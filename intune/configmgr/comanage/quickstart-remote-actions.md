@@ -36,7 +36,7 @@ Remote device actions give you management controls on the device without interfe
 
 These functions are an important and simple way to protect corporate data stored on these devices, whether in e-mail or OneDrive.
 
-For more information on these actions, see [Available remote actions](#available-remote-actions).
+For more information on these actions, see [Available remote actions](../../intune-service/remote-actions/index.md#available-remote-actions).
 
 ## Case studies
 
@@ -45,11 +45,11 @@ The global consulting firm Avanade regularly uses remote actions to manage the d
 > *Our immediate win from having the Intune functionality was the ability to remotely reset Windows on a machine. This is important to us for lost or stolen machines, which is more common in our highly mobile workforce.*
 > *This is functionality that we otherwise would have had to build and maintain in a custom ConfigMgr package.*
 
-For more information on how to use these remote actions, see [Available device actions](../../intune-service/remote-actions/device-management.md#available-remote-actions).
+For more information on how to use these remote actions, see [Available device actions](../../intune-service/remote-actions/index.md#available-remote-actions).
 
 ## Value proposition
 
-When a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can now do any remote action that's supported by Intune.
+When a Configuration Manager device is co-managed, it immediately adds these functions that Configuration Manager doesn't natively have. Now you can do any remote action that's supported by Intune.
 
 With co-management, the Configuration Manager devices are now just like any other Intune-managed device. For example, they have a full presence in the cloud, and you can reach them as long as they have internet access. You can do all of these actions without taking any additional steps beyond enabling co-management.
 
@@ -104,10 +104,10 @@ For more information, see [Use Fresh Start to reset Windows devices with Intune]
 
 Devices managed by Intune can be administered remotely using [TeamViewer](https://www.teamviewer.com/). TeamViewer is a third-party program that you acquire separately.
 
-For more information, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/remote-actions/teamviewer-support.md).
+For more information, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).
 
 ## Configure
 
 Other than remote control via TeamViewer, to start using these remote device actions in Intune, no additional setup is required after you [enable co-management](how-to-enable.md).
 
-For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/remote-actions/teamviewer-support.md).
+For more information on using TeamViewer for remote control, see [Use TeamViewer to remotely administer Intune devices](../../intune-service/fundamentals/teamviewer-support.md).

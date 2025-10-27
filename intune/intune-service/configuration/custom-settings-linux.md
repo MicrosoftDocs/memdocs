@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Add custom settings to Linux devices in Microsoft Intune
-titleSuffix:
 description: Add Bash scripts to create a custom Linux profile in Microsoft Intune. Use the script to create, use, and control custom settings and features on Linux devices. This custom profile can then be assigned or distributed to Linux devices in your organization to create a baseline or standard.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 01/09/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -41,7 +24,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 ## Prerequisites
 
 - **Linux Ubuntu Desktop**, **RedHat Enterprise Linux 8**, or **RedHat Enterprise Linux 9**: For a list of the supported versions, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
-- **Linux devices are enrolled in Intune**. For more information on Linux enrollment, go to [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md).  
+- **Linux devices are enrolled in Intune**. For more information on Linux enrollment, go to [Enrollment guide: Enroll Linux desktop devices in Microsoft Intune](../fundamentals/deployment-guide-enrollment-linux.md).
 
 ## Import the script
 
@@ -67,7 +50,7 @@ This article lists the steps to add an existing script and has a GitHub repo wit
 
     - **Execution retries**: If the script fails, enter how many times Intune should retry running the script. The default is **No retries**.
 
-    - **Execution Script**: Select the file picker to upload an existing Bash script. Only add `.sh` files.  
+    - **Execution Script**: Select the file picker to upload an existing Bash script. Only add `.sh` files.
 
       Microsoft has some sample Bash scripts at [https://github.com/microsoft/shell-intune-samples/tree/master/Linux](https://github.com/microsoft/shell-intune-samples/tree/master/Linux).
 

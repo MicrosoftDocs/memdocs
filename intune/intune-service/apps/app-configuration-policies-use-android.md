@@ -1,39 +1,16 @@
 ---
-# required metadata
-
-title: Add app configuration policies for managed Android Enterprise devices
-titleSuffix: Microsoft Intune
+title: Add App Configuration Policies for Managed Android Enterprise Devices
 description: Use app configuration policies in Microsoft Intune to supply settings when users run a Managed Google Play app.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 10/09/2024
+ms.date: 08/13/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: esalter
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Configure
-ms.custom: intune-azure
 ---
 
-# Add app configuration policies for managed Android Enterprise devices
+# Add App Configuration Policies for Managed Android Enterprise Devices
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -48,28 +25,26 @@ Not every app supports app configuration. Check with the app developer to see if
 Android Enterprise has several enrollment methods. The enrollment type depends on how email is configured on the device:
 
 - On Android Enterprise Fully Managed, Dedicated, and Corporate-owned Work Profiles, use an app configuration policy and the steps in this article. App configuration policies support Gmail and Nine Work email apps.
-- On Android Enterprise personally owned devices with a work profile, create an [Android Enterprise email device configuration profile](../configuration/email-settings-android-enterprise.md). When you create the profile, you can configure settings for email clients that support app configuration policies. When using the configuration designer, Intune includes email settings specific to Gmail and Nine Work apps.
-<!-- commenting this bullet out for workitem: device admin end of support, 13891824
-- On Android device administrator, create an [Android device administrator email device configuration profile](../configuration/email-settings-android.md) for Samsung Knox devices. When you create the profile, you can configure Exchange email settings, such as `outlook.office365.com`.-->
+- On Android Enterprise personally owned devices with a work profile, create an [Android Enterprise email device configuration profile](../configuration/email-settings-android-enterprise.md). When you create the profile, you can configure settings for email clients that support app configuration policies. When you use the configuration designer, Intune includes email settings specific to Gmail and Nine Work apps.
 
 ## Create an app configuration policy
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Choose the **Apps** > **Configuration** > **Create** > **Managed devices**. Note that you can choose between **Managed devices** and **Managed apps**. For more information see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
+2. Choose the **Apps** > **Configuration** > **Create** > **Managed devices**. You can choose between **Managed devices** and **Managed apps**. For more information, see [Apps that support app configuration](app-configuration-policies-overview.md#apps-that-support-app-configuration).
 3. On the **Basics** page, set the following details:
     - **Name** - The name of the profile that appears in the portal.
     - **Description** - The description of the profile that appears in the portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **Android Enterprise** as the **Platform**.
-5. Click **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
-6. On the **Associated app** pane, choose the managed app to associate with the configuration policy and click **OK**.
-7. Click **Next** to display the **Settings** page.
-8. Click **Add** to display the **Add permissions** pane.
-9. Click the permissions that you want to override. Permissions granted will override the "Default app permissions" policy for the selected apps.
+5. Select **Select app** next to **Targeted app**. The **Associated app** pane is displayed.
+6. On the **Associated app** pane, choose the managed app to associate with the configuration policy and select **OK**.
+7. Select **Next** to display the **Settings** page.
+8. Select **Add** to display the **Add permissions** pane.
+9. Select the permissions that you want to override. Permissions granted override the "Default app permissions" policy for the selected apps.
 10. Set the **Permission state** for each permission. You can choose from **Prompt**, **Auto grant**, or **Auto deny**.
 
     > [!NOTE]
-    > As of Android 12, configuring **Auto grant** for the following permissions is not supported for coporate-owned work profile or corporate-owned dedicated devices.
+    > As of Android 12, configuring **Auto grant** for the following permissions isn't supported for corporate-owned work profile or corporate-owned dedicated devices.
     > * SMS (read)
     > * Location access (coarse)
     > * Location access (fine)
@@ -78,7 +53,10 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     > * Record audio
     > * Allow body sensor data
 
-11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods to add configuration information:
+    > [!NOTE]
+    > As of Android 16, configuring **Auto grant** for permissions under the **HEALTH** permission group is no longer supported.
+
+11. If the managed app supports configuration settings, the **Configuration settings format** dropdown box is visible. Select one of the following methods for adding configuration information:
     - **Use configuration designer**
     - **Enter JSON data**
 
@@ -90,33 +68,33 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
     > [!NOTE]
     > This setting only works for personally owned work profile and corporate-owned work profile devices.
-    > 
-    > Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
+    >
+    > Changing the **Connected apps** setting to **Not Configured** won't remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
-13. Click **Next** to display the **Scope tags** page.
-14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
-15. Click **Next** to display the **Assignments** page. 
-16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you've selected an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
+13. Select **Next** to display the **Scope tags** page.
+14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+15. Select **Next** to display the **Assignments** page.
+16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" ::: 
+    :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" :::
 
 17. Select **All users** in the dropdown box.
 
     :::image type="content" alt-text="Screenshot of policy assignments - All Users dropdown option" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-03.png" :::
 
-18. [Optional] Click **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
+18. [Optional] select **Edit filter** to add a [filter](../fundamentals/filters.md) and refine the assignment scope.
 
     :::image type="content" alt-text="Screenshot of policy assignments - Edit filter" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-04.png" :::
 
-16. Click **Select groups to exclude** to display the related pane.
+16. Select **Select groups to exclude** to display the related pane.
 
-17. Choose the groups you want to exclude and then click **Select**.
+17. Choose the groups you want to exclude and then choose **Select**.
 
     >[!NOTE]
-    >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
+    >When you add a group, if any other group is already included for a given assignment type, it's preselected and unchangeable for other include assignment types. Therefore, a group already used can't be selected as an excluded group.
 
-18. Click **Next** to display the **Review + create** page.
-19. Click **Create** to add the app configuration policy to Intune.
+18. Select **Next** to display the **Review + create** page.
+19. Select **Create** to add the app configuration policy to Intune.
 
 ## Use the configuration designer
 
@@ -128,7 +106,7 @@ You can use the configuration designer for Managed Google Play apps when the app
 
 2. For each key and value in the configuration, set:
 
-    - **Value type**: The data type of the configuration value. For string value types, you can optionally choose a variable or certificate profile as the value type. Note that once the policy is created, these value types will show as string. 
+    - **Value type**: The data type of the configuration value. For string value types, you can optionally choose a variable or certificate profile as the value type. Once the policy is created, these value types show as string.
     - **Configuration value**: The value for the configuration. If you select variable or certificate for the **Value type**, choose from a list of variables or certificate profiles. If you choose a certificate, then the certificate alias of the certificate deployed to the device is populated at runtime.
 
 ### Supported variables for configuration values
@@ -139,24 +117,30 @@ You can choose the following options if you choose variable as the value type:
 |----|----|
 | Microsoft Entra Device ID | dc0dc142-11d8-4b12-bfea-cae2a8514c82 |
 | Account ID | fc0dc142-71d8-4b12-bbea-bae2a8514c81 |
+| IMEI | 123456789012345 |
 | Intune Device ID | b9841cd9-9843-405f-be28-b2265c59ef97 |
-| Domain | contoso.com |
 | Mail | john@contoso.com |
 | Partial UPN | john |
 | User ID | 3ec2c00f-b125-4519-acf0-302ac3761822 |
 | User name | John Doe |
 | User Principal Name | john@contoso.com |
+| Account name | Contoso |
+| Device name | John_AndroidEnterprise_1/2/2025_12:00 PM |
+| Employee ID | 123456 |
+| MEID | 12345678901234 |
+| Serial number | 1A2B3C4D5E6F7G |
+| Last four digits of serial number | 6F7G |
 
-### Allow only configured organization accounts in apps 
+### Allow only configured organization accounts in apps
 
 As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For Android devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
 | Key | com.microsoft.intune.mam.AllowedAccountUPNs |
 |---|---|
-| **Values** | <ul><li>One or more <code>;</code> delimited UPNs.</li><li>Only account(s) allowed are the managed user account(s) defined by this key.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token may be used to represent the enrolled user account.</li></ul> |
+| **Values** | <ul><li>One or more <code>;</code> delimited UPNs.</li><li>Only the managed user accounts defined by this key are allowed.</li><li> For Intune enrolled devices, the <code>{{userprincipalname}}</code> token could be used to represent the enrolled user account.</li></ul> |
 
    > [!NOTE]
-   > The following apps process the above app configuration and only allow organization accounts:
+   > The following apps process the previous app configuration and only allow organization accounts:
    > - Copilot for Android (28.1.420328045 and later)
    > - Edge for Android (42.0.4.4048 and later)
    > - Office, Word, Excel, PowerPoint for Android (16.0.9327.1000 and later)
@@ -182,25 +166,25 @@ When the assigned app is run on a device, it runs with the settings that you con
 Applies to:<br>
 Android 11+
 
-Personally owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users do not need a specific version of the Microsoft Intune app for support.
+Personally owned work profile users must have Company Portal version 5.0.5291.0 or newer. Corporate-owned work profile users don't need a specific version of the Microsoft Intune app for support.
 
 You can allow users using Android personally owned and corporate-owned work profiles to turn on connected apps experiences for supported apps. This app configuration setting enables apps to connect and integrate app data across the work and personal app instances.
 
-For an app to provide this experience, the app needs to integrate with Google's connected apps SDK, so only limited apps support it. You can turn on the connected apps setting proactively, and when apps add support, users will be able to enable the connected apps experience.
+For an app to provide this experience, the app needs to integrate with Google's connected apps SDK, so only limited apps support it. You can turn on the connected apps setting proactively, and when apps add support, users are able to enable the connected apps experience.
 
-Changing the **Connected apps** setting to **Not Configured** will not remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
+Changing the **Connected apps** setting to **Not Configured** won't remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
 > [!WARNING]
-> If you enable the connected apps functionality for an app, work data in personal apps will not be protected by an app protection policy.
-> 
-> Additionally, regardless of your connected apps configuration, some OEMs may automatically connect certain apps or may be able to request user approval to connect apps that you did not configure. An example of an app in this case could be the OEM's keyboard app.
+> If you enable the connected apps functionality for an app, work data in personal apps won't be protected by an app protection policy.
+>
+> Additionally, regardless of your connected apps configuration, some OEMs could automatically connect certain apps or might be able to request user approval to connect apps that you didn't configure. An example of an app in this case could be the OEM's keyboard app.
 
-There are two ways users may be able to connect work and personal apps after you've enabled the connected apps setting:
-1. A supported app may choose to prompt a user to approve connecting it across profiles.
-2. Users can open the Settings app and go to the Connected work & personal apps section, where they will see all supported apps listed.
+There are two ways users could be able to connect work and personal apps after you enable the connected apps setting:
+1. A supported app might choose to prompt a user to approve connecting it across profiles.
+2. Users can open the Settings app and go to the Connected work & personal apps section, where they see all supported apps listed.
 
 > [!IMPORTANT]
-> If multiple app configuration policies are assigned for the same app targeting the same device, and one policy sets **Connected Apps** to `Enabled` while the other policy does not, the app configuration will report a conflict and the resulting behavior applied on the device will be to disallow the connected apps.
+> If multiple app configuration policies target the same app and device, and one policy sets **Connected Apps** to `Enabled` while another doesn't, the app configuration reports a conflict. The device then disallows connected apps.
 
 ## Preconfigure the permissions grant state for apps
 
@@ -215,7 +199,7 @@ For example, an app uses the device's microphone. The user is prompted to grant 
     - **Device enrollment type**: This setting is set to **Managed devices**.
     - **Platform**: Select **Android Enterprise**.
 3. Select **Profile Type**:
-3. Select **Targeted App**. Choose the app that you want to associate a configuration policy with. Select from the list of Android Enterprise fully managed work profile apps that you've approved and synchronized with Intune.
+3. Select **Targeted App**. Choose the app that you want to associate a configuration policy with. Select from the list of Android Enterprise fully managed work profile apps that you approve and synchronized with Intune.
 4. Select **Permissions** > **Add**. From the list, select the available app permissions > **OK**.
 5. Select an option for each permission to grant with this policy:
     - **Prompt**. Prompt the user to accept or deny.

@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Set up Trellix Mobile Security MTD with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: How to set up the Trellix Mobile Security mobile threat defense (MTD) solution with Microsoft Intune to control mobile device access to your corporate resources
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/23/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---

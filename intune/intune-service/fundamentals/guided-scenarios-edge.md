@@ -1,28 +1,17 @@
 ---
-title: Guided scenario - Deploy Microsoft Edge for Mobile 
-titleSuffix: Microsoft Intune
+title: Guided Scenario - Deploy Microsoft Edge for Mobile
 description: Learn about the guided scenario to deploy Microsoft Edge for Mobile from the Microsoft 365 Device Management portal.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 02/24/2025
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---
 
-# Guided scenario - Deploy Microsoft Edge for Mobile
+# Guided Scenario - Deploy Microsoft Edge for Mobile
 
 By following this [guided scenario](guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app allows your users to seamlessly browse content using their corporate devices.
 
@@ -79,7 +68,7 @@ In this step, you can choose the user groups that you want to include to have Mi
 
 ## Step 5 - Review + create
 
-The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices select **Create** to complete the guided scenario. 
+The final step allows you to review a summary of the settings you configured. Once you have reviewed your choices select **Create** to complete the guided scenario.
 
 > [!NOTE]
 > Microsoft Edge may take up to 12 hours to receive configuration. For more information, see [App configuration policies for Microsoft Intune](../apps/app-configuration-policies-overview.md).

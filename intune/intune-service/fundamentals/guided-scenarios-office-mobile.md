@@ -1,28 +1,17 @@
 ---
-title: Guided scenario - Secure Microsoft Office mobile apps
-titleSuffix: Microsoft Intune
+title: Guided Scenario - Secure Microsoft Office Mobile Apps
 description: Learn about the guided scenario to deploy secure Microsoft Office mobile apps from the Microsoft 365 Device Management portal.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 03/28/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
 ms.reviewer: ilwu
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---
 
-# Guided scenario - Secure Microsoft Office mobile apps
+# Guided Scenario - Secure Microsoft Office Mobile Apps
 
 By following this guided scenario in the Device Management portal, you can enable basic Intune app protection on iOS/iPadOS and Android devices.
 
@@ -31,7 +20,7 @@ The app protection that you enable will enforce the following actions:
 - Encrypt work files.
 - Require a PIN to access work files.
 - Require the PIN to be reset after five failed attempts.
-- Block work files from being backed up in iTunes, iCloud, or Android backup services.  
+- Block work files from being backed up in iTunes, iCloud, or Android backup services.
 - Require work files to only be saved to OneDrive or SharePoint.
 - Prevent protected apps from loading work files on jailbroken or rooted devices.
 - Block access to work files if the device is offline for 720 minutes.
@@ -39,7 +28,7 @@ The app protection that you enable will enforce the following actions:
 
 ## Background
 
-Office mobile apps, and Microsoft Edge for Mobile, support dual identity. Dual identity allows the apps to manage work files separately from personal files. 
+Office mobile apps, and Microsoft Edge for Mobile, support dual identity. Dual identity allows the apps to manage work files separately from personal files.
 
 ![Image of corporate data versus personal data](./media/guided-scenarios-office-mobile/guided-scenarios-office-mobile-01.png)
 
@@ -68,7 +57,7 @@ You'll need the follow Intune admin permissions:
 
 ## Step 1 - Introduction
 
-By following the **Intune App Protection** guided scenario, you'll prevent data from being shared or leaked outside of your organization. 
+By following the **Intune App Protection** guided scenario, you'll prevent data from being shared or leaked outside of your organization.
 
 Assigned iOS/iPadOS and Android users must enter a PIN each time they open an Office app. After five failed PIN attempts, users must reset their PIN. If you already require a device PIN, users won't be impacted.​
 

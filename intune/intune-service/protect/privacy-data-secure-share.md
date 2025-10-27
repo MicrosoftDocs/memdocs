@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Data security and sharing in Intune
-titleSuffix: Microsoft Intune
 description: Learn how personal data is secured and shared in Intune.
-keywords: privacy, data
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 12/07/2023
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 68921fd6-5f50-456c-a3af-83d7bc4b134b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: angerobe
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - essentials-privacy
@@ -37,7 +17,7 @@ ms.collection:
 
 ## Data security
 
-Microsoft Intune is a key component of the Microsoft Enterprise Mobility and Security Suite cloud service offering. To support the [data governance strategy](https://www.microsoft.com/en-us/TrustCenter/Security/default.aspx), all Microsoft cloud services are developed with [Microsoft Privacy](https://www.microsoft.com/en-us/trustcenter/privacy) and [Microsoft Security](https://www.microsoft.com/en-us/trustcenter/security/) methodologies.  
+Microsoft Intune is a key component of the Microsoft Enterprise Mobility and Security Suite cloud service offering. To support the [data governance strategy](https://www.microsoft.com/en-us/TrustCenter/Security/default.aspx), all Microsoft cloud services are developed with [Microsoft Privacy](https://www.microsoft.com/en-us/trustcenter/privacy) and [Microsoft Security](https://www.microsoft.com/en-us/trustcenter/security/) methodologies.
 
 Microsoft Intune follows the same technical and organizational measures that the Microsoft Azure service teams take for securing against data breach processes.
 
@@ -58,7 +38,7 @@ All third parties acting as Microsoft agents are included in the [Online Service
 
 Sharing data with such entities is done to aid customer and technical support, service maintenance, and other operations.
 
-A tenant's contract with the third party governs the Intune personal data held in the third party's service. It also grants Intune the permission to transmit data to the third party service.  
+A tenant's contract with the third party governs the Intune personal data held in the third party's service. It also grants Intune the permission to transmit data to the third party service.
 
 For information about data shared with certain third parties, see the following articles:
 - [Data Intune sends to Apple](data-intune-sends-to-apple.md)
@@ -71,7 +51,7 @@ For information about data shared with certain third parties, see the following 
 
 Microsoft Intune doesn't share any data with Configuration Manager. Configuration Manager is an on-premise product deployed, managed, and operated directly by the customer. The diagnostics and usage data that is collected by Configuration Manager are only to improve the installation experience, quality, and security of future releases.
 
-To learn more, see [Diagnostics and usage data for Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data). 
+To learn more, see [Diagnostics and usage data for Configuration Manager](/configmgr/core/plan-design/diagnostics/diagnostics-and-usage-data).
 
 
 ## Next steps

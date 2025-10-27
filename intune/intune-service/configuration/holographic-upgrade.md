@@ -1,27 +1,11 @@
 ---
-# required metadata
 title: Upgrade to Windows Holographic for Business in Microsoft Intune
 description: Upgrade HoloLens (first gen) to Windows 10 Holographic for Business using a device configuration profile in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 04/16/2024
+ms.date: 10/14/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -40,10 +24,11 @@ As part of your mobile device management (MDM) solution, use these settings to u
 
 As an Intune administrator, you can create and assign these settings to your devices.
 
-For more information on this feature, see [Upgrade Windows 10/11 editions or enable S mode](edition-upgrade-configure-windows-10.md).
+For more information on this feature, see [Upgrade Windows editions or enable S mode](edition-upgrade-configure-windows-10.md).
 
 ## Before you begin
 
+- [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 - [Create a Windows client edition upgrade and mode switch device configuration profile](edition-upgrade-configure-windows-10.md#create-the-profile).
 - When you create a Windows client edition upgrade and mode switch device configuration profile, there are more settings than what's listed in this article. The settings in this article are supported on Windows Holographic for Business devices.
 
@@ -57,5 +42,4 @@ For more information on this feature, see [Upgrade Windows 10/11 editions or ena
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
-
-- Create edition upgrade profiles for [Windows 10/11](edition-upgrade-windows-settings.md) devices.
+- Create edition upgrade profiles for [Windows](edition-upgrade-windows-settings.md) devices.

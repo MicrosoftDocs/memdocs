@@ -1,13 +1,6 @@
 ---
 title: Windows Autopilot self-deploying mode
 description: Self-deploying mode allows a device to be deployed with little to no user interaction. This mode is designed to deploy Windows as a kiosk, digital signage device, or a shared device.
-ms.subservice: autopilot
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
@@ -61,7 +54,7 @@ Optionally, a [device-only subscription](https://techcommunity.microsoft.com/t5/
 
 > [!NOTE]
 > Intune doesn't automatically configure a primary user when using self-deploying mode in Windows Autopilot to provision a Windows device. Some Intune capabilities rely on a primary user being set on a device. These features include user self-service BitLocker recovery key retrieval and using the Company Portal to install software **assigned to users**. Using self-provisioning mode for Windows Autopilot doesn't preclude a licensed user from logging into the device and using features entitled to that user such as Conditional Access. For more information, see [Windows Autopilot scenarios and capabilities](windows-autopilot-scenarios.md).
-> 
+>
 > If desired, a primary user can be manually set after device provisioning via the Intune admin center. For more information, see [Change a devices primary user](/mem/intune-service/remote-actions/find-primary-user#change-a-devices-primary-user).
 
 ## Requirements

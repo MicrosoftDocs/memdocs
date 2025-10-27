@@ -34,17 +34,17 @@ When co-management is already enabled, edit the co-management properties to enab
 1. In the **Configure upload** tab, select **Upload to Microsoft Endpoint Manager admin center**. Select **Apply**.
    - The default setting for device upload is **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
    - When a single collection is selected, its child collections are also uploaded.
-1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights for optimizing the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
+1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights for optimizing the end-user experience in [endpoint analytics](../../analytics/index.md).
 1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. Hence, the checkbox is checked by default. If you want to enforce only Intune RBAC or if you're using cloud-only account, you must uncheck the option.
 1. Check the option to **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center** if you want to use [Endpoint Security reports in Intune admin center](deploy-antivirus-policy.md#bkmk_mdereports)
 
 > [!Important]
 > When you enable Endpoint analytics data upload, your default client settings is automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more information on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../analytics/enroll-configmgr.md#bkmk_cm_enable).
 
- [![Screenshot that shows how to upload devices to Microsoft Intune admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox) 
- 
+ [![Screenshot that shows how to upload devices to Microsoft Intune admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox)
+
 <!-- : : : image type="content" source="../../analytics/media/13058986-configure-upload-configmgr.png" alt-text="Upload devices to Microsoft Intune admin center." : : : -->
- 
+
 1. Sign in with your *Global Administrator* account when prompted.
 1. Select **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync.
 1. Choose **OK** to exit the co-management properties once you've done making changes.
@@ -73,17 +73,17 @@ When co-management isn't enabled, use the instructions below to enable device up
      - Optionally, you can import a previously created Microsoft Entra application during tenant attach onboarding. For more information, see the [Import a previously created Microsoft Entra application](#bkmk_aad_app) section.
 1. On the **Configure upload** page, select the recommended device upload setting for **All my devices managed by Microsoft Endpoint Configuration Manager**. If needed, you can limit upload to a single device collection.
     - When a single collection is selected, its child collections are also uploaded. <!--8717629-->
-1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [Endpoint Analytics](../../analytics/overview.md).
+1. Check the option to **Enable Endpoint analytics for devices uploaded to Microsoft Endpoint Manager** if you also want to get insights to optimize the end-user experience in [endpoint analytics](../../analytics/index.md).
 1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. Hence, the checkbox is checked by default. If you want to enforce only Intune RBAC or if you're using cloud-only account, you must uncheck the option.
 1. Check the option to **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center** if you want to use [Endpoint Security reports in Intune admin center](deploy-antivirus-policy.md#bkmk_mdereports)
 1. Select **Summary** to review your selection, then choose **Next**.
-1. When the wizard is complete, select **Close**.  
+1. When the wizard is complete, select **Close**.
 
 ## Scope tags
 <!--IN12698965-->
 Tenant-attached devices receive the [default scope tag](../../intune-service/fundamentals/scope-tags.md#default-scope-tag) from Microsoft Intune. If you remove the default scope tag from a tenant-attached device, the device won't be displayed at all in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Currently, tenant-attached devices can't be assigned scope tags unlike [co-managed devices](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) can.
 
-However, sometimes you don’t want certain [Intune roles](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) to see tenant-attached devices. For instance, you may not want someone with Intune's **Help Desk Operator** role to see tenant-attached devices because they're servers. In these cases, create or use a custom role in Intune that doesn't have **Default** listed for its **Scope tags**. When [creating custom Intune roles](../../intune-service/fundamentals/create-custom-role.md#to-create-a-custom-role), keep in mind that the default scope tag is automatically added to all untagged objects.
+However, sometimes you don't want certain [Intune roles](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) to see tenant-attached devices. For instance, you may not want someone with Intune's **Help Desk Operator** role to see tenant-attached devices because they're servers. In these cases, create or use a custom role in Intune that doesn't have **Default** listed for its **Scope tags**. When [creating custom Intune roles](../../intune-service/fundamentals/create-custom-role.md#to-create-a-custom-role), keep in mind that the default scope tag is automatically added to all untagged objects.
 
 ## Perform device actions
 
@@ -102,7 +102,7 @@ However, sometimes you don’t want certain [Intune roles](../../intune-service/
 ## Display the Configuration Manager connector status from the admin console
  <!--IN9229333, CM7138634-->
 From the Microsoft Intune admin center, you can review the status of your Configuration Manager connector. To display the connector status, go to **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**. Select a Configuration Manager hierarchy to display additional information about it.
-   
+
 :::image type="content" source="media/7138634-connector-status.png" alt-text="Microsoft Configuration Manager connector in the admin center" lightbox="media/7138634-connector-status.png":::
 
 ### View recommendations and insights to enrich the Configuration Manager site health and device management experience
@@ -116,7 +116,7 @@ Recommendations include:
 - Provide device insights
 - Improve the health of the site
 
-To view recommendations, go to **Tenant administration > Connectors and tokens > Microsoft Endpoint Configuration Manager**, and select a _site_ to view recommendations for that. Once selected, you’ll find the _Recommendations_ tab that displays each insight along with a _Learn more_ link that opens details on how to apply that recommendation.
+To view recommendations, go to **Tenant administration > Connectors and tokens > Microsoft Endpoint Configuration Manager**, and select a _site_ to view recommendations for that. Once selected, you'll find the _Recommendations_ tab that displays each insight along with a _Learn more_ link that opens details on how to apply that recommendation.
 
 ## <a name="bkmk_offboard"></a> Offboard from tenant attach
 

@@ -1,32 +1,14 @@
 ---
-# required metadata
-
 title: Configure Platform SSO for macOS devices
 description: Use Microsoft Intune to configure Platform SSO and deploy the configuration to your macOS devices. Platform SSO enables single sign-on (SSO) using Microsoft Entra ID with the Secure Enclave, smart card, or password authentication methods. You create a settings catalog policy to configure the settings. This article is a step-by-step guide to configure Platform SSO for macOS devices using Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 08/12/2025
+ms.date: 08/26/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
 appliesto:
 - ✅ macOS
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab, veenasoman
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -74,7 +56,7 @@ You configure Platform SSO using the Intune [settings catalog](settings-catalog.
 
   - Microsoft Edge
   - Google Chrome with the [Microsoft Single Sign On extension](https://chromewebstore.google.com/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji)
-  
+
     Using an [Intune preference file (.plist) policy](preference-file-settings-macos.md), you can force this extension to install. In your `.plist` file, you need some of the information at [Chrome Enterprise policy - ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist) (opens Google's web site).
 
     > [!WARNING]
@@ -206,6 +188,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     - **Extension Identifier**
     - Expand **Platform SSO**:
       - Select **Authentication Method** (Select for macOS 14+)
+      - Select **FileVault Policy** (Select for macOS 15+)
       - Select **Token To User Mapping**
       - Select **Use Shared Device Keys**
     - **Registration Token**
@@ -225,9 +208,10 @@ To configure the Platform SSO policy, use the steps in this section to create an
 
     | Name | Configuration value | Description |
     |---|---|---|
-    | **Authentication Method (Deprecated)** </br>(macOS 13 only) | **Password** or **UserSecureEnclave** | Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). <br/><br/>This setting applies to macOS 13 only. For macOS 14.0 and later, use the **Platform SSO** > **Authentication Method** setting.|
+    | **Authentication Method (Deprecated)** </br>(macOS 13 only) | **Password** or **UserSecureEnclaveKey** | Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). <br/><br/>This setting applies to macOS 13 only. For macOS 14.0 and later, use the **Platform SSO** > **Authentication Method** setting.|
     | **Extension Identifier** | `com.microsoft.CompanyPortalMac.ssoextension` | Copy and paste this value in the setting. <br/><br/>This ID is the SSO app extension that the profile needs for SSO to work. <br/><br/> The **Extension Identifier** and **Team Identifier** values work together. |
-    | **Platform SSO** > **Authentication Method** </br>(macOS 14+) | **Password**, **UserSecureEnclave**, or **SmartCard** | Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). <br/><br/>This setting applies to macOS 14 and later. For macOS 13, use the **Authentication Method (Deprecated)** setting. |
+    | **Platform SSO** > **Authentication Method** </br>(macOS 14+) | **Password**, **UserSecureEnclaveKey**, or **SmartCard** | Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). <br/><br/>This setting applies to macOS 14 and later. For macOS 13, use the **Authentication Method (Deprecated)** setting. |
+    | **Platform SSO** > **FileVault Policy** </br>(macOS 15+) | **AttemptAuthentication** | This setting allows the device to verify the Microsoft Entra ID password with Microsoft Entra at the FileVault unlock screen when a Mac device is turned on. <br/><br/>This setting applies to macOS 15 and later. |
     | **Platform SSO** > **Use Shared Device Keys** </br>(macOS 14+) | **Enabled** | When enabled, Platform SSO uses the same signing and encryption keys for all users on the same device. </br></br>Users upgrading from macOS 13.x to 14.x are prompted to register again. |
     | **Registration token** | `{{DEVICEREGISTRATION}}` | Copy and paste this value in the setting. You must include the curly braces. <br/><br/>To learn more about this registration token, go to [Configure Microsoft Entra device registration](/entra/identity-platform/apple-sso-plugin#configure-microsoft-entra-device-registration). <br/><br/>This setting requires that you also configure the `AuthenticationMethod` setting.<br/><br/>- If you use only macOS 13 devices, then configure the **Authentication Method (Deprecated)** setting.<br/>- If you use only macOS 14+ devices, then configure the **Platform SSO** > **Authentication Method** setting.<br/>- If you have a mix of macOS 13 and macOS 14+ devices, then configure both authentication settings in the same profile. |
     | **Screen Locked Behavior** | **Do Not Handle** | When set to **Do Not Handle**, the request continues without SSO. |
@@ -349,7 +333,7 @@ When you configure Platform SSO, you might see the following errors:
 - `10001: misconfiguration in the SSOe payload.`
 
   This error can occur if:
-  
+
   - There's a required setting that isn't configured in the settings catalog profile.
   - There's a setting in the settings catalog profile that you configured that's not applicable for the [redirect type payload](use-enterprise-sso-plug-in-ios-ipados-macos.md#sso-app-extension).
 

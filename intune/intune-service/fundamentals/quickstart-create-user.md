@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Create a user in Intune
 description: Create a user in Intune.
 services: microsoft-intune
-author: Smritib17
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
+author: paolomatarazzo
+ms.author: paoloma
 ms.topic: how-to
 ms.date: 04/07/2025
-ms.author: smbhardwaj
-manager: laurawi
-ms.assetid: 820fcb18-0927-4ebd-be79-dce92b51c261
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jlynn
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -45,7 +27,7 @@ Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?link
 
 If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-> [!CAUTION]  
+> [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create a user
@@ -63,7 +45,7 @@ A user must have a user account to enroll in Intune device management. To create
 1. In the **User name** box, enter a user identifier, such as `Dewey@contoso.onmicrosoft.com`.
 
     > [!NOTE]
-    > If you haven't configured your customer domain name, use the verified domain name you used to create the Intune subscription (or [free trial](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)). 
+    > If you haven't configured your customer domain name, use the verified domain name you used to create the Intune subscription (or [free trial](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)).
 
 4. Select **Show password** and be sure to remember the automatically generated password so that you can sign in to a test device.
 5. Select **Create**.
@@ -90,7 +72,7 @@ To assign an Intune license to a user:
 The new active Intune user shows that they're using an **Intune** license.
 
 > [!NOTE]
-> You can also assign an Intune license via [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Users** > **All Users** > *the user's name* > **Licenses** > **Assignments**. The **Update license assignments** pane is displayed. 
+> You can also assign an Intune license via [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Users** > **All Users** > *the user's name* > **Licenses** > **Assignments**. The **Update license assignments** pane is displayed.
 
 ## Assign Intune licenses to multiple users
 

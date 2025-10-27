@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: bpardi
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
-ms.date: 06/13/2025
-ms.localizationpriority: medium
+ms.date: 09/24/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -38,6 +32,12 @@ Device ESP runs first followed by the User ESP.
 
 When the Enrollment Status Page (ESP) is configured, it has several options that can be configured to meet the needs of the organization. The following lists the different options and their possible configurations:
 
+- **Show app and profile configuration progress**:
+
+  - **No**: The enrollment status page doesn't appear during device setup. To disable the configuration progress to users during the provisioning process, select **No**.
+
+  - **Yes**: The enrollment status page appears during device setup. More options become available when this option is selected. Microsoft recommends selecting **Yes** and enabling displaying the enrollment status page configuration progress when using Windows Autopilot.
+
 - **Show an error when installation takes longer than specified number of minutes**:
 
   - The default time-out is 60 minutes. Enter a higher value if more time is needed to install applications on the devices.
@@ -60,11 +60,31 @@ When the Enrollment Status Page (ESP) is configured, it has several options that
 
   - **Yes**: The enrollment status page (ESP) is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
+- **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates the available quality updates, also known as monthly security update releases. The available options are:
+
+  - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is displayed to the user showing update progress.
+
+  - **No**: Monthly security update releases aren't installed during OOBE and the device instead continues to the desktop as usual. Messages regarding installation of monthly security update releases aren't displayed since they aren't installed.
+
+    > [!IMPORTANT]
+    >
+    > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
+    > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
+    > - For important detailed information regarding this option, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+    > - If this option is set to **No**, make sure to set the option **Block device use until all apps and profiles are installed** is set to **Yes** to ensure that monthly security update releases aren't installed. For more information, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+
 - **Block device use until all apps and profiles are installed**:
 
   - **No**: Users can leave the ESP before Intune is finished setting up the device.
 
-  - **Yes**: Users can't leave the ESP until Intune is done setting up the device. Enabling this option unlocks the following additional options:
+    > [!IMPORTANT]
+    >
+    > Don't set this option to **No** if the option **Install Windows quality updates (might restart the device)** is set to **No**. For more information, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+    >
+
+  - **Yes**: Users can't leave the ESP until Intune is done setting up the device.
+
+    Enabling this option unlocks the following additional options:
 
     - **Allow users to reset device if installation error occurs**:
 

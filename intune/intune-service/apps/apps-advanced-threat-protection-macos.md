@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune
-titleSuffix:
+title: Add Microsoft Defender for Endpoint to macOS Devices Using Microsoft Intune
 description: Learn about adding Microsoft Defender for Endpoint to macOS devices using Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/17/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - macOS
 ---
 
-# Add Microsoft Defender for Endpoint to macOS devices using Microsoft Intune
+# Add Microsoft Defender for Endpoint to macOS Devices Using Microsoft Intune
 
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Defender for Endpoint. By selecting this app type in Intune, you can assign and install Microsoft Defender for Endpoint to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Defender for Endpoint to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
 

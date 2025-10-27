@@ -1,35 +1,16 @@
 ---
-# required metadata
-
-title: Device query in Microsoft Intune
-description: Learn how to gain on-demand information about the state of your devices using device query.
-keywords:
-ms.author: smbhardwaj
-author: smritib17
-manager: dougeby
-ms.date: 08/01/2024
+title: Device Query in Microsoft Intune
+description: Learn how to use device query in Microsoft Intune to get on-demand device state, run Kusto Query Language (KQL) queries, and troubleshoot devices.
+ms.date: 10/09/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: Elizabeth cox
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
-ms.collection:
-- tier2
-- M365-identity-device-management
+ms.subservice: suite
 ---
 
 # Device query
+
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+
+[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
 Device query allows you to quickly gain on-demand information about the state of your devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
@@ -40,9 +21,9 @@ Device query allows you to quickly gain on-demand information about the state of
   - The Intune Advanced Analytics Add-on
   - Microsoft Intune Suite
 
-- To use Device query on a device, the device must be enrolled in Endpoint Analytics. Learn [how to enroll a device in Endpoint Analytics](enroll-intune.md).
+- To use Device query on a device, the device must be enrolled in endpoint analytics. Learn [how to enroll a device in endpoint analytics](configure.md).
 
-- You cannot opt out of cloud notifications (WNS)
+- You can't opt out of cloud notifications (WNS)
 
 - For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.
 
@@ -65,7 +46,14 @@ The supported properties you can query are listed in the **Properties** section.
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> You can now use Copilot in Intune (public preview) to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+> You can now use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+
+Best practices:
+
+- Consider how device queries can be used to help your L1/L2 engineers quicker resolve support tickets, while minimizing disruption to users.
+- Review support processes and tasks that normally require a remote control session to the end user's device. Check if these can be completed using single device query – for example – checking a running service, checking a registry key value for an application configuration, checking an application version, or reporting on top processes by CPU consumption.
+- Create saved queries for recurring investigations in your ITSM knowledge base, for L1/L2 engineers to quickly access.
+- Update processes to use remote actions for quick issue resolution. Either reboot a device, or run a remediation script to resolve a known issue.
 
 ## Remote device actions
 
@@ -84,21 +72,21 @@ The following list includes supported device actions:
 |[Windows Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|Restores a device to its original settings and removes personal files, apps, and settings.|
 |[BitLocker key rotation](../intune-service/protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)|Changes the BitLocker recovery key for a device and uploads the new key to Intune.|
 |[Collect diagnostics](../intune-service/remote-actions/collect-diagnostics.md)|Collects diagnostic logs from a device and uploads the logs to Intune.|
-|[Delete](../intune-service/remote-actions/devices-wipe.md)|Removes a device from Intune management, any company data is removed, and the device is retired.|
+|[Delete](../intune-service/remote-actions/device-wipe.md)|Removes a device from Intune management, any company data is removed, and the device is retired.|
 |[Fresh start](../intune-service/remote-actions/device-fresh-start.md)|Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed.|
 |[Full scan](../intune-service/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)|Initiates a full scan of the device by Microsoft Defender Antivirus.|
 |[Locate device](../intune-service/remote-actions/device-locate.md)|Shows the approximate location of a device on a map.|
 |[Pause ConfigRefresh](../intune-service/remote-actions/pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.|
 |[Quick scan](../intune-service/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)|Initiates a quick scan of the device by Microsoft Defender Antivirus.|
-|[Remote control with Team Viewer](../intune-service/remote-actions/teamviewer-support.md)|Allows you to remotely control a device using TeamViewer.|
+|[Remote control with Team Viewer](../intune-service/fundamentals/teamviewer-support.md)|Allows you to remotely control a device using TeamViewer.|
 |[Rename device](../intune-service/remote-actions/device-rename.md)|Changes the device name in Intune.|
 |[Restart](../intune-service/remote-actions/device-rename.md)|Restarts a device.|
-|[Retire](../intune-service/remote-actions/devices-wipe.md#retire)|Removes company data and settings from a device, and leaves personal data intact.|
+|[Retire](../intune-service/remote-actions/device-retire.md)|Removes company data and settings from a device, and leaves personal data intact.|
 |[Rotate Local admin password](../intune-service/protect/windows-laps-policy.md#manually-rotate-passwords)|Changes the local administrator password for a device and stores the password in Intune.|
 |[Synchronize device](../intune-service/remote-actions/device-sync.md)|Syncs a device with Intune to apply the latest policies and configurations.|
 |[Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)|Updates the security intelligence files for Microsoft Defender Antivirus.|
 |[Microsoft PIN reset service](/windows/security/identity-protection/hello-for-business/pin-reset)|Microsoft PIN reset service enables your users to recover a forgotten Windows Hello for Business PIN, and how to configure it.|
-|[Wipe](../intune/remote-actions/devices-wipe.md#wipe)|This action restores a device to its factory settings and removes all data and settings.|
+|[Wipe](../intune-service/remote-actions/device-wipe.md)|This action restores a device to its factory settings and removes all data and settings.|
 
 ## Supported Operators 
 
@@ -118,14 +106,14 @@ Table operators can be used filter, summarize, and transform data streams. Curre
 
 |Table operators|Description|
 |---|---|
-|count|Returns a table with a single record containing the number of records|
-|distinct|Produces a table with the distinct combination of the provided columns of the input table|
-|join|Merge the rows of two tables to form a new table by matching row for the same device|
-|order by|Sort the rows of the input table into order by one or more columns|
-|project|Select the columns to include, rename or drop, and insert new computed columns|
-|take|Return up to the specified number of rows|
-|top|Returns the first N records sorted by the specified columns|
-|where|Filters a table to the subset of rows that satisfy a predicate|
+|`count`|Returns a table with a single record containing the number of records|
+|`distinct`|Produces a table with the distinct combination of the provided columns of the input table|
+|`join`|Merge the rows of two tables to form a new table by matching row for the same device|
+|`order by`|Sort the rows of the input table into order by one or more columns|
+|`project`|Select the columns to include, rename or drop, and insert new computed columns|
+|`take`|Return up to the specified number of rows|
+|`top`|Returns the first N records sorted by the specified columns|
+|`where`|Filters a table to the subset of rows that satisfy a predicate|
 
 ### Scalar operators
 
@@ -133,44 +121,44 @@ The following table summarizes operators:
 
 |Operators|Description|Example
 |---|---|---|
-|==|Equal|`1 == 1, 'aBc' == 'AbC'`|
-|!=|Not Equal|`1 != 2, 'abc' != 'abcd'`|
-|< |Less|`1 < 2, 'abc' < 'DEF'`|
-|> |Greater|`2 > 1, 'xyz' > 'XYZ'`|
-|<=|Less or Equal|`1 <= 2, 'abc' <= 'abc'`|
-|>=|Greater or Equal|`2 >= 1, 'abc' >= 'ABC'`|
-|+|Add|`2 + 1, now() + 1d`|
-|-|Subtract|`2 - 1, now() - 1h`|
-|*|Multiply|`2 * 2`|
-|/|Divide|`2 / 1`|
-|%|Modulo|`2 % 1`|
-|like|Left Hand Side (LHS) contains a match for Right Hand Side (RHS)|`'abc' like '%B%'`|
-|contains|RHS occurs as a subsequence of LHS|`'abc' contains 'b'`|
-|!contains|RHS doesn't occur in LHS|`'team' !contains 'i'`|
-|startswith|RHS is an initial subsequence of LHS|`'team' startswith 'tea'`|
-|!startswith|RHS isn't an initial subsequence of LHS|`'abc' !startswith 'bc'`|
-|endswith|RHS is a closing subsequence of LHS|`'abc' endswith 'bc'`|
-|!endswith|RHS isn't a closing subsequence of LHS|`'abc' !endswith 'a'`|
-|and|True if and only if RHS and LHS are true|`(1 == 1) and (2 == 2)`|
-|or|True if and only if RHS or LHS is true|`(1 == 1) or (1 == 2)`|
+|`==`|Equal|`1 == 1, 'aBc' == 'AbC'`|
+|`!=`|Not Equal|`1 != 2, 'abc' != 'abcd'`|
+|`<`|Less|`1 < 2, 'abc' < 'DEF'`|
+|`>`|Greater|`2 > 1, 'xyz' > 'XYZ'`|
+|`<=`|Less or Equal|`1 <= 2, 'abc' <= 'abc'`|
+|`>=`|Greater or Equal|`2 >= 1, 'abc' >= 'ABC'`|
+|`+`|Add|`2 + 1, now() + 1d`|
+|`-`|Subtract|`2 - 1, now() - 1h`|
+|`*`|Multiply|`2 * 2`|
+|`/`|Divide|`2 / 1`|
+|`%`|Modulo|`2 % 1`|
+|`like`|Left Hand Side (LHS) contains a match for Right Hand Side (RHS)|`'abc' like '%B%'`|
+|`contains`|RHS occurs as a subsequence of LHS|`'abc' contains 'b'`|
+|`!contains`|RHS doesn't occur in LHS|`'team' !contains 'i'`|
+|`startswith`|RHS is an initial subsequence of LHS|`'team' startswith 'tea'`|
+|`!startswith`|RHS isn't an initial subsequence of LHS|`'abc' !startswith 'bc'`|
+|`endswith`|RHS is a closing subsequence of LHS|`'abc' endswith 'bc'`|
+|`!endswith`|RHS isn't a closing subsequence of LHS|`'abc' !endswith 'a'`|
+|`and`|True if and only if RHS and LHS are true|`(1 == 1) and (2 == 2)`|
+|`or`|True if and only if RHS or LHS is true|`(1 == 1) or (1 == 2)`|
 
 ### Aggregation functions
 
-Aggregation functions can be used with the summarize table operator to calculate summarized values. Currently the following aggregation functions are supported:
+Aggregation functions can be used with the `summarize` table operator to calculate summarized values. Currently the following aggregation functions are supported:
 
 |Function|Description|
 |---|---|
-|avg()|Returns the average of the values across the group|
-|count()|Returns a count of the records per summarization group|
-|countif()|Returns a count of rows for which Predicate evaluates to true|
-|dcount()|Returns the number of distinct values in the group|
-|max()|Returns the maximum value across the group|
-|maxif()|Starting in version 2107, you can use [maxif](/azure/data-explorer/kusto/query/maxif-aggfunction) with the summarize table operator. <!--9966861--> </br></br>Returns the maximum value across the group for which *Predicate* evaluates to `true`. |
-|min()|Returns the minimum value across the group|
-|minif()|Starting in version 2107, you can use [minif](/azure/data-explorer/kusto/query/minif-aggfunction) with the summarize table operator. <!--9966861--> </br></br>Returns the minimum value across the group for which *Predicate* evaluates to `true`. |
-|percentile()|Returns an estimate for the specified nearest-rank percentile of the population defined by Expr|
-|sum()|Returns the sum of the values across the group|
-|sumif()|Returns a sum of Expr for which Predicate evaluates to true|
+|`avg()`|Returns the average of the values across the group|
+|`count()`|Returns a count of the records per summarization group|
+|`countif()`|Returns a count of rows for which Predicate evaluates to true|
+|`dcount()`|Returns the number of distinct values in the group|
+|`max()`|Returns the maximum value across the group|
+|`maxif()`|Starting in version 2107, you can use [`maxif`](/azure/data-explorer/kusto/query/maxif-aggfunction) with the `summarize` table operator. <!--9966861--> </br></br>Returns the maximum value across the group for which *Predicate* evaluates to `true`. |
+|`min()`|Returns the minimum value across the group|
+|`minif()`|Starting in version 2107, you can use [`minif`](/azure/data-explorer/kusto/query/minif-aggfunction) with the `summarize` table operator. <!--9966861--> </br></br>Returns the minimum value across the group for which *Predicate* evaluates to `true`. |
+|`percentile()`|Returns an estimate for the specified nearest-rank percentile of the population defined by Expr|
+|`sum()`|Returns the sum of the values across the group|
+|`sumif()`|Returns a sum of Expr for which Predicate evaluates to true|
 
 ### Scalar functions
 
@@ -178,20 +166,20 @@ Scalar functions can be used in expressions. Currently the following scalar func
 
 |Function|Description|
 |---|---|
-|ago()|Subtracts the given timespan from the current UTC clock time|
-|bin()|Rounds values down to many datetime multiple of a given bin size|
-|case()|Evaluates a list of predicates and returns the first result expression whose predicate is satisfied|
-|datetime_add()|Calculates a new datetime from a specified datepart multiplied by a specified amount, added to a specified datetime|
-|datetime_diff()|Calculates the difference between two date time values|
-|iif()|Evaluates the first argument and returns the value of either the second or third arguments depending on whether the predicate evaluated to true (second) or false (third)|
-|indexof()|Function reports the zero-based index of the first occurrence of a specified string within input string|
-|isnotnull()|Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a non-null value|
-|isnull()|Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a null value|
-|now()|Returns the current UTC clock time|
-|strcat()|Concatenates between 1 and 64 arguments|
-|strlen()|Returns the length, in characters, of the input string|
-|substring()|Extracts a substring from a source string starting from some index to the end of the string|
-|tostring()|Converts input to a string representation|
+|`ago()`|Subtracts the given timespan from the current UTC clock time|
+|`bin()`|Rounds values down to many datetime multiple of a given bin size|
+|`case()`|Evaluates a list of predicates and returns the first result expression whose predicate is satisfied|
+|`datetime_add()`|Calculates a new datetime from a specified datepart multiplied by a specified amount, added to a specified datetime|
+|`datetime_diff()`|Calculates the difference between two date time values|
+|`iif()`|Evaluates the first argument and returns the value of either the second or third arguments depending on whether the predicate evaluated to true (second) or false (third)|
+|`indexof()`|Function reports the zero-based index of the first occurrence of a specified string within input string|
+|`isnotnull()`|Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a non-null value|
+|`isnull()`|Evaluates its sole argument and returns a Boolean value indicating if the argument evaluates to a null value|
+|`now()`|Returns the current UTC clock time|
+|`strcat()`|Concatenates between 1 and 64 arguments|
+|`strlen()`|Returns the length, in characters, of the input string|
+|`substring()`|Extracts a substring from a source string starting from some index to the end of the string|
+|`tostring()`|Converts input to a string representation|
 
 ## Supported Properties
 
@@ -249,14 +237,14 @@ Device query supports the following entities. To learn more about what propertie
 
 - The now() scalar function doesn't support the offset parameter.
 
-- The !like operator is not supported.
+- The `!like` operator isn't supported.
 
 - The input window auto-recommends double quotes when only single quotes are supported on the following operators:
-  - contains
-  - !contains
-  - startswith
-  - !startswith
-  - endswith
+  - `contains`
+  - `!contains`
+  - `startswith`
+  - `!startswith`
+  - `endswith`
 
 - The WindowsRegistry entity fails to return the RegistryKey for root.
 
@@ -276,9 +264,16 @@ Device query supports the following entities. To learn more about what propertie
 
 - If a file is currently in use on the machine, then FileInfo queries returns an error.
 
-- If the end user has admin access to the device, they might be able to change client-based information that show up in the query results. For example, OS version and registry.
+- If the end user has admin access to the device, they might be able to change client-based information returned in query results. For example, OS version and registry.
+
+---
 
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Device Query for multiple devices >](device-query-multiple-devices.md)
+
+---
 
 For more information, go to:
 

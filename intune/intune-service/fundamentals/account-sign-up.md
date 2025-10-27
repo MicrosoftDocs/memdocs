@@ -1,30 +1,11 @@
 ---
-# required metadata
-
 title: Sign up or sign in to Microsoft Intune
 description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
-keywords:
-author: brenduns
-ms.author: brenduns
-manager: laurawi
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 05/21/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -55,6 +36,8 @@ Securing access to your organization is a foundational security step. We recomme
 The Intune Administrator is a privileged account. The permissions this role includes are applicable only within the scope of Microsoft Intune.
 
 In addition to configuring Intune, an Intune Administrator can use the Intune admin center to assign other user accounts to the specific Intune built-in roles that they require to complete their regular day-to-day administrative tasks. Use of lesser-privileged roles to manage daily tasks follows the principle of *least privileged* access and reduces risk.
+
+For enhanced security, consider enabling [Multi Admin Approval](../fundamentals/multi-admin-approval.md) for role-based access control changes. [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
 
 For more information, see [Best practices](/entra/identity/role-based-access-control/best-practices) for Microsoft Entra roles, and [Role-based access control](../fundamentals/role-based-access-control.md) (RBAC) with Microsoft Intune.
 

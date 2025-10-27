@@ -1,42 +1,21 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for iOS developer guide - Plan the integration
+title: Microsoft Intune App SDK for iOS Developer Guide - Plan the Integration
 description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. Plan the integration.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: has-adal-ref
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
 
-# Intune App SDK for iOS - Plan the integration
+# Intune App SDK for iOS - Plan the Integration
 
 The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. A MAM-enabled application is one that is integrated with the Intune App SDK. IT administrators can deploy app protection policies to your mobile app when Intune actively manages the app.
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the [Intune App SDK](https://github.com/microsoftconnect). We recommend subscribing to the [Intune App SDK](https://github.com/microsoftconnect) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
-> 
+>
 > Plan to take mandatory Intune App SDK updates prior to every major OS release to ensure your app continues to run smoothly as OS updates can cause breaking changes. If you do not update to the latest version prior to a major OS release, you might run the risk of encountering a breaking change and/or being unable to apply app protection policies to your app.
 
 ## Stage 1: Plan the Integration
@@ -55,7 +34,7 @@ This guide is for iOS developers who are looking to add support for Microsoft In
 Before you start integrating the Intune App SDK into your iOS application, take a moment to familiarize yourself with Microsoft Intune's Mobile Application Management solution:
 
 - [What is Microsoft Intune app management] provides a high level overview of MAM capabilities on different platforms
-  and where to find these features in the Microsoft Intune admin center.  
+  and where to find these features in the Microsoft Intune admin center.
 - [Intune App SDK overview] goes one layer deeper, describing the current features of the SDK.
 - [Get Started with Intune App SDK Guide](app-sdk-get-started.md) explains how to prepare for integration on each supported platform.
 - [iOS app protection policy settings] describe each iOS setting in detail.
@@ -66,7 +45,7 @@ Before you start integrating the Intune App SDK into your iOS application, take 
 ## Key Decisions for SDK integration
 
 ### Do I need to register my application with the Microsoft identity platform?
- 
+
 Yes, all apps integrating with the Intune SDK are required to register with the Microsoft identity platform. Please follow the steps in [Quickstart: Register an app in the Microsoft identity platform - Microsoft identity platform].
 
 ### Do I have access to my application's source code?
@@ -147,8 +126,8 @@ To create a new account:
 Before you test app protection policy settings within your own application, it's helpful to familiarize yourself with how these settings behave inside other SDK-integrated applications.
 
 > [!TIP]
-> If your app isn't listed in the Microsoft Intune admin center, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.  
-> You must target your app with app protection policy and deploy the policy to a user to successfully test your integration.  
+> If your app isn't listed in the Microsoft Intune admin center, you can target it with a policy by selecting the **more apps** option and providing the package name in the text box.
+> You must target your app with app protection policy and deploy the policy to a user to successfully test your integration.
 > Even if policy is targeted and deployed, your app will not properly enforce policies until it has successfully integrated the SDK.
 
 ## Exit Criteria
