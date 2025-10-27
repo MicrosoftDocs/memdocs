@@ -148,7 +148,7 @@ You can now [enroll your dedicated devices](android-dedicated-devices-fully-mana
 
 > [!NOTE]
 > The Microsoft Intune app will be automatically installed during enrollment of a dedicated device.  This app is required for enrollment and cannot be uninstalled.
-> The Microsoft Authenticator app will be automatically installed during enrollment of a dedicated device when using the token type **Corporate-owned dedicated device with Microsoft Entra ID shared mode**. This app is required for this enrollment method and cannot be uninstalled.
+> Microsoft Authenticator and Company Portal will be automatically installed during enrollment of a dedicated device when using the token type **Corporate-owned dedicated device with Microsoft Entra ID shared mode**. These apps are required for this enrollment method and cannot be uninstalled.
 
 ## Managing apps on Android Enterprise dedicated devices
 
