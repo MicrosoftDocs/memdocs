@@ -36,22 +36,32 @@ This feature applies to:
 
 ## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > This feature supports the following platforms:
 >
 > - Windows
 > - Devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > To configure this policy and start collecting inventory data from devices, use an account with at least one of the following roles:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 > - A [custom role](custom-settings-configure.md) that includes the **Device Configurations** > **Create** permission and the **Organization** > **Read** permission.
 > - For a user to view collected data about devices, they must have the **Managed Devices** > **Read** permission. This permission is included in many built-in roles. For a list, see [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md).
+:::column-end:::
+:::row-end:::
 
 ## Create the policy and view the collected data
 
