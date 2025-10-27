@@ -25,11 +25,15 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 ::: zone-end
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Android device administrator
@@ -38,9 +42,14 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 > - macOS
 > - Windows
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]

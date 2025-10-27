@@ -1,7 +1,7 @@
 ---
 title: "Intune Remote Action: Rotate FileVault Recovery Key"
 description: Learn how to rotate the FileVault recovery key with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
@@ -11,16 +11,20 @@ The *rotate FileVault recovery key* remote action in Microsoft Intune allows IT 
 
 This action is useful when the current key is lost, potentially exposed, or needs to be refreshed for compliance or support reasons.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - macOS (corporate-owned)
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
@@ -30,9 +34,14 @@ This action is useful when the current key is lost, potentially exposed, or need
 
 For more information, see Use [FileVault disk encryption for macOS with Intune][LEARN-1].
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]

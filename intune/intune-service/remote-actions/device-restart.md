@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Restart"
 description: Learn how to restart managed devices with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
@@ -13,11 +13,15 @@ The *restart* remote action triggers a restart (usually begins within 5 minutes)
 > [!IMPORTANT]
 > The restart depends on the device receiving a push notification. If the device is offline or push notifications are blocked, the restart is delayed until connectivity resumes.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 > - Android Enterprise corporate-owned Fully Managed (COBO)
 > - Android Enterprise corporate-owned Dedicated (COSU)
@@ -33,9 +37,14 @@ The *restart* remote action triggers a restart (usually begins within 5 minutes)
 > Restart is only available for kiosk devices and managed guest session devices. The restart fails on any other type of device. For more information, see [Kiosk apps, managed guest sessions, and smart cards](https://support.google.com/chrome/a/topic/6128720?) (opens Google Chrome Enterprise Help).
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]

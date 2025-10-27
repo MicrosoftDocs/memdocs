@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Reset Passcode"
 description: Learn how to reset a passcode with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
@@ -9,11 +9,15 @@ ms.topic: how-to
 
 With the *reset passcode* action in Microsoft Intune, you can remotely reset a device passcode to help users regain access to their devices without requiring a full device wipe. This remote action is especially useful when a user forgets their passcode or is locked out of their device or work profile.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Android Enterprise corporate-owned dedicated (COSU)
@@ -22,9 +26,14 @@ With the *reset passcode* action in Microsoft Intune, you can remotely reset a d
 > - Android Enterprise personally-owned work profile (BYOD)
 > - Android Open Source Project (AOSP)
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]

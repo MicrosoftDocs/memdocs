@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Find lost devices"
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: shsivaku
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
@@ -13,11 +13,15 @@ The *locate device* device remote action in Microsoft Intune enables IT administ
 
 Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or [display custom messages](device-lost-mode.md).
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
@@ -25,7 +29,7 @@ Depending on the platform, Intune can also report the last known location if the
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 > - Windows
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 ::: zone pivot="ios"
 
@@ -76,9 +80,14 @@ Before you can use the locate functionality, you must configure your devices to 
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]

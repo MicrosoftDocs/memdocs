@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Remove Apps and Configuration"
 description: Learn how apps and configurations can be removed temporarily, then restored automatically or manually using the Remove apps and configuration device action with Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: Jack Poehlman
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
@@ -11,20 +11,29 @@ zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
 
 Use the *remove apps and configuration* remote action in Intune to uninstall apps and remove configuration profiles from a device. This action is useful for troubleshooting or temporarily removing settings that might be causing issues.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To execute this remote action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]

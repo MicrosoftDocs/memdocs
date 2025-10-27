@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Play Lost Mode Sound"
 description: Learn how to use the Play lost device sound remote action in Microsoft Intune to trigger an audible alert on a lost, stolen, or misplaced device—helping users locate it quickly and securely.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: shsivaku
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
@@ -16,18 +16,22 @@ Microsoft Intune provides platform-specific remote actions to help locate a lost
 
 These remote actions are especially useful in environments where devices are shared or frequently moved—such as classrooms, labs, or enterprise workspaces. Playing a sound helps users or administrators locate the device quickly and securely, supporting recovery efforts when a device is lost.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 ::: zone pivot="ios"
 
@@ -46,9 +50,14 @@ These remote actions are especially useful in environments where devices are sha
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]

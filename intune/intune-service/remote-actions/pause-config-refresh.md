@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Pause Config Refresh"
 description: Learn how to temporarily pause policy enforcement on Windows 11 devices using Intune's Pause Config Refresh remote action to support troubleshooting and manual changes.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: Mike Danoski
 ---
@@ -14,16 +14,20 @@ Config Refresh is a Windows feature that periodically reapplies policy settings 
 
 With the pause Config Refresh action, IT admins can suspend policy refresh for a specified duration—up to 1,440 minutes. After the pause period ends, Config Refresh resumes automatically.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Windows 11
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 > [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
@@ -32,9 +36,14 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 
 To learn more, see [Config Refresh][LEARN-1].
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Intune Administrator][ENT-R1]
