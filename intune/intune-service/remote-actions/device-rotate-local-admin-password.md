@@ -22,9 +22,11 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 > This remote action supports the following platforms:
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
 > - Windows (corporate-owned)
-
+:::row:::
+:::column span="1":::
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
-
+:::column-end:::
+:::column span="3":::
 ::: zone pivot="windows"
 
 > [!div class="checklist"]
@@ -55,13 +57,15 @@ For more information, see [Configure support for macOS ADE local account with LA
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Rotate Local Admin Password**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## How to rotate the local admin password from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

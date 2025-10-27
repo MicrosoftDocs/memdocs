@@ -33,7 +33,8 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To execute this remote action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -41,7 +42,8 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Ramote tasks/Change assignments**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 #### Admin permissions and scope tags for Remove apps and configuration
 
 Admins can use the **Remove apps and configuration** remote action to:

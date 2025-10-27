@@ -30,9 +30,13 @@ These remote actions are especially useful in environments where devices are sha
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
-
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="1":::
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
-
+:::column-end:::
+:::column span="3":::
 ::: zone pivot="ios"
 
 > [!div class="checklist"]
@@ -57,7 +61,8 @@ These remote actions are especially useful in environments where devices are sha
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -65,7 +70,8 @@ These remote actions are especially useful in environments where devices are sha
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## How to play lost mode sound from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

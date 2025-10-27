@@ -39,7 +39,8 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -47,7 +48,8 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Wipe**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ::: zone pivot="macos,android"
 ## Before wiping a device
 ::: zone-end

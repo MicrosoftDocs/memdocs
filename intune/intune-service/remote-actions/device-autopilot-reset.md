@@ -37,6 +37,9 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
+:::column-end:::
+:::column span="3":::
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -44,6 +47,9 @@ For more information, see [Windows Autopilot Reset](/autopilot/windows-autopilot
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Wipe**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+
+:::column-end:::
+:::row-end:::
 
 ### How to use Autopilot reset from the Intune admin center
 

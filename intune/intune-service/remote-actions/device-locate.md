@@ -28,9 +28,14 @@ Depending on the platform, Intune can also report the last known location if the
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 > - Windows
+:::column-end:::
+:::row-end:::
 
+:::row:::
+:::column span="1":::
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
-
+:::column-end:::
+:::column span="3":::
 ::: zone pivot="ios"
 
 > [!div class="checklist"]
@@ -87,7 +92,8 @@ Before you can use the locate functionality, you must configure your devices to 
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -95,7 +101,8 @@ Before you can use the locate functionality, you must configure your devices to 
 > - [Custom role][INT-RC] that includes:
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## Locate a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

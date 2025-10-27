@@ -39,7 +39,8 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To execute this remote action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -47,7 +48,8 @@ Chrome Enterprise and the Google Admin console refer to devices in lost mode as 
 > - [Custom role][INT-RC] that includes:
 >   - The permissions **Remote tasks/Enable lost mode**, **Remote tasks/Disable lost mode**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## How to enable Lost Mode from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

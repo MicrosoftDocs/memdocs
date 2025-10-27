@@ -39,7 +39,8 @@ The *remote lock* device action locks a managed device so the user must enter th
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To execute this remote action, at a minimum, use an account that has one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -48,7 +49,8 @@ The *remote lock* device action locks a managed device so the user must enter th
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Remote lock**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## How to remote lock a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

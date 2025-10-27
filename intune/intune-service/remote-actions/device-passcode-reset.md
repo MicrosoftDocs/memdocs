@@ -33,7 +33,8 @@ With the *reset passcode* action in Microsoft Intune, you can remotely reset a d
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -41,7 +42,8 @@ With the *reset passcode* action in Microsoft Intune, you can remotely reset a d
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote Tasks/Reset Passcode**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## Passcode reset types
 
 When working with Android devices, it's important to understand the two types of passcode resets available:

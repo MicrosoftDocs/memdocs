@@ -29,7 +29,8 @@ The *Fresh Start* remote action removes apps from managed Windows devices, helpi
 :::column span="1":::
 
 [!INCLUDE [rbac](../../includes/requirements/rbac.md)]
-
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -38,7 +39,8 @@ The *Fresh Start* remote action removes apps from managed Windows devices, helpi
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Clean PC**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## How to execute Fresh Start from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
