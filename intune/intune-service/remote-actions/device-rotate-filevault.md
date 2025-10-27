@@ -28,7 +28,6 @@ This action is useful when the current key is lost, potentially exposed, or need
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Are encrypted with FileVault using an Intune disk encryption policy.

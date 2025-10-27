@@ -44,7 +44,6 @@ You can send notifications to individual devices or to users in groups. Custom n
 
 ::: zone pivot="android"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - The Company Portal app or Microsoft Intune app is installed.
@@ -53,7 +52,6 @@ You can send notifications to individual devices or to users in groups. Custom n
 ::: zone-end
 ::: zone pivot="ios"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - The Company Portal app is installed.

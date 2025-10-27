@@ -39,7 +39,6 @@ These remote actions are especially useful in environments where devices are sha
 :::column span="3":::
 ::: zone pivot="ios"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Enable [Lost Mode](device-lost-mode.md)
@@ -47,7 +46,6 @@ These remote actions are especially useful in environments where devices are sha
 ::: zone-end
 
 ::: zone pivot="android"
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Intune app is installed.

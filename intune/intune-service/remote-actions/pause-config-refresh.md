@@ -33,12 +33,11 @@ With the pause Config Refresh action, IT admins can suspend policy refresh for a
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Config Refresh is enabled.
-
-To learn more, see [Config Refresh][LEARN-1].
+>
+> To learn more, see [Config Refresh][LEARN-1].
 
 :::column-end:::
 :::row-end:::

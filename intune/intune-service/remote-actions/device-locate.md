@@ -38,7 +38,6 @@ Depending on the platform, Intune can also report the last known location if the
 :::column span="3":::
 ::: zone pivot="ios"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Enable [Lost Mode](device-lost-mode.md)
@@ -47,23 +46,22 @@ Depending on the platform, Intune can also report the last known location if the
 
 ::: zone pivot="android"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Location services must be turned on.
 > - Intune app is installed.
-
+>
 > **Fully Managed Devices**:
 > - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
-
+>
 > **Corporate-Owned Work Profile Devices**:
 >
 > - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
 > - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
-
+>
 > **Dedicated Devices**:
 > - The **Locate Device** feature is enabled by default, unless explicitly blocked with a device restriction profile.
-
+>
 > [!NOTE]
 > When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 

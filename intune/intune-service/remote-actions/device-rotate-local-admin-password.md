@@ -29,7 +29,6 @@ The *rotate local admin password* remote action in Microsoft Intune lets IT admi
 :::column span="3":::
 ::: zone pivot="windows"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Are Microsoft Entra joined or Hybrid Entra joined.
@@ -41,7 +40,6 @@ For more information, see [What is Windows LAPS?][LEARN-1].
 
 ::: zone pivot="macos"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - The local admin account must be configured in the ADE profile before enrollment.
