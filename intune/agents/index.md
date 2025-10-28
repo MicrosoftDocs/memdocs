@@ -21,16 +21,6 @@ Built on Microsoft Security Copilot's generative AI and automation capabilities,
 The following agents are available in Intune:
 
 :::row:::
-    :::column:::
-#### Vulnerability remediation agent
-
-:::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
-
-The *vulnerability remediation agent* uses Microsoft Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
-
-> [!div class="nextstepaction"]
-> [Learn more](vulnerability-remediation-agent.md)
-    :::column-end:::
 
     :::column:::
 #### Approver agent
@@ -67,5 +57,15 @@ The *policy agent* translates complex regulatory standards into actionable Intun
 
 > [!div class="nextstepaction"]
 > [Learn more](policy-agent.md)
-    :::column-end:::  
+    :::column-end:::
+    :::column:::
+#### Vulnerability remediation agent
+
+:::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
+
+The *vulnerability remediation agent* uses Microsoft Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
+
+> [!div class="nextstepaction"]
+> [Learn more](vulnerability-remediation-agent.md)
+    :::column-end:::
 :::row-end:::
