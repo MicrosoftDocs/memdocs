@@ -27,7 +27,7 @@ Settings Catalog policies provide deep device-level control for Microsoft Edge b
 Settings Catalog for Windows provides comprehensive browser configuration with progressive security levels aligned with NIST, DISA STIG, and CISA frameworks.
 
 > **Microsoft Documentation:**
-> - [Settings Catalog Overview](../../configuration/settings-catalog.md)
+> - [Settings Catalog Overview](../configuration/settings-catalog.md)
 > - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-policies)
 > - [Microsoft Edge Update Policies](/deployedge/microsoft-edge-update-policies)
 
@@ -183,7 +183,7 @@ Level 3 provides maximum security with URL allowlisting and Application Guard is
 Settings Catalog for macOS provides foundational browser security for enrolled Mac devices.
 
 > **Microsoft Documentation:**
-> - [Settings Catalog for macOS](../../configuration/settings-catalog.md)
+> - [Settings Catalog for macOS](../configuration/settings-catalog.md)
 > - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-policies)
 
 > [!IMPORTANT]

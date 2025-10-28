@@ -26,9 +26,9 @@ The Microsoft Edge security baseline provides a preconfigured set of 23 security
 The Microsoft Edge security baseline includes 23 preconfigured settings that address core browser security requirements. Deploying the baseline provides immediate security hardening without requiring individual setting configuration.
 
 > **Microsoft Documentation:**
-> - [Security Baselines Overview](../../protect/security-baselines.md)
-> - [Use security baselines to configure Windows devices](../../protect/security-baselines-configure.md)
-> - [Microsoft Edge Security Baseline](../../protect/security-baseline-settings-edge.md)
+> - [Security Baselines Overview](../protect/security-baselines.md)
+> - [Use security baselines to configure Windows devices](../protect/security-baselines-configure.md)
+> - [Microsoft Edge Security Baseline](../protect/security-baseline-settings-edge.md)
 
 **Prerequisites:**
 - Windows 10/11 Enterprise
