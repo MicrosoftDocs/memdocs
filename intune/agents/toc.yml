@@ -1,46 +1,44 @@
 items:
-- name: Security Copilot Agents
+- name: Overview
+  href: index.md
+  displayName: security copilot agent
+- name: Current to merge 👆
+  href: security-copilot-agents-intune.md
+- name: Approver agent
   items:
   - name: Overview
-    href: index.md
-    displayName: security copilot agent
-  - name: 🔴 Current to merge 👆
-    href: security-copilot-agents-intune.md
-  - name: Approver agent
-    items:
-    - name: Overview
-      href: approver-agent.md
-      displayName: approver agent
-    - name: Configure the agent
-      href: approver-agent-configure.md
-      displayName: approver agent
-    - name: Use the agent
-      href: approver-agent-use.md
-      displayName: approver agent
-  - name: Device lifecycle agent
-    items:
-    - name: Overview
-      href: device-lifecycle-agent.md
-      displayName: device lifecycle agent
-    - name: Configure the agent
-      href: device-lifecycle-agent-configure.md
-      displayName: device lifecycle agent
-    - name: Use the agent
-      href: device-lifecycle-agent-use.md
-      displayName: device lifecycle agent
-  - name: Policy agent
-    items:
-    - name: Overview
-      href: policy-agent.md
-      displayName: policy agent
-    - name: Configure the agent
-      href: policy-agent-configure.md
-      displayName: policy agent
-    - name: Use the agent
-      href: policy-agent-use.md
-      displayName: policy agent
-  - name: Vulnerability remediation agent
-    items:
-    - name: Overview
-      href: vulnerability-remediation-agent.md
-      displayName: vulnerability remediation agent
+    href: approver-agent.md
+    displayName: approver agent
+  - name: Configure the agent
+    href: approver-agent-configure.md
+    displayName: approver agent
+  - name: Use the agent
+    href: approver-agent-use.md
+    displayName: approver agent
+- name: Device lifecycle agent
+  items:
+  - name: Overview
+    href: device-lifecycle-agent.md
+    displayName: device lifecycle agent
+  - name: Configure the agent
+    href: device-lifecycle-agent-configure.md
+    displayName: device lifecycle agent
+  - name: Use the agent
+    href: device-lifecycle-agent-use.md
+    displayName: device lifecycle agent
+- name: Policy agent
+  items:
+  - name: Overview
+    href: policy-agent.md
+    displayName: policy agent
+  - name: Configure the agent
+    href: policy-agent-configure.md
+    displayName: policy agent
+  - name: Use the agent
+    href: policy-agent-use.md
+    displayName: policy agent
+- name: Vulnerability remediation agent
+  items:
+  - name: Overview
+    href: vulnerability-remediation-agent.md
+    displayName: vulnerability remediation agent
