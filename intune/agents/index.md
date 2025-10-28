@@ -21,8 +21,7 @@ Built on Microsoft Security Copilot's generative AI and automation capabilities,
 The following agents are available in Intune:
 
 :::row:::
-
-    :::column:::
+:::column:::
 #### Approver agent
 
 :::image type="icon" source="icons/approver-agent.svg" border="false":::
@@ -31,12 +30,7 @@ The *approver agent* evaluates the effect of approval requests in Intune and mak
 
 > [!div class="nextstepaction"]
 > [Learn more](approver-agent.md)
-    :::column-end:::
-    
-:::row-end:::
-
-
-:::row:::
+:::column-end:::
 :::column:::
 #### Device lifecycle agent
 
@@ -46,9 +40,11 @@ The *device lifecycle agent* can find devices that were removed from Intune, but
 
 > [!div class="nextstepaction"]
 > [Learn more](device-lifecycle-agent.md)
-    :::column-end:::
+:::column-end:::
+:::row-end:::
 
-    :::column:::
+:::row:::
+:::column:::
 #### Policy agent
 
 :::image type="icon" source="icons/policy-agent.svg" border="false":::
@@ -57,8 +53,8 @@ The *policy agent* translates complex regulatory standards into actionable Intun
 
 > [!div class="nextstepaction"]
 > [Learn more](policy-agent.md)
-    :::column-end:::
-    :::column:::
+:::column-end:::
+:::column:::
 #### Vulnerability remediation agent
 
 :::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
@@ -67,5 +63,5 @@ The *vulnerability remediation agent* uses Microsoft Defender data to monitor vu
 
 > [!div class="nextstepaction"]
 > [Learn more](vulnerability-remediation-agent.md)
-    :::column-end:::
+:::column-end:::
 :::row-end:::
