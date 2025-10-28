@@ -1,6 +1,6 @@
 ---
-title: Use the Device Lifecycle Agent
-description: Learn how to use the device lifecycle agent in Microsoft Intune to identify and offboard devices that are no longer in use.
+title: Use the Device Offboarding Agent
+description: Learn how to use the device offboarding agent in Microsoft Intune to identify and offboard devices that are no longer in use.
 ms.date: 10/15/2025
 ms.topic: how-to
 author: paolomatarazzo
@@ -8,15 +8,15 @@ ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 
-# Use the device lifecycle agent
+# Use the device offboarding agent
 
-This article describes how to use the Device Lifecycle Agent in Microsoft Intune to identify and manage devices that were removed from Intune but might still exist in Microsoft Entra.
+This article describes how to use the Device offboarding Agent in Microsoft Intune to identify and manage devices that were removed from Intune but might still exist in Microsoft Entra.
 
 Different prompts can be used to get different results from the agent. The article includes sample prompts and responses to illustrate how the agent can assist in offboarding devices.
 
 ## Prerequisites
 
-Before you get started, ensure you meet the requirementts listed in the overview article: [Device lifecycle agent overview](device-lifecycle-agent.md). The following additional prerequisite are required to use the agent.
+Before you get started, ensure you meet the requirementts listed in the overview article: [Device offboarding agent overview](device-offboarding-agent.md). The following additional prerequisite are required to use the agent.
 
 :::row:::
 :::column span="1":::
@@ -40,9 +40,9 @@ Before you get started, ensure you meet the requirementts listed in the overview
 
 ## Agent action: run
 
-To manually run the Device Lifecycle Agent:
+To manually run the device offboarding agent:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device offboarding Agent (preview)**.
 1. Select **Run**.  
 
 When an agent run starts, the agent runs until it completes its evaluation. It can't be stopped or paused. 
@@ -67,7 +67,7 @@ Factors:
 - Conditional access limited to user-based policies only.
 ```
 
-## Device Lifecycle Agent logs 
+## Device offboarding agent logs 
 
 All agent management, create, delete, run, and any permission failures are available in Security Copilot logs. Logging of which devices were offboarded or when a recommended actions were complete aren't available. Instead, use the options to mark a suggestion as complete.  
 

@@ -15,17 +15,17 @@ items:
   - name: Use the agent
     href: approver-agent-use.md
     displayName: approver agent
-- name: Device lifecycle agent
+- name: Device offboarding agent
   items:
   - name: Overview
-    href: device-lifecycle-agent.md
-    displayName: device lifecycle agent
+    href: device-offboarding-agent.md
+    displayName: device offboarding agent
   - name: Configure the agent
-    href: device-lifecycle-agent-configure.md
-    displayName: device lifecycle agent
+    href: device-offboarding-agent-configure.md
+    displayName: device offboarding agent
   - name: Use the agent
-    href: device-lifecycle-agent-use.md
-    displayName: device lifecycle agent
+    href: device-offboarding-agent-use.md
+    displayName: device offboarding agent
 - name: Policy agent
   items:
   - name: Overview

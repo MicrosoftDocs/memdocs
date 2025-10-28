@@ -1,6 +1,6 @@
 ---
-title: Device Lifecycle Agent Overview
-description: Learn about the device lifecycle agent in Microsoft Intune, its prerequisites, and how it works.
+title: Device Offboarding Agent Overview
+description: Learn about the device offboarding agent in Microsoft Intune, its prerequisites, and how it works.
 ms.date: 10/15/2025
 ms.topic: overview
 author: paolomatarazzo
@@ -8,9 +8,9 @@ ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 
-# Device lifecycle agent overview
+# Device offboarding agent overview
 
-The Device Lifecycle Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Lifecycle Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
+The device offboarding agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. The device offboarding agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
 
 ## Prerequisites
 
@@ -69,8 +69,8 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 :::column span="3":::
 > There are different role requirements depending on the action being taken with the agent. For details, see:
 >
-> - [Configure the device lifecycle agent](device-lifecycle-agent-configure.md)
-> - [Use the device lifecycle agent](device-lifecycle-agent-use.md)
+> - [Configure the device offboarding agent](device-offboarding-agent-configure.md)
+> - [Use the device offboarding agent](device-offboarding-agent-use.md)
 
 :::column-end:::
 :::row-end:::
@@ -85,7 +85,7 @@ Recommendations: Flags devices for offboarding, with suggested actions and ratio
 
 Admin Approval: No changes are made without explicit admin approval. 
 
-Assisted Remediation: Upon approval, Device Lifecycle Agent disables Entra ID objects and guides further steps (e.g., Defender offboarding). 
+Assisted Remediation: Upon approval, the device offboarding agent disables Entra ID objects and guides further steps (e.g., Defender offboarding). 
 
 <!--
 Workspace: This agent will run in the same preferred workspace you selected for Security Copilot.
@@ -95,13 +95,13 @@ Select **Start agent** to begin the setup process.-->
 
 ### Agent identity 
 
-By default, the device lifecycle agent runs under the identity and permissions of the admin account that is used to set up the agent.  
+By default, the device offboarding agent runs under the identity and permissions of the admin account that is used to set up the agent.  
 
 The agent behavior is limited to the permissions of the user identity that the agent runs under. 
 
 The agent persistently runs in the identity and permissions of the Intune admin account that is assigned as the agent's identity. 
 
-The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](device-lifecycle-agent-configure.md#renew-the-agent). 
+The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](device-offboarding-agent-configure.md#renew-the-agent). 
 
 Agent identity: the agent runs using the identity of the user who first set up the agent. Agent authentication expires after 90 days and needs to be renewed. Learn more about agent authentication.
 
@@ -116,8 +116,8 @@ Agent identity: the agent runs using the identity of the user who first set up t
 
 ## Next steps
 
-- [Configure the device lifecycle agent](device-lifecycle-agent-configure.md)
-- [Use the device lifecycle agent](device-lifecycle-agent-use.md)
+- [Configure the device offboarding agent](device-offboarding-agent-configure.md)
+- [Use the device offboarding agent](device-offboarding-agent-use.md)
 
 <!--links-->
 
