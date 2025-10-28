@@ -1,8 +1,11 @@
 ---
-title: "Device lifecycle agent: use"
+title: Use the Device Lifecycle Agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
+author: paolomatarazzo
+ms.author: paoloma
+ms.reviewer: rishitasarin
 ---
 
 # Use the device lifecycle agent

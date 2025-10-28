@@ -1,8 +1,11 @@
 ---
-title: Device lifecycle agent overview
-description: 
+title: Device Lifecycle Agent Overview
+description: Learn about the device lifecycle agent in Microsoft Intune, its prerequisites, and how it works.
 ms.date: 10/15/2025
 ms.topic: overview
+author: paolomatarazzo
+ms.author: paoloma
+ms.reviewer: rishitasarin
 ---
 
 # Device lifecycle agent overview

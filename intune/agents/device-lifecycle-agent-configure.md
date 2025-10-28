@@ -1,8 +1,11 @@
 ---
-title: Configure the device lifecycle agent
+title: Configure the Device Lifecycle Agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
+author: paolomatarazzo
+ms.author: paoloma
+ms.reviewer: rishitasarin
 ---
 
 # Configure the device lifecycle agent

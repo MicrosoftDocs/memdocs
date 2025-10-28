@@ -1,8 +1,11 @@
 ---
-title: Configure the approver agent
+title: Configure the Approver Agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
+author: brenduns
+ms.author: brenduns
+ms.reviewer: 
 ---
 
 # Configure the approver agent
