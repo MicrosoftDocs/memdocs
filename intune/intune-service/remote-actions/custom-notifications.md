@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Send Custom Notifications"
 description: Use Intune to create and send custom notifications to users of iOS/iPadOS and Android devices.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: petermt
 zone_pivot_groups: 22f7442d-9384-49c8-abff-aaa058b30589
@@ -16,21 +16,34 @@ You can send notifications to individual devices or to users in groups. Custom n
 - Informing users of schedule changes, like building closures due to weather.
 - Sending targeted messages to individual users, such as prompting a device restart to complete an update.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action is supported on the following platform:
 >
 > - Android Enterprise personally-owned work profile (BYOD)
 > - iOS/iPadOS
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+
+
+:::column-end:::
+:::column span="3":::
 
 ::: zone pivot="android"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - The Company Portal app or Microsoft Intune app is installed.
@@ -39,7 +52,6 @@ You can send notifications to individual devices or to users in groups. Custom n
 ::: zone-end
 ::: zone pivot="ios"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - The Company Portal app is installed.
@@ -47,9 +59,17 @@ You can send notifications to individual devices or to users in groups. Custom n
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -57,6 +77,9 @@ You can send notifications to individual devices or to users in groups. Custom n
 >   - The permission **Remote tasks/Send custom notifications**—to send notifications to devices
 >   - The permission **Organization/Update**—to send notifications to groups
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+
+:::column-end:::
+:::row-end:::
 
 ## How to send custom notifications from the Intune admin center
 

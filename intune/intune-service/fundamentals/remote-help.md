@@ -90,8 +90,7 @@ Use the interactive demos to explore Remote Help on macOS:
 - [macOS web app experience](https://regale.cloud/microsoft/play/1746/remote-help#/6/0)
 
 ### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
-
-For an overview and demo of Remote Help on Android, see [Remote Help for Android overview](https://www.youtube.com/watch?v=1mX4jv2b9mA).
+Check back in this space for demos and videos of Remote Help for Android.  
 
 ---
 
