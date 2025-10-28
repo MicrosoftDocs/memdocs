@@ -14,7 +14,7 @@ This article describes how to configure the device lifecycle agent in Microsoft 
 
 ## Prerequisites
 
-Before you get started, ensure you meet the requirementts listed in the overview article: [Device lifecycle agent overview](device-lifecycle-agent.md). The following additional prerequisite are required to configure the agent.
+Before you get started, ensure you meet the requirements listed in the overview article: [Device lifecycle agent overview](device-lifecycle-agent.md). The following additional prerequisite are required to configure the agent.
 
 :::row:::
 :::column span="1":::
@@ -34,11 +34,11 @@ Before you get started, ensure you meet the requirementts listed in the overview
  
 ## Enable the agent
 
-To enable the device lifecycle agent:
+To enable the device lifecycle agent, follow these steps:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
 1. Select **Set up Agent** to open the set-up pane.
-1. Review the details to ensure requirements are in place, and then select **Start agent**.
+1. Review the details to ensure requirements are in place, then select **Start agent**.
 
 The agent runs until it finishes and then displays its results in the device lifecycle agent pane.
 
@@ -46,36 +46,38 @@ The agent runs until it finishes and then displays its results in the device lif
 
 ## Explore the agent pane
 
-Once the agent is configured, you can manage it from the device lifecycle agent pane.
+After you configure the agent, you can manage it from the device lifecycle agent pane.
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**.
-  1. By default, the agent page opens to the **Overview** tab. On this tab, admins can view the suggestions of devices to offboard, drill in for more details and remediation steps.
-  1. The second available tab is **Suggestions**, which provides the full list of suggestions of devices to offboard, including the completed suggestions.  
-  1. The other available tab is **Settings**, which provides limited details about the agent's configuration.
+In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Lifecycle Agent (preview)**:
+- On the **Overview** tab, view the suggestions of devices to offboard, and get more details and remediation steps.
+- On the **Suggestions** tab, view the full list of suggestions of devices to offboard, including the completed suggestions.  
+- On the **Settings** tab, review details about the agent's configuration.
+
+To learn more about each tab, select the following tabs:
 
 # [**Overview**](#tab/overview)
 
-After the Device Lifecycle Agent completes a run, the Overview tab updates with the agents list of top suggestions of devices to offboard. The Overview tab only displays the "not started" and "in progress" suggestions.  
+After the Device Lifecycle Agent completes a run, the Overview tab updates with the agent's list of top suggestions for devices to offboard. The Overview tab only displays the suggestions that are *not started* or *in progress*.  
 
 The following information is available on this tab: 
 
 - The agent's availability and run status. 
-- Agent suggestions, which are the list of devices to offboard which are "not started" or "in progress" 
+- Agent suggestions, which are the list of devices to offboard that are *not started* or *in progress*. 
 
 # [**Suggestions**](#tab/suggestions)
 
-Agent suggestions are a list of the top devices to offboard identified based on the data from Microsoft Intune and Microsoft Entra.  
+Agent suggestions are a list of the top devices to offboard, identified based on data from Microsoft Intune and Microsoft Entra.  
 
 A suggestion displays the following details: 
 - Summary of the suggestions. 
-- Factors that were considered by the agent to suggest offboarding these devices.  
-- Details about the associated suggestions (number of devices to offboard, their ownership, and their platform) 
+- Factors that the agent considered when suggesting offboarding these devices.  
+- Details about the associated suggestions, including the number of devices to offboard, their ownership, and their platform. 
 - Recommended actions to offboard securely.  
 
 > [!IMPORTANT]
-> Follow the recommended actions in the order they are listed to prevent orphaned devices and ensure offboarding securely.  
+> Follow the recommended actions in the order they're listed to prevent orphaned devices and ensure secure offboarding.  
 
-After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the Manage Suggestions to complete. Marking a suggestion as complete doesn't trigger any device changes by the agent.  
+After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to complete. Marking a suggestion as complete doesn't trigger any device changes by the agent.  
 
 ### Activity 
 
@@ -83,16 +85,16 @@ This section tracks the current and past run activity of the agent.
 
 # [**Settings**](#tab/settings)
 
-Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs using the optional **Instructions** field.
+Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs by using the optional **Instructions** field.
 
 ### Custom instructions 
 
-With the **Instruction** field you can provide a prompt that influences how the agent runs. Common use cases include:
+With the **Instruction** field, you can provide a prompt that influences how the agent runs. Common use cases include:
 
 - Including or excluding specific object IDs
 - Setting thresholds for device activity
 
-For example, if your organization has executive devices that shouldn't be flagged for offboarding, you can use custom instructions to exclude them. Without this, the agent might detect identity mismatches on those devices and consume SCUs to suggest offboarding—even when it's not appropriate. Custom instructions help you prevent that by guiding the agent's logic based on your organizational needs.
+For example, if your organization has executive devices that you don't want to flag for offboarding, you can use custom instructions to exclude them. Without this exclusion, the agent might detect identity mismatches on those devices and consume SCUs to suggest offboarding—even when it's not appropriate. Custom instructions help you prevent that issue by guiding the agent's logic based on your organizational needs.
 
 Examples of custom instructions you can use:
 
@@ -127,6 +129,6 @@ Include only [device ID] in recommendations
 
 ## Next steps
 
-To learn how to use the agent after it's been configured, see [Use the device lifecycle agent](device-lifecycle-agent-use.md).
+To learn how to use the agent after you configure it, see [Use the device lifecycle agent](device-lifecycle-agent-use.md).
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

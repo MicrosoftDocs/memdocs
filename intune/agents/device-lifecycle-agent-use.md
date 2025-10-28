@@ -28,7 +28,7 @@ Before you get started, ensure you meet the requirementts listed in the overview
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
 >
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
-> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)\
+> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > 
 >   To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
 >
