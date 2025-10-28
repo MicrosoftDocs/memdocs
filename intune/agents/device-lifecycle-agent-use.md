@@ -1,6 +1,6 @@
 ---
 title: Use the Device Lifecycle Agent
-description: 
+description: Learn how to use the device lifecycle agent in Microsoft Intune to identify and offboard devices that are no longer in use.
 ms.date: 10/15/2025
 ms.topic: how-to
 author: paolomatarazzo

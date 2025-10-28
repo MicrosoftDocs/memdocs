@@ -1,6 +1,6 @@
 ---
 title: Configure the Device Lifecycle Agent
-description: 
+description: Learn how to configure the device lifecycle agent in Microsoft Intune to identify and offboard devices that are no longer in use.
 ms.date: 10/15/2025
 ms.topic: how-to
 author: paolomatarazzo
@@ -81,9 +81,7 @@ After an admin reviews and completes the recommended actions, they can self-atte
 
 ### Activity 
 
-This section tracks the current and past run activity of the agent.  
-
-###
+This section tracks the current and past run activity of the agent.
 
 # [**Settings**](#tab/settings)
 
