@@ -108,7 +108,7 @@ items:
     - name: Copilot in Windows 365 Cloud PCs
       href: /windows-365/enterprise/copilot-in-intune-for-windows365?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
     - name: Security Copilot agents in Microsoft Intune
-      href: ./copilot/security-copilot-agents-intune.md
+      href: ../agents/toc.yml
 
   - name: Intune Suite
     items:
