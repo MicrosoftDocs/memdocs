@@ -53,7 +53,7 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 > The agent supports devices managed by Intune across multiple platforms, including Windows, iOS/iPadOS, macOS, Android, and Linux.\
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
-> The agent doesn'o't support:
+> The agent doesn't support:
 > - Shared devices
 > - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones

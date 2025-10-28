@@ -29,7 +29,7 @@ The following agents are available in Intune:
 The *vulnerability remediation agent* uses Microsoft Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
 
 > [!div class="nextstepaction"]
-> [Learn more](approver-agent-configure.md)
+> [Learn more](vulnerability-remediation-agent.md)
     :::column-end:::
 
     :::column:::
@@ -40,7 +40,7 @@ The *vulnerability remediation agent* uses Microsoft Defender data to monitor vu
 The *approver agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take. 
 
 > [!div class="nextstepaction"]
-> [Learn more](approver-agent-configure.md)
+> [Learn more](approver-agent.md)
     :::column-end:::
     
 :::row-end:::
@@ -66,6 +66,6 @@ The *device lifecycle agent* can find devices that were removed from Intune, but
 The *policy agent* translates complex regulatory standards into actionable Intune settings. 
 
 > [!div class="nextstepaction"]
-> [Learn more](policy-agent-configure.md)
+> [Learn more](policy-agent.md)
     :::column-end:::  
 :::row-end:::

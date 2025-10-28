@@ -37,3 +37,8 @@ items:
     - name: Use the agent
       href: policy-agent-use.md
       displayName: policy agent
+  - name: Vulnerability remediation agent
+    items:
+    - name: Overview
+      href: vulnerability-remediation-agent.md
+      displayName: vulnerability remediation agent
