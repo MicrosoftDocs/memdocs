@@ -87,6 +87,45 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
+### Settings available in both Templates and Settings Catalog for Android Enterprise <!-- 34876806 -->
+
+Some settings that were only available in Templates are now also supported in the settings catalog.
+
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+To create a new settings catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
+
+The following settings are available in the settings catalog:
+
+**General**:
+
+- Skip first use hints
+- Contact sharing via Bluetooth (work profile level)
+- Search work contacts and display work contact caller-id in personal profile
+- Data sharing between work and personal profiles
+
+**Work profile password**:
+
+- Required password type
+- Minimum password length
+- Number of characters required
+- Number of lowercase characters required
+- Number of uppercase characters required
+- Number of non-letter characters required
+- Number of numeric characters required
+- Number of symbol characters required
+- Number of days until password expires
+- Number of passwords required before user can reuse a password
+- Number of sign-in failures before wiping device
+- Required unlock frequency
+
+To learn more about these settings, go to [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
+
 ### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
 
 On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
