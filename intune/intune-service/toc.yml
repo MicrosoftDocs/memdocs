@@ -506,10 +506,14 @@ items:
               href: ./apps/mamedge-3-scc.md
             - name: Step 4. Create app configuration policies
               href: ./apps/mamedge-4-acp-edge.md
-            - name: Step 5. Understand end user experience
-              href: ./apps/mamedge-5-end-user-experience.md
-            - name: Step 6. Troubleshoot
-              href: ./apps/mamedge-6-troubleshoot.md
+            - name: Step 5. Create Settings Catalog policies
+              href: ./apps/mamedge-5-settings-catalog.md
+            - name: Step 6. Deploy Microsoft Edge security baseline
+              href: ./apps/mamedge-6-security-baseline.md
+            - name: Step 7. Understand end user experience
+              href: ./apps/mamedge-7-end-user-experience.md
+            - name: Step 8. Troubleshoot
+              href: ./apps/mamedge-8-troubleshoot.md
 
         - name: Concepts
           items:
@@ -2227,10 +2231,14 @@ items:
           href: ./apps/mamedge-3-scc.md
         - name: Step 4. Create app configuration policies
           href: ./apps/mamedge-4-acp-edge.md
-        - name: Step 5. Understand end user experience
-          href: ./apps/mamedge-5-end-user-experience.md
-        - name: Step 6. Troubleshoot
-          href: ./apps/mamedge-6-troubleshoot.md
+        - name: Step 5. Create Settings Catalog policies
+          href: ./apps/mamedge-5-settings-catalog.md
+        - name: Step 6. Deploy Microsoft Edge security baseline
+          href: ./apps/mamedge-6-security-baseline.md
+        - name: Step 7. Understand end user experience
+          href: ./apps/mamedge-7-end-user-experience.md
+        - name: Step 8. Troubleshoot
+          href: ./apps/mamedge-8-troubleshoot.md
 
   - name: Developer guidance
     items:

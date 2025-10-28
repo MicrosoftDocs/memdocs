@@ -14,7 +14,7 @@ ms.collection:
 
 # Step 3. Integrate Mobile Threat Defense
 
-The Microsoft Mobile Threat Defense (MTD) connector is a feature in Microsoft Intune that creates a channel of communication between Intune and your chosen MTD vendor, regardless of the device’s operating system. There are various supported MTD partners for both Windows and mobile devices. Intune integrates data from an MTD vendor as an information source for device compliance policies and device Conditional Access rules. The information provided by this communication channel can help protect corporate resources, such as Exchange and SharePoint data, by blocking access from compromised devices.
+The Microsoft Mobile Threat Defense (MTD) connector is a feature in Microsoft Intune that creates a channel of communication between Intune and your chosen MTD vendor, regardless of the device’s operating system. There are many supported MTD partners for both Windows and mobile devices. Intune integrates data from an MTD vendor as an information source for device compliance policies and device Conditional Access rules. The information provided by this communication channel can help protect corporate resources, such as Exchange and SharePoint data, by blocking access from compromised devices.
 
 Mobile Application Management (MAM) threat detection can be integrated with various MTD partners, including Windows Security Center. This integration provides a client device health assessment to Intune app protection policies via a service-to-service connector. This assessment supports gating the flow and access to organizational data on personal unmanaged devices.
 
@@ -28,7 +28,7 @@ Only users enrolled in Mobile Application Management send health state data. If 
 
 ## Intune app protection policies
 
-Intune app protection policies help secure organizational data and help ensure client devices are healthy. It also can perform additional client health verification via Windows Security Center. This involves designating the Windows Security Center risk level for allowing end users to access corporate resources. In addition, it also involves setting up tenant-based connectors to Microsoft Intune for Windows Security Center.
+Intune app protection policies help secure organizational data and help ensure client devices are healthy. It also can perform other client health verification via Windows Security Center. This involves designating the Windows Security Center risk level for allowing end users to access corporate resources. In addition, it also involves setting up tenant-based connectors to Microsoft Intune for Windows Security Center.
 
 - **Apps**: Select the apps that you want to target from app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Health Checks**: Under **Device conditions** you can select **Max allowed device threat level**.
@@ -48,7 +48,7 @@ You can select one of the following threat level values:
 
 You can select one of the following **Action** options:
 
-- **Block access:** Will prevent the users from performing any activity until they're back in compliance.
+- **Block access:** Prevents the users from performing any activity until they're back in compliance.
 - **Wipe data:** This removes any information stored in the application related to the corporate data. It doesn't affect personal data on the personal profile.
 
 ### Assignments
@@ -56,7 +56,7 @@ You can select one of the following **Action** options:
 Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
 > [!IMPORTANT]
-> If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that do not meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they are prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
+> If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that don't meet an acceptable level are either blocked or selectively wiped through conditional launch. If blocked, they're prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
 
 ## Configure the MTD Connector
 
@@ -73,7 +73,7 @@ Use the following steps to configure the MTD Connector.
 4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
 
     > [!NOTE]
-    > In this example, you have selected **Windows Security Center**. For the full list of MTD Partners, see [Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
+    > In this example, you select **Windows Security Center**. For the full list of MTD Partners, see [Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
 
     :::image type="content" alt-text="Connectors and tokens - Mobile Threat Defense - Add Connector - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business4.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business4.png":::
 
@@ -84,6 +84,6 @@ Use the following steps to configure the MTD Connector.
 
 ## Next step
 
-[![Step 4 to create app configuration policies for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-04.png)](mamedge-4-acp-edge.md)
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-04.png" alt-text="Step 4 to create app configuration policies for Microsoft Edge for Business.":::](mamedge-4-acp-edge.md)
 
 Continue with [Step 4](mamedge-4-acp-edge.md) to create app configuration policies for Microsoft Edge for Business.

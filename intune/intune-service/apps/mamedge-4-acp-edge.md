@@ -1,7 +1,7 @@
 ---
 title: Step 4. Create App Configuration Policies for Microsoft Edge for Business
-description: Step 4. Create app configuration policy for Microsoft Edge for Business.
-ms.date: 03/26/2024
+description: Step 4. Create app configuration policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
+ms.date: 10/28/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -11,129 +11,340 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 4. Create App Configuration Policies for Microsoft Edge for Business
+# Step 4: App Configuration Policies for Microsoft Edge for Business
 
-Microsoft Edge for iOS, Android, and Windows supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement browser configuration.
+App configuration policies allow you to customize browser behavior and features for Microsoft Edge across all platforms. These policies work with app protection policies to provide comprehensive browser management.
 
-App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android or through the MAM (Mobile Application Management) channel.
+**Applies to:**
+- Windows
+- Android 6.0+
+- iOS/iPadOS 15+
 
-Microsoft Edge for iOS and Android supports the following configuration scenarios:
+> [!NOTE]
+> App configuration policies customize browser features and behavior. They complement app protection policies that focus on data protection.
 
-- Only allow work or school accounts
-- General app configuration settings
-- Data protection settings
-- Additional app configuration for managed devices
+## App configuration policies for Windows
+
+Windows app configuration policies provide browser customization through managed app settings.
+
+> **Microsoft Documentation:**
+> - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-policies)
+> - [Windows App Configuration Policies](app-configuration-policies-overview.md)
+> - [Managed App Configuration for Windows](app-configuration-policies-managed-app.md)
+
+**Prerequisites:**
+- Windows 10/11
+- Microsoft Edge installed
+- Intune enrollment or MAM managed
+- User Entra ID account
+
+### Level 1 - Basic browser configuration (Windows)
+
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Apps** > **Configuration** > **Create** > **Managed apps**.
+
+3. On the **Basics** tab:
+    - **Name**: Level 1 - Basic browser configuration - Windows ACP
+    - **Description**: Basic browser customization for Microsoft Edge on Windows
+
+4. Select **Next**.
+
+5. For **Target policy to**, select **Select apps** > **Microsoft Edge Windows** > **Select**.
+
+6. Select **Next**.
+
+7. For **Settings**, select **Use configuration designer** and add:
+
+    **Core Browser Behavior:**
+    - Configure the home page URL: https://portal.office.com
+    - Show Home button on toolbar: Enabled
+    - Configure the new tab page URL: https://portal.office.com
+    - Action to take on startup: Open new tab page
+
+    **Security:**
+    - Configure Automatic HTTPS: Enabled
+    - Default pop-up window setting: Don't allow popups (2)
+
+    **Privacy:**
+    - Enable saving passwords: Disabled
+    - Enable AutoFill for addresses: Disabled
+    - Enable AutoFill for payment instruments: Disabled
+    - Block tracking of users' web-browsing activity: Balanced (2)
+
+    **Search:**
+    - Enable search suggestions: Disabled
+    - Enable network prediction: Don't predict (2)
+
+    **Import Controls:**
+    - Allow importing of autofill form data: Disabled
+    - Allow importing of saved passwords: Disabled
+    - Allow importing of browsing history: Disabled
+
+    **Downloads:**
+    - Set download directory: ${user_home}/Downloads/Edge
+    - Ask where to save downloaded files: Enabled
+    - Allow download restrictions: Block malicious downloads
+
+    **Features:**
+    - Show Hubs Sidebar: Disabled
+    - Show Microsoft Rewards experiences: Disabled
+    - Shopping in Microsoft Edge: Disabled
+
+8. Select **Next**.
+
+9. For **Assignments**, assign to **SEB-Level1-Users** group.
+
+10. Select **Next** and **Create**.
+
+### Level 2 - Enhanced browser configuration (Windows)
+
+1. Follow steps 1-6 from Level 1.
+
+2. On the **Basics** tab:
+    - **Name**: Level 2 - Enhanced browser configuration - Windows ACP
+    - **Description**: Enhanced browser configuration with other security controls
+
+3. Configure all Level 1 settings PLUS:
+
+    **Enhanced Security:**
+    - SmartScreen for trusted downloads: Enabled
+    - Block insecure content on specified sites: ["*"]
+
+    **Extension Management:**
+    - Control which extensions can't be installed: ["*"]
+    - Configure extension management settings: {"*": {"installation_mode": "blocked"}}
+
+    **Privacy:**
+    - Continue running background apps after Microsoft Edge closes: Disabled
+    - Disable synchronization of data: Enabled
+    - Clear browsing data when Microsoft Edge closes: Enabled
+
+4. For **Assignments**, assign to **SEB-Level2-Users** group.
+
+5. Select **Next** and **Create**.
+
+### Level 3 - High security configuration (Windows)
+
+1. Follow steps 1-6 from Level 1.
+
+2. On the **Basics** tab:
+    - **Name**: Level 3 - High security configuration - Windows ACP
+    - **Description**: Maximum security browser configuration
+
+3. Configure all Level 1 and Level 2 settings PLUS:
+
+    **URL Filtering:**
+    - Define a list of allowed URLs: ["*.company.com","*.microsoft.com","*.office.com"]
+    - Block access to a list of URLs: ["*"]
+
+    **Maximum Security:**
+    - Allow download restrictions: Block all downloads (3)
+    - Control where developer tools can be used: Disallowed (2)
+    - Configure InPrivate mode availability: InPrivate forced (1)
+
+4. For **Assignments**, assign to **SEB-Level3-Users** group.
+
+5. Select **Next** and **Create**.
+
+## App configuration policies for Android
+
+Android app configuration policies customize browser behavior on mobile devices.
+
+> **Microsoft Documentation:**
+> - [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies)
+> - [Android App Configuration Policies](app-configuration-policies-overview.md)
+
+**Prerequisites:**
+- Android 6.0+
+- Microsoft Edge for Android installed
+- Company Portal or MAM managed
+- User Entra ID account
+
+### Level 1 - Basic mobile browser configuration (Android)
+
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Apps** > **Configuration** > **Create** > **Managed apps**.
+
+3. On the **Basics** tab:
+    - **Name**: Level 1 - Basic mobile browser configuration - Android ACP
+    - **Description**: Basic browser configuration for Microsoft Edge on Android
+
+4. Select **Target policy to** > **Select apps** > **Microsoft Edge for Android** > **Select**.
+
+5. For **General configuration settings**, configure:
+    - com.microsoft.intune.mam.managedbrowser.PasswordSSO: true
+    - com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled: true
+    - EdgeMyApps: true
+    - EdgeDefaultHTTPS: true
+    - EdgeDisableShareUsageData: true
+    - PasswordManagerEnabled: false
+    - SearchSuggestEnabled: false
+    - HideFirstRunExperience: true
+    - DefaultPopupsSetting: 2
+
+6. For **Edge configuration settings**:
+    - Homepage shortcut URL: https://www.company.com
+    - Managed bookmarks: Company Portal|https://portal.company.com
+
+7. For **Assignments**, assign to **SEB-Level1-Users** group.
+
+8. Select **Next** and **Create**.
+
+### Level 2 - Enhanced mobile browser configuration (Android)
+
+1. Follow steps 1-4 from Level 1.
+
+2. On the **Basics** tab:
+    - **Name**: Level 2 - Enhanced mobile browser configuration - Android ACP
+    - **Description**: Enhanced browser configuration with data protection
+
+3. Configure all Level 1 settings PLUS:
+    - EdgeSyncDisabled: true
+    - EdgeImportPasswordsDisabled: true
+    - EdgeDisabledFeatures: "password|autofill|copilot"
+    - SSLErrorOverrideAllowed: false
+
+4. For **Edge configuration settings**:
+    - Blocked URLs: *.facebook.com, *.twitter.com, *.instagram.com
+    - Redirect restricted sites to personal context: Enable
+
+5. For **Assignments**, assign to **SEB-Level2-Users** group.
+
+6. Select **Next** and **Create**.
+
+### Level 3 - High security mobile configuration (Android)
+
+1. Follow steps 1-4 from Level 1.
+
+2. On the **Basics** tab:
+    - **Name**: Level 3 - High security mobile configuration - Android ACP
+    - **Description**: Maximum security browser configuration for Android
+
+3. Configure all Level 1 and Level 2 settings PLUS:
+    - EdgeMyApps: false
+    - EdgeDisabledFeatures: "inprivate|autofill|password|translator|copilot"
+    - InPrivateModeAvailability: 1
+    - SavingBrowserHistoryDisabled: true
+    - EdgeBlockSignInEnabled: true
+
+4. For **Edge configuration settings**:
+    - Allowed URLs: *.company.com, *.microsoft.com, login.microsoftonline.com
+    - (Blocked URLs field becomes unavailable when Allowed URLs are configured)
+
+5. For **Assignments**, assign to **SEB-Level3-Users** group.
+
+6. Select **Next** and **Create**.
+
+## App configuration policies for iOS/iPadOS
+
+iOS app configuration policies provide comprehensive mobile browser management.
+
+> **Microsoft Documentation:**
+> - [Microsoft Edge Mobile Policies](/deployedge/microsoft-edge-mobile-policies)
+> - [iOS App Configuration Policies](app-configuration-policies-overview.md)
+
+**Prerequisites:**
+- iOS/iPadOS 15+
+- Microsoft Edge for iOS installed
+- Company Portal or MAM managed
+- User Entra ID account
 
 > [!IMPORTANT]
-> For configuration scenarios that require device enrollment on Android, the devices must be enrolled in Android Enterprise and Microsoft Edge for Android must be deployed via the Managed Google Play store. For more information, see [**Set up enrollment of Android Enterprise personally-owned work profile devices**](../enrollment/android-work-profile-enroll.md) and [**Add app configuration policies for managed Android Enterprise devices**](app-configuration-policies-use-android.md).
+> In iOS App Configuration Policies, **Allowed URLs** and **Blocked URLs** are mutually exclusive. Configure one or the other based on security level requirements.
 
-You'll now review the following key items that need to be configured. Then, you'll create an app configuration policy in Microsoft Intune admin center.
-
-## Microsoft Edge app configuration values
-
-Reference the following table when setting app configuration values for Microsoft Edge:
-
-| Key | Value | Example | Notes |
-|---|---|---|---|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | TRUE |  |  |
-| com.microsoft.intune.mam.managedbrowser.disableShareUsageData | TRUE |  |  |
-| com.microsoft.intune.mam.managedbrowser.disabledFeatures | Option include:<br><ul><li>`password`</li><li>`inprivate`</li><li>`autofill`</li><li>`translator`</li><li>`drop`</li><li>`developer tools`</li></ul> | `password|inprivate|autofill|translator|drop|developer tools` | To disable a feature, include it as part of the value. |
-| com.microsoft.intune.mam.managedbrowser.disableImportPasswords | TRUE |  |  |
-| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | TRUE |  |  |
-| com.microsoft.intune.mam.managedbrowser.account.syncDisabled | TRUE |  |  |
-| com.microsoft.intune.IntuneMAMOnly.AdvancedEncryption | enabled |  |  |
-
-For related information, see [Manage Microsoft Edge on iOS and Android with Intune](manage-microsoft-edge.md).
-
-### Configure the app configuration policy for Android and iOS
-
-Use the following steps to configure the app:
+### Level 1 - Basic mobile browser configuration (iOS)
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 2. Select **Apps** > **Configuration** > **Create** > **Managed apps**.
 
-3. On the **Create app configuration policy**, pane enter the following information:
+3. On the **Basics** tab:
+    - **Name**: Level 1 - Basic mobile browser configuration - iOS ACP
+    - **Description**: Basic browser configuration for Microsoft Edge on iOS
 
-    - **Name**: Secure Enterprise Browser ACP
-    - **Description**: Microsoft Edge for Business ACP Configuration - Mobile
-    - **Target Policy to**: Selected apps
+4. Select **Target policy to** > **Select apps** > **Microsoft Edge iOS/iPadOS** > **Select**.
 
-    :::image type="content" alt-text="Apps - App configuration policies - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business49.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business49.png":::
+5. For **General configuration settings**, configure:
+    - com.microsoft.intune.mam.managedbrowser.PasswordSSO: true
+    - com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled: true
+    - EdgeMyApps: true
+    - EdgeDefaultHTTPS: true
+    - EdgeDisableShareUsageData: true
+    - PasswordManagerEnabled: false
+    - SearchSuggestEnabled: false
+    - HideFirstRunExperience: true
+    - DefaultPopupsSetting: 2
+    - EdgeCopilotEnabled: true
 
-4. Click **Select public apps** to display the **Selected apps to target** pane.
+6. For **Edge configuration settings**:
+    - Homepage shortcut URL: https://www.company.com
+    - Managed bookmarks: Company Portal|https://portal.company.com
 
-5. Select the **Microsoft Edge** app for **iOS/iPadOS** and click **Select**.
+7. For **Assignments**, assign to **SEB-Level1-Users** group.
 
-    > [!NOTE]
-    > You will need to follow the same steps for both Android. iOS and Windows. However, the steps for Windows differ after a certain point in the process. For this reason, separate instructions for Windows are included later in the documentation.
+8. Select **Next** and **Create**.
 
-6. Select **Next** to display the **Settings catalog** step. Don't change settings on the **Settings catalog** step.
+### Level 2 - Enhanced mobile browser configuration (iOS)
 
-7. Select **Next** to display the **Settings** step.
+1. Follow steps 1-4 from Level 1.
 
-8. Enter the **name** and **value** for each configuration setting you want to add. For details, see the [Microsoft Edge app configuration values](#microsoft-edge-app-configuration-values) table.
+2. On the **Basics** tab:
+    - **Name**: Level 2 - Enhanced mobile browser configuration - iOS ACP
+    - **Description**: Enhanced browser configuration with security controls
 
-    For example, set **com.microsoft.intune.mam.managedbrowser.PasswordSSO** to `TRUE`.
+3. Configure all Level 1 settings PLUS:
+    - EdgeSyncDisabled: true
+    - EdgeImportPasswordsDisabled: true
+    - EdgeCopilotEnabled: false
+    - EdgeDisabledFeatures: "password|autofill|copilot|collections"
+    - BiometricAuthenticationBeforeFilling: true
+    - SSLErrorOverrideAllowed: false
 
-    :::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business50.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business50.png":::
+4. For **Edge configuration settings**:
+    - Blocked URLs: *.facebook.com, *.twitter.com, *.instagram.com, *.tiktok.com
+    - (Allowed URLs field becomes unavailable when Blocked URLs are configured)
+    - Redirect restricted sites to personal context: Enable
 
-9. Review each value and select **Next**.
+5. For **Assignments**, assign to **SEB-Level2-Users** group.
 
-10. Add a **Scope tag** and select **Next**.
+6. Select **Next** and **Create**.
 
-11. Review Assignment and select **Next**.
+### Level 3 - High security mobile configuration (iOS)
 
-12. Select **Review + create**.
+1. Follow steps 1-4 from Level 1.
 
-### Configure the App Configuration policy for Windows
+2. On the **Basics** tab:
+    - **Name**: Level 3 - High security mobile configuration - iOS ACP
+    - **Description**: Maximum security browser configuration for iOS
 
-Use the following steps to configure the app:
+3. Configure all Level 1 and Level 2 settings PLUS:
+    - com.microsoft.intune.mam.managedbrowser.PasswordSSO: false
+    - EdgeMyApps: false
+    - EdgeDisabledFeatures: "inprivate|autofill|password|translator|copilot|share"
+    - InPrivateModeAvailability: 1
+    - SavingBrowserHistoryDisabled: true
+    - TranslateEnabled: false
+    - EdgeBlockSignInEnabled: true
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+4. For **Edge configuration settings**:
+    - Allowed URLs: *.company.com, *.microsoft.com, login.microsoftonline.com
+    - (Blocked URLs field becomes unavailable when Allowed URLs are configured)
 
-2. Select **Apps** > **Configuration** > **Create** > **Managed apps**.
+5. For **Assignments**, assign to **SEB-Level3-Users** group.
 
-3. On the **Create app configuration policy**, pane enter the following information:
+6. Select **Next** and **Create**.
 
-    - **Name**: Secure Enterprise Browser ACP - Windows
-    - **Description**: Microsoft Edge for Business ACP Configuration - Windows
-    - **Target Policy to**: Selected apps
+## Validation
 
+After deploying app configuration policies:
 
-4. Select **Select public apps** to display the **Selected apps to target** pane.
+1. **Policy Application**: Check Intune console for successful ACP deployment
+2. **Browser Behavior**: Verify configured homepage, blocked features, and URL restrictions
+3. **User Experience**: Test browsing functionality and confirm policy enforcement
+4. **Mobile Testing**: On mobile devices, verify Microsoft Edge > Menu > Settings reflects corporate policies
 
-5. Select the **Microsoft Edge** app for **Windows* and click **Select**.
+## Next steps
 
-6. Select **Next** to display the **Settings catalog** step.
-7. Click **Add settings** to display the **Settings picker** pane.
-8. Expand Microsoft Edge or you can type the setting on the search menu > select **Password manager and protection** select the following options:
-   - **Allow users to be alerted if their passwords are found to be unsafe**
-   - **Configure password protection warning trigger**
-9. Type on the **Search for a setting** the following **StartUp** and select **Microsoft Edge\StartUp, home page and new tab page** select the following options:
-   - **Configure the home page URL**
-   - **Configure the new tab page URL**
-   - **Hide App Launcher on Microsoft Edge new tab page**
-10. Under Microsoft Edge, configure each item for this example by entering the following details:
-    - **Hide App Launcher on Microsoft Edge new tab page:** Enabled
-    - **Configure the new tab url:** *Add a URL, such as `https://www.contoso.com`.*
-    - **Configure the new tab page url:** *Add a URL, such as `https://www.contoso.com`.*
-    - **Allow users to be alerted if their passwords are found to be unsafe:** Enabled
-   -  **Configure password protection warning trigger:** Enabled
-11. Select **Next** to display the **Assignments** page.
-12. Click **Select groups to include**.
-13. Select a group in the **Select groups to include** pane and click **Select**.
-14. Click **Select groups to exclude** to display the related pane.
-15. Choose the groups you want to exclude and then click **Select**.
-    >[!NOTE]
-    >When adding a group, if any other group has already been included for a given assignment type, it is pre-selected and unchangeable for other include assignment types. Therefore, that group that has been used, cannot be used as an excluded group.
-18. Select **Next** to display the **Review + create** page.
-19. Select **Create** to add the app configuration policy to Intune.
-
-You have now created an App Configuration Policy for Windows and Microsoft Edge.
-
-## Next step
-
-[![Step 5 to understand the end user experience for Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-05.png)](mamedge-5-end-user-experience.md)
-
-Continue with [Step 5](mamedge-5-end-user-experience.md) to understand the end user experience for Microsoft Edge for Business.
+Continue to [Step 5](mamedge-5-settings-catalog.md) to configure Settings Catalog policies for enrolled Windows and macOS devices.
