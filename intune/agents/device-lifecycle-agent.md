@@ -31,15 +31,16 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 
 :::column-end:::
 :::column span="3":::
->To use Security Copilot agents in Microsoft Intune, your organization must meet specific licensing prerequisites.\
+>To use Security Copilot agents in Microsoft Intune, your organization must meet specific licensing requirements.
+>
 >Required licenses:
 >
-> - Microsoft Intune subscription (Plan 1 or equivalent)
+> - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
 > - Microsoft Security Copilot access with sufficient [security compute units (SCUs)](/copilot/security/get-started-security-copilot#security-compute-units)
 >
 > Optional licenses for enhanced functionality:
 >
-> - Microsoft Defender for Endpoint (Plan 2): required for Defender offboarding steps
+> - [Microsoft Defender for Endpoint (Plan 2)](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint): required for Defender offboarding steps
 
 :::column-end:::
 :::row-end:::
