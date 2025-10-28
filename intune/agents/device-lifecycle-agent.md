@@ -36,7 +36,7 @@ The Device Lifecycle Agent helps IT admins offboard devices securely and efficie
 >Required licenses:
 >
 > - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
-> - Microsoft Security Copilot access with sufficient [security compute units (SCUs)](/copilot/security/get-started-security-copilot#security-compute-units)
+> - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 >
 > Optional licenses for enhanced functionality:
 >
