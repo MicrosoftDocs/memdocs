@@ -32,11 +32,11 @@ The *approver agent* evaluates the effect of approval requests in Intune and mak
 > [Learn more](approver-agent.md)
 :::column-end:::
 :::column:::
-#### Device offboarding agent
+#### Device Offboarding Agent
 
 :::image type="icon" source="icons/device-offboarding-agent.svg" border="false":::
 
-The *device offboarding agent* can find devices that were removed from Intune, but might linger in Microsoft Entra. It provides steps to properly remove them from Entra.
+The *Device Offboarding Agent* can find devices that were removed from Intune, but might linger in Microsoft Entra. It provides steps to properly remove them from Entra.
 
 > [!div class="nextstepaction"]
 > [Learn more](device-offboarding-agent.md)

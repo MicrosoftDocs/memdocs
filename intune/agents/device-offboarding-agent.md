@@ -1,6 +1,6 @@
 ---
 title: Device Offboarding Agent Overview
-description: Learn about the device offboarding agent in Microsoft Intune, its prerequisites, and how it works.
+description: Learn about the Device Offboarding Agent in Microsoft Intune, its prerequisites, and how it works.
 ms.date: 10/15/2025
 ms.topic: overview
 author: paolomatarazzo
@@ -8,9 +8,9 @@ ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 
-# Device offboarding agent overview
+# Device Offboarding Agent overview
 
-The device offboarding agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. The device offboarding agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
+The Device Offboarding Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. The Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
 
 ## Prerequisites
 
@@ -69,8 +69,8 @@ The device offboarding agent helps IT admins offboard devices securely and effic
 :::column span="3":::
 > There are different role requirements depending on the action being taken with the agent. For details, see:
 >
-> - [Configure the device offboarding agent](device-offboarding-agent-configure.md)
-> - [Use the device offboarding agent](device-offboarding-agent-use.md)
+> - [Configure the Device Offboarding Agent](device-offboarding-agent-configure.md)
+> - [Use the Device Offboarding Agent](device-offboarding-agent-use.md)
 
 :::column-end:::
 :::row-end:::
@@ -85,7 +85,7 @@ Recommendations: Flags devices for offboarding, with suggested actions and ratio
 
 Admin Approval: No changes are made without explicit admin approval. 
 
-Assisted Remediation: Upon approval, the device offboarding agent disables Entra ID objects and guides further steps (e.g., Defender offboarding). 
+Assisted Remediation: Upon approval, the Device Offboarding Agent disables Entra ID objects and guides further steps (e.g., Defender offboarding). 
 
 <!--
 Workspace: This agent will run in the same preferred workspace you selected for Security Copilot.
@@ -95,7 +95,7 @@ Select **Start agent** to begin the setup process.-->
 
 ### Agent identity 
 
-By default, the device offboarding agent runs under the identity and permissions of the admin account that is used to set up the agent.  
+By default, the Device Offboarding Agent runs under the identity and permissions of the admin account that is used to set up the agent.  
 
 The agent behavior is limited to the permissions of the user identity that the agent runs under. 
 
@@ -116,8 +116,8 @@ Agent identity: the agent runs using the identity of the user who first set up t
 
 ## Next steps
 
-- [Configure the device offboarding agent](device-offboarding-agent-configure.md)
-- [Use the device offboarding agent](device-offboarding-agent-use.md)
+- [Configure the Device Offboarding Agent](device-offboarding-agent-configure.md)
+- [Use the Device Offboarding Agent](device-offboarding-agent-use.md)
 
 <!--links-->
 

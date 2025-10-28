@@ -1,6 +1,6 @@
 ---
 title: Configure the Device Offboarding Agent
-description: Learn how to configure the device offboarding agent in Microsoft Intune to identify and offboard devices that are no longer in use.
+description: Learn how to configure the Device Offboarding Agent in Microsoft Intune to identify and offboard devices that are no longer in use.
 ms.date: 10/15/2025
 ms.topic: how-to
 author: paolomatarazzo
@@ -8,13 +8,13 @@ ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 
-# Configure the device offboarding agent
+# Configure the Device Offboarding Agent
 
-This article describes how to configure the device offboarding agent in Microsoft Intune.
+This article describes how to configure the Device Offboarding Agent in Microsoft Intune.
 
 ## Prerequisites
 
-Before you get started, ensure you meet the requirements listed in the overview article: [Device offboarding agent overview](device-offboarding-agent.md). The following additional prerequisite are required to configure the agent.
+Before you get started, ensure you meet the requirements listed in the overview article: [Device Offboarding Agent overview](device-offboarding-agent.md). The following additional prerequisite are required to configure the agent.
 
 :::row:::
 :::column span="1":::
@@ -34,19 +34,19 @@ Before you get started, ensure you meet the requirements listed in the overview 
  
 ## Enable the agent
 
-To enable the device offboarding agent, follow these steps:
+To enable the Device Offboarding Agent, follow these steps:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
 1. Select **Set up Agent** to open the set-up pane.
 1. Review the details to ensure requirements are in place, then select **Start agent**.
 
-The agent runs until it finishes and then displays its results in the device offboarding agent pane.
+The agent runs until it finishes and then displays its results in the Device Offboarding Agent pane.
 
-:::image type="content" source="images/device-offboarding-agent-overview.png" alt-text="Screenshot of the overview pane of the device offboarding agent." border="false":::
+:::image type="content" source="images/device-offboarding-agent-overview.png" alt-text="Screenshot of the overview pane of the Device Offboarding Agent." border="false":::
 
 ## Explore the agent pane
 
-After you configure the agent, you can manage it from the device offboarding agent pane.
+After you configure the agent, you can manage it from the Device Offboarding Agent pane.
 
 In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**:
 - On the **Overview** tab, view the suggestions of devices to offboard, and get more details and remediation steps.
@@ -57,7 +57,7 @@ To learn more about each tab, select the following tabs:
 
 # [**Overview**](#tab/overview)
 
-After the device offboarding agent completes a run, the Overview tab updates with the agent's list of top suggestions for devices to offboard. The Overview tab only displays the suggestions that are *not started* or *in progress*.  
+After the Device Offboarding Agent completes a run, the Overview tab updates with the agent's list of top suggestions for devices to offboard. The Overview tab only displays the suggestions that are *not started* or *in progress*.  
 
 The following information is available on this tab: 
 
@@ -129,6 +129,6 @@ Include only [device ID] in recommendations
 
 ## Next steps
 
-To learn how to use the agent after you configure it, see [Use the device offboarding agent](device-offboarding-agent-use.md).
+To learn how to use the agent after you configure it, see [Use the Device Offboarding Agent](device-offboarding-agent-use.md).
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
