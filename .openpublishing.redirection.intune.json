@@ -436,8 +436,13 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/apps/mamedge-6-troubleshoot.md",
+      "source_path": "intune/intune/apps/mamedge-6-troubleshoot.md",
       "redirect_url": "/intune/intune-service/apps/mamedge-8-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-5-end-user-experience.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-end-user-experience",
       "redirect_document_id": false
     },
     {
