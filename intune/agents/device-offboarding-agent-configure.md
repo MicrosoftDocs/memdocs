@@ -31,13 +31,13 @@ Before you get started, ensure you meet the requirements listed in the overview 
 
 :::column-end:::
 :::row-end:::
- 
-## Enable the agent
 
-To enable the Device Offboarding Agent, follow these steps:
+## Enable the agent
 
 :::row:::
 :::column span="3":::
+To enable the Device Offboarding Agent, follow these steps:
+
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
 1. Select **Set up Agent** to open the set-up pane.
 1. Review the details to ensure requirements are in place, then select **Start agent**.
@@ -49,7 +49,7 @@ To enable the Device Offboarding Agent, follow these steps:
 
 The agent runs until it finishes and then displays its results in the Device Offboarding Agent pane.
 
-:::image type="content" source="images/device-offboarding-agent-overview.png" alt-text="Screenshot of the overview pane of the Device Offboarding Agent." border="false":::
+:::image type="content" source="images/device-offboarding-agent-set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-set-up.png":::
 
 ## Explore the agent pane
 
@@ -71,6 +71,8 @@ The following information is available on this tab:
 - The agent's availability and run status. 
 - Agent suggestions, which are the list of devices to offboard that are *not started* or *in progress*. 
 
+:::image type="content" source="images/device-offboarding-agent-overview.png" alt-text="Screenshot of the overview pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-overview.png":::
+
 # [**Suggestions**](#tab/suggestions)
 
 Agent suggestions are a list of the top devices to offboard, identified based on data from Microsoft Intune and Microsoft Entra.  
@@ -79,7 +81,9 @@ A suggestion displays the following details:
 - Summary of the suggestions. 
 - Factors that the agent considered when suggesting offboarding these devices.  
 - Details about the associated suggestions, including the number of devices to offboard, their ownership, and their platform. 
-- Recommended actions to offboard securely.  
+- Recommended actions to offboard securely.
+
+:::image type="content" source="images/device-offboarding-agent-suggestions.png" alt-text="Screenshot of the suggestions tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-suggestions.png":::
 
 > [!IMPORTANT]
 > Follow the recommended actions in the order they're listed to prevent orphaned devices and ensure secure offboarding.  
@@ -93,6 +97,8 @@ This section tracks the current and past run activity of the agent.
 # [**Settings**](#tab/settings)
 
 Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs by using the optional **Instructions** field.
+
+:::image type="content" source="images/device-offboarding-agent-settings.png" alt-text="Screenshot of the settings tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-settings.png":::
 
 ### Custom instructions 
 
