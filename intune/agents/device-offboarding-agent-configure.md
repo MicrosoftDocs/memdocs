@@ -36,9 +36,16 @@ Before you get started, ensure you meet the requirements listed in the overview 
 
 To enable the Device Offboarding Agent, follow these steps:
 
+:::row:::
+:::column span="3":::
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
 1. Select **Set up Agent** to open the set-up pane.
 1. Review the details to ensure requirements are in place, then select **Start agent**.
+:::column-end:::
+:::column span="1":::
+:::image type="icon" source="icons/add-agent.svg" border="false":::
+:::column-end:::
+:::row-end:::
 
 The agent runs until it finishes and then displays its results in the Device Offboarding Agent pane.
 
