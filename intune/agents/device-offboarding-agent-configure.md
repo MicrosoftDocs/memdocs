@@ -49,7 +49,7 @@ To enable the Device Offboarding Agent, follow these steps:
 
 The agent runs until it finishes and then displays its results in the Device Offboarding Agent pane.
 
-:::image type="content" source="images/device-offboarding-agent-set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-set-up.png":::
+<!--:::image type="content" source="images/device-offboarding-agent-set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-set-up.png":::-->
 
 ## Explore the agent pane
 
