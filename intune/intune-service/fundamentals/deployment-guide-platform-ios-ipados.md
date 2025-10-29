@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Deployment guide to manage iOS/iPadOS devices in Microsoft Intune
 description: A guide to managing iOS/iPadOS devices in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 07/22/2024
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -57,7 +39,7 @@ The [Microsoft Intune planning guide](intune-planning-guide.md) provides guidanc
 
 The iOS/iPadOS security configuration framework is a series of recommendations for device compliance and configuration policy settings. These recommendations help you tailor your organization's mobile device security protection to your specific needs.
 
-Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in Windows 10. It applies to both personally owned and supervised devices, and includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one and offers more protection than the last.
+Microsoft Intune uses a taxonomy for this framework that's similar to the one used for security configurations in Windows. It applies to both personally owned and supervised devices, and includes the recommended settings for basic, enhanced, and high-level security. Each security level builds off the previous one and offers more protection than the last.
 
 The security levels for personally owned devices are:
 
@@ -122,7 +104,7 @@ Use Microsoft Intune to enable or disable settings and features on iOS/iPadOS de
 |[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-ios.md).|
 |[Configure custom profile](../configuration/custom-settings-ios.md)|Add and assign device settings and features that aren't built into Intune.|
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
-|[Configure software update policy](../protect/software-updates-ios.md)| Schedule automatic OS updates and installations for supervised iOS/iPadOS devices.|
+|[Managed software updates](../protect/updates/apple.md)| Schedule automatic OS updates and installations for supervised iOS/iPadOS devices.|
 
 
 ## Set up secure authentication methods
@@ -184,7 +166,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 | Task | Detail |
 | ---- | ------ |
-|[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
+|[Take remote action on devices](../remote-actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
 |[Remediate vulnerabilities identified by Microsoft Defender for Endpoint](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 

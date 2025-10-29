@@ -3,23 +3,10 @@ title: Admin checklist for software updates on BYOD in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for BYOD and personally owned devices using Microsoft Intune. See tasks and settings that can manage updates on personal devices on Android and iOS/iPadOS platforms.
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 04/07/2025
-audience: ITPro
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: ahamil, talima, mandia
-ms.suite: ems
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-updates
 ---
@@ -41,8 +28,8 @@ This article applies to:
 > If your devices are organization owned, then go to the software updates planning guides for:
 >
 > - [Managed Android devices](software-updates-guide-android.md)
-> - [Supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-> - [Managed macOS devices](software-updates-guide-macos.md)
+> - [Supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)
+> - [Managed macOS devices](updates/software-updates-guide-macos.md)
 
 ## Create enrollment restrictions
 
@@ -106,9 +93,9 @@ Remember, if the OS updates can't be forced or controlled, which is common on pe
 For more information on these features, go to:
 
 - [Conditional launch actions with app protection policies in Intune](../apps/app-protection-policies-access-actions.md)
-- [Using custom notifications in Intune](../remote-actions/custom-notifications.md#considerations-for-using-custom-notifications)
+- [Using custom notifications in Intune](../remote-actions/custom-notifications.md)
 
 ## Related articles
 
 - [Software updates planning guide for managed Android devices](software-updates-guide-android.md)
-- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
+- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)

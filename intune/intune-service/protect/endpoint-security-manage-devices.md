@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Manage devices with endpoint security in Microsoft Intune
 description: Learn how Security Administrators can use the Endpoint Security node to view devices and manage them in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/02/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -85,7 +68,7 @@ Consider the following fields:
 
 - **Compliance**: Compliance is evaluated against the compliance policies that are assigned to the device. The source of these policies and what information is in the console depends on how the device is managed; Intune, Configuration Manager, or co-management. For co-managed devices to report compliance, set the co-management slider for Device Compliance to *Intune* or to *Pilot Intune*.
 
-  After compliance is reported to the admin center for a device, you can drill into the details to view more details. When a device isn’t compliant, drill into its details to information about which policies aren't compliant. That information can help you investigate and help you bring the device into compliance.
+  After compliance is reported to the admin center for a device, you can drill into the details to view more details. When a device isn't compliant, drill into its details to information about which policies aren't compliant. That information can help you investigate and help you bring the device into compliance.
 
 - **Last check-in**: This field identifies the last time the device reported its status.
 
@@ -97,7 +80,7 @@ To view the report, select a device and then select **Device configuration**, wh
 
 ![View endpoint security policy details](./media/endpoint-security-manage-devices/view-policy-details.png)
 
-Devices that are managed by Configuration Manager don’t display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
+Devices that are managed by Configuration Manager don't display policy details in the report. To view additional information for these devices, use the Configuration Manager console.
 
 ## Review your profiles for endpoint security policies
 
@@ -113,13 +96,13 @@ In addition to the different endpoint security policy views, you can go to **Dev
 
 Remote actions are actions you can start or apply to a device from the Microsoft Intune admin center. When you view details for a device, you can access remote actions that apply to the device.
 
-Remote actions display across the top of the devices *Overview* page. Actions that can’t display because of limited space on your screen are available by selecting the ellipsis on the right side:
+Remote actions display across the top of the devices *Overview* page. Actions that can't display because of limited space on your screen are available by selecting the ellipsis on the right side:
 
 ![View additional actions](./media/endpoint-security-manage-devices/view-additional-actions.png)
 
 The remote actions that are available depend on how the device is managed:
 
-- **Intune**: All [Intune remote actions](../remote-actions/device-management.md) that apply to the device platform are available.
+- **Intune**: All [Intune remote actions](../remote-actions/index.md) that apply to the device platform are available.
 - **Configuration Manager**: You can use the following Configuration Manager actions:
 
   - Sync Machine Policy
@@ -142,21 +125,24 @@ The following Intune remote actions are of interest to the security admin, and a
 
 - [Synchronize device](../remote-actions/device-sync.md) – Have the device immediately check-in with Intune. When a device checks in, it receives any pending actions or policies that are assigned to it.
 
-- [Restart](../remote-actions/device-restart.md) – Force a Windows 10/11 device to restart, within five minutes. The device owners aren't automatically notified of the restart and might lose work.
+- [Restart](../remote-actions/device-restart.md) – Force a Windows device to restart, within five minutes. The device owners aren't automatically notified of the restart and might lose work.
 
 - [Quick Scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a quick scan of the device for malware and then submit the results to Intune. A quick scan looks at common locations where there could be malware registered, such as registry keys and known Windows startup folders.
 
 - [Full scan](../configuration/device-restrictions-windows-10.md) – Have Defender run a scan of the device for malware and then submit the results to Intune. A full scan looks at common locations where there could be malware registered, and also scans every file and folder on the device.
 
-- Update Windows Defender security intelligence – Have the device update its malware definitions for Microsoft Defender Antivirus. This action doesn’t start a scan.
+- Update Windows Defender security intelligence – Have the device update its malware definitions for Microsoft Defender Antivirus. This action doesn't start a scan.
 
 - [BitLocker key rotation](../protect/encrypt-devices.md#to-rotate-the-bitlocker-recovery-key) – Remotely rotate the BitLocker recovery key of a device that runs Windows 10 version 1909 or later, or Windows 11.
 
-You can also use **Bulk Device Actions** to manage some actions like *Retire* and *Wipe* for multiple devices at the same time. [Bulk actions](../remote-actions/bulk-device-actions.md) are available from the *All devices* view. You select a platform, action, and then specify up to 100 devices.
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+You can also use *bulk device actions* to manage some actions like *Retire* and *Wipe* for multiple devices at the same time. To learn more, see [bulk device actions](../remote-actions/index.md#bulk-device-actions).
 
 ![Select bulk actions](./media/endpoint-security-manage-devices/select-bulk-actions.png)
 
-Options you manage for devices don’t take effect until the device checks in with Intune.
+Options you manage for devices don't take effect until the device checks in with Intune.
 
 ## Next steps
 

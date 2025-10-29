@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: Configure device configuration profiles in Microsoft Intune
 description: Add or configure a device configuration profile in Microsoft Intune. Select the platform type, configure the settings, and add a scope tag. Learn more about applicability rules, and the policy refresh cycle times.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 09/15/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-ms.assetid: d98aceff-eb35-4e3e-8e40-5f300e7335cc
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - msec-ai-copilot
@@ -119,7 +100,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 - [Endpoint protection (macOS, Windows)](../protect/endpoint-protection-configure.md)
 - [Extensions (macOS)](kernel-extensions-overview-macos.md)
 - [Kiosk](kiosk-settings.md)
-- [Microsoft Defender for Endpoint (Windows)](../protect/advanced-threat-protection.md)
+- [Microsoft Defender for Endpoint (Windows)](../protect/microsoft-defender-with-intune.md)
 - [Mobility Extensions (MX) profile (Android device administrator)](android-zebra-mx-overview.md)
 - [Network boundary (Windows)](network-boundary-windows.md)
 - [OEMConfig (Android Enterprise)](android-oem-configuration-overview.md)
@@ -216,10 +197,10 @@ When creating profiles, consider the following recommendations:
 
   Some configuration profile examples include:
 
-  **Profile name**: OneDrive configuration profile for all Windows users  
+  **Profile name**: OneDrive configuration profile for all Windows users\
   **Profile description**: OneDrive profile that includes the minimum and base settings for all Windows users. Created by `user@contoso.com` to prevent users from sharing organizational data to personal OneDrive accounts.
 
-  **Profile name**: VPN profile for all iOS/iPadOS users  
+  **Profile name**: VPN profile for all iOS/iPadOS users\
   **Profile description**: VPN profile that includes the minimum and base settings for all iOS/iPadOS users to connect to Contoso VPN. Created by `user@contoso.com` so users automatically authenticate to VPN, instead of prompting users for their username and password.
 
 - Create your profile by its task, such as configure Microsoft Edge settings, enable Microsoft Defender anti-virus settings, block iOS/iPadOS jailbroken devices, and so on.

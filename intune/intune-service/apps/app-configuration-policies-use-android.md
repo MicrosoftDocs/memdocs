@@ -1,39 +1,16 @@
 ---
-# required metadata
-
-title: Add app configuration policies for managed Android Enterprise devices
-titleSuffix: Microsoft Intune
+title: Add App Configuration Policies for Managed Android Enterprise Devices
 description: Use app configuration policies in Microsoft Intune to supply settings when users run a Managed Google Play app.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 08/13/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: d0b6f3fe-2bd4-4518-a6fe-b9fd115ed5e0
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: esalter
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Configure
-ms.custom: intune-azure
 ---
 
-# Add app configuration policies for managed Android Enterprise devices
+# Add App Configuration Policies for Managed Android Enterprise Devices
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -59,7 +36,7 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
     - **Description** - The description of the profile that appears in the portal.
     - **Device enrollment type** - This setting is set to **Managed devices**.
 4. Select **Android Enterprise** as the **Platform**.
-5. Select **Select app** next to **Targeted app**. The **Associated app** pane is displayed. 
+5. Select **Select app** next to **Targeted app**. The **Associated app** pane is displayed.
 6. On the **Associated app** pane, choose the managed app to associate with the configuration policy and select **OK**.
 7. Select **Next** to display the **Settings** page.
 8. Select **Add** to display the **Add permissions** pane.
@@ -91,15 +68,15 @@ Android Enterprise has several enrollment methods. The enrollment type depends o
 
     > [!NOTE]
     > This setting only works for personally owned work profile and corporate-owned work profile devices.
-    > 
+    >
     > Changing the **Connected apps** setting to **Not Configured** won't remove the configuration policy from the device. To remove the **Connected apps** functionality from a device, you must unassign the related configuration policy.
 
 13. Select **Next** to display the **Scope tags** page.
 14. [Optional] You can configure scope tags for your app configuration policy. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
-15. Select **Next** to display the **Assignments** page. 
+15. Select **Next** to display the **Assignments** page.
 16. In the dropdown box next to **Assign to**, select either **Add groups**, **Add all users**, or **Add all devices** to assign the app configuration policy. Once you select an assignment group, you can select a [filter](../fundamentals/filters.md) to refine the assignment scope when deploying app configuration policies for managed devices.
 
-    :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" ::: 
+    :::image type="content" alt-text="Screenshot of policy assignments - Assignments" source="./media/app-configuration-policies-use-android/app-configuration-policies-use-android-02.png" :::
 
 17. Select **All users** in the dropdown box.
 
@@ -129,7 +106,7 @@ You can use the configuration designer for Managed Google Play apps when the app
 
 2. For each key and value in the configuration, set:
 
-    - **Value type**: The data type of the configuration value. For string value types, you can optionally choose a variable or certificate profile as the value type. Once the policy is created, these value types show as string. 
+    - **Value type**: The data type of the configuration value. For string value types, you can optionally choose a variable or certificate profile as the value type. Once the policy is created, these value types show as string.
     - **Configuration value**: The value for the configuration. If you select variable or certificate for the **Value type**, choose from a list of variables or certificate profiles. If you choose a certificate, then the certificate alias of the certificate deployed to the device is populated at runtime.
 
 ### Supported variables for configuration values
@@ -154,7 +131,7 @@ You can choose the following options if you choose variable as the value type:
 | Serial number | 1A2B3C4D5E6F7G |
 | Last four digits of serial number | 6F7G |
 
-### Allow only configured organization accounts in apps 
+### Allow only configured organization accounts in apps
 
 As the Microsoft Intune administrator, you can control which work or school accounts are added to Microsoft apps on managed devices. You can limit access to only allowed organization user accounts and block personal accounts on enrolled devices. For Android devices, use the following key/value pairs in a Managed Devices app configuration policy:
 
@@ -199,7 +176,7 @@ Changing the **Connected apps** setting to **Not Configured** won't remove the c
 
 > [!WARNING]
 > If you enable the connected apps functionality for an app, work data in personal apps won't be protected by an app protection policy.
-> 
+>
 > Additionally, regardless of your connected apps configuration, some OEMs could automatically connect certain apps or might be able to request user approval to connect apps that you didn't configure. An example of an app in this case could be the OEM's keyboard app.
 
 There are two ways users could be able to connect work and personal apps after you enable the connected apps setting:

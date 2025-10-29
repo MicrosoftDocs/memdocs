@@ -1,40 +1,19 @@
 ---
-# required metadata
-
-title: Data protection framework using app protection policies 
-titleSuffix: Microsoft Intune
-description: Learn how app protection policies ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. 
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+title: Data Protection Framework Using App Protection Policies
+description: Learn how app protection policies ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled.
 ms.date: 06/12/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
-# Data protection framework using app protection policies 
+# Data Protection Framework Using App Protection Policies
 
 As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune's mobile application management solution for protecting against data leakage is app protection policies. These policies are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled. For more information, see [App protection policies overview](app-protection-policy.md).
 
-When you configure app protection policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its app protection policies data protection framework for mobile app management.  
+When you configure app protection policies, the number of various settings and options enable organizations to tailor the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its app protection policies data protection framework for mobile app management.
 
 The app protection policies data protection configuration framework is organized into three distinct configuration scenarios:
 
@@ -82,7 +61,7 @@ To ensure that only apps supporting app protection policies access work or schoo
 > [!NOTE]
 > These policies leverage the grant controls [Require approved client app](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-approved-client-app) and [Require app protection policy](/azure/active-directory/conditional-access/concept-conditional-access-grant#require-app-protection-policy).
 
-### Apps to include in the app protection policies  
+### Apps to include in the app protection policies
 
 For each app protection policy, the Core Microsoft Apps group is targeted, which includes the following apps:
 

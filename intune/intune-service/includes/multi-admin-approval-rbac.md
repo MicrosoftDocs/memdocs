@@ -1,15 +1,8 @@
 ---
-title: Include file
-description: Include file
 author: nicholasswhite
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 08/13/2025
 ms.author: nwhite
-ms.custom: include file
-ms.collection:
-- tier2
-- M365-identity-device-management
 ---
 
 <!-- This include file is used in the following articles: /fundamentals/role-based-access-control.md, /fundamentals/assign-role.md, /fundamentals/create-custom-role.md, /fundamentals/account-sign-up.md, /protect/endpoint-security-policy.md -->

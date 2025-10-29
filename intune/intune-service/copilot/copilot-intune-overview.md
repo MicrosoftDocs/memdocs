@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Security Copilot in Intune features overview
 description: Microsoft Security Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues and query devices.
-keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, settings catalog, policies, device details, troubleshooting
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
 ms.date: 09/17/2025
 ms.update-cycle: 180-days
 ms.topic: get-started
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: ankurgoyal, rashok, zadvor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -88,7 +68,7 @@ To use Copilot in Intune, you should know the following information:
   > Some roles can enable or disable plug-ins. For more information, see [Manage plug-ins in Microsoft Security Copilot](/copilot/security/manage-plugins).
 
   To use Copilot in Intune for Windows 365 Cloud PCs, in the [Security Copilot portal](https://securitycopilot.microsoft.com) > **Sources**, enable **Windows 365**.
-  
+
 - **Your Intune data**: Copilot uses your Intune data. When an Intune admin submits a prompt, Copilot can only access the data that they have permissions to, which includes the [RBAC roles](../fundamentals/role-based-access-control.md) and [scope tags](../fundamentals/scope-tags.md) assigned to them.
 
 > [!TIP]
@@ -200,7 +180,7 @@ You can use this feature on device configuration policies, including the setting
 
 ### ✅ Use Copilot to analyze compliance policies
 
-On your existing Intune compliance policies, you can use Copilot to analyze different aspects of the policy. The prompt guide can help summarize what the policy does, effect of the policy and its settings on your users, and security. You can also use Copilot to help get compliance policies that have conflicting settings.  
+On your existing Intune compliance policies, you can use Copilot to analyze different aspects of the policy. The prompt guide can help summarize what the policy does, effect of the policy and its settings on your users, and security. You can also use Copilot to help get compliance policies that have conflicting settings.
 
 :::image type="content" source="./media/copilot-intune-overview/compliance-policy-prompt-options.png" alt-text="Screenshot that shows the Copilot prompt options for compliance policies in Microsoft Intune or Intune admin center." lightbox="./media/copilot-intune-overview/compliance-policy-prompt-options.png":::
 

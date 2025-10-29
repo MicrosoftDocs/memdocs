@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Configure the Jamf Pro Cloud Connector to integrate Jamf Pro with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Use the Jamf Cloud Connector to integrate Jamf Pro with Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 08/30/2023
 ms.topic: integration
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
-
-#ROBOTS: 
-#audience:
-
 ms.reviewer: ilwu
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - conditional-access
 - sub-device-compliance
@@ -69,15 +50,15 @@ For more information about the Jamf Cloud Connector, see [Configuring the macOS 
 
 ## Prerequisites
 
-**Products and services**:  
+**Products and services**:
 - Jamf Pro 10.18 or later
-- A Jamf Pro user account with Conditional Access privileges  
+- A Jamf Pro user account with Conditional Access privileges
 - Microsoft Intune
 - Microsoft Entra ID P1 or P2
 - [Company Portal app for macOS](https://aka.ms/macoscompanyportal)
 - macOS devices with OS X 10.12 Yosemite or later
 
-**Network**:  
+**Network**:
 The following ports and endpoints must be accessible for Jamf and Intune to integrate correctly:
 
 - **Intune**: Port 443
@@ -86,8 +67,8 @@ The following ports and endpoints must be accessible for Jamf and Intune to inte
 
 - Endpoints:
   - login.microsoftonline.com
-  - graph.windows.net  
-  - *.manage.microsoft.com  
+  - graph.windows.net
+  - *.manage.microsoft.com
 
 For APNS to function correctly on the network, you must enable outgoing connections to, and redirects from the following ports:
 
@@ -100,7 +81,7 @@ For more information about these ports, see the following articles:
 - [Network Ports Used by Jamf Pro](https://www.jamf.com/jamf-nation/articles/34/network-ports-used-by-jamf-pro) on jamf.com.
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944) on support.apple.com
 
-**Accounts**:  
+**Accounts**:
 Procedures in this article require use of accounts with the following permissions:
 
 - **Jamf Pro console**: An account with permissions to manage Jamf Pro
@@ -181,9 +162,9 @@ If you currently have a manually configured integration between Intune and Jamf 
    - **The Default Jamf Pro Device Registration page** - Depending on the state of the macOS device, this option redirects users to either the Jamf Pro device enrollment portal (to enroll with Jamf Pro) or the Intune Company Portal app (to register with Microsoft Entra ID).
    - **The Access Denied page**
    - **Custom URL**
-  
+
    If you're replacing your previous integration with the Jamf Cloud Connector, you can skip this step if the landing page has been specified.
-  
+
 8. Select **Connect**. You're redirected to register the Jamf Pro applications in Azure.
 
    When prompted, specify your Microsoft Azure credentials and follow the onscreen instructions to grant the requested permissions. You'll grant permissions for the **Cloud Connector**, and then again for the **Cloud Connector user registration app**. Both apps are registered in Azure as Enterprise Applications.
@@ -212,7 +193,7 @@ If you currently have a manually configured integration between Intune and Jamf 
 
 When the connection between Jamf Pro and Microsoft Intune is successfully established, Jamf Pro sends inventory information to Microsoft Intune for each computer that is registered with Microsoft Entra ID (registering with Microsoft Entra ID is an end-user workflow). You can view the Conditional Access Inventory State for a user and a computer in the Local User Account category of a computer's inventory information in Jamf Pro.
 
-After you integrate one instance of Jamf Pro by using the Jamf Cloud Connector, you can use this same procedure to configure more instances of Jamf Pro with the same Intune subscription in your Azure tenant.  
+After you integrate one instance of Jamf Pro by using the Jamf Cloud Connector, you can use this same procedure to configure more instances of Jamf Pro with the same Intune subscription in your Azure tenant.
 
 ## Set up compliance policies and register devices
 
@@ -250,7 +231,7 @@ After you terminate the integration, your organization's macOS devices will be r
 Because the cloud connector automatically creates the Azure Enterprise apps necessary for integration, your first point of contact for support should be **Jamf**. Options include:
 
 - Email support at `support@jamf.com`
-- Use the support portal at Jamf Nation: https://www.jamf.com/support/ 
+- Use the support portal at Jamf Nation: https://www.jamf.com/support/
 
 
 Prior to contacting support:

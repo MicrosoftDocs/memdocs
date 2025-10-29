@@ -1,32 +1,10 @@
 ---
-# required metadata
-
 title: Add and assign the Windows Company Portal app for Intune managed devices
-titleSuffix: Microsoft Intune
 description: Add and assign the Windows Company Portal app to Intune managed devices.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 01/06/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri

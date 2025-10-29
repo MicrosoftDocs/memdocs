@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Manage endpoint security in Microsoft Intune | Microsoft Docs
-description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microsoft Intune. 
-keywords:
+description: Learn how Security Administrators can use the Endpoint Security node to manage device security and remediate issues for devices in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 01/28/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -153,7 +136,7 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 - Use of Defender for Endpoint device risk signals in Intune compliance policies and app protection policies.
 - Access to *Tamper protection* capabilities.
 
- To learn more about using Microsoft Defender for Endpoint with Intune, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+ To learn more about using Microsoft Defender for Endpoint with Intune, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).
 
 ## Role-based access control requirements
 
@@ -281,4 +264,4 @@ Configure:
 - [Security baselines](../protect/security-baselines.md)
 - [Compliance policies](../protect/device-compliance-get-started.md)
 - [Conditional Access policies](#configure-conditional-access)
-- [Integration with Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
+- [Integration with Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md)

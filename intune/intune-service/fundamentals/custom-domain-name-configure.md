@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Configure a custom domain name
-titleSuffix: Microsoft Intune
 description: Add a custom domain name for your Microsoft Intune subscription
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 05/21/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

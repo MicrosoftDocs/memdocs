@@ -2,27 +2,12 @@
 
 title: Assign Microsoft Intune licenses
 description: Assign licenses to users so they can enroll in Intune
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 01/24/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: amsaeedi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic, get-started, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - EngageScoreOct2022
@@ -47,7 +32,7 @@ The user account now has the permissions needed to use the service and enroll de
 
 ## Use School Data Sync to assign licenses to users in Intune for Education
 
-If you're an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.  
+If you're an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.
 
 ![Screenshot of SDS profile setting](./media/licenses-assign/i4e-sds-profile-setup-setting.png)
 
@@ -62,7 +47,7 @@ See this [overview of School Data Sync](https://support.office.com/article/Overv
 - Each **user** that you assign a user software license to may access and use the online services and related software (including System Center software) to manage applications and up to 15 MDM devices.
 - You can purchase licenses for any devices separately from user licenses. Device licenses don't need to be assigned to the devices. Each device that accesses and uses the online services and related software (including System Center software) must have a device license available in the Microsoft 365 tenant.
 - If a device is used by more than one user, each device requires a device based software license or all users require a user software license.
-- If you remove a license from a user that has managed devices, it may affect the compliance or management of those devices.  
+- If you remove a license from a user that has managed devices, it may affect the compliance or management of those devices.
 
 ## How to restore users accidentally unlicensed
 
@@ -119,7 +104,7 @@ To view the number of free and used licenses on a Microsoft Intune subscription,
    Get-MgSubscribedSku
    ```
 
-A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
+   A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
 
 > [!NOTE]
 > To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).

@@ -1,36 +1,16 @@
 ---
-# required metadata
-
-title: Microsoft Tunnel for MAM iOS SDK developer guide 
+title: Microsoft Tunnel for MAM iOS SDK Developer Guide
 description: The Microsoft Tunnel for MAM iOS SDK lets you incorporate support for Mobile Application Management (MAM) Tunnel into your native iOS app. iOS/iPadOS app developers should use this article to integrate per-app VPN when they're creating and developing line of business (LOB) apps.
-keywords:
-author: Brenduns
-ms.author: brenduns
-manager: dougeby
 ms.date: 03/27/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid:  
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ochukwunyere, wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: has-adal-ref
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 
 ---
 
-# Microsoft Tunnel for MAM iOS SDK developer guide
+# Microsoft Tunnel for MAM iOS SDK Developer Guide
 
 [!INCLUDE [intune-add-on-note](../includes/intune-plan2-suite-note.md)]
 
@@ -181,7 +161,7 @@ In the `info.plist` for the Xcode app project, confirm the following settings:
   1. Using the **Intune App SDK for iOS** ([a required prerequisite](#prerequisites)), create an `info.plist` **Array** property and name it **Queried URL Schemes**.
 
      Add the string items listed in the step 5 of [Build the SDK into your mobile app](../developer/app-sdk-ios-phase3.md#). This step creates the Intune MAM SDK URL schemes.
-  
+
      The following example shows the info.plist using **Queried URL Schemes**:
 
      :::image type="content" source="./media/tunnel-mam-ios-sdk/project-targets-info-queried-url-schemes-xcode.png" alt-text="Screenshot that shows selecting project, targets, info, queried URL schemes values in Xcode on a macOS device." lightbox="./media/tunnel-mam-ios-sdk/project-targets-info-queried-url-schemes-xcode.png":::
@@ -234,7 +214,7 @@ Keychain sharing might be present in the app project. If it's not there, add it:
 Depending on the LOB app and its implementation/intended purpose, the use of the `MicrosoftTunnelApi` can vary. There are some core functionalities to know as you're integrating the SDK with your app:
 
 - All interactions with the Microsoft Tunnel for MAM iOS SDK are handled through a `MicrosoftTunnelAPI` singleton object.
-- The `MicrosoftTunnelAPI` object interacts with the app using a delegate that implements a `MicrosoftTunnelDelegate` interface.  
+- The `MicrosoftTunnelAPI` object interacts with the app using a delegate that implements a `MicrosoftTunnelDelegate` interface. 
 
 To understand how to write the Microsoft Tunnel delegate and how to initialize the `MicrosoftTunnelAPI`, use the [Microsoft Tunnel for MAM iOS SDK sample apps](https://github.com/msintuneappsdk/ms-intune-tunnel-iOS-sampleapps) (opens a GitHub site).
 

@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Set the mobile device management authority
-titleSuffix: Microsoft Intune
 description: Learn about how to set the mobile device management authority in Microsoft Intune and some key considerations.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 09/24/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-# CustomerIntent: As an  IT admin, I want to set the MDM authority before users can enroll their devices so that we can determine how to manage devices.
-#ROBOTS:
-#audience:
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---

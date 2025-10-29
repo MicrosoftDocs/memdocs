@@ -1,27 +1,12 @@
 ---
-# required metadata
-
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-keywords:
-author: laurawi
+author: brenduns
 ms.author: brenduns
-manager: laurawi
-ms.date: 09/17/2025
+ms.date: 10/27/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
- 
-# optional metadata
-
-#audience:
-
 ms.reviewer: intuner
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -61,25 +46,33 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
+### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-Endpoint Privilege Management (EPM) will soon offer a new option for elevation rules: the ability to run elevated applications using the user's context, not just a virtual account. Today, when EPM elevates an app or file, it uses a virtual account for security. While this protects your environment, it can result in elevated apps missing a users personal settings, preferences, and customizations.
- 
-With this upcoming change, EPM elevation rules will support changing the user token context. This means that when EPM runs an app with elevated privileges, a users personalized experience like custom file paths, app settings, and preferences can be preserved by the EPM elevation.
-
-For more information, see [Use Endpoint Privilege Management with Microsoft Intune](../protect/epm-overview.md).
-
-### Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
-
-We're working on a dashboard for Endpoint Privilege Management (EPM) that brings you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
 ## App management
 
-### PowerShell script support when installing Win32 apps<!-- 29857395 -->
+### More volume options available in Managed Home Screen<!-- 16462284 -->
 
-For added flexibility when installing apps, you'll be able to upload a PowerShell script to install Enterprise App Catalog apps as an alternative to running a command line. Support for other Win32 app types will be added soon.
+We're adding more volume control options to the Managed Home Screen (MHS) app for Android Enterprise dedicated and fully managed devices. With this update, you can enable additional controls for call, ring, notification, and alarm volumes, giving users greater flexibility to adjust sound levels based on their needs.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise (dedicated and fully managed devices)
+
+### Reset Managed Google Play store mode to Basic<!-- 33632857 -->
+
+You'll soon be able to reset the Managed Google Play store layout from *Custom* back to *Basic* in the Intune admin center under **Apps** > **All apps** > **Create Managed Google Play app**.
+
+In **Basic** mode, all approved apps are visible to users. In **Custom** mode, newly approved apps must be added to collections. When you reset to Basic, Intune deletes all existing collections. The **Reset to Basic** button appears only when the store is in Custom mode and shows immediate success or failure.
+ 
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -92,39 +85,179 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
 
+### Settings available in both Templates and Settings Catalog for Android Enterprise <!-- 34876806 -->
+
+Some settings that were only available in Templates are now also supported in the settings catalog.
+
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+To create a new settings catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
+
+The following settings are available in the settings catalog:
+
+**General**:
+
+- Skip first use hints
+- Contact sharing via Bluetooth (work profile level)
+- Search work contacts and display work contact caller-id in personal profile
+- Data sharing between work and personal profiles
+
+**Work profile password**:
+
+- Required password type
+- Minimum password length
+- Number of characters required
+- Number of lowercase characters required
+- Number of uppercase characters required
+- Number of non-letter characters required
+- Number of numeric characters required
+- Number of symbol characters required
+- Number of days until password expires
+- Number of passwords required before user can reuse a password
+- Number of sign-in failures before wiping device
+- Required unlock frequency
+
+To learn more about these settings, go to [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
+
+### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
+
+On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
+
+In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+
+  - Set a recovery lock password
+  - Configure a password rotation schedule
+  - Clear a recovery lock password
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
+### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342  -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type):
+
+- **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+> - Android Enterprise corporate owned fully managed (COBO)
+> - Android Enterprise corporate owned dedicated devices (COSU)
 
 <!-- *********************************************** -->
 
 ## Device enrollment
 
+### New opt-in upgrade to allow existing customers to move from managed Google Play Accounts to Microsoft Entra ID accounts  <!-- 30675087 -->
+
+Microsoft Intune will offer a new opt-in upgrade that allows existing Android Enterprise customers to move from using managed Google Play accounts to using Microsoft Entra ID accounts for Android device management. Customers are eligible if they previously used a managed Google Play account. This better together enterprise (BTE) integration streamlines the onboarding process by eliminating the need for a separate Google account and leveraging your work account. It's not required to switch account types. 
+
+To learn more about this change, see [New onboarding flow to managing Android Enterprise devices with Microsoft Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-onboarding-flow-to-managing-android-enterprise-devices-with-microsoft-intune/4206602).
+
+
+### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
+
+As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
+
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions include:
+- **App Store** (iOS/iPadOS 14.3+)
+- **Camera button** (iOS/iPadOS 18+)
+   - **Web content filtering** (iOS/iPadOS 18.2+)
+   - **Safety and handling** (iOS/iPadOS 18.4+)
+   - **Multitasking** (iOS/iPadOS 26+)
+   - **OS Showcase** (iOS/iPadOS 26+)
+
+The screens you can skip during macOS enrollment include:
+- **App Store** (macOS 11.1+)
+- **Get Started** (macOS 15+)
+- **Software update** (macOS 15.4+)
+- **Additional privacy settings** (macOS 26+)
+- **OS Showcase** (macOS 26+)
+- **Update completed** (macOS 26+)
+- **Get Started** (macOS 15+)
+
 ### Configure Windows Backup for Organizations<!--29202026 -->
 
-A new feature called *Windows Backup for Organizations* will be soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
+A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
 
 <!-- *********************************************** -->
 
 ## Device management
 
-### End of support for older versions of the Intune Company Portal app<!-- 33827426 -->
+### Windows Autopilot device preparation in automatic mode to be available for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps (public preview)<!-- 35518695 -->
 
-On October 1, 2025, support for all Intune Company Portal versions that are older than 5.0.5421.0 ends. When support ends, users with a device that runs an older version of the Intune Company Portal might not be able to successfully maintain that device's registration status and those devices could be identified as non-compliant. For devices to remain registered and in compliance, the Company Portal version must be updated to a version that remains in support.
+You will be able to use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and will apply immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You'll be able to monitor deployment status in the [Windows Autopilot device preparation deployment report](/autopilot/device-preparation/reporting-monitoring).
 
-To update the version of the Company Portal app, see the following available guidance:
+For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](/autopilot/device-preparation/tutorial/automatic/automatic-workflow).
 
-**For administrators:**  
-- Use Intune to deploy the latest version: [Windows Company Portal app by using Microsoft Intune](../apps/store-apps-company-portal-app.md)
+For more information, see the following articles:
 
-**For device users:**  
-- Get the latest version of the Company Portal from your device's app store:
-  - [Apple App Store](https://apps.apple.com/app/intune-company-portal/id719171358)
-  - [Google Play Store](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal)
-  - [Microsoft Store](https://apps.microsoft.com/detail/9wzdncrfj3pz)
+- [Create provisioning policies for Windows 365 | Microsoft Learn](/windows-365/enterprise/create-provisioning-policy)
+- [Windows 365 Cloud Apps | Microsoft Learn](/windows-365/enterprise/cloud-apps)
+- [Use Autopilot device preparation with Cloud PCs | Microsoft Learn](/windows-365/enterprise/autopilot-device-preparation)
+
+### New prompts available to explore your Intune data<!-- 33787582 -->
+
+You can use Security Copilot in Intune to explore new prompts related to your data using natural language. Use these new prompts to view data on:
+
+- Users and groups
+- Role based access control (RBAC)
+- Audit logs
+
+When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
+
+Each query returns a Copilot summary to help you understand the results and offers suggestions. With this information, you can also:
+
+- Add devices or users from the results to a group so you can target apps and policies to this group.
+- Filter example queries to find or build requests that match your needs.
+
+To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+
+### Device Management type assignment filter property supports more Android enrollment options<!-- 33016364 -->
+
+When you create a policy in Intune, you can use [assignment filters](filters.md) to assign a policy based on rules you create. You can create a rule using different [app properties](filters-device-properties.md), like `deviceManagementType`.
+
+The Device Management Type property supports the following Android enrollment options for managed devices:
+
+- Corporate-owned dedicated devices with Entra ID Shared mode
+- Corporate-owned dedicated devices without Entra ID Shared mode
+- Corporate-owned with work profile
+- Corporate-owned fully managed
+- Personal-owned device with a work profile
+- AOSP user-associated devices
+- AOSP userless devices
+
+To learn more about filters and the properties you can currently use, see:
+
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [App and device properties, operators, and rule editing when creating filters in Microsoft Intune](filters-device-properties.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
 
 <!-- *********************************************** -->
 
 ## Device security
+
+### Microsoft Tunnel for detection and protection for rooted Android devices<!-- 30336962 -->
+
+We’re updating Microsoft Tunnel with the capability to detect and block access from rooted Android devices. This update will ensure that only compliant and trustworthy devices can establish secure connections through the Tunnel.
+ 
+This new capability will be available with Microsoft Tunnel for [Mobile Device Management](/intune/intune-service/protect/microsoft-tunnel-overview) (MDM) and for [Mobile Application Management](/intune/intune-service/protect/microsoft-tunnel-mam) (MAM).
 
 ### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
@@ -132,8 +265,8 @@ As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.mic
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices, and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
- 
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+
 > [!div class="checklist"]
 > Applies to:
 >
@@ -161,7 +294,9 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
+
 <!-- ## Monitor and troubleshoot -->
+
 
 <!-- *********************************************** -->
 

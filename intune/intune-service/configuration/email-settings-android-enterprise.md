@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Android Enterprise email settings in Microsoft Intune
 description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Microsoft Entra ID. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android Enterprise personally owned devices with a work profile using Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/15/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
 ms.reviewer: sheetg
-#ms.tgt_pltfrm:
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 

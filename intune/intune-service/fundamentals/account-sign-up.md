@@ -1,30 +1,11 @@
 ---
-# required metadata
-
 title: Sign up or sign in to Microsoft Intune
 description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 05/21/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo

@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Use app-based Conditional Access policies with Intune
-titleSuffix: Microsoft Intune
 description: Learn about using app-based Conditional Access policies with Microsoft Intune for both enrolled and unenrolled devices.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 09/18/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: b399fba0-5dd4-4777-bc9b-856af038ec41
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: elocholi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - conditional-access
 - sub-device-compliance

@@ -1,11 +1,8 @@
 ---
-author: ErikjeMS
-ms.author: erikje
-ms.service: microsoft-intune
-ms.subservice: fundamentals
+author: MandiOhlinger
+ms.author: mandia
 ms.topic: include
-ms.date: 09/10/2025
-ms.localizationpriority: high
+ms.date: 10/14/2025
 ---
 
 ### Apple
@@ -23,26 +20,29 @@ ms.localizationpriority: high
     - macOS 12.x and later
 
 > [!NOTE]
-> **Supported** versions include devices running the three most recent operating system versions. These devices can enroll and take advantage of all Intune functionality that is applicable, and all new eligible features will work on these devices.
+> **Supported** versions include devices running the three most recent operating system versions. These devices can enroll and take advantage of all Intune functionality that's applicable, and all new eligible features work on these devices.
 >
-> **Allowed** versions includes devices running a non-supported version (within three versions of the supported versions). These devices can enroll and take advantage of Intune's eligible features but there is no guarantee that they will work as expected.
+> **Allowed** versions include devices running a non-supported version (within three versions of the supported versions). These devices can enroll and take advantage of Intune's eligible features but there's no guarantee that they'll work as expected.
 >
 > Intune requires iOS/iPadOS 17.x or later for app protection policies and app configuration.
 
 ### Android
 
 **Android 10.0 and later for user-based management methods**. These methods are:
+
 - Android Enterprise personally owned with a work profile
 - Android Enterprise corporate owned work profile
 - Android Enterprise fully managed
 - Android Open Source Project (AOSP) user-based
-- Android device administrator (Note that [Intune ended support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443))
+- Android device administrator ([Intune ended support for Android device administrator on devices with GMS in December 2024](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de/3915443))
 
 **Android 8.0 and later for userless management methods**. These methods are:
+
 - Android Enterprise dedicated
 - AOSP userless
 
 **Additional**
+
 - Samsung KNOX Standard 3.0 and higher: [requirements](https://www.samsungknox.com/en/knox-platform/supported-devices/2.4+)
 - Android open source project devices: [See here for the list of supported devices](../fundamentals/android-os-project-supported-devices.md)
 
@@ -60,37 +60,30 @@ ms.localizationpriority: high
 
 ### Microsoft
 
-- Windows 10/11 (Home, S, Pro, Pro Education, Education, Enterprise, and IoT Enterprise editions)
+- Windows 11 Home, S, Pro, Pro Education, Education, Enterprise, and IoT Enterprise editions
 - Windows 10/11 Cloud PCs on Windows 365
 
-  > [!NOTE]
-  > You can continue to use Microsoft Intune to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11.
-  >
-  > Some features may not be available on Windows 11. This article lists some [known issues](#windows-11-known-issues). As always, test your policies before broadly deploying them across your devices.
+  You can continue to use Microsoft Intune to manage devices running Windows 11 the same as with Windows 10. If another article doesn't explicitly reference Windows 11, assume that feature support for Windows 10 also includes Windows 11.
+
+  Some features might not be available on Windows 11. This article lists some [known issues](#windows-11-known-issues). As always, test your policies before broadly deploying them across your devices.
 
 - Windows 10 LTSC 2019/2021 and Windows 11 LTSC 2024 (Enterprise and IoT Enterprise editions)
-
-- Windows 10 version 1709 (RS3) and later, Windows 8.1 RT, PCs running Windows 8.1 (Sustaining mode)
 
 - Windows Holographic for Business
 
   For more information about managing devices running Windows Holographic for Business, see [Windows Holographic for Business support](../fundamentals/windows-holographic-for-business.md).
 
-- Surface Hub
-
-- Windows 10 Teams (Surface Hub)
-
-  For more information about managing devices running Windows 10 Teams, see [Manage Surface Hub with MDM](/surface-hub/manage-settings-with-mdm-for-surface-hub)
-
 > [!NOTE]
 > Not all Windows editions support all available operating system features being configured through MDM. For more information, see the [Windows configuration service provider reference docs](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers). Each CSP highlights which Windows editions are supported.
 
-Customers with Enterprise Management + Security (EMS) can also use [Microsoft Entra ID to register Windows 10 devices](../enrollment/windows-enroll.md).
+Customers with Enterprise Management + Security (EMS) can also use [Microsoft Entra ID to register Windows devices](../enrollment/windows-enroll.md).
 
-For guidelines on using Windows 10 virtual machines with Intune, see [Using Windows 10 virtual machines](../fundamentals/windows-10-virtual-machines.md).
+For guidelines on using Windows virtual machines with Intune, see [Using Windows virtual machines](../fundamentals/windows-10-virtual-machines.md).
 
-> [!NOTE]
-> Intune does not currently support managing UWF enabled devices. For more information, see [Unified Write Filter (UWF) feature](/windows-hardware/customize/enterprise/unified-write-filter).
+> [!IMPORTANT]
+>
+> - [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+> - Intune doesn't currently support managing UWF enabled devices. For more information, see [Unified Write Filter (UWF) feature](/windows-hardware/customize/enterprise/unified-write-filter).
 
 ### Windows 11 known issues
 

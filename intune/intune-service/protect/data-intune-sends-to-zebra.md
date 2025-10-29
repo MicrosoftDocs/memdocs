@@ -1,33 +1,12 @@
 ---
-# required metadata
-
 title: Data Intune sends to Zebra
-titleSuffix: Microsoft Intune
 description: List of data that Intune sends to Zebra.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 12/07/2023
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: a5c3bec4-18ed-11e8-accf-0ed5f89f718b
-
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: Jessica Yang 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: jieyan
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy

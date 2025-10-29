@@ -1,30 +1,10 @@
 ---
-# required metadata
 title:  Intune Data Warehouse Collections
-titleSuffix: Microsoft Intune
 description: The Intune Data Warehouse collections provide details related to the Data Warehouse API.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 11/18/2024
+ms.date: 10/02/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 29f09230-dc56-43db-b599-d961967bda49
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -76,7 +56,7 @@ The **appType** entity lists the installation source of an app.
 | 3         | iOS   store app                   | An   iOS store app.                                 |
 | 4         | iOS   LOB app                     | An   iOS line-of-business app.                      |
 | 5         | Managed   iOS store app (MAM)     | An   iOSstore app that is management enabled.       |
-| 6         | Microsoft 365 Apps for enterprise        | The   Microsoft 365 Apps for Windows 10.     |
+| 6         | Microsoft 365 Apps for enterprise        | The   Microsoft 365 Apps for Windows.     |
 | 7         | Web   app                         | A   web app.                                        |
 | 8         | Windows   Phone 8.1 store app     | A   Windows phone 8.1 store app.                    |
 | 9         | Windows   store app               | A   Windows store app.                              |
@@ -417,7 +397,7 @@ The **EnrollmentFailureReason** entity indicates a more detailed reason for a de
 | APNSCertificateExpired           | Apple devices cannot be managed with an expired Apple MDM push certificate.                                                                                                                            |
 
 ## intuneManagementExtensions
-The **intuneManagementExtension** lists the **intuneManagementExtension** health on each Windows 10 device per day. The data is retained for the last 60 days.
+The **intuneManagementExtension** lists the **intuneManagementExtension** health on each Windows device per day. The data is retained for the last 60 days.
 
 |       Property      |                          Description                          | Example |
 |---------------------|---------------------------------------------------------------|---------|

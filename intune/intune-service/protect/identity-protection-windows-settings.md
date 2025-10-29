@@ -1,32 +1,14 @@
 ---
-# required metadata
-
 title: Windows Hello for Business settings in Microsoft Intune
 description: View details for Windows Hello for Business settings you configure in an Intune identity protection profile for device groups in Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 07/09/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - identity-protection
 - sub-secure-endpoints
-
 ms.reviewer: mattcall
 
 ---
@@ -47,7 +29,7 @@ ms.reviewer: mattcall
 
 This article describes Windows Hello for Business settings you can manage with an Identity protection profile. Identity protection profiles are part of device configuration policy in Microsoft Intune. However, as of July 2024, device configuration profiles for *Identity protection* are replaced by endpoint security profiles for *Account protection*. While you can continue to use identity protection profiles that you previously created, Intune no longer supports creating new instances. Instead, to manage settings for identity protection, use an endpoint security [account protection policy](../protect/endpoint-security-account-protection-policy.md).
 
-With an Identity protection profile, you can configure settings on discrete groups of Windows 10/11 devices. To configure Windows Hello for Business tenant-wide, as part of *device enrollment*, see [Create a Windows Hello for Business policy](../protect/windows-hello.md) in *Integrate Windows Hello for Business with Microsoft Intune*.
+With an Identity protection profile, you can configure settings on discrete groups of Windows devices. To configure Windows Hello for Business tenant-wide, as part of *device enrollment*, see [Create a Windows Hello for Business policy](../protect/windows-hello.md) in *Integrate Windows Hello for Business with Microsoft Intune*.
 
 This article describes the settings for the enrollment policy.
 
@@ -57,9 +39,9 @@ You can find additional information about these settings in [Configure Windows H
 
 *The following settings details apply only to the device configuration profile template for Identity protection, which was deprecated in July 2024.*
 
-- **Configure Windows Hello for Business**:  
+- **Configure Windows Hello for Business**:
 
-  - **Not configured** (*default*) - Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on Windows 10/11 devices isn't changed. All other settings on the pane are unavailable.
+  - **Not configured** (*default*) - Select this setting if you don't want to use Intune to control Windows Hello for Business settings. Any existing Windows Hello for Business settings on Windows devices isn't changed. All other settings on the pane are unavailable.
 
   - **Disable** - If you don't want to use Windows Hello for Business, select this setting. All other settings on the screen are then unavailable.
   - **Enable** - Select this setting if you want to configure Windows Hello for Business settings.
@@ -70,7 +52,7 @@ You can find additional information about these settings in [Configure Windows H
     Specify a minimum PIN length for devices, from 4 to 127 characters. By default, this setting is *Not configured*.
 
   - **Maximum PIN length**  
-  Specify a maximum PIN length for devices, from four to 127 characters. By default, this setting is *Not configured*.
+    Specify a maximum PIN length for devices, from four to 127 characters. By default, this setting is *Not configured*.
 
   - **Lowercase letters in PIN**  
     If required, user PIN must include at least one lowercase letter. By default, this setting is *Not configured*.
@@ -123,7 +105,7 @@ You can find additional information about these settings in [Configure Windows H
     - **Enable** - Windows requires all users to use anti-spoofing for facial features when that is supported.
     - **Not configured** (*default*) - Windows honors the anti-spoofing configurations on the device.
 
-  - **Certificate for on-premise resources**  
+  - **Certificate for on-premise resources**
 
     - **Enable** - Allows Windows Hello for Business to use certificates to authenticate to resources on-premises.
     - **Not configured** (*default*) - Prevents Windows Hello for Business from using certificates to authenticate to resources on-premises. Instead, devices use the default behavior of *key-trust on-premises authentication*. For more information, see [User certificate for on-premises authentication](/windows/security/identity-protection/hello-for-business/hello-cert-trust-policy-settings#use-certificate-for-on-premises-authentication) in the Windows Hello documentation.
@@ -132,7 +114,10 @@ You can find additional information about these settings in [Configure Windows H
   This setting is available for devices that run Windows 10 version 1903 or later, or Windows 11. Use it to manage support for using Windows Hello security keys for sign-in.
 
   - **Enable** - Users can use a Windows Hello security key as a sign-in credential for PCs targeted with this policy.
-  - **Not configured** - Security keys are disabled and users can't use them to sign in to PCs.
+  - **Not configured** - Security keys are disabled and users can't use them to sign in to PCs.  
+
+   > [!IMPORTANT]
+   > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Next steps
 

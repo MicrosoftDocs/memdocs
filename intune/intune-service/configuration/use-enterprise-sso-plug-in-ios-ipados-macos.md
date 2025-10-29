@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Single sign-on (SSO) for iOS/iPadOS and macOS
 description: Overview of Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro, and other MDM solution providers. The Enterprise SSO plug-in is available on iOS/iPadOS and macOS devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 05/01/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm, arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 zone_pivot_groups: apple-enterprise-sso
 ---
@@ -73,7 +56,7 @@ With Platform SSO:
     - Use Platform SSO to enhance your SSO configuration. You can configure different authentication methods, create new organizational users at sign in, and assign authorization modes for users.
 
 - End users:
-  
+
   - Get a more secure sign-in experience as Microsoft Entra ID integrates with the Microsoft Enterprise SSO plug-in.
   - Get a single sign-on experience when combined with the SSO app extension. The SSO app extension allows using Touch ID and passkeys with Microsoft Entra ID.
   - Can sign in with their Microsoft Entra user account and minimize the number of times they need to enter their Microsoft Entra credentials on their macOS devices.

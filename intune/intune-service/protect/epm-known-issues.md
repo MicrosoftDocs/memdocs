@@ -1,26 +1,12 @@
 ---
 title: Known Issues for Endpoint Privilege Management with Microsoft Intune
 description: Configure policies that define how Endpoint Privilege Management functions in your tenant, and behaviors when elevating files to run in administrative context.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management

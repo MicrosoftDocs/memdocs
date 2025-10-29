@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Wrap Android apps with the Intune App Wrapping Tool 
+title: Wrap Android Apps With the Intune App Wrapping Tool
 description: Learn how to wrap your Android apps without changing the code of the app itself. Prepare the apps so you can apply mobile app management policies.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: e9c349c8-51ae-4d73-b74a-6173728a520b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
-# Prepare Android apps for app protection policies with the Intune App Wrapping Tool
+# Prepare Android Apps for App Protection Policies With the Intune App Wrapping Tool
 
 Use the Microsoft Intune App Wrapping Tool for Android to change the behavior of your in-house Android apps by restricting features of the app without changing the code of the app itself.
 
@@ -44,9 +23,9 @@ Before running the tool, review [Security considerations for running the App Wra
 ## Fulfill the prerequisites for using the App Wrapping Tool
 
 - Your app must use up-to-date libraries
-  
+
 - Your app must be compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk)
-  
+
 - If your app is complex, it must integrate with the [Intune App SDK for Android](../developer/app-sdk-android-phase1.md)
 
 - You must run the App Wrapping Tool on a Windows computer running Windows 10 or later.
@@ -59,7 +38,7 @@ Before running the tool, review [Security considerations for running the App Wra
 
   > [!NOTE]
   > If your input app is an Android App Bundle (.aab), you will need to convert it to an APK before using the Intune App Wrapping Tool. For details, see [Convert Android App Bundle (AAB) to APK](#convert-android-app-bundle-aab-to-apk). As of August 2021, [new private apps can still be published to the Google Play Store as APKs](https://support.google.com/googleplay/work/answer/6145139?hl=en).
-  
+
 - The app must be developed by or for your company. You cannot use this tool on apps that are available in the Google Play Store. This includes downloading or obtaining the app from the Google Play Store.
 
 - To run the App Wrapping Tool, you must install the latest version of the [Java Runtime Environment](https://java.com/download/) and then ensure that the Java path variable has been set to C:\ProgramData\Oracle\Java\javapath in your Windows environment variables. For more help, see the [Java documentation](https://java.com/en/download/help/index.html).
@@ -72,7 +51,7 @@ Before running the tool, review [Security considerations for running the App Wra
 - (Optional) Sometimes an app may hit the Dalvik Executable (DEX) size limit due to the Intune MAM SDK classes that are added during wrapping. DEX files are a part of the compilation of an Android app. The Intune App Wrapping Tool automatically handles DEX file overflow during wrapping for apps with a min API level of 21 or higher (as of [v. 1.0.2501.1](https://github.com/microsoftconnect/intune-app-wrapping-tool-android/releases)). For apps with a min API level of < 21, best practice would be to increase the min API level using the wrapper's `-UseMinAPILevelForNativeMultiDex` flag. For customers unable to increase the app's minimum API level, the following DEX overflow workarounds are available. In certain organizations, this may require working with whoever compiles the app (ie. the app build team):
 
   - Use ProGuard to eliminate unused class references from the app's primary DEX file.
-  - For customers using v3.1.0 or higher of the Android Gradle plugin, disable the [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).  
+  - For customers using v3.1.0 or higher of the Android Gradle plugin, disable the [D8 dexer](https://android-developers.googleblog.com/2018/04/android-studio-switching-to-d8-dexer.html).
 
 ## How often should I rewrap my Android application with the Intune App Wrapping Tool?
 
@@ -154,7 +133,7 @@ Wrapped apps can be signed *after* wrapping using your existing signing tools (a
 
 If the previous signing certificate cannot be used, or the app has not been deployed before, you may create a new signing certificate by following the instructions in the [Android Developer Guide](https://developer.android.com/studio/publish/app-signing.html#signing-manually).
 
-If the app has been deployed previously with a different signing certificate, the app can't be uploaded to Intune after upgrade. App upgrade scenarios will be broken if your app is signed with a different certificate than the one the app is built with. As such, any new signing certificates should be maintained for app upgrades. 
+If the app has been deployed previously with a different signing certificate, the app can't be uploaded to Intune after upgrade. App upgrade scenarios will be broken if your app is signed with a different certificate than the one the app is built with. As such, any new signing certificates should be maintained for app upgrades.
 
 ## Security considerations for running the App Wrapping Tool
 
