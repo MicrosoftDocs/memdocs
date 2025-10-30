@@ -11,7 +11,6 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-
 # Configure Microsoft Intune for Zero Trust: Secure tenants (Preview)
 
 Protecting your Intune tenant is essential to enforcing Zero Trust principles and maintaining a secure, well-managed environment. These recommendations align with Microsoft’s [Secure Future Initiative](https://www.microsoft.com/trust-center/security/secure-future-initiative?msockid=2bad2df65a416adb0e5838355b3e6b95#SFI-pillars) by limiting blast radius and enforcing least-privilege access through segmented administrative control, secure device onboarding, and policy-driven protections. Together, they help reduce risk, maintain tenant hygiene, and strengthen compliance across platforms.
@@ -49,6 +48,14 @@ Protecting your Intune tenant is essential to enforcing Zero Trust principles an
 ### Compliance policies protect iOS/iPadOS devices<!--  24543 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24543](./includes/secure-recommendations/24543.md)]
+
+### Platform SSO is configured to strengthen authentication on macOS devices<!-- 24568 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24568](./includes/secure-recommendations/24568.md)]
+
+### Defender for Endpoint automatic enrollment is enforced to reduce risk from unmanaged Android threats<!-- 24871 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24871](./includes/secure-recommendations/24871.md)]
 
 ### Device cleanup rules maintain tenant hygiene by hiding inactive devices<!--  24802 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
