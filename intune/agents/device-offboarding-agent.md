@@ -85,9 +85,9 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 
 :::column-end:::
 :::column span="3":::
-> There are different role requirements depending on the action being taken with the agent.\
-> For details, see:
+> Role requirements vary based on whether you're configuring the agent or using it, and on the specific actions performed.
 >
+> For detailed guidance, see:
 > - [Configure the Device Offboarding Agent](device-offboarding-agent-configure.md)
 > - [Use the Device Offboarding Agent](device-offboarding-agent-use.md)
 
