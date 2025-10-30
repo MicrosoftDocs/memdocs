@@ -53,9 +53,9 @@ Protecting your Intune tenant is essential to enforcing Zero Trust principles an
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]
 
-### Defender for Endpoint automatic enrollment is enforced to reduce risk from unmanaged Android threats<!-- 24874 -->
+### Defender for Endpoint automatic enrollment is enforced to reduce risk from unmanaged Android threats<!-- 24871 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
-[!INCLUDE [24874](./includes/secure-recommendations/24874.md)]
+[!INCLUDE [24871](./includes/secure-recommendations/24871.md)]
 
 ### Device cleanup rules maintain tenant hygiene by hiding inactive devices<!--  24802 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
