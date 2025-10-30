@@ -3,7 +3,7 @@ title: Android configuration list for Intune settings catalog
 description: Use the Microsoft Intune settings catalog to add, configure, or restrict features on Android devices. This article lists and describes the settings you can configure.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 10/20/2025
+ms.date: 11/11/2025
 ms.topic: reference
 params:
   siblings_only: true
@@ -227,7 +227,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
 - **Allow copy and paste between work and personal profiles**: If **True**, allows users to copy and paste data between the work and personal profiles. If **False**, Intune doesn't change or update this setting. By default, the OS might:
 
-  - Prevent users from pasting text into the personal profile that's copied from the work profile
+  - Prevent users from pasting text copied from the work profile into the personal profile
   - Allow users to copy text from the personal profile and paste into the work profile
   - Allow users to copy text from the work profile, and paste into the work profile.
 
@@ -272,6 +272,14 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
+- **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature. If **False**, Intune doesn't change or update this setting. By default, the OS might allow assist content.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
 - **Block beaming data from apps using NFC (work-profile level)**: If **True**, prevents using the Near Field Communication (NFC) technology to beam data from apps to other devices. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.
 
   Applies to:
@@ -297,6 +305,12 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate-owned devices with a work profile (COPE)
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Block Contact sharing via Bluetooth (work profile level)**: If **True**, prevents sharing work profile contacts with paired Bluetooth devices, like cars or mobile devices. If **False**, Intune doesn't change or update this setting. By default, the OS might allow users to share their contacts using Bluetooth.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
 
 - **Block date and time changes**: If **True**, prevents users from manually setting the date and time. If **False**, Intune doesn't change or update this setting. By default, the OS might allow users to the set date and time on the device.
 
@@ -367,6 +381,12 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
+- **Block searching of work contacts and displaying work contact caller-id in personal profile**: In the personal profile, **True** prevents users from searching work contacts, and showing work caller ID information. If **False**, Intune doesn't change or update this setting. By default, the OS might allow searching work contacts, and show work caller IDs.
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+
 - **Block tethering and access to hotspots**: If **True**, prevents tethering and access to portable hotspots. If **False**, Intune doesn't change or update this setting. By default, the OS might allow tethering and access to portable hotspots.
 
   Applies to:
@@ -408,6 +428,17 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
+- **Data sharing between work and personal profiles**: Choose if data can be shared between work and personal profiles. Your options:
+
+  - Device default
+  - Block all sharing between profiles
+  - Block sharing from work to personal profile
+  - No restrictions on sharing
+
+  Applies to:
+
+  - Android Enterprise corporate-owned devices with a work profile (COPE)
+
 - **Default permission policy**: Define the default permission policy for requests for runtime permissions. Your options:
 
   - Device default
@@ -426,6 +457,13 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   This feature applies to:
 
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+  - Android Enterprise corporate owned fully managed (COBO)
+  - Android Enterprise corporate owned dedicated devices (COSU)
+
+- **Skip first use hints**: If **True**, hides or skips suggestions from apps that step through tutorials, or hints when the app starts. If **False**, Intune doesn't change or update this setting. By default, the OS might show these suggestions when the app starts.
+
+  Applies to:
+
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
@@ -474,6 +512,59 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
+
+#### Work profile password
+
+These settings require users to set a password that protects only the work profile on their device. It applies to corporate apps and data, and doesn't affect personal apps or settings. You can configure complexity requirements, like length and character types, and enforce password expiration.
+
+- **Number of days until password expires**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
+
+- **Number of passwords required before user can reuse a password**: Use this setting to restrict users from creating previously used passwords. Enter the number of previously used passwords that can't be used, from 1-24. For example, enter `5` so users can't set a new password to their current password or any of their previous four passwords. When the value is blank, Intune doesn't change or update this setting.
+
+- **Number of sign-in failures before wiping device**: Enter the number of wrong passwords allowed before the device is wiped, from 4-11. `0` (zero) might disable the device wipe functionality. When the value is blank, Intune doesn't change or update this setting.
+
+  Fully managed, dedicated, and corporate-owned work profile devices aren't prompted to set a password. The settings are required, but users might not be notified. Users need to set the password manually. The policy reports as failed until the user sets a password that meets your requirements.
+
+- **Required password type**: Set the work profile password's complexity requirements. More password requirements are available based on your selection. Your options:
+
+  - **Device default**
+  - **Password required, no restrictions**
+  - **Weak biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
+  - **Numeric**: Password must only be numbers, like `123456789`. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+
+  - **Numeric complex**: Password must only be numbers but can't be repeated or consecutive numbers. For example, `1111` or `1234` aren't allowed. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+
+  - **Alphabetic**: Letters in the alphabet are required. Numbers and symbols aren't required. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+
+  - **Alphanumeric**: Password can include uppercase letters, lowercase letters, and numeric characters. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+
+  - **Alphanumeric with symbols**: Password can include uppercase letters, lowercase letters, numeric characters, punctuation marks, and symbols. Also enter:
+    - **Minimum password length**: Enter the minimum length the password must have, between 4 and 16 characters.
+    - **Number of characters required**: Enter the number of characters the password must have, between 0 and 16 characters.
+    - **Number of lowercase characters required**: Enter the number of lowercase characters the password must have, between 0 and 16 characters.
+    - **Number of non-letter characters required**: Enter the number of non-letter characters, like `!`, `$`, `#`, `%`, the password must have, between 0 and 16 characters.
+    - **Number of numeric characters required**: Enter the number of numeric characters (1, 2, 3, and so on) the password must have, between 0 and 16 characters.
+    - **Number of symbol characters required**: Enter the number of symbol characters, like `!`, `$`, `#`, `%`, the password must have, between 0 and 16 characters.
+    - **Number of uppercase characters required**: Enter the number of uppercase characters the password must have, between 0 and 16 characters.
+
+- **Required unlock frequency**: Select how long users have before they're required to unlock the work profile using a strong authentication method.
+
+  Strong authentication is when users unlock the work profile using a password, PIN, or pattern. Non-strong authentication methods are when users unlock the work profile using some biometric options, like a fingerprint or face scan.
+
+   Your options:
+
+  - **Device default** (default): The screen locks using the device's default time.
+  - **24 hours since last pin, password, or pattern unlock**: The screen locks 24 hours after users last used a strong authentication method to unlock the work profile. When the timeout is reached, non-strong authentication methods are disabled until the work profile is unlocked using strong authentication.
+
+  To learn more, see [2.3.4 Advanced passcode management: Strong Authentication required timeout](https://developers.google.com/android/work/requirements#2.3.-advanced-passcode-management_1) (opens Android's web site).
+
+These settings apply to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
 
 # [AOSP](#tab/aosp)
 
