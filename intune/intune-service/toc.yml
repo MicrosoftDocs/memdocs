@@ -178,19 +178,16 @@ items:
 
     - name: Remote Help
       items:
-      - name: Using Remote Help
+      - name: Remote Help overview
         href: ./fundamentals/remote-help.md
-      - name: Remote Help on Windows
-        href: ./fundamentals/remote-help-windows.md
-      - name: Remote Help on macOS
-        href: ./fundamentals/remote-help-macos.md
-      - name: Remote Help Web App
-        href: ./fundamentals/remote-help-webapp.md
-      - name: Remote Help on Android
-        href: ./fundamentals/remote-help-android.md
-      - name: Troubleshooting Remote Help on Android
-        href: ./fundamentals/remote-help-android-troubleshoot.md
-
+      - name: Planning Remote Help
+        href: ./fundamentals/remote-help-plan.md
+      - name: Deploying Remote Help
+        href: ./fundamentals/remote-help-deploy.md
+      - name: Using Remote Help
+        href: ./fundamentals/remote-help-use.md
+      - name: Troubleshooting Remote Help
+        href: ./fundamentals/remote-help-troubleshoot-monitor.md
     - name: Advanced analytics
       href: ../analytics/advanced/toc.yml
 
@@ -209,7 +206,7 @@ items:
       displayName: help, get started, mdm, mam, android, ios, ipados, macos, windows
       href: ./fundamentals/intune-planning-guide.md
       items:
-      - name: Using Windows 10 VMs with Intune
+      - name: Using Windows VMs with Intune
         href: ./fundamentals/windows-10-virtual-machines.md
       - name: Using Azure Virtual Desktop with Intune
         href: ./fundamentals/azure-virtual-desktop.md
@@ -295,10 +292,10 @@ items:
         href: ./protect/software-updates-guide-android.md
       - name: iOS/iPadOS
         displayName: software updates
-        href: ./protect/software-updates-guide-ios-ipados.md
+        href: ./protect/updates/software-updates-guide-ios-ipados.md
       - name: macOS
         displayName: software updates
-        href: ./protect/software-updates-guide-macos.md
+        href: ./protect/updates/software-updates-guide-macos.md
 
   - name: Set up Microsoft Intune
     items:
@@ -355,6 +352,12 @@ items:
       items:
       - name: Configure security recommendations using Zero Trust
         href: ./protect/zero-trust-configure-security.md
+      - name: Secure tenants
+        href: ./protect/zero-trust-secure-tenant.md
+      - name: Secure devices
+        href: ./protect/zero-trust-secure-devices.md
+      - name: Secure data
+        href: ./protect/zero-trust-secure-data.md
 
   - name: Create and deploy Intune policies
     items:
@@ -547,7 +550,7 @@ items:
                   href: ./apps/apps-add-android-for-work.md
               - name: Microsoft 365 Suite
                 items:
-                - name: Microsoft 365 apps for Windows 10
+                - name: Microsoft 365 apps for Windows
                   href: ./apps/apps-add-office365.md
                 - name: Microsoft 365 apps for macOS
                   href: ./apps/apps-add-office365-macos.md
@@ -609,7 +612,7 @@ items:
                   href: ./apps/store-apps-company-portal-app.md
                 - name: Company Portal app - macOS
                   href: ./apps/apps-company-portal-macos.md
-                - name: Microsoft Edge for Windows 10
+                - name: Microsoft Edge for Windows
                   href: ./apps/apps-windows-edge.md
                 - name: Microsoft Edge for macOS
                   href: ./apps/apps-edge-macos.md
@@ -629,7 +632,7 @@ items:
               - name: Include and exclude apps
                 href: ./apps/apps-inc-exl-assignments.md
                 displayName: app assignment
-              - name: Deploy Windows 10/11 apps
+              - name: Deploy Windows apps
                 href: ./apps/apps-windows-10-app-deploy.md
               - name: Deploy apps to Government environments
                 href: ./apps/apps-deploy-gcc-dod.md
@@ -838,13 +841,13 @@ items:
         - name: Microsoft Defender for Endpoint
           items:
           - name: Microsoft Defender for Endpoint
-            href: ./protect/advanced-threat-protection.md
+            href: ./protect/microsoft-defender-with-intune.md
           - name: Configure Defender for Endpoint
-            href: ./protect/advanced-threat-protection-configure.md
+            href: ./protect/microsoft-defender-integrate.md
           - name: Android web protection
-            href: ./protect/advanced-threat-protection-manage-android.md
+            href: ./protect/microsoft-defender-configure-android.md
           - name: Monitor Defender for Endpoint
-            href: ./protect/advanced-threat-protection-monitor.md
+            href: ./protect/microsoft-defender-monitor.md
           - name: Microsoft Defender for Endpoint Security settings management
             items:
             - name: Microsoft Defender for Endpoint Security settings management
@@ -1123,7 +1126,7 @@ items:
             href: ./protect/compliance-policy-create-Linux.md
           - name: Compliance settings - macOS
             href: ./protect/compliance-policy-create-mac-os.md
-          - name: Compliance settings - Windows 10
+          - name: Compliance settings - Windows
             href: ./protect/compliance-policy-create-windows.md
           - name: Compliance settings - Windows 8.1
             href: ./protect/compliance-policy-create-windows-8-1.md
@@ -1133,7 +1136,7 @@ items:
             items:
             - name: macOS Defender Antivirus settings
               href: ./protect/antivirus-microsoft-defender-settings-macos.md
-            - name: Windows 10 Defender Antivirus settings
+            - name: Windows Defender Antivirus settings
               href: ./protect/antivirus-microsoft-defender-settings-windows.md
             - name: Tenant attach Defender Antivirus settings
               href: ./protect/antivirus-microsoft-defender-settings-windows-tenant-attach.md
@@ -1156,7 +1159,7 @@ items:
             href: ./protect/endpoint-security-account-protection-profile-settings.md
         - name: Security baseline settings
           items:
-          - name: Windows 10 MDM baseline settings
+          - name: Windows MDM baseline settings
             href: ./protect/security-baseline-settings-mdm-all.md
           - name: Microsoft Defender for Endpoint baseline settings
             href: ./protect/security-baseline-settings-defender.md
@@ -1247,8 +1250,8 @@ items:
               displayName: gpo, admx, settings catalog, windows
               href: ./configuration/group-policy-analytics-migrate.md
 
-        - name: Properties catalog
-          displayName: windows
+        - name: Properties catalog (device inventory)
+          displayName: windows, device inventory
           href: ./configuration/properties-catalog.md
         - name: Custom settings & scripts
           items:
@@ -1494,7 +1497,7 @@ items:
           - name: Wired networks
             displayName: macos
             href: ./configuration/wired-network-settings-macos.md
-        - name: Windows 10/11
+        - name: Windows
           items:
           - name: BIOS configurations and other settings
             href: ./configuration/bios-configuration.md
@@ -1770,7 +1773,7 @@ items:
         items:
         - name: Get incomplete user enrollment report
           href: ./enrollment/enrollment-report-company-portal-abandon.md
-        - name: View enrollment reports 
+        - name: View enrollment reports
           href: ./enrollment/view-enrollment-reports.md
         - name: Troubleshoot device enrollment
           href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
@@ -1795,7 +1798,7 @@ items:
         - name: Include and exclude apps
           href: ./apps/apps-inc-exl-assignments.md
           displayName: assign apps, app assignment, android, ios, ipados
-        - name: Deploy Windows 10/11 apps
+        - name: Deploy Windows apps
           displayName: assign apps, app assignment, windows
           href: ./apps/apps-windows-10-app-deploy.md
         - name: Deploy apps to Government environments
@@ -2049,7 +2052,7 @@ items:
         href: ./fundamentals/guided-scenarios-cloud-managed-pc.md
       - name: Secure Microsoft Office mobile apps
         href: ./fundamentals/guided-scenarios-office-mobile.md
-      - name: Windows 10/11 in cloud configuration
+      - name: Windows in cloud configuration
         items:
         - name: Overview
           displayName: cloud config, flw, windows

@@ -1,7 +1,7 @@
 ---
 title: Automatically Hide Devices With Cleanup Rules
 description: Intune's device cleanup rules offer a simple, automated way to ensure that only actively managed devices remain visible in the admin center. Learn more about device cleanup rules and how to configure them.
-ms.date: 09/22/2025
+ms.date: 10/08/2025
 ms.topic: how-to
 author: paolomatarazzo
 ms.author: paoloma
@@ -17,19 +17,18 @@ Managing a dynamic device fleet means constantly tracking devices that come and 
 Device cleanup rules in Intune run on a schedule and automatically hide records of devices that didn't check in for a specified period (for example, 90 days). These rules:
 
 - Hide devices from the Intune portal and reports.
+- **Don't trigger any actions on the device (no wipe or retire).**
 - Allow cleaned-up devices to reappear if they check in before their device certificate expires.
 - Require re-enrollment after the certificate expires.
-- Don't trigger any actions on the device (no wipe or retire).
 - Aren't available for Jamf-managed devices.
 
-> [!NOTE]
-> Devices removed from Intune aren't deleted from Microsoft Entra ID. For more information about removing devices from Microsoft Entra ID, see [Manage stale devices in Microsoft Entra ID](/entra/identity/devices/manage-stale-devices).
+## Prerequisites
 
-## Requirements
-
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
-
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To configure device cleanup rules, use an account with at least one of the following roles:
 >
 > - Intune Service Administrator
@@ -37,6 +36,9 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 >   - The permission **Managed Device Cleanup Rules/Update**
 >   - The permission **Managed Device Cleanup Settings/Update**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
+
 
 ## How to create a device cleanup rule
 
@@ -65,13 +67,16 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 1. Select **Next**.
 1. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
 
-    This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device fails to check in before the period ends, the device is cleaned up.
+    This setting determines how many days a device must check in with the Intune service before the device is considered stale or inactive. If a device doesn't check in before the period ends, the device is cleaned up.
 
     > [!TIP]
     > Select **Preview affected devices** to get a list of devices that didn't check in during the specified number of days.
 
 1. Select **Next**.
 1. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the rule applies.
+
+> [!NOTE]
+> Devices hidden from Intune aren't removed from Microsoft Entra ID. For more information about removing devices from Microsoft Entra ID, see [Manage stale devices in Microsoft Entra ID](/entra/identity/devices/manage-stale-devices).
 
 ## Device cleanup rules logging
 

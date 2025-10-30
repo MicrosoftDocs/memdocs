@@ -66,7 +66,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes**
 
-- **Turn on Credential Guard**
+- **Turn on Credential Guard**  
   [CSP: DeviceGuard](https://go.microsoft.com/fwlink/?linkid=872424)
 
   Credential Guard uses Windows Hypervisor to provide protections. Credential Guard requires hardware support for Secure Boot and DMA protections. This setting is only successful on devices that meet the hardware requirements.

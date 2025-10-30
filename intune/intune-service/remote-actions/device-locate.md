@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Find lost devices"
 description: Locate lost or stolen devices by using the locate device feature in Microsoft Intune. Get details on security and privacy information when using the locate device action.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: shsivaku
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
@@ -13,23 +13,31 @@ The *locate device* device remote action in Microsoft Intune enables IT administ
 
 Depending on the platform, Intune can also report the last known location if the device is offline, [play lost device sound alerts](device-play-lost-mode-sound.md), or [display custom messages](device-lost-mode.md).
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 > - Android Enterprise corporate-owned dedicated (COSU)
 > - Android Enterprise corporate-owned fully managed (COBO)
 > - Android Enterprise corporate-owned work profile (COPE)
 > - iOS/iPadOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode)
 > - Windows
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
-
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
 ::: zone pivot="ios"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Enable [Lost Mode](device-lost-mode.md)
@@ -38,23 +46,22 @@ Depending on the platform, Intune can also report the last known location if the
 
 ::: zone pivot="android"
 
-> [!div class="checklist"]
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Location services must be turned on.
 > - Intune app is installed.
-
+>
 > **Fully Managed Devices**:
 > - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
-
+>
 > **Corporate-Owned Work Profile Devices**:
 >
 > - The **Locate Device** feature must be explicitly enabled with a device restrictions profile.
 > - Users must grant location permission to the Intune app. Go to: **Settings** > **Apps** > **Intune (Work tab)** > **Permissions** > **Location** > **Allow all the time**.
-
+>
 > **Dedicated Devices**:
 > - The **Locate Device** feature is enabled by default, unless explicitly blocked with a device restriction profile.
-
+>
 > [!NOTE]
 > When **Locate device** is allowed, users receive a one-time notification, *Intune can access your location*, indicating that Intune has the ability to use location permissions on the device.
 
@@ -64,29 +71,36 @@ For more information about device restrictions, see [Android template device set
 
 ::: zone pivot="windows"
 
-Before you can use the locate functionality, you must configure your devices to allow it.
-
-1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
-
-    | Category | Setting name | Value |
-    |--|--|--|
-    | **Privacy** | Let Apps Access Location| Force allow|
-
-1. Assign the policy to a group that contains as members the devices that you want to configure.
+> Before you can use the locate functionality, you must configure your devices to allow it.
+> 
+> 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
+> 
+>     | Category | Setting name | Value |
+>     |--|--|--|
+>     | **Privacy** | Let Apps Access Location| Force allow|
+> 
+> 1. Assign the policy to a group that contains as members the devices that you want to configure.
 
 ::: zone-end
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
 ## Locate a device
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

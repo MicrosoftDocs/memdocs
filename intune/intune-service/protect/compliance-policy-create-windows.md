@@ -57,7 +57,7 @@ For more information, see:
   > [!NOTE]
   > The **Require Secure Boot to be enabled on the device** setting is supported on some TPM 1.2 and 2.0 devices. For devices that don't support TPM 2.0 or later, the policy status in Intune shows as **Not Compliant**. For more information on supported versions, see  [Device Health Attestation](/windows/security/information-protection/tpm/trusted-platform-module-overview#device-health-attestation).
 
-- **Require code integrity**:
+- **Require code integrity**:  
   Code integrity is a feature that validates the integrity of a driver or system file each time it's loaded into memory.
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or non-compliance.
   - **Require** - Require code integrity, which detects if an unsigned driver or system file is being loaded into the kernel. It also detects if a system file is changed by malicious software or run by a user account with administrator privileges.
@@ -73,36 +73,36 @@ For more information, see:
 
 To discover build versions for all Windows Feature Updates and Cumulative Updates (to be used in some of the fields below), see [Windows release information](/windows/release-information). Be sure to include the appropriate version prefix before the build numbers, like 11.0 for Windows 11.
 
-- **Minimum OS version**:
+- **Minimum OS version**:  
   Enter the minimum allowed version in the **major.minor.build.revision number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
   When a device has an earlier version than the OS version you enter, it's reported as noncompliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After they upgrade, they can access company resources.
 
-- **Maximum OS version**:
+- **Maximum OS version**:  
   Enter the maximum allowed version, in the **major.minor.build.revision number** format. To get the correct value, open a command prompt, and type `ver`. The `ver` command returns the version in the following format:
 
   `Microsoft Windows [Version 10.0.17134.1]`
 
   When a device is using an OS version later than the version entered, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until the rule is changed to allow the OS version.
 
-- **Minimum OS required for mobile devices**:
+- **Minimum OS required for mobile devices**:  
   Enter the minimum allowed version, in the major.minor.build number format.
 
   When a device has an earlier version that the OS version you enter, it's reported as noncompliant. A link with information on how to upgrade is shown. The end user can choose to upgrade their device. After they upgrade, they can access company resources.
 
-- **Maximum OS required for mobile devices**:
+- **Maximum OS required for mobile devices**:  
   Enter the maximum allowed version, in the major.minor.build number.
 
   When a device is using an OS version later than the version entered, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until the rule is changed to allow the OS version.
 
-- **Valid operating system builds**:
+- **Valid operating system builds**:  
   Specify a list of minimum and maximum operating system builds. Valid operating system builds provides additional flexibility when compared against minimum and maximum OS versions. Consider a scenario where minimum OS version is set to 10.0.18362.xxx (Windows 10 1903) and maximum OS version is set to 10.0.18363.xxx (Windows 10 1909). This configuration can allow a Windows 10 1903 device that doesn't have recent cumulative updates installed to be identified as compliant. Minimum and maximum OS versions might be suitable if you have standardized on a single Windows 10 release, but might not address your requirements if you need to use multiple builds, each with specific patch levels. In such a case, consider leveraging valid operating system builds instead, which allows multiple builds to be specified as per the following example.
 
   The largest supported value for each of the version, major, minor, and build fields is 65535. For example, the largest value you can enter is 65535.65535.65535.65535.
 
-  **Example**:
+  **Example**:  
   The following table is an example of a range for the acceptable operating systems versions for different Windows 10 releases. In this example, three different Feature Updates have been allowed (1809, 1909 and 2004). Specifically, only those versions of Windows and which have applied cumulative updates from June to September 2020 will be considered to be compliant. This is sample data only. The table includes a first column that includes any text you want to describe the entry, followed by the minimum and maximum OS version for that entry. The second and third columns must adhere to valid OS build versions in the **major.minor.build.revision number** format. After you define one or more entries, you can **Export** the list as a comma-separated values (CSV) file.
 
   | Description                 | Minimum OS version | Maximum OS version |
@@ -134,7 +134,7 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   - **Not configured** (*default*) - Users can create simple passwords, such as **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
-- **Password type**:
+- **Password type**:  
   Choose the type of password or PIN required. Your options:
   - **Device default** (*default*) - Require a password, numeric PIN, or alphanumeric PIN
   - **Numeric** - Require a password or numeric PIN
@@ -153,16 +153,16 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
     > - [DeviceLock/AlphanumericDevicePasswordRequired CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-alphanumericdevicepasswordrequired)
     > - [DeviceLock/MinDevicePasswordComplexCharacters CSP](/windows/client-management/mdm/policy-csp-devicelock#devicelock-mindevicepasswordcomplexcharacters)
 
-- **Minimum password length**:
+- **Minimum password length**:  
   Enter the minimum number of digits or characters that the password must have.
 
-- **Maximum minutes of inactivity before password is required**:
+- **Maximum minutes of inactivity before password is required**:  
   Enter the idle time before the user must reenter their password.
 
-- **Password expiration (days)**:
+- **Password expiration (days)**:  
   Enter the number of days before the password expires, and they must create a new one, from 1-730.
 
-- **Number of previous passwords to prevent reuse**:
+- **Number of previous passwords to prevent reuse**:  
   Enter the number of previously used passwords that can't be used.
 
 - **Require password when device returns from idle state (Mobile and Holographic)**:
@@ -174,7 +174,7 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
 
 ### Encryption
 
-- **Encryption of data storage on a device**:
+- **Encryption of data storage on a device**:  
   This setting applies to all drives on a device.
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
@@ -225,12 +225,12 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
   - **Not configured** (*default*) - Intune doesn't control the service, nor change existing settings.
   - **Require** - Turn on the Microsoft Defender anti-malware service, and prevent users from turning it off.
 
-- **Microsoft Defender Antimalware minimum version**:
+- **Microsoft Defender Antimalware minimum version**:  
   Enter the minimum allowed version of Microsoft Defender anti-malware service. For example, enter `4.11.0.0`. When left blank, any version of the Microsoft Defender anti-malware service can be used.
 
   *By default, no version is configured*.
 
-- **Microsoft Defender Antimalware security intelligence up-to-date**:
+- **Microsoft Defender Antimalware security intelligence up-to-date**:  
   Controls the Windows Security virus and threat protection updates on the devices.
   - **Not configured** (*default*) - Intune doesn't enforce any requirements.
   - **Require** - Force the Microsoft Defender security intelligence be up-to-date.
@@ -251,7 +251,7 @@ Applies only to co-managed devices running Windows. Intune-only devices return a
 
 For additional information on Microsoft Defender for Endpoint integration in Conditional Access scenarios, see [Configure Conditional Access in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/configure-conditional-access).
 
-- **Require the device to be at or under the machine risk score**:
+- **Require the device to be at or under the machine risk score**:  
   Use this setting to take the risk assessment from your defense threat services as a condition for compliance. Choose the maximum allowed threat level:
   - **Not configured** (*default*)
   - **Clear** -This option is the most secure, as the device can't have any threats. If the device is detected as having any level of threats, it's evaluated as non-compliant.
@@ -259,7 +259,7 @@ For additional information on Microsoft Defender for Endpoint integration in Con
   - **Medium** - The device is evaluated as compliant if existing threats on the device are low or medium level. If the device is detected to have high-level threats, it's determined to be non-compliant.
   - **High** - This option is the least secure, and allows all threat levels. It may be useful if you're using this solution only for reporting purposes.
 
-  To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](advanced-threat-protection.md).
+  To set up Microsoft Defender for Endpoint as your defense threat service, see [Enable Microsoft Defender for Endpoint with Conditional Access](microsoft-defender-with-intune.md).
 
 ## Windows Subsystem for Linux
 
@@ -290,7 +290,7 @@ Surface Hub uses the **Windows 10 and later** platform. Surface Hubs are support
 
 For guidance, see [set up enrollment for Windows devices](../enrollment/windows-enroll.md).
 
-**Special consideration for Surface Hubs running Windows Team OS**:
+**Special consideration for Surface Hubs running Windows Team OS**:  
 Surface Hubs that run Windows Team OS do not support the Microsoft Defender for Endpoint and Password compliance policies at this time. Therefore, for Surface Hubs that run Windows Team OS set the following two settings to their default of *Not configured*:
 
 - In the category [Password](#password), set **Require a password to unlock mobile devices** to the default of *Not configured*.

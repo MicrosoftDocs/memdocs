@@ -6,6 +6,7 @@ ms.author: brenduns
 ms.date: 09/09/2025
 ms.topic: how-to
 ms.reviewer: ochukwunyere
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - sub-intune-suite
@@ -39,7 +40,7 @@ Microsoft Tunnel for MAM on iOS/iPadOS is supported with the following sovereign
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-Microsoft Tunnel for MAM on iOS/iPadOS isn’t supported on Microsoft Azure operated by 21Vianet.
+Microsoft Tunnel for MAM on iOS/iPadOS isn't supported on Microsoft Azure operated by 21Vianet.
 
 
 Microsoft Tunnel for MAM on iOS/iPadOS doesn't support Federal Information Processing Standard (FIPS).
@@ -239,7 +240,7 @@ When you integrate the Tunnel for MAM iOS SDK into a line-of-business app, the f
 
 Depending on your needs, choose one of the following options:
 
-- [Create a new app registration](#create-a-new-app-registration)
+- [Create a new app registration](#create-a-new-app-registration)  
   If you have an iOS app that hasn't been previously integrated with the Intune App SDK for iOS, or the Microsoft Authentication Library (MSAL), then you need to create a new app registration. The steps to create a new app registration include:
 
   - App registration
@@ -248,7 +249,7 @@ Depending on your needs, choose one of the following options:
   - Token configuration
   - Verify using Integration assistant
 
-- [Update an existing app registration](#update-an-existing-app-registration)
+- [Update an existing app registration](#update-an-existing-app-registration)  
   If you have an iOS app that previously integrated with the Intune App SDK for iOS, then you need to review and update the existing app registration.
 
 #### Create a new app registration

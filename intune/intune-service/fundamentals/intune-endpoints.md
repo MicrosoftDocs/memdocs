@@ -112,7 +112,7 @@ In this section, the following tables list the Intune dependencies and the ports
 
 **Google Android Enterprise** - Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
 
-**Android push notification** - Intune uses Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. Both Android Device Administrator and Android Enterprise require this. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+**Android push notification** - Intune uses Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. Both Android Device Administrator and Android Enterprise require this. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/).
 
 #### Android AOSP dependencies
 
@@ -186,7 +186,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 ## Endpoint analytics
 
-For more information on the required endpoints for Endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../analytics/index.md#prerequisites).
 
 ## Microsoft Defender for Endpoint
 
@@ -230,12 +230,18 @@ Managed Windows devices that use the Microsoft Store either to acquire, install,
 - `licensing.mp.microsoft.com`
 - `storeedgefd.dsx.mp.microsoft.com`
 
+ > [!IMPORTANT]
+ > SSL Inspection isn't supported on endpoints required for Microsoft Store API.
+
 **Windows Update Agent:**
 
 For details, see the following resources:
 
 - [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
+
+  > [!NOTE]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 **Win32 content download:**
 

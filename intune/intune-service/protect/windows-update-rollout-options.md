@@ -25,9 +25,11 @@ You configure rollout options when creating [Feature Updates policy](../protect/
 
 - **Make update available on a specific date** - With this option you can select a day on which the update in the policy is initially available to install. Windows Update doesn't make the update available to devices with this configuration until that day is reached.
 
-- **Make update available gradually** - This process helps distribute the availability of the update across a range of time that you configure, with Windows Update making an update available to different subsets of the devices targeted by the policy, at different times. This option can reduce the effect to your network when compared to offering the update to all devices at the same time. The following section explains how to use this option in more detail.
 
 ## Make updates available gradually
+
+> [!WARNING]
+> Gradual rollout will no longer be an available option after October 14, 2025.
 
 With the option **Make update available gradually**, you can direct Windows Update to extend an update offer to different subsets of the devices that the policy targets, at different times. We refer to those subsets as *offer groups*. This behavior distributes the availability of the update across the time you've configured, which can reduce the effect to your network as compared to offering the update to all devices at the same time.
 

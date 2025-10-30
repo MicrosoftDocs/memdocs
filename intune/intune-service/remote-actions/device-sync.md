@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Sync"
 description: Learn how to use the device sync remote action in Intune to apply policy, app, and configuration updates to managed devices.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
@@ -12,20 +12,30 @@ The *sync* device action forces a device to check in with Intune. When a device 
 
 For more information about the standard Intune policy check-in frequencies, see [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action is supported on the following platform:
 > - Android
 > - iOS/iPadOS
 > - macOS
 > - Windows
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -33,13 +43,14 @@ For more information about the standard Intune policy check-in frequencies, see 
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Sync devices**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
 ## How to sync a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row ofremote action icons. Select **Sync**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Sync**.
 1. To confirm, select **Yes**.
 
 ::: zone pivot="ios,android"

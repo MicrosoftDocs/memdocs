@@ -1,7 +1,7 @@
 ---
 title: "Intune Remote Action: Rotate FileVault Recovery Key"
 description: Learn how to rotate the FileVault recovery key with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
@@ -11,36 +11,50 @@ The *rotate FileVault recovery key* remote action in Microsoft Intune allows IT 
 
 This action is useful when the current key is lost, potentially exposed, or needs to be refreshed for compliance or support reasons.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - macOS (corporate-owned)
-
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
-
-> [!div class="checklist"]
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Are encrypted with FileVault using an Intune disk encryption policy.
 > - Have the FileVaultpersonal recovery key escrowed to Intune.
+>
+> For more information, see Use [FileVault disk encryption for macOS with Intune][LEARN-1].
 
-For more information, see Use [FileVault disk encryption for macOS with Intune][LEARN-1].
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::row:::
+:::column span="1":::
 
-> [!div class="checklist"]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Rotate filevault key**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
 ## How to rotate BitLocker keys from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

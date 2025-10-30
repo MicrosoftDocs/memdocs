@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Collect Diagnostics"
 description: Learn how to collect diagnostics with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: jlynn
 zone_pivot_groups: d4b2a9c3-d659-4922-8403-9b50d065fc07
@@ -13,11 +13,15 @@ Collecting diagnostics in Microsoft Intune is a powerful remote action that enab
 
 The *collect diagnostics* remote action lets you collect and download managed device diagnostics without interrupting the user. Only nonuser locations and file types are accessed.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Android (via app protection)
@@ -25,29 +29,48 @@ The *collect diagnostics* remote action lets you collect and download managed de
 > - Windows (corporate-owned)
 > - Windows Holographic
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Collect diagnostics**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
-### Connectivity requirements
+:::column-end:::
+:::row-end:::
 
-For diagnostics to be able to upload successfully from the client, make sure that the URL for your region isn't blocked on the network:
+:::row:::
+:::column span="1":::
 
-- Europe: `lgmsapeweu.blob.core.windows.net`
-- Americas: `lgmsapewus2.blob.core.windows.net`
-- East Asia: `lgmsapesea.blob.core.windows.net`
-- Australia: `lgmsapeaus.blob.core.windows.net`
-- India: `lgmsapeind.blob.core.windows.net`
+[!INCLUDE [network-connectivity](../../includes/requirements/network-connectivity.md)]
 
-Devices must be online and able to communicate with the service during diagnostics.
+:::column-end:::
+:::column span="3":::
 
+> For diagnostics to be able to upload successfully from the client, make sure that the URL for your region isn't blocked on the network:
+>
+> - Europe: `lgmsapeweu.blob.core.windows.net`
+> - Americas: `lgmsapewus2.blob.core.windows.net`
+> - East Asia: `lgmsapesea.blob.core.windows.net`
+> - Australia: `lgmsapeaus.blob.core.windows.net`
+> - India: `lgmsapeind.blob.core.windows.net`
+> 
+> Devices must be online and able to communicate with the service during diagnostics.
+
+:::column-end:::
+:::row-end:::
 
 > [!NOTE]
 >  Intune App Protection logs are available to download from the diagnostics tab in the **Troubleshooting** pane. However, M365 remote application diagnostics are only available to their specific support engineers.

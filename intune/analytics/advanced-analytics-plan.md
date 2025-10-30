@@ -1,14 +1,9 @@
 ---
-title: Planning for Advanced Analytics
-titleSuffix: Microsoft Intune
-description: Learn about the requirements and fundamentals of Intune Advanced Analytics
-ms.date: 08/01/2024
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
+title: Plan for Advanced Analytics
+description: Plan Microsoft Intune Advanced Analytics by understanding requirements, prerequisites, and best practices for endpoint analytics and advanced reporting.
+ms.date: 10/09/2025
 ms.topic: concept-article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
+ms.subservice: suite
 ---
 
 # Plan for Advanced Analytics
@@ -25,7 +20,7 @@ For a successful deployment of Advanced Analytics, the following activities are 
 
 ## Prerequisites
 
-Intune Advanced Analytics features build on top of the base Endpoint analytics experience.
+Intune Advanced Analytics features build on top of the base endpoint analytics experience.
 
 > [!NOTE]
 > The Advanced Analytics features are only available for Intune-managed (including co-managed) devices.
@@ -39,10 +34,8 @@ Windows capability requirements:
 
 - Windows 10/11 (minimum build 1903 or later recommended).
 - Microsoft Entra-joined or Hybrid Entra-joined.
-- [Endpoint analytics for Windows license requirements](enroll-intune.md#licensing-prerequisites).
-- Device enrolled into Intune and onboarded to Endpoint analytics
-  - [Onboard and enroll your Intune-managed devices to Endpoint analytics](enroll-intune.md)
-  - [Onboard and enroll your co-managed devices to Endpoint analytics](enroll-configmgr.md)
+- [Endpoint analytics for Windows license requirements](index.md#prerequisites).
+- [Device enrolled into Intune and onboarded to endpoint analytics](configure.md).
 - Multi Device query requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed.
 - Single device query requires the device to be marked as corporate.
 - Anamoly detection:
@@ -65,22 +58,22 @@ Device query for multiple devices is supported on devices running:
 
 ## Government cloud support
 
-Advanced Endpoint Analytics is supported with the following sovereign cloud environments:
+Advanced Analytics is supported with the following sovereign cloud environments:
 
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
 > [!NOTE]
 >
-> Support for Advanced Endpoint Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) or [*Resource performance*](resource-performance-report.md) functionality.
+> Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) or [*Resource performance*](resource-performance-report.md) functionality.
 
 For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
 
 ## Mixed licensing scenarios
 
-A mixed licenisng scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the base Endpoint analytics product.
+A mixed licenisng scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the base endpoint analytics product.
 
-Currently, the highest functional subscription sets the Endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in Endpoint analytics for all enrolled devices.
+Currently, the highest functional subscription sets the endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in endpoint analytics for all enrolled devices.
 
 ## Role based access control
 

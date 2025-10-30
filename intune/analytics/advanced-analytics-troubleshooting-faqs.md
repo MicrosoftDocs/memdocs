@@ -1,14 +1,9 @@
 ---
 title: Advanced Analytics Troubleshooting and Frequently Asked Questions
-titleSuffix: Microsoft Intune
-description: Learn about the frequently asked questions and common troubleshooting steps for Advanced Analytics features
-ms.date: 09/10/2025
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
-ms.topic: concept-article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
+description: Find troubleshooting steps and FAQs for Microsoft Intune Advanced Analytics, including endpoint analytics issues, data refresh, and dashboard customization.
+ms.date: 10/09/2025
+ms.topic: faq
+ms.subservice: suite
 ---
 
 # Advanced Analytics Troubleshooting and Frequently Asked Questions
@@ -19,9 +14,9 @@ manager: laurawi
 
 ## Frequently Asked Questions
 
-### What is the difference between Endpoint Analytics and Advanced Analytics?
+### What is the difference between endpoint analytics and Advanced Analytics?
 
-Advanced Analytics builds on Endpoint Analytics by offering deeper insights, advanced reporting, and enhanced anomaly detection capabilities.
+Advanced Analytics builds on endpoint analytics by offering deeper insights, advanced reporting, and enhanced anomaly detection capabilities.
 
 ### Do I need additional licensing for Advanced Analytics?
 
@@ -37,7 +32,7 @@ Some advanced features may be limited to specific Windows builds or device types
 
 ### Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?
 
-This is typically due to the volume and usage patterns of devices and apps. The device must be actively used, enrolled in Endpoint Analytics, and data collection is enabled. In addition, a high volume of events (such as BSODs or app crashes) is usually required before the event is flagged as anomalous.
+This is typically due to the volume and usage patterns of devices and apps. The device must be actively used, enrolled in endpoint analytics, and data collection is enabled. In addition, a high volume of events (such as BSODs or app crashes) is usually required before the event is flagged as anomalous.
 
 ### How often is analytics data refreshed?
 
