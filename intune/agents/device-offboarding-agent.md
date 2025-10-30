@@ -51,7 +51,9 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 
 :::column-end:::
 :::column span="3":::
->Required plugins:
+> Plugins enable Security Copilot agents to connect with Microsoft services and perform specialized actions.
+>
+> The Device Offboarding Agent requires the following plugins:
 >
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
 > - [!INCLUDE [plugin-entra](includes/plugin-entra.md)]
