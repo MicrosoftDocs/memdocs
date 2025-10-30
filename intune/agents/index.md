@@ -11,6 +11,7 @@ ms.reviewer:
 # Security Copilot agents in Microsoft Intune
 
 <!-- placeholder intro to update-->
+<!-- Microsoft Security Copilot agents are adaptive generative AI assistants that extend the capabilities of Copilot across security tools to simplify task automation and improve security outcomes at scale.-->
 
 Security Copilot agents in Intune are AI-powered assistants designed to streamline and strengthen enterprise security operations. These agents automate critical tasks across endpoint protection, identity management, and threat intelligence, helping IT teams respond swiftly to vulnerabilities, policy gaps, and emerging threats. Each agent is tailored to a specific use case—for example, the Vulnerability Remediation Agent identifies and prioritizes fixes for CVEs affecting Intune-managed devices, while the Conditional Access Optimization Agent proactively scans for coverage gaps in Entra ID policies. By integrating deeply with Microsoft tools like Defender and Entra ID, these agents deliver actionable insights and remediation steps directly within the Intune admin experience.
 
@@ -57,11 +58,11 @@ The *Policy Configuration Agent* translates complex regulatory standards into ac
 > [Learn more](policy-configuration-agent.md)
 :::column-end:::
 :::column:::
-#### Vulnerability remediation agent
+#### Vulnerability Remediation Agent
 
 :::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
 
-The *vulnerability remediation agent* uses Microsoft Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
+The *Vulnerability Remediation Agent* uses Microsoft Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
 
 > [!div class="nextstepaction"]
 > [Learn more](vulnerability-remediation-agent.md)

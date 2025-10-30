@@ -37,8 +37,8 @@ items:
   - name: Use the agent
     href: policy-configuration-agent-use.md
     displayName: Policy Configuration Agent
-- name: Vulnerability remediation agent
+- name: Vulnerability Remediation Agent
   items:
   - name: Overview
     href: vulnerability-remediation-agent.md
-    displayName: vulnerability remediation agent
+    displayName: Vulnerability Remediation Agent
