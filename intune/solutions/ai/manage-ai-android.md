@@ -1,7 +1,7 @@
 ---
 title: Control AI features on Android Enterprise devices
 description: Using Microsoft Intune, you can manage and restrict AI usage on Android devices enrolled in Intune. This guide provides lists the steps in Intune to block AI apps, websites, screen-driven experiences, on-device AI services, and OEM-specific AI features. You can manage Microsoft Copilot, Google Gemini, Samsung Galaxy AI, claude.ai, ChatGPT, and more.
-ms.date: 10/16/2025
+ms.date: 10/30/2025
 ms.topic: how-to
 ms.reviewer: cchristenson
 ms.collection:
@@ -21,36 +21,47 @@ Applies to:
 
 - Android Enterprise
 
-**Word draft**:
-https://microsoft.sharepoint.com/:w:/r/teams/CTeam/_layouts/15/Doc.aspx?sourcedoc=%7BB12547D3-091A-403B-88AA-FCDA1759E258%7D&file=BlockAIIntuneAndroidv2.docx&action=default&mobileredirect=true
-
 ## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > IT admins and security engineers can allow/block generative AI on the following Android enrollment types:
 >
 > - Android Enterprise corporate owned fully managed devices (COBO)
 > - Android Enterprise corporate owned dedicated devices (COSU)
 > - Android Enterprise corporate owned devices with a work profile (COPE)
 > - Android Enterprise personally owned devices with a work profile (BYOD)
+>
+> To learn more about the different Android enrollment options, see the [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+:::column-end:::
+:::row-end:::
 
-To learn more about the different Android enrollment options, see the [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
-
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > - Devices enrolled in Intune, including co-managed devices
 > - Managed Google Play account linked in the Intune admin center (**Devices > Android > Enrollment > Managed Google Play**)
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > To configure the policies, use an account with the following role:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
-> - Custom role perms??
+:::column-end:::
+:::row-end:::
 
 ## Before you begin
 
@@ -238,11 +249,13 @@ To block these features, you can use Intune to restrict screenshot abilities and
 
 ### Step 1 - Implement Basic Coverage
 
-??INCLUDE FILE - SETTING N/A?? [CC: This setting is being released in 2511, it will be in Settings Catalog]
+[!INCLUDE [ai-android-block-assist-settings-catalog](../../includes/ai-android-block-assist-settings-catalog.md)]
 
-This step creates a settings catalog policy that configures the **Block assist content sharing with privileged apps** setting.
+### Step 2 - Implement Comprehensive Coverage (Optional)
 
-This setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used on Android AI capabilities, like Circle to Search. This setting doesn't affect general screenshot abilities.
+For more comprehensive protection, you can also restrict screenshot abilities and other functionalities by blocking screen captures.
+
+This setting blocks AI features from accessing on-screen content, but also disables screenshots device-wide.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
 2. Enter the following properties:
@@ -253,26 +266,9 @@ This setting blocks assist content, like screenshots and app details, from being
 3. Select **Create**.
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
 5. Select **Add settings**.
-6. Select the **General** category > **Block assist content sharing with privileged apps** setting. Set its value to **True**.
+6. Select the **General** category > **Block Screen capture** setting. Set its value to **True**.
 
-### Step 2 - Implement Comprehensive Coverage (Optional)
-
-??INCLUDE FILE [CC: can you expand on Include file? Not sure what is meant]
-
-For more comprehensive protection, you can also restrict screenshot abilities and other functionalities using the **Block screen capture** setting in a device restrictions template profile.
-
-This setting blocks AI features from accessing on-screen content, but also disables screenshots device-wide.
-
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
-2. Enter the following properties:
-
-    - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Templates > Fully Managed, Dedicated, and Corporate-Owned Work Profile Only > Device restrictions**.
-
-3. Select **Create**.
-4. In **Basics**, enter a **Name** for the profile, and select **Next**.
-5. Expand the **General** category and set the **Screen capture (work profile level)** setting to **Block**.
-
+    This setting blocks AI features from accessing on-screen content. End users can't take screenshots on the device.
 
 
 # [Corporate owned with work profile](#tab/screen-corporate-owned)
@@ -283,22 +279,7 @@ This setting blocks AI features from accessing on-screen content, but also disab
 
 ### Step 1 - Implement Basic Coverage
 
-??INCLUDE FILE
-
-This step creates a settings catalog policy that configures the **Block assist content sharing with privileged apps** setting.
-
-This setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used on Android AI capabilities, like Circle to Search. This setting doesn't affect general screenshot abilities.
-
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
-2. Enter the following properties:
-
-    - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Settings catalog**.
-
-3. Select **Create**.
-4. In **Basics**, enter a **Name** for the profile, and select **Next**.
-5. Select **Add settings**.
-6. Select the **General** category > **Block assist content sharing with privileged apps** setting. Set its value to **True**.
+[!INCLUDE [ai-android-block-assist-settings-catalog](../../includes/ai-android-block-assist-settings-catalog.md)]
 
 ### Step 2 - Implement Comprehensive Coverage (Optional)
 
@@ -312,7 +293,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
 3. Select **Create**.
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
-5. Expand the **General** category and configure the following settings:
+5. Expand the **General** category and configure the following settings: ??All the following settings are in SC? Replace with SC policy? Then this section would create two separate policies??
 
     - **Screen capture (work profile-level)**: Set to **Block**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the work profile.
 
@@ -349,8 +330,8 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
 5. In **Configuration settings**, expand **Work profile settings** category. The following settings and their default values help limit AI data leakage. If any of these settings are changed from their default values, you should change them back to the defaults.
 
-    - **Copy and paste between work and personal profiles**: Set to **Block** (default).
-    - **Data sharing between work and personal profiles**: Set to **Device Default**. Device Default restricts sharing between work and personal profiles.
+    - **Copy and paste between work and personal profiles**: Set to **Block** (default). ??Compare with SC policy??
+    - **Data sharing between work and personal profiles**: Set to **Device Default**. Device Default restricts sharing between work and personal profiles. ??Compare with SC policy??
 
 ---
 
