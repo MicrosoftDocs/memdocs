@@ -854,8 +854,6 @@ items:
               href: ./protect/mde-security-integration.md
             - name: Manage endpoint security policies in Microsoft Defender
               href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
-        - name: Vulnerability Remediation Agent
-          href: ./protect/vulnerability-remediation-agent.md
         - name: Endpoint Privilege Management overview
           href: ./protect/epm-overview.md
         - name: Tenant attach
