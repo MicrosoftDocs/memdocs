@@ -24,14 +24,14 @@ The following agents are available in Intune:
 
 :::row:::
 :::column:::
-#### Approver agent
+#### Change Review Agent
 
-:::image type="icon" source="icons/approver-agent.svg" border="false":::
+:::image type="icon" source="icons/change-review-agent.svg" border="false":::
 
-The *approver agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take. 
+The *Change Review Agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take. 
 
 > [!div class="nextstepaction"]
-> [Learn more](approver-agent.md)
+> [Learn more](change-review-agent.md)
 :::column-end:::
 :::column:::
 #### Device Offboarding Agent
@@ -47,14 +47,14 @@ The *Device Offboarding Agent* can find devices that were removed from Intune, b
 
 :::row:::
 :::column:::
-#### Policy agent
+#### Policy Configuration Agent
 
-:::image type="icon" source="icons/policy-agent.svg" border="false":::
+:::image type="icon" source="icons/policy-configuration-agent.svg" border="false":::
 
-The *policy agent* translates complex regulatory standards into actionable Intune settings. 
+The *Policy Configuration Agent* translates complex regulatory standards into actionable Intune settings. 
 
 > [!div class="nextstepaction"]
-> [Learn more](policy-agent.md)
+> [Learn more](policy-configuration-agent.md)
 :::column-end:::
 :::column:::
 #### Vulnerability remediation agent

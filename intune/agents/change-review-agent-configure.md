@@ -1,14 +1,14 @@
 ---
-title: Configure the Policy Agent
+title: Configure the Change Review Agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
-author: mandiohlinger
-ms.author: mandia
+author: brenduns
+ms.author: brenduns
 ms.reviewer: 
 ---
 
-# Configure the policy agent
+# Configure the Change Review Agent
 
 ## Prerequisites
 

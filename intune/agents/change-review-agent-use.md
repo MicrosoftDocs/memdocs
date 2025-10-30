@@ -1,5 +1,5 @@
 ---
-title: Use the Approver Agent
+title: Use the Change Review Agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.author: brenduns
 ms.reviewer: 
 ---
 
-# Use the approver agent
+# Use the Change Review Agent
 
 ## Prerequisites
 

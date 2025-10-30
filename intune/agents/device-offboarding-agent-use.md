@@ -40,6 +40,8 @@ Before you get started, ensure you meet the requirementts listed in the overview
 
 ## Agent action: run
 
+Running the agent will reset your current suggestions, status, and assignments for this view. You can use the Tasks page to track progress of suggestions you've added.
+
 To manually run the Device Offboarding Agent:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.

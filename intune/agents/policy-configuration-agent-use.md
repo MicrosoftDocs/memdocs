@@ -1,14 +1,14 @@
 ---
-title: Configure the Approver Agent
+title: Use the Policy Configuration Agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
-author: brenduns
-ms.author: brenduns
+author: mandiohlinger
+ms.author: mandia
 ms.reviewer: 
 ---
 
-# Configure the approver agent
+# Use the Policy Configuration Agent
 
 ## Prerequisites
 

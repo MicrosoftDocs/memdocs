@@ -4,17 +4,17 @@ items:
   displayName: security copilot agent
 - name: Current to merge 👆
   href: security-copilot-agents-intune.md
-- name: Approver agent
+- name: Change Review Agent
   items:
   - name: Overview
-    href: approver-agent.md
-    displayName: approver agent
+    href: change-review-agent.md
+    displayName: Change Review Agent
   - name: Configure the agent
-    href: approver-agent-configure.md
-    displayName: approver agent
+    href: change-review-agent-configure.md
+    displayName: Change Review Agent
   - name: Use the agent
-    href: approver-agent-use.md
-    displayName: approver agent
+    href: change-review-agent-use.md
+    displayName: Change Review Agent
 - name: Device Offboarding Agent
   items:
   - name: Overview
@@ -26,17 +26,17 @@ items:
   - name: Use the agent
     href: device-offboarding-agent-use.md
     displayName: Device Offboarding Agent
-- name: Policy agent
+- name: Policy Configuration Agent
   items:
   - name: Overview
-    href: policy-agent.md
-    displayName: policy agent
+    href: policy-configuration-agent.md
+    displayName: Policy Configuration Agent
   - name: Configure the agent
-    href: policy-agent-configure.md
-    displayName: policy agent
+    href: policy-configuration-agent-configure.md
+    displayName: Policy Configuration Agent
   - name: Use the agent
-    href: policy-agent-use.md
-    displayName: policy agent
+    href: policy-configuration-agent-use.md
+    displayName: Policy Configuration Agent
 - name: Vulnerability remediation agent
   items:
   - name: Overview

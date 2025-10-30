@@ -1,5 +1,5 @@
 ---
-title: Use the Policy Agent
+title: Configure the Policy Configuration Agent
 description: 
 ms.date: 10/15/2025
 ms.topic: how-to
@@ -8,7 +8,7 @@ ms.author: mandia
 ms.reviewer: 
 ---
 
-# Use the policy agent
+# Configure the Policy Configuration Agent
 
 ## Prerequisites
 
