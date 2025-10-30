@@ -37,6 +37,10 @@ Protecting sensitive data across mobile apps and networks is a key part of a Zer
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24839](./includes/secure-recommendations/24839.md)]
 
+### Secure Wi-Fi profiles protect macOS devices from unauthorized network access<!-- 24870 -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+[!INCLUDE [24870](./includes/secure-recommendations/24870.md)]
+
 ### Secure Wi-Fi profiles protect Android devices from unauthorized network access<!-- 24840 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24840](./includes/secure-recommendations/24840.md)]
