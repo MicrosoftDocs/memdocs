@@ -272,7 +272,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
+- **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature. If **False**, Intune doesn't change or update this setting. By default, the OS might allow assist content.
 
   Applies to:
 
