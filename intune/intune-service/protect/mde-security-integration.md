@@ -551,6 +551,8 @@ The following security settings are pending deprecation. The Defender for Endpoi
 - Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
 
+- AllowLocalPolicyMerge
+
 ### Use of security settings management on domain controllers
 
 Security settings management is supported on domain controllers. To manage security settings on domain controllers, you must enable it in the enforcement scope page (go to **Settings** > **Endpoints** **Enforcement scope**). Windows Server devices must be enabled before you can enable configuration of domain controllers. Additionally, if the *on tagged devices* option is selected for Windows Servers, configuration of domain controllers is limited to tagged devices, too.
