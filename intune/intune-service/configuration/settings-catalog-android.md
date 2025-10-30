@@ -227,7 +227,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
 - **Allow copy and paste between work and personal profiles**: If **True**, allows users to copy and paste data between the work and personal profiles. If **False**, Intune doesn't change or update this setting. By default, the OS might:
 
-  - Prevent users from pasting text into the personal profile that's copied from the work profile
+  - Prevent users from pasting text copied from the work profile into the personal profile
   - Allow users to copy text from the personal profile and paste into the work profile
   - Allow users to copy text from the work profile, and paste into the work profile.
 
@@ -422,7 +422,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
 - **Data sharing between work and personal profiles**: Choose if data can be shared between work and personal profiles. Your options:
 
-  - Device default ??What is the device default behavior??
+  - Device default
   - Block all sharing between profiles
   - Block sharing from work to personal profile
   - No restrictions on sharing
@@ -507,7 +507,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
 
 #### Work profile password
 
-These settings require users to set a password that protects only the work profile on their device. It applies to corporate apps and data and doesn't affect personal apps or settings. You can configure complexity requirements, like length and character types, and enforce password expiration.
+These settings require users to set a password that protects only the work profile on their device. It applies to corporate apps and data, and doesn't affect personal apps or settings. You can configure complexity requirements, like length and character types, and enforce password expiration.
 
 - **Number of days until password expires**: Enter the number of days, until the device password must be changed, from 1-365. For example, enter `90` to expire the password after 90 days. When the password expires, users are prompted to create a new password. When the value is blank, Intune doesn't change or update this setting.
 
