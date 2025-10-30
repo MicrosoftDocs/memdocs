@@ -53,7 +53,7 @@ Protecting your Intune tenant is essential to enforcing Zero Trust principles an
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24568](./includes/secure-recommendations/24568.md)]
 
-### Automatic enrollment to Microsoft Defender for Endpoint is enabled on Android devices<!-- 24874 -->
+### Defender for Endpoint automatic enrollment is enforced to reduce risk from unmanaged Android threats<!-- 24874 -->
 <!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
 [!INCLUDE [24874](./includes/secure-recommendations/24874.md)]
 
