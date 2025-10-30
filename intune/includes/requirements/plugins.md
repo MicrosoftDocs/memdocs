@@ -5,4 +5,4 @@ ms-topic: include
 ms.date: 10/14/2025
 ---
 
-:::image type="icon" source="../../media/icons/admin-center/plugins.svg" border="false"::: **Plugins requirements**
+:::image type="icon" source="../../media/icons/admin-center/plugin.svg" border="false"::: **Plugins requirements**
