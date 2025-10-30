@@ -56,7 +56,7 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
 > - [!INCLUDE [plugin-entra](includes/plugin-entra.md)]
 >
-> [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474)
+> [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474).
 
 :::column-end:::
 :::row-end:::
@@ -83,7 +83,8 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 
 :::column-end:::
 :::column span="3":::
-> There are different role requirements depending on the action being taken with the agent. For details, see:
+> There are different role requirements depending on the action being taken with the agent.\
+> For details, see:
 >
 > - [Configure the Device Offboarding Agent](device-offboarding-agent-configure.md)
 > - [Use the Device Offboarding Agent](device-offboarding-agent-use.md)
