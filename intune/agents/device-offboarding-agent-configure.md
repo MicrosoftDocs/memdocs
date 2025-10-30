@@ -51,7 +51,7 @@ The agent runs until it finishes and then displays its results in the Device Off
 
 <!--:::image type="content" source="images/device-offboarding-agent-set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-set-up.png":::-->
 
-## Explore the agent pane
+## Explore the agent options
 
 After you configure the agent, you can manage it from the Device Offboarding Agent pane.
 
@@ -64,7 +64,7 @@ To learn more about each tab, select the following tabs:
 
 # [**Overview**](#tab/overview)
 
-After the Device Offboarding Agent completes a run, the Overview tab updates with the agent's list of top suggestions for devices to offboard. The Overview tab only displays the suggestions that are *not started* or *in progress*.  
+After the Device Offboarding Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for devices to offboard. The **Overview** tab only displays the suggestions that are *not started* or *in progress*.  
 
 The following information is available on this tab: 
 
@@ -100,6 +100,11 @@ Use the **Settings** tab to view the agent's current configuration. You can view
 
 :::image type="content" source="images/device-offboarding-agent-settings.png" alt-text="Screenshot of the settings tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent-settings.png":::
 
+---
+
+
+## Configuration
+
 ### Custom instructions 
 
 With the **Instruction** field, you can provide a prompt that influences how the agent runs. Common use cases include:
@@ -124,8 +129,6 @@ Include [device ID] in all recommendations
 
 Include only [device ID] in recommendations
 ```
-
----
 
 ## Agent actions
 
