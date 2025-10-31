@@ -13,14 +13,14 @@ summary: |
 
   **General questions**:
 
-  - [What are Microsoft Security Copilot agents?](#What-are-microsoft-security-copilot-agents)
+  - [What are Microsoft Security Copilot agents?](#what-are-microsoft-security-copilot-agents)
 
   **Common errors**:
 
   - [You don't have access to this agent - Licenses](#you-don-t-have-access-to-this-agent---licenses)
   - [You don't have access to this agent - Workspace](#you-don-t-have-access-to-this-agent---workspace)
   - [You don't have access to this agent - Permissions](#you-don-t-have-access-to-this-agent---permissions)
-  - [The agent encountered an error and didn't finish the run. Try running the agent again.](##the-agent-encountered-an-error-and-didn-t-finish-the-run--try-running-the-agent-again)
+  - [The agent encountered an error and didn't finish the run. Try running the agent again.](#the-agent-encountered-an-error-and-didn-t-finish-the-run--try-running-the-agent-again)
 
 sections:
 
@@ -35,7 +35,8 @@ sections:
       - question: You don't have access to this agent - Licenses
         answer: |
           **Details:** You don't have the licenses needed to access this agent.
-          Review the prerequisites for the [license and plugin](#licensing-and-plugins) requirements for this agent and ensure license assignments and related product license and configurations are available in your tenant.
+          
+          Check the licensing and plugins requirements for this agent, and make sure the necessary licenses and configurations are assigned in your tenant.
       - question: You don't have access to this agent - Workspace
         answer: |
           **Details:** You aren't part of the workspace needed to access this agent.\
