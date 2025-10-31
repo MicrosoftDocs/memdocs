@@ -21,7 +21,7 @@ Level 2 is the data protection configuration recommended as a standard for devic
 | Data Transfer |       Receive data from  |          No sources  |          Windows  |                  |
 | Data Transfer |       Select apps to exempt  |          Default / skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;  |          iOS/iPadOS  |                  |
 | Data Transfer |       Save   copies of org data  |          Block  |          iOS/iPadOS,   Android  |                  |
-| Data Transfer |       Allow   users to save copies to selected services  |          OneDrive, SharePoint Online, Photo Library |          iOS/iPadOS,   Android  |                  |
+| Data Transfer |       Allow users to save copies to selected services  |          OneDrive for Business, SharePoint, Photo Library |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Transfer telecommunication data to  |          Any dialer app |          iOS/iPadOS,   Android  |                  |
 | Data Transfer |       Restrict   cut, copy, and paste between apps  |          Policy   managed apps with paste in  |          iOS/iPadOS,   Android  |                  |
 | Data   Transfer |       Allow cut, copy, and paste for  |  No destination or source  |             Windows        |
