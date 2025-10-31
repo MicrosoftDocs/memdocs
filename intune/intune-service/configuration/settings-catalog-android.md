@@ -18,15 +18,14 @@ This article lists and describes the Android Enterprise and AOSP settings you ca
 
 To learn more about the settings catalog, see [Settings catalog overview](settings-catalog.md).
 
-This feature applies to:
+## Prerequisites
 
-- Android
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-## Requirements
-
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
-
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > This feature supports the following platforms:
 >
 > - Android Enterprise corporate-owned devices with a work profile (COPE)
@@ -34,22 +33,36 @@ This feature applies to:
 > - Android Enterprise corporate owned dedicated devices (COSU)
 > - Android Open Source Project (AOSP) corporate-owned userless devices (shared)
 > - Android Open Source Project (AOSP) corporate-owned user-associated devices (single user)
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
 > To configure the policy, use an account with the following role:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
+:::row:::
+:::column span="1":::
 
-> [!div class="checklist"]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
 > To use this feature, make sure you meet the following requirements:
 >
 > - Devices must be corporate owned.
 > - Devices must be enrolled in Intune.
 > - Create a [settings catalog policy](settings-catalog.md).
+:::column-end:::
+:::row-end:::
+
 
 ## Android settings
 
