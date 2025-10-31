@@ -52,6 +52,21 @@ When an agent run starts, the agent runs until it completes its evaluation. It c
 > [!NOTE]
 > Each time the agent runs, it runs under the identity and permissions of the Intune administrator that its been configured to use. 
 
+## Refresh
+
+Executing the **Refresh** action updates the agent's current view with the latest data from its most recent run. This action doesn't trigger a new evaluation; it simply refreshes the displayed information to reflect any changes or updates since the last run.
+
+## Review suggestions and take action
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
+1. Select the **Suggestions** tab to view the list of recommndations.
+1. Select a suggestion to view more details, including the rationale behind the recommendation and steps for offboarding the device.
+  1. You can change the status of a suggestion by selecting **Manage suggestion** and selecting whether the offboarding action is in progress or completed.
+  1. You can select the option **Add to tasks list** to assign the offboarding action to an individual or team for tracking and management.
+
+:::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showind the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
+
+<!--
 ## Use the agent
 
 ```agent-prompt
@@ -68,11 +83,7 @@ Factors:
 - Personal devices may have corporate data without proper controls.
 - Conditional access limited to user-based policies only.
 ```
-
-
-## Agent actions
-
-### Refresh
+--->
 
 
 

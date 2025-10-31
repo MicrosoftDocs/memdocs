@@ -1,6 +1,6 @@
 ---
 title: Configure the Device Offboarding Agent
-description: Learn how to configure the Device Offboarding Agent in Microsoft Intune to identify and offboard devices that are no longer in use.
+description: Learn how to configure the Device Offboarding Agent in Microsoft Intune to identify and offboard Microsoft Entra devices that are no longer in use.
 ms.date: 10/15/2025
 ms.topic: how-to
 author: paolomatarazzo
@@ -62,13 +62,14 @@ After the Device Offboarding Agent completes a run, the **Overview** tab updates
 The following information is available on this tab: 
 
 - The agent's availability and run status. 
-- Agent suggestions, which are the list of devices to offboard that are *not started* or *in progress*. 
+- Agent suggestions, which are the list of devices to offboard that are *not started* or *in progress*.
+- Activity section that tracks the current and past run activity of the agent.
 
 :::image type="content" source="images/device-offboarding-agent/overview.png" alt-text="Screenshot of the overview pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/overview.png":::
 
 # [**Suggestions**](#tab/suggestions)
 
-Agent suggestions are a list of the top devices to offboard, identified based on data from Microsoft Intune and Microsoft Entra.  
+Agent suggestions are a list of the top devices to offboard. Suggestions are generated after each agent run based on the latest data. In this tab, you can use search and filters to find specific suggestions.
 
 A suggestion displays the following details: 
 - Summary of the suggestions. 
@@ -95,15 +96,13 @@ Use the **Settings** tab to view the agent's current configuration. You can view
 
 ---
 
+## Configure custom instructions 
 
-## Configuration
-
-### Custom instructions 
-
-With the **Instruction** field, you can provide a prompt that influences how the agent runs. Common use cases include:
-
-- Including or excluding specific object IDs
-- Setting thresholds for device activity
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
+1. Select the **Settings** tab.
+1. In the **Instructions** field, you can provide a prompt that influences how the agent runs. Common use cases include:
+  - Including or excluding specific object IDs
+  - Setting thresholds for device activity
 
 For example, if your organization has executive devices that you don't want to flag for offboarding, you can use custom instructions to exclude them. Without this exclusion, the agent might detect identity mismatches on those devices and consume SCUs to suggest offboarding—even when it's not appropriate. Custom instructions help you prevent that issue by guiding the agent's logic based on your organizational needs.
 
@@ -111,15 +110,20 @@ Examples of custom instructions you can use:
 
 ```agent-prompt
 Exclude from all recommendations if device has been inactive in Entra for less than [n] days 
-
+```
+```agent-prompt
 Include in all recommendations if device has been active in Entra more than [n] days ago 
-
+```
+```agent-prompt
 Exclude [device ID] from all recommendations 
-
+```
+```agent-prompt
 Exclude [device ID] from recommendation if retired is true 
-
+```
+```agent-prompt
 Include [device ID] in all recommendations 
-
+```
+```agent-prompt
 Include only [device ID] in recommendations
 ```
 
