@@ -1,7 +1,7 @@
 {
   "redirections": [
     {
-      "source_path": "intune/agents/vulnerability-remediation-agent.md",
+      "source_path": "intune/intune-service/protect/vulnerability-remediation-agent.md",
       "redirect_url": "/intune/agents/vulnerability-remediation-agent",
       "redirect_document_id": false
     },
