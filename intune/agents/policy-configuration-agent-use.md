@@ -1,6 +1,6 @@
 ---
 title: Use the Policy Configuration Agent
-description: 
+description: Learn how to use the Policy Configuration Agent in Microsoft Intune.
 ms.date: 10/15/2025
 ms.topic: how-to
 author: mandiohlinger
