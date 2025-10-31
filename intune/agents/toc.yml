@@ -2,8 +2,6 @@ items:
 - name: Overview
   href: index.md
   displayName: security copilot agent
-- name: Current to merge 👆
-  href: security-copilot-agents-intune.md
 - name: Change Review Agent
   items:
   - name: Overview
@@ -42,6 +40,8 @@ items:
   - name: Overview
     href: vulnerability-remediation-agent.md
     displayName: Vulnerability Remediation Agent
+  - name: Current to merge 👆
+    href: security-copilot-agents-intune.md
 - name: Frequently asked questions (FAQs)
   href: faq.yml
   displayName: FAQs, Security Copilot agents

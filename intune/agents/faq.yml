@@ -43,7 +43,7 @@ sections:
       - question: You don't have access to this agent - Permissions
         answer: |
           **Details:** You don't have the permissions needed to access this agent.\
-          Review the prerequisites for the [role-based access control](#role-based-access-control-and-permissions) permission required to use this agent. Work with an Intune Administrator to assign your account the required permissions.
+          Review the roles requirements to use the agent. Work with an Intune Administrator to assign your account the required permissions.
       - question: The agent encountered an error and didn't finish the run. Try running the agent again.
         answer: |
           **Details:** The agent instance failed to start or successfully complete its run. Details of the failure can't be identified. Despite failing to run or complete, admins can continue to view and manage the agent suggestions from past runs.\
