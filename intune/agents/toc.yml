@@ -42,3 +42,6 @@ items:
   - name: Overview
     href: vulnerability-remediation-agent.md
     displayName: Vulnerability Remediation Agent
+- name: Frequently asked questions (FAQ)
+  href: faq.yml
+  displayName: FAQs, Security Copilot agents
