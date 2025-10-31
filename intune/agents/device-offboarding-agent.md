@@ -57,6 +57,7 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 >
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
 > - [!INCLUDE [plugin-entra](includes/plugin-entra.md)]
+> - [!INCLUDE [plugin-defender](includes/plugin-defender.md)]
 >
 > [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474).
 
