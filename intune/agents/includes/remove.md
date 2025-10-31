@@ -5,16 +5,15 @@ ms-topic: include
 ms.date: 10/16/2025
 ---
 
-### Remove the agent instance
+### Remove the agent
+
+When you remove an agent, all associated data generated including suggestions and activities are deleted. Previously applied suggestions remain unchanged.
 
 Steps to remove an agent instance:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents**.
 1. Select the agent instance you want to remove.
 1. Select **Remove agent** and confirm the removal.
-
-> [!WARNING]
-> Removing an agent deletes all existing suggestions, including those marked as complete. Previously applied suggestions will remain unchanged.
 
 After removal:
 

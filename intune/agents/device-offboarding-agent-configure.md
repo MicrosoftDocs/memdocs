@@ -123,19 +123,6 @@ Include [device ID] in all recommendations
 Include only [device ID] in recommendations
 ```
 
-## Agent actions
-
-### Refresh
-
-<!--##renew-->
-
-[!INCLUDE [renew](includes/renew.md)]
-
-<!--##remove-->
-[!INCLUDE [remove](includes/remove.md)]
-
-<!-- admin center links -->
-
 ## Next steps
 
 To learn how to use the agent after you configure it, see [Use the Device Offboarding Agent](device-offboarding-agent-use.md).

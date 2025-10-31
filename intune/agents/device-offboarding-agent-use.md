@@ -69,6 +69,20 @@ Factors:
 - Conditional access limited to user-based policies only.
 ```
 
+
+## Agent actions
+
+### Refresh
+
+<!--##renew-->
+
+[!INCLUDE [renew](includes/renew.md)]
+
+<!--##remove-->
+[!INCLUDE [remove](includes/remove.md)]
+
+<!-- admin center links -->
+
 ## Device Offboarding Agent logs 
 
 All agent management, create, delete, run, and any permission failures are available in Security Copilot logs. Logging of which devices were offboarded or when a recommended actions were complete aren't available. Instead, use the options to mark a suggestion as complete.  
