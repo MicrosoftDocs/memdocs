@@ -1,0 +1,57 @@
+### YamlMime:FAQ
+metadata:
+  title: "FAQs: Security Copilot agents in Microsoft Intune"
+  description: Use these frequently asked questions (FAQs) to learn important details about the Security Copilot agents available in Intune.
+  author: paolomatarazzo
+  ms.author: paoloma
+  ms.topic: faq
+  ms.date: 10/31/2025
+
+title: "Security Copilot agents in Microsoft Intune: Frequently Asked Questions (FAQs)"
+summary: |
+  This article addresses frequently asked questions about the Security Copilot agents available in Intune.
+
+  **General questions**:
+
+  - [What are Microsoft Security Copilot agents?](#what-are-microsoft-security-copilot-agents)
+
+  **Common errors**:
+
+  - [You don't have access to this agent - Licenses](#you-don-t-have-access-to-this-agent---licenses)
+  - [You don't have access to this agent - Workspace](#you-don-t-have-access-to-this-agent---workspace)
+  - [You don't have access to this agent - Permissions](#you-don-t-have-access-to-this-agent---permissions)
+  - [The agent encountered an error and didn't finish the run. Try running the agent again.](#the-agent-encountered-an-error-and-didn-t-finish-the-run--try-running-the-agent-again)
+
+sections:
+
+  - name: General questions
+    questions:
+      - question: What are Microsoft Security Copilot agents?
+        answer: |
+          Microsoft Security Copilot agents are adaptive generative AI assistants that extend the capabilities of Copilot across security tools to simplify task automation and improve security outcomes at scale.
+
+  - name: Common errors
+    questions:
+      - question: You don't have access to this agent - Licenses
+        answer: |
+          **Details:** You don't have the licenses needed to access this agent.
+          
+          Check the licensing and plugins requirements for this agent, and make sure the necessary licenses and configurations are assigned in your tenant.
+      - question: You don't have access to this agent - Workspace
+        answer: |
+          **Details:** You aren't part of the workspace needed to access this agent.\
+          This message indicates that your account doesn't have permission to view or use the [Security Copilot workspace](/copilot/security/workspaces-overview), which is configured at the time Security Copilot is added to your Tenant. Contact the administrator who installed or manages your Security Copilot subscription for assistance in gaining access, and see [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication).
+      - question: You don't have access to this agent - Permissions
+        answer: |
+          **Details:** You don't have the permissions needed to access this agent.\
+          Review the roles requirements to use the agent. Work with an Intune Administrator to assign your account the required permissions.
+      - question: The agent encountered an error and didn't finish the run. Try running the agent again.
+        answer: |
+          **Details:** The agent instance failed to start or successfully complete its run. Details of the failure can't be identified. Despite failing to run or complete, admins can continue to view and manage the agent suggestions from past runs.\
+          If the agent continues to fail, it's possible that its lost authorization for its identity account and can't run until it's reauthorized. Possible reasons for a loss of authorization include but aren't limited to:
+          - The agent's authorization period of 90 days was reached.
+          - The user account that the agent was installed with is subject to a policy that requires periodic reauthentication.
+          - An access token has been revoked.
+          Agent reauthorization requires that the agent is removed and then set up again.
+          > [!WARNING]
+          > When an agent is removed, all existing agent suggestions are deleted. This includes details about suggestions that were marked as *Applied*.
