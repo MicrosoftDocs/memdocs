@@ -38,7 +38,7 @@ Before you get started, ensure you meet the requirementts listed in the overview
 :::column-end:::
 :::row-end:::
 
-## Agent action: run
+## Run the agent
 
 Running the agent will reset your current suggestions, status, and assignments for this view. You can use the Tasks page to track progress of suggestions you've added.
 
@@ -74,14 +74,7 @@ Factors:
 
 ### Refresh
 
-<!--##renew-->
 
-[!INCLUDE [renew](includes/renew.md)]
-
-<!--##remove-->
-[!INCLUDE [remove](includes/remove.md)]
-
-<!-- admin center links -->
 
 ## Device Offboarding Agent logs 
 

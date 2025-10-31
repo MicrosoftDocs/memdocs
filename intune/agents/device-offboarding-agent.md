@@ -109,8 +109,7 @@ Assisted Remediation: Upon approval, the Device Offboarding Agent disables Entra
 <!--
 Workspace: This agent will run in the same preferred workspace you selected for Security Copilot.
 Once started, the agent will immediately run in your tenant. You will not be able to cancel an agent mid-run. When the run finishes, you can choose to [remove the agent](#remove-the-agent).
-
-Select **Start agent** to begin the setup process.-->
+-->
 
 ### Agent identity 
 

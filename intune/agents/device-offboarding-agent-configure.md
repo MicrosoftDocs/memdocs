@@ -123,8 +123,14 @@ Include [device ID] in all recommendations
 Include only [device ID] in recommendations
 ```
 
+[!INCLUDE [renew](includes/renew.md)]
+
+[!INCLUDE [remove](includes/remove.md)]
+
 ## Next steps
 
 To learn how to use the agent after you configure it, see [Use the Device Offboarding Agent](device-offboarding-agent-use.md).
+
+<!-- admin center links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
