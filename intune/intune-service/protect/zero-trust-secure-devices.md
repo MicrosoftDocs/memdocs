@@ -50,7 +50,7 @@ Securing endpoints is a critical part of a Zero Trust strategy. These Intune rec
 [!INCLUDE [24575](./includes/secure-recommendations/24575.md)]
 
 ### Defender Antivirus policies protect macOS devices from malware<!-- 24784 -->
-<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)]  -->
+<!-- [!INCLUDE [applies-to-zero-trust-assessment](./includes/secure-recommendations/applies-to-zero-trust-assessment.md)] -->
 [!INCLUDE [24784](./includes/secure-recommendations/24784.md)]
 
 ### Windows Firewall policies protect against unauthorized network access<!-- 24540 -->

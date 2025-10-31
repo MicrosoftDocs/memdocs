@@ -108,11 +108,32 @@ Updates for the Microsoft Tunnel release periodically. When a new version is ava
 
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
-The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of *agentImageDigest* and *serverImageDigest*: `cat /etc/mstunnel/images_configured`
 
 > [!IMPORTANT]
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
+
+### October 29, 2025
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:adc8259f8946e23612f9156223be6462690da82d113f919b9503fe227ca811e3
+- **serverImageDigest**: sha256:a8f1d5c7d734516e40ee3c2ead88d785ad25c5886ded095ce6dc74cf62b9916f
+
+Changes in this release:
+- Minor bug fixes
+
+  
+### October 7, 2025
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:c658a64a3a849f3bec94aa18acd48a56a652023cef163e5f683c580cd8407ea4
+- **serverImageDigest**: sha256:6772cfe5f32a741864732254b26b40b13d8544294d739cc9dc79b964e433f069
+
+Changes in this release:
+- Minor bug fixes
 
 ### Sept 15, 2025
 
