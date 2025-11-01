@@ -5,5 +5,5 @@ ms-topic: include
 ms.date: 10/16/2025
 ---
 
-### Refresh the agent
+## Refresh the agent
 

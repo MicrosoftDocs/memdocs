@@ -5,7 +5,7 @@ ms-topic: include
 ms.date: 10/16/2025
 ---
 
-### Remove the agent
+## Remove the agent
 
 When you remove an agent, all associated data generated including suggestions and activities are deleted. Previously applied suggestions remain unchanged.
 

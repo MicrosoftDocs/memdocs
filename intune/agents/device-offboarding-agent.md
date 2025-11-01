@@ -10,7 +10,7 @@ ms.reviewer: rishitasarin
 
 # Device Offboarding Agent overview
 
-The Device Offboarding Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. The Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
+The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra ID. It analyzes signals from Microsoft Intune and Entra ID to identify stale or misaligned devices and provides actionable recommendations for offboarding. This agent complements Intune's automation by surfacing insights and addressing ambiguous cases where automated cleanup might not be sufficient.
 
 ## Prerequisites
 
@@ -37,11 +37,6 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 >
 > - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
->
-> Optional licenses for enhanced functionality:
->
-> - [Microsoft Defender for Endpoint (Plan 2)](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint): required for Defender offboarding steps
-
 :::column-end:::
 :::row-end:::
 
@@ -57,7 +52,6 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 >
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
 > - [!INCLUDE [plugin-entra](includes/plugin-entra.md)]
-> - [!INCLUDE [plugin-defender](includes/plugin-defender.md)]
 >
 > [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474).
 
@@ -97,41 +91,29 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 
 ## How it works
 
-Signal Aggregation: Collects device data from Intune and Entra ID. 
+The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
 
-Evaluation: Assesses devices using predefined logic and optional custom admin instructions. 
+Next, the agent evaluates each device using predefined logic and any optional custom instructions provided by admins. Based on this assessment, it generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
 
-Recommendations: Flags devices for offboarding, with suggested actions and rationale. 
+>[!NOTE]
+> The Device Offboarding Agent rusn in the same preferred workspace you selected for Security Copilot.
 
-Admin Approval: No changes are made without explicit admin approval. 
+### Agent identity
 
-Assisted Remediation: Upon approval, the Device Offboarding Agent disables Entra ID objects and guides further steps (e.g., Defender offboarding). 
+The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
-<!--
-Workspace: This agent will run in the same preferred workspace you selected for Security Copilot.
-Once started, the agent will immediately run in your tenant. You will not be able to cancel an agent mid-run. When the run finishes, you can choose to [remove the agent](#remove-the-agent).
--->
+For more information about renewing authentication, see [Renew the agent](device-offboarding-agent-configure.md#renew-the-agent). 
 
-### Agent identity 
+## Operational considerations
 
-By default, the Device Offboarding Agent runs under the identity and permissions of the admin account that is used to set up the agent.  
+Before running the Device Offboarding Agent, keep these points in mind:
 
-The agent behavior is limited to the permissions of the user identity that the agent runs under. 
-
-The agent persistently runs in the identity and permissions of the Intune admin account that is assigned as the agent's identity. 
-
-The agent identity refreshes with each agent run and expires if the agent doesn't run for 90 consecutive days. When the expiration date nears, each Copilot owner and Copilot contributor receives a warning banner about renewal of the agent identity when they view the agent overview page. If the agent authentication expires, subsequent agent runs fail until authentication is renewed. For more information about renewing authentication, see [Renew the agent](device-offboarding-agent-configure.md#renew-the-agent). 
-
-Agent identity: the agent runs using the identity of the user who first set up the agent. Agent authentication expires after 90 days and needs to be renewed. Learn more about agent authentication.
-
-## Limitations 
-
-- An admin must manually start the agent. Once the agent starts, there are no options to stop or pause it. 
-- Only start the agent from within the Microsoft Intune admin center. 
-- Only the user who sets up the agent can view session details in the Microsoft Security Copilot portal. 
-- No suggestion history across runs. If you re-run the agent, the suggestions from the previous runs will be lost.  
-- One agent instance per tenant/user context. 
-- Only disables Entra ID objects; other remediation steps are instructions for admins. 
+- An admin must manually start the agent. After starting, there's no option to stop or pause it.
+- The agent can only be started from the Microsoft Intune admin center.
+- Session details in the [Microsoft Security Copilot portal][COP-PORTAL] are visible only to the user who set up the agent.
+- Suggestions don't persist across runs; re-running the agent clears previous recommendations.
+- Only one agent instance is supported per tenant/user context.
+- The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
 
 ## Next steps
 
@@ -141,3 +123,4 @@ Agent identity: the agent runs using the identity of the user who first set up t
 <!--links-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[COP-PORTAL]: https://go.microsoft.com/fwlink/?linkid=2247989
