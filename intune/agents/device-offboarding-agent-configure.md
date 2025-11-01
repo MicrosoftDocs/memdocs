@@ -84,10 +84,6 @@ A suggestion displays the following details:
 
 After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to complete. Marking a suggestion as complete doesn't trigger any device changes by the agent.  
 
-### Activity 
-
-This section tracks the current and past run activity of the agent.
-
 # [**Settings**](#tab/settings)
 
 Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs by using the optional **Instructions** field.
