@@ -50,9 +50,8 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 
 > [!NOTE]
 > Company Portal doesn't show device-licensed apps on User Enrollment devices because only user-licensed apps can be installed on User Enrollment devices.
-> > When you create a new assignment for an Apple Volume Purchase Program (VPP) app, the default license type is now "device." Existing assignments remain unchanged.
-> 
-> Don't use user licensing for the same Managed Apple Account across account-driven user enrollments and non-account driven user enrollments. 
+>
+> When you create a new assignment for an Apple Volume Purchase Program (VPP) app, the default license type is now "device." Existing assignments remain unchanged.
 
 ## What app types are supported?
 You can purchase and distribute public and private apps using Apple Business Manager.
