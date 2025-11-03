@@ -110,7 +110,7 @@ In this section, the following tables list the Intune dependencies and the ports
 
 #### Android Enterprise dependencies
 
-**Google Android Enterprise** - Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
+**Google Android Enterprise** - Google provides documentation of required network ports and destination host names in the [Android Enterprise Help Center](https://support.google.com/work/android/answer/10513641?hl=en).
 
 **Android push notification** - Intune uses Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. Both Android Device Administrator and Android Enterprise require this. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/).
 
