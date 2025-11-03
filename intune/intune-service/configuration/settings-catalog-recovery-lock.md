@@ -11,7 +11,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Prevent unauthorized reinstallation and wiping on macOS using Recovery Lock with Microsoft Intune
+# Configure Recovery Lock on macOS devices using the settings catalog in Microsoft Intune
 
 Recovery Lock helps protect your macOS devices against unauthorized reinstallation and wiping. When you add a Recovery Lock policy, Intune automatically generates a strong, random password and sets it on the device.
 
@@ -60,6 +60,8 @@ This article applies to:
 :::row-end:::
 
 ## Create the Recovery Lock policy
+
+Use the following steps to create a Recovery Lock policy in the settings catalog.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
@@ -117,7 +119,7 @@ When you unenroll the device from Intune, the Recovery Lock password is automati
 
 ## Remove or rotate the Recovery Lock password
 
-If a device needs to be serviced, recovered, or transferred, the Recovery Lock password can be removed or updated:
+If a device needs to be serviced, recovered, or transferred, the Recovery Lock password can be removed or updated.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select the macOS device.
