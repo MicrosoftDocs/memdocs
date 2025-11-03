@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Data storage and processing in Intune
-titleSuffix: Microsoft Intune
 description: Learn how personal data is stored and processed in Intune.
-keywords: data, privacy
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 06/25/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: edb07842-6a16-482e-8c1d-541a29e169a8
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bradyw
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy
@@ -37,13 +17,13 @@ ms.collection:
 
 ### Storage locations
 
-Microsoft Intune isn't deployed to all Microsoft data centers globally. We make decisions on where to deploy Intune services based on the number of customers, regional affiliations, and to help customers comply with laws, regulations or industry standards that explicitly govern the location of data storage. 
+Microsoft Intune isn't deployed to all Microsoft data centers globally. We make decisions on where to deploy Intune services based on the number of customers, regional affiliations, and to help customers comply with laws, regulations or industry standards that explicitly govern the location of data storage.
 
 Microsoft offers and operates Intune services in three major geographic regions:
 
 - **North America** - Includes data centers in the United States
 - **Europe** - Includes data centers located solely in the [European Data boundary](/privacy/eudb/eu-data-boundary-learn): European Union (EU) and the European Free Trade Association (EFTA)
-- **Asia Pacific** - Includes data centers in Australia, Hong Kong Special Administrative Region, Japan, Singapore, and South Korea 
+- **Asia Pacific** - Includes data centers in Australia, Hong Kong Special Administrative Region, India, Japan, Singapore, and South Korea
 
 Intune is also available in the following local geographies:
 
@@ -88,7 +68,7 @@ Microsoft 365 Data Handling Standard policy specifies how long customer data is 
 -**Active Deletion**: The tenant has an active subscription and a user or administrator deletes data, or administrators delete a user.
 -**Passive Deletion**: The tenant subscription ends.
 
-For each of the deletion scenarios, see [Data Retention, Deletion, and Destruction in Microsoft 365](/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide&preserve-view=true).  
+For each of the deletion scenarios, see [Data Retention, Deletion, and Destruction in Microsoft 365](/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide&preserve-view=true).
 
 In general, personal data collected by Intune is removed within 30 days after deletion. Audit logs are retained for up to one year for security purposes.
 
@@ -98,7 +78,7 @@ Intune processes personal data with ISO certified systems. For more information,
 
 ### Profiling and marketing
 
-Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling or marketing purposes. 
+Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling or marketing purposes.
 
 ## Next steps
 

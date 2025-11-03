@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Using Azure Virtual Desktop single-session with Microsoft Intune
-titleSuffix:
 description: Guidelines for using Azure Virtual Desktop single-session with Microsoft Intune.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
-ms.date: 02/13/2025
+author: MandiOhlinger
+ms.author: mandia
+ms.date: 10/14/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: madakeva
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -36,9 +16,9 @@ ms.collection:
 
 ## Prerequisites
 
-Currently, for single-session, Intune supports Azure Virtual Desktop VMs that are:
+For single-session, Intune supports Azure Virtual Desktop VMs that are:
 
-- Running Windows 10 Enterprise, version 1809 or later, or running Windows 11.
+- Running Windows Enterprise.
 - Set up as [personal remote desktops](/azure/virtual-desktop/configure-host-pool-personal-desktop-assignment-type) in Azure.
 - [Microsoft Entra hybrid joined](/azure/active-directory/devices/hybrid-azuread-join-plan) and enrolled in Intune in one of the following methods:
   - Configure [Active Directory group policy](/windows/client-management/mdm/enroll-a-windows-10-device-automatically-using-group-policy) to automatically enroll devices that are Microsoft Entra hybrid joined.
@@ -47,15 +27,15 @@ Currently, for single-session, Intune supports Azure Virtual Desktop VMs that ar
 - Microsoft Entra joined and enrolled in Intune by enabling [Enroll the VM with Intune](/azure/virtual-desktop/deploy-azure-ad-joined-vm#deploy-azure-ad-joined-vms) in the Azure portal.
 - Under the same tenant as Intune and in the same region.
 
-For more information on Azure Virtual Desktop licensing requirements, see [What is Azure Virtual Desktop?](/azure/virtual-desktop/overview#requirements).
+For more information on Azure Virtual Desktop licensing requirements, see [Licensing Azure Virtual Desktop](/azure/virtual-desktop/licensing).
 
-For information about working with multi-session remote desktops, see [Windows 10 or Windows 11 Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
+For information about working with multi-session remote desktops, see [Windows Enterprise multi-session remote desktops](azure-virtual-desktop-multi-session.md).
 
-Intune treats Azure Virtual Desktop personal VMs the same as Windows 10 or Windows 11 Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
+Intune treats Azure Virtual Desktop personal VMs the same as Windows Enterprise physical desktops. This treatment lets you use some of your existing configurations and secure the VMs with compliance policy and Conditional Access. Intune management doesn't depend on or interfere with Azure Virtual Desktop management of the same virtual machine.
 
 ## Limitations
 
-There are some limitations to keep in mind when managing Windows 10 Enterprise remote desktops:
+There are some limitations to keep in mind when managing Windows Enterprise remote desktops:
 
 ### Enrollment
 
@@ -63,7 +43,7 @@ Cross-regional enrollments aren't supported, for example an Azure Virtual Deskto
 
 ### Configuration
 
-All VM limitations listed in [Using Windows 10 virtual machines](windows-10-virtual-machines.md) also apply to Azure Virtual Desktop VMs.
+All VM limitations listed in [Using Windows virtual machines](windows-10-virtual-machines.md) also apply to Azure Virtual Desktop VMs.
 
 Also, the following profiles aren't currently supported:
 
@@ -74,7 +54,7 @@ Make sure that the [RemoteDesktopServices/AllowUsersToConnectRemotely policy](/w
 
 ### Cloning physical and virtual devices
 
-Intune doesn't support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures will occur.
+Intune doesn't support using a cloned image of a computer that is already enrolled. This includes both physical and virtual devices such as Azure Virtual Desktop (AVD). When device enrollment or identity tokens are replicated between devices, Intune device enrollment or synchronization failures occur.
 
 - For more information, see [Mobile device enrollment - Windows Client Management](/windows/client-management/mobile-device-enrollment) and [Certificate authentication device enrollment - Windows Client Management](/windows/client-management/certificate-authentication-device-enrollment).
 - For information on disabling token roaming in AVD, see [Using Azure Virtual Desktop multi-session with Microsoft Intune](azure-virtual-desktop-multi-session.md#prerequisites).
@@ -82,7 +62,7 @@ Intune doesn't support using a cloned image of a computer that is already enroll
 
 ### Remote actions
 
-The following Windows 10 desktop device remote actions aren't supported/recommended for Azure Virtual Desktop VMs:
+The following Windows desktop device remote actions aren't supported/recommended for Azure Virtual Desktop VMs:
 
 - Windows Autopilot reset
 - BitLocker key rotation
@@ -93,7 +73,7 @@ The following Windows 10 desktop device remote actions aren't supported/recommen
 
 ### Retirement
 
-Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules) according to the cleanup rules configured for the tenant.
+Deleting VMs from Azure leaves orphaned device records in Intune. They'll be automatically [cleaned up](../fundamentals/device-cleanup-rules.md) according to the cleanup rules configured for the tenant.
 
 ### Known issues
 

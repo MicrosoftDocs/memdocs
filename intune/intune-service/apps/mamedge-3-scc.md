@@ -1,30 +1,11 @@
 ---
-# required metadata
-
 title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
-titleSuffix:
 description: Step 3. Integrate Microsoft Entra Conditional Access with Microsoft Edge for Business.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-
-# optional metadata
-
-#audience:
-#ROBOTS: 
 ms.reviewer: samarti
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
@@ -90,7 +71,7 @@ Use the following steps to configure the MTD Connector.
 3. Select **Add** to display the **Add Connector** pane.
 
 4. From the **Select the Mobile Threat Defense connector to setup** dropdown box, select **Windows Security Center**.
-   
+
     > [!NOTE]
     > In this example, you have selected **Windows Security Center**. For the full list of MTD Partners, see [Mobile Threat Defense partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
 

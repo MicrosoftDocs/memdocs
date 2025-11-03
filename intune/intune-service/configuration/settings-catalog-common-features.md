@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Common tasks and features in the settings catalog
 description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 05/29/2024
+ms.date: 08/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: laarrizz, mikedano, beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: laarrizz, mayurjadhav, beflamm
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -39,18 +22,16 @@ This feature applies to:
 
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Configure Microsoft Edge and Google Chrome
 
-<!-- ms.reviewer: mikedano -->
+<!-- ms.reviewer: mayurjadhav -->
 
 This feature applies to:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
@@ -58,14 +39,15 @@ These web browser settings are built in, and can be configured & deployed to you
 
 Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 
+For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](settings-catalog-configure-edge.md).
+
 ## Add universal printers
 
 <!-- ms.reviewer: laarrizz -->
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 
@@ -84,7 +66,7 @@ This feature applies to:
 
 You can use the settings catalog to configure Apple's declarative device management (DDM) to manage software updates. With DDM, the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
 
-For more information, go to [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+For more information, go to [Managed software updates with the settings catalog](../protect/updates/apple.md).
 
 ## Built-in macOS features replacing plist files
 

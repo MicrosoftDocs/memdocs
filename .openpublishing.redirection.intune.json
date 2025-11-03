@@ -1,6 +1,41 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/protect/create-conditional-access-intune.md",
+      "redirect_url": "/entra/identity/conditional-access/policy-all-users-device-compliance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/enroll-configmgr.md",
+      "redirect_url": "/intune/intune-service/analytics/set-up?pivots=cm#enroll-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/enroll-intune.md",
+      "redirect_url": "/intune/intune-service/analytics/set-up?pivots=intune#enroll-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/settings.md",
+      "redirect_url": "/intune/intune-service/analytics/set-up",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/bulk-device-actions.md",
+      "redirect_url": "/intune/intune-service/remote-actions",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/overview.md",
+      "redirect_url": "/intune/analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/windows-information-protection-configure.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/developer/mam-tunnel-ios-xamarin-bindings.md",
       "redirect_url": "/intune/intune-service/developer/app-sdk-get-started",
       "redirect_document_id": false
@@ -12,7 +47,7 @@
     },
     {
       "source_path": "intune/intune/copilot/security-copilot-surface-portal.md",
-      "redirect_url": "/intune/intune-service/copilot/security-copilot-surface-portal",
+      "redirect_url": "/surface/security-copilot-surface-management-portal",
       "redirect_document_id": false
     },
     {
@@ -87,7 +122,7 @@
     },
     {
       "source_path": "intune/intune/apps/app-protection-policies-configure-windows-10.md",
-      "redirect_url": "/intune/intune-service/apps/app-protection-policies-configure-windows-10",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
       "redirect_document_id": false
     },
     {
@@ -497,12 +532,12 @@
     },
     {
       "source_path": "intune/intune/apps/windows-information-protection-policy-create.md",
-      "redirect_url": "/intune/intune-service/apps/windows-information-protection-policy-create",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/administrative-templates-configure-edge.md",
-      "redirect_url": "/intune/intune-service/configuration/administrative-templates-configure-edge",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-configure-edge",
       "redirect_document_id": false
     },
     {
@@ -512,12 +547,12 @@
     },
     {
       "source_path": "intune/intune/configuration/administrative-templates-restrict-usb.md",
-      "redirect_url": "/intune/intune-service/configuration/administrative-templates-restrict-usb",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-restrict-usb",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/administrative-templates-update-office.md",
-      "redirect_url": "/intune/intune-service/configuration/administrative-templates-update-office",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-update-office",
       "redirect_document_id": false
     },
     {
@@ -892,7 +927,7 @@
     },
     {
       "source_path": "intune/intune/configuration/tutorial-walkthrough-administrative-templates.md",
-      "redirect_url": "/intune/intune-service/configuration/tutorial-walkthrough-administrative-templates",
+      "redirect_url": "/intune/intune-service/configuration/tutorial-settings-catalog-group-policy",
       "redirect_document_id": false
     },
     {
@@ -1837,7 +1872,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/intune-legacy-pc-client.md",
-      "redirect_url": "/intune/intune-service/fundamentals/intune-legacy-pc-client",
+      "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
       "redirect_document_id": false
     },
     {
@@ -2837,7 +2872,7 @@
     },
     {
       "source_path": "intune/intune/protect/managed-software-updates-ios-macos.md",
-      "redirect_url": "/intune/intune-service/protect/managed-software-updates-ios-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
       "redirect_document_id": false
     },
     {
@@ -3127,12 +3162,12 @@
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-ios-ipados.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-guide-ios-ipados",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-ios-ipados",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-guide-macos.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-guide-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-macos",
       "redirect_document_id": false
     },
     {
@@ -3142,12 +3177,12 @@
     },
     {
       "source_path": "intune/intune/protect/software-updates-ios.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-ios",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-ios",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/protect/software-updates-macos.md",
-      "redirect_url": "/intune/intune-service/protect/software-updates-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-macos",
       "redirect_document_id": false
     },
     {
@@ -3227,7 +3262,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-information-protection-configure.md",
-      "redirect_url": "/intune/intune-service/protect/windows-information-protection-configure",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip",
       "redirect_document_id": false
     },
     {
@@ -3292,7 +3327,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/chrome-enterprise-device-details.md",
-      "redirect_url": "/intune/intune-service/remote-actions/chrome-enterprise-device-details",
+      "redirect_url": "/intune/intune-service/fundamentals/chrome-enterprise-device-details",
       "redirect_document_id": false
     },
     {
@@ -3322,7 +3357,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/device-inventory.md",
-      "redirect_url": "/intune/intune-service/remote-actions/device-inventory",
+      "redirect_url": "/intune/intune-service/fundamentals/device-inventory",
       "redirect_document_id": false
     },
     {
@@ -3397,12 +3432,12 @@
     },
     {
       "source_path": "intune/intune/remote-actions/find-primary-user.md",
-      "redirect_url": "/intune/intune-service/remote-actions/find-primary-user",
+      "redirect_url": "/intune/intune-service/fundamentals/find-primary-user",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/remote-actions/password-reset.md",
-      "redirect_url": "/intune/intune-service/remote-actions/password-reset",
+      "redirect_url": "/entra/identity/authentication/concept-sspr-howitworks",
       "redirect_document_id": false
     },
     {
@@ -3417,7 +3452,7 @@
     },
     {
       "source_path": "intune/intune/remote-actions/teamviewer-support.md",
-      "redirect_url": "/intune/intune-service/remote-actions/teamviewer-support",
+      "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
       "redirect_document_id": false
     },
     {

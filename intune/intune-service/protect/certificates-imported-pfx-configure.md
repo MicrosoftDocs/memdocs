@@ -1,28 +1,12 @@
 ---
 title: Use imported PFX certificates in Microsoft Intune
 description: Use imported Public Key Cryptography Standards (PKCS) certificates with Microsoft Intune. Import certificates, configure certificate templates, and create an Imported PKCS Certificate profile.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 04/27/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-#ROBOTS:
-#audience:
-
-ms.reviewer: lacranda; rimarram
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-
+ms.reviewer: wicale
 ms.collection:
-- tier2
 - M365-identity-device-management
 - certificates
 - sub-certificates
@@ -33,20 +17,20 @@ ms.collection:
 Microsoft Intune supports the use of imported public key pair (PKCS) certificates, commonly used for S/MIME encryption with Email profiles. Certain email profiles in Intune support an option to enable S/MIME where you can define an S/MIME signing certificate and S/MIME encryption cert.
 
 > [!IMPORTANT]
-> 
+>
 > As announced in [this Microsoft Tech Community blog](https://techcommunity.microsoft.com/t5/microsoft-entra-azure-ad-blog/update-your-applications-to-use-microsoft-authentication-library/ba-p/1257363), support for Azure Active Directory Authentication Library (ADAL) ends in December 2022. For your PowerShell scripts or custom code to continue to work to import user PFX certificates to Intune, they must be updated to leverage [Microsoft Authentication Library](/azure/active-directory/develop/msal-overview) (MSAL). Additionally, the global Intune application ID should be updated with the unique Application (client) ID assigned to your app after registering it in [Microsoft Entra ID to prevent future authentication issues](/azure/active-directory/develop/quickstart-register-app).
-> 
-> On GitHub, the sample PowerShell script to help simplify importing PFX certificates has been updated to reference MSAL and the Microsoft Entra Application (client) ID. Script samples in this article are also updated where applicable. 
-> 
+>
+> On GitHub, the sample PowerShell script to help simplify importing PFX certificates has been updated to reference MSAL and the Microsoft Entra Application (client) ID. Script samples in this article are also updated where applicable.
+>
 > For more information, view the [PFXImport PowerShell Project](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell#pfximport-powershell-project) readme file on GitHub, and  download the updated sample script.
- 
+
 
 
 S/MIME encryption is challenging because email is encrypted with a specific certificate:
 
 - You must have the private key of the certificate that encrypted the email on the device where you're reading the email so it can be decrypted.
 - Before a certificate on a device expires, you should import a new certificate so devices can continue to decrypt new email. Renewal of these certificates isn't supported.
-- Encryption certificates are renewed regularly, which means that you might want to keep past certificate on your devices, to ensure that older email can continue to be decrypted.  
+- Encryption certificates are renewed regularly, which means that you might want to keep past certificate on your devices, to ensure that older email can continue to be decrypted.
 
 Because the same certificate needs to be used across devices, it's not possible to use [SCEP](certificates-scep-configure.md) or [PKCS](certificates-pfx-configure.md) certificate profiles for this purpose as those certificate delivery mechanisms deliver unique certificates per device.
 
@@ -63,7 +47,7 @@ Intune supports import of PFX certificates for the following platforms:
   - Personally-Owned Work Profile
 - iOS/iPadOS
 - macOS
-- Windows 10/11
+- Windows
 
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
@@ -73,7 +57,7 @@ Intune supports import of PFX certificates for the following platforms:
 To use imported PKCS certificates with Intune, you'll need the following infrastructure:
 
 - **Certificate Connector for Microsoft Intune**:
-  
+
   The certificate connector handles requests for PFX files imported to Intune for S/MIME email encryption for a specific user. Ensure that each connector you install has access to the private key that is used to encrypt the passwords of the uploaded PFX files.
 
   For information about the certificate connector, see:
@@ -105,7 +89,7 @@ If you prefer to use your own custom solution using Graph, use the [userPFXCerti
 
 ### Build 'PFXImport PowerShell Project' cmdlets
 
-To make use of the PowerShell cmdlets, you build the project yourself using Visual Studio. The process is straight forward and while it can run on the server, we recommended you run it on your workstation.  
+To make use of the PowerShell cmdlets, you build the project yourself using Visual Studio. The process is straight forward and while it can run on the server, we recommended you run it on your workstation.
 
 1. Go to the root of the [Intune-Resource-Access](https://github.com/microsoft/Intune-Resource-Access) repository on GitHub, and then either download or clone the repository with Git to your machine.
 
@@ -127,7 +111,7 @@ To make use of the PowerShell cmdlets, you build the project yourself using Visu
 
 You import PFX Certificates and their private keys to Intune. The password protecting the private key is encrypted with a public key that is stored on-premises. You can use either Windows cryptography, a hardware security module, or another type of cryptography to generate and store the public/private key pairs.  Depending on the type of cryptography used, the public/private key pair can be exported in a file format for backup purposes.
 
-The PowerShell module provides methods to create a key using Windows cryptography. You can also use other tools to create a key.  
+The PowerShell module provides methods to create a key using Windows cryptography. You can also use other tools to create a key.
 
 #### To create the encryption key using Windows cryptography
 
@@ -169,7 +153,7 @@ Options include:
 
 Select the Key Storage Provider that matches the provider you used to create the key.
 
-#### To import the PFX certificate  
+#### To import the PFX certificate
 
 1. Export the certificates from any Certification Authority (CA) by following the documentation from the provider.  For Microsoft Active Directory Certificate Services, you can use [this sample script](http://web.archive.org/web/20200319074455/https://gallery.technet.microsoft.com/Export-CMPfxCertificatesFro-d55f687b).
 
@@ -178,22 +162,22 @@ Select the Key Storage Provider that matches the provider you used to create the
    > [!NOTE]
    > The following changes must be made for GCC High and DoD tenants prior to running *IntunePfxImport.psd1*.
    >
-   > Use a text editor or PowerShell ISE to edit the file, which updates the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of two updates within *IntunePfxImport.psd1*. One for **AuthURI** and the second for **GraphURI**:  
+   > Use a text editor or PowerShell ISE to edit the file, which updates the service endpoints for the GCC High environment. Notice that these updates change the URIs from **.com** to **.us** suffixes. There are a total of two updates within *IntunePfxImport.psd1*. One for **AuthURI** and the second for **GraphURI**:
    > ```
    > PrivateData = @{
    >     AuthURI = "login.microsoftonline.us"
    >     GraphURI = "https://graph.microsoft.us"
    >     SchemaVersion = "beta"
-   > 
+   >
    >     ClientId = "00000000-0000-0000-0000-000000000000" # Client Id from Azure app registration
-   > 
+   >
    >     ClientSecret = ""  # client secret from app registration when using application permissions to authenticate
-   > 
+   >
    >     TenantId = "00000000-0000-0000-0000-000000000000" # TenantId is required when using client secret
    >     }
    > ```
    >
-   > After saving the changes, restart PowerShell.  
+   > After saving the changes, restart PowerShell.
 
 3. To import the module, run `Import-Module .\IntunePfxImport.psd1`
 
@@ -212,23 +196,23 @@ Select the Key Storage Provider that matches the provider you used to create the
    > [!NOTE]
    > When you import the certificate from a system other than the server where the connector is installed, you must use the following command that includes the key file path: `$userPFXObject = New-IntuneUserPfxCertificate -PathToPfxFile "<FullPathToPFX>" $SecureFilePassword "<UserUPN>" "<ProviderName>" "<KeyName>" "<IntendedPurpose>" "<PaddingScheme>" "<File path to public key file>"`
    >
-   > *VPN* is not supported as a IntendedPurpose. 
+   > *VPN* is not supported as a IntendedPurpose.
 
 
 7. Import the **UserPFXCertificate** object to Intune by running `Import-IntuneUserPfxCertificate -CertificateList $userPFXObject`
 
 8. To validate the certificate was imported, run `Get-IntuneUserPfxCertificate -UserList "<UserUPN>"`
 
-9.	As a best practice to clean up the Microsoft Entra token cache without waiting for it to expire on it’s own, run `Remove-IntuneAuthenticationToken`
+9.    As a best practice to clean up the Microsoft Entra token cache without waiting for it to expire on it's own, run `Remove-IntuneAuthenticationToken`
 
 For more information about other available commands, see the readme file at [PFXImport PowerShell Project at GitHub](https://github.com/microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
 
 ## Create a PKCS imported certificate profile
 
-After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Microsoft Entra groups. 
+After importing the certificates to Intune, create a **PKCS imported certificate** profile, and assign it to Microsoft Entra groups.
 
 > [!NOTE]
-> After you create a PKCS imported certificate profile, the **Intended Purpose** and **Key storage provider** (KSP) values in the profile are read-only and can't be edited. If you need a different value for either of these settings, create and deploy a new profile. 
+> After you create a PKCS imported certificate profile, the **Intended Purpose** and **Key storage provider** (KSP) values in the profile are read-only and can't be edited. If you need a different value for either of these settings, create and deploy a new profile.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -265,7 +249,7 @@ After importing the certificates to Intune, create a **PKCS imported certificate
 
     Select **Next**.
 
-11. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+11. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
     For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
@@ -285,21 +269,21 @@ To learn more about the DigiCert Import tool, including how to obtain the tool, 
 
 ### EverTrust
 
-If you use EverTrust as your PKI solution, standalone or combined to an existing PKI, you can configure EverTrust Horizon to import PFX certificates to Intune. After you complete the integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that's detailed earlier in this article.
+If you use EverTrust as your PKI solution, standalone or combined to an existing PKI, you can configure EverTrust Horizon to import PFX certificates to Intune. After you complete the integration, you won't need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) that's detailed earlier in this article.
 
-To learn more about EverTrust’s integration with Intune, see https://evertrust.fr/horizon-and-intune-integration/.
+To learn more about EverTrust's integration with Intune, see https://evertrust.fr/horizon-and-intune-integration/.
 
 ### KeyTalk
 
-If you use the KeyTalk service, you can configure their service to import PFX certificates to Intune. After you complete the integration, you won’t need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) to Intune that's detailed earlier in this article.
+If you use the KeyTalk service, you can configure their service to import PFX certificates to Intune. After you complete the integration, you won't need to follow the instructions in the section [Import PFX Certificates to Intune](#import-pfx-certificates-to-intune) to Intune that's detailed earlier in this article.
 
-To learn more about KeyTalk’s integration with Intune, see https://keytalk.com/support in the KeyTalk knowledge base.
+To learn more about KeyTalk's integration with Intune, see https://keytalk.com/support in the KeyTalk knowledge base.
 
 ## Next steps
 
 [Use SCEP for certificates](certificates-scep-configure.md)
 ### Intune UI displays Windows Server devices as distinct from Windows clients for the Security Management for Microsoft Defender for Endpoint scenario<!-- 16882836  iddraft -->
 
-To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Microsoft Entra ID as either *Windows Server* for devices that run Windows Server, or as *Windows* for devices that run Windows 10 or Windows 11.
+To support the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) (MDE security configuration) scenario, Intune will soon differentiate Windows devices in Microsoft Entra ID as either *Windows Server* or as *Windows*.
 
-With this change, you'll be able to improve policy targeting for Microsoft Defender for Endpoint security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices (Windows 10/11).
+With this change, you'll be able to improve policy targeting for Microsoft Defender for Endpoint security configuration. For example, you'll be able to use dynamic groups that consist of only Windows Server devices, or only Windows client devices.

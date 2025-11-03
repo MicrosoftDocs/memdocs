@@ -1,35 +1,15 @@
 ---
-
-title: How to use Microsoft Entra ID to access Intune APIs in Microsoft Graph
-titleSuffix: Microsoft Intune
+title: How to Use Microsoft Entra ID to Access Intune APIs in Microsoft Graph
 description: Describes steps needed for apps to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph.
-keywords: intune graphapi c# powershell permission roles
-author: dougeby
-manager: laurawi
-ms.author: dougeby
 ms.date: 07/31/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 79A67342-C06D-4D20-A447-678A6CB8D70A
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
-# How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph
+# How to Use Microsoft Entra ID to Access the Intune APIs in Microsoft Graph
 
-The [Microsoft Graph API](https://developer.microsoft.com/graph/) now supports Microsoft Intune with specific APIs and permission roles.  The Microsoft Graph API uses Microsoft Entra ID for authentication and access control.  
+The [Microsoft Graph API](https://developer.microsoft.com/graph/) now supports Microsoft Intune with specific APIs and permission roles.  The Microsoft Graph API uses Microsoft Entra ID for authentication and access control.
 Access to the Intune APIs in Microsoft Graph requires:
 
 - An application ID with:
@@ -72,7 +52,7 @@ To register an app to use Microsoft Graph API:
     - A tenant user account with the **Users can register applications** setting enabled.
 
 2. In the admin center, expand **Identity** > **Applications**, and then select **App registrations**.
-   
+
    :::image type="content" source="./media/intune-graph-apis/entra-app-reg.png" alt-text="Screenshot of Entra admin center app registrations menu location.":::
 
 3. Either choose **New registration** to create a new application or choose an existing application.  (If you choose an existing application, skip the next step.)
@@ -91,7 +71,7 @@ To register an app to use Microsoft Graph API:
         To learn more, see [Authentication Scenarios for Microsoft Entra ID](/azure/active-directory/develop/active-directory-authentication-scenarios).
 
 5. Select **Register** to add your new application.
-   
+
    By selecting *Register*, you agree to the [Microsoft Platform Policies](https://go.microsoft.com/fwlink/?linkid=2090497&clcid=0x409).
 
 6. From the application pane for your app:
@@ -102,9 +82,9 @@ To register an app to use Microsoft Graph API:
 
 7. From the **API permissions** pane:
 
-    1. Select **Add a permission**, and then on the **Microsoft APIs** tab, select the **Microsoft Graph** tile. 
+    1. Select **Add a permission**, and then on the **Microsoft APIs** tab, select the **Microsoft Graph** tile.
 
-    2. Select the **Application permissions** option to show all of the available permissions, and then select the type of permissions your application requires. 
+    2. Select the **Application permissions** option to show all of the available permissions, and then select the type of permissions your application requires.
 
     3. Choose the roles required for your app by placing a checkmark to the left of the relevant names.  To learn about specific Intune permission scopes, see [Intune permission scopes](#intune-permission-scopes).  To learn about other Graph API permission scopes, see [Microsoft Graph permissions reference](/graph/permissions-reference).
 
@@ -112,11 +92,11 @@ To register an app to use Microsoft Graph API:
 
 ### Data warehouse and reporting permissions
 
-When you add an application through the Microsoft Entra admin center, you can choose the Intune API permissions based on the requirements of your application. 
+When you add an application through the Microsoft Entra admin center, you can choose the Intune API permissions based on the requirements of your application.
 
   - **get_data_warehouse** - Use this API permission to grant access to the Intune data warehouse API from Microsoft Intune. For more information, see [Using the Microsoft Intune Data Warehouse](./reports-nav-create-intune-reports.md).
 
-### Partner solution APIs  
+### Partner solution APIs
 
 The following Intune API permissions are available when adding an application through the Microsoft Entra admin center:
 
@@ -133,13 +113,13 @@ When finished, choose **Add permissions** to save your changes.
 
 At this point, you may also:
 
-- Choose to grant permission for all tenant accounts to use the app without providing credentials.  
+- Choose to grant permission for all tenant accounts to use the app without providing credentials.
 
     To do so, you can grant permissions and accept the confirmation prompt.
 
     When you run the application for the first time, you're prompted to grant the app permission to perform the selected roles.
 
-- Make the app available to users outside your tenant.  (This is typically only required for partners supporting multiple tenants/organizations.)  
+- Make the app available to users outside your tenant.  (This is typically only required for partners supporting multiple tenants/organizations.)
 
     To do so:
 
@@ -157,7 +137,7 @@ If you receive a large amount of data while requesting your app listing when usi
 
 ## Intune permission scopes
 
-Microsoft Entra ID and Microsoft Graph use permission scopes to control access to corporate resources.  
+Microsoft Entra ID and Microsoft Graph use permission scopes to control access to corporate resources.
 
 Permission scopes (also called the _OAuth scopes_) control access to specific Intune entities and their properties. This section summarizes the permission scopes for Intune API features.
 
@@ -221,11 +201,11 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Notification Messages
 
 > [!NOTE]
-> As of July 31, 2025, Microsoft Graph replaced use of the *DeviceManagementConfiguration.Read.All* permission with *DeviceManagementScripts.ReadWrite.All* for the following API calls:  
+> As of July 31, 2025, Microsoft Graph replaced use of the *DeviceManagementConfiguration.Read.All* permission with *DeviceManagementScripts.ReadWrite.All* for the following API calls:
 > - ~/deviceManagement/deviceShellScripts
 > - ~/deviceManagement/deviceHealthScripts
 > - ~/deviceManagement/deviceComplianceScripts
-> - ~/deviceManagement/deviceCustomAttributeShellScripts 
+> - ~/deviceManagement/deviceCustomAttributeShellScripts
 > - ~/deviceManagement/deviceManagementScripts 
 
 ### <a name="cfg-rw"></a>DeviceManagementConfiguration.ReadWrite.All
@@ -240,11 +220,11 @@ At this time, all Intune permission scopes require administrator access.  This m
   - Notification Messages
 
 > [!NOTE]
-> As of July 31, 2025, Microsoft Graph replaced use of the *DeviceManagementConfiguration.ReadWrite.All* permission with *DeviceManagementScripts.ReadWrite.All* for the following API calls:  
+> As of July 31, 2025, Microsoft Graph replaced use of the *DeviceManagementConfiguration.ReadWrite.All* permission with *DeviceManagementScripts.ReadWrite.All* for the following API calls:
 > - ~/deviceManagement/deviceShellScripts
 > - ~/deviceManagement/deviceHealthScripts
 > - ~/deviceManagement/deviceComplianceScripts
-> - ~/deviceManagement/deviceCustomAttributeShellScripts 
+> - ~/deviceManagement/deviceCustomAttributeShellScripts
 > - ~/deviceManagement/deviceManagementScripts 
 
 ### <a name="mgd-po"></a>DeviceManagementManagedDevices.PrivilegedOperations.All
@@ -310,7 +290,7 @@ At this time, all Intune permission scopes require administrator access.  This m
 
 - **Enable Access** setting: **Read Microsoft Intune scripts**
 
-- Apps can view (read) a script, specifically:  
+- Apps can view (read) a script, specifically:
   - Device Shell Scripts
   - Device Health Scripts
   - Device Compliance Scripts
@@ -319,10 +299,10 @@ At this time, all Intune permission scopes require administrator access.  This m
 
 ### <a name="script-rw"></a>DeviceManagementScripts.ReadWrite.All
 
-- **Enable Access** setting: **Read and write Microsoft Intune scripts**  
+- **Enable Access** setting: **Read and write Microsoft Intune scripts**\
   Allows the same operations as *DeviceManagementScripts.Read.All*
 
-- Apps can create, update or delete a script, specifically:  
+- Apps can create, update or delete a script, specifically:
   - Device Shell Scripts
   - Device Health Scripts
   - Device Compliance Scripts
@@ -464,9 +444,9 @@ This example shows how to use C# to retrieve a list of devices associated with y
     Console.WriteLine(devices);
     ```
 
-8. Compile and run your program.  
+8. Compile and run your program.
 
-When you first run your program, you should receive two prompts.  The first requests your credentials and the second grants permissions for the `managedDevices` request.  
+When you first run your program, you should receive two prompts.  The first requests your credentials and the second grants permissions for the `managedDevices` request.
 
 For reference, here's the completed program:
 
@@ -523,7 +503,7 @@ To do so:
 
 2. Verify that your tenant account allows users to register applications (see **User settings**).
 
-3. Establish a relationship between each tenant.  
+3. Establish a relationship between each tenant.
 
     To do so, either:
 

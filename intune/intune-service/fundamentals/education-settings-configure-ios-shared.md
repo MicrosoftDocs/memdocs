@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Intune shared device settings for the iOS/iPadOS Classroom app
-titleSuffix: Microsoft Intune
-description: Learn the Intune settings you can use to control settings for the Classroom app on shared iOS/iPadOS devices.  
-keywords:
+description: Learn the Intune settings you can use to control settings for the Classroom app on shared iOS/iPadOS devices.
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 12/06/2018
 ms.topic: archived
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: heenamac
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -149,9 +129,9 @@ When you are finished configuring certificates, choose **OK**.
 
 The profile is created and appears on the profiles list pane.
 
-## Step 3 - Create a device category  
+## Step 3 - Create a device category
 
-In the admin center, go to **Devices** > **Manage devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../enrollment/device-group-mapping.md#step-1-create-device-category-in-intune).  
+In the admin center, go to **Devices** > **Manage devices** > **Device categories**.  For more information about how to categorize devices in Intune, see [Add device categories](../enrollment/device-group-mapping.md#step-1-create-device-category-in-intune).
 
 ## Step 4 – Create a dynamic group
 
@@ -190,7 +170,7 @@ The device is now associated to the device category. Repeat this process for all
 5. On the profiles pane, choose **Create Profile**.
 6. On the **Create Association** pane, enter a **Name** and **Description**.
 7. Choose **Select Classes** > **Configure** to associate groups to the Cart Profile.
-8. Choose the classes to include to the Cart Profile then choose **Select**. 
+8. Choose the classes to include to the Cart Profile then choose **Select**.
 9. Choose **Select Carts** > **Configure** to associate groups to the Cart Profile.
 10. Choose the groups to include to the Cart Profile then choose **Select**.
 11. On the **Create Association** pane, choose **Save** to save the Cart Profile.
@@ -204,7 +184,7 @@ The profile is created and appears on the profiles list pane.
 4. On the **Device configuration** pane, choose **Monitor** > **Assignment status**.
 5. On the **Assignment status** pane, select the **Cart Profile** you created.
 6. On the **Cart Profile** pane choose **Assignments** and then, under **Include** choose **Select groups to include**.
-7. Select the classes you want the cart profile to target (do not select a group), then choose **Select**. 
+7. Select the classes you want the cart profile to target (do not select a group), then choose **Select**.
 8. When you are finished, choose **Save**.
 
 The assignment completes, and Intune deploys the Classroom profile to the targeted devices based on the classroom assignment.

@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Windows device enrollment guide for Microsoft Intune
 description: Enroll Windows devices using Automatic enrollment, Windows Autopilot, group policy, and co-management enrollment options in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/28/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: maholdaa
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -52,11 +34,13 @@ There's also a visual guide of the different enrollment options for each platfor
 
 ## Before you begin
 
-For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
+- For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
+
+- [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Windows automatic enrollment
 
-Use for personal and corporate-owned devices running Windows 10 and Windows 11. Microsoft Entra ID P1 or P2 is required with some automatic enrollment options.
+Use for personal and corporate-owned devices running Windows. Microsoft Entra ID P1 or P2 is required with some automatic enrollment options.
 
 Automatic enrollment:
 
@@ -74,7 +58,7 @@ You can use this enrollment option to:
 | --- | --- |
 | You use Windows client. | ✅ <br/><br/> Configuration Manager supports Windows Server. |
 | You have Microsoft Entra ID P1 or P2 | ✅ |
-| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✅ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
+| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✅ On Windows, CA is available for Windows devices enrolled using bulk enrollment. |
 | You have remote workers. | ✅ |
 | Devices are personal or BYOD. | ✅ <br/><br/> ❌ If you use Group Policy, then bulk enrollment and automatic enrollment are for corporate-owned devices, not personal or BYOD. |
 | Devices are owned by the organization or school. | ✅  |
@@ -89,7 +73,7 @@ You can use this enrollment option to:
 
 ### Automatic enrollment administrator tasks
 
-- Be sure your devices are running Windows 10/11. For a complete list, go to [supported device platforms](supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](supported-devices-browsers.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 - In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Windows Enrollment** > **Automatic Enrollment**. In the configuration, you set the **MDM user scope** and **MAM user scope**:
@@ -178,7 +162,7 @@ When users turn on the device, the next steps determine how they're enrolled. Cl
 
 ## Windows Autopilot
 
-Use on organization-owned devices running Windows 10/11.
+Use on organization-owned devices running Windows.
 
 Windows Autopilot uses the Windows client OEM version preinstalled on the device. You don't have to wipe the devices or use custom OS images. Windows Autopilot also requires Automatic enrollment, and uses the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to create an enrollment profile. When users sign in with their organization account, they're automatically enrolled.
 
@@ -192,7 +176,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 | Devices are Microsoft Entra hybrid joined. | ✅ <br/><br/> Microsoft Entra hybrid joined devices are joined to your on-premises Active Directory, and registered with your Microsoft Entra ID. Devices in Microsoft Entra ID are available to Intune. Devices that aren't registered in Microsoft Entra ID aren't available to Intune. <br/><br/>A full Microsoft Entra joined solution might be better for your organization. For more information, go to the [Success with remote Windows Autopilot and Microsoft Entra hybrid join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog.|
 | You have remote workers. | ✅ <br/><br/> The OEM or partner can send devices directly to your users.|
 | Devices are owned by the organization or school. | ✅ |
-| You have new or existing devices. | ✅ <br/><br/> You can update existing desktops running older Windows versions, like Windows 7, to Windows 10. This option also uses Microsoft Configuration Manager. |
+| You have new or existing devices. | ✅ <br/><br/> You can update existing desktops running older Windows versions. This option also uses Microsoft Configuration Manager. |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | You have Microsoft Entra ID P1 or P2. | ✅ <br/><br/> Windows Autopilot uses Automatic enrollment. Automatic enrollment requires Microsoft Entra ID P1 or P2. |
 | Devices are associated with a single user. | ✅ |
@@ -252,7 +236,7 @@ The end user experience depends on the Windows Autopilot deployment option you c
 
 ## BYOD: User enrollment
 
-Use for personal or BYOD (bring your own device) and organization-owned devices running Windows 10/11.
+Use for personal or BYOD (bring your own device) and organization-owned devices running Windows.
 
 User enrollment uses the **Settings** app > **Accounts** > **Access school or work** feature on the devices. There's some overlap with User enrollment and Automatic enrollment.
 
@@ -286,7 +270,7 @@ With User enrollment, you can "register" the devices with Microsoft Entra ID or 
 
 Other than having Intune setup, there are minimal administrator tasks with this enrollment method.
 
-- Be sure your devices are running Windows 10 and newer. For a complete list, go to [supported device platforms](supported-devices-browsers.md).
+- Be sure your devices are running a supported Windows version. For a complete list, go to [supported device platforms](supported-devices-browsers.md).
 
 - Optional. Instead of users entering the Intune server name, you can create a CNAME record that's easier to enter, like `EnterpriseEnrollment.contoso.com`. CNAME records associate a domain name with a specific server. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), test your CNAME record to make sure it's configured correctly. For more information, go to [create a CNAME record](../enrollment/windows-enrollment-create-cname.md).
 
@@ -339,7 +323,7 @@ Clearly communicate the options users should choose on personal and organization
 
 If you use Configuration Manager, and want to continue to use Configuration Manager, then co-management enrollment is for you.
 
-Co-management manages Windows 10/11 devices using Configuration Manager and Microsoft Intune together. You cloud-attach your existing Configuration Manager environment to Intune. This enrollment option runs some workloads in Configuration Manager, and other workloads in Intune.
+Co-management manages Windows devices using Configuration Manager and Microsoft Intune together. You cloud-attach your existing Configuration Manager environment to Intune. This enrollment option runs some workloads in Configuration Manager, and other workloads in Intune.
 
 For more specific information on co-management, go to [What is co-management?](../../configmgr/comanage/overview.md).
 
@@ -357,7 +341,7 @@ For more specific information on co-management, go to [What is co-management?](.
 | You have remote workers. | ✅ |
 | Devices are owned by the organization or school. | ✅ |
 | Devices are personal or BYOD. | ✅ |
-| You have new or existing devices. | ✅ <br/><br/> For devices that aren't running Windows 10/11, like Windows 7, you'll need to upgrade. For more specific information, go to [Upgrade Windows 10 for co-management](../../configmgr/comanage/quickstart-upgrade-win10.md). |
+| You have new or existing devices. | ✅ <br/><br/> For devices that aren't running supported versions of Windows, like Windows 7, you'll need to upgrade. For more specific information, go to [Upgrade Windows for co-management](../../configmgr/comanage/quickstart-upgrade-win10.md). |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | Devices are associated with a single user. | ✅ |
 | Devices are user-less, like kiosk, dedicated, or shared. | ✅ <br/><br/> These devices are organization-owned. This enrollment method requires users to sign in with their organization account. An organization admin can sign in, and automatically enroll. When the device is enrolled, create a [kiosk](../configuration/kiosk-settings.md) profile, and assign this profile to this device. You can also create a profile for [devices shared with many users](../configuration/shared-user-device-settings.md). |
@@ -374,7 +358,7 @@ When setting up co-management, you choose to:
 
 - Automatically enroll existing Configuration Manager-managed devices to Intune. This option requires Microsoft Entra hybrid joined devices. For more specific information, go to [Tutorial: Enable co-management for existing Configuration Manager clients](../../configmgr/comanage/tutorial-co-manage-clients.md).
 
-- Bring existing Intune enrolled Windows 10/11 devices to also be managed by Configuration Manager. In this situation, these devices aren't Microsoft Entra hybrid joined devices. Meaning, the devices are registered in Microsoft Entra ID. They're not registered in on-premises local Active Directory.
+- Bring existing Intune enrolled Windows devices to also be managed by Configuration Manager. In this situation, these devices aren't Microsoft Entra hybrid joined devices. Meaning, the devices are registered in Microsoft Entra ID. They're not registered in on-premises local Active Directory.
 
   For more specific information, go to [Tutorial: Enable co-management for new internet-based devices](../../configmgr/comanage/tutorial-co-manage-new-devices.md).
 

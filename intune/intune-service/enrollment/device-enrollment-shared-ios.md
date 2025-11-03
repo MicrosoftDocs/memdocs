@@ -1,46 +1,27 @@
 ---
-# required metadata
-
 title: Shared iOS and iPadOS devices
-titleSuffix: Microsoft Intune
 description: Learn about Shared iOS and iPadOS devices.
-keywords:
-author: Lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 09/16/2024
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: annovich
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # Overview of shared device solutions for iOS/iPadOS
 
-Shared devices are organization-owned multi-user devices. These devices can be special-purpose or multi-purpose as needed in each environment. Shared devices enable front-line workers in healthcare, hospitality, retail, manufacturing, and other industries to access critical applications and tools essential to their role in the organization. In education, shared devices are used as learning aids or test-taking devices in classrooms.  
+> [!IMPORTANT]
+> Shared device mode for iOS/iPadOS isn't currently available for GCC High tenants.
 
-Microsoft Intune supports two types of shared device solutions for iOS and iPadOS: 
+Shared devices are organization-owned multi-user devices. These devices can be special-purpose or multi-purpose as needed in each environment. Shared devices enable front-line workers in healthcare, hospitality, retail, manufacturing, and other industries to access critical applications and tools essential to their role in the organization. In education, shared devices are used as learning aids or test-taking devices in classrooms.
+
+Microsoft Intune supports two types of shared device solutions for iOS and iPadOS:
 - [Shared iPads](../enrollment/device-enrollment-shared-ipad.md)
 - [Shared Device Mode](/azure/active-directory/develop/msal-ios-shared-devices)
 
-## Compare solutions   
+## Compare solutions
 
-The following table captures the key differences between the two available shared devices solutions on iOS/iPadOS. Review this to select the most appropriate iOS/iPadOS shared device strategy for your organization.  
+The following table captures the key differences between the two available shared devices solutions on iOS/iPadOS. Review this to select the most appropriate iOS/iPadOS shared device strategy for your organization.
 
 | Consideration | Shared iPad | Shared Device Mode |
 |-|-|-|
@@ -56,12 +37,12 @@ The following table captures the key differences between the two available share
 
 \* The following Conditional Access configurations are not supported with Shared iPad:
   * Granting Conditional Access conditions for a device that require an approved client app, require an app protection policy, require [per-device terms of use](/azure/active-directory/conditional-access/terms-of-use#per-device-terms-of-use), or require the device to be marked as compliant.
-  * Conditional Access conditions that use filters for devices. 
+  * Conditional Access conditions that use filters for devices.
 
 ## Recommended iOS/iPadOS shared device strategy
 
-Shared iPad is the recommended shared device solution for Microsoft 365 on iPadOS. If you're planning your organization’s shared device strategy, we recommended that you choose iPadOS devices that meet the minimum requirements for Shared iPad (see section above). 
-If your organization’s shared device strategy requires cellphone capabilities or includes iOS devices, Shared Device Mode is the recommended shared device solution on iOS. 
+Shared iPad is the recommended shared device solution for Microsoft 365 on iPadOS. If you're planning your organization’s shared device strategy, we recommended that you choose iPadOS devices that meet the minimum requirements for Shared iPad (see section above).
+If your organization’s shared device strategy requires cellphone capabilities or includes iOS devices, Shared Device Mode is the recommended shared device solution on iOS.
 Review the differences between Shared iPad and Shared Device Mode to ensure that the recommendations above will fit your organization’s needs.
 
 ## Next steps
