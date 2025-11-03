@@ -169,29 +169,26 @@ It might take some time after editing for the end user to see the changes made t
 
 Apps that aren't part of any collection don't appear on the end users' Play Store front page. However, the end user can still search for them and install in the Play Store. You can add the same Managed Google Play app to multiple collections. Each collection can contain up to 100 apps. For more information on collections, see [Google's documentation](https://support.google.com/googleplay/work/answer/9146438).
 
-### Reset store layout to Basic mode
+## Play Store modes and layout reset
 
-The Managed Google Play store has two layout modes:
-
-- **Basic mode**: All approved apps automatically appear in users' Play Store. When you approve new apps, they're immediately visible without extra configuration.
-- **Custom mode**: Apps are organized into collections you create. Newly approved apps must be manually added to collections or users won't see them on the store front page (though they can still search for and install them).
-
-If you've created collections, Google automatically switches your store to Custom mode. In Custom mode, any app you approve after creating the first collection doesn't appear on users' store front page unless you add it to a collection. This can create confusion if users expect to see newly approved apps automatically.
-
-You can reset from Custom mode back to Basic mode directly in the Intune admin center:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **All Apps** > **Create**.
-3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
-4. Select **Select**. The **Managed Google Play** app store is displayed within Intune.
-5. Select **Reset to Basic** at the top of the Managed Google Play window.
-6. Confirm the action when prompted.
+When you customize Collections in the Managed Google Play iFrame, Google automatically switches your Play Store layout to Custom mode. In Custom mode, newly approved apps won't appear in the Play Store unless you manually add them to a collection. In Basic mode, all approved apps are automatically visible to users.
 
 > [!IMPORTANT]
-> Resetting to Basic mode immediately deletes all collections you've created. This action can't be undone. All approved apps become visible in users' Play Store, and newly approved apps automatically appear without requiring manual collection assignment.
+> Resetting to Basic deletes all existing collections. Any future changes to Collections will switch the store back to Custom mode.
 
-> [!NOTE]
-> The **Reset to Basic** button only appears if your store is currently in Custom mode. If you haven't created any collections yet, your store is already in Basic mode.
+### How to reset the Play Store to Basic
+
+In the Intune admin center, go to: **Apps** > **Managed Google Play** > **Store layout**.
+
+If the mode is Custom, select **Reset to Basic** (the button is conditionally available based on the current store mode).
+
+Confirm the action in the dialog.
+
+### What happens when you reset
+
+- All existing Collections are permanently deleted.
+- All approved apps become visible in the Managed Google Play Store without manual assignment.
+- The reset action is logged in Intune audit logs.
 
 ## Sync a Managed Google Play app with Intune
 
