@@ -238,7 +238,8 @@ Include only [device ID] in recommendations
 
 ## Next steps
 
-- [Use the Device Offboarding Agent](device-offboarding-agent-use.md)
+> [!div class="nextstepaction"]
+> [Learn how to use the Device Offboarding Agent](device-offboarding-agent-use.md)
 
 <!--links-->
 
