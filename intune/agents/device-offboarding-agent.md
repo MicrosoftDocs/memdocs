@@ -1,6 +1,6 @@
 ---
-title: Device Offboarding Agent Overview
-description: Learn about the Device Offboarding Agent in Microsoft Intune, its prerequisites, and how it works.
+title: Get Started with the Device Offboarding Agent
+description: Learn about the Device Offboarding Agent in Microsoft Intune, its prerequisites, how it works, and how to configure it.
 ms.date: 10/15/2025
 ms.topic: overview
 author: paolomatarazzo
@@ -8,7 +8,7 @@ ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 
-# Device Offboarding Agent overview
+# Get Started with the Device Offboarding Agent
 
 The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra ID. It analyzes signals from Microsoft Intune and Entra ID to identify stale or misaligned devices and provides actionable recommendations for offboarding. This agent complements Intune's automation by surfacing insights and addressing ambiguous cases where automated cleanup might not be sufficient.
 
@@ -82,9 +82,22 @@ The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra
 :::column span="3":::
 > Role requirements vary based on whether you're configuring the agent or using it, and on the specific actions performed.
 >
-> For detailed guidance, see:
-> - [Configure the Device Offboarding Agent](device-offboarding-agent-configure.md)
-> - [Use the Device Offboarding Agent](device-offboarding-agent-use.md)
+> To enable and configure the Device Offboarding Agent, use an account with the following roles:
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
+> - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
+> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+>
+> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
+>
+> To use the agent and perform offboarding actions, use an account with the following roles:
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
+> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
+>
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
+> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+> 
+> To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
 
 :::column-end:::
 :::row-end:::
@@ -115,9 +128,95 @@ Before running the Device Offboarding Agent, keep these points in mind:
 - Only one agent instance is supported per tenant/user context.
 - The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
 
+[!INCLUDE [enable](includes/enable.md)]
+
+<!--:::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::-->
+
+## Explore the agent options
+
+After you configure the agent, you can manage it from the Device Offboarding Agent pane.
+
+In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**:
+- On the **Overview** tab, view the suggestions of devices to offboard, and get more details and remediation steps.
+- On the **Suggestions** tab, view the full list of suggestions of devices to offboard, including the completed suggestions.  
+- On the **Settings** tab, review details about the agent's configuration.
+
+To learn more about each tab, select the following tabs:
+
+# [**Overview**](#tab/overview)
+
+After the Device Offboarding Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for devices to offboard. The **Overview** tab only displays the suggestions that are *not started* or *in progress*.  
+
+The following information is available on this tab: 
+
+- The agent's availability and run status. 
+- Agent suggestions, which are the list of devices to offboard that are *not started* or *in progress*.
+- Activity section that tracks the current and past run activity of the agent.
+
+:::image type="content" source="images/device-offboarding-agent/overview.png" alt-text="Screenshot of the overview pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/overview.png":::
+
+# [**Suggestions**](#tab/suggestions)
+
+Agent suggestions are a list of the top devices to offboard. Suggestions are generated after each agent run based on the latest data. In this tab, you can use search and filters to find specific suggestions.
+
+A suggestion displays the following details: 
+- Summary of the suggestions. 
+- Factors that the agent considered when suggesting offboarding these devices.  
+- Details about the associated suggestions, including the number of devices to offboard, their ownership, and their platform. 
+- Recommended actions to offboard securely.
+
+:::image type="content" source="images/device-offboarding-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/suggestions.png":::
+
+> [!IMPORTANT]
+> Follow the recommended actions in the order they're listed to prevent orphaned devices and ensure secure offboarding.  
+
+After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to complete. Marking a suggestion as complete doesn't trigger any device changes by the agent.  
+
+# [**Settings**](#tab/settings)
+
+Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs by using the optional **Instructions** field.
+
+:::image type="content" source="images/device-offboarding-agent/settings.png" alt-text="Screenshot of the settings tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/settings.png":::
+
+---
+
+## Configure custom instructions 
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
+1. Select the **Settings** tab.
+1. In the **Instructions** field, you can provide a prompt that influences how the agent runs. Common use cases include:
+  - Including or excluding specific object IDs
+  - Setting thresholds for device activity
+
+For example, if your organization has executive devices that you don't want to flag for offboarding, you can use custom instructions to exclude them. Without this exclusion, the agent might detect identity mismatches on those devices and consume SCUs to suggest offboarding—even when it's not appropriate. Custom instructions help you prevent that issue by guiding the agent's logic based on your organizational needs.
+
+Examples of custom instructions you can use:
+
+```agent-prompt
+Exclude from all recommendations if device has been inactive in Entra for less than [n] days 
+```
+```agent-prompt
+Include in all recommendations if device has been active in Entra more than [n] days ago 
+```
+```agent-prompt
+Exclude [device ID] from all recommendations 
+```
+```agent-prompt
+Exclude [device ID] from recommendation if retired is true 
+```
+```agent-prompt
+Include [device ID] in all recommendations 
+```
+```agent-prompt
+Include only [device ID] in recommendations
+```
+
+[!INCLUDE [renew](includes/renew.md)]
+
+[!INCLUDE [remove](includes/remove.md)]
+
 ## Next steps
 
-- [Configure the Device Offboarding Agent](device-offboarding-agent-configure.md)
 - [Use the Device Offboarding Agent](device-offboarding-agent-use.md)
 
 <!--links-->
