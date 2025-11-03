@@ -182,17 +182,27 @@ Use the **Settings** tab to view the agent's current configuration. You can view
 
 ---
 
-## Configure custom instructions 
+## Configure custom instructions
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
-1. Select the **Settings** tab.
-1. In the **Instructions** field, you can provide a prompt that influences how the agent runs. Common use cases include:
-  - Including or excluding specific object IDs
-  - Setting thresholds for device activity
+Use custom instructions to guide the agent's logic based on your organization's needs. Custom instructions help refine the agent's evaluation criteria, allowing you to include or exclude specific devices from offboarding recommendations.
+
+These instructions can be used to: 
+
+- Include or exclude specific object IDs.
+- Set thresholds for device activity.
 
 For example, if your organization has executive devices that you don't want to flag for offboarding, you can use custom instructions to exclude them. Without this exclusion, the agent might detect identity mismatches on those devices and consume SCUs to suggest offboarding—even when it's not appropriate. Custom instructions help you prevent that issue by guiding the agent's logic based on your organizational needs.
 
-Examples of custom instructions you can use:
+Custom instructions persist between agent runs, so once you set them, they are evaluated every time the agent runs. You can change custom instructions at any time in the **Settings** tab and re-run the agent. The **Factors** section in a suggestion highlights details on which custom instructions were taken into account while forming the list of suggested devices to offboard.  
+
+To configure custom instructions:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
+1. Select the **Settings** tab.
+1. In the **Instructions** field, you can provide a prompt that influences how the agent runs.
+  - Setting thresholds for device activity
+
+### Examples of custom instructions you can use
 
 ```agent-prompt
 Exclude from all recommendations if device has been inactive in Entra for less than [n] days 
