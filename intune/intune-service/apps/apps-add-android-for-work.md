@@ -1,9 +1,10 @@
 ---
 title: Add and Assign Managed Google Play Apps to Android Enterprise Devices
 description: Understand how to synchronize and assign apps to Android Enterprise devices from the Managed Google Play store.
-ms.date: 06/12/2025
+ms.date: 11/03/2025
 ms.topic: how-to
 ms.reviewer: ilwu
+ai-usage: ai-assisted
 ms.collection:
 - M365-identity-device-management
 - Android
@@ -168,6 +169,30 @@ To create a Managed Google Play collection:
 It may take some time after editing for the end user to see the changes made to their collections. If the changes haven't finished syncing yet, the end user may see an empty screen with **no results** text if they open the Play Store app. End users can still use the search bar to search for and download apps, even if the screen appears. Once at least one collection is created, all existing approved Managed Google Play apps that aren't in any other collection will appear in a default **My work app** collection. Apps approved after initial collection creation will have no collection assignment and won't be automatically added to the **My work app** collection.
 
 Apps that aren't part of any collection won't appear on the end users' Play Store front page. However, the end user can still search for them and install in the Play Store. You can add the same Managed Google Play app to multiple collections. Each collection can contain up to 100 apps. For more information on collections, see [Google's documentation](https://support.google.com/googleplay/work/answer/9146438).
+
+### Reset store layout to Basic mode
+
+The Managed Google Play store has two layout modes:
+
+- **Basic mode**: All approved apps automatically appear in users' Play Store. When you approve new apps, they're immediately visible without additional configuration.
+- **Custom mode**: Apps are organized into collections you create. Newly approved apps must be manually added to collections or users won't see them on the store front page (though they can still search for and install them).
+
+If you've created collections, Google automatically switches your store to Custom mode. In Custom mode, any app you approve after creating the first collection won't appear on users' store front page unless you add it to a collection. This can create confusion if users expect to see newly approved apps automatically.
+
+You can reset from Custom mode back to Basic mode directly in the Intune admin center:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All Apps** > **Create**.
+3. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**.
+4. Select **Select**. The **Managed Google Play** app store is displayed within Intune.
+5. Select **Reset to Basic** at the top of the Managed Google Play window.
+6. Confirm the action when prompted.
+
+> [!IMPORTANT]
+> Resetting to Basic mode immediately deletes all collections you've created. This action can't be undone. All approved apps will become visible in users' Play Store, and newly approved apps will automatically appear without requiring manual collection assignment.
+
+> [!NOTE]
+> The **Reset to Basic** button only appears if your store is currently in Custom mode. If you haven't created any collections yet, your store is already in Basic mode.
 
 ## Sync a Managed Google Play app with Intune
 
