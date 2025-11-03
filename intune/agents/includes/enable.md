@@ -14,3 +14,7 @@ To enable the Device Offboarding Agent, follow these steps:
 1. Review the details to ensure requirements are in place, then select **Start agent**.
 
 The agent runs until it finishes and then displays its results in the **Overview** tab.
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

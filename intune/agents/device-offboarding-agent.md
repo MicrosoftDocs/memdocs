@@ -82,7 +82,10 @@ The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra
 :::column span="3":::
 > Role requirements vary based on whether you're configuring the agent or using it, and on the specific actions performed.
 >
-> To enable and configure the Device Offboarding Agent, use an account with the following roles:
+> ---
+>
+> To **enable and configure** the Device Offboarding Agent, use an account with the following roles:
+>
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
 > - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
@@ -90,7 +93,9 @@ The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
-> To use the agent and perform offboarding actions, use an account with the following roles:
+> ---
+>
+> To **use** the agent and perform offboarding actions, use an account with the following roles:
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
 >
