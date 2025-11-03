@@ -3,7 +3,7 @@ title: Learn about the Microsoft Tunnel VPN solution for Microsoft Intune
 description: Learn about the Microsoft Tunnel Gateway, a VPN server for Intune that runs on Linux. With Microsoft Tunnel, cloud-based devices you manage with Intune can reach your on-premises infrastructure.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/03/2025
+ms.date: 11/11/2025
 ms.topic: article
 ms.reviewer: ochukwunyere
 ms.collection:
@@ -35,6 +35,25 @@ After you deploy Microsoft Tunnel, you can choose to add [Microsoft Tunnel for M
 
 Microsoft Tunnel Gateway installs onto a container that runs on a Linux server. The Linux server can be a physical box in your on-premises environment or a virtual machine that runs on-premises or in the cloud. To configure Tunnel, you deploy a Microsoft Defender for Endpoint as the Microsoft Tunnel client app, and Intune VPN profiles to your iOS and Android devices. The client app and VPN profile enable devices to use the tunnel to connect to corporate resources. When the tunnel is hosted in the cloud, you need to use a solution like Azure ExpressRoute to extend your on-premises network to the cloud.
 
+### Capabilities
+
+**Features of the VPN profiles for the tunnel include:**
+
+- A friendly name for the VPN connection that is visible to your end users.
+- The site that the VPN client connects to.
+- Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN automatically connects and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
+- For iOS devices that have Microsoft Defender for Endpoint configured to support per-app VPNs and *TunnelOnly* mode set to *True*, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multifactor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
+- Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
+- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. *(iOS/iPadOS)*
+- Proxy support. *(iOS/iPadOS, Android 10+)*
+- Android root detection. The Microsoft Defender for Endpoint client [automatically blocks]() a device's access to Microsoft Tunnel if it identifies that the device is rooted.
+
+  When a device is identified as rooted, the client immediately marks the device's risk category as *High*, drops active Tunnel connections, and continues to block access until the device is determined to be compliant. The device user receives a notification about this status from the Defender for Endpoint client.
+
+  This capability doesn’t replace the use of Intune compliance policies for Android to manage the settings for *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*. Use of Intune compliance policies to manage keys settings for Android supports the Microsoft Zero Trust security model for Android Enterprise [personally owned](/intune/intune-service/protect/android-personally-owned-security-configurations#personally-owned-work-profile-enhanced-security-level-2) and  [fully managed](/intune/intune-service/protect/android-fully-managed-security-configurations#fully-managed-basic-security-level-1) devices.
+
+### Setup Overview
+
 Through the Microsoft Intune admin center, you’ll:
 
 - Download the Microsoft Tunnel installation script that you run on the Linux servers.
@@ -51,16 +70,6 @@ Through the Defender for Endpoint app, iOS/iPadOS and Android Enterprise devices
 You can install multiple Linux servers to support Microsoft Tunnel, and combine servers into logical groups called *Sites*. Each server can join a single Site. When you configure a Site, you’re defining a connection point for devices to use when they access the tunnel. Sites require a *Server configuration* that you define and assign to the Site. The Server configuration is applied to each server you add to that Site, simplifying the configuration of more servers.
 
 To direct devices to use the tunnel, you create and deploy a VPN policy for Microsoft Tunnel. This policy is a device configuration VPN profile that uses Microsoft Tunnel for its connection type.
-
-Features of the VPN profiles for the tunnel include:
-
-- A friendly name for the VPN connection that is visible to your end users.
-- The site that the VPN client connects to.
-- Per-app VPN configurations that define which apps the VPN profile is used for, and if it's always-on or not. When always-on, the VPN automatically connects and is used only for the apps you define. If no apps are defined, the always-on connection provides tunnel access for all network traffic from the device.
-- For iOS devices that have Microsoft Defender for Endpoint configured to support per-app VPNs and *TunnelOnly* mode set to *True*, users don’t need to open or sign-in to Microsoft Defender on their device for the Tunnel to be used. Instead, with the user signed-in to the Company Portal on the device or to any other app that uses multifactor authentication that has a valid token for access, the Tunnel per-app VPN is used automatically. *TunnelOnly* mode is supported for iOS/iPadOS, and disables the Defender functionality, leaving only the Tunnel capabilities.
-- Manual connections to the tunnel when a user launches the VPN and selects *Connect*.
-- On-demand VPN rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses. *(iOS/iPadOS)*
-- Proxy support. *(iOS/iPadOS, Android 10+)*
 
 Server configurations include:
 
