@@ -132,7 +132,16 @@ Before running the Device Offboarding Agent, keep these points in mind:
 - Only one agent instance is supported per tenant/user context.
 - The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
 
+:::row:::
+:::column span="2":::
 [!INCLUDE [enable](includes/enable.md)]
+:::column-end:::
+:::column span="2":::
+
+:::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::
+
+:::column-end:::
+:::row-end:::
 
 ## Explore the agent options
 
@@ -226,8 +235,6 @@ Include only [device ID] in recommendations
 [!INCLUDE [renew](includes/renew.md)]
 
 [!INCLUDE [remove](includes/remove.md)]
-
-:::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::
 
 ## Next steps
 

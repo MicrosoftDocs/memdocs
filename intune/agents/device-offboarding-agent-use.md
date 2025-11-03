@@ -12,15 +12,15 @@ ms.reviewer: rishitasarin
 
 This article describes how to use the Device Offboarding Agent in Microsoft Intune to identify and manage devices that were removed from Intune but might still exist in Microsoft Entra.
 
-Different prompts can be used to get different results from the agent. The article includes sample prompts and responses to illustrate how the agent can assist in offboarding devices.
+Different prompts can be used to get different results from the agent. The article includes sample prompts and responses to illustrate how the agent can help offboarding devices.
 
 ## Prerequisites
 
-Before you get started, ensure you meet the requirementts listed in the overview article: [Device Offboarding Agent overview](device-offboarding-agent.md).
+Before you get started, ensure you meet the requirements listed in the overview article: [Device Offboarding Agent overview](device-offboarding-agent.md).
 
 ## Run the agent
 
-Running the agent will reset your current suggestions, status, and assignments for this view. You can use the Tasks page to track progress of suggestions you've added.
+Running the agent resets your current suggestions, status, and assignments for this view. You can use the Tasks page to track progress of suggestions you've added.
 
 To manually run the Device Offboarding Agent:
 
@@ -39,12 +39,12 @@ Executing the **Refresh** action updates the agent's current view with the lates
 ## Review suggestions and take action
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
-1. Select the **Suggestions** tab to view the list of recommndations.
+1. Select the **Suggestions** tab to view the list of recommendation.
 1. Select a suggestion to view more details, including the rationale behind the recommendation and steps for offboarding the device.
   1. You can change the status of a suggestion by selecting **Manage suggestion** and selecting whether the offboarding action is in progress or completed.
   1. You can select the option **Add to tasks list** to assign the offboarding action to an individual or team for tracking and management.
 
-:::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showind the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
+:::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
 
 ## Recommended actions examples
 
