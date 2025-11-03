@@ -96,6 +96,7 @@ The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra
 > ---
 >
 > To **use** the agent and perform offboarding actions, use an account with the following roles:
+>
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
 >
