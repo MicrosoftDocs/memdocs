@@ -1,7 +1,7 @@
 ---
 title: Add and Assign Managed Google Play Apps to Android Enterprise Devices
 description: Understand how to synchronize and assign apps to Android Enterprise devices from the Managed Google Play store.
-ms.date: 11//2025
+ms.date: 11/03/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ai-usage: ai-assisted
@@ -121,7 +121,9 @@ There are two ways to add LOB apps to Managed Google Play:
 1. Select **Select**. The **Managed Google Play** app store is displayed within Intune. 
 1. Select **Private apps** (next to the *lock* icon) in the Google Play window. 
 1. Select **Select** for the private app you want to sync.  
-1. Select **Sync** on the **App** pane to sync with the Managed Google Play service.## Managed Google Play web links
+1. Select **Sync** on the **App** pane to sync with the Managed Google Play service.
+
+## Managed Google Play web links
 
 Managed Google Play web links are installable and manageable just like other Android apps. When installed on a device, they appear in the user's app list alongside the other apps they have installed. When selected, they launch in the device's browser.
 
@@ -199,7 +201,9 @@ If you have approved an app from the store and don't see it in the **Apps** work
 1. Select **Apps** > **All Apps** > **Create**. 
 1. In the **Select app type** pane, under the available **Store app** types, select **Managed Google Play app**. 
 1. Select **Select**. The **Managed Google Play** app store is displayed within Intune. 
-1. Select **Sync** on the **App** pane to sync with the Managed Google Play service.## Assign a Managed Google Play app to Android Enterprise personally owned and corporate-owned work profile devices
+1. Select **Sync** on the **App** pane to sync with the Managed Google Play service.
+
+## Assign a Managed Google Play app to Android Enterprise personally owned and corporate-owned work profile devices
 
 When the app is displayed in the **App licenses** node of the **Apps** workload pane, you can [assign it just as you would assign any other app](./apps-deploy.md) by assigning the app to groups of users.
 
