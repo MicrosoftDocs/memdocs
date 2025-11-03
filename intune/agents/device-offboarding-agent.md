@@ -10,7 +10,7 @@ ms.reviewer: rishitasarin
 
 # Get Started with the Device Offboarding Agent
 
-The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra ID. It analyzes signals from Microsoft Intune and Entra ID to identify stale or misaligned devices and provides actionable recommendations for offboarding. This agent complements Intune's automation by surfacing insights and addressing ambiguous cases where automated cleanup might not be sufficient.
+The Device Offboarding Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
 
 ## Prerequisites
 
@@ -51,7 +51,7 @@ The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra
 > The Device Offboarding Agent requires the following plugins:
 >
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
-> - [!INCLUDE [plugin-entra](includes/plugin-entra.md)]
+> <!--- [!INCLUDE [plugin-entra](includes/plugin-entra.md)]-->
 >
 > [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474).
 
@@ -68,6 +68,7 @@ The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
 > The agent doesn't support:
+> - Window Autopilot devices
 > - Shared devices
 > - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones
@@ -103,19 +104,18 @@ The Device Offboarding Agent helps IT admins remove devices from Microsoft Entra
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > 
-> To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
+> To take action from within the agent, such as to [disable devices in Entra](/entra/identity/devices/manage-stale-devices#disable-devices), you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
 
 :::column-end:::
 :::row-end:::
 
 ## How it works
 
-The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
-
-Next, the agent evaluates each device using predefined logic and any optional custom instructions provided by admins. Based on this assessment, it generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
-
->[!NOTE]
-> The Device Offboarding Agent rusn in the same preferred workspace you selected for Security Copilot.
+1. **Signal aggregation**: The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
+1. **Evaluation**: The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
+1. **Recommendations**: Based on this assessment, the agent generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
+1. **Admin approval**: No changes are made to devices without explicit admin approval. The agent provides detailed recommendations, but the final decision to offboard a device rests with the IT admin.
+1. **Assisted remediation**: Upon admin approval, the Device Offboarding Agent facilitates the offboarding process by disabling the corresponding Entra ID objects and providing guidance on further remediation steps, such as offboarding from Microsoft Defender or removing Apple Business Manager.
 
 ### Agent identity
 
@@ -133,8 +133,6 @@ Before running the Device Offboarding Agent, keep these points in mind:
 - The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
 
 [!INCLUDE [enable](includes/enable.md)]
-
-<!--:::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::-->
 
 ## Explore the agent options
 
@@ -218,6 +216,8 @@ Include only [device ID] in recommendations
 [!INCLUDE [renew](includes/renew.md)]
 
 [!INCLUDE [remove](includes/remove.md)]
+
+:::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::
 
 ## Next steps
 
