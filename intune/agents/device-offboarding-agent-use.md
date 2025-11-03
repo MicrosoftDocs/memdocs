@@ -18,29 +18,6 @@ Different prompts can be used to get different results from the agent. The artic
 
 Before you get started, ensure you meet the requirementts listed in the overview article: [Device Offboarding Agent overview](device-offboarding-agent.md).
 
-<!--The following additional prerequisite are required to use the agent.
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [rbac](../includes/requirements/rbac.md)]
-
-:::column-end:::
-:::column span="3":::
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
-> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
->
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
-> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
-> 
->   To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
->
-> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
-> - [Copilot contributor](/copilot/security/authentication#security-copilot-roles) 
-
-:::column-end:::
-:::row-end:::
--->
-
 ## Run the agent
 
 Running the agent will reset your current suggestions, status, and assignments for this view. You can use the Tasks page to track progress of suggestions you've added.
@@ -69,26 +46,68 @@ Executing the **Refresh** action updates the agent's current view with the lates
 
 :::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showind the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
 
-<!--
-## Use the agent
+## Recommended actions examples
 
-```agent-prompt
-Find all devices that were removed from Intune but might still exist in Microsoft Entra. Provide steps to properly remove them from Entra.
-```
+The following examples describe sample responses from the Device Offboarding Agent.
+
+### Remove Windows corporate devices
 
 ```agent-response
-Summary
-There are 23 devices that are no longer in Intune but still in other portals. These devices should be removed.
+Summary:
+There are 23 corporate Windows devices that are no longer in Intune but still in other portals. These devices should be removed.
 
 Factors:
 - Users accessing corporate apps without MDM enrollment.
 - Cannot enforce compliance policies or data protection.
 - Personal devices may have corporate data without proper controls.
 - Conditional access limited to user-based policies only.
+
+Recommended actions:
+1. Download device list
+2. Back up BitLocker recovery keys (recommended)
+3. Back up Local Admin Password Solution (LAPS) (recommended)
+4. Remove devices from Microsoft Defender portal
+5. Remove devices from Autopilot
+6. Disable devices in Microsoft Entra
 ```
---->
 
+### Remove iOS/iPad corporate devices
 
+```agent-response
+Summary:
+There are 5 personal iOS/iPad devices that are no longer in Intune but still in other portals. These devices should be removed.
+
+Factors:
+- Devices are not present in Intune for management
+- Corporate devices operating without MDM oversight
+- Cannot enforce corporate compliance policies
+- Company data accessible without proper security controls
+
+Recommended Actions:
+1. Download affected device list >
+2. Remove devices from Apple Business/School Manager (ABM/ASM) >
+3. Disable devices in Microsoft Entra >
+
+```
+
+### Remove Android personal (BYOD) devices
+
+```agent-response
+Summary:
+There are 5 personal Android devices that are no longer in Intune but still in other portals. These devices should be removed.
+
+Factors:
+- Devices are not present in Intune for management
+- Users accessing corporate email and apps without MDM
+- No work profile separation between personal and corporate data
+- Cannot enforce mobile application management policies
+- Data loss prevention policies cannot be applied
+
+Recommended Actions:
+1. Download affected device list >
+2. Remove devices from Microsoft Defender portal >
+3. Disable devices in Microsoft Entra >
+```
 
 ## Device Offboarding Agent logs 
 
