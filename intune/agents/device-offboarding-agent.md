@@ -118,9 +118,7 @@ Next, the agent evaluates each device using predefined logic and any optional cu
 
 ### Agent identity
 
-The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. To maintain functionality, renew the agent identity before the 90-day limit.
-
-For more information about renewing authentication, see [Renew the agent](device-offboarding-agent-configure.md#renew-the-agent). 
+The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. To maintain functionality, [renew the agent](#renew-the-agent) identity before the 90-day limit.
 
 ## Operational considerations
 
