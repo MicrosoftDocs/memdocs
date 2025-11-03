@@ -16,7 +16,9 @@ Different prompts can be used to get different results from the agent. The artic
 
 ## Prerequisites
 
-Before you get started, ensure you meet the requirementts listed in the overview article: [Device Offboarding Agent overview](device-offboarding-agent.md). The following additional prerequisite are required to use the agent.
+Before you get started, ensure you meet the requirementts listed in the overview article: [Device Offboarding Agent overview](device-offboarding-agent.md).
+
+<!--The following additional prerequisite are required to use the agent.
 
 :::row:::
 :::column span="1":::
@@ -37,6 +39,7 @@ Before you get started, ensure you meet the requirementts listed in the overview
 
 :::column-end:::
 :::row-end:::
+-->
 
 ## Run the agent
 

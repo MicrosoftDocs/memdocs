@@ -11,3 +11,17 @@ ms.reviewer:
 # Policy Configuration Agent overview
 
 ## How it works
+
+## Prerequisites
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
+:::column-end:::
+:::row-end:::
+
+## Configuration
