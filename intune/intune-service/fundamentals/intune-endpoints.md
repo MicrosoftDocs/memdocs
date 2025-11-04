@@ -334,7 +334,9 @@ For more information on the required endpoints for Windows Autopatch, see [Windo
 
 ## Consolidated Endpoint List
 
-To make it easier to configure services through firewalls, below is a consolidated list of the FQDNs and IP Subnets used by Intune managed devices.
+To make it easier to configure services through firewalls, the following is a consolidated list of the FQDNs and IP Subnets used by Intune managed devices. 
+
+These lists include only those endpoints that that are used by Intune managed devices. These lists do not include additional endpoints that were provided by the Office 365 Endpoint service but not used by Intune.
 
 FQDNs
 ```
