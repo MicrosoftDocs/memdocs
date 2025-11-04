@@ -80,7 +80,7 @@ Intune configurations for Defender for Endpoint:
 
 Before you manage security tasks, they must be created within the Defender Security Center. For detailed instructions, see the Defender for Endpoint documentation on [remediating vulnerabilities](/microsoft-365/security/defender-endpoint/tvm-remediation?view=o365-worldwide&preserve-view=true#request-remediation).
 
-[!INCLUDE [manage-in-admin-tasks](../../intune-service/fundamentals/includes/manage-in-admin-tasks.md)]
+[!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
 
 To manage security tasks:
 

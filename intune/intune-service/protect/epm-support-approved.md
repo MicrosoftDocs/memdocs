@@ -88,7 +88,7 @@ To use support-approved elevation, use the same workflow for creating other EPM 
 
 Use the following procedure as guidance for reviewing and managing elevation requests.
 
-[!INCLUDE [manage-in-admin-tasks](../../intune-service/fundamentals/includes/manage-in-admin-tasks.md)]
+[!INCLUDE [manage--admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > **Elevation requests** tab.
 1. The elevation requests tab shows **pending requests** and **requests from the last 30 days**. Selecting a row opens that entries elevation request properties, where you can review the request in detail.
