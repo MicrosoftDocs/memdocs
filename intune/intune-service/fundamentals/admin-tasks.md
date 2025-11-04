@@ -17,8 +17,8 @@ In the Microsoft Intune admin center, the **admin tasks** node provides a centra
 Admin tasks include items from the following Intune capabilities:
 
 - [Endpoint Privilege Management file elevation requests](/intune/intune-service/protect/epm-support-approved#manage-pending-elevation-requests) – Found in the admin center at *Endpoint security > Endpoint Privilege Management*.
-- [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities) - Found in the admin center at *Endpoint security > Security Tasks*.
-- [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval) - Found in the admin center at *Tenant administration > Multi Admin Approval*.
+- [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#work-with-security-tasks) - Found in the admin center at *Endpoint security > Security Tasks*.
+- [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#approve-requests) - Found in the admin center at *Tenant administration > Multi Admin Approval*.
 
 ## Role-based access control for admin tasks
 
