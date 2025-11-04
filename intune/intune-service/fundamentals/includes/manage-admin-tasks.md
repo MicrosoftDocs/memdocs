@@ -8,4 +8,4 @@ ms.date: 11/18/2025
 ms.localizationpriority: medium
 ---
 > [!TIP]
-> You can also manage these as *tasks* in the [**admin task**](/intune/intune-service/fundamentals/admin-tasks.md) pane of the Intune admin center.
+> You can also manage these as *tasks* in the [**admin task**](../intune/intune-service/fundamentals/admin-tasks.md) pane of the Intune admin center.

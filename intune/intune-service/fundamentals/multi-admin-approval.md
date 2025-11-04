@@ -94,7 +94,7 @@ You can cancel a request before it's approved by selecting it from the My reques
 
    To verify if the approval succeeded (or failed), look at the notifications in the Intune admin center. A message shows if the approval succeeded or failed.
 
-[!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-inadmin-tasks.md)]
+[!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
 
 ## More considerations
 
