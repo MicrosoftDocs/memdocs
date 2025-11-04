@@ -1,7 +1,7 @@
 ---
 title: Passwordless Solutions With Microsoft Intune conclusions
 description: Discover how Microsoft Intune and Entra ID work together to enable passwordless authentication across devices and platforms - conclusions.
-ms.topic: overview
+ms.topic: concept-article
 author: paolomatarazzo
 ms.author: paoloma
 ms.reviewer: 

@@ -2,7 +2,7 @@
 title: Passwordless Solutions With Microsoft Intune
 description: Discover how Microsoft Intune and Entra ID work together to enable passwordless authentication across devices and platforms.
 ms.date: 11/04/2025
-ms.topic: overview
+ms.topic: concept-article
 author: paolomatarazzo
 ms.author: paoloma
 ms.reviewer: 
@@ -88,9 +88,9 @@ In summary, Entra ID is the central hub that validates the user's passwordless c
 
 The end-to-end passwordless SSO solution involves close cooperation between Intune (device management), Entra ID (identity), and the client operating systems (Windows, macOS, iOS, Android). Here's how these pieces come together on each platform: 
 
-## Windows
+# [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
 
-On Windows 10 and 11, Intune and Entra ID integration is deepest, providing a very smooth experience: 
+On Windows, Intune and Entra ID integration is deepest, providing a very smooth experience: 
 
 Azure AD Join + Intune Enrollment: Typically, a Windows device for a cloud-first organization will be Azure AD-joined (meaning it's registered directly with Entra ID as its primary domain). This often happens through Windows Autopilot or during the first sign-in, where the user enters their Entra credentials and the device joins the tenant. Auto-enrollment is usually enabled, so the moment the device Azure AD joins, it also enrolls into Intune management. This bootstrap process is the first integration point: the device now has an identity in Entra ID and is known to Intune as a managed device. Intune can evaluate compliance immediately and start applying policies (including those that enforce passwordless config like Hello). From the user perspective, this might just feel like "logging into my new PC with my work account" - behind the scenes, that action set up device trust with Entra and gave Intune control. 
 
@@ -104,7 +104,7 @@ Updates and Maintenance: Intune manages Windows updates and keeps devices on sup
 
 In essence, on Windows devices Intune and Entra ID create a very tight-knit system: the device is joined to Entra, Intune enforces configuration (like Hello) that directly uses Entra ID, and Entra ID in turn trusts the device per Intune's reports and gives out tokens for everything. Users get a fast login (PIN or fingerprint) and then can work without signing in again, even to legacy resources, and admins get strong security (no password to steal, plus device compliance gating access). 
 
-## macOS (Apple Mac) 
+# [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
 
 Historically, Macs have been somewhat outside the traditional Windows AD/Azure AD domain join world - users log in with local accounts, and SSO to enterprise resources was limited. That has changed significantly with the introduction of the Microsoft Enterprise SSO plug-in for Apple devices and Apple's own Platform SSO framework for macOS. Intune and Entra ID now integrate to allow a near Windows-like experience on Macs: 
 
@@ -128,7 +128,7 @@ Updates and App Deployment: Intune also manages macOS updates and can deploy the
 
 With these integrations, a Mac user in an Intune/Entra ID environment can have an experience very close to a Windows user: They turn on their Mac, use Touch ID (for example) to log in with their company Entra ID account, and then they can open Outlook, Teams, SharePoint in Safari, etc., all without repeated sign-ins. And the organization can enforce compliance (for instance, require the Mac to have encryption and no risky software - otherwise Conditional Access will block data sync). This is a huge improvement in both user experience and security for Mac in the enterprise. It's worth noting these capabilities are relatively new (publicly released in 2023-2025 timeframe)63 64, so they represent the cutting edge of Intune and Entra ID integration.
 
-## iOS and iPadOS 
+# [:::image type="icon" source="../../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
 
 On iPhones and iPads, the concept of "device login" with Entra ID is not present in the same way (users unlock their device with a personal PIN/biometric, not a work account). However, Intune and Entra ID still enable a robust SSO and passwordless experience within apps on iOS: 
 
@@ -150,7 +150,7 @@ Managed Apple IDs vs Entra ID: It's worth noting Apple does have its own enterpr
 
 Overall, on iOS, Intune + Entra ID provide app-level SSO and authentication brokerage. A user with an Intune-managed iPhone might still authenticate once (enter credentials in Authenticator or Company Portal during setup), but afterwards, they often won't have to enter their password again on that device - not for Outlook, not for Teams, not even for viewing an intranet site in Safari, thanks to the SSO plug-in75 76. And because of device registration, that authentication is strong (could be device-bound passkey in Authenticator) and tied to a compliant device, satisfying high security requirements without user friction. 
 
-## Android
+# [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
 
 Android's scenario is analogous to iOS in many ways, with a few platform-specific differences: 
 
@@ -170,7 +170,9 @@ Conditional Access and Compliance: Similar to iOS, Conditional Access can treat 
 
 Differences in UI and User Experience: On Android, the Authenticator app also recently gained the ability to be set as the device's default password manager & passkey provider (akin to iOS's feature)83 84. If a user does that, it can autofill credentials and also handle passkeys at the OS level. This might slightly blur lines between personal and work usage of passkeys, but Intune's focus would be ensuring corporate accounts are protected. Also, on Android, because there are many device manufacturers, some slight differences exist (e.g., Samsung devices with Knox might require additional steps). However, from Intune/Entra's perspective, the flow is standard. 
 
-In summary, on Android devices Intune establishes a managed context (which Entra ID recognizes), and Entra ID via Authenticator provides the single sign-on backbone. The result: a user enrolls their Android phone, signs in once, and then they can use all their authorized apps without repeated sign-ins. They might even use biometric unlock for the Authenticator app to satisfy MFA prompts instead of passwords. The combination of Intune and Entra ID ensures that is both seamless and secure: seamless, because the token sharing is automatic; secure, because the device is managed and must remain compliant for those tokens to be valid. 
+In summary, on Android devices Intune establishes a managed context (which Entra ID recognizes), and Entra ID via Authenticator provides the single sign-on backbone. The result: a user enrolls their Android phone, signs in once, and then they can use all their authorized apps without repeated sign-ins. They might even use biometric unlock for the Authenticator app to satisfy MFA prompts instead of passwords. The combination of Intune and Entra ID ensures that is both seamless and secure: seamless, because the token sharing is automatic; secure, because the device is managed and must remain compliant for those tokens to be valid.
+
+---
 
 ## Intune Policies and Configuration Options Across Platforms 
 
