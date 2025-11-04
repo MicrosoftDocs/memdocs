@@ -115,42 +115,42 @@ To support secure and efficient device lifecycle management, the Device Offboard
 
 :::row:::
 :::column span="1":::
-##### Signal aggregation
+**1. Signal aggregation**
 :::column-end:::
 :::column span="3":::
-The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
+>The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="1":::
-##### Evaluation
+**2. Evaluation**
 :::column-end:::
 :::column span="3":::
-The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
+>The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="1":::
-##### Recommendations
+**3. Recommendations**
 :::column-end:::
 :::column span="3":::
-Based on this assessment, the agent generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
+>Based on this assessment, the agent generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="1":::
-##### Admin approval
+**4. Admin approval**
 :::column-end:::
 :::column span="3":::
-No changes are made to devices without explicit admin approval. The agent provides detailed recommendations, but the final decision to offboard a device rests with the IT admin.
+>No changes are made to devices without explicit admin approval. The agent provides detailed recommendations, but the final decision to offboard a device rests with the IT admin.
 :::column-end:::
 :::row-end:::
 :::row:::
 :::column span="1":::
-##### Assisted remediation
+**5. Assisted remediation**
 :::column-end:::
 :::column span="3":::
-Upon admin approval, the Device Offboarding Agent facilitates the offboarding process by disabling the corresponding Entra ID objects and providing guidance on further remediation steps, such as offboarding from Microsoft Defender or removing Apple Business Manager.
+>Upon admin approval, the Device Offboarding Agent facilitates the offboarding process by disabling the corresponding Entra ID objects and providing guidance on further remediation steps, such as offboarding from Microsoft Defender or removing Apple Business Manager.
 :::column-end:::
 :::row-end:::
 
