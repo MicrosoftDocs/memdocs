@@ -115,7 +115,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 
 :::row:::
 :::column span="1":::
-#### 1. Signal aggregation
+##### Signal aggregation
 :::column-end:::
 :::column span="3":::
 The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
@@ -123,7 +123,7 @@ The Device Offboarding Agent begins by aggregating signals from Microsoft Intune
 :::row-end:::
 :::row:::
 :::column span="1":::
-#### 2. Evaluation
+##### Evaluation
 :::column-end:::
 :::column span="3":::
 The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
@@ -131,7 +131,7 @@ The agent evaluates each device using predefined logic and any optional [custom 
 :::row-end:::
 :::row:::
 :::column span="1":::
-#### 3. Recommendations
+##### Recommendations
 :::column-end:::
 :::column span="3":::
 Based on this assessment, the agent generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
@@ -139,7 +139,7 @@ Based on this assessment, the agent generates recommendations that flag devices 
 :::row-end:::
 :::row:::
 :::column span="1":::
-#### 4. Admin approval
+##### Admin approval
 :::column-end:::
 :::column span="3":::
 No changes are made to devices without explicit admin approval. The agent provides detailed recommendations, but the final decision to offboard a device rests with the IT admin.
@@ -147,7 +147,7 @@ No changes are made to devices without explicit admin approval. The agent provid
 :::row-end:::
 :::row:::
 :::column span="1":::
-#### 5. Assisted remediation
+##### Assisted remediation
 :::column-end:::
 :::column span="3":::
 Upon admin approval, the Device Offboarding Agent facilitates the offboarding process by disabling the corresponding Entra ID objects and providing guidance on further remediation steps, such as offboarding from Microsoft Defender or removing Apple Business Manager.
@@ -166,7 +166,7 @@ Upon admin approval, the Device Offboarding Agent facilitates the offboarding pr
 
 The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. To maintain functionality, [renew the agent](#renew-the-agent) identity before the 90-day limit.
 
-## Operational considerations
+### Operational considerations
 
 Before running the Device Offboarding Agent, keep these points in mind:
 
