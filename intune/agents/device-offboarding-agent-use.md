@@ -52,8 +52,8 @@ For each suggestion, you can view more details and take recommended actions to o
 1. In the [Microsoft Intune admin center][INT-AC], go to **Agents** > **Device Offboarding Agent (preview)**.
 2. Select the **Suggestions** tab to view the list of recommendations.
 3. Select a suggestion to see more details, including the rationale and steps for offboarding the device.
-  - To update the status, select **Manage suggestion** and choose whether the offboarding action is in progress or completed.
-  - To assign the offboarding action, select **Add to tasks list** and assign it to an individual or team for tracking and management.
+   - To update the status, select **Manage suggestion** and choose whether the offboarding action is in progress or completed.
+   - To assign the offboarding action, select **Add to tasks list** and assign it to an individual or team for tracking and management.
 
 :::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
 
