@@ -24,7 +24,7 @@ Settings Catalog policies provide deep device-level control for Microsoft Edge b
 
 ## Settings Catalog for Windows
 
-Settings Catalog for Windows provides comprehensive browser configuration with progressive security levels aligned with NIST, DISA STIG, and CISA frameworks.
+Settings Catalog for Windows provides comprehensive browser configuration with progressive security levels aligned with NIST, DISA STIG, and CISA frameworks. Following this guide doen’t make your organization compliant with these standards; they were used as input to build the security framework.
 
 > **Microsoft Documentation:**
 > - [Settings Catalog Overview](../configuration/settings-catalog.md)
@@ -32,8 +32,9 @@ Settings Catalog for Windows provides comprehensive browser configuration with p
 > - [Microsoft Edge Update Policies](/deployedge/microsoft-edge-update-policies)
 
 **Prerequisites:**
-- Windows 10/11 Pro or Enterprise
-- Intune enrollment (Entra ID join or Hybrid)
+- Windows Pro or Enterprise
+- Intune enrollment
+- Entra ID join or Hybrid
 - Microsoft Edge Stable channel
 - TPM 2.0 (for Application Bound Encryption)
 - Hyper-V (if using Application Guard for Level 3)
