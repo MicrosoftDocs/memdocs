@@ -48,7 +48,7 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 :::column span="3":::
 > Plugins enable Security Copilot agents to connect with Microsoft services and perform specialized actions.
 >
-> The Device Offboarding Agent requires the following plugins:
+> The Device Offboarding Agent requires the following plugin:
 >
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
 > <!--- [!INCLUDE [plugin-entra](includes/plugin-entra.md)]-->
@@ -154,14 +154,6 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::column-end:::
 :::row-end:::
 
-<!--
-1. **Signal aggregation**: The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
-1. **Evaluation**: The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
-1. **Recommendations**: Based on this assessment, the agent generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
-1. **Admin approval**: No changes are made to devices without explicit admin approval. The agent provides detailed recommendations, but the final decision to offboard a device rests with the IT admin.
-1. **Assisted remediation**: Upon admin approval, the Device Offboarding Agent facilitates the offboarding process by disabling the corresponding Entra ID objects and providing guidance on further remediation steps, such as offboarding from Microsoft Defender or removing Apple Business Manager.
--->
-
 ### Agent identity
 
 The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. To maintain functionality, [renew the agent](#renew-the-agent) identity before the 90-day limit.
@@ -177,16 +169,9 @@ Before running the Device Offboarding Agent, keep these points in mind:
 - Only one agent instance is supported per tenant/user context.
 - The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
 
-:::row:::
-:::column span="2":::
 [!INCLUDE [enable](includes/enable.md)]
-:::column-end:::
-:::column span="2":::
 
 :::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::
-
-:::column-end:::
-:::row-end:::
 
 ## Explore the agent options
 
@@ -197,7 +182,7 @@ In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Off
 - On the **Suggestions** tab, view the full list of suggestions of devices to offboard, including the completed suggestions.  
 - On the **Settings** tab, review details about the agent's configuration.
 
-To learn more about each tab, select the following tabs:
+Select a tab to learn more about its purpose and available options.
 
 # [**Overview**](#tab/overview)
 

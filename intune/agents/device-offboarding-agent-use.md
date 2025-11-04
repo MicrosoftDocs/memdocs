@@ -36,7 +36,7 @@ The agent runs until it completes its evaluation. You can't stop or pause the pr
 
 Select **Refresh** to update the agent's view with the latest data from its most recent run. This action doesn't trigger a new evaluation; it only refreshes the displayed information to reflect any changes since the last run.
 
-## View the agent's suggestions
+## View and act on suggestions
 
 After running the agent, review its findings to see which devices may need offboarding.
 
@@ -45,15 +45,11 @@ After running the agent, review its findings to see which devices may need offbo
 
 :::image type="content" source="images/device-offboarding-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/suggestions.png":::
 
-### Review suggestion details and take action
+Each offboarding suggestion includes detailed context and recommended actions. To manage these suggestions:
 
-For each suggestion, you can view more details and take recommended actions to offboard devices.
-
-1. In the [Microsoft Intune admin center][INT-AC], go to **Agents** > **Device Offboarding Agent (preview)**.
-2. Select the **Suggestions** tab to view the list of recommendations.
-3. Select a suggestion to see more details, including the rationale and steps for offboarding the device.
-   - To update the status, select **Manage suggestion** and choose whether the offboarding action is in progress or completed.
-   - To assign the offboarding action, select **Add to tasks list** and assign it to an individual or team for tracking and management.
+- View details and take action: Select a suggestion to review its rationale and initiate offboarding steps.
+- Update status: Choose **Manage suggestion** to mark the offboarding action as *In progress* or *Completed*.
+- Assign tasks: Use **Add to tasks list** to delegate the offboarding action to an individual or team for tracking and follow-up.
 
 :::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
 
