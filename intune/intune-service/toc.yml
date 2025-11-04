@@ -981,6 +981,8 @@ items:
 
       - name: Passwordless, certificates, and single sign-on
         items:
+        - name: Passwordless solutions
+          href: ../solutions/passwordless/toc.yml
         - name: Microsoft Cloud PKI
           items:
           - name: Microsoft Cloud PKI overview
