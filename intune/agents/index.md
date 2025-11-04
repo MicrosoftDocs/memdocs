@@ -23,8 +23,8 @@ The following agents are currently available:
 :::column:::
 #### Change Review Agent
 
-> :::image type="icon" source="icons/change-review-agent.svg" border="false":::
->
+:::image type="icon" source="icons/change-review-agent.svg" border="false":::
+
 > The *Change Review Agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take. 
 
 > [!div class="nextstepaction"]
@@ -33,8 +33,8 @@ The following agents are currently available:
 :::column:::
 #### Device Offboarding Agent
 
-> :::image type="icon" source="icons/device-offboarding-agent.svg" border="false":::
->
+:::image type="icon" source="icons/device-offboarding-agent.svg" border="false":::
+
 > The *Device Offboarding Agent* identifies stale or misaligned devices across Intune, Entra ID, Defender, Autopilot, and Apple Business Manager, providing actionable insights and requiring admin approval before offboarding any devices.
 
 > [!div class="nextstepaction"]
@@ -46,8 +46,8 @@ The following agents are currently available:
 :::column:::
 #### Policy Configuration Agent
 
-> :::image type="icon" source="icons/policy-configuration-agent.svg" border="false":::
->
+:::image type="icon" source="icons/policy-configuration-agent.svg" border="false":::
+
 > With the *Policy Configuration Agent* you can import documents or write instructions in plain language. The agent uses your document as reference and matches those instructions to the Settings Catalog to help create a policy.
 
 > [!div class="nextstepaction"]
@@ -56,8 +56,8 @@ The following agents are currently available:
 :::column:::
 #### Vulnerability Remediation Agent
 
-> :::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
->
+:::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
+
 > The *Vulnerability Remediation Agent* uses Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
 
 > [!div class="nextstepaction"]
