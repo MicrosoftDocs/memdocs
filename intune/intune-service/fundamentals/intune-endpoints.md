@@ -14,7 +14,7 @@ ms.collection:
 
 # Network endpoints for Microsoft Intune
 
-This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments. A consolidated list is at the end of this page.  [Consolidated endpoint list](#Consolidated-Endpoint-List)
+This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments. A consolidated list is at the end of this page.  [Consolidated endpoint list](#consolidated-endpoint-list)
 
  > [!CAUTION]
  >
