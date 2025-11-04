@@ -113,6 +113,8 @@
         "configmgr/core/misc/**/*": "None"
       },
       "author": {
+        "solutions/passwordless/**/*.md": "paolomatarazzo",
+        "solutions/passwordless/**/*.yml": "paolomatarazzo",
         "intune-service/apps/**/*.md": "nicholasswhite",
         "intune-service/apps/**/*.yml": "nicholasswhite",
         "intune-service/copilot/**/*.md": "mandiohlinger",
@@ -139,6 +141,8 @@
         "solutions/**/*.yml": "laurawi"
       },
       "ms.author": {
+        "solutions/passwordless/**/*.md": "paoloma",
+        "solutions/passwordless/**/*.yml": "paoloma",
         "intune-service/apps/**/*.md": "nwhite",
         "intune-service/apps/**/*.yml": "nwhite",
         "intune-service/copilot/**/*.md": "mandia",
@@ -171,6 +175,8 @@
       "ms.subservice": {
         "analytics/**/*.md": "endpoint-analytics",
         "analytics/**/*.yml": "endpoint-analytics",
+        "solutions/passwordless/**/*.md": "protect",
+        "solutions/passwordless/**/*.yml": "protect",
         "intune-service/apps/**/*.md": "apps",
         "intune-service/apps/**/*.yml": "apps",
         "intune-service/configuration/**/*.md": "configuration",
