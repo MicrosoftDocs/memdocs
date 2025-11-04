@@ -1835,6 +1835,8 @@ items:
     items:
     - name: Tenant status and health
       href: ./fundamentals/tenant-status.md
+    - name: Manage admin tasks
+      href: ./fundamentals/admin-tasks.md
     - name: Device cleanup rules
       href: ./fundamentals/device-cleanup-rules.md
 
