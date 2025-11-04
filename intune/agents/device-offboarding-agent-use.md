@@ -10,17 +10,34 @@ ms.reviewer: rishitasarin
 
 # Use the Device Offboarding Agent
 
-This article describes how to use the Device Offboarding Agent in Microsoft Intune to identify and manage devices that were removed from Intune but might still exist in Microsoft Entra.
+This article describes how to use the Device Offboarding Agent in Microsoft Intune to identify and manage devices that were removed from Intune but might still exist in Microsoft Entra ID or other connected services.
 
-Different prompts can be used to get different results from the agent. The article includes sample prompts and responses to illustrate how the agent can help offboarding devices.
+The article includes sample responses to illustrate how the agent can help offboarding devices.
 
 ## Prerequisites
 
 Before you get started, ensure you meet the requirements listed in the overview article: [Device Offboarding Agent overview](device-offboarding-agent.md).
 
+## View the agent's suggestions
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
+1. You can view the agent's suggestions in the **Overview** tab or the **Suggestions** tab.
+
+:::image type="content" source="images/device-offboarding-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/suggestions.png":::
+
+### Review suggestions details and take action
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
+1. Select the **Suggestions** tab to view the list of recommendation.
+1. Select a suggestion to view more details, including the rationale behind the recommendation and steps for offboarding the device.
+  1. You can change the status of a suggestion by selecting **Manage suggestion** and selecting whether the offboarding action is in progress or completed.
+  1. You can select the option **Add to tasks list** to assign the offboarding action to an individual or team for tracking and management.
+
+:::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
+
 ## Run the agent
 
-Running the agent resets your current suggestions, status, and assignments for this view. You can use the Tasks page to track progress of suggestions you've added.
+Executing the **Run** action triggers the Device Offboarding Agent to perform a new evaluation of your device inventory. It resets current suggestions, status, and assignments.
 
 To manually run the Device Offboarding Agent:
 
@@ -30,21 +47,11 @@ To manually run the Device Offboarding Agent:
 When an agent run starts, the agent runs until it completes its evaluation. It can't be stopped or paused. 
 
 > [!NOTE]
-> Each time the agent runs, it runs under the identity and permissions of the Intune administrator that its been configured to use. 
+> Each time the agent runs, it runs under the identity and permissions of the Intune administrator that it's been configured to use. 
 
 ## Refresh
 
 Executing the **Refresh** action updates the agent's current view with the latest data from its most recent run. This action doesn't trigger a new evaluation; it simply refreshes the displayed information to reflect any changes or updates since the last run.
-
-## Review suggestions and take action
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
-1. Select the **Suggestions** tab to view the list of recommendation.
-1. Select a suggestion to view more details, including the rationale behind the recommendation and steps for offboarding the device.
-  1. You can change the status of a suggestion by selecting **Manage suggestion** and selecting whether the offboarding action is in progress or completed.
-  1. You can select the option **Add to tasks list** to assign the offboarding action to an individual or team for tracking and management.
-
-:::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
 
 ## Recommended actions examples
 
@@ -63,12 +70,12 @@ Factors:
 - Conditional access limited to user-based policies only.
 
 Recommended actions:
-1. Download device list
-2. Back up BitLocker recovery keys (recommended)
-3. Back up Local Admin Password Solution (LAPS) (recommended)
-4. Remove devices from Microsoft Defender portal
-5. Remove devices from Autopilot
-6. Disable devices in Microsoft Entra
+1. Download affected device list >
+2. Back up BitLocker recovery keys (recommended) >
+3. Back up Local Admin Password Solution (LAPS) (recommended) >
+4. Remove devices from Microsoft Defender portal >
+5. Remove devices from Autopilot >
+6. Disable devices in Microsoft Entra >
 ```
 
 ### Remove iOS/iPad corporate devices
@@ -78,10 +85,10 @@ Summary:
 There are 5 personal iOS/iPad devices that are no longer in Intune but still in other portals. These devices should be removed.
 
 Factors:
-- Devices are not present in Intune for management
-- Corporate devices operating without MDM oversight
-- Cannot enforce corporate compliance policies
-- Company data accessible without proper security controls
+- Devices are not present in Intune for management.
+- Corporate devices operating without MDM oversight.
+- Cannot enforce corporate compliance policies.
+- Company data accessible without proper security controls.
 
 Recommended Actions:
 1. Download affected device list >
@@ -97,11 +104,11 @@ Summary:
 There are 5 personal Android devices that are no longer in Intune but still in other portals. These devices should be removed.
 
 Factors:
-- Devices are not present in Intune for management
-- Users accessing corporate email and apps without MDM
-- No work profile separation between personal and corporate data
-- Cannot enforce mobile application management policies
-- Data loss prevention policies cannot be applied
+- Devices are not present in Intune for management.
+- Users accessing corporate email and apps without MDM.
+- No work profile separation between personal and corporate data.
+- Cannot enforce mobile application management policies.
+- Data loss prevention policies cannot be applied.
 
 Recommended Actions:
 1. Download affected device list >
