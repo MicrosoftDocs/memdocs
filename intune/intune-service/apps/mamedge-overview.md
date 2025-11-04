@@ -1,5 +1,5 @@
 ---
-title: Secure Your Corporate Data Using Microsoft Edge for Business
+title: Secure Your Corporate Data in Intune with Microsoft Edge for Business
 description: Secure your corporate data in Microsoft Intune with Microsoft Edge for Business across all platforms.
 ms.date: 10/28/2025
 ms.topic: overview
@@ -11,11 +11,12 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Secure Your Corporate Data in Intune With Microsoft Edge for Business
+# Secure Your Corporate Data in Intune with Microsoft Edge for Business
 
 This comprehensive guide helps you implement a complete Secure Enterprise Browser strategy using Microsoft Edge for Business and Microsoft Intune across all platforms.
 
 **Applies to:**
+
 - Microsoft Edge for Business
 - Microsoft Intune Mobile Application Management (MAM)
 - Microsoft Intune Mobile Device Management (MDM)
@@ -64,9 +65,15 @@ Each level applies consistently across app protection policies, app configuratio
 
 ### What is Microsoft Edge for Business?
 
-Microsoft Edge for Business is a dedicated Microsoft Edge browsing experience designed specifically for work environments. Microsoft Edge for Business is secure by default. It enables admins in organizations to give their users a productive and secure work-browser provided across managed and unmanaged devices. In addition, Microsoft Edge for Business has the same rich set of enterprise controls, security, and productivity features that you're already familiar with in Microsoft Edge, and it's built to help meet the evolving needs of businesses and organizations.
+Microsoft Edge for Business is your secure, productivity-first browser built for modern work. Designed for managed and unmanaged devices, it delivers enterprise-grade security and controls while maintaining the familiar Microsoft Edge experience you trust.
 
-Microsoft Edge for Business aims to address the needs of both end users and IT Pros by automatically separating work and personal browsing. Microsoft Edge for Business does this using dedicated browser windows containing their own favorites, separate caches, and storage locations. This separation ensures that work related content doesn't get intermingled with personal browsing. In addition, it helps to prevent end users accidentally share sensitive information with unintended audiences.
+With automatic separation of work and personal browsing, Microsoft Edge for Business creates dedicated windows for each—complete with their own favorites, caches, and storage. This separation means no mix-ups, no accidental data leaks, and a seamless way to stay productive without compromising privacy.
+
+Why choose Microsoft Edge for Business?
+
+- **Secure by default** – Protect sensitive data effortlessly.
+- **Built for productivity** – Enterprise features you already know, optimized for work.
+- **Smart separation** – Keep work and personal browsing clearly apart.
 
 ### Is this a new browser?
 
@@ -84,12 +91,12 @@ Microsoft Edge for Business offers a multitude of advantages:
 
 **Enhanced security:** Microsoft Edge for Business fortifies the browsing experience by implementing app protection policies. These policies ensure that enterprise data remains secure, providing peace of mind for both the organization and its users.
 
-**Centralized management:** With Microsoft Intune, managing a Microsoft Edge for Business policy experience isn't complex. This centralized management system simplifies the process, saving time and resources.
+**Centralized management:** Microsoft Intune offers centralized policy management for Microsoft Edge for Business which simplifies the process, saving time and resources.
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to corporate data on personal devices. This capability uses the following functionality:
 - Intune application configuration policies (ACP) with Microsoft Edge for Business. Using ACP allows you to apply Microsoft Edge settings to better enable a secure browsing experience.
 - Intune app protection policies to secure organization data and ensure the client device is healthy.
-- Mobile Threat Protection (MTP) integrated with Intune APP to detect local health threats on personal Windows and all mobile devices.
+- Mobile Threat Protection (MTP) integrated with Intune app protection policies to detect local health threats on personal Windows and all mobile devices.
 - Microsoft Entra Conditional Access to ensure the device is protected and healthy before granting protected services access via Microsoft Entra.
 
 ## Zero Trust Methodology
@@ -106,7 +113,7 @@ Microsoft Edge for Business, built on the robust and secure foundation of Chromi
 
 In addition to the inherent security features of Chromium, Microsoft Edge for Business incorporates unique protection features and supports a range of Microsoft technologies:
 
-- **Microsoft Defender:** Provides comprehensive security solutions.
+- **[Microsoft Defender](/defender/):** Provides comprehensive security solutions.
 - **[Microsoft Entra](/entra/):** Offers identity and access management services.
 - **[Microsoft Intune](/mem/):** Offers mobile device and application management.
 - **[Microsoft Purview](/purview/):** Supports data governance across your hybrid data estate.
