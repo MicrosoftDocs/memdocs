@@ -12,9 +12,9 @@ ms.collection:
 
 # Manage admin tasks in Microsoft Intune
 
-In the Microsoft Intune admin center, the **admin tasks** node provides a centralized view where you can discover, organize, and act on recommendations, administrative tasks, and user requests. This consolidated experience helps you focus on what matters most without navigating across multiple nodes.
+In the Microsoft Intune admin center, the **admin tasks** node provides a centralized view to discover, organize, and act on recommendations, administrative tasks, and user requests. This unified experience helps you focus on what matters most without navigating across multiple nodes.
 
-Admin tasks include items from the following Intune capabilities:
+Admin tasks supports tasks from the following Intune capabilities:
 
 - [Endpoint Privilege Management file elevation requests](/intune/intune-service/protect/epm-support-approved#manage-pending-elevation-requests) – Found in the admin center at *Endpoint security > Endpoint Privilege Management*.
 - [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#work-with-security-tasks) - Found in the admin center at *Endpoint security > Security Tasks*.
@@ -34,7 +34,7 @@ For RBAC and related prerequisite details specific to each capability, see:
 **To review and manage tasks:**
 
 1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Admin tasks**.
-2. Intune displays a consolidated list of tasks available to you, based on your RBAC permissions. To manage the list view you can search, use filters and select a column header to sort the view.
+2. Intune displays a consolidated list of tasks available to you, based on your RBAC permissions. To organize the list you can search, use filters and select a column header to sort the view.
 3. Select a task from the **Task** column to open its management pane. The pane that opens is the *same interface and workflow* you'd use if managing the task from its original location in the admin center. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
 
 For task-specific workflows, refer to the documentation for that task type.
