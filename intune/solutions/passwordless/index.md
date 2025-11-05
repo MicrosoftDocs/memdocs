@@ -16,7 +16,14 @@ Microsoft's passwordless authentication strategy helps organizations reduce reli
 
 Microsoft's passwordless solution integrates Entra ID for identity and single sign-on (SSO) with Intune for device configuration and policy enforcement. This combination enables users to authenticate using strong credentials—such as biometrics, FIDO2 security keys, or passkeys—without entering passwords.
 
-#### :::image type="icon" source="icons/entra.svg" border="false"::: Entra ID: Identity and token issuance
+:::row:::
+   :::column span="1":::
+   #### :::image type="icon" source="icons/entra.svg" border="false":::
+   :::column-end:::
+   :::column span="3":::
+    ### Entra ID: Identity and token issuance
+   :::column-end:::
+:::row-end:::
 
 >Microsoft Entra ID is the core identity provider that verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. Upon successful authentication, Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. This eliminates repeated credential prompts and supports a frictionless user experience.
 
