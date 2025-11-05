@@ -119,12 +119,6 @@ ms.reviewer:
 > To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
 
 
-
-
-
-:::column-end:::
-:::column span="3":::
-
 :::column-end:::
 :::row-end:::
 <!-- end rbac -->
