@@ -116,7 +116,7 @@ ms.reviewer:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > 
 > :::image type="icon" source="../media/icons/admin-center/defender.svg" border="false"::: Defender roles
-> - Use of the agent requires the same access as agent setup.
+> - Use of the agent requires the same access as *enabling and configuring* the agent.
 >
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot contributor](/copilot/security/authentication#security-copilot-roles)
