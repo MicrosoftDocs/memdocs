@@ -55,6 +55,8 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
 > - On Windows, Entra join and Intune policies enable Hello or FIDO2 sign-in with instant cloud and on-premises SSO.
 > - On macOS, Platform SSO allows users to sign in with Entra ID credentials and gain token-based access to apps.
 > - On mobile, th:::row:::
+
+:::row:::
    :::column span="1":::
    :::image type="icon" source="icons/passkey.svg" border="false"::: 
    :::column-end:::
