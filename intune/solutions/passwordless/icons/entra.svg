@@ -1,24 +1,22 @@
-<svg width="266" height="93" viewBox="0 0 266 93" fill="none" xmlns="http://www.w3.org/2000/svg">
-<g filter="url(#filter0_dd_1304_264)">
-<rect x="4" y="2" width="257.844" height="85" rx="12" fill="#F5F5F5" shape-rendering="crispEdges"/>
-<path d="M128.885 18.2864C131.196 15.7454 135.011 16.1164 136.878 18.1359V18.1429C136.928 18.1919 146.204 28.4748 146.197 28.4713C143.971 27.4318 137.952 26.0878 133.351 31.0438C133.33 31.0718 117.469 48.7081 117.469 48.7081L130.041 56.4535L125.849 59.0365C119.154 62.9985 112.487 60.8985 110.013 59.3725C109.608 59.1205 103.382 55.281 103.382 55.281C100.694 53.6501 100.107 50.2306 102.127 47.9976C102.841 47.2031 128.213 19.0249 128.885 18.2864ZM151.925 34.7258C151.914 34.6838 163.733 47.9941 163.779 48.0466C165.489 49.9856 165.446 53.5206 162.51 55.2741C161.976 55.5926 135.883 71.6784 135.883 71.6784C134.108 72.7739 131.808 72.7739 130.034 71.6784L117.682 64.087C122.4 65.1895 126.553 62.1935 126.553 62.1935L148.451 48.7011L135.292 34.0643C137.184 32.0763 139.662 30.5328 142.705 30.4558C142.743 30.4544 142.781 30.452 142.819 30.4495C142.878 30.4457 142.937 30.4418 142.997 30.4418C146.649 30.4418 150.005 32.0973 151.925 34.7258Z" fill="#0078D4"/>
+<svg width="166" height="166" viewBox="0 0 166 166" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1311_127)">
+<circle cx="83" cy="79" r="75" fill="url(#paint0_linear_1311_127)" shape-rendering="crispEdges"/>
 </g>
+<path d="M78.9634 52.7864C81.2745 50.2454 85.0895 50.6164 86.9561 52.6359V52.6429C87.0059 52.6919 96.2822 62.9748 96.2751 62.9713C94.0493 61.9318 88.0299 60.5878 83.4291 65.5438C83.4078 65.5718 67.5467 83.2081 67.5467 83.2081L80.1189 90.9535L75.927 93.5365C69.232 97.4985 62.5655 95.3985 60.0909 93.8725C59.6856 93.6205 53.4599 89.781 53.4599 89.781C50.772 88.1501 50.1853 84.7306 52.2048 82.4976C52.9195 81.7031 78.2914 53.5249 78.9634 52.7864ZM102.003 69.2258C101.992 69.1838 113.811 82.4941 113.857 82.5466C115.567 84.4856 115.524 88.0206 112.588 89.7741C112.054 90.0926 85.9606 106.178 85.9606 106.178C84.1864 107.274 81.886 107.274 80.1118 106.178L67.7601 98.587C72.4782 99.6895 76.631 96.6935 76.631 96.6935L98.5292 83.2011L85.3704 68.5643C87.2619 66.5763 89.74 65.0328 92.7835 64.9558C92.8214 64.9544 92.8593 64.952 92.8975 64.9495C92.9559 64.9457 93.0148 64.9418 93.0751 64.9418C96.7266 64.9418 100.083 66.5973 102.003 69.2258Z" fill="#0078D4"/>
 <defs>
-<filter id="filter0_dd_1304_264" x="0" y="0" width="265.844" height="93" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<filter id="filter0_d_1311_127" x="0" y="0" width="166" height="166" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset/>
-<feGaussianBlur stdDeviation="1"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="4"/>
 <feComposite in2="hardAlpha" operator="out"/>
 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.12 0"/>
-<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1304_264"/>
-<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-<feOffset dy="2"/>
-<feGaussianBlur stdDeviation="2"/>
-<feComposite in2="hardAlpha" operator="out"/>
-<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0"/>
-<feBlend mode="normal" in2="effect1_dropShadow_1304_264" result="effect2_dropShadow_1304_264"/>
-<feBlend mode="normal" in="SourceGraphic" in2="effect2_dropShadow_1304_264" result="shape"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1311_127"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1311_127" result="shape"/>
 </filter>
+<linearGradient id="paint0_linear_1311_127" x1="83" y1="4" x2="83" y2="154" gradientUnits="userSpaceOnUse">
+<stop stop-color="#0078D4" stop-opacity="0.02"/>
+<stop offset="1" stop-color="#0078D4" stop-opacity="0.1"/>
+</linearGradient>
 </defs>
 </svg>

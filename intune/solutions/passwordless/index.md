@@ -22,10 +22,11 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
    :::column-end:::
    :::column span="3":::
     ### Entra ID: Identity and token issuance
+>Microsoft Entra ID is the core identity provider that verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. Upon successful authentication, Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. This eliminates repeated credential prompts and supports a frictionless user experience.
    :::column-end:::
 :::row-end:::
 
->Microsoft Entra ID is the core identity provider that verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. Upon successful authentication, Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. This eliminates repeated credential prompts and supports a frictionless user experience.
+
 
 :::row:::
    :::column span="1":::
@@ -33,14 +34,15 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
    :::column-end:::
    :::column span="3":::
     ### Intune: Policy-based enablement
-   :::column-end:::
-:::row-end:::
-
 > Microsoft Intune configures passwordless sign-in policies across managed endpoints. For example:
 > - Enforce Windows Hello for Business on Windows 11 devices to block password prompts during in-session authentication.
 > - Enable FIDO2 security key sign-in at the Windows lock screen.
 > - Deploy the Microsoft Enterprise SSO plug-in on Apple devices to support biometric authentication and Entra ID credentials.
 > - Guide mobile users to use the Microsoft Authenticator app or passkeys for secure sign-in.
+   :::column-end:::
+:::row-end:::
+
+
 
 :::row:::
    :::column span="1":::
@@ -48,13 +50,14 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
    :::column-end:::
    :::column span="3":::
     ### Cross-platform SSO
-   :::column-end:::
-:::row-end:::
-
 >Passwordless authentication is supported across Windows, macOS, iOS, and Android:
 > - On Windows, Entra join and Intune policies enable Hello or FIDO2 sign-in with instant cloud and on-premises SSO.
 > - On macOS, Platform SSO allows users to sign in with Entra ID credentials and gain token-based access to apps.
 > - On mobile, the Authenticator app acts as a broker, sharing Entra ID tokens across apps after a single biometric or passkey-based sign-in.
+   :::column-end:::
+:::row-end:::
+
+
 
 :::row:::
    :::column span="1":::
@@ -62,10 +65,11 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
    :::column-end:::
    :::column span="3":::
     ### Passkeys and future readiness
+>Microsoft is expanding support for modern passkeys, including device-bound and syncable options. Entra ID supports passkeys as a passwordless sign-in method, and Intune ensures devices meet OS and app requirements to enable these capabilities securely. This aligns with Microsoft's roadmap toward a fully passwordless enterprise.
    :::column-end:::
 :::row-end:::
 
->Microsoft is expanding support for modern passkeys, including device-bound and syncable options. Entra ID supports passkeys as a passwordless sign-in method, and Intune ensures devices meet OS and app requirements to enable these capabilities securely. This aligns with Microsoft's roadmap toward a fully passwordless enterprise.
+
 
 ## Intune-Supported Passwordless Authentication Methods 
 
