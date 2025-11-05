@@ -29,7 +29,7 @@ App protection policies for Windows provide secure and compliant access to work 
 
 > [!IMPORTANT]
 > Framework alignment:  
-> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Enterprise Browser managed by Microsoft Intune](secure-enterprise-browser-overview.md) guide.
+> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Your Corporate Data in Intune with Microsoft Edge for Business](mamedge-overview.md) guide.
 > 
 > This guide references industry frameworks (NIST, DISA STIG, CISA) as inputs. Applying these settings does not by itself make your organization compliant with any specific standard; perform your own compliance assessments against official requirements.
 
@@ -149,7 +149,7 @@ App protection policies for iOS/iPadOS provide data protection for Microsoft Edg
 
 > [!IMPORTANT]
 > Framework alignment:  
-> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Enterprise Browser managed by Microsoft Intune](secure-enterprise-browser-overview.md) guide.
+> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Your Corporate Data in Intune with Microsoft Edge for Business](mamedge-overview.md) guide.
 > 
 > This guide references industry frameworks (NIST, DISA STIG, CISA) as inputs. Applying these settings does not by itself make your organization compliant with any specific standard; perform your own compliance assessments against official requirements.
 
@@ -337,7 +337,7 @@ App protection policies for Android provide data protection for Microsoft Edge f
 
 > [!IMPORTANT]
 > Framework alignment:  
-> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Enterprise Browser managed by Microsoft Intune](secure-enterprise-browser-overview.md) guide.
+> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Your Corporate Data in Intune with Microsoft Edge for Business](mamedge-overview.md) guide.
 > 
 > This guide references industry frameworks (NIST, DISA STIG, CISA) as inputs. Applying these settings does not by itself make your organization compliant with any specific standard; perform your own compliance assessments against official requirements.
 
