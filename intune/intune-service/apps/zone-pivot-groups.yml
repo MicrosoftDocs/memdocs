@@ -1,0 +1,12 @@
+### YamlMime:ZonePivotGroups
+groups:
+- id: app-protection-platforms
+  title: Device platform
+  prompt: "Choose the platform for app protection policies:"
+  pivots:
+  - id: windows
+    title: Windows
+  - id: ios-ipados
+    title: iOS/iPadOS
+  - id: android
+    title: Android

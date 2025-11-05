@@ -91,7 +91,7 @@ Microsoft Edge for Business offers a multitude of advantages:
 
 **Enhanced security:** Microsoft Edge for Business fortifies the browsing experience by implementing app protection policies. These policies ensure that enterprise data remains secure, providing peace of mind for both the organization and its users.
 
-**Centralized management:** Microsoft Intune offers centralized policy management for Microsoft Edge for Business which simplifies the process, saving time and resources.
+**Centralized management:** Microsoft Intune offers centralized policy management for Microsoft Edge for Business that simplifies the process, saving time and resources.
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to corporate data on personal devices. This capability uses the following functionality:
 - Intune application configuration policies (ACP) with Microsoft Edge for Business. Using ACP allows you to apply Microsoft Edge settings to better enable a secure browsing experience.

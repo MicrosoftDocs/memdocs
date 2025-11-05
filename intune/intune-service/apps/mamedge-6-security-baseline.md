@@ -16,6 +16,7 @@ ms.collection:
 The Microsoft Edge security baseline provides a preconfigured set of 23 security settings that enable rapid deployment of enterprise browser security. Security baselines represent Microsoft's recommended security configuration based on industry best practices and security frameworks.
 
 **Applies to:**
+
 - Windows (enrolled devices)
 
 > [!NOTE]
@@ -26,15 +27,16 @@ The Microsoft Edge security baseline provides a preconfigured set of 23 security
 The Microsoft Edge security baseline includes 23 preconfigured settings that address core browser security requirements. Deploying the baseline provides immediate security hardening without requiring individual setting configuration.
 
 > **Microsoft Documentation:**
+>
 > - [Security Baselines Overview](../protect/security-baselines.md)
 > - [Use security baselines to configure Windows devices](../protect/security-baselines-configure.md)
 > - [Microsoft Edge Security Baseline](../protect/security-baseline-settings-edge.md)
 
 **Prerequisites:**
-- Windows 10/11 Enterprise
+
+- Windows Enterprise
 - Intune enrollment
 - Microsoft Edge Stable channel
-- Administrative access
 
 ## Deploy Microsoft Edge security baseline
 
@@ -146,36 +148,59 @@ After deploying the security baseline:
 ## Benefits of security baselines
 
 **Rapid Deployment:**
+
 - 23 settings configured in under 30 minutes
 - No manual configuration required
 - Production-ready security
 
 **Best Practices:**
+
 - Microsoft-validated security settings
 - Industry framework alignment
 - Regular updates from Microsoft
 
 **Consistency:**
+
 - Standardized security posture
 - Predictable configuration
 - Reduced configuration errors
 
 **Maintenance:**
+
 - Automatic updates when Microsoft releases new baseline versions
 - Simplified compliance reporting
 - Reduced administrative overhead
 
 ## Framework compliance
 
-**Level 2 Baseline:**
-- DISA STIG: CAT II/III requirements
-- NIST: Moderate controls
-- CISA: Enhanced protections
+> [!IMPORTANT]  
+> The Microsoft Edge security baseline and its Level 2 and Level 3 configurations **do not make your organization compliant** with any industry security standard. These configurations include **some settings informed by** frameworks such as DISA STIG, NIST, and CISA, but they are **not designed to implement** or achieve compliance with those frameworks. They were used only as **reference input** when developing Microsoft’s recommended security settings.  
 
-**Level 3 Enhanced:**
-- DISA STIG: CAT I compliance
-- NIST: High-impact controls
-- CISA: Maximum protections
+**Framework influence overview:**  
+
+**Level 2** draws from concepts found in:
+
+- **DISA STIG:** CAT II/III guidance  
+- **NIST:** Moderate control categories  
+- **CISA:** Enhanced protection principles  
+
+**Level 3** builds on stricter security concepts found in:
+
+- **DISA STIG:** CAT I guidance  
+- **NIST:** High-impact control categories  
+- **CISA:** Maximum protection principles  
+
+These references illustrate how Microsoft’s recommendations map conceptually to common security frameworks. **Following this guidance alone does not result in compliance or certification** with any framework.  
+
+**Compliance considerations:**  
+Security baselines help you align with industry-standard security frameworks and reduce configuration complexity, but they **do not guarantee compliance** with any standard or certification. Achieving full compliance requires organizations to implement **additional technical, administrative, and procedural controls** beyond the browser configuration, including network and device policies, documentation, and formal assessment processes.  
+
+For more information related to security baselines and framework alignment, see:
+
+- [Security baselines overview](/mem/intune/protect/security-baselines)
+- [Windows security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)  
+- [Microsoft Defender for Endpoint Security Configuration Framework](/microsoft-365/security/defender-endpoint/security-configuration-framework)  
+- [Windows security baselines FAQ](/windows/security/threat-protection/windows-security-baselines-faq)
 
 ## Next steps
 
