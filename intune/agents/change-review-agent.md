@@ -62,10 +62,10 @@ ms.reviewer:
 :::row-end:::
 <!-- end plugin -->
 
-<!-- start platform -->
+<!-- start platform ../../media/icons/admin-center/devices.svg  -->
 :::row:::
 :::column span="1":::
-:::image type="icon" source="../../media/icons/admin-center/devices.svg" border="false"::: **Device platform and scenarios**
+:::image type="icon" source="../media/icons/admin-center/devices.svg" border="false"::: **Platform requirements and scenarios**
 :::column-end:::
 :::column span="3":::
 > The agent supports evaluation and recommendations for the following platforms and scenarios:
@@ -104,7 +104,6 @@ ms.reviewer:
 
 ## Configuration
 
-## How it works
 ## Enable the agent
 ## Explore the agent options
 ## Configure custom instructions
