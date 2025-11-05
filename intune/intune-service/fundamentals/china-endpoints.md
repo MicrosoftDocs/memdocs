@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Network endpoints for China deployments - Microsoft Intune
-titleSuffix: 
 description: Review China endpoints for Intune.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
+author: MandiOhlinger
+ms.author: mandia
 ms.date: 06/09/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: srink
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -43,7 +23,7 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enrollment-create-cname.md#windows-auto-enrollment-and-device-registration).  
+For more information about Windows auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enrollment-create-cname.md#windows-auto-enrollment-and-device-registration).
 
 The following tables list the ports and services that the Intune client accesses:
 
@@ -58,7 +38,7 @@ The following tables list the ports and services that the Intune client accesses
 - Intune Company Portal: `https:\//portal.manage.microsoftonline.cn/`
 - Microsoft Intune admin center: `https:\//intune.microsoftonline.cn/`
 
-## Network requirements for PowerShell scripts and Win32 apps  
+## Network requirements for PowerShell scripts and Win32 apps
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
 
@@ -68,7 +48,7 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need
 
 ## Network requirements for macOS app and script deployments
 
-If you're using Intune to deploy apps or scripts on macOS, you also need to grant access to endpoints in which your tenant currently resides. 
+If you're using Intune to deploy apps or scripts on macOS, you also need to grant access to endpoints in which your tenant currently resides.
 
 |Azure Scale Unit (ASU) | Storage Name | CDN |
 | --- | --- |--- |

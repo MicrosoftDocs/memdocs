@@ -1,31 +1,12 @@
 ---
 title: Issue DigiCert PKCS certificates with Microsoft Intune
-titleSuffix: Microsoft Intune 
 description: Install and configure the Certificate Connector for Microsoft Intune to issue PKCS certificates from DigiCert PKI Platform to Intune-managed devices.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 10/09/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: lacranda
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-
+ms.reviewer: wicale
 ms.collection:
-- tier3
 - M365-identity-device-management
 - certificates
 - sub-certificates
@@ -64,31 +45,31 @@ The following are requirements to support use of a DigiCert CA:
 1. Save the following code snippet as in a file named **certreq.ini** and update it as required (for example: *Subject name in CN format*).
 
    ```ini
-   
-   [Version] 
-   Signature="$Windows NT$" 
 
-   [NewRequest] 
-   ;Change to your,country code, company name and common name 
+   [Version]
+   Signature="$Windows NT$"
+
+   [NewRequest]
+   ;Change to your,country code, company name and common name
    Subject = "Subject Name in CN format"
 
-   KeySpec = 1 
-   KeyLength = 2048 
-   Exportable = TRUE 
-   MachineKeySet = TRUE 
-   SMIME = False 
-   PrivateKeyArchive = FALSE 
-   UserProtected = FALSE 
-   UseExistingKeySet = FALSE 
-   ProviderName = "Microsoft RSA SChannel Cryptographic Provider" 
-   ProviderType = 12 
-   RequestType = PKCS10 
-   KeyUsage = 0xa0 
+   KeySpec = 1
+   KeyLength = 2048
+   Exportable = TRUE
+   MachineKeySet = TRUE
+   SMIME = False
+   PrivateKeyArchive = FALSE
+   UserProtected = FALSE
+   UseExistingKeySet = FALSE
+   ProviderName = "Microsoft RSA SChannel Cryptographic Provider"
+   ProviderType = 12
+   RequestType = PKCS10
+   KeyUsage = 0xa0
 
-   [EnhancedKeyUsageExtension] 
+   [EnhancedKeyUsageExtension]
    OID=1.3.6.1.5.5.7.3.2 ; Client Authentication // Uncomment if you need a mutual TLS authentication
 
-   ;----------------------------------------------- 
+   ;-----------------------------------------------
    ```
 
 2. Open an elevated command prompt and generate a certificate signing request (CSR) by using the following command:

@@ -6,9 +6,9 @@ ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: article
-author: sheetg09
+author: LauraWi
 manager: apoorvseth
-ms.author: sheetg
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart

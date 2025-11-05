@@ -1,18 +1,11 @@
 ---
 title: Compliance in Microsoft Intune
-titleSuffix:
 description: Learn about compliance, dependencies, and features in Microsoft Intune supporting data protection and regulatory requirements.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 12/03/2024
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.collection: 
- - tier1
+ms.collection:
  - highpri
  - essentials-compliance
 
@@ -49,7 +42,7 @@ Intune leverages other Microsoft services for compliance, including:
 - [Microsoft Purview](/purview/purview): A suite of data governance and compliance tools.
 - [Microsoft Entra ID](/entra/fundamentals/whatis): Identity and access management, formerly known as Azure Active Directory (Azure AD).
 - [Microsoft Purview Compliance Manager](/purview/compliance-manager): Tools for managing compliance across your organization.
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md): An enterprise endpoint security platform.
+- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md): An enterprise endpoint security platform.
 
 ## Microsoft Intune capabilities for compliance
 
@@ -75,7 +68,7 @@ Intune includes several compliance features that help organizations meet regulat
 ### Data lifecycle management
 
 > [!IMPORTANT]
-> Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes. 
+> Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.
 
 Intune supports data lifecycle management through retention policies and labels. These features help organizations retain or delete data based on compliance requirements. For more information, see [Privacy and personal data in Intune](../fundamentals/intune-service-servicing-information.md#privacy-and-personal-data-in-intune).
 

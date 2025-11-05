@@ -4,8 +4,8 @@ titleSuffix: Configuration Manager
 description: Learn how to switch workloads currently managed by Configuration Manager to Microsoft Intune.
 ms.subservice: co-management
 ms.service: configuration-manager
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 10/05/2021
 ms.topic: how-to
@@ -35,9 +35,12 @@ You can configure different pilot collections for each of the co-management work
     - **Configuration Manager**: Configuration Manager continues to manage this workload.
 
     - **Pilot Intune**: Switch this workload only for the devices in the pilot collection. You can change the **Pilot collections** on the **Staging** tab of the co-management properties page.
-
-[!NOTE] When pilot Intune is selected for Endpoint Protection and Device Configuration Policies, Intune will only deploy the policies and will not perform policy removal upon unassignment. For policy removal from the device when the policy is unassigned, the workload must be switched to Intune.
+  
     - **Intune**: Switch this workload for all Windows devices enrolled in co-management.
+
+> [!NOTE] 
+> When Pilot Intune is selected for Endpoint Protection and Device Configuration Policies, Intune only deploys the policies and doesn't perform policy removal upon unassignment. For policy removal from the device when the policy is unassigned, the workload must be switched to Intune.
+
 
 4. Go to the **Staging** tab and change the **Pilot collection** for any of the workloads if needed.
 

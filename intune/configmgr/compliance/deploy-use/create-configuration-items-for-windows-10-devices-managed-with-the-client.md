@@ -6,9 +6,9 @@ ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: sheetg09
+author: LauraWi
 manager: apoorvseth
-ms.author: sheetg
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart
@@ -117,32 +117,6 @@ Use the Configuration Manager **Windows 10 or later** configuration item to mana
 |**SmartScreen**|Enables or disables Windows SmartScreen.|
 |**Virus protection**|Requires that antivirus software must be installed and configured.|
 |**Virus protection signatures are up to date**|Requires that the signature files for the antivirus software on the device must be up to date.|
-
-### Windows Information Protection
-
-[!INCLUDE [wip-deprecation](../../../includes/wip-deprecation.md)]
-<!-- MAXADO-6010051 -->
-
-With the increase of employee-owned devices in the enterprise, there's also an increasing risk of accidental data leaks through apps and services, like email, social media, and the public cloud. These are outside of the organization's control. Examples include when an employee:
-
-- Sends the latest engineering pictures from their personal email account.
-- Copies and pastes product info into a tweet.
-- Saves an in-progress sales report to their public cloud storage.
-
-Windows Information Protection (WIP, formerly enterprise data protection) helps to protect against this potential data leakage, without otherwise interfering with the employee experience. WIP also helps to protect enterprise apps and data against accidental data leaks on enterprise-owned devices and personal devices that employees bring to work. WIP doesn't require changes to your environment or other apps.
-
-Configuration Manager Windows Information Protection configuration items manage the following:
-
-- The list of apps protected by WIP
-- Enterprise network locations
-- Protection level
-- Encryption settings
-
-For information about how to configure WIP with Configuration Manager, see:
-
-- [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip)
-- [Create and deploy a Windows Information Protection (WIP) policy using Configuration Manager](/windows/security/information-protection/windows-information-protection/create-wip-policy-using-configmgr)
-- [Limitations while using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/limitations-with-wip)
 
 ## See also
 [Configuration items for devices managed with the Configuration Manager client](../../compliance/deploy-use/create-configuration-items.md)

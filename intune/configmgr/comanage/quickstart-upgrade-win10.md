@@ -6,8 +6,8 @@ ms.date: 11/08/2021
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

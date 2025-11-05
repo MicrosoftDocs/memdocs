@@ -2,8 +2,8 @@
 title: Manually deploy software updates
 titleSuffix: Configuration Manager
 description: Manually create software deployments to get your clients up-to-date with required software updates, or to deploy out-of-band updates.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: install-set-up-deploy
@@ -116,7 +116,7 @@ After you determine the updates you want to deploy, and add them to a software u
         - Select **Available** to create an optional software update deployment. This deployment is available for users to install from Software Center. For software update groups deployed as **Available**, clients download the content in the foreground and ignore BITS settings.
 
        > [!NOTE]
-       > Starting in Configuration Manager version 2203, you can select the **Pre-download content for this deployment** setting for **Available** deployments. This setting reduces installation wait times for clients since installation notifications won't be visible in Software Center until the content has fully downloaded. <!--4497776-->
+       > Starting in Configuration Manager version 2203, you can select the **Pre-download content for this deployment** setting for **Available** deployments. This setting is intended to help reduce installation wait times for clients. Installation notifications won’t be visible in Software Center until the content has either fully downloaded or has been determined to have failed. <!--4497776-->
        > - If an update is in multiple deployments for a client and the **Pre-download content for this deployment** setting is enabled for a least one of the deployments, then the content will pre-download.
        > - If you edit an existing deployment to use the **Pre-download content for this deployment** setting, the content will only pre-download if the software update is not yet available on the client.
 

@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Import custom and third-party partner ADMX templates in Microsoft Intune
-description: You can add, upload, or import custom and third-party partner ADMX and ADML files in Microsoft Intune. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 devices.
-keywords:
+description: You can add, upload, or import custom and third-party partner ADMX and ADML files in Microsoft Intune. When they're imported, create a device configuration profile and assign the profile to your Windows 10/11 client devices.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 02/19/2025
+ms.date: 09/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano, kabalu
-ms.suite: ems
-search.appverid: 
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
-
 ---
 
 # Import custom ADMX and ADML administrative templates into Microsoft Intune (public preview)
@@ -34,20 +16,21 @@ You can import custom and third-party/partner ADMX and ADML templates into the I
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 
-This article shows you how to import custom ADMX and ADML files in the Intune admin center. For more information on administrative templates in Intune, go to [Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md).
+This article shows you how to import custom ADMX and ADML files in the Intune admin center.
 
 > [!TIP]
 > The settings catalog has many settings natively built-in to Intune, including Google Chrome. For more information, go to:
 >
-> - [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](settings-catalog.md)
+> - [Use the settings catalog to configure settings](settings-catalog.md)
 > - [Common tasks you can complete using the Settings Catalog](settings-catalog-common-features.md)
 
 ## What you need to know
 
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+
+  To modify or update an ADMX policy with the **Not Configured** setting, RBAC administrators need the **Device configurations > Delete** permission. The built-in **Policy and Profile Manager** role has this permission.
 
 - This feature is in [public preview](../fundamentals/public-preview.md).
 
@@ -66,11 +49,11 @@ This article shows you how to import custom ADMX and ADML files in the Intune ad
   2. Import the `firefox.admx` and `firefox.adml` files.
 
   If you upload `firefox.admx` before `mozilla.adml`, then the import fails.
-  
+
   To see if your ADMX has a dependency, open the ADMX file in a text editor, go to the `policyNamespaces` node, and look for `using prefix`. Any dependencies are listed.
-  
+
   In the following example, the`kerberos.admx` file requires the `Windows.admx` file:
-  
+
   ```xml
    <policyNamespaces>
       <target prefix="kerberos" namespace="Microsoft.Policies.Kerberos" />
@@ -145,7 +128,7 @@ When the import completes, your ADMX templates are shown in the list. You can al
 4. Select **Create**.
 5. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Mozilla Firefox for Windows 10/11 devices**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, a good profile name is **ADMX: Mozilla Firefox for Windows devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 6. Select **Next**.
@@ -164,9 +147,6 @@ When the import completes, your ADMX templates are shown in the list. You can al
     Select **Next**.
 
 10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
-
-> [!NOTE]
-> To modify or update an ADMX policy with the **Not Configured** setting, RBAC administrators need the **Device configurations > Delete** permission. The built-in **Policy and Profile Manager** role has this permission. For more information on the built-in roles, go to [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 ## Replace existing ADMX files
 
@@ -192,4 +172,4 @@ To update existing ADMX files that are imported, you have the following options:
 
 ## Related articles
 
-[Overview: Use ADMX templates to configure policy settings in Microsoft Intune](administrative-templates-windows.md)
+[Use the settings catalog to configure settings](settings-catalog.md)

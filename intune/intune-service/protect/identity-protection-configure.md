@@ -1,28 +1,11 @@
 ---
-# required metadata
-
-title: Deploy policy for Windows Hello to groups of Windows 10 and Windows 11 devices in Microsoft Intune
+title: Deploy policy for Windows Hello to groups of Windows devices 
 description: Use a Microsoft Intune profile for Identity protection configure Windows Hello for Business on Windows devices.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 07/23/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - identity-protection
 - sub-secure-endpoints
@@ -32,7 +15,7 @@ ms.collection:
 
 > [!IMPORTANT]
 >
-> In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog. 
+> In July 2024, the following Intune profiles for identity protection and account protection were deprecated and replaced by a new consolidated profile named *Account protection*. This newer profile is found in the account protection policy node of endpoint security, and is the only profile template that remains available to create new policy instances for identity and account protection. The settings from this new profile are also available through the settings catalog.
 >
 > Any instances of the following older profiles that you have created remain available to use and edit:
 >
@@ -43,8 +26,7 @@ Microsoft Intune supports use of *Account protection* profiles to manage Windows
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows 
 
 When you use Intune Account protection profiles to manage Windows Hello for Business settings, you can:
 

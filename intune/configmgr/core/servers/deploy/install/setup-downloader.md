@@ -6,8 +6,8 @@ ms.date: 02/16/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -21,6 +21,9 @@ ms.reviewer: mstewart
 Before you run Configuration Manager setup to install or upgrade a site, you can use the setup downloader standalone tool to download updated setup files. Run the tool from the version of Configuration Manager that you want to install. Use updated setup files to make sure your site installation uses current versions of key installation files.
 
 When you use setup downloader, you specify a folder to contain the files. The account you use to run the tool must have **Full Control** permissions to the download folder. When you run setup to install or upgrade a site, you can specify this local copy of files you previously downloaded. This behavior prevents setup from connecting to Microsoft when you start the site install or upgrade. You can use the same local copy of setup files for other site installations or upgrades of the same version.
+
+> [!NOTE]
+> Microsoft ODBC Driver for SQL Server should be installed before invoking download through either the user interface or a command prompt. For more information, see [Download ODBC Driver for SQL Server](/sql/connect/odbc/download-odbc-driver-for-sql-server?view=sql-server-ver17) in the SQL Server documentation. 
 
 The setup downloader tool downloads the following types of files:
 

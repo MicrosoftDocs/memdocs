@@ -2,8 +2,8 @@
 title: Service a server group
 titleSuffix: Configuration Manager
 description: Server groups have been replaced by orchestration groups
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/01/2020
 ms.topic: how-to

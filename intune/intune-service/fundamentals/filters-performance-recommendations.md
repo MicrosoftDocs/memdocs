@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Performance recommendations when using filters
 description: When using filters in Microsoft Intune, use Intune virtual groups that don't require Microsoft Entra ID syncing. To improve performance, reuse groups, make incremental group changes, and use filters to include and exclude.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 12/11/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: gokarthi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
+ms.reviewer: mattcall
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -57,7 +40,7 @@ Intune almost exclusively uses Microsoft Entra groups for grouping and targeting
 Microsoft Entra groups are an important part of Intune because these groups are:
 
 - The objects used for assigning apps, policies, and other workloads to users and devices
-- Used to define the devices that admins can view and manage in the Intune admin center, like scope groups in role-based access control (RBAC)
+- Used to define the devices that admins can view and manage in the Intune admin center, like [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments) in role-based access control (RBAC)
 
 ### Virtual groups
 
@@ -89,9 +72,9 @@ These recommendations focus on improving performance and reducing latency in wor
 
 Larger groups take longer to sync membership updates between Microsoft Entra ID and Intune. The **All users** and **All devices** are usually the largest groups you have. If you assign Intune workloads to large Microsoft Entra groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
-The update from Microsoft Entra to Intune typically happens within 5 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group. 
+The update from Microsoft Entra to Intune typically happens within 5 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group.
 
-The built-in **All users** and **All devices** groups are Intune-only grouping objects that don't exist in Microsoft Entra ID. There isn't a continuous sync between Microsoft Entra ID and Intune. So, group membership is instant. 
+The built-in **All users** and **All devices** groups are Intune-only grouping objects that don't exist in Microsoft Entra ID. There isn't a continuous sync between Microsoft Entra ID and Intune. So, group membership is instant.
 
 > [!NOTE]
 > For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
@@ -152,7 +135,7 @@ When creating and managing assignments in Intune, incorporate some of these reco
 
 - Don't create your own version of "All users" or "All devices" groups. Use the Intune virtual groups, as they don't require Microsoft Entra ID syncing when a new user or device is added to the environment.
 - To optimize your targeting, reuse groups as much as possible.
-- Take care when making large nesting changes to Intune groups. Intune needs to process all these changes and calculate effective changes for all the members of all the groups impacted by that change. 
+- Take care when making large nesting changes to Intune groups. Intune needs to process all these changes and calculate effective changes for all the members of all the groups impacted by that change.
 - Intune doesn't support mixed group exclusions. So, use filters to dynamically include and exclude devices in addition to group or virtual group assignments.
 
 ## Related articles

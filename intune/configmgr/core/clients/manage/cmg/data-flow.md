@@ -6,8 +6,8 @@ ms.date: 04/08/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

@@ -6,8 +6,8 @@ ms.date: 04/08/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

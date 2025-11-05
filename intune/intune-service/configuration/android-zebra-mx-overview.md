@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Use Zebra Mobility Extensions on Android devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use Zebra devices running Android with Zebra Mobility Extensions (MX). See all the steps, including install the Company Portal app, sideload the app, assign device administrator role, create a StageNow profile, and more.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/27/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: Low
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jieyan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -82,9 +63,6 @@ The following steps provide an overview. For specific details, go to Zebra's doc
     - **Class Name**: `com.microsoft.windowsintune.companyportal.views.SplashActivity`
 
 Continue to publish the profile, and consume it with the StageNow app on the device. The Company Portal app is installed and opened on the device.
-
-> [!TIP]
-> To learn more about StageNow, go to [StageNow Android device staging](https://www.zebra.com/us/en/software/mobile-computer-software/stagenow.html) (opens Zebra's web site).
 
 ## Step 2 - Confirm the Company Portal app has device administrator role
 
@@ -176,7 +154,7 @@ The next time the device checks for configuration updates, the MX profile is dep
 
 ## Update a Zebra MX configuration after it's assigned
 
-To update the MX-specific configuration of a Zebra device, you can: 
+To update the MX-specific configuration of a Zebra device, you can:
 
 - Create an updated StageNow XML file, edit the existing Intune MX profile, and upload the new StageNow XML file. This new file overwrites the previous policy in the profile, and replaces the previous configuration.
 - Create a new StageNow XML file that configures different settings, create a new Intune MX profile, upload the new StageNow XML file, and assign it to the same group. In this scenario, multiple profiles are deployed. If the new profile configures settings that already exist in existing profiles, conflicts occur.

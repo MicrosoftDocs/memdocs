@@ -1,32 +1,10 @@
 ---
-# required metadata
-
-title: Manually add the Windows 10 Company Portal app
-titleSuffix: Microsoft Intune
+title: Manually Add the Windows 10 Company Portal App
 description: Learn how your workforce can manually add the Windows 10 Company Portal app to their PC from the Microsoft Store.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 08/27/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: bfe1a2d3-f611-4dbb-adef-c0dff4d7b810
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri

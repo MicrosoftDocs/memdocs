@@ -6,9 +6,9 @@ ms.date: 10/06/2016
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: baladelli
+author: LauraWi
 manager: apoorvseth
-ms.author: baladell
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart

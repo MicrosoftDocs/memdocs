@@ -6,8 +6,8 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 ms.date: 12/04/2024
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -35,7 +35,7 @@ The following features are deprecated. You can still use them now, but Microsoft
 |-------|---------------------------|----------------------|
 | The **MDT Integration with CM and Standalone**  is no longer supported with Configuration Manager. Customers should remove MDT TS steps, followed by removing MDT integration, to avoid TS corruption and modification failures.  | Dec 2024 | The first release after Oct 10, 2025 |
 | **Office 365 Client Management dashboard add-in support statement**.<!-- 12454890 --> For more information, see [Office 365 Client Management dashboard](../../../../sum/deploy-use/office-365-dashboard.md). | April 2024 | The first release after April 1, 2025 |
-| [Windows Information Protection](../../../../compliance/deploy-use/create-configuration-items-for-windows-10-devices-managed-with-the-client.md#windows-information-protection) <!-- MAXADO-6010051 --> | July 2022 | TBD |
+| Windows Information Protection <!-- MAXADO-6010051 --> | July 2022 | TBD |
 | The site system roles for on-premises MDM and macOS clients: **enrollment proxy point and enrollment point**.<!-- 12454901,12927803 --> | January 2022 | Mar 31, 2024 |
 | The **Microsoft Store for Business and Education**. For more information, see [Manage apps from the Microsoft Store for Business and Education with Configuration Manager](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).<!-- 10884039 --> | November 2021 | The first release after March 1, 2023 |
 | **Asset intelligence**.<!-- 12454890 --> For more information, see [Asset intelligence deprecation](../../../clients/manage/asset-intelligence/deprecation.md). | November 2021 | The first release after November 1, 2022 |
@@ -69,7 +69,7 @@ The following features are no longer supported. In some cases, they're no longer
 | Desktop Analytics data for Windows 7, Windows 8, and earlier versions of Windows 10 that don't support the [Windows diagnostic data processor configuration](../../../../desktop-analytics/whats-new.md#support-for-the-windows-diagnostic-data-processor-configuration).<!-- 10220671 -->|July 2021|January 31, 2022|
 | Third-party add-ons that use Microsoft .NET Framework version 4.6.1 or earlier, and rely on Configuration Manager libraries. Such add-ons need to use .NET 4.6.2 or later. For more information, see [External dependencies require .NET 4.6.2](../../../get-started/2021/technical-preview-2109.md#bkmk_dotnetsdk)<!--10529267-->. | September 2021 | Version 2111 |
 | [Log Analytics connector for Azure Monitor.](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855,9649296 --> This feature is called the *OMS Connector* in the Azure Services node. | November 2020 | Version 2107 |
-| Microsoft Edge legacy [browser profiles](../../../../compliance/deploy-use/browser-profiles.md).<!-- 9388900 --> For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April’s Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224) | March 2021 | April 2021 |
+| Microsoft Edge legacy [browser profiles](../../../../compliance/deploy-use/browser-profiles.md).<!-- 9388900 --> For more information, see [New Microsoft Edge to replace Microsoft Edge Legacy with April's Windows 10 Update Tuesday release](https://techcommunity.microsoft.com/t5/microsoft-365-blog/new-microsoft-edge-to-replace-microsoft-edge-legacy-with-april-s/ba-p/2114224) | March 2021 | April 2021 |
 | The [collection evaluation viewer](../../../support/ceviewer.md)<!-- 8509484 -->, which was integrated in version 2010. | November 2020 | Version 2103 |
 | Desktop Analytics tile and page for **Security Updates**<!-- 8099536 --> | December 2020 | March 2021 |
 | Desktop Analytics option to **View recent data** for device enrollment and security updates.<!-- 7080949 --> For more information, see [Data latency](../../../../desktop-analytics/troubleshooting.md#data-latency).|May 2020|July 2020|

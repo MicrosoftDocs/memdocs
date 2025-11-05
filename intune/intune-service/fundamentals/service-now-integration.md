@@ -1,29 +1,14 @@
 ---
 title: ServiceNow integration with Microsoft Intune
-titleSuffix: Microsoft Intune
-description: ServiceNow integration enables help desk staff, who are licensed to use Remote Help, to use ServiceNow to view incidents and details of the tech issue that an employee is facing from the Troubleshooting pane. This article also describes how to configure ServiceNow integration with Microsoft Intune. 
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: laurawi
+description: ServiceNow integration enables help desk staff, who are licensed to use Remote Help, to use ServiceNow to view incidents and details of the tech issue that an employee is facing from the Troubleshooting pane. This article also describes how to configure ServiceNow integration with Microsoft Intune.
+author: lenewsad
+ms.author: lanewsad
 ms.date: 02/27/2025
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: Dave Randall
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection: 
+ms.subservice: suite
+ms.collection:
 - M365-identity-device-management
-- tier1
 ---
 # ServiceNow Integration with Microsoft Intune
 
@@ -35,7 +20,7 @@ Support organizations need all the tools at their disposal to resolve workers' t
 
 ServiceNow is a third party platform for IT Service Management and helps to automate IT Business Management. For more information on ServiceNow, go to:
 
-- [ServiceNow](https://www.servicenow.com/)  
+- [ServiceNow](https://www.servicenow.com/)
 
 The Intune ServiceNow Connector Integration focuses on creating a basic ticketing flow to enable IT admins to view the history of ServiceNow incidents in the MEM portal, device inventory, MEM insights enhanced ticket flows, and software licensing and reclamation.
 
@@ -45,13 +30,13 @@ To get started, review the following steps:
 
 - ServiceNow integration is now Generally Available. An active Intune Suite or Remote Help trial or add-on license is required. Go to [Remote Help trial or add-on license.](intune-add-ons.md)
 
-- You must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role to make updates to the connector. To view the incidents, you must have the Microsoft Entra Global Admin Role or Microsoft Entra Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Microsoft Entra roles, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
+- You must have the Microsoft Entra Intune Admin role to make updates to the connector. To view the incidents, you must have the Microsoft Entra Intune Admin role or have an Intune Role with the Organization | Read permission. Admins that aren't assigned the Microsoft Entra role, need one of these two permissions to either modify the connector or view incidents respectively; **Update Connector** and **View Incidents**. These permissions are part of the ServiceNow permission category. For information on  roles, see [Role-based administration control with Intune](role-based-access-control.md)
 
-- You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents. A ServiceNow license needs to be assigned to admins who view incidents. 
+- You must have ServiceNow permissions to view incidents when using the **Test connection** action. You can assign the *itil* role to grant appropriate permissions to view incidents. A ServiceNow license needs to be assigned to admins who view incidents.
 
-- You must have the Troubleshooting Preview enabled. To enable the Troubleshooting Preview, select **Preview upcoming changes to Troubleshooting and provide feedback** in the Troubleshooting pane. After reviewing the Troubleshooting preview information, select **Try it now** to enable the preview. 
+- You must have the Troubleshooting Preview enabled. To enable the Troubleshooting Preview, select **Preview upcoming changes to Troubleshooting and provide feedback** in the Troubleshooting pane. After reviewing the Troubleshooting preview information, select **Try it now** to enable the preview.
 
-- To configure the ServiceNow connector to establish a connection between Intune and your ServiceNow instance. See the steps outlined in [Configure the ServiceNow integration with Microsoft Intune](#configure-the-servicenow-integration-with-microsoft-intune).  
+- To configure the ServiceNow connector to establish a connection between Intune and your ServiceNow instance. See the steps outlined in [Configure the ServiceNow integration with Microsoft Intune](#configure-the-servicenow-integration-with-microsoft-intune).
 
 ## Configure the ServiceNow integration with Microsoft Intune
 
@@ -74,7 +59,7 @@ To get started, review the following steps:
 ### How to create a ServiceNow app
 
 In your ServiceNow developer instance you need to:
- 
+
 - create a new OAuth application
 - create a new CORS Rule
 

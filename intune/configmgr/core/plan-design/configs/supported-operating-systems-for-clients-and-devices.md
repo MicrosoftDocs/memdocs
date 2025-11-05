@@ -6,8 +6,8 @@ ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -146,7 +146,7 @@ This version includes the long-term servicing channel (LTSC). For more informati
 
 The [Extended Security Updates (ESU)](/lifecycle/faq/extended-security-updates) program is a last resort option for customers who need to run certain legacy Microsoft products past the end of support. For example, Windows 7. It includes Critical and/or Important security updates (as defined by the [Microsoft Security Response Center (MSRC)](https://www.microsoft.com/msrc)) for a maximum of three years after the product's End of Extended Support date.
 
-Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program for Windows Server 2012 and 2012 R2 only. No further support is offered for computers running Windows 7 or Windows Server 2008/ 2008 R2, including customers with an additional further year of ESU support as noted in [KB4522133](https://support.microsoft.com/en-us/topic/kb4522133-procedure-to-continue-receiving-security-updates-after-extended-support-ended-on-january-10-2023-48c59204-fe67-3f42-84fc-c3c3145ff28e)
+Products that are beyond their support lifecycle aren't supported for use with Configuration Manager. This includes any products that are covered under the ESU program. Security updates released under the ESU program will be published to Windows Server Update Services (WSUS). These updates will appear in the Configuration Manager console. While products that are covered under the ESU program are no longer supported for use with Configuration Manager, the [latest released version of Configuration Manager current branch](../../servers/manage/updates.md#version-details) can be used to deploy and install Windows security updates released under the program for **Windows Server 2012, Windows Server 2012 R2**, and **Windows 10 Enterprise, Education, and Pro (commercial use only)** editions. For details on supported Windows 10 editions under the ESU program, see the [Extended Security Updates FAQ](/lifecycle/faq/extended-security-updates). No further support is offered for computers running Windows 7 or Windows Server 2008/ 2008 R2, including customers with an additional further year of ESU support as noted in [KB4522133](https://support.microsoft.com/en-us/topic/kb4522133-procedure-to-continue-receiving-security-updates-after-extended-support-ended-on-january-10-2023-48c59204-fe67-3f42-84fc-c3c3145ff28e)
 
 Client management features not related to Windows software update management or OS deployment will no longer be tested on the operating systems covered under the ESU program and we don't guarantee that they'll continue to function. It's highly recommended to upgrade or migrate to a current version of the operating systems as soon as possible to receive client management support.
 

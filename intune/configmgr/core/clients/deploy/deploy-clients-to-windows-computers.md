@@ -6,8 +6,8 @@ ms.date: 12/04/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: Baladelli
-ms.author: Baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

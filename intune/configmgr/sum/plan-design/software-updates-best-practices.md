@@ -2,8 +2,8 @@
 title: Best practices for software updates
 titleSuffix: Configuration Manager
 description: Use these best practices for software updates in Configuration Manager.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 02/11/2025
 ms.topic: best-practice
