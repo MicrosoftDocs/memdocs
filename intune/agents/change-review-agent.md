@@ -91,21 +91,20 @@ ms.reviewer:
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
 > - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
-
-> :::image type="icon" source="../media/icons/admin-center/defender.svg" border="false"::: Defender roles:
-> Defender role-based access control (RBAC) roles depend on your Defender XDR implementation:
+>
+> :::image type="icon" source="../media/icons/admin-center/defender.svg" border="false"::: Defender roles - Defender role-based access control (RBAC) roles depend on your Defender XDR implementation:
 > - [Unified RBAC](/defender-xdr/manage-rbac): Assign the Microsoft Entra ID Security Reader to the agent's identity account. This role provides read-only access to Defender Vulnerability Management data and automatically enforces device group scoping.
 > - [Granular RBAC](/defender-endpoint/rbac): Assign a custom RBAC role with permissions equivalent to the Unified RBAC Security Reader role. For example: 
 >   - **View data** – **Defender Vulnerability Management** - This permission maps to the Unified RBAC permission *Security posture / Posture management / Vulnerability management (read)*.
 >   - **Entra/Identity risky user (read)** - This permission maps to the Unified RBAC permission *Security posture / Identity risk / Risky users (read)*.
 >
->   For details about mapping permissions to the Unified RBAC Security Reader role, see [Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
-
+>    For details about mapping permissions to the Unified RBAC Security Reader role, see [Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
+>
+>    Ensure the agent’s identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
+>
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
-> Ensure the agent’s identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
-> 
 > ---
 >
 > To **use** the agent and perform offboarding actions, use an account with the following roles:
@@ -116,8 +115,11 @@ ms.reviewer:
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > 
-> To take action from within the agent, such as to disable devices in Entra, you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
-
+> :::image type="icon" source="../media/icons/admin-center/defender.svg" border="false"::: Defender roles
+> - Use of the agent requires the same access as agent setup.
+>
+> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> - [Copilot contributor](/copilot/security/authentication#security-copilot-roles)
 
 :::column-end:::
 :::row-end:::
