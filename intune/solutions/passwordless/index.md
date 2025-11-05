@@ -16,24 +16,25 @@ Microsoft's passwordless authentication strategy helps organizations reduce reli
 
 Microsoft's passwordless solution integrates Entra ID for identity and single sign-on (SSO) with Intune for device configuration and policy enforcement. This combination enables users to authenticate using strong credentials—such as biometrics, FIDO2 security keys, or passkeys—without entering passwords.
 
+### Entra ID: Identity and token issuance
+
 :::row:::
    :::column span="1":::
    :::image type="icon" source="icons/entra.svg" border="false":::
    :::column-end:::
    :::column span="3":::
-    ### Entra ID: Identity and token issuance
 >Microsoft Entra ID is the core identity provider that verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. Upon successful authentication, Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. This eliminates repeated credential prompts and supports a frictionless user experience.
    :::column-end:::
 :::row-end:::
 
 
+### Intune: Policy-based enablement
 
 :::row:::
    :::column span="1":::
    :::image type="icon" source="icons/intune.svg" border="false"::: 
    :::column-end:::
    :::column span="3":::
-    ### Intune: Policy-based enablement
 > Microsoft Intune configures passwordless sign-in policies across managed endpoints. For example:
 > - Enforce Windows Hello for Business on Windows 11 devices to block password prompts during in-session authentication.
 > - Enable FIDO2 security key sign-in at the Windows lock screen.
@@ -43,17 +44,18 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
 :::row-end:::
 
 
+### Cross-platform SSO
 
 :::row:::
    :::column span="1":::
    :::image type="icon" source="icons/platforms.svg" border="false"::: 
    :::column-end:::
    :::column span="3":::
-    ### Cross-platform SSO
->Passwordless authentication is supported across Windows, macOS, iOS, and Android:
-> - On Windows, Entra join and Intune policies enable Hello or FIDO2 sign-in with instant cloud and on-premises SSO.
-> - On macOS, Platform SSO allows users to sign in with Entra ID credentials and gain token-based access to apps.
-> - On mobile, the Authenticator app acts as a broker, sharing Entra ID tokens across apps after a single biometric or passkey-based sign-in.
+    
+Passwordless authentication is supported across Windows, macOS, iOS, and Android:
+- On Windows, Entra join and Intune policies enable Hello or FIDO2 sign-in with instant cloud and on-premises SSO.
+- On macOS, Platform SSO allows users to sign in with Entra ID credentials and gain token-based access to apps.
+- On mobile, the Authenticator app acts as a broker, sharing Entra ID tokens across apps after a single biometric or passkey-based sign-in.
    :::column-end:::
 :::row-end:::
 
@@ -75,24 +77,60 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
 
 Intune provides first-class support for several passwordless authentication methods in the enterprise. By configuring these methods on managed devices, Intune helps replace passwords with stronger, phish-resistant credentials: 
 
-### :::image type="icon" source="icons/windows-hello.svg" border="false"::: Windows Hello for Business
+### Windows Hello for Business
 
+:::row:::
+   :::column span="1":::
+   :::image type="icon" source="icons/windows-hello.svg" border="false":::
+   :::column-end:::
+   :::column span="3":::
 This is Microsoft's passwordless sign-in method for Windows clients, using a PIN or biometrics (fingerprint/face) backed by a hardware key (TPM). Intune can enable and require Windows Hello for Business during Windows enrollment. Intune also lets admins enforce specific Hello settings (PIN length/complexity, allow/disallow biometrics, etc.) through policy settings. When a Windows device enrolls in Intune and is Entra joined, Intune can prompt the user to set up a Hello PIN/biometric during the out-of-box experience. Thereafter, the user signs into Windows with the PIN or biometric gesture, not a password. The Hello credential is tied to the device's TPM and user, and never leaves the device, making it extremely difficult to compromise.
+   :::column-end:::
+:::row-end:::
+
+
+
+
 
 ### FIDO2 Security Keys
 
+:::row:::
+   :::column span="1":::
+   :::image type="icon" source="icons/security-key.svg" border="false":::
+   :::column-end:::
+   :::column span="3":::
 Intune allows organizations to use external FIDO2-compliant security keys (USB, NFC, etc.) for signing into Windows and other services. In the same Windows Hello for Business configuration, there's an option "Use security keys for sign-in", which Intune admins set to Enabled2. This policy causes Azure AD-joined Windows 10/11 machines to accept FIDO2 security keys at the logon screen. For instance, an employee could use a YubiKey or similar token: at the Windows lock screen, they plug in the key and tap it (and/or enter the key's PIN) to sign in, rather than typing a password. Intune also supports deploying FIDO2 via an Identity protection profile (which can target specific groups if a tenant-wide setting isn't desired)3. Once enabled, users must have previously registered a FIDO2 key with their Entra ID account (which is an Entra ID configuration - enabling the FIDO2 authentication method for the tenant and having users register keys through MySecurityInfo). Importantly, FIDO2 keys are portable credentials: a user can carry their key and use it to log into any Intune-managed Azure AD-joined device (if allowed), which is great for scenarios like hot-desking or shared PCs. After logging in with a FIDO2 key, the experience is the same as Hello - Entra ID issues a token and the user has SSO. From Intune's perspective, enabling FIDO2 login is a one-time config; usage is then controlled by Entra ID's policies (e.g., which users can use keys). Administrators often pair this with disabling password sign-in to truly go passwordless for key users. 
+   :::column-end:::
+:::row-end:::
+
+
 
 ### Temporary Access Pass (TAP)
 
+:::row:::
+   :::column span="1":::
+   :::image type="icon" source="icons/tap.svg" border="false":::
+   :::column-end:::
+   :::column span="3":::
 A Temporary Access Pass is a time-limited, single-use passcode that Entra ID can generate as a strong credential alternative. It's often used to onboard new users or recover accounts without a password. While TAP is defined and managed in Entra ID's Authentication Methods policy, Intune plays a role on Windows devices by enabling Web Sign-In. Web Sign-In is a Windows 10/11 feature that lets the login screen accept a cloud-provided credential (like TAP or Microsoft Authenticator) via a web flow4. Intune can turn this on by a device configuration (Settings Catalog > Authentication > "Enable Web Sign-in" = Enabled). With Web Sign-in enabled, a user at the Windows login prompt can choose "Sign-in options" and select the web sign-in icon, which then prompts for a code. This is where they can enter a Temporary Access Pass provided to them. For example, a new employee who has never set a password might be issued a TAP out-of-band; at first login on an Intune-enrolled laptop, they use the TAP through web sign-in and gain entry to Windows5 6. Because TAP counts as a strong auth, the user can then immediately be prompted to set up Windows Hello for Business (completing their passwordless onboarding)7. Intune's role is crucial: without enabling Web Sign-in, the Windows UI wouldn't accept TAP. Additionally, as of the latest Windows 11 updates, Web Sign-in can also allow Authenticator app sign-in (showing a QR code to approve with your phone) as a login method8 9. This means Intune-enabled Web Sign-in provides a path for users to log in with a phone-based credential if they have no password or forgot it - further reducing dependency on passwords. TAPs are typically short-lived (for example, 1 day, one-time use), so they are a secure way to bootstrap a more permanent passwordless method. 
+   :::column-end:::
+:::row-end:::
+
+
 
 ### Passkeys
 
+:::row:::
+   :::column span="1":::
+   :::image type="icon" source="icons/passkey.svg" border="false":::
+   :::column-end:::
+   :::column span="3":::
 Passkey is the industry term for the next generation of passwordless credentials that can synchronize across devices (built on FIDO2 standards). In Microsoft's ecosystem, passkeys can refer to two categories: device-bound passkeys (which are essentially the same as a FIDO2 security key or Hello credential tied to one device) and syncable passkeys (which can roam via cloud backup). Entra ID has added support for passkeys as an authentication method, especially starting in 202410 11. For instance, the Microsoft Authenticator app (version 6.7+ on iOS 17/Android 14 or later) can act as a FIDO2 authenticator and store a device-bound passkey for a user's Entra account12 13. When enabled, a user can register a passkey through Authenticator (the app generates a key pair and the public key is registered in Entra ID)14. This effectively turns their phone into a login key for Entra ID accounts - similar to a hardware security key but using the phone's secure enclave and biometrics. Intune ensures that the device prerequisites are in place: for example, Intune compliance policies can enforce a minimum OS version (iOS 17/Android 14 required for passkeys support in Authenticator)15, and require the Authenticator app to be installed. There's not a "passkey policy" per se in Intune; rather, Intune's device management makes it possible to use passkeys by keeping devices up to date and managed (and marking them as compliant so that Conditional Access allows their sign-in). On Windows, a syncable passkey might be stored in Windows Hello or via a browser's password manager. Microsoft announced that Windows 11 will support issuing and using cloud-synced passkeys by late 202416, meaning a user could create a passkey on Windows and have it available on their other devices (or vice versa). In the context of Intune, once Windows supports that, admins might encourage users to use passkeys (for instance, by integrating with Edge or encouraging passwordless strategy) but again the enforcement is via Entra ID policies (e.g., disabling password fallback). Key point: Passkeys are becoming a universal credential across Windows, Mac, iOS, Android. Microsoft Entra ID's adoption of passkeys (now generally available since late 2024) means users can sign in with platform biometrics (like Face ID or Windows Hello) even for first-time sign-in on a new device by leveraging another device. Intune's job is to facilitate this by making sure devices and apps (Authenticator, Company Portal, etc.) are in place so that users can register and use passkeys easily. Many organizations are currently piloting passkeys for a truly passwordless future, and Intune provides the management layer (device trust, compliance, config) to support that transition. 
+   :::column-end:::
+:::row-end:::
 
 
-Comparison of Key Passwordless Methods and Intune's Role 
+## Comparison of Key Passwordless Methods and Intune's Role 
 
 | Method | Intune Configuration | Platforms | Description |
 |--|--|--|--|
