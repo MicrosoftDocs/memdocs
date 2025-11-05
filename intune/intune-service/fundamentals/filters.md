@@ -1,5 +1,7 @@
 ---
-title: Create filters in Microsoft Intune
+# required metadata
+
+title: Create assignment filters in Microsoft Intune
 description: Learn more about policy assignment filters, and see the steps to create, update, or delete a filter in Microsoft Intune. Create an assignment filter for managed devices or managed apps scenarios.
 author: MandiOhlinger
 ms.author: mandia
@@ -12,9 +14,9 @@ ms.collection:
 
 # Use filters when assigning your apps, policies, and profiles in Microsoft Intune
 
-When you create a policy, you can use filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
+When you create a policy, you can use assignment filters to assign a policy based on rules you create. An assignment filter allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
 
-Filters are available for:
+Assignment filters are available for:
 
 - Devices enrolled in Intune, which are **managed devices**.
 - Apps that are managed by Intune, which are **managed apps**.
@@ -58,7 +60,7 @@ This article describes the filter architecture, and shows you how to create, upd
 
  [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-## How filters work
+## How assignment filters work
 
 :::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Screenshot that shows how the admin creates a filter, and uses the filter in a policy in Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::
 
@@ -88,12 +90,12 @@ There are some general restrictions when creating filters:
 ## Create a filter
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters** > **Create**.
+2. Select **Tenant administration** > **Assignment filters** > **Create**.
 
     You can also create filters in:
 
-    - **Devices** > **Organize devices** > **Filters**
-    - **Apps** > **Filters**
+    - **Devices** > **Organize devices** > **Assignment filters**
+    - **Apps** > **Assignment filters**
 
 3. Select **Managed devices** or **Managed apps**:
 
@@ -173,7 +175,7 @@ There are some general restrictions when creating filters:
 
 10. In **Review + create**, review your settings. When you select **Create**, your changes are saved. The filter is created, and ready to be used. The filter is also shown in the filters list.
 
-## Use a filter
+## Use an assignment filter
 
 After the filter is created, it's ready to use when assigning your apps or policies.
 
@@ -209,9 +211,9 @@ When the device checks in with the Intune service, the properties defined in the
 
 After you create a filter, you can filter the existing list of filters by platform and by profile type (**Managed devices** or **Managed apps**).
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. A list of all the filters is shown.
 
-    You can also go to **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also go to **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. Select **Add filters**:
 
@@ -235,9 +237,9 @@ After you create a filter, you can filter the existing list of filters by platfo
 
 After the filter is assigned to your policies, you can see all the policies that use the filter.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. A list of all the filters is shown.
 
-    You can also go to **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also go to **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. Select the filter you want to review > **Associated Assignments** tab.
 
@@ -249,9 +251,9 @@ After the filter is assigned to your policies, you can see all the policies that
 
 After a filter is created, it can also be changed or updated.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. A list of all the filters is shown.
 
-    You can also update filters in **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also update filters in **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. To update an existing filter, select the filter you want to change. Select **Rules** > **Edit**, and make your changes:
 
@@ -261,9 +263,9 @@ After a filter is created, it can also be changed or updated.
 
 ## Delete a filter
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. A list of all the filters is shown.
 
-    You can also delete filters in **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also delete filters in **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. Next to the filter, select the ellipses (**...**), and select **Delete**:
 
