@@ -107,7 +107,7 @@ For guidance on updating the agent version, see [Deploy updates for Microsoft De
 
 **macOS**:
 
-With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#system-requirements) agent version **101.23052.0004** or later, security settings management is supported on the macOS versions listed in the [System requirements](https://learn.microsoft.com/en-us/defender-endpiont/microsoft-defender-endpoint-mac-prerequisties#system-requirements)
+With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#system-requirements) agent version **101.23052.0004** or later, security settings management is supported on the macOS versions listed in the [System requirements](/defender-endpoint/microsoft-defender-endpoint-mac-prerequisites#system-requirements)
 
 You can find the versions of your Defender agents using these methods from within the [Microsoft Defender portal](https://security.microsoft.com):
 
