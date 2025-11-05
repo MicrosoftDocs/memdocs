@@ -91,6 +91,15 @@ Intune supports multiple passwordless options to replace passwords with stronger
    :::column span="3":::
 >Sign in with a PIN or biometrics backed by the device's TPM. Intune can require Hello during enrollment and enforce settings like PIN complexity or biometric use. Credentials never leave the device, making them highly secure.
 
+Sign in with a PIN or biometrics backed by the device's TPM.
+Intune contributes by:
+
+Requiring Windows Hello during enrollment.
+Enforcing Hello settings (PIN complexity, biometrics allowed/disallowed).
+Prompting setup during OOBE for Entra-joined devices.
+Ensuring compliance for passwordless sign-in policies.
+Credentials never leave the device, making them highly secure.
+
    :::column-end:::
 :::row-end:::
 
@@ -103,6 +112,15 @@ Intune supports multiple passwordless options to replace passwords with stronger
    :::column span="3":::
 >External FIDO2 keys (USB, NFC) let users sign in without passwords. Intune enables this via policy and identity protection profiles. Keys are portable and ideal for shared-device scenarios.
 
+External FIDO2 keys (USB, NFC) let users sign in without passwords.
+Intune contributes by:
+
+
+Enabling FIDO2 sign-in via policy settings.
+Deploying FIDO2 through identity protection profiles targeting specific groups.
+Ensuring devices are compliant for passwordless access.
+Keys are portable and ideal for shared-device scenarios.
+
    :::column-end:::
 :::row-end:::
 
@@ -114,7 +132,16 @@ Intune supports multiple passwordless options to replace passwords with stronger
    :::column-end:::
    :::column span="3":::
 Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supports passkeys via Microsoft Authenticator (iOS 17+/Android 14+) and soon Windows 11. Intune ensures device compliance and app readiness for passkey use, enabling a seamless passwordless experience across platforms.
-   :::column-end:::
+   
+Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supports passkeys via Microsoft Authenticator (iOS 17+/Android 14+) and soon Windows 11.
+Intune contributes by:
+
+
+Enforcing OS version requirements for passkey support.
+Ensuring Authenticator and Company Portal apps are installed.
+Maintaining compliance so Conditional Access allows passkey sign-in.
+Passkeys enable a seamless passwordless experience across platforms.
+:::column-end:::
 :::row-end:::
 
 ### Certificate-Based Authentication (CBA)
@@ -125,6 +152,17 @@ Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supp
 :::column span="3":::
 
 CBA uses X.509 certificates to authenticate users without passwords. Intune can deploy certificates via SCEP or PKCS profiles and enforce CBA for apps and device sign-in. This method is ideal for high-security environments and integrates with Entra ID conditional access for strong, phishing-resistant authentication.
+
+CBA uses X.509 certificates for strong, passwordless authentication.
+Intune contributes by:
+
+
+Deploying certificates via SCEP or PKCS profiles.
+Configuring apps and devices to enforce CBA.
+Integrating with Entra ID conditional access for secure sign-in.
+Supporting Purebred workflows for mobile certificate issuance and renewal in government or high-security environments.
+Ideal for regulated or high-security environments.
+
 :::column-end:::
 :::row-end:::
 
@@ -136,6 +174,15 @@ CBA uses X.509 certificates to authenticate users without passwords. Intune can 
    :::column-end:::
    :::column span="3":::
 >TAP is a time-limited passcode for onboarding or recovery without passwords. Intune enables TAP on Windows by turning on Web Sign-in, allowing users to enter TAP at the login screen. After sign-in, users can set up Windows Hello, completing passwordless onboarding. TAP is short-lived and secure, reducing password dependency.
+
+TAP is a short-lived passcode for onboarding or recovery.
+
+Intune contributes by:
+
+Enabling Web Sign-in on Windows devices so TAP can be used at login.
+Providing a path for passwordless onboarding by prompting Hello setup after TAP sign-in.
+Supporting fallback scenarios without compromising security.
+
    :::column-end:::
 :::row-end:::
 
