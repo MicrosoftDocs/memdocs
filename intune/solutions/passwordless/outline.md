@@ -10,16 +10,45 @@ ms.reviewer:
 
 # Passwordless Solutions with Microsoft Intune outline
 
-## Introduction
-Explain why passwordless authentication is critical for modern security and how it aligns with **Zero Trust principles** (verify explicitly, least privilege, assume breach). Highlight benefits such as reducing phishing risk, improving user experience, and supporting compliance.
+Passwordless authentication eliminates passwords as a security risk while improving user experience. Microsoft's approach is built on three interconnected building blocks:
 
----
+- Identity (Microsoft Entra ID) for strong, phishing-resistant credentials and policy enforcement
+- Management (Microsoft Intune) for device compliance and configuration
+- Endpoint (Devices) for secure, intuitive sign-in using platform authenticators like passkeys and FIDO2 keys
 
-## Understanding Microsoft's Passwordless Ecosystem
-Provide a high-level overview of the three pillars and their interconnection:
-- **Microsoft Entra ID** – Identity and access management.
-- **Microsoft Intune** – Device compliance and configuration.
-- **Devices** – Endpoint readiness and user experience.
+These components work together to deliver passwordless access while aligning with Zero Trust principles, ensuring every sign-in is verified based on identity, device health, and context.
+
+:::row:::
+    :::column:::
+#### Microsoft Entra ID
+
+:::image type="icon" source="icons/entra.svg" border="false":::
+
+   > - Passkeys / FIDO2 / Windows Hello
+   > - Authentication strengths & policies
+   > - Conditional Access decision engine
+    :::column-end:::
+    :::column:::
+#### Microsoft Intune
+
+    :::image type="icon" source="icons/intune.svg" border="false":::
+
+   > Device compliance & configuration
+   > Security baselines, updates
+   > Risk posture signals
+
+    :::column-end:::
+    :::column:::
+#### Devices
+
+        :::image type="icon" source="icons/devices.svg" border="false":::
+
+> - Platform authenticators (biometrics, PIN)
+> - Microsoft Authenticator app (mobile-based sign-in)
+> - User experience & enrollment readiness
+    :::column-end:::
+:::row-end:::
+
 
 > **Learn more:** [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 
