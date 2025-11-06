@@ -93,7 +93,7 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
    - **Print org data:** Block  
 1. Select **Next**.
 1. In **Health checks**, configure:
-   - **Offline grace period:** 10080 minutes, Block access  
+   - **Offline grace period:** 1,440 minutes, Block access  
    - **Offline grace period:** 30 days, Wipe data
    - **Disabled account:** Block access  
    - **Min OS version:** 10.0.22621.2506, Block access
@@ -144,7 +144,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 | Copy/paste controls | Any destination/source | No destination/source | No destination/source |
 | Screen capture | Allow | Block | Block |
 | Encryption | Not required | Required | Required |
-| Offline grace period | 10,080 minutes / 90 days | 10,080 minutes / 30 days | 1,440 minutes / 30 days |
+| Offline grace period | 10,080 minutes / 90 days | 1,440 minutes / 30 days | 1,440 minutes / 30 days |
 | OS version requirements | Not required | Min required | Min + Max required |
 | Device threat level | Low | Medium | Secured |
 | Print restrictions | Allow | Block | Block |
@@ -578,7 +578,9 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 [!INCLUDE [App protection policy validation](includes/app-protection-policy-validation.md)]
 
-#### Framework Compliance Summary for Android| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+#### Framework Compliance Summary for Android  
+
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
 |---------------------------------|-----------|-----------|-----------|
 | Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
 | Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
