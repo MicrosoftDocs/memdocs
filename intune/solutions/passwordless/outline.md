@@ -24,19 +24,19 @@ These components work together to deliver passwordless access while aligning wit
 
 :::image type="icon" source="icons/entra.svg" border="false":::
 
-   > - Phishing-resistant credentials (FIDO2, CBA, passkeys)
-   > - Authentication strengths & policies
-   > - Conditional Access decision engine
+    - Phishing-resistant credentials (FIDO2, CBA, passkeys)
+    - Authentication strengths & policies
+    - Conditional Access decision engine
     :::column-end:::
     :::column:::
 #### Microsoft Intune
 
     :::image type="icon" source="icons/intune.svg" border="false":::
 
-   > - Device compliance
-   > - Device configuration (updates, apps, policies)
-   > - Security baselines
-   > - Risk posture signals (compliance, MTD, MAM)
+    - Device compliance
+    - Device configuration (updates, apps, policies)
+    - Security baselines
+    - Risk posture signals (compliance, MTD, MAM)
 
     :::column-end:::
     :::column:::
@@ -44,14 +44,14 @@ These components work together to deliver passwordless access while aligning wit
 
         :::image type="icon" source="icons/devices.svg" border="false":::
 
-   > - Platform authenticators (biometrics, PIN)
-   > - Microsoft Authenticator app (mobile-based sign-in)
-   > - Hardware-backed security (TPM, secure enclaves)
-   > - User experience & enrollment readiness
+    - Platform authenticators (biometrics, PIN)
+    - Microsoft Authenticator app (mobile-based sign-in)
+    - Hardware-backed security (TPM, secure enclaves)
+    - User experience & enrollment readiness
     :::column-end:::
 :::row-end:::
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+> [!INCLUDE [learn-more](includes/learn-more.md)]
 > - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 > - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 > - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
