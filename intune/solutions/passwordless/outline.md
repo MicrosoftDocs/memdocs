@@ -24,7 +24,7 @@ These components work together to deliver passwordless access while aligning wit
 
 :::image type="icon" source="icons/entra.svg" border="false":::
 
-   > - Passkeys / FIDO2 / Windows Hello
+   > - Phishing-resistant credentials (FIDO2, CBA, passkeys)
    > - Authentication strengths & policies
    > - Conditional Access decision engine
     :::column-end:::
@@ -33,9 +33,10 @@ These components work together to deliver passwordless access while aligning wit
 
     :::image type="icon" source="icons/intune.svg" border="false":::
 
-   > Device compliance & configuration
-   > Security baselines, updates
-   > Risk posture signals
+   > - Device compliance
+   > - Device configuration (updates, apps, policies)
+   > - Security baselines
+   > - Risk posture signals (compliance, MTD, MAM)
 
     :::column-end:::
     :::column:::
@@ -43,9 +44,10 @@ These components work together to deliver passwordless access while aligning wit
 
         :::image type="icon" source="icons/devices.svg" border="false":::
 
-> - Platform authenticators (biometrics, PIN)
-> - Microsoft Authenticator app (mobile-based sign-in)
-> - User experience & enrollment readiness
+   > - Platform authenticators (biometrics, PIN)
+   > - Microsoft Authenticator app (mobile-based sign-in)
+   > - Hardware-backed security (TPM, secure enclaves)
+   > - User experience & enrollment readiness
     :::column-end:::
 :::row-end:::
 
