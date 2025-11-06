@@ -134,12 +134,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 #### Validation
 
-Validation helps confirm that your app protection policy has been successfully created and deployed, and that it behaves as expected across platforms.
-
-- Go to **Apps > Manage apps > Protection**.  
-  From there, you can see all configured policies, including those for **Windows**, **iOS**, and **Android**.  
-  Select the Windows policy you created, then choose **Monitor** to view deployment and protection status.  
-- On the client: Sign in to Microsoft Edge with your organization account and attempt to copy and paste content into an unmanaged app — this action should be blocked on **Levels 2 and 3**.
+[!INCLUDE [App protection policy validation](includes/app-protection-policy-validation.md)]
 
 #### Framework Compliance Summary for Windows
 
@@ -175,7 +170,7 @@ Prerequisites:
 - Company Portal installed (or Mobile Application Management [MAM] managed)  
 - User signed in with a corporate Entra ID account  
 
-### Level 1 – Enterprise basic data protection (iOS/iPadOS)
+### Level 1 – Enterprise basic data protection for iOS/iPadOS
 
 Level 1 configuration provides the minimum data protection for an iOS/iPadOS device while minimizing effects to users.
 
@@ -229,7 +224,7 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
 1. On the **Assignments** page, select **Add groups**, choose **SEB-Level1-Users**, then select **Next**.  
 1. From the **Review + create** page, select **Create**.  
 
-### Level 2 – Enterprise enhanced data protection (iOS/iPadOS)
+### Level 2 – Enterprise enhanced data protection for iOS/iPadOS
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
@@ -289,7 +284,7 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 1. On the **Assignments** page, select **Add groups**, choose **SEB-Level2-Users**, then select **Next**.  
 1. From the **Review + create** page, select **Create**.
 
-### Level 3 – Enterprise high data protection (iOS/iPadOS)
+### Level 3 – Enterprise high data protection for iOS/iPadOS
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
@@ -357,12 +352,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 #### Validation
 
-Validation helps confirm that your app protection policy has been successfully created and deployed, and that it behaves as expected across platforms.
-
-- Go to **Apps > Manage apps > Protection**.  
-  From there, you can see all configured policies, including those for **Windows**, **iOS**, and **Android**.  
-  Select the Windows policy you created, then choose **Monitor** to view deployment and protection status.  
-- On the client: Sign in to Microsoft Edge with your organization account and attempt to copy and paste content into an unmanaged app — this action should be blocked on **Levels 2 and 3**.
+[!INCLUDE [App protection policy validation](includes/app-protection-policy-validation.md)]
 
 #### Framework Compliance Summary for iOS/iPadOS  
 
@@ -526,7 +516,7 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 1. On the **Assignments** page, select **Add groups**, choose **SEB-Level2-Users**, then select **Next**.  
 1. From the **Review + create** page, select **Create**.
 
-### Level 3 – Enterprise high data protection (Android)
+### Level 3 – Enterprise high data protection for Android
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
@@ -586,16 +576,9 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 #### Validation
 
-Validation helps confirm that your app protection policy has been successfully created and deployed, and that it behaves as expected across platforms.
+[!INCLUDE [App protection policy validation](includes/app-protection-policy-validation.md)]
 
-- Go to **Apps > Manage apps > Protection**.  
-  From there, you can see all configured policies, including those for **Windows**, **iOS**, and **Android**.  
-  Select the Windows policy you created, then choose **Monitor** to view deployment and protection status.  
-- On the client: Sign in to Microsoft Edge with your organization account and attempt to copy and paste content into an unmanaged app — this action should be blocked on **Levels 2 and 3**.
- 
-#### Framework Compliance Summary for Android  
-
-| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+#### Framework Compliance Summary for Android| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
 |---------------------------------|-----------|-----------|-----------|
 | Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
 | Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
