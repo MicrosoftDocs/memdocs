@@ -51,8 +51,10 @@ These components work together to deliver passwordless access while aligning wit
     :::column-end:::
 :::row-end:::
 
-
-> **Learn more:** [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+[!INCLUDE [learn-more](includes/learn-more.md)]
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 
 ---
 

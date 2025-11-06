@@ -59,6 +59,14 @@ Passwordless authentication is supported across Windows, macOS, iOS, and Android
 - On mobile, the Authenticator app acts as a broker, sharing Entra ID tokens across apps after a single biometric or passkey-based sign-in.
 - On all platforms, certificate-based authentication (CBA) can be deployed for smart card logon.
 
+[!INCLUDE [learn-more](includes/learn-more.md)]
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+
+[!INCLUDE [learn-more](includes/learn-more.md)]
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+
 ## What counts as passwordless in Microsoft Entra ID?
 
 ### Phishing‑resistant methods
@@ -77,6 +85,9 @@ Temporary Access Pass (TAP) — time‑limited, strong credential you issue to g
 Still available, but not phishing‑resistant
 
 Authenticator "phone sign‑in" (Approve on phone) remains a passwordless option, but it's not phishing‑resistant the way passkeys/FIDO/CBA are. Many orgs are moving users from phone sign‑in to passkeys.
+
+[!INCLUDE [learn-more](includes/learn-more.md)]
+> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 
 ## Intune-Supported Passwordless Authentication Methods 
 
