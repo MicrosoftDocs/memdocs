@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune Enterprise Application Management
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
-ms.date: 10/09/2025
+ms.date: 11/06/2025
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -95,9 +95,23 @@ The apps currently provided in the Enterprise application catalog are Windows Wi
 
 At this time, Intune provides no running application detection.
 
-### What is the Service Level Agreement (SLA) for when an app update is available in the catalog?
+### What are the Service Level Objectives (SLOs) for when an app update is available in the catalog?
 
-No SLA is currently available.
+Service Level Objectives (SLOs) define target timelines for making app updates available in the Enterprise App Catalog. Unlike Service Level Agreements (SLAs), these objectives are guidelines—not guarantees—designed to provide predictability and help you plan for typical app update processing timelines.
+
+**Happy Path Apps (Automated Validation):**  
+Most apps undergo automated validation checks for compatibility, security, and compliance.
+- **Target:** 80–90% of app updates are processed and available in the Intune portal within 24 hours of ingestion
+- **Current Performance:** Average processing time is approximately 70 minutes; maximum observed is approximately 8 hours
+
+**Manual Validation Apps (Bypass Required):**  
+If an app fails automated checks, it moves to manual validation, which requires vendor engagement for additional testing or bypass approval.
+- **Target:** Updates requiring manual vendor testing and bypass are completed within 7 days
+- **Current State:** Average wait time for bypassed apps is approximately 11 days; Microsoft is actively working to reduce this through vendor process improvements and prioritization
+
+**Exception Handling:**
+- High-usage or critical apps that fail automated validation are prioritized for expedited processing (goal: 48 hours)
+- Apps that fail both automated and manual validation don't meet SLO and are flagged as unsupported
 
 ### How many applications are in the catalog?
 
