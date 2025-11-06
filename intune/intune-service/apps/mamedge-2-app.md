@@ -143,16 +143,16 @@ Validation helps confirm that your app protection policy has been successfully c
 
 #### Framework Compliance Summary for Windows
 
-| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 | Status |
-|--------------------------------|----------|----------|----------|---------|
-| Data transfer restrictions | All destinations/sources | No destinations/sources | No destinations/sources | ✅ |
-| Copy/paste controls | Any destination/source | No destination/source | No destination/source | ✅ |
-| Screen capture | Allow | Block | Block | ✅ |
-| Encryption | Not required | Required | Required | ✅ |
-| Offline grace period | 10,080 min / 90 days | 10,080 min / 30 days | 1440 min / 30 days | ✅ |
-| OS version requirements | Not required | Min required | Min + Max required | ✅ |
-| Device threat level | Low | Medium | Secured | ✅ |
-| Print restrictions | Allow | Block | Block | ✅ |
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+|--------------------------------|----------|----------|----------|
+| Data transfer restrictions | All destinations/sources | No destinations/sources | No destinations/sources |
+| Copy/paste controls | Any destination/source | No destination/source | No destination/source |
+| Screen capture | Allow | Block | Block |
+| Encryption | Not required | Required | Required |
+| Offline grace period | 10,080 minutes / 90 days | 10,080 minutes / 30 days | 1,440 minutes / 30 days |
+| OS version requirements | Not required | Min required | Min + Max required |
+| Device threat level | Low | Medium | Secured |
+| Print restrictions | Allow | Block | Block |
 
 ::: zone-end
 
@@ -366,27 +366,27 @@ Validation helps confirm that your app protection policy has been successfully c
 
 #### Framework Compliance Summary for iOS/iPadOS  
 
-| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 | Status |
-|-------------------------------------|-------------|-------------|-------------|-------------|
-| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps | ✅ Compliant |
-| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps | ✅ Compliant |
-| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in | ✅ Compliant |
-| Encryption of org data | Required | Required | Required | ✅ Compliant |
-| Print org data | Allow | Allow | Block | ✅ Compliant |
-| Screen capture | Allow | Block | Block | ✅ Compliant |
-| Third-party keyboards | Allow | Block | Block | ✅ Compliant |
-| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge | ✅ Compliant |
-| Offline grace period | 7 days / Block access<br>90 days / Wipe data | 7 days / Block access<br>30 days / Wipe data | 7 days / Block access<br>30 days / Block access | ✅ Compliant |
-| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN | ✅ Compliant |
-| PIN length requirement | 4-digit | 4-digit | 6-digit | ✅ Compliant |
-| Simple PIN allowed | Yes | Yes | No | ✅ Compliant |
-| Override biometrics with PIN | Required | Required | Required | ✅ Compliant |
-| Work/school credentials required | Not required | Not required | Required | ✅ Compliant |
-| Device threat level enforcement | Low | Medium | Secured | ✅ Compliant |
-| Jailbroken/rooted devices | Block access | Block access | Wipe data | ✅ Compliant |
-| Minimum OS version | N/A | 14.8 | 14.8 | ✅ Compliant |
-| Maximum OS version | N/A | N/A | 26.0.1 | ✅ Compliant |
-| App version requirement | N/A | Latest / Warn | Latest / Warn | ✅ Compliant |
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+|-------------------------------------|-------------|-------------|-------------|
+| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
+| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
+| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in |
+| Encryption of org data | Required | Required | Required |
+| Print org data | Allow | Allow | Block |
+| Screen capture | Allow | Block | Block |
+| Third-party keyboards | Allow | Block | Block |
+| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
+| Offline grace period | 10,080 minutes / Block access<br>90 days / Wipe data | 10,080 minutes / Block access<br>30 days / Wipe data | 10,080 minutes / Block access<br>30 days / Block access |
+| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
+| PIN length requirement | 4-digit | 4-digit | 6-digit |
+| Simple PIN allowed | Yes | Yes | No |
+| Override biometrics with PIN | Required | Required | Required |
+| Work/school credentials required | Not required | Not required | Required |
+| Device threat level enforcement | Low | Medium | Secured |
+| Jailbroken/rooted devices | Block access | Block access | Wipe data |
+| Minimum OS version | N/A | 14.8 | 14.8 |
+| Maximum OS version | N/A | N/A | 26.0.1 |
+| App version requirement | N/A | Latest / Warn | Latest / Warn |
 
 ::: zone-end
 
@@ -409,7 +409,7 @@ Prerequisites:
 - Company Portal or Mobile Application Management (MAM) managed  
 - User Microsoft Entra ID account
 
-### Level 1 – Enterprise basic data protection (Android)
+### Level 1 – Enterprise basic data protection for Android
 
 Level 1 configuration provides the minimum data protection for an Android device while minimizing effects to users.
 
@@ -466,11 +466,9 @@ Level 1 configuration provides the minimum data protection for an Android device
 1. On the **Assignments** page, select **Add groups**, choose **SEB-Level1-Users**, then select **Next**.  
 1. From the **Review + create** page, select **Create**.  
 
-### Level 2 – Enterprise enhanced data protection (Android)
+### Level 2 – Enterprise enhanced data protection for Android
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
-
-### Level 2 – Enterprise enhanced data protection – Android
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 1. Select **Apps > Manage apps > Protection > Create > Android**.  
@@ -597,31 +595,31 @@ Validation helps confirm that your app protection policy has been successfully c
  
 #### Framework Compliance Summary for Android  
 
-| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 | Status |
-|---------------------------------|-----------|-----------|-----------|-----------|
-| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps | ✅ Compliant |
-| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps | ✅ Compliant |
-| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in | ✅ Compliant |
-| Encryption of org data | Required | Required | Required | ✅ Compliant |
-| Print org data | Allow | Allow | Block | ✅ Compliant |
-| Screen capture | Allow | Block | Block | ✅ Compliant |
-| Approved keyboards | Not required | Not required | Required (Microsoft SwiftKey, Samsung Keyboard, Gboard) | ✅ Compliant |
-| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge | ✅ Compliant |
-| Offline grace period | 7 days / Block access <br>90 days / Wipe data | 1 day (1440 min) / Block access <br>30 days / Wipe data | 1 day (1440 min) / Block access <br>30 days / Block access | ✅ Compliant |
-| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN | ✅ Compliant |
-| PIN length requirement | 4-digit | 4-digit | 6-digit | ✅ Compliant |
-| Simple PIN allowed | Yes | Yes | No | ✅ Compliant |
-| Biometric instead of PIN | Allow | Allow | Block | ✅ Compliant |
-| Override biometrics with PIN after timeout | Required | Required | Required | ✅ Compliant |
-| Work or school credentials required | Not required | Not required | Required | ✅ Compliant |
-| Device lock complexity | Low | Medium | High | ✅ Compliant |
-| Device threat level / Play Integrity verdict | Basic integrity | Basic + Device integrity | Secured | ✅ Compliant |
-| Jailbroken / rooted devices | Block access | Block access | Wipe data | ✅ Compliant |
-| Minimum OS version | 8.0 | 9.0 | 9.0 | ✅ Compliant |
-| Maximum OS version | N/A | N/A | 16.0 | ✅ Compliant |
-| Minimum patch version | N/A | 2024-10-01 | 2024-10-01 | ✅ Compliant |
-| Samsung Knox device attestation | N/A | Block access on supported devices | Wipe data (on supported devices) | ✅ Compliant |
-| Class 3 biometrics (Android 9.0 +) | Not required | Not required | Required | ✅ Compliant |
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+|---------------------------------|-----------|-----------|-----------|
+| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
+| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
+| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in |
+| Encryption of org data | Required | Required | Required |
+| Print org data | Allow | Allow | Block |
+| Screen capture | Allow | Block | Block |
+| Approved keyboards | Not required | Not required | Required (Microsoft SwiftKey, Samsung Keyboard, Gboard) |
+| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
+| Offline grace period | 10,080 minutes / Block access <br>90 days / Wipe data | 1,440 minutes / Block access <br>30 days / Wipe data | 1,440 minutes / Block access <br>30 days / Block access |
+| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
+| PIN length requirement | 4-digit | 4-digit | 6-digit |
+| Simple PIN allowed | Yes | Yes | No |
+| Biometric instead of PIN | Allow | Allow | Block |
+| Override biometrics with PIN after timeout | Required | Required | Required |
+| Work or school credentials required | Not required | Not required | Required |
+| Device lock complexity | Low | Medium | High |
+| Device threat level / Play Integrity verdict | Basic integrity | Basic + Device integrity | Secured |
+| Jailbroken / rooted devices | Block access | Block access | Wipe data |
+| Minimum OS version | 8.0 | 9.0 | 9.0 |
+| Maximum OS version | N/A | N/A | 16.0 |
+| Minimum patch version | N/A | 2024-10-01 | 2024-10-01 |
+| Samsung Knox device attestation | N/A | Block access on supported devices | Wipe data (on supported devices) |
+| Class 3 biometrics (Android 9.0 +) | Not required | Not required | Required |
 
 ::: zone-end
 
