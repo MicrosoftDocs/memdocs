@@ -84,7 +84,7 @@ This feature applies to:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -197,5 +197,5 @@ Use the following steps to set up the agent.
 ## Related content
 
 - [Use the Policy Configuration Agent](policy-configuration-agent-use.md)
-- [Security Copilot agents in Intune - An overview](agents.md)
+- [Security Copilot agents in Intune - An overview](index.md)
 - [Security Copilot in Intune - An overview](../intune-service/copilot/copilot-intune-overview.md)

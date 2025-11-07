@@ -112,5 +112,5 @@ You can view your existing policy drafts in the Intune admin center. Use the fol
 ## Related content
 
 - [Policy Configuration Agent in Intune](policy-configuration-agent.md)
-- [Security Copilot agents in Intune - An overview](agents.md)
+- [Security Copilot agents in Intune - An overview](index.md)
 - [Security Copilot in Intune - An overview](../intune-service/copilot/copilot-intune-overview.md)
