@@ -153,26 +153,15 @@ At a high level, the agent does the following steps:
 
 2. **Evaluation** - The agent evaluates each Multi Admin Approval request using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin as part of the agent configuration.
 
-3. **Recommendations** - The agent generates recomendations (Agent suggestions) for each active Multi Admin Approval request and presents them in a list. THe first column of results, *Suggested Next Steps*, includes the name of the request which is prefixed with the agents recommendation:
+3. **Recommendations** - The agent generates recomendations (Agent suggestions) for each active Multi Admin Approval request and presents them in a list. The agent makes no changes or approvals on own. The final decision to approve or reject a Multi Admin Approval request remains with an Intune administrator.
+
+   The first column of results, *Suggested Next Steps*, includes the name of the request which is prefixed with the agents recommendation:
 
    - *Approve* - The request was assessed to have low risk and should be safe to approve.
    - *Reject* - The request was assessed to have high risk, and should not be approved.
    - *Needs more info* - The agent was unable to fully assess the risk with this request and is should be further investigated by an administrator before approving or rejecting it. 
-   
+
    In addition to labeling each suggestion with a recommendation, the agent provides underlying details that lead to that recommendation. These details are available when you drill in to an individual suggestion.
-
-The agent makes no changes or approvals on own. The final decision to approve or reject a Multi Admin Approval request remains with an Intune administrator.
-
->>>>>
-3. **Recommendations** - The agent provides recommendations for each active Multi Admin Approval request. These are *suggestions* only. Approval or rejection of a request remains with an Intune administrator.
-
-   Recommendations are shown in a list. The first column, Suggested Next Steps, displays the recommended action followed by the request name. Possible actions include:
-
-   - Approve - Low-risk request; likely safe to approve.
-   - Reject - High-risk request; should not be approved.
-   - Needs more info - Risk could not be fully assessed. This request requires further review.
-
-   Each recommendation includes supporting details that explain how it was determined. You can view these insights by selecting a suggestion.
 
 ## Agent identity
 <!-- READY! -->
