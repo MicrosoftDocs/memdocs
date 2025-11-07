@@ -153,12 +153,26 @@ At a high level, the agent does the following steps:
 
 2. **Evaluation** - The agent evaluates each Multi Admin Approval request using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin as part of the agent configuration.
 
-3. **Recommendation** - The agent generates recomendations (Agent suggestions) for each active Multi Admin Approval request that is not yet completed. These suggestions include:
+3. **Recommendations** - The agent generates recomendations (Agent suggestions) for each active Multi Admin Approval request and presents them in a list. THe first column of results, *Suggested Next Steps*, includes the name of the request which is prefixed with the agents recommendation:
 
-   - *Suggested action*. This action can be to *Approve* or *Reject* the request. 
-   - Details behind the suggestion - Following the suggested action are an explanation of the details that the agent considered and applied in generating the suggested action. You'll also find a description of what the requested change implements if approved.
+   - *Approve* - The request was assessed to have low risk and should be safe to approve.
+   - *Reject* - The request was assessed to have high risk, and should not be approved.
+   - *Needs more info* - The agent was unable to fully assess the risk with this request and is should be further investigated by an administrator before approving or rejecting it. 
+   
+   In addition to labeling each suggestion with a recommendation, the agent provides underlying details that lead to that recommendation. These details are available when you drill in to an individual suggestion.
 
 The agent makes no changes or approvals on own. The final decision to approve or reject a Multi Admin Approval request remains with an Intune administrator.
+
+>>>>>
+3. **Recommendations** - The agent provides recommendations for each active Multi Admin Approval request. These are *suggestions* only. Approval or rejection of a request remains with an Intune administrator.
+
+   Recommendations are shown in a list. The first column, Suggested Next Steps, displays the recommended action followed by the request name. Possible actions include:
+
+   - Approve - Low-risk request; likely safe to approve.
+   - Reject - High-risk request; should not be approved.
+   - Needs more info - Risk could not be fully assessed. This request requires further review.
+
+   Each recommendation includes supporting details that explain how it was determined. You can view these insights by selecting a suggestion.
 
 ## Agent identity
 <!-- READY! -->
@@ -214,6 +228,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 - On the **Suggestions** tab, view the full list of suggestions for approval requests, including suggestions that are *Not started*, *In progress*, or *Completed*.
 - On the **Settings** tab, review details about the agent's configuration.
 
+<!-- The following tab breakout might move to the use article -->
 To learn more about each tab, select the following tabs:
 
 # [**Overview**](#tab/overview)
@@ -279,7 +294,6 @@ We're a financial-services firm with hybrid workers. Prioritize device complianc
 ``` 
 
 When reviewing an agent suggestion, the *Factors* section identifies the custom instructions that were considered by the agent in creating its results.
-
 
 **To configure custom instructions:**
 
