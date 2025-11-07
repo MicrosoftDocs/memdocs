@@ -1,7 +1,7 @@
 ---
 title: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business
 description: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business.
-ms.date: 10/28/2025
+ms.date: 11/07/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -25,8 +25,6 @@ Identity-driven signals might include:
 - Application
 - Real-time and calculated risk detection
 
-:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png" alt-text="Conditional Access Policy Decision Making." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png":::
-
 Conditional Access is enforced after initial authentication is completed. It isn't intended to be an organization's frontline of defense for scenarios like denial-of-service (DoS) attacks, but it can use signals from these events to determine access.
 
 ## Conditional Access compliance
@@ -46,9 +44,9 @@ In this scenario, you create a Conditional Access policy for mobile devices usin
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
+1. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
-3. On the **Conditional Access policy** pane, set the following details:
+1. On the **Conditional Access policy** pane, set the following details:
 
     - **Name:** Secure Enterprise Browser Policy - Mobile
     - **Users:** All Users or Specific Group dedicated to using the policy.
@@ -63,7 +61,7 @@ In this scenario, you create a Conditional Access policy for mobile devices usin
     > [!NOTE]
     > Set **Report-only** to **On** until you confirm that the policy is working as expected. Once confirmed, set this setting to **Off**.
 
-4. Select **Create** to enable the policy.
+1. Select **Create** to enable the policy.
 
 ## Conditional Access policy for Windows BYOD
 
@@ -73,9 +71,9 @@ This policy ensures browser access uses app protection policies for BYOD scenari
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
+1. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
-3. On the **Conditional Access policy** pane, set the following details:
+1. On the **Conditional Access policy** pane, set the following details:
 
     - **Name:** Secure Enterprise Browser Policy - Windows
     - **Users:** All Users or Specific Group dedicated to using the policy.
@@ -90,7 +88,7 @@ This policy ensures browser access uses app protection policies for BYOD scenari
     > [!NOTE]
     > Set **Report-only** to **On** until you confirm that the policy is working as expected. Once confirmed, set this setting to **Off**.
 
-4. Select **Create** to enable the policy.
+1. Select **Create** to enable the policy.
 
 ## Browser only access for Windows BYOD
 
@@ -100,32 +98,23 @@ In the previous steps, you implemented Conditional Access as a required app prot
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
+1. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
 
-3. On this new policy, you restrict access from desktop apps to managed devices only. Select target resources and select **Office 365** to follow the example in this page.
+1. On this new policy, you restrict access from desktop apps to managed devices only. Select target resources and select **Office 365** to follow the example in this page.
 
-    :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business57.png" alt-text="Conditional Access policy in Microsoft Intune admin center." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business57.png":::
+1. Select the **device Platform** and select **Windows**.
 
-5. Select the **device Platform** and select **Windows**.
-
-    :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business58.png" alt-text="Device Platform - Conditional Access policy in Microsoft Intune admin center." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business58.png":::
-
-6. Select **Client Apps** and select **Mobile apps and desktop clients**.
+1. Select **Client Apps** and select **Mobile apps and desktop clients**.
 
     > [!NOTE]
-    > For legacy authentication clients, maybe create a third CA to just block them. That's up to the customer. For this example, I'll only affect Desktop apps. *
+    > For legacy authentication clients, create a third CA to block them.
 
-    :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png" alt-text="Client Apps configuration in Conditional Access policy in Microsoft Intune admin center." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business59.png":::
-
-7. Select **Grant** and select **Require device to be marked as compliant.** This provides access through desktop apps only for enrolled and compliant devices.
-
-    :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png" alt-text="Grant controls in Conditional Access policy in Microsoft Intune admin center." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business60.png":::
+1. Select **Grant** and select **Require device to be marked as compliant.** This provides access through desktop apps only for enrolled and compliant devices.
 
     > [!NOTE]
-    > Probably to this last control, customers should add also MFA or other options as well.*
+    > Consider adding additional security controls such as multifactor authentication (MFA) to this policy for enhanced protection.
 
-
-8. Select **Done** \> select **Create** and complete the Conditional Access policy creation as you performed on the previous step.
+1. Select **Done** \> select **Create** and complete the Conditional Access policy creation as you performed on the previous step.
 
 ## Next step
 
