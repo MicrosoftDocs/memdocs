@@ -10,7 +10,7 @@ ms.reviewer:
 
 # Change Review Agent overview
 <!-- READY! -->
-The Change Review Agent helps Intune admins make faster, more informed decisions in Multi Admin Approval (MAA) workflows by providing AI-driven recommendations to approve or deny requests, along with contextual insights. It gathers signals from Microsoft Defender for vulnerability and threat data, Microsoft Entra ID for identity risk, and Intune for device and deployment context. Using these signals, the agent assesses the risk of MAA requests and offers actionable insights and suggestions to help you take the appropriate action.
+The Change Review Agent helps Intune admins make faster, more informed decisions in Multi Admin Approval workflows by providing AI-driven recommendations to approve or deny requests, along with contextual insights. It gathers signals from Microsoft Defender for vulnerability as threat data, Microsoft Entra ID as identity risk, and Intune for device and deployment context. The agent uses these signals to assess the risk of Multi Admin Approval requests and offers actionable insights and suggestions to help you take the appropriate action.
 
 ## Prerequisites
 
@@ -129,22 +129,22 @@ The Change Review Agent helps Intune admins make faster, more informed decisions
 
 ## How it works
 <!-- READY -->
-The Change Review Agent operates under thane Intune admin account identity and runs manually when an admin starts it. When started, the agent gathers signals from:
+The Change Review Agent operates using an Intune admins account identity and runs manually when an admin starts it. When started, the agent gathers signals from:
 
 - **Microsoft Defender** for vulnerability and threat insights
 - **Microsoft Entra ID** for identity risk
 - **Intune** for device and deployment context
 
-After collecting signals, the agent evaluates each Multi Admin Approval request to determine its risk level and generate recommendations. These results are provided for admin review and decision-making.
+After the agent collects signals, it evaluates each Multi Admin Approval request to determine its risk level and generate recommendations. These results are provided for admin review and decision-making.
 
 > [!NOTE]
-> THe agent runs in the same preferred workspace you selected for the Security Copilot
+> The agent runs in the same preferred workspace you selected for the Security Copilot
 
 ## Agent identity
 <!-- READY! -->
 The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change-the-agent-identity](#change-the-agent-identity) after setup if needed.
 
-The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until it’s renewed. To maintain functionality, renew the agent identity before the 90-day limit.
+The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
 ### Change the agent identity
 <!-- READY -->
@@ -154,89 +154,104 @@ After setup, the agent identity can be changed. A change of the agent identity d
 - The agent settings are edited to explicitly assign a new agent identity. 
 
 **To assign a new agent identity**:
-1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > select the Agent's tile > and then select the **Settings** tab.
+1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents** > select the Agent's tile > and then select the **Settings** tab.
 1. Locate *Identity*, which displays the current user account the agent uses. 
 1. Select the **Chose another identity** button to open an account sign-in prompt. Use the prompt to select and authenticate a new account as the agents identity.
 
 > [!IMPORTANT]
-> The agent can only perform operations allowed by the permissions of the account it runs under. If that  account lacks [required permissions](#prerequisites), the agent will fail to run. 
+> The agent can only perform operations allowed by the permissions of the account it runs under. If that  account lacks [required permissions](#prerequisites), the agent fails to run.
 
 
 ## Operational considerations
 <!-- READY -->
 Before running the Change Review Agent, keep these points in mind:
 
-- An admin must manually start the agent. After starting, there's no option to stop or pause it
+- An admin must manually start the agent. After it starts, there's no option to stop or pause it.
 - The agent can only be started from the Microsoft Intune admin center.
 - Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
-- Suggestions don't persist across runs; re-running the agent clears previous recommendations.
+- Suggestions don't persist across runs; rerunning the agent clears previous recommendations.
 - Only one agent instance is supported per tenant/user context.
-The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
 
- 
 ## Enable the agent
-<!-- FIXING Pending -->
+<!-- READY -->
 To enable the Change Review Agent, follow these steps:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** and select the agent you want to enable.
-2. Select **Set up Agent** to open the set-up pane.
+2. On the **Overview** tab, select **Set up Agent** to open the set-up pane.
 3. Review the details to ensure requirements are in place, then select **Start agent**.
 
 The agent runs until it finishes and then displays its results in the **Overview** tab.
 
-
 ## Explore the agent options
-<!-- FIXING Pending -->
+<!-- REVIEW after DEMO ---  Pending -->
 After you configure the agent, you can manage it from the Change Review Agent pane.
 
-In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**:
-- On the **Overview** tab, view the suggestions of devices to offboard, and get more details and remediation steps.
-- On the **Suggestions** tab, view the full list of suggestions of devices to offboard, including the completed suggestions.  
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**:
+- On the **Overview** tab, see the agent runt status, review suggestions for the top Multi Admin Approval requests, and see the record of recent agent activity. 
+- On the **Suggestions** tab, view the full list of suggestions for approval requests, including suggestions that are *Not started*, *In progress*, or *Completed*.
 - On the **Settings** tab, review details about the agent's configuration.
 
 To learn more about each tab, select the following tabs:
 
 # [**Overview**](#tab/overview)
 <!-- REVIEW For accuracy to agent - Add Images -->
-After the Change Review Agent completes a run, the **Overview** tab updates with the agent's list of ????? recommendations ?????. The **Overview** tab only displays the suggestions that are *not started* or *in progress*.  
+After the Change Review Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for Multi Admin Approval change requests. The **Overview** tab only displays the suggestions that are *Not started* or *In progress*.
 
 The following information is available on this tab: 
 
 - The agent's availability and run status. 
-- Agent suggestions, which are the list of ?????? that are *not started* or *in progress*.
+- Agent suggestion for a list of top change requests. This list includes requests that are assessed to have the least risk and are safe to approve. 
 - Activity section that tracks the current and past run activity of the agent.
 
+<!-- No image source yet - Figma has not been updated >
 :::image type="content" source="images/change-review-agent/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." border="false" lightbox="images/change-review-age/overview.png":::
+-->
 
 # [**Suggestions**](#tab/suggestions)
 <!-- REVIEW For accuracy to agent - Add Images -->
-Agent suggestions are a list of the top devices to offboard. Suggestions are generated after each agent run based on the latest data. In this tab, you can use search and filters to find specific suggestions.
+Agent suggestions are a list of all Multi Admin Approval change requests. Suggestions are generated after each agent run based on the latest data. In this tab, you can use search and filters to find specific suggestions.
 
 A suggestion displays the following details: 
-- Summary of the suggestions. 
-- Factors that the agent considered when suggesting offboarding these devices.  
-- Details about the associated suggestions, including the number of devices to offboard, their ownership, and their platform. 
-- Recommended actions to offboard securely.
+- A risk assessment of the change request. 
+- The account used to submit the request.
+- When the request expires.
+- Status of the request, from *Not started* to *Completed*.
+- Details about the associated suggestions. 
 
+<!-- No image source yet - Figma has not been updated >
 :::image type="content" source="images/change-review-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/suggestions.png":::
+-->
 
-After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to complete. Marking a suggestion as complete doesn't trigger any device changes by the agent.  
+After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to *complete*. Marking a suggestion as complete doesn't trigger any changes by the agent.
 
 # [**Settings**](#tab/settings)
 <!-- REVIEW For accuracy to agent - Add Images -->
-Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs by using the optional **Instructions** field.
+Use the **Settings** tab to view the details about the agent's identity and current configuration.
 
+<!-- No image source yet - Figma has not been updated >
 :::image type="content" source="images/change-review-agent/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/settings.png":::
+-->
 
 ---
 
 ## Configure custom instructions 
 
+Use custom instructions to guide the agent's logic based on your organization's needs. Custom instructions help refine the agent's evaluation criteria, allowing you to include or exclude specific devices from offboarding recommendations.
 
+These instructions can be used to:
+- Exclude changes that affect specific accounts, like break-glass/emergency accounts from all policy suggestions.
+- Prioritize approvals for specify policy types, like compliance policies.
+- Triage high-risk users first (executives and admins).
 
+For example, << **EXAMPLE HERE**>>. Custom instructions help you prevent that issue by guiding the agent's logic based on your organizational needs.
 
+Custom instructions persist between agent runs. Once they're set, they're evaluated every time the agent runs. You can change custom instructions at any time in the Settings tab and rerun the agent. The Factors section in a suggestion highlights details on which custom instructions were taken into account while forming the list of suggested devices to offboard.
 
+To configure custom instructions:
 
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**.
+1. Select the **Settings** tab.
+In the **Instructions** field, enter a prompt to customize the agent's evaluation criteria.
 
 <!-- ## Renew the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [renew](includes/renew.md)]
