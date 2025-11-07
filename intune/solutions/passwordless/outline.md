@@ -64,9 +64,10 @@ Before diving into how Intune supports passwordless, it's important to understan
 
 MFA adds layers of security by requiring two or more factors (something you know, have, or are). Passwordless methods often satisfy MFA because they combine possession (device or key) and inherence (biometrics).
 
+## Phising resistance
+
 :::row:::
     :::column span="1":::
-## Phising resistance
 
 :::image type="icon" source="icons/phishing.svg" border="false":::
 
@@ -105,56 +106,54 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 Before exploring Intune's role, it's important to understand the passwordless authentication methods supported by Microsoft Entra ID. Let's briefly review them.
 
-### Passkeys
-
 :::row:::
     :::column span="1":::
+**Passkeys**
 
 :::image type="icon" source="icons/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-- Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
-  - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
-  - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager)
+> - Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
+>   - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
+>   - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager)
     :::column-end:::
 :::row-end:::
 
-### FIDO2 Security Keys
-
 :::row:::
     :::column span="1":::
+**FIDO2 Security Keys**
+
 :::image type="icon" source="icons/security-key.svg" border="false":::
+
 :::column-end:::
 :::column span="3":::
-External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared devices or high‑assurance scenarios.
+> External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared devices or high‑assurance scenarios.
     :::column-end:::
 :::row-end:::
 
-### Certificate-Based Authentication (CBA)
-
 :::row:::
     :::column span="1":::
+**Certificate-Based Authentication (CBA)**
 
 :::image type="icon" source="icons/certificate.svg" border="false":::
-:::column-end:::
-:::column span="3":::
-- Certificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
-- Derived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
+::column-end:::
+column span="3":::
+>ertificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
+>erived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
     :::column-end:::
 :::row-end:::
 
-
-### Temporary Access Pass (TAP)
-
 :::row:::
     :::column span="1":::
+**Temporary Access Pass (TAP)**
+
 :::image type="icon" source="icons/tap.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 Used for bootstrap during initial passwordless setup.
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
-> - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
+- [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
     :::column-end:::
 :::row-end:::
 
