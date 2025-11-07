@@ -165,7 +165,7 @@ At a high level, the agent does the following steps:
 
 ## Agent identity
 <!-- READY! -->
-The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change-the-agent-identity](#change-the-agent-identity) after setup if needed.
+The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change the agent identity](#change-the-agent-identity) after setup if needed.
 
 The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
@@ -201,7 +201,7 @@ The agent operates under the identity and permissions of the Intune admin accoun
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
 2. In **Overview**, select **Set up Agent**.
 
-   The **Set up Change Review Agent** pane lists the required permissions to setup the agent, and provides more information about the setup requirements.
+   The **Set up Change Review Agent** pane lists the required permissions to set up the agent, and provides more information about the setup requirements.
 
 3. When requirements are in place, select **Start agent**.
 
