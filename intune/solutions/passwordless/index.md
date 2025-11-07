@@ -73,17 +73,6 @@ Passwordless authentication is supported across Windows, macOS, iOS, and Android
 
 Phishing attacks trick users into revealing credentials or approving fraudulent sign-ins. Multi-factor authentication (MFA) reduces risk, but not all MFA methods are equally strong. Phishing-resistant MFA ensures credentials can't be intercepted or replayed, even if a user is tricked.
 
-**Definitions**:
-
-> **Phishing-resistant MFA**
-> An authentication method that prevents credential theft and replay attacks by binding authentication to the device and cryptographic keys. Examples include FIDO2 security keys and certificate-based authentication.
->
-> **Non-phishing-resistant MFA**
-> An MFA method that adds a second factor but can still be bypassed if the user is tricked into approving a fraudulent request. Examples include SMS codes, voice calls, and push notifications.
-
-
-The following methods are considered phishing-resistant and are supported by Entra ID for passwordless authentication:
-
 - Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
   - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
   - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager) and some 3rd‑party providers—supported/rolling out per roadmap
@@ -210,8 +199,6 @@ Supporting fallback scenarios without compromising security.
 
    :::column-end:::
 :::row-end:::
-
-
 
 ## Comparison of Key Passwordless Methods and Intune's Role 
 
