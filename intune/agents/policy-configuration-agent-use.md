@@ -11,7 +11,7 @@ ms.reviewer: aanavath
 # Use the Policy Configuration Agent
 
 > [!WARNING]
-> This article is still being written. Do not use it or share any information from it.
+> This article is still being written. Do not use it or share any information from article.
 
 The [Policy Configuration Agent](policy-configuration-agent.md) is a generative AI feature in Intune. It helps you automate the creation of Intune policies based on your organization's requirements or industry benchmarks.
 
@@ -20,7 +20,7 @@ After you [set up the agent](policy-configuration-agent.md), the next step is to
 This article shows you how to use the Policy Configuration Agent, including:
 
 - Adding, saving, and viewing a knowledge source
-- Creating a policy from a knowledge source
+- Creating a policy from a knowledge source and natural language prompts
 
 To learn about the agent and how to set it up, see [Use the Policy Configuration Agent](policy-configuration-agent.md).
 
@@ -107,7 +107,7 @@ You can view your existing policy drafts in the Intune admin center. Use the fol
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
 
-??Figma is unclear on this part and seems to show new buttons??
+??Figma is unclear on this part and seems to show a completely different workflow??
 
 ## Related content
 
