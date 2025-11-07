@@ -20,7 +20,7 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 
 :::column-end:::
 :::column span="3":::
-> The agent is supported on the public cloud ony. It isn't supported on government clouds.
+> The agent is supported on the public cloud only. It isn't supported on government clouds.
 
 :::column-end:::
 :::row-end:::
@@ -68,7 +68,7 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
 > The agent doesn't support:
-> - Window Autopilot devices
+> - Window corporate devices
 > - Shared devices
 > - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones
@@ -118,7 +118,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 **1. Signal aggregation**
 :::column-end:::
 :::column span="3":::
->The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include device status, alignment indicators, and other metadata that help determine whether a device is active, stale, or misconfigured.
+>The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
 :::column-end:::
 :::row-end:::
 :::row:::
@@ -150,7 +150,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 **5. Assisted remediation**
 :::column-end:::
 :::column span="3":::
->Upon admin approval, the Device Offboarding Agent facilitates the offboarding process by disabling the corresponding Entra ID objects and providing guidance on further remediation steps, such as offboarding from Microsoft Defender or removing Apple Business Manager.
+>Upon admin approval, the Device Offboarding Agent disables the corresponding Entra ID objects. It also facilitates the offboarding process by providing guidance on additional remediation steps, such as removing devices from Microsoft Defender or Apple Business Manager.
 :::column-end:::
 :::row-end:::
 
