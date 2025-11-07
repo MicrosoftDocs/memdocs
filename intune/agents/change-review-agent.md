@@ -144,7 +144,7 @@ After the agent collects signals, it evaluates each Multi Admin Approval request
 <!-- READY! -->
 The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change-the-agent-identity](#change-the-agent-identity) after setup if needed.
 
-The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
+The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, it's authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
 ### Change the agent identity
 <!-- READY -->
@@ -156,7 +156,7 @@ After setup, the agent identity can be changed. A change of the agent identity d
 **To assign a new agent identity**:
 1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents** > select the Agent's tile > and then select the **Settings** tab.
 1. Locate *Identity*, which displays the current user account the agent uses. 
-1. Select the **Chose another identity** button to open an account sign-in prompt. Use the prompt to select and authenticate a new account as the agents identity.
+1. Select the **Chose another identity** button to open an account sign-in prompt. Use the prompt to select and authenticate a new account as the agent identity.
 
 > [!IMPORTANT]
 > The agent can only perform operations allowed by the permissions of the account it runs under. If that  account lacks [required permissions](#prerequisites), the agent fails to run.
