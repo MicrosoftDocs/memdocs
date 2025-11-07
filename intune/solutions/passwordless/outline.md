@@ -103,7 +103,7 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 ## Passwordless Authentication Methods in Microsoft Entra ID
 
-Let's explore the main passwordless authentication methods supported by Microsoft Entra ID, highlighting their phishing resistance and use cases.
+Before exploring Intune's role, it's important to understand the passwordless authentication methods supported by Microsoft Entra ID. Let's briefly review them.
 
 ### Passkeys
 
@@ -152,6 +152,9 @@ External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared device
 :::column-end:::
 :::column span="3":::
 Used for bootstrap during initial passwordless setup.
+
+[!INCLUDE [learn-more](includes/learn-more.md)]
+> - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
     :::column-end:::
 :::row-end:::
 
@@ -159,7 +162,15 @@ Used for bootstrap during initial passwordless setup.
 
 Clarify OTP in Authenticator and transitional use cases.
 
+
 ---
+
+
+For a deeper dive into these methods, refer to the [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
+
+Now that we have the foundational concepts covered, let's explore how Microsoft Intune plays a critical role in enabling and managing passwordless authentication across devices.
+
+
 
 ## Passwordless options in Intune and Entra
 
