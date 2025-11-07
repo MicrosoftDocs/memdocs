@@ -106,18 +106,26 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 Before exploring Intune's role, it's important to understand the passwordless authentication methods supported by Microsoft Entra ID. Let's briefly review them.
 
+#### Passkeys
 :::row:::
     :::column span="1":::
-**Passkeys**
-
 :::image type="icon" source="icons/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
+
+> Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supports passkeys via Microsoft Authenticator (iOS 17+/Android 14+).
+    :::column-end:::
+:::row-end:::
+
 > - Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
 >   - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
 >   - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager)
-    :::column-end:::
-:::row-end:::
+
+[!INCLUDE [intune](includes/intune.md)]
+- Enforcing OS version requirements for passkey support.
+- Ensuring Authenticator and Company Portal apps are installed.
+- Maintaining compliance so Conditional Access allows passkey sign-in.
+- Ensuring device compliance and app readiness for passkey use, enabling a seamless passwordless experience across platforms.
 
 :::row:::
     :::column span="1":::
