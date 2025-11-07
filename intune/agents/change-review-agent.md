@@ -9,8 +9,20 @@ ms.reviewer:
 ---
 
 # Change Review Agent overview
+
+> [!WARNING]
+> This article is still being written. Do not use it or share any information from this article.
+
 <!-- READY! -->
-The Change Review Agent helps Intune admins make faster, more informed decisions in Multi Admin Approval workflows by providing AI-driven recommendations to approve or deny requests, along with contextual insights. It gathers signals from Microsoft Defender for vulnerability as threat data, Microsoft Entra ID as identity risk, and Intune for device and deployment context. The agent uses these signals to assess the risk of Multi Admin Approval requests and offers actionable insights and suggestions to help you take the appropriate action.
+The Intune Change Review Agent uses Microsoft Security Copilot’s generative AI capabilities to evaluate Multi Admin Approval requests for Microsoft Intune. The agent provides risk-based recommendations and contextual insights to help administrators make faster, more informed decisions about whether to approve or deny requests. 
+
+To generate these recommendations, the agent aggregates signals from multiple sources:
+
+- Microsoft Defender Vulnerability Management – threat and vulnerability data
+- Microsoft Entra ID – identity risk indicators
+- Microsoft Intune – device posture and deployment context
+
+By analyzing these signals, the agent assesses the potential risk associated with each request and delivers actionable insights to support secure and efficient change management.
 
 ## Prerequisites
 
@@ -21,7 +33,7 @@ The Change Review Agent helps Intune admins make faster, more informed decisions
 :::column-end:::
 
 :::column span="3":::
-> The agent is supported on the public cloud ony. It isn't supported on government clouds.
+> The agent is supported on the public cloud only. It isn't supported on government clouds.
 :::column-end:::
 :::row-end:::
 <!-- end cloud -->
@@ -110,7 +122,7 @@ The Change Review Agent helps Intune admins make faster, more informed decisions
 >
 > ---
 >
-> To **use** the agent and perform offboarding actions, use an account with the following roles:
+> To **use the agent and perform offboarding actions, use an account with the following roles:
 >
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
@@ -127,18 +139,26 @@ The Change Review Agent helps Intune admins make faster, more informed decisions
 :::column-end:::
 :::row-end:::
 
-## How it works
-<!-- READY -->
-The Change Review Agent operates using an Intune admins account identity and runs manually when an admin starts it. When started, the agent gathers signals from:
+## How the agent works
+<!-- READY - but lite in details. The 'how it works story' hasn't been provided. -->
+The Change Review Agent operates using an Intune admins account identity and runs manually when an admin starts it.
 
-- **Microsoft Defender** for vulnerability and threat insights
-- **Microsoft Entra ID** for identity risk
-- **Intune** for device and deployment context
+At a high level, the agent does the following steps:
 
-After the agent collects signals, it evaluates each Multi Admin Approval request to determine its risk level and generate recommendations. These results are provided for admin review and decision-making.
+1. **Signal aggregation** - The agent begins by aggregating signals from the following sources:
 
-> [!NOTE]
-> The agent runs in the same preferred workspace you selected for the Security Copilot
+   - Microsoft Defender Vulnerability Management - for threat insights
+   - Microsoft Entra ID - for identity risk
+   - Microsoft Intune - for device and deployment context
+
+2. **Evaluation** - The agent evaluates each Multi Admin Approval request using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin as part of the agent configuration.
+
+3. **Recommendation** - The agent generates recomendations (Agent suggestions) for each active Multi Admin Approval request that is not yet completed. These suggestions include:
+
+   - *Suggested action*. This action can be to *Approve* or *Reject* the request. 
+   - Details behind the suggestion - Following the suggested action are an explanation of the details that the agent considered and applied in generating the suggested action. You'll also find a description of what the requested change implements if approved.
+
+The agent makes no changes or approvals on own. The final decision to approve or reject a Multi Admin Approval request remains with an Intune administrator.
 
 ## Agent identity
 <!-- READY! -->
@@ -154,36 +174,39 @@ After setup, the agent identity can be changed. A change of the agent identity d
 - The agent settings are edited to explicitly assign a new agent identity. 
 
 **To assign a new agent identity**:
-1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents** > select the Agent's tile > and then select the **Settings** tab.
-1. Locate *Identity*, which displays the current user account the agent uses. 
+1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents**. Select the **Change Review Agent** tile, and then select the **Settings** tab.
+1. Locate *Identity*, which displays the current user account the agent uses.
 1. Select the **Chose another identity** button to open an account sign-in prompt. Use the prompt to select and authenticate a new account as the agent identity.
 
 > [!IMPORTANT]
 > The agent can only perform operations allowed by the permissions of the account it runs under. If that  account lacks [required permissions](#prerequisites), the agent fails to run.
 
-
 ## Operational considerations
 <!-- READY -->
-Before running the Change Review Agent, keep these points in mind:
+Before setting up and starting the agent for the first time, review the following considerations:
 
-- An admin must manually start the agent. After it starts, there's no option to stop or pause it.
+- An admin must manually start the agent. Once it starts, there's no option to stop or pause it.
 - The agent can only be started from the Microsoft Intune admin center.
 - Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
 - Suggestions don't persist across runs; rerunning the agent clears previous recommendations.
 - Only one agent instance is supported per tenant/user context.
 
-## Enable the agent
+## Set up the agent
 <!-- READY -->
-To enable the Change Review Agent, follow these steps:
+The agent runs under the identity and permissions of the account used during this setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. So, any changes to the account's permissions affect the agent's capabilities during its next run.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** and select the agent you want to enable.
-2. On the **Overview** tab, select **Set up Agent** to open the set-up pane.
-3. Review the details to ensure requirements are in place, then select **Start agent**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**.
+2. In **Overview**, select **Set up Agent**.
 
-The agent runs until it finishes and then displays its results in the **Overview** tab.
+   The **Set up Change Review Agent** pane lists the required permissions to set up the agent, and provides more information about hte setup requirements.
+3. When requirements are in place, select **Start agent**.
 
-## Explore the agent options
-<!-- REVIEW after DEMO ---  Pending -->
+   The agent runs until it finishes and displays it's results in the **Overview** tab.
+
+When the agents run is finished, the agent is ready to use. To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use).
+
+## Explore the agent
+<!-- REVIEW after DEMO --- Does this beling in Use the Agent? OR perhaps the drill in details do. = -->
 After you configure the agent, you can manage it from the Change Review Agent pane.
 
 In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**:
@@ -234,24 +257,35 @@ Use the **Settings** tab to view the details about the agent's identity and curr
 
 ---
 
-## Configure custom instructions 
+## Configure custom instructions
+<!-- Pending clear example of instructions, and what they can do -->
 
-Use custom instructions to guide the agent's logic based on your organization's needs. Custom instructions help refine the agent's evaluation criteria, allowing you to include or exclude specific devices from offboarding recommendations.
+The Change Review Agent supports custom instructions. Custom instructions can refine the agent's evaluation criteria to better meet your organizations needs by emphasize or deemphasize different types of details, like policies or users. 
 
 These instructions can be used to:
-- Exclude changes that affect specific accounts, like break-glass/emergency accounts from all policy suggestions.
-- Prioritize approvals for specify policy types, like compliance policies.
-- Triage high-risk users first (executives and admins).
+- Exclude changes that affect specific accounts from all policy suggestions, like break-glass/emergency accounts.
+- Prioritize approvals for specific policy types, like compliance policies.
+- Triage high-risk users first, such as changes submitted by Executives and administrators with highly privileged role permissions.
 
-For example, << **EXAMPLE HERE**>>. Custom instructions help you prevent that issue by guiding the agent's logic based on your organizational needs.
+Specify all custom instructions in the **Instructions** field of the agent's *Settings* tab in a format that concisely describes the intent. All instructions persist between agent runs and are evaluated every time the agent runs. You can edit the agents custom instructions between agent runs. After changing them, rerun the agent to generate updated suggestions that include the new instructions.
 
-Custom instructions persist between agent runs. Once they're set, they're evaluated every time the agent runs. You can change custom instructions at any time in the Settings tab and rerun the agent. The Factors section in a suggestion highlights details on which custom instructions were taken into account while forming the list of suggested devices to offboard.
+The following are examples of instructions an organization might add: 
 
-To configure custom instructions:
+```agent-prompt
+Exclude changes that affect specific accounts from all policy suggestions, like break-glass/emergency accounts. 
+```
+```agent-prompt
+We're a financial-services firm with hybrid workers. Prioritize device compliance policies that apply to remote workers.
+``` 
+
+When reviewing an agent suggestion, the *Factors* section identifies the custom instructions that were considered by the agent in creating its results.
+
+
+**To configure custom instructions:**
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**.
 1. Select the **Settings** tab.
-In the **Instructions** field, enter a prompt to customize the agent's evaluation criteria.
+1. In the **Instructions** field, enter a prompt to customize the agent's evaluation criteria.
 
 <!-- ## Renew the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [renew](includes/renew.md)]
@@ -264,7 +298,6 @@ In the **Instructions** field, enter a prompt to customize the agent's evaluatio
 <!--  ## Remove the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [remove](includes/remove.md)]
 
-
-## Next steps
+## Related content
 
 - [Use the Change Review Agent](/intune/agents/change-review-agent-use)
