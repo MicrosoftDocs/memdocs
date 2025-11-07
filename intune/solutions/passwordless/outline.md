@@ -137,9 +137,9 @@ Before exploring Intune's role, it's important to understand the passwordless au
 
 :::image type="icon" source="icons/certificate.svg" border="false":::
 ::column-end:::
-column span="3":::
->ertificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
->erived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
+:::column span="3":::
+> - Certificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
+> - Derived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
     :::column-end:::
 :::row-end:::
 
@@ -152,10 +152,11 @@ column span="3":::
 :::column span="3":::
 Used for bootstrap during initial passwordless setup.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
-- [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
     :::column-end:::
 :::row-end:::
+
+[!INCLUDE [learn-more](includes/learn-more.md)]
+- [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
 
 ### Other Options
 
