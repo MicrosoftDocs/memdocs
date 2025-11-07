@@ -206,7 +206,7 @@ The agent runs under the identity and permissions of the account used during thi
 
    The agent runs until it finishes and displays its results in the **Overview** tab.
 
-When the agents run is finished, the agent is ready to use. To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use).
+When the agents run is finished, the agent is ready to use. To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
 
 ## Explore the agent
 <!-- REVIEW after DEMO --- Does this beling in Use the Agent? OR perhaps the drill in details do. = -->
