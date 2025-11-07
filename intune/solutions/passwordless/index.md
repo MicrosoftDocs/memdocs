@@ -21,7 +21,7 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
    :::image type="icon" source="icons/entra.svg" border="false":::
    :::column-end:::
    :::column span="3":::
-    ### Microsoft Entra ID: Identity and token issuance
+    #### Microsoft Entra ID: Identity and token issuance
    :::column-end:::
 :::row-end:::
 
@@ -33,7 +33,7 @@ Microsoft Entra ID is the core identity provider that verifies passwordless cred
    :::image type="icon" source="icons/intune.svg" border="false"::: 
    :::column-end:::
    :::column span="3":::
-    ### Microsoft Intune: device management and policy enforcement
+    #### Microsoft Intune: device management and policy enforcement
    :::column-end:::
 :::row-end:::
 
@@ -49,7 +49,7 @@ Microsoft Intune configures passwordless sign-in policies across managed endpoin
    :::image type="icon" source="icons/devices.svg" border="false"::: 
    :::column-end:::
    :::column span="3":::
-    ### Cross-platform SSO
+    #### Cross-platform SSO
    :::column-end:::
 :::row-end:::
 
@@ -96,7 +96,7 @@ Still available, but not phishing‑resistant:
 
 Intune supports multiple passwordless options to replace passwords with stronger, phishing-resistant credentials on managed devices. For each method, Intune plays a key role in enabling, enforcing, and managing the experience.
 
-### Windows Hello for Business
+#### Windows Hello for Business
 
 :::row:::
    :::column span="1":::
@@ -117,7 +117,7 @@ Credentials never leave the device, making them highly secure.
    :::column-end:::
 :::row-end:::
 
-### FIDO2 Security Keys
+#### FIDO2 Security Keys
 
 :::row:::
    :::column span="1":::
@@ -138,7 +138,7 @@ Keys are portable and ideal for shared-device scenarios.
    :::column-end:::
 :::row-end:::
 
-### Passkeys
+#### Passkeys
 
 :::row:::
    :::column span="1":::
@@ -158,7 +158,7 @@ Passkeys enable a seamless passwordless experience across platforms.
 :::column-end:::
 :::row-end:::
 
-### Certificate-Based Authentication (CBA)
+#### Certificate-Based Authentication (CBA)
 :::row:::
 :::column span="1":::
 :::image type="icon" source="icons/certificate.svg" border="false":::
@@ -180,7 +180,7 @@ Ideal for regulated or high-security environments.
 :::column-end:::
 :::row-end:::
 
-### Temporary Access Pass (TAP)
+#### Temporary Access Pass (TAP)
 
 :::row:::
    :::column span="1":::
