@@ -196,20 +196,6 @@ Before setting up and starting the agent for the first time, review the followin
 
 ## Set up the agent
 <!-- READY -->
-The agent operates under the identity and permissions of the Intune admin account used during this setup. Its actions are limited to the permissions of that account, and this identity refreshes with each run. So, any changes to the account's permissions affect the agent's capabilities during its next run.
-
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
-2. In **Overview**, select **Set up Agent**.
-
-   The **Set up Change Review Agent** pane lists the required permissions to set up the agent, and provides more information about the setup requirements.
-
-3. When requirements are in place, select **Start agent**.
-
-   The agent runs until it finishes and displays its results in the **Overview** tab.
-
-When the agents run is finished, the agent is ready to use. To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
-
-## Set up the agent v2
 The agent operates under the identity and permissions of the Intune admin account used during setup. Its operations are limited to the permissions of that account, and the identity refreshes with each run. Any changes to the account’s permissions affect the agent’s capabilities during its next run.
 
 **To set up the Change Review Agent:**
@@ -228,7 +214,7 @@ The agent operates until it completes its evaluation and displays results in the
 To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
 
 ## Explore the agent
-<!-- REVIEW after DEMO --- Does this belong in Use the Agent? OR perhaps the drill in details do. = -->
+<!-- REVIEW after DEMO --- Does this belong in Use the Agent? OR perhaps the drill in details do.  -->
 After you configure the agent, you can manage it from the Change Review Agent pane.
 
 In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**:
