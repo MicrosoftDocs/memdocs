@@ -37,7 +37,7 @@ This feature applies to:
 
 ## Add, save, and view a knowledge source
 
-Knowledge sources are text or JSON files that you upload. These files describe the device configuration requirements in natural language. They can be internal policy documents and baselines, like security and compliance policies and frameworks, industry standards that describe settings, or risk assessment guidelines for device configurations.
+Knowledge sources are files that you upload. These files describe the device configuration requirements in natural language. They can be internal policy documents and baselines, like security and compliance policies and frameworks, industry standards that describe settings, or risk assessment guidelines for device configurations.
 
 For example, you can upload compliance standards and common industry benchmarks, like Security Technical Implementation Guides (STIGs), National Institute of Standards and Technology (NIST) guidelines, Defense Information Systems Agency (DISA) STIGs, and Center for Internet Security (CIS) benchmarks.
 
@@ -47,9 +47,9 @@ To add a knowledge source, use the following steps:
 2. Select **Create new** > **Knowledge source**.
 3. Configure the following settings:
 
-    - **Reference name**: Enter a name for the knowledge source.
-    - **Description**: Optional. Enter a description for the knowledge source.
-    - **Upload reference file**: Browse for your file or drag-and-drop the file. You can add text or JSON files up to 100 KB in size.
+    - **Reference name** - Enter a name for the knowledge source.
+    - **Description** - Optional. Enter a description for the knowledge source.
+    - **Upload reference file** - Browse for your file or drag-and-drop the file. You can add text or JSON files up to 100 KB in size.
 
 4. Select **Create**. The agent runs immediately and analyzes the knowledge source you uploaded.
 
@@ -87,11 +87,11 @@ To create a policy using the agent, use the following steps:
     - **Description**: Optional. Enter a description for the policy.
     - **Source**: Select the knowledge source you want to use for this policy draft. Your options:
 
-      - **Natural language prompt**: Enter a prompt that describes the device configuration settings you want to include in the policy. For example, enter `Create a device configuration policy that enforces strong password requirements and enables BitLocker encryption on Windows devices`.
+      - **Natural language prompt** - Enter a prompt that describes the device configuration settings you want to include in the policy. For example, enter `Create a device configuration policy that enforces strong password requirements and enables BitLocker encryption on Windows devices`.
 
-      - **Knowledge source**: Select a knowledge source that you previously uploaded. For example, you might choose your organization's security policy document that outlines specific device configuration requirements.
+      - **Knowledge source** - Select a knowledge source that you previously uploaded. For example, you might choose your organization's security policy document that outlines specific device configuration requirements.
 
-      - **Industry baseline**: Select an industry baseline that you want to use for this policy draft. For example, you might choose a baseline for Windows devices that enforces specific security settings. ??
+      - **Industry baseline** - Select an industry baseline that you want to use for this policy draft. For example, you might choose a baseline for Windows devices that enforces specific security settings.
 
 4. Select **Generate**. The agent runs and creates a policy draft based on your selected source.
 

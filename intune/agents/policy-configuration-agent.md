@@ -41,10 +41,6 @@ This article:
 
 To learn how to use the agent, see [Use the Policy Configuration Agent](policy-configuration-agent-use.md).
 
-This feature applies to:
-
-- Windows
-
 ## Prerequisites
 
 :::row:::
@@ -117,9 +113,11 @@ This feature applies to:
 >
 > To **use** the agent and create policies, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Roles:
-> - [Copilot Contributor Security Copilot role](/copilot/security/authentication#security-copilot-roles)
-> - [Policy and Profile manager Intune role](../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) or a [Custom Intune role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
+>
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
+> - [Policy and Profile manager](../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Create
 >   - Device configurations/Update
 
@@ -128,12 +126,12 @@ This feature applies to:
 
 ## How the agent works
 
-:::image type="content" source="./media/policy-agent-workflow-svg.png" alt-text="Diagram that shows different steps and stages of the policy configuration agent workflow in Microsoft Intune." lightbox="./media/policy-agent-workflow-svg.png":::
-
 At a high level, the agent does the following steps:
 
+:::image type="content" source="./media/policy-agent-workflow-svg.png" alt-text="Diagram that shows different steps and stages of the policy configuration agent workflow in Microsoft Intune." lightbox="./media/policy-agent-workflow-svg.png":::
+
 > [!NOTE]
-> These in-depth descriptions belong in the -use article. Will move when I can experience is in UI.
+> These in-depth descriptions belong in the -use article. Will move when I can step through the experience in UI.
 
 1. **Input ingestion**: You give the agent an input that has your policy requirements. It can be a document you upload or direct text input, like `All laptops must have BitLocker enabled with AES-256 encryption`.
 
