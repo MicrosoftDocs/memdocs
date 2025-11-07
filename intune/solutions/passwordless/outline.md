@@ -51,7 +51,7 @@ These components work together to deliver passwordless access while aligning wit
     :::column-end:::
 :::row-end:::
 
-> [!INCLUDE [learn-more](includes/learn-more.md)]
+[!INCLUDE [learn-more](includes/learn-more.md)]
 > - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 > - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 > - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
@@ -146,7 +146,9 @@ Summarize benefits, reiterate Intune's role, and link to next steps or resources
 
 ---
 
-### Additional Resources
-- [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)  
-- [Configure Credential Guard](https://learn.microsoft.com/windows/security/identity-protection/credential-guard/configure)  
-- [Go passwordless in Windows](https://support.microsoft.com/en
+### Links to review
+
+[!INCLUDE [learn-more](includes/learn-more.md)]
+- [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](../../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
+- [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students)
+- [App Protection Policies Overview](../../intune-service/apps/app-protection-policy.md)
