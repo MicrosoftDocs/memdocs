@@ -105,9 +105,11 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 Let's explore the main passwordless authentication methods supported by Microsoft Entra ID, highlighting their phishing resistance and use cases.
 
+### Passkeys
+
 :::row:::
     :::column span="1":::
-### Passkeys
+
 :::image type="icon" source="icons/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -117,9 +119,10 @@ Let's explore the main passwordless authentication methods supported by Microsof
     :::column-end:::
 :::row-end:::
 
+### FIDO2 Security Keys
+
 :::row:::
     :::column span="1":::
-### FIDO2 Security Keys
 :::image type="icon" source="icons/security-key.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -127,9 +130,11 @@ External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared device
     :::column-end:::
 :::row-end:::
 
+### Certificate-Based Authentication (CBA)
+
 :::row:::
     :::column span="1":::
-### Certificate-Based Authentication (CBA)
+
 :::image type="icon" source="icons/certificate.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -138,9 +143,11 @@ External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared device
     :::column-end:::
 :::row-end:::
 
+
+### Temporary Access Pass (TAP)
+
 :::row:::
     :::column span="1":::
-### Temporary Access Pass (TAP)
 :::image type="icon" source="icons/tap.svg" border="false":::
 :::column-end:::
 :::column span="3":::
