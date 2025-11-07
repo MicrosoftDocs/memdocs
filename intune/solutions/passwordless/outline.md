@@ -136,7 +136,7 @@ Before exploring Intune's role, it's important to understand the passwordless au
 **Certificate-Based Authentication (CBA)**
 
 :::image type="icon" source="icons/certificate.svg" border="false":::
-::column-end:::
+:::column-end:::
 :::column span="3":::
 > - Certificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
 > - Derived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
