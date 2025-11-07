@@ -22,7 +22,7 @@ To generate these recommendations, the agent aggregates signals from multiple so
 - Microsoft Entra ID – identity risk indicators
 - Microsoft Intune – device posture and deployment context
 
-By analyzing these signals, the agent assesses the potential risk associated with each request and delivers actionable insights to support secure and efficient change management.
+The agent analyzes these signals to assess the potential risk associated with each request and then delivers actionable insights to support secure and efficient change management.
 
 ## Prerequisites
 
@@ -153,21 +153,21 @@ At a high level, the agent does the following steps:
 
 2. **Evaluation** - The agent evaluates each Multi Admin Approval request using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin as part of the agent configuration.
 
-3. **Recommendations** - The agent generates recomendations (Agent suggestions) for each active Multi Admin Approval request and presents them in a list. The agent makes no changes or approvals on own. The final decision to approve or reject a Multi Admin Approval request remains with an Intune administrator.
+3. **Recommendations** - The agent provides recommendations for each active Multi Admin Approval request, which are *suggestions* only. Approval or rejection of a request remains with an Intune administrator.
 
-   The first column of results, *Suggested Next Steps*, includes the name of the request which is prefixed with the agents recommendation:
+   Recommendations are shown in a list. The first column, Suggested Next Steps, displays the recommended action followed by the request name. Possible actions include:
 
-   - *Approve* - The request was assessed to have low risk and should be safe to approve.
-   - *Reject* - The request was assessed to have high risk, and should not be approved.
-   - *Needs more info* - The agent was unable to fully assess the risk with this request and is should be further investigated by an administrator before approving or rejecting it. 
+   - Approve - Low-risk request; likely safe to approve.
+   - Reject - High-risk request; shouldn't be approved.
+   - Needs more info - Risk couldn't be fully assessed. This request requires further review.
 
-   In addition to labeling each suggestion with a recommendation, the agent provides underlying details that lead to that recommendation. These details are available when you drill in to an individual suggestion.
+   Each recommendation includes supporting details that explain how it was determined. You can view these insights by selecting a suggestion.
 
 ## Agent identity
 <!-- READY! -->
 The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change-the-agent-identity](#change-the-agent-identity) after setup if needed.
 
-The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, it's authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
+The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
 ### Change the agent identity
 <!-- READY -->
@@ -201,10 +201,10 @@ The agent runs under the identity and permissions of the account used during thi
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**.
 2. In **Overview**, select **Set up Agent**.
 
-   The **Set up Change Review Agent** pane lists the required permissions to set up the agent, and provides more information about hte setup requirements.
+   The **Set up Change Review Agent** pane lists the required permissions to set up the agent, and provides more information about the setup requirements.
 3. When requirements are in place, select **Start agent**.
 
-   The agent runs until it finishes and displays it's results in the **Overview** tab.
+   The agent runs until it finishes and displays its results in the **Overview** tab.
 
 When the agents run is finished, the agent is ready to use. To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use).
 
@@ -264,16 +264,16 @@ Use the **Settings** tab to view the details about the agent's identity and curr
 ## Configure custom instructions
 <!-- Pending clear example of instructions, and what they can do -->
 
-The Change Review Agent supports custom instructions. Custom instructions can refine the agent's evaluation criteria to better meet your organizations needs by emphasize or deemphasize different types of details, like policies or users. 
+The Change Review Agent supports custom instructions. Custom instructions can refine the agent's evaluation criteria to better meet your organizations needs by emphasize or de-emphasize different types of details, like policies or users. 
 
 These instructions can be used to:
 - Exclude changes that affect specific accounts from all policy suggestions, like break-glass/emergency accounts.
 - Prioritize approvals for specific policy types, like compliance policies.
 - Triage high-risk users first, such as changes submitted by Executives and administrators with highly privileged role permissions.
 
-Specify all custom instructions in the **Instructions** field of the agent's *Settings* tab in a format that concisely describes the intent. All instructions persist between agent runs and are evaluated every time the agent runs. You can edit the agents custom instructions between agent runs. After changing them, rerun the agent to generate updated suggestions that include the new instructions.
+Specify all custom instructions in the **Instructions** field of the agent's *Settings* tab in a format that concisely describes the intent. All instructions persist between agent runs and are evaluated each time the agent runs. You can edit the agents custom instructions between agent runs. After changing them, rerun the agent to generate updated suggestions that include the new instructions.
 
-The following are examples of instructions an organization might add: 
+The following are examples of instructions an organization might add:
 
 ```agent-prompt
 Exclude changes that affect specific accounts from all policy suggestions, like break-glass/emergency accounts. 
@@ -281,8 +281,6 @@ Exclude changes that affect specific accounts from all policy suggestions, like 
 ```agent-prompt
 We're a financial-services firm with hybrid workers. Prioritize device compliance policies that apply to remote workers.
 ``` 
-
-When reviewing an agent suggestion, the *Factors* section identifies the custom instructions that were considered by the agent in creating its results.
 
 **To configure custom instructions:**
 
