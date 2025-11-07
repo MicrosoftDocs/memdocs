@@ -22,7 +22,7 @@ Before you begin, make sure you meet the requirements detailed in the Get Starte
 
 ## Explore the agent
 
-To explore and use the agent, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents** > **Change Review Agent**. This opens the agent page. Depending on what you want to accomplish, choose one of the following tabs:
+To explore and use the agent, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents** > **Change Review Agent**, which opens the agent page. Depending on what you want to accomplish, choose one of the following tabs:
 
 - Overview – Displays the agent’s status, recent runs, and results.
 - Suggestions – Shows risk assessments and manage recommendations for Multi Admin Approval requests.
@@ -74,7 +74,7 @@ Use the **Settings** tab to view the details about the agent's identity and curr
 
 Run the agent to refresh its recommendations and evaluate new Multi Admin Approval requests. When started, the agent operates until it completes its evaluation. You can’t stop or pause the process.
 
-The agent operates under the identity and permissions of the assigned Intune admin account. Its operations are limited to the permissions of that account. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until it’s renewed.
+The agent operates under the identity and permissions of the assigned Intune admin account. Its operations are limited to the permissions of that account. If the agent doesn’t run for 90 consecutive days, its authentication expires and subsequent runs fail until the identity is renewed.
 
 The agent doesn't support scheduled runs and must be started manually each time you want to update its results.
 
