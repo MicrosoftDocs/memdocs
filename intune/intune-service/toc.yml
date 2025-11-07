@@ -1236,8 +1236,11 @@ items:
               displayName: gpo, windows
               href: ./configuration/settings-catalog-restrict-usb.md
             - name: Configure ADMX
-              displayName: gpo, admx, windows
+              displayName: gpo, admx, windows, settings catalog
               href: ./configuration/administrative-templates-windows.md
+            - name: Configure recovery lock on macOS
+              displayName: gpo, admx, macos
+              href: ./configuration/settings-catalog-recovery-lock.md
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./configuration/administrative-templates-import-custom.md
@@ -1761,7 +1764,7 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
-          - name: Setup macOS account configuration with LAPS
+          - name: Set up macOS account configuration with LAPS
             href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
