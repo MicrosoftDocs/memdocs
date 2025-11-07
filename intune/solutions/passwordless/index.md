@@ -46,7 +46,7 @@ Microsoft Intune configures passwordless sign-in policies across managed endpoin
 
 :::row:::
    :::column span="1":::
-   :::image type="icon" source="icons/platforms.svg" border="false"::: 
+   :::image type="icon" source="icons/devices.svg" border="false"::: 
    :::column-end:::
    :::column span="3":::
     ### Cross-platform SSO
