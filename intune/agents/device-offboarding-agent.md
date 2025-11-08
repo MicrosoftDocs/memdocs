@@ -118,7 +118,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 **1. Signal aggregation**
 :::column-end:::
 :::column span="3":::
->The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
+>The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
 :::column-end:::
 :::row-end:::
 :::row:::
