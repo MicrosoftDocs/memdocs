@@ -67,7 +67,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
 > The agent doesn't support:
-> - Window corporate devices
+> - Windows corporate devices
 > - Shared devices
 > - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones
@@ -117,7 +117,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 **1. Signal aggregation**
 :::column-end:::
 :::column span="3":::
->The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
+>The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
 :::column-end:::
 :::row-end:::
 :::row:::
