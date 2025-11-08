@@ -10,7 +10,9 @@ ms.reviewer: rishitasarin
 
 # Use the Device Offboarding Agent
 
-The Device Offboarding Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. This article provides sample responses to show how the agent helps with device offboarding.
+The* Device Offboarding Agent* identifies stale or misaligned devices across Intune and Entra ID providing actionable insights and requiring admin approval before offboarding any devices. The Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice.
+
+This article provides sample responses to show how the agent helps with device offboarding.
 
 ## Prerequisites
 
