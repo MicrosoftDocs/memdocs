@@ -122,7 +122,7 @@ The agent analyzes these signals to assess the potential risk associated with ea
 >
 > ---
 >
-> To **use the agent and perform offboarding actions, use an account with the following roles:
+> To **use** the agent and perform offboarding actions, use an account with the following roles:
 >
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
@@ -165,7 +165,7 @@ At a high level, the agent does the following steps:
 
 ## Agent identity
 <!-- READY! -->
-The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change-the-agent-identity](#change-the-agent-identity) after setup if needed.
+The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change the agent identity](#change-the-agent-identity) after setup if needed.
 
 The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
@@ -196,24 +196,29 @@ Before setting up and starting the agent for the first time, review the followin
 
 ## Set up the agent
 <!-- READY -->
-The agent runs under the identity and permissions of the account used during this setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. So, any changes to the account's permissions affect the agent's capabilities during its next run.
+The agent operates under the identity and permissions of the Intune admin account used during setup. Its operations are limited to the permissions of that account, and the identity refreshes with each run. Any changes to the account’s permissions affect the agent’s capabilities during its next run.
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**.
+**To set up the Change Review Agent:**
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
+
 2. In **Overview**, select **Set up Agent**.
 
-   The **Set up Change Review Agent** pane lists the required permissions to set up the agent, and provides more information about the setup requirements.
-3. When requirements are in place, select **Start agent**.
+   The **Set up Change Review Agent** pane lists the required permissions and provides details about setup requirements.
 
-   The agent runs until it finishes and displays its results in the **Overview** tab.
+3. The Set up Change Review Agent pane lists the required permissions and provides details about setup requirements.
+When requirements are met, select Start agent.
 
-When the agents run is finished, the agent is ready to use. To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
+The agent operates until it completes its evaluation and displays results in the Overview tab. When the run finishes, the agent is ready to use.
+
+To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
 
 ## Explore the agent
-<!-- REVIEW after DEMO --- Does this beling in Use the Agent? OR perhaps the drill in details do. = -->
+<!-- REVIEW after DEMO --- Does this belong in Use the Agent? OR perhaps the drill in details do.  -->
 After you configure the agent, you can manage it from the Change Review Agent pane.
 
 In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**:
-- On the **Overview** tab, see the agent runt status, review suggestions for the top Multi Admin Approval requests, and see the record of recent agent activity. 
+- On the **Overview** tab, review the agent run status, suggestions for the top Multi Admin Approval requests, and the record of recent agent activity.
 - On the **Suggestions** tab, view the full list of suggestions for approval requests, including suggestions that are *Not started*, *In progress*, or *Completed*.
 - On the **Settings** tab, review details about the agent's configuration.
 
