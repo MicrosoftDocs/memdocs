@@ -122,7 +122,7 @@ Image hash values:
 - **serverImageDigest**: sha256:a8f1d5c7d734516e40ee3c2ead88d785ad25c5886ded095ce6dc74cf62b9916f
 
 Changes in this release:
-- Minor bug fixes
+- Contains various package updates and a major bugfix for the UI
 
   
 ### October 7, 2025
