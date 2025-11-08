@@ -68,7 +68,7 @@ The Device Offboarding Agent helps IT admins offboard devices securely and effic
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
 > The agent doesn't support:
-> - Window corporate devices
+> - Windows corporate devices
 > - Shared devices
 > - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones
