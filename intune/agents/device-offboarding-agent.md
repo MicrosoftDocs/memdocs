@@ -8,7 +8,7 @@ ms.author: paoloma
 ms.reviewer: rishitasarin
 ---
 
-# Get Started with the Device Offboarding Agent
+# Get started with the Device Offboarding Agent
 
 The Device Offboarding Agent helps IT admins offboard devices securely and efficiently across Microsoft Intune, Microsoft Entra ID, Microsoft Defender, Autopilot, and Apple Business Manager. It analyzes device signals from multiple sources to identify stale or misaligned devices and provides actionable offboarding recommendations. Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice. All actions require admin approval.
 
@@ -156,7 +156,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 
 ### Agent identity
 
-The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. To maintain functionality, [renew the agent](#renew-the-agent) identity before the 90-day limit.
+The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. <!--To maintain functionality, [renew the agent](#renew-the-agent) identity before the 90-day limit.-->
 
 ### Operational considerations
 
@@ -239,7 +239,6 @@ To configure custom instructions:
 1. In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**.
 1. Select the **Settings** tab.
 1. In the **Instructions** field, enter a prompt to customize the agent's evaluation criteria.
-  - Setting thresholds for device activity
 
 ### Examples of custom instructions you can use
 
@@ -262,7 +261,7 @@ Include [device ID] in all recommendations
 Include only [device ID] in recommendations
 ```
 
-[!INCLUDE [renew](includes/renew.md)]
+<!-- [!INCLUDE [renew](includes/renew.md)] -->
 
 [!INCLUDE [remove](includes/remove.md)]
 
