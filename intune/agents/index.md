@@ -35,7 +35,7 @@ The following agents are currently available:
 
 :::image type="icon" source="icons/device-offboarding-agent.svg" border="false":::
 
-> The *Device Offboarding Agent* identifies stale or misaligned devices across Intune, Entra ID, Defender, Autopilot, and Apple Business Manager, providing actionable insights and requiring admin approval before offboarding any devices.
+> The *Device Offboarding Agent* identifies stale or misaligned devices across Intune and Entra ID, providing actionable insights and requiring admin approval before offboarding any devices.
 
 > [!div class="nextstepaction"]
 > [Learn more](device-offboarding-agent.md)

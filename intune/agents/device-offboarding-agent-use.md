@@ -10,7 +10,7 @@ ms.reviewer: rishitasarin
 
 # Use the Device Offboarding Agent
 
-Use the Device Offboarding Agent in Microsoft Intune to identify and manage devices removed from Intune that might still exist in Microsoft Entra ID or other connected services.
+The* Device Offboarding Agent* identifies stale or misaligned devices across Intune and Entra ID, providing actionable insights and requiring admin approval before offboarding any devices. The Device Offboarding Agent complements existing Intune automation by surfacing insights and handling ambiguous cases where automated cleanup may not suffice.
 
 This article provides sample responses to show how the agent helps with device offboarding.
 
@@ -20,7 +20,7 @@ Before you begin, make sure you meet the requirements detailed in the [Get Start
 
 ## Run the agent
 
-To start using the Device Offboarding Agent, first run an evaluation of your device inventory. This action resets the agent's suggestions, status, and their assignments.
+To start using the Device Offboarding Agent, first run an evaluation of your device inventory. This action resets the agent's suggestions and status.
 
 To manually run the Device Offboarding Agent:
 
@@ -49,10 +49,10 @@ Each offboarding suggestion includes detailed context and recommended actions. T
 
 - View details and take action: Select a suggestion to review its rationale and initiate offboarding steps.
 - Update status: Choose **Manage suggestion** to mark the offboarding action as *In progress* or *Completed*.
-- Assign tasks: Use **Add to tasks list** to delegate the offboarding action to an individual or team for tracking and follow-up.
 
 :::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
 
+<!--
 ## Examples of recommended actions
 
 The following examples illustrate typical responses and actions you might receive from the agent.
@@ -115,6 +115,7 @@ Recommended Actions:
 2. Remove devices from Microsoft Defender portal >
 3. Disable devices in Microsoft Entra >
 ```
+-->
 
 ## Device Offboarding Agent logs
 
