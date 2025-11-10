@@ -19,7 +19,7 @@ This article details basic information for using iVerify integration with Intune
 
 ## Supported platforms
 
-Use iVerify Enterprise with teh following platforms and version:
+Use iVerify Enterprise with the following platforms and version:
 - Android 9.0 and later
 - iOS/iPadOS 14.0 and later 
 
@@ -53,7 +53,7 @@ Use the following guidance to authorize the **iVerify Enterprise** app:
 
 For step-by-step setup guidance, see [Connecting iVerify Enterprise with Microsoft Intune](https://edr.iverify.io/docs/iverify-portal-guide/Integrations/intune-mtd) in the iVerify documentation. To access this content, sign in to your iVerify subscription. 
 
-## Related  content
+## Related content
 
 - [Create device compliance policy for Mobile Threat Protection](mtd-device-compliance-policy-create.md)
 - [Enable mobile threat connectors in Intune](mtd-connector-enable.md)
