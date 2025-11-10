@@ -242,22 +242,22 @@ To configure custom instructions:
 ### Examples of custom instructions you can use
 
 ```agent-prompt
-Exclude from all recommendations if device has been inactive in Entra for less than [n] days 
+Exclude devices with IDs […]
 ```
 ```agent-prompt
-Include in all recommendations if device has been active in Entra more than [n] days ago 
+Exclude devices with last activity after […]
 ```
 ```agent-prompt
-Exclude [device ID] from all recommendations 
+Exclude devices with last activity before […]
 ```
 ```agent-prompt
-Exclude [device ID] from recommendation if retired is true 
+Include only devices with IDs […]
 ```
 ```agent-prompt
-Include [device ID] in all recommendations 
+Include only devices with last activity after […]
 ```
 ```agent-prompt
-Include only [device ID] in recommendations
+Include only devices with last activity before […]
 ```
 
 <!-- [!INCLUDE [renew](includes/renew.md)] -->

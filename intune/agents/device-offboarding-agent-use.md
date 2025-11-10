@@ -52,6 +52,7 @@ Each offboarding suggestion includes detailed context and recommended actions. T
 
 :::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
 
+<!--
 ## Examples of recommended actions
 
 The following examples illustrate typical responses and actions you might receive from the agent.
@@ -114,6 +115,7 @@ Recommended Actions:
 2. Remove devices from Microsoft Defender portal >
 3. Disable devices in Microsoft Entra >
 ```
+-->
 
 ## Device Offboarding Agent logs
 
