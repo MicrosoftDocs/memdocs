@@ -1,7 +1,7 @@
 ---
 title: Configure the Microsoft Managed Home Screen App
 description: Learn how to configure the Microsoft Managed Home Screen app.
-ms.date: 09/05/2025
+ms.date: 11/06/2025
 ms.topic: how-to
 ms.reviewer: abigailstein
 ms.collection:
@@ -74,6 +74,9 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Wi-Fi allowlist | bundleArray | See **Enter JSON Data** section of this document. | Lets you list all the SSIDs of the Wi-Fi networks you want the device to show in Managed Home Screen. This list is   only relevant if show Wi-Fi setting and Enable Wi-Fi   allowlist is set to True. If either setting is set to False, then   you don't need to modify this configuration. | ✔️ |
 | Show Bluetooth setting | bool | FALSE | Turning this setting to True allows the   end user to turn on or off Bluetooth and to connect to different   Bluetooth-capable devices. | ✔️ |
 | Show volume setting | bool | FALSE | Turning this setting to True allows the   end user to access a volume slider to adjust media volume. | ✔️ |
+| Show call volume control | bool | FALSE | Turning this setting to True allows end users to adjust call volume directly from the Managed Settings page in MHS. This control gives task workers greater flexibility to manage sound levels for different hearing needs or work environments without exiting kiosk mode. | ❌ |
+| Show ring and notification volume control | bool | FALSE | Turning this setting to True allows end users to adjust ring and notification volume directly from the Managed Settings page in MHS. This control helps users adapt volume levels for different environments, such as keeping notifications quiet during patient care or louder in busy operational settings. | ❌ |
+| Show alarm volume control | bool | FALSE | Turning this setting to True allows end users to adjust alarm volume directly from the Managed Settings page in MHS. This control enables task workers to set appropriate alarm levels based on their work scenario and hearing needs without leaving kiosk mode. | ❌ |
 | Show flashlight setting | bool | FALSE | Turning this setting to True allows the   end user to on or off the device's flashlight. If the device doesn't support  a flashlight, then this setting doesn't appear, even if configured   to True. | ✔️ |
 | Show brightness slider | bool | FALSE | Turn this setting to TRUE to allow end users to access a brightness slider to adjust the device screen brightness. | ❌ |
 | Show adaptive brightness toggle | bool | FALSE | Turn this setting to TRUE to allow end users to turn adaptive brightness on and off on the device. Adaptive brightness allows the device to select an optimal brightness based on ambient lighting. | ❌ |
@@ -362,6 +365,18 @@ The following syntax is an example JSON script with all the available configurat
         },
         {
             "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_call_volume_control",
+            "valueBool": false
+        },
+        {
+            "key": "show_ring_and_notification_volume_control",
+            "valueBool": false
+        },
+        {
+            "key": "show_alarm_volume_control",
             "valueBool": false
         },
         {
