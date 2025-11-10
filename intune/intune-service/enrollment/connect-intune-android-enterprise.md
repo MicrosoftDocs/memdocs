@@ -77,8 +77,10 @@ If you onboarded to Microsoft Intune with a Gmail account, you can optionally up
 1. Select **Upgrade** again to confirm that you want to upgrade your enterprise.   
 1. In the Google popup, follow the steps. When given the option, select **Sign in with Microsoft**.  
 1. Select **Upgrade**.  
-1. Wait for the upgrade to finish. An onscreen message appears confirming that the upgrade is done. You also receive a notification in the admin center confirming that the upgrade is complete. At this point, the **Upgrade** button appears grayed out because no more upgrades are available. If the button appears grayed out and you haven't upgraded, check your RBAC permissions.  
+1. Wait for the upgrade to finish. An onscreen message appears confirming that the upgrade is done. You also receive a notification in the admin center confirming that the upgrade is complete.
 
+    > [!NOTE]
+    > After a successful upgrade, the **Upgrade** button appears grayed out because no more upgrades are available. If the button appears grayed out and you haven't upgraded, check your RBAC permissions.
 ## Disconnect your Android Enterprise administrative account
 
 You can disconnect the link between Microsoft Intune and Google in the admin center. Disconnecting the account disables Android Enterprise device management for your tenant.
