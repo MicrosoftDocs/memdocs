@@ -86,16 +86,7 @@ Still available, but not phishing‑resistant:
 **Authenticator - phone sign‑in** (Approve on phone): remains a passwordless option, but it's not phishing‑resistant the way passkeys/FIDO/CBA are. Many orgs are moving users from phone sign‑in to passkeys.
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+- [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 
 
-## Comparison of Key Passwordless Methods and Intune's Role 
 
-| Method | Intune Configuration | Platforms | Description |
-|--|--|--|--|
-| Windows Hello for Business | Enable via Windows enrollment policy; set PIN/biometric requirements (Intune Identity Protection profile)1. Optionally hide password credential provider (Windows 11) to force Hello2 3. | Windows 10/11 (Azure AD-joined) | Passwordless sign-in using PIN or biometrics tied to TPM-backed keys. Provides two-factor auth (device + PIN/biometric) and yields SSO token on login. Intune can make Hello mandatory on devices. |
-| FIDO2 Security Keys | Enable "Use security keys for sign-in" in Hello for Business settings4 or via Identity Protection profile5. Ensure Azure AD FIDO2 method is enabled tenant-wide. | Windows 10/11 (login); All platforms (web/app sign-in) | External authenticator (USB/NFC key) used instead of password. Intune allows Windows OS to accept FIDO2 at login6. Also used on web or apps via browser support on Windows, macOS, iOS, Android. Totally passwordless and phishing-resistant. |
-| Temporary Access Pass | Enable "Web sign-in" credential provider via Intune policy (Settings Catalog > Authentication)7. TAP itself configured in Entra ID admin center (Authentication Methods > Temporary Access Pass). | Windows 10/11 (login); (Web sign-in also works for phone sign-in) |Time-limited passcode issued by Entra ID for one-time sign-in. Intune enables its use at Windows login8. Used for onboarding or recovery to sign in without a password and then set up a permanent method (like Hello). |
-| Passkeys (Entra ID) | Ensure devices are eligible (e.g. Windows 11 22H2+, iOS 17+, Android 14+). Deploy Authenticator app via Intune on mobile; advise users on setup. No separate Intune toggle needed; enabled in Entra ID auth policy9. | All platforms (Windows, macOS, iOS, Android - in browsers or Authenticator) | Modern FIDO2 credentials that can sync across devices. E.g., Authenticator can store a passkey for an Entra account10, or a user can use an Apple iCloud passkey to log into Entra ID in Safari (public preview). Provides a convenient, strong login using device biometrics. Intune's device compliance and app config support their usage (making sure Authenticator or company portal is present for token flow). |
-
-> (Table: Key passwordless authentication methods supported in an Intune-managed environment, with summary of how Intune configures/supports them and where they apply.) 
