@@ -2,7 +2,7 @@
 author: brenduns
 ms.author: brenduns
 ms.topic: include
-ms.date: 08/20/2024
+ms.date: 11/10/2025
 ---
 
 <!-- This note appears in several articles that detail MTD partner apps that support App Protection policies (MAM)  Do not add a blank line after the end of this note.  -->
@@ -14,6 +14,7 @@ ms.date: 08/20/2024
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (CylancePROTECT for Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
+> - iVerify Enterprise (Android, iOS/iPadOS)
 > - Jamf (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - Microsoft Defender for Endpoint (Android, iOS/iPadOS, Windows)
