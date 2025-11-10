@@ -75,7 +75,8 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Show Bluetooth setting | bool | FALSE | Turning this setting to True allows the   end user to turn on or off Bluetooth and to connect to different   Bluetooth-capable devices. | ✔️ |
 | Show volume setting | bool | FALSE | Turning this setting to True allows the   end user to access a volume slider to adjust media volume. | ✔️ |
 | Show call volume control | bool | FALSE | Turning this setting to True allows end users to adjust call volume directly from the Managed Settings page in MHS. This control gives task workers greater flexibility to manage sound levels for different hearing needs or work environments without exiting kiosk mode. | ❌ |
-| Show ring and notification volume control | bool | FALSE | Turning this setting to True allows end users to adjust ring and notification volume directly from the Managed Settings page in MHS. This control helps users adapt volume levels for different environments, such as keeping notifications quiet during patient care or louder in busy operational settings. | ❌ |
+| Show ring volume control | bool | FALSE | Turning this setting to True allows end users to adjust ring volume directly from the Managed Settings page in MHS. This control helps users adapt ring volume levels for different environments without exiting kiosk mode. | ❌ |
+| Show notification volume control | bool | FALSE | Turning this setting to True allows end users to adjust notification volume directly from the Managed Settings page in MHS. This control helps users adapt notification volume levels for different environments, such as keeping notifications quiet during patient care or louder in busy operational settings. | ❌ |
 | Show alarm volume control | bool | FALSE | Turning this setting to True allows end users to adjust alarm volume directly from the Managed Settings page in MHS. This control enables task workers to set appropriate alarm levels based on their work scenario and hearing needs without leaving kiosk mode. | ❌ |
 | Show flashlight setting | bool | FALSE | Turning this setting to True allows the   end user to on or off the device's flashlight. If the device doesn't support  a flashlight, then this setting doesn't appear, even if configured   to True. | ✔️ |
 | Show brightness slider | bool | FALSE | Turn this setting to TRUE to allow end users to access a brightness slider to adjust the device screen brightness. | ❌ |
@@ -372,7 +373,11 @@ The following syntax is an example JSON script with all the available configurat
             "valueBool": false
         },
         {
-            "key": "show_ring_and_notification_volume_control",
+            "key": "show_ring_volume_control",
+            "valueBool": false
+        },
+        {
+            "key": "show_notification_volume_control",
             "valueBool": false
         },
         {
