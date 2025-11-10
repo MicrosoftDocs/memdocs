@@ -33,6 +33,12 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
+## Device preparation deployments on Windows 365 devices time out after 60 minutes
+
+Date added: *November 10, 2025*
+
+There is a known issue for Windows 365 devices where the value set for **Minutes allowed before device preparation fails** in the Cloud PC provisioning policy does not get configured correctly during Autopilot device preparation provisioning. As a result, deployments will time out if they require more than 60 minutes to install all configurations selected in the Device preparation policy. To avoid unexpected failures, we recommend that admins limit the number of blocking apps configured for the Device preparation policy in automatic mode until the issue is resolved. This issue will be fixed in the future.
+
 ## Exporting logs during the out-of-box experience (OOBE) doesn't show result
 
 Date added: *January 6, 2025*
