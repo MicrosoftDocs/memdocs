@@ -148,9 +148,9 @@ At a high level, the agent does the following steps:
    - Microsoft Entra ID - for identity risk
    - Microsoft Intune - for device and deployment context
 
-2. **Evaluation** - The agent evaluates Windows PowerShell scripts for Multi Admin Approval requests using predefined logic that's built-in to the agent configuration.
+2. **Evaluation** - The agent evaluates Windows PowerShell scripts for Multi Admin Approval requests using predefined logic that's built in to the agent configuration.
 
-3. **Recommendations** - The agent provides recommendations for up to 10 active Multi Admin Approval requests, presenting the 10 which are closest to expiration. The focus ensures those requests in danger of expiring can be addressed first. These are *suggestions* only and actual approval or rejection of a request remains with an Intune administrator. 
+3. **Recommendations** - The agent provides recommendations for up to 10 active Multi Admin Approval requests, presenting the 10 that are closest to expiration. The focus ensures those requests in danger of expiring can be addressed first. These are *suggestions* only and actual approval or rejection of a request remains with an Intune administrator. 
 
    Recommendations are shown in a list. The first column, Suggested Next Steps, displays the recommended action followed by the request name. Possible actions include:
 
