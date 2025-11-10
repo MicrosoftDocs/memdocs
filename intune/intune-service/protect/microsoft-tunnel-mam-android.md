@@ -6,6 +6,7 @@ ms.author: brenduns
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.reviewer: ochukwunyere
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - sub-intune-suite
@@ -68,7 +69,7 @@ Microsoft Tunnel for MAM on Android is supported with the following sovereign cl
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-Microsoft Tunnel for MAM on Android isn’t supported on Microsoft Azure operated by 21Vianet.
+Microsoft Tunnel for MAM on Android isn't supported on Microsoft Azure operated by 21Vianet.
 
 Microsoft Tunnel for MAM on Android doesn't support Federal Information Processing Standard (FIPS).
 

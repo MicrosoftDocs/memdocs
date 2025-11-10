@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Pause Config Refresh"
 description: Learn how to temporarily pause policy enforcement on Windows 11 devices using Intune's Pause Config Refresh remote action to support troubleshooting and manual changes.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ms.reviewer: Mike Danoski
 ---
@@ -14,34 +14,48 @@ Config Refresh is a Windows feature that periodically reapplies policy settings 
 
 With the pause Config Refresh action, IT admins can suspend policy refresh for a specified duration—up to 1,440 minutes. After the pause period ends, Config Refresh resumes automatically.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Windows 11
-
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
-
-> [!div class="checklist"]
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
 > To use this remote action, make sure devices meet the following requirements:
 >
 > - Config Refresh is enabled.
+>
+> To learn more, see [Config Refresh][LEARN-1].
 
-To learn more, see [Config Refresh][LEARN-1].
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::row:::
+:::column span="1":::
 
-> [!div class="checklist"]
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Intune Administrator][ENT-R1]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Run Pause Configuration Refresh**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
 ## How to pause Config Refresh from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

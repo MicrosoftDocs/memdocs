@@ -1,8 +1,9 @@
 ---
-title: Resource Performance report in Microsoft Intune Advanced Analytics
-description: This article provides an overview of the resource performance report for cloud-managed Windows devices
-ms.date: 08/19/2024
-ms.topic: article
+title: Resource Performance Report in Microsoft Intune Advanced Analytics
+description: Explore the resource performance report in Microsoft Intune Advanced Analytics for CPU and RAM insights, device performance analysis, and proactive endpoint analytics.
+ms.date: 10/09/2025
+ms.topic: concept-article
+ms.subservice: suite
 ---
 
 # Resource Performance report in Microsoft Intune Advanced Analytics
@@ -36,7 +37,7 @@ The resource performance report is available for:
 Best practices:
 
 - IT administrators should periodically review the resource performance dashboard, to investigate poor performing devices from CPU or RAM spikes.
-- Identify cohorts of devices, either hardware type, or by groups of users, with poor performance. 
+- Identify cohorts of devices, either hardware type, or by groups of users, with poor performance.
 - Investigate performance issues and resolutions before users report persistent problems. Use the Enhanced Device Timeline and Device Query capabilities to find the root cause of issues.
 - Leverage performance data to optimize hardware replacement costs, extending the life of devices with no performance problem, or replacing underperforming devices sooner for improved user experience.
 

@@ -61,7 +61,7 @@ To learn more about using security baselines, see:
 ## Microsoft Defender for Endpoint baseline for March 2020 - version 3
 ::: zone-end
 
-The Microsoft Defender for Endpoint baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites).
+The Microsoft Defender for Endpoint baseline is available when your environment meets the prerequisites for using [Microsoft Defender for Endpoint](microsoft-defender-with-intune.md#prerequisites).
 
 This baseline is optimized for physical devices and isn't recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can affect remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 

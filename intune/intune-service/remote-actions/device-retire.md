@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Retire"
 description: Learn how to retire device using Microsoft Intune.
-ms.date: 07/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: 51e33912-415a-402f-8201-8acebf3e4991
 ---
@@ -25,11 +25,15 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 
 ::: zone-end
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Android device administrator
@@ -38,17 +42,24 @@ Before retiring a Microsoft Entra joined device, make sure to back up any critic
 > - macOS
 > - Windows
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Retire**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
 ## How to retire a device from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

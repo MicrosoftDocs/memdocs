@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: BitLocker Key Rotation"
 description: Learn how to rotate the BitLocker recovery key with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
@@ -11,26 +11,37 @@ The *BitLocker key rotation* remote action in Microsoft Intune lets IT admins re
 
 Key rotation is especially useful in environments where devices are frequently serviced, reassigned, or exposed to support scenarios. For example, if a helpdesk technician shares a recovery key during a support call, you can rotate the key from Intune to ensure it can't be reused.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Windows
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
 > - [Endpoint Security Manager][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Rotate BitLockerKeys**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
-
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
 ## How to rotate the BitLocker key from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

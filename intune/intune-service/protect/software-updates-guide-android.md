@@ -108,5 +108,5 @@ For more version information, go to [Supported operating systems and browsers in
 ## Related articles
 
 - [Software updates planning guide and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
-- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-- [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)
+- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)
+- [Software updates planning guide for managed macOS devices](updates/software-updates-guide-macos.md)

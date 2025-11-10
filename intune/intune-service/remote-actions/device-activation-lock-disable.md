@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Disable Activation Lock"
 description: Learn how to use Microsoft Intune to disable Activation Lock on Apple devices.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 zone_pivot_groups: e5de148b-1c4f-40a3-8ecb-0f8a7724d927
 ---
@@ -47,48 +47,70 @@ The business benefits of using Intune to manage Activation Lock are:
 > [!TIP]
 > You can also turn off Activation Lock directly in Apple Business Manager and Apple School Manager. To learn more, see [Turn off Activation Lock in Apple Business Manager][APL-1].
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - iOS/iPadOS in [Supervised Mode][IOS-SUP] through Automated Device Enrollment (ADE)
 > - macOS [enrolled via Automated Device Enrollment (ADE)][MAC-ADE]
+:::column-end:::
+:::row-end:::
 
-[!INCLUDE [device-configuration-requirements](../../includes/h3/device-configuration-requirements.md)]
-
-Before you can manage Activation Lock, you must configure your devices to allow it.
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
 
 ::: zone pivot="ios"
-1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS platform and use the following setting:
-
-    | Category | Setting name | Value |
-    |--|--|--|
-    | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
-
+> Before you can manage Activation Lock, you must configure your devices to allow it.
+> 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS platform and use the following setting:
+> 
+>     | Category | Setting name | Value |
+>     |--|--|--|
+>     | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
+>
+> 1. Assign the policy to a group that contains as members the devices that you want to configure.
 ::: zone-end
 ::: zone pivot="macos"
-1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the macOS platform and use the following setting:
-
-    | Category | Setting name | Value |
-    |--|--|--|
-    | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
-
+> Before you can manage Activation Lock, you must configure your devices to allow it.
+> 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the macOS platform and use the following setting:
+> 
+>     | Category | Setting name | Value |
+>     |--|--|--|
+>     | **Managed Setting** > **MDM Options** | Activation Lock Allowed While Supervised| Allowed|
+>
+> 1. Assign the policy to a group that contains as members the devices that you want to configure.
 ::: zone-end
 
-2. Assign the policy to a group that contains as members the devices that you want to configure.
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - Intune Service Administrator
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Bypass activation lock**
->   - Permissions that provide visibility into and access to managed devices in Intune (e.g. Organization/Read, Managed devices/Read)
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+
+:::column-end:::
+:::row-end:::
 
 ## How to use disable Activation Lock
 

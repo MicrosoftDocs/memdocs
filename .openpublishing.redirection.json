@@ -1,7 +1,35 @@
 {
   "redirections": [
-
     {
+      "source_path": "intune/intune-service/protect/managed-software-updates-ios-macos.md",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-guide-ios-ipados.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-guide-macos.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-ios.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-macos.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-reports-apple-declarative-based.md",
+      "redirect_url": "/intune/intune-service/protect/updates/apple-reports",
+      "redirect_document_id": false
+    },    {
       "source_path": "intune/intune-service/fundamentals/intune-legacy-pc-client.md",
       "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
       "redirect_document_id": false
@@ -93,7 +121,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/software-update-report-apple-per-device.md",
-      "redirect_url": "/intune/intune-service/protect/managed-software-updates-ios-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
       "redirect_document_id": false
     },
     {
@@ -2333,7 +2361,7 @@
     },
     {
       "source_path": "intune/intune/protect/software-updates-declarative-ios-macos.md",
-      "redirect_url": "/intune/intune-service/protect/managed-software-updates-ios-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
       "redirect_document_id": false
     },
     {
@@ -2658,6 +2686,26 @@
     {
       "source_path": "intune/intune-service/fundamentals/remote-help-webapp.md",
       "redirect_url": "/intune/intune-service/fundamentals/remote-help",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-configure.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-integrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-manage-android.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-configure-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-monitor.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-with-intune",
       "redirect_document_id": false
     }
   ]

@@ -136,7 +136,7 @@ While Intune can integrate with several [Mobile Threat Defense partners](../prot
 - Use of Defender for Endpoint device risk signals in Intune compliance policies and app protection policies.
 - Access to *Tamper protection* capabilities.
 
- To learn more about using Microsoft Defender for Endpoint with Intune, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+ To learn more about using Microsoft Defender for Endpoint with Intune, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).
 
 ## Role-based access control requirements
 
@@ -264,4 +264,4 @@ Configure:
 - [Security baselines](../protect/security-baselines.md)
 - [Compliance policies](../protect/device-compliance-get-started.md)
 - [Conditional Access policies](#configure-conditional-access)
-- [Integration with Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md)
+- [Integration with Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md)

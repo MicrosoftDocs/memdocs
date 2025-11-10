@@ -71,7 +71,7 @@ To see a generated report of device state, you can use the following steps:
     > [!NOTE]
     > This **Device compliance** report provides a time stamp of when the report was last generated.
 
-For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).
 
 ### Device compliance trends report (Historical)
 
@@ -287,7 +287,16 @@ You can view details about failed user enrollment attempts.
 You can view the **Enrollment failures** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > **Enrollment failures**.
+2. Select **Devices** > **Monitor** > **Enrollment failures**.  
+
+### Enrollment time grouping  
+
+View the details of failed grouping attempts that happened with [enrollment time grouping](../enrollment/enrollment-time-grouping.md). 
+
+You can view the enrollment time grouping report using the following steps:  
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Devices** > **Monitor** > **Enrollment time grouping failures**.  
 
 ### Incomplete user enrollments report (Operational)
 

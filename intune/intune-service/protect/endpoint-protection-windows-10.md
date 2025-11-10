@@ -1166,7 +1166,7 @@ Block end-user access to the various areas of the Microsoft Defender Security Ce
 - **Tamper Protection**  
   **Default**: Not configured
 
-  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](advanced-threat-protection.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).
+  Turn Tamper Protection on or off on devices. To use Tamper Protection, you must [integrate Microsoft Defender for Endpoint with Intune](microsoft-defender-with-intune.md), and have [Enterprise Mobility + Security E5 Licenses](../fundamentals/licenses.md).
   - **Not configured** - No change is made to device settings.
   - **Enabled** - Tamper Protection is turned on and restrictions are enforced on devices.
   - **Disabled** - Tamper Protection is turned off and restrictions aren't enforced.
