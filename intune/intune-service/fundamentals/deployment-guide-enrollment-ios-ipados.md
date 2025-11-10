@@ -35,6 +35,8 @@ There's also a visual guide of the different enrollment options for each platfor
 
 For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
 
+Note that for new and existing tenants, there may be a one-time failure when completing Entra ID join. This can be resolved by manually syncing the device from the Intune admin console, or from the device itself from the Company Portal website or the Company Portal app. If this occurs, this will only happen to one device completing Entra ID registration for the tenant, and a manual sync will resolve this for all future enrollments. Alternatively, add the Microsoft Intune Certificate Authority client production app to your tenant as a workaround. To do so, a Microsoft Entra administrator must create a service principal object, with app ID 3dde09a2-ff4f-4ebd-9b9a-d24a7a819b6f, in PowerShell or Microsoft Graph.
+
 ## Automated Device Enrollment (ADE) (supervised)
 
 Previously called Apple Device Enrollment Program (DEP). Use on devices owned by your organization. This option configures settings using Apple Business Manager (ABM) or Apple School Manager (ASM). It enrolls a large number of devices, without you ever touching the devices. These devices are purchased from Apple, have your preconfigured settings, and can be shipped directly to users or schools. You create an enrollment profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and push this profile to the devices.
