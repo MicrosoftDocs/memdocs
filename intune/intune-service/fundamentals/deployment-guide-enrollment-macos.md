@@ -39,6 +39,8 @@ There's also a visual guide of the different enrollment options for each platfor
 
 For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
 
+Note that for new and existing tenants, there may be a one-time failure when completing Entra ID join. This can be resolved by manually syncing the device from the Intune admin console, or from the device itself from the Company Portal website or the Company Portal app. If this occurs, this will only happen to one device completing Entra ID registration for the tenant, and a manual sync will resolve this for all future enrollments. Alternatively, add the Microsoft Intune Certificate Authority client production app to your tenant as a workaround. To do so, a Microsoft Entra administrator must create a service principal object, with app ID 3dde09a2-ff4f-4ebd-9b9a-d24a7a819b6f, in PowerShell or Microsoft Graph.
+
 ## BYOD: Device enrollment
 
 Use for personal or bring your own devices (BYOD). This enrollment option is also known as **user approved enrollment**.
