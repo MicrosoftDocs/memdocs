@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 04/04/2025
+ms.date: 11/10/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -33,13 +33,19 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
-## Exporting logs during the out-of-box experience (OOBE) doesn't show result
+### Device preparation deployments on Windows 365 devices time out after 60 minutes 
+
+Date added: *November 10, 2025*
+
+There is a known issue for Windows 365 devices where the value set for **Minutes allowed before device preparation fails** in the Cloud PC provisioning policy does not get configured correctly during Autopilot device preparation provisioning. As a result, deployments time out if they require more than 60 minutes to install all configurations selected in the Device preparation policy. To avoid unexpected failures, we recommend that admins limit the number of blocking apps configured for the Device preparation policy in automatic mode until the issue is resolved. This issue will be fixed in the future.  
+
+### Exporting logs during the out-of-box experience (OOBE) doesn't show result
 
 Date added: *January 6, 2025*
 
 When a failure occurs during the provisioning process, an **Export logs** option is displayed to the user. When selected, it saves the file to the first USB drive on the device without displaying the browse dialog. The browse dialog isn't displayed for security reasons. Currently, users don't see failure or success messages to indicate the logs were saved. This issue will be fixed in the future.
 
-## Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
+### Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
 
 Date added: *December 18, 2024*
 
@@ -47,7 +53,7 @@ During the editing flow of the Windows Autopilot device preparation policy, ther
 
 As a workaround, select the table header **Allowed Applications** or **Allowed Scripts** to reload the table's contents.
 
-## Win32, WinGet, and Enterprise App Catalog applications are skipped when Managed installer policy is enabled for the tenant
+### Win32, WinGet, and Enterprise App Catalog applications are skipped when Managed installer policy is enabled for the tenant
 
 Date added: *October 10, 2024*<br>
 Date updated: *June 20, 2025*
@@ -60,7 +66,7 @@ When the [Managed installer policy](/mem/intune-service/protect/endpoint-securit
 
 For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
 
-## Security group membership update failures might lead to non-compliant devices
+### Security group membership update failures might lead to non-compliant devices
 
 Date added: *September 27, 2024*
 
@@ -89,7 +95,7 @@ To mitigate the issue, follow these steps:
 
 Security group membership failures can be prevented by following these steps, ensuring devices remain compliant and secure.
 
-## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
+### Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 
 Date added: *July 8, 2024* <br>
 Date updated: *July 23, 2024*
@@ -104,13 +110,13 @@ Set-TimeZone -Id "UTC"
 
 **This issue was resolved in July 2024.**
 
-## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
+### BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
 Date added: *July 8, 2024*
 
 In some Windows Autopilot device preparation deployments, BitLocker encryption may default to 128-bit even though the admin configured 256-bit encryption due to a known race condition. The issue is being investigated. Microsoft recommends that customers who need 256-bit BitLocker encryption wait for the issue to be resolved before trying to use Windows Autopilot device preparation.
 
-## Windows Autopilot device preparation policy shows 0 groups assigned
+### Windows Autopilot device preparation policy shows 0 groups assigned
 
 Date added: *June 18, 2024* <br>
 Date updated: *July 23, 2024*
@@ -124,7 +130,7 @@ The issue is being investigated. As a workaround, create a new assigned device s
 
 **This issue was resolved in July 2024.**
 
-## Unable to assign Windows Autopilot device preparation policy to user group
+### Unable to assign Windows Autopilot device preparation policy to user group
 
 Date added: *June 18, 2024* <br>
 Date updated: *July 23, 2024*
