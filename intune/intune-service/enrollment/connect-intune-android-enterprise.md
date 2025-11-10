@@ -65,9 +65,9 @@ Complete these steps to enable Android Enterprise management options in Microsof
 >  - Android Sync - Read
    >  - Android Sync – UpdateOnBoarding  
 
-## Upgrade to managed Google domain    
+## Upgrade to a managed Google domain    
 
-If you onboarded with a Gmail account, you can optionally upgrade to a managed Google domain in the Intune admin center. During this process, you link your Microsoft Entra account to Google. That way you can manage the connection between Google and Intune with a work account, rather than a Gmail account.   
+If you onboarded to Microsoft Intune with a Gmail account, you can optionally upgrade your Microsoft Entra account to a managed Google domain in the Intune admin center. During this process, you link your Microsoft Entra account to Google. That way you can manage the connection between Google and Intune with your Microsoft Entra account, rather than a Gmail account.   
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an Intune Administrator account.
 1. Go to **Devices** > **Enrollment**. 
