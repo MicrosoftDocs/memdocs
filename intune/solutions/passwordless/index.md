@@ -59,13 +59,9 @@ Passwordless authentication is supported across Windows, macOS, iOS, and Android
 - On mobile, the Authenticator app acts as a broker, sharing Entra ID tokens across apps after a single biometric or passkey-based sign-in.
 - On all platforms, certificate-based authentication (CBA) can be deployed for smart card logon.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+- [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 
 ## What counts as passwordless in Microsoft Entra ID?
 

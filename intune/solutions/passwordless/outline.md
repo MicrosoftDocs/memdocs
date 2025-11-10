@@ -108,22 +108,22 @@ Before exploring Intune's role, it's important to understand the passwordless au
 
 :::row:::
     :::column span="1":::
-**Passkeys**
+**Passkeys (FIDO2)**
 
 :::image type="icon" source="icons/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-
+>Passkeys are phishing-resistant credentials built on the FIDO2 and WebAuthn standards. They replace passwords with asymmetric key pairs generated on a secure device, ensuring that private keys never leave the authenticator. Users can sign in by unlocking the passkey with a biometric or PIN gesture, eliminating risks like credential theft and replay attacks. Entra ID currently supports device-bound passkeys, with future plans for syncable passkeys across devices.
 > Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supports passkeys via Microsoft Authenticator (iOS 17+/Android 14+).
 > - Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
 >   - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
 >   - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager)
-
-[!INCLUDE [intune](includes/intune.md)]
-- Enforcing OS version requirements for passkey support.
-- Ensuring Authenticator and Company Portal apps are installed.
-- Maintaining compliance so Conditional Access allows passkey sign-in.
-- Ensuring device compliance and app readiness for passkey use, enabling a seamless passwordless experience across platforms.
+>
+>[!INCLUDE [intune](includes/intune.md)]
+>- Enforcing OS version requirements for passkey support.
+>- Ensuring Authenticator and Company Portal apps are installed.
+>- Maintaining compliance so Conditional Access allows passkey sign-in.
+>- Ensuring device compliance and app readiness for passkey use, enabling a seamless passwordless experience across platforms.
 
     :::column-end:::
 :::row-end:::
@@ -136,6 +136,8 @@ Before exploring Intune's role, it's important to understand the passwordless au
 
 :::column-end:::
 :::column span="3":::
+>FIDO2 security keys are external hardware authenticators that provide phishing-resistant passwordless sign-in. These keys store private keys in a secure enclave and require a user gesture (touch, PIN, or biometric) to complete authentication. They work across platforms and are ideal for high-security environments or shared workstation scenarios where platform authenticators like Windows Hello aren't practical.
+>
 > External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared devices or high‑assurance scenarios.
     :::column-end:::
 :::row-end:::
@@ -147,6 +149,8 @@ Before exploring Intune's role, it's important to understand the passwordless au
 :::image type="icon" source="icons/certificate.svg" border="false":::
 :::column-end:::
 :::column span="3":::
+
+>Certificate-based authentication uses X.509 certificates issued by a trusted PKI to authenticate users without passwords. It's widely adopted in regulated industries and government environments, often through smart cards (PIV/CAC). CBA provides strong identity assurance and integrates with Entra ID for single sign-on, but requires PKI infrastructure and careful lifecycle management of certificates.
 > - Certificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
 > - Derived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
     :::column-end:::
@@ -154,15 +158,37 @@ Before exploring Intune's role, it's important to understand the passwordless au
 
 :::row:::
     :::column span="1":::
-**Temporary Access Pass (TAP)**
+**Windows Hello for Business**
+:::image type="icon" source="icons/authenticator.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+>Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key stored in the TPM and protected by biometrics or a PIN. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
+    :::column-end:::
+:::row-end:::
 
+:::row:::
+    :::column span="1":::
+**Microsoft Authenticator app**
+:::image type="icon" source="icons/authenticator.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+>The Microsoft Authenticator app enables passwordless sign-in on mobile devices. After entering a username, users approve the sign-in by matching a number and verifying with biometrics or PIN on their phone. While convenient and widely supported, this method is not considered phishing-resistant because it relies on push notifications rather than hardware-bound credentials. It's best suited for scenarios where flexibility and ease of use are priorities.
+    :::column-end:::
+:::row-end:::
+
+
+
+
+:::row:::
+    :::column span="1":::
+**Temporary Access Pass (TAP)**
 :::image type="icon" source="icons/tap.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-Used for bootstrap during initial passwordless setup.
-
-[!INCLUDE [learn-more](includes/learn-more.md)]
-- [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
+>A Temporary Access Pass is a time-limited passcode that helps bootstrap passwordless methods or recover access when primary credentials are unavailable. TAP can be configured for single use or multiple sign-ins and is particularly useful for onboarding new users or setting up Windows Hello for Business without requiring a password. It's not a long-term authentication method but a secure bridge to passwordless enrollment.
+>
+>[!INCLUDE [learn-more](includes/learn-more.md)]
+>- [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
     :::column-end:::
 :::row-end:::
 
