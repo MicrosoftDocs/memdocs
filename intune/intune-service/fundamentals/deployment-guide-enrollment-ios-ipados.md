@@ -35,7 +35,7 @@ There's also a visual guide of the different enrollment options for each platfor
 
 For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
 
-> ![NOTE]
+> [!NOTE]
 > For new and existing tenants, there may be a one-time failure when completing Microsoft Entra ID join. This issue can be resolved by manually syncing the device from the Intune admin center, or from the device on the Intune Company Portal website or Company Portal app. If a failure occurs, it will only happen to one device completing Microsoft Entra ID registration for the tenant. A manual sync will resolve this issue for all future enrollments. Alternatively, as a workaround, add the Microsoft Intune Certificate Authority client production app to your tenant. To do so, a Microsoft Entra administrator must create a service principal object, with app ID 3dde09a2-ff4f-4ebd-9b9a-d24a7a819b6f, in PowerShell or Microsoft Graph. 
 
 ## Automated Device Enrollment (ADE) (supervised)
