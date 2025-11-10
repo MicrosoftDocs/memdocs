@@ -52,9 +52,9 @@ These components work together to deliver passwordless access while aligning wit
 :::row-end:::
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
-> - [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+- [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+- [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
+- [Passwordless strategy overview](https://learn.microsoft.com/windows/security/identity-protection/passwordless-strategy)
 
 ---
 
@@ -87,7 +87,7 @@ Some exaples include:
 | - Windows Hello for Business<br>-Platform credential for macOS<br>FIDO2 security keys<br>- Microsoft Authenticator app passkeys<br>- Other passkeys and providers, such as iCloud Keychain<br>- Certificate-based authentication (including derived credentials like Purebred)| - SMS or voice-based codes<br>- OTP apps<br>- Push notifications without cryptographic binding |
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
-> - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
+- [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
 
 ### Phishing resistance and Zero Trust
 
@@ -106,86 +106,132 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 Before exploring Intune's role, it's important to understand the passwordless authentication methods supported by Microsoft Entra ID. Let's briefly review them.
 
+#### Passkeys (FIDO2)
 :::row:::
     :::column span="1":::
-**Passkeys (FIDO2)**
-
 :::image type="icon" source="icons/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
->Passkeys are phishing-resistant credentials built on the FIDO2 and WebAuthn standards. They replace passwords with asymmetric key pairs generated on a secure device, ensuring that private keys never leave the authenticator. Users can sign in by unlocking the passkey with a biometric or PIN gesture, eliminating risks like credential theft and replay attacks. Entra ID currently supports device-bound passkeys, with future plans for syncable passkeys across devices.
-> Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supports passkeys via Microsoft Authenticator (iOS 17+/Android 14+).
-> - Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
->   - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
->   - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager)
->
->[!INCLUDE [intune](includes/intune.md)]
->- Enforcing OS version requirements for passkey support.
->- Ensuring Authenticator and Company Portal apps are installed.
->- Maintaining compliance so Conditional Access allows passkey sign-in.
->- Ensuring device compliance and app readiness for passkey use, enabling a seamless passwordless experience across platforms.
+Passkeys are phishing-resistant credentials built on the FIDO2 and WebAuthn standards. They replace passwords with asymmetric key pairs generated on a secure device, ensuring that private keys never leave the authenticator. Users can sign in by unlocking the passkey with a biometric or PIN gesture, eliminating risks like credential theft and replay attacks. Entra ID currently supports device-bound passkeys, with future plans for syncable passkeys across devices.\
+ Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supports passkeys via Microsoft Authenticator (iOS 17+/Android 14+).
+
+- Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
+  - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
+  - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager)
+
+[!INCLUDE [intune](includes/intune.md)]
+- Enforcing OS version requirements for passkey support.
+- Ensuring Authenticator and Company Portal apps are installed.
+- Maintaining compliance so Conditional Access allows passkey sign-in.
+- Ensuring device compliance and app readiness for passkey use, enabling a seamless passwordless experience across platforms.
 
     :::column-end:::
 :::row-end:::
 
+#### FIDO2 Security Keys
+
 :::row:::
     :::column span="1":::
-**FIDO2 Security Keys**
-
 :::image type="icon" source="icons/security-key.svg" border="false":::
 
 :::column-end:::
 :::column span="3":::
->FIDO2 security keys are external hardware authenticators that provide phishing-resistant passwordless sign-in. These keys store private keys in a secure enclave and require a user gesture (touch, PIN, or biometric) to complete authentication. They work across platforms and are ideal for high-security environments or shared workstation scenarios where platform authenticators like Windows Hello aren't practical.
->
-> External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared devices or high‑assurance scenarios.
+FIDO2 security keys are external hardware authenticators that provide phishing-resistant passwordless sign-in. These keys store private keys in a secure enclave and require a user gesture (touch, PIN, or biometric) to complete authentication. They work across platforms and are ideal for high-security environments or shared workstation scenarios where platform authenticators like indows Hello aren't practical.
+
+External keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared devices or high‑assurance scenarios.
+External FIDO2 keys (USB, NFC) let users sign in without passwords. Intune enables this via policy and identity protection profiles. Keys are portable and ideal for shared-device scenarios.
+
+External FIDO2 keys (USB, NFC) let users sign in without passwords.
+[!INCLUDE [intune](includes/intune.md)]
+
+- Enabling FIDO2 sign-in via policy settings.
+- Deploying FIDO2 through identity protection profiles targeting specific groups.
+- Ensuring devices are compliant for passwordless access.
+- Keys are portable and ideal for shared-device scenarios.
     :::column-end:::
 :::row-end:::
 
+#### Certificate-Based Authentication (CBA)
+
 :::row:::
     :::column span="1":::
-**Certificate-Based Authentication (CBA)**
 
 :::image type="icon" source="icons/certificate.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 
->Certificate-based authentication uses X.509 certificates issued by a trusted PKI to authenticate users without passwords. It's widely adopted in regulated industries and government environments, often through smart cards (PIV/CAC). CBA provides strong identity assurance and integrates with Entra ID for single sign-on, but requires PKI infrastructure and careful lifecycle management of certificates.
-> - Certificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
-> - Derived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
+CBA uses X.509 certificates to authenticate users without passwords. Intune can deploy certificates via SCEP or PKCS profiles and enforce CBA for apps and device sign-in. This method is ideal for high-security environments and integrates with Entra ID conditional access for strong, phishing-resistant authentication.
+
+CBA uses X.509 certificates for strong, passwordless authentication.
+
+[!INCLUDE [intune](includes/intune.md)]
+
+- Deploying certificates via SCEP or PKCS profiles.
+- Configuring apps and devices to enforce CBA.
+- Integrating with Entra ID conditional access for secure sign-in.
+- Supporting Purebred workflows for mobile certificate issuance and renewal in government or high-security environments.
+- Ideal for regulated or high-security environments.
+
+Certificate-based authentication uses X.509 certificates issued by a trusted PKI to authenticate users without passwords. It's widely adopted in regulated industries and government environments, often through smart cards (PIV/CAC). CBA provides strong identity assurance and integrates with Entra ID for single sign-on, but requires PKI infrastructure and careful lifecycle management of certificates.
+- Certificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in.
+- Derived credentials (Purebred) — mobile‑friendly CBA alternative that stores certs in secure elements on mobile devices.
     :::column-end:::
 :::row-end:::
 
+#### Windows Hello for Business
+
 :::row:::
     :::column span="1":::
-**Windows Hello for Business**
 :::image type="icon" source="icons/authenticator.svg" border="false":::
 :::column-end:::
 :::column span="3":::
->Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key stored in the TPM and protected by biometrics or a PIN. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
+Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key stored in the TPM and protected by biometrics or a PIN. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
+
+Sign in with a PIN or biometrics backed by the device's TPM. Intune can require Hello during enrollment and enforce settings like PIN complexity or biometric use. Credentials never leave the device, making them highly secure.
+
+Sign in with a PIN or biometrics backed by the device's TPM.
+
+[!INCLUDE [intune](includes/intune.md)]
+
+- Requiring Windows Hello during enrollment.
+- Enforcing Hello settings (PIN complexity, biometrics allowed/disallowed).
+- Prompting setup during OOBE for Entra-joined devices.
+- Ensuring compliance for passwordless sign-in policies.
+- Credentials never leave the device, making them highly secure.
+
     :::column-end:::
 :::row-end:::
 
+#### Microsoft Authenticator app
+
 :::row:::
     :::column span="1":::
-**Microsoft Authenticator app**
 :::image type="icon" source="icons/authenticator.svg" border="false":::
 :::column-end:::
 :::column span="3":::
->The Microsoft Authenticator app enables passwordless sign-in on mobile devices. After entering a username, users approve the sign-in by matching a number and verifying with biometrics or PIN on their phone. While convenient and widely supported, this method is not considered phishing-resistant because it relies on push notifications rather than hardware-bound credentials. It's best suited for scenarios where flexibility and ease of use are priorities.
+The Microsoft Authenticator app enables passwordless sign-in on mobile devices. After entering a username, users approve the sign-in by matching a number and verifying with biometrics or PIN on their phone. While convenient and widely supported, this method is not considered phishing-resistant because it relies on push notifications rather than hardware-bound credentials. It's best suited for scenarios where flexibility and ease of use are priorities.
     :::column-end:::
 :::row-end:::
 
-
-
+#### Temporary Access Pass (TAP)
 
 :::row:::
     :::column span="1":::
-**Temporary Access Pass (TAP)**
 :::image type="icon" source="icons/tap.svg" border="false":::
 :::column-end:::
 :::column span="3":::
->A Temporary Access Pass is a time-limited passcode that helps bootstrap passwordless methods or recover access when primary credentials are unavailable. TAP can be configured for single use or multiple sign-ins and is particularly useful for onboarding new users or setting up Windows Hello for Business without requiring a password. It's not a long-term authentication method but a secure bridge to passwordless enrollment.
+
+TAP is a time-limited passcode for onboarding or recovery without passwords. Intune enables TAP on Windows by turning on Web Sign-in, allowing users to enter TAP at the login screen. After sign-in, users can set up Windows Hello, completing passwordless onboarding. TAP is short-lived and secure, reducing password dependency.
+
+TAP is a short-lived passcode for onboarding or recovery.
+
+Intune contributes by:
+
+- Enabling Web Sign-in on Windows devices so TAP can be used at login.
+- Providing a path for passwordless onboarding by prompting Hello setup after TAP sign-in.
+- Supporting fallback scenarios without compromising security.
+
+A Temporary Access Pass is a time-limited passcode that helps bootstrap passwordless methods or recover access when primary credentials are unavailable. TAP can be configured for single use or multiple sign-ins and is particularly useful for onboarding new users or setting up Windows Hello for Business without requiring a password. It's not a long-term authentication method but a secure bridge to passwordless enrollment.
 >
 >[!INCLUDE [learn-more](includes/learn-more.md)]
 >- [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
