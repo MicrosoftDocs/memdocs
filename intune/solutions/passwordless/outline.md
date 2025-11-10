@@ -106,17 +106,15 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 Before exploring Intune's role, it's important to understand the passwordless authentication methods supported by Microsoft Entra ID. Let's briefly review them.
 
-#### Passkeys
 :::row:::
     :::column span="1":::
+**Passkeys**
+
 :::image type="icon" source="icons/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 
 > Passkeys are FIDO2-based credentials that can sync across devices. Entra ID supports passkeys via Microsoft Authenticator (iOS 17+/Android 14+).
-    :::column-end:::
-:::row-end:::
-
 > - Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
 >   - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
 >   - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager)
@@ -126,6 +124,9 @@ Before exploring Intune's role, it's important to understand the passwordless au
 - Ensuring Authenticator and Company Portal apps are installed.
 - Maintaining compliance so Conditional Access allows passkey sign-in.
 - Ensuring device compliance and app readiness for passkey use, enabling a seamless passwordless experience across platforms.
+
+    :::column-end:::
+:::row-end:::
 
 :::row:::
     :::column span="1":::
@@ -160,16 +161,14 @@ Before exploring Intune's role, it's important to understand the passwordless au
 :::column span="3":::
 Used for bootstrap during initial passwordless setup.
 
-    :::column-end:::
-:::row-end:::
-
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
+    :::column-end:::
+:::row-end:::
 
 ### Other Options
 
 Clarify OTP in Authenticator and transitional use cases.
-
 
 ---
 
