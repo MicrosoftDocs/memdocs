@@ -14,7 +14,7 @@ ms.reviewer:
 > This article is still being written. Do not use it or share any information from this article.
 
 
-The Microsoft Intune Change Review Agent uses Microsoft Security Copilot’s generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests. 
+In public preview, the Microsoft Intune Change Review Agent uses Microsoft Security Copilot’s generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests. 
 
 To generate these recommendations, the agent aggregates signals from multiple sources:
 
@@ -169,9 +169,7 @@ At a high level, the agent does the following steps:
 
 ## Agent identity
 
-The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change the agent identity](#change-the-agent-identity) after setup if needed.
-
-The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
+The agent runs under the identity and permissions of the Intune admin account used during setup. The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
 ### Change the agent identity
 
@@ -211,62 +209,6 @@ When requirements are met, select Start agent.
 The agent operates until it completes its evaluation and displays results in the Overview tab. When the run finishes, the agent is ready to use.
 
 To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
-
-## Explore the agent
-<!-- REVIEW after DEMO --- Does this belong in Use the Agent? OR perhaps the drill in details do.  -->
-After you configure the agent, you can manage it from the Change Review Agent pane.
-
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**:
-- On the **Overview** tab, review the agent run status, suggestions for the top Multi Admin Approval requests, and the record of recent agent activity.
-- On the **Suggestions** tab, view the full list of suggestions for approval requests, including suggestions that are *Not started*, *In progress*, or *Completed*.
-- On the **Settings** tab, review details about the agent's configuration.
-
-<!-- The following tab breakout might move to the use article -->
-To learn more about each tab, select the following tabs:
-
-# [**Overview**](#tab/overview)
-<!-- REVIEW For accuracy to agent - Add Images -->
-After the Change Review Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for Multi Admin Approval change requests. The **Overview** tab only displays the suggestions that are *Not started* or *In progress*.
-
-The following information is available on this tab: 
-
-- The agent's availability and run status. 
-- Agent suggestion for a list of top change requests. This list includes requests that are assessed to have the least risk and are safe to approve. 
-- Activity section that tracks the current and past run activity of the agent.
-
-<!-- No image source yet - Figma has not been updated >
-:::image type="content" source="images/change-review-agent/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." border="false" lightbox="images/change-review-age/overview.png":::
--->
-
-# [**Suggestions**](#tab/suggestions)
-<!-- REVIEW For accuracy to agent - Add Images -->
-Agent suggestions are a list of all Multi Admin Approval change requests. Suggestions are generated after each agent run and are based on the latest data. In this tab, you can use search and filters to find specific suggestions.
-
-A suggestion displays the following details:
-
-- A risk assessment of the change request.
-- The account used to submit the request.
-- When the request expires.
-- Status of the request, from *Not started* to *Completed*.
-- Details about the associated suggestions. 
-
-<!-- No image source yet - Figma has not been updated >
-:::image type="content" source="images/change-review-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/suggestions.png":::
--->
-
-After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to *complete*. Marking a suggestion as complete doesn't trigger any changes by the agent.
-
-# [**Settings**](#tab/settings)
-<!-- REVIEW For accuracy to agent - Add Images -->
-Use the **Settings** tab to view the details about the agent's identity and current configuration.
-
-<!-- No image source yet - Figma has not been updated >
-:::image type="content" source="images/change-review-agent/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/settings.png":::
--->
-
----
-
-
 
 <!-- ## Renew the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [renew](includes/renew.md)]
