@@ -118,3 +118,12 @@ groups:
     title: iOS/iPadOS
   - id: android
     title: Android
+
+- id: platforms-windows-macos
+  title: Device platform
+  prompt: Choose your platform
+  pivots:
+  - id: windows
+    title: Windows
+  - id: macos
+    title: macOS

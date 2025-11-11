@@ -1,7 +1,7 @@
 ---
 title: Step 5. Create Settings Catalog policies for Microsoft Edge for Business
 description: Step 5. Create Settings Catalog policies for Microsoft Edge for Business on Windows and macOS.
-ms.date: 01/15/2025
+ms.date: 01/16/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -51,63 +51,65 @@ Level 1 configuration provides foundational browser security controls while main
    - **Name:** Level 1 - Enterprise basic security - Windows Settings Catalog  
    - **Description:** Basic browser security configuration for Microsoft Edge on Windows devices.  
 6. Select **Next**.  
-7. On **Configuration settings**, select **Add settings** and configure the following:
+7. On **Configuration settings**, select **+ Add settings**.
+8. From the **Settings picker**, search for **Microsoft Edge** and select it.
+9. Select the following settings:
 
 | Configuration Area | Category | Setting |
 |--------------------|-----------|----------|
-| Core Security (SmartScreen & HTTPS) | Microsoft Edge | Configure Microsoft Defender SmartScreen:<br>Enabled |
-|  | Microsoft Edge | Configure Microsoft Defender SmartScreen to block potentially unwanted apps:<br>Enabled |
-|  | Microsoft Edge | Configure Automatic HTTPS:<br>Enabled |
-| Privacy & Tracking Prevention | Microsoft Edge | Block tracking of users' web-browsing activity:<br>Strict (3) |
-|  | Microsoft Edge | Enable network prediction:<br>Don't predict (2) |
-|  | Microsoft Edge | Enable search suggestions:<br>Disabled |
-|  | Microsoft Edge | Send required and optional diagnostic data about browser usage:<br>Off (0) |
-|  | Microsoft Edge | Configure Do Not Track:<br>Enabled |
+| Core Security (SmartScreen & HTTPS) | Microsoft Edge | Configure Microsoft Defender SmartScreen to<br>protect users from malicious sites: Enabled |
+|  | Microsoft Edge | Configure Microsoft Defender SmartScreen<br>to block potentially unwanted apps: Enabled |
+|  | Microsoft Edge | Configure Automatic HTTPS to ensure<br>secure connections: Enabled |
+| Privacy & Tracking Prevention | Microsoft Edge | Block tracking of users' web-browsing<br>activity: Strict (3) |
+|  | Microsoft Edge | Enable network prediction to improve<br>performance: Don't predict (2) |
+|  | Microsoft Edge | Enable search suggestions for the address<br>bar: Disabled |
+|  | Microsoft Edge | Send required and optional diagnostic data<br>about browser usage: Off (0) |
+|  | Microsoft Edge | Configure Do Not Track setting to signal<br>user preference: Enabled |
 | Content Settings & Security | Microsoft Edge | Default pop-up window setting (Device):<br>Don't allow any site to show popups (2) |
-|  | Microsoft Edge | Default geolocation setting (Device):<br>Don't allow any site to track the users' physical location (2) |
-|  | Microsoft Edge | Default sensors setting (Device):<br>Don't allow any site to access sensors (2) |
-|  | Microsoft Edge | Default notification setting (Device):<br>Don't allow any site to show desktop notifications (2) |
-|  | Microsoft Edge | Default media stream setting (Device):<br>Don't allow any site to request access to camera and microphone (2) |
-|  | Microsoft Edge | Block third party cookies:<br>Enabled |
-| Password & Autofill Security | Microsoft Edge | Enable saving passwords to the password manager:<br>Disabled |
-|  | Microsoft Edge | Enable AutoFill for addresses:<br>Disabled |
-|  | Microsoft Edge | Enable AutoFill for payment instruments:<br>Disabled |
-|  | Microsoft Edge | Biometric authentication for local data storage reauth:<br>Disabled |
+|  | Microsoft Edge | Default geolocation setting (Device):<br>Don't allow any site to track location (2) |
+|  | Microsoft Edge | Default sensors setting (Device):<br>Don't allow sites to access sensors (2) |
+|  | Microsoft Edge | Default notification setting (Device):<br>Don't allow any site to show notifications (2) |
+|  | Microsoft Edge | Default media stream setting (Device):<br>Don't allow access to camera/mic (2) |
+|  | Microsoft Edge | Block third party cookies to improve<br>privacy: Enabled |
+| Password & Autofill Security | Microsoft Edge | Enable saving passwords to the password<br>manager: Disabled |
+|  | Microsoft Edge | Enable AutoFill for addresses and contact<br>information: Disabled |
+|  | Microsoft Edge | Enable AutoFill for payment instruments<br>and cards: Disabled |
+|  | Microsoft Edge | Biometric authentication for local data<br>storage reauth: Disabled |
 | Import & Export Controls | Microsoft Edge | Allow importing of autofill form data:<br>Disabled |
 |  | Microsoft Edge | Allow importing of saved passwords:<br>Disabled |
 |  | Microsoft Edge | Allow importing of browsing history:<br>Disabled |
-|  | Microsoft Edge | Allow importing of payment info:<br>Disabled |
+|  | Microsoft Edge | Allow importing of payment information:<br>Disabled |
 | Browser Experience & Customization | Microsoft Edge | Configure the home page URL:<br>https://portal.office.com |
-|  | Microsoft Edge | Show Home button on toolbar:<br>Enabled |
-|  | Microsoft Edge | Hide the First-run experience and splash screen:<br>Enabled |
-|  | Microsoft Edge | Suppress the unsupported OS warning:<br>Enabled |
-|  | Microsoft Edge | Enable browser sign-in:<br>Force users to sign in (2) |
-| Shopping & Consumer Features | Microsoft Edge | Shopping in Microsoft Edge Enabled:<br>Disabled |
-|  | Microsoft Edge | Allow users to be prompted for password for Microsoft Wallet on domain joined devices:<br>Disabled |
-|  | Microsoft Edge | Show feature and merchandise recommendations in Microsoft Edge:<br>Disabled |
+|  | Microsoft Edge | Show Home button on toolbar for user<br>convenience: Enabled |
+|  | Microsoft Edge | Hide the First-run experience and splash<br>screen for users: Enabled |
+|  | Microsoft Edge | Suppress unsupported OS warning to avoid<br>disruption: Enabled |
+|  | Microsoft Edge | Enable browser sign-in and force users to<br>sign in: Force (2) |
+| Shopping & Consumer Features | Microsoft Edge | Shopping in Microsoft Edge feature:<br>Disabled |
+|  | Microsoft Edge | Allow users to be prompted for Microsoft<br>Wallet password: Disabled |
+|  | Microsoft Edge | Show feature and merchandise<br>recommendations in Edge: Disabled |
 | Sidebar & UI Features | Microsoft Edge | Allow feature suggestions in sidebar:<br>Disabled |
-|  | Microsoft Edge | Enable Microsoft Search in sidebar:<br>Disabled |
-|  | Microsoft Edge | Allow side panel sites list:<br>Disabled |
-| AI & Copilot Features | Microsoft Edge | Configure Copilot:<br>Enabled, but available to users |
-|  | Microsoft Edge | Control the mode of the Copilot AI features:<br>AI-powered Copilot features available |
-| Network & DNS | Microsoft Edge | Control the mode of DNS-over-HTTPS:<br>Enabled, but allowing fallback to insecure DNS (on) |
-|  | Microsoft Edge | DNS interception checks enabled:<br>Enabled |
-|  | Microsoft Edge | Allow QUIC protocol:<br>Disabled |
+|  | Microsoft Edge | Enable Microsoft Search integration in<br>sidebar: Disabled |
+|  | Microsoft Edge | Allow side panel sites list customization:<br>Disabled |
+| AI & Copilot Features | Microsoft Edge | Configure Copilot integration:<br>Enabled, but available to users |
+|  | Microsoft Edge | Control the mode of the Copilot AI<br>features: AI-powered features available |
+| Network & DNS | Microsoft Edge | Control the mode of DNS-over-HTTPS:<br>Enabled, fallback to insecure DNS allowed |
+|  | Microsoft Edge | DNS interception checks for validation:<br>Enabled |
+|  | Microsoft Edge | Allow QUIC protocol for connectivity:<br>Disabled |
 | Search Engine Configuration | Microsoft Edge | Enable the default search provider:<br>Enabled |
 |  | Microsoft Edge | Default search provider name:<br>Microsoft Bing |
 |  | Microsoft Edge | Default search provider search URL:<br>https://www.bing.com/search?q={searchTerms} |
 |  | Microsoft Edge | Default search provider keyword:<br>bing |
-| Privacy Sandbox & Data Collection | Microsoft Edge | Privacy Sandbox Ad measurement setting:<br>Disabled |
-|  | Microsoft Edge | Privacy Sandbox Topics feature setting:<br>Disabled |
-|  | Microsoft Edge | Privacy Sandbox Fledge feature setting:<br>Disabled |
-|  | Microsoft Edge | Personalize detected languages for website translation:<br>Disabled |
-| Experimentation & Telemetry | Microsoft Edge | Experimentation and Configuration Service Control:<br>Retrieve configurations (1) |
-| Update Management | Microsoft Edge Update | Control updater's communication with the Experimentation and Configuration Service:<br>Disabled (0) |
+| Privacy Sandbox & Data Collection | Microsoft Edge | Privacy Sandbox Ad measurement feature:<br>Disabled |
+|  | Microsoft Edge | Privacy Sandbox Topics feature:<br>Disabled |
+|  | Microsoft Edge | Privacy Sandbox Fledge feature:<br>Disabled |
+|  | Microsoft Edge | Personalize detected languages for<br>website translation: Disabled |
+| Experimentation & Telemetry | Microsoft Edge | Experimentation and Configuration Service<br>Control: Retrieve configurations (1) |
+| Update Management | Microsoft Edge Update | Control updater's communication with the<br>Experimentation and Configuration Service:<br>Disabled (0) |
 
-8. Select **Next**.  
-9. For **Scope tags**, select the appropriate scope tag.  
-10. For **Assignments**, assign to **SEB-Level1-Devices** group.  
-11. Select **Next** to review the settings. Then choose **Create**.  
+10. Select **Next**.  
+11. For **Scope tags**, select the appropriate scope tag.  
+12. For **Assignments**, assign to **SEB-Level1-Devices** group.  
+13. Select **Next** to review the settings. Then choose **Create**.  
 
 **Validation:**
 
@@ -125,79 +127,106 @@ Level 2 adds enhanced security controls including Application Bound Encryption, 
 4. Select **Create**.  
 5. On the **Basics** tab:  
    - **Name:** Level 2 - Enterprise enhanced security - Windows Settings Catalog  
-   - **Description:** Enhanced browser security with 128 settings including Application Bound Encryption and extension controls (60% coverage).  
+   - **Description:** Enhanced browser security including Application Bound Encryption and extension controls.
 6. Select **Next**.  
-7. On **Configuration settings**, configure all Level 1 settings PLUS the following enhancements:
+7. On **Configuration settings**, select **+ Add settings**.
+8. From the **Settings picker**, search for **Microsoft Edge** and select it.
+9. Select the following settings:
 
-    **Enhanced SmartScreen & Security:**
-    - **Microsoft Edge** > Prevent bypassing Microsoft Defender SmartScreen prompts for sites: Enabled
-    - **Microsoft Edge** > Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads: Enabled
-    - **Microsoft Edge** > Enable Application Bound Encryption: Enabled
-    - **Microsoft Edge** > Enhance the security state in Microsoft Edge: Strict
+| Configuration Area | Category | Setting |
+|--------------------|-----------|----------|
+| Core Security (SmartScreen & HTTPS) | Microsoft Edge | Configure Microsoft Defender SmartScreen to<br>protect users from malicious sites: Enabled |
+|  | Microsoft Edge | Configure Microsoft Defender SmartScreen<br>to block potentially unwanted apps: Enabled |
+|  | Microsoft Edge | Configure Automatic HTTPS to ensure<br>secure connections: Enabled |
+| Privacy & Tracking Prevention | Microsoft Edge | Block tracking of users' web-browsing<br>activity: Strict (3) |
+|  | Microsoft Edge | Enable network prediction to improve<br>performance: Don't predict (2) |
+|  | Microsoft Edge | Enable search suggestions for the address<br>bar: Disabled |
+|  | Microsoft Edge | Send required and optional diagnostic data<br>about browser usage: Off (0) |
+|  | Microsoft Edge | Configure Do Not Track setting to signal<br>user preference: Enabled |
+| Content Settings & Security | Microsoft Edge | Default pop-up window setting (Device):<br>Don't allow any site to show popups (2) |
+|  | Microsoft Edge | Default geolocation setting (Device):<br>Don't allow any site to track location (2) |
+|  | Microsoft Edge | Default sensors setting (Device):<br>Don't allow sites to access sensors (2) |
+|  | Microsoft Edge | Default notification setting (Device):<br>Don't allow any site to show notifications (2) |
+|  | Microsoft Edge | Default media stream setting (Device):<br>Don't allow access to camera/mic (2) |
+|  | Microsoft Edge | Block third party cookies to improve<br>privacy: Enabled |
+| Password & Autofill Security | Microsoft Edge | Enable saving passwords to the password<br>manager: Disabled |
+|  | Microsoft Edge | Enable AutoFill for addresses and contact<br>information: Disabled |
+|  | Microsoft Edge | Enable AutoFill for payment instruments<br>and cards: Disabled |
+|  | Microsoft Edge | Biometric authentication for local data<br>storage reauth: Disabled |
+| Import & Export Controls | Microsoft Edge | Allow importing of autofill form data:<br>Disabled |
+|  | Microsoft Edge | Allow importing of saved passwords:<br>Disabled |
+|  | Microsoft Edge | Allow importing of browsing history:<br>Disabled |
+|  | Microsoft Edge | Allow importing of payment information:<br>Disabled |
+| Browser Experience & Customization | Microsoft Edge | Configure the home page URL:<br>https://portal.office.com |
+|  | Microsoft Edge | Show Home button on toolbar for user<br>convenience: Enabled |
+|  | Microsoft Edge | Hide the First-run experience and splash<br>screen for users: Enabled |
+|  | Microsoft Edge | Suppress unsupported OS warning to avoid<br>disruption: Enabled |
+|  | Microsoft Edge | Enable browser sign-in and force users to<br>sign in: Force (2) |
+| Shopping & Consumer Features | Microsoft Edge | Shopping in Microsoft Edge feature:<br>Disabled |
+|  | Microsoft Edge | Allow users to be prompted for Microsoft<br>Wallet password: Disabled |
+|  | Microsoft Edge | Show feature and merchandise<br>recommendations in Edge: Disabled |
+| Sidebar & UI Features | Microsoft Edge | Allow feature suggestions in sidebar:<br>Disabled |
+|  | Microsoft Edge | Enable Microsoft Search integration in<br>sidebar: Disabled |
+|  | Microsoft Edge | Allow side panel sites list customization:<br>Disabled |
+| AI & Copilot Features | Microsoft Edge | Configure Copilot integration:<br>Enabled, but available to users |
+|  | Microsoft Edge | Control the mode of the Copilot AI<br>features: AI-powered features available |
+| Network & DNS | Microsoft Edge | Control the mode of DNS-over-HTTPS:<br>Enabled, fallback to insecure DNS allowed |
+|  | Microsoft Edge | DNS interception checks for validation:<br>Enabled |
+|  | Microsoft Edge | Allow QUIC protocol for connectivity:<br>Disabled |
+| Search Engine Configuration | Microsoft Edge | Enable the default search provider:<br>Enabled |
+|  | Microsoft Edge | Default search provider name:<br>Microsoft Bing |
+|  | Microsoft Edge | Default search provider search URL:<br>https://www.bing.com/search?q={searchTerms} |
+|  | Microsoft Edge | Default search provider keyword:<br>bing |
+| Privacy Sandbox & Data Collection | Microsoft Edge | Privacy Sandbox Ad measurement feature:<br>Disabled |
+|  | Microsoft Edge | Privacy Sandbox Topics feature:<br>Disabled |
+|  | Microsoft Edge | Privacy Sandbox Fledge feature:<br>Disabled |
+|  | Microsoft Edge | Personalize detected languages for<br>website translation: Disabled |
+| Experimentation & Telemetry | Microsoft Edge | Experimentation and Configuration Service<br>Control: Retrieve configurations (1) |
+| Update Management | Microsoft Edge Update | Control updater's communication with the<br>Experimentation and Configuration Service:<br>Disabled (0) |
+| Enhanced SmartScreen & Security | Microsoft Edge | Prevent bypassing Microsoft Defender<br>SmartScreen prompts for sites: Enabled |
+|  | Microsoft Edge | Prevent bypassing of Microsoft Defender<br>SmartScreen warnings about downloads: Enabled |
+|  | Microsoft Edge | Enable Application Bound Encryption to<br>protect sensitive data: Enabled |
+|  | Microsoft Edge | Enhance the security state in Microsoft<br>Edge: Strict |
+| Extension Management & Developer Tools | Microsoft Edge | Control which extensions cannot be<br>installed: ["*"] |
+|  | Microsoft Edge | Control where developer tools can be<br>used: Disallowed (2) |
+|  | Microsoft Edge | Block external extensions from being<br>installed: Enabled |
+| API & Hardware Access Controls | Microsoft Edge | Control use of the WebUSB API:<br>Do not allow any site to request access to<br>USB devices (2) |
+|  | Microsoft Edge | Control use of the WebHID API:<br>Do not allow any site to request access to<br>HID devices (2) |
+|  | Microsoft Edge | Control use of the Web Bluetooth API:<br>Do not allow any site to request access to<br>Bluetooth devices (2) |
+|  | Microsoft Edge | Control use of the Serial API:<br>Do not allow any site to request access to<br>serial ports (2) |
+| Privacy & Data Controls | Microsoft Edge | Continue running background apps after<br>Microsoft Edge closes: Disabled |
+|  | Microsoft Edge | Disable synchronization of data using<br>Microsoft sync services: Enabled |
+|  | Microsoft Edge | Clear browsing data when Microsoft Edge<br>closes: Enabled |
+|  | Microsoft Edge | Configure InPrivate mode availability:<br>Disabled (1) |
+|  | Microsoft Edge | Enable Guest mode in browser:<br>Disabled |
+| Content & Script Security | Microsoft Edge | Block insecure content on specified sites:<br>["*"] |
+|  | Microsoft Edge | Enable site isolation for every site:<br>Enabled |
+|  | Microsoft Edge | Allow user feedback:<br>Disabled |
+|  | Microsoft Edge | Enable the Click-to-Call feature in<br>Microsoft Edge: Disabled |
+| Download & File Security | Microsoft Edge | Set download directory:<br>1 (prompt for location) |
+|  | Microsoft Edge | Allow download restrictions:<br>Block dangerous downloads (1) |
+| Browser Features & UI | Microsoft Edge | Allow users to access the games menu in<br>Microsoft Edge: Disabled |
+|  | Microsoft Edge | Enable split screen in Microsoft Edge:<br>Disabled |
+|  | Microsoft Edge | Show Collections menu entry:<br>Disabled |
+|  | Microsoft Edge | Show microsoft.com homepage as desktop<br>Start page instead of New Tab page:<br>Disabled |
+| AI & Copilot Enhanced Controls | Microsoft Edge | Configure Copilot page context:<br>Copilot can't use page content for<br>prompts (1) |
+|  | Microsoft Edge | Show Compose (writing assistance) on<br>websites: Disabled |
+|  | Microsoft Edge | Show a prompt to organize tabs:<br>Disabled |
+| Certificate & Security | Microsoft Edge | Minimum SSL version enabled:<br>TLS 1.2 |
+|  | Microsoft Edge | Require online OCSP/CRL checks for local<br>trust anchors: Enabled |
+|  | Microsoft Edge | Allow certificates from root stores:<br>Disabled |
+| Search & Address Bar | Microsoft Edge | Enable Microsoft Bing trending suggestions<br>in the address bar: Disabled |
+|  | Microsoft Edge | Enable related matches in Find on Page:<br>Disabled |
+| Performance & Resource Management | Microsoft Edge | Configure when efficiency mode should<br>become active: Enabled, Efficiency mode is<br>always active |
+|  | Microsoft Edge | Configure sleeping tabs:<br>Enabled |
+| Startup & Behavior | Microsoft Edge | Action to take on startup:<br>Open specific pages (4) |
+|  | Microsoft Edge | URLs to open on startup:<br>["https://portal.office.com"] |
+| Update Management | Microsoft Edge Update | Update policy override default:<br>Automatic silent updates only (3) |
 
-    **Extension Management & Developer Tools:**
-    - **Microsoft Edge** > Control which extensions cannot be installed: ["*"]
-    - **Microsoft Edge** > Control where developer tools can be used: Disallowed (2)
-    - **Microsoft Edge** > Block external extensions from being installed: Enabled
-
-    **API & Hardware Access Controls:**
-    - **Microsoft Edge** > Control use of the WebUSB API: Do not allow any site to request access to USB devices (2)
-    - **Microsoft Edge** > Control use of the WebHID API: Do not allow any site to request access to HID devices (2)
-    - **Microsoft Edge** > Control use of the Web Bluetooth API: Do not allow any site to request access to Bluetooth devices (2)
-    - **Microsoft Edge** > Control use of the Serial API: Do not allow any site to request access to serial ports (2)
-
-    **Privacy & Data Controls:**
-    - **Microsoft Edge** > Continue running background apps after Microsoft Edge closes: Disabled
-    - **Microsoft Edge** > Disable synchronization of data using Microsoft sync services: Enabled
-    - **Microsoft Edge** > Clear browsing data when Microsoft Edge closes: Enabled
-    - **Microsoft Edge** > Configure InPrivate mode availability: Disabled (1)
-    - **Microsoft Edge** > Enable Guest mode in browser: Disabled
-
-    **Content & Script Security:**
-    - **Microsoft Edge** > Block insecure content on specified sites: ["*"]
-    - **Microsoft Edge** > Enable site isolation for every site: Enabled
-    - **Microsoft Edge** > Allow user feedback: Disabled
-    - **Microsoft Edge** > Enable the Click-to-Call feature in Microsoft Edge: Disabled
-
-    **Download & File Security:**
-    - **Microsoft Edge** > Set download directory: 1 (prompt for location)
-    - **Microsoft Edge** > Allow download restrictions: Block dangerous downloads (1)
-
-    **Browser Features & UI:**
-    - **Microsoft Edge** > Allow users to access the games menu in Microsoft Edge: Disabled
-    - **Microsoft Edge** > Enable split screen in Microsoft Edge: Disabled
-    - **Microsoft Edge** > Show Collections menu entry: Disabled
-    - **Microsoft Edge** > Show microsoft.com homepage as desktop Start page instead of New Tab page: Disabled
-
-    **AI & Copilot Enhanced Controls:**
-    - **Microsoft Edge** > Configure Copilot page context: Copilot can't use page content for prompts (1)
-    - **Microsoft Edge** > Show Compose (writing assistance) on websites: Disabled
-    - **Microsoft Edge** > Show a prompt to organize tabs: Disabled
-
-    **Certificate & Security:**
-    - **Microsoft Edge** > Minimum SSL version enabled: TLS 1.2
-    - **Microsoft Edge** > Require online OCSP/CRL checks for local trust anchors: Enabled
-    - **Microsoft Edge** > Allow certificates from root stores: Disabled
-
-    **Search & Address Bar:**
-    - **Microsoft Edge** > Enable Microsoft Bing trending suggestions in the address bar: Disabled
-    - **Microsoft Edge** > Enable related matches in Find on Page: Disabled
-
-    **Performance & Resource Management:**
-    - **Microsoft Edge** > Configure when efficiency mode should become active: Enabled, Efficiency mode is always active
-    - **Microsoft Edge** > Configure sleeping tabs: Enabled
-
-    **Startup & Behavior:**
-    - **Microsoft Edge** > Action to take on startup: Open specific pages (4)
-    - **Microsoft Edge** > URLs to open on startup: ["https://portal.office.com"]
-
-    **Update Management:**
-    - **Microsoft Edge Update** > Update policy override default: Automatic silent updates only (3)
-
-8. Select **Next**.  
-9. For **Scope tags**, select the appropriate scope tag.  
-10. For **Assignments**, assign to **SEB-Level2-Devices** group.  
-11. Select **Next** to review the settings. Then choose **Create**.  
+10. Select **Next**.  
+11. For **Scope tags**, select the appropriate scope tag.  
+12. For **Assignments**, assign to **SEB-Level2-Devices** group.  
+13. Select **Next** to review the settings. Then choose **Create**.  
 
 **Validation:**
 
@@ -216,94 +245,122 @@ Level 3 provides maximum security with URL allowlisting, Application Guard isola
 4. Select **Create**.  
 5. On the **Basics** tab:  
    - **Name:** Level 3 - Enterprise high security - Windows Settings Catalog  
-   - **Description:** High security with 203 settings including URL allowlisting, Application Guard, and zero-trust controls.  
+   - **Description:** High security including URL allowlisting, Application Guard, and zero-trust controls.  
 6. Select **Next**.  
-7. On **Configuration settings**, configure all Level 1 and Level 2 settings PLUS the following maximum security enhancements:
+7. On **Configuration settings**, select **+ Add settings**.
+8. From the **Settings picker**, search for **Microsoft Edge** and select it.
+9. Select the following settings:
 
-    **URL Filtering & Access Control:**
-    - **Microsoft Edge** > Define a list of allowed URLs: ["*.company.com","*.microsoft.com","*.office.com","login.microsoftonline.com"]
-    - **Microsoft Edge** > Block access to a list of URLs: ["*"]
-    - **Microsoft Edge** > Allows you to set a list of URL patterns that specify sites which are not allowed to load images: ["*"]
+| Configuration Area | Category | Setting |
+|--------------------|-----------|----------|
+| Core Security (SmartScreen & HTTPS) | Microsoft Edge | Configure Microsoft Defender SmartScreen to<br>protect users from malicious sites: Enabled |
+|  | Microsoft Edge | Configure Microsoft Defender SmartScreen<br>to block potentially unwanted apps: Enabled |
+|  | Microsoft Edge | Configure Automatic HTTPS to ensure<br>secure connections: Enabled |
+| Privacy & Tracking Prevention | Microsoft Edge | Block tracking of users' web-browsing<br>activity: Strict (3) |
+|  | Microsoft Edge | Enable network prediction to improve<br>performance: Don't predict (2) |
+|  | Microsoft Edge | Enable search suggestions for the address<br>bar: Disabled |
+|  | Microsoft Edge | Send required and optional diagnostic data<br>about browser usage: Off (0) |
+|  | Microsoft Edge | Configure Do Not Track setting to signal<br>user preference: Enabled |
+| Content Settings & Security | Microsoft Edge | Default pop-up window setting (Device):<br>Don't allow any site to show popups (2) |
+|  | Microsoft Edge | Block third party cookies to improve<br>privacy: Enabled |
+| Password & Autofill Security | Microsoft Edge | Enable saving passwords to the password<br>manager: Disabled |
+|  | Microsoft Edge | Enable AutoFill for addresses and contact<br>information: Disabled |
+|  | Microsoft Edge | Enable AutoFill for payment instruments<br>and cards: Disabled |
+|  | Microsoft Edge | Biometric authentication for local data<br>storage reauth: Disabled |
+| Import & Export Controls | Microsoft Edge | Allow importing of autofill form data:<br>Disabled |
+|  | Microsoft Edge | Allow importing of saved passwords:<br>Disabled |
+|  | Microsoft Edge | Allow importing of browsing history:<br>Disabled |
+|  | Microsoft Edge | Allow importing of payment information:<br>Disabled |
+| Browser Experience & Customization | Microsoft Edge | Configure the home page URL:<br>https://portal.office.com |
+|  | Microsoft Edge | Show Home button on toolbar for user<br>convenience: Enabled |
+|  | Microsoft Edge | Hide the First-run experience and splash<br>screen for users: Enabled |
+|  | Microsoft Edge | Suppress unsupported OS warning to avoid<br>disruption: Enabled |
+|  | Microsoft Edge | Enable browser sign-in and force users to<br>sign in: Force (2) |
+| Shopping & Consumer Features | Microsoft Edge | Shopping in Microsoft Edge feature:<br>Disabled |
+|  | Microsoft Edge | Allow users to be prompted for Microsoft<br>Wallet password: Disabled |
+|  | Microsoft Edge | Show feature and merchandise<br>recommendations in Edge: Disabled |
+| Sidebar & UI Features | Microsoft Edge | Allow feature suggestions in sidebar:<br>Disabled |
+|  | Microsoft Edge | Allow side panel sites list customization:<br>Disabled |
+| URL Filtering & Access Control | Microsoft Edge | Define a list of allowed URLs:<br>["*.company.com","*.microsoft.com","*.office.com","login.microsoftonline.com"] |
+|  | Microsoft Edge | Block access to a list of URLs:<br>["*"] |
+|  | Microsoft Edge | Allows you to set a list of URL patterns<br>that specify sites which are not allowed to<br>load images: ["*"] |
+| Application Guard (Windows Defender Application Guard) | Microsoft Edge | Configure Microsoft Defender Application<br>Guard: Enabled |
+|  | Microsoft Edge | Prevents files from being uploaded to<br>Microsoft Defender Application Guard:<br>Enabled |
+|  | Microsoft Edge | Traffic Identification:<br>Enabled |
+| Enhanced SmartScreen & Security | Microsoft Edge | Prevent bypassing Microsoft Defender<br>SmartScreen prompts for sites: Enabled |
+|  | Microsoft Edge | Prevent bypassing of Microsoft Defender<br>SmartScreen warnings about downloads: Enabled |
+|  | Microsoft Edge | Enable Application Bound Encryption to<br>protect sensitive data: Enabled |
+|  | Microsoft Edge | Enhance the security state in Microsoft<br>Edge: Strict |
+| Extension Management & Developer Tools | Microsoft Edge | Control which extensions cannot be<br>installed: ["*"] |
+|  | Microsoft Edge | Control where developer tools can be<br>used: Disallowed (2) |
+|  | Microsoft Edge | Block external extensions from being<br>installed: Enabled |
+| API & Hardware Access Controls | Microsoft Edge | Control use of the WebUSB API:<br>Do not allow any site to request access to<br>USB devices (2) |
+|  | Microsoft Edge | Control use of the WebHID API:<br>Do not allow any site to request access to<br>HID devices (2) |
+|  | Microsoft Edge | Control use of the Web Bluetooth API:<br>Do not allow any site to request access to<br>Bluetooth devices (2) |
+|  | Microsoft Edge | Control use of the Serial API:<br>Do not allow any site to request access to<br>serial ports (2) |
+| Privacy & Data Controls | Microsoft Edge | Continue running background apps after<br>Microsoft Edge closes: Disabled |
+|  | Microsoft Edge | Clear browsing data when Microsoft Edge<br>closes: Enabled |
+| InPrivate & Guest Mode | Microsoft Edge | Configure InPrivate mode availability:<br>InPrivate mode forced (2) |
+|  | Microsoft Edge | Enable Guest mode in browser:<br>Disabled |
+| Content & Script Security | Microsoft Edge | Block insecure content on specified sites:<br>["*"] |
+|  | Microsoft Edge | Enable site isolation for every site:<br>Enabled |
+|  | Microsoft Edge | Allow user feedback:<br>Disabled |
+|  | Microsoft Edge | Enable the Click-to-Call feature in<br>Microsoft Edge: Disabled |
+| Download & File Security | Microsoft Edge | Set download directory:<br>1 (prompt for location) |
+|  | Microsoft Edge | Allow download restrictions:<br>Block all downloads (3) |
+|  | Microsoft Edge | Prompt for download location:<br>Enabled |
+| Printing | Microsoft Edge | Enable printing:<br>Disabled |
+|  | Microsoft Edge | Print Headers and Footers:<br>Disabled |
+|  | Microsoft Edge | Enable print preview:<br>Disabled |
+| GDPR Data Retention & Privacy | Microsoft Edge | Browsing Data Lifetime Settings:<br>[{"data_types": ["browsing_history","download_history","cookies_and_other_site_data","cached_images_and_files"],"time_to_live_in_hours": 24}] |
+|  | Microsoft Edge | Enable use of ephemeral profiles:<br>Enabled |
+|  | Microsoft Edge | Clear cached images and files on exit:<br>Enabled |
+| Screen Capture & Recording | Microsoft Edge | Allow screen capture:<br>Disabled |
+|  | Microsoft Edge | Allow screenshots of Windows Defender<br>Application Guard: Disabled |
+| Password & Credential Management | Microsoft Edge | Password manager enabled:<br>Disabled |
+|  | Microsoft Edge | Allow password reveal button:<br>Disabled |
+|  | Microsoft Edge | Enable Password Monitor:<br>Disabled |
+| AI & Copilot Maximum Restrictions | Microsoft Edge | Configure Copilot:<br>Disabled |
+|  | Microsoft Edge | Show Compose on websites:<br>Disabled |
+|  | Microsoft Edge | Allow Image Creator in Microsoft Edge:<br>Disabled |
+| Sync & Data Sharing | Microsoft Edge | Disable synchronization of data:<br>Enabled |
+|  | Microsoft Edge | Sync Types Disabled:<br>["favorites","settings","passwords","addresses","collections","tabs","extensions","history"] |
+| Browser Features Lockdown | Microsoft Edge | Show Collections menu entry:<br>Disabled |
+|  | Microsoft Edge | Allow users to access the games menu:<br>Disabled |
+|  | Microsoft Edge | Enable split screen:<br>Disabled |
+|  | Microsoft Edge | Enable Drop feature in Microsoft Edge:<br>Disabled |
+|  | Microsoft Edge | Enable Microsoft Wallet payment feature:<br>Disabled |
+| Sidebar & App Restrictions | Microsoft Edge | Allow sidebar in Microsoft Edge:<br>Disabled |
+|  | Microsoft Edge | Enable Microsoft Search in sidebar:<br>Disabled |
+|  | Microsoft Edge | Show Microsoft Rewards app in Microsoft<br>Edge sidebar: Disabled |
+| Media & Device Access | Microsoft Edge | Default media stream setting:<br>Don't allow any site to request access (2) |
+|  | Microsoft Edge | Default geolocation setting:<br>Don't allow any site to track location (2) |
+|  | Microsoft Edge | Default sensors setting:<br>Don't allow any site to access sensors (2) |
+|  | Microsoft Edge | Default notification setting:<br>Don't allow notifications (2) |
+| Certificate & SSL Enforcement | Microsoft Edge | Minimum SSL version enabled:<br>TLS 1.3 |
+|  | Microsoft Edge | Require online OCSP/CRL checks:<br>Enabled |
+|  | Microsoft Edge | Allow proceeding from the SSL warning<br>page: Disabled |
+| Certificate & Security | Microsoft Edge | Allow certificates from root stores:<br>Disabled |
+| Search Engine Configuration | Microsoft Edge | Enable the default search provider:<br>Enabled |
+|  | Microsoft Edge | Default search provider name:<br>Microsoft Bing |
+|  | Microsoft Edge | Default search provider search URL:<br>https://www.bing.com/search?q={searchTerms} |
+|  | Microsoft Edge | Default search provider keyword:<br>bing |
+| Search & Address Bar | Microsoft Edge | Enable Microsoft Bing trending suggestions<br>in the address bar: Disabled |
+|  | Microsoft Edge | Enable related matches in Find on Page:<br>Disabled |
+| Performance & Resource Management | Microsoft Edge | Configure when efficiency mode should<br>become active: Enabled, Efficiency mode is<br>always active |
+|  | Microsoft Edge | Configure sleeping tabs:<br>Enabled |
+| Startup & Behavior | Microsoft Edge | Action to take on startup:<br>Open specific pages (4) |
+|  | Microsoft Edge | URLs to open on startup:<br>["https://portal.office.com"] |
+| Version Control & Update Management | Microsoft Edge Update | Target Version Override:<br>[Specific version - e.g., "120.0.6099"] |
+|  | Microsoft Edge Update | Update policy override default:<br>Manual updates only (0) |
+|  | Microsoft Edge Update | Rollback to Target version:<br>Always rollback to target version (1) |
+|  | Microsoft Edge Update | Remove Desktop Shortcuts upon update<br>default: Force delete system-level and<br>user-level Desktop Shortcuts (2) |
+| Update Management | Microsoft Edge Update | Control updater's communication with the<br>Experimentation and Configuration Service:<br>Disabled (0) |
 
-    **Application Guard (Windows Defender Application Guard):**
-    - **Microsoft Edge** > Configure Microsoft Defender Application Guard: Enabled
-    - **Microsoft Edge** > Prevents files from being uploaded to Microsoft Defender Application Guard: Enabled
-    - **Microsoft Edge** > Traffic Identification: Enabled
-
-    **Download & File Security:**
-    - **Microsoft Edge** > Allow download restrictions: Block all downloads (3)
-    - **Microsoft Edge** > Prompt for download location: Enabled
-    - **Microsoft Edge** > Default download directory: Not configured (block all overrides previous setting)
-
-    **InPrivate & Guest Mode:**
-    - **Microsoft Edge** > Configure InPrivate mode availability: InPrivate mode forced (2)
-    - **Microsoft Edge** > Enable Guest mode in browser: Disabled
-
-    **Clipboard & Data Transfer:**
-    - **Microsoft Edge** > Allow clipboard use on specific sites: ["*.company.com"]
-    - **Microsoft Edge** > Block clipboard use on specific sites: ["*"]
-
-    **Printing:**
-    - **Microsoft Edge** > Enable printing: Disabled
-    - **Microsoft Edge** > Print Headers and Footers: Disabled
-    - **Microsoft Edge** > Enable print preview: Disabled
-
-    **GDPR Data Retention & Privacy:**
-    - **Microsoft Edge** > Browsing Data Lifetime Settings: [{"data_types": ["browsing_history", "download_history", "cookies_and_other_site_data", "cached_images_and_files"], "time_to_live_in_hours": 24}]
-    - **Microsoft Edge** > Enable use of ephemeral profiles: Enabled
-    - **Microsoft Edge** > Clear cached images and files on exit: Enabled
-
-    **Screen Capture & Recording:**
-    - **Microsoft Edge** > Allow screen capture: Disabled
-    - **Microsoft Edge** > Allow screenshots of Windows Defender Application Guard: Disabled
-
-    **Password & Credential Management:**
-    - **Microsoft Edge** > Password manager enabled: Disabled
-    - **Microsoft Edge** > Allow password reveal button: Disabled
-    - **Microsoft Edge** > Enable Password Monitor: Disabled
-
-    **AI & Copilot Maximum Restrictions:**
-    - **Microsoft Edge** > Configure Copilot: Disabled
-    - **Microsoft Edge** > Show Compose on websites: Disabled
-    - **Microsoft Edge** > Allow Image Creator in Microsoft Edge: Disabled
-
-    **Sync & Data Sharing:**
-    - **Microsoft Edge** > Disable synchronization of data: Enabled
-    - **Microsoft Edge** > Sync Types Disabled: ["favorites", "settings", "passwords", "addresses", "collections", "tabs", "extensions", "history"]
-
-    **Browser Features Lockdown:**
-    - **Microsoft Edge** > Show Collections menu entry: Disabled
-    - **Microsoft Edge** > Allow users to access the games menu: Disabled
-    - **Microsoft Edge** > Enable split screen: Disabled
-    - **Microsoft Edge** > Enable Drop feature in Microsoft Edge: Disabled
-    - **Microsoft Edge** > Enable Microsoft Wallet payment feature: Disabled
-
-    **Sidebar & App Restrictions:**
-    - **Microsoft Edge** > Allow sidebar in Microsoft Edge: Disabled
-    - **Microsoft Edge** > Enable Microsoft Search in sidebar: Disabled
-    - **Microsoft Edge** > Show Microsoft Rewards app in Microsoft Edge sidebar: Disabled
-
-    **Media & Device Access:**
-    - **Microsoft Edge** > Default media stream setting: Don't allow any site to request access (2)
-    - **Microsoft Edge** > Default geolocation setting: Don't allow any site to track location (2)
-    - **Microsoft Edge** > Default sensors setting: Don't allow any site to access sensors (2)
-    - **Microsoft Edge** > Default notification setting: Don't allow notifications (2)
-
-    **Certificate & SSL Enforcement:**
-    - **Microsoft Edge** > Minimum SSL version enabled: TLS 1.3
-    - **Microsoft Edge** > Require online OCSP/CRL checks: Enabled
-    - **Microsoft Edge** > Allow proceeding from the SSL warning page: Disabled
-
-    **Version Control & Update Management:**
-    - **Microsoft Edge Update** > Target Version Override: [Specific version - e.g., "120.0.6099"]
-    - **Microsoft Edge Update** > Update policy override default: Manual updates only (0)
-    - **Microsoft Edge Update** > Rollback to Target version: Always rollback to target version (1)
-    - **Microsoft Edge Update** > Remove Desktop Shortcuts upon update default: Force delete system-level and user-level Desktop Shortcuts (2)
-
-8. Select **Next**.  
-9. For **Scope tags**, select the appropriate scope tag.  
-10. For **Assignments**, assign to **SEB-Level3-Devices** group.  
-11. Select **Next** to review the settings. Then choose **Create**.  
+10. Select **Next**.  
+11. For **Scope tags**, select the appropriate scope tag.  
+12. For **Assignments**, assign to **SEB-Level3-Devices** group.  
+13. Select **Next** to review the settings. Then choose **Create**.  
 
 **Validation:**
 
@@ -344,185 +401,238 @@ Settings Catalog for macOS provides foundational browser security for enrolled M
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New Policy**.  
 3. Select **macOS** for platform and **Settings catalog** for profile type.  
-4. On the **Basics** tab:  
+4. Select **Create**.
+5. On the **Basics** tab:  
    - **Name:** Level 1 - Enterprise basic security - macOS Settings Catalog  
    - **Description:** Basic browser security for Microsoft Edge on macOS.  
-5. On **Configuration settings**, configure:
-
-    **Core Security:**
-    - **Microsoft Edge** > Configure Microsoft Defender SmartScreen: Enabled
-    - **Microsoft Edge** > Configure Microsoft Defender SmartScreen to block potentially unwanted apps: Enabled
-    - **Microsoft Edge** > Configure Automatic HTTPS: Enabled
-    - **Microsoft Edge** > Default pop-up window setting: Do not allow popups (2)
-    - **Microsoft Edge** > Block third party cookies: Enabled
-
-    **Network Security:**
-    - **Microsoft Edge** > Control the mode of DNS-over-HTTPS: Enable without fallback
-    - **Microsoft Edge** > DNS interception checks enabled: Enabled
-    - **Microsoft Edge** > Allow QUIC protocol: Disabled
-
-    **Privacy & Tracking:**
-    - **Microsoft Edge** > Block tracking of users' web-browsing activity: Strict (3)
-    - **Microsoft Edge** > Enable network prediction: Don't predict (2)
-    - **Microsoft Edge** > Enable search suggestions: Disabled
-    - **Microsoft Edge** > Send required and optional diagnostic data: Off (0)
-    - **Microsoft Edge** > Configure Do Not Track: Enabled
-
-    **Content Settings:**
-    - **Microsoft Edge** > Default geolocation setting: Don't allow any site to track location (2)
-    - **Microsoft Edge** > Default sensors setting: Don't allow any site to access sensors (2)
-    - **Microsoft Edge** > Default notification setting: Don't allow notifications (2)
-    - **Microsoft Edge** > Default media stream setting: Don't allow any site to request access (2)
-
-    **Password Management:**
-    - **Microsoft Edge** > Enable saving passwords to the password manager: Disabled
-    - **Microsoft Edge** > Enable AutoFill for addresses: Disabled
-    - **Microsoft Edge** > Enable AutoFill for credit cards: Disabled
-    - **Microsoft Edge** > Biometric authentication for local data storage reauth: Disabled
-
-    **Import Controls:**
-    - **Microsoft Edge** > Allow importing of autofill form data: Disabled
-    - **Microsoft Edge** > Allow importing of saved passwords: Disabled
-    - **Microsoft Edge** > Allow importing of browsing history: Disabled
-    - **Microsoft Edge** > Allow importing of payment info: Disabled
-
-    **Browser Experience:**
-    - **Microsoft Edge** > Configure the home page URL: https://portal.office.com
-    - **Microsoft Edge** > Show Home button on toolbar: Enabled
-    - **Microsoft Edge** > Hide the First-run experience: Enabled
-    - **Microsoft Edge** > Enable browser sign-in: Force users to sign in (2)
-
-    **Search Engine:**
-    - **Microsoft Edge** > Enable the default search provider: Enabled
-    - **Microsoft Edge** > Default search provider name: Microsoft Bing
-    - **Microsoft Edge** > Default search provider search URL: https://www.bing.com/search?q={searchTerms}
-
 6. Select **Next**.  
-7. For **Scope tags**, select the appropriate scope tag.  
-8. For **Assignments**, assign to **SEB-Level1-Devices** group.  
-9. Select **Next** to review the settings. Then choose **Create**.  
+7. On **Configuration settings**, select **+ Add settings**.
+8. From the **Settings picker**, search for **Microsoft Edge** and select it.
+9. Select the following settings:
+
+| Configuration Area | Category | Setting |
+|--------------------|-----------|----------|
+| Core Security | Microsoft Edge | Configure Microsoft Defender SmartScreen:<br>Enabled |
+|  | Microsoft Edge | Configure Microsoft Defender SmartScreen<br>to block potentially unwanted apps:<br>Enabled |
+|  | Microsoft Edge | Configure Automatic HTTPS:<br>Enabled |
+|  | Microsoft Edge | Default pop-up window setting:<br>Do not allow popups (2) |
+|  | Microsoft Edge | Block third party cookies:<br>Enabled |
+| Network Security | Microsoft Edge | Control the mode of DNS-over-HTTPS:<br>Enable without fallback |
+|  | Microsoft Edge | DNS interception checks enabled:<br>Enabled |
+|  | Microsoft Edge | Allow QUIC protocol:<br>Disabled |
+| Privacy & Tracking | Microsoft Edge | Block tracking of users' web-browsing<br>activity: Strict (3) |
+|  | Microsoft Edge | Enable network prediction:<br>Don't predict (2) |
+|  | Microsoft Edge | Enable search suggestions:<br>Disabled |
+|  | Microsoft Edge | Send required and optional diagnostic data:<br>Off (0) |
+|  | Microsoft Edge | Configure Do Not Track:<br>Enabled |
+| Content Settings | Microsoft Edge | Default geolocation setting:<br>Don't allow any site to track location (2) |
+|  | Microsoft Edge | Default sensors setting:<br>Don't allow any site to access sensors (2) |
+|  | Microsoft Edge | Default notification setting:<br>Don't allow notifications (2) |
+|  | Microsoft Edge | Default media stream setting:<br>Don't allow any site to request access (2) |
+| Password Management | Microsoft Edge | Enable saving passwords to the password<br>manager: Disabled |
+|  | Microsoft Edge | Enable AutoFill for addresses:<br>Disabled |
+|  | Microsoft Edge | Enable AutoFill for credit cards:<br>Disabled |
+|  | Microsoft Edge | Biometric authentication for local data<br>storage reauth: Disabled |
+| Import Controls | Microsoft Edge | Allow importing of autofill form data:<br>Disabled |
+|  | Microsoft Edge | Allow importing of saved passwords:<br>Disabled |
+|  | Microsoft Edge | Allow importing of browsing history:<br>Disabled |
+|  | Microsoft Edge | Allow importing of payment info:<br>Disabled |
+| Browser Experience | Microsoft Edge | Configure the home page URL:<br>https://portal.office.com |
+|  | Microsoft Edge | Show Home button on toolbar:<br>Enabled |
+|  | Microsoft Edge | Hide the First-run experience:<br>Enabled |
+|  | Microsoft Edge | Enable browser sign-in:<br>Force users to sign in (2) |
+| Search Engine | Microsoft Edge | Enable the default search provider:<br>Enabled |
+|  | Microsoft Edge | Default search provider name:<br>Microsoft Bing |
+|  | Microsoft Edge | Default search provider search URL:<br>https://www.bing.com/search?q={searchTerms} |
+
+10. Select **Next**.  
+11. For **Scope tags**, select the appropriate scope tag.  
+12. For **Assignments**, assign to **SEB-Level1-Devices** group.  
+13. Select **Next** to review the settings. Then choose **Create**.  
 
 ### Level 2 - Enterprise enhanced security (macOS)
 
-1. Follow steps 1-4 from Level 1.  
-2. On the **Basics** tab:  
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+2. Select **Devices** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New Policy**.  
+3. Select **macOS** for platform and **Settings catalog** for profile type.  
+4. Select **Create**.
+5. On the **Basics** tab:  
    - **Name:** Level 2 - Enterprise enhanced security - macOS Settings Catalog  
    - **Description:** Enhanced security with extension blocking and privacy controls.  
-3. Select **Next**.  
-4. On **Configuration settings**, configure all Level 1 settings PLUS:
+6. Select **Next**.  
+7. On **Configuration settings**, select **+ Add settings**.
+8. From the **Settings picker**, search for **Microsoft Edge** and select it.
+9. Select the following settings:
 
-    **Enhanced Security:**
-    - **Microsoft Edge** > Prevent bypassing Microsoft Defender SmartScreen prompts for sites: Enabled
-    - **Microsoft Edge** > Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads: Enabled
-    - **Microsoft Edge** > Enhance the security state in Microsoft Edge: Strict
-    - **Microsoft Edge** > Configure InPrivate mode availability: Disabled (1)
-    - **Microsoft Edge** > Enable Guest mode in browser: Disabled
+| Configuration Area | Category | Setting |
+|--------------------|-----------|----------|
+| Core Security | Microsoft Edge | Configure Microsoft Defender SmartScreen:<br>Enabled |
+|  | Microsoft Edge | Configure Microsoft Defender SmartScreen<br>to block potentially unwanted apps:<br>Enabled |
+|  | Microsoft Edge | Configure Automatic HTTPS:<br>Enabled |
+|  | Microsoft Edge | Default pop-up window setting:<br>Do not allow popups (2) |
+|  | Microsoft Edge | Block third party cookies:<br>Enabled |
+| Enhanced Security | Microsoft Edge | Prevent bypassing Microsoft Defender<br>SmartScreen prompts for sites:<br>Enabled |
+|  | Microsoft Edge | Prevent bypassing of Microsoft Defender<br>SmartScreen warnings about downloads:<br>Enabled |
+|  | Microsoft Edge | Enhance the security state in Microsoft Edge:<br>Strict |
+|  | Microsoft Edge | Configure InPrivate mode availability:<br>Disabled (1) |
+|  | Microsoft Edge | Enable Guest mode in browser:<br>Disabled |
+| Network Security | Microsoft Edge | Control the mode of DNS-over-HTTPS:<br>Enable without fallback |
+|  | Microsoft Edge | DNS interception checks enabled:<br>Enabled |
+|  | Microsoft Edge | Allow QUIC protocol:<br>Disabled |
+| Privacy & Tracking | Microsoft Edge | Block tracking of users' web-browsing<br>activity:<br>Strict (3) |
+|  | Microsoft Edge | Enable network prediction:<br>Don't predict (2) |
+|  | Microsoft Edge | Enable search suggestions:<br>Disabled |
+|  | Microsoft Edge | Send required and optional diagnostic data:<br>Off (0) |
+|  | Microsoft Edge | Configure Do Not Track:<br>Enabled |
+| Privacy & Data Controls | Microsoft Edge | Continue running background apps after<br>Microsoft Edge closes:<br>Disabled |
+|  | Microsoft Edge | Disable synchronization of data:<br>Enabled |
+|  | Microsoft Edge | Clear browsing data when Microsoft Edge closes:<br>Enabled |
+|  | Microsoft Edge | Enable Microsoft Bing trending suggestions:<br>Disabled |
+|  | Microsoft Edge | Allow user feedback:<br>Disabled |
+| Content Settings | Microsoft Edge | Default geolocation setting:<br>Don't allow any site to track location (2) |
+|  | Microsoft Edge | Default sensors setting:<br>Don't allow any site to access sensors (2) |
+|  | Microsoft Edge | Default notification setting:<br>Don't allow notifications (2) |
+|  | Microsoft Edge | Default media stream setting:<br>Don't allow any site to request access (2) |
+| Content Security | Microsoft Edge | Block insecure content on specified sites:<br>["*"] |
+|  | Microsoft Edge | Enable site isolation for every site:<br>Enabled |
+| Password Management | Microsoft Edge | Enable saving passwords to the password<br>manager:<br>Disabled |
+|  | Microsoft Edge | Enable AutoFill for addresses:<br>Disabled |
+|  | Microsoft Edge | Enable AutoFill for credit cards:<br>Disabled |
+|  | Microsoft Edge | Biometric authentication for local data<br>storage reauth:<br>Disabled |
+| Import Controls | Microsoft Edge | Allow importing of autofill form data:<br>Disabled |
+|  | Microsoft Edge | Allow importing of saved passwords:<br>Disabled |
+|  | Microsoft Edge | Allow importing of browsing history:<br>Disabled |
+|  | Microsoft Edge | Allow importing of payment info:<br>Disabled |
+| Download Security | Microsoft Edge | Set download directory:<br>Prompt for location (1) |
+|  | Microsoft Edge | Allow download restrictions:<br>Block dangerous downloads (1) |
+| Browser Features | Microsoft Edge | Allow users to access the games menu:<br>Disabled |
+|  | Microsoft Edge | Show Collections menu entry:<br>Disabled |
+| Browser Experience | Microsoft Edge | Configure the home page URL:<br>https://portal.office.com |
+|  | Microsoft Edge | Show Home button on toolbar:<br>Enabled |
+|  | Microsoft Edge | Hide the First-run experience:<br>Enabled |
+|  | Microsoft Edge | Enable browser sign-in:<br>Force users to sign in (2) |
+| Search Engine | Microsoft Edge | Enable the default search provider:<br>Enabled |
+|  | Microsoft Edge | Default search provider name:<br>Microsoft Bing |
+|  | Microsoft Edge | Default search provider search URL:<br>https://www.bing.com/search?q={searchTerms} |
+| AI & Copilot Controls | Microsoft Edge | Configure Copilot page context:<br>Copilot can't use page content (1) |
+|  | Microsoft Edge | Show Compose on websites:<br>Disabled |
+| Extension & Developer Controls | Microsoft Edge | Control which extensions can't be installed:<br>["*"] |
+|  | Microsoft Edge | Control where developer tools can be used:<br>Disallowed (2) |
+|  | Microsoft Edge | Block external extensions from being installed:<br>Enabled |
+| API & Hardware Access | Microsoft Edge | Control use of the WebUSB API:<br>Do not allow (2) |
+|  | Microsoft Edge | Control use of the WebHID API:<br>Do not allow (2) |
+|  | Microsoft Edge | Control use of the Web Bluetooth API:<br>Do not allow (2) |
+|  | Microsoft Edge | Control use of the Serial API:<br>Do not allow (2) |
+| Certificate Security | Microsoft Edge | Minimum SSL version enabled:<br>TLS 1.2 |
+|  | Microsoft Edge | Require online OCSP/CRL checks for local<br>trust anchors:<br>Enabled |
 
-    **Extension & Developer Controls:**
-    - **Microsoft Edge** > Control which extensions can't be installed: ["*"]
-    - **Microsoft Edge** > Control where developer tools can be used: Disallowed (2)
-    - **Microsoft Edge** > Block external extensions from being installed: Enabled
-
-    **API & Hardware Access:**
-    - **Microsoft Edge** > Control use of the WebUSB API: Do not allow (2)
-    - **Microsoft Edge** > Control use of the WebHID API: Do not allow (2)
-    - **Microsoft Edge** > Control use of the Web Bluetooth API: Do not allow (2)
-    - **Microsoft Edge** > Control use of the Serial API: Do not allow (2)
-
-    **Privacy & Data Controls:**
-    - **Microsoft Edge** > Continue running background apps after Microsoft Edge closes: Disabled
-    - **Microsoft Edge** > Disable synchronization of data: Enabled
-    - **Microsoft Edge** > Clear browsing data when Microsoft Edge closes: Enabled
-    - **Microsoft Edge** > Enable Microsoft Bing trending suggestions: Disabled
-    - **Microsoft Edge** > Allow user feedback: Disabled
-
-    **Content Security:**
-    - **Microsoft Edge** > Block insecure content on specified sites: ["*"]
-    - **Microsoft Edge** > Enable site isolation for every site: Enabled
-    - **Microsoft Edge** > Allow user feedback: Disabled
-
-    **Download Security:**
-    - **Microsoft Edge** > Set download directory: Prompt for location (1)
-    - **Microsoft Edge** > Allow download restrictions: Block dangerous downloads (1)
-
-    **Browser Features:**
-    - **Microsoft Edge** > Allow users to access the games menu: Disabled
-    - **Microsoft Edge** > Show Collections menu entry: Disabled
-
-    **AI & Copilot Controls:**
-    - **Microsoft Edge** > Configure Copilot page context: Copilot can't use page content (1)
-    - **Microsoft Edge** > Show Compose on websites: Disabled
-
-    **Certificate Security:**
-    - **Microsoft Edge** > Minimum SSL version enabled: TLS 1.2
-    - **Microsoft Edge** > Require online OCSP/CRL checks for local trust anchors: Enabled
-
-5. Select **Next**.  
-6. For **Scope tags**, select the appropriate scope tag.  
-7. For **Assignments**, assign to **SEB-Level2-Devices** group.  
-8. Select **Next** to review the settings. Then choose **Create**.  
+10. Select **Next**.  
+11. For **Scope tags**, select the appropriate scope tag.  
+12. For **Assignments**, assign to **SEB-Level2-Devices** group.  
+13. Select **Next** to review the settings. Then choose **Create**.  
 
 ### Level 3 - Enterprise high security (macOS)
 
-1. Follow steps 1-4 from Level 1.  
-2. On the **Basics** tab:  
+1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+2. Select **Devices** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New Policy**.  
+3. Select **macOS** for platform and **Settings catalog** for profile type.  
+4. Select **Create**.
+5. On the **Basics** tab:  
    - **Name:** Level 3 - Enterprise high security - macOS Settings Catalog  
    - **Description:** High security with URL filtering and maximum restrictions.  
-3. Select **Next**.  
-4. On **Configuration settings**, configure all Level 1 and Level 2 settings PLUS:
+6. Select **Next**.  
+7. On **Configuration settings**, select **+ Add settings**.
+8. From the **Settings picker**, search for **Microsoft Edge** and select it.
+9. Select the following settings:
 
-    **URL Filtering:**
-    - **Microsoft Edge** > Define a list of allowed URLs: ["*.company.com","*.microsoft.com","*.office.com","login.microsoftonline.com"]
-    - **Microsoft Edge** > Block access to a list of URLs: ["*"]
-    - **Microsoft Edge** > Sites not allowed to load images: ["*"]
+| Configuration Area | Category | Setting |
+|--------------------|-----------|----------|
+| Core Security | Microsoft Edge | Configure Microsoft Defender SmartScreen:<br>Enabled |
+|  | Microsoft Edge | Configure Microsoft Defender SmartScreen<br>to block potentially unwanted apps:<br>Enabled |
+|  | Microsoft Edge | Configure Automatic HTTPS:<br>Enabled |
+|  | Microsoft Edge | Default pop-up window setting:<br>Do not allow popups (2) |
+|  | Microsoft Edge | Block third party cookies:<br>Enabled |
+| Enhanced Security | Microsoft Edge | Prevent bypassing Microsoft Defender<br>SmartScreen prompts for sites:<br>Enabled |
+|  | Microsoft Edge | Prevent bypassing of Microsoft Defender<br>SmartScreen warnings about downloads:<br>Enabled |
+|  | Microsoft Edge | Enhance the security state in Microsoft Edge:<br>Strict |
+| InPrivate & Guest Mode | Microsoft Edge | Configure InPrivate mode availability:<br>InPrivate mode forced (2) |
+|  | Microsoft Edge | Enable Guest mode in browser:<br>Disabled |
+| Network Security | Microsoft Edge | Control the mode of DNS-over-HTTPS:<br>Enable without fallback |
+|  | Microsoft Edge | DNS interception checks enabled:<br>Enabled |
+|  | Microsoft Edge | Allow QUIC protocol:<br>Disabled |
+| URL Filtering | Microsoft Edge | Define a list of allowed URLs:<br>["*.company.com","*.microsoft.com","*.office.com","login.microsoftonline.com"] |
+|  | Microsoft Edge | Block access to a list of URLs:<br>["*"] |
+|  | Microsoft Edge | Sites not allowed to load images:<br>["*"] |
+| Privacy & Tracking | Microsoft Edge | Block tracking of users' web-browsing<br>activity:<br>Strict (3) |
+|  | Microsoft Edge | Enable network prediction:<br>Don't predict (2) |
+|  | Microsoft Edge | Enable search suggestions:<br>Disabled |
+|  | Microsoft Edge | Send required and optional diagnostic data:<br>Off (0) |
+|  | Microsoft Edge | Configure Do Not Track:<br>Enabled |
+| Privacy & Data Controls | Microsoft Edge | Continue running background apps after<br>Microsoft Edge closes:<br>Disabled |
+|  | Microsoft Edge | Disable synchronization of data:<br>Enabled |
+|  | Microsoft Edge | Clear browsing data when Microsoft Edge closes:<br>Enabled |
+|  | Microsoft Edge | Enable Microsoft Bing trending suggestions:<br>Disabled |
+|  | Microsoft Edge | Allow user feedback:<br>Disabled |
+| Content Settings | Microsoft Edge | Default geolocation setting:<br>Don't allow any site to track location (2) |
+|  | Microsoft Edge | Default sensors setting:<br>Don't allow any site to access sensors (2) |
+|  | Microsoft Edge | Default notification setting:<br>Don't allow notifications (2) |
+|  | Microsoft Edge | Default media stream setting:<br>Don't allow any site to request access (2) |
+| Content Security | Microsoft Edge | Block insecure content on specified sites:<br>["*"] |
+|  | Microsoft Edge | Enable site isolation for every site:<br>Enabled |
+| Clipboard Control | Microsoft Edge | Allow clipboard use on specific sites:<br>["*.company.com"] |
+|  | Microsoft Edge | Block clipboard use on specific sites:<br>["*"] |
+| Password Management | Microsoft Edge | Enable saving passwords to the password<br>manager:<br>Disabled |
+|  | Microsoft Edge | Enable AutoFill for addresses:<br>Disabled |
+|  | Microsoft Edge | Enable AutoFill for credit cards:<br>Disabled |
+|  | Microsoft Edge | Biometric authentication for local data<br>storage reauth:<br>Disabled |
+| Password & Credential Lockdown | Microsoft Edge | Allow password reveal button:<br>Disabled |
+|  | Microsoft Edge | Enable Password Monitor:<br>Disabled |
+| Import Controls | Microsoft Edge | Allow importing of autofill form data:<br>Disabled |
+|  | Microsoft Edge | Allow importing of saved passwords:<br>Disabled |
+|  | Microsoft Edge | Allow importing of browsing history:<br>Disabled |
+|  | Microsoft Edge | Allow importing of payment info:<br>Disabled |
+| Download Security | Microsoft Edge | Set download directory:<br>Prompt for location (1) |
+|  | Microsoft Edge | Allow download restrictions:<br>Block all downloads (3) |
+|  | Microsoft Edge | Prompt for download location:<br>Enabled |
+| Maximum Download Security | Microsoft Edge | Allow download restrictions:<br>Block all downloads (3) |
+| Printing | Microsoft Edge | Enable printing:<br>Disabled |
+|  | Microsoft Edge | Print Headers and Footers:<br>Disabled |
+|  | Microsoft Edge | Enable print preview:<br>Disabled |
+| Data Protection | Microsoft Edge | Browsing Data Lifetime Settings:<br>[{"data_types": ["browsing_history", "download_history", "cookies_and_other_site_data", "cached_images_and_files"], "time_to_live_in_hours": 24}] |
+|  | Microsoft Edge | Clear cached images and files on exit:<br>Enabled |
+|  | Microsoft Edge | Clear browsing data when Microsoft Edge closes:<br>Enabled |
+| Browser Features | Microsoft Edge | Allow users to access the games menu:<br>Disabled |
+|  | Microsoft Edge | Show Collections menu entry:<br>Disabled |
+| Browser Features Lockdown | Microsoft Edge | Allow sidebar in Microsoft Edge:<br>Disabled |
+|  | Microsoft Edge | Enable Microsoft Search in sidebar:<br>Disabled |
+|  | Microsoft Edge | Enable Drop feature:<br>Disabled |
+|  | Microsoft Edge | Enable Microsoft Wallet payment feature:<br>Disabled |
+| Browser Experience | Microsoft Edge | Configure the home page URL:<br>https://portal.office.com |
+|  | Microsoft Edge | Show Home button on toolbar:<br>Enabled |
+|  | Microsoft Edge | Hide the First-run experience:<br>Enabled |
+|  | Microsoft Edge | Enable browser sign-in:<br>Force users to sign in (2) |
+| Search Engine | Microsoft Edge | Enable the default search provider:<br>Enabled |
+|  | Microsoft Edge | Default search provider name:<br>Microsoft Bing |
+|  | Microsoft Edge | Default search provider search URL:<br>https://www.bing.com/search?q={searchTerms} |
+| AI & Copilot Restrictions | Microsoft Edge | Configure Copilot:<br>Disabled |
+|  | Microsoft Edge | Show Compose on websites:<br>Disabled |
+|  | Microsoft Edge | Allow Image Creator in Microsoft Edge:<br>Disabled |
+| Sync Restrictions | Microsoft Edge | Sync Types Disabled:<br>["favorites","settings","passwords","addresses","collections","tabs","extensions","history"] |
+| Extension & Developer Controls | Microsoft Edge | Control which extensions can't be installed:<br>["*"] |
+|  | Microsoft Edge | Control where developer tools can be used:<br>Disallowed (2) |
+|  | Microsoft Edge | Block external extensions from being installed:<br>Enabled |
+| API & Hardware Access | Microsoft Edge | Control use of the WebUSB API:<br>Do not allow (2) |
+|  | Microsoft Edge | Control use of the WebHID API:<br>Do not allow (2) |
+|  | Microsoft Edge | Control use of the Web Bluetooth API:<br>Do not allow (2) |
+|  | Microsoft Edge | Control use of the Serial API:<br>Do not allow (2) |
+| Certificate Enforcement | Microsoft Edge | Minimum SSL version enabled:<br>TLS 1.3 |
+|  | Microsoft Edge | Require online OCSP/CRL checks for local<br>trust anchors:<br>Enabled |
+|  | Microsoft Edge | Allow proceeding from the SSL warning page:<br>Disabled |
 
-    **Maximum Download Security:**
-    - **Microsoft Edge** > Allow download restrictions: Block all downloads (3)
-    - **Microsoft Edge** > Prompt for download location: Enabled
-
-    **InPrivate & Guest Mode:**
-    - **Microsoft Edge** > Configure InPrivate mode availability: InPrivate mode forced (2)
-
-    **Clipboard Control:**
-    - **Microsoft Edge** > Allow clipboard use on specific sites: ["*.company.com"]
-    - **Microsoft Edge** > Block clipboard use on specific sites: ["*"]
-
-    **Printing:**
-    - **Microsoft Edge** > Enable printing: Disabled
-    - **Microsoft Edge** > Print Headers and Footers: Disabled
-    - **Microsoft Edge** > Enable print preview: Disabled
-
-    **Data Protection:**
-    - **Microsoft Edge** > Browsing Data Lifetime Settings: [{"data_types": ["browsing_history", "download_history", "cookies_and_other_site_data", "cached_images_and_files"], "time_to_live_in_hours": 24}]
-    - **Microsoft Edge** > Clear cached images and files on exit: Enabled
-    - **Microsoft Edge** > Clear browsing data when Microsoft Edge closes: Enabled
-
-    **Password & Credential Lockdown:**
-    - **Microsoft Edge** > Allow password reveal button: Disabled
-    - **Microsoft Edge** > Enable Password Monitor: Disabled
-
-    **AI & Copilot Restrictions:**
-    - **Microsoft Edge** > Configure Copilot: Disabled
-    - **Microsoft Edge** > Show Compose on websites: Disabled
-    - **Microsoft Edge** > Allow Image Creator in Microsoft Edge: Disabled
-
-    **Sync Restrictions:**
-    - **Microsoft Edge** > Sync Types Disabled: ["favorites", "settings", "passwords", "addresses", "collections", "tabs", "extensions", "history"]
-
-    **Browser Features Lockdown:**
-    - **Microsoft Edge** > Allow sidebar in Microsoft Edge: Disabled
-    - **Microsoft Edge** > Enable Microsoft Search in sidebar: Disabled
-    - **Microsoft Edge** > Enable Drop feature: Disabled
-    - **Microsoft Edge** > Enable Microsoft Wallet payment feature: Disabled
-
-    **Certificate Enforcement:**
-    - **Microsoft Edge** > Minimum SSL version enabled: TLS 1.3
-    - **Microsoft Edge** > Allow proceeding from the SSL warning page: Disabled
-
-5. Select **Next**.  
-6. For **Scope tags**, select the appropriate scope tag.  
-7. For **Assignments**, assign to **SEB-Level3-Devices** group.  
-8. Select **Next** to review the settings. Then choose **Create**.
+10. Select **Next**.  
+11. For **Scope tags**, select the appropriate scope tag.  
+12. For **Assignments**, assign to **SEB-Level3-Devices** group.  
+13. Select **Next** to review the settings. Then choose **Create**.
 
 ## Validation
 
