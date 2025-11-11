@@ -248,8 +248,8 @@ The following table describes the Setup Assistant screens shown during automated
 | **App Store**| Shows the Apple App Store pane. For macOS 11.1 and later.  |
 | **Software update**| Shows the the mandatory software update screen. For macOS 15.4 and later.  |
 | **Additional privacy settings**| Shows the additional privacy settings pane. For macOS 26.0 and later.  |
-| **OS Showcase**| Shows the OS showcase pane. For macOS 26.0 and later.  |
-|**Update completed**| Shows the software update complete pane. For macOS 26.0 and later.  |
+| **OS Showcase**| Shows the OS showcase pane. For macOS 26.1 and later.  |
+|**Update completed**| Shows the software update complete pane. For macOS 26.1 and later.  |
 |**Get started**| Shows the get started pane. For macOS 15.0 and later. |
 
 ## Sync managed devices
