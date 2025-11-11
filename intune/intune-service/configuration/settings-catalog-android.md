@@ -68,7 +68,7 @@ To learn more about the settings catalog, see [Settings catalog overview](settin
 
 # [Android Enterprise](#tab/ae)
 
-These settings apply to the Android Enterprise enrollment types where Intune controls the entire device, including the following enrollment types:
+These settings apply to the Android Enterprise enrollment types where Intune controls the entire device, which includes the following enrollment types:
 
 - Fully managed devices
 - Dedicated devices
@@ -279,6 +279,9 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
+
+  > [!TIP]
+  > This setting impacts AI features on the device. To learn about other settings that manage AI on your Android devices, see [Manage AI features on Android Enterprise devices](../../solutions/ai/manage-ai-android.md).
 
 - **Block beaming data from apps using NFC (work-profile level)**: If **True**, prevents using the Near Field Communication (NFC) technology to beam data from apps to other devices. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.
 

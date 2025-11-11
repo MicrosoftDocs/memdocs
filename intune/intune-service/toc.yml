@@ -2024,6 +2024,8 @@ items:
 
   - name: Scenario-based guidance
     items:
+    - name: Manage AI on Android
+      href: ../solutions/ai/manage-ai-android.md
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
     - name: Frontline worker (FLW) device management
