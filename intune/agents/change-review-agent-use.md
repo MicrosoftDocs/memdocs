@@ -81,7 +81,7 @@ The agent doesn't support scheduled runs and must be started manually each time 
 
 ## Manage suggestions
 
-You can use the Change Review Agent node to deeply review and then manage (approve or reject) the Multi Admin Approval script request. 
+You can use the Change Review Agent node to deeply review and then manage (approve or reject) the Multi Admin Approval script request.
 
 To review and manage a request that's been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent’s review for that request. The detailed view is named after the selected suggestion and includes the agent’s recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
 
@@ -93,9 +93,7 @@ To review and manage a request that's been evaluated by the agent, select an age
 - **Reject** – A high-risk request that shouldn't be approved.
 - **Needs more info** – The risk couldn’t be fully assessed, and the request requires careful admin review.
 
-The final decision to approve or reject a request always remains with the admin. 
- 
-When you open an agent suggestion, the review page is divided into two main areas. Each area provides specific information to help you understand the recommendation:
+When you open an agent suggestion, the review page is divided into two main areas. Each area provides specific information to help you understand the recommendation. At the bottom of this information are details for the *View request* button, which is used to open the Multi Admin Approval request where you can then approve or reject the request. The final decision to approve or reject a request always remains with the admin.
 
 - **Details tile**
 
@@ -120,9 +118,7 @@ When you open an agent suggestion, the review page is divided into two main area
     - A simple feedback system to share your input on the agent’s results.
 
   - **View request:**
-    This button opens a review window for the current request. The review window provides yo with the same options available in the *Multi Admin Approval* node of the admin center.
-
-    The following are available actions after selecting *View request*:
+    This button opens a review window for the current request. The review window provides the same options available in the *Multi Admin Approval* node of the admin center
 
     - Use the *Approver note* to explain your decision for this request.
     - Complete the approval process by selecting **Approve request** or **Reject request**.
