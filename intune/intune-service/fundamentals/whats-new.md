@@ -232,6 +232,21 @@ Each query returns a Copilot summary to help you understand the results and offe
 
 To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
 
+### Device security
+
+#### Microsoft Tunnel access by rooted Android devices is blocked by the Microsoft Defender client<!-- 30336962 -->
+
+Microsoft Tunnel uses the Microsoft Defender client app to provide Android devices access to tunnel. The latest version of the Defender for Endpoint client can now detect when a device is rooted. If a device is determined to be rooted, Defender:
+
+- Marks the device's risk category as *High*
+- Immediately drops active Tunnel connections
+- Prevents further use of Tunnel until the device is determined to no longer be rooted
+- Sends a notification to the device user about the device status
+
+This capability is a feature of the Defender client on Android and doesn’t replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
+
+For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](/intune/intune-service/protect/microsoft-tunnel-overview#capabiltities).
+
 ## Week of October 20, 2025 (Service release 2510)
 
 ### Microsoft Intune Suite

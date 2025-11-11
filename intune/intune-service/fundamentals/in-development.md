@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/27/2025
+ms.date: 11/13/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -115,12 +115,6 @@ For more information, see the following articles:
 <!-- *********************************************** -->
 
 ## Device security
-
-### Microsoft Tunnel for detection and protection for rooted Android devices<!-- 30336962 -->
-
-We’re updating Microsoft Tunnel with the capability to detect and block access from rooted Android devices. This update will ensure that only compliant and trustworthy devices can establish secure connections through the Tunnel.
- 
-This new capability will be available with Microsoft Tunnel for [Mobile Device Management](/intune/intune-service/protect/microsoft-tunnel-overview) (MDM) and for [Mobile Application Management](/intune/intune-service/protect/microsoft-tunnel-mam) (MAM).
 
 ### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
