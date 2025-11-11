@@ -171,15 +171,6 @@ At a high level, the agent does the following steps:
 
 The agent runs under the identity and permissions of the Intune admin account used during setup. The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
-### Change the agent identity
-
-After setup, the agent identity can be changed. A change of the agent identity doesn't affect the agent's run history. 
-
-The identity changes when a different admin account than current identity is used to [renew](#renew-the-agent) the agent.
-
-> [!IMPORTANT]
-> The agent can only perform operations allowed by the permissions of the account it runs under. If that  account lacks [required permissions](#prerequisites), the agent fails to run.
-
 ## Operational considerations
 
 Before setting up and starting the agent for the first time, review the following considerations:
