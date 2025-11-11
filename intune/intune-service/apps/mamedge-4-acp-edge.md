@@ -53,40 +53,40 @@ Windows app configuration policies provide browser customization through managed
 6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
 7. On the **Settings** step, expand **General configuration settings** and configure:
 
-    | Setting | Key | Value |
-    |---------|-----|-------|
-    | Core Browser Behavior (Enterprise Foundation)<br><br>[Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) | HomepageLocation | `https://portal.company.com` |
-    | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) | ShowHomeButton | Enabled |
-    | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) | NewTabPageLocation | `https://portal.company.com` |
-    | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) | RestoreOnStartup | Open the new tab page (5) |
-    | Content & Security Controls<br><br>[Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) | HTTPSOnlyMode | Enabled |
-    | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) | DefaultPopupsSetting | Do not allow popups (2) |
-    | Privacy & Data Management<br><br>[Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
-    | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) | AutofillAddressEnabled | Disabled |
-    | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | Disabled |
-    | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) | TrackingPrevention | Balanced (2) |
-    | Search & Navigation Enhancement<br><br>[Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) | DefaultSearchProviderEnabled | Enabled |
-    | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) | DefaultSearchProviderName | Microsoft Bing |
-    | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | https://www.bing.com/search?q |
-    | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
-    | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
-    | Import Controls (Data Boundary)<br><br>[Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) | ImportAutofillFormData | Disabled |
-    | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) | ImportSavedPasswords | Disabled |
-    | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) | ImportBrowsingHistory | Disabled |
-    | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) | ImportCookies | Disabled |
-    | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) | ImportExtensions | Disabled |
-    | Extension Management (Basic)<br><br>[Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) | ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" |
-    | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) | ExtensionAllowedTypes | "extension", "theme" |
-    | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) | ExtensionInstallSources | https://corp.contoso.com/ |
-    | Download & File Management<br><br>[Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) | DefaultDownloadDirectory | $ |
-    | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) | PromptForDownloadLocation | Enabled |
-    | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block malicious downloads and dangerous file types |
-    | Feature Controls (Productivity)<br><br>[Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) | HubsSidebarEnabled | Disabled |
-    | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) | ShowMicrosoftRewards | Disabled |
-    | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) | EdgeShoppingAssistantEnabled | Disabled |
-    | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) | EdgeWorkspacesEnabled | Enabled |
-    | Bookmarks & Favorites Management<br><br>[Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) | FavoritesBarEnabled | Enabled |
-    | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) | AllowDeletingBrowserHistory | Enabled |
+    | Category | Setting | Name | Value |
+    |---------|---------|------|-------|
+    | Core Browser Behavior (Enterprise Foundation) | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) | HomepageLocation | `https://portal.company.com` |
+    | | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) | ShowHomeButton | Enabled |
+    | | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) | NewTabPageLocation | `https://portal.company.com` |
+    | | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) | RestoreOnStartup | Open the new tab page (5) |
+    | Content & Security Controls | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) | HTTPSOnlyMode | Enabled |
+    | | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) | DefaultPopupsSetting | Do not allow popups (2) |
+    | Privacy & Data Management | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
+    | | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) | AutofillAddressEnabled | Disabled |
+    | | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | Disabled |
+    | | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) | TrackingPrevention | Balanced (2) |
+    | Search & Navigation Enhancement | [Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) | DefaultSearchProviderEnabled | Enabled |
+    | | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) | DefaultSearchProviderName | Microsoft Bing |
+    | | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | https://www.bing.com/search?q |
+    | | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
+    | | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
+    | Import Controls (Data Boundary) | [Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) | ImportAutofillFormData | Disabled |
+    | | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) | ImportSavedPasswords | Disabled |
+    | | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) | ImportBrowsingHistory | Disabled |
+    | | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) | ImportCookies | Disabled |
+    | | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) | ImportExtensions | Disabled |
+    | Extension Management (Basic) | [Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) | ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" |
+    | | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) | ExtensionAllowedTypes | "extension", "theme" |
+    | | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) | ExtensionInstallSources | https://corp.contoso.com/ |
+    | Download & File Management | [Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) | DefaultDownloadDirectory | $ |
+    | | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) | PromptForDownloadLocation | Enabled |
+    | | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block malicious downloads and dangerous file types |
+    | Feature Controls (Productivity) | [Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) | HubsSidebarEnabled | Disabled |
+    | | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) | ShowMicrosoftRewards | Disabled |
+    | | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) | EdgeShoppingAssistantEnabled | Disabled |
+    | | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) | EdgeWorkspacesEnabled | Enabled |
+    | Bookmarks & Favorites Management | [Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) | FavoritesBarEnabled | Enabled |
+    | | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) | AllowDeletingBrowserHistory | Enabled |
 
 7. Select **Next**.  
 8. For **Assignments**, assign to **SEB-Level1-Users** group.  
@@ -106,66 +106,66 @@ Windows app configuration policies provide browser customization through managed
 6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
 7. On the **Settings** step, expand **General configuration settings** and configure:
 
-    | Setting | Key | Value |
-    |---------|-----|-------|
-    | Core Browser Behavior (Enterprise Foundation)<br><br>[Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) | HomepageLocation | `https://portal.company.com` |
-    | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) | ShowHomeButton | Enabled |
-    | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) | NewTabPageLocation | https://portal.company.com |
-    | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) | RestoreOnStartup | Open the new tab page (5) |
-    | Content & Security Controls<br><br>[Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) | HTTPSOnlyMode | Enabled |
-    | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) | DefaultPopupsSetting | Do not allow popups (2) |
-    | Privacy & Data Management<br><br>[Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
-    | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) | AutofillAddressEnabled | Disabled |
-    | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | Disabled |
-    | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) | TrackingPrevention | Balanced (2) |
-    | Search & Navigation Enhancement<br><br>[Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) | DefaultSearchProviderEnabled | Enabled |
-    | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) | DefaultSearchProviderName | Microsoft Bing |
-    | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | https://www.bing.com/search?q |
-    | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
-    | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
-    | Import Controls (Data Boundary)<br><br>[Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) | ImportAutofillFormData | Disabled |
-    | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) | ImportSavedPasswords | Disabled |
-    | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) | ImportBrowsingHistory | Disabled |
-    | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) | ImportCookies | Disabled |
-    | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) | ImportExtensions | Disabled |
-    | Extension Management (Basic)<br><br>[Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) | ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" |
-    | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) | ExtensionAllowedTypes | "extension", "theme" |
-    | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) | ExtensionInstallSources | https://corp.contoso.com/ |
-    | Download & File Management<br><br>[Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) | DefaultDownloadDirectory | $ |
-    | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) | PromptForDownloadLocation | Enabled |
-    | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block malicious downloads and dangerous file types |
-    | Feature Controls (Productivity)<br><br>[Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) | HubsSidebarEnabled | Disabled |
-    | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) | ShowMicrosoftRewards | Disabled |
-    | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) | EdgeShoppingAssistantEnabled | Disabled |
-    | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) | EdgeWorkspacesEnabled | Enabled |
-    | Bookmarks & Favorites Management<br><br>[Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) | FavoritesBarEnabled | Enabled |
-    | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) | AllowDeletingBrowserHistory | Enabled |
-    | Enhanced Security Controls<br><br>[Force Microsoft Defender SmartScreen checks on downloads from trusted sources](/deployedge/microsoft-edge-browser-policies/smartscreenfortrusteddownloadsenabled) | SmartScreenForTrustedDownloadsEnabled | Enabled |
-    | [Allow insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentallowedforurls) | InsecureContentAllowedForUrls | [] |
-    | [Block insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentblockedforurls) | InsecureContentBlockedForUrls | ["*"] |
-    | Advanced Extension Management<br><br>[Allow specific extensions to be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) | ExtensionInstallAllowlist | [] |
-    | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) | ExtensionInstallForcelist | [] |
-    | [Configure extension management settings](/deployedge/microsoft-edge-browser-policies/extensionsettings) | ExtensionSettings | {"*":{"installation_mode":"blocked"}} |
-    | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlistt) | NativeMessagingHostAllowlist | [] |
-    | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) | NativeMessagingHostBlocklist | ["*"] |
-    | Certificate & Authentication<br><br>[Automatically select client certificates for these sites](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) | AutoSelectCertificateForUrls | ["*.company.com"] |
-    | Content & Media Controls<br><br>[Restrict the range of local UDP ports used by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtcudpportrange) | WebRtcUdpPortRange | 10000:11000 |
-    | [Default images setting](/deployedge/microsoft-edge-browser-policies/defaultimagessetting) | DefaultImagesSetting | Allow images (1) |
-    | [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) | DefaultJavaScriptSetting | Allow JavaScript (1) |
-    | Advanced Privacy Controls<br><br>[Clear browsing data when Microsoft Edge closes](/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) | ClearBrowsingDataOnExit | Enabled |
-    | [Disable synchronization of data using Microsoft sync services](/deployedge/microsoft-edge-browser-policies/syncdisabled) | SyncDisabled | Enabled |
-    | Printing & Export Controls<br><br>[Enable printing](/deployedge/microsoft-edge-browser-policies/printingenabled) | PrintingEnabled | Enabled |
-    | Session & Storage Management<br><br>[InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) | InPrivateModeAvailability | InPrivate mode available (0) |
-    | [Force synchronization of browser data and do not show the sync consent prompt](/deployedge/microsoft-edge-browser-policies/forcesync) | ForceSync | Disabled |
-    | Performance & Resource Management<br><br>[Configure sleeping tabs](/deployedge/microsoft-edge-browser-policies/sleepingtabsenabled) | SleepingTabsEnabled | Enabled |
-    | Address Bar Suggestions Management<br><br>[Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
-    | [Allow suggestions from local providers](/deployedge/microsoft-edge-browser-policies/localprovidersenabled) | LocalProvidersEnabled | Disabled |
-    | Media Device Permissions<br><br>[Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) | VideoCaptureAllowed | Disabled |
-    | Notification Controls<br><br>[Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) | DefaultNotificationsSetting | Block (2) |
-    | Location Services Management<br><br>[Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) |
-    | USB/HID Device Controls<br><br>[Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usballowdevicesforurls) | UsbAllowDevicesForUrls | [] |
-    | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) | UsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] |
-    | WebRTC Advanced Settings<br><br>[Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) |
+    | Category | Setting | Name | Value |
+    |---------|---------|------|-------|
+    | Core Browser Behavior (Enterprise Foundation) | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) | HomepageLocation | `https://portal.company.com` |
+    | | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) | ShowHomeButton | Enabled |
+    | | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) | NewTabPageLocation | https://portal.company.com |
+    | | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) | RestoreOnStartup | Open the new tab page (5) |
+    | Content & Security Controls | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) | HTTPSOnlyMode | Enabled |
+    | | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) | DefaultPopupsSetting | Do not allow popups (2) |
+    | Privacy & Data Management | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
+    | | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) | AutofillAddressEnabled | Disabled |
+    | | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | Disabled |
+    | | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) | TrackingPrevention | Balanced (2) |
+    | Search & Navigation Enhancement | [Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) | DefaultSearchProviderEnabled | Enabled |
+    | | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) | DefaultSearchProviderName | Microsoft Bing |
+    | | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | https://www.bing.com/search?q |
+    | | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
+    | | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
+    | Import Controls (Data Boundary) | [Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) | ImportAutofillFormData | Disabled |
+    | | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) | ImportSavedPasswords | Disabled |
+    | | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) | ImportBrowsingHistory | Disabled |
+    | | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) | ImportCookies | Disabled |
+    | | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) | ImportExtensions | Disabled |
+    | Extension Management (Basic) | [Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) | ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" |
+    | | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) | ExtensionAllowedTypes | "extension", "theme" |
+    | | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) | ExtensionInstallSources | https://corp.contoso.com/ |
+    | Download & File Management | [Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) | DefaultDownloadDirectory | $ |
+    | | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) | PromptForDownloadLocation | Enabled |
+    | | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block malicious downloads and dangerous file types |
+    | Feature Controls (Productivity) | [Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) | HubsSidebarEnabled | Disabled |
+    | | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) | ShowMicrosoftRewards | Disabled |
+    | | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) | EdgeShoppingAssistantEnabled | Disabled |
+    | | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) | EdgeWorkspacesEnabled | Enabled |
+    | Bookmarks & Favorites Management | [Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) | FavoritesBarEnabled | Enabled |
+    | | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) | AllowDeletingBrowserHistory | Enabled |
+    | Enhanced Security Controls | [Force Microsoft Defender SmartScreen checks on downloads from trusted sources](/deployedge/microsoft-edge-browser-policies/smartscreenfortrusteddownloadsenabled) | SmartScreenForTrustedDownloadsEnabled | Enabled |
+    | | [Allow insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentallowedforurls) | InsecureContentAllowedForUrls | [] |
+    | | [Block insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentblockedforurls) | InsecureContentBlockedForUrls | ["*"] |
+    | Advanced Extension Management | [Allow specific extensions to be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) | ExtensionInstallAllowlist | [] |
+    | | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) | ExtensionInstallForcelist | [] |
+    | | [Configure extension management settings](/deployedge/microsoft-edge-browser-policies/extensionsettings) | ExtensionSettings | {"*":{"installation_mode":"blocked"}} |
+    | | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlistt) | NativeMessagingHostAllowlist | [] |
+    | | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) | NativeMessagingHostBlocklist | ["*"] |
+    | Certificate & Authentication | [Automatically select client certificates for these sites](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) | AutoSelectCertificateForUrls | ["*.company.com"] |
+    | Content & Media Controls | [Restrict the range of local UDP ports used by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtcudpportrange) | WebRtcUdpPortRange | 10000:11000 |
+    | | [Default images setting](/deployedge/microsoft-edge-browser-policies/defaultimagessetting) | DefaultImagesSetting | Allow images (1) |
+    | | [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) | DefaultJavaScriptSetting | Allow JavaScript (1) |
+    | Advanced Privacy Controls | [Clear browsing data when Microsoft Edge closes](/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) | ClearBrowsingDataOnExit | Enabled |
+    | | [Disable synchronization of data using Microsoft sync services](/deployedge/microsoft-edge-browser-policies/syncdisabled) | SyncDisabled | Enabled |
+    | Printing & Export Controls | [Enable printing](/deployedge/microsoft-edge-browser-policies/printingenabled) | PrintingEnabled | Enabled |
+    | Session & Storage Management | [InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) | InPrivateModeAvailability | InPrivate mode available (0) |
+    | | [Force synchronization of browser data and do not show the sync consent prompt](/deployedge/microsoft-edge-browser-policies/forcesync) | ForceSync | Disabled |
+    | Performance & Resource Management | [Configure sleeping tabs](/deployedge/microsoft-edge-browser-policies/sleepingtabsenabled) | SleepingTabsEnabled | Enabled |
+    | Address Bar Suggestions Management | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
+    | | [Allow suggestions from local providers](/deployedge/microsoft-edge-browser-policies/localprovidersenabled) | LocalProvidersEnabled | Disabled |
+    | Media Device Permissions | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) | VideoCaptureAllowed | Disabled |
+    | Notification Controls | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) | DefaultNotificationsSetting | Block (2) |
+    | Location Services Management | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) |
+    | USB/HID Device Controls | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usballowdevicesforurls) | UsbAllowDevicesForUrls | [] |
+    | | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) | UsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] |
+    | WebRTC Advanced Settings | [Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) |
 
 7. Select **Next**.  
 8. For **Assignments**, assign to **SEB-Level2-Users** group.  
@@ -185,84 +185,84 @@ Windows app configuration policies provide browser customization through managed
 6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
 7. On the **Settings** step, expand **General configuration settings** and configure:
 
-    | Setting | Key | Value |
-    |---------|-----|-------|
-    | Core Browser Behavior (Enterprise Foundation)<br><br>[Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) | HomepageLocation | `https://portal.company.com` |
-    | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) | ShowHomeButton | Enabled |
-    | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) | NewTabPageLocation | https://portal.company.com |
-    | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) | RestoreOnStartup | Open the new tab page (5) |
-    | Content & Security Controls<br><br>[Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) | HTTPSOnlyMode | Enabled |
-    | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) | DefaultPopupsSetting | Do not allow popups (2) |
-    | Privacy & Data Management<br><br>[Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
-    | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) | AutofillAddressEnabled | Disabled |
-    | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | Disabled |
-    | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) | TrackingPrevention | Balanced (2) |
-    | Search & Navigation Enhancement<br><br>[Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) | DefaultSearchProviderEnabled | Enabled |
-    | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) | DefaultSearchProviderName | Microsoft Bing |
-    | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | `https://www.bing.com/search?q` |
-    | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
-    | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
-    | Import Controls (Data Boundary)<br><br>[Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) | ImportAutofillFormData | Disabled |
-    | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) | ImportSavedPasswords | Disabled |
-    | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) | ImportBrowsingHistory | Disabled |
-    | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) | ImportCookies | Disabled |
-    | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) | ImportExtensions | Disabled |
-    | Extension Management (Basic)<br><br>[Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) | ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" |
-    | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) | ExtensionAllowedTypes | "extension", "theme" |
-    | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) | ExtensionInstallSources | `https://corp.contoso.com/` |
-    | Download & File Management<br><br>[Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) | DefaultDownloadDirectory | $ |
-    | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) | PromptForDownloadLocation | Enabled |
-    | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block malicious downloads and dangerous file types |
-    | Feature Controls (Productivity)<br><br>[Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) | HubsSidebarEnabled | Disabled |
-    | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) | ShowMicrosoftRewards | Disabled |
-    | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) | EdgeShoppingAssistantEnabled | Disabled |
-    | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) | EdgeWorkspacesEnabled | Enabled |
-    | Bookmarks & Favorites Management<br><br>[Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) | FavoritesBarEnabled | Enabled |
-    | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) | AllowDeletingBrowserHistory | Enabled |
-    | Enhanced Security Controls<br><br>[Force Microsoft Defender SmartScreen checks on downloads from trusted sources](/deployedge/microsoft-edge-browser-policies/smartscreenfortrusteddownloadsenabled) | SmartScreenForTrustedDownloadsEnabled | Enabled |
-    | [Allow insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentallowedforurls) | InsecureContentAllowedForUrls | [] |
-    | [Block insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentblockedforurls) | InsecureContentBlockedForUrls | ["*"] |
-    | Advanced Extension Management<br><br>[Allow specific extensions to be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) | ExtensionInstallAllowlist | [] |
-    | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) | ExtensionInstallForcelist | [] |
-    | [Configure extension management settings](/deployedge/microsoft-edge-browser-policies/extensionsettings) | ExtensionSettings | {"*":{"installation_mode":"blocked"}} |
-    | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlistt) | NativeMessagingHostAllowlist | [] |
-    | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) | NativeMessagingHostBlocklist | ["*"] |
-    | Certificate & Authentication<br><br>[Automatically select client certificates for these sites](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) | AutoSelectCertificateForUrls | ["*.company.com"] |
-    | Content & Media Controls<br><br>[Restrict the range of local UDP ports used by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtcudpportrange) | WebRtcUdpPortRange | 10000:11000 |
-    | [Default images setting](/deployedge/microsoft-edge-browser-policies/defaultimagessetting) | DefaultImagesSetting | Allow images (1) |
-    | [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) | DefaultJavaScriptSetting | Allow JavaScript (1) |
-    | Advanced Privacy Controls<br><br>[Clear browsing data when Microsoft Edge closes](/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) | ClearBrowsingDataOnExit | Enabled |
-    | [Disable synchronization of data using Microsoft sync services](/deployedge/microsoft-edge-browser-policies/syncdisabled) | SyncDisabled | Enabled |
-    | Printing & Export Controls<br><br>[Enable printing](/deployedge/microsoft-edge-browser-policies/printingenabled) | PrintingEnabled | Enabled |
-    | Session & Storage Management<br><br>[InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) | InPrivateModeAvailability | InPrivate mode available (0) |
-    | [Force synchronization of browser data and do not show the sync consent prompt](/deployedge/microsoft-edge-browser-policies/forcesync) | ForceSync | Disabled |
-    | Performance & Resource Management<br><br>[Configure sleeping tabs](/deployedge/microsoft-edge-browser-policies/sleepingtabsenabled) | SleepingTabsEnabled | Enabled |
-    | Address Bar Suggestions Management<br><br>[Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
-    | [Allow suggestions from local providers](/deployedge/microsoft-edge-browser-policies/localprovidersenabled) | LocalProvidersEnabled | Disabled |
-    | Media Device Permissions<br><br>[Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) | VideoCaptureAllowed | Disabled |
-    | Notification Controls<br><br>[Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) | DefaultNotificationsSetting | Block (2) |
-    | Location Services Management<br><br>[Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) |
-    | USB/HID Device Controls<br><br>[Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usballowdevicesforurls) | UsbAllowDevicesForUrls | [] |
-    | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) | UsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] |
-    | WebRTC Advanced Settings<br><br>[Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) |
-    | Zero-Trust URL Management<br><br>[Define a list of allowed URLs](/deployedge/microsoft-edge-browser-policies/urlallowlist) | URLAllowlist | ["*.company.com",".microsoft.com",".office.com"] |
-    | [Block access to a list of URLs](/deployedge/microsoft-edge-browser-policies/urlblocklist) | URLBlocklist | ["*"] |
-    | [Allow cookies on specific sites](/deployedge/microsoft-edge-browser-policies/cookiesallowedforurls) | CookiesAllowedForUrls | ["*.company.com"] |
-    | [Block cookies on specific sites](/deployedge/microsoft-edge-browser-policies/cookiesblockedforurls) | CookiesBlockedForUrls | ["*"] |
-    | [Limit cookies from specific websites to current session](/deployedge/microsoft-edge-browser-policies/cookiessessiononlyforurls) | CookiesSessionOnlyForUrls | ["*"] |
-    | Complete Data Loss Prevention<br><br>[Download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block all downloads (4) |
-    | [Allow or deny screen capture](/deployedge/microsoft-edge-browser-policies/screencaptureallowed) | ScreenCaptureAllowed | Disabled |
-    | [Enable printing](/deployedge/microsoft-edge-browser-policies/printingenabled) | PrintingEnabled | Disabled |
-    | [Default clipboard site permission](/deployedge/microsoft-edge-browser-policies/defaultclipboardsetting) | DefaultClipboardSetting | Block clipboard (2) |
-    | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) | VideoCaptureAllowed | Disabled |
-    | High Privacy Enforcement<br><br>[Configure InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) | InPrivateModeAvailability | InPrivate mode forced (2) |
-    | [Clear browsing data when Microsoft Edge closes](/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) | ClearBrowsingDataOnExit | Enabled |
-    | [Disable saving browser history](/deployedge/microsoft-edge-browser-policies/savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | Enabled |
-    | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
-    | Developer Tools Lockdown<br><br>[Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) | DeveloperToolsAvailability | Disallowed (2) |
-    | Network Security<br><br>[Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
-    | Feature Restrictions<br><br>[Enable the Collections feature](/deployedge/microsoft-edge-browser-policies/edgecollectionsenabled) | EdgeCollectionsEnabled | Disabled |
-    | [Allow users to access the games menu](/deployedge/microsoft-edge-browser-policies/gamemenuenabled) | GameMenuEnabled | Disabled |
+    | Category | Setting | Name | Value |
+    |---------|---------|------|-------|
+    | Core Browser Behavior (Enterprise Foundation) | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) | HomepageLocation | `https://portal.company.com` |
+    | | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) | ShowHomeButton | Enabled |
+    | | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) | NewTabPageLocation | https://portal.company.com |
+    | | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) | RestoreOnStartup | Open the new tab page (5) |
+    | Content & Security Controls | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) | HTTPSOnlyMode | Enabled |
+    | | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) | DefaultPopupsSetting | Do not allow popups (2) |
+    | Privacy & Data Management | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
+    | | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) | AutofillAddressEnabled | Disabled |
+    | | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | Disabled |
+    | | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) | TrackingPrevention | Balanced (2) |
+    | Search & Navigation Enhancement | [Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) | DefaultSearchProviderEnabled | Enabled |
+    | | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) | DefaultSearchProviderName | Microsoft Bing |
+    | | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | `https://www.bing.com/search?q` |
+    | | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
+    | | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
+    | Import Controls (Data Boundary) | [Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) | ImportAutofillFormData | Disabled |
+    | | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) | ImportSavedPasswords | Disabled |
+    | | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) | ImportBrowsingHistory | Disabled |
+    | | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) | ImportCookies | Disabled |
+    | | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) | ImportExtensions | Disabled |
+    | Extension Management (Basic) | [Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) | ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" |
+    | | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) | ExtensionAllowedTypes | "extension", "theme" |
+    | | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) | ExtensionInstallSources | `https://corp.contoso.com/` |
+    | Download & File Management | [Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) | DefaultDownloadDirectory | $ |
+    | | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) | PromptForDownloadLocation | Enabled |
+    | | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block malicious downloads and dangerous file types |
+    | Feature Controls (Productivity) | [Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) | HubsSidebarEnabled | Disabled |
+    | | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) | ShowMicrosoftRewards | Disabled |
+    | | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) | EdgeShoppingAssistantEnabled | Disabled |
+    | | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) | EdgeWorkspacesEnabled | Enabled |
+    | Bookmarks & Favorites Management | [Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) | FavoritesBarEnabled | Enabled |
+    | | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) | AllowDeletingBrowserHistory | Enabled |
+    | Enhanced Security Controls | [Force Microsoft Defender SmartScreen checks on downloads from trusted sources](/deployedge/microsoft-edge-browser-policies/smartscreenfortrusteddownloadsenabled) | SmartScreenForTrustedDownloadsEnabled | Enabled |
+    | | [Allow insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentallowedforurls) | InsecureContentAllowedForUrls | [] |
+    | | [Block insecure content on specified sites](/deployedge/microsoft-edge-browser-policies/insecurecontentblockedforurls) | InsecureContentBlockedForUrls | ["*"] |
+    | Advanced Extension Management | [Allow specific extensions to be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) | ExtensionInstallAllowlist | [] |
+    | | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) | ExtensionInstallForcelist | [] |
+    | | [Configure extension management settings](/deployedge/microsoft-edge-browser-policies/extensionsettings) | ExtensionSettings | {"*":{"installation_mode":"blocked"}} |
+    | | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlistt) | NativeMessagingHostAllowlist | [] |
+    | | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) | NativeMessagingHostBlocklist | ["*"] |
+    | Certificate & Authentication | [Automatically select client certificates for these sites](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) | AutoSelectCertificateForUrls | ["*.company.com"] |
+    | Content & Media Controls | [Restrict the range of local UDP ports used by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtcudpportrange) | WebRtcUdpPortRange | 10000:11000 |
+    | | [Default images setting](/deployedge/microsoft-edge-browser-policies/defaultimagessetting) | DefaultImagesSetting | Allow images (1) |
+    | | [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) | DefaultJavaScriptSetting | Allow JavaScript (1) |
+    | Advanced Privacy Controls | [Clear browsing data when Microsoft Edge closes](/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) | ClearBrowsingDataOnExit | Enabled |
+    | | [Disable synchronization of data using Microsoft sync services](/deployedge/microsoft-edge-browser-policies/syncdisabled) | SyncDisabled | Enabled |
+    | Printing & Export Controls | [Enable printing](/deployedge/microsoft-edge-browser-policies/printingenabled) | PrintingEnabled | Enabled |
+    | Session & Storage Management | [InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) | InPrivateModeAvailability | InPrivate mode available (0) |
+    | | [Force synchronization of browser data and do not show the sync consent prompt](/deployedge/microsoft-edge-browser-policies/forcesync) | ForceSync | Disabled |
+    | Performance & Resource Management | [Configure sleeping tabs](/deployedge/microsoft-edge-browser-policies/sleepingtabsenabled) | SleepingTabsEnabled | Enabled |
+    | Address Bar Suggestions Management | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) | SearchSuggestEnabled | Disabled |
+    | | [Allow suggestions from local providers](/deployedge/microsoft-edge-browser-policies/localprovidersenabled) | LocalProvidersEnabled | Disabled |
+    | Media Device Permissions | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) | VideoCaptureAllowed | Disabled |
+    | Notification Controls | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) | DefaultNotificationsSetting | Block (2) |
+    | Location Services Management | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) |
+    | USB/HID Device Controls | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usballowdevicesforurls) | UsbAllowDevicesForUrls | [] |
+    | | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) | UsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] |
+    | WebRTC Advanced Settings | [Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) |
+    | Zero-Trust URL Management | [Define a list of allowed URLs](/deployedge/microsoft-edge-browser-policies/urlallowlist) | URLAllowlist | ["*.company.com",".microsoft.com",".office.com"] |
+    | | [Block access to a list of URLs](/deployedge/microsoft-edge-browser-policies/urlblocklist) | URLBlocklist | ["*"] |
+    | | [Allow cookies on specific sites](/deployedge/microsoft-edge-browser-policies/cookiesallowedforurls) | CookiesAllowedForUrls | ["*.company.com"] |
+    | | [Block cookies on specific sites](/deployedge/microsoft-edge-browser-policies/cookiesblockedforurls) | CookiesBlockedForUrls | ["*"] |
+    | | [Limit cookies from specific websites to current session](/deployedge/microsoft-edge-browser-policies/cookiessessiononlyforurls) | CookiesSessionOnlyForUrls | ["*"] |
+    | Complete Data Loss Prevention | [Download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | Block all downloads (4) |
+    | | [Allow or deny screen capture](/deployedge/microsoft-edge-browser-policies/screencaptureallowed) | ScreenCaptureAllowed | Disabled |
+    | | [Enable printing](/deployedge/microsoft-edge-browser-policies/printingenabled) | PrintingEnabled | Disabled |
+    | | [Default clipboard site permission](/deployedge/microsoft-edge-browser-policies/defaultclipboardsetting) | DefaultClipboardSetting | Block clipboard (2) |
+    | | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) | VideoCaptureAllowed | Disabled |
+    | High Privacy Enforcement | [Configure InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) | InPrivateModeAvailability | InPrivate mode forced (2) |
+    | | [Clear browsing data when Microsoft Edge closes](/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) | ClearBrowsingDataOnExit | Enabled |
+    | | [Disable saving browser history](/deployedge/microsoft-edge-browser-policies/savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | Enabled |
+    | | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) | PasswordManagerEnabled | Disabled |
+    | Developer Tools Lockdown | [Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) | DeveloperToolsAvailability | Disallowed (2) |
+    | Network Security | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) | NetworkPredictionOptions | Don't predict (2) |
+    | Feature Restrictions | [Enable the Collections feature](/deployedge/microsoft-edge-browser-policies/edgecollectionsenabled) | EdgeCollectionsEnabled | Disabled |
+    | | [Allow users to access the games menu](/deployedge/microsoft-edge-browser-policies/gamemenuenabled) | GameMenuEnabled | Disabled |
 
 7. Select **Next**.  
 8. For **Assignments**, assign to **SEB-Level3-Users** group.  
@@ -332,38 +332,38 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
 7. On the **Settings** step, expand **General configuration settings** and configure:
 
-| Setting | Key | Value |
-|---------|-----|-------|
-| General configuration settings<br><br>[Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
-| [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | false |
-| [Configure new tab page layout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) | EdgeNewTabPageLayout | 0 |
-| [Enable kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeenablekioskmode) | EdgeEnableKioskMode | false |
-| [Show address bar in kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeshowaddressbarinkioskmode) | EdgeShowAddressBarInKioskMode | true |
-| General configuration settings - Smartscreen<br><br>[Enable SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | SmartScreenEnabled | true |
-| General configuration settings - Additional<br><br>[Enable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
-| [Enable translate](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | true |
-| [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
-| [Allow SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | true |
-| [Enable as default browser](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | true |
-| [Enable Edge Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | true |
-| [Enable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | true |
-| [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 1 |
-| General configuration settings - Content<br><br>[Default pop-ups setting](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
-| [Default cookies setting](/deployedge/microsoft-edge-mobile-policies#defaultcookiessetting) | DefaultCookiesSetting | 1 |
-| General configuration settings - Password Manager and Protection<br><br>[Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | false |
-| [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| General configuration settings - Organizational Branding<br><br>[Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | "#0078d4" |
-| General configuration settings - Default Search Provider<br><br>[Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
-| [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
-| [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
-| General configuration settings - Proxy Configuration<br><br>[Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "direct"} |
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
+| General configuration settings | [Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
+| | [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
+| | [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | false |
+| | [Configure new tab page layout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) | EdgeNewTabPageLayout | 0 |
+| | [Enable kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeenablekioskmode) | EdgeEnableKioskMode | false |
+| | [Show address bar in kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeshowaddressbarinkioskmode) | EdgeShowAddressBarInKioskMode | true |
+| General configuration settings - Smartscreen | [Enable SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | SmartScreenEnabled | true |
+| General configuration settings - Additional | [Enable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
+| | [Enable translate](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | true |
+| | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
+| | [Allow SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | true |
+| | [Enable as default browser](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | true |
+| | [Enable Edge Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | true |
+| | [Enable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | true |
+| | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 1 |
+| General configuration settings - Content | [Default pop-ups setting](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
+| | [Default cookies setting](/deployedge/microsoft-edge-mobile-policies#defaultcookiessetting) | DefaultCookiesSetting | 1 |
+| General configuration settings - Password Manager and Protection | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | false |
+| | [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+| General configuration settings - Organizational Branding | [Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+| | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | "#0078d4" |
+| General configuration settings - Default Search Provider | [Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
+| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
+| | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
+| | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
+| General configuration settings - Proxy Configuration | [Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "direct"} |
 
 
 7. Expand **Edge configuration settings** and configure:
@@ -386,37 +386,37 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 5. Select **Next**.  
 6. On the **Settings** step, expand **General configuration settings** and configure:
 
-| Setting | Key | Value |
-|---------|-----|-------|
-| General configuration settings<br><br>[Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
-| [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
-| [Configure new tab page layout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) | EdgeNewTabPageLayout | 1 |
-| [Enable kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeenablekioskmode) | EdgeEnableKioskMode | false |
-| [Show address bar in kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeshowaddressbarinkioskmode) | EdgeShowAddressBarInKioskMode | true |
-| General configuration settings – Enhanced<br><br>[Disable browser sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
-| General configuration settings – Smartscreen<br><br>[Enable SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | SmartScreenEnabled | true |
-| General configuration settings – Additional<br><br>[Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | false |
-| [Allow SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
-| [Disable Edge Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | false |
-| [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
-| [Set as default browser](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
-| General configuration settings – Content<br><br>[Default cookies setting](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) | DefaultCookiesSetting | 2 |
-| General configuration settings – Password Manager and Protection<br><br>[Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
-| [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| General configuration settings – Manageability<br><br>[Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | password&#124;autofill&#124;copilot&#124;collections&#124;readaloud |
-| General configuration settings – Identity and sign-in<br><br>[Block sign-in enabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) | EdgeBlockSignInEnabled | false |
-| General configuration settings – Organizational Branding<br><br>[Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | `#0078d4` |
-| General configuration settings – Default Search Provider<br><br>[Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
-| [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
-| [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
-| General configuration settings – Proxy Configuration<br><br>[Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "direct"} |
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
+| General configuration settings | [Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
+| | [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
+| | [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
+| | [Configure new tab page layout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) | EdgeNewTabPageLayout | 1 |
+| | [Enable kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeenablekioskmode) | EdgeEnableKioskMode | false |
+| | [Show address bar in kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeshowaddressbarinkioskmode) | EdgeShowAddressBarInKioskMode | true |
+| General configuration settings – Enhanced | [Disable browser sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
+| General configuration settings – Smartscreen | [Enable SmartScreen](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | SmartScreenEnabled | true |
+| General configuration settings – Additional | [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | false |
+| | [Allow SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
+| | [Disable Edge Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | false |
+| | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
+| | [Set as default browser](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
+| General configuration settings – Content | [Default cookies setting](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) | DefaultCookiesSetting | 2 |
+| General configuration settings – Password Manager and Protection | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
+| | [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+| General configuration settings – Manageability | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | password&#124;autofill&#124;copilot&#124;collections&#124;readaloud |
+| General configuration settings – Identity and sign-in | [Block sign-in enabled](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) | EdgeBlockSignInEnabled | false |
+| General configuration settings – Organizational Branding | [Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+| | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | `#0078d4` |
+| General configuration settings – Default Search Provider | [Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
+| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
+| | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
+| | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
+| General configuration settings – Proxy Configuration | [Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "direct"} |
 
 7. Expand **Edge configuration settings** and configure:
    - **Homepage shortcut URL:** https://www.company.com  
@@ -440,39 +440,39 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 5. Select **Next**.
 6. On the **Settings** step, expand **General configuration settings** and configure:
 
-| Setting | Key | Value |
-|---------|-----|-------|
-| General configuration settings<br><br>[Microsoft Entra password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | false |
-| [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | false |
-| [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| [Configure new tab page layout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) | EdgeNewTabPageLayout | 2 |
-| [Enable kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeenablekioskmode) | EdgeEnableKioskMode | true |
-| [Show address bar in kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeshowaddressbarinkioskmode) | EdgeShowAddressBarInKioskMode | false |
-| General configuration settings – Enhanced<br><br>[Disable browser sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
-| General configuration settings – Additional<br><br>[Disable InPrivate mode](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability) | InPrivateModeAvailability | 1 |
-| [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | true |
-| [Disable translate](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | false |
-| [Disable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | false |
-| [Disable autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | false |
-| [Download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | 2 |
-| [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
-| [Set as default browser](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
-| General configuration settings – Content<br><br>[Default cookies setting](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) | DefaultCookiesSetting | 4 |
-| [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) | DefaultJavaScriptSetting | 2 |
-| [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) | DefaultGeolocationSetting | 2 |
-| General configuration settings – Password Manager and Protection<br><br>[Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
-| [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| General configuration settings – Manageability<br><br>[Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | inprivate&#124;autofill&#124;password&#124;translator&#124;readaloud&#124;drop&#124;coupons&#124;extensions&#124;copilot&#124;collections&#124;myapps |
-| General configuration settings – Organizational Branding<br><br>[Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | "#0078d4" |
-| General configuration settings – Default Search Provider<br><br>[Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
-| [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
-| [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
-| General configuration settings – Proxy Configuration<br><br>[Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "fixed_servers"} |
-| General configuration settings – Identity and sign-in<br><br>[Block sign-in enabled](/deployedge/microsoft-edge-browser-policies/edgeblocksigninenabled) | EdgeBlockSignInEnabled | true |
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
+| General configuration settings | [Microsoft Entra password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | false |
+| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | false |
+| | [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+| | [Configure new tab page layout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) | EdgeNewTabPageLayout | 2 |
+| | [Enable kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeenablekioskmode) | EdgeEnableKioskMode | true |
+| | [Show address bar in kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeshowaddressbarinkioskmode) | EdgeShowAddressBarInKioskMode | false |
+| General configuration settings – Enhanced | [Disable browser sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
+| General configuration settings – Additional | [Disable InPrivate mode](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability) | InPrivateModeAvailability | 1 |
+| | [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | true |
+| | [Disable translate](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | false |
+| | [Disable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | false |
+| | [Disable autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) | AutofillCreditCardEnabled | false |
+| | [Download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) | DownloadRestrictions | 2 |
+| | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
+| | [Set as default browser](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
+| General configuration settings – Content | [Default cookies setting](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) | DefaultCookiesSetting | 4 |
+| | [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) | DefaultJavaScriptSetting | 2 |
+| | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) | DefaultGeolocationSetting | 2 |
+| General configuration settings – Password Manager and Protection | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
+| | [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+| General configuration settings – Manageability | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | inprivate&#124;autofill&#124;password&#124;translator&#124;readaloud&#124;drop&#124;coupons&#124;extensions&#124;copilot&#124;collections&#124;myapps |
+| General configuration settings – Organizational Branding | [Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+| | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | "#0078d4" |
+| General configuration settings – Default Search Provider | [Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
+| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
+| | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
+| | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
+| General configuration settings – Proxy Configuration | [Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "fixed_servers"} |
+| General configuration settings – Identity and sign-in | [Block sign-in enabled](/deployedge/microsoft-edge-browser-policies/edgeblocksigninenabled) | EdgeBlockSignInEnabled | true |
 
 7. Expand **Edge configuration settings** and configure:
    - **Homepage shortcut URL:** https://www.company.com  
@@ -536,33 +536,33 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
 
 #### General configuration settings
 
-| Setting | Name | Value |
-|----------|------|-------|
-| [Password single sign-on](/deployedge/microsoft-edge-mobile-policies#passwordsso) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
-| [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | false |
-| [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
-| [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
-| [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
-| [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | true |
-| [SSL error override allowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | true |
-| [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | true |
-| [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | #0078d4 |
-| [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
-| [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
-| [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
+| | [Password single sign-on](/deployedge/microsoft-edge-mobile-policies#passwordsso) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
+| | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
+| | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | false |
+| | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+| | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
+| | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
+| | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
+| | [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | true |
+| | [SSL error override allowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | true |
+| | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | true |
+| | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+| | [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | #0078d4 |
+| | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
+| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
+| | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
+| | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
 
 #### Edge configuration settings
 
-| Setting | Key | Value |
-|----------|-----|-------|
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
 | Application proxy redirection | — | Disable |
 | Homepage shortcut URL | — | https://www.company.com |
 | Managed bookmarks | — | Company Portal \| https://portal.company.com |
@@ -596,33 +596,33 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
 
 #### General configuration settings
 
-| Setting | Name | Value |
-|----------|------|-------|
-| [Password single sign-on](/deployedge/microsoft-edge-mobile-policies#passwordsso) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
-| [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
-| [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
-| [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
-| [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
-| [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
-| [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | "password|autofill|copilot|collections|readaloud" |
-| [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
-| [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
-| [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
-| [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
-| [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
+| | [Password single sign-on](/deployedge/microsoft-edge-mobile-policies#passwordsso) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
+| | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
+| | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+| | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+| | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
+| | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
+| | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
+| | [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
+| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
+| | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | "password|autofill|copilot|collections|readaloud" |
+| | [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
+| | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
+| | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
+| | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
+| | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+| | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
+| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
 
 #### Edge configuration settings
 
-| Setting | Key | Value |
-|----------|-----|-------|
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
 | Allowed URLs | — | (Leave empty – Level 3 uses Allowed URLs instead.) |
 | Blocked URLs | — | *.facebook.com, *.twitter.com, *.instagram.com, *.tiktok.com |
 | Redirect restricted sites to personal context | — | Enable |
@@ -652,37 +652,37 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
 
 #### General configuration settings
 
-| Setting | Name | Value |
-|----------|------|-------|
-| [Password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | false |
-| [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
-| [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
-| [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
-| [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
-| [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
-| [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | "inprivate|autofill|password|translator|copilot|share|collections|readaloud|drop" |
-| [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
-| [Disable InPrivate mode](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability) | InPrivateModeAvailability | 1 |
-| [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | true |
-| [Block Edge sign-in](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) | EdgeBlockSignInEnabled | true |
-| [Disable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | false |
-| [Disable Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | false |
-| [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | false |
-| [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
-| [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
-| [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
-| [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | #0078d4 |
-| [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
-| [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
-| [Default search keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
+| Category | Setting | Name | Value |
+|---------|---------|------|-------|
+| | [Password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
+| | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | false |
+| | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+| | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+| | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
+| | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
+| | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
+| | [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
+| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
+| | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | "inprivate|autofill|password|translator|copilot|share|collections|readaloud|drop" |
+| | [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
+| | [Disable InPrivate mode](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability) | InPrivateModeAvailability | 1 |
+| | [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | true |
+| | [Block Edge sign-in](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) | EdgeBlockSignInEnabled | true |
+| | [Disable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | false |
+| | [Disable Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | false |
+| | [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | false |
+| | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
+| | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
+| | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
+| | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+| | [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | #0078d4 |
+| | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
+| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
+| | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
+| | [Default search keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
 
 8. Expand **Edge configuration settings** and configure:
 
@@ -717,4 +717,7 @@ After deploying app configuration policies:
 ## Next steps
 
 Continue to [Step 5](mamedge-5-settings-catalog.md) to configure Settings Catalog policies for enrolled Windows and macOS devices.
+
+
+
 
