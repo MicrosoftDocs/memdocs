@@ -84,6 +84,9 @@ The following table lists the various options when *assigning* apps to users and
 
 The app is now assigned to the groups that you selected. For more information about including and excluding app assignments, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 
+> [!NOTE]
+> You will see the status of the selected group in the assignments. The possible status options are: Active, Deleted, or Soft-Deleted.
+
 > [!Tip]
 > Intune supports assigning apps to nested groups too. For example, if you assigned an app to the "Engineering Global" group and have "Engineering APAC", "Engineering EMEA" and "Engineering US" nested as child groups, the members of those child groups will also be targeted with the assignment.
 
