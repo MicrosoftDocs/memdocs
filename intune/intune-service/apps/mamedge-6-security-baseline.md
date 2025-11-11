@@ -1,7 +1,7 @@
 ---
 title: Step 6. Deploy Microsoft Edge security baseline
 description: Step 6. Deploy the Microsoft Edge security baseline for rapid Windows security configuration.
-ms.date: 10/28/2025
+ms.date: 11/11/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -97,7 +97,7 @@ For Level 3 high security, supplement the baseline with extra Settings Catalog p
     - **Name**: Microsoft Edge Security Baseline - Level 3 Enhancements
     - **Description**: More settings to enhance the security baseline for Level 3 high security
 4. Select **Next**.
-5. In **Configuration settings**, expand **Microsoft Edge** and modify the following settings for Level 3:
+5. In **Configuration settings**, expand **Microsoft Edge** and modify the following settings:
 
 | Category | Setting | Value |
 |-----------|----------|--------|
