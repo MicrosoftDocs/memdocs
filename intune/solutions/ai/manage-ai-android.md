@@ -21,8 +21,6 @@ Applies to:
 
 - Android Enterprise
 
-??Add link to Android SC article, SC common tasks??
-
 ## Prerequisites
 
 :::row:::
@@ -220,7 +218,7 @@ Use the following steps to create an app configuration policy that configures yo
       - Fully Managed, Dedicated, and Corporate-Owned Work Profile Only
       - Personally Owned Work Profile devices
 
-    - **Targeted app**: Select the browser app you added, like Edge or Chrome.
+    - **Targeted app**: Select the browser app you added, like Microsoft Edge or Chrome.
 
 3. Select **Next**.
 4. In **Settings** > **Configuration settings format**, select **Enter JSON data**. Enter the list of URLs to block. For example, enter:
@@ -272,7 +270,7 @@ This setting blocks AI features from accessing on-screen content, but also disab
 
     This setting blocks AI features from accessing on-screen content. End users can't take screenshots on the device.
 
-7. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
+7. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../../intune-service/configuration/settings-catalog.md).
 
 # [Corporate owned with work profile](#tab/screen-corporate-owned)
 
@@ -309,7 +307,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
     - **Block screen capture**: Set to **True**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the personal profile.
 
-8. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
+8. Select **Next** and continue creating the profile. For step-by-step instructions, see [Use the Intune settings catalog to configure settings](../../intune-service/configuration/settings-catalog.md).
 
 9. Create a device restrictions profile to block specific AI apps. This setting isn't available in the settings catalog. So, that's why you create a separate device restrictions profile.
 
@@ -325,7 +323,7 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 
         - **Type of restricted apps list**: Set to **Blocked Apps** and add the AI apps you want to block.
 
-    6. Continue creating the profile and assign the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
+    6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
 
 # [Personally owned with work profile](#tab/screen-personal)
 
