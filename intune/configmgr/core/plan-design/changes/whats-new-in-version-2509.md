@@ -27,7 +27,7 @@ To take full advantage of new Configuration Manager changes, after you update th
 ## General enhancements
 
 As part of Microsoft's Secure Future Initiative (SFI) the 2509 version of Configuration Manager focuses on security and quality updates. For more information, see the [Microsoft Trust Center](https://www.microsoft.com/trust-center/security/secure-future-initiative).
-For a list of significant customer-reported issues resolved in this release, see the [Summary of changes in Configuration Manager version 2509](../../../hotfix/2509/31909343.md) knowledge base article.
+For a list of significant customer-reported issues resolved in this release, see the [Summary of changes in Configuration Manager version 2509](../../../hotfix/2509/35877153.md) knowledge base article.
 
 
 ## Known Issues
