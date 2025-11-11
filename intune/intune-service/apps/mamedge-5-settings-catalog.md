@@ -32,14 +32,14 @@ Settings Catalog for Windows provides comprehensive browser configuration with p
 
 **Prerequisites:**
 
-- Windows Pro or Enterprise  
+- Windows 11 Pro or Enterprise  
 - Intune enrollment  
 - Entra ID join or Hybrid  
 - Microsoft Edge Stable channel  
 - TPM 2.0 (for Application Bound Encryption)  
 - Hyper-V (if using Application Guard for Level 3)  
 
-### Level 1 - Enterprise basic security (Windows)
+### Level 1 - Enterprise basic security for Windows
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
@@ -117,7 +117,7 @@ Level 1 configuration provides foundational browser security controls while main
 - Endpoint: Open edge://policy and verify settings are applied  
 - Test basic controls: SmartScreen, tracking prevention, disabled autofill  
 
-### Level 2 - Enterprise enhanced security (Windows)
+### Level 2 - Enterprise enhanced security for Windows
 
 Level 2 adds enhanced security controls including Application Bound Encryption, extension blocking, and advanced privacy controls.
 
@@ -235,7 +235,7 @@ Level 2 adds enhanced security controls including Application Bound Encryption, 
 - Verify developer tools blocked: F12 should not open developer tools  
 - Test API restrictions: WebUSB, WebHID, Serial API should all be blocked  
 
-### Level 3 - Enterprise high security (Windows)
+### Level 3 - Enterprise high security for Windows
 
 Level 3 provides maximum security with URL allowlisting, Application Guard isolation, and comprehensive zero-trust controls.
 
@@ -396,7 +396,7 @@ Settings Catalog for macOS provides foundational browser security for enrolled M
 - Microsoft Edge installed  
 - Administrative access  
 
-### Level 1 - Enterprise basic security (macOS)
+### Level 1 - Enterprise basic security for macOS
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New Policy**.  
@@ -450,7 +450,7 @@ Settings Catalog for macOS provides foundational browser security for enrolled M
 12. For **Assignments**, assign to **SEB-Level1-Devices** group.  
 13. Select **Next** to review the settings. Then choose **Create**.  
 
-### Level 2 - Enterprise enhanced security (macOS)
+### Level 2 - Enterprise enhanced security for macOS
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New Policy**.  
@@ -531,7 +531,7 @@ Settings Catalog for macOS provides foundational browser security for enrolled M
 12. For **Assignments**, assign to **SEB-Level2-Devices** group.  
 13. Select **Next** to review the settings. Then choose **Create**.  
 
-### Level 3 - Enterprise high security (macOS)
+### Level 3 - Enterprise high security for macOS
 
 1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New Policy**.  
