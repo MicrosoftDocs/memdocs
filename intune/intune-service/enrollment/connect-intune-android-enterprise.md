@@ -79,6 +79,8 @@ If you onboarded to Microsoft Intune with a Gmail account, you can optionally up
 1. Select **Upgrade**.  
 1. Select **Upgrade** again to confirm that you want to upgrade your enterprise.   
 1. In the Google popup, follow the steps. When given the option, select **Sign in with Microsoft**.  
+    > [!TIP]
+    > If you have trouble upgrading your domain or you get an error reporting that the domain is already in use, see [Can't sign up my domain for a Google service](https://support.google.com/a/answer/80610?hl=en#zippy=%2Cthis-domain-is-already-in-use) in Google support docs.    
 1. Select **Upgrade**.  
 1. Wait for the upgrade to finish. An onscreen message appears confirming that the upgrade is done. You also receive a notification in the admin center confirming that the upgrade is complete.
 
