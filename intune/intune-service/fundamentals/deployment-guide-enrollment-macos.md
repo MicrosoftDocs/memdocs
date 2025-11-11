@@ -39,6 +39,9 @@ There's also a visual guide of the different enrollment options for each platfor
 
 For all Intune-specific prerequisites and configurations needed to prepare your tenant for enrollment, go to [Enrollment guide: Microsoft Intune enrollment](deployment-guide-enrollment.md).
 
+> [!NOTE]
+> For new and existing tenants, there may be a one-time failure when completing Microsoft Entra ID join. This issue can be resolved by manually syncing the device from the Intune admin center, or from the device on the Intune Company Portal website or Company Portal app. If a failure occurs, it will only happen to one device completing Microsoft Entra ID registration for the tenant. A manual sync will resolve this issue for all future enrollments. Alternatively, as a workaround, add the Microsoft Intune Certificate Authority client production app to your tenant. To do so, a Microsoft Entra administrator must create a service principal object, with app ID 3dde09a2-ff4f-4ebd-9b9a-d24a7a819b6f, in PowerShell or Microsoft Graph. 
+
 ## BYOD: Device enrollment
 
 Use for personal or bring your own devices (BYOD). This enrollment option is also known as **user approved enrollment**.
@@ -96,7 +99,7 @@ For more specific information on this enrollment type, go to [Automatically enro
 | Devices are associated with a single user. | ✅ |
 | Devices are user-less, such as kiosk or dedicated device. | ✅ |
 | Devices are personal or BYOD. | ❌ <br/><br/> Not recommended. BYOD or personal devices should be enrolled using [Device enrollment](#byod-device-enrollment) (in this article). |
-| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use [Device enrollment](#byod-device-enrollment) to manage specifics apps on the device. Since these devices are organization-owned, we recommended to enroll in Intune. |
+| Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users must unenroll from the current MDM provider, and then enroll in Intune. Or, you can use [Device enrollment](#byod-device-enrollment) to manage specifics apps on the device. Since these devices are organization-owned, we recommend to enroll in Intune. |
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ---
@@ -109,7 +112,7 @@ This task list provides an overview. For more specific information, go to [Autom
 - You need access to the [Apple Business Manager (ABM) portal](https://business.apple.com/), or the [Apple School Manager (ASM) portal](https://school.apple.com/).
 - Be sure the Apple token (`.p7m`) is active. For more specific information, go to [Create enrollment program token](../enrollment/device-enrollment-program-enroll-macos.md#create-enrollment-program-token).
 - Be sure the [Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md) is added to Intune, and is active. This certificate is required to enroll macOS devices. For more information, go to [Get an Apple MDM push certificate](../enrollment/apple-mdm-push-certificate-get.md).
-- Decide how how you want users to authenticate on their devices: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended). Make this decision before you create the enrollment policy. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
+- Decide how you want users to authenticate on their devices: **Setup Assistant with modern authentication** (recommended), the **Company Portal** app, or **Setup Assistant (legacy)** (not recommended). Make this decision before you create the enrollment policy. Using the **Setup Assistant with modern authentication** is considered modern authentication. Microsoft recommends using **Setup Assistant with modern authentication**.
 
   For all organization-owned macOS devices, **Setup Assistant (legacy)** is always and automatically used, even if you don't see "Setup Assistant" text in Intune. Setup Assistant (legacy) authenticates the user, and enrolls the device.
 
