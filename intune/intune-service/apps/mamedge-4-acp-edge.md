@@ -50,8 +50,7 @@ Windows app configuration policies provide browser customization through managed
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge Windows**, then select **Select**.  
 5. Select **Next**.  
-6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
-7. On the **Settings** step, expand **General configuration settings** and configure:
+6. On the **Settings** step, expand **General configuration settings** and configure:
 
     | Category | Setting | Name | Value |
     |---------|---------|------|-------|
@@ -90,7 +89,7 @@ Windows app configuration policies provide browser customization through managed
 
 7. Select **Next**.  
 8. For **Assignments**, assign to **SEB-Level1-Users** group.  
-9. Select **Next** to review the settings. Then choose **Create** when you're done.
+9. Select **Next** to review the settings. Then choose **Create**.
 
 ### Level 2 - Enhanced browser configuration for Windows
 
@@ -103,8 +102,7 @@ Windows app configuration policies provide browser customization through managed
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge Windows**, then select **Select**.  
 5. Select **Next**.  
-6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
-7. On the **Settings** step, expand **General configuration settings** and configure:
+6. On the **Settings** step, expand **General configuration settings** and configure:
 
     | Category | Setting | Name | Value |
     |---------|---------|------|-------|
@@ -169,7 +167,7 @@ Windows app configuration policies provide browser customization through managed
 
 7. Select **Next**.  
 8. For **Assignments**, assign to **SEB-Level2-Users** group.  
-9. Select **Next** to review the settings. Then choose **Create** when you're done.
+9. Select **Next** to review the settings. Then choose **Create**.
 
 ### Level 3 - High security configuration for Windows
 
@@ -182,8 +180,7 @@ Windows app configuration policies provide browser customization through managed
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge Windows**, then select **Select**.  
 5. Select **Next**.  
-6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
-7. On the **Settings** step, expand **General configuration settings** and configure:
+6. On the **Settings** step, expand **General configuration settings** and configure:
 
     | Category | Setting | Name | Value |
     |---------|---------|------|-------|
@@ -266,7 +263,7 @@ Windows app configuration policies provide browser customization through managed
 
 7. Select **Next**.  
 8. For **Assignments**, assign to **SEB-Level3-Users** group.  
-9. Select **Next** to review the settings. Then choose **Create** when you're done.
+9. Select **Next** to review the settings. Then choose **Create**.
 
 ### Validation (All Windows Levels)
 
@@ -329,8 +326,7 @@ Android app configuration policies customize Microsoft Edge for Business behavio
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge (Android)**, then select **Select**.  
 5. Select **Next**.  
-6. On the **Settings catalog** step, no options are available for app configuration policies. Select **Next** to continue.  
-7. On the **Settings** step, expand **General configuration settings** and configure:
+6. On the **Settings** step, expand **General configuration settings** and configure:
 
 | Category | Setting | Name | Value |
 |---------|---------|------|-------|
@@ -357,7 +353,7 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 | General configuration settings - Password Manager and Protection | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | false |
 | | [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
 | General configuration settings - Organizational Branding | [Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | "#0078d4" |
+| | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | `#0078d4` |
 | General configuration settings - Default Search Provider | [Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
 | | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
 | | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
@@ -365,13 +361,33 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 | | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
 | General configuration settings - Proxy Configuration | [Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "direct"} |
 
+7. Under Microsoft Tunnel for Mobile Application Management settings:
 
-7. Expand **Edge configuration settings** and configure:
-   - **Homepage shortcut URL:** https://www.company.com  
-   - **Managed bookmarks:** Company Portal\|https://portal.company.com
-8. Select **Next**
-9. In **Assignments**, assign to **SEB-Level1-Users** group.  
-10. Select **Next** to review the settings. Then choose **Create** when you're done.
+| Category | Setting | Value |
+|-----------|----------|-------|
+| Microsoft Tunnel for Mobile Application Management settings | Tunnel enabled | Not configured |
+|  | Connection name | Not configured |
+|  | Microsoft Tunnel site | Not configured |
+|  | Per-App VPN (Android only) | No Per-App VPN |
+|  | Automatic configuration script | Not configured |
+|  | Address | Not configured |
+|  | Port Number | Not configured |
+|  | Root Certificate | Not configured |
+
+8. Expand **Edge configuration settings** and configure:
+
+| Category | Setting | Value |
+|-----------|----------|-------|
+| Edge configuration settings | Application proxy redirection | Disable |
+|  | Homepage shortcut URL | `https://www.company.com` |
+|  | Managed bookmarks | Company Portal &#124; `https://portal.company.com` |
+|  | Allowed URLs | Leave empty (Level 3 uses Allowed URLs) |
+|  | Blocked URLs | Leave empty (Level 2 uses Blocked URLs) |
+|  | Redirect restricted sites to personal context | Disable |
+
+9. Select **Next**
+10. In **Assignments**, assign to **SEB-Level1-Users** group.  
+11. Select **Next** to review the settings. Then choose **Create**.
 
 ### Level 2 – Enhanced Mobile Browser Configuration for Android
 
@@ -419,13 +435,16 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 | General configuration settings – Proxy Configuration | [Configure proxy settings](/deployedge/microsoft-edge-browser-policies/proxysettings) | ProxySettings | {"ProxyServer": "IP:Port", "ProxyBypassList": "*.company.com", "ProxyMode": "direct"} |
 
 7. Expand **Edge configuration settings** and configure:
-   - **Homepage shortcut URL:** https://www.company.com  
-   - **Managed bookmarks:** Company Portal\|https://portal.company.com  
-   - **Blocked URLs:** *.facebook.com, *.twitter.com, *.instagram.com, *.tiktok.com  
-   - **Redirect restricted sites to personal context:** Enable  
+
+| Category | Setting | Value |
+|-----------|----------|-------|
+| Edge Configuration Settings | Allowed URLs | Leave empty (Level 2 uses blocked URLs instead – when blocked URLs are configured, allowed URLs field becomes unavailable) |
+|  | Blocked URLs | *.facebook.com, *.twitter.com, *.instagram.com, *.tiktok.com |
+|  | Redirect restricted sites to personal context | Enable |
+
 8. Select **Next**
 9. In **Assignments**, assign to **SEB-Level2-Users** group.  
-10. Select **Next** to review the settings. Then choose **Create** when you're done.
+10. Select **Next** to review the settings. Then choose **Create**.
 
 ### Level 3 – High Security Mobile Configuration for Android
 
@@ -465,7 +484,7 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 | | [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
 | General configuration settings – Manageability | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | inprivate&#124;autofill&#124;password&#124;translator&#124;readaloud&#124;drop&#124;coupons&#124;extensions&#124;copilot&#124;collections&#124;myapps |
 | General configuration settings – Organizational Branding | [Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | "#0078d4" |
+| | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | `#0078d4` |
 | General configuration settings – Default Search Provider | [Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
 | | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
 | | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
@@ -475,18 +494,15 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 | General configuration settings – Identity and sign-in | [Block sign-in enabled](/deployedge/microsoft-edge-browser-policies/edgeblocksigninenabled) | EdgeBlockSignInEnabled | true |
 
 7. Expand **Edge configuration settings** and configure:
-   - **Homepage shortcut URL:** https://www.company.com  
-   - **Managed bookmarks:** Company Portal\|https://portal.company.com  
-   - **Allowed URLs:** *.company.com, *.microsoft.com, login.microsoftonline.com  
-   - *(When Allowed URLs are configured, the Blocked URLs field becomes unavailable.)*  
-   - **Proxy configuration (optional):**  
-     ```
-     ProxySettings: {"ProxyServer": "proxy.company.com:8080", "ProxyBypassList": "*.company.com", "ProxyMode": "fixed_servers"}
-     ```  
-   - **Per-App VPN (optional):** Integrate with Microsoft Tunnel if required for isolated secure traffic routing.  
+
+| Category | Setting | Value |
+|-----------|----------|-------|
+| Edge Configuration Settings | Allowed URLs | *.company.com, *.microsoft.com, login.microsoftonline.com |
+|  | Blocked URLs | Leave empty (Level 3 uses allowed URLs – when allowed URLs are configured, blocked URLs field becomes unavailable) |
+
 8. Select **Next**
 9. In **Assignments**, assign to **SEB-Level3-Users** group.  
-10. Select **Next** to review the settings. Then choose **Create** when you're done.
+10. Select **Next** to review the settings. Then choose **Create**.
 
 ### Validation (All Levels)
 
@@ -532,53 +548,50 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
    - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
    - Choose **Microsoft Edge (iOS/iPadOS)**, then **Select**.  
 5. Select **Next**.  
-6. On the **Settings** step, expand **General configuration settings** and **Edge configuration settings** to begin adding configuration values. Configure the following settings.
-
-#### General configuration settings
+6. On the **Settings** step, expand **General configuration settings** and configure:
 
 | Category | Setting | Name | Value |
 |---------|---------|------|-------|
-| | [Password single sign-on](/deployedge/microsoft-edge-mobile-policies#passwordsso) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
-| | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | false |
-| | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
-| | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
-| | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
-| | [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | true |
-| | [SSL error override allowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | true |
-| | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | true |
-| | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| | [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | #0078d4 |
-| | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
-| | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
-| | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
+| General Configuration Settings | [Password single sign-on](https://learn.microsoft.com/en-us/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
+|  | [SmartScreen enabled](https://learn.microsoft.com/en-us/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+|  | [Enable EdgeMyApps](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
+|  | [Default HTTPS enforced](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+|  | [Disable sharing usage data](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+|  | [Disable password import](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | false |
+|  | [Proxy PAC URL](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) | EdgeProxyPacUrl |  |
+| General Configuration Settings – Password Manager and Protection | [Biometric authentication before filling](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | false |
+|  | [Disable password manager](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+| General Configuration Settings – Smartscreen | [SmartScreen enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | SmartScreenEnabled | true |
+| General Configuration Settings – Additional | [Disable search suggestions](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
+|  | [Translate enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | true |
+|  | [Hide first run experience](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
+|  | [SSL error override allowed](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | true |
+|  | [Default browser setting enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | true |
+|  | [Experimentation and configuration service control](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 1 |
+| General Configuration Settings – Content | [Disable pop-ups](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
+| General Configuration Settings – Organizational Branding | [Organizational branding – logo](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+|  | [Organizational branding – color](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | `#0078d4` |
+| General Configuration Settings – Default Search Provider | [Default search provider enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+|  | [Default search provider name](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | Preferred Company Search |
+|  | [Default search provider search URL](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | `https://search.company.com?q={searchTerms}` |
+|  | [Default search provider suggest URL](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | `https://search.company.com/suggest?q={searchTerms}` |
+|  | [Default search provider keyword](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | company |
 
-#### Edge configuration settings
+7. Expand **Edge configuration settings** and configure:
 
-| Category | Setting | Name | Value |
-|---------|---------|------|-------|
-| Application proxy redirection | — | Disable |
-| Homepage shortcut URL | — | https://www.company.com |
-| Managed bookmarks | — | Company Portal \| https://portal.company.com |
-| Allowed URLs | — | Leave empty (Level 3 uses Allowed URLs) |
-| Blocked URLs | — | Leave empty (Level 2 uses Blocked URLs) |
-| Redirect restricted sites to personal context | — | Disable |
+| Category | Setting | Value |
+|-----------|----------|-------|
+| Edge configuration settings | Application proxy redirection | Disable |
+|  | Homepage shortcut URL | `https://www.company.com` |
+|  | Managed bookmarks | Company Portal &#124; `https://portal.company.com` |
+|  | Allowed URLs | Leave empty (Level 3 uses Allowed URLs) |
+|  | Blocked URLs | Leave empty (Level 2 uses Blocked URLs) |
+|  | Redirect restricted sites to personal context | Disable |
 
-7. Select **Next**.  
-8. In **Assignments**, assign to **SEB-Level1-Users** group.  
-9. Select **Next** to review the settings. Then choose **Create** when you're done.  
 
-> **Validation (iOS Level 1)**  
-> - **Policy application:** Verify in Intune that the ACP status shows *Succeeded*.  
-> - **Device behavior:** Open Edge > **Settings** and confirm homepage and basic privacy settings are applied.  
-> - **Policy verification:** Run `edge://policy` (in desktop simulation or debug build) to confirm key deployment.
-
+8. Select **Next**.  
+9. In **Assignments**, assign to **SEB-Level1-Users** group.  
+10. Select **Next** to review the settings. Then choose **Create** when you're done.  
 
 ### Level 2 – Enhanced mobile browser configuration for iOS
 
@@ -592,50 +605,47 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
    - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
    - Choose **Microsoft Edge (iOS/iPadOS)**, then **Select**.  
 5. Select **Next**.  
-6. On the **Settings** step, expand **General configuration settings** and **Edge configuration settings** to begin adding configuration values. Configure all of the following settings:
-
-#### General configuration settings
+6. On the **Settings** step, expand **General configuration settings** and configure:
 
 | Category | Setting | Name | Value |
 |---------|---------|------|-------|
-| | [Password single sign-on](/deployedge/microsoft-edge-mobile-policies#passwordsso) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
-| | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
-| | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
-| | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
-| | [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
-| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
-| | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | "password|autofill|copilot|collections|readaloud" |
-| | [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
-| | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
-| | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
-| | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
-| | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
+| General Configuration Settings | [Password single sign-on](/deployedge/microsoft-edge-mobile-policies#passwordsso) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
+|  | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+|  | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | true |
+|  | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+|  | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+|  | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+|  | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
+|  | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
+|  | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
+|  | [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
+|  | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
+|  | [Disable Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | false |
+|  | [Disable browser setting](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
+|  | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
+| General Configuration Settings – Additional | [Disable saving browser history](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | false |
+|  | [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
+| General Configuration Settings – Password Manager and Protection | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
+| General Configuration Settings – Organizational Branding Configuration | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+| General Configuration Settings – Manageability | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | password\|autofill\|copilot\|collections\|readaloud |
+| General Configuration Settings – Identity and Sign-in | [Block Edge sign-in](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) | EdgeBlockSignInEnabled | false |
+| General Configuration Settings – Default Search Provider | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+|  | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | Preferred Company Search |
+|  | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | `https://search.company.com?q={searchTerms}` |
+|  | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | `https://search.company.com/suggest?q={searchTerms}` |
+|  | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | company |
 
-#### Edge configuration settings
+7. Expand **Edge configuration settings** and configure:
 
-| Category | Setting | Name | Value |
-|---------|---------|------|-------|
-| Allowed URLs | — | (Leave empty – Level 3 uses Allowed URLs instead.) |
-| Blocked URLs | — | *.facebook.com, *.twitter.com, *.instagram.com, *.tiktok.com |
-| Redirect restricted sites to personal context | — | Enable |
+| Category | Setting | Value |
+|-----------|----------|-------|
+| Edge Configuration Settings | Allowed URLs | Leave empty (Level 2 uses blocked URLs instead – when blocked URLs are configured, allowed URLs field becomes unavailable) |
+|  | Blocked URLs | *.facebook.com, *.twitter.com, *.instagram.com, *.tiktok.com |
+|  | Redirect restricted sites to personal context | Enable |
 
 7. Select **Next**.  
 8. In **Assignments**, assign to **SEB-Level2-Users** group.  
 9. Select **Next** to review the settings. Then choose **Create** when you're done.  
-
-> **Validation (iOS Level 2)**  
-> - **Policy application:** Verify in Intune that the ACP status shows *Succeeded*.  
-> - **Device behavior:** Open Edge > **Settings** and confirm privacy and blocked URL behavior are applied.  
-> - **Blocked content:** Attempt to open restricted sites (e.g., facebook.com) and verify they’re blocked or redirected.  
-> - **Policy verification:** Run `edge://policy` (in desktop simulation or debug build) to confirm key deployment.
 
 ### Level 3 – High security mobile configuration for iOS
 
@@ -654,70 +664,88 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
 
 | Category | Setting | Name | Value |
 |---------|---------|------|-------|
-| | [Password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | true |
-| | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
-| | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | false |
-| | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
-| | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
-| | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
-| | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
-| | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
-| | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
-| | [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
-| | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
-| | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | "inprivate|autofill|password|translator|copilot|share|collections|readaloud|drop" |
-| | [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
-| | [Disable InPrivate mode](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability) | InPrivateModeAvailability | 1 |
-| | [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | true |
-| | [Block Edge sign-in](/deployedge/microsoft-edge-mobile-policies#edgeblocksigninenabled) | EdgeBlockSignInEnabled | true |
-| | [Disable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | false |
-| | [Disable Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | false |
-| | [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | false |
-| | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
-| | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
-| | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
-| | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
-| | [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | #0078d4 |
-| | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
-| | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | "Preferred Company Search" |
-| | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | "https://search.company.com?q={searchTerms}" |
-| | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | "https://search.company.com/suggest?q={searchTerms}" |
-| | [Default search keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | "company" |
+| General Configuration Settings | [Password single sign-on](https://learn.microsoft.com/en-us/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) | com.microsoft.intune.mam.managedbrowser.PasswordSSO | false |
+|  | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true |
+|  | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) | EdgeMyApps | false |
+|  | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) | EdgeDefaultHTTPS | true |
+|  | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) | EdgeDisableShareUsageData | true |
+|  | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) | PasswordManagerEnabled | false |
+|  | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) | SearchSuggestEnabled | false |
+|  | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) | HideFirstRunExperience | true |
+|  | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) | DefaultPopupsSetting | 2 |
+|  | [Disable sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) | EdgeSyncDisabled | true |
+|  | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) | EdgeImportPasswordsDisabled | true |
+|  | [Disable Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) | EdgeCopilotEnabled | false |
+|  | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) | DefaultBrowserSettingEnabled | false |
+|  | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) | ExperimentationAndConfigurationServiceControl | 0 |
+| General Configuration Settings – Additional | [Disable InPrivate mode](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability) | InPrivateModeAvailability | 1 |
+|  | [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) | SavingBrowserHistoryDisabled | true |
+|  | [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) | TranslateEnabled | false |
+|  | [Disable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) | EdgeSharedDeviceSupportEnabled | false |
+|  | [Disable SSL error override](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) | SSLErrorOverrideAllowed | false |
+| General Configuration Settings – Password Manager and Protection | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) | BiometricAuthenticationBeforeFilling | true |
+| General Configuration Settings – Organizational Branding Configuration | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) | EdgeBrandLogo | true |
+|  | [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) | EdgeBrandColor | #0078d4 |
+| General Configuration Settings – Manageability | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) | EdgeDisabledFeatures | inprivate\|autofill\|password\|translator\|readaloud\|drop\|coupons\|extensions\|copilot\|collections\|myapps\|share |
+| General Configuration Settings – Identity and Sign-in | [Block Edge sign-in](/deployedge/microsoft-edge-browser-policies/edgeblocksigninenabled) | EdgeBlockSignInEnabled | true |
+| General Configuration Settings – Default Search Provider | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) | DefaultSearchProviderEnabled | true |
+|  | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) | DefaultSearchProviderName | Preferred Company Search |
+|  | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) | DefaultSearchProviderSearchURL | `https://search.company.com?q={searchTerms}` |
+|  | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) | DefaultSearchProviderSuggestURL | `https://search.company.com/suggest?q={searchTerms}` |
+|  | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) | DefaultSearchProviderKeyword | company |
 
 8. Expand **Edge configuration settings** and configure:
 
-| Setting | Value |
-|----------|-------|
-| Allowed URLs | *.company.com, *.microsoft.com, login.microsoftonline.com |
-| Blocked URLs | Leave empty (Level 3 uses allowed URLs - when allowed URLs are configured, blocked URLs field becomes unavailable) |
+| Category | Setting | Value |
+|-----------|----------|-------|
+| Edge Configuration Settings | Allowed URLs | *.company.com, *.microsoft.com, login.microsoftonline.com |
+|  | Blocked URLs | Leave empty (Level 3 uses allowed URLs – when allowed URLs are configured, blocked URLs field becomes unavailable) |
 
-1. Per-App VPN (optional): Integrate with Microsoft Tunnel if required for isolated secure traffic routing
-1. Select **Next**.  
-1. In **Assignments**, assign to **SEB-Level3-Users** group.  
-1. Select **Next** to review the settings. Then choose **Create** when you're done.  
+9. Per-App VPN (optional): Integrate with Microsoft Tunnel if required for isolated secure traffic routing
+10. Select **Next**.  
+11. In **Assignments**, assign to **SEB-Level3-Users** group.  
+12. Select **Next** to review the settings. Then choose **Create** when you're done.  
 
-> **Validation (iOS Level 3)**  
-> - **Policy application:** Verify in Intune that the ACP status shows *Succeeded*.  
-> - **Device behavior:** Open Edge > **Settings** and confirm homepage, privacy restrictions, and URL enforcement are applied.  
-> - **Blocked content:** Attempt to open restricted sites (for example, facebook.com) and verify they’re blocked or redirected.  
-> - **Zero-trust enforcement:** Confirm InPrivate, Autofill, Copilot, and password features are disabled.  
-> - **Policy verification:** Run `edge://policy` (in desktop simulation or debug build) to confirm key deployment.
+### Validation (All iOS Levels)
+
+#### Policy Application
+
+In the Intune admin center, navigate to **Devices** > **Apple mobile** > select a device > **Device configuration** > **View report**.
+Confirm the policy status shows **Succeeded**.
+
+#### Device Verification
+
+On an iOS device:
+
+1. Open the **Company Portal** app.  
+2. Tap **Devices** > select the managed device > **Check status** to force a sync.  
+3. After syncing, open **Microsoft Edge**.  
+4. Tap the **ellipsis (···)** menu > **Settings**.  
+5. Verify that managed configurations—such as homepage, search provider, password manager, and default browser setting—match the applied policy.
+
+> **Note:** App configuration policies only apply when the user signs into Edge with their work or school (Entra ID) account. If settings haven’t applied, confirm the correct account is in use.
+
+#### Feature Testing
+
+- **Level 1:**  
+  - Verify homepage and search provider match corporate settings.  
+  - Confirm **SmartScreen** is active and pop-ups are blocked.  
+  - Confirm users can sign in and general browsing functions normally.  
+
+- **Level 2:**  
+  - Verify that **sync**, **password import**, and **Copilot** are disabled.  
+  - Attempt to autofill or save passwords—confirm it’s blocked.  
+  - Confirm **Biometric authentication before filling** works as intended.  
+  - Validate **InPrivate** browsing reflects the configured policy state.  
+
+- **Level 3:**  
+  - Attempt to open a non-allowlisted site—confirm it’s blocked or redirected.  
+  - Confirm **InPrivate** browsing is unavailable.  
+  - Validate **browser history saving**, **shared device support**, and **Copilot** are disabled.  
+  - Confirm that disabled features (for example, **Extensions**, **Collections**, or **Drop**) don’t appear in Settings.
 
 ::: zone-end
-
-## Validation
-
-After deploying app configuration policies:
-
-1. **Policy Application**: Check Intune console for successful ACP deployment
-2. **Browser Behavior**: Verify configured homepage, blocked features, and URL restrictions
-3. **User Experience**: Test browsing functionality and confirm policy enforcement
-4. **Mobile Testing**: On mobile devices, verify Microsoft Edge > Menu > Settings reflects corporate policies
 
 ## Next steps
 
 Continue to [Step 5](mamedge-5-settings-catalog.md) to configure Settings Catalog policies for enrolled Windows and macOS devices.
-
-
-
-
