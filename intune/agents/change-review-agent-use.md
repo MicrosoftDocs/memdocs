@@ -85,7 +85,7 @@ You can use the Change Review Agent node to deeply review and then manage (appro
 
 To review and manage a request that's been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent’s review for that request. The detailed view is named after the selected suggestion and includes the agent’s recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
 
-:::image type="content" source="./media/change-review-agent-use/reject.png" alt-text="Screenshot of the overview pane of the Change Review Agent." :::
+:::image type="content" source="./media/change-review-agent-use/reject.png" alt-text="Screenshot of the details for a rejected request." :::
 
  The following are the agent recommendations you might see:
 
