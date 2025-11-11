@@ -188,7 +188,7 @@ The screens you can skip during macOS enrollment include:
 For more information about available Setup Assistant skipkeys, see:
 
 - [Set up automated device enrollment for iOS/iPadOS]( ../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)
-- [Set up automated device enrollment for]( ../enrollment/device-enrollment-program-enroll-macos.md##setup-assistant-screen-reference)
+- [Set up automated device enrollment for]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
 
 ### Device management 
 
