@@ -61,7 +61,7 @@ The list of available tasks includes the following columns of information:
 - **Last updated** – The date the task was last modified.
 - **Created** – The date the task was created.
 
-Tasks are removed from this view 30 days after their creation date.
+Tasks are removed from this view when they are removed from their source node.
 
 ## Related articles
 
