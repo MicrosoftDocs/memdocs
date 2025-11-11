@@ -22,12 +22,17 @@ Admin tasks supports tasks from the following Intune capabilities:
 
 ## Role-based access control for admin tasks
 
-Access to tasks in the admin tasks node is based on your role-based access control (RBAC) permissions. You can only view and manage tasks that your assigned roles allow in the original source nodes.
+Access to tasks in the admin tasks node is based on your Intune role-based access control (RBAC) permissions:
 
-For RBAC and related prerequisite details specific to each capability, see:
+The following permission is required to access the Admin tasks pane in the Intune admin center: 
+- **Organization** >  **Read**  
+
+When viewing Admin tasks, you can only see and manage tasks permitted by your assigned roles within the task’s original source node. For RBAC requirements and related prerequisites specific to each capability, see:
+
 - [Endpoint Privilege Management file elevation requests](/intune/intune-service/protect/epm-support-approved#rbac-permissions-for-elevation-requests)
 - [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#prerequisites)
 - [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#prerequisites-for-access-policies-and-approvers) 
+
 
 ## Manage tasks in the admin tasks node
 
@@ -55,6 +60,8 @@ The list of available tasks includes the following columns of information:
 - **Due in** – Shows how much time remains before the task expires (if applicable).
 - **Last updated** – The date the task was last modified.
 - **Created** – The date the task was created.
+
+Tasks are removed from this view 30 days after their creation date.
 
 ## Related articles
 
