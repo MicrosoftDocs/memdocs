@@ -95,8 +95,6 @@ To review and manage a request that's been evaluated by the agent, select an age
 
 The final decision to approve or reject a request always remains with the admin. 
  
-### Layout of the detailed view
-
 When you open an agent suggestion, the review page is divided into two main areas. Each area provides specific information to help you understand the recommendation:
 
 - **Details tile**
