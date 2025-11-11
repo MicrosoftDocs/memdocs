@@ -101,14 +101,14 @@ The agent analyzes these signals to assess the potential risk associated with ea
 > To **enable and configure** the Change Review Agent, use an account with the following roles:
 >
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
-> - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
-> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+> - [*Intune Administrator*](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
+> - [*Security Reader*](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+> - *Entra/Identity risky user (read)* - This permission maps to the Unified RBAC permission *Security posture / Identity risk / Risky users (read)*.
 >
 > :::image type="icon" source="../media/icons/admin-center/defender.svg" border="false"::: Defender roles - Defender role-based access control (RBAC) roles depend on your Defender XDR implementation:
-> - [Unified RBAC](/defender-xdr/manage-rbac): Assign the Microsoft Entra ID Security Reader to the agent's identity account. This role provides read-only access to Defender Vulnerability Management data and automatically enforces device group scoping.
-> - [Granular RBAC](/defender-endpoint/rbac): Assign a custom RBAC role with permissions equivalent to the Unified RBAC Security Reader role. For example: 
->   - **View data** – **Defender Vulnerability Management** - This permission maps to the Unified RBAC permission *Security posture / Posture management / Vulnerability management (read)*.
->   - **Entra/Identity risky user (read)** - This permission maps to the Unified RBAC permission *Security posture / Identity risk / Risky users (read)*.
+> - [*Unified RBAC*](/defender-xdr/manage-rbac): Assign the Microsoft Entra ID Security Reader to the agent's identity account. This role provides read-only access to Defender Vulnerability Management data and automatically enforces device group scoping.
+> - [*Granular RBAC*](/defender-endpoint/rbac): Assign a custom RBAC role with permissions equivalent to the Unified RBAC Security Reader role. For example: 
+>   - *View data – Defender Vulnerability Management* - This permission maps to the Unified RBAC permission *Security posture / Posture management / Vulnerability management (read)*.
 >
 >    For details about mapping permissions to the Unified RBAC Security Reader role, see [Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
 >
@@ -150,9 +150,13 @@ At a high level, the agent does the following steps:
 
 2. **Evaluation** - The agent evaluates Windows PowerShell scripts for Multi Admin Approval requests using predefined logic that's built in to the agent configuration.
 
-3. **Recommendations** - The agent provides recommendations for up to 10 active Multi Admin Approval requests, presenting the 10 that are closest to expiration. The focus ensures those requests in danger of expiring can be addressed first. These are *suggestions* only and actual approval or rejection of a request remains with an Intune administrator. 
+3. **Recommendations** - When the agent runs, it provides recommendations for up to 10 requests. Admins can view the recommendations list which might include old recommendations beyond the 10. For example, if an admin chooses to run the agent  again after their first run, the view will display 20 recomendations.
 
-   Recommendations are shown in a list. The first column, Suggested Next Steps, displays the recommended action followed by the request name. Possible actions include:
+   The agent presents the requests that are closest to expiration. this focus ensures those requests in danger of expiring can be addressed first.
+
+    Suggestions are *suggestions* only. The approval or rejection of a request remains with an Intune administrator.
+
+   The first column of the recommendation list presents Suggested Next Steps, which display the recommended action followed by the name of the request. Possible actions include:
 
    - Approve - Low-risk request; likely safe to approve.
    - Reject - High-risk request; shouldn't be approved.
@@ -171,15 +175,9 @@ The agent’s actions are limited to the permissions of that account, and the id
 
 ### Change the agent identity
 
-After setup, the agent identity can be changed. A change of the agent identity doesn't affect the agent's run history. The identity changes when:
+After setup, the agent identity can be changed. A change of the agent identity doesn't affect the agent's run history. 
 
-- A different admin account than current identity is used to [renew](#renew-the-agent) the agent.
-- The agent settings are edited to explicitly assign a new agent identity. 
-
-**To assign a new agent identity**:
-1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents**. Select the **Change Review Agent** tile, and then select the **Settings** tab.
-1. Locate *Identity*, which displays the current user account the agent uses.
-1. Select the **Choose another identity** button to open an account sign-in prompt. Use the prompt to select and authenticate a new account as the agent identity.
+The identity changes when a different admin account than current identity is used to [renew](#renew-the-agent) the agent.
 
 > [!IMPORTANT]
 > The agent can only perform operations allowed by the permissions of the account it runs under. If that  account lacks [required permissions](#prerequisites), the agent fails to run.
