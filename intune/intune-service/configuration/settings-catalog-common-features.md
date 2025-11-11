@@ -3,7 +3,7 @@ title: Common tasks and features in the settings catalog
 description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/28/2025
+ms.date: 11/10/2025
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav, beflamm
 ms.collection:
@@ -40,6 +40,18 @@ These web browser settings are built in, and can be configured & deployed to you
 Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 
 For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](settings-catalog-configure-edge.md).
+
+## Manage AI features on Android devices
+
+<!-- ms.reviewer: cchristenson -->
+
+This feature applies to:
+
+- Android Enterprise
+
+There are features and built-in settings to help you manage AI features on Android Enterprise devices. You can block AI websites in web browser apps, block Screen-driven AI experiences, and disable the on-device AI system app.
+
+For more information, go to [Manage AI features on Android devices](../../solutions/ai/manage-ai-android.md).
 
 ## Add universal printers
 

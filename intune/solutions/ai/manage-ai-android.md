@@ -1,7 +1,7 @@
 ---
 title: Control AI features on Android Enterprise devices
 description: Using Microsoft Intune, you can manage and restrict AI usage on Android devices enrolled in Intune. This guide provides lists the steps in Intune to block AI apps, websites, screen-driven experiences, on-device AI services, and OEM-specific AI features. You can manage Microsoft Copilot, Google Gemini, Samsung Galaxy AI, claude.ai, ChatGPT, and more.
-ms.date: 10/30/2025
+ms.date: 11/11/2025
 ms.topic: how-to
 ms.reviewer: cchristenson
 ms.collection:
@@ -20,6 +20,8 @@ When you use the steps in this guide, you can manage and restrict AI experiences
 Applies to:
 
 - Android Enterprise
+
+??Add link to Android SC article, SC common tasks??
 
 ## Prerequisites
 
@@ -270,6 +272,7 @@ This setting blocks AI features from accessing on-screen content, but also disab
 
     This setting blocks AI features from accessing on-screen content. End users can't take screenshots on the device.
 
+7. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
 
 # [Corporate owned with work profile](#tab/screen-corporate-owned)
 
@@ -289,28 +292,40 @@ For more comprehensive protection, you can also restrict screenshot abilities an
 2. Enter the following properties:
 
     - **Platform**: Select **Android Enterprise**.
-    - **Profile type**: Select **Templates** > **Fully managed, dedicated, and Corporate-owned work profile** > **Device restrictions**.
+    - **Profile type**: Select **Settings catalog**.
 
-3. Select **Create**.
+3. Select **Next**.
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
-5. Expand the **General** category and configure the following settings: ??All the following settings are in SC? Replace with SC policy? Then this section would create two separate policies??
+5. Select **Add settings**.
+6. Select the **General** category and configure the following settings:
 
-    - **Screen capture (work profile-level)**: Set to **Block**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the work profile.
+    - **Allow copy and paste between work and personal profiles**: Set to **False**. This setting blocks copy and paste functionality between work and personal profiles. This helps ensure that no data from the work profile leaks into AI apps in the personal profile.
 
-    - **Copy and paste between work and personal profiles**: By default, this feature is already blocked. If you have a policy that sets it to **Allow**, then ??. If it's changed to Not Configured, is the default value restored??
+    - **Block screen capture**: Set to **True**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the work profile.
 
-      This setting blocks copy and paste functionality between work and personal profiles. This helps ensure that no data from the work profile leaks into AI apps in the personal profile.
+    - **Data sharing between work and personal profiles**: Set to **Block all sharing between profiles**. This setting blocks data sharing between work and personal profiles. It helps ensure that no data from the work profile leaks into AI apps in the personal profile.
 
-    - **Data sharing between work and personal profiles**: Set to **Block all sharing between profiles**. This setting blocks data sharing between work and personal profiles. This helps ensure that no data from the work profile leaks into AI apps in the personal profile.
+7. Select the **Personal profile** category and configure the following setting:
 
-6. Expand the **Personal profile** category and configure the following settings:
+    - **Block screen capture**: Set to **True**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the personal profile.
 
-    - **Type of restricted apps list**: Set to **Blocked Apps** and add the apps you want to block.
+8. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
 
-    - **Screen capture**: Set to **Block**. This setting blocks AI features from accessing on-screen content. End users can't take screenshots in the personal profile.
+9. Create a device restrictions profile to block specific AI apps. This setting isn't available in the settings catalog. So, that's why you create a separate device restrictions profile.
 
-      You can also configure this setting in the settings catalog > **Personal profile** category > **Block screen capture (Personal profile)** setting.
+    1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices > Configuration > Create > New policy**.
+    2. Enter the following properties:
 
+        - **Platform**: Select **Android Enterprise**.
+        - **Profile type**: Select **Templates** > **Fully managed, dedicated, and Corporate-owned work profile** > **Device restrictions**.
+
+    3. Select **Create**.
+    4. In **Basics**, enter a **Name** for the profile, and select **Next**.
+    5. In **Configuration settings**, expand the **Personal profile** category and configure the following settings:
+
+        - **Type of restricted apps list**: Set to **Blocked Apps** and add the AI apps you want to block.
+
+    6. Continue creating the profile and assign the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
 
 # [Personally owned with work profile](#tab/screen-personal)
 
@@ -330,8 +345,10 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
 4. In **Basics**, enter a **Name** for the profile, and select **Next**.
 5. In **Configuration settings**, expand **Work profile settings** category. The following settings and their default values help limit AI data leakage. If any of these settings are changed from their default values, you should change them back to the defaults.
 
-    - **Copy and paste between work and personal profiles**: Set to **Block** (default). ??Compare with SC policy??
-    - **Data sharing between work and personal profiles**: Set to **Device Default**. Device Default restricts sharing between work and personal profiles. ??Compare with SC policy??
+    - **Copy and paste between work and personal profiles**: Set to **Block** (default).
+    - **Data sharing between work and personal profiles**: Set to **Device Default**. Device Default restricts sharing between work and personal profiles.
+
+6. Select **Next** and continue creating the profile. For step-by-step instructions, see [Create device profiles](../../intune-service/configuration/device-profile-create.md).
 
 ---
 
@@ -340,8 +357,6 @@ To prevent sensitive data from being used by AI apps in the personal profile, yo
 ✅ **Goal - Block Google's local AI processing**
 
 Gemini Nano is Google's on-device foundation model and processes AI interactions on the device. It enables AI summary and message reply capabilities in Messages, Recorder, GBoard, and other services. You can use Intune to disable the AICore system app.
-
-??Third‑party SDK inference is not covered.?? [CC: can you expand on this?]
 
 **Supported enrollment types**:
 
@@ -431,7 +446,7 @@ Make sure the app is shown in the list (**Apps > Android > Android apps**). The 
 
 ## Related content
 
-- [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md)
+- [Android enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md)
 - [Include and exclude app assignments in Microsoft Intune](../../intune-service/apps/apps-inc-exl-assignments.md)
 - [Assign apps to groups in Microsoft Intune](../../intune-service/apps/apps-deploy.md)
 - [Use OEMConfig on Android Enterprise devices in Microsoft Intune](../../intune-service/configuration/android-oem-configuration-overview.md)
