@@ -1,7 +1,7 @@
 ---
 title: Security Copilot Agents in Intune
 description: Discover how Microsoft Security Copilot enhances Microsoft Intune through AI-powered security agents. Learn about available agents and explore their capabilities.
-ms.date: 10/15/2025
+ms.date: 11/10/2025
 ms.topic: overview
 author: paolomatarazzo
 ms.author: paoloma
@@ -10,14 +10,13 @@ ms.reviewer:
 
 # Security Copilot agents in Intune overview
 
-Security Copilot agents in Intune are AI-powered assistants that enhance enterprise security by automating tasks across endpoint protection, identity management, and threat intelligence. They help IT teams quickly address vulnerabilities, policy gaps, and emerging threats.
+Security Copilot agents in Intune are AI-powered assistants that enhance enterprise security. They automate tasks for endpoint protection, identity management, threat intelligence, and device configuration. They help IT teams quickly address vulnerabilities, policy gaps, and emerging threats.
 
-Built on Microsoft Security Copilot's generative AI and automation capabilities, these agents observe, reason, and act under administrator oversight. Each agent is tailored to a specific use case and operates within a dedicated blade in the Intune admin center, using role-based access controls for secure execution.
+Agents are built on Microsoft Security Copilot's generative AI and automation capabilities. They observe, reason, and act with oversight and review from your administrators. Each agent is tailored to a specific use case, operates within the Intune admin center, and uses role-based access controls.
 
 ## Available agents
 
-Microsoft Intune includes specialized Security Copilot agents, each designed for a specific security scenario. 
-The following agents are currently available:
+Microsoft Intune includes specialized Security Copilot agents, each designed for a specific security scenario. The following agents are available:
 
 :::row:::
 :::column:::
@@ -25,7 +24,7 @@ The following agents are currently available:
 
 :::image type="icon" source="icons/change-review-agent.svg" border="false":::
 
-> The *Change Review Agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take. 
+> The *Change Review Agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take.
 
 > [!div class="nextstepaction"]
 > [Learn more](change-review-agent.md)
@@ -35,7 +34,7 @@ The following agents are currently available:
 
 :::image type="icon" source="icons/device-offboarding-agent.svg" border="false":::
 
-> The *Device Offboarding Agent* identifies stale or misaligned devices across Intune and Entra ID, providing actionable insights and requiring admin approval before offboarding any devices.
+> The *Device Offboarding Agent* identifies stale or misaligned devices across Intune and Microsoft Entra ID, providing actionable insights and requiring admin approval before offboarding any devices.
 
 > [!div class="nextstepaction"]
 > [Learn more](device-offboarding-agent.md)
@@ -48,7 +47,7 @@ The following agents are currently available:
 
 :::image type="icon" source="icons/policy-configuration-agent.svg" border="false":::
 
-> With the *Policy Configuration Agent* you can import documents or write instructions in plain language. The agent uses your document as reference and matches those instructions to the Settings Catalog to help create a policy.
+> With the *Policy Configuration Agent*, you import documents or write instructions in plain language. The agent uses this information to find matching settings in the Intune settings catalog and recommends values for these settings. You can then use the agent to create a policy with those settings and their values.
 
 > [!div class="nextstepaction"]
 > [Learn more](policy-configuration-agent.md)
@@ -80,7 +79,7 @@ Before you begin, make sure you have:
 1. Sign in to the [Microsoft Intune admin center][INT-AC] using the least privileged role required for the agent you want to configure.
 1. Browse to **Agents** and select **View details** for the agent you want to configure.
 
-:::image type="content" source="images/security-copilot-agents.png" alt-text="Screenshot of the security copilot blade in the Intune admin center." lightbox="images/security-copilot-agents.png" border="false":::
+:::image type="content" source="images/security-copilot-agents.png" alt-text="Screenshot of the security copilot feature in the Intune admin center." lightbox="images/security-copilot-agents.png" border="false":::
 
 ## Agents in the Microsoft ecosystem
 
