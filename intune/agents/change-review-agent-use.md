@@ -93,7 +93,10 @@ To review and manage a request that's been evaluated by the agent, select an age
 - **Reject** – A high-risk request that shouldn't be approved.
 - **Needs more info** – The risk couldn’t be fully assessed, and the request requires careful admin review.
 
-When you open an agent suggestion, the review page is divided into two main areas. Each area provides specific information to help you understand the recommendation. At the bottom of this information are details for the *View request* button, which is used to open the Multi Admin Approval request where you can then approve or reject the request. The final decision to approve or reject a request always remains with the admin.
+When you open an agent suggestion, the review page is divided into two main areas. Each area provides specific information to help you understand the recommendation. 
+
+> [!TIP]
+> Near the end of this section are details for the *View request* button. You can use this button to open the Multi Admin Approval request and then *approve* or *reject* it. The final decision to approve or reject a request always remains with the admin.
 
 - **Details tile**
 
