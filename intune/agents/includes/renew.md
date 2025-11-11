@@ -13,4 +13,4 @@ As the expiration gets closer, Intune shows a warning that each **Copilot owner*
 
 To reauthorize the agent identity, select **Renew authentication**. When you renew the agent authentication, the agent automatically uses the signed-in credentials. If you don't want to use the signed-in credentials, then select the agent > **Settings** tab > **Choose another identity**.
 
-After renewal, the warning banner disappears, and a toast notification validates that renewal is successful.
+After renewal, the warning banner disappears, and a toast notification validates that the renewal is successful.

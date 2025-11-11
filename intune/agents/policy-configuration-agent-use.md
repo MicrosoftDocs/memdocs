@@ -30,8 +30,8 @@ This feature applies to:
 
 ## Before you begin
 
-- This feature is in [public preview](../fundamentals/public-preview.md).
-- Make sure you meet the prerequisites to use the [Policy Configuration Agent](policy-configuration-agent.md#prerequisites), including signing in with an appropriate account.
+- This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
+- Make sure you meet the [Policy Configuration Agent](policy-configuration-agent.md#prerequisites) prerequisites, including signing in with an appropriate account.
 - You can upload one knowledge source file at a time. If you have multiple baseline documents, run them separately through the agent.
 - Well-structured, well-written policies result in better mappings. If a document is poorly formatted or uses unclear language, the agent can produce low-confidence matches. We recommend you review your source documents for clarity.
 - You can add text files up to 100 KB in size. Large or complex documents with hundreds of pages of requirements might challenge the agent's ability to process them effectively.
@@ -56,7 +56,7 @@ You can also:
 
 # [Knowledge](#tab/knowledge)
 
-This tab shows the knowledge sources you uploaded and other important information about the source, like its status.
+The **Knowledge** tab shows the knowledge sources you uploaded and other important information about the source, like its status.
 
 In this tab, you can:
 
@@ -76,13 +76,13 @@ In this tab, you can:
 
 # [Settings](#tab/settings)
 
-Shows the agent's settings, like the required permissions, the identity running the agent, and more requirements. In this tab, you can update the identity running the agent.
+The **Settings** tab shows the agent's settings, like the required permissions, the identity running the agent, and more requirements. In this tab, you can update the identity running the agent.
 
 ---
 
 ## Add, save, and view a knowledge source
 
-Knowledge sources are files that you upload. These files describe the device configuration requirements in natural language. They can be internal policy documents and baselines, like security and compliance policies and frameworks, industry standards that describe settings, or risk assessment guidelines for device configurations.
+**Knowledge sources** are files that you upload. These files describe the device configuration requirements in natural language. They can be internal policy documents and baselines, like security and compliance policies and frameworks, industry standards that describe settings, or risk assessment guidelines for device configurations.
 
 For example, you can upload compliance standards and common industry benchmarks, like:
 
@@ -103,26 +103,31 @@ To add a knowledge source, use the following steps:
     - **Description** - Optional. Enter a description for the knowledge source.
     - **Upload document** - Browse for your file or drag-and-drop the file. The agent supports well-known baseline formats, custom documents, and bulleted lists of requirements.
 
-4. Select **Review**. The agent runs immediately and analyzes the knowledge source you uploaded.
+4. Select **Review**. The agent runs immediately and analyzes the knowledge source you uploaded. Select the link to open it.
 
-    When the agent finishes, it shows the **Suggested next steps** as a link. Select the link. You see a policy draft with suggested settings based on the knowledge source you uploaded. Select the policy draft link to open it.
+    When the agent finishes, **Suggested next steps** shows a policy draft as a link.
 
     :::image type="content" source="./media/policy-configuration-agent-suggestion.png" alt-text="Diagram that shows a sample policy draft created with the Copilot Policy Configuration Agent in Microsoft Intune." lightbox="./media/policy-configuration-agent-suggestion.png":::
 
-5. In the **Policy details** > **Identified settings** tab, each setting mapping and its recommended configured value is shown. For each setting, the agent shows:
+    You see a policy draft with suggested settings based on the knowledge source you uploaded.
+
+5. In the **Policy details** > **Identified settings** tab, your data is mapped to Intune settings. For each setting, the agent shows:
 
     - The name of the Intune policy setting
-    - The proposed value
+    - The proposed value of the setting
     - The original requirement text it maps to
-    - The confidence score for the mapping - If the text clearly matches a known setting (high confidence), then it proceeds. If not, it marks the suggestion as low confidence. You must review and confirm every mapping, especially the low-confidence mappings.
+    - The confidence score for the mapping
+
+      If the text clearly matches a known setting (high confidence), then it proceeds. If not, it marks the suggestion as low confidence. **You must review and confirm every mapping, especially the low-confidence mappings**.
 
     The agent classifies each mapping rule into the following categories:
 
     - **Supported** – There's a direct Intune setting available. The agent maps the rule to that setting and proposes a configuration.
     - **Unsupported** – There isn't a built-in Intune setting for this requirement. The agent notes that the rule is unsupported, meaning Intune alone can't enforce it. For example, a rule about a very niche OS setting that Intune can't manage would be flagged.
-    - **Unmappable/Ambiguous** – The agent couldn't confidently determine a matching setting. It highlights these settings so admins can review. In some cases, it can happen due to ambiguous phrasing or a requirement that needs clarification.
 
-    If any settings are unsupported, then they're listed.
+      If any settings are unsupported, then they're listed.
+
+    - **Unmappable/Ambiguous** – The agent couldn't confidently determine a matching setting. It highlights these settings so admins can review. In some cases, it can happen due to ambiguous phrasing or a requirement that needs clarification.
 
 6. You can also **Save this mapping** to save the suggested policy with its configured settings. The saved mapping is shown in ??. When you save the mapping, you can then choose to create a device configuration profile now or later.
 
@@ -136,7 +141,7 @@ When you upload a knowledge source, it available in the **Knowledge** tab. To vi
 
 ## Create and view a policy draft
 
-The agent can create a device configuration policy based on a knowledge source you uploaded, using a natural language prompt, or using an industry baseline.
+The agent can create a settings catalog device configuration policy based on a knowledge source you uploaded, using a natural language prompt, or using an industry baseline.
 
 To create a policy using the agent, use the following steps:
 
@@ -186,6 +191,8 @@ You can view your existing policy drafts. Use the following steps:
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
 1. In the **Overview** and **Suggestions** tabs, your policy drafts are shown as suggested next steps. Select a policy draft to view its settings and their configured values.
+
+To update any settings and their values in the policy draft, you must create a device configuration policy from the draft. After you create the policy, you can edit it like any other Intune device configuration policy.
 
 ## Related content
 

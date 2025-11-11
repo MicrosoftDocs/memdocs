@@ -26,7 +26,7 @@ With the agent, you:
 - Can upload internal policy documents and baselines, like your organization's security policies or compliance requirements.
 - Get relevant configuration settings and actionable suggestions based on your uploaded documents.
 
-  The recommendations include explanations, answering the "why" behind each setting. Admins can learn from this information and improve their own knowledge of Intune settings and security principles.
+  The recommendations include explanations, answering the "why" behind each setting. Admins can learn from this information and improve their own knowledge of Intune settings and security principles.??Do they? Or was this removed??
 
 - Can customize the suggestions to create a baseline that fits your environment. For example, if your organization has an exception to a CIS rule, you can remove that rule from the final policy.
 
@@ -148,8 +148,8 @@ At a high level, the agent does the following steps.
 
     At this stage, you should:
 
-    - **View Details** - You can drill into each recommended setting to read the rationale and adjust. For instance, if the agent suggests a password length of 14 characters because the baseline said `at least 12`, then you might increase it to 15. You can make edits to the proposed values before saving.
-    - **Remove or Exclude** - If there are certain suggestions you don't want to implement, then you can remove them from the draft policy.
+    - **View Details** - You can drill into each recommended setting to read the rationale and adjust. For instance, if the agent suggests a password length of 14 characters because the baseline said `at least 12`, then you might increase it to 15 in the final policy.
+    - **Remove or Exclude** - If there are certain suggestions you don't want to implement, then you can remove them from the final policy.
     - **Acknowledge Unsupported Items** - For any requirements that Intune can't enforce, document how you plan to handle them, or acknowledge them. The agent's role is informational and to make sure you're aware of any gaps.
 
 6. **Policy creation**: After you confirm the suggestions, you can select to automatically create a new configuration profile with all the recommended settings. This settings catalog policy isn't enforced until you assign it, just like any Intune policy you manually create.
@@ -158,13 +158,13 @@ At a high level, the agent does the following steps.
 
 7. **Deploy and monitor**: Once the policy is assigned, devices start reporting compliance with the new settings. The agent's job is done until you run it again.
 
-    Any agent suggestions you apply are tracked. If you rerun the agent with the same baseline file later, like maybe the baseline is updated in six months, it can compare the applied settings so it doesn't duplicate suggestions.
+    Any agent suggestions you apply are tracked. If you rerun the agent with the same baseline file later, like when the baseline is updated in six months, it can compare the applied settings so it doesn't duplicate suggestions.
 
 ## Set up the agent
 
 The agent runs under the identity and permissions of the account used during this setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. So, any changes to the account's permissions affect the agent's capabilities during its next run.
 
-We recommend you sign in with the Intune Administrator Microsoft Entra role to set up the agent.
+We recommend you sign in with the **Intune Administrator** Microsoft Entra role to set up the agent.
 
 Use the following steps to set up the agent.
 
