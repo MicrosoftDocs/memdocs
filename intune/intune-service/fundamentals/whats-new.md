@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/23/2025
+ms.date: 11/13/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,182 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+## Week of November 10, 2025 (Service release 2511)
+
+### App management
+
+#### More volume options available in Managed Home Screen <!-- 16462284 -->
+
+Admins can now enable more volume controls in the Managed Home Screen (MHS) app for Android Enterprise dedicated and fully managed devices. In addition to the existing media volume control, this update introduces configuration settings to show or hide sliders for **call**, **ring and notification**, and **alarm** volumes.
+
+Each new option can be independently enabled through app configuration policies. When turned on, users can adjust these specific volume levels directly from the Managed Settings page within MHS, without leaving kiosk mode. This enhancement provides task workers greater flexibility to manage sound levels for different environments while keeping the device securely locked down.
+
+For more information, see [Configure the Microsoft Managed Home Screen app for Android Enterprise](../apps/app-configuration-managed-home-screen-app.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise (dedicated and fully managed devices)
+
+#### Secure enterprise browser managed by Intune<!-- 31609121 -->
+ 
+Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
+
+For more information, see [Microsoft Edge for Business management with Intune](../apps/secure-enterprise-browser-using-intune.md).
+
+#### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
+
+Intune adds two new values to the **Allow cut, copy and paste for** setting in Windows app protection policies (starting with Microsoft Edge) to give admins more control over data movement:
+
+- Org data destinations and any source: Users can paste from any source into the org context, and can cut/copy only to org destinations.  
+- Org data destinations and org data sources: Users can cut/copy/paste only within the org context.
+
+These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../apps/app-protection-policy.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### Reset Managed Google Play store mode to Basic <!-- 33632857 -->
+
+You can now reset the Managed Google Play store layout from **Custom** back to **Basic** in the Intune admin center (**Apps** > **All apps** > **Create Managed Google Play app**).
+
+In **Basic** mode, all approved apps are automatically visible to users. In **Custom** mode, newly approved apps must be manually added to collections before they appear in the store. The new **Reset to Basic** button lets admins quickly revert to Basic mode without needing to contact support. When selected, Intune deletes all existing collections and immediately displays a success or failure message.
+
+For more information about Managed Google Play store layout options, see [Approve and deploy Android Enterprise apps in Intune](../apps/apps-add-android-for-work.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android
+
+### Device configuration
+
+#### Settings available in both Templates and Settings Catalog for Android Enterprise <!-- 34876806 -->
+
+Some settings that were only available in Templates are now also supported in the settings catalog.
+
+The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+To create a new settings catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
+
+The following settings are available in the settings catalog:
+
+**General**:
+
+- Block Contact sharing via Bluetooth (work profile level)
+- Block searching of work contacts and displaying work contact caller-id in personal profile
+- Data sharing between work and personal profiles
+- Skip first use hints
+
+**Work profile password**:
+
+- Number of days until password expires
+- Number of passwords required before user can reuse a password
+- Number of sign-in failures before wiping device
+- Required password type
+  - Minimum password length
+  - Number of characters required
+  - Number of lowercase characters required
+  - Number of non-letter characters required
+  - Number of numeric characters required
+  - Number of symbol characters required
+  - Number of uppercase characters required
+- Required unlock frequency
+
+To learn more about these settings, go to [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
+
+Applies to:
+
+- Android Enterprise
+
+#### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type):
+
+- **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
+
+Applies to:
+
+- Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
+- Android Enterprise corporate owned fully managed (COBO)
+- Android Enterprise corporate owned dedicated devices (COSU)
+
+### Device enrollment
+
+#### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
+
+You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant. 
+
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
+
+ - **App Store** (iOS/iPadOS 14.3+)
+ - **Camera button** (iOS/iPadOS 18+)
+ - **Web content filtering** (iOS/iPadOS 18.2+)
+ - **Safety and handling** (iOS/iPadOS 18.4+)
+ - **Multitasking** (iOS/iPadOS 26+)
+ - **OS Showcase** (iOS/iPadOS 26+)
+
+The screens you can skip during macOS enrollment include:
+
+   - **App Store** (macOS 11.1+)
+   - **Get Started** (macOS 15+)
+   - **Software update** (macOS 15.4+)
+   - **Additional privacy settings** (macOS 26+)
+   - **OS Showcase** (macOS 26.1+)
+   - **Update completed** (macOS 26.1+)
+   - **Get Started** (macOS 15+)
+
+For more information about available Setup Assistant skipkeys, see:
+
+- [Set up automated device enrollment for iOS/iPadOS]( ../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)
+- [Set up automated device enrollment for]( ../enrollment/device-enrollment-program-enroll-macos.md##setup-assistant-screen-reference)
+
+### Device management 
+
+#### Device Management Type assignment filter property supports Android enrollment options for Managed Devices<!-- 33016364 -->
+
+When you create a policy in Intune, you can use [assignment filters](filters.md) to assign a policy based on rules you create. You can create a rule using different [properties](filters-device-properties.md), like `deviceManagementType`.
+
+For managed devices, the Device Management Type property supports the following Android enrollment options:
+
+- Corporate-owned dedicated devices with Entra ID Shared mode
+- Corporate-owned dedicated devices without Entra ID Shared mode
+- Corporate-owned with work profile
+- Corporate-owned fully managed
+- Personally-owned device with a work profile
+- AOSP user-associated devices
+- AOSP userless devices
+
+To learn more about assignment filters and the properties you can currently use, see:
+
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [App and device properties, operators, and rule editing when creating filters in Microsoft Intune](filters-device-properties.md)
+
+Applies to:
+
+- Android
+
+#### New prompts available to explore your Intune data <!-- 33787582 -->
+
+You can use Security Copilot in Intune to explore new prompts related to your data using natural language. Use these new prompts to view data on:
+
+- Users and groups
+- Role based access control (RBAC)
+- Audit logs
+
+When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
+
+Each query returns a Copilot summary to help you understand the results and offers suggestions. With this information, you can also:
+
+- Add devices or users from the results to a group so you can target apps and policies to this group.
+- Filter example queries to find or build requests that match your needs.
+
+To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+
 ## Week of October 20, 2025 (Service release 2510)
 
 ### Microsoft Intune Suite
