@@ -14,7 +14,7 @@ ms.reviewer:
 > This article is still being written. Do not use it or share any information from this article.
 
 
-The Microsoft Intune Change Review Agent uses Microsoft Security Copilot’s generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests. 
+In public preview, the Microsoft Intune Change Review Agent uses Microsoft Security Copilot’s generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests. 
 
 To generate these recommendations, the agent aggregates signals from multiple sources:
 
@@ -101,14 +101,14 @@ The agent analyzes these signals to assess the potential risk associated with ea
 > To **enable and configure** the Change Review Agent, use an account with the following roles:
 >
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
-> - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
-> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+> - [*Intune Administrator*](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
+> - [*Security Reader*](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+> - *Entra/Identity risky user (read)* - This permission maps to the Unified RBAC permission *Security posture / Identity risk / Risky users (read)*.
 >
 > :::image type="icon" source="../media/icons/admin-center/defender.svg" border="false"::: Defender roles - Defender role-based access control (RBAC) roles depend on your Defender XDR implementation:
-> - [Unified RBAC](/defender-xdr/manage-rbac): Assign the Microsoft Entra ID Security Reader to the agent's identity account. This role provides read-only access to Defender Vulnerability Management data and automatically enforces device group scoping.
-> - [Granular RBAC](/defender-endpoint/rbac): Assign a custom RBAC role with permissions equivalent to the Unified RBAC Security Reader role. For example: 
->   - **View data** – **Defender Vulnerability Management** - This permission maps to the Unified RBAC permission *Security posture / Posture management / Vulnerability management (read)*.
->   - **Entra/Identity risky user (read)** - This permission maps to the Unified RBAC permission *Security posture / Identity risk / Risky users (read)*.
+> - [*Unified RBAC*](/defender-xdr/manage-rbac): Assign the Microsoft Entra ID Security Reader to the agent's identity account. This role provides read-only access to Defender Vulnerability Management data and automatically enforces device group scoping.
+> - [*Granular RBAC*](/defender-endpoint/rbac): Assign a custom RBAC role with permissions equivalent to the Unified RBAC Security Reader role. For example: 
+>   - *View data – Defender Vulnerability Management* - This permission maps to the Unified RBAC permission *Security posture / Posture management / Vulnerability management (read)*.
 >
 >    For details about mapping permissions to the Unified RBAC Security Reader role, see [Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
 >
@@ -150,9 +150,13 @@ At a high level, the agent does the following steps:
 
 2. **Evaluation** - The agent evaluates Windows PowerShell scripts for Multi Admin Approval requests using predefined logic that's built in to the agent configuration.
 
-3. **Recommendations** - The agent provides recommendations for up to 10 active Multi Admin Approval requests, presenting the 10 that are closest to expiration. The focus ensures those requests in danger of expiring can be addressed first. These are *suggestions* only and actual approval or rejection of a request remains with an Intune administrator. 
+3. **Recommendations** - When the agent runs, it provides recommendations for up to 10 requests. Admins can view the recommendations list which might include old recommendations beyond the 10. For example, if an admin chooses to run the agent  again after their first run, the view will display 20 recomendations.
 
-   Recommendations are shown in a list. The first column, Suggested Next Steps, displays the recommended action followed by the request name. Possible actions include:
+   The agent presents the requests that are closest to expiration. this focus ensures those requests in danger of expiring can be addressed first.
+
+    Suggestions are *suggestions* only. The approval or rejection of a request remains with an Intune administrator.
+
+   The first column of the recommendation list presents Suggested Next Steps, which display the recommended action followed by the name of the request. Possible actions include:
 
    - Approve - Low-risk request; likely safe to approve.
    - Reject - High-risk request; shouldn't be approved.
@@ -165,24 +169,7 @@ At a high level, the agent does the following steps:
 
 ## Agent identity
 
-The agent runs under the identity and permissions of the Intune admin account used during setup. You can [change the agent identity](#change-the-agent-identity) after setup if needed.
-
-The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
-
-### Change the agent identity
-
-After setup, the agent identity can be changed. A change of the agent identity doesn't affect the agent's run history. The identity changes when:
-
-- A different admin account than current identity is used to [renew](#renew-the-agent) the agent.
-- The agent settings are edited to explicitly assign a new agent identity. 
-
-**To assign a new agent identity**:
-1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Agents**. Select the **Change Review Agent** tile, and then select the **Settings** tab.
-1. Locate *Identity*, which displays the current user account the agent uses.
-1. Select the **Choose another identity** button to open an account sign-in prompt. Use the prompt to select and authenticate a new account as the agent identity.
-
-> [!IMPORTANT]
-> The agent can only perform operations allowed by the permissions of the account it runs under. If that  account lacks [required permissions](#prerequisites), the agent fails to run.
+The agent runs under the identity and permissions of the Intune admin account used during setup. The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
 ## Operational considerations
 
@@ -213,62 +200,6 @@ When requirements are met, select Start agent.
 The agent operates until it completes its evaluation and displays results in the Overview tab. When the run finishes, the agent is ready to use.
 
 To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
-
-## Explore the agent
-<!-- REVIEW after DEMO --- Does this belong in Use the Agent? OR perhaps the drill in details do.  -->
-After you configure the agent, you can manage it from the Change Review Agent pane.
-
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**:
-- On the **Overview** tab, review the agent run status, suggestions for the top Multi Admin Approval requests, and the record of recent agent activity.
-- On the **Suggestions** tab, view the full list of suggestions for approval requests, including suggestions that are *Not started*, *In progress*, or *Completed*.
-- On the **Settings** tab, review details about the agent's configuration.
-
-<!-- The following tab breakout might move to the use article -->
-To learn more about each tab, select the following tabs:
-
-# [**Overview**](#tab/overview)
-<!-- REVIEW For accuracy to agent - Add Images -->
-After the Change Review Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for Multi Admin Approval change requests. The **Overview** tab only displays the suggestions that are *Not started* or *In progress*.
-
-The following information is available on this tab: 
-
-- The agent's availability and run status. 
-- Agent suggestion for a list of top change requests. This list includes requests that are assessed to have the least risk and are safe to approve. 
-- Activity section that tracks the current and past run activity of the agent.
-
-<!-- No image source yet - Figma has not been updated >
-:::image type="content" source="images/change-review-agent/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." border="false" lightbox="images/change-review-age/overview.png":::
--->
-
-# [**Suggestions**](#tab/suggestions)
-<!-- REVIEW For accuracy to agent - Add Images -->
-Agent suggestions are a list of all Multi Admin Approval change requests. Suggestions are generated after each agent run and are based on the latest data. In this tab, you can use search and filters to find specific suggestions.
-
-A suggestion displays the following details:
-
-- A risk assessment of the change request.
-- The account used to submit the request.
-- When the request expires.
-- Status of the request, from *Not started* to *Completed*.
-- Details about the associated suggestions. 
-
-<!-- No image source yet - Figma has not been updated >
-:::image type="content" source="images/change-review-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/suggestions.png":::
--->
-
-After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to *complete*. Marking a suggestion as complete doesn't trigger any changes by the agent.
-
-# [**Settings**](#tab/settings)
-<!-- REVIEW For accuracy to agent - Add Images -->
-Use the **Settings** tab to view the details about the agent's identity and current configuration.
-
-<!-- No image source yet - Figma has not been updated >
-:::image type="content" source="images/change-review-agent/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/settings.png":::
--->
-
----
-
-
 
 <!-- ## Renew the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [renew](includes/renew.md)]
