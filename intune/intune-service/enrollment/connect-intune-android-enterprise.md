@@ -1,7 +1,7 @@
 ---
 title: Connect Intune account to managed Google Play account
 description: Learn how to connect your Intune account to your Managed Google Play account.
-ms.date: 10/14/2025
+ms.date: 11/06/2025
 ms.topic: how-to
 ms.reviewer: grwilson
 ms.collection:
@@ -59,6 +59,9 @@ Complete these steps to enable Android Enterprise management options in Microsof
 8. Follow the onscreen prompts to finish creating a Google Admin account.
 
 9. When prompted, select **Allow and create account** to allow Microsoft Intune to manage your Android Enterprise devices.
+
+> [!TIP]
+> After you connect to Managed Google Play and start using Collections, Google changes the Play Store mode to Custom. If you prefer all approved apps to be automatically visible, use **Reset to Basic** in the Intune admin center. For more information, see [Play Store modes and layout reset](../apps/apps-add-android-for-work.md#play-store-modes-and-layout-reset).
 
 > [!TIP]
 > To choose a scope tag for your managed Google Play apps, go to **Tenant administration** > **Connectors and tokens** > **Managed Google Play** in the Microsoft Intune admin center. Then select a scope tag to apply to all newly-approved managed Google Play apps. You must have the following permissions to interact with this area in the admin center and to remove the selected scope tag. Tenant admins, or admins who are in charge of giving admin permissions to others, can go to **Tenant Administration** > **Roles** to edit permissions.
