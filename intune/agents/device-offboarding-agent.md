@@ -84,11 +84,11 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 > ---
 >
-> To **enable and configure** the Device Offboarding Agent, use an account with the following roles:
+> To **enable**, **configure**, and **delete** the Device Offboarding Agent, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
-> - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
-> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles, either:
+> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
+> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data / Read** permissions
 >
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
