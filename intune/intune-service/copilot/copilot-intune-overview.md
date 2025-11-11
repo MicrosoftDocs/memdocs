@@ -1,7 +1,7 @@
 ---
 title: Security Copilot in Intune features overview
 description: Microsoft Security Copilot in Intune is an AI platform. It can help you create policies, get information about existing policies, and show more details on specific settings, including their impacts on users and devices. You can also use Copilot to troubleshoot device issues and query devices.
-ms.date: 09/17/2025
+ms.date: 11/17/2025
 ms.update-cycle: 180-days
 ms.topic: get-started
 ms.reviewer: ankurgoyal, rashok, zadvor
@@ -89,6 +89,21 @@ You can use Copilot in Intune for:
 - Troubleshooting Microsoft Surface devices
 - Gaining insights about Windows 365 Cloud PCs
 
+## Intune agents
+
+Security Copilot agents in Intune are AI-powered assistants that help strengthen enterprise security by automating key tasks. These agents help streamline endpoint protection, identity management, threat intelligence, and device configuration.
+
+Intune includes specialized agents for common scenarios:
+
+- **[Change Review Agent](../../agents/change-review-agent.md)** – Evaluates multi-admin approval requests and recommends actions.
+- **[Device Offboarding Agent](../../agents/device-offboarding-agent.md)** – Identifies stale or misaligned devices and provides insights before offboarding the devices.
+- **[Policy Configuration Agent](../../agents/policy-configuration-agent.md)** – Converts plain-language instructions or documents into recommended settings and policies.
+- **[Vulnerability Remediation Agent](../../agents/vulnerability-remediation-agent.md)** – Uses Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments.
+
+These agents help IT teams quickly address vulnerabilities, policy gaps, and emerging threats.
+
+To learn more, see [Security Copilot agents in Intune overview](../../agents/index.md).
+
 ## Data exploration
 
 Using natural language, you can query and explore your Intune data, including data about your devices, users, apps, policies, updates, and compliance. There are also built-in examples that help you understand the kinds of questions you can ask.
@@ -125,7 +140,7 @@ If a prompt requires more information, you're prompted to enter that information
 
 Copilot Chat includes all the prompts that you can use to explore your Intune data. In your prompt, you might see the **Explore further** option:
 
-:::image type="content" source="./media/copilot-intune-overview/go-to-explorer.png" alt-text="Screenshot that shows the Explor further option in Copilot Chat in Microsoft Intune." lightbox="./media/copilot-intune-overview/go-to-explorer.png":::
+:::image type="content" source="./media/copilot-intune-overview/go-to-explorer.png" alt-text="Screenshot that shows the Explore further option in Copilot Chat in Microsoft Intune." lightbox="./media/copilot-intune-overview/go-to-explorer.png":::
 
 When you select **Explore further**, you're redirected with your prompt already filled out in the Explorer prompt box. In our example, select **Platform** and then select your platform from the list:
 
