@@ -34,7 +34,7 @@ Microsoft Intune includes specialized Security Copilot agents, each designed for
 
 :::image type="icon" source="icons/device-offboarding-agent.svg" border="false":::
 
-> The *Device Offboarding Agent* identifies stale or misaligned devices across Intune, Microsoft Entra ID, Defender, Windows Autopilot, and Apple Business Manager, providing actionable insights and requiring admin approval before offboarding any devices.
+> The *Device Offboarding Agent* identifies stale or misaligned devices across Intune and Microsoft Entra ID, providing actionable insights and requiring admin approval before offboarding any devices.
 
 > [!div class="nextstepaction"]
 > [Learn more](device-offboarding-agent.md)
