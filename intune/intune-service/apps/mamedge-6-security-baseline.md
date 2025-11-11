@@ -13,18 +13,14 @@ ms.collection:
 
 # Step 6: Microsoft Edge Security Baseline
 
-The Microsoft Edge security baseline provides a preconfigured set of security settings that enable rapid deployment of enterprise browser security. Security baselines represent Microsoft's recommended security configuration based on industry best practices and security frameworks.
-
-**Applies to:**
-
-- Windows (enrolled devices)
+The Microsoft Edge security baseline provides a preconfigured set of security settings that address core browser security requirements and enable rapid deployment of enterprise browser protection. These baselines represent Microsoft’s recommended configuration based on industry best practices and security frameworks.
 
 > [!NOTE]
 > Security baselines are only available for Windows enrolled devices and provide a foundation for Level 2 enhanced security. The baseline can be supplemented with extra Settings Catalog policies for Level 3 high security.
 
-## Overview
+**Applies to:**
 
-The Microsoft Edge security baseline includes preconfigured settings that address core browser security requirements. Deploying the baseline provides immediate security hardening without requiring individual setting configuration.
+- Windows (enrolled devices)
 
 > **Microsoft Documentation:**
 >
