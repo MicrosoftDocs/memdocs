@@ -41,37 +41,27 @@ The following information is available on this tab:
 - Agent suggestion for a list of top change requests. This list displays a few of the results, focused on requests that are assessed to have the least risk and are safe to approve.
 - Activity section that tracks the current and past run activity of the agent.
 
-After the Change Review Agent completes a run, thos tab updates with the agent's list of top suggestions for Multi Admin Approval change requests The Overview tab displays only a few suggestions at a time with the full list available on the *Suggestions* tab. You can use either tab to drill in and review and manage recomendations from the agent.
+After the Change Review Agent completes a run, this tab updates with the agent's list of top suggestions for Multi Admin Approval change requests The Overview tab displays only a few suggestions at a time with the full list available on the *Suggestions* tab. You can use either tab to drill in and review and manage recomendations from the agent.
 
-<!-- No image source yet:
-:::image type="content" source="images/change-review-agent/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." border="false" lightbox="images/change-review-age/overview.png":::
--->
+:::image type="content" source="./media/change-review-agent-use/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." border="false" lightbox="./media/change-review-agent-use/overview.png":::
 
 # [**Suggestions**](#tab/suggestions)
 
-On the Suggestions tab you can view the full list of Agent suggestions for Multi Admin Approval change requests. Suggestions are generated after each agent run and are based on the latest data. In this tab, you can use search and filters to find specific suggestions.
+This tab displays the full list of requests that the agent has reviewed. Suggestions are generated after each agent run and are based on the latest data. In this tab, you can use search and filters to find specific suggestions. \
 
 A list of suggestions includes columns with the following details:
 
-- A risk assessment of the change request.
-- The account used to submit the request.
-- When the request expires.
-- Status of the request, from *Not started* to *Completed*.
-- Details about the associated suggestions. 
+- Risk threshold - An assessment of the change request.
+- Resource type - The type of request, like PowerShell script
+- Requested by - The user account that submitted the request.
+- Approval expiration - When the request will expire if not acted on.
+- Status - The status of the request. Requests that require no further action are marked as *Completed*.
 
-<!-- No image source yet:
-:::image type="content" source="images/change-review-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/suggestions.png":::
--->
-
-After an admin reviews and completes the recommended actions for a request, they can self-attest to applying those actions by updating the **Manage Suggestions** to *complete*. Marking a suggestion as *complete* doesn't trigger any changes by the agent.
+:::image type="content" source="./media/change-review-agent-use/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." border="false" lightbox="./media/change-review-agent-use/suggestions.png":::
 
 # [**Settings**](#tab/settings)
 
-Use the **Settings** tab to view the details about the agent's identity and current configuration.
-
-<!-- No image source yet:
-:::image type="content" source="images/change-review-agent/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." border="false" lightbox="images/change-review-agent/settings.png":::
--->
+Use this tab to view the details about the agent's identity and current configuration and requirements, like plugins the agent uses and the role-based access controls necessary to configure or use the agent.
 
 ---
 
@@ -88,23 +78,56 @@ The agent doesn't support scheduled runs and must be started manually each time 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
 2. Select **Run**, located above the agent’s tab selection.
 
-## Manage recommendations
 
-Upon review of each change request, the agent appends a recommendation to the name of the request and presents it on a list of *Suggested next steps*. You can find and manage suggestions from both the *Overview* and *Suggestions* tab of the agent. The agents recommendations include: 
+## Manage suggestions
 
-   - **Approve** - This is a low-risk request that is assessed to be save to approve. 
-   - **Reject** - A high-risk request that shouldn't be approved.
-   - **Needs more info** - Risk couldn't be fully assessed. This request requires further review.
+You can use the Change Review Agent node to deeply review and then manage (approve or reject) the Multi Admin Approval script request. 
+
+To review and manage a request that has been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent’s review for that request. The detailed view is named after the selected suggestion and includes the agent’s recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
+
+:::image type="content" source="./media/change-review-agent-use/reject.png" alt-text="Screenshot of the overview pane of the Change Review Agent." border="false" lightbox="./media/change-review-agent-use/reject.png":::
+
+ The following are the agent recomendations you might see:
+
+- **Approve** – A low-risk request assessed as safe to approve.
+- **Reject** – A high-risk request that should not be approved.
+- **Needs more info** – The risk couldn’t be fully assessed, and the request requires careful admin review.
  
-To review what went into the agents recommendation for a request, select the name of the request from either the *Overview* or *Suggestions* tab of the agent. Selecting the name opens the *Manage suggestion* view, which is a detailed review of that request. THis view includes the following information:
+### Layout of the detailed view
 
-- **Suggested action** - The suggested action section begins with one of three recommendations, *Approve*, *Reject*, or *Needs more info*. The first paragraph of this section explains how the agent arrived at its recommendation. The second paragraph provides details about the requests PowerShell script including what it does and interacts with, and details should it identified as malicious.
+The following explains the available information when viewing agent suggestions:
 
-- **Factors** - This is a detailed break down of specific details the agent reviewed for its assessment, including a script analysis, identity reviews of the account used to submit the request, and more.
+- **Details tile**
 
-- **View request** - Near the bottom of the *Manage suggestion* view is the *View request* button. TFor a PowerShell request, this option opens a pane where you can review the scripts contents, line by line.
+  On the right side, this tile displays metadata related to the agent suggestion.
 
-- **Details** - This tile displays high-level status details about the request, including its risk level, current approval status, and business justification. 
+- **Main tile**
+
+  On the left side, this tile displays the following sections and information:
+
+  - **Suggested action:**  
+    This provides a summary of the agent’s review and details that can help you make a decision to accept or reject the request:
+    - The first paragraph explains the rationale behind the agent’s recommendation.
+    - The second paragraph summarizes what the PowerShell script does or the potential impact if it is approved to run.
+
+  - **Factors:**
+    Factors are the specific details and conditions the agent considered when evaluating the script.
+
+  - **Additional resources and feedback:**
+
+    Below the Factors section, you’ll find:
+    - Links to relevant content for the skills the agent used during evaluation.
+    - A simple feedback system to share your input on the agent’s results.
+
+  - **View request:**
+    This button opens a review window for the current request. The review window provides yo with the same options available in the *Multi Admin Approval* node of the admin center.
+
+    The following are available actions after selecting *View request*:
+
+    - Use the *Approver note* to explain your decision for this request.
+    - Complete the approval process by selecting **Approve request** or **Reject request**.
+
+    After you approve or reject the request, the agent suggestion status changes to **Completed**.
 
 ## Agent logs
 
