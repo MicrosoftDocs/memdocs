@@ -90,20 +90,28 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 > - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 >
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles, either:
+> - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
+> - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions
+>
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
 > ---
 >
-> To **use** the agent and perform offboarding actions, use an account with the following roles:
+> To **use** the agent and perform offboarding actions, use an account with at least the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
-> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) or [custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with equivalent permissions.
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles, either:
+> - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
+> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data / Read** permissions
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles:
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
-> 
-> To take action from within the agent, such as to [disable devices in Entra](/entra/identity/devices/manage-stale-devices#disable-devices), you must have the *Disable devices* in Entra permission. You don't need this permission to run or view results from the agent.
+> - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions\
+>     To take action from within the agent, such as to [disable devices in Entra](/entra/identity/devices/manage-stale-devices#disable-devices), you must have the *[Disable devices](/entra/identity/role-based-access-control/custom-device-permissions#enable-or-disable-devices)* in Entra permission. You don't need this permission to run or view results from the agent.
+>
+> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> - [Copilot contributor](/copilot/security/authentication#security-copilot-roles) 
 
 :::column-end:::
 :::row-end:::
@@ -167,6 +175,9 @@ Before running the Device Offboarding Agent, keep these points in mind:
 - Suggestions don't persist across runs; re-running the agent clears previous recommendations.
 - Only one agent instance is supported per tenant/user context.
 - The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
+
+>[!IMPORTANT]
+>Data reported by the agent is surfaced through agent suggestions. This information may be visible to admins who have access to the agent in the Intune admin center, even if it includes data outside their assigned Administrative Units (AUs) in Microsoft Entra ID.
 
 [!INCLUDE [enable](includes/enable.md)]
 
