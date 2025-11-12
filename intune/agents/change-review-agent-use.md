@@ -29,7 +29,7 @@ After configuration, manage the agent from the Change Review Agent pane.
 In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**. The agent includes the following three tabs:
 
 - **Overview** - View the agent's current status, suggestions for the top Multi Admin Approval requests, and the records of recent agent activity.
-- **Suggestions** - Here you'll find the full list of suggestions assessed approval requests.
+- **Suggestions** - Here you'll find the full list of suggestions for assessed approval requests.
 - **Settings** - This tab displays the agent's configuration details.
 
 To learn more about each tab, select the following tabs:
