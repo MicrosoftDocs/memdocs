@@ -1,8 +1,8 @@
 ---
-title: Checklist for 2503
+title: Checklist for 2509
 titleSuffix: Configuration Manager
-description: Learn about actions to take before updating to Configuration Manager version 2503.
-ms.date: 03/31/2025
+description: Learn about actions to take before updating to Configuration Manager version 2509.
+ms.date: 11/11/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: checklist
@@ -14,17 +14,17 @@ ms.collection: tier3
 ms.reviewer: mstewart
 ---
 
-# Checklist for installing update 2503 for Configuration Manager
+# Checklist for installing update 2509 for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 2503 to update your hierarchy from a previous version.
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2509 to update your hierarchy from a previous version.
 
-To get the update for version 2503, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).
+To get the update for version 2509, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).
 
 After your hierarchy downloads the update package from Microsoft, find it in the console. In the **Administration** workspace, select the **Updates and Servicing** node.
 
-- When the update is listed as **Available**, the update is ready to install. Before installing version 2503, review the following information [about installing update 2503](#about-installing-update-2503) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
+- When the update is listed as **Available**, the update is ready to install. Before installing version 2509, review the following information [about installing update 2509](#about-installing-update-2509) and the [pre-update checklist](#pre-update-checklist) for configurations to make before starting the update.
 
 - If the update displays as **Downloading** and doesn't change, review the **hman.log** and **dmpdownloader.log** for errors.
 
@@ -36,11 +36,11 @@ For more information about installing updates, see [In-console updates and servi
 
 For more information about current branch versions, see [Baseline and update versions](updates.md#bkmk_Baselines).
 
-## About installing update 2503
+## About installing update 2509
 
 ### Sites
 
-Install update 2503 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
+Install update 2509 at the top-level site of your hierarchy. Start the installation from your central administration site (CAS) or from your stand-alone primary site. After the update is installed at the top-level site, child sites have the following update behavior:
 
 - Child primary sites install the update automatically after the CAS finishes the installation of the update. You can use service windows to control when a site installs the update. For more information, see [Service windows for site servers](service-windows.md).
 
@@ -65,39 +65,40 @@ The first time you use a Configuration Manager console after finishing the insta
 
 <!-- SCCMDocs#1397 -->
 
-At this time, version 2503 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2503:
+At this time, version 2509 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2509:
 
-[Version 2503 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
+[Version 2509 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
-> [!NOTE]
-> The version 2503 update is only applicable to sites running version 2403 or later.
+<!-- > [!NOTE]
+> The version 2509 update is only applicable to sites running version 2403 or later.
+-->
 
 To opt-in to the early update ring:
 
 1. Open a Windows PowerShell session **as administrator**.
 
-1. Run the **EnableEarlyUpdateRing2503.ps1** script, using the following syntax:
+1. Run the **EnableEarlyUpdateRing2509.ps1** script, using the following syntax:
 
-    `EnableEarlyUpdateRing2503.ps1 <SiteServer_Name> | SiteServer_IP>`
+    `EnableEarlyUpdateRing2509.ps1 <SiteServer_Name> | SiteServer_IP>`
 
-    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2503.ps1 cmprimary01`
+    Where `SiteServer` refers to the central administration site or standalone primary site server. For example, `EnableEarlyUpdateRing2509.ps1 cmprimary01`
 
 1. Check for updates. For more information, see [Get available updates](install-in-console-updates.md).
 
-The version 2503 update should now be available in the console.
+The version 2509 update should now be available in the console.
 
 > [!IMPORTANT]
-> This script only adds your site to the early update ring for version 2503. It's not a permanent change.
+> This script only adds your site to the early update ring for version 2509. It's not a permanent change.
 
-As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
+<!-- As of December 15, 2025, version 2509 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
 
 ## Pre-update checklist
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2503, use version 2303 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2509, use version 2403 or later.
 
 ### Review the status of your product licensing
 
@@ -117,7 +118,7 @@ For more information including how to manage restarts, see [Site and site system
 
 ### Review the version of the Windows ADK
 
-The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2503. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
+The version of the Windows Assessment and Deployment Kit (ADK) should be supported for Configuration Manager version 2509. For more information, see [Support for the Windows ADK](../../plan-design/configs/support-for-windows-adk.md). If you need to update the Windows ADK, do so before you begin the update of Configuration Manager. This order makes sure the default boot images are automatically updated to the latest version of Windows PE. Manually update any custom boot images after updating the site.
 
 If you update the site before you update the Windows ADK, see [Update distribution points with the boot image](../../../osd/get-started/manage-boot-images.md#update-distribution-points-with-the-boot-image).
 
@@ -228,7 +229,7 @@ To define a period during which updates to a site server can be installed, use s
 ### Review supported extensions
 
 <!--SCCMdocs#587-->
-If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2503. Check with the product vendor for this information.
+If you extend Configuration Manager with other products from Microsoft, Microsoft partners, or third-party vendors, confirm that those products support and are compatible with version 2509. Check with the product vendor for this information.
 
 > [!TIP]
 > If you develop a partner add-on for Configuration Manager, you should test your add-on with every monthly [technical preview branch release](../../get-started/technical-preview.md). Regular testing helps confirm compatibility, and allows for early reporting of any issues with standard interfaces.
@@ -254,7 +255,7 @@ For more information, see the [Release notes](../deploy/install/release-notes.md
 
 When the console lists the update as **Available**, you can run the prerequisite checker before installing the update. (When you install the update on the site, prerequisite checker runs again.)
 
-To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2503** update package, and select **Run prerequisite check** in the ribbon.
+To run a prerequisite check from the console, go to the **Administration** workspace, and select **Updates and Servicing**. Select the **Configuration Manager 2509** update package, and select **Run prerequisite check** in the ribbon.
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
@@ -275,7 +276,7 @@ After the site updates, use the following checklist to complete common tasks and
 
 ### Confirm version and restart (if necessary)
 
-Make sure each site server and site system role is updated to version 2503. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
+Make sure each site server and site system role is updated to version 2509. In the console, add the **Version** column to the **Sites** and **Distribution Points** nodes in the **Administration** workspace. When necessary, a site system role automatically reinstalls to update to the new version.
 
 Consider restarting remote site systems that don't successfully update at first. Review your site infrastructure and make sure that applicable site servers and remote site system servers successfully restarted. Typically, site servers restart only when Configuration Manager installs .NET as a prerequisite for a site system role.
 
@@ -332,7 +333,7 @@ Update clients per the plan you created, especially if you configured client pil
 
 ### Partner extensions
 
-If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 2503.
+If you use any extensions to Configuration Manager, update them to the latest version to support Configuration Manager version 2509.
 
 ### Update boot images and media
 
