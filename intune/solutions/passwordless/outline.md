@@ -63,25 +63,14 @@ Before diving into how Intune supports passwordless, it's important to understan
 
 MFA adds layers of security by requiring two or more factors (something you know, have, or are). Passwordless methods often satisfy MFA because they combine possession (device or key) and inherence (biometrics).
 
-## Phising resistance
+## :::image type="icon" source="icons/phishing.svg" border="false"::: Phising resistance
 
 Phishing attacks trick users into revealing credentials or approving malicious sign-ins. Passwordless methods combined with strong multi-factor authentication (MFA) help mitigate these risks.
 
-:::row:::
-    :::column span="1":::
-
-:::image type="icon" source="icons/phishing.svg" border="false":::
-
-:::column-end:::
-:::column span="3":::
 It's essential to understand the difference between phishing-resistant and non-phishing-resistant authentication methods when designing a passwordless strategy. A phishing-resistant method ensures that even if a user is tricked into interacting with a fraudulent prompt, the attacker cannot gain access. On the other hand, non-phishing-resistant methods can still be compromised if users are deceived into sharing secrets or approving fake requests.
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
-
-    :::column-end:::
-:::row-end:::
-
 
 ### Phishing resistance and Zero Trust
 
@@ -100,12 +89,7 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 Microsoft Entra ID supports several passwordless methods that vary in phishing resistance and use cases. Here are the primary options:
 
-#### Passkeys (FIDO2)
-:::row:::
-    :::column span="1":::
-:::image type="icon" source="icons/passkey.svg" border="false":::
-:::column-end:::
-:::column span="3":::
+#### :::image type="icon" source="icons/passkey.svg" border="false"::: Passkeys (FIDO2)
 
 Passkeys are cryptographic credentials that replace passwords and can sync across devices. They offer strong phishing resistance and simplify sign-in for users. Passkeys are ideal for organizations adopting modern authentication across multiple platforms. 
 
@@ -113,9 +97,6 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 - Enforcing OS version requirements for passkey support.
 - Ensuring Authenticator and Company Portal apps are installed.
 - Maintaining compliance so Conditional Access allows passkey sign-in.
-
-    :::column-end:::
-:::row-end:::
 
 #### FIDO2 Security Keys
 
