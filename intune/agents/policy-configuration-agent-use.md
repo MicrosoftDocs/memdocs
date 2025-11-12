@@ -1,7 +1,7 @@
 ---
 title: Use the Policy Configuration Agent to create policies
 description: Learn how to use the Policy Configuration Agent in Microsoft Intune to create policies. You can create policies on files you uploaded, natural language prompts, or industry baselines. The Policy Configuration Agent is a feature of Security Copilot in Intune.
-ms.date: 11/10/2025
+ms.date: 11/12/2025
 ms.topic: how-to
 author: mandiohlinger
 ms.author: mandia
@@ -151,20 +151,14 @@ To create a policy using the agent, use the following steps:
 
     - **Policy name** - Enter a name for the policy draft.
     - **Description** - Optional. Enter a description for the policy.
-    - **Knowledge source** - Select the knowledge source you want to use for this policy draft. Your options: ??What do these options mean??
-
-      - Secure System Baseline
-      - Critical Endpoint Controls (CEC) v2
-
+    - **Knowledge source** - Select the knowledge source you want to use for this policy draft. If it's blank, then no knowledge sources are uploaded. Select **add a document** to upload a file that contains your instructions.
     - **Instructions** - In natural language, describe the device configuration settings you want to include in the policy. For example, enter `Create a device configuration policy that enforces strong password requirements and enables BitLocker encryption on Windows devices`.
-
-      Or, select **add a document** to upload a file that contains your instructions.
 
 4. Select **Create**. The agent runs and creates a policy draft based on your selected source.
 
 5. In the **Overview** and **Suggestions** tabs, your policy draft is shown as a suggested next step. Select the draft link.
 
-    An AI Summary describes the policy draft. The policy details show the settings suggested by the agent and its configured values. You can also export the settings as a `.csv` file.
+    An AI Summary describes the policy draft and provides more helpful insights. The policy details show the settings suggested by the agent and its configured values. You can also export the settings as a `.csv` file.
 
     **In this step, review each setting and its value to ensure they meet your requirements**. You can start with the settings that have a low confidence score.
 
@@ -175,11 +169,13 @@ To create a policy using the agent, use the following steps:
     - New
     - In progress
     - Completed
-    - Dismissed
+    - Dismissed - This status removed the suggestion from the **Suggestions** tab.
 
     These statuses are for your tracking purposes only. They help you track the suggestions you've reviewed and the suggestions you need to address.
 
-7. Select **Create configuration policy** to save the policy draft as a device configuration policy. The saved policy is shown in **Devices** > **Manage devices** > **Configuration**.
+7. Select **Create configuration policy** to save the policy draft as a device configuration policy. This step takes you to the settings catalog, and the saved policy is shown in **Devices** > **Manage devices** > **Configuration**.
+
+    The agent also automatically adds any required settings to the policy, including parent and child settings. So, the settings count can be different between the agents policy draft and the device configuration policy.
 
     At this stage, the policy is a normal Intune policy. You can change the policy name, update the policy settings, and assign the policy when you're ready.
 
