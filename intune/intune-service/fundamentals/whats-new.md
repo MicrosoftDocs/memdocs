@@ -588,7 +588,7 @@ If the Intune settings catalog contains relevant settings for the reported vulne
 
 If there are no recommended device configuration settings to deploy, the Configurations section indicates that no recommended settings catalog policy configurations are available.
 
-To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../../agents/vulnerability-remediation-agent-use.md#view-and-manage-vulnerability-suggestions) in *Use the Vulnerability Remediation Agent.*
+To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../../agents/vulnerability-remediation-agent-use.md#manage-agent-suggestions) in *Use the Vulnerability Remediation Agent*.
 
 
 ## Week of August 25, 2025
