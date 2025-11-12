@@ -103,7 +103,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 #### FIDO2 Security Keys
 :::column-end:::
 :::column span="1":::
-:::image type="icon" source="icons/security-key.svg" border="false" align="center":::
+:::image type="icon" source="icons/security-key.svg" border="false":::
 :::column-end:::
 :::row-end:::
 
@@ -177,8 +177,6 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 - Enforcing device compliance.
 - Applying App Protection Policies (MAM).
 - Ensuring the brokered authentication flow (Company Portal/Authenticator) is present on iOS/Android.
-
-    
 
 #### Temporary Access Pass (TAP)
 
