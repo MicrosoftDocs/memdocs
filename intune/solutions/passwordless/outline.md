@@ -98,14 +98,15 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 - Ensuring Authenticator and Company Portal apps are installed.
 - Maintaining compliance so Conditional Access allows passkey sign-in.
 
-#### FIDO2 Security Keys
-
 :::row:::
-    :::column span="1":::
-:::image type="icon" source="icons/security-key.svg" border="false":::
-
+:::column span="3":::
+#### FIDO2 Security Keys
 :::column-end:::
-:::column span="5":::
+:::column span="1":::
+:::image type="icon" source="icons/security-key.svg" border="false":::
+:::column-end:::
+:::row-end:::
+
 FIDO2 keys are hardware-based authenticators that provide strong phishing resistance and offline capabilities. They're best suited for high-security environments or shared devices.
 
 [!INCLUDE [intune](includes/intune.md)]
@@ -113,8 +114,7 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 - Enabling FIDO2 sign-in via policy settings.
 - Deploying FIDO2 through identity protection profiles targeting specific groups.
 - Ensuring devices are compliant for passwordless access.
-    :::column-end:::
-:::row-end:::
+
 
 #### Certificate-Based Authentication (CBA)
 
