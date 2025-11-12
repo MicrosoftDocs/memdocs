@@ -5,7 +5,7 @@ ms.date: 11/17/2025
 ms.topic: how-to
 author: brenduns
 ms.author: brenduns
-ms.reviewer: 
+ms.reviewer: zinebtakafi
 ---
 
 # Use the Change Review Agent

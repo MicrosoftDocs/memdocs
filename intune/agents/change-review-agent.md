@@ -5,7 +5,7 @@ ms.date: 11/10/2025
 ms.topic: overview
 author: brenduns
 ms.author: brenduns
-ms.reviewer: 
+ms.reviewer: zinebtakafi
 ---
 
 # Change Review Agent overview
@@ -204,7 +204,7 @@ To learn more about using the agent, see [Use the Change Review Agent](change-re
 <!-- ## Renew the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [renew](includes/renew.md)]
 
-<!-- My version of the note in the Include:
+<!-- My version of the note in the Includ
 > [!IMPORTANT]
 > When renewing agent authentication, the agent adopts the credentials of the user performing the renewal. To keep the agent’s identity unchanged, the same user who originally authorized the agent must also renew it.
  -->
