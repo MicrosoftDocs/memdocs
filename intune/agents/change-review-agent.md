@@ -14,13 +14,13 @@ ms.reviewer: zinebtakafi
 > This article is still being written. Do not use it or share any information from this article.
 
 
-In public preview, the Microsoft Intune Change Review Agent uses Microsoft Security Copilot’s generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests. 
+In public preview, the Microsoft Intune Change Review Agent uses Microsoft Security Copilot’s generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests.
 
 To generate these recommendations, the agent aggregates signals from multiple sources:
 
-- Microsoft Defender Vulnerability Management – threat intelligence and vulnerability data
-- Microsoft Entra ID – identity risk indicators
-- Microsoft Intune – device posture and deployment context
+- Microsoft Defender Vulnerability Management - for threat insights
+- Microsoft -Entra ID - for identity risk
+- Microsoft Intune - for Multi Admin Approval requests and historical context of similar requests
 
 The agent analyzes these signals to assess the potential risk associated with each request and then delivers actionable insights to support secure and efficient change management.
 
