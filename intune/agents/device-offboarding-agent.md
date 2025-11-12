@@ -163,14 +163,15 @@ To support secure and efficient device lifecycle management, the Device Offboard
 
 ### Agent identity
 
-The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. <!--To maintain functionality, [renew the agent](#renew-the-agent) identity before the 90-day limit.-->
+The Device Offboarding Agent runs under the identity and permissions of the Intune admin account used during setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until renewed. To maintain functionality, [renew the agent](#renew-the-agent) identity before the 90-day limit.
 
 ### Operational considerations
 
-Before running the Device Offboarding Agent, keep these points in mind:
+Before running the Device Offboarding Agent, note the following:
 
-- An admin must manually start the agent. After starting, there's no option to stop or pause it.
-- The agent can only be started from the Microsoft Intune admin center.
+- The agent's scope is to identify devices that were retired, wiped, or deleted from Intune within the last 30 days.
+- An admin must start the agent manually. Once started, it cannot be paused or stopped.
+- The agent can only be launched from the Microsoft Intune admin center.
 - Session details in the [Microsoft Security Copilot portal][COP-PORTAL] are visible only to the user who set up the agent.
 - Suggestions don't persist across runs; re-running the agent clears previous recommendations.
 - Only one agent instance is supported per tenant/user context.
@@ -271,7 +272,7 @@ Include only devices with last activity after […]
 Include only devices with last activity before […]
 ```
 
-<!-- [!INCLUDE [renew](includes/renew.md)] -->
+[!INCLUDE [renew-alternative](includes/renew-alternative.md)]
 
 [!INCLUDE [remove](includes/remove.md)]
 
