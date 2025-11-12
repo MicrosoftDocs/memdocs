@@ -98,7 +98,7 @@ The version 2509 update should now be available in the console.
 
 ### All sites run a supported version of Configuration Manager
 
-Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2509, use version 2303 or later.
+Each site server in the hierarchy must run the same version of Configuration Manager before you can start the installation. To update to version 2509, use version 2403 or later.
 
 ### Review the status of your product licensing
 

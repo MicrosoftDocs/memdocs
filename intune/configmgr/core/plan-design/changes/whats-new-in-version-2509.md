@@ -18,7 +18,7 @@ ms.reviewer: mstewart
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 2509 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2309 or later.
+Update 2509 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2403 or later.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2509](../../servers/manage/checklist-for-installing-update-2509.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2509.md#post-update-checklist).
 
