@@ -39,7 +39,7 @@ To learn more about each tab, select the following tabs:
 The Overview tab includes:
 
 - **Agent status** - Various tiles introduce the agent, detail whether the agent is available and its current run status.
-- **Agent suggestions** – This  is a short list of the top suggestions for Multi Admin Approval requests that are assessed as low risk and safe to approve.
+- **Agent suggestions** – This short list highlights the top suggestions for Multi-Admin Approval requests. Recommended actions include approving low-risk requests and rejecting those assessed as high-risk.
 - **Activity** – This area displays records  of the current and past agent runs. 
 
 After the agent completes a run, the Overview tab updates with its top suggestions for Multi Admin Approval requests. This tab shows only a few suggestions at a time; the full list is available on the Suggestions tab. Use either tab to drill down and review or manage recommendations.
@@ -115,9 +115,7 @@ When you open an agent suggestion, the review page is divided into two main area
   On the left side, this tile displays the following sections and information:
 
   - **Suggested action:**  
-    This provides a summary of the agent’s review and details that can help you make a decision to accept or reject the request:
-    - The first paragraph explains the rationale behind the agent’s recommendation.
-    - The second paragraph summarizes what the PowerShell script does or the potential effects if it's approved to run.
+    This section provides a summary of the agent’s review, including key details to help you decide whether to accept or reject the request. It outlines the rationale behind the assessment and includes a brief overview of the script.
 
   - **Factors:**
     Factors are the specific details and conditions the agent considered when evaluating the script.
