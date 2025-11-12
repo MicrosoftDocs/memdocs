@@ -55,7 +55,6 @@ Level 1 configuration provides foundational browser security controls while main
 8. In the **Settings picker**, locate each setting using one of the following options:  
    - **Search for a setting:** Copy the **Setting** from the table and paste it into search.  
    - **Browse by category:** Select the **Category** listed for that setting.  
-   When multiple results appear, choose the entry that matches the **Category**.  
 9. Configure the setting using the **Value** specified.
 
 | Category | Setting | Value | Documentation |
