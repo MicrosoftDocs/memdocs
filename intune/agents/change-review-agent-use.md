@@ -64,8 +64,8 @@ Each suggestion includes columns with these details:
 
 Use the Settings tab to view details about the agent’s identity, current configuration, and requirements. This includes:
 
-**Plugins** – Components the agent uses during evaluation.
-**Role-based access controls** – Permissions required to configure or use the agent.
+- **Plugins** – Components the agent uses during evaluation.
+- **Role-based access controls** – Permissions required to configure or use the agent.
 
 :::image type="content" source="./media/change-review-agent-use/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." :::
 
