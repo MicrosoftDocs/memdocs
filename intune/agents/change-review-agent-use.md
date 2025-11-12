@@ -64,8 +64,10 @@ Each suggestion includes columns with these details:
 
 Use the Settings tab to view details about the agent’s identity, current configuration, and requirements. This includes:
 
+- **Agent jobs** - Request types that agent reviews.
+- **Identity** - Details about the agents use of a user account as its identity.
+- **Required permissions** – Role-based access controls required to configure or use the agent.
 - **Plugins** – Components the agent uses during evaluation.
-- **Role-based access controls** – Permissions required to configure or use the agent.
 
 :::image type="content" source="./media/change-review-agent-use/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." :::
 
