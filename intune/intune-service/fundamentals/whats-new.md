@@ -162,6 +162,23 @@ Applies to:
 
 ### Device enrollment
 
+#### New opt-in upgrade allows existing customers to move from managed Google Play accounts to Microsoft Entra ID accounts<!-- 30675087 --> 
+
+Microsoft Intune offers a new opt-in upgrade that allows existing Android Enterprise customers to move from using managed Google Play accounts to using Microsoft Entra ID accounts for Android device management. You are eligible for upgrade if you previously used a consumer Gmail account. This change streamlines the onboarding process by eliminating the need for a separate Gmail account and by leveraging your work account. This change is not required. To learn more about this change, see:
+
+- [New onboarding flow to managing Android Enterprise devices with Microsoft Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-onboarding-flow-to-managing-android-enterprise-devices-with-microsoft-intune/4206602)
+- [Connect your Intune account to your managed Google Play account](../enrollment/connect-intune-android-enterprise.md#upgrade-to-a-managed-google-domain)
+
+#### Incomplete user enrollment report removed <!-- 26395805 -->
+
+The incomplete user enrollments report has been removed and is no longer functional in the Microsoft Intune admin center. The following corresponding APIs have also been removed from Microsoft Intune:  
+
+- getEnrollmentAbandonmentDetailsReport
+- getEnrollmentAbandonmentSummaryReport
+- getEnrollmentFailureDetailsReport
+
+Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).
+
 #### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
 
 You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant. 

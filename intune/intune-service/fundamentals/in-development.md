@@ -86,12 +86,6 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 ## Device enrollment
 
-### New opt-in upgrade to allow existing customers to move from managed Google Play Accounts to Microsoft Entra ID accounts  <!-- 30675087 -->
-
-Microsoft Intune will offer a new opt-in upgrade that allows existing Android Enterprise customers to move from using managed Google Play accounts to using Microsoft Entra ID accounts for Android device management. Customers are eligible if they previously used a managed Google Play account. This better together enterprise (BTE) integration streamlines the onboarding process by eliminating the need for a separate Google account and leveraging your work account. It's not required to switch account types. 
-
-To learn more about this change, see [New onboarding flow to managing Android Enterprise devices with Microsoft Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-onboarding-flow-to-managing-android-enterprise-devices-with-microsoft-intune/4206602).
-
 ### Configure Windows Backup for Organizations<!--29202026 -->
 
 A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
