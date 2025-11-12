@@ -105,7 +105,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 :::image type="icon" source="icons/security-key.svg" border="false":::
 
 :::column-end:::
-:::column span="3":::
+:::column span="5":::
 FIDO2 keys are hardware-based authenticators that provide strong phishing resistance and offline capabilities. They're best suited for high-security environments or shared devices.
 
 [!INCLUDE [intune](includes/intune.md)]
@@ -144,7 +144,7 @@ Certificate-based authentication uses digital certificates to verify identity, c
     :::column span="1":::
 :::image type="icon" source="icons/windows-hello.svg" border="false":::
 :::column-end:::
-:::column span="3":::
+:::column span="5":::
 Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key stored in the TPM and protected by biometrics or a PIN. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
 
 [!INCLUDE [intune](includes/intune.md)]
