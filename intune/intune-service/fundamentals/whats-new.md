@@ -73,26 +73,6 @@ For more information, see [Configure the Microsoft Managed Home Screen app for A
 >
 > - Android Enterprise (dedicated and fully managed devices)
 
-#### Secure enterprise browser managed by Intune<!-- 31609121 -->
- 
-Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
-
-For more information, see [Microsoft Edge for Business management with Intune](../apps/secure-enterprise-browser-using-intune.md).
-
-#### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
-
-Intune adds two new values to the **Allow cut, copy and paste for** setting in Windows app protection policies (starting with Microsoft Edge) to give admins more control over data movement:
-
-- Org data destinations and any source: Users can paste from any source into the org context, and can cut/copy only to org destinations.  
-- Org data destinations and org data sources: Users can cut/copy/paste only within the org context.
-
-These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../apps/app-protection-policy.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
 #### Reset Managed Google Play store mode to Basic <!-- 33632857 -->
 
 You can now reset the Managed Google Play store layout from **Custom** back to **Basic** in the Intune admin center (**Apps** > **All apps** > **Create Managed Google Play app**).
