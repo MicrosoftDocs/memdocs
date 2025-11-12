@@ -72,7 +72,10 @@ Phishing attacks trick users into revealing credentials or approving fraudulent 
 - Passkeys (FIDO) — this is the standards-based umbrella. In Entra you can use:
   - **Device‑bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
   - **Synced passkeys** (multi-device) in platform password managers (e.g., iCloud Keychain, Google Password Manager) and some 3rd‑party providers—supported/rolling out per roadmap
-- FIDO2 security keys — external keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared devices or high‑assurance scenarios. [643422_Phi...hods_FINAL | PowerPoint], [OA for Pas...ment Guide | Word]
+- FIDO2 security keys — external keys (USB/NFC/BLE) that hold a FIDO credential; ideal for shared devices or high‑assurance scenarios.
+- 
+- 
+- 
 Certificate‑based authentication (CBA) / smart cards (incl. PIV/CAC) — long‑standing, phishing‑resistant certificate credentials for web and native app sign‑in. [643422_Phi...hods_FINAL | PowerPoint]
 
 ### Other methods

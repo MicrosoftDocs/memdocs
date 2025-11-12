@@ -98,30 +98,35 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 - Ensuring Authenticator and Company Portal apps are installed.
 - Maintaining compliance so Conditional Access allows passkey sign-in.
 
-:::row:::
-:::column span="3":::
+[!INCLUDE [learn-more](includes/learn-more.md)]
+- add here
+
 #### FIDO2 Security Keys
-:::column-end:::
+
+:::row:::
 :::column span="1":::
 :::image type="icon" source="icons/security-key.svg" border="false":::
 :::column-end:::
+:::column span="3":::
+> FIDO2 keys are physical devices that enable strong, phishing-resistant authentication without relying on passwords. They store cryptographic credentials and work offline, making them ideal for high-security environments or shared devices. These external keys connect via USB, NFC, or Bluetooth and provide a simple, secure way to verify identity in scenarios where maximum assurance is required.
+:::column-end:::
 :::row-end:::
-
-FIDO2 keys are hardware-based authenticators that provide strong phishing resistance and offline capabilities. They're best suited for high-security environments or shared devices.
 
 [!INCLUDE [intune](includes/intune.md)]
 
 - Enabling FIDO2 sign-in via policy settings.
-- Deploying FIDO2 through identity protection profiles targeting specific groups.
 - Ensuring devices are compliant for passwordless access.
+
+[!INCLUDE [learn-more](includes/learn-more.md)]
+- add here
 
 #### Certificate-Based Authentication (CBA)
 
 :::row:::
-:::column span="3":::
+:::column span="1":::
 :::image type="icon" source="icons/certificate.svg" border="false":::
 :::column-end:::
-:::column span="1":::
+:::column span="3":::
 > Certificate-based authentication uses digital certificates to verify identity, commonly required in regulated industries. Because it relies on asymmetric cryptography, CBA is phishing-resistant and prevents credential replay attacks. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV (Personal Identity Verification) and CAC (Common Access Card). For mobile-friendly deployments, organizations can use derived credentials (e.g., Purebred), which store certificates in secure elements on mobile devices
 :::column-end:::
 :::row-end:::
@@ -134,6 +139,8 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 - Supporting Purebred workflows for mobile certificate issuance and renewal in government or high-security environments.
 - Offering a cloud-based PKI option to reduce infrastructure complexity.
 
+[!INCLUDE [learn-more](includes/learn-more.md)]
+- add here
 
 #### Windows Hello for Business
 
@@ -153,7 +160,9 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 - Prompting setup during OOBE for Entra-joined devices.
 - Ensuring compliance for passwordless sign-in policies.
 
-    
+[!INCLUDE [learn-more](includes/learn-more.md)]
+- add here
+
 #### Microsoft Authenticator app
 
 :::row:::
@@ -161,13 +170,10 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 :::image type="icon" source="icons/authenticator.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-> The Microsoft Authenticator app enables passwordless sign-in on mobile devices. After entering a username, users approve the sign-in by matching a number and verifying with biometrics or PIN on their phone. While convenient and widely supported, this method is not considered phishing-resistant because it relies on push notifications rather than hardware-bound credentials. It's best suited for scenarios where flexibility and ease of use are priorities.
->
->Microsoft Authenticator enables two passwordless approaches and one legacy MFA approach—be explicit about which you're using:
->
->- Passwordless phone sign‑in: Users approve sign‑in on the trusted device after unlocking it (biometric/PIN). Passwordless; mitigates MFA fatigue with number matching and device unlock.
->- Passkeys in Authenticator: Authenticator can store a FIDO‑based passkey for an Entra account. Passwordless and phishing‑resistant.
->- TOTP/OTP codes: One‑time codes in Authenticator. MFA but not passwordless and not phishing‑resistant; include for completeness but steer readers to the methods above.
+>**Microsoft Authenticator** offers multiple sign-in options, including passwordless methods and a legacy MFA approach:
+>- **Passkeys in Authenticator**: Authenticator can store a FIDO-based passkey for an Entra account, enabling passwordless authentication that is **phishing-resistant**. Ideal for high-assurance environments.
+>- **Passwordless phone sign-in**: After entering a username, users approve sign-in on their trusted device by unlocking it with biometrics or a PIN and matching a number. This method is convenient and widely supported, but it's **not phishing-resistant** because it relies on push notifications rather than hardware-bound credentials. Best for scenarios prioritizing flexibility and ease of use.
+>- **TOTP/OTP codes**: Time-based one-time codes for MFA. This is **not passwordless** and **not phishing-resistant**. It's included here for completeness but organizations should steer users toward the passwordless methods above for stronger security.
 :::column-end:::
 :::row-end:::
 
@@ -178,6 +184,9 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 - Applying App Protection Policies (MAM).
 - Ensuring the brokered authentication flow (Company Portal/Authenticator) is present on iOS/Android.
 
+[!INCLUDE [learn-more](includes/learn-more.md)]
+- add here
+
 #### Temporary Access Pass (TAP)
 
 :::row:::
@@ -186,17 +195,16 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 :::column-end:::
 :::column span="3":::
 
-TAP is a time-limited credential that enables onboarding or recovery without requiring a password. It's ideal for scenarios where users need initial access before setting up passwordless methods. Intune ensures devices are ready for TAP workflows and enforces compliance during onboarding.
+> TAP is a time-limited credential that enables onboarding or recovery without requiring a password. It's ideal for scenarios where users need initial access before setting up passwordless methods. Intune ensures devices are ready for TAP workflows and enforces compliance during onboarding.
+
+> [!TIP]
+> TAP isn't a long-term authentication method but a secure bridge to passwordless enrollment.
 
 [!INCLUDE [intune](includes/intune.md)]
 
 - On Windows device, by enabling Web Sign-in so TAP can be used at the lock screen.
 - Providing a path for passwordless onboarding by prompting Hello setup after TAP sign-in.
 - Supporting fallback scenarios without compromising security.
-
-> [!TIP]
-> TAP isn't a long-term authentication method but a secure bridge to passwordless enrollment.
-
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
