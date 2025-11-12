@@ -1,7 +1,7 @@
 ---
 title: Learn about Policy Configuration Agent and set it up
 description: Learn about the Policy Configuration Agent in Microsoft Intune, its prerequisites, how it works, and how to set it up. The agent is a generative AI feature that helps create Intune policies based on uploaded documents or benchmarks. The Policy Configuration Agent is a feature of Security Copilot in Intune.
-ms.date: 11/10/2025
+ms.date: 11/12/2025
 ms.topic: overview
 author: mandiohlinger
 ms.author: mandia
@@ -25,9 +25,6 @@ With the agent, you:
 
 - Can upload internal policy documents and baselines, like your organization's security policies or compliance requirements.
 - Get relevant configuration settings and actionable suggestions based on your uploaded documents.
-
-  The recommendations include explanations, answering the "why" behind each setting. Admins can learn from this information and improve their own knowledge of Intune settings and security principles.??Do they? Or was this removed??
-
 - Can customize the suggestions to create a baseline that fits your environment. For example, if your organization has an exception to a CIS rule, you can remove that rule from the final policy.
 
 The agent also guides you through creating a policy using the suggestions and helps configure each setting based on your organization's needs. It provides insights into each setting's benefits and potential implications, and can highlight supported, unsupported, and unmappable rules. You can also review and save these suggestions.
