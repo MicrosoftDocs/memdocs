@@ -13,63 +13,69 @@ ms.reviewer:
 > [!WARNING]
 > This article is still being written. Do not use it or share any information from this article.
 
-In public preview, the [Change Review Agent](change-review-agent.md) is a generative AI feature in Intune. The agent evaluates Multi Admin Approval requests for PowerShell scripts on Windows devices to provide risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks for the change requests. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests.
+The [Change Review Agent](change-review-agent.md) (public preview) is a generative AI feature in Intune. It evaluates Multi Admin Approval requests for PowerShell scripts on Windows devices and provides risk-based recommendations with contextual insights. These insights help administrators understand script behavior and associated risks, so they can decide whether to approve or deny requests more quickly.
 
 After the [agent is set up](change-review-agent.md#set-up-the-agent), its recommendations can be viewed, and the agent can be run again on demand to refresh its recommendations.
 
 
 ## Prerequisites
 
-Before you begin, make sure you meet the requirements detailed in the [Change Review Agent overview](change-review-agent.md#prerequisites) article.
+Before you start, review the requirements in the [Change Review Agent overview](change-review-agent.md#prerequisites) article.
 
-## Explore the agent
+## Explore the Change Review Agent
 
-After you configure the agent, you can manage it from the Change Review Agent pane.
+After configuration, manage the agent from the Change Review Agent pane.
 
-In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**:
-- On the **Overview** tab, review the agent run status, suggestions for the top Multi Admin Approval requests, and the records of recent agent activity.
-- On the **Suggestions** tab, view the full list of suggestions for approval requests, including suggestions that are *Not started*, *In progress*, or *Completed*.
-- On the **Settings** tab, review details about the agent's configuration.
+In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Change Review Agent**. The agent includes the following three tabs:
+
+- **Overview** - View the agent's current status, suggestions for the top Multi Admin Approval requests, and the records of recent agent activity.
+- **Suggestions** - Here you'll find the full list of suggestions assessed approval requests.
+- **Settings** - This tab displays the agent's configuration details.
 
 To learn more about each tab, select the following tabs:
 
 # [**Overview**](#tab/overview)
  
-The following information is available on this tab: 
+The Overview tab includes:
 
-- The agent's availability and run status.
-- Agent suggestion for a list of top change requests. This list displays a few of the results, focused on requests that are assessed to have the least risk and are safe to approve.
-- Activity section that tracks the current and past run activity of the agent.
+- **Agent status** - Various tiles introduce the agent, detail whether the agent is available and its current run status.
+- **Agent suggestions** – This  is a short list of the top suggestions for Multi Admin Approval requests that are assessed as low risk and safe to approve.
+- **Activity** – This area displays records  of the current and past agent runs. 
 
-After the Change Review Agent completes a run, this tab updates with the agent's list of top suggestions for Multi Admin Approval change requests. The Overview tab displays only a few suggestions at a time with the full list available on the *Suggestions* tab. You can use either tab to drill in and review and manage recommendations from the agent.
+After the agent completes a run, the Overview tab updates with its top suggestions for Multi Admin Approval requests. This tab shows only a few suggestions at a time; the full list is available on the Suggestions tab. Use either tab to drill down and review or manage recommendations.
 
 :::image type="content" source="./media/change-review-agent-use/overview.png" alt-text="Screenshot of the overview pane of the Change Review Agent." :::
 
 # [**Suggestions**](#tab/suggestions)
 
-This tab displays the full list of requests that the agent reviewed. Suggestions are generated after each agent run and are based on the latest data. In this tab, you can use search and filters to find specific suggestions. \
+The *Suggestions* tab shows the full list of requests reviewed by the agent. Suggestions are generated after each agent run and reflect the latest data. Use search and filters to find specific suggestions.
 
-A list of suggestions includes columns with the following details:
+Each suggestion includes columns with these details:
 
-- Risk threshold - An assessment of the change request.
-- Resource type - The type of request, like PowerShell script
-- Requested by - The user account that submitted the request.
-- Approval expiration - When the request expires if not acted on.
-- Status - The status of the request. Requests that require no further action are marked as *Completed*.
+- **Risk threshold** - An assessment of the change request.
+- **Resource type** - The type of request, such as PowerShell script
+- **Requested by** - The user account that submitted the request.
+- **Approval expiration** - The Date when the request expires if no action is taken.
+- **Status** - Current status of the request. Requests that require no further action are marked as *Completed*.
 
 :::image type="content" source="./media/change-review-agent-use/suggestions.png" alt-text="Screenshot of the suggestions tab of the Change Review Agent." :::
 
 # [**Settings**](#tab/settings)
 
-Use this tab to view the details about the agent's identity and current configuration and requirements, like plugins the agent uses and the role-based access controls necessary to configure or use the agent.
+Use the Settings tab to view details about the agent’s identity, current configuration, and requirements. This includes:
+
+**Plugins** – Components the agent uses during evaluation.
+**Role-based access controls** – Permissions required to configure or use the agent.
+
+:::image type="content" source="./media/change-review-agent-use/settings.png" alt-text="Screenshot of the settings tab of the Change Review Agent." :::
 
 ---
 
-## Run the Agent
+## Run the Change Review Agent
 
-Run the agent to refresh its recommendations and evaluate new Multi Admin Approval requests. When started, the agent operates until it completes its evaluation. You can’t stop or pause the process.
+Run the agent to refresh recommendations and evaluate new Multi Admin Approval requests. The agent runs until evaluation completes; you can’t stop or pause it.
 
-The agent operates under the identity and permissions of the assigned Intune admin account. Its operations are limited to the permissions of that account. If the agent doesn’t run for 90 consecutive days, its authentication expires and subsequent runs fail until the identity is renewed.
+The agent uses the identity and permissions of the assigned Intune admin account. Its operations are limited to the permissions of that account. If the agent doesn’t run for 90 consecutive days, its authentication expires and subsequent runs fail until the identity is renewed.
 
 The agent doesn't support scheduled runs and must be started manually each time you want to update its results.
 
@@ -79,9 +85,9 @@ The agent doesn't support scheduled runs and must be started manually each time 
 2. Select **Run**, located above the agent’s tab selection.
 
 
-## Manage suggestions
+## Manage agent suggestions
 
-You can use the Change Review Agent node to deeply review and then manage (approve or reject) the Multi Admin Approval script request.
+Use the Change Review Agent node to review and manage (approve or reject) Multi Admin Approval script requests.
 
 To review and manage a request that's been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent’s review for that request. The detailed view is named after the selected suggestion and includes the agent’s recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
 
@@ -130,9 +136,7 @@ When you open an agent suggestion, the review page is divided into two main area
 
 ## Agent logs
 
-You can track agent activity and troubleshoot issues using the available logs.
-
-All agent management actions that are taken, and any permission failures are available in Security Copilot logs. Logs don't include details from the recommendations, or when recommended actions were completed.
+Security Copilot logs include all agent management actions and permission failures. Logs don’t include recommendation details or completion times.
 
 ## Related content
 
