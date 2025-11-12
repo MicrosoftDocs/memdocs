@@ -5,7 +5,7 @@ ms.date: 11/10/2025
 ms.topic: overview
 author: brenduns
 ms.author: brenduns
-ms.reviewer: 
+ms.reviewer: zinebtakafi
 ---
 
 # Change Review Agent overview
@@ -140,21 +140,19 @@ The agent analyzes these signals to assess the potential risk associated with ea
 
 The Change Review Agent operates using an Intune admins account identity and runs manually when an admin starts it.
 
-At a high level, the agent does the following steps:
+At a high level, the agent does the following steps each time it runs:
 
 1. **Signal aggregation** - The agent begins by aggregating signals from the following sources:
 
    - Microsoft Defender Vulnerability Management - for threat insights
    - Microsoft Entra ID - for identity risk
-   - Microsoft Intune - for device and deployment context
+   - Microsoft Intune - for Multi Admin Approval requests and historical context of similar requests
 
 2. **Evaluation** - The agent evaluates Windows PowerShell scripts for Multi Admin Approval requests using predefined logic that's built in to the agent configuration.
 
-3. **Recommendations** - When the agent runs, it provides recommendations for up to 10 requests. Admins can view the recommendations list which might include old recommendations beyond the 10. For example, if an admin chooses to run the agent  again after their first run, the view will display 20 recomendations.
+3. **Recommendations** - The agent reviews and then provides recomendations for a maximum of 10 requests per run.
 
-   The agent presents the requests that are closest to expiration. this focus ensures those requests in danger of expiring can be addressed first.
-
-    Suggestions are *suggestions* only. The approval or rejection of a request remains with an Intune administrator.
+   Suggestions are *suggestions* only. The approval or rejection of a request remains with an Intune administrator.
 
    The first column of the recommendation list presents Suggested Next Steps, which display the recommended action followed by the name of the request. Possible actions include:
 
@@ -178,8 +176,7 @@ Before setting up and starting the agent for the first time, review the followin
 - An admin must manually start the agent. Once started, there’s no option to stop or pause it.
 - The agent can only be started from the Microsoft Intune admin center.
 - Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
-- The agent reviews up to 10 active requests, prioritizing those closest to expiration. 
-- Suggestions don’t persist across runs; rerunning clears previous recommendations and reviews the next 10 oldest active requests.
+- The agent reviews and then provides recomendations for a maximum of 10 requests per run.
 - Only one agent instance is supported per tenant/user context.
 
 ## Set up the agent
@@ -190,24 +187,15 @@ The agent operates under the identity and permissions of the Intune admin accoun
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
 
-2. In **Overview**, select **Set up Agent**.
+2. In **Overview**, select **Set up Agent** to open the *Set up Change review agent* pane.
 
-   The **Set up Change Review Agent** pane lists the required permissions and provides details about setup requirements.
+3. The **Set up Change review agent** pane lists the required permissions and provides details about setup requirements. When requirements are met, select **Start agent**.
 
-3. The Set up Change Review Agent pane lists the required permissions and provides details about setup requirements.
-When requirements are met, select Start agent.
+   :::image type="content" source="./media/change-review-agent/setup.png" alt-text="Screenshot of the Set up Change review agent pane." :::
 
 The agent operates until it completes its evaluation and displays results in the Overview tab. When the run finishes, the agent is ready to use.
 
 To learn more about using the agent, see [Use the Change Review Agent](change-review-agent-use.md).
-
-<!-- ## Renew the agent  --  H2 header is in the Include:  -->
-[!INCLUDE [renew](includes/renew.md)]
-
-<!-- My version of the note in the Include:
-> [!IMPORTANT]
-> When renewing agent authentication, the agent adopts the credentials of the user performing the renewal. To keep the agent’s identity unchanged, the same user who originally authorized the agent must also renew it.
- -->
 
 <!--  ## Remove the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [remove](includes/remove.md)]

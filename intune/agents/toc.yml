@@ -31,8 +31,6 @@ items:
   - name: Get started
     href: vulnerability-remediation-agent.md
     displayName: Vulnerability Remediation Agent
-  - name: Current to merge 👆
-    href: security-copilot-agents-intune.md
   - name: Use the agent
     href: vulnerability-remediation-agent-use.md
     displayName: Vulnerability Remediation Agent
