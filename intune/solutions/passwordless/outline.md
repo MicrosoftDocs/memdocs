@@ -103,7 +103,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 #### FIDO2 Security Keys
 :::column-end:::
 :::column span="1":::
-:::image type="icon" source="icons/security-key.svg" border="false":::
+:::image type="icon" source="icons/security-key.svg" border="false" align="center":::
 :::column-end:::
 :::row-end:::
 
@@ -115,15 +115,14 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 - Deploying FIDO2 through identity protection profiles targeting specific groups.
 - Ensuring devices are compliant for passwordless access.
 
-
-#### Certificate-Based Authentication (CBA)
-
 :::row:::
-    :::column span="1":::
-
+:::column span="3":::
+#### Certificate-Based Authentication (CBA)
+:::column-end:::
+:::column span="1":::
 :::image type="icon" source="icons/certificate.svg" border="false":::
 :::column-end:::
-:::column span="3":::
+:::row-end:::
 
 Certificate-based authentication uses digital certificates to verify identity, commonly required in regulated industries. Because it relies on asymmetric cryptography, CBA is phishing-resistant and prevents credential replay attacks. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV (Personal Identity Verification) and CAC (Common Access Card). For mobile-friendly deployments, organizations can use derived credentials (e.g., Purebred), which store certificates in secure elements on mobile devices
 
@@ -135,8 +134,6 @@ Certificate-based authentication uses digital certificates to verify identity, c
 - Supporting Purebred workflows for mobile certificate issuance and renewal in government or high-security environments.
 - Offering a cloud-based PKI option to reduce infrastructure complexity.
 
-    :::column-end:::
-:::row-end:::
 
 #### Windows Hello for Business
 
