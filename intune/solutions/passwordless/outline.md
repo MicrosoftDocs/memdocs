@@ -196,6 +196,8 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 :::column span="3":::
 
 > TAP is a time-limited credential that enables onboarding or recovery without requiring a password. It's ideal for scenarios where users need initial access before setting up passwordless methods. Intune ensures devices are ready for TAP workflows and enforces compliance during onboarding.
+:::column-end:::
+:::row-end:::
 
 > [!TIP]
 > TAP isn't a long-term authentication method but a secure bridge to passwordless enrollment.
@@ -208,8 +210,6 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
-    :::column-end:::
-:::row-end:::
 
 ---
 
