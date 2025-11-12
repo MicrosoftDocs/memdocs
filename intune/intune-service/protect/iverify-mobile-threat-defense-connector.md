@@ -22,7 +22,7 @@ This article details basic information for using iVerify integration with Intune
 Use iVerify Enterprise with the following platforms and version:
 
 - Android 9.0 and later
-- iOS/iPadOS 14.0 and later 
+- iOS/iPadOS 15.0 and later 
 
 ## Prerequisites
 
