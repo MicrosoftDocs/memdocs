@@ -115,16 +115,16 @@ FIDO2 keys are hardware-based authenticators that provide strong phishing resist
 - Deploying FIDO2 through identity protection profiles targeting specific groups.
 - Ensuring devices are compliant for passwordless access.
 
+#### Certificate-Based Authentication (CBA)
+
 :::row:::
 :::column span="3":::
-#### Certificate-Based Authentication (CBA)
-:::column-end:::
-:::column span="1":::
 :::image type="icon" source="icons/certificate.svg" border="false":::
 :::column-end:::
+:::column span="1":::
+> Certificate-based authentication uses digital certificates to verify identity, commonly required in regulated industries. Because it relies on asymmetric cryptography, CBA is phishing-resistant and prevents credential replay attacks. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV (Personal Identity Verification) and CAC (Common Access Card). For mobile-friendly deployments, organizations can use derived credentials (e.g., Purebred), which store certificates in secure elements on mobile devices
+:::column-end:::
 :::row-end:::
-
-Certificate-based authentication uses digital certificates to verify identity, commonly required in regulated industries. Because it relies on asymmetric cryptography, CBA is phishing-resistant and prevents credential replay attacks. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV (Personal Identity Verification) and CAC (Common Access Card). For mobile-friendly deployments, organizations can use derived credentials (e.g., Purebred), which store certificates in secure elements on mobile devices
 
 [!INCLUDE [intune](includes/intune.md)]
 
@@ -141,8 +141,10 @@ Certificate-based authentication uses digital certificates to verify identity, c
     :::column span="1":::
 :::image type="icon" source="icons/windows-hello.svg" border="false":::
 :::column-end:::
-:::column span="5":::
-Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key stored in the TPM and protected by biometrics or a PIN. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
+:::column span="3":::
+> Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key stored in the TPM and protected by biometrics or a PIN. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
+:::column-end:::
+:::row-end:::
 
 [!INCLUDE [intune](includes/intune.md)]
 
@@ -151,9 +153,7 @@ Windows Hello for Business provides a passwordless experience for Windows sign-i
 - Prompting setup during OOBE for Entra-joined devices.
 - Ensuring compliance for passwordless sign-in policies.
 
-    :::column-end:::
-:::row-end:::
-
+    
 #### Microsoft Authenticator app
 
 :::row:::
@@ -161,14 +161,15 @@ Windows Hello for Business provides a passwordless experience for Windows sign-i
 :::image type="icon" source="icons/authenticator.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-The Microsoft Authenticator app enables passwordless sign-in on mobile devices. After entering a username, users approve the sign-in by matching a number and verifying with biometrics or PIN on their phone. While convenient and widely supported, this method is not considered phishing-resistant because it relies on push notifications rather than hardware-bound credentials. It's best suited for scenarios where flexibility and ease of use are priorities.
-
-
-Microsoft Authenticator enables two passwordless approaches and one legacy MFA approach—be explicit about which you're using:
-
-Passwordless phone sign‑in: Users approve sign‑in on the trusted device after unlocking it (biometric/PIN). Passwordless; mitigates MFA fatigue with number matching and device unlock.
-Passkeys in Authenticator: Authenticator can store a FIDO‑based passkey for an Entra account. Passwordless and phishing‑resistant.
-TOTP/OTP codes: One‑time codes in Authenticator. MFA but not passwordless and not phishing‑resistant; include for completeness but steer readers to the methods above.
+> The Microsoft Authenticator app enables passwordless sign-in on mobile devices. After entering a username, users approve the sign-in by matching a number and verifying with biometrics or PIN on their phone. While convenient and widely supported, this method is not considered phishing-resistant because it relies on push notifications rather than hardware-bound credentials. It's best suited for scenarios where flexibility and ease of use are priorities.
+>
+>Microsoft Authenticator enables two passwordless approaches and one legacy MFA approach—be explicit about which you're using:
+>
+>- Passwordless phone sign‑in: Users approve sign‑in on the trusted device after unlocking it (biometric/PIN). Passwordless; mitigates MFA fatigue with number matching and device unlock.
+>- Passkeys in Authenticator: Authenticator can store a FIDO‑based passkey for an Entra account. Passwordless and phishing‑resistant.
+>- TOTP/OTP codes: One‑time codes in Authenticator. MFA but not passwordless and not phishing‑resistant; include for completeness but steer readers to the methods above.
+:::column-end:::
+:::row-end:::
 
 [!INCLUDE [intune](includes/intune.md)]
 
@@ -177,8 +178,7 @@ TOTP/OTP codes: One‑time codes in Authenticator. MFA but not passwordless and 
 - Applying App Protection Policies (MAM).
 - Ensuring the brokered authentication flow (Company Portal/Authenticator) is present on iOS/Android.
 
-    :::column-end:::
-:::row-end:::
+    
 
 #### Temporary Access Pass (TAP)
 
