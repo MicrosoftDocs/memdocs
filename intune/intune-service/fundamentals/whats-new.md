@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/13/2025
+ms.date: 11/14/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,6 +57,12 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 ## Week of November 10, 2025 (Service release 2511)
+
+### Microsoft Intune Suite
+
+#### Scope tag enforcement for Endpoint Privilege Management elevation requests<!-- 33479826  -->
+
+When viewing Endpoint Privilege Management [elevation requests](/intune/intune-service/protect/epm-support-approved#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
 
 ### App management
 
