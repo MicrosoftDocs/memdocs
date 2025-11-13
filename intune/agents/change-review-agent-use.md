@@ -10,9 +10,6 @@ ms.reviewer: zinebtakafi
 
 # Use the Change Review Agent
 
-> [!WARNING]
-> This article is still being written. Do not use it or share any information from this article.
-
 The [Change Review Agent](change-review-agent.md) (public preview) is a generative AI feature in Intune. It evaluates Multi Admin Approval requests for PowerShell scripts on Windows devices and provides risk-based recommendations with contextual insights. These insights help administrators understand script behavior and associated risks, so they can decide whether to approve or deny requests more quickly.
 
 After the [agent is set up](change-review-agent.md#set-up-the-agent), its recommendations can be viewed, and the agent can be run again on demand to refresh its recommendations.
