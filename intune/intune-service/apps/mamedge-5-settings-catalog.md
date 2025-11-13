@@ -35,7 +35,7 @@ Settings Catalog for Windows provides comprehensive browser configuration with p
 
 - Windows 11 Pro or Enterprise  
 - Intune enrollment  
-- Entra ID join or Hybrid  
+- Microsoft Entra ID join or Hybrid  
 - Microsoft Edge Stable channel  
 - TPM 2.0 (for Application Bound Encryption)  
 - Hyper-V (if using Application Guard for Level 3)  
@@ -61,7 +61,6 @@ Level 1 configuration provides foundational browser security controls while main
 | Category | Setting | Value | Documentation |
 |-----------|----------|-------|----------------|
 | Microsoft Edge\SmartScreen settings | Configure Microsoft Defender<br>SmartScreen to protect users<br>from malicious sites | Enabled | [Configure Microsoft Defender<br>SmartScreen to protect users<br>from malicious sites](/deployedge/microsoft-edge-browser-policies/smartscreenenabled) |
-| Microsoft Edge\SmartScreen settings | Configure Microsoft Defender<br>SmartScreen to block<br>potentially unwanted apps | Enabled | [Configure Microsoft Defender<br>SmartScreen to block<br>potentially unwanted apps](/deployedge/microsoft-edge-browser-policies/smartscreenpuadetectionenabled) |
 | Microsoft Edge\Automatic HTTPS | Enable automatic<br>HTTPS upgrades | Enabled | [Enable automatic<br>HTTPS upgrades](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
 | Microsoft Edge\Content settings | Block tracking of users’<br>web-browsing activity | Strict (3) | [Block tracking of users’<br>web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) |
 | Microsoft Edge\Network settings | Enable network prediction | Don’t predict (2) | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) |
@@ -85,16 +84,12 @@ Level 1 configuration provides foundational browser security controls while main
 | Microsoft Edge\Startup, home page and new tab page | Configure the home page URL | https://portal.office.com | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
 | Microsoft Edge\Startup, home page and new tab page | Show Home button on toolbar for user convenience | Enabled | [Show Home button on toolbar for user convenience](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
 | Microsoft Edge\Startup, home page and new tab page | Hide the First-run experience and splash screen for users | Enabled | [Hide the First-run experience and splash screen for users](/deployedge/microsoft-edge-browser-policies/hidefirstrunexperience) |
-| Microsoft Edge\Additional | Suppress unsupported OS warning to avoid disruption | Enabled | [Suppress unsupported OS warning to avoid disruption](/deployedge/microsoft-edge-browser-policies/unsupportedoswarningenabled) |
-| Microsoft Edge\Browser Sign-in | Enable browser sign-in and force users to sign in | Force (2) | [Enable browser sign-in and force users to sign in](/deployedge/microsoft-edge-browser-policies/browsersigninenabled) |
 | Microsoft Edge\Shopping and Commerce | Shopping in Microsoft Edge feature | Disabled | [Shopping in Microsoft Edge feature](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) |
 | Microsoft Edge\Wallet and Payments | Allow users to be prompted for Microsoft Wallet password | Disabled | [Allow users to be prompted for Microsoft Wallet password](/deployedge/microsoft-edge-browser-policies/walletserviceenabled) |
 | Microsoft Edge\Feature Recommendations | Show feature and merchandise recommendations in Edge | Disabled | [Show feature and merchandise recommendations in Edge](/deployedge/microsoft-edge-browser-policies/showfeatureandmerchandiserecommendationsenabled) |
 | Microsoft Edge\Feature Recommendations | Allow feature suggestions in sidebar | Disabled | [Allow feature suggestions in sidebar](/deployedge/microsoft-edge-browser-policies/sidebarfeaturesuggestionsenabled) |
 | Microsoft Edge\Sidebar Management | Enable Microsoft Search integration in sidebar | Disabled | [Enable Microsoft Search integration in sidebar](/deployedge/microsoft-edge-browser-policies/sidebarmicrosoftsearchenabled) |
 | Microsoft Edge\Sidebar Management | Allow side panel sites list customization | Disabled | [Allow side panel sites list customization](/deployedge/microsoft-edge-browser-policies/sidebarcustomizationsettings) |
-| Microsoft Edge\AI Integration | Configure Copilot integration | Enabled, but available to users | [Configure Copilot integration](/deployedge/microsoft-edge-browser-policies/microsoft365copilotchaticonenabled) |
-| Microsoft Edge\AI Integration | Control the mode of the Copilot AI features | AI-powered features available | [Control the mode of the Copilot AI features](/deployedge/microsoft-edge-browser-policies/microsoftcopilotsettings) |
 | Microsoft Edge\Network Security | Control the mode of DNS-over-HTTPS | Enabled, fallback to insecure DNS allowed | [Control the mode of DNS-over-HTTPS](/deployedge/microsoft-edge-browser-policies/dnsoverhttpsmode) |
 | Microsoft Edge\Network Security | DNS interception checks for validation | Enabled | [DNS interception checks for validation](/deployedge/microsoft-edge-browser-policies/dnsinterceptionchecksenabled) |
 | Microsoft Edge\Network Security | Allow QUIC protocol for connectivity | Disabled | [Allow QUIC protocol for connectivity](/deployedge/microsoft-edge-browser-policies/quicallowed) |
@@ -129,7 +124,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 7. Find your new Level 2 policy in the policy list. If it doesn’t appear, select **Refresh**.  
 8. When the policy appears, select the context menu (**⋯**) next to the policy name, and then select **Edit**.  
 9. On the **Basics** tab, verify that the name and description are correct, and then select **Next**.  
-10. On the **Settings** tab, all Level 1 settings are already included. You can locate additional or modified settings using one of the following options:  
+10. On the **Settings** tab, all Level 1 settings are already included. You can locate more settings using one of the following options:  
     - **Search for a setting:** Use the **search box** to find the setting name listed in the table. When multiple results appear, choose the entry that matches the **Category**.  
     - **Browse by category:** Expand **Microsoft Edge** and select the **Category** listed for that setting.  
 11. Configure each setting using the **Value** specified in the table.
@@ -152,12 +147,10 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 | Microsoft Edge\Content settings | Grant access to specific<br>sites to connect to<br>specific USB devices | Enabled [*.contoso.com] | [Grant access to specific<br>sites to connect to<br>specific USB devices](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/webusballowdevicesforurls) |
 | Microsoft Edge\Extensions | Control which extensions<br>cannot be installed | ["*"] | [Control which extensions<br>cannot be installed](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) |
 | Microsoft Edge\Microsoft Edge | Allow download<br>restrictions | Block dangerous downloads (1) | [Allow download<br>restrictions](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/downloadrestrictions) |
-| Microsoft Edge\Microsoft Edge | Allow insecure content<br>on specified sites | [] | [Allow insecure content<br>on specified sites](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/insecurecontentallowedforurls) |
 | Microsoft Edge\Microsoft Edge | Allow media autoplay<br>for websites | Disabled | [Allow media autoplay<br>for websites](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/autoplayallowed) |
 | Microsoft Edge\Microsoft Edge | Allow remote<br>debugging | Disabled | [Allow remote<br>debugging](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/remotedebuggingallowed) |
 | Microsoft Edge\Microsoft Edge | Allow specific extensions<br>to be installed | [] | [Allow specific extensions<br>to be installed](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) |
 | Microsoft Edge\Microsoft Edge | Allow user-level native<br>messaging hosts (installed<br>without admin permissions) | Enabled | [Allow user-level native<br>messaging hosts (installed<br>without admin permissions)](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/nativemessaginguserlevelhosts) |
-| Microsoft Edge\Microsoft Edge | Ask where to save<br>downloaded files | Enabled | [Ask where to save<br>downloaded files](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) |
 | Microsoft Edge\Microsoft Edge | Block insecure content<br>on specified sites | ["*"] | [Block insecure content<br>on specified sites](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/insecurecontentblockedforurls) |
 | Microsoft Edge\Microsoft Edge | Blocks external extensions<br>from being installed | Enabled | [Blocks external extensions<br>from being installed](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/blockexternalextensions) |
 | Microsoft Edge\Microsoft Edge | Clear browsing data<br>when Microsoft Edge closes | Enabled | [Clear browsing data<br>when Microsoft Edge closes](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) |
