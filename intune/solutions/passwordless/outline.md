@@ -101,10 +101,10 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
 
-#### FIDO2 Security Keys
-
 :::row:::
 :::column span="1":::
+**FIDO2 Security Keys**
+
 :::image type="icon" source="icons/security-key.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -120,10 +120,10 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
 
-#### Certificate-Based Authentication (CBA)
-
 :::row:::
 :::column span="1":::
+**Certificate-Based Authentication (CBA)**
+
 :::image type="icon" source="icons/certificate.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -142,10 +142,10 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
 
-#### Windows Hello for Business
-
 :::row:::
     :::column span="1":::
+**Windows Hello for Business**
+
 :::image type="icon" source="icons/windows-hello.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -163,10 +163,10 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
 
-#### Microsoft Authenticator app
-
 :::row:::
     :::column span="1":::
+**Microsoft Authenticator app**
+
 :::image type="icon" source="icons/authenticator.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -187,10 +187,10 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
 
-#### Temporary Access Pass (TAP)
-
 :::row:::
     :::column span="1":::
+**Temporary Access Pass (TAP)**
+
 :::image type="icon" source="icons/tap.svg" border="false":::
 :::column-end:::
 :::column span="3":::
