@@ -63,14 +63,14 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 :::column-end:::
 :::column span="3":::
-> The agent supports devices managed by Intune across multiple platforms, including Windows, iOS/iPadOS, macOS, Android, and Linux.\
+> The agent supports devices managed by Intune across multiple platforms, including iOS/iPadOS, macOS, Android, and Linux.\
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
 > The agent doesn't support:
-> - Windows corporate devices
+> - Windows devices
 > - Shared devices
-> - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones
+<!--> - Hybrid Entra-joined Windows devices-->
 :::column-end:::
 :::row-end:::
 
@@ -169,13 +169,14 @@ The Device Offboarding Agent runs under the identity and permissions of the Intu
 
 Before running the Device Offboarding Agent, note the following:
 
-- The agent's scope is to identify devices that were retired, wiped, or deleted from Intune within the last 30 days.
-- An admin must start the agent manually. Once started, it cannot be paused or stopped.
-- The agent can only be launched from the Microsoft Intune admin center.
-- Session details in the [Microsoft Security Copilot portal][COP-PORTAL] are visible only to the user who set up the agent.
-- Suggestions don't persist across runs; re-running the agent clears previous recommendations.
-- Only one agent instance is supported per tenant/user context.
-- The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
+- Admins must start the agent manually; once launched, it cannot be paused or stopped.
+- Admins can only launch the agent from the Microsoft Intune admin center.
+- Only the admin who set up the agent can view session details in the [Microsoft Security Copilot portal][COP-PORTAL].
+- The agent identifies devices that were retired, wiped, or deleted from Intune within the last 30 days.
+- The agent limits results to the first 10,000 devices.
+- Upon admin approval to offboard, the agent disables Entra ID objects. Other remediation steps are provided as instructions for admins.
+- The agent doesn't persist suggestions across runs; re-running clears previous recommendations.
+- Only one agent instance is supported per tenant.
 
 >[!IMPORTANT]
 >Data reported by the agent is surfaced through agent suggestions. This information may be visible to admins who have access to the agent in the Intune admin center, even if it includes data outside their assigned Administrative Units (AUs) in Microsoft Entra ID.
@@ -193,11 +194,14 @@ In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Off
 - On the **Suggestions** tab, view the full list of suggestions of devices to offboard, including the completed suggestions.  
 - On the **Settings** tab, review details about the agent's configuration.
 
+>[!TIP]
+> Select **Refresh** to ensure you're viewing the latest data after the agent completes a run.
+
 Select a tab to learn more about its purpose and available options.
 
 # [**Overview**](#tab/overview)
 
-After the Device Offboarding Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for devices to offboard. The **Overview** tab only displays the suggestions that are *not started* or *in progress*.  
+After the Device Offboarding Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for devices to offboard. The **Overview** tab only displays the suggestions that are *not started* or *in progress*.
 
 The following information is available on this tab: 
 

@@ -14,9 +14,10 @@ The* Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 This article provides sample responses to show how the agent helps with device offboarding.
 
-## Prerequisites
+## Before you begin
 
-Before you begin, make sure you meet the requirements detailed in the [Get Started with the Device Offboarding Agent](device-offboarding-agent.md) article.
+- This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
+- Make sure you meet the requirements detailed in the [Get Started with the Device Offboarding Agent](device-offboarding-agent.md) article.
 
 ## Run the agent
 
@@ -51,71 +52,6 @@ Each offboarding suggestion includes detailed context and recommended actions. T
 - Update status: Choose **Manage suggestion** to mark the offboarding action as *In progress* or *Completed*.
 
 :::image type="content" source="images/device-offboarding-agent/suggestion.png" alt-text="Screenshot of a suggestion of the Device Offboarding Agent showing the details and options." border="false" lightbox="images/device-offboarding-agent/suggestion.png":::
-
-<!--
-## Examples of recommended actions
-
-The following examples illustrate typical responses and actions you might receive from the agent.
-
-### Remove Windows corporate devices
-
-```agent-response
-Summary:
-There are 23 corporate Windows devices that are no longer in Intune but still in other portals. These devices should be removed.
-
-Factors:
-- Users accessing corporate apps without MDM enrollment.
-- Cannot enforce compliance policies or data protection.
-- Personal devices may have corporate data without proper controls.
-- Conditional access limited to user-based policies only.
-
-Recommended Actions:
-1. Download affected device list >
-2. Back up BitLocker recovery keys (recommended) >
-3. Back up Local Admin Password Solution (LAPS) (recommended) >
-4. Remove devices from Microsoft Defender portal >
-5. Remove devices from Autopilot >
-6. Disable devices in Microsoft Entra >
-```
-
-### Remove iOS/iPad corporate devices
-
-```agent-response
-Summary:
-There are 5 personal iOS/iPad devices that are no longer in Intune but still in other portals. These devices should be removed.
-
-Factors:
-- Devices are not present in Intune for management.
-- Corporate devices operating without MDM oversight.
-- Cannot enforce corporate compliance policies.
-- Company data accessible without proper security controls.
-
-Recommended Actions:
-1. Download affected device list >
-2. Remove devices from Apple Business/School Manager (ABM/ASM) >
-3. Disable devices in Microsoft Entra >
-
-```
-
-### Remove Android personal (BYOD) devices
-
-```agent-response
-Summary:
-There are 5 personal Android devices that are no longer in Intune but still in other portals. These devices should be removed.
-
-Factors:
-- Devices are not present in Intune for management.
-- Users accessing corporate email and apps without MDM.
-- No work profile separation between personal and corporate data.
-- Cannot enforce mobile application management policies.
-- Data loss prevention policies cannot be applied.
-
-Recommended Actions:
-1. Download affected device list >
-2. Remove devices from Microsoft Defender portal >
-3. Disable devices in Microsoft Entra >
-```
--->
 
 ## Device Offboarding Agent logs
 
