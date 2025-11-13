@@ -51,85 +51,79 @@ Prerequisites:
 
 Level 1 configuration provides the minimum data protection for a Windows device while minimizing effects to users.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Managed apps > Protection > Create > Windows**.  
-1. In **Basics**, set:  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 1 – Enterprise basic data protection – Windows  
    - **Description:** Provides Level 1 basic data protection for Microsoft Edge for Business on Windows devices.  
-1. Select **Next**.  
-1. In the **Apps** tab, choose **Select apps** > **Microsoft Edge** > **Select**.  
-1. Select **Next**.
-1. In **Data protection**, configure:  
+4. Select **Next**.  
+5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.  
+6. Select **Next**.  
+7. On the **Data protection** tab, configure:  
    - **Receive data from:** All sources  
    - **Send org data to:** All destinations  
    - **Allow cut, copy, and paste for:** Any destination and any source  
    - **Print org data:** Allow  
-1. Select **Next**.
-1. In **Health checks**, configure:  
-   - **Offline grace period:** 10,080 minutes, Block access  
+8. Select **Next**.  
+9. On the **Health checks** tab, configure:  
+   - **Offline grace period:** 10,080 minutes (7 days), Block access  
    - **Offline grace period:** 90 days, Wipe data  
    - **Max allowed device threat level:** Low, Block access  
-1. Choose **Next**.
-1. For **Scope tags**, select the appropriate scope tag.
-1. Select **Next**
-1. For **Assignments**, assign to **SEB-Level1-Users**.  
-1. Select **Next** to review the settings and choose **Create**.
+10. Select **Next**.  
+11. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
+12. Select **Next**, review the configuration, and then choose **Create**.
 
 ### Level 2 – Enterprise enhanced data protection for Windows
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > Windows**.  
-1. In the **Basics**, set:  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enterprise enhanced data protection – Windows  
    - **Description:** Provides Level 2 enhanced data protection for Microsoft Edge for Business on Windows devices.
-1. Select **Next**.
-1. On the **Apps** step, choose **Select apps** > **Microsoft Edge** > **Select**.
-1. Select **Next**.
-1. In **Data protection**, configure:
-   - **Receive data from:** No sources
+4. Select **Next**.  
+5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.  
+6. Select **Next**.  
+7. On the **Data protection** tab, configure:  
    - **Send org data to:** No destinations
-   - **Allow cut, copy, and paste for:** No destination or source  
-   - **Print org data:** Block  
-1. Select **Next**.
-1. In **Health checks**, configure:
-   - **Offline grace period:** 30 days, Wipe data
-   - **Disabled account:** Block access  
+   - **Receive data from:** No sources
+   - **Allow cut, copy, and paste for:** No destination or source
+8. Select **Next**.  
+9. On the **Health checks** tab, configure:  
+   - **Disabled account:** Block access
    - **Min OS version:** 10.0.22621.2506, Block access
    - **Max allowed device threat level:** Medium, Block access
-1. Select **Next**.
-1. For **Scope tags**, select the appropriate scope tags.
-1. Select **Next**
-1. For **Assignments**, assign to **SEB-Level2-Users**.
-1. Select **Next** to review the settings and choose **Create**.
+   - **Offline grace period:** 30 days, Wipe data
+10. Select **Next**.  
+11. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
+12. Select **Next**, review the configuration, and then choose **Create**.
 
-### Level 3 – Enterprise high data protection
+### Level 3 – Enterprise high data protection for Windows
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > Windows**.  
-1. On the **Basics** step, set:  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – Enterprise high data protection – Windows  
    - **Description:** Provides Level 3 high data protection for Microsoft Edge for Business on Windows devices.
-1. Select **Next**.
-1. On the **Apps** step, choose > **Select apps** > **Microsoft Edge** > **Select**.
-1. Select **Next**.
-1. In **Data protection**, configure:  
-   - **Receive data from:** No sources  
-   - **Send org data to:** No destinations  
-   - **Allow cut, copy, and paste for:** No destination or source  
-   - **Print org data:** Block  
-1. Select **Next**.  
-1. In **Health checks**, configure:  
-   - **Offline grace period:** 1,440 minutes, Block access  
-   - **Offline grace period:** 30 days, Wipe data  
+4. Select **Next**.  
+5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.  
+6. Select **Next**.  
+7. On the **Data protection** tab, configure:  
+   - **Receive data from:** No sources
+   - **Send org data to:** No destinations
+   - **Allow cut, copy, and paste for:** No destination or source
+   - **Print org data:** Block
+8. Select **Next**.  
+9. On the **Health checks** tab, configure:  
+   - **Offline grace period:** 1,440 minutes, Block access
+   - **Offline grace period:** 30 days, Wipe data
    - **Max allowed device threat level:** Secured, Block access
-1. Select **Next**.  
-1. For **Scope tags**, select the appropriate scope tags.
-1. For **Assignments**, assign to **SEB-Level3-Users**.
-1. Select **Next** to review the settings and choose **Create**.
+10. Select **Next**.  
+11. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
+12. Select **Next**, review the configuration, and then choose **Create**.
 
 #### Framework Compliance Summary for Windows
 
@@ -163,40 +157,37 @@ Prerequisites:
 
 Level 1 configuration provides the minimum data protection for an iOS/iPadOS device while minimizing effects to users.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > iOS/iPadOS**.  
-1. On the **Basics** step, set:  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 1 – Enterprise basic data protection – iOS/iPadOS  
    - **Description:** Provides Level 1 basic data protection for Microsoft Edge for Business on iOS and iPadOS devices.  
-1. Select **Next**.  
-1. On the **Apps** step, in **Target policy to**, select **Selected apps**.  
+4. Select **Next**.  
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge**.
    - Choose **Microsoft Edge**, then **Select**.
-1. Select **Next**.
-1. In **Data protection**, configure:  
+6. Select **Next**.
+7. On the **Data protection** tab, configure:  
    - **Back up org data to iTunes and iCloud:** Allow  
    - **Send org data to other apps:** All apps  
    - **Receive data from other apps:** All apps  
    - **Restrict cut, copy, and paste between apps:** Any app  
    - **Third-party keyboards:** Allow  
    - **Encrypt org data:** Require
-   - **Sync policy managed app data with native apps or add-ins:** Allow
    - **Print org data:** Allow  
    - **Restrict web content transfer with other apps:** Microsoft Edge  
    - **Org data notifications:** Allow
-   - **Sync policy managed app data with app widgets:** Allow
    - **Genmoji:** Allow  
    - **Screen capture:** Allow  
    - **Writing tools:** Allow  
-1. Select **Next**.  
-1. In **Access requirements**, configure:  
+8. Select **Next**.  
+9. On the **Access requirements** tab, configure:  
    - **PIN for access:** Require  
    - **PIN type:** Numeric  
    - **Simple PIN:** Allow  
    - **Select minimum PIN length:** 4  
    - **Touch ID instead of PIN for access:** Allow  
-   - **Face ID instead of PIN for access:** Allow  
    - **Override biometrics with PIN after timeout:** Require  
    - **Timeout (minutes of inactivity):** 1440
    - **Face ID instead of PIN for access:** Allow
@@ -204,35 +195,34 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
    - **App PIN when device PIN is set:** Require  
    - **Work or school account credentials for access:** Not required  
    - **Recheck access requirements after (minutes of inactivity):** 30  
-1. In **Conditional launch**, configure:
-- **Max PIN attempts:** 5 / Reset PIN
-- **Offline grace period:** 10,080 minutes (7 days), Block access  
-- **Offline grace period:** 90 days, Wipe data  
-- **Jailbroken / rooted devices:** Block access
-1. Select **Next**.  
-1. In **Scope tags**, choose **Next** (or skip if not shown).  
-1. On the **Assignments** page, select **Add groups**, choose **SEB-Level1-Users**, then select **Next**.  
-1. From the **Review + create** page, select **Create**.  
+10. On the **Conditional launch** tab, configure:
+   - **Max PIN attempts:** 5, Reset PIN
+   - **Offline grace period:** 10,080 minutes, Block access  
+   - **Offline grace period:** 90 days, Wipe data  
+   - **Jailbroken / rooted devices:** Block access
+11. Select **Next**.  
+12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
+13. Select **Next**, review the configuration, and then choose **Create**.  
 
 ### Level 2 – Enterprise enhanced data protection for iOS/iPadOS
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > iOS/iPadOS**.  
-1. On the **Basics** step, set:  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enterprise enhanced data protection – iOS/iPadOS  
    - **Description:** Provides Level 2 enhanced data protection for Microsoft Edge for Business on iOS and iPadOS devices.  
-1. Select **Next**.  
-1. On the **Apps** step, in **Target policy to**, select **Selected apps**.  
+4. Select **Next**.  
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
-   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
-   - Choose **Microsoft Edge**, then **Select**.  
-1. Select **Next**.  
-1. In **Data protection**, configure:  
+   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:  
    - **Back up org data to iTunes and iCloud:** Block  
    - **Send org data to other apps:** Policy-managed apps  
-   - **Select apps to exempt:** _Default list (skype; app-settings; calshow; itms; itmss; itms-apps; itms-appss; itms-services)_  
+   - **Select apps to exempt:** Default list (skype; app-settings; calshow; itms; itmss; itms-apps; itms-appss; itms-services)
    - **Save copies of org data:** Block  
    - **Allow users to save copies to selected services:** OneDrive for Business, SharePoint Online, Photo Library  
    - **Transfer telecommunication data to:** Any dialer app  
@@ -243,81 +233,79 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
    - **Genmoji:** Block  
    - **Screen capture:** Block  
    - **Writing tools:** Block  
-1. Select **Next**.  
-1. In **Access requirements**, configure (same as Level 1 unless noted):  
+   - **Sync policy managed app data with native contacts app:** Block
+8. Select **Next**.  
+9. On the **Access requirements** tab, configure:  
    - **PIN for access:** Require  
    - **PIN type:** Numeric  
    - **Simple PIN:** Allow  
    - **Select minimum PIN length:** 4  
    - **Touch ID instead of PIN for access:** Allow  
    - **Override biometrics with PIN after timeout:** Require  
-   - **Timeout (minutes of inactivity):** 1440  
-   - **Face ID instead of PIN for access:** Allow  
+   - **Timeout (minutes of inactivity):** 1440
+   - **Face ID instead of PIN for access:** Allow
    - **PIN reset after number of days:** No  
    - **App PIN when device PIN is set:** Require  
    - **Work or school account credentials for access:** Not required  
-   - **Recheck access requirements after (minutes of inactivity):** 30
-1. In **Conditional launch**, configure:  
-   - **Offline grace period:** 30 days / Wipe data  
+   - **Recheck access requirements after (minutes of inactivity):** 30  
+10. On the **Conditional launch** tab, configure:
    - **Disabled account:** Block access  
-   - **Min OS version:** 14.8 / Block access  
-   - **Min app version:** Latest / Warn
-   - **Min patch version:** 2024-11-01
-1. Select **Next**.  
-1. In **Scope tags**, choose **Next** (or skip if not shown).  
-1. On the **Assignments** page, select **Add groups**, choose **SEB-Level2-Users**, then select **Next**.  
-1. From the **Review + create** page, select **Create**.
+   - **Min OS version:** 14.8, Block access  
+   - **Min patch version:** 2024-10-01, Block access
+   - **Offline grace period:** 30 days, Wipe data  
+   - **Min app version:** Latest, Warn
+11. Select **Next**.  
+12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
+13. Select **Next**, review the configuration, and then choose **Create**.
 
 ### Level 3 – Enterprise high data protection for iOS/iPadOS
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > iOS/iPadOS**.  
-1. On the **Basics** step, set:  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – Enterprise high data protection – iOS/iPadOS  
    - **Description:** Provides Level 3 high data protection for Microsoft Edge for Business on iOS and iPadOS devices.  
-1. Select **Next**.  
-1. On the **Apps** step, in **Target policy to**, select **Selected apps**.  
+4. Select **Next**.  
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
-   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
-   - Choose **Microsoft Edge**, then **Select**.  
-1. Select **Next**.  
-1. In **Data protection**, configure:  
+   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:  
    - **Transfer telecommunication data to:** A specific dialer app  
    - **Dialer app URL scheme:** replace_with_dialer_app_url_scheme  
    - **Transfer messaging data to:** A specific messaging app  
    - **Messaging app URL scheme:** replace_with_messaging_app_url_scheme  
    - **Receive data from other apps:** Policy-managed apps  
+   - **Open data into org documents:** Block
+   - **Allow users to open data from selected services:** OneDrive for Business, SharePoint, Camera, Photo Library
    - **Third-party keyboards:** Block  
-   - **Encrypt org data:** Require  
-1. Select **Next**.  
-1. In **Access requirements**, configure:
+   - **Print org data:** Block
+8. Select **Next**.  
+9. On the **Access requirements** tab, configure:
    - **Simple PIN:** Block
    - **Select minimum PIN length:** 6
    - **PIN reset after number of days:** Yes
    - **Number of days:** 365
-1. In **Conditional launch**, configure:  
-   - **Offline grace period:** 30 days / Block access  
+10. On the **Conditional launch** tab, configure:  
    - **Jailbroken / rooted devices:** Wipe data  
-   - **Max allowed threat level:** Secured / Block access  
-   - **Min OS version:** 14.8 / Block access  
-   - **Max OS version:** 26.0.1 / Block access (set to prevent beta versions)
-1. Add the additional recommended controls:
-   - Data Protection
-       - **Sync policy managed app data with native apps or add-ins:** Block  
-   - Access Requirements
-       - **Biometric instead of PIN for access:** Block  
-       - **PIN reset after number of days:** Yes (90 days)  
+   - **Max allowed threat level:** Secured, Block access  
+   - **Min OS version:** 14.8, Block access
+   - **Max OS version:** 26.0.1, Block access
+   - **Offline grace period:** 30 days, Block access
+11. Add the additional recommended controls:
+   - **Access Requirements:**
+       - **PIN reset after number of days:** Yes (365 days)  
        - **Work or school account credentials for access:** Require  
        - **Override Touch ID with PIN after timeout:** Require  
        - **Timeout (minutes of inactivity):** 30  
-   - Conditional Launch  
-       - **Min SDK version: 21.1.0** / Block access  
-1. Select **Next**.  
-1. In **Scope tags**, choose **Next** (or skip if not shown).  
-1. On the **Assignments** page, select **Add groups**, choose **SEB-Level3-Users**, then select **Next**.  
-1. From the **Review + create** page, select **Create**.
+   - **Conditional Launch:**  
+       - **Min SDK version:** 21.1.0, Block access  
+12. Select **Next**.  
+13. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
+14. Select **Next**, review the configuration, and then choose **Create**.
 
 #### Framework Compliance Summary for iOS/iPadOS  
 
@@ -369,17 +357,17 @@ Prerequisites:
 Level 1 configuration provides the minimum data protection for an Android device while minimizing effects to users.
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > Android**.  
-1. On the **Basics** step, set:  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 1 – Enterprise basic data protection – Android  
    - **Description:** Provides Level 1 basic data protection for Microsoft Edge for Business on Android devices.  
-1. Select **Next**.  
-1. On the **Apps** step, in **Target policy to**, select **Selected apps**.  
+4. Select **Next**.  
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
-   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
-   - Choose **Microsoft Edge**, then **Select**.  
-1. Select **Next**.  
-1. In **Data protection**, configure:  
+   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:  
    - **Back up org data to Android backup services:** Allow  
    - **Send org data to other apps:** All apps  
    - **Receive data from other apps:** All apps  
@@ -392,8 +380,8 @@ Level 1 configuration provides the minimum data protection for an Android device
    - **Print org data:** Allow  
    - **Restrict web content transfer with other apps:** Microsoft Edge  
    - **Org data notifications:** Allow  
-1. Select **Next**.  
-1. In **Access requirements**, configure:  
+8. Select **Next**.  
+9. On the **Access requirements** tab, configure:  
    - **PIN for access:** Require  
    - **PIN type:** Numeric  
    - **Simple PIN:** Allow  
@@ -408,108 +396,102 @@ Level 1 configuration provides the minimum data protection for an Android device
    - **App PIN when device PIN is set:** Require  
    - **Work or school account credentials for access:** Not required  
    - **Recheck access requirements after (minutes of inactivity):** 30  
-1. In **Conditional launch**, configure:  
-   - **Max PIN attempts:** 5 / Reset PIN  
-   - **Offline grace period:** 10,080 minutes (7 days), Block access  
+10. On the **Conditional launch** tab, configure:
+   - **Max PIN attempts:** 5, Reset PIN
+   - **Offline grace period:** 10,080 minutes, Block access  
    - **Offline grace period:** 90 days, Wipe data  
-   - **Jailbroken / rooted devices:** Block access  
-   - **Play Integrity verdict:** Basic integrity / Block access  
+   - **Jailbroken / rooted devices:** Block access
+   - **Play Integrity verdict:** Basic integrity and certified devices, Block access  
    - **Require threat scan on apps:** Block access  
-   - **Require device lock:** Low complexity / Block access  
-1. Select **Next**.  
-1. In **Scope tags**, choose **Next** (or skip if not shown).  
-1. On the **Assignments** page, select **Add groups**, choose **SEB-Level1-Users**, then select **Next**.  
-1. From the **Review + create** page, select **Create**.  
+   - **Require device lock:** Low, Warn
+11. Select **Next**.  
+12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
+13. Select **Next**, review the configuration, and then choose **Create**.  
 
 ### Level 2 – Enterprise enhanced data protection for Android
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > Android**.  
-1. On the **Basics** step, set:  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enterprise enhanced data protection – Android  
    - **Description:** Provides Level 2 enhanced data protection for Microsoft Edge for Business on Android devices.  
-1. Select **Next**.  
-1. On the **Apps** step, in **Target policy to**, select **Selected apps**.  
+4. Select **Next**.  
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
-   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
-   - Choose **Select**.  
-1. Select **Next**.  
-1. In **Data protection**, configure:  
+   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:  
    - **Back up org data to Android backup services:** Block  
    - **Send org data to other apps:** Policy-managed apps  
+   - **Save copies of org data:** Block  
+   - **Allow users to save copies to selected services:** OneDrive for Business, SharePoint Online, Photo Library  
    - **Receive data from other apps:** Policy-managed apps  
+   - **Transfer telecommunication data to:** Any dialer app  
    - **Restrict cut, copy, and paste between apps:** Policy-managed apps with paste in  
    - **Screen capture and Google Assistant:** Block  
-   - **Approved keyboards:** Not required  
-   - **Encrypt org data:** Require  
-   - **Encrypt org data on enrolled devices:** Require  
-   - **Sync policy managed app data with native apps or add-ins:** Allow  
-   - **Print org data:** Allow  
-   - **Restrict web content transfer with other apps:** Microsoft Edge  
    - **Org data notifications:** Block org data  
-1. Select **Next**.  
-1. In **Conditional launch**, configure:  
+8. Select **Next**.  
+9. On the **Conditional launch** tab, configure:
    - **Offline grace period:** 30 days, Wipe data  
    - **Disabled account:** Block access  
-   - **Minimum OS version:** 9.0, Block access  
-   - **Minimum patch version:** 2024-11-01, Block access  
+   - **Min OS version:** 9.0, Block access  
+   - **Min patch version:** 2024-11-01, Block access  
    - **Play Integrity verdict:** Basic integrity and device integrity, Block access  
-   - **Require device lock:** Medium complexity, Block access  
-   - **Samsung Knox device attestation:** Block access on supported devices
-1. Select **Next**.  
-1. In **Scope tags**, choose **Next** (or skip if not shown).  
-1. On the **Assignments** page, select **Add groups**, choose **SEB-Level2-Users**, then select **Next**.  
-1. From the **Review + create** page, select **Create**.
+   - **Require device lock:** Medium, Block access  
+   - **Samsung Knox device attestation:** Block access
+11. Select **Next**.  
+12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
+13. Select **Next**, review the configuration, and then choose **Create**.
 
 ### Level 3 – Enterprise high data protection for Android
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
-1. Select **Apps > Manage apps > Protection > Create > Android**.  
-1. On the **Basics** step, set:  
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.  
+3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – Enterprise high data protection – Android  
    - **Description:** Provides Level 3 high data protection for Microsoft Edge for Business on Android devices.  
-1. Select **Next**.  
-1. On the **Apps** step, in **Target policy to**, select **Selected apps**.  
+4. Select **Next**.  
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
-   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
-   - Choose **Microsoft Edge**, then **Select**.  
-1. Select **Next**.  
-1. In **Data protection**, configure:  
-   - **Transfer telecommunication data to:** Any dialer app  
-   - **Transfer messaging data to:** Any messaging app  
+   - In the **Select apps to target** panel, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:  
+   - **Transfer telecommunication data to:** Any policy-managed dialer app  
    - **Receive data from other apps:** Policy-managed apps  
    - **Open data into org documents:** Block  
-   - **Allow users to open data from selected services:** OneDrive for Business, SharePoint, Photo Library  
-   - **Approved keyboards:** Require (Microsoft SwiftKey Keyboard, Samsung Keyboard, Gboard – the Google Keyboard)
+   - **Allow users to open data from selected services:** OneDrive for Business, SharePoint, Camera, Photo Library  
+   - **Approved keyboards:** Require  
+   - **Select keyboards to approve:** Microsoft SwiftKey Keyboard, Samsung Keyboard, Gboard – the Google Keyboard
    - **Print org data:** Block
-1. Select **Next**.  
-1. In **Access requirements**, configure:  
+8. Select **Next**.  
+9. On the **Access requirements** tab, configure:  
    - **Simple PIN:** Block
    - **Select minimum PIN length:** 6
    - **PIN reset after number of days:** Yes
    - **Number of days:** 365
    - **Class 3 biometrics (Android 9.0+):** Require
    - **Override biometrics with PIN after biometric updates:** Require
-1. In **Conditional launch**, configure:
+10. On the **Conditional launch** tab, configure:
    - **Offline grace period:** 30 days, Block access  
    - **Jailbroken / rooted devices:** Wipe data  
-   - **Maximum OS version:** 16.0, Block access (set to prevent beta versions)  
-   - **Require device lock:** High complexity, Block access  
-   - **Samsung Knox device attestation:** Wipe data (on supported devices)  
    - **Max allowed threat level:** Secured, Block access  
-1. Select **Next**.  
-1. In **Scope tags**, choose **Next** (or skip if not shown).  
-1. On the **Assignments** page, select **Add groups**, choose **SEB-Level3-Users**, then select **Next**.  
-1. From the **Review + create** page, select **Create**.
+   - **Max OS version:** 16.0, Block access  
+   - **Require device lock:** High, Block access  
+   - **Samsung Knox device attestation:** Wipe data
+11. Select **Next**.  
+12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
+13. Select **Next**, review the configuration, and then choose **Create**.
 
 #### Framework Compliance Summary for Android  
 
 | Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
-|---------------------------------|-----------|-----------|-----------|
+|---------------------------------|---------|---------|---------|
 | Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
 | Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
 | Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in |
@@ -518,14 +500,14 @@ Level 3 configuration provides the highest level of data protection and is recom
 | Screen capture | Allow | Block | Block |
 | Approved keyboards | Not required | Not required | Required (Microsoft SwiftKey, Samsung Keyboard, Gboard) |
 | Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
-| Offline grace period | 10,080 minutes / Block access <br>90 days / Wipe data | 1,440 minutes / Block access <br>30 days / Wipe data | 1,440 minutes / Block access <br>30 days / Block access |
+| Offline grace period | 10,080 minutes / Block access <br>90 days / Wipe data | 10,080 minutes / Block access <br>30 days / Wipe data | 10,080 minutes / Block access <br>30 days / Block access |
 | Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
 | PIN length requirement | 4-digit | 4-digit | 6-digit |
 | Simple PIN allowed | Yes | Yes | No |
 | Biometric instead of PIN | Allow | Allow | Block |
 | Override biometrics with PIN after timeout | Required | Required | Required |
 | Work or school credentials required | Not required | Not required | Required |
-| Device lock complexity | Low | Medium | High |
+| Device lock complexity | Low | Low | High |
 | Device threat level / Play Integrity verdict | Basic integrity | Basic + Device integrity | Secured |
 | Jailbroken / rooted devices | Block access | Block access | Wipe data |
 | Minimum OS version | 8.0 | 9.0 | 9.0 |

@@ -44,7 +44,7 @@ Settings Catalog for Windows provides comprehensive browser configuration with p
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.  
 3. For **Platform**, choose **Windows 10 and later**. For **Profile type**, choose **Settings catalog**.  
 4. Select **Create**.  
@@ -246,7 +246,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 After deploying all Windows security levels, validate that the policies have applied correctly and that each configuration behaves as expected on a test device.
 
 - **Policy verification:**  
-  In the Intune admin center, go to **Devices** > **Windows** > **Manage devices** > **Configuration**, and locate the policies for each level.  
+  In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Windows** > **Manage devices** > **Configuration**, and locate the policies for each level.  
   Select a policy, and then choose **Device assignment status** to confirm that all assigned devices show a status of *Succeeded*.  
   You can also review **Per setting status** to verify individual policy settings applied successfully.  
   On a test device, open Microsoft Edge and go to `edge://policy` to confirm that key settings appear as **Active** and not **Error**.
@@ -269,7 +269,7 @@ After deploying all Windows security levels, validate that the policies have app
   Confirm that InPrivate mode is forced, Application Guard isolation is active, and all optional features (Collections, Games, Sidebar, Drop, Wallet, Copilot) are disabled.
 
 If any settings do not apply, sync the device from the **Company Portal** app or verify group assignments (`SEB-Level1-Devices`, `SEB-Level2-Devices`, or `SEB-Level3-Devices`).  
-For additional confirmation, monitor **edge://policy** and the **Device configuration report** in the Intune admin center to ensure the expected number of policies are active per level.
+For additional confirmation, monitor **edge://policy** and the **Device configuration report** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to ensure the expected number of policies are active per level.
 
 ::: zone-end
 
@@ -284,7 +284,8 @@ Settings Catalog for macOS provides foundational browser security for enrolled M
 > - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-policies)
 
 > [!IMPORTANT]
-> **macOS Platform Limitations:**
+> macOS Platform Limitations
+>
 > - App Protection Policies (APP): Not available for macOS
 > - App Configuration Policies (ACP): Not available for macOS
 > - Settings Catalog only: macOS Microsoft Edge management relies solely on Settings Catalog policies
