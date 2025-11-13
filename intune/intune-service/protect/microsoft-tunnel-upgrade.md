@@ -116,6 +116,7 @@ The Microsoft Tunnel version for a server isn’t available in the Intune UI at 
 
 ### October 29, 2025
 
+Version Number: 20251028.1
 Image hash values:
 
 - **agentImageDigest**:  sha256:adc8259f8946e23612f9156223be6462690da82d113f919b9503fe227ca811e3
@@ -127,6 +128,7 @@ Changes in this release:
   
 ### October 7, 2025
 
+Version Number: 20250815.1
 Image hash values:
 
 - **agentImageDigest**:  sha256:c658a64a3a849f3bec94aa18acd48a56a652023cef163e5f683c580cd8407ea4
@@ -137,6 +139,7 @@ Changes in this release:
 
 ### Sept 15, 2025
 
+Version Number: 20250716.1
 Image hash values:
 
 - **agentImageDigest**:  sha256:24f1b034e1b0f72ceba6b9b351ddfcca3f2f8c26d32028b520e9e666ed6d6b75
