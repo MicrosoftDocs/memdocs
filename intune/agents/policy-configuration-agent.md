@@ -116,7 +116,9 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 > - [Read only operator](../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
-> To **use the agent**, **generate suggestions**, and **create policies**, use an account with the following roles:
+> ---
+>
+> To **use the agent**, **generate suggestions**, **get policy recommendations**, and **create policies**, use an account with the following roles:
 >
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
