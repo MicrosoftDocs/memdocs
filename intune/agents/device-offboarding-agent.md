@@ -63,14 +63,14 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 :::column-end:::
 :::column span="3":::
-> The agent supports devices managed by Intune across multiple platforms, including Windows, iOS/iPadOS, macOS, Android, and Linux.\
+> The agent supports devices managed by Intune across multiple platforms, including iOS/iPadOS, macOS, Android, and Linux.\
 > It applies to both corporate-owned and BYOD (bring-your-own-device) scenarios.
 >
 > The agent doesn't support:
-> - Windows corporate devices
+> - Windows devices
 > - Shared devices
-> - Hybrid Entra-joined Windows devices
 > - Microsoft Teams Phones
+<!--> - Hybrid Entra-joined Windows devices-->
 :::column-end:::
 :::row-end:::
 
