@@ -89,10 +89,18 @@ Without phishing resistance, attackers can bypass MFA through social engineering
 
 Microsoft Entra ID supports several passwordless methods that vary in phishing resistance and use cases. Here are the primary options:
 
-#### :::image type="icon" source="icons/passkey.svg" border="false"::: Passkeys (FIDO2)
+:::row:::
+:::column span="1":::
+**Passkeys (FIDO2)**
 
-Passkeys are cryptographic credentials that replace passwords and can sync across devices. They offer strong phishing resistance and simplify sign-in for users. Passkeys are ideal for organizations adopting modern authentication across multiple platforms. 
+:::image type="icon" source="icons/passkey.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> Passkeys are cryptographic credentials that replace passwords and can sync across devices. They offer strong phishing resistance and simplify sign-in for users. Passkeys are ideal for organizations adopting modern authentication across multiple platforms. 
+:::column-end:::
+:::row-end:::
 
+<!--
 [!INCLUDE [intune](includes/intune.md)]
 - Enforcing OS version requirements for passkey support.
 - Ensuring Authenticator and Company Portal apps are installed.
@@ -100,6 +108,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
+-->
 
 :::row:::
 :::column span="1":::
@@ -112,6 +121,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 :::column-end:::
 :::row-end:::
 
+<!--
 [!INCLUDE [intune](includes/intune.md)]
 
 - Enabling FIDO2 sign-in via policy settings.
@@ -119,6 +129,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
+-->
 
 :::row:::
 :::column span="1":::
@@ -131,6 +142,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 :::column-end:::
 :::row-end:::
 
+<!--
 [!INCLUDE [intune](includes/intune.md)]
 
 - Deploying certificates via SCEP or PKCS profiles.
@@ -141,6 +153,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
+- -->
 
 :::row:::
     :::column span="1":::
@@ -153,6 +166,8 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 :::column-end:::
 :::row-end:::
 
+<!--
+
 [!INCLUDE [intune](includes/intune.md)]
 
 - Requiring Windows Hello during enrollment.
@@ -162,6 +177,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
+-->
 
 :::row:::
     :::column span="1":::
@@ -177,6 +193,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 :::column-end:::
 :::row-end:::
 
+<!--
 [!INCLUDE [intune](includes/intune.md)]
 
 - Deploying the Authenticator app.
@@ -186,6 +203,7 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - add here
+-->
 
 :::row:::
     :::column span="1":::
@@ -196,12 +214,13 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 :::column span="3":::
 
 > TAP is a time-limited credential that enables onboarding or recovery without requiring a password. It's ideal for scenarios where users need initial access before setting up passwordless methods. Intune ensures devices are ready for TAP workflows and enforces compliance during onboarding.
-:::column-end:::
-:::row-end:::
 
 > [!TIP]
 > TAP isn't a long-term authentication method but a secure bridge to passwordless enrollment.
+:::column-end:::
+:::row-end:::
 
+<!--
 [!INCLUDE [intune](includes/intune.md)]
 
 - On Windows device, by enabling Web Sign-in so TAP can be used at the lock screen.
@@ -210,11 +229,9 @@ Passkeys are cryptographic credentials that replace passwords and can sync acros
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
+-->
 
----
-
-
-For a deeper dive into these methods, refer to the [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
+For a deeper dive into passwordless authentication methods, refer to the [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless) article.
 
 ---
 
