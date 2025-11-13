@@ -30,10 +30,6 @@ The following list provides common issues and potential solutions:
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png" alt-text="Sign in with your work account in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png":::
 
-- If you encounter an error, it could mean that you selected the wrong enrollment method. You might have a checkmark on 'Select No, sign into this app only.' Redo the enrollment process without selecting this option. Otherwise, the App Protection Policy isn't applied.
-
-    :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business64.png" alt-text="Enrollment Window in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business64.png":::
-
 Successful app protection policy deployment relies on proper configuration of settings and other dependencies. Always verify that you meet the prerequisites for deploying app protection policies.
 
 If you continue to experience issues, it might be helpful to contact [Microsoft Support](../../get-support.md) for further assistance.
