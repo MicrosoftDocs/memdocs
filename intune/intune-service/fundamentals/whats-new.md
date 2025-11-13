@@ -244,6 +244,14 @@ This capability is a feature of the Defender client on Android and doesn’t rep
 
 For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](/intune/intune-service/protect/microsoft-tunnel-overview#capabiltities).
 
+### Tenant administration
+
+#### Soft-deleted Microsoft Entra groups now visible in Intune <!-- 30035949 -->
+
+Microsoft Intune now displays soft-deleted Microsoft Entra groups in the Intune admin center. When a group is soft-deleted, its assignments no longer apply. However, if the group is restored, its previous assignments are automatically reinstated.
+
+For more information, see [Include and exclude app assignments in Microsoft Intune](../apps/apps-inc-exl-assignments.md).
+
 ## Week of October 20, 2025 (Service release 2510)
 
 ### Microsoft Intune Suite
