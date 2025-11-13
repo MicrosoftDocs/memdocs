@@ -214,9 +214,9 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::column span="3":::
 
 > TAP is a time-limited credential that enables onboarding or recovery without requiring a password. It's ideal for scenarios where users need initial access before setting up passwordless methods. Intune ensures devices are ready for TAP workflows and enforces compliance during onboarding.
-
-> [!TIP]
-> TAP isn't a long-term authentication method but a secure bridge to passwordless enrollment.
+>
+> > [!TIP]
+> > TAP isn't a long-term authentication method but a secure bridge to passwordless enrollment.
 :::column-end:::
 :::row-end:::
 
