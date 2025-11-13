@@ -14,9 +14,10 @@ The* Device Offboarding Agent* identifies stale or misaligned devices across Int
 
 This article provides sample responses to show how the agent helps with device offboarding.
 
-## Prerequisites
+## Before you begin
 
-Before you begin, make sure you meet the requirements detailed in the [Get Started with the Device Offboarding Agent](device-offboarding-agent.md) article.
+- This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
+- Make sure you meet the requirements detailed in the [Get Started with the Device Offboarding Agent](device-offboarding-agent.md) article.
 
 ## Run the agent
 
