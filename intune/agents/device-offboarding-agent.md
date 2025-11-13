@@ -174,9 +174,9 @@ Before running the Device Offboarding Agent, note the following:
 - Only the admin who set up the agent can view session details in the [Microsoft Security Copilot portal][COP-PORTAL].
 - The agent identifies devices that were retired, wiped, or deleted from Intune within the last 30 days.
 - The agent limits results to the first 10,000 devices.
-- The agent disables Entra ID objects; other remediation steps are provided as instructions for admins.
+- Upon admin approval to offboard, the agent disables Entra ID objects. Other remediation steps are provided as instructions for admins.
 - The agent doesn't persist suggestions across runs; re-running clears previous recommendations.
-- Only one agent instance is supported per tenant/user context.
+- Only one agent instance is supported per tenant.
 
 >[!IMPORTANT]
 >Data reported by the agent is surfaced through agent suggestions. This information may be visible to admins who have access to the agent in the Intune admin center, even if it includes data outside their assigned Administrative Units (AUs) in Microsoft Entra ID.
