@@ -45,7 +45,6 @@ The Intune App SDK consists of the following files:
 - **Microsoft.Intune.MAM.SDK.aar**: The SDK components, except for the Support Library JAR files.
 - **com.microsoft.intune.mam.build.jar**: A Gradle plugin, which [aids in integrating the SDK].
 - **CHANGELOG.md**: Provides a record of changes made in each SDK version.
-- **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
 - **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: This AAR contains
   stubs for Android system classes that are present only on newer
   devices but that are referenced by methods in [MAMActivity]. Newer
@@ -152,28 +151,29 @@ Test compilation isn't affected.
 
 ### Dependencies
 
-> [!NOTE]
-> You must be using version 3.6.1 or newer of the Android Gradle plugin and version 5.6.4 or newer of Gradle.
-
 The Gradle plugin has a dependency on [Javassist], which must be made available to Gradle's dependency resolution.
 **Javassist is used solely at build time when running the plugin and no Javassist code will be added to your app.**
 
+| MAM SDK | Javassist Version |
+|-|-|
+| ≥ 10.0.0 | 3.29.2-GA |
+| ≥ 7.0.0  | 3.27.0-GA |
+| < 7.0.0  | 3.22.0-GA |
+
 > [!NOTE]
 > Javassist versions may not be backwards compatible.
-> Generally, you should use the exact version expected by the Intune App SDK:
->
-> - Intune App SDK ≥ 10.0.0 requires Javassist 3.29.2-GA
-> - Intune App SDK ≥ 7.0.0 requires Javassist 3.27.0-GA
-> - Intune App SDK < 7.0.0 requires Javassist 3.22.0-GA
+> Generally, you should use the exact version expected by the Intune App SDK.
 
-Additionally, when consuming MAM SDK 8.0.0+, you must ensure the following is set in your Gradle configuration:
+### Compatibility Matrix
 
-```groovy
-compileOptions {
-  sourceCompatibility JavaVersion.VERSION_1_8
-  targetCompatibility JavaVersion.VERSION_1_8
-}
-```
+The MAM SDK Build Plugin aligns with [Android build requirements and compatibility tables].
+Versions not listed here may or may not work.
+
+| MAM SDK | Android Version | Gradle | Android Gradle Plugin | Kotlin Version | Java Version |
+|-|-|-|-|-|-|
+| 10.0.0 | 14 |   8.2  | 8.2.2 | 1.9.25 | 17 |
+| 11.0.0 | 15 |   8.7  | 8.6.1 | 2.0.21 | 17 |
+| 12.0.0 | 16 | 8.11.1 | 8.9.1 | 2.1.21 | 17 |
 
 ### Exclusions
 
@@ -426,3 +426,4 @@ After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integr
 [Javassist]:https://jboss-javassist.github.io/javassist/
 [Service]:https://developer.android.com/reference/android/app/Service
 [Add your AAR or JAR as a dependency]: https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency
+[Android build requirements and compatibility tables]: https://developer.android.com/build/releases/gradle-plugin

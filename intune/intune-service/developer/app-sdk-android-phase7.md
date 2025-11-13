@@ -99,9 +99,11 @@ To determine whether your app should implement the `getIsSaveToLocationAllowedFo
 | - | - | - |
 | `ONEDRIVE_FOR_BUSINESS` | The app is saving data to OneDrive. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
 | `SHAREPOINT` | The app is saving data to Sharepoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
-| `BOX` | This app is saving data to Box. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `BOX` | The app is saving data to Box. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
 | `LOCAL` | The app is saving data to an external storage location on the device that is **not** the app's private storage. | The external storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
 | `PHOTO_LIBRARY` | The app is saving data to Android local photo storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
+| `IMANAGE` | The app is saving data to iManage. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
+| `EGNYTE` | The app is saving data to Egnyte. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
 | `ACCOUNT_DOCUMENT` | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified above. *This location should be used to determine if data can be passed between accounts within a multi-identity app.* | An OID for an account that is used for Microsoft Entra authentication. If such an account doesn't exist or the OID isn't known use `null`. |
 | `OTHER` | The app is saving data to a location that isn't specified above and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and so should be `null`. |
 
@@ -983,4 +985,3 @@ Do continue to refer to this guide and the [Appendix] as you continue to develop
 
 <!-- Method links -->
 [unregisterAccountForMAM]: https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/policy/MAMEnrollmentManager.html#unregisterAccountForMAM(java.lang.String,%20java.lang.String)
-
