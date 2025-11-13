@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 06/09/2025
+ms.date: 11/04/2025
 ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
@@ -401,11 +401,17 @@ The following table describes the Setup Assistant screens shown during automated
 | **Device to Device Migration** | Shows the device-to-device migration pane. On this screen, users can transfer data from an old device to their current device. The option to transfer data directly from a device isn't available for devices running iOS 13 or later.
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |
 | **Software Update Completed** | Shows users all software updates that happen during Setup Assistant.|
-| **Get Started**| Shows users the Get Started welcome screen.
+| **Get Started**| Shows users the Get Started pane.
 | **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.
 | **Emergency SOS**| Shows the safety setup pane. For iOS/iPadOS 16.0 and later.
 | **Action button**| Shows the configuration pane for the action button. For iOS/iPadOS 17.0 and later.
 | **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For iOS/iPadOS 18.0 and later.
+| **Camera button**| Shows the camera button pane. For iOS/iPadOS 18.0 and later.  
+| **Web content filtering**| Shows the web content filtering pane. For iOS/iPadOS 18.2 and later.  
+| **App Store**| Shows the Apple App Store pane. For iOS/iPadOS 14.3 and later.  
+| **Safety and handling**| Shows the safety and handling pane. For iOS/iPadOS 18.4 and later.  
+| **Multitasking**| Shows the multitasking pane. For iOS/iPadOS 26.0 and later.  
+| **OS Showcase**| Shows the OS showcase pane. For iOS/iPadOS 26.0 and later.  
 
 ## Sync managed devices
 
