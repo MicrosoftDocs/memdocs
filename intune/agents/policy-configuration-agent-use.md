@@ -1,7 +1,7 @@
 ---
 title: Use the Policy Configuration Agent to create policies
 description: Learn how to use the Policy Configuration Agent in Microsoft Intune to create policies. You can create policies on files you uploaded, natural language prompts, or industry baselines. The Policy Configuration Agent is a feature of Security Copilot in Intune.
-ms.date: 11/12/2025
+ms.date: 11/13/2025
 ms.topic: how-to
 author: mandiohlinger
 ms.author: mandia
@@ -11,18 +11,18 @@ ms.reviewer: aanavath
 # Use the Policy Configuration Agent
 
 > [!WARNING]
-> This article is still being written. Do not use it or share any information from article.
+> This article is still being written. Do not use it or share any information from this article.
 
-The [Policy Configuration Agent](policy-configuration-agent.md) is a generative AI feature in Intune. It helps you automate the creation of Intune policies based on your organization's requirements or industry benchmarks.
+The [Policy Configuration Agent](policy-configuration-agent.md) is a generative AI feature in Intune. It helps IT admins translate complex requirements and industry standard documents into actionable Intune settings.
 
-After you [set up the agent](policy-configuration-agent.md), the next step is to upload documents and benchmarks as **knowledge sources**, or enter text directly in the agent. The agent analyzes these knowledge sources to suggest relevant Intune settings and then can create device configuration policies using these settings.
+After you [set up the agent](policy-configuration-agent.md), the next step is to upload documents and benchmarks as **knowledge sources**. Or, enter natural language instructions on what to include in the policy draft. The agent analyzes these knowledge sources to suggest relevant Intune settings and then can create device configuration policies using these settings.
 
 This article shows you how to use the Policy Configuration Agent, including:
 
 - Adding, saving, and viewing a knowledge source
 - Creating a policy from a knowledge source and natural language prompts
 
-To learn about the agent and how to set it up, see [Use the Policy Configuration Agent](policy-configuration-agent.md).
+To learn about the agent and how to set it up, see [Set up the Policy Configuration Agent](policy-configuration-agent.md).
 
 This feature applies to:
 
@@ -33,8 +33,8 @@ This feature applies to:
 - This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
 - Make sure you meet the [Policy Configuration Agent](policy-configuration-agent.md#prerequisites) prerequisites, including signing in with an appropriate account.
 - You can upload one knowledge source file at a time. If you have multiple baseline documents, run them separately through the agent.
-- Well-structured, well-written policies result in better mappings. If a document is poorly formatted or uses unclear language, the agent can produce low-confidence matches. We recommend you review your source documents for clarity.
-- You can add text files up to 100 KB in size. Large or complex documents with hundreds of pages of requirements might challenge the agent's ability to process them effectively.
+- Well-structured, well-written input result in better mappings. If a document is poorly formatted or uses unclear language, the agent can produce low-confidence matches. We recommend you review your source documents for clarity.
+- You can add text files up to 25 KB in size. Large or complex documents with hundreds of pages of requirements might challenge the agent's ability to process them effectively.
 
 ## Explore the agent
 
@@ -63,10 +63,11 @@ In this tab, you can:
 - Search and filter to find specific knowledge sources.
 - View the knowledge source status, like New, In progress, Completed, and Dismissed.
 - Select a knowledge source to see all the settings and their recommended values.
+- Delete a knowledge source.
 
 # [Suggestions](#tab/suggestions)
 
-The **Suggestions** tab shows a list of the agent's suggestions based on the knowledge sources you used. After the agent completes a run, this tab updates with the agent's suggestions.
+The **Suggestions** tab shows a list of the agent's suggestions based on the input you selected, including any natural language prompts. After the agent completes a run, this tab updates with the agent's suggestions.
 
 In this tab, you can:
 
@@ -103,11 +104,9 @@ To add a knowledge source, use the following steps:
 
 4. Select **Review**. The agent runs immediately and analyzes the knowledge source you uploaded. Select the link to open it.
 
-    When the agent finishes, **Suggested next steps** shows a policy draft as a link.
-
     :::image type="content" source="./media/policy-configuration-agent-suggestion.png" alt-text="Diagram that shows a sample policy draft created with the Copilot Policy Configuration Agent in Microsoft Intune." lightbox="./media/policy-configuration-agent-suggestion.png":::
 
-    You see a policy draft with suggested settings based on the knowledge source you uploaded.
+    You see suggested settings mapped to the knowledge source you uploaded.
 
 5. In the **Policy details** > **Identified settings** tab, your data is mapped to Intune settings. For each setting, the agent shows:
 
@@ -116,8 +115,6 @@ To add a knowledge source, use the following steps:
     - The original requirement text it maps to
     - The confidence score for the mapping
 
-      If the text clearly matches a known setting (high confidence), then it proceeds. If not, it marks the suggestion as low confidence. **You must review and confirm every mapping, especially the low-confidence mappings**.
-
     The agent classifies each mapping rule into the following categories:
 
     - **Supported** – There's a direct Intune setting available. The agent maps the rule to that setting and proposes a configuration.
@@ -125,11 +122,15 @@ To add a knowledge source, use the following steps:
 
       If any settings are unsupported, then they're listed.
 
-    - **Unmappable/Ambiguous** – The agent couldn't confidently determine a matching setting. It highlights these settings so admins can review. In some cases, it can happen due to ambiguous phrasing or a requirement that needs clarification.
+    **We recommend you review and confirm every mapping, especially the low-confidence mappings**.
 
-6. You can also **Save this mapping** to save the suggested mappings and use them in other policies later
+6. You can also **Save this mapping** to save the suggested mappings and use them in other policies later.
 
     After you save the mapping, you can choose to create a device configuration profile.
+
+7. After you review the suggestions, select **Manage suggestion**. Use this option to update the suggestion status.
+
+    These statuses are for your tracking purposes only. They help you track the suggestions you reviewed and the suggestions you need to address. The **Dismissed** status removes the suggestion from the **Suggestions** tab.
 
 ### View your existing knowledge sources
 
@@ -141,7 +142,7 @@ When you upload a knowledge source, it's available in the **Knowledge** tab. To 
 
 ## Create and view a policy draft
 
-The agent can create a settings catalog device configuration policy based on a knowledge source you uploaded, using a natural language prompt, or using an industry baseline.
+The agent can create a settings catalog device configuration policy based on a knowledge source you uploaded or using a natural language prompt.
 
 To create a policy using the agent, use the following steps:
 
@@ -151,7 +152,9 @@ To create a policy using the agent, use the following steps:
 
     - **Policy name** - Enter a name for the policy draft.
     - **Description** - Optional. Enter a description for the policy.
-    - **Knowledge source** - Select the knowledge source you want to use for this policy draft. If it's blank, then no knowledge sources are uploaded. Select **add a document** to upload a file that contains your instructions.
+    - **Knowledge source** - Select the knowledge source you want to use for this policy draft.
+
+      If it's blank, then no knowledge sources are uploaded. Select **add a document** to upload a file that contains your instructions.
     - **Instructions** - In natural language, describe the device configuration settings you want to include in the policy. For example, enter `Create a device configuration policy that enforces strong password requirements and enables BitLocker encryption on Windows devices`.
 
 4. Select **Create**. The agent runs and creates a policy draft based on your selected source.
@@ -162,18 +165,11 @@ To create a policy using the agent, use the following steps:
 
     **In this step, review each setting and its value to ensure they meet your requirements**. You can start with the settings that have a low confidence score.
 
-6. After you review the suggestions, select **Manage suggestion**. Use this option to update the suggestion status for your tracking purposes.
+6. After you review the suggestions, select **Manage suggestion**. Use this option to update the suggestion status.
 
-    Your options:
+    These statuses are for your tracking purposes only. They help you track the suggestions you reviewed and the suggestions you need to address. The **Dismissed** status removes the suggestion from the **Suggestions** tab.
 
-    - New
-    - In progress
-    - Completed
-    - Dismissed - This status removed the suggestion from the **Suggestions** tab.
-
-    These statuses are for your tracking purposes only. They help you track the suggestions you've reviewed and the suggestions you need to address.
-
-7. Select **Create configuration policy** to save the policy draft as a device configuration policy. This step takes you to the settings catalog, and the saved policy is shown in **Devices** > **Manage devices** > **Configuration**.
+7. Select **Create configuration policy** to save the policy draft as a device configuration policy. This step takes you to the settings catalog, and is prepopulated with the agent-generated configuration. The saved policy is shown in **Devices** > **Manage devices** > **Configuration**.
 
     The agent also automatically adds any required settings to the policy, including parent and child settings. So, the settings count can be different between the agents policy draft and the device configuration policy.
 

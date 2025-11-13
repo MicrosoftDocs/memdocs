@@ -1,7 +1,7 @@
 ---
 title: Learn about Policy Configuration Agent and set it up
 description: Learn about the Policy Configuration Agent in Microsoft Intune, its prerequisites, how it works, and how to set it up. The agent is a generative AI feature that helps create Intune policies based on uploaded documents or benchmarks. The Policy Configuration Agent is a feature of Security Copilot in Intune.
-ms.date: 11/12/2025
+ms.date: 11/13/2025
 ms.topic: overview
 author: mandiohlinger
 ms.author: mandia
@@ -102,12 +102,20 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles)
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Microsoft Entra roles:
-> - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
->
+> To learn about the Security Copilot roles, see [Security Copilot roles and permissions](/copilot/security/authentication).
 > ---
 >
-> To **use** the agent and create policies, use an account with the following roles:
+> To **use** the agent, generate suggestions, and get policy recommendations, use an account with the following roles:
+>
+> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
+>
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
+>
+> - [Read only operator](../intune-service/fundamentals/role-based-access-control.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+>   - Device configurations/Read
+>
+> To **use** the agent, generate suggestions, and create policies, use an account with the following roles:
 >
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
