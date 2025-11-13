@@ -248,6 +248,8 @@ For more information about features of Microsoft Tunnel, see [Overview of Micros
 
 #### Soft-deleted Microsoft Entra groups now visible in Intune <!-- 30035949 -->
 
+This feature is in public preview. For more information, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
+
 Microsoft Intune now displays soft-deleted Microsoft Entra groups in the Intune admin center. When a group is soft-deleted, its assignments no longer apply. However, if the group is restored, its previous assignments are automatically reinstated.
 
 For more information, see [Include and exclude app assignments in Microsoft Intune](../apps/apps-inc-exl-assignments.md).
