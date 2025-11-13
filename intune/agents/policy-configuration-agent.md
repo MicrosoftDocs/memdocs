@@ -13,7 +13,7 @@ ms.reviewer: aanavath, jubaptis
 > [!WARNING]
 > This article is still being written. Do not use it or share any information from this article.
 
-The Intune Policy Configuration Agent uses the generative AI-powered features in Security Copilot. It automates the task of reading through standards and finding the corresponding device configuration settings.
+The Intune Policy Configuration Agent uses the generative AI-powered features in Security Copilot. It helps IT admins translate complex requirements and industry standard documents into actionable Intune settings.
 
 Admins can quickly generate Intune [settings catalog](../intune-service/configuration/settings-catalog.md) policies that align with organizational or regulatory baselines, including any hardening initiatives.
 
@@ -21,13 +21,13 @@ With the agent, you:
 
 - Upload a document or industry benchmark, and the agent identifies relevant and matching Intune settings.
 
-  You can upload compliance standards and common industry benchmarks, like Security Technical Implementation Guides (STIGs), National Institute of Standards and Technology (NIST) guidelines, Defense Information Systems Agency (DISA) STIGs, and Center for Internet Security (CIS) benchmarks.
+  You can upload compliance standards and common industry benchmarks, like Security Technical Implementation Guides (STIGs) and National Institute of Standards and Technology (NIST) guidelines.
 
 - Can upload internal policy documents and baselines, like your organization's security policies or compliance requirements.
 - Get relevant configuration settings and actionable suggestions based on your uploaded documents.
 - Can customize the suggestions to create a baseline that fits your environment. For example, if your organization has an exception to a CIS rule, you can remove that rule from the final policy.
 
-The agent also guides you through creating a policy using the suggestions and helps configure each setting based on your organization's needs. It provides insights into each setting's benefits and potential implications, and can highlight supported, unsupported, and unmappable rules. You can also review and save these suggestions.
+The agent also guides you through creating a policy using the suggestions and helps configure each setting based on your organization's needs. You can review and save these suggestions.
 
 This article:
 
@@ -46,7 +46,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 
 :::column-end:::
 :::column span="3":::
-> The agent is supported on the public cloud ony. It isn't supported on government clouds.
+> The agent is supported on the public cloud only. It isn't supported on government clouds.
 
 :::column-end:::
 :::row-end:::
@@ -74,7 +74,7 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 >
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
 >
-> If you use Copilot in the Intune, then the Intune plugin is already enabled. [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474).
+> If you use Copilot in Intune, then the Intune plugin is already enabled. [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474).
 
 :::column-end:::
 :::row-end:::
@@ -88,7 +88,6 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 > This feature supports the following platforms:
 >
 > - Windows
-> - Devices must be corporate owned, enroled in Intune (includes co-managed), and Microsoft Entra joined.
 :::column-end:::
 :::row-end:::
 
@@ -100,11 +99,11 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 :::column span="3":::
 > To **enable and configure** the agent, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Microsoft Entra roles:
-> - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
->
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles)
+>
+> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Microsoft Entra roles:
+> - [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)
 >
 > ---
 >
@@ -129,9 +128,9 @@ At a high level, the agent does the following steps.
 
 1. **Input ingestion**: You give the agent an input that has your policy requirements. It can be a document you upload or direct text input, like `All laptops must have BitLocker enabled with AES-256 encryption`.
 
-    The agent supports well-known baseline formats, like official CIS benchmarks or DISA STIG checklists, custom documents, and bulleted lists of requirements.
+    The agent supports custom documents and bulleted lists of requirements.
 
-2. **Natural language processing and parsing**: When you run the agent against your input, the agent uses Security Copilot's natural language-to-policy mapping skill and parses the input. It reads through the language and identifies individual settings that the text describes.
+2. **Natural language processing and parsing**: When you run the agent against your input, the agent uses Security Copilot to parse and map the input. It reads through the language and identifies individual settings that the text describes.
 
     For example, if the document says "Disallow use of USB storage devices", then the agent interprets the text as a requirement about external storage policy.
 
@@ -139,23 +138,21 @@ At a high level, the agent does the following steps.
 
 3. **Maps rules to Intune settings**: For each parsed requirement, the agent attempts to find a corresponding settings catalog setting that achieves that goal. The agent uses built-in knowledge of Intune's capabilities to choose the correct setting and the setting value that meets the requirement.
 
-4. **Generates policy suggestions**: The agent compiles the mapping results into a draft Intune configuration profile (or set of profiles) with the recommended settings.
+4. **Generates policy suggestions**: The agent compiles the mapping results into a draft Intune configuration profile with the recommended settings.
 
 5. **Admin review and confirmation**: Before anything is applied, you review the agent's output. In the admin center, select the agent's suggestion to see the details. You might see a list of recommended settings (supported mappings) and separate lists for unsupported or unmapped items.
 
     At this stage, you should:
 
-    - **View Details** - You can drill into each recommended setting to read the rationale and adjust. For instance, if the agent suggests a password length of 14 characters because the baseline said `at least 12`, then you might increase it to 15 in the final policy.
-    - **Remove or Exclude** - If there are certain suggestions you don't want to implement, then you can remove them from the final policy.
+    - **View Details** - You can drill into each recommended setting to read the rationale and adjust. For instance, the agent might suggest a password length of 14 characters because the baseline said `at least 12`.
+    - **Remove or Exclude** - If there are certain suggestions you don't want to implement, then you can remove them when you tell the agent to create the device configuration policy.
     - **Acknowledge Unsupported Items** - For any requirements that Intune can't enforce, document how you plan to handle them, or acknowledge them. The agent's role is informational and to make sure you're aware of any gaps.
 
-6. **Policy creation**: After you confirm the suggestions, you can select to automatically create a new configuration profile with all the recommended settings. This settings catalog policy isn't enforced until you assign it, just like any Intune policy you manually create.
+6. **Policy creation**: After you confirm the suggestions, you can choose to create a new configuration profile with all the recommended settings. This settings catalog policy isn't enforced until you assign it, just like any Intune policy you manually create.
 
-    At this stage, the policy is a normal Intune policy. You can assign it to the appropriate groups and name the policy. You might be able to save the mappings and reuse them as a baseline, like an AI-mapped template, without creating a policy. This feature allows you to generate an audit report or use the mappings in other policies later.
+    At this stage, the policy is a normal Intune policy. You can assign it to the appropriate groups and rename the policy.
 
-7. **Deploy and monitor**: Once the policy is assigned, devices start reporting compliance with the new settings. The agent's job is done until you run it again.
-
-    Any agent suggestions you apply are tracked. If you rerun the agent with the same baseline file later, like when the baseline is updated in six months, it can compare the applied settings so it doesn't duplicate suggestions.
+7. **Deploy and monitor**: Once the policy is assigned, devices start reporting with the new settings. The agent's job is done until you run it again.
 
 ## Set up the agent
 
@@ -172,7 +169,7 @@ Use the following steps to set up the agent.
 
 1. Select **Set up agent**.
 
-When it's finished, the agent is ready to use. To learn more about using the agent, see [Use the Policy Configuration Agent](policy-configuration-agent-use.md).
+When it completes, the agent is ready to use. To learn more about using the agent, see [Use the Policy Configuration Agent](policy-configuration-agent-use.md).
 
 [!INCLUDE [renew](includes/renew.md)]
 

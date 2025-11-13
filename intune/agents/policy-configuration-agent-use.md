@@ -88,8 +88,6 @@ For example, you can upload compliance standards and common industry benchmarks,
 
 - Security Technical Implementation Guides (STIGs)
 - National Institute of Standards and Technology (NIST) guidelines
-- Defense Information Systems Agency (DISA) STIGs
-- Center for Internet Security (CIS) benchmarks
 
 You can save the agent suggestions so you can create device configuration policies when you're ready.
 
@@ -129,11 +127,13 @@ To add a knowledge source, use the following steps:
 
     - **Unmappable/Ambiguous** – The agent couldn't confidently determine a matching setting. It highlights these settings so admins can review. In some cases, it can happen due to ambiguous phrasing or a requirement that needs clarification.
 
-6. You can also **Save this mapping** to save the suggested policy with its configured settings. The saved mapping is shown in ??. When you save the mapping, you can then choose to create a device configuration profile now or later.
+6. You can also **Save this mapping** to save the suggested mappings and use them in other policies later
+
+    After you save the mapping, you can choose to create a device configuration profile.
 
 ### View your existing knowledge sources
 
-When you upload a knowledge source, it available in the **Knowledge** tab. To view your existing knowledge sources, use the following steps:
+When you upload a knowledge source, it's available in the **Knowledge** tab. To view your existing knowledge sources, use the following steps:
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
 2. In the **Knowledge** tab, there's a list of your existing knowledge sources. Select a knowledge source to view its settings and their configured values.
