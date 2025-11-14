@@ -49,7 +49,7 @@ Level 1 configuration provides foundational browser security controls while main
 3. For **Platform**, choose **Windows 10 and later**. For **Profile type**, choose **Settings catalog**.  
 4. Select **Create**.  
 5. On the **Basics** tab, enter:  
-   - **Name:** Level 1 – Enterprise basic security – Windows Settings Catalog  
+   - **Name:** Edge Windows Level 1 Basic  
    - **Description:** Basic browser security configuration for Microsoft Edge on Windows devices.  
 6. Select **Next**.  
 7. On **Configuration settings**, select **+ Add settings**.  
@@ -137,7 +137,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 3. Locate the *Level 1 – Enterprise basic security – Windows Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
 5. In the **Duplicate policy** window, enter the following:  
-   - **Name:** Level 2 – Enterprise enhanced security – Windows Settings Catalog  
+   - **Name:** Edge Windows Level 2 Enhanced 
    - **Description:** Enhanced browser security including Application Bound Encryption, extension controls, and advanced privacy settings.  
 6. Select **Save**. This action takes you back to the **Windows configuration** page.  
 7. Find your new Level 2 policy in the policy list. If it doesn’t appear, select **Refresh**.  
@@ -216,7 +216,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 3. Locate the *Level 2 – Enterprise enhanced security – Windows Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
 5. In the **Duplicate policy** window, enter the following:  
-   - **Name:** Level 3 – Enterprise high security – Windows Settings Catalog  
+   - **Name:** Edge Windows Level 3 High
    - **Description:** High-security browser configuration including URL allowlisting, site isolation, and maximum data protection.  
 6. Select **Save**. This action takes you back to the **Windows configuration** page.  
 7. Find your new Level 3 policy in the policy list. If it doesn’t appear, select **Refresh**.  
@@ -381,7 +381,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 3. Locate the *Level 1 – Enterprise basic security – macOS Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
 5. In the **Duplicate policy** window, enter the following:  
-   - **Name:** Level 2 – Enterprise enhanced security – macOS Settings Catalog  
+   - **Name:** Edge macOS Level 2 Enhanced  
    - **Description:** Enhanced security with extension blocking and privacy controls.  
 6. Select **Save**. This action takes you back to the **macOS configuration** page.  
 7. Find your new Level 2 policy in the policy list. If it doesn't appear, select **Refresh**.  
@@ -419,7 +419,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 3. Locate the *Level 2 – Enterprise enhanced security – macOS Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
 5. In the **Duplicate policy** window, enter the following:  
-   - **Name:** Level 3 – Enterprise high security – macOS Settings Catalog  
+   - **Name:** Edge macOS Level 3 High  
    - **Description:** High-security configuration with URL filtering and maximum restrictions.  
 6. Select **Save**. This action takes you back to the **macOS configuration** page.  
 7. Find your new Level 3 policy in the policy list. If it doesn't appear, select **Refresh**.  
