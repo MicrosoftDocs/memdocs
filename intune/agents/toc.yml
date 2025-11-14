@@ -34,6 +34,3 @@ items:
   - name: Use the agent
     href: vulnerability-remediation-agent-use.md
     displayName: Vulnerability Remediation Agent
-- name: Frequently asked questions (FAQs)
-  href: faq.yml
-  displayName: FAQs, Security Copilot agents

@@ -190,6 +190,8 @@ You can view your existing policy drafts. Use the following steps:
 
 To update any settings and their values in the policy draft, you must create a device configuration policy from the draft. After you create the policy, you can edit it like any other Intune device configuration policy.
 
+[!INCLUDE [errors](includes/errors.md)]
+
 ## Related content
 
 - [Policy Configuration Agent in Intune - Overview and set up](policy-configuration-agent.md)

@@ -59,6 +59,8 @@ You can track agent activity and troubleshoot issues using the available logs.
 
 All agent management actions (create, delete, run) and any permission failures are available in Security Copilot logs. Logs do not include which devices were offboarded or when recommended actions were completed.
 
+[!INCLUDE [errors](includes/errors.md)]
+
 <!-- admin center links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
