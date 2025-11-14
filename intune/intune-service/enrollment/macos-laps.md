@@ -83,7 +83,7 @@ Following are examples of the available configuration options. Additional detail
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
   - {{onPremisesSamAccountName}} - for example, **JDoe**
 - **Hide in Users & Groups** - Make the admin account hidden in the sign-in window and in Users & Groups. By default, this set to *Not Configured*.
-- **Admin account password rotation period (days)** - If configured, this is the period (1-180 days) after which the administrator account password will be automatically rotated. This is in addition to the automatic rotation that happens once every 180 days. 
+- **Admin account password rotation period (days)** - If configured, this setiing dictates the period (1-180 days) after which the administrator account password is automatically rotated. This rotation is in addition to the automatic rotation that happens once every 180 days.  
 
 ### Local user account
 
