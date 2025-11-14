@@ -66,6 +66,17 @@ When viewing Endpoint Privilege Management [elevation requests](/intune/intune-s
 
 ### App management
 
+#### PowerShell script installer support for Win32 apps <!-- 34496511 -->
+
+When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
+
+For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 #### More volume options available in Managed Home Screen <!-- 16462284 -->
 
 Admins can now enable more volume controls in the Managed Home Screen (MHS) app for Android Enterprise dedicated and fully managed devices. In addition to the existing media volume control, this update introduces configuration settings to show or hide sliders for **call**, **ring and notification**, and **alarm** volumes.
@@ -91,6 +102,14 @@ For more information about Managed Google Play store layout options, see [Approv
 > Applies to:
 >
 > - Android
+
+#### Updated Service Level Objectives for Enterprise App Management <!-- 30049867, wndraft -->
+
+**Service Level Objectives (SLOs)** are now available in Enterprise App Management (EAM) to provide clearer expectations for when app updates become available in the Enterprise App Catalog. SLO processing timelines begin when Intune first receives the updated app package.
+
+Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
+
+For more information, see [Enterprise App Management overview](../apps/enterprise-app-management.md).
 
 ### Device configuration
 
@@ -448,7 +467,7 @@ For more information, see [Support statement for Windows 10 in Intune](#update-t
 
 ### App management
 
-#### PowerShell script support when installing Win32 apps<!--29857395-->
+#### PowerShell script installer support for Enterprise App Catalog apps<!--29857395-->
 
 You can now upload a PowerShell script to install Enterprise App Catalog apps as an alternative to using a command line. This option gives you more flexibility when deploying apps.
 
