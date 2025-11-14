@@ -103,7 +103,7 @@ For more information about Managed Google Play store layout options, see [Approv
 >
 > - Android
 
-#### Updated Service Level Objectives for Enterprise App Management <!-- 30049867, wndraft -->
+#### Updated Service Level Objectives for Enterprise App Management <!-- 30049867 -->
 
 **Service Level Objectives (SLOs)** are now available in Enterprise App Management (EAM) to provide clearer expectations for when app updates become available in the Enterprise App Catalog. SLO processing timelines begin when Intune first receives the updated app package.
 
