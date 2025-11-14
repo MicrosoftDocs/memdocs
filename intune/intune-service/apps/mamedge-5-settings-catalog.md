@@ -235,7 +235,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 | Microsoft Edge\Additional | Control where developer tools can be used | Disallowed (2) | [Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) |
 | Microsoft Edge\Additional | Enable site isolation for every site | Enabled | [Enable site isolation for every site](/deployedge/microsoft-edge-browser-policies/siteperprocess) |
 | Microsoft Edge\Additional | Send required and optional diagnostic data about browser usage | Off (0) | [Send required and optional diagnostic data about browser usage](/deployedge/microsoft-edge-browser-policies/diagnosticdata) |
-| Microsoft Edge\Startup, home page and new tab page | Configure InPrivate mode availability | InPrivate mode forced (1) | [Configure InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) |
+| Microsoft Edge\Startup, home page and new tab page | Configure InPrivate mode availability | InPrivate mode forced (2) | [Configure InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) |
 | Microsoft Edge\User Data & Retention | Limits the number of user data snapshots retained for use in case of emergency rollback | 1 | [Limits the number of user data snapshots retained for use in case of emergency rollback](/deployedge/microsoft-edge-browser-policies/userdatasnapshotretentionlimit) |
 | Microsoft Edge\User Data & Retention | Browsing Data Lifetime Settings | [{"data_types": ["browsing_history", "download_history", "cookies_and_other_site_data", "cached_images_and_files"], "time_to_live_in_hours": 24}] | [Browsing Data Lifetime Settings](/deployedge/microsoft-edge-browser-policies/browsingdatalifetime) |
 | Microsoft Edge\User Data & Retention | Enable use of ephemeral profiles | Enabled | [Enable use of ephemeral profiles](/deployedge/microsoft-edge-browser-policies/forceephemeralprofiles) |
@@ -445,7 +445,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 | Microsoft Edge | Enable use of ephemeral profiles | Enabled | [Enable use of ephemeral profiles](/deployedge/microsoft-edge-browser-policies/forceephemeralprofiles) |
 | Microsoft Edge | Manage exposure of local IP addresses by WebRTC | [] | [Manage exposure of local IP addresses by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalipsallowedurls) |
 | Microsoft Edge | Control which extensions are installed silently | [] | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) |
-| Microsoft Edge | Configure allowed extension types | extension (extension) | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
+| Microsoft Edge | Configure allowed extension types | extension | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
 | Microsoft Edge | Configure tracking prevention exceptions for specific sites | *.company.com | [Configure tracking prevention exceptions for specific sites](/deployedge/microsoft-edge-browser-policies/allowtrackingforurls) |
 | Microsoft Edge | Allow media autoplay for websites | Disabled | [Allow media autoplay for websites](/deployedge/microsoft-edge-browser-policies/autoplayallowed) |
 | Microsoft Edge | Allow or block video capture | Disabled | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) |
