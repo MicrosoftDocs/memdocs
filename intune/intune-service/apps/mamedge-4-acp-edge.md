@@ -55,40 +55,40 @@ Level 1 configuration provides foundational browser security controls while main
 6. On the **Settings** step, expand **General configuration settings**.  
 7. Configure each setting using the **Name** and **Value** specified:
 
-    | Name | Value | Documentation |
-    |------|-------|---------------|
-    | HomepageLocation | `https://portal.company.com` | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
-    | ShowHomeButton | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-    | NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
-    | RestoreOnStartup | Open the new tab page (5) | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) |
-    | HTTPSOnlyMode | Enabled | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
-    | DefaultPopupsSetting | Do not allow popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
-    | PasswordManagerEnabled | Disabled | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) |
-    | AutofillAddressEnabled | Disabled | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) |
-    | AutofillCreditCardEnabled | Disabled | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) |
-    | TrackingPrevention | Balanced (2) | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) |
-    | DefaultSearchProviderEnabled | Enabled | [Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) |
-    | DefaultSearchProviderName | Microsoft Bing | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) |
-    | DefaultSearchProviderSearchURL | https://www.bing.com/search?q | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) |
-    | SearchSuggestEnabled | Disabled | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) |
-    | NetworkPredictionOptions | Don't predict (2) | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) |
-    | ImportAutofillFormData | Disabled | [Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) |
-    | ImportSavedPasswords | Disabled | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) |
-    | ImportBrowsingHistory | Disabled | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) |
-    | ImportCookies | Disabled | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) |
-    | ImportExtensions | Disabled | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) |
-    | ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" | [Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) |
-    | ExtensionAllowedTypes | "extension", "theme" | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
-    | ExtensionInstallSources | https://corp.contoso.com/ | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) |
-    | DefaultDownloadDirectory | $ | [Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) |
-    | PromptForDownloadLocation | Enabled | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) |
-    | DownloadRestrictions | Block malicious downloads and dangerous file types | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) |
-    | HubsSidebarEnabled | Disabled | [Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) |
-    | ShowMicrosoftRewards | Disabled | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) |
-    | EdgeShoppingAssistantEnabled | Disabled | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) |
-    | EdgeWorkspacesEnabled | Enabled | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) |
-    | FavoritesBarEnabled | Enabled | [Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) |
-    | AllowDeletingBrowserHistory | Enabled | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) |
+| Name | Value | Documentation |
+|------|--------|----------------|
+| HomepageLocation | `https://portal.company.com` | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
+| ShowHomeButton | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
+| NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
+| RestoreOnStartup | Open the new tab page (5) | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) |
+| HTTPSOnlyMode | Enabled | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
+| DefaultPopupsSetting | Do not allow popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
+| PasswordManagerEnabled | Disabled | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) |
+| AutofillAddressEnabled | Disabled | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) |
+| AutofillCreditCardEnabled | Disabled | [Enable Autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) |
+| TrackingPrevention | Balanced (2) | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) |
+| DefaultSearchProviderEnabled | Enabled | [Enable the default search provider](/deployedge/microsoft-edge-browser-policies/defaultsearchproviderenabled) |
+| DefaultSearchProviderName | Microsoft Bing | [Default search provider name](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidername) |
+| DefaultSearchProviderSearchURL | https://www.bing.com/search?q={searchTerms} | [Default search provider search URL](/deployedge/microsoft-edge-browser-policies/defaultsearchprovidersearchurl) |
+| SearchSuggestEnabled | Disabled | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) |
+| NetworkPredictionOptions | Don't predict (2) | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) |
+| ImportAutofillFormData | Disabled | [Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) |
+| ImportSavedPasswords | Disabled | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) |
+| ImportBrowsingHistory | Disabled | [Allow importing of browsing history](/deployedge/microsoft-edge-browser-policies/importhistory) |
+| ImportCookies | Disabled | [Allow importing cookies](/deployedge/microsoft-edge-browser-policies/importcookies) |
+| ImportExtensions | Disabled | [Allow importing of extension](/deployedge/microsoft-edge-browser-policies/importextensions) |
+| ExtensionInstallBlocklist | "external_component", "external_pref", "external_registry" | [Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) |
+| ExtensionAllowedTypes | "extension", "theme" | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
+| ExtensionInstallSources | https://corp.contoso.com/* | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) |
+| DefaultDownloadDirectory | ${user_home}/Downloads/Edge | [Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) |
+| PromptForDownloadLocation | Enabled | [Ask where to save downloaded files](/deployedge/microsoft-edge-browser-policies/promptfordownloadlocation) |
+| DownloadRestrictions | Block malicious downloads and dangerous file types | [Allow download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) |
+| HubsSidebarEnabled | Disabled | [Show Hubs Sidebar](/deployedge/microsoft-edge-browser-policies/hubssidebarenabled) |
+| ShowMicrosoftRewards | Disabled | [Show Microsoft Rewards experiences](/deployedge/microsoft-edge-browser-policies/showmicrosoftrewards) |
+| EdgeShoppingAssistantEnabled | Disabled | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) |
+| EdgeWorkspacesEnabled | Enabled | [Edge Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) |
+| FavoritesBarEnabled | Enabled | [Show favorites bar](/deployedge/microsoft-edge-browser-policies/favoritesbarenabled) |
+| AllowDeletingBrowserHistory | Enabled | [Enable deleting browser and download history](/deployedge/microsoft-edge-browser-policies/allowdeletingbrowserhistory) |
 
 8. Select **Next**.  
 9. For **Assignments**, assign to **SEB-Level1-Users** group.  
