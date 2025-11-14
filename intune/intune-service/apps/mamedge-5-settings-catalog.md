@@ -332,8 +332,8 @@ Level 1 establishes foundational browser protections for enrolled macOS devices 
 3. In the **Create a profile** window, verify that **Platform** is set to **macOS** (this option is pre-selected and cannot be changed).  
 4. For **Profile type**, choose **Settings catalog**, and then select **Create**.  
 5. On the **Basics** tab, enter:  
-   - **Name:** Level 1 – Enterprise basic security – macOS Settings Catalog  
-   - **Description:** Foundational browser configuration for Microsoft Edge on macOS with core security and privacy controls.  
+   - **Name:** Edge macOS Level 1 Basic  
+   - **Description:** Foundational browser configuration for Microsoft Edge addressing gap analysis findings (Certificate management, network policies, system integration)
 6. Select **Next**.  
 7. On the **Configuration settings** tab, select **+ Add settings**.  
 8. In the **Settings picker**, locate each setting using one of the following options:  
@@ -342,9 +342,8 @@ Level 1 establishes foundational browser protections for enrolled macOS devices 
 9. Configure each setting using the **Value** specified in the table.  
 
 | Category | Setting | Value | Documentation |
-|--------------------|---------|-------|----------------|
+|----------|---------|--------|----------------|
 | Microsoft Edge | Configure Microsoft Defender SmartScreen | Enabled | [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-browser-policies/smartscreenenabled) |
-| Microsoft Edge | Configure Microsoft Defender SmartScreen to block potentially unwanted apps | Enabled | [Configure Microsoft Defender SmartScreen to block potentially unwanted apps](/deployedge/microsoft-edge-browser-policies/smartscreenpuadetectionenabled) |
 | Microsoft Edge | Configure Automatic HTTPS | Enabled | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
 | Microsoft Edge | Default pop-up window setting | Do not allow any site to show popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
 | Microsoft Edge | DNS interception checks enabled | Enabled | [DNS interception checks enabled](/deployedge/microsoft-edge-browser-policies/dnsinterceptionchecksenabled) |
@@ -353,7 +352,7 @@ Level 1 establishes foundational browser protections for enrolled macOS devices 
 | Microsoft Edge | Allow QUIC protocol | Disabled for security | [Allow QUIC protocol](/deployedge/microsoft-edge-browser-policies/quicallowed) |
 | Microsoft Edge | Configure the home page URL | https://portal.company.com | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
 | Microsoft Edge | Show Home button on toolbar | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-| Microsoft Edge | Configure the new tab page URL | https://portal.company.com | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
+| Microsoft Edge | Configure the new tab page URL | https://portal.company.com | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) |
 | Microsoft Edge | Hide the First-run experience and splash screen | Enabled | [Hide the First-run experience](/deployedge/microsoft-edge-browser-policies/hidefirstrunexperience) |
 | Microsoft Edge | Enable saving passwords to the password manager | Disabled | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) |
 | Microsoft Edge | Enable AutoFill for addresses | Disabled | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) |
@@ -365,7 +364,7 @@ Level 1 establishes foundational browser protections for enrolled macOS devices 
 | Microsoft Edge | Send required and optional diagnostic data | Off (0) | [Send required and optional diagnostic data](/deployedge/microsoft-edge-browser-policies/diagnosticdata) |
 | Microsoft Edge | Allow importing of autofill form data | Disabled | [Allow importing of autofill form data](/deployedge/microsoft-edge-browser-policies/importautofillformdata) |
 | Microsoft Edge | Allow importing of saved passwords | Disabled | [Allow importing of saved passwords](/deployedge/microsoft-edge-browser-policies/importsavedpasswords) |
-| Microsoft Edge Update | Specifies how Microsoft Edge Update handles available updates from Microsoft Edge | automatic-silent-only (automatic-silent-only) = Updates are applied only when they're found by the periodic update check | [UpdatePolicyOverride](/deployedge/microsoft-edge-update-policies#updatedefault) |
+| Microsoft Edge Update | Specifies how Microsoft Edge Update handles available updates from Microsoft Edge | automatic-silent-only (automatic-silent-only) | [UpdatePolicyOverride](/deployedge/microsoft-edge-update-policies#updatedefault) |
 | Microsoft Edge Update | Enable component updates in Microsoft Edge | Enabled | [ComponentUpdatesEnabled](/deployedge/microsoft-edge-update-policies#componentupdatesenabled) |
 
 10. Select **Next**.  
