@@ -598,30 +598,30 @@ Level 1 configuration provides foundational browser security controls while main
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Password single sign-on](https://learn.microsoft.com/en-us/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
-| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](https://learn.microsoft.com/en-us/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
-| EdgeMyApps | true | [Enable EdgeMyApps](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
-| EdgeDefaultHTTPS | true | [Default HTTPS enforced](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
-| EdgeDisableShareUsageData | true | [Disable sharing usage data](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
-| EdgeImportPasswordsDisabled | false | [Disable password import](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) |
-| EdgeProxyPacUrl |  | [Proxy PAC URL](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) |
-| BiometricAuthenticationBeforeFilling | false | [Biometric authentication before filling](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) |
-| PasswordManagerEnabled | false | [Disable password manager](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) |
-| SmartScreenEnabled | true | [SmartScreen enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) |
-| SearchSuggestEnabled | false | [Disable search suggestions](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) |
-| TranslateEnabled | true | [Translate enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#translateenabled) |
-| HideFirstRunExperience | true | [Hide first run experience](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) |
-| SSLErrorOverrideAllowed | true | [SSL error override allowed](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) |
-| DefaultBrowserSettingEnabled | true | [Default browser setting enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) |
-| ExperimentationAndConfigurationServiceControl | 1 | [Experimentation and configuration service control](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) |
-| DefaultPopupsSetting | 2 | [Disable pop-ups](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) |
-| EdgeBrandLogo | true | [Organizational branding – logo](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) |
-| EdgeBrandColor | `#0078d4` | [Organizational branding – color](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) |
-| DefaultSearchProviderEnabled | true | [Default search provider enabled](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) |
-| DefaultSearchProviderName | Preferred Company Search | [Default search provider name](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) |
-| DefaultSearchProviderSearchURL | `https://search.company.com?q={searchTerms}` | [Default search provider search URL](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) |
-| DefaultSearchProviderSuggestURL | `https://search.company.com/suggest?q={searchTerms}` | [Default search provider suggest URL](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) |
-| DefaultSearchProviderKeyword | company | [Default search provider keyword](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) |
+| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
+| EdgeMyApps | true | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
+| EdgeDefaultHTTPS | true | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
+| EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
+| EdgeImportPasswordsDisabled | false | [Disable password import](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) |
+| EdgeProxyPacUrl |  | [Proxy PAC URL](/deployedge/microsoft-edge-mobile-policies#edgeproxypacurl) |
+| BiometricAuthenticationBeforeFilling | false | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) |
+| PasswordManagerEnabled | false | [Disable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) |
+| SmartScreenEnabled | true | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) |
+| SearchSuggestEnabled | false | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) |
+| TranslateEnabled | true | [Translate enabled](/deployedge/microsoft-edge-mobile-policies#translateenabled) |
+| HideFirstRunExperience | true | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) |
+| SSLErrorOverrideAllowed | true | [SSL error override allowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) |
+| DefaultBrowserSettingEnabled | true | [Default browser setting enabled](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) |
+| ExperimentationAndConfigurationServiceControl | 1 | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) |
+| DefaultPopupsSetting | 2 | [Disable pop-ups](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) |
+| EdgeBrandLogo | true | [Organizational branding – logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) |
+| EdgeBrandColor | `#0078d4` | [Organizational branding – color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) |
+| DefaultSearchProviderEnabled | true | [Default search provider enabled](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) |
+| DefaultSearchProviderName | Preferred Company Search | [Default search provider name](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidername) |
+| DefaultSearchProviderSearchURL | `https://search.company.com?q={searchTerms}` | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) |
+| DefaultSearchProviderSuggestURL | `https://search.company.com/suggest?q={searchTerms}` | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) |
+| DefaultSearchProviderKeyword | company | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) |
 
 8. Expand **Edge configuration settings** and configure:
 
