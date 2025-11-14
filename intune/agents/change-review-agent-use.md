@@ -59,7 +59,7 @@ Each suggestion includes columns with these details:
 
 # [**Settings**](#tab/settings)
 
-Use the Settings tab to view details about the agent’s identity, current configuration, and requirements. This includes:
+Use the Settings tab to view details about the agent's identity, current configuration, and requirements. This includes:
 
 - **Agent jobs** - Request types that agent reviews.
 - **Identity** - Details about the agents use of a user account as its identity.
@@ -72,23 +72,23 @@ Use the Settings tab to view details about the agent’s identity, current confi
 
 ## Run the Change Review Agent
 
-Run the agent to refresh recommendations and evaluate new Multi Admin Approval requests. The agent runs until evaluation completes; you can’t stop or pause it.
+Run the agent to refresh recommendations and evaluate new Multi Admin Approval requests. The agent runs until evaluation completes; you can't stop or pause it.
 
-The agent uses the identity and permissions of the assigned Intune admin account. Its operations are limited to the permissions of that account. If the agent doesn’t run for 90 consecutive days, its authentication expires and subsequent runs fail until the identity is renewed.
+The agent uses the identity and permissions of the assigned Intune admin account. Its operations are limited to the permissions of that account. If the agent doesn't run for 90 consecutive days, its authentication expires and subsequent runs fail until the identity is renewed.
 
 The agent doesn't support scheduled runs and must be started manually each time you want to update its results.
 
 **To manually run the Change Review Agent:**
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Agents** > **Change Review Agent**.
-2. Select **Run**, located above the agent’s tab selection.
+2. Select **Run**, located above the agent's tab selection.
 
 
 ## Manage agent suggestions
 
 Use the Change Review Agent node to review and manage (approve or reject) Multi Admin Approval script requests.
 
-To review and manage a request that's been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent’s review for that request. The detailed view is named after the selected suggestion and includes the agent’s recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
+To review and manage a request that's been evaluated by the agent, select an agent suggestion from the **Suggested Next Steps** column in either the *Overview* or *Suggestions* tab. Intune opens a new window showing the detailed results of the agent's review for that request. The detailed view is named after the selected suggestion and includes the agent's recommendation followed by the name of the request. For example, the following image shows the upper part of the review details for a request named *ReputationScoreScript*, which the agent recommends rejecting:
 
 :::image type="content" source="./media/change-review-agent-use/reject.png" alt-text="Screenshot of the details for a rejected request." :::
 
@@ -96,7 +96,7 @@ To review and manage a request that's been evaluated by the agent, select an age
 
 - **Approve** – A low-risk request assessed as safe to approve.
 - **Reject** – A high-risk request that shouldn't be approved.
-- **Needs more info** – The risk couldn’t be fully assessed, and the request requires careful admin review.
+- **Needs more info** – The risk couldn't be fully assessed, and the request requires careful admin review.
 
 When you open an agent suggestion, the review page is divided into two main areas. Each area provides specific information to help you understand the recommendation. 
 
@@ -112,16 +112,16 @@ When you open an agent suggestion, the review page is divided into two main area
   On the left side, this tile displays the following sections and information:
 
   - **Suggested action:**  
-    This section provides a summary of the agent’s review, including key details to help you decide whether to accept or reject the request. It outlines the rationale behind the assessment and includes a brief overview of the script.
+    This section provides a summary of the agent's review, including key details to help you decide whether to accept or reject the request. It outlines the rationale behind the assessment and includes a brief overview of the script.
 
   - **Factors:**
     Factors are the specific details and conditions the agent considered when evaluating the script.
 
   - **Additional resources and feedback:**
 
-    Below the *Factors* section, you’ll find:
+    Below the *Factors* section, you'll find:
     - Links to relevant content for the skills the agent used during evaluation.
-    - A simple feedback system to share your input on the agent’s results.
+    - A simple feedback system to share your input on the agent's results.
 
   - **View request:**
     This button opens a review window for the current request. The review window provides the same options available in the *Multi Admin Approval* node of the admin center
@@ -133,7 +133,9 @@ When you open an agent suggestion, the review page is divided into two main area
 
 ## Agent logs
 
-Security Copilot logs include all agent management actions and permission failures. Logs don’t include recommendation details or completion times.
+Security Copilot logs include all agent management actions and permission failures. Logs don't include recommendation details or completion times.
+
+[!INCLUDE [errors](includes/errors.md)]
 
 ## Related content
 
