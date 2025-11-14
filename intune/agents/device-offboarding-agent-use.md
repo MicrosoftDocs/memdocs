@@ -21,7 +21,7 @@ This article provides sample responses to show how the agent helps with device o
 
 ## Run the agent
 
-To start using the Device Offboarding Agent, first run an evaluation of your device inventory. This action resets the agent's suggestions and status.
+To start using the Device Offboarding Agent, first run an evaluation of your device inventory. This action resets the agent's suggestions and status. The agent doesn't persist suggestions across runs; re-running clears previous recommendations.
 
 To manually run the Device Offboarding Agent:
 
