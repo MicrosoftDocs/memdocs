@@ -11,10 +11,9 @@ While the agent run might fail due to insufficient SCUs, there are other possibl
 
 ### The agent doesn't provide accurate suggestions
 
-In this case, the agent might not have enough data to generate accurate suggestions or its settings might not align with your organization's environment.
+In this case, the agent may not have enough data to generate accurate suggestions, or its settings might not fully align with your organization's environment.
 
-To help us improve the agent's suggestions, consider providing feedback by using the like/dislike buttons :::image type="icon" source="../icons/feedback-buttons.svg" border="false"::: available in each suggestion.
-
+To help improve future suggestions, use the like/dislike buttons :::image type="icon" source="../icons/feedback-buttons.svg" border="false"::: available on each suggestion to share your feedback.
 
 ###  You don't have access to this agent - Licenses
 
