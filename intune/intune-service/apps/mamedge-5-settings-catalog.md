@@ -393,18 +393,18 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 11. Configure each setting using the **Value** specified in the table.
 
 | Category | Setting | Value | Documentation |
-|--------------------|---------|-------|----------------|
+|----------|---------|--------|----------------|
 | Microsoft Edge | Enhance the security state in Microsoft Edge | Strict | [Enhance the security state in Microsoft Edge](/deployedge/microsoft-edge-browser-policies/enhancesecuritymode) |
-| Microsoft Edge | Configure InPrivate mode availability | Disabled (1) = InPrivate mode disabled | [Configure InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) |
+| Microsoft Edge | Configure InPrivate mode availability | Disabled (1) | [Configure InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) |
 | Microsoft Edge | Control which extensions cannot be installed | ["*"] | [Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) |
-| Microsoft Edge | Control use of the WebUSB API | BlockWebUsb (2) = Do not allow any site to request access to USB devices via the WebUSB API | [Control use of the WebUSB API](/deployedge/microsoft-edge-browser-policies/defaultwebusbguardsetting) |
-| Microsoft Edge | Control use of the WebHID API | BlockWebHid (2) = Do not allow any site to request access to HID devices via the WebHID API | [Control use of the WebHID API](/deployedge/microsoft-edge-browser-policies/defaultwebhidguardsetting) |
-| Microsoft Edge | Control where developer tools can be used | DeveloperToolsDisallowed (2) = Don't allow using the developer tools | [Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) |
-| Microsoft Edge | Control the availability of developer mode on extensions page | Disallow (1) = Do not allow the usage of developer mode on extensions page | [Control the availability of developer mode on extensions page](/deployedge/microsoft-edge-browser-policies/extensiondevelopermodesettings) |
+| Microsoft Edge | Control use of the WebUSB API | BlockWebUsb (2) | [Control use of the WebUSB API](/deployedge/microsoft-edge-browser-policies/defaultwebusbguardsetting) |
+| Microsoft Edge | Control use of the WebHID API | BlockWebHid (2) | [Control use of the WebHID API](/deployedge/microsoft-edge-browser-policies/defaultwebhidguardsetting) |
+| Microsoft Edge | Control where developer tools can be used | DeveloperToolsDisallowed (2) | [Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) |
+| Microsoft Edge | Control the availability of developer mode on extensions page | Disallow (1) | [Control the availability of developer mode on extensions page](/deployedge/microsoft-edge-browser-policies/extensiondevelopermodesettings) |
 | Microsoft Edge | Enable Microsoft Defender SmartScreen DNS requests | Enabled | [Enable Microsoft Defender SmartScreen DNS requests](/deployedge/microsoft-edge-browser-policies/smartscreendnsrequestsenabled) |
 | Microsoft Edge | Shopping in Microsoft Edge Enabled | Disabled | [Shopping in Microsoft Edge Enabled](/deployedge/microsoft-edge-browser-policies/edgeshoppingassistantenabled) |
 | Microsoft Edge | Edge Wallet E-Tree Enabled | Disabled | [Edge Wallet E-Tree Enabled](/deployedge/microsoft-edge-browser-policies/edgewalletetreeenabled) |
-| Microsoft Edge | Enable Microsoft Bing trending suggestions in the address bar | Disabled | [Enable Microsoft Bing trending suggestions in the address bar](/deployedge/microsoft-edge-browser-policies/addressbartrendingsuggestenabled) |
+| Microsoft Edge | Enable Microsoft Bing trending suggestions in the address bar | Disabled | [Enable Microsoft Bing trending suggestions](/deployedge/microsoft-edge-browser-policies/addressbartrendingsuggestenabled) |
 
 12. Select **Next**.  
 13. For **Assignments**, assign to **SEB-Level2-Devices** group.  
@@ -431,7 +431,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 11. Configure each setting using the **Value** specified in the table.
 
 | Category | Setting | Value | Documentation |
-|--------------------|---------|-------|----------------|
+|----------|---------|--------|----------------|
 | Microsoft Edge | Configure InPrivate mode availability | InPrivate mode forced (2) | [Configure InPrivate mode availability](/deployedge/microsoft-edge-browser-policies/inprivatemodeavailability) |
 | Microsoft Edge | Define a list of allowed URLs | ["*.company.com","*.microsoft.com","*.office.com"] | [Define a list of allowed URLs](/deployedge/microsoft-edge-browser-policies/urlallowlist) |
 | Microsoft Edge | Block access to a list of URLs | ["*"] | [Block access to a list of URLs](/deployedge/microsoft-edge-browser-policies/urlblocklist) |
@@ -443,15 +443,15 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 | Microsoft Edge | Enable printing | Disabled | [Enable printing](/deployedge/microsoft-edge-browser-policies/printingenabled) |
 | Microsoft Edge | Configure clipboard | [] | [Configure clipboard](/deployedge/microsoft-edge-browser-policies/clipboardallowedforurls) |
 | Microsoft Edge | Enable use of ephemeral profiles | Enabled | [Enable use of ephemeral profiles](/deployedge/microsoft-edge-browser-policies/forceephemeralprofiles) |
-| Microsoft Edge | Manage exposure of local IP addressess by WebRTC | [] | [Manage exposure of local IP addressess by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalipsallowedurls) |
+| Microsoft Edge | Manage exposure of local IP addresses by WebRTC | [] | [Manage exposure of local IP addresses by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalipsallowedurls) |
 | Microsoft Edge | Control which extensions are installed silently | [] | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) |
-| Microsoft Edge | Configure allowed extension types | extension (extension) = Extension | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
+| Microsoft Edge | Configure allowed extension types | extension (extension) | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
 | Microsoft Edge | Configure tracking prevention exceptions for specific sites | *.company.com | [Configure tracking prevention exceptions for specific sites](/deployedge/microsoft-edge-browser-policies/allowtrackingforurls) |
 | Microsoft Edge | Allow media autoplay for websites | Disabled | [Allow media autoplay for websites](/deployedge/microsoft-edge-browser-policies/autoplayallowed) |
 | Microsoft Edge | Allow or block video capture | Disabled | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) |
 | Microsoft Edge | Allow or block audio capture | Disabled | [Allow or block audio capture](/deployedge/microsoft-edge-browser-policies/audiocaptureallowed) |
-| Microsoft Edge | Default notification setting | BlockNotifications (2) = Don't allow any site to show desktop notifications | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
-| Microsoft Edge | Default geolocation setting | BlockGeolocation (2) = Don't allow any site to track users' physical location | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
+| Microsoft Edge | Default notification setting | BlockNotifications (2) | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
+| Microsoft Edge | Default geolocation setting | BlockGeolocation (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
 | Microsoft Edge | Default sensors setting | Do not allow any site to access sensors | [Default sensors setting](/deployedge/microsoft-edge-browser-policies/defaultsensorssetting) |
 
 12. Select **Next**.  
