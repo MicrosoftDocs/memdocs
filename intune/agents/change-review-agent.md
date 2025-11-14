@@ -63,7 +63,7 @@ The agent analyzes these signals to assess the potential risk associated with ea
 > - [!INCLUDE [plugin-intune](includes/plugin-intune.md)]
 > - [!INCLUDE [plugin-entra](includes/plugin-entra.md)]
 > - [!INCLUDE [plugin-defender-xdr](includes/plugin-defender-xdr.md)]
-> - [!INCLUDE [plugin-defender-ti](includes/plugin-defender-ti.md)]
+> - [!INCLUDE [plugin-threat-intelligence](includes/plugin-threat-intelligence.md)]
 >
 > [Learn more about plugins](https://go.microsoft.com/fwlink/?linkid=2316474).
 
