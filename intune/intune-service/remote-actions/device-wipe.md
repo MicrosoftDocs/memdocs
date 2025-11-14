@@ -109,13 +109,16 @@ To factory reset a Zebra Android device, use one of the following methods:
       - If the disk is BitLocker-encrypted, it remains encrypted after the wipe.
       - Uses the [doWipePersistUserData](/windows/client-management/mdm/remotewipe-csp#dowipepersistuserdata) CSP node.
     - **Wipe device, and continue to wipe even if device loses power**
-      - Deletes all the user data and overwrites the free space. After secure wipe completion, the disk is BitLocker-decrypted (if applicable), and the device is reset to factory settings.
+      - Resets the device to factory settings, deleting all user data, MDM policies, and settings.
+      - It overwrites the free space to prevent data recovery.
       - Ensures the wipe continues even if the device loses power, preventing interruption—ideal for high-security scenarios such as lost or stolen devices.
+      - After the wipe is completed, the disk is BitLocker-decrypted (if applicable).
       - Uses the [doWipeProtected](/windows/client-management/mdm/remotewipe-csp#dowipeprotected) CSP node.
         > [!IMPORTANT]
         > This option can prevent some devices from starting up again. The wipe process may interfere with boot recovery or firmware protections, leaving the device unrecoverable. Use only on corporate-owned devices where full data destruction is required and recovery procedures are in place.
     - **No options selected**
-      - Resets the device to factory settings, deleting all user data, MDM policies, and settings. After the wipe is completed, the disk is BitLocker-decrypted (if applicable). 
+      - Resets the device to factory settings, deleting all user data, MDM policies, and settings.
+      - After the wipe is completed, the disk is BitLocker-decrypted (if applicable). 
       - If the wipe is interrupted, the device attempts to roll back to its previous state. If rollback fails, the device may become unusable and require a full Windows reinstallation.
       - Uses the [doWipe](/windows/client-management/mdm/remotewipe-csp#dowipe) CSP node.
 
