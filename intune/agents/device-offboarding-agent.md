@@ -68,7 +68,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 > The agent doesn't support:
 > - Hybrid Entra-joined Windows devices
-> - Windows devices
+> - Windows Autopilot devices
 > - Shared devices
 > - Microsoft Teams Phones
 :::column-end:::

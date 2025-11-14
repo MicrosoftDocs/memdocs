@@ -2,15 +2,19 @@
 author: paolomatarazzo
 ms.author: paoloma
 ms-topic: include
-ms.date: 10/16/2025
+ms.date: 11/14/2025
 ---
 
 ## Common errors
 
 While the agent run might fail due to insufficient SCUs, there are other possible errors that can occur. This section lists some common error messages you might encounter while using the agent, along with explanations and suggested actions.
 
-> [!TIP]
-> For feedback or to report other errors not listed here, use the thumbs-up/thumbs-down feedback buttons in this article.
+### The agent doesn't provide accurate suggestions
+
+In this case, the agent might not have enough data to generate accurate suggestions or its settings might not align with your organization's environment.
+
+To help us improve the agent's suggestions, consider providing feedback by using the like/dislike buttons (:::image type="icon" source="../icons/feedback-buttons.svg" border="false":::) available in each suggestion.
+
 
 ###  You don't have access to this agent - Licenses
 
