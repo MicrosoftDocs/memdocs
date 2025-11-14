@@ -28,7 +28,7 @@ This step defines three progressive ACP configurations per platform, Level 1 (Ba
 Windows app configuration policies provide browser customization through managed app settings.
 
 > **Microsoft Documentation:**
-> - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-browser-policies)
+> - [Microsoft Edge Browser Policies](/deployedge/microsoft-edge-policies)
 > - [Windows App Configuration Policies](app-configuration-policies-overview.md)
 > - [Managed App Configuration for Windows](app-configuration-policies-managed-app.md)
 
@@ -59,7 +59,7 @@ Level 1 configuration provides foundational browser security controls while main
     |------|-------|---------------|
     | HomepageLocation | `https://portal.company.com` | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
     | ShowHomeButton | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-    | NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) |
+    | NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
     | RestoreOnStartup | Open the new tab page (5) | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) |
     | HTTPSOnlyMode | Enabled | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
     | DefaultPopupsSetting | Do not allow popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
@@ -114,7 +114,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
     |------|-------|---------------|
     | HomepageLocation | `https://portal.company.com` | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
     | ShowHomeButton | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-    | NewTabPageLocation | https://portal.company.com | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) |
+    | NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
     | RestoreOnStartup | Open the new tab page (5) | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) |
     | HTTPSOnlyMode | Enabled | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
     | DefaultPopupsSetting | Do not allow popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
@@ -150,8 +150,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
     | ExtensionInstallAllowlist | [] | [Allow specific extensions to be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) |
     | ExtensionInstallForcelist | [] | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) |
     | ExtensionSettings | {"*":{"installation_mode":"blocked"}} | [Configure extension management settings](/deployedge/microsoft-edge-browser-policies/extensionsettings) |
-    | NativeMessagingHostAllowlist | [] | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlistt) |
-    | NativeMessagingHostBlocklist | ["*"] | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) |
+    | NativeMessagingAllowlist | [] | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlist) |
+    | NativeMessagingBlocklist | ["*"] | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) |
     | AutoSelectCertificateForUrls | ["*.company.com"] | [Automatically select client certificates for these sites](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) |
     | WebRtcUdpPortRange | 10000:11000 | [Restrict the range of local UDP ports used by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtcudpportrange) |
     | DefaultImagesSetting | Allow images (1) | [Default images setting](/deployedge/microsoft-edge-browser-policies/defaultimagessetting) |
@@ -167,8 +167,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
     | VideoCaptureAllowed | Disabled | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) |
     | DefaultNotificationsSetting | Block (2) | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
     | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
-    | UsbAllowDevicesForUrls | [] | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usballowdevicesforurls) |
-    | UsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) |
+    | WebUsbAllowDevicesForUrls | [] | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusballowdevicesforurls) |
+    | WebUsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusbblockedforurls) |
     | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) | [Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) |
 
 8. Select **Next**.  
@@ -195,7 +195,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
     |------|-------|---------------|
     | HomepageLocation | `https://portal.company.com` | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
     | ShowHomeButton | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-    | NewTabPageLocation | https://portal.company.com | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) |
+    | NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
     | RestoreOnStartup | Open the new tab page (5) | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) |
     | HTTPSOnlyMode | Enabled | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
     | DefaultPopupsSetting | Do not allow popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
@@ -231,8 +231,8 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
     | ExtensionInstallAllowlist | [] | [Allow specific extensions to be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) |
     | ExtensionInstallForcelist | [] | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) |
     | ExtensionSettings | {"*":{"installation_mode":"blocked"}} | [Configure extension management settings](/deployedge/microsoft-edge-browser-policies/extensionsettings) |
-    | NativeMessagingHostAllowlist | [] | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlistt) |
-    | NativeMessagingHostBlocklist | ["*"] | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) |
+    | NativeMessagingAllowlist | [] | [Control which native messaging hosts users can use](/deployedge/microsoft-edge-browser-policies/nativemessagingallowlist) |
+    | NativeMessagingBlocklist | ["*"] | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) |
     | AutoSelectCertificateForUrls | ["*.company.com"] | [Automatically select client certificates for these sites](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) |
     | WebRtcUdpPortRange | 10000:11000 | [Restrict the range of local UDP ports used by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtcudpportrange) |
     | DefaultImagesSetting | Allow images (1) | [Default images setting](/deployedge/microsoft-edge-browser-policies/defaultimagessetting) |
@@ -244,8 +244,8 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
     | LocalProvidersEnabled | Disabled | [Allow suggestions from local providers](/deployedge/microsoft-edge-browser-policies/localprovidersenabled) |
     | DefaultNotificationsSetting | Block (2) | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
     | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
-    | UsbAllowDevicesForUrls | [] | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usballowdevicesforurls) |
-    | UsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) |
+    | WebUsbAllowDevicesForUrls | [] | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusballowdevicesforurls) |
+    | WebUsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusbblockedforurls) |
     | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) | [Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) |
     | URLAllowlist | ["*.company.com", "*.microsoft.com", "*.office.com"] | [Define a list of allowed URLs](/deployedge/microsoft-edge-browser-policies/urlallowlist) |
     | URLBlocklist | ["*"] | [Block access to a list of URLs](/deployedge/microsoft-edge-browser-policies/urlblocklist) |
@@ -714,7 +714,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | false | [Password single sign-on](https://learn.microsoft.com/en-us/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.PasswordSSO | false | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
 | com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) |
 | EdgeMyApps | false | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
