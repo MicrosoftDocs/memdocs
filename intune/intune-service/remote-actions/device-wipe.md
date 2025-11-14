@@ -105,7 +105,8 @@ To factory reset a Zebra Android device, use one of the following methods:
 4. You can customize the wipe behavior with the following options:
 
     - **Wipe device, but keep enrollment state and associated user account**
-      - Removes all MDM policies but retains user accounts and data. User settings are reset to default, and the device remains enrolled in Intune.
+      - Resets the device to factory settings, but retains all user accounts and data.
+      - User settings are reset to default, MDM policies and settings are removed, but the device remains enrolled in Intune.
       - If the disk is BitLocker-encrypted, it remains encrypted after the wipe.
       - Uses the [doWipePersistUserData](/windows/client-management/mdm/remotewipe-csp#dowipepersistuserdata) CSP node.
     - **Wipe device, and continue to wipe even if device loses power**
