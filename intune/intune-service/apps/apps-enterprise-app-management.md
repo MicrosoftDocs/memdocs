@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune Enterprise Application Management
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
-ms.date: 11/06/2025
+ms.date: 11/14/2025
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -97,21 +97,40 @@ At this time, Intune provides no running application detection.
 
 ### What are the Service Level Objectives (SLOs) for when an app update is available in the catalog?
 
-Service Level Objectives (SLOs) define target timelines for making app updates available in the Enterprise App Catalog. Unlike Service Level Agreements (SLAs), these objectives are guidelines—not guarantees—designed to provide predictability and help you plan for typical app update processing timelines.
+Service Level Objectives (SLOs) define target timelines for making app updates available in the Enterprise App Catalog between when Microsoft receives them to when they're made available in the Enterprise App Catalog. Unlike Service Level Agreements (SLAs), these are guidelines, not guarantees. SLOs allow customers to plan typical app update processing timelines.
 
-**Happy Path Apps (Automated Validation):**  
+The SLO measurement window starts at ingestion, the point when the app update is first received from the data source and logged in the EAM system.
+
+#### App Update Process Flow
+
+1. **Ingestion** – App update is received by Microsoft
+2. **Automated Validation** – Compatibility, security, and compliance checks
+3. **Manual Validation** (if needed) – Vendor engagement for additional testing or bypass approval
+4. **Catalog Availability** – App update published to Enterprise App Catalog
+
+#### Automated Validation
+
 Most apps undergo automated validation checks for compatibility, security, and compliance.
-- **Target:** 80–90% of app updates are processed and available in the Intune portal within 24 hours of ingestion
-- **Current Performance:** Average processing time is approximately 70 minutes; maximum observed is approximately 8 hours
 
-**Manual Validation Apps (Bypass Required):**  
-If an app fails automated checks, it moves to manual validation, which requires vendor engagement for additional testing or bypass approval.
-- **Target:** Updates requiring manual vendor testing and bypass are completed within 7 days
-- **Current State:** Average wait time for bypassed apps is approximately 11 days; Microsoft is actively working to reduce this through vendor process improvements and prioritization
+- Target: 80–90% of app updates are processed and available in the Intune portal within 24 hours of ingestion.
+- Current Performance: Average processing time is approximately 70 minutes; maximum observed is approximately 8 hours.
 
-**Exception Handling:**
-- High-usage or critical apps that fail automated validation are prioritized for expedited processing (goal: 48 hours)
-- Apps that fail both automated and manual validation don't meet SLO and are flagged as unsupported
+#### Manual Validation Apps (Bypass Required)
+
+If an app fails automated checks, it moves to manual validation. Automated validation includes:
+
+- Detonation: Testing installation and uninstallation processes
+- Scan: Malware and virus detection checks
+
+When an app fails these automated checks, vendor engagement is required for additional testing or bypass approval. The 7-day SLO accounts for vendor turnaround time, which is outside Microsoft's direct control.
+
+- Target: Updates requiring manual vendor testing and bypass are completed within 7 days.
+- Current State: Average wait time for bypassed apps is approximately 11 days. Microsoft is actively working to reduce this through vendor process improvements and prioritization.
+
+#### Exception Handling
+
+- High-usage or critical apps that fail automated validation are prioritized for expedited processing (goal: 48 hours).
+- Apps that fail both automated and manual validation don't meet SLO and are flagged as unsupported.
 
 ### How many applications are in the catalog?
 
