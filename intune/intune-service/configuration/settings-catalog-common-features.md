@@ -1,9 +1,9 @@
 ---
 title: Common tasks and features in the settings catalog
-description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built-in settings instead of plist files for macOS devices.
+description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/11/2025
+ms.date: 11/10/2025
 ms.topic: how-to
 ms.reviewer: laarrizz, mayurjadhav, beflamm
 ms.collection:
@@ -41,17 +41,17 @@ Previously, to configure Google Chrome settings on Windows devices, you created 
 
 For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](settings-catalog-configure-edge.md).
 
-## Enable recovery lock on macOS devices
+## Manage AI features on Android devices
 
-<!-- ms.reviewer: beflamm -->
+<!-- ms.reviewer: cchristenson -->
 
 This feature applies to:
 
-- macOS
+- Android Enterprise
 
-You can configure Recovery Lock on your macOS devices. When you enable Recovery Lock, users are prompted for a password when they try to access the recovery partition environment on the device. This feature helps prevent unauthorized users from reinstalling or wiping the device.
+There are features and built-in settings to help you manage AI features on Android Enterprise devices. You can block AI websites in web browser apps, block Screen-driven AI experiences, and disable the on-device AI system app.
 
-For more information, go to [Protect macOS devices using Recovery Lock with Microsoft Intune](settings-catalog-recovery-lock.md).
+For more information, go to [Manage AI features on Android devices](../../solutions/ai/manage-ai-android.md).
 
 ## Add universal printers
 
@@ -108,7 +108,7 @@ On macOS, you can use property list (plist) files to configure features and sett
 
   Previously, you had to [use a property list (plist) file to configure these features for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
-Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then we recommend you continue using the [preference file](preference-file-settings-macos.md).
+Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then it's recommended to continue using the [preference file](preference-file-settings-macos.md).
 
 ## Related content
 

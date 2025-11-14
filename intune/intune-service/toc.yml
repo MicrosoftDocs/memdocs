@@ -1236,11 +1236,8 @@ items:
               displayName: gpo, windows
               href: ./configuration/settings-catalog-restrict-usb.md
             - name: Configure ADMX
-              displayName: gpo, admx, windows, settings catalog
+              displayName: gpo, admx, windows
               href: ./configuration/administrative-templates-windows.md
-            - name: Configure recovery lock on macOS
-              displayName: gpo, admx, macos
-              href: ./configuration/settings-catalog-recovery-lock.md
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./configuration/administrative-templates-import-custom.md
@@ -2027,6 +2024,8 @@ items:
 
   - name: Scenario-based guidance
     items:
+    - name: Manage AI on Android
+      href: ../solutions/ai/manage-ai-android.md
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
     - name: Frontline worker (FLW) device management

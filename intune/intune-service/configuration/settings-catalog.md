@@ -3,7 +3,7 @@ title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/11/2025
+ms.date: 09/25/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
@@ -45,16 +45,17 @@ This feature applies to:
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
 
-  With the settings catalog, you can:
+  Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../protect/updates/apple.md), passcode restrictions, and more.
 
-  - Configure Recovery Lock to help protect your devices against unauthorized reinstallation and wiping. For more information, see [Protect macOS devices using Recovery Lock with Microsoft Intune](settings-catalog-recovery-lock.md).
+  You can also use the settings catalog to configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, see:
 
-  - [Use DDM to manage software updates](../protect/updates/apple.md), passcode restrictions, and more. Apple's declarative device management (DDM) is available in the settings catalog.
+  - [Built-in macOS features replacing plist files](settings-catalog-common-features.md#built-in-macos-features-replacing-plist-files)
+  - [Add a property list file to macOS devices using Microsoft Intune](preference-file-settings-macos.md).
 
-  - Configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, see:
+  You can continue using the [preference file](/deployedge/configure-microsoft-edge-on-mac) to:
 
-    - [Built-in macOS features replacing plist files](settings-catalog-common-features.md#built-in-macos-features-replacing-plist-files)
-    - [Add a property list file to macOS devices using Microsoft Intune](preference-file-settings-macos.md).
+  - Configure earlier versions of Microsoft Edge.
+  - Configure Microsoft Edge browser settings that aren't in the settings catalog.
 
 - **Windows**
 
