@@ -109,7 +109,7 @@ For more information about Managed Google Play store layout options, see [Approv
 
 Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
 
-For more information, see [Enterprise App Management overview](../apps/enterprise-app-management.md).
+For more information, see [Enterprise App Management overview](../apps/apps-enterprise-app-management.md).
 
 ### Device configuration
 
