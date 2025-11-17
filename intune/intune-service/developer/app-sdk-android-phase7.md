@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - App Participation Features
 description: Understand App participation features when incorporating Intune mobile app management (MAM) into your Android app.
-ms.date: 06/12/2025
+ms.date: 11/17/2025
 ms.topic: reference
 ms.reviewer: jamiesil
 ms.collection:
@@ -95,17 +95,17 @@ SaveLocation service, String oid);
 
 To determine whether the app should implement the `getIsSaveToLocationAllowedForOID` check, determine if the app supports data egress by reviewing the following table:
 
-| `service` Parameter: `SaveLocation` Enum  Value | Use Case                                                                                                                                                                                                                                                              | Associated OID |
-| - | - | - |
-| `ONEDRIVE_FOR_BUSINESS`                         | The app is saving data to OneDrive.                                                                                                                                                                                                                                   | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `SHAREPOINT`                                    | The app is saving data to Sharepoint.                                                                                                                                                                                                                                 | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `BOX`                                           | The app is saving data to Box.                                                                                                                                                                                                                                        | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `LOCAL`                                         | The app is saving data to an external storage location on the device that **isn't** the app's private storage.                                                                                                                                                       | The external storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
-| `PHOTO_LIBRARY`                                 | The app is saving data to Android local photo storage.                                                                                                                                                                                                                | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
-| `IMANAGE`                                       | The app is saving data to iManage.                                                                                                                                                                                                                                    | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `EGNYTE`                                        | The app is saving data to Egnyte.                                                                                                                                                                                                                                     | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `ACCOUNT_DOCUMENT`                              | The app is saving data to a location that is associated with an account within the app and isn't one of the specific cloud locations specified in this table. *This location should be used to determine if data can be passed between accounts within a multi-identity app.* | An OID for an account that is used for Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `OTHER`                                         | The app is saving data to a location that isn't specified in this table and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`.                                                                                                                                              | The `oid` isn't evaluated for this location and so should be `null`. |
+| `service` Parameter: `SaveLocation` Enum Value | Use Case | Associated OID |
+|-----------------------------------------------|----------|----------------|
+| `ONEDRIVE` | The app is saving data to OneDrive. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `SHAREPOINT` | The app is saving data to SharePoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `BOX` | The app is saving data to Box. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `LOCAL` | The app is saving data to an external storage location on the device that **isn't** the app's private storage. | This storage location isn't considered a cloud service and should always be used with a `null` OID parameter. |
+| `PHOTO_LIBRARY` | The app is saving data to Android local photo storage. | Local photo storage isn't considered a cloud service and should always be used with a `null` OID parameter. |
+| `IMANAGE` | The app is saving data to iManage. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `EGNYTE` | The app is saving data to Egnyte. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `ACCOUNT_DOCUMENT` | The app is saving data to a location associated with an account within the app and isn't one of the specific cloud locations in this table.<br><br>*Use this location to determine whether data can be passed between accounts within a multi-identity app.* | An OID for an account used for Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `OTHER` | The app is saving data to a location not specified in this table and that doesn't meet the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and should be `null`. |
 
 Files placed in private app storage that are either necessary for app
 operation or downloaded temporarily for display are always allowed; no need to check `getIsSaveToLocationAllowedForOID`.
@@ -131,14 +131,14 @@ OpenLocation location, String oid);
 To determine whether the app should implement the `getIsOpenFromLocationAllowedForOID` check, determine if the app supports data ingress by reviewing the following table:
 
 | `location` Parameter: `OpenLocation` Enum Value | Use Case | Associated OID |
-| - | - | - |
-| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `SHAREPOINT` | The app is opening data from Sharepoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `CAMERA` | The app is opening data from the camera. | A `null` value, because the device camera isn't a cloud service. |
-| `LOCAL` | The app is opening data from an external storage location on the device that **isn't** the app's private storage. | Although the external storage isn't a cloud service location, an `oid` parameter is expected because it indicates ownership. <br>  When you open a file from local storage, the file owner must always be considered, because the file owner's save-as policy might permit other identities to open the file: <br> - **For identity-tagged files,** `oid` should be the file owner's identity. <br> - **For files without an identity tag,** `oid` should be `null`. |
-| `PHOTO_LIBRARY` | The app is opening data from Android photo local storage. | The Android local photo storage isn't considered a cloud service and so should always be used with a `null` oid parameter. |
-| `ACCOUNT_DOCUMENT` | The app is opening data from a location that is associated with an account within the app and isn't one of the specific cloud locations specified in this table. *This location should be used to determine if data can be passed between accounts within a multi-identity app.* | An OID for an account that is used for Microsoft Entra authentication. If this account doesn't exist or the OID isn't known use `null`. |
-| `OTHER` | The app is opening data from a location that isn't specified in this table and doesn't satisfy the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and so should be `null`. |
+|------------------------------------------------|----------|----------------|
+| `ONEDRIVE_FOR_BUSINESS` | The app is opening data from OneDrive. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `SHAREPOINT` | The app is opening data from SharePoint. | An OID for an account that is used for both cloud service authentication and Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `CAMERA` | The app is opening data from the device camera. | A `null` value, because the device camera isn't a cloud service. |
+| `LOCAL` | The app is opening data from an external storage location on the device that **isn't** the app's private storage. | Although external storage isn't a cloud service, an `oid` parameter is expected because it indicates ownership.<br><br>• **For identity-tagged files:** `oid` should be the file owner's identity.<br>• **For files without an identity tag:** `oid` should be `null`. |
+| `PHOTO_LIBRARY` | The app is opening data from Android local photo storage. | Local photo storage isn't considered a cloud service and should always be used with a `null` OID parameter. |
+| `ACCOUNT_DOCUMENT` | The app is opening data from a location associated with an account within the app and isn't one of the specific cloud locations in this table.<br><br>*Use this location to determine whether data can be passed between accounts within a multi-identity app.* | An OID for an account used for Microsoft Entra authentication. If this account doesn't exist or the OID isn't known, use `null`. |
+| `OTHER` | The app is opening data from a location not specified in this table and that doesn't meet the criteria for `ACCOUNT_DOCUMENT`. | The `oid` isn't evaluated for this location and should be `null`. |
 
 > [!NOTE]
 > When you check the open policy, `oid` should be the OID of the account associated with the file or cloud service being opened **from** (*not* necessarily the same as the account who is opening the document).
@@ -185,9 +185,9 @@ NotificationRestriction notificationRestriction =
 
 The returned `NotificationRestriction` enum has the following values:
 
-| `NotificationRestriction` Enum | Expected App Behavior  |
-| - | - |
-| `BLOCKED` | The app *mustn't* show any notifications for the account associated with this policy. For *single-identity* apps, the Intune App SDK blocks all notifications automatically, and no extra code is required. |
+| `NotificationRestriction` Enum | Expected App Behavior |
+|--------------------------------|------------------------|
+| `BLOCKED` | The app *mustn't* show any notifications for the account associated with this policy. For single-identity apps, the Intune App SDK blocks all notifications automatically, and no extra code is required. |
 | `BLOCK_ORG_DATA` | The app must show a modified notification that doesn't contain organization data. |
 | `UNRESTRICTED` | The app should show all notifications. |
 
@@ -306,10 +306,10 @@ Follow these steps to use a BackupAgentHelper with Intune MAM:
 2. Have your class extend the MAM equivalent of BackupAgentHelper, FileBackupHelper, and SharedPreferencesBackupHelper.
 
 | Android class | MAM equivalent |
-| - | - |
-| BackupAgentHelper | [MAMBackupAgentHelper] |
-| FileBackupHelper | [MAMFileBackupHelper] |
-| SharedPreferencesBackupHelper | [MAMSharedPreferencesBackupHelper] |
+|---------------|----------------|
+| `BackupAgentHelper` | `MAMBackupAgentHelper` |
+| `FileBackupHelper` | `MAMFileBackupHelper` |
+| `SharedPreferencesBackupHelper` | `MAMSharedPreferencesBackupHelper` |
 
 Following these guidelines leads to a successful multi-identity back up and restore.
 
@@ -455,15 +455,15 @@ public interface MAMComplianceNotification extends MAMUserNotification {
 The `getComplianceStatus()` method returns the result of the compliance remediation attempt as a value from the [MAMCAComplianceStatus] enum.
 
 | Status code | Explanation |
-| - | - |
+|-------------|-------------|
 | `UNKNOWN` | Status is unknown. This status could indicate an unanticipated failure reason. More information might be found in the Company Portal logs. |
 | `COMPLIANT` | Compliance remediation succeeded and the app is now compliant with policy. The MSAL token acquisition should be retried. |
-| `NOT_COMPLIANT` | The attempt to remediate compliance failed. The app isn't compliant and MSAL token acquisition shouldn't be retried until the error condition is corrected. The MAMComplianceNotification includes extra error information. |
-| `SERVICE_FAILURE` | There was a failure while attempting to retrieve compliance data from the Intune Service. More information might be found in the Company Portal logs. |
-| `NETWORK_FAILURE` | There was an error connecting to the Intune Service. The app should try its token acquisition again when the network connection is restored. |
-| `CLIENT_ERROR` | The attempt to remediate compliance failed for some reason related to the client. For example, no token or wrong user. The MAMComplianceNotification includes more error information. |
+| `NOT_COMPLIANT` | The attempt to remediate compliance failed. The app isn't compliant and MSAL token acquisition shouldn't be retried until the error condition is corrected. The `MAMComplianceNotification` includes extra error information. |
+| `SERVICE_FAILURE` | There was a failure while attempting to retrieve compliance data from the Intune service. More information might be found in the Company Portal logs. |
+| `NETWORK_FAILURE` | There was an error connecting to the Intune service. The app should retry its token acquisition when the network connection is restored. |
+| `CLIENT_ERROR` | The attempt to remediate compliance failed due to a client-related issue, such as missing or incorrect user token. The `MAMComplianceNotification` includes more error information. |
 | `PENDING` | The attempt to remediate compliance fails because the service doesn't send the status response before the time limit expires. The app should try its token acquisition again later. |
-| `COMPANY_PORTAL_REQUIRED` | The Company Portal must be installed on the device in order for compliance remediation to succeed. If the Company Portal is already installed on the device, the app needs to be restarted. In this case, a dialog is shown asking the user to restart the app. |
+| `COMPANY_PORTAL_REQUIRED` | The Company Portal must be installed on the device for compliance remediation to succeed. If it is already installed, the app must be restarted. A dialog prompts the user to restart the app. |
 
 If the compliance status is `MAMCAComplianceStatus.COMPLIANT`, the app should reinitiate its original token acquisition (for its own resource).
 
@@ -571,15 +571,15 @@ Most notifications are [MAMUserNotification]s, which provide information specifi
 [MAMEnrollmentNotification] and [MAMComplianceNotification] further extend `MAMUserNotification`, which contain results for attempts to enroll a user/device with the MAM Service and result for attempting to remediate compliance for App Protection CA, respectively.
 
 | Notification type | Notification class | Reason for notification | Applicability | Tips for handling | Thread info |
-| - | - | - | - | - | - |
-| `COMPLIANCE_STATUS` | `MAMComplianceNotification` | Returns the result of a compliance remediation attempt. | Apps that implement App Protection CA must handle this. | - | Nondeterministic |
-| `MAM_ENROLLMENT_RESULT` | `MAMEnrollmentNotification` | Returns the result of an enrollment attempt. | All apps receives this. | - | Nondeterministic |
-| `MANAGEMENT_REMOVED` | `MAMUserNotification` | App is about to become unmanaged. | Apps that use `MAMDataProtectionManager` must handle this. | See [MANAGEMENT_REMOVED]. | Never on UI thread |
-| `REFRESH_APP_CONFIG` | `MAMUserNotification` | App config values might have changed. | Apps that implement app configuration and cache app configuration data must handle this. | Apps must invalidate and update any cached app configuration data. | Nondeterministic |
-| `REFRESH_POLICY` | `MAMUserNotification` | App protection policy might have changed. | Apps that cache app protection policy must handle this. | Apps must invalidate and update any cached app protection policy data. | Nondeterministic |
-| `WIPE_USER_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Apps that use `MAMDataProtectionManager` must handle this **or** `WIPE_USER_AUXILIARY_DATA`. | See [Selective Wipe]. | Never on UI thread |
-| `WIPE_USER_AUXILIARY_DATA` | `MAMUserNotification` | Wipe is about to occur(*). | Only multi-identity apps receive this. <br> Apps that use `MAMDataProtectionManager` must handle this **or** `WIPE_USER_DATA`.  | See [Selective Wipe]. | Never on UI thread |
-| `WIPE_COMPLETED` | `MAMUserNotification` | Wipe has completed. | Always optional. | Delivered after `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`. *If the app reports a failure from its handler for `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`, this notification won't be sent.* | Never on UI thread |
+|-------------------|--------------------|--------------------------|---------------|-------------------|--------------|
+| `COMPLIANCE_STATUS` | `MAMComplianceNotification` | Returns the result of a compliance remediation attempt. | Apps that implement App Protection CA must handle this. | – | Nondeterministic |
+| `MAM_ENROLLMENT_RESULT` | `MAMEnrollmentNotification` | Returns the result of an enrollment attempt. | All apps receive this. | – | Nondeterministic |
+| `MANAGEMENT_REMOVED` | `MAMUserNotification` | App is about to become unmanaged. | Apps that use `MAMDataProtectionManager` must handle this. | See **MANAGEMENT_REMOVED**. | Never on UI thread |
+| `REFRESH_APP_CONFIG` | `MAMUserNotification` | App configuration values might have changed. | Apps that implement app configuration and cache app configuration data must handle this. | Apps must invalidate and refresh any cached app configuration data. | Nondeterministic |
+| `REFRESH_POLICY` | `MAMUserNotification` | App protection policy might have changed. | Apps that cache app protection policy must handle this. | Apps must invalidate and update cached app protection policy data. | Nondeterministic |
+| `WIPE_USER_DATA` | `MAMUserNotification` | Wipe is about to occur (*). | Apps that use `MAMDataProtectionManager` must handle this **or** `WIPE_USER_AUXILIARY_DATA`. | See **Selective Wipe**. | Never on UI thread |
+| `WIPE_USER_AUXILIARY_DATA` | `MAMUserNotification` | Wipe is about to occur (*). | Only multi-identity apps receive this.<br>Apps that use `MAMDataProtectionManager` must handle this **or** `WIPE_USER_DATA`. | See **Selective Wipe**. | Never on UI thread |
+| `WIPE_COMPLETED` | `MAMUserNotification` | Wipe has completed. | Optional for all apps. | Delivered after `WIPE_USER_DATA` or `WIPE_USER_AUXILIARY_DATA`.<br>*If the app reports a failure from its wipe handler, this notification won't be sent.* | Never on UI thread |
 
 (*) Wipes might occur for many reasons, for example:
 
@@ -802,14 +802,14 @@ Also:
   - "Send org data to other apps" to "Policy managed apps".
   - "Receive data from other apps" to "Policy managed apps".
 
-| Scenario | Preconditions | Steps                                                                                                                                                                                                                                                                                                                                                               |
-| - | - |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Save to, fully allowed | "Save copies of org data" policy set to "Allow" | - Navigate to where your app can save data to OneDrive. <br> - Attempt to save a document to OneDrive, to the same managed account logged into your app. <br> - Confirm the save is allowed.                                                                                                                                              |
-| Save to, exempted | - "Save copies of org data" policy set to "Block" <br> - "Allow user to save copies to selected services" policy set to "OneDrive" only | - Navigate to where your app can save data to OneDrive. <br> - Attempt to save a document to OneDrive, to the same managed account logged into your app. <br> - Confirm the save is allowed. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it's blocked.                          |
-| Save to, blocked | "Save copies of org data" policy set to "Block" | - Navigate to where your app can save data to OneDrive. <br> - Attempt to save a document to OneDrive, to the same managed account logged into your app. <br> - Confirm the save is blocked. <br> - If your app allows, attempt to save the file to a different cloud storage location and confirm it's blocked.                          |
-| Open from, fully allowed | "Open data into Org documents" policy set to "Allow" | - Navigate to where your app can open data from OneDrive. <br> - Attempt to open a document from OneDrive, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed.                                                                                                                              |
-| Open from, exempted | - "Open data into Org documents" policy set to "Block" <br> - "Allow users to open data from selected services" policy set to "OneDrive" only | - Navigate to where your app can open data from OneDrive. <br> - Attempt to open a document from OneDrive, from the same managed account logged into your app's storage. <br> - Confirm the open is allowed. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it's blocked.    |
-| Open from, blocked | "Open data into Org documents" policy set to "Block" | - Navigate to where your app can open data from OneDrive. <br> - Attempt to open a document from OneDrive, from the same managed account logged into your app's storage. <br> - Confirm the open is blocked. <br> - If your app allows, attempt to open another file from a different cloud storage location and confirm it's blocked. |
+| Scenario | Preconditions | Steps |
+|----------|---------------|--------|
+| Save to, fully allowed | “Save copies of org data” policy set to **Allow** | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is allowed. |
+| Save to, exempted | - “Save copies of org data” policy set to **Block**<br>- “Allow user to save copies to selected services” policy set to **OneDrive** only | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is allowed.<br>- If your app allows it, attempt to save the file to a different cloud storage location and confirm it is blocked. |
+| Save to, blocked | “Save copies of org data” policy set to **Block** | - Navigate to the part of your app where it can save data to OneDrive.<br>- Attempt to save a document to OneDrive using the same managed account logged into your app.<br>- Confirm the save is blocked.<br>- If your app allows it, attempt to save the file to a different cloud storage location and confirm it is blocked. |
+| Open from, fully allowed | “Open data into Org documents” policy set to **Allow** | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app’s storage.<br>- Confirm the open is allowed. |
+| Open from, exempted | - “Open data into Org documents” policy set to **Block**<br>- “Allow users to open data from selected services” policy set to **OneDrive** only | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app’s storage.<br>- Confirm the open is allowed.<br>- If your app allows it, attempt to open another file from a different cloud storage location and confirm it is blocked. |
+| Open from, blocked | “Open data into Org documents” policy set to **Block** | - Navigate to the part of your app where it can open data from OneDrive.<br>- Attempt to open a document from OneDrive using the same managed account logged into your app’s storage.<br>- Confirm the open is blocked.<br>- If your app allows it, attempt to open another file from a different cloud storage location and confirm it is blocked. |
 
 ### Validating notification restrictions
 
@@ -829,10 +829,10 @@ For these tests, install your app and the Intune Company Portal; sign-in with a 
 If your app is multi-identity, also sign-in to your app with an unmanaged account.
 
 | Scenario | Preconditions | Steps |
-| - | - | - |
-| Full content blocked | "Org data notifications" policy set to "Block" | - Trigger your app to fire a notification with no account data. <br> - Confirm this notification doesn't display any content. <br> - Trigger your app to fire a notification with the managed account's data. <br> - Confirm this notification doesn't display any content. <br> - Trigger your app to fire a notification with the unmanaged account's data. <br> - Confirm this notification doesn't display any content. |
-| Partial content blocked | "Org data notifications" policy set to "Block org data" | - Trigger your app to fire a notification with no account data. <br> - Confirm this notification displays its full content. <br> - Trigger your app to fire a notification with the managed account's data. <br> - Confirm this notification redacts the managed account's content. <br> - Trigger your app to fire a notification with the unmanaged account's data. <br> - Confirm this notification displays its full content. |
-| No content blocked | "Org data notifications" policy set to "Allow" |
+|----------|---------------|--------|
+| Full content blocked | “Org data notifications” policy set to **Block** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification doesn't display any content.<br>- Trigger your app to fire a notification with the managed account’s data.<br>- Confirm the notification doesn't display any content.<br>- Trigger your app to fire a notification with the unmanaged account’s data.<br>- Confirm the notification doesn't display any content. |
+| Partial content blocked | “Org data notifications” policy set to **Block org data** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the managed account’s data.<br>- Confirm the notification redacts the managed account’s content.<br>- Trigger your app to fire a notification with the unmanaged account’s data.<br>- Confirm the notification displays its full content. |
+| No content blocked | “Org data notifications” policy set to **Allow** | - Trigger your app to fire a notification with no account data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the managed account’s data.<br>- Confirm the notification displays its full content.<br>- Trigger your app to fire a notification with the unmanaged account’s data.<br>- Confirm the notification displays its full content. |
 
 ### Validating data backup and restore
 
@@ -857,9 +857,9 @@ If your application has a feature that bypasses Android's `Window`-level `FLAG_S
 For these tests, install your app and the Intune Company Portal; sign-in with a managed account before starting the test.
 
 | Scenario | Preconditions | Steps |
-| - | - | - |
-| Screen capture blocked | "Screen capture and Google Assistant" policy set to "Block" | - Navigate to the location in the app that uses the custom FLAG_SECURE code. <br> - Attempt to use that feature. <br> - Confirm the feature is blocked. |
-| Screen capture allowed | "Screen capture and Google Assistant" policy set to "Allow" | - Navigate to the location in the app that uses the custom FLAG_SECURE code. <br> - Attempt to use that feature. <br> - Confirm the feature is allowed. |
+|----------|---------------|--------|
+| Screen capture blocked | “Screen capture and Google Assistant” policy set to **Block** | - Navigate to the part of your app that uses the custom `FLAG_SECURE` code.<br>- Attempt to use that feature.<br>- Confirm the feature is blocked. |
+| Screen capture allowed | “Screen capture and Google Assistant” policy set to **Allow** | - Navigate to the part of your app that uses the custom `FLAG_SECURE` code.<br>- Attempt to use that feature.<br>- Confirm the feature is allowed. |
 
 ### Validating App Protection CA
 
