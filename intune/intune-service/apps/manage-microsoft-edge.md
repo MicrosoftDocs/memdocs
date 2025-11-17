@@ -391,17 +391,6 @@ Organizations can specify dedicated proxy via MDM policy for users to sign in to
 |:---------|:---------|
 |EdgeOneAuthProxy |  The corresponding value is a string <br> **Example** `http://MyProxy.com:8080` |
 
-### iOS Website data store
-
-The website data store in Microsoft Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there's only one persistent website data store in Microsoft Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts can't utilize it. So, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
-
-|Key |Value |
-|:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store is used by the first signed-in account <br>**2** (Default) The website data store is used by work or school account regardless of the sign-in order |
-
-> [!NOTE]
-> With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
-
 ### Microsoft Defender SmartScreen
 
 Microsoft Defender SmartScreen is a feature that helps users avoid malicious sites and downloads. It's enabled by default. Organizations can disable this setting.
