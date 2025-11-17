@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/14/2025
+ms.date: 11/19/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -59,9 +59,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of November 17, 2025
 
-### 
-
-[11.04.2025 brenduns] What's New draft
+### Tenant administration
 
 #### Manage tasks and requests from the centralized Admin tasks node in Microsoft Intune<!-- 3542038 -->
 
@@ -179,6 +177,8 @@ The [Settings Catalog](../configuration/settings-catalog.md) lists all the setti
 There are new settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type):
 
 - **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
+
+For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](/intune/solutions/ai/manage-ai-android).
 
 Applies to:
 
