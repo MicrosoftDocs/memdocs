@@ -96,7 +96,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::image type="icon" source="icons/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-> Passkeys are cryptographic credentials that replace passwords and can sync across devices. They offer strong phishing resistance and simplify sign-in for users. Passkeys are ideal for organizations adopting modern authentication across multiple platforms. 
+> Passkeys are cryptographic credentials that replace passwords and can sync across devices or remain device-bound. Synced passkeys provide cross-device convenience, while device-bound passkeys offer stronger hardware-based security. They deliver strong phishing resistance and simplify sign-in for users, making them ideal for organizations adopting modern authentication across multiple platforms.
 :::column-end:::
 :::row-end:::
 
@@ -162,7 +162,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::image type="icon" source="icons/windows-hello.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-> Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key stored in the TPM and protected by biometrics or a PIN. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
+> Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key that is generated and sealed to the TPM, with access controlled by a PIN or biometric gesture.. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
 :::column-end:::
 :::row-end:::
 
