@@ -80,7 +80,7 @@ The following Intune agents are available:
 
 To learn more, see:
 
-- [Security Copilot agents in Intune](/intune/agents)
+- [Security Copilot agents in Intune](../../agents/index.md)
 
 ## Week of November 10, 2025 (Service release 2511)
 
