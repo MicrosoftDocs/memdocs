@@ -131,7 +131,7 @@ Known issues with Windows Backup for Organizations include:
   - Hybrid Azure AD Join
   - Workplace Join
   - Self-deployment mode
-  - Windows Autopilot for pre-provisioned devices
+  - Technician flow of Windows Autopilot for pre-provisioned devices  
   - Windows Autopilot reset flow
   - Manual enrollment through the Windows Settings app
   - Enrollment via Group Policy
