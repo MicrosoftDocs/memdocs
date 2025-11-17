@@ -61,7 +61,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Tenant administration
 
-#### Manage tasks and requests from the centralized Admin tasks node in Microsoft Intune<!-- 3542038 -->
+#### Manage tasks and requests from the centralized Admin tasks node in Microsoft Intune (public preview)<!-- 3542038 -->
 
 The new **Admin tasks** node in the Intune admin center provides a centralized view to discover, organize, and act on security tasks and user elevation requests. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention—without navigating across multiple nodes.
 
