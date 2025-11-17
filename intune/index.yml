@@ -5,9 +5,9 @@ brand: azure
 
 metadata:
   ms.topic: hub-page
-  author: dougeby
-  ms.author: dougeby
-  ms.date: 11/25/2024
+  author: paolomatarazzo
+  ms.author: paoloma
+  ms.date: 11/17/2025
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
@@ -16,13 +16,13 @@ highlightedContent:
       itemType: overview
       url: ./intune-service/fundamentals/what-is-intune.md
     - title: What's new in Intune
-      itemType: overview
+      itemType: whats-new
       url: ./intune-service/fundamentals/whats-new.md
     - title: Intune Blog and Community
-      itemType: overview
+      itemType: learn
       url: https://aka.ms/IntuneCommunity
     - title: Microsoft Intune Suite add-ons
-      itemType: overview
+      itemType: how-to-guide
       url: ./intune-service/fundamentals/intune-add-ons.md
 
 # productDirectory section (optional)

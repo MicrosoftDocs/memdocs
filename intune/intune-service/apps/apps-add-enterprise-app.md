@@ -1,7 +1,7 @@
 ---
 title: Add an Enterprise App Catalog App to Microsoft Intune
 description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
-ms.date: 06/17/2025
+ms.date: 11/14/2025
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -27,6 +27,10 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 
 > [!NOTE]
 > Enterprise App Catalog apps are supported with Windows Autopilot. Using Windows Autopilot, you can select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions.
+
+## App update availability
+
+Microsoft has established Service Level Objectives (SLOs) to provide predictable timelines for when app updates become available in the Enterprise App Catalog. Most app updates complete automated validation and are available within 24 hours. Updates requiring manual testing typically complete within seven days. For more information about SLOs and processing timelines, see [Enterprise App Management overview](apps-enterprise-app-management.md).
 
 ## Add a Windows catalog app (Win32) to Intune
 

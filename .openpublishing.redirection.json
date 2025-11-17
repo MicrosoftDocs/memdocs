@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/enrollment/enrollment-report-company-portal-abandon.md",
+      "redirect_url": "/intune/intune-service/enrollment/view-enrollment-reports",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/protect/managed-software-updates-ios-macos.md",
       "redirect_url": "/intune/intune-service/protect/updates/apple",
       "redirect_document_id": false

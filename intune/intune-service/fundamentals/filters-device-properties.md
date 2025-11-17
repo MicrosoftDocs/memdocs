@@ -3,7 +3,7 @@ title: Supported filter device and app properties & operators in Microsoft Intun
 description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/06/2025
+ms.date: 11/11/2025
 ms.topic: reference
 ms.reviewer: mattcall
 ms.collection:
@@ -76,6 +76,26 @@ You can use the following device properties in your managed device filter rules:
   - iOS/iPadOS
   - macOS
   - Windows
+
+- **`deviceManagementType` (Device Management Type)**: Create a filter rule based on the Intune device management type. Select from the following values using the `-eq` and `-ne` operators:
+
+  | Value | Supported platforms |
+  |-----------|------------------------|
+  | `Corporate-owned dedicated devices with Entra ID Shared mode` | Android |
+  | `Corporate-owned dedicated devices without Entra ID Shared mode` | Android |
+  | `Corporate-owned with work profile` | Android |
+  | `Corporate-owned fully managed` | Android |
+  | `Personally-owned work profile` | Android |
+  | `AOSP user-associated devices` | Android |
+  | `AOSP userless devices` | Android |
+
+  Example:
+
+  - `(app.deviceManagementType -eq "Corporate-owned dedicated devices without Entra ID Shared mode")`
+
+  This property applies:
+
+  - Android
 
 - **`deviceName` (Device Name)**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -359,7 +379,7 @@ You can use the following app properties in your managed app filter rules:
   - Windows
 
   > [!NOTE]
-  > The `app.deviceModel -startsWith "RealityDevice"` property is in preview and is only supported on the Microsoft Teams app. If your app protection policy is targeted to the iOS/iPadOS platform, it will also apply to visionOS. However, when targeting specific conditional launch settings to visionOS, such as "Min/Max OS version" or "Min app version", you can use the app property `app.deviceModel -startsWith "RealityDevice"` in your managed app filter rules.
+  > The `app.deviceModel -startsWith "RealityDevice"` property is in preview and is only supported on the Microsoft Teams app. If your app protection policy is targeted to the iOS/iPadOS platform, it also applies to visionOS. However, when targeting specific conditional launch settings to visionOS, like **Min/Max OS version** or **Min app version**, you can use the app property `app.deviceModel -startsWith "RealityDevice"` in your managed app filter rules.
 
 - **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
 

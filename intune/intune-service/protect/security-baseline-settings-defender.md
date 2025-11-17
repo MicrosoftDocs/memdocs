@@ -36,7 +36,7 @@ The details that display in this article are based on baseline version you selec
 
 When a new version of a baseline becomes available, it replaces the previous version. Profile instances that you’ve created prior to the availability of a new version:
 
-- Become read-only. You can continue to use those profiles but can't edit them to change their configuration.
+- Become read-only. While you can continue to use those profiles and edit their name, description, and assignments, you can’t modify the configuration of any settings in them.
 - Can be updated to the current version. After you update a profile to the current baseline version, you can edit the profile to modify settings.
 
 To learn more about using security baselines, see:

@@ -3,7 +3,7 @@ title: Create a Group to Manage Users
 description: In this article, you'll use Microsoft Intune to create a group based on existing users.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 06/07/2024
+ms.date: 10/29/2025
 ms.topic: how-to
 ms.reviewer: mattcall
 ms.collection:
@@ -12,14 +12,14 @@ ms.collection:
 
 # Step 3: Create a Group to Manage Users
 
-In this article, you'll use Intune to create a group based on an existing user. Groups are used to manage your users and control your employees' access to your company resources. These resources can be part of your company's intranet or can be external resources, such as SharePoint sites, SaaS apps, or web apps.
+In this article, you use Intune to create a group based on an existing user. Groups are used to manage your users and control your employees' access to your company resources. These resources can be part of your company's intranet or can be external resources, such as SharePoint sites, SaaS apps, or web apps.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
 If you don't have an Intune subscription, [sign up for a free trial account](free-trial-sign-up.md).
 
 >[!NOTE]
->Intune provides pre-created **All Users** and **All Devices** groups in the console with built-in optimizations for your convenience.
+>Intune provides precreated **All Users** and **All Devices** groups in the console with built-in optimizations for your convenience.
 
 ## Prerequisites
 
@@ -37,9 +37,9 @@ If you created an Intune Trial subscription, the account that created the subscr
 
 ## Create a group
 
-You'll create a group that will be used later in this evaluation series. To create a group:
+You create a group that is used later in this evaluation series. To create a group:
 
-1. Once you've opened the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
+1. Once you open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Groups** > **New group**.
 2. In the **Group type** dropdown box, select **Security**.
 3. In the **Group name** field, enter the name for the new group (for example, **Contoso Testers**).
 4. Add a **Group description** for the group.
@@ -48,12 +48,15 @@ You'll create a group that will be used later in this evaluation series. To crea
 
     ![Screenshot of creating a group in Microsoft Intune](./media/quickstart-create-group/quickstart-use-groups-01.png)
 
-7. Click **Select** > **Create**.
+7. Choose **Select** > **Create**.
 
-Once you've successfully created the group, it will appear in the list of **All groups**.
+Once you create the group, it appears in the list of **All groups**.
+
+> [!NOTE]
+> 
+> With the added support for soft-deleting groups by Microsoft Entra, Intune displays those groups as soft deleted in the console when they are in that state. When groups are soft-deleted, their assignments are removed. Any restoration of the groups restores the assignments to those groups.
 
 ## Next steps
-
 In this article, you used Intune to create a group based on an existing user. For more information about adding groups to Intune, see [Add groups to organize users and devices](groups-add.md).
 
 To continue to evaluate Microsoft Intune, go to the next step:
