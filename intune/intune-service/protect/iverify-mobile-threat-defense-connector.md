@@ -13,7 +13,7 @@ ms.collection:
 
 # Set up iVerify Mobile Threat Defense Connector
 
-Microsoft Intune supports use of iVerify as a Mobile Threat Defense solution. When integrated with Intune, iVerify is supported for both enrolled devices (using device compliance) and unenrolled devices (using app protection policies).
+Microsoft Intune supports use of iVerify as a Mobile Threat Defense solution. When integrated with Intune, iVerify is supported for enrolled devices using device compliance and telemetry collected from devices that run the iVerify app.
 
 This article details basic information for using iVerify integration with Intune. For step-by-step guidance to set up and integrate iVerify with Intune, see  the iVerify documentation at [Connecting iVerify Enterprise with Microsoft Intune](https://edr.iverify.io/docs/iverify-portal-guide/Integrations/intune-mtd). To access iVerify content, you must sign in to your iVerify subscription.
 

@@ -14,7 +14,6 @@ ms.date: 11/10/2025
 > - Better Mobile (Android, iOS/iPadOS)
 > - BlackBerry Mobile (CylancePROTECT for Android, iOS/iPadOS)
 > - Check Point Harmony Mobile (Android, iOS/iPadOS)
-> - iVerify Enterprise (Android, iOS/iPadOS)
 > - Jamf (Android, iOS/iPadOS)
 > - Lookout for Work (Android, iOS/iPadOS)
 > - Microsoft Defender for Endpoint (Android, iOS/iPadOS, Windows)

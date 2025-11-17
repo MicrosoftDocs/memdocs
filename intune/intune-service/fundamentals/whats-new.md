@@ -63,7 +63,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Intune support for iVerify as a mobile threat defense partner<!-- 35838315 -->
 
-You can now use iVerify Enterprise as a mobile threat defense partner (MTD) with Intune. Support for iVerify extends to both enrolled and unenrolled devices, and includes the following platforms:
+You can now use iVerify Enterprise as a mobile threat defense partner (MTD) for enrolled devices that run the following platforms:  
 
 - Android 9.0 and later
 -  iOS/iPadOS 15.0 and later
