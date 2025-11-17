@@ -933,10 +933,10 @@ items:
             items:
             - name: CrowdStrike Falcon and Intune integration
               href: ./protect/crowdstrike-falcon-mtd-connector-integration.md
-          - name: Set up Jamf
-            href: ./protect/jamf-mtd-connector.md
           - name: Setup iVerify
             href: ./protect/iverify-mobile-threat-defense-connector.md
+          - name: Set up Jamf
+            href: ./protect/jamf-mtd-connector.md
             items:
             - name: Jamf and Intune integration
               href: ./protect/jamf-mtd-connector-integration.md
