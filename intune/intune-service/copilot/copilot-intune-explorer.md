@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Explore Intune data with natural language and take action
 description: In Microsoft Intune, use Explorer to query your data in natural language and run built-in queries that match your request. Copilot summarizes the results, and provides recommendations and actions based on the query results. You can also create policies that target users and groups in the query results. Use this feature to explore your Intune data, troubleshoot issues, and create custom reports.
-keywords: Security Copilot, Intune, Microsoft Intune, AI, Copilot, explorer, query, data exploration, natural language
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.date: 09/15/2025
+ms.date: 11/11/2025
 ms.update-cycle: 180-days
 ms.topic: get-started
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: ankurgoyal, rashok
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -52,11 +32,11 @@ You can also use the query output to add users or devices to groups, and create 
 
   To learn more about the prerequisites for using Microsoft Copilot in Intune, see [Microsoft Copilot in Intune overview](copilot-intune-overview.md).
 
-- The data you see as you explore is scoped to your Intune permissions. If you don't have permissions to view a resource, then it isn't included in the results.
+- As you explore, the data you see is scoped to your Intune permissions. Some of the data is retrieved from Microsoft Graph using your permissions. If you don't have permissions to view a resource, then it isn't included in the results. Data from Intune and Microsoft Entra are most commonly used.
 
 ## Explore your data
 
-The best way to explore is to ask your specific questions in natural language. The intelligent search helps you find a query that matches your request, and a Copilot summary with a query explanation and suggestions helps you understand and navigate the results.
+The best way to explore is to ask your specific questions in natural language. The intelligent search helps you find a query that matches your request. A Copilot summary with a query explanation and suggestions helps you understand and navigate the results.
 
 There are also built-in examples that help you understand the kinds of questions you can ask. Your search is matched to available query views, with more queries continually being added.
 
@@ -70,26 +50,30 @@ In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), s
 
 In the prompt box, type your request in natural language. When you start typing, a drop-down list of prompts similar to your text is shown. These prompts are built into Intune and list the kinds of questions you can ask.
 
-Select the prompt that best matches your request, or continue typing for more suggestions. For example, start typing `what are the top 5 apps`. As you type, a list of suggestions is shown. Continue typing to make your request more specific, or try different natural language wordings if you aren't finding what you are looking for. Use the feedback input available in the search or in the top right corner of the screen to provide feedback to the Intune team if you can't find what you're looking for.
+Select the prompt that best matches your request, or continue typing for more suggestions. For example, start typing `what are the top 5 apps`. As you type, a list of suggestions is shown. Continue typing to make your request more specific. Or, try different natural language text if you don't find what you're looking for.
 
 :::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-apps-example.png" alt-text="Sample prompt in Copilot Explorer that asks about the top five apps in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-prompt-apps-example.png":::
 
 #### What data can I explore?
-You can explore several Intune resources and the relationships between them. The areas you can ask about along with the queries and query capabilities available will all evolve as we add more data coverage and exploration functionality. The areas you can explore today include:
 
+You can explore several Intune resources and the relationships between them. The areas you can ask about, the queries, and the query capabilities continue to evolve as we add more data coverage and exploration features. The areas you can explore include:
+
+- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
 - App configuration and app protection
 - Apps
+- Audit logs
 - Compliance
 - Device Configuration
 - Device updates
 - Devices (device properties)
-- Windows Autopilot deployments
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- Role based access control (RBAC)
+- Users and groups
+- Windows Autopilot deployments
 
 ### 3 - Use the built-in examples
 
-There are also built-in examples that you can use. You can filter the examples by category to find an example that best matches your request. The examples can also help you understand the types of requests you can make here, as you form your own requests.
+There are also built-in examples that you can use. You can filter the examples by category to find an example that best matches your request. The examples help you understand the types of requests you can make.
 
 :::image type="content" source="./media/copilot-intune-explorer/explorer-prompt-categories.png" alt-text="Select an example or filter the example list by the category in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-prompt-categories.png":::
 
@@ -105,13 +89,13 @@ The **Get results** button runs your query. Copilot summarizes and helps you und
 
 ### 5 - Take action
 
-In the query results, you can export the results and select an item to go to its individual resource page and get more information. If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group to complete management tasks.
+In the query results, you can export the results and select an item that goes to its individual resource page with more information. If your query results are a list of users or devices, you can add them to a group, and target apps and policies to this group.
 
 :::image type="content" source="./media/copilot-intune-explorer/explorer-query-results.png" alt-text="When exploring data, you can export the query results and add users or devices to groups in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-query-results.png":::
 
 When you add to a group, you can select an existing group or create a new group. When finished, a progress report is automatically created. If you want to keep the report, export it now, as the report isn't available again.
 
-In the following example, a query found noncompliant devices that are out of the grace period. These devices are added to a group. Some devices failed to be added to the group, and the **Status detail** shows the reason why. You can use the **Add filters** option to filter the results, like the devices that were successfully added to the group.
+In the following example, a query found noncompliant devices that are past the grace period. These devices are added to a group. Some devices failed to be added to the group, and the **Status detail** shows the reason why. You can use the **Add filters** option to filter the results, like the devices that were successfully added to the group.
 
 :::image type="content" source="./media/copilot-intune-explorer/explorer-add-to-group-report.png" alt-text="When exploring data, add the device query results to a group and view the report status in the Microsoft Intune admin center." lightbox="./media/copilot-intune-explorer/explorer-add-to-group-report.png":::
 

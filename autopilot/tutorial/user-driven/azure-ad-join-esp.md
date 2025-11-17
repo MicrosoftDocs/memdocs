@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra join - Step 5 of 8 - Configure and assign the Enrollment Status Page (ESP)
 description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 5 of 8 - Configure and assign the Enrollment Status Page (ESP).
-ms.date: 09/03/2025
+ms.date: 09/24/2025
 ms.topic: tutorial
 ms.collection:
   - tier1

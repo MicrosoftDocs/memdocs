@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Configure Universal Print policy using settings catalog in Microsoft Intune
 description: Use the settings catalog in Microsoft Intune to create a Universal Print policy for Windows 10/11 client devices. The policy automatically installs printers on your managed devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 05/21/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: laarrizz, mayurjadhav
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -54,7 +36,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 
 - Every printer must be registered in the Universal Print service (UP), which uses Microsoft Entra ID. For more information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration).
 
-- To create the Intune policy, you need the following printer information. Get this information from the Printer Administrator in your organization.  
+- To create the Intune policy, you need the following printer information. Get this information from the Printer Administrator in your organization.
 
   - Device ID
   - Printer shared ID
@@ -156,7 +138,7 @@ For information on the reporting data you can view, go to [Intune reports](../fu
 
 ### Enable tracing
 
-If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation of the universal printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.  
+If the [common issues](#common-issues) (in this article) don't resolve your issue, you can use Fiddler tracing, the Print-Collect script, and `UPPrinterInstaller.exe` to resync the Intune installation of the universal printer. You can review these logs for possible issues. You can also work with the Intune support team to review and analyze these logs.
 
 For more information and specific steps, go to [Universal Print troubleshooting guide - Use PrintCollect, Fiddler, and UPPrinterInstaller](/universal-print/fundamentals/universal-print-troubleshooting-support-howto#use-printcollect-fiddler-and-upprinterinstaller).
 

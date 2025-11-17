@@ -1,35 +1,14 @@
 ---
-# required metadata
-
 title: Walkthrough-Create a settings catalog policy
 description: This tutorial or walkthrough steps through creating and comparing an on-premises Administrative Templates (ADMX) Group Policy and Microsoft Intune cloud-based settings catalog policy. It shows similar settings in on-premises and the Intune settings catalog to create and manage policies for Office, Windows, and Microsoft Edge on Windows 10/11 client devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/21/2025
 ms.topic: tutorial
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mayurjadhav
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
-
-#Customer intent: As an on-premises ADMX Group Policy administrator, I want to learn and use the settings catalog in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows devices.
 ---
 
 # Walkthrough - Create an Intune settings catalog policy and compare with on-premises ADMX
@@ -84,7 +63,7 @@ This feature applies to:
       - The group policy we created with these templates is named **OfficeandEdge**. You'll see this name in the images.
       - The Windows Enterprise administrator computer we use is named the **Admin computer**.
 
-      In most organizations, a domain administrator has two accounts:  
+      In most organizations, a domain administrator has two accounts:
         - A typical domain work account
         - A different domain administrator account used only for domain administrator tasks, like group policy
 
@@ -95,7 +74,7 @@ This feature applies to:
   - Sign in with a Domain Administrator account.
 
   - Add the **RSAT: Group Policy Management Tools**:
-  
+
     1. Open the **Settings** app > **System** > **Add an optional feature** > **View features**.
 
     1. Select **RSAT: Group Policy Management Tools** > **Add**.
@@ -111,7 +90,7 @@ This feature applies to:
 1. Open a Chromium-based web browser, like Microsoft Edge.
 2. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Sign in with the following account:
 
-    **User**: Enter the administrator account of your Microsoft 365 tenant subscription.  
+    **User**: Enter the administrator account of your Microsoft 365 tenant subscription.
     **Password**: Enter its password.
 
 The Intune admin center is focused on device management, and includes Azure services, like Microsoft Entra ID. You might not see the **Microsoft Entra ID** and **Azure** branding, but you're using them.

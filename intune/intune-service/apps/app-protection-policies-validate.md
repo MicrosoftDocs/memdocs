@@ -1,36 +1,14 @@
 ---
-# required metadata
-
-title: Validate your app protection policy setup
-titleSuffix: Microsoft Intune
+title: Validate Your App Protection Policy Setup
 description: Learn how to test that your app protection policy is set up and working correctly in Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 01/06/2025
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
 ms.topic: how-to
-ms.assetid: 15f8a838-0b69-412b-a42e-c6edb61f0cae
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# How to validate your app protection policy setup in Microsoft Intune
+# How to Validate Your App Protection Policy Setup in Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -49,8 +27,8 @@ If testing shows that your app protection policy behavior isn't functioning as e
 
 ### User app protection status
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-3. Select **Apps** > **Monitor** >  **App protection status**, and then select the **Assigned users** tile. 
-4. On the **App reporting** page, select **Select user** to bring up a list of users and groups. 
+3. Select **Apps** > **Monitor** >  **App protection status**, and then select the **Assigned users** tile.
+4. On the **App reporting** page, select **Select user** to bring up a list of users and groups.
 5. Search for and select a user from the list, then choose **Select user**. At the top of the **App reporting** pane, you can see whether the user is licensed for app protection. You can also see whether the user has a license for Microsoft 365 and the app status for all of the user's devices.
 
 ## What to do

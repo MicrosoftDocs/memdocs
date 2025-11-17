@@ -1,26 +1,12 @@
 ---
 title: Managing Elevation Settings for Endpoint Privilege Management
-description: View guidance on how to manage the Endpoint Privilege Management client, including reporting level and default elevation response. 
-keywords:
+description: View guidance on how to manage the Endpoint Privilege Management client, including reporting level and default elevation response.
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/10/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -49,7 +35,7 @@ Use *Windows elevation settings policy* when you want to:
 
 - **Set a Default elevation response** - Set a default response for an *elevation request* of any file that isn't managed by a *Windows elevation rule policy*. For this setting to have an effect, no rule can exist for the application **AND** an end user must *explicitly request* elevation through the *Run with elevated access* right-click menu. By default, this option is set to *Not Configured*. If no setting is configured, the EPM components fall back to their built-in default, which is to **deny all requests**.
 
-  > [!TIP]  
+  > [!TIP]
   > We [recommend the use of *Require support approval*](../protect/epm-plan.md#security-recommendations) or *Deny all requests* as a default elevation response.
 
   Options include:
@@ -67,7 +53,7 @@ Use *Windows elevation settings policy* when you want to:
 
   > [!CAUTION]
   > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking business justifications or credential prompts for elevations, we recommend use of *Deny all requests* or *Require support approval*.
-  
+
 - **Send elevation data for reporting** - This setting controls whether your device shares diagnostic and usage data with Microsoft. Use the *Reporting scope* setting to control the data collected.
 
   Diagnostic data is used by Microsoft to measure the health of the EPM client components. Usage data is used to show you elevations that happen within your tenant. For more information about the types of data and how it's stored, see [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md).
@@ -107,7 +93,7 @@ Use *Windows elevation settings policy* when you want to:
      - **Require user confirmation**: The user receives a simple prompt to confirm their intent to run the file. You can also require more prompts that are available from the *Validation* drop down:
        - **Business justification**: Require the user to enter a justification for running the file. There's no required format for this justification. User input is saved and can be reviewed through logs if the *Reporting scope* includes collection of endpoint elevations.
        - **Windows authentication**: This option requires the user to authenticate using their organization credentials.
-       
+
        > [!CAUTION]
        > The *default elevation response* applies to all files that don't match an elevation rule, as a result the *Require user confirmation* setting allows all files to be elevated by default. If you're not seeking additional auditing or credential prompts, we recommend use of *Deny all requests* or *Require support approval*.
 

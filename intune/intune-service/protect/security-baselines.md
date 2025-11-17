@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Learn about Intune security baselines for Windows devices
 description: Deploy security baselines that have preset and recommended configurations to the Windows devices you manage with Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 02/12/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: juidaewo
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom:
   - intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -33,14 +16,17 @@ ms.collection:
 
 # Use security baselines to help secure Windows devices you manage with Microsoft Intune
 
-With Microsoft Intune’s security baselines, you can rapidly deploy a recommended security posture to your managed Windows devices for Windows security baselines to help you secure and protect your users and devices.
+With Microsoft Intune's security baselines, you can rapidly deploy a recommended security posture to your managed Windows devices for Windows security baselines to help you secure and protect your users and devices.
 
 Even though Windows and Windows Server are designed to be secure out-of-the-box, many organizations still want more granular control over their security configurations. To navigate the large number of controls, organizations often seek guidance on configuring various security features. Microsoft provides this guidance in the form of security baselines.
 
 This feature applies to:
 
-- Windows 10 version 1809 and later
 - Windows 11
+- Windows 10 version 1809 and later
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Intune security baseline overview
 
@@ -50,7 +36,7 @@ The settings in each baseline are device configuration settings like those found
 
 To learn more about why and when you might want to deploy security baselines, see [Windows security baselines](/windows/security/threat-protection/windows-security-configuration-framework/windows-security-baselines) in the Windows security documentation.
 
-You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows 10 or 11. For example, the default configuration of the *Security Baseline for Windows 10 and later* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
+You deploy security baselines to groups of users or devices in Intune, and the settings apply to devices that run Windows. For example, the default configuration of the *Security Baseline for Windows 10 and later* automatically enables BitLocker for removable drives, automatically requires a password to unlock a device, automatically disables basic authentication, and more. When a default value doesn't work for your environment, customize the baseline to apply the settings you need.
 
 > [!NOTE]
 >
@@ -58,19 +44,19 @@ You deploy security baselines to groups of users or devices in Intune, and the s
 >
 > Intune also introduced a new process to help you migrate an existing security baseline profile to the newer baseline version. This new behavior is a one-time process that replaces the normal update behavior when you move from the most recent version of an older profile to a newer version that became available in May 2023 or later.
 
-**Benefits of using baselines**:  
+**Benefits of using baselines**:
 Security baselines can help you to have an end-to-end secure workflow when working with Microsoft 365. Some of the benefits include:
 
 - By default, each security baseline is configured to meet the best practices and recommendations for the settings that affect security. Intune partners with the same Windows security team that creates group policy security baselines. These recommendations are based on guidance and extensive experience.
 - If you're new to Intune, and not sure where to start, security baselines give you an advantage. You can quickly create and deploy a secure profile, knowing that you're helping protect your organization's resources and data.
 - If you currently use group policy, migrating to Intune for management is easier with these baselines. These baselines are natively built into Intune, and include a modern management experience.
 
-**Default settings across multiple baselines**:  
-Separate baseline types, like the MDM security baseline for Windows and the baseline for Microsoft Defender, might include the same settings and use different default values for those settings. Intune can’t determine which configuration is best for you, or even in which environment or scenario you might want to use one baselines default recommendation over another:
+**Default settings across multiple baselines**:
+Separate baseline types, like the MDM security baseline for Windows and the baseline for Microsoft Defender, might include the same settings and use different default values for those settings. Intune can't determine which configuration is best for you, or even in which environment or scenario you might want to use one baselines default recommendation over another:
 
 - It's important to understand the defaults in the baselines you use, and to then modify each baseline to fit your organizational needs.
 - By default, each baseline is preconfigured using the recommendations that are specific to the product it applies to.
-- In some cases, a configuration that Microsoft Defender recommends might not be the default configuration for similar settings when recommended by Windows. In such situations, it’s important to review each setting so you can understand its intent based on the configuration service provider details, and larger scope of the two products.
+- In some cases, a configuration that Microsoft Defender recommends might not be the default configuration for similar settings when recommended by Windows. In such situations, it's important to review each setting so you can understand its intent based on the configuration service provider details, and larger scope of the two products.
 
 In almost all scenarios, the default settings in the security baselines are the most restrictive. You should confirm that these settings don't conflict with other policy settings or features in your environment.
 
@@ -84,7 +70,7 @@ For example, the default settings for firewall configuration might not merge con
 
 The following security baseline instances are available for use with Intune. Use the links to view the settings for recent instances of each baseline.
 
-- **Security Baseline for Windows 10 and later**:  
+- **Security Baseline for Windows 10 and later**:
   - [Version 24H2](security-baseline-settings-mdm-all.md?pivots=mdm-24h2)
   - [Version 23H2](security-baseline-settings-mdm-all.md?pivots=mdm-23h2)
   - [November 2021](security-baseline-settings-mdm-all.md?pivots=november-2021)
@@ -97,7 +83,7 @@ The following security baseline instances are available for use with Intune. Use
 -->
 
 - **Microsoft Defender for Endpoint baseline**:  
-  *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](advanced-threat-protection.md#prerequisites))*.
+  *(To use this baseline your environment must meet the prerequisites for using [Microsoft Defender for Endpoint](microsoft-defender-with-intune.md#prerequisites))*.
   - [Version 24H1](security-baseline-settings-defender.md?pivots=mde-v24h1)
   - [Version 6](security-baseline-settings-defender.md?pivots=atp-december-2020)
   - [Version 5](security-baseline-settings-defender.md?pivots=atp-sept-2020)
@@ -107,7 +93,7 @@ The following security baseline instances are available for use with Intune. Use
   > [!NOTE]
   > The Microsoft Defender for Endpoint security baseline is optimized for physical devices and is currently not recommended for use on virtual machines (VMs) or VDI endpoints. Certain baseline settings can impact remote interactive sessions on virtualized environments. For more information, see [Increase compliance to the Microsoft Defender for Endpoint security baseline](/windows/security/threat-protection/microsoft-defender-atp/configure-machines-security-baseline) in the Windows documentation.
 
-- **Microsoft 365 Apps for Enterprise**:  
+- **Microsoft 365 Apps for Enterprise**:
   - [Version 2306 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=v2023) *Released in November 2023*
   - [May 2023 (Office baseline)](../protect/security-baseline-v2-office-settings.md?pivots=office-may-2023)
 
@@ -119,13 +105,13 @@ The following security baseline instances are available for use with Intune. Use
   - [Microsoft Edge version 80 and later](../protect/security-baseline-settings-edge.md?pivots-edge-april-2020) - April 2020
   - [Preview: Microsoft Edge version 77 and later](../protect/security-baseline-settings-edge.md?pivots=edge-october-2019) - October 2019
 
-- **HoloLens 2 - Advanced security baseline settings**:  
+- **HoloLens 2 - Advanced security baseline settings**:
   - [Version 1 - HoloLens 2 advanced security](../protect/security-baseline-hololens2-advanced.md) - *January 2025*
 
-- **HoloLens 2 - Standard security baseline settings**:  
+- **HoloLens 2 - Standard security baseline settings**:
   - [Version 1 - HoloLens 2 standard security](../protect/security-baseline-hololens2-standard.md) - *January 2025*
 
-- **Windows 365 Security Baseline**:  
+- **Windows 365 Security Baseline**:
   - [Version 24H1](security-baseline-settings-windows-365.md?pivots=win365-24h1)
   - [November 2021](security-baseline-settings-windows-365.md?pivots=win365-nov21)
 
@@ -135,7 +121,7 @@ When you're ready to use the more recent baseline version, you can create new pr
 
 ## About baseline versions and instances
 
-Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows 10/11, *Security Baseline for Windows 10 and later* might receive a new version instance that includes the newest settings.
+Each new version instance of a baseline can add or remove settings or introduce other changes. For example, as new Windows settings become available with new versions of Windows, *Security Baseline for Windows 10 and later* might receive a new version instance that includes the newest settings.
 
 You can view the list of available baselines in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), under **Endpoint security** > **Security baselines**. The list includes:
 
@@ -185,7 +171,7 @@ Migrating from on-premises Active Directory group policies to a pure cloud solut
 
 ### Where can I find details about using or configuring the settings that are available in a security baseline?
 
-Each security baseline manages device configurations by applying the options found in a configuration service provider on a device. For example, settings that apply to Microsoft Defender are taken from the Microsoft Defender CSP. Because Intune is a configuration vehicle for those options and doesn’t determine their functionality or scope, the CSP documentation owns the content for how to configure each option.
+Each security baseline manages device configurations by applying the options found in a configuration service provider on a device. For example, settings that apply to Microsoft Defender are taken from the Microsoft Defender CSP. Because Intune is a configuration vehicle for those options and doesn't determine their functionality or scope, the CSP documentation owns the content for how to configure each option.
 
 Within the Intune security baseline policy UI, Intune provides information text that is taken from the source CSP and provides a link to that CSP. In some cases, the CSP might be part of a larger content set that includes proactive guidance that remains beyond the scope of Intune to include or duplicate in our content. However, Intune does document the list of settings in each security baseline version and its default configuration.
 

@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Zero Trust with Microsoft Intune
 description: Microsoft Intune contributes to a strong Zero Trust strategy and architecture.
-keywords: Zero Trust, security architecture, security strategy, cyber security, enterprise security, devices, device, identity, users, data, applications
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 08/27/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: laurawi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -34,7 +16,7 @@ ms.collection:
 
 # Zero Trust with Microsoft Intune
 
-Microsoft Intune is a mobile device management solution that supports your organization’s Zero Trust journey. 
+Microsoft Intune is a mobile device management solution that supports your organization’s Zero Trust journey.
 
 [Zero Trust](/security/zero-trust/zero-trust-overview) isn’t a product or service. Instead, it’s a modern cybersecurity strategy that assumes no implicit trust - not even within the corporate network. Instead of trusting users, devices, or applications by default, a Zero Trust approach explicitly verifies every access request, continuously assesses risk, and enforces least privilege access across the entire digital estate.
 

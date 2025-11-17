@@ -1,26 +1,12 @@
 ---
 title: Use EPM support approvals for file elevation requests with Intune
 description: Manage support approvals for elevation requests when you use Endpoint Privilege Management for Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
-ms.date: 09/10/2025
+ms.date: 11/13/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
-ms.reviewer: miked"
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -63,7 +49,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
 - **Review of elevation requests**
 
-  An Intune admin must have *view* and *manage* rights for the **Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests.
+  An Intune admin must have *view* and *manage* rights for the **Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests. Admins can only view and manage requests that fall within their configured scope.
 
   To find and respond to requests, these admins use the **Elevation requests** tab of the *Endpoint Privilege Management* page in the admin center. Because Intune doesn't have a way to notify admins about new elevation requests, admins should plan to check the tab regularly for pending requests.
 
@@ -129,7 +115,7 @@ Use the following procedure as guidance for reviewing and managing elevation req
 1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
 
     - **For approvals** - The admin completes the justification dialog and then selects **Yes** to approve the request. Intune sends the approval to the device and the end user is notified via a toast notification that they're able to elevate the application.
-  
+
       The end user can now complete the elevation activity by using the **Run with elevated access** right-click menu of the file.
 
       :::image type="content" source="./media/epm-support-approved/sample-request-approval-dialog.png" alt-text="Image that displays the elevation approval dialog with sample approval justification provided as the reason" lightbox="./media/epm-support-approved/sample-request-approval-dialog.png":::
@@ -159,7 +145,7 @@ For example, when viewing the file properties for an elevation request, you can 
 
 To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use [Security Copilot](/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](../protect/epm-plan.md#prerequisites) for using Endpoint Privilege Management.
 
-If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.  
+If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.
 
 ### Workflow to analyze file requests
 

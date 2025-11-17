@@ -1,15 +1,8 @@
 ---
-title: include file
-description: include file
 author: brenduns
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 10/02/2024
 ms.author: brenduns
-ms.custom: include file
-ms.collection:
-- tier2
-- M365-identity-device-management
 ---
 
 > [!IMPORTANT]

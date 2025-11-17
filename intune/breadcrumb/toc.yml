@@ -53,9 +53,6 @@ items:
     - name: Hotfix
       tocHref: /intune/configmgr/hotfix
       topicHref: /intune/configmgr/hotfix
-  - name: Endpoint analytics
-    tocHref: /intune/analytics/
-    topicHref: /intune/analytics/
   - name: Windows Autopilot
     tocHref: /autopilot/
     topicHref: /autopilot/

@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Enable use of Windows diagnostic data by Intune
-titleSuffix: Microsoft Intune
 description: Enable Windows diagnostic data in processor configuration for your tenant to enable its use by Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 02/28/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: b204a956-18ec-11e8-accf-0ed5f89f718b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: zadvor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy

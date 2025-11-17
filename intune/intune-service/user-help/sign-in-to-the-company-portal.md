@@ -1,31 +1,8 @@
 ---
-# required metadata
-
-title: Get the Intune Company Portal app | Microsoft Docs
+title: Get the Intune Company Portal app
 description: Learn where to get the Company Portal app and how to sign in.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 01/27/2025
-ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid: cfd214bc-f072-4808-af2e-a3cbf7af9bca
-searchScope:
- - User help
-
-# optional metadata
-
-ROBOTS:
-#audience:
-
 ms.reviewer: esmich
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier1
 ---
 
 # Get the Intune Company Portal app

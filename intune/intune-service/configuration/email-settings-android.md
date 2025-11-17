@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Android DA email settings in Microsoft Intune
 description: Create device configuration email profiles that use Exchange servers, and retrieve attributes from Microsoft Entra ID. Enable SSL or SMIME, authenticate users with certificates or username/password, and synchronize email and schedules on Android device administrator Samsung Knox devices using Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 06/09/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS: NOINDEX
-#audience:
-
 ms.reviewer: sheetg
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -50,7 +33,7 @@ As an Intune administrator, you can create and assign email settings to Android 
 - **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that this profile uses. Your options:
   - **User principal name**: Gets the name, like `user1` or `user1@contoso.com`.
   - **User name**: Gets only the name, like `user1`.
-  - **sAM Account Name**: Requires the domain, like `domain\user1`. sAM account name is only used with Android devices. Also enter:  
+  - **sAM Account Name**: Requires the domain, like `domain\user1`. sAM account name is only used with Android devices. Also enter:
     - **User domain name source**: Select **Microsoft Entra ID** or **Custom**.
 
       When choosing to get the attributes from Microsoft Entra ID, enter:

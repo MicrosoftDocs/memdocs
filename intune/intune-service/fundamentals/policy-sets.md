@@ -1,36 +1,17 @@
 ---
-# required metadata
-
-title: Policy sets
-titleSuffix: Microsoft Intune
+title: Policy Sets
 description: Use policy sets to group collections of management objects in Microsoft Intune.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 04/10/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: DaGerrit
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
 
-# Use policy sets to group collections of management objects
+# Use Policy Sets to Group Collections of Management Objects
 
 Policy sets allow you to create a bundle of references to already existing management entities that need to be identified, targeted, and monitored as a single conceptual unit. A policy set is an assignable collection of apps, policies, and other management objects you've created. Creating a policy set enables you to select many different objects at once, and assign them from a single place. As your organization changes, you can revisit a policy set to add or remove its objects and assignments. You can use a policy set to associate and assign existing objects, such as apps, policies, and VPNs in a single package.
 
@@ -98,9 +79,9 @@ Policy sets, new to 1910, have the following known issues.
   - Android store app
   - Android line-of-business app
   - Managed Android line-of-business app
-  - Microsoft 365 Apps (Windows 10 and later)
+  - Microsoft 365 Apps
   - Microsoft 365 Apps (macOS)
-  - Microsoft Edge (Windows 10 and later)
+  - Microsoft Edge
   - Microsoft Edge (macOS)
   - Microsoft Defender ATP (macOS)
   - Windows MSI line-of-business app
@@ -134,7 +115,6 @@ Policy sets, new to 1910, have the following known issues.
     If a policy is added to a policy set that is deployed to a group, the group would show as directly assigned in the workload, not "assigned via the policy set". As a result of this, MAM doesn't process group assignment deletions coming from policy sets.
 
 - MAM doesn't support deployment to **All Users** and **All Devices** virtual groups for any policy types.
-- The Device Configuration Profile of type "Administrative Templates" can't be selected as part of a policy set.
 
 ## Next steps
 

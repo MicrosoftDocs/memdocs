@@ -1,36 +1,17 @@
 ---
-# required metadata
-
-title: Step 2. Create app protection policies for Microsoft Edge for Business
-titleSuffix:
+title: Step 2. Create App Protection Policies for Microsoft Edge for Business
 description: Step 2. Create app protection policies for Microsoft Edge for Business.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-
-# optional metadata
-
-#audience:
-#ROBOTS: 
 ms.reviewer: samarti
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 2. Create app protection policies for Microsoft Edge for Business
+# Step 2. Create App Protection Policies for Microsoft Edge for Business
 
 App protection policies are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the device user is using the app. A managed app is an app that has app protection policies applied to it and is managed by an enterprise management solution, such as Intune.
 
@@ -105,7 +86,7 @@ Use the following steps to apply the data protection framework.
 
 13. For the **Scope Tags** step, you must select the proper scope tag for your environment and the roles that have access to this policy.
 
-14. For the **Assignments** step, select **Add Group** and select the desired group. 
+14. For the **Assignments** step, select **Add Group** and select the desired group.
 For this example, select all VPN Users. However, when you assign this policy in a production environment, you should create a new group of users that will best fit users that must adhere to **Level 3** app protection.
 
 15. Click **Next** to continue to the next step.
@@ -172,7 +153,7 @@ To create the app protection policy, follow these steps:
     |     Data Transfer    |     Restrict cut, copy,   and paste between apps    |     Policy managed apps   with paste in    |     iOS/iPadOS, Android    |     3    |
 
 5. Review the **Encryption** section **settings** based on the following table:
-  
+
     |     Setting    |     Setting description    |     Value    |     Platform    |     Level    |
     |---|---|---|---|---|
     |     Encryption    |     Encrypt org data    |     Require    |     iOS/iPadOS, Android    |     3    |
@@ -249,7 +230,7 @@ To create the app protection policy, follow these steps:
 
 11. Select **Next** after you've completed the **Conditional launch** step.
 
-12. Review the **Scope Tags** step. 
+12. Review the **Scope Tags** step.
     For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
 13. Select **Next**.

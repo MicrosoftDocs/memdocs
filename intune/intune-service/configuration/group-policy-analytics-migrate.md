@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Migrate your imported group policy to a policy in Microsoft Intune
 description: After you import your Windows group policy objects in Microsoft Intune, use the migrate feature to transfer your GPOs to a Settings Catalog policy. This policy uses your imported GPOs, and can be assigned to users and devices managed by your organizations.
-keywords:
 author: MandiOhlinger
-
 ms.author: mandia
-manager: laurawi
 ms.date: 02/20/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -80,7 +60,7 @@ After you [import your GPOs](group-policy-analytics.md#import-gpos-and-run-analy
 
     To help you pick the settings, you can use the built-in features:
 
-    - **Select all on this page**: Select this option if you want all settings on the existing page to be included in your Settings Catalog profile.  
+    - **Select all on this page**: Select this option if you want all settings on the existing page to be included in your Settings Catalog profile.
 
       :::image type="content" source="./media/group-policy-analytics-migrate/select-all-on-this-page.png" alt-text="Screenshot that shows how to use the select all on this page button to include all page settings in the Group Policy Analytics migrate feature in Microsoft Intune." lightbox="./media/group-policy-analytics-migrate/select-all-on-this-page.png":::
 
@@ -145,7 +125,7 @@ When you create the Settings Catalog profile, any settings that can be included 
   If you import AppLocker settings or Firewall rule settings, then the **Migrate** option is disabled and grayed out. Instead, configure these settings using the Endpoint Security workload in the Intune admin center.
 
   For more information, go to:
-  
+
   - [Firewall policy in Endpoint Security](../protect/endpoint-security-firewall-policy.md)
   - [Application control policy in Endpoint Security](../protect/endpoint-security-asr-policy.md).
 

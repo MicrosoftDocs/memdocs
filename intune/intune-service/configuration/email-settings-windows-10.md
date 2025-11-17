@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Email settings for Windows devices in Microsoft Intune
 description: Create a device configuration email profile that that uses Exchange servers, and retrieves attributes from Microsoft Entra ID. You can also enable SSL, and synchronize email and schedules on Windows 10/11 client devices using Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/15/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: sheetg
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -52,7 +35,7 @@ This article describes some of the settings you can configure. You can create a 
 - **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that this profile uses. Your options:
   - **User Principal Name**: Gets the name, such as `user1` or `user1@contoso.com`.
   - **Primary SMTP address**: Gets the name in email address format, such as `user1@contoso.com`.
-  - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:  
+  - **sAM Account Name**: Requires the domain, such as `domain\user1`. Also enter:
     - **User domain name source**: Select **Microsoft Entra ID** or **Custom**.
 
       When getting the attributes from Microsoft Entra ID, also enter:

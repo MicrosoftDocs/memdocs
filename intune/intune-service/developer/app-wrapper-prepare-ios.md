@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Wrap iOS apps with the Intune App Wrapping Tool 
+title: Wrap iOS Apps With the Intune App Wrapping Tool
 description: Learn how to wrap your iOS apps without changing the code of the app itself. Prepare the apps so you can apply mobile app management policies.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/17/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 99ab0369-5115-4dc8-83ea-db7239b0de97
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
 
-# Prepare iOS apps for app protection policies with the Intune App Wrapping Tool
+# Prepare iOS Apps for App Protection Policies With the Intune App Wrapping Tool
 
 Use the Microsoft Intune App Wrapping Tool for iOS to enable Intune app protection policies for in-house iOS apps without changing the code of the app itself.
 
@@ -70,9 +49,9 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 ## Register your app with Microsoft Entra ID
 
-1.	Register your apps with Microsoft Entra ID. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app). 
-2.	Add the custom redirect URL to your app settings. For more information, see [Configuring MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal). 
-3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune Mobile App Management service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service). 
+1.	Register your apps with Microsoft Entra ID. For more information, see [Register an application with the Microsoft identity platform](/azure/active-directory/develop/quickstart-register-app).
+2.	Add the custom redirect URL to your app settings. For more information, see [Configuring MSAL](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal).
+3.	Give your app access to the Intune MAM service. For more information, see [Give your app access to the Intune Mobile App Management service](../developer/app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service).
 4.	Once the above changes are completed, run the latest version of the Intune App Wrapping tool. Configure your apps for Microsoft Authentication Library (MSAL): Add the Microsoft Entra application client ID into the command-line parameters with the Intune App Wrapping Tool. For more information, see [Command-line parameters](../developer/app-wrapper-prepare-ios.md#command-line-parameters).
 
    > [!NOTE]
@@ -146,7 +125,7 @@ You need the following to distribute apps wrapped by Intune:
 
 9. Follow the previous instructions to create a Certificate Signing Request. On your macOS computer, launch the **Keychain Access** application.
 
-10. On the macOS menu at the top of the screen, go to  **Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority**.  
+10. On the macOS menu at the top of the screen, go to  **Keychain Access > Certificate Assistant > Request a Certificate From a Certificate Authority**.
 
     ![Request a certificate from a Certificate Authority in Keychain Access](./media/app-wrapper-prepare-ios/iOS-signing-cert-5.png)
 
@@ -223,7 +202,7 @@ Open the macOS Terminal and run the following command:
 You can use the following command line parameters with the App Wrapping Tool:
 
 > **Example:** The following example command runs the App Wrapping Tool, incorporating the required commands when wrapping an application for use within a single tenant.
-> 
+>
 >```bash
 >./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/<tenantID> -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v
 >```
@@ -300,7 +279,7 @@ For iOS/iPadOS, you can wrap the app with a different certificate or provisionin
 
 Some best practices for rewrapping include:
 
-* Ensuring that a different provisioning profile has all the required entitlements as any previous provisioning profile. 
+* Ensuring that a different provisioning profile has all the required entitlements as any previous provisioning profile.
 
 ## Error messages and log files
 
@@ -398,7 +377,7 @@ Before wrapping your app, you can grant *[entitlements](https://developer.apple.
 
     b. Create a provisioning profile for your app. For instructions, see [How to Obtain the Prerequisites for the Intune App Wrapping Tool for iOS](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/).
 
-    c. In your provisioning profile, enable the same entitlements that you have in your app. You need to supply the same IDs (the `AppIdentifierPrefix` values) that you specified during the development of your app. 
+    c. In your provisioning profile, enable the same entitlements that you have in your app. You need to supply the same IDs (the `AppIdentifierPrefix` values) that you specified during the development of your app.
 
     d. Finish the provisioning profile wizard and download your file.
 

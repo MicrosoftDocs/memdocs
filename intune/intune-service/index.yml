@@ -4,15 +4,11 @@ summary: Learn more about Microsoft Intune's unified endpoint management and sec
 brand: azure
 
 metadata:
-  services: service
-  ms.service: microsoft-intune
   ms.topic: hub-page
-  author: dougeby
-  ms.author: dougeby
-  manager: dansimp
-  ms.date: 02/06/2025
+  author: paolomatarazzo
+  ms.author: paoloma
+  ms.date: 11/17/2025
   ms.collection:
-  - tier1
   - essentials-navigation
   ms.custom: intro-hub-or-landing
 
@@ -22,13 +18,13 @@ highlightedContent:
       itemType: overview
       url: ./fundamentals/what-is-intune.md
     - title: What's new in Intune
-      itemType: overview
+      itemType: whats-new
       url: ./fundamentals/whats-new.md
     - title: Features in development
-      itemType: overview
+      itemType: whats-new
       url: ./fundamentals/in-development.md
     - title: Microsoft Intune Suite add-ons
-      itemType: overview
+      itemType: how-to-guide
       url: ./fundamentals/intune-add-ons.md
 
 productDirectory:
@@ -227,18 +223,18 @@ conceptualContent:
 
     - title: Initiate remote actions
       links:
-        - url: ./remote-actions/device-management.md
+        - url: ./remote-actions/index.md
           itemType: concept
           text: Remote actions overview
         - url: ./remote-actions/custom-notifications.md
           itemType: how-to-guide
           text: Send custom notifications
-        - url: ./remote-actions/devices-wipe.md
+        - url: ./remote-actions/device-wipe.md
           itemType: how-to-guide
           text: Remove devices
       footerLink:
         text: Browse all articles in this area
-        url: ./remote-actions/device-management.md
+        url: ./remote-actions/index.md
 
     - title: View reports and monitor status
       links:
@@ -264,17 +260,17 @@ conceptualContent:
           itemType: how-to-guide
           text: Microsoft Tunnel for Mobile Application Management
 
-    - title: Microsoft Endpoint analytics
+    - title: Endpoint analytics
       links:
-        - url: ../analytics/overview.md
+        - url: ../analytics/index.md
           itemType: how-to-guide
-          text: Overview of Endpoint analytics
+          text: Overview of endpoint analytics
         - url: ../analytics/scores.md
           itemType: how-to-guide
           text: Scores, baselines and insight
         - url: ../analytics/startup-performance.md
           itemType: how-to-guide
-          text: Reports in Endpoint analytics
+          text: Reports in endpoint analytics
 
     - title: Developer guidance
       links:

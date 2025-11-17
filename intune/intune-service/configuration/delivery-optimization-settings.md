@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Windows Delivery Optimization settings for Intune
-titleSuffix: Microsoft Intune
 description: Delivery Optimization settings for Windows devices that you can deploy using Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 04/22/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -39,7 +20,7 @@ This feature applies to:
 > The information in this article applies to Intune profiles for Delivery Optimization created before April 24, 2025.
 >
 > This article details the settings you can find in Windows device configuration templates for Delivery Optimization created before April 24, 2025. On April 24, 2025, the original Delivery Optimization template was deprecated and replaced by a new template that uses the newer settings format as found in the Settings Catalog.
-> 
+>
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text that is available within in the Microsoft Intune admin center are taken directly from the settings authoritative content. You can access that content by viewing a settings *information text* and then selecting the **Learn more** link.
 
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]

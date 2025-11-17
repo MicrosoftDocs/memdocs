@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Common tasks and features in the settings catalog
 description: Use the settings catalog in Microsoft Intune to configure common features. You can create a Universal Print policy, configure Microsoft Edge and Google Chrome web browsers, and use built in settings instead of plist files for macOS devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 08/28/2025
+ms.date: 11/10/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: laarrizz, mayurjadhav, beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -58,6 +41,18 @@ Previously, to configure Google Chrome settings on Windows devices, you created 
 
 For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](settings-catalog-configure-edge.md).
 
+## Manage AI features on Android devices
+
+<!-- ms.reviewer: cchristenson -->
+
+This feature applies to:
+
+- Android Enterprise
+
+There are features and built-in settings to help you manage AI features on Android Enterprise devices. You can block AI websites in web browser apps, block Screen-driven AI experiences, and disable the on-device AI system app.
+
+For more information, go to [Manage AI features on Android devices](../../solutions/ai/manage-ai-android.md).
+
 ## Add universal printers
 
 <!-- ms.reviewer: laarrizz -->
@@ -83,7 +78,7 @@ This feature applies to:
 
 You can use the settings catalog to configure Apple's declarative device management (DDM) to manage software updates. With DDM, the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads, prepares the device for the installation, & installs the update.
 
-For more information, go to [Managed software updates with the settings catalog](../protect/managed-software-updates-ios-macos.md).
+For more information, go to [Managed software updates with the settings catalog](../protect/updates/apple.md).
 
 ## Built-in macOS features replacing plist files
 
