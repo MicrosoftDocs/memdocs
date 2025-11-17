@@ -245,12 +245,6 @@ The following table describes the Setup Assistant screens shown during automated
 | **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane after devices complete a software upgrade. If you hide this screen, devices get the default macOS Sonoma wallpaper. For macOS 14.1 and later.|
 | **Lockdown mode**| Shows the lockdown mode setup pane to users who set up an Apple ID. For macOS 14.0 and later.|
 | **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For macOS 15.0 and later.|
-| **App Store**| Shows the Apple App Store pane. For macOS 11.1 and later.  |
-| **Software update**| Shows the the mandatory software update screen. For macOS 15.4 and later.  |
-| **Additional privacy settings**| Shows the additional privacy settings pane. For macOS 26.0 and later.  |
-| **OS Showcase**| Shows the OS showcase pane. For macOS 26.1 and later.  |
-|**Update completed**| Shows the software update complete pane. For macOS 26.1 and later.  |
-|**Get started**| Shows the get started pane. For macOS 15.0 and later. |
 
 ## Sync managed devices
 Syncing refreshes existing device status and imports new devices assigned to the Apple MDM server. To see all associated Apple devices and device info, sync your enrollment program token in the admin center.
