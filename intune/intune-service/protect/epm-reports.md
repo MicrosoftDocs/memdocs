@@ -17,7 +17,6 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-*Elevation reports for Endpoint Privilege Management are currently in preview.*
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
