@@ -935,6 +935,8 @@ items:
               href: ./protect/crowdstrike-falcon-mtd-connector-integration.md
           - name: Set up Jamf
             href: ./protect/jamf-mtd-connector.md
+          - name: Setup iVerify
+            href: ./protect/iverify-mobile-threat-defense-connector.md
             items:
             - name: Jamf and Intune integration
               href: ./protect/jamf-mtd-connector-integration.md
@@ -1771,8 +1773,6 @@ items:
             href: ./enrollment/macos-enroll.md
       - name: Troubleshoot enrollment
         items:
-        - name: Get incomplete user enrollment report
-          href: ./enrollment/enrollment-report-company-portal-abandon.md
         - name: View enrollment reports
           href: ./enrollment/view-enrollment-reports.md
         - name: Troubleshoot device enrollment
