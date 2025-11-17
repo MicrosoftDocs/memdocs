@@ -18,13 +18,13 @@ highlightedContent:
       itemType: overview
       url: ./fundamentals/what-is-intune.md
     - title: What's new in Intune
-      itemType: overview
+      itemType: whats-new
       url: ./fundamentals/whats-new.md
     - title: Features in development
-      itemType: overview
+      itemType: whats-new
       url: ./fundamentals/in-development.md
     - title: Microsoft Intune Suite add-ons
-      itemType: overview
+      itemType: how-to-guide
       url: ./fundamentals/intune-add-ons.md
 
 productDirectory:
