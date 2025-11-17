@@ -173,7 +173,7 @@ We recommend you sign in with the **Security Copilot Owner** role to set up the 
 **Before you enable the agent**:
 
 - An admin must manually start the agent. Once started, there's no option to stop or pause the agent.
-- The agent can only be started from the Microsoft Intune admin center.
+- The agent can only be started from the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 - Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
 - Only one agent instance is supported per tenant.
 
