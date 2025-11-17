@@ -159,6 +159,8 @@ There are new settings (**Devices** > **Manage devices** > **Configuration** > *
 
 - **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
 
+For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](/intune/solutions/ai/manage-ai-android).
+
 Applies to:
 
 - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
