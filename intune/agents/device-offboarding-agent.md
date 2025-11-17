@@ -123,6 +123,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **1. Signal aggregation**
+:::image type="icon" source="icons/signal-aggregation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
@@ -131,6 +132,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **2. Evaluation**
+:::image type="icon" source="icons/evaluation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
@@ -139,6 +141,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **3. Recommendations**
+:::image type="icon" source="icons/recommendations.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >Based on this assessment, the agent generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
@@ -147,6 +150,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **4. Admin approval**
+:::image type="icon" source="icons/approval.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >No changes are made to devices without explicit admin approval. The agent provides detailed recommendations, but the final decision to offboard a device rests with the IT admin.
@@ -155,6 +159,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **5. Assisted remediation**
+:::image type="icon" source="icons/remediation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >Upon admin approval, the Device Offboarding Agent disables the corresponding Entra ID objects. It also facilitates the offboarding process by providing guidance on additional remediation steps, such as removing devices from Microsoft Defender or Apple Business Manager.
