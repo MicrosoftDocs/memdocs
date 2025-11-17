@@ -184,35 +184,7 @@ The incomplete user enrollments report has been removed and is no longer functio
 - getEnrollmentAbandonmentSummaryReport
 - getEnrollmentFailureDetailsReport
 
-Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).
-
-#### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
-
-You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant. 
-
-The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
-
- - **App Store** (iOS/iPadOS 14.3+)
- - **Camera button** (iOS/iPadOS 18+)
- - **Web content filtering** (iOS/iPadOS 18.2+)
- - **Safety and handling** (iOS/iPadOS 18.4+)
- - **Multitasking** (iOS/iPadOS 26+)
- - **OS Showcase** (iOS/iPadOS 26+)
-
-The screens you can skip during macOS enrollment include:
-
-   - **App Store** (macOS 11.1+)
-   - **Get Started** (macOS 15+)
-   - **Software update** (macOS 15.4+)
-   - **Additional privacy settings** (macOS 26+)
-   - **OS Showcase** (macOS 26.1+)
-   - **Update completed** (macOS 26.1+)
-   - **Get Started** (macOS 15+)
-
-For more information about available Setup Assistant skipkeys, see:
-
-- [Set up automated device enrollment for iOS/iPadOS]( ../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)
-- [Set up automated device enrollment for]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).  
 
 ### Device management 
 
