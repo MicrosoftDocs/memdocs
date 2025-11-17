@@ -54,20 +54,30 @@ Together, these components deliver passwordless access aligned with **Zero Trust
     :::column-end:::
 :::row-end:::
 
-
 ---
 
-Before diving into how Intune supports passwordless, it's important to understand key concepts around passwordless authentication, the role played by multifactor authentication (MFA), and phishing resistance.
+Before diving into how Intune supports passwordless, it's important to understand key concepts around phishing resistance and the role played by multifactor authentication (MFA) within passwordless strategies.
 
 ## MFA and passwordless
 
 MFA adds layers of security by requiring two or more factors (something you know, have, or are). Passwordless methods often satisfy MFA because they combine possession (device or key) and inherence (biometrics).
 
-## :::image type="icon" source="icons/phishing.svg" border="false"::: Phising resistance
+## Phising resistance
 
-Phishing attacks trick users into revealing credentials or approving malicious sign-ins. Passwordless methods combined with strong multi-factor authentication (MFA) help mitigate these risks.
+:::row:::
+:::column span="1":::
+**Phising resistance**
 
-It's essential to understand the difference between phishing-resistant and non-phishing-resistant authentication methods when designing a passwordless strategy. A phishing-resistant method ensures that even if a user is tricked into interacting with a fraudulent prompt, the attacker cannot gain access. On the other hand, non-phishing-resistant methods can still be compromised if users are deceived into sharing secrets or approving fake requests.
+:::image type="icon" source="icons/phishing.svg" border="false"::: 
+:::column-end:::
+:::column span="3":::
+> Phishing attacks trick users into revealing credentials or approving malicious sign-ins. Passwordless methods combined with strong multi-factor authentication (MFA) help mitigate these risks.
+>
+>It's essential to understand the difference between phishing-resistant and non-phishing-resistant authentication methods when designing a passwordless strategy:
+> - A phishing-resistant method ensures that even if a user is tricked into interacting with a fraudulent prompt, the attacker cannot gain access.
+> - Non-phishing-resistant methods can be compromised if users are deceived into sharing secrets or approving fake requests.
+:::column-end:::
+:::row-end:::
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
 - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
@@ -83,7 +93,7 @@ Zero Trust assumes no implicit trust—every access request must be verified. Ph
 Without phishing resistance, attackers can bypass MFA through social engineering or prompt bombing, undermining Zero Trust protections.
 
 [!INCLUDE [learn-more](includes/learn-more.md)]
-> - [What is Zero Trust?](/en-us/security/zero-trust/zero-trust-overview)
+- [What is Zero Trust?](/en-us/security/zero-trust/zero-trust-overview)
 
 ## Passwordless Authentication Methods in Microsoft Entra ID
 
@@ -189,7 +199,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 >**Microsoft Authenticator** offers multiple sign-in options, including passwordless methods and a legacy MFA approach:
 >- **Passkeys in Authenticator**: Authenticator can store a FIDO-based passkey for an Entra account, enabling passwordless authentication that is **phishing-resistant**. Ideal for high-assurance environments.
 >- **Passwordless phone sign-in**: After entering a username, users approve sign-in on their trusted device by unlocking it with biometrics or a PIN and matching a number. This method is convenient and widely supported, but it's **not phishing-resistant** because it relies on push notifications rather than hardware-bound credentials. Best for scenarios prioritizing flexibility and ease of use.
->- **TOTP/OTP codes**: Time-based one-time codes for MFA. This is **not passwordless** and **not phishing-resistant**. It's included here for completeness but organizations should steer users toward the passwordless methods above for stronger security.
+>- **TOTP/OTP codes**: Time-based one-time codes for MFA. This is **not passwordless** and **not phishing-resistant**. These methods are not passwordless and don't provide phishing resistance. They're included for completeness, but organizations should prioritize passwordless options for stronger security.
 :::column-end:::
 :::row-end:::
 
