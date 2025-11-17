@@ -59,10 +59,33 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of November 17, 2025
 
+### Device management
+
+#### Security Copilot in Intune agents are available for public preview <!-- 32766422 35360466 35100315 35320958 -->
+
+Security Copilot agents in Intune are AI-powered assistants that specialize in specific scenarios. The Intune agents are available in the Intune admin center > **Agents**, and are available for Security Copilot users.
+
+The following Intune agents are available:
+
+- The **[Change Review Agent](../../agents/change-review-agent.md)** evaluates Multi Admin Approval requests for Windows PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help admins understand script behavior and associated risks.
+
+  These insights can help Intune admins make informed decisions more quickly about whether to approve or deny requests. This agent supports Intune-managed devices running Windows.
+
+- The **[Device Offboarding Agent](../../agents/device-offboarding-agent.md)** identifies stale or misaligned devices across Intune and Microsoft Entra ID. It provides actionable insights and requires admin approval before offboarding any devices. This agent complements existing Intune automation by showing insights and handling ambiguous cases where automated cleanup isn't enough.
+
+  The agent supports Intune-managed devices running Windows, iOS/iPadOS, macOS, Android, and Linux. During public preview, admins can directly disable Microsoft Entra ID objects, with additional remediation steps provided as guidance.
+
+- The **[Policy Configuration Agent](../../agents/policy-configuration-agent.md)** analyzes uploaded documents or industry benchmarks and automatically identifies matching Intune settings. Admins can upload their requirements, like compliance standards or internal policy documents, and the agent intelligently shows relevant settings from the Intune settings catalog.
+
+  The agent also guides you through policy creation and helps you configure each setting that best suits your organization’s needs. This agent supports devices running Windows.
+
+To learn more, see:
+
+- [Security Copilot agents in Intune](../../agents/index.md)
+
 ### Tenant administration
 
 #### Manage tasks and requests from the centralized Admin tasks node in Microsoft Intune (public preview)<!-- 3542038 -->
-
 The new **Admin tasks** node in the Intune admin center provides a centralized view to discover, organize, and act on security tasks and user elevation requests. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention—without navigating across multiple nodes.
 
 The following task types are supported:
@@ -306,7 +329,7 @@ For more information, see [Include and exclude app assignments in Microsoft Intu
 
 #### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
 
-Endpoint Privilege Management (EPM) has a new option for elevation rules that runs the elevated file using the user’s context instead of a virtual account. The option is **Elevate as current user**.
+Endpoint Privilege Management (EPM) has a new option for elevation rules that runs the elevated file using the user's context instead of a virtual account. The option is **Elevate as current user**.
 
 With the *Elevate as current user* elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to enter their credentials for Windows Authentication. This process supports multifactor authentication (MFA) for enhanced security.
 
@@ -518,15 +541,15 @@ To keep devices registered and compliant, users must download the latest version
 
 We've updated the Vulnerability Remediation Agent for Security Copilot, adding the following changes to the ongoing limited public preview:
 
-- **Role-based access control (RBAC) for Microsoft Defender** - We've updated the [RBAC guidance](../protect/vulnerability-remediation-agent.md#role-based-access-control-and-permissions) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
+- **Role-based access control (RBAC) for Microsoft Defender** - We've updated the [RBAC guidance](../../agents/vulnerability-remediation-agent.md#prerequisites) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
 
   When using granular RBAC configurations, ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../agents/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
 
   Changes to the agent's identity won't affect the agent's run history, which remains available.
 
-These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
+These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../agents/vulnerability-remediation-agent.md).
 
 ## Week of September 15, 2025 (Service release 2509)
 
@@ -832,7 +855,8 @@ If the Intune settings catalog contains relevant settings for the reported vulne
 
 If there are no recommended device configuration settings to deploy, the Configurations section indicates that no recommended settings catalog policy configurations are available.
 
-To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../protect/vulnerability-remediation-agent.md#agent-suggestions) in Vulnerability Remediation Agent for Security Copilot in Microsoft Intune.
+To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../../agents/vulnerability-remediation-agent-use.md#manage-agent-suggestions) in *Use the Vulnerability Remediation Agent*.
+
 
 ## Week of August 25, 2025
 
@@ -1471,7 +1495,7 @@ When run, this agent uses data from Microsoft Defender Vulnerability Management 
 
 This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
 
-For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
+For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../agents/vulnerability-remediation-agent.md).
 
 ## Week of May 26, 2025 (Service release 2505)
 
