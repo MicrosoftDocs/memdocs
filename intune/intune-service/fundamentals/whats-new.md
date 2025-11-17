@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/14/2025
+ms.date: 11/17/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -215,6 +215,19 @@ For more information about available Setup Assistant skipkeys, see:
 - [Set up automated device enrollment for]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
 
 ### Device management 
+
+#### Query and results improvements to Explorer feature with Security Copilot in Intune <!--33987602-->
+
+With your Security Copilot license, you can query your Intune data using the **[Explorer in Intune](../copilot/copilot-intune-explorer.md)** feature. 
+
+When you create your queries, you have more filter options. For example:
+
+- Queries with a number operator let you choose equal, greater than, and less than values.
+- Queries that forced you to choose one option, like platform, allow you to select multiple options.
+
+In the query results, there are also more columns available to view your data.
+
+To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
 
 #### Device Management Type assignment filter property supports Android enrollment options for Managed Devices<!-- 33016364 -->
 
