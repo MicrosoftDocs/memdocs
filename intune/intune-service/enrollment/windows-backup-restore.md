@@ -1,7 +1,7 @@
 ---
 title: Enable Windows Backup for Organizations 
 description: Enable Windows backup and restore in Intune for employees or students.
-ms.date: 11/11/2025
+ms.date: 11/21/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -94,6 +94,21 @@ Complete these steps to configure the restore setting for enrollment.
 The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.
 
 ---
+
+## Reporting  
+Per device reporting is available in the Microsoft Intune admin center. 
+
+1. Go to **Devices** > **Enrollment**.
+1. Select the **Windows** tab.  
+1. Under the **Device Name** column in the table, select a device. 
+1. From the navigation menu, select **Enrollment**.  
+1. In the table, look for **Profile type: Windows Backup and Restore profile**. From here, you can check the state of the backup profile on the device, and see whether or not the device went through a restore. Possible statuses include:  
+   - Not Applicable  
+   - No policy assigned  
+   - Succeeded  
+   - Failed  
+   - No Backup Profiles  
+   - Setup as New PC Selected   
 
 ## Known issues
 Known issues with Windows Backup for Organizations include:
