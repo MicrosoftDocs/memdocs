@@ -1,7 +1,7 @@
 ---
 title: Use the Policy Configuration Agent to create policies
 description: Learn how to use the Policy Configuration Agent in Microsoft Intune to create policies. You can create policies on files you uploaded, natural language prompts, or industry baselines. The Policy Configuration Agent is a feature of Security Copilot in Intune.
-ms.date: 11/13/2025
+ms.date: 11/17/2025
 ms.topic: how-to
 author: mandiohlinger
 ms.author: mandia
@@ -9,9 +9,6 @@ ms.reviewer: aanavath
 ---
 
 # Use the Policy Configuration Agent
-
-> [!WARNING]
-> This article is still being written. Do not use it or share any information from this article.
 
 The [Policy Configuration Agent](policy-configuration-agent.md) is a generative AI feature in Intune. It helps IT admins translate complex requirements and industry standard documents into actionable Intune settings.
 
@@ -36,9 +33,9 @@ This feature applies to:
 - Well-structured, well-written input results in better mappings. If a document is poorly formatted or uses unclear language, the agent can produce low-confidence matches. We recommend you review your source documents for clarity.
 - You can add text files up to 25 KB in size. Large or complex documents with hundreds of pages of requirements might challenge the agent's ability to process them effectively.
 
-## Explore the agent
+## Use the agent
 
-To explore and use the agent, open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
+To use the agent, open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
 
 The following tabs are available:
 
@@ -92,7 +89,7 @@ For example, you can upload compliance standards and common industry benchmarks,
 
 You can save the agent suggestions so you can create device configuration policies when you're ready.
 
-To add a knowledge source, use the following steps:
+**To add a knowledge source, use the following steps**:
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
 2. Select **Create new** > **Knowledge source**.

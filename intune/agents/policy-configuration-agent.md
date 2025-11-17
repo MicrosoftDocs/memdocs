@@ -1,7 +1,7 @@
 ---
 title: Learn about Policy Configuration Agent and set it up
 description: Learn about the Policy Configuration Agent in Microsoft Intune, its prerequisites, how it works, and how to set it up. The agent is a generative AI feature that helps create Intune policies based on uploaded documents or benchmarks. The Policy Configuration Agent is a feature of Security Copilot in Intune.
-ms.date: 11/13/2025
+ms.date: 11/17/2025
 ms.topic: overview
 author: mandiohlinger
 ms.author: mandia
@@ -9,9 +9,6 @@ ms.reviewer: aanavath, jubaptis
 ---
 
 # Policy Configuration Agent in Microsoft Intune
-
-> [!WARNING]
-> This article is still being written. Do not use it or share any information from this article.
 
 The Intune Policy Configuration Agent uses the generative AI-powered features in Security Copilot. It helps IT admins translate complex requirements and industry standard documents into actionable Intune settings.
 
@@ -165,13 +162,22 @@ At a high level, the agent does the following steps.
 
 7. **Deploy and monitor**: Once the policy is assigned, devices start reporting with the new settings. The agent's job is done until you run it again.
 
+## Agent identity
+
+The agent runs under the identity and permissions of the account used during this setup. Actions are limited to the permissions of that account, and the identity refreshes with each run. So, any changes to the account's permissions affect the agent's capabilities during its next run.
+
+We recommend you sign in with the **Security Copilot Owner** role to set up the agent. Some roles might automatically have the required permissions. To learn more, see [Security Copilot roles](/copilot/security/authentication#security-copilot-roles).
+
 ## Set up the agent
 
-The agent runs under the identity and permissions of the account used during this setup. Its actions are limited to the permissions of that account, and the identity refreshes with each run. So, any changes to the account's permissions affect the agent's capabilities during its next run.
+**Before you enable the agent**:
 
-We recommend you sign in with the **Intune Administrator** Microsoft Entra role to set up the agent.
+- An admin must manually start the agent. Once started, there's no option to stop or pause the agent.
+- The agent can only be started from the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+- Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
+- Only one agent instance is supported per tenant.
 
-Use the following steps to set up the agent.
+**Use the following steps to set up the agent**:
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Agents** > **Policy Configuration Agent**.
 1. In **Overview**, select **Set up agent**.
@@ -183,6 +189,8 @@ Use the following steps to set up the agent.
 When it completes, the agent is ready to use. To learn more about using the agent, see [Use the Policy Configuration Agent](policy-configuration-agent-use.md).
 
 [!INCLUDE [renew](includes/renew.md)]
+
+:::image type="content" source="./media/policy-configuration-agent-change-identity.png" alt-text="Screenshot of the Policy Configuration Agent change identity screen in Microsoft Intune." lightbox="./media/policy-configuration-agent-change-identity.png":::
 
 [!INCLUDE [remove](includes/remove.md)]
 
