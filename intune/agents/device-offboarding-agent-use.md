@@ -19,6 +19,54 @@ This article provides sample responses to show how the agent helps with device o
 - This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
 - Make sure you meet the requirements detailed in the [Get Started with the Device Offboarding Agent](device-offboarding-agent.md) article.
 
+## Explore the agent options
+
+After configuration, manage the agent from the Device Offboarding Agent pane.
+
+In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**:
+- On the **Overview** tab, view the suggestions of devices to offboard, and get more details and remediation steps.
+- On the **Suggestions** tab, view the full list of suggestions of devices to offboard, including the completed suggestions.  
+- On the **Settings** tab, review details about the agent's configuration.
+
+Select a tab to learn more about its purpose and available options.
+
+# [**Overview**](#tab/overview)
+
+After the Device Offboarding Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for devices to offboard. The **Overview** tab only displays the suggestions that are *not started* or *in progress*.
+
+The following information is available on this tab: 
+
+- The agent's availability and run status. 
+- Agent suggestions, which are the list of devices to offboard that are *not started* or *in progress*.
+- Activity section that tracks the current and past run activity of the agent.
+
+:::image type="content" source="images/device-offboarding-agent/overview.png" alt-text="Screenshot of the overview pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/overview.png":::
+
+# [**Suggestions**](#tab/suggestions)
+
+Agent suggestions are a list of the top devices to offboard. Suggestions are generated after each agent run based on the latest data. In this tab, you can use search and filters to find specific suggestions.
+
+A suggestion displays the following details: 
+- Summary of the suggestions. 
+- Factors that the agent considered when suggesting offboarding these devices.  
+- Details about the associated suggestions, including the number of devices to offboard, their ownership, and their platform. 
+- Recommended actions to offboard securely.
+
+:::image type="content" source="images/device-offboarding-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/suggestions.png":::
+
+> [!IMPORTANT]
+> Follow the recommended actions in the order they're listed to prevent orphaned devices and ensure secure offboarding.  
+
+After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to complete. Marking a suggestion as complete doesn't trigger any device changes by the agent.  
+
+# [**Settings**](#tab/settings)
+
+Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs by using the optional **Instructions** field.
+
+:::image type="content" source="images/device-offboarding-agent/settings.png" alt-text="Screenshot of the settings tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/settings.png":::
+
+---
+
 ## Run the agent
 
 To start using the Device Offboarding Agent, first run an evaluation of your device inventory. This action resets the agent's suggestions and status. The agent doesn't persist suggestions across runs; re-running clears previous recommendations.

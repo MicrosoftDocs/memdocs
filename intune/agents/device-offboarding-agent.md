@@ -88,14 +88,14 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles, either:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
-> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data / Read** permissions
+> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions
 >
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
-> - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
+> - [Security Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
 > ---
 >
@@ -103,15 +103,15 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles, either:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
-> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data / Read** permissions
+> - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
 > :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions\
->     To take action from within the agent, such as to [disable devices in Entra](/entra/identity/devices/manage-stale-devices#disable-devices), you must have the *[Disable devices](/entra/identity/role-based-access-control/custom-device-permissions#enable-or-disable-devices)* in Entra permission. You don't need this permission to run or view results from the agent.
+>     To take action from within the agent, such as to [disable devices in Entra](/entra/identity/devices/manage-stale-devices#disable-devices), you must have the **[Disable devices](/entra/identity/role-based-access-control/custom-device-permissions#enable-or-disable-devices)** permission. You don't need this permission to run or view results from the agent.
 >
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
-> - [Copilot contributor](/copilot/security/authentication#security-copilot-roles) 
+> - [Security Copilot contributor](/copilot/security/authentication#security-copilot-roles)
 
 :::column-end:::
 :::row-end:::
@@ -123,6 +123,8 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **1. Signal aggregation**
+
+:::image type="icon" source="icons/signal-aggregation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
@@ -131,6 +133,8 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **2. Evaluation**
+
+:::image type="icon" source="icons/evaluation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
@@ -139,6 +143,8 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **3. Recommendations**
+
+:::image type="icon" source="icons/recommendations.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >Based on this assessment, the agent generates recommendations that flag devices for offboarding, along with suggested actions and the rationale behind them.
@@ -147,6 +153,8 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **4. Admin approval**
+
+:::image type="icon" source="icons/approval.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >No changes are made to devices without explicit admin approval. The agent provides detailed recommendations, but the final decision to offboard a device rests with the IT admin.
@@ -155,6 +163,8 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row:::
 :::column span="1":::
 **5. Assisted remediation**
+
+:::image type="icon" source="icons/remediation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >Upon admin approval, the Device Offboarding Agent disables the corresponding Entra ID objects. It also facilitates the offboarding process by providing guidance on additional remediation steps, such as removing devices from Microsoft Defender or Apple Business Manager.
@@ -184,54 +194,6 @@ Before running the Device Offboarding Agent, note the following:
 [!INCLUDE [enable](includes/enable.md)]
 
 :::image type="content" source="images/device-offboarding-agent/set-up.png" alt-text="Screenshot of the setup pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/set-up.png":::
-
-## Explore the agent options
-
-After you configure the agent, you can manage it from the Device Offboarding Agent pane.
-
-In the [Microsoft Intune admin center][INT-AC], select **Agents** > **Device Offboarding Agent (preview)**:
-- On the **Overview** tab, view the suggestions of devices to offboard, and get more details and remediation steps.
-- On the **Suggestions** tab, view the full list of suggestions of devices to offboard, including the completed suggestions.  
-- On the **Settings** tab, review details about the agent's configuration.
-
-Select a tab to learn more about its purpose and available options.
-
-# [**Overview**](#tab/overview)
-
-After the Device Offboarding Agent completes a run, the **Overview** tab updates with the agent's list of top suggestions for devices to offboard. The **Overview** tab only displays the suggestions that are *not started* or *in progress*.
-
-The following information is available on this tab: 
-
-- The agent's availability and run status. 
-- Agent suggestions, which are the list of devices to offboard that are *not started* or *in progress*.
-- Activity section that tracks the current and past run activity of the agent.
-
-:::image type="content" source="images/device-offboarding-agent/overview.png" alt-text="Screenshot of the overview pane of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/overview.png":::
-
-# [**Suggestions**](#tab/suggestions)
-
-Agent suggestions are a list of the top devices to offboard. Suggestions are generated after each agent run based on the latest data. In this tab, you can use search and filters to find specific suggestions.
-
-A suggestion displays the following details: 
-- Summary of the suggestions. 
-- Factors that the agent considered when suggesting offboarding these devices.  
-- Details about the associated suggestions, including the number of devices to offboard, their ownership, and their platform. 
-- Recommended actions to offboard securely.
-
-:::image type="content" source="images/device-offboarding-agent/suggestions.png" alt-text="Screenshot of the suggestions tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/suggestions.png":::
-
-> [!IMPORTANT]
-> Follow the recommended actions in the order they're listed to prevent orphaned devices and ensure secure offboarding.  
-
-After an admin reviews and completes the recommended actions, they can self-attest to applying those actions by updating the **Manage Suggestions** to complete. Marking a suggestion as complete doesn't trigger any device changes by the agent.  
-
-# [**Settings**](#tab/settings)
-
-Use the **Settings** tab to view the agent's current configuration. You can view details about the agent's identity and tailor the agent outputs to your needs by using the optional **Instructions** field.
-
-:::image type="content" source="images/device-offboarding-agent/settings.png" alt-text="Screenshot of the settings tab of the Device Offboarding Agent." border="false" lightbox="images/device-offboarding-agent/settings.png":::
-
----
 
 ## Configure custom instructions
 
