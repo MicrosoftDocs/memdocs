@@ -122,8 +122,9 @@ To support secure and efficient device lifecycle management, the Device Offboard
 
 :::row:::
 :::column span="1":::
-**1. Signal aggregation**\
-:::image type="icon" source="icons/signal-aggregation.svg" border="false":::
+**1. Signal aggregation**
+
+  :::image type="icon" source="icons/signal-aggregation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >The Device Offboarding Agent begins by aggregating signals from Microsoft Intune and Microsoft Entra ID. These signals include  indicators, that help determine whether a device is active, stale, or misconfigured.
@@ -133,7 +134,7 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::column span="1":::
 **2. Evaluation**
 
-:::image type="icon" source="icons/evaluation.svg" border="false":::
+    :::image type="icon" source="icons/evaluation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >The agent evaluates each device using predefined logic and any optional [custom instructions](#configure-custom-instructions) provided by an admin.
@@ -151,7 +152,8 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row-end:::
 :::row:::
 :::column span="1":::
-**4. Admin approval**\
+**4. Admin approval**
+
 :::image type="icon" source="icons/approval.svg" border="false":::
 :::column-end:::
 :::column span="3":::
@@ -160,7 +162,8 @@ To support secure and efficient device lifecycle management, the Device Offboard
 :::row-end:::
 :::row:::
 :::column span="1":::
-**5. Assisted remediation**\
+**5. Assisted remediation**
+
 :::image type="icon" source="icons/remediation.svg" border="false":::
 :::column-end:::
 :::column span="3":::
