@@ -58,4 +58,3 @@ For step-by-step setup guidance, see [Connecting iVerify Enterprise with Microso
 
 - [Create device compliance policy for Mobile Threat Protection](mtd-device-compliance-policy-create.md)
 - [Enable mobile threat connectors in Intune](mtd-connector-enable.md)
-- [Create an Mobile Threat Protection app protection policy](../protect/mtd-app-protection-policy.md)
