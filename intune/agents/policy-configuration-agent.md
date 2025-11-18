@@ -1,7 +1,7 @@
 ---
 title: Learn about Policy Configuration Agent and set it up
 description: Learn about the Policy Configuration Agent in Microsoft Intune, its prerequisites, how it works, and how to set it up. The agent is a generative AI feature that helps create Intune policies based on uploaded documents or benchmarks. The Policy Configuration Agent is a feature of Security Copilot in Intune.
-ms.date: 11/17/2025
+ms.date: 11/18/2025
 ms.topic: overview
 author: mandiohlinger
 ms.author: mandia
@@ -99,7 +99,11 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles)
 >
-> To learn about the Security Copilot roles, see [Security Copilot roles and permissions](/copilot/security/authentication).
+>   To learn about the Security Copilot roles, see [Security Copilot roles and permissions](/copilot/security/authentication).
+>
+> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
+> - [Read only operator](../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
+>   - Device configurations/Read
 >
 > ---
 >
@@ -109,7 +113,6 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
 >
 > :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
->
 > - [Read only operator](../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
