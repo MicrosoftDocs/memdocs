@@ -1,7 +1,7 @@
 ---
 title: Enable Windows Backup for Organizations in Microsoft Intune
 description: Enable Windows backup and restore in Intune for employees or students.
-ms.date: 08/18/2025
+ms.date: 11/11/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:

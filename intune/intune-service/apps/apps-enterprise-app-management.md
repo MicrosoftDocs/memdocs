@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune Enterprise Application Management
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
-ms.date: 10/09/2025
+ms.date: 11/17/2025
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -95,9 +95,33 @@ The apps currently provided in the Enterprise application catalog are Windows Wi
 
 At this time, Intune provides no running application detection.
 
-### What is the Service Level Agreement (SLA) for when an app update is available in the catalog?
+### What are the Service Level Objectives for when an app update is available in the catalog?
 
-No SLA is currently available.
+Service Level Objectives (SLOs) define target timelines for making app updates available in the Enterprise App Catalog between when Microsoft receives them to when they're made available in the Enterprise App Catalog. Unlike Service Level Agreements (SLAs), these are guidelines, not guarantees. SLOs allow customers to plan typical app update processing timelines.
+
+The SLO measurement window starts at ingestion, the point when the app update is first received from the data source and logged in the EAM system.
+
+#### App Update Process Flow
+
+1. **Ingestion** – App update is received by Microsoft
+2. **Automated Validation** – Compatibility, security, and compliance checks
+3. **Manual Validation** (if needed) – Vendor engagement for additional testing or bypass approval
+4. **Catalog Availability** – App update published to Enterprise App Catalog
+
+#### Automated Validation
+
+Most apps undergo automated validation checks.
+
+- Target: 80–90% of app updates are processed and available in the Intune portal within 24 hours of ingestion.
+
+#### Manual Validation Apps (Bypass Required)
+
+If an app fails automated checks, it moves to manual validation and requires additional testing. Updates requiring manual testing and approval are completed within 7 days.
+
+#### Exception Handling
+
+- High-usage or critical apps that fail automated validation are prioritized for expedited processing (goal of 48 hours.)
+- Apps that fail both automated and manual validation don't meet SLO and are flagged as unsupported.
 
 ### How many applications are in the catalog?
 

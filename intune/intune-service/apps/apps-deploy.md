@@ -38,8 +38,8 @@ The following table lists the various options when *assigning* apps to users and
 > [!NOTE]
 > Currently, you can assign iOS/iPadOS and Android apps (line-of-business and store-purchased apps) to devices that aren't enrolled with Intune.
 >
-> To receive app updates on devices that aren't enrolled with Intune, device users must go to their organization's Company Portal and manually install app updates.
->
+> Device users with devices that aren’t enrolled in Intune must open their organization’s Company Portal and install app updates manually.
+> 
 > For almost all app types and platforms, *Available assignments* are only valid when assigning to user groups, not device groups. Win32 apps can be assigned to either user or device groups.
 >
 > If managed Google Play preproduction track apps are assigned as required on Android Enterprise personally owned work profile devices, they don't install on the device. To work around this issue, create two identical user groups. Assign the preproduction track as "available" to one group and "required" to the other group. The result is that the preproduction track successfully deploys to the device.
@@ -82,7 +82,12 @@ The following table lists the various options when *assigning* apps to users and
 13. In the **Add group** pane, select **OK**.
 14. In the app **Assignments** pane, select **Save**.
 
-The app is now assigned to the groups that you selected. For more information about including and excluding app assignments, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
+The app is now assigned to the groups that you selected.
+
+> [!NOTE]
+> If Microsoft Entra soft-deletes any of these groups, Intune shows them as soft deleted in the console, and their assignments don’t apply until the groups are restored.
+
+For more information about including and excluding app assignments, see [Include and exclude app assignments](apps-inc-exl-assignments.md).
 
 > [!NOTE]
 > You see the status of the selected group in the assignments. The possible status options are: Active, Deleted, or Soft-Deleted.

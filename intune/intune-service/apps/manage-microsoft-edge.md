@@ -1,7 +1,7 @@
 ---
 title: Manage Microsoft Edge on iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Microsoft Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place.
-ms.date: 08/27/2025
+ms.date: 11/18/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
@@ -25,7 +25,7 @@ This feature applies to:
 The richest and broadest protection capabilities for Microsoft 365 data are available when you subscribe to the Enterprise Mobility + Security suite, which includes Microsoft Intune and Microsoft Entra ID P1 or P2 features, such as Conditional Access. At a minimum, you want to deploy a Conditional Access policy that only allows connectivity to Microsoft Edge for iOS and Android from mobile devices and an Intune app protection policy that ensures the browsing experience is protected.
 
 > [!NOTE]
-> New web clips (pinned web apps) on iOS devices open in Microsoft Edge for iOS and Android instead of the Intune Managed Browser when required to open in a protected browser. For older iOS web clips, you must retarget these web clips to ensure they open in Microsoft Edge for iOS and Android rather than the Managed Browser.
+> Web clips (pinned web apps) on iOS devices open in Microsoft Edge for iOS and Android when required to open in a protected browser.
 
 ## Create Intune app protection policies
 
@@ -391,17 +391,6 @@ Organizations can specify dedicated proxy via MDM policy for users to sign in to
 |:---------|:---------|
 |EdgeOneAuthProxy |  The corresponding value is a string <br> **Example** `http://MyProxy.com:8080` |
 
-### iOS Website data store
-
-The website data store in Microsoft Edge for iOS is essential for managing cookies, disk and memory caches, and various types of data. However, there's only one persistent website data store in Microsoft Edge for iOS. By default, this data store is exclusively used by personal accounts, leading to a limitation where work or school accounts can't utilize it. So, browsing data, excluding cookies, is lost after each session for work or school accounts. To improve the user experience, organizations can configure the website data store for use by work or school accounts, ensuring the persistence of browsing data.
-
-|Key |Value |
-|:-----------|:-------------|
-|com.microsoft.intune.mam.managedbrowser.PersistentWebsiteDataStore |**0** The website data store is always used only by personal account  <br>**1** The website data store is used by the first signed-in account <br>**2** (Default) The website data store is used by work or school account regardless of the sign-in order |
-
-> [!NOTE]
-> With the release of iOS 17, multiple persistent stores are now supported. Work and personal account have its own designated persistent store. Therefore, this policy is no longer valid from version 122.
-
 ### Microsoft Defender SmartScreen
 
 Microsoft Defender SmartScreen is a feature that helps users avoid malicious sites and downloads. It's enabled by default. Organizations can disable this setting.
@@ -676,7 +665,7 @@ Target Microsoft Edge for iOS and Android with the following key/value pair, to 
 |:-------------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.AppProxyRedirection <br><br> This policy name has been replaced by the UI of **Application proxy redirection** under Microsoft Edge Configuration settings |**true** enables Microsoft Entra application proxy redirection scenarios <br>**false** (default) prevents Microsoft Entra application proxy scenarios |
 
-For more information about how to use Microsoft Edge for iOS and Android and Microsoft Entra application proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Microsoft Entra team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254). This blog post references the Intune Managed Browser, but the content applies to Microsoft Edge for iOS and Android as well.
+For more information about how to use Microsoft Edge for iOS and Android and Microsoft Entra application proxy in tandem for seamless (and protected) access to on-premises web apps, see [Better together: Intune and Microsoft Entra team up to improve user access](https://techcommunity.microsoft.com/t5/enterprise-mobility-security/better-together-intune-and-azure-active-directory-team-up-to/ba-p/250254).
 
 ### Manage NTLM single sign-on sites
 
