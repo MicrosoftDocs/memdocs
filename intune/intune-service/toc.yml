@@ -352,6 +352,12 @@ items:
       items:
       - name: Configure security recommendations using Zero Trust
         href: ./protect/zero-trust-configure-security.md
+      - name: Secure tenants
+        href: ./protect/zero-trust-secure-tenant.md
+      - name: Secure devices
+        href: ./protect/zero-trust-secure-devices.md
+      - name: Secure data
+        href: ./protect/zero-trust-secure-data.md
 
   - name: Create and deploy Intune policies
     items:
@@ -1755,7 +1761,7 @@ items:
           items:
           - name: Set up automated device enrollment for macOS
             href: ./enrollment/device-enrollment-program-enroll-macos.md
-          - name: Setup macOS account configuration with LAPS
+          - name: Set up macOS account configuration with LAPS
             href: ./enrollment/macos-laps.md
           - name: Set up Direct Enrollment for macOS
             href: ./enrollment/device-enrollment-direct-enroll-macos.md
@@ -1765,8 +1771,6 @@ items:
             href: ./enrollment/macos-enroll.md
       - name: Troubleshoot enrollment
         items:
-        - name: Get incomplete user enrollment report
-          href: ./enrollment/enrollment-report-company-portal-abandon.md
         - name: View enrollment reports
           href: ./enrollment/view-enrollment-reports.md
         - name: Troubleshoot device enrollment
@@ -2018,6 +2022,8 @@ items:
 
   - name: Scenario-based guidance
     items:
+    - name: Manage AI on Android
+      href: ../solutions/ai/manage-ai-android.md
     - name: Manage operating system versions
       href: ./fundamentals/manage-os-versions.md
     - name: Frontline worker (FLW) device management

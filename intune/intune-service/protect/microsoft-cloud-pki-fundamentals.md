@@ -6,6 +6,7 @@ ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
 ms.reviewer: wicale
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - certificates

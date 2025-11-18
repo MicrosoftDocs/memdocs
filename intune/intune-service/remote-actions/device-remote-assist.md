@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: New Remote Assistance Session"
 description: Learn how to use the the new remote assistance session action in Intune to offer support to your users.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ---
 

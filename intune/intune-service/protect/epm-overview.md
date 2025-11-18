@@ -7,6 +7,7 @@ manager: laurawi
 ms.date: 10/20/2025
 ms.topic: how-to
 ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -65,7 +66,7 @@ This diagram shows a high level architecture of how the EPM client is triggered,
 
 EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
-With the exception of *Elevate as current user* type, EPM uses a *virtual account* to elevate processes. Use of the virtual account isolates elevated actions from the user’s profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+With the exception of *Elevate as current user* type, EPM uses a *virtual account* to elevate processes. Use of the virtual account isolates elevated actions from the user's profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
 
 When you use Endpoint Privilege Management, there are a few options for elevation behavior:
 

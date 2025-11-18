@@ -6,6 +6,7 @@ ms.author: brenduns
 ms.date: 10/20/2025
 ms.topic: how-to
 ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -16,7 +17,6 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-*Elevation reports for Endpoint Privilege Management are currently in preview.*
 
 [!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
@@ -38,7 +38,7 @@ The following reports are available from the Report tab:
 
 ## Overview dashboard
 
-The EPM Overview tab provides a dashboard that can help you assess your organization’s readiness in migrating your local admin user accounts to standard users, securely and efficiently. Information tiles on this dashboard include details pulled from the last 48 hours for the following file and elevation activities:
+The EPM Overview tab provides a dashboard that can help you assess your organization's readiness in migrating your local admin user accounts to standard users, securely and efficiently. Information tiles on this dashboard include details pulled from the last 48 hours for the following file and elevation activities:
 
 - **Users who have only unmanaged file elevations**. This tile identifies the count of users who are running files in an elevated context that aren't managed by EPM. This information can help you create policies to close gaps in your EPM coverage.
 

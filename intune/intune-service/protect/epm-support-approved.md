@@ -3,9 +3,10 @@ title: Use EPM support approvals for file elevation requests with Intune
 description: Manage support approvals for elevation requests when you use Endpoint Privilege Management for Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/10/2025
+ms.date: 11/13/2025
 ms.topic: how-to
-ms.reviewer: miked"
+ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -48,7 +49,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
 - **Review of elevation requests**
 
-  An Intune admin must have *view* and *manage* rights for the **Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests.
+  An Intune admin must have *view* and *manage* rights for the **Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests. Admins can only view and manage requests that fall within their configured scope.
 
   To find and respond to requests, these admins use the **Elevation requests** tab of the *Endpoint Privilege Management* page in the admin center. Because Intune doesn't have a way to notify admins about new elevation requests, admins should plan to check the tab regularly for pending requests.
 

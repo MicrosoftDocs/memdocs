@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Full Scan"
 description: Learn how to initiate on demand Microsoft Defender full scan with Microsoft Intune.
-ms.date: 09/22/2025
+ms.date: 10/27/2025
 ms.topic: how-to
 ---
 
@@ -11,18 +11,28 @@ The *full scan* remote action in Intune lets IT admins trigger a comprehensive m
 
 This action is ideal when a device is suspected of compromise or when validating security baselines. Instead of waiting for scheduled scans or relying on user action, admins can launch a full scan directly from the Intune admin center.
 
-## Requirements
+## Prerequisites
 
-[!INCLUDE [platform-requirements](../../includes/h3/platform-requirements.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!div class="checklist"]
+:::column-end:::
+:::column span="3":::
+
 > This remote action supports the following platforms:
 >
 > - Windows
 
-[!INCLUDE [rbac-requirements](../../includes/h3/rbac-requirements.md)]
+:::column-end:::
+:::row-end:::
 
-> [!div class="checklist"]
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
 > To run this remote action, use an account with at least one of the following roles:
 >
 > - [Help Desk Operator][INT-R1]
@@ -30,7 +40,8 @@ This action is ideal when a device is suspected of compromise or when validating
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Remote tasks/Windows defender**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
-
+:::column-end:::
+:::row-end:::
 ## How to initiate a full scan from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].

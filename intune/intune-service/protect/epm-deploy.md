@@ -6,6 +6,7 @@ ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: how-to
 ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
