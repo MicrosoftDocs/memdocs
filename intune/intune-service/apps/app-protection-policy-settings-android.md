@@ -1,7 +1,7 @@
 ---
 title: Android App Protection Policy Settings
 description: This article describes the app protection policy settings for Android devices.
-ms.date: 09/30/2025
+ms.date: 11/18/2025
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
@@ -15,8 +15,6 @@ There are three categories of policy settings: data protection settings, access 
 
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies for Android devices.
->
-> The Intune Managed Browser is retired. Use [Microsoft Edge](../apps/manage-microsoft-edge.md) for your protected Intune browser experience.
 
 ## Data protection
 ### Data Transfer

@@ -1,7 +1,7 @@
 ---
 title: Benefits of Intune App SDK
 description: The Intune App SDK is available for both the iOS and Android platforms, and enables mobile app management features with Microsoft Intune.
-ms.date: 10/31/2024
+ms.date: 11/18/2025
 ms.topic: reference
 ms.reviewer: jamiesil
 ms.collection:
@@ -29,7 +29,7 @@ IT administrators can enforce a policy that ensures that data saved to the devic
 ### Remotely wipe corporate data
 IT administrators can remotely wipe corporate data from an Intune-managed app. This feature is identity-based and will only delete the files associated with the corporate identity of the end user. To do that, the feature requires the app's participation. The app can specify the identity for which the wipe should occur based on user settings. In the absence of these specified user settings from the app, the default behavior is to wipe the application directory and notify the end user that access has been removed.
 
-### Enforce the use of a managed browser
+### Enforce the use of Microsoft Edge
 IT administrators can force web links in the app to be opened with the [Microsoft Edge app](../apps/manage-microsoft-edge.md). This functionality ensures that links that appear in a corporate environment are kept within the domain of Intune-managed apps.
 
 ### Enforce a PIN policy
