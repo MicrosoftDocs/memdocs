@@ -81,17 +81,6 @@ When viewing Endpoint Privilege Management [elevation requests](/intune/intune-s
 
 ### App management
 
-#### PowerShell script installer support for Win32 apps <!-- 34496511 -->
-
-When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
-
-For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
 #### More volume options available in Managed Home Screen <!-- 16462284 -->
 
 Admins can now enable more volume controls in the Managed Home Screen (MHS) app for Android Enterprise dedicated and fully managed devices. In addition to the existing media volume control, this update introduces configuration settings to show or hide sliders for **call**, **ring and notification**, and **alarm** volumes.
@@ -125,6 +114,20 @@ For more information about Managed Google Play store layout options, see [Approv
 Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
 
 For more information, see [Enterprise App Management overview](../apps/apps-enterprise-app-management.md).
+
+#### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
+
+Intune adds two new values to the **Allow cut, copy and paste for** setting in Windows app protection policies (starting with Microsoft Edge) to give admins more control over data movement:
+
+- Org data destinations and any source: Users can paste from any source into the org context, and can cut/copy only to org destinations.  
+- Org data destinations and org data sources: Users can cut/copy/paste only within the org context.
+
+These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../apps/app-protection-policy.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+>- Windows
 
 ### Device configuration
 

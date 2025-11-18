@@ -1,7 +1,7 @@
 ---
 title: iOS/iPadOS App Protection Policy Settings
 description: This article describes the iOS/iPadOS app protection policy (APP) settings for iOS/iPadOS devices.
-ms.date: 07/18/2025
+ms.date: 11/18/2025
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
@@ -15,9 +15,6 @@ ms.collection:
 This article describes the app protection policy settings for iOS/iPadOS devices. The policy settings that are described can be [configured](app-protection-policies.md) for an app protection policy on the **Settings** pane in the portal when you make a new policy.
 
 There are three categories of policy settings: *Data relocation*, *Access requirements*, and *Conditional launch*. In this article, the term ***policy-managed apps*** refers to apps that are configured with app protection policies.
-
-> [!IMPORTANT]
-> The Intune Managed Browser is retired. Use [Microsoft Edge](../apps/manage-microsoft-edge.md) for your protected Intune browser experience.
 
 ## Data protection
 

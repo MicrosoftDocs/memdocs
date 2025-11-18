@@ -1,7 +1,7 @@
 ---
 title: Android App Protection Policy Settings
 description: This article describes the app protection policy settings for Android devices.
-ms.date: 09/30/2025
+ms.date: 11/18/2025
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
@@ -15,15 +15,13 @@ There are three categories of policy settings: data protection settings, access 
 
 > [!IMPORTANT]
 > The Intune Company Portal is required on the device to receive App Protection Policies for Android devices.
->
-> The Intune Managed Browser is retired. Use [Microsoft Edge](../apps/manage-microsoft-edge.md) for your protected Intune browser experience.
 
 ## Data protection
 ### Data Transfer
 |Setting |How to use |Default value |
 |:------|:------|:------|
 |**Backup org data to Android backup services** |Select **Block** to prevent this app from backing up work or school data to the [Android Backup Service](https://developer.android.com/google/backup/index.html).<br><br> Select **Allow** to allow this app to back up work or school data.|**Allow** |
-|**Send org data to other apps** |Specify what apps can receive data from this app: <ul><li> **Policy managed apps**: Allow transfer only to other policy-managed apps.</li> <li>**All Apps**: Allow transfer to any app. </li> <li>**None**: Don't allow data transfer to any app, including other policy-managed apps.</li></ul> <p>There are some exempt apps and services to which Intune can allow data transfer by default. In addition, you can create your own exemptions if you need to allow data to transfer to an app that doesn't support Intune APP. For more information, see [Data transfer exemptions](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>This policy can also apply to Android App Links. General web links are managed by the **Open app links in Intune Managed Browser** policy setting.<p><div class="NOTE"><p>Note</p><p>Intune doesn't currently support the Android Instant Apps feature. Intune blocks any data connection to or from the app. For more information, see [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) in the Android Developer documentation.</p><p>If **Send org data to other apps** is configured to **All Apps**, text data can still be transferred via OS sharing to the clipboard.</p></div> |**All Apps** |
+|**Send org data to other apps** |Specify what apps can receive data from this app: <ul><li> **Policy managed apps**: Allow transfer only to other policy-managed apps.</li> <li>**All Apps**: Allow transfer to any app. </li> <li>**None**: Don't allow data transfer to any app, including other policy-managed apps.</li></ul> <p>There are some exempt apps and services to which Intune can allow data transfer by default. In addition, you can create your own exemptions if you need to allow data to transfer to an app that doesn't support Intune APP. For more information, see [Data transfer exemptions](app-protection-policy-settings-android.md#data-transfer-exemptions).<p>This policy can also apply to Android App Links.<p><div class="NOTE"><p>Note</p><p>Intune doesn't currently support the Android Instant Apps feature. Intune blocks any data connection to or from the app. For more information, see [Android Instant Apps](https://developer.android.com/topic/instant-apps/index.html) in the Android Developer documentation.</p><p>If **Send org data to other apps** is configured to **All Apps**, text data can still be transferred via OS sharing to the clipboard.</p></div> |**All Apps** |
 |<ul><b>**Select apps to exempt** |This option is available when you select *Policy managed apps* for the previous option. ||
 |<ul><b>**Save copies of org data** |Choose **Block** to disable the use of the Save As option in this app. Choose **Allow** if you want to allow the use of *Save As*. When set to *Block*, you can configure the setting *Allow user to save copies to selected services*. <br><br>**Note:**<ul><li><i>This setting is supported for Microsoft Excel, OneNote, PowerPoint, Word, and Microsoft Edge. It might also be supported by non-Microsoft and LOB apps.</i></li><li><i>This setting is only configurable when the setting **Send org data to other apps** is set to **Policy managed apps**.</i></li><li><i>This setting is "Allow" when the setting **Send org data to other apps** is set to **All Apps**. </i></li><li><i>This setting is "Block" with no allowed service locations when the setting **Send org data to other apps** is set to **None".</i></li><li><i>This setting saves files as encrypted if **Encrypt org data** is set to **Require". </i></li></ul> |**Allow** |
 |<ul><b><ul><b>**Allow user to save copies to selected services** |Users can save to the selected services (OneDrive, SharePoint, Photo Library, Box, iManage, Egnyte, and Local Storage). All other services are blocked. |**0 selected** |
