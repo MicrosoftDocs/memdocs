@@ -49,21 +49,17 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
     >
     > Always keep your password secure.
 
-7. Uncheck **Allow my organization to manage my device** and select **OK**.
+    > [!NOTE]
+	> A new user experience and a new admin property in public preview is rolling out November and December 2025. You have the option to control if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the work or school account registration flow (referring to [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506)). To control the behavior of the flow, use the Disable MDM enrollment when adding work or school account setting. Configure the new admin property to control the via Windows Autoenrollment policies and learn more about the setting at [Enable MDM automatic enrollment for Windows - Microsoft Intune | Microsoft Learn](https://review.learn.microsoft.com/en-us/intune/intune-service/enrollment/windows-enroll?branch=pr-en-us-18970).
 
-	:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png" alt-text="Stay signed in to all your apps window in Microsoft Edge." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png":::
-
-    > [!IMPORTANT]
-    > You need to make sure the checkmark is unselected otherwise the device is enrolled into Intune. You should also not select the option **No, sign in the app only** as this won't enroll or ensure MAM is operational for the browser.
+7. Select **Yes** to sign in and register the device. You should not select the option **No, sign in the app only** as this will not enroll or ensure MAM is operational for the browser. 
 
 8. Wait until you see the message, **You're all set!** Then, select **Done.**
 
-	:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business23.png" alt-text="You're all set in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business23.png":::
-
 9. Confirm that you're signed-in by clicking on the user icon again.
 
-	> [!NOTE]
-	> Now that enrollment is complete your browser is protecting your corporate data.
+> [!NOTE]
+> Now that enrollment is complete your browser is protecting your corporate data.
 
 ## App protection notifications
 
