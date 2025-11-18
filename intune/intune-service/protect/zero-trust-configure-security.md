@@ -41,6 +41,8 @@ Ensure tenant-level governance, identity, and configuration consistency.
 | [Compliance policies protect fully managed and corporate-owned Android devices](../protect/zero-trust-secure-tenant.md#compliance-policies-protect-fully-managed-and-corporate-owned-android-devices) | Microsoft Intune Plan 1 |
 | [Compliance policies protect personally owned Android devices](../protect/zero-trust-secure-tenant.md#compliance-policies-protect-personally-owned-android-devices) | Microsoft Intune Plan 1 |
 | [Compliance policies protect iOS/iPadOS devices](../protect/zero-trust-secure-tenant.md#compliance-policies-protect-iosipados-devices) | Microsoft Intune Plan 1 |
+| [Platform SSO is configured to strengthen authentication on macOS devices](../protect/zero-trust-secure-tenant.md#platform-sso-is-configured-to-strengthen-authentication-on-macos-devices) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
+| [Defender for Endpoint automatic enrollment is enforced to reduce risk from unmanaged Android threats](../protect/zero-trust-secure-tenant.md#defender-for-endpoint-automatic-enrollment-is-enforced-to-reduce-risk-from-unmanaged-android-threats) | Microsoft Intune Plan 1<br>Defender for Endpoint Plan 1 |
 | [Device cleanup rules maintain tenant hygiene by hiding inactive devices](../protect/zero-trust-secure-tenant.md#device-cleanup-rules-maintain-tenant-hygiene-by-hiding-inactive-devices) | Microsoft Intune Plan 1 |
 | [Terms and Conditions policies protect access to sensitive data](../protect/zero-trust-secure-tenant.md#terms-and-conditions-policies-protect-access-to-sensitive-data) | Microsoft Intune Plan 1 |
 | [Company Portal branding and support settings enhance user experience and trust](../protect/zero-trust-secure-tenant.md#company-portal-branding-and-support-settings-enhance-user-experience-and-trust) | Microsoft Intune Plan 1 |
@@ -50,6 +52,8 @@ For license details, see:
 
 - [Microsoft Intune licensing](../fundamentals/licenses.md)
 - [Microsoft Entra licensing](/entra/fundamentals/licensing)
+- [Overview of Microsoft Defender for Endpoint Plan 1](/defender-endpoint/defender-endpoint-plan-1)
+
 
 ## Secure Devices
 
@@ -89,6 +93,7 @@ Protect data on devices and in transit, and enforce secure access to organizatio
 | [Conditional Access policies block access from unmanaged apps](../protect/zero-trust-secure-data.md#conditional-access-policies-block-access-from-unmanaged-apps) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
 | [Conditional Access policies block access from noncompliant devices](../protect/zero-trust-secure-data.md#conditional-access-policies-block-access-from-noncompliant-devices) | Microsoft Intune Plan 1<br>Microsoft Entra ID P1 *(for Conditional Access)* |
 | [Secure Wi-Fi profiles protect iOS devices from unauthorized network access](../protect/zero-trust-secure-data.md#secure-wi-fi-profiles-protect-ios-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
+| [Secure Wi-Fi profiles protect macOS devices from unauthorized network access](../protect/zero-trust-secure-data.md#secure-wi-fi-profiles-protect-macos-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
 | [Secure Wi-Fi profiles protect Android devices from unauthorized network access](../protect/zero-trust-secure-data.md#secure-wi-fi-profiles-protect-android-devices-from-unauthorized-network-access) | Microsoft Intune Plan 1 |
 
 For license details, see:
