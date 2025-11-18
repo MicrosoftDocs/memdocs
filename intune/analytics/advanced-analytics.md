@@ -16,78 +16,64 @@ Advanced Analytics includes the following features:
 
 :::row:::
 :::column span="1":::
-**Anomaly detection**
+**[Anomaly detection](anomaly-detection.md)**
 :::column-end:::
 :::column span="3":::
 >Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
->
->:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Anomaly detection](anomaly-detection.md).
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-**Battery health**
+**[Battery health](battery-health.md)**
 :::column-end:::
 :::column span="3":::
 >Report helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
->
->:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Battery health](battery-health.md).
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-**Custom device scopes**
+**[Device scopes](device-scopes.md)**
 :::column-end:::
 :::column span="3":::
->Use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region. 
->
->:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Device scopes](device-scopes.md).
+>Use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region.
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-**Enhanced device timeline**
+**[Enhanced device timeline](enhanced-device-timeline.md)**
 :::column-end:::
 :::column span="3":::
 >Includes more events and lower data latency to assist with troubleshooting device issues
->
->:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Enhanced device timeline](enhanced-device-timeline.md).
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-**Resource Performance**
+**[Resource Performance](resource-performance-report.md)**
 :::column-end:::
 :::column span="3":::
 > Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
->
->:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Resource Performance report](resource-performance-report.md).
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-**Device query**
+**[Device query](device-query.md)**
 :::column-end:::
 :::column span="3":::
 > Get near-real time access to data about the state and configuration of devices.
->
->:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Device query](device-query.md).
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column span="1":::
-**Device query for multiple devices**
+**[Device query for multiple devices](device-query-multiple-devices.md)**
 :::column-end:::
 :::column span="3":::
 > View collected inventory data across multiple devices and platforms.
->
->:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Device query for multiple devices](device-query-multiple-devices.md).
 :::column-end:::
 :::row-end:::
 
