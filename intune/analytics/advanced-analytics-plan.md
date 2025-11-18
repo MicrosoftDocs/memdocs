@@ -20,15 +20,20 @@ For a successful deployment of Advanced Analytics, the following activities are 
 
 ## Prerequisites
 
+<!--
 Intune Advanced Analytics features build on top of the base endpoint analytics experience.
 
 > [!NOTE]
 > The Advanced Analytics features are only available for Intune-managed (including co-managed) devices.
+-->
 
 General requirements:
 
 - Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
+
+<!-->
 - Network connectivity to required Microsoft endpoints. For more information, see [Microsoft Intune URLs and IP address ranges](/mem/intune/fundamentals/intune-endpoints).
+
 
 Windows capability requirements:
 
@@ -36,15 +41,17 @@ Windows capability requirements:
 - Microsoft Entra-joined or Hybrid Entra-joined.
 - [Endpoint analytics for Windows license requirements](index.md#prerequisites).
 - [Device enrolled into Intune and onboarded to endpoint analytics](configure.md).
+
 - Multi Device query requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed.
 - Single device query requires the device to be marked as corporate.
 - Anamoly detection:
-  - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
+  - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085--
   - Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 > [!NOTE]
 > For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
 
+<!--
 Device query for multiple devices is supported on devices running:
 
 - Windows 10 and later
@@ -55,6 +62,7 @@ Device query for multiple devices is supported on devices running:
 - Apple
   - iOS/iPadOS
   - macOS
+-->
 
 ## Government cloud support
 

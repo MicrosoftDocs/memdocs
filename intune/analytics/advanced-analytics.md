@@ -24,7 +24,6 @@ Advanced Analytics includes the following features:
 >:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Anomaly detection](anomaly-detection.md).
 :::column-end:::
 :::row-end:::
-:::row:::
 
 :::row:::
 :::column span="1":::
@@ -36,7 +35,6 @@ Advanced Analytics includes the following features:
 >:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Battery health](battery-health.md).
 :::column-end:::
 :::row-end:::
-:::row:::
 
 :::row:::
 :::column span="1":::
@@ -48,7 +46,6 @@ Advanced Analytics includes the following features:
 >:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Device scopes](device-scopes.md).
 :::column-end:::
 :::row-end:::
-:::row:::
 
 :::row:::
 :::column span="1":::
@@ -60,7 +57,6 @@ Advanced Analytics includes the following features:
 >:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Enhanced device timeline](enhanced-device-timeline.md).
 :::column-end:::
 :::row-end:::
-:::row:::
 
 :::row:::
 :::column span="1":::
@@ -72,7 +68,6 @@ Advanced Analytics includes the following features:
 >:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Resource Performance report](resource-performance-report.md).
 :::column-end:::
 :::row-end:::
-:::row:::
 
 :::row:::
 :::column span="1":::
@@ -84,7 +79,6 @@ Advanced Analytics includes the following features:
 >:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Device query](device-query.md).
 :::column-end:::
 :::row-end:::
-:::row:::
 
 :::row:::
 :::column span="1":::
@@ -96,7 +90,6 @@ Advanced Analytics includes the following features:
 >:::image type="icon" source="../media/icons/information.svg" border="false"::: Learn more: [Device query for multiple devices](device-query-multiple-devices.md).
 :::column-end:::
 :::row-end:::
-:::row:::
 
 ## Advanced Analytics Reports
 
@@ -125,7 +118,55 @@ When Advanced Analytics is enabled, single device views in Intune are supplement
 
 When Advanced Analytics is enabled, [**Device query** for multiple devices](device-query-multiple-devices.md) is enabled under the **Devices** node in the *Intune admin center*.
 
----
+
+## Prerequisites
+
+Intune Advanced Analytics features build on top of the base endpoint analytics experience, but it's only available for Intune-managed devices (including co-managed devices). Devices must meet the [endpoint analytics prerequisites](index.md#prerequisites) to use Advanced Analytics features, and must be enrolled in endpoint analytics.
+
+This section details additional prerequisites specific to Advanced Analytics features.
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+> **Single device query** requires the device to be marked as corporate.
+>
+> **Device query for multiple devices** is supported on devices running:
+> - Windows
+> - Android
+>   - Android Enterprise corporate owned dedicated devices (COSU)
+>   - Android Enterprise corporate owned fully managed (COBO)
+>   - Android Enterprise corporate owned work profile (COPE)
+> - Apple
+>   - iOS/iPadOS
+>   - macOS
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
+
+:::column-end:::
+:::column span="3":::
+> Advanced Analytics supports Windows devices that are:
+>
+> - Managed by Intune
+> - Co-managed (Intune + Configuration Manager)
+> - Microsoft Entra joined
+> - Microsoft Entra hybrid joined
+>
+> **Single device query** requires the device to be marked as corporate.
+>
+> **Device query for multiple devices** requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed.
+>
+> [!NOTE]
+> For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
+
+:::column-end:::
+:::row-end:::
 
 ## Next Steps
 
