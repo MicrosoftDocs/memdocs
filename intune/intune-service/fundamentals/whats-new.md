@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/14/2025
+ms.date: 11/18/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of November 17, 2025
+
+### Device management
+
+### Intune support for iVerify as a mobile threat defense partner<!-- 35838315 -->
+
+You can now use iVerify Enterprise as a mobile threat defense partner (MTD) for enrolled devices that run the following platforms:  
+
+- Android 9.0 and later
+-  iOS/iPadOS 15.0 and later
+
+To learn more about this support, see [Set up iVerify Mobile Threat Defense Connector](../protect/iverify-mobile-threat-defense-connector.md).
+
+
 ## Week of November 10, 2025 (Service release 2511)
 
 ### Microsoft Intune Suite
