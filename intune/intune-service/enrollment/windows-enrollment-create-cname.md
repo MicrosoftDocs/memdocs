@@ -86,4 +86,11 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 |CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.us | One hour |
 |CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | One hour |
 
+For Intune operated in China and by 21Vianet use the following: 
+
+| Type | Host name | Points to | TTL |
+| --- | --- | --- | --- |
+|CNAME | EnterpriseEnrollment.contoso.com | enterpriseenrollment-s.manage.microsoftonline.cn | One hour |
+
+
 For more information about automatic enrollment for Windows, see [Set up automatic enrollment](../enrollment/windows-enroll.md).
