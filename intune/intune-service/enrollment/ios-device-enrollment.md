@@ -17,12 +17,9 @@ Device enrollment supports an app based enrollment experience and web based enro
 * **Device enrollment with Company Portal**
 * **Web based device enrollment**
 
-Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** and select **Enrollment types**.
+Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** and select **Enrollment types**.  
 
-> [!TIP]
-> We recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment.
-
-Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Microsoft Entra registration within the employee's work apps and reduce the number of times they have to authenticate. We recommend web enrollment using JIT registration with SSO as the most secure enrollment method for device attestation. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration). You aren't required to use JIT registration with web-based enrollment but we recommend using it to make the enrollment experience faster and easier for your employees and students.  
+Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Microsoft Entra registration within the employee's work apps and reduce the number of times they have to authenticate. We recommend web enrollment using JIT registration with SSO as the most secure enrollment method for device attestation. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration). You aren't required to use JIT registration with web-based enrollment, but we recommend using it to make the enrollment experience faster, easier, and more secure for your employees and students. We also recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment.  
 
 The following table provides details about app and web-based enrollment.
 
