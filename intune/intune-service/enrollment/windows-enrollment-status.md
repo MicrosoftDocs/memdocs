@@ -68,7 +68,7 @@ Use the following steps to create an Intune profile that configures the enrollme
       >
       > - This setting only supports [current supported versions of Windows 11](/windows/release-health/windows11-release-information).
       > - When set to **Yes**, monthly security update releases are installed during OOBE after the ESP completes.
-      > - For more details on this setting, see [Install Windows quality updates](#install-windows-monthly-security-update-releases) (in this article).
+      > - For more details on this setting, see [Windows monthly security update release details](#windows-monthly-security-update-release-details) (in this article).
 
     - **Block device use until all apps and profiles are installed**: Your options:
       - **No**: Users can leave the ESP before Intune is finished setting up the device.
@@ -107,6 +107,21 @@ Use the following steps to create an Intune profile that configures the enrollme
 
 1. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. Once deployed, the profile applies the next time the devices check in. You can access the profile from your profiles list.
 
+## Edit default profile
+
+Intune applies the default profile to all users and all devices when no other ESP profiles are available to assign. You can configure the default profile to show or hide the ESP.
+
+1. Select the default profile.
+1. Select **Properties**.
+1. Go to the **Settings** section and select **Edit**.
+1. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
+   - **No**: The ESP isn't visible to users during initial device setup and sign-in.
+   - **Yes**: The ESP is visible to users during initial device setup and sign-in.
+
+   If you select **Yes**, more settings become available for you to configure.
+1. Select **Review + save**.
+1. Review the summary of changes and then select **Save**.
+
 ## Windows monthly security update release details
 
 When you configure the enrollment status page, you can choose to install [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates, during the OOBE. By default, these quality updates aren't installed during OOBE. ??seems contradictory to what's in [#supported-configurations](#supported-configurations)??
@@ -123,7 +138,7 @@ The operating system control is included in the following 2025-06 D operating sy
 | Windows 11, version 24H2 | [KB5060829](https://support.microsoft.com/topic/june-26-2025-kb5060829-os-build-26100-4484-preview-e31ba7c2-ff65-4863-a462-a66e30840b1a) |
 | Windows 11, version 23H2 <br/> Windows 11, version 22H2 | [KB5060826](https://support.microsoft.com/topic/june-26-2025-kb5060826-os-builds-22621-5549-and-22631-5549-preview-65d38dd2-e149-4462-9699-e2482f60b16b) |
 
-On Windows 11 versions with these (or later) updates installed, the feature is automatically built-in. On supported Windows 11 versions that don't have these (or later) updates installed, the feature is in a zero day package (ZDP) that's automatically installed before the ESP is displayed.
+On Windows 11 versions with these (or later) updates installed, the feature is built in. On Windows 11 versions without these (or later) updates installed, the feature is in a zero day package (ZDP) that's automatically installed before the ESP is displayed.
 
 ### What you need to know
 
@@ -132,9 +147,11 @@ On Windows 11 versions with these (or later) updates installed, the feature is a
 - The **Install Windows quality updates** setting can be configured on new and existing ESP profiles.
 
   - On new ESP profiles, the setting default is **Yes**.
-  - On existing ESP profiles, the setting default is **No**. To install the quality updates during OOBE, edit the existing ESP profile and set the **Install Windows quality updates** setting to **Yes**.
+  - On existing ESP profiles, the setting default is **No**.
 
-    The 2026-11 D update changes the default value of the Install Windows updates setting in Windows to be disabled by default. This change is included with the zero day package.
+    To install the quality updates during OOBE, edit the existing ESP profile and set the **Install Windows quality updates** setting to **Yes**.
+
+    The 2026-11 D update changes the default value of the Install Windows updates setting ??Which setting? Do you mean the **Install Windows quality updates** Intune setting?? in Windows to be disabled by default. This change is included with the zero day package.
 
 - Installing the quality updates during OOBE adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
 
@@ -180,21 +197,6 @@ Expedited updates aren't part of the installation of monthly security update rel
 
 > [!TIP]
 > By using Update Rings to manage updates, administrators don't need to go to both the ESP and Update Rings to pause an update. Pausing an update via Update Rings pauses the update on both devices being provisioned, for example running Windows Autopilot, and devices that are already enrolled.
-
-## Edit default profile
-
-Intune applies the default profile to all users and all devices when no other ESP profiles are available to assign. You can configure the default profile to show or hide the ESP.
-
-1. Select the default profile.
-1. Select **Properties**.
-1. Go to the **Settings** section and select **Edit**.
-1. Configure **Show app and profile installation progress** to set the behavior of the default profile. Your options:
-   - **No**: The ESP isn't visible to users during initial device setup and sign-in.
-   - **Yes**: The ESP is visible to users during initial device setup and sign-in.
-
-   If you select **Yes**, more settings become available for you to configure.
-1. Select **Review + save**.
-1. Review the summary of changes and then select **Save**.
 
 ## Prioritize profiles
 
