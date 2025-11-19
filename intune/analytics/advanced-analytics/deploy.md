@@ -21,10 +21,10 @@ When license requirements are met, then Advanced Analytics capabilities are auto
 
 For the extra reports and capabilities on Windows devices:
 
-1. Devices need to be enrolled into Intune and onboarded to endpoint analytics and meet the [Prerequisites](advanced-analytics-plan.md#prerequisites):
+1. Devices need to be enrolled into Intune and onboarded to endpoint analytics and meet the [Prerequisites](plan.md#prerequisites):
 
-    - [Onboard and enroll your Intune-managed devices to endpoint analytics](configure.md)
-    - [Onboard and enroll your co-managed devices to endpoint analytics](configure.md)
+    - [Onboard and enroll your Intune-managed devices to endpoint analytics](../configure.md)
+    - [Onboard and enroll your co-managed devices to endpoint analytics](../configure.md)
 
 1. For Multi Device query, a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) needs to be configured and deployed.
 

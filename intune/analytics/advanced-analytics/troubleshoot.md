@@ -58,7 +58,7 @@ Ensure devices are online and have connectivity to required Microsoft endpoints.
 
 ### Incomplete Device Reports
 
-Check that targeted devices meet the [prerequisites](advanced-analytics-plan.md#prerequisites). In some cases, end-to-end latency might exceed 24 hours when event details aren't able to upload from the client right away. Events such as restarts and stop errors experience this when the device doesn't immediately reboot after the shut-down or stop error event. In this case, the event details are uploaded at the next available opportunity, and the event appears on the timeline with a timestamp equal to the time the event occurred.
+Check that targeted devices meet the [prerequisites](plan.md#prerequisites). In some cases, end-to-end latency might exceed 24 hours when event details aren't able to upload from the client right away. Events such as restarts and stop errors experience this when the device doesn't immediately reboot after the shut-down or stop error event. In this case, the event details are uploaded at the next available opportunity, and the event appears on the timeline with a timestamp equal to the time the event occurred.
 
 ---
 

@@ -157,7 +157,7 @@ This section details additional prerequisites specific to Advanced Analytics fea
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Plan Advanced Analytics >](advanced-analytics-plan.md)
+> [Next: Plan Advanced Analytics >](plan.md)
 
 ---
 
