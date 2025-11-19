@@ -1,7 +1,7 @@
 ---
 title: Set up the Enrollment Status Page in the admin center copy
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
-ms.date: 11/18/2025
+ms.date: 11/19/2025
 ms.topic: how-to
 ms.reviewer: madakeva, davguy
 ms.collection:
@@ -30,6 +30,8 @@ This article describes the information that the enrollment status page tracks an
 - You can create maximum of 51 ESP profiles (Default + 50) in a tenant.
 
 ## Create new profile
+
+Use the following steps to create an Intune profile that configures the enrollment status page.
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > expand **Device onboarding** > ***Enrollment**.
 1. In the **Windows** tab, under **Windows Autopilot**, select **Enrollment Status Page**.
@@ -105,12 +107,14 @@ This article describes the information that the enrollment status page tracks an
 
 1. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. Once deployed, the profile applies the next time the devices check in. You can access the profile from your profiles list.
 
-### Install Windows monthly security update releases
+## Windows monthly security update release details
+
+When you configure the enrollment status page, you can choose to install [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates, during the OOBE. By default, these quality updates aren't installed during OOBE. ??seems contradictory to what's in [#supported-configurations](#supported-configurations)??
 
 There are two parts to this feature:
 
-- The operating system control that enables this feature
-- The **Install Windows quality updates (might restart the device)** Intune ESP profile setting that configures this feature
+1. The control that enables this feature in the Windows operating system
+2. The **Install Windows quality updates (might restart the device)** Intune ESP profile setting that configures this feature
 
 The operating system control is included in the following 2025-06 D operating system updates:
 
@@ -121,24 +125,23 @@ The operating system control is included in the following 2025-06 D operating sy
 
 On Windows 11 versions with these (or later) updates installed, the feature is automatically built-in. On supported Windows 11 versions that don't have these (or later) updates installed, the feature is in a zero day package (ZDP) that's automatically installed before the ESP is displayed.
 
-Monthly security update releases on supported Windows 11 versions aren't installed by default during OOBE. The **Install Windows quality updates** Intune setting in the ESP profile controls the installation of [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates. 
+### What you need to know
 
-**What you need to know**
-
-- This setting only installs monthly security update releases. It doesn't install other types of updates listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
+- This setting only installs monthly security update releases. It doesn't install the other types of updates listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
 
 - The **Install Windows quality updates** setting can be configured on new and existing ESP profiles.
+
   - On new ESP profiles, the setting default is **Yes**.
-  - On existing ESP profiles, the setting default is **No**. To enable installing monthly security update releases during OOBE, edit the existing ESP profile so that the **Install Windows quality updates** setting is set to **Yes**.
+  - On existing ESP profiles, the setting default is **No**. To install the quality updates during OOBE, edit the existing ESP profile and set the **Install Windows quality updates** setting to **Yes**.
 
     The 2026-11 D update changes the default value of the Install Windows updates setting in Windows to be disabled by default. This change is included with the zero day package.
 
-- Installing monthly security update releases during OOBE adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
+- Installing the quality updates during OOBE adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
 
 - Monthly security update releases aren't installed during OOBE when the device is on a metered network.
 
 > [!IMPORTANT]
-> The automatic installation of monthly security update releases and the new user interface isn't available until January 9th with the regular monthly security update.
+> The automatic installation of monthly security update releases and the new user interface isn't available until January 9th with the regular monthly security update. ??This sentence is unclear? What user interface??
 
 > [!IMPORTANT]
 > If admins set the **Block device use until all apps and profiles are installed** setting to **No** in an ESP profile, the device might exit ESP before the following items are applied. It can result in monthly security update releases being installed during OOBE, even when **Install Windows quality updates** is set to **No**.
@@ -147,28 +150,26 @@ Monthly security update releases on supported Windows 11 versions aren't install
 >
 > To ensure that monthly security update releases are installed when **Install Windows quality updates** is set to **Yes**, make sure that the **Block device use until all apps and profiles are installed** setting is set to **Yes**.
 
-#### Supported configurations
+### Supported configurations
 
-Devices that meet all of the following conditions honor the **Install Windows quality updates (might restart the device)** setting:
+Devices that meet all of the following conditions honor the **Install Windows quality updates** setting. Devices that don't meet these conditions don't honor the **Install Windows quality updates** setting and they always install monthly security update releases during OOBE. ??seems contradictory??
 
 - Running a [currently supported version of Windows 11](/windows/release-health/windows11-release-information).
-- Assigned to an ESP profile with the **Install Windows quality updates (might restart the device)** Intune setting configured to **Yes**.
+- Assigned an ESP profile with the **Install Windows quality updates** Intune setting configured to **Yes**.
 - Using a Windows Autopilot deployment profile with ESP enabled.
 - One of the following two assignments:
   - Assigned to devices that are registered for Windows Autopilot.
   - For devices that aren't registered with Windows Autopilot, devices that are assigned using the **All Devices** assignment.    
-- This setting doesn't support user-targeted ESP profiles. The device uses the highest priority device-targeted profile, which is typically the default ESP profile. If the ESP page is disabled, quality updates won't install. If the ESP page is enabled, it follows the **Install Windows quality updates** setting and value you configured.
-  
-Devices that don't meet these conditions don't honor the **Install Windows quality updates (might restart the device)** setting and they always install monthly security update releases during OOBE.
+- The **Install Windows quality updates** setting doesn't support user-targeted ESP profiles. The device uses the highest priority device-targeted profile, which is typically the default ESP profile. If the ESP page is disabled, quality updates won't install. If the ESP page is enabled, it follows the **Install Windows quality updates** setting and value you configured.
 
-The following specific scenarios aren't supported and the **Install Windows quality updates (might restart the device)** setting isn't honored:
+The following specific scenarios aren't supported and the **Install Windows quality updates** setting isn't honored:
 
-- **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. Therefore, monthly security update releases are always installed during OOBE.
-- **Windows Autopilot for pre-provisioned deployment Technician Flow** - Monthly security update releases aren't installed during the [Technician Flow](/autopilot/pre-provision#technician-flow) portion of a Windows Autopilot for pre-provisioned deployment. However, the **Install Windows quality updates (might restart the device)** setting is honored during the [User Flow](/autopilot/pre-provision#user-flow) portion of a Windows Autopilot for pre-provisioned deployment.
+- **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. So, monthly security update releases are always installed during OOBE.
+- **Windows Autopilot for pre-provisioned deployment Technician Flow** - Monthly security update releases aren't installed during the [Technician Flow](/autopilot/pre-provision#technician-flow) portion of a Windows Autopilot for pre-provisioned deployment. However, the **Install Windows quality updates** setting is honored during the [User Flow](/autopilot/pre-provision#user-flow) portion of a Windows Autopilot for pre-provisioned deployment.
 
-#### Update rings and Windows Autopatch
+### Update rings and Windows Autopatch
 
-Update rings settings, such as monthly security update release deferrals and pauses are honored. The ESP page doesn't exit until ring settings are synced. This process ensures sure that the right settings are used when Windows Update scan occurs. If a device isn't registered as a Windows Autopilot device, the **All** Devices assignments must be used for both the Update Rings and ESP profile settings.
+Update rings settings, such as monthly security update release deferrals and pauses, are honored. The ESP page doesn't exit until ring settings are synced. This process ensures sure that the right settings are used when Windows Update scan occurs. If a device isn't registered as a Windows Autopilot device, the **All** Devices assignments must be used for both the Update Rings and ESP profile settings.
 
 If using Windows Autopatch, Update rings policies need to be configured as described. Since Autopatch groups don't support assigning to **All Devices**, use one of the following two methods instead:
 
@@ -178,7 +179,6 @@ If using Windows Autopatch, Update rings policies need to be configured as descr
 Expedited updates aren't part of the installation of monthly security update releases during OOBE. Devices assigned to an expedited update policy will initiate the expedited update sometime after OOBE completes if the expedited updates aren't part of monthly security update releases.
 
 > [!TIP]
->
 > By using Update Rings to manage updates, administrators don't need to go to both the ESP and Update Rings to pause an update. Pausing an update via Update Rings pauses the update on both devices being provisioned, for example running Windows Autopilot, and devices that are already enrolled.
 
 ## Edit default profile
