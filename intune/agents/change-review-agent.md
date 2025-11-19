@@ -44,6 +44,8 @@ The agent analyzes these signals to assess the potential risk associated with ea
 >
 > Required licenses:
 > - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
+> - [Microsoft Entra ID P2](/entra/fundamentals/licensing)
+> - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-prerequisites)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 :::column-end:::
 :::row-end:::
