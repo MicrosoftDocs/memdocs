@@ -23,7 +23,7 @@ The following tables provide details of supported partner and Microsoft apps tha
 - Protecting work or school account data while leaving personal data untouched in apps that support multi-identity
 - Restricting data transfer and copy-and-paste functions
 - Encrypting work or school account data
-- Configuring work or school account web links to open inside a managed browser, like Microsoft Edge
+- Configuring work or school account web links to open inside Microsoft Edge
 - Enforcing access requirements to access work or school account data
 - Enforcing conditional launch behaviors to protect the work or school account data
 - Applying data loss prevention policies without managing the user's device

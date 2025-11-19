@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/17/2025
+ms.date: 11/18/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of November 17, 2025
+
+### Device management
+
+### Intune support for iVerify as a mobile threat defense partner<!-- 35838315 -->
+
+You can now use iVerify Enterprise as a mobile threat defense partner (MTD) for enrolled devices that run the following platforms:  
+
+- Android 9.0 and later
+-  iOS/iPadOS 15.0 and later
+
+To learn more about this support, see [Set up iVerify Mobile Threat Defense Connector](../protect/iverify-mobile-threat-defense-connector.md).
+
+
 ## Week of November 10, 2025 (Service release 2511)
 
 ### Microsoft Intune Suite
@@ -65,17 +80,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 When viewing Endpoint Privilege Management [elevation requests](/intune/intune-service/protect/epm-support-approved#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
 
 ### App management
-
-#### PowerShell script installer support for Win32 apps <!-- 34496511 -->
-
-When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
-
-For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
 
 #### More volume options available in Managed Home Screen <!-- 16462284 -->
 
@@ -110,6 +114,20 @@ For more information about Managed Google Play store layout options, see [Approv
 Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
 
 For more information, see [Enterprise App Management overview](../apps/apps-enterprise-app-management.md).
+
+#### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
+
+Intune adds two new values to the **Allow cut, copy and paste for** setting in Windows app protection policies (starting with Microsoft Edge) to give admins more control over data movement:
+
+- Org data destinations and any source: Users can paste from any source into the org context, and can cut/copy only to org destinations.  
+- Org data destinations and org data sources: Users can cut/copy/paste only within the org context.
+
+These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../apps/app-protection-policy.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+>- Windows
 
 ### Device configuration
 
@@ -184,35 +202,7 @@ The incomplete user enrollments report has been removed and is no longer functio
 - getEnrollmentAbandonmentSummaryReport
 - getEnrollmentFailureDetailsReport
 
-Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).
-
-#### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
-
-You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant. 
-
-The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
-
- - **App Store** (iOS/iPadOS 14.3+)
- - **Camera button** (iOS/iPadOS 18+)
- - **Web content filtering** (iOS/iPadOS 18.2+)
- - **Safety and handling** (iOS/iPadOS 18.4+)
- - **Multitasking** (iOS/iPadOS 26+)
- - **OS Showcase** (iOS/iPadOS 26+)
-
-The screens you can skip during macOS enrollment include:
-
-   - **App Store** (macOS 11.1+)
-   - **Get Started** (macOS 15+)
-   - **Software update** (macOS 15.4+)
-   - **Additional privacy settings** (macOS 26+)
-   - **OS Showcase** (macOS 26.1+)
-   - **Update completed** (macOS 26.1+)
-   - **Get Started** (macOS 15+)
-
-For more information about available Setup Assistant skipkeys, see:
-
-- [Set up automated device enrollment for iOS/iPadOS]( ../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)
-- [Set up automated device enrollment for]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).  
 
 ### Device management 
 
