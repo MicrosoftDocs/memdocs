@@ -228,6 +228,10 @@ Exclude devices with last activity before […]
 ```agent-prompt
 Include only devices with IDs […]
 ```
+
+>[!IMPORTANT]
+>If you include one or more deviceIds and none of them have been retired, wiped, or deleted within the last 30 days, the agent will fail to run.
+
 ```agent-prompt
 Include only devices with last activity after […]
 ```
