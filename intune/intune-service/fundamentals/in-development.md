@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/27/2025
+ms.date: 11/13/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -54,26 +54,6 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 ## App management
 
-### More volume options available in Managed Home Screen<!-- 16462284 -->
-
-We're adding more volume control options to the Managed Home Screen (MHS) app for Android Enterprise dedicated and fully managed devices. With this update, you can enable additional controls for call, ring, notification, and alarm volumes, giving users greater flexibility to adjust sound levels based on their needs.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise (dedicated and fully managed devices)
-
-### Reset Managed Google Play store mode to Basic<!-- 33632857 -->
-
-You'll soon be able to reset the Managed Google Play store layout from *Custom* back to *Basic* in the Intune admin center under **Apps** > **All apps** > **Create Managed Google Play app**.
-
-In **Basic** mode, all approved apps are visible to users. In **Custom** mode, newly approved apps must be added to collections. When you reset to Basic, Intune deletes all existing collections. The **Reset to Basic** button appears only when the store is in Custom mode and shows immediate success or failure.
- 
-> [!div class="checklist"]
-> Applies to:
->
-> - Android
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -86,45 +66,6 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 <!-- *********************************************** -->
 
 ## Device configuration
-
-### Settings available in both Templates and Settings Catalog for Android Enterprise <!-- 34876806 -->
-
-Some settings that were only available in Templates are now also supported in the settings catalog.
-
-The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring settings catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-To create a new settings catalog policy, go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type.
-
-The following settings are available in the settings catalog:
-
-**General**:
-
-- Skip first use hints
-- Contact sharing via Bluetooth (work profile level)
-- Search work contacts and display work contact caller-id in personal profile
-- Data sharing between work and personal profiles
-
-**Work profile password**:
-
-- Required password type
-- Minimum password length
-- Number of characters required
-- Number of lowercase characters required
-- Number of uppercase characters required
-- Number of non-letter characters required
-- Number of numeric characters required
-- Number of symbol characters required
-- Number of days until password expires
-- Number of passwords required before user can reuse a password
-- Number of sign-in failures before wiping device
-- Required unlock frequency
-
-To learn more about these settings, go to [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise
 
 ### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
 
@@ -141,31 +82,13 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 >
 > - macOS
 
-### New Assist Content Sharing setting in the Android Enterprise settings catalog<!-- 31479342  -->
-
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
-
-There are new settings (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Android Enterprise** for platform > **Settings catalog** for profile type):
-
-- **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
-> - Android Enterprise corporate owned fully managed (COBO)
-> - Android Enterprise corporate owned dedicated devices (COSU)
-
 <!-- *********************************************** -->
 
 ## Device enrollment
 
-### New opt-in upgrade to allow existing customers to move from managed Google Play Accounts to Microsoft Entra ID accounts  <!-- 30675087 -->
-
-Microsoft Intune will offer a new opt-in upgrade that allows existing Android Enterprise customers to move from using managed Google Play accounts to using Microsoft Entra ID accounts for Android device management. Customers are eligible if they previously used a managed Google Play account. This better together enterprise (BTE) integration streamlines the onboarding process by eliminating the need for a separate Google account and leveraging your work account. It's not required to switch account types. 
-
-To learn more about this change, see [New onboarding flow to managing Android Enterprise devices with Microsoft Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/new-onboarding-flow-to-managing-android-enterprise-devices-with-microsoft-intune/4206602).
-
+### Configure Windows Backup for Organizations<!--29202026 -->
+      
+A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).  
 
 ### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
 
@@ -184,13 +107,9 @@ The screens you can skip during macOS enrollment include:
 - **Get Started** (macOS 15+)
 - **Software update** (macOS 15.4+)
 - **Additional privacy settings** (macOS 26+)
-- **OS Showcase** (macOS 26+)
-- **Update completed** (macOS 26+)
+- **OS Showcase** (macOS 26.1+)
+- **Update completed** (macOS 26.1+)
 - **Get Started** (macOS 15+)
-
-### Configure Windows Backup for Organizations<!--29202026 -->
-
-A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).
 
 <!-- *********************************************** -->
 
@@ -208,56 +127,9 @@ For more information, see the following articles:
 - [Windows 365 Cloud Apps | Microsoft Learn](/windows-365/enterprise/cloud-apps)
 - [Use Autopilot device preparation with Cloud PCs | Microsoft Learn](/windows-365/enterprise/autopilot-device-preparation)
 
-### New prompts available to explore your Intune data<!-- 33787582 -->
-
-You can use Security Copilot in Intune to explore new prompts related to your data using natural language. Use these new prompts to view data on:
-
-- Users and groups
-- Role based access control (RBAC)
-- Audit logs
-
-When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
-
-Each query returns a Copilot summary to help you understand the results and offers suggestions. With this information, you can also:
-
-- Add devices or users from the results to a group so you can target apps and policies to this group.
-- Filter example queries to find or build requests that match your needs.
-
-To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
-
-### Device Management type assignment filter property supports more Android enrollment options<!-- 33016364 -->
-
-When you create a policy in Intune, you can use [assignment filters](filters.md) to assign a policy based on rules you create. You can create a rule using different [app properties](filters-device-properties.md), like `deviceManagementType`.
-
-The Device Management Type property supports the following Android enrollment options for managed devices:
-
-- Corporate-owned dedicated devices with Entra ID Shared mode
-- Corporate-owned dedicated devices without Entra ID Shared mode
-- Corporate-owned with work profile
-- Corporate-owned fully managed
-- Personal-owned device with a work profile
-- AOSP user-associated devices
-- AOSP userless devices
-
-To learn more about filters and the properties you can currently use, see:
-
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [App and device properties, operators, and rule editing when creating filters in Microsoft Intune](filters-device-properties.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android
-
 <!-- *********************************************** -->
 
 ## Device security
-
-### Microsoft Tunnel for detection and protection for rooted Android devices<!-- 30336962 -->
-
-We’re updating Microsoft Tunnel with the capability to detect and block access from rooted Android devices. This update will ensure that only compliant and trustworthy devices can establish secure connections through the Tunnel.
- 
-This new capability will be available with Microsoft Tunnel for [Mobile Device Management](/intune/intune-service/protect/microsoft-tunnel-overview) (MDM) and for [Mobile Application Management](/intune/intune-service/protect/microsoft-tunnel-mam) (MAM).
 
 ### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
