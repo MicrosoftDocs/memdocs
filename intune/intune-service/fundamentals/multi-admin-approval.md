@@ -94,6 +94,8 @@ You can cancel a request before it's approved by selecting it from the My reques
 
    To verify if the approval succeeded (or failed), look at the notifications in the Intune admin center. A message shows if the approval succeeded or failed.
 
+[!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
+
 ## More considerations
 
 - Intune doesn't send notifications when new requests are created, or the status of an existing request changes. We recommend that when submitting an urgent change request, you reach out to individuals who have permission to approve those requests.

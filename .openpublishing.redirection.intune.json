@@ -1,6 +1,16 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/protect/vulnerability-remediation-agent.md",
+      "redirect_url": "/intune/agents/vulnerability-remediation-agent",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/copilot/security-copilot-agents-intune.md",
+      "redirect_url": "/intune/agents/",
+      "redirect_document_id": false
+    },    
+    {
       "source_path": "intune/intune-service/protect/create-conditional-access-intune.md",
       "redirect_url": "/entra/identity/conditional-access/policy-all-users-device-compliance",
       "redirect_document_id": false
