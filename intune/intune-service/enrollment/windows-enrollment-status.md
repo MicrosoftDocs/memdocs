@@ -1,160 +1,163 @@
 ---
 title: Set up the Enrollment Status Page in the admin center copy
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
-ms.date: 09/24/2025
+ms.date: 11/18/2025
 ms.topic: how-to
-ms.reviewer: madakeva
+ms.reviewer: madakeva, davguy
 ms.collection:
 - M365-identity-device-management
 - highpri
 ---
 
-
-
 # Set up the Enrollment Status Page
 
-The enrollment status page (ESP) displays the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track how far along their device is in the setup process.
+The enrollment status page (ESP) shows the provisioning status to people enrolling Windows devices and signing in for the first time. You can configure the ESP to block device use until all required policies and applications are installed. Device users can look at the ESP to track the setup progress on their device.
 
 The ESP can be deployed during the default out-of-box experience (OOBE) for Microsoft Entra join, and any [Windows Autopilot](/autopilot/index) provisioning scenario.
 
-To deploy the ESP to devices, you have to create an ESP profile in Microsoft Intune. Within the profile, you can configure the ESP settings that control:
+To deploy the ESP to devices, create an ESP profile in Microsoft Intune, and configure the ESP settings that control:
 
-- Visibility of installation progress indicators.
-- Device access during provisioning.
-- Time limits.
-- Allowed troubleshooting operations.
+- Visibility of installation progress indicators
+- Device access during provisioning
+- Time limits
+- Allowed troubleshooting operations
 
-This article describes the information that the enrollment status page tracks and how to create an ESP profile.
+This article describes the information that the enrollment status page tracks and how to create an ESP profile in Microsoft Intune.
 
-> [!NOTE]
-> You can create maximum of 51 ESP profiles (Default + 50) in a tenant.
+## Before you begin
 
-## Windows CSP
-
-ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track app installation.
+- ESP uses the [EnrollmentStatusTracking configuration service provider (CSP)](/windows/client-management/mdm/enrollmentstatustracking-csp) and [FirstSyncStatus CSP](/windows/client-management/mdm/dmclient-csp) to track app installation.
+- You can create maximum of 51 ESP profiles (Default + 50) in a tenant.
 
 ## Create new profile
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices**.
-1. Expand **Device onboarding**, and then select **Enrollment**.
-1. Select the **Windows** tab.
-1. Under **Windows Autopilot**, select **Enrollment Status Page**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > expand **Device onboarding** > ***Enrollment**.
+1. In the **Windows** tab, under **Windows Autopilot**, select **Enrollment Status Page**.
 1. Select **Create**.
 1. In **Basics**, enter the following properties:
-     - **Name**: Name your profile so you can easily identify it later.
-     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    - **Name**: Name your profile so you can easily identify it.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 1. Select **Next**.
 1. In **Settings**, configure the following settings:
 
     - **Show app and profile configuration progress**: Your options:
       - **No**: The enrollment status page doesn't appear during device setup. Select this option if you don't want to show the configuration progress to users.
-      - **Yes**: The enrollment status page appears during device setup. More options become available if you select this one.
+      - **Yes**: The enrollment status page appears during device setup. More options become available if you select this option.
 
     - **Show an error when installation takes longer than specified number of minutes**: A time-out error message is shown after your desired time. The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.
 
     - **Show custom message when time limit or error occur**: Include a custom message that tells people what happened and who to contact for help. Your options:
-       - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."
-       - **Yes**: Your custom message is shown to users when an error occurs. Enter your message in the provided text box.
+      - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."
+      - **Yes**: Your custom message is shown to users when an error occurs. Enter your message in the provided text box.
 
     - **Turn on log collection and diagnostics page for end users**: We recommended turning on this option since the user's logs and diagnostics could aid with troubleshooting. Your options:
-       - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.
-       - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.
+      - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.
+      - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11.
 
     - **Only show page to devices provisioned by out-of-box experience (OOBE)**: Use this setting to stop the enrollment status page from reappearing to every new user who signs into the device. Your options:
-       - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.
-       - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
+      - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.
+      - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
     - **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates the available quality updates, also known as monthly security update releases. Your options:
-       - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is displayed to the user showing update progress.
-       - **No**: Monthly security update releases aren't installed during OOBE and the device instead continues to the desktop as usual. Messages regarding installation of monthly security update releases aren't displayed since they aren't installed.
+      - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is shows the update progress.
+      - **No**: Monthly security update releases aren't installed during OOBE and the device continues to the desktop as usual. Messages regarding installation of monthly security update releases aren't displayed since they aren't installed.
 
-        > [!IMPORTANT]
-        >
-        > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
-        > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
-        > - For important detailed information regarding this option, see the section [Install Windows quality updates](#install-windows-monthly-security-update-releases) in this article.
+      > [!IMPORTANT]
+      >
+      > - This setting only supports [current supported versions of Windows 11](/windows/release-health/windows11-release-information).
+      > - When set to **Yes**, monthly security update releases are installed during OOBE after the ESP completes.
+      > - For more details on this setting, see [Install Windows quality updates](#install-windows-monthly-security-update-releases) (in this article).
 
     - **Block device use until all apps and profiles are installed**: Your options:
-       - **No**: Users can leave the ESP before Intune is finished setting up the device.
-       - **Yes**: Users can't leave the ESP until Intune is done setting up the device. This option unlocks more settings for this scenario.
+      - **No**: Users can leave the ESP before Intune is finished setting up the device.
+      - **Yes**: Users can't leave the ESP until Intune is done setting up the device. This option unlocks more settings for this scenario.
 
     - **Allow users to reset device if installation error occurs**: Your options:
-        - **No**: The ESP doesn't give users the option to reset their devices when an installation fails.
-        - **Yes**: The ESP gives users the option to reset their devices when an installation fails.
+      - **No**: The ESP doesn't give users the option to reset their devices when an installation fails.
+      - **Yes**: The ESP gives users the option to reset their devices when an installation fails.
 
     - **Allow users to use device if installation error occurs**: Your options:
-         - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.
-         - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.
+      - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.
+      - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.
 
     - **Block device use until these required apps are installed if they are assigned to the user/device**: Your options:
-         - **All**: All assigned apps must be installed before users can use their devices.
-         - **Selected**: The selected-apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list with more settings related to blocking apps.
+      - **All**: All assigned apps must be installed before users can use their devices.
+      - **Selected**: The selected apps must be installed before users can use their devices. Choose **Select apps** to start a *Blocking apps* list with more settings related to blocking apps.
 
     - **Only fail selected blocking apps in technician phase**: Use this setting with Windows Autopilot pre-provisioned deployments to control how your required apps are prioritized during the [Technician Flow](/autopilot/pre-provision#technician-flow). This setting is only available if *blocking apps* are added and only applies to devices going through pre-provisioning. Your options:
-         - **No**: An attempt is made to install the blocking apps. Windows Autopilot deployment fails if a blocking app fails to install. No attempt is made to install nonblocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the nonblocking apps.
-         - **Yes**: An attempt is made to install all required apps. Windows Autopilot deployment fails if a blocking app fails to install. If a nonblocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't during the Technician Flow. This setting is the default setting for pre-provisioned deployments.
+      - **No**: An attempt is made to install the blocking apps. Windows Autopilot deployment fails if a blocking app fails to install. No attempt is made to install nonblocking apps. When the end user receives the resealed device and signs in for the first time, the ESP attempts to install the nonblocking apps.
+      - **Yes**: An attempt is made to install all required apps. Windows Autopilot deployment fails if a blocking app fails to install. If a nonblocking app targeted to the device fails to install, the ESP ignores it and deployment continues as normal. When the end user signs into the resealed device for the first time, the ESP reattempts to install the apps that it couldn't during the Technician Flow. This setting is the default setting for pre-provisioned deployments.
 
-         > [!TIP]
-         >
-         > When using this feature, expect provisioning time to increase during the Technician Flow. The more apps assigned, the longer it could take. If you're using a non-Microsoft provider to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time-out.
+      > [!TIP]
+      > When using this feature, expect provisioning time to increase during the Technician Flow. The more apps assigned, the longer it could take. If you're using a non-Microsoft provider to provision your devices, tell them about the potential for increased provisioning time. Increase the ESP time-out duration to prevent deployment from failing due to a time-out.
 
 1. Select **Next**.
 1. In **Assignments**, select the groups to receive your profile. Optionally, select **Edit filter** to restrict the assignment further.
+
     > [!NOTE]
-    >
     > Due to OS restrictions, a limited selection of filters are available for ESP assignments. The picker only shows filters that have rules defined for `model`, `manufacturer`, `osVersion`, `operatingSystemSKU`, `deviceOwnership`, and `enrollmentProfileName` properties. `model` and `manufacturer` are available with Windows 11, version 23H2 with KB5035942 or later, or version 22H2 with KB5035942 or later. Filters that contain other properties aren't available.
 
 1. Select **Next**.
 
-1. Optionally, in **Scope tags**, assign a tag to limit profile management to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.
+1. Optional. In **Scope tags**, assign a tag to limit profile management to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. Then select **Next**.
 
-    > [!NOTE]
-    >
-    > Scope tags limit who can see and reprioritize ESP profiles in the admin center. A scoped user can tell the relative priority of their profile even if they can't see all of the other profiles in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+    Scope tags limit who can see and reprioritize ESP profiles in the admin center. A scoped user can tell the relative priority of their profile even if they can't see all of the other profiles in Intune. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
-1. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. Once deployed, the profile will be applied the next time the devices check in. You can access the profile from your profiles list.
+1. In **Review + create**, review your settings. After you select **Create**, your changes are saved, and the profile is assigned. Once deployed, the profile applies the next time the devices check in. You can access the profile from your profiles list.
 
 ### Install Windows monthly security update releases
 
+There are two parts to this feature:
+
+- The operating system control that enables this feature
+- The **Install Windows quality updates (might restart the device)** Intune ESP profile setting that configures this feature
+
+The operating system control is included in the following 2025-06 D operating system updates:
+
+| OS version | KB article |
+| --- | --- |
+| Windows 11, version 24H2 | [KB5060829](https://support.microsoft.com/topic/june-26-2025-kb5060829-os-build-26100-4484-preview-e31ba7c2-ff65-4863-a462-a66e30840b1a) |
+| Windows 11, version 23H2 <br/> Windows 11, version 22H2 | [KB5060826](https://support.microsoft.com/topic/june-26-2025-kb5060826-os-builds-22621-5549-and-22631-5549-preview-65d38dd2-e149-4462-9699-e2482f60b16b) |
+
+On Windows 11 versions with these (or later) updates installed, the feature is automatically built-in. For supported Windows 11 versions that don't have these (or later) updates installed, the feature is in a zero day package (ZDP) that's automatically installed before the ESP is displayed.
+
+Monthly security update releases on supported Windows 11 versions aren't installed by default during OOBE. The **Install Windows quality updates** Intune setting in the ESP profile controls the installation of [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates. 
+
+**What you need to know**
+
+- This setting only installs monthly security update releases. It doesn't install other types of updates listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
+
+- The **Install Windows quality updates** setting can be configured on new and existing ESP profiles.
+  - On new ESP profiles, the setting default is **Yes**.
+  - On existing ESP profiles, the setting default is **No**. To enable installing monthly security update releases during OOBE, edit the existing ESP profile so that the **Install Windows quality updates** setting is set to **Yes**.
+
+    The 2026-11 D update changes the default value of the Install Windows updates setting in Windows to be disabled by default. This change is included with the zero day package.
+
+  - Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
+
+  - Monthly security update releases aren't installed during OOBE when the device is on a metered network.
+
 > [!IMPORTANT]
-> The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available until January 9th with the regular monthly security update.
-
-Installation of [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates, are controlled via the option **Install Windows quality updates (might restart the device)**. This setting only installs monthly security update releases. It doesn't install other types of updates as listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
-
-The control to disable the installation of monthly security update releases during the Windows 11 out-of-box experience (OOBE) was added via the 2025-06 D updates:
-
-- [KB5060829](https://support.microsoft.com/topic/june-26-2025-kb5060829-os-build-26100-4484-preview-e31ba7c2-ff65-4863-a462-a66e30840b1a) for Windows 11, version 24H2.
-- [KB5060826](https://support.microsoft.com/topic/june-26-2025-kb5060826-os-builds-22621-5549-and-22631-5549-preview-65d38dd2-e149-4462-9699-e2482f60b16b) for Windows 11, version 23H2 and Windows 11, version 22H2.
-
-Versions of Windows 11 that already have these or later updates installed have the feature of installing monthly security update releases during OOBE built-in. For supported versions of Windows 11 that lack these or later updates, the feature is automatically added via a zero day package (ZDP) before the ESP is displayed.   
-**Note:**  The 2026-11 D (KB's Pending) update changes the default value of the Install Windows updates setting in Windows to be disabled by default and this change is also included via the zero day package described above.
-
-Monthly security update releases on supported versions of Windows 11 are not installed by default during OOBE. This behavior can be managed using the **Install Windows quality updates (might restart the device)** setting of the ESP profile. Newly created ESP Profiles will default to **Yes**, while existing ESP profiles default to **No**. To enable installing monthly security update releases during OOBE on existing ESP profiles, edit the existing ESP profile so that the **Install Windows quality updates (might restart the device)** setting is set to **Yes**.
-
-Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process. Installation of monthly security update releases also might require restarts. If a restart occurs, the user isn't automatically logged into Windows. Restarts might break some autologon provisioning scenarios. Setting the setting **Install Windows quality updates (might restart the device)** to **No** is recommended in these scenarios.
-
-Monthly security update releases will not be installed during OOBE when the device is on a metered network.
+> The automatic installation of monthly security update releases and the new user interface isn't available until January 9th with the regular monthly security update.
 
 > [!IMPORTANT]
-> If admins set the option **Block device use until all apps and profiles are installed** to **No** in an ESP profile, the device might exit ESP before the following items are applied:
-> - Windows Update for Business (WUfB) policies.
-- Monthly security update releases.
-
-> The device exiting the ESP before these items are applied can result in monthly security update releases being installed during OOBE, even when the option **Install Windows quality updates (might restart the device)** is set to **No**.
-> > To ensure that monthly security update releases are installed when the option **Install Windows quality updates (might restart the device)** is set to **Yes**, make sure that the option **Block device use until all apps and profiles are installed** is set to **Yes**.
+> If admins set the **Block device use until all apps and profiles are installed** setting to **No** in an ESP profile, the device might exit ESP before the following items are applied. It can result in monthly security update releases being installed during OOBE, even when **Install Windows quality updates** is set to **No**.
+> - Windows Update for Business (WUfB) policies
+> - Monthly security update releases
+>
+> To ensure that monthly security update releases are installed when **Install Windows quality updates** is set to **Yes**, make sure that the **Block device use until all apps and profiles are installed** setting is set to **Yes**.
 
 #### Supported configurations
 
 Devices that meet all of the following conditions honor the **Install Windows quality updates (might restart the device)** setting:
 
 - Running a [currently supported version of Windows 11](/windows/release-health/windows11-release-information).
-- Assigned to an ESP profile with  **Install Windows quality updates (might restart the device)** configured to **Yes**.
+- Assigned to an ESP profile with the **Install Windows quality updates (might restart the device)** Intune setting configured to **Yes**.
 - Using a Windows Autopilot deployment profile with ESP enabled.
 - One of the following two assignments:
   - Assigned to devices that are registered for Windows Autopilot.
-  - For devices that aren't registered with Windows Autopilot, devices that are assigned using the **All Devices** assignment.
-    
-  - Since user-targeted ESP profiles are not supported for this setting, the device uses the highest priority device-targeted profile, typically the default ESP profile. If the ESP page is disabled, Quality Updates will not install; if enabled, it follows the selected setting.
+  - For devices that aren't registered with Windows Autopilot, devices that are assigned using the **All Devices** assignment.    
+  - This setting doesn't support user-targeted ESP profiles. The device uses the highest priority device-targeted profile, which is typically the default ESP profile. If the ESP page is disabled, quality updates won't install. If the ESP page is enabled, it follows the **Install Windows quality updates** setting and value you configured.
   
 Devices that don't meet these conditions don't honor the **Install Windows quality updates (might restart the device)** setting and they always install monthly security update releases during OOBE.
 
