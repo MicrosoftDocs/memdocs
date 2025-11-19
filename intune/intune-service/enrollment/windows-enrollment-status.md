@@ -119,7 +119,7 @@ The operating system control is included in the following 2025-06 D operating sy
 | Windows 11, version 24H2 | [KB5060829](https://support.microsoft.com/topic/june-26-2025-kb5060829-os-build-26100-4484-preview-e31ba7c2-ff65-4863-a462-a66e30840b1a) |
 | Windows 11, version 23H2 <br/> Windows 11, version 22H2 | [KB5060826](https://support.microsoft.com/topic/june-26-2025-kb5060826-os-builds-22621-5549-and-22631-5549-preview-65d38dd2-e149-4462-9699-e2482f60b16b) |
 
-On Windows 11 versions with these (or later) updates installed, the feature is automatically built-in. For supported Windows 11 versions that don't have these (or later) updates installed, the feature is in a zero day package (ZDP) that's automatically installed before the ESP is displayed.
+On Windows 11 versions with these (or later) updates installed, the feature is automatically built-in. On supported Windows 11 versions that don't have these (or later) updates installed, the feature is in a zero day package (ZDP) that's automatically installed before the ESP is displayed.
 
 Monthly security update releases on supported Windows 11 versions aren't installed by default during OOBE. The **Install Windows quality updates** Intune setting in the ESP profile controls the installation of [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates. 
 
@@ -133,9 +133,9 @@ Monthly security update releases on supported Windows 11 versions aren't install
 
     The 2026-11 D update changes the default value of the Install Windows updates setting in Windows to be disabled by default. This change is included with the zero day package.
 
-  - Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
+- Installing monthly security update releases during OOBE adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
 
-  - Monthly security update releases aren't installed during OOBE when the device is on a metered network.
+- Monthly security update releases aren't installed during OOBE when the device is on a metered network.
 
 > [!IMPORTANT]
 > The automatic installation of monthly security update releases and the new user interface isn't available until January 9th with the regular monthly security update.
@@ -157,7 +157,7 @@ Devices that meet all of the following conditions honor the **Install Windows qu
 - One of the following two assignments:
   - Assigned to devices that are registered for Windows Autopilot.
   - For devices that aren't registered with Windows Autopilot, devices that are assigned using the **All Devices** assignment.    
-  - This setting doesn't support user-targeted ESP profiles. The device uses the highest priority device-targeted profile, which is typically the default ESP profile. If the ESP page is disabled, quality updates won't install. If the ESP page is enabled, it follows the **Install Windows quality updates** setting and value you configured.
+- This setting doesn't support user-targeted ESP profiles. The device uses the highest priority device-targeted profile, which is typically the default ESP profile. If the ESP page is disabled, quality updates won't install. If the ESP page is enabled, it follows the **Install Windows quality updates** setting and value you configured.
   
 Devices that don't meet these conditions don't honor the **Install Windows quality updates (might restart the device)** setting and they always install monthly security update releases during OOBE.
 
