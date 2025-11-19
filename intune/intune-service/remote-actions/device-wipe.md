@@ -106,21 +106,18 @@ To factory reset a Zebra Android device, use one of the following methods:
 
     - **Wipe device, but keep enrollment state and associated user account**
       - Resets the device to factory settings, while preserving the user data, user accounts, and important settings.\
-        To learn more about what data is preserved, see [How push-button reset features work](/windows-hardware/manufacture/desktop/how-push-button-reset-features-work?view=windows-11#keep-my-files).
+        To learn more about what data is preserved, see [How push-button reset features work](/windows-hardware/manufacture/desktop/how-push-button-reset-features-work#keep-my-files).
       - MDM policies and settings are removed, but the device remains enrolled in Intune.
-      - If the disk is BitLocker-encrypted, it remains encrypted after the wipe.
       - Uses the [doWipePersistUserData](/windows/client-management/mdm/remotewipe-csp#dowipepersistuserdata) CSP node.
     - **Wipe device, and continue to wipe even if device loses power**
       - Resets the device to factory settings, deleting all user data, settings, and MDM policies.
       - Overwrites the free space to prevent data recovery.
       - Ensures the wipe continues even if the device loses power, preventing interruption—ideal for high-security scenarios such as lost or stolen devices.
-      - After the wipe is completed, the disk is BitLocker-decrypted (if applicable).
       - Uses the [doWipeProtected](/windows/client-management/mdm/remotewipe-csp#dowipeprotected) CSP node.
         > [!IMPORTANT]
         > This option can prevent some devices from starting up again. The wipe process may interfere with boot recovery or firmware protections, leaving the device unrecoverable. Use only on corporate-owned devices where full data destruction is required and recovery procedures are in place.
     - **No options selected**
       - Resets the device to factory settings, deleting all user data, settings, and MDM policies.
-      - After the wipe is completed, the disk is BitLocker-decrypted (if applicable). 
       - If the wipe is interrupted, the device attempts to roll back to its previous state. If rollback fails, the device may become unusable and require a full Windows reinstallation.
       - Uses the [doWipe](/windows/client-management/mdm/remotewipe-csp#dowipe) CSP node.
 
