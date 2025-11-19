@@ -8,7 +8,7 @@ ms.subservice: suite
 
 # Deploying Advanced Analytics
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
@@ -30,7 +30,7 @@ For the extra reports and capabilities on Windows devices:
 
 ## Integrating Advanced Analytics into your business
 
-1. Update role based access control for custom roles to include new permissions such as **Managed Devices** > **Query** for [Device Query](device-query.md). For more information, see [Role-based access control](../intune-service/fundamentals/role-based-access-control.md)
+1. Update role based access control for custom roles to include new permissions such as **Managed Devices** > **Query** for [Device Query](device-query.md). For more information, see [Role-based access control](../../intune-service/fundamentals/role-based-access-control.md)
 1. Update support processes to:
     1. Use [device timeline](enhanced-device-timeline.md) to review if there's a specific pattern, such as a device restart or update tied to the anomaly.
     1. Use [device query](device-query.md) retrieve live information from a device to aid troubleshooting.

@@ -8,7 +8,7 @@ ms.subservice: suite
 
 # Device scopes in endpoint analytics
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
@@ -24,7 +24,7 @@ Custom device scopes are supported on the following endpoint analytics reports:
 ## Permissions
 
 Custom device scopes use Intune Scope tags, hence other permissions are required for some actions.
-To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune-service/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
+To create custom device scopes, a user must have the **Roles/Read** [role permission](../../intune-service/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
 
 - Endpoint Security Manager
 

@@ -22,7 +22,7 @@ With a Windows 365 license, you get access to this report for the Cloud PCs in y
 
 The resource performance report is available for:
 - Windows 365 Cloud PCs and;
-- Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+- Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Resource performance report
 
@@ -161,7 +161,7 @@ For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
 
-- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md)
 
 - [Device scopes](device-scopes.md)
 

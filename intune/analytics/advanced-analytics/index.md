@@ -8,7 +8,7 @@ ms.subservice: suite
 
 # What is Microsoft Intune Advanced Analytics
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
 
 Microsoft Intune Advanced Analytics provides comprehensive visibility of the end-user experience in your organization and optimizes it with data driven insights. With Intune Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
 
@@ -37,7 +37,7 @@ Advanced Analytics includes the following features:
 **[Device scopes](device-scopes.md)**
 :::column-end:::
 :::column span="3":::
->Use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region.
+>Use [Scope tags](../../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region.
 :::column-end:::
 :::row-end:::
 
@@ -113,7 +113,7 @@ This section details additional prerequisites specific to Advanced Analytics fea
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -133,7 +133,7 @@ This section details additional prerequisites specific to Advanced Analytics fea
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 :::column-end:::
 :::column span="3":::

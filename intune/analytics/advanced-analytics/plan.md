@@ -8,7 +8,7 @@ ms.subservice: suite
 
 # Plan for Advanced Analytics
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
@@ -29,7 +29,7 @@ Intune Advanced Analytics features build on top of the base endpoint analytics e
 
 General requirements:
 
-- Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
+- Advanced Analytics features are included in [Microsoft Intune Suite](../../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
 
 <!-->
 - Network connectivity to required Microsoft endpoints. For more information, see [Microsoft Intune URLs and IP address ranges](/mem/intune/fundamentals/intune-endpoints).
@@ -75,7 +75,7 @@ Advanced Analytics is supported with the following sovereign cloud environments:
 >
 > Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) or [*Resource performance*](resource-performance-report.md) functionality.
 
-For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../../intune-service/fundamentals/intune-govt-service-description.md).
 
 ## Mixed licensing scenarios
 

@@ -8,7 +8,7 @@ ms.subservice: suite
 
 # Anomaly Detection in endpoint analytics
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
@@ -35,7 +35,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
 ## Prerequisites
 
-- Licensing/Subscriptions: The advanced features in endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+- Licensing/Subscriptions: The advanced features in endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 - Permissions: Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)
 

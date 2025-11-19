@@ -8,7 +8,7 @@ ms.subservice: suite
 
 # Advanced Analytics Troubleshooting and Frequently Asked Questions
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 

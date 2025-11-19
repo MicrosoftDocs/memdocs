@@ -8,7 +8,7 @@ ms.subservice: suite
 
 # Battery health
 
-[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
@@ -117,6 +117,6 @@ Batteries that have low design capacity (For example, devices designed to hold l
 For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
-- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md)
 - [Device scopes](device-scopes.md)
 - [Device query](device-query.md)
