@@ -3,7 +3,7 @@ title: Mobile Threat Defense with Microsoft Intune
 description: Use Intune Mobile Threat Defense (MTD) with your Mobile Threat Defense partner to protect access to company resources based on device risk.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/21/2024
+ms.date: 11/10/2025
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
@@ -114,6 +114,7 @@ Learn how to protect access to company resource based on device, network, and ap
 - [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [iVerify Enterprise](iverify-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Jamf Mobile Threat Defense](jamf-mtd-connector.md) - *(Android, iOS/iPadOS)*
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) - *(Android, iOS/iPadOS, Windows)*
