@@ -171,7 +171,6 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 | UsbBlockDevicesForUrls | `[{"urls": ["*"], "devices": [{"vendor_id": "*", "product_id": "*"}]}]` | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) |
 | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) | [Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) |
 
-
 8. Select **Next**.  
 9. For **Assignments**, assign to **SEB-Level2-Users** group.  
 10. Select **Next** to review the settings. Then choose **Create**.
@@ -622,14 +621,14 @@ Level 1 configuration provides foundational browser security controls while main
 
 8. Expand **Edge configuration settings** and configure:
 
-| Category | Setting | Value |
-|-----------|----------|-------|
-| Edge configuration settings | Application proxy redirection | Disable |
-|  | Homepage shortcut URL | `https://www.company.com` |
-|  | Managed bookmarks | Company Portal &#124; `https://portal.company.com` |
-|  | Allowed URLs | Leave empty (Level 3 uses Allowed URLs) |
-|  | Blocked URLs | Leave empty (Level 2 uses Blocked URLs) |
-|  | Redirect restricted sites to personal context | Disable |
+| Setting | Value |
+|----------|-------|
+| Application proxy redirection | Disable |
+| Homepage shortcut URL | `https://www.company.com` |
+| Managed bookmarks | Company Portal &#124; `https://portal.company.com` |
+| Allowed URLs | Leave empty (Level 3 uses Allowed URLs) |
+| Blocked URLs | Leave empty (Level 2 uses Blocked URLs) |
+| Redirect restricted sites to personal context | Disable |
 
 
 9. Select **Next**.  

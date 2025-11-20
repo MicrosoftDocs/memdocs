@@ -54,28 +54,36 @@ Level 1 configuration provides the minimum data protection for a Windows device 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 1 – Enterprise basic data protection – Windows  
-   - **Description:** Provides Level 1 basic data protection for Microsoft Edge for Business on Windows devices.  
+   - **Name:** Edge Windows APP Level 1 Basic
+   - **Description:** Basic data protection for Microsoft Edge with fundamental controls
 4. Select **Next**.  
 5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.  
 6. Select **Next**.  
 7. On the **Data protection** tab, configure:  
-   - **Receive data from:** All sources  
-   - **Send org data to:** All destinations  
-   - **Allow cut, copy, and paste for:** Any destination and any source  
-   - **Print org data:** Allow  
+
+| Setting | Value |
+|--------|-------|
+| [Receive data from](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | All destinations |
+| [Send org data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | All sources |
+| [Allow cut, copy, and paste for](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | Any destination and any source |
+| [Printing org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#functionality) | Allow |
+
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:  
-   - **Offline grace period:** 10,080 minutes (7 days), Block access  
-   - **Offline grace period:** 90 days, Wipe data  
-   - **Max allowed device threat level:** Low, Block access  
+
+| Setting | Value |
+|--------|-------|
+| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10080 minutes / Block access |
+| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 90 days / Wipe data |
+| [Max allowed device threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Low / Block access |
+
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
 12. Select **Next**, review the configuration, and then choose **Create**.
 
 ### Level 2 – Enterprise enhanced data protection for Windows
 
-Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
+Level 2 configuration includes more controls for enhanced data protection.
 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
@@ -86,15 +94,25 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.  
 6. Select **Next**.  
 7. On the **Data protection** tab, configure:  
-   - **Send org data to:** No destinations
-   - **Receive data from:** No sources
-   - **Allow cut, copy, and paste for:** No destination or source
+
+| Setting | Value |
+|--------|-------|
+| [Send org data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destinations |
+| [Receive data from](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No sources |
+| [Allow cut, copy, and paste for](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destination or source |
+| [Printing org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#functionality) | Allow |
+
 8. Select **Next**.  
-9. On the **Health checks** tab, configure:  
-   - **Disabled account:** Block access
-   - **Min OS version:** 10.0.22621.2506, Block access
-   - **Max allowed device threat level:** Medium, Block access
-   - **Offline grace period:** 30 days, Wipe data
+9. On the **Health checks** tab, configure:
+
+| Setting | Value |
+|--------|--------|
+| [Disabled account](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Block access |
+| [Min OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10.0.22621.2506 / Block access |
+| [Max allowed device threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Medium / Block access |
+| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10080 minutes / Block access |
+| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 30 days / Wipe data |
+
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
 12. Select **Next**, review the configuration, and then choose **Create**.
@@ -112,15 +130,25 @@ Level 3 configuration provides the highest level of data protection and is recom
 5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.  
 6. Select **Next**.  
 7. On the **Data protection** tab, configure:  
-   - **Receive data from:** No sources
-   - **Send org data to:** No destinations
-   - **Allow cut, copy, and paste for:** No destination or source
-   - **Print org data:** Block
+
+| Setting | Value |
+|--------|-------|
+| [ReceiveDataFromOtherApps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No sources |
+| [SendOrgDataToOtherApps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destinations |
+| [RestrictCutCopyPasteIn](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destination or source |
+| [PrintBlocked](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#functionality) | Block |
+
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:  
-   - **Offline grace period:** 1,440 minutes, Block access
-   - **Offline grace period:** 30 days, Wipe data
-   - **Max allowed device threat level:** Secured, Block access
+
+| Setting | Value |
+|--------|--------|
+| [Disabled account](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Block access |
+| [Min OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10.0.22621.2506 / Block access |
+| [Max allowed device threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Medium / Block access |
+| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 1440 minutes / Block access |
+| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 30 days / Wipe data |
+
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
 12. Select **Next**, review the configuration, and then choose **Create**.
