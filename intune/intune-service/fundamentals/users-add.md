@@ -1,175 +1,169 @@
 ---
-
-title: Add users and grant permissions
-titleSuffix: Microsoft Intune
-description:  Synchronize on-premises users with Microsoft Entra ID and grant administrator permissions for your Intune subscription.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+title: Add users to Microsoft Intune
+description: Learn how to add and managing Microsoft Entra user accounts from within Microsoft Intune.
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic, get-started, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
 
-# Add users and grant administrative permission to Intune
+# Add and manage users for Microsoft Intune
 
-As an administrator, you can add users directly or synchronize users from your on-premises Active Directory. Once added and enabled, users can enroll devices and access company resources. You can also give users more permissions including *global administrator* and *service administrator* permissions.
+Microsoft Entra ID, part of Microsoft Entra, is the identity service for Microsoft Intune which means user accounts you see in Intune exist in Microsoft Entra. As an administrator with sufficient role-based access control (RBAC) permissions within Microsoft Entra, you can use the Intune admin center to manage Microsoft Entra user account. Those same Entra permissions also enable an admin to manage users from within the Microsoft 365 admin center or directly through the Microsoft Entra admin center.
 
-Microsoft recommends following the principle of least-permissions by only assigning the minimum required permissions for an administrator to perform their duties. Global Administrator and Intune Service Administrator
-are [privileged roles](/entra/identity/role-based-access-control/privileged-roles-permissions) and assignment **should be limited**.
+Intune also supports use of user accounts that synchronize from Active Directory to any cloud-based service that shares the tenant with Intune and your Entra tenant.
+
+After a user is added or synchronized to Entra and [assigned a license to Intune](../fundamentals/licenses-assign.md), that user can enroll devices with Intune and begin to access company resources. Intune administrators can also [assign Intune RBAC roles](../fundamentals/assign-role.md) and permissions to discreet groups of users to enable those users to help administer your Intune subscription.
+
+The remainder of this article focuses on using the Intune admin center to manage user accounts.
+
+- For information on using the Microsoft Entra admin center to manage users, see [How to create, invite, and delete users](/entra/fundamentals/how-to-create-delete-users) in the Microsoft Entra documentation.
+- For information on using the Microsoft 365 admin center to manage users, see [Add users](/microsoft-365/admin/add-users/add-users) and [Add several users](/microsoft-365/enterprise/add-several-users-at-the-same-time) in the Microsoft 365 documentation.
+
+## Role-based access controls for managing user accounts
+
+Before you can use the Intune admin center to manage users, your account must have RBAC permissions within Microsoft Entra to manage user accounts. Microsoft Entra permissions are required as Intune RBAC is a subset of Entra RBAC. As a subset, Intune-only RBAC permissions aren't sufficient to manage accounts in Microsoft Entra. However, there are some [Microsoft Entra roles](../fundamentals/role-based-access-control.md#microsoft-entra-roles-with-intune-access) that include permissions within Intune.
+
+When working with RBAC, Microsoft recommends following the principle of least-permissions by using only accounts that have the minimum required permissions for a task, and **limiting** use and assignment of [privileged](/entra/identity/role-based-access-control/privileged-roles-permissions) administrative roles like the Intune Administrator.
+
+The following Microsoft Entra built-in RBAC role is the least privileged built-in role that includes sufficient permissions to add and manage user accounts:
+
+- [**User Administrator**](/entra/identity/role-based-access-control/permissions-reference#user-administrator) – This role provides permissions sufficient to add and edit user accounts from within the admin centers for Microsoft Intune, Microsoft Entra, and Microsoft 365.
+
+> [!TIP]
+> The Microsoft Entra *User Administrator* role also provides sufficient permissions to assign licenses to Intune and other products to users. However, license management is a task that can only be managed when using the Microsoft 365 admin center. For more information, see [Assign Intune licenses to users](../fundamentals/licenses-assign.md).
 
 ## Add users to Intune
 
-You can manually add users to your Intune subscription via the [Microsoft 365 admin center](https://admin.microsoft.com), the [Microsoft Entra admin center](https://entra.microsoft.com), or the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In addition, an administrator can edit user accounts to assign Intune licenses. You can assign licenses in either the Microsoft 365 admin center or the Microsoft Intune admin center. For more information on using the Microsoft 365 admin center, see [Add users individually or in bulk to the Microsoft 365 admin center](https://support.office.com/article/Add-users-individually-or-in-bulk-to-Office-365-Admin-Help-1970f7d6-03b5-442f-b385-5880b9c256ec). For more information on using the Microsoft Entra admin center, see [How to create, invite, and delete users](/entra/fundamentals/how-to-create-delete-users).
+You can use the Intune admin center to manually add new user accounts to your Microsoft Entra ID where they will then be available to your subscription. You can add users individually and also use a bulk operation to add multiple users at the same time when they're defined in a csv file.
 
-### Add individual Intune users in the Microsoft Intune admin center
+### Add individual users
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Users** > **All users** > **New user** > **Create new user**.
-2. On the **Basics** tab, add the following user details:
-   - **User principal name** - Universal principle name (UPN) stored in Microsoft Entra ID used to access the service.
-   - **Mail nickname** -  If you need to enter an email nickname that is different from the user principal name you entered, uncheck the **Derive from user principal name** option, then enter the mail nickname..
-   - **Display name** - The user's name, , such as Chris Green or Chris A. Green.
-   - **Password** - Add a password for the new user or choose to have it autogenerated.
-   - **Account enabled** - Choose to enable the account once it is created. If not checked, this user will be blocked from signing in. This can be updated after user creation. 
+The following procedural steps can be used to add individual users to your Intune subscription. For a more complete review of creating new user accounts, see [How to create, invite, and delete users](/entra/fundamentals/how-to-create-delete-users) in the Microsoft Entra documentation.
 
-   Either select the **Review + create** button to create the new user or **Next: Properties** to complete the next section.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Users** > **All users** > select **New user** > **Create new user**.
 
-3. On the **Properties** tab, add the following details:
-   - **Identity:**
-       - **FirstName**
-       - **Last name**
-       - **User type** - Choose either **Member** or **Guest**. Both of these user types are internal to your organization. Members are commonly full-time employees in your organization. Guests have an account in your tenant, but have guest-level privileges. It's possible they were created within your tenant prior to the availability of B2B collaboration.
-       - **Authorization info** - You can add up to 5 certificate user IDs. These are used as a part of Certificate Based Authentication and require a specific format. For more information, see [Mapping to the certificateUserIds attribute in Microsoft Entra ID](/entra/identity/authentication/concept-certificate-based-authentication-certificateuserids).
-   - **Job information:** Add any job-related information, such as the user's job title, department, or manager.
-   - **Contact information:** Add any relevant contact information for the user.
-   - **Parental controls:** For organizations like K-12 school districts, the user's age group may need to be provided. *Minors* are 12 and under, *Not adult* are 13-18 years old, and *Adults* are 18 and over. The combination of age group and consent provided by parent options determine the Legal age group classification. The Legal age group classification may limit the user's access and authority.
-   - **Settings:** The **Usage location** specify the user's global location.
+2. On the **Basics** tab, configure the following user details:
+   - **User principal name** - The User Principal Name (UPN) is stored in Microsoft Entra ID and is used to access services, including Microsoft Entra, Microsoft 365, and Microsoft Intune.
+   - **Mail nickname** - To enter an email nickname that is different from the user principal name, uncheck the **Derive from user principal name** option and then enter the mail nickname.
+   - **Display name** – How the user's name is displayed. For example, Chris Green or Chris A. Green.
+   - **Password** - Add a password for the new user or choose to have it autogenerated. All new users are directed to create a new password at their first sign-in.
+   - **Account enabled** - When an account isn't enabled, the user is blocked from signing in. This setting can be updated after creating the account.
 
-   Either select the **Review + create** button to create the new user or **Next: Assignments** to complete the next section.
+   You can select **Review + create** to create the new user account using only the Basic information, or you can select **Next: Properties** to complete additional but optional configurations.
 
-4. On the **Assignments** tab, add the following details:
-   You can assign the user to an administrative unit, group, or Microsoft Entra role when the account is created. You can assign the user to up to 20 groups or roles. You can only assign the user to one administrative unit. Assignments can be added after the user is created.
+3. On the **Properties** tab, configure the following details which are all optional. Values that aren't specified remain blank when the account is created and can be edited later.
+   - **Identity**:
+     - **First name**
+     - **Last name**
+     - **User type** - Choose either **Member** or **Guest**. Both user types are internal to your organization. Members are commonly full-time employees in your organization. Guests have an account in your tenant, but have [guest-level privileges](/entra/identity/users/users-restrict-guest-permissions).
+     - **Authorization info** – When you use Certificate Based Authentication for users, you can use this field to add up to five certificate user IDs. For more information, see [Mapping to the certificateUserIds attribute in Microsoft Entra ID](/entra/identity/authentication/concept-certificate-based-authentication-certificateuserids).
+   - **Job information**: Specify job-related information, like the user's job title, department, or manager.
+   - **Contact information**: Add contact information for the user.
+   - **Parental controls**: For organizations like K-12 school districts, the user's age group might need to be provided. *Minors* are 12 and under, *Not adult* are 13-18 years old, and *Adults* are 18 and over. The combination of age group and consent provided by parent options determine the Legal age group classification. The Legal age group classification might limit the user's access and authority.
+   - **Settings**: You can use **Usage location** to identify a user's global location.
+
+   Select **Review + create** or continue on to **Next: Assignments**.
+
+4. On the **Assignments** tab you can assign the user to a single administrative unit, and up to 20 groups or Microsoft Entra roles at the time the account is created. You can also configure Assignments after the user is created.
+
+   > [!TIP]
+   > Some options might not be available to configure based on your accounts level of privilege in Microsoft Entra. For example, if you're assigned only the *User Administrator* role, you can assign users to groups but lack rights to assign an administrative unit or assign the user a Microsoft Entra role. For information about the permissions provided by different roles, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
 
    **To assign a group to the new user**:
-
    1. Select **+ Add group**.
-   1. From the menu that appears, choose up to 20 groups from the list and select the **Select** button.
-   1. Select the **Review + create** button.
+   2. From the menu that appears, choose up to 20 groups from the list and select the **Select** button.
+   3. Select the **Review** + **create** button.
 
-   **To assign a role to the new user**:
+   **To assign a Microsoft Entra role to the new user**:
+   When a user requires permissions within Entra, you can use this option to assign them a suitable role. To assign Entra roles to other accounts, your account must have permissions equal to the Microsoft Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator).
+
+   > [!TIP]
+   > Most users you add to Intune won't require a *Microsoft Entra* role assignment. Instead, for the users that manage only Intune, plan to [assign an Intune RBAC role](../fundamentals/assign-role.md) to them after their account is created.
 
    1. Select **+ Add role**.
-   1. From the menu that appears, choose up to 20 roles from the list and select the **Select** button.
-   1. Select the **Review + create** button.
+   2. From the menu that appears, choose up to 20 roles from the list and select the **Select** button.
+   3. Select the **Review + create** button.
 
    **To add an administrative unit to the new user**:
+   Most users you add to Intune will never require an Administrative Units (AUs), which in Microsoft Entra ID is a powerful way to delegate administrative control over subsets of users, groups, or devices within your organization.
+
+   Instead, within Intune you can use [scope tags](../fundamentals/scope-tags.md) and [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments).
+
+   To assign an administrative unit to a user, your account must have permissions equal to the Entra [Privileged Role Administrator](/entra/identity/role-based-access-control/permissions-reference#privileged-role-administrator).
 
    1. Select **+ Add administrative unit**.
-   1. From the menu that appears, choose one administrative unit from the list and select the **Select** button.
-   1. Select the **Review + create** button.
+   2. From the menu that appears, select one administrative unit and then the **Select** button.
+   3. Select the **Review + create**.
 
-5. On the **Review + Create** tab, review the details to be sure the information is correct and details passed validation.
-   Review the details and select the **Create** button if everything looks good.
+5. On the **Review + Create** tab, review the details to be sure the information is correct and details passed validation. Review the details and select the **Create** button if everything looks good.
 
 > [!NOTE]
-> If you're moving to Microsoft 365 from an Office 365 subscription, your users and groups are already in Microsoft Entra ID. Intune uses the same Microsoft Entra ID, and can use the existing users and groups.
->
 > You can also invite guest users to your Intune tenant. For more information, see [Add Microsoft Entra B2B collaboration users in the Microsoft Entra admin center](/entra/external-id/add-users-administrator).
 
-### Add multiple Intune users in the Microsoft Intune admin center
+### Add multiple users
 
-You can add Intune users in bulk by uploading a *csv* file containing the full list of users. The following steps allow you to add multiple users to Intune:
+You can add Intune users in bulk by uploading a csv file containing the full list of users. The csv file is a comma-separated value list that can be edited in Notepad or Excel.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
-2. Select **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create users** pane is displayed.
-3. Download, edit, and upload a *csv* template containing a list of users that you want to add to Intune.
+**To add multiple users to Intune**:
 
-The *csv* file is a comma-separated value list that can be edited in Notepad or Excel. For more information about using a *csv* file to add Intune users, see [Bulk create users in Microsoft Entra ID](/azure/active-directory/enterprise-users/users-bulk-add).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Users** > **All users** > **Bulk operations** > **Bulk create**. The **Bulk create users** pane is displayed, which provides an option to **Download** a CSV template you can use.
+3. When your CSV template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin the import.
+
+   For more information about using a csv file to add Intune users, see [Bulk create users in Microsoft Entra ID](/azure/active-directory/enterprise-users/users-bulk-add).
 
 > [!NOTE]
 > You can also invite multiple guest users to your Intune tenant. For more information, see [Tutorial: Bulk invite Microsoft Entra B2B collaboration users](/entra/external-id/tutorial-bulk-invite).
 
-## Delete user from Intune
+## Sync Active Directory and add users to Intune
 
-When a user has left your organization, you can delete them from your Intune tenant. If needed, you can choose to delete multiple users using **Bulk operations**.
+You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Entra which includes Intune users. Having your on-premises Active Directory service connected with all of your Entra ID-based services makes managing user identity simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Entra tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you previously synchronized are available to all your cloud-based services.
 
-To delete an individual user from Intune:
+Be sure your Active Directory admins have access to your Entra subscription and are trained to complete common Active Directory and Microsoft Entra tasks.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
+### How to sync on-premises users with Microsoft Entra ID
+
+- To move existing users from on-premises Active Directory to Entra ID, you can set up [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). Hybrid identities exist in both services - on-premises Active Directory and Microsoft Entra ID.
+- You can also export Active Directory users using the UI or through script. An internet search can help you find the best option for your organization.
+- To synchronize your user accounts with Entra ID, use the [Microsoft Entra Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The *Microsoft Entra Connect* wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview) module.
+
+> [!TIP]
+> *Microsoft Entra Connect* encompasses functionality that was previously released as *Dirsync* and *Azure AD Sync*. Learn more about [directory integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). To learn about syncing user accounts from a local directory to Entra ID, see [Similarities between Active Directory and Microsoft Entra ID](/previous-versions/azure/azure-services/dn518177(v=azure.100)).
+
+## Delete users
+
+After a user leaves your organization, you can use the Intune admin center to delete them from Microsoft Entra, which also removes them from Intune. You can also delete multiple users using **Bulk operations**.
+
+To delete users from Entra, your administrative account must have permissions equal to the Microsoft Entra [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator) role.
+
+**To delete an individual user from Intune**:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Browse to **Users** > **All users**.
 3. Select the user you want to delete.
 4. Select **Delete**.
 
-To delete multiple users from Intune:
+**To delete multiple users from Intune**:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as at least a [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
-2. Select **Users** > **All users** > **Bulk operations** > **Bulk delete**. The **Bulk delete users** pane is displayed.
-4. Download, edit, and upload a *csv* template containing a list of users that you want to delete from Intune.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Go to **Users** > **All users** > **Bulk operations** > **Bulk delete**. The *Bulk delete users* pane is displayed which provides an option to **Download** a CSV template you can use.
+3. When your CSV template is ready, use the browse functionality to locate and upload the file. Select **Submit** to begin deletion.
 
-For related information, see [Bulk delete users in Microsoft Entra ID](/entra/identity/users/users-bulk-delete).
-
-## Grant admin permissions
-
-After you've added users to your Intune subscription, we recommend that you grant a few users administrative permission. To grant admin permissions, follow these steps:
-
-### Give admin permissions in Microsoft 365
-
-1. Sign in to the[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account >  select **Users** > **Active users** > choose the user to give admin permissions.
-2. In the user pane, choose **Manage roles** under **Roles**.
-3. In the **Manage roles** pane, choose the admin permission to grant from the list of available roles.
-4. Choose **Save changes**.
-
-### Give admin permissions in Microsoft Intune admin center
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with a global administrator account > **Users** > then choose the user you want to give admin permissions.
-2. Select **Assigned roles** > **Add assignments**.
-3. In the **Directory roles** pane, select the roles you want to assign to the user > **Add**.
-
-### Types of administrators
-
-Assign users one or more administrator permissions. These permissions define the administrative scope for users and the tasks they can manage. Administrator permissions are common between the different Microsoft cloud services, and some services might not support some permissions. Both the Azure portal and Microsoft 365 admin center list limited administrator roles that aren't used by Intune. Intune administrator permissions include the following options:
-
-- **Global administrator** - (Microsoft 365 and Intune) Accesses all administrative features in Intune. By default the person who signs up for Intune becomes a Global admin. Global admins are the only admins who can assign other admin roles. You can have more than one global admin in your organization. As a best practice, we recommend that only a few people in your company have this role to reduce the risk to your business.
-- **Password administrator** - (Microsoft 365 and Intune) Resets passwords, manages service requests, and monitors service health. Password admins are limited to resetting passwords for users.
-- **Service support administrator** - (Microsoft 365 and Intune) Opens support requests with Microsoft, and views the service dashboard and message center. They have "view only" permissions except for opening support tickets and reading them.
-- **Billing administrator** - (Microsoft 365 and Intune) Makes purchases, manages subscriptions, manages support tickets, and monitors service health.
-- **User administrator** - (Microsoft 365 and Intune) Resets passwords, monitors service health, adds and deletes user accounts, and manages service requests. The user management admin can't delete a global admin, create other admin roles, or reset passwords for other admins.
-- **Intune administrator** - All Intune Global administrator permissions except permission to create administrators with **Directory Role** options.
-
-The account you use to create your Microsoft Intune subscription is a global administrator. As a best practice, don't use a global administrator for day-to-day management tasks. While an administrator doesn't require an Intune license to access the Intune on Azure portal, in order to perform certain management tasks, such as setting up the Exchange service Connector,  an Intune license is required.
-
-To access the Microsoft 365 admin center, your account must have a **Sign-in allowed** set. In the Azure portal under **Profile**, set **Block sign in** to **No** to allow access. This status is different from having a license to the subscription. By default, all user accounts are **Allowed**. Users without administrator permissions can use the Microsoft 365 admin center to reset Intune passwords.
-
-## Sync Active Directory and add users to Intune
-
-You can configure directory synchronization to import user accounts from your on-premises Active Directory to Microsoft Entra which includes Intune users. Having your on-premises Active Directory service connected with all of your Microsoft Entra ID-based services makes managing user identity simpler. You can also configure single sign-on features to make the authentication experience for your users familiar and easy. When you link the same [Microsoft Entra tenant](/azure/active-directory/hybrid/whatis-hybrid-identity) with multiple services, the user accounts that you have previously synchronized are available to all cloud-based services.
-
-Be sure your AD admins have access to your Microsoft Entra subscription, and are trained to complete common AD and Microsoft Entra tasks.
-
-### How to sync on-premises users with Microsoft Entra ID
-
-- To move existing users from on-premises Active Directory to Microsoft Entra ID, you can set up [hybrid identity](/azure/active-directory/hybrid/whatis-hybrid-identity). Hybrid identities exist in both services - on-premises AD and Microsoft Entra ID.
-
-- You can also export Active Directory users using the UI or through script. An internet search can help you find the best option for your organization.
-
-- To synchronize your user accounts with Microsoft Entra ID, use the [Microsoft Entra Connect wizard](https://www.microsoft.com/download/details.aspx?id=47594). The Microsoft Entra Connect wizard provides a simplified and guided experience for connecting your on-premises identity infrastructure to the cloud. Choose your topology and needs (single or multiple directories, password hash sync, pass-through authentication, or federation). The wizard deploys and configures all components required to get your connection up and running. Including: sync services, Active Directory Federation Services (AD FS), and the [Microsoft Graph PowerShell](/powershell/microsoftgraph/overview?view=graph-powershell-1.0) module.
+   For related information, see [Bulk delete users in Microsoft Entra ID](/entra/identity/users/users-bulk-delete).
 
 > [!TIP]
-> Microsoft Entra Connect encompasses functionality that was previously released as Dirsync and Azure AD Sync. Learn more about [directory integration](/previous-versions/azure/azure-services/jj573653(v=azure.100)). To learn about syncing user accounts from a local directory to Microsoft Entra ID, see [Similarities between Active Directory and Microsoft Entra ID](/previous-versions/azure/azure-services/dn518177(v=azure.100)).
+> As a user with sufficient permissions to manage user accounts, there are some accounts you might not be able to delete. Reasons you can't delete a specific account can include:
+> - Accounts that are synchronized from an on-premises Active Directory.
+> - Accounts that are assigned a higher-privileged Entra role than your account.
+- what resources they can change.
+> - Accounts that fall outside your current Intune [scope group](../fundamentals/role-based-access-control.md#about-intune-role-assignments) when using the Intune admin center.
+
+## Related content
+
+- [Add groups to organize users and devices](../fundamentals/groups-add.md)
+- [Assign users licenses to Intune](../fundamentals/licenses-assign.md)

@@ -12,7 +12,7 @@ manager: apoorvseth
 ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2010 of Configuration Manager current branch
@@ -412,7 +412,7 @@ The following features are now deprecated:
 - [Connector for Azure Monitor](/azure/azure-monitor/platform/collect-sccm?context=%2fmem%2fconfigmgr%2fcore%2fcontext%2fcore-context)<!-- 8269855 -->
 
 <!--
-As first announced in version 1906, version 2010 drops support for the following client OS versions:  
+As first announced in version 1906, version 2010 drops support for the following client OS versions:
 
 - Windows CE 7.0
 - Windows 10 Mobile
@@ -446,7 +446,7 @@ The following additional hotfixes are available to address specific issues:
 | [4600089](https://support.microsoft.com/help/4600089)| Update Rollup for Microsoft Endpoint Configuration Manager current branch, version 2010 | March 8, 2021| Yes|
 
 <!--
-> [!NOTE]  
+> [!NOTE]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 

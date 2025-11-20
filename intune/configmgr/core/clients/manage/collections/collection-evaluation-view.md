@@ -6,12 +6,12 @@ ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # <a name="bkmk_colleval"></a> How to view collection evaluation
@@ -76,7 +76,7 @@ View the collection summary information to get information specific to the evalu
 1. In the **Summary** group pane for collection, review the evaluation-related information for the selected collection.
    :::image type="content" source="./media/6251274-summary-collection-evaluation.png" alt-text="Evaluation-related information in the summary group for the selected collection" lightbox="./media/6251274-summary-collection-evaluation.png":::
 1. The **Related Objects** give links to view status of the collection in the specific queue. These links take you to the queues in the **Monitoring** workspace under the **Collection Evaluation** node.
-   - This action creates a new node is created where you can see the evaluation status for the specific collection.  
+   - This action creates a new node is created where you can see the evaluation status for the specific collection.
 
 ## Monitoring collection evaluation queues
 
@@ -97,7 +97,7 @@ Monitoring the collection evaluation queues can give you deeper insight into the
 1. Starting in Configuration Manager 2103, you can: <!--8787410-->
     - Configure a primary site's refresh interval for the **Collection Evaluation** statistics page to be between 1 minute and 1440 minutes (1 day). Typically, collection evaluation occurs over the course of seconds or minutes. However, you can change the statistics refresh to accommodate your environment. The default **Refresh Interval (minutes)** is 5.
     - Copy collection evaluation statistics as structured text to the clipboard. Use the **Copy** button in the ribbon to copy the statistics. When the text is pasted into a text editor, it's structured to make it easy to read.
-1. Selecting the node for a queue brings up detailed status for the queue including: 
+1. Selecting the node for a queue brings up detailed status for the queue including:
    - **Name**: Name of the collection
    - **Collection ID**:  ID of the collection
    - **Estimated Completion Time**: When the evaluation is estimated to complete

@@ -12,41 +12,41 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Approve Method in Class SMS_UserApplicationRequest
-The `Approve` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves user application requests.  
+The `Approve` Windows Management Instrumentation (WMI) class method, in Configuration Manager, approves user application requests.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-sint32 Approve(  
-     string Comments  
-);  
-```  
+```
+sint32 Approve(
+     string Comments
+);
+```
 
-#### Parameters  
- `Comments`  
- Data type: `String` Array  
+#### Parameters
+ `Comments`
+ Data type: `String` Array
 
- Qualifiers: [in, SizeLimit("2000")]  
+ Qualifiers: [in, SizeLimit("2000")]
 
- Comments regarding the approval of the application request.  
+ Comments regarding the approval of the application request.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_UserApplicationRequest Server WMI Class](../../../develop/reference/apps/sms_userapplicationrequest-server-wmi-class.md)

@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Fundamentals of role-based administration for Configuration Manager
@@ -80,7 +80,7 @@ The following table summarizes all of the built-in roles:
 
 You can't modify the built-in security roles, other than add administrative users. You can copy the role, make changes, and then save these changes as a new custom security role. You can also import security roles that you've exported from another hierarchy like a lab environment. For more information, see [Configure role-based administration](../../core/servers/deploy/configure/configure-role-based-administration.md#how-to-create-custom-security-roles).
 
-Review the security roles and their permissions to determine whether you'll use the built-in security roles, or whether you have to create your own custom security roles.  
+Review the security roles and their permissions to determine whether you'll use the built-in security roles, or whether you have to create your own custom security roles.
 
 ### Role permissions
 

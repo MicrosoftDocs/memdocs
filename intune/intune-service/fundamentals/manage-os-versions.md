@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Manage device operating system versions with Intune
-titleSuffix: Microsoft Intune
 description: Learn about the methods for managing device operating system versions supported by Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 02/24/2025
+ms.date: 06/12/2025
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 361ef17b-1ee0-4879-b7b1-d678b0787f5a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---
@@ -41,7 +21,7 @@ Intune can help you address these common scenarios:
 - Control access to organizational data on devices while you validate a new operating system release
 - Encourage/require end users to upgrade to the latest operating system version approved by your organization
 - Manage an organization-wide rollout to a new operating system version
-  
+
 ## Operating system version control using Intune mobile device management enrollment restrictions
 
 With [device enrollment restrictions](../enrollment/enrollment-restrictions-set.md), you can restrict devices from enrolling in Intune based on certain device attributes. The goal is to allow users to enroll only devices that are compliant to your organizations expectations, and prevent enrollment of devices that aren't compliant where they could gain access to your organizations resources. You can create *enrollment device platform restriction* policies for the following platforms:
@@ -104,7 +84,7 @@ For more information, see [How to create and assign app protection policies](../
 
 ## Managing multiple OS versions using Intune app protection policies
 
-In App Protection Policies (APP), you can only configure one minimum OS version in the conditional
+In app protection policies, you can only configure one minimum OS version in the conditional
 launch settings but you could create multiple APPs with different
 minimum OS values. However, because APPs are assigned to user groups,
 this means a user with multiple devices that are running different OS

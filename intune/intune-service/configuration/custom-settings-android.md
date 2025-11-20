@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Add custom settings to Android DA devices in Microsoft Intune
 description: Add or create a custom profile for Android device administrator (DA) devices in Microsoft Intune. Create a WiFi profile with a preshared key, create a per-app VPN profile, or allow/block apps for Samsung Knox Standard devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 02/18/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: anuragjain
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -44,7 +27,7 @@ Using a custom profile, you can configure and assign the following Android setti
 - [Create a Wi-Fi profile with a pre-shared key](/mem/intune-service/configuration/wi-fi-profile-shared-key)
 - [Create a per-app VPN profile](/mem/intune-service/configuration/android-pulse-secure-per-app-vpn)
 - [Allow and block apps for Samsung Knox Standard devices](/mem/intune-service/configuration/samsung-knox-apps-allow-block)
-- [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/advanced-threat-protection-manage-android.md)
+- [Configure web protection in Microsoft Defender for Endpoint for Android](../protect/microsoft-defender-configure-android.md)
 
 > [!IMPORTANT]
 > Only the settings listed can be configured in a custom profile. Android devices don't expose a complete list of OMA-URI settings you can configure.<!-- 10948264 -->
@@ -107,4 +90,3 @@ This article shows you how to create a custom profile for Android DA devices.
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Create a [custom profile on Android Enterprise devices](custom-settings-android-for-work.md).

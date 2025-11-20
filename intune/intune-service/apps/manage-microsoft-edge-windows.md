@@ -1,35 +1,13 @@
 ---
-# required metadata
-
 title: Configure Microsoft Edge for Windows with Intune
-titleSuffix: 
-description: Use Intune configuration policies with Edge for Windows to ensure corporate websites are always accessed with safeguards in place. 
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+description: Use Intune configuration policies with Edge for Windows to ensure corporate websites are always accessed with safeguards in place.
 ms.date: 08/08/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri
-ms.custom: intune-azure
 ---
 
 # Configure Microsoft Edge for Windows with Intune
@@ -53,5 +31,5 @@ To create a **Managed apps** app configuration policy for Microsoft Edge on Wind
 
 ## Next steps
 
-- [What are app protection policies?](app-protection-policy.md) 
+- [What are app protection policies?](app-protection-policy.md)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)

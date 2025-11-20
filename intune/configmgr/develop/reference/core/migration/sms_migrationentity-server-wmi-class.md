@@ -12,195 +12,195 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MigrationEntity Server WMI Class
-The `SMS_MigrationEntity` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the gathered object entities from the Configuration Manager 2007 hierarchy.  
+The `SMS_MigrationEntity` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the gathered object entities from the Configuration Manager 2007 hierarchy.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MigrationEntity : SMS_BaseClass  
-{  
-    Boolean ChangedAffinity;  
-    UInt32 DashboardState;  
-    UInt32 EntityID;  
-    String EntityKey;  
-    String EntityName;  
-    String ExcludedBy;  
-    Boolean IsActive;  
-    UInt32 JobIDs[];  
-    UInt32 ObjectTypeID;  
-    UInt32 ReferencedEntities[];  
-    UInt32 ReferencingEntities[];  
-    UInt32 SourceSiteID;  
-    UInt32 Status;  
-    UInt32 Type;  
-};  
-```  
+```
+Class SMS_MigrationEntity : SMS_BaseClass
+{
+    Boolean ChangedAffinity;
+    UInt32 DashboardState;
+    UInt32 EntityID;
+    String EntityKey;
+    String EntityName;
+    String ExcludedBy;
+    Boolean IsActive;
+    UInt32 JobIDs[];
+    UInt32 ObjectTypeID;
+    UInt32 ReferencedEntities[];
+    UInt32 ReferencingEntities[];
+    UInt32 SourceSiteID;
+    UInt32 Status;
+    UInt32 Type;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_MigrationEntity` class.  
+## Methods
+ The following table lists the methods in the `SMS_MigrationEntity` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[ExcludeAndInclude Method in Class SMS_MigrationEntity](../../../../develop/reference/core/migration/excludeandinclude-method-in-class-sms_migrationentity.md)|Marks the entities as excluded or included.|  
-|[GetEntityReferences Method in Class SMS_MigrationEntity](../../../../develop/reference/core/migration/getentityreferences-method-in-class-sms_migrationentity.md)|Gets the referenced entities of the specified entities.|  
+|Method|Description|
+|------------|-----------------|
+|[ExcludeAndInclude Method in Class SMS_MigrationEntity](../../../../develop/reference/core/migration/excludeandinclude-method-in-class-sms_migrationentity.md)|Marks the entities as excluded or included.|
+|[GetEntityReferences Method in Class SMS_MigrationEntity](../../../../develop/reference/core/migration/getentityreferences-method-in-class-sms_migrationentity.md)|Gets the referenced entities of the specified entities.|
 
-## Properties  
- `ChangedAffinity`  
- Data type: `Boolean`  
+## Properties
+ `ChangedAffinity`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if this object should be included in changed object type job.  
+ `true` if this object should be included in changed object type job.
 
- `DashboardState`  
- Data type: `UInt32`  
+ `DashboardState`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Entity dashboard state. Possible values are:  
+ Entity dashboard state. Possible values are:
 
-|Value|Entity dashboard state|  
-|-|-|  
-|0|Remaining|  
-|1|Migrated|  
-|2|Excluded|  
+|Value|Entity dashboard state|
+|-|-|
+|0|Remaining|
+|1|Migrated|
+|2|Excluded|
 
- `EntityID`  
- Data type: `UInt32`  
+ `EntityID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Entity ID.  
+ Entity ID.
 
- `EntityKey`  
- Data type: `String`  
+ `EntityKey`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Entity key imported from a Configuration Manager 2007 site.  
+ Entity key imported from a Configuration Manager 2007 site.
 
- `EntityName`  
- Data type: `String`  
+ `EntityName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the entity.  
+ Name of the entity.
 
- `ExcludedBy`  
- Data type: `String`  
+ `ExcludedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Excluded by user.  
+ Excluded by user.
 
- `IsActive`  
- Data type: `Boolean`  
+ `IsActive`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if this object is from an active site.  
+ `true` if this object is from an active site.
 
- `JobIDs`  
- Data type: `UInt32 Array`  
+ `JobIDs`
+ Data type: `UInt32 Array`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- Jobs containing this entity.  
+ Jobs containing this entity.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Sub-type of entity.  
+ Sub-type of entity.
 
- `ReferencedEntities`  
- Data type: `UInt32 Array`  
+ `ReferencedEntities`
+ Data type: `UInt32 Array`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- Entities directly referenced by this entity.  
+ Entities directly referenced by this entity.
 
- `ReferencingEntities`  
- Data type: `UInt32 Array`  
+ `ReferencingEntities`
+ Data type: `UInt32 Array`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- Entities directly referencing this entity.  
+ Entities directly referencing this entity.
 
- `SourceSiteID`  
- Data type: `UInt32`  
+ `SourceSiteID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Source site ID.  
+ Source site ID.
 
- `Status`  
- Data type: `UInt32`  
+ `Status`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Entity migration status. Possible values are:  
+ Entity migration status. Possible values are:
 
-|Value|Entity migration status|  
-|-|-|  
-|0|AVAILABLETOMIGRATE|  
-|1|MIGRATED|  
-|2|RUNNING|  
-|3|FAILED|  
-|4|EXCLUDED|  
-|6|MODIFIED|  
-|7|REMOVED|  
-|8|PENDINGSCHEDULE|  
-|9|SCHEDULED|  
+|Value|Entity migration status|
+|-|-|
+|0|AVAILABLETOMIGRATE|
+|1|MIGRATED|
+|2|RUNNING|
+|3|FAILED|
+|4|EXCLUDED|
+|6|MODIFIED|
+|7|REMOVED|
+|8|PENDINGSCHEDULE|
+|9|SCHEDULED|
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Type of entity.  
+ Type of entity.
 
-## Remarks  
- Each instance represents an object like a collection, a package, or a configuration item, carrying the basic metadata for the entities, such as name, status, and the unique key.  
+## Remarks
+ Each instance represents an object like a collection, a package, or a configuration item, carrying the basic metadata for the entities, such as name, status, and the unique key.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).

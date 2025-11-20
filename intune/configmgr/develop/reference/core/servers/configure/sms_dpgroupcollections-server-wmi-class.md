@@ -12,99 +12,99 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DPGroupCollections Server WMI Class
-The `SMS_DPGroupCollections` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes collection association for a given distribution point group.  
+The `SMS_DPGroupCollections` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes collection association for a given distribution point group.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DPGroupCollections : SMS_BaseClass  
-{  
-    String CollectionDescription;  
-    String CollectionID;  
-    UInt32 CollectionMemberCount;  
-    String CollectionName;  
-    String GroupDescription;  
-    String GroupID;  
-    String GroupName;  
-};  
-```  
+```
+Class SMS_DPGroupCollections : SMS_BaseClass
+{
+    String CollectionDescription;
+    String CollectionID;
+    UInt32 CollectionMemberCount;
+    String CollectionName;
+    String GroupDescription;
+    String GroupID;
+    String GroupName;
+};
+```
 
-## Methods  
- The `SMS_DPGroupCollections` class does not define any methods.  
+## Methods
+ The `SMS_DPGroupCollections` class does not define any methods.
 
-## Properties  
- `CollectionDescription`  
- Data type: `String`  
+## Properties
+ `CollectionDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description of the collection.  
+ Description of the collection.
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Collection associated with the distribution point group.  
+ Collection associated with the distribution point group.
 
- `CollectionMemberCount`  
- Data type: `UInt32`  
+ `CollectionMemberCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of the collection members.  
+ Count of the collection members.
 
- `CollectionName`  
- Data type: `String`  
+ `CollectionName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the collection.  
+ Name of the collection.
 
- `GroupDescription`  
- Data type: `String`  
+ `GroupDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description of the distribution point group.  
+ Description of the distribution point group.
 
- `GroupID`  
- Data type: `String`  
+ `GroupID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier for the distribution point group.  
+ Identifier for the distribution point group.
 
- `GroupName`  
- Data type: `String`  
+ `GroupName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the distribution point group.  
+ Name of the distribution point group.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

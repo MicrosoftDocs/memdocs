@@ -11,16 +11,16 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Back up a Configuration Manager site
 
 *Applies to: Configuration Manager (current branch)*
 
-Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites, a backup and recovery approach can help you to recover sites and hierarchies more quickly, and with the least data loss.  
+Prepare backup and recovery approaches to avoid data loss. For Configuration Manager sites, a backup and recovery approach can help you to recover sites and hierarchies more quickly, and with the least data loss.
 
-The sections in this article can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](recover-sites.md).  
+The sections in this article can help you back up your sites. To recover a site, see [Recovery for Configuration Manager](recover-sites.md).
 
 <!--/SCCMdocs/issues/2108-->
 > [!WARNING]
@@ -29,13 +29,13 @@ The sections in this article can help you back up your sites. To recover a site,
 > - A successful backup from the **Backup Site Server** maintenance task
 > - A manually recovered site database backup
 
-## Considerations before creating a backup  
+## Considerations before creating a backup
 
-- If you use a SQL Server Always On availability group to host the site database: Modify your backup and recovery plans as described in [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup).  
+- If you use a SQL Server Always On availability group to host the site database: Modify your backup and recovery plans as described in [Prepare to use an availability group](../deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md#changes-for-site-backup).
 
 - Configuration Manager can recover the site database from the Configuration Manager backup task. It can also use a backup of the site database that you create with another process.
 
-    For example, you can restore the site database from a backup that's created as part of a SQL Server maintenance plan. You can also use a backup that's created by using Data Protection Manager to back up your site database.  
+    For example, you can restore the site database from a backup that's created as part of a SQL Server maintenance plan. You can also use a backup that's created by using Data Protection Manager to back up your site database.
 
 - You can also install an additional site server in *passive* mode. The site server in passive mode is in addition to your existing site server in *active* mode. A site server in passive mode is available for immediate use, when needed. For more information, see [Site server high availability](../deploy/configure/site-server-high-availability.md). While this role doesn't remove the need to plan for and practice backup and recovery operations, it significantly reduces the effort to recover a site when necessary.
 
@@ -43,9 +43,9 @@ The sections in this article can help you back up your sites. To recover a site,
 
 You can use System Center Data Protection Manager (DPM) to back up your Configuration Manager site database.
 
-Create a new protection group in DPM for the site database computer. On the **Select Group Members** page of the Create New Protection Group Wizard, you select the SMS Writer service from the data source list. Then select the site database as an appropriate member. For more information about using DPM, see the [Data Protection Manager](/system-center/dpm) documentation library.  
+Create a new protection group in DPM for the site database computer. On the **Select Group Members** page of the Create New Protection Group Wizard, you select the SMS Writer service from the data source list. Then select the site database as an appropriate member. For more information about using DPM, see the [Data Protection Manager](/system-center/dpm) documentation library.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > Configuration Manager doesn't support DPM backup for a SQL Server Always On failover cluster instance that uses a named instance. It does support DPM backup on a failover cluster instance that uses the default instance of SQL Server.
 
 After you restore the site database, follow the steps in setup to recover the site. To use the site database that you backed up with Data Protection Manager, select the recovery option to **Use a site database that has been manually recovered**.
@@ -62,15 +62,15 @@ You can automate backup for Configuration Manager sites by scheduling the predef
 
 Plan to run the default site backup task at a minimum of every five days. This schedule is because Configuration Manager uses a *SQL Server change tracking retention period* of five days. For more information, see [SQL Server change tracking retention period](recover-sites.md#sql-server-change-tracking-retention-period).
 
-To simplify the backup process, you can create an **AfterBackup.bat** file. This script automatically runs post-backup actions after the backup task completes successfully. Use the AfterBackup.bat file to archive the backup snapshot to a secure location. You can also use the AfterBackup.bat file to copy files to your backup folder, or to start other backup tasks.  
+To simplify the backup process, you can create an **AfterBackup.bat** file. This script automatically runs post-backup actions after the backup task completes successfully. Use the AfterBackup.bat file to archive the backup snapshot to a secure location. You can also use the AfterBackup.bat file to copy files to your backup folder, or to start other backup tasks.
 
 You can back up a central administration site and primary site. Secondary sites or site system servers don't have backup tasks.
 
-When the Configuration Manager backup service runs, it follows the instructions defined in the backup control file: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. You can modify the backup control file to change the behavior of the backup service.  
+When the Configuration Manager backup service runs, it follows the instructions defined in the backup control file: `<ConfigMgrInstallationFolder>\Inboxes\Smsbkup.box\Smsbkup.ctl`. You can modify the backup control file to change the behavior of the backup service.
 > [!NOTE]
 > Modifications of **Smsbkup.ctl** will apply after a restart of the service SMS_SITE_VSS_WRITER on the Site Server.
 
-Site backup status information is written to the **Smsbkup.log** file. This file is created in the destination folder that you specify in the properties of the Backup Site Server maintenance task.  
+Site backup status information is written to the **Smsbkup.log** file. This file is created in the destination folder that you specify in the properties of the Backup Site Server maintenance task.
 
 ### To enable the site backup maintenance task
 
@@ -155,7 +155,7 @@ If you modify predefined or created custom reports in SQL Server Reporting Servi
 - Custom assemblies or extensions
 - Configuration files
 - Custom SQL Server views used in custom reports
-- Custom stored procedures  
+- Custom stored procedures
 
 > [!IMPORTANT]
 > When Configuration Manager updates to a newer version, the predefined reports might be overwritten by new reports. If you modify a predefined report, make sure to back up the report and then restore it in Reporting Services.
@@ -164,7 +164,7 @@ For more information about backing up your custom reports in Reporting Services,
 
 ### Back up content files
 
-The content library in Configuration Manager is the location where all content files are stored for all software deployments. The content library is located on the site server and on each distribution point. The Backup Site Server maintenance task doesn't back up the content library or package source files. When a site server fails, the information about the content library is restored to the site database, but you must restore the content library and package source files.  
+The content library in Configuration Manager is the location where all content files are stored for all software deployments. The content library is located on the site server and on each distribution point. The Backup Site Server maintenance task doesn't back up the content library or package source files. When a site server fails, the information about the content library is restored to the site database, but you must restore the content library and package source files.
 
 - The content library must be restored before you can redistribute content to distribution points. When you start content redistribution, Configuration Manager copies the files from the site server's content library to the distribution points. For more information, see [The content library](../../plan-design/hierarchy/the-content-library.md).
 

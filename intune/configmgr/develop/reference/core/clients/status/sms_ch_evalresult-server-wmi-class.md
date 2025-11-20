@@ -12,109 +12,109 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CH_EvalResult Server WMI Class
-The `SMS_CH_EvalResult` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client evaluation results.  
+The `SMS_CH_EvalResult` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client evaluation results.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CH_EvalResult : SMS_BaseClass  
-{  
-    DateTime EvalTime;  
-    String HealthCheckDescription;  
-    String HealthCheckGUID;  
-    UInt32 ResourceID;  
-    UInt32 Result;  
-    UInt32 ResultCode;  
-    String ResultDetail;  
-    UInt32 ResultType;  
-};  
-```  
+```
+Class SMS_CH_EvalResult : SMS_BaseClass
+{
+    DateTime EvalTime;
+    String HealthCheckDescription;
+    String HealthCheckGUID;
+    UInt32 ResourceID;
+    UInt32 Result;
+    UInt32 ResultCode;
+    String ResultDetail;
+    UInt32 ResultType;
+};
+```
 
-## Methods  
- The `SMS_CH_EvalResult` class does not define any methods.  
+## Methods
+ The `SMS_CH_EvalResult` class does not define any methods.
 
-## Properties  
- `EvalTime`  
- Data type: `DateTime`  
+## Properties
+ `EvalTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- Evaluation time.   
+ Evaluation time.
 
- `HealthCheckDescription`  
- Data type: `String`  
+ `HealthCheckDescription`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Health Check description.   
+ Health Check description.
 
- `HealthCheckGUID`  
- Data type: `String`  
+ `HealthCheckGUID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- Health check GUID.   
+ Health check GUID.
 
- `ResourceID`  
- Data type: `UInt32`  
+ `ResourceID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- Unique Configuration Manager-supplied ID for the resource.  
+ Unique Configuration Manager-supplied ID for the resource.
 
- `Result`  
- Data type: `UInt32`  
+ `Result`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- Evaluation result.   
+ Evaluation result.
 
- `ResultCode`  
- Data type: `UInt32`  
+ `ResultCode`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Result code.   
+ Result code.
 
- `ResultDetail`  
- Data type: `String`  
+ `ResultDetail`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Result detail.   
+ Result detail.
 
- `ResultType`  
- Data type: `UInt32`  
+ `ResultType`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Result type.   
+ Result type.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

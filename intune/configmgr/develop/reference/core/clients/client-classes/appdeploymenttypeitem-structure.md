@@ -12,36 +12,36 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # AppDeploymentTypeItem Structure
-In Configuration Manager, the `AppDeploymentTypeItem` structure contains detection results for an individual deployment type.  
+In Configuration Manager, the `AppDeploymentTypeItem` structure contains detection results for an individual deployment type.
 
-## Syntax  
+## Syntax
 
-```  
-typedef struct tagAppDeploymentTypeItem  
-{  
-    LPWSTR szId;  
-    DWORD dwRevision;  
-    AppDetectState eDetectState;  
-    DWORD dwErrorCode;  
-}AppDeploymentTypeItem, *PAppDeploymentTypeItem;  
-```  
+```
+typedef struct tagAppDeploymentTypeItem
+{
+    LPWSTR szId;
+    DWORD dwRevision;
+    AppDetectState eDetectState;
+    DWORD dwErrorCode;
+}AppDeploymentTypeItem, *PAppDeploymentTypeItem;
+```
 
-## Members  
- `szId`  
- ID of the deployment item.   
+## Members
+ `szId`
+ ID of the deployment item.
 
- `dwRevision`  
- Revision.   
+ `dwRevision`
+ Revision.
 
- `eDetectState`  
- Detect state.   
+ `eDetectState`
+ Detect state.
 
- dwErrorCode  
- Error code.   
+ dwErrorCode
+ Error code.
 
-## See Also  
- [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+## See Also
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

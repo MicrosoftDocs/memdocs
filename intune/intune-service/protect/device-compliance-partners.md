@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Third-party device compliance partners support in Microsoft Intune
-description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune. 
-keywords:
+description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune.
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 09/25/2023
+ms.date: 04/10/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.reviewer: tycast
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu-microsoft
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -50,7 +32,7 @@ To enable user data from device compliance partners, complete the following task
 
 3. **Enroll your devices to your device compliance partner**.
 
-With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices in a noncompliant state have a *not compliant* status added to their device record in Microsoft Entra ID. 
+With these tasks complete, the device compliance partner sends device state details to Intune. Intune adds this information to Microsoft Entra ID. For example, devices in a noncompliant state have a *not compliant* status added to their device record in Microsoft Entra ID.
 
 ## Supported device compliance partners
 
@@ -62,11 +44,13 @@ The following compliance partners are supported as generally available:
 - BlackBerry UEM
 - Citrix Workspace device compliance
 - CLOMO MDM
+- Fleet
 - IBM MaaS360
 - Jamf Pro
 - Kandji
 - Ivanti Neurons for MDM
 - Ivanti EPMM
+- mobiconnect
 - Mosyle Fuse
 - Mosyle Onek12
 - SOTI MobiControl
@@ -115,7 +99,7 @@ Your configuration now appears on the Partner compliance management page.
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations are ordered by platform type.
+2. Go to **Tenant Administration** > **Connectors and Tokens** > **Partner Compliance management**, and then select the partner configuration you want to modify. Configurations appear by platform type.
 
 3. On the partner configuration **Overview** page, select **Properties** to open the Properties page where you can edit the assignments.
 
@@ -132,7 +116,7 @@ Your configuration now appears on the Partner compliance management page.
    2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
    3. For *Sync Azure Services*, select **SYNC**.
 
-      All the changes you’ve made since the initial configuration or the last manual synchronization are synchronized from Azure Services to UEM.  
+      All the changes you’ve made since the initial configuration or the last manual synchronization are synchronized from Azure Services to UEM.
 
 ## Configure your compliance partner to work with Intune
 
@@ -141,9 +125,11 @@ To enable a device compliance partner to work with Intune, you must complete con
 - [42Gears SureMDM](https://docs.42gears.com/suremdm/docs/SureMDM/ConditionalAccessintheSureMDMCon.html)
 - [Citrix Endpoint Management integration with Microsoft Endpoint Manager](https://docs.citrix.com/en-us/citrix-endpoint-management/integration-with-mem.html)
 - [CLOMO MDM](https://support.clomo.com/?page_id=61477)
+- [Fleet](https://fleetdm.com/guides/entra-conditional-access-integration)
 - [Kandji Device Compliance](https://support.kandji.io/support/solutions/articles/72000630314)
+- [mobiconnect](https://help.mobi-connect.net/function/function_category/c0119/?func_os=ios-ipados)
 - [VMware Workspace ONE UEM](https://docs.vmware.com/en/VMware-Workspace-ONE-UEM/2102/Directory_Service_Integration/GUID-800FB831-AA66-4094-8F5A-FA5899A3C70C.html)
-  
+
 
 ## Enroll your devices to your device compliance partner
 
@@ -154,6 +140,24 @@ Refer to the documentation from your device compliance partner for how to enroll
 After you configure third-party device compliance partners and enroll devices with them, the partner will forward compliance details to Intune. After Intune receives that data,  you can view details about the devices in the Azure portal.
 
 Sign in to the Azure portal and go to **Microsoft Entra ID** > **Devices** > [**All devices**](https://portal.azure.com/#blade/Microsoft_AAD_Devices/DevicesMenuBlade/Devices/menuId/).
+
+## Best practices for migrating devices from 3rd party MDM to Intune MDM
+
+When you migrate devices from 3rd party MDM providers to a full Intune stack, we recommend you follow these cleanup steps:
+
+1. Initiate a retirement action from the 3rd party MDM service before the device is enrolled with Intune MDM. This notifies Intune to perform the necessary cleanup tasks in our 3rd party integration services.
+> [!NOTE]
+> Removing the 3rd party MDM profile locally on a device doesn't sufficiently trigger the Intune cleanup tasks.
+
+2. Confirm that devices retired from the 3rd party MDM appear in Microsoft Entra ID with **None** listed in the **MDM** column. At this point, your devices can be newly enrolled with Intune MDM.
+
+3. After all devices have migrated to Intune via steps 1 and 2, disable the Intune connection in your 3rd party MDM provider's admin console. If that isn't an option, you can also disable the connection console in the Microsoft Intune admin center.
+   1. Go to **Tenant administration** > **Connectors and tokens** > **Device compliance partner**.
+   1. Select the device compliance partner you want to disable.
+   1. Toggle the connection to **Off**.
+
+> [!NOTE]
+> If devices haven't been through the cleanup tasks and they're showing as enrolled in Intune, Intune enforces Intune compliance policies and statuses and ignores the 3rd party policies.
 
 ## Next steps
 

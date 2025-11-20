@@ -9,7 +9,7 @@ ms.topic: whats-new
 author: Banreet
 ms.author: banreetkaur
 manager: apoorvseth
-ms.reviewer: mstewart,aczechowski
+ms.reviewer: mstewart
 ms.localizationpriority: medium
 ---
 

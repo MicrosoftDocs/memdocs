@@ -1,13 +1,8 @@
 ---
-title: include file
-description: include file
 author: MandiOhlinger
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 05/01/2024
 ms.author: mandia
-ms.custom: include file
-ms.reviewer: miepping
 ---
 
 <!-- This include file is used in the Apple Enterprise SSO deployment guide docs. 4.10.2023 (mandia): Removed 'preview'. 4.16.2024 (mandia) Updated for platform SSO.-->

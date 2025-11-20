@@ -12,50 +12,50 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # FormatModuleMessage Method
-The `FormatModuleMessage` method, in Configuration Manager, resolves Configuration Manager status messages in Srvmsgs.dll, Provmsgs.dll, and Climmsgs.dll.  
+The `FormatModuleMessage` method, in Configuration Manager, resolves Configuration Manager status messages in Srvmsgs.dll, Provmsgs.dll, and Climmsgs.dll.
 
-## Syntax  
+## Syntax
 
-```  
-[VBScript]  
-SMSFormatMessageCtl.FormatModuleMessage  
-```  
+```
+[VBScript]
+SMSFormatMessageCtl.FormatModuleMessage
+```
 
-#### Parameters  
- `ModuleName`  
- Data type: `string`  
+#### Parameters
+ `ModuleName`
+ Data type: `string`
 
- Name of the module to load. The name can be Srvmsgs.dll, Provmsgs.dll, or Climmsgs.dll.  
+ Name of the module to load. The name can be Srvmsgs.dll, Provmsgs.dll, or Climmsgs.dll.
 
- `MessageID`  
- Data type: `int`  
+ `MessageID`
+ Data type: `int`
 
- Message ID logically ORed with the severity.  
+ Message ID logically ORed with the severity.
 
- `InsertionStrings`  
- Data type: `object`  
+ `InsertionStrings`
+ Data type: `object`
 
- Optional insertion strings.  
+ Optional insertion strings.
 
-## Return Values  
- A string.  
+## Return Values
+ A string.
 
-## Remarks  
- `FormatModuleMessage` loads a string that is specified by `MessageID` from a message resource in the `ModuleName` module and inserts the supplied strings.  
+## Remarks
+ `FormatModuleMessage` loads a string that is specified by `MessageID` from a message resource in the `ModuleName` module and inserts the supplied strings.
 
- If insertion strings aren't passed in, the message is returned without them. Insertion strings are an optional parameter. When retrieving the messages from the Configuration Manager database, you should OR the severity with the `MessageID` parameter. You should also keep the object alive between calls to `FormatModuleMessage` because the object caches module handles. Doing this saves an extra call to `LoadLibrary`.  
+ If insertion strings aren't passed in, the message is returned without them. Insertion strings are an optional parameter. When retrieving the messages from the Configuration Manager database, you should OR the severity with the `MessageID` parameter. You should also keep the object alive between calls to `FormatModuleMessage` because the object caches module handles. Doing this saves an extra call to `LoadLibrary`.
 
-## Requirements  
- FormatMessageCtl.dll.  
+## Requirements
+ FormatMessageCtl.dll.
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMSFormatMessageCtl Class](../../../../../develop/reference/core/servers/manage/smsformatmessagectl-class.md)

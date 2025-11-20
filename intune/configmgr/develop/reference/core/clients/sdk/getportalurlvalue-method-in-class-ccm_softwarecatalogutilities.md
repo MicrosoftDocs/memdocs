@@ -12,36 +12,36 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetPortalUrlValue Method in Class CCM_SoftwareCatalogUtilities
-The `GetPortalUrlValue` Windows Management Instrumentation (WMI) class method in Configuration Manager that returns the portal url for a client.   
+The `GetPortalUrlValue` Windows Management Instrumentation (WMI) class method in Configuration Manager that returns the portal url for a client.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 GetPortalUrlValue   
-{  
-    [OUT]   String PortalUrl  
-};  
-```  
+```
+uint32 GetPortalUrlValue
+{
+    [OUT]   String PortalUrl
+};
+```
 
-## Parameters  
- `PortalUrl`  
- Data type: `String`  
+## Parameters
+ `PortalUrl`
+ Data type: `String`
 
- Qualifiers: [id("0"), out]  
+ Qualifiers: [id("0"), out]
 
- Portal url.   
+ Portal url.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

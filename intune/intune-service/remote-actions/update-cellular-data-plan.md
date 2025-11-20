@@ -1,58 +1,81 @@
 ---
-# required metadata
-
-title: Update cellular data plan for iOS/iPadOS devices with Microsoft Intune
-description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 06/29/2021
+title: "Remote Device Action: Update Cellular Data Plan"
+description: Learn how to update the cellular data plan for iOS/iPadOS devices that support eSIM with Microsoft Intune.
+ms.date: 10/27/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-ms.assetid: 126a7489-fe3e-43fd-a681-defb2fe0bb66
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: rashok
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection:
-- tier2
-- M365-identity-device-management
 ---
 
-# Update cellular data plan (public preview)
+# Remote device action: update cellular data plan
 
-The **Update cellular data plan** remote action lets you remotely activate eSIM cellular plan on iOS/iPadOS devices that support it.
+The *update cellular data plan* remote action lets you remotely activate an eSIM cellular plan on supported iOS/iPadOS devices, making it easier to manage connectivity for users without physical SIM cards.
 
-## Supported platforms
+## Prerequisites
 
-- iOS 14 and later
-- iPadOS 13.0 or later
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-For more information about devices that support eSIM, see the Apple support article [Using Dual SIM with an eSIM](https://support.apple.com/HT209044).
+:::column-end:::
+:::column span="3":::
 
-## Remotely update the cellular data plan
+> This remote action supports the following platforms:
+>
+> - iOS/iPadOS
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **By platform** > **iOS/iPadOS** > select a device.
-    ![Screenshot of selecting a device](./media/update-cellular-data-plan/select-device.png)
-2. Select **...** > **Update cellular data plan (preview)**.
-    ![Screenshot of updating cellular data plan](./media/update-cellular-data-plan/update-cellular-data-plan.png)
-3. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
+:::column-end:::
+:::row-end:::
 
-When the command is successfully applied and the data plan is activated:
+:::row:::
+:::column span="1":::
+
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To execute this remote action, at a minimum, use an account that has one of the following roles:
+>
+> - [Help Desk Operator][INT-R1]
+> - [School Administrator][INT-R2]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Remote tasks/Update cellular data plan**
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
+## Remotely update the cellular data plan from the Intune admin center
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
+1. From the devices list, select a device.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Update cellular data plan (preview)**.
+    ![Screenshot of updating cellular data plan](images/update-cellular-data-plan.png)
+1. Enter the activation server URL for your mobile carrier and select **Update cellular plan**.
+
+## User experience
+
+When you select the **Update cellular data plan** action, the device receives a command to activate the eSIM cellular data plan. The user experience on the device is as follows:
 
 - Cellular data starts working.
 - The active cellular data plan is listed in the cellular section of the **Settings** app on the device.
 
-## Next steps
+For more information about devices that support eSIM, see the Apple support article [Using Dual SIM with an eSIM](https://support.apple.com/HT209044).
 
-To see the status of the **Update cellular data plan** device action, check the **Overview** page for the device.
+## Reference links
+
+- Microsoft Graph API: [activateDeviceEsim action][GRAPH-1]
+
+<!--links-->
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
+
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+<!-- API links -->
+
+[GRAPH-1]: /graph/api/intune-devices-manageddevice-activateDeviceEsim

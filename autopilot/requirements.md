@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot requirements
 description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 03/27/2025
+ms.date: 07/08/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -68,6 +61,7 @@ The following editions of Windows 11 are supported:
 - Windows 11 Enterprise.
 - Windows 11 Education.
 - [Windows 11 Enterprise LTSC](/windows/whats-new/ltsc/overview).
+- Windows 11 IoT Enterprise only when used in Microsoft Teams Rooms devices.
 
 #### Windows 10
 
@@ -81,6 +75,7 @@ The following editions of Windows 10 are supported:
 - Windows 10 Enterprise.
 - Windows 10 Education.
 - [Windows 10 Enterprise LTSC](/windows/whats-new/ltsc/overview).
+- Windows 10 IoT Enterprise only when used in Microsoft Teams Rooms devices.
 
 #### HoloLens
 
@@ -106,7 +101,7 @@ Additional configuration might be required to grant access to required services 
 
 > [!NOTE]
 >
-> Smart card and certificate based authentication isn't supported during the out-of-box experience (OOBE). For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> Smart card and certificate based authentication is supported during the out-of-box experience (OOBE) with [Entra Certificate-based authentication](/entra/identity/authentication/concept-certificate-based-authentication). For more information, see [Entra certificate-based authentication & OOBE](/entra/identity/authentication/concept-certificate-based-authentication-smartcard#windows-out-of-the-box-experience-oobe).
 
 #### Service requirements
 

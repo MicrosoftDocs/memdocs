@@ -1,25 +1,10 @@
 ---
 title: Get started with frontline worker (FLW) device management
-description: Learn how to manage frontline worker devices using Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Get guidance on device use and Intune features built for FLW, like Remote Help. Also, learn about Microsoft Entra shared device mode (SDM) for FLW. 
-ms.author: mandia
-author: MandiOhlinger
-manager: dougeby
+description: Learn how to manage frontline worker devices using Android, iOS/iPadOS, and Windows devices in Microsoft Intune. Get guidance on device use and Intune features built for FLW, like Remote Help. Also, learn about Microsoft Entra shared device mode (SDM) for FLW.
 ms.date: 08/19/2024
-audience: ITPro
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: cbernier
-ms.suite: ems
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -78,8 +63,8 @@ Intune has built-in features that can be used for frontline worker devices, incl
 
   For more information on this guided scenario and the other guided scenarios available, go to:
 
-  - [Guided scenario - Windows 10/11 in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)
-  - [Step-by-step guide - Windows 10/11 in cloud configuration](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
+  - [Guided scenario - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)
+  - [Step-by-step guide - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
   - [Intune guided scenarios overview](../../intune-service/fundamentals/guided-scenarios-overview.md)
 
 - **[Remote Help](../../intune-service/fundamentals/remote-help.md)**

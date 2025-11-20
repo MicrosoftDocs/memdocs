@@ -6,12 +6,12 @@ ms.date: 05/31/2022
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Microsoft Edge Management
@@ -127,7 +127,7 @@ From the **Software Library** workspace, click **Microsoft Edge Management** to 
 [![Microsoft Edge Management dashboard](./media/3871913-microsoft-edge-dashboard.png)](./media/3871913-microsoft-edge-dashboard.png#lightbox)
 
 > [!TIP]
-> The [Power BI sample reports](../../core/servers/manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Edge Status**. This report can also help with monitoring Edge deployment. <!--5679791, 10123832, 10131458, 10488910-->  
+> The [Power BI sample reports](../../core/servers/manage/powerbi-sample-reports.md) for Configuration Manager includes a report called **Edge Status**. This report can also help with monitoring Edge deployment. <!--5679791, 10123832, 10131458, 10488910-->
 
 ## Known issues
 

@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_CollectionEvaluationFull server WMI class
@@ -21,7 +21,7 @@ Starting in version 2010, the `SMS_CollectionEvaluationFull` WMI class is an SMS
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
 ```MOF
 Class SMS_CollectionEvaluationFull : SMS_BaseClass
@@ -114,7 +114,7 @@ Next evaluation time of the collection.
 
 This class is read-only
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 

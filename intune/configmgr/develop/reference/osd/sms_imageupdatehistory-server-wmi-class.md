@@ -12,86 +12,86 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ImageUpdateHistory Server WMI Class
-The `SMS_ImageUpdateHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update installation history of offline servicing image.  
+The `SMS_ImageUpdateHistory` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents software update installation history of offline servicing image.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ImageUpdateHistory : SMS_BaseClass  
-{  
-    SInt32 FailedUpdateID;  
-    String ImagePackageID;  
-    DateTime RunDateTime;  
-    SInt32 ScheduleID;  
-    SInt32 Status;  
-};  
-```  
+```
+Class SMS_ImageUpdateHistory : SMS_BaseClass
+{
+    SInt32 FailedUpdateID;
+    String ImagePackageID;
+    DateTime RunDateTime;
+    SInt32 ScheduleID;
+    SInt32 Status;
+};
+```
 
-## Methods  
- The `SMS_ImageUpdateHistory` class does not define any methods.  
+## Methods
+ The `SMS_ImageUpdateHistory` class does not define any methods.
 
-## Properties  
- `FailedUpdateID`  
- Data type: `SInt32`  
+## Properties
+ `FailedUpdateID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- ID for software update that failed to install.  
+ ID for software update that failed to install.
 
- `ImagePackageID`  
- Data type: `String`  
+ `ImagePackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID for offline servicing image.  
+ ID for offline servicing image.
 
- `RunDateTime`  
- Data type: `DateTime`  
+ `RunDateTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Last run time for software update.  
+ Last run time for software update.
 
- `ScheduleID`  
- Data type: `SInt32`  
+ `ScheduleID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID for software update installation schedule.  
+ ID for software update installation schedule.
 
- `Status`  
- Data type: `SInt32`  
+ `Status`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Software update installation status.  
+ Software update installation status.
 
-| Value | Installation status |  
-| ----- | ------------------- |  
-|2|Success|  
-|3|Failed|  
+| Value | Installation status |
+| ----- | ------------------- |
+|2|Success|
+|3|Failed|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

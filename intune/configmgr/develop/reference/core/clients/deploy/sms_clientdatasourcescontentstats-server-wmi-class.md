@@ -12,71 +12,71 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientDataSourcesContentStats Server WMI Class
-The `SMS_ClientDataSourcesContentStats` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client content data sources per package.  
+The `SMS_ClientDataSourcesContentStats` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client content data sources per package.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientDataSourcesContentStats : SMS_BaseClass  
-{  
-    UInt64 BytesDownloaded;  
-    String ContentName;  
-    UInt32 SourceType;  
-};  
+```
+Class SMS_ClientDataSourcesContentStats : SMS_BaseClass
+{
+    UInt64 BytesDownloaded;
+    String ContentName;
+    UInt32 SourceType;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_ClientDataSourcesContentStats` class does not define any methods.  
+## Methods
+ The `SMS_ClientDataSourcesContentStats` class does not define any methods.
 
-## Properties  
- `BytesDownloaded`  
- Data type: `UInt64`  
+## Properties
+ `BytesDownloaded`
+ Data type: `UInt64`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of bytes downloaded.  
+ Number of bytes downloaded.
 
- `ContentName`  
- Data type: `String`  
+ `ContentName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- The name of the content.  
+ The name of the content.
 
- `SourceType`  
- Data type: `UInt32`  
+ `SourceType`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- Source type.  
+ Source type.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

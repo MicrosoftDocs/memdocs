@@ -6,12 +6,12 @@ ms.date: 04/08/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Use the setup wizard to install a secondary site
@@ -46,8 +46,8 @@ Before you start, review the [overview for using the setup wizard](use-the-setup
         - `PRN`
         - `SMS`
 
-    > [!NOTE]  
-    > Setup doesn't verify whether the site code that you specify is already in use, or if it's a reserved name.  
+    > [!NOTE]
+    > Setup doesn't verify whether the site code that you specify is already in use, or if it's a reserved name.
 
     - **Site server name**: This value is the FQDN of the server for the new secondary site.
 

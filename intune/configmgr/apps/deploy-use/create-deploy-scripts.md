@@ -6,12 +6,12 @@ ms.date: 12/16/2024
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Create and run PowerShell scripts from the Configuration Manager console
@@ -19,10 +19,10 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 <!--1236459-->
-Configuration Manager has an integrated ability to run PowerShell scripts. PowerShell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.  
+Configuration Manager has an integrated ability to run PowerShell scripts. PowerShell has the benefit of creating sophisticated, automated scripts that are understood and shared with a larger community. The scripts simplify building custom tools to administer software and let you accomplish mundane tasks quickly, allowing you to get large jobs done more easily and more consistently.
 
-> [!Note]  
-> In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
+> [!Note]
+> In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. You must enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->
 
 
 With this integration in Configuration Manager, you can use the *Run Scripts* functionality to do the following things:
@@ -97,22 +97,22 @@ This approval is primarily used for the testing phase of script development.
 >As a best practice, you shouldn't allow a script author to approve their own scripts. It should only be allowed in a lab setting. Carefully consider the potential impact of changing this setting in a production environment.
 
 ## Security scopes
-  
+
 Run Scripts uses security scopes, an existing feature of Configuration Manager, to control scripts authoring and execution through assigning tags that represent user groups. For more information on using security scopes, see [Configure role-based administration for Configuration Manager](../../core/servers/deploy/configure/configure-role-based-administration.md).
 
 ## <a name="bkmk_ScriptRoles"></a> Create security roles for scripts
 The three security roles used for running scripts aren't created by default in Configuration Manager. To create the script runners, script authors, and script approvers roles, follow the outlined steps.
 
 1. In the Configuration Manager console, go to **Administration** >**Security** >**Security Roles**
-2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Make sure you take only the permissions that you want. 
-3. Give the custom role a **Name** and a **Description**. 
-4. Assign the security role the permissions outlined below.  
+2. Right-click on a role and click **Copy**. The role you copy has permissions already assigned. Make sure you take only the permissions that you want.
+3. Give the custom role a **Name** and a **Description**.
+4. Assign the security role the permissions outlined below.
 
-### Security Role Permissions  
+### Security Role Permissions
 
-**Role Name**: Script Runners  
-- **Description**: These permissions enable this role to only run scripts that were previously created and approved by other roles.  
-- **Permissions:** Ensure the following are set to **Yes**.  
+**Role Name**: Script Runners
+- **Description**: These permissions enable this role to only run scripts that were previously created and approved by other roles.
+- **Permissions:** Ensure the following are set to **Yes**.
 
 |Category|Permission|State|
 |---|---|---|
@@ -121,10 +121,10 @@ The three security roles used for running scripts aren't created by default in C
 |SMS Scripts|Read|Yes|
 
 
-**Role Name**: Script Authors  
-- **Description**: These permissions enable this role to author scripts, but they can't approve or run them.  
+**Role Name**: Script Authors
+- **Description**: These permissions enable this role to author scripts, but they can't approve or run them.
 - **Permissions**: Ensure the following permissions are set.
- 
+
 |Category|Permission|State|
 |---|---|---|
 |Collection|Run Script|No|
@@ -135,9 +135,9 @@ The three security roles used for running scripts aren't created by default in C
 |SMS Scripts|Modify|Yes|
 
 
-**Role Name**: Script Approvers  
-- **Description**: These permissions enable this role to approve scripts, but they can't create or run them.  
-- **Permissions:** Ensure the following permissions are set.  
+**Role Name**: Script Approvers
+- **Description**: These permissions enable this role to approve scripts, but they can't create or run them.
+- **Permissions:** Ensure the following permissions are set.
 
 |Category|Permission|State|
 |---|---|---|
@@ -147,11 +147,11 @@ The three security roles used for running scripts aren't created by default in C
 |SMS Scripts|Approve|Yes|
 |SMS Scripts|Modify|Yes|
 
-     
-**Example of SMS Scripts permissions for the script authors role**  
+
+**Example of SMS Scripts permissions for the script authors role**
 
  ![Example of SMS Scripts permissions for the script authors role](./media/run-scripts/script_authors_permissions.png)
- 
+
 ## Folder support for scripts
 
 Starting in version 2403, you can organize scripts by using folders. This change allows for better categorization and management of scripts.
@@ -176,10 +176,10 @@ From the ribbon or right-click menu, in the Scripts, select from the following o
     - **Import** - Import a PowerShell script into the console. The script is displayed in the **Script** field.
     - **Clear** - Removes the current script from the Script field.
     - **Script** - Displays the currently imported script. You can edit the script in this field as necessary.
-5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it. 
+5. Complete the wizard. The new script is displayed in the **Script** list with a status of **Waiting for approval**. Before you can run this script on client devices, you must approve it.
 
 > [!IMPORTANT]
-> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices. The [pending restart column](../../core/clients/manage/manage-clients.md#restart-clients) can help identify devices that need a restart. 
+> Avoid scripting a device reboot or a restart of the Configuration Manager agent when using the Run Scripts feature. Doing so could lead to a continuous rebooting state. If needed, there are enhancements to the client notification feature that enable restarting devices. The [pending restart column](../../core/clients/manage/manage-clients.md#restart-clients) can help identify devices that need a restart.
 > <!--SMS503978  -->
 
 ## Script parameters
@@ -251,13 +251,13 @@ Write-Output (Get-WmiObject -Class Win32_operatingSystem).Caption
 <!--3705507-->
 You can **Edit** or **Copy** an existing PowerShell script used with the **Run Scripts** feature. Instead of recreating a script that you need to change, now directly edit it. Both actions use the same wizard experience as when you create a new script. When you edit or copy a script, Configuration Manager doesn't persist the approval state.
 
-> [!Tip]  
-> Don't edit a script that's actively running on clients. They won't finish running the original script, and you may not get the intended results from these clients.  
+> [!Tip]
+> Don't edit a script that's actively running on clients. They won't finish running the original script, and you may not get the intended results from these clients.
 
 ### Edit a script
 
 1. Go to the **Scripts** node under the **Software Library** workspace.
-1. Select the script to edit, then click **Edit** in the ribbon. 
+1. Select the script to edit, then click **Edit** in the ribbon.
 1. Change or reimport your script in the **Script Details** page.
 1. Click **Next** to view the **Summary** then **Close** when you're finished editing.
 
@@ -289,16 +289,16 @@ To select a collection of targets for your script:
 
 Starting in Configuration Manager current branch version 2309, you can now schedule scripts' runtime in UTC.
 
-Schedule script execution on a collection: 
-  
+Schedule script execution on a collection:
+
 1. In the Configuration Manager console, click **Assets and Compliance**.
 2. In the Assets and Compliance workspace, click **Device Collections**.
 3. In the **Device Collections** list, click the collection of devices on which you want to schedule the script.
 4. Select a collection of your choice, click **Run Script**.
-4. On the **Scheduling page**, Schedule the script to be run at checkbox and specify the Schedule Time in UTC. 
-5. Verify the details that are displayed on the **summary page**. 
+4. On the **Scheduling page**, Schedule the script to be run at checkbox and specify the Schedule Time in UTC.
+5. Verify the details that are displayed on the **summary page**.
 6. Click **Next**, and then complete the wizard.
-   
+
    ![Screenshot of script - schedule.](./media/run-scripts/schedule-script.png)
 
 > [!Note]
@@ -318,24 +318,24 @@ After you have initiated running a script on a collection of devices, use the fo
 2. In the **Monitoring** workspace, click **Script Status**.
 3. In the **Script Status** list, you view the results for each script you ran on client devices. A script exit code of **0** generally indicates that the script ran successfully.
 
- 
+
    ![Script monitor - Truncated Script](./media/run-scripts/Script-monitoring-truncated.png)
 
 ### Schedule script Monitoring on a collection
- 
-1. In the Configuration Manager console, click **Monitoring**. 
-2. In the Monitoring workspace, click **Scheduled Scripts node**. 
-3. A new row will be displayed in the list of **Scheduled Scripts**.  
+
+1. In the Configuration Manager console, click **Monitoring**.
+2. In the Monitoring workspace, click **Scheduled Scripts node**.
+3. A new row will be displayed in the list of **Scheduled Scripts**.
 4. Verify a new row has been displayed in the list of Scheduled Scripts. The state column should have the value **Scheduled**. The **ClientOperationId** column should be blank. Verify that the other columns like Script Name, Schedule Time etc. have appropriate values.
-5. After the Schedule Time, refresh the **Scheduled Scripts** node. The state column should have the value **Successfully initiated client operation**. The **ClientOperationId** column  should have an integer value. 
-6. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node. 
+5. After the Schedule Time, refresh the **Scheduled Scripts** node. The state column should have the value **Successfully initiated client operation**. The **ClientOperationId** column  should have an integer value.
+6. In the Monitoring workspace, click **Script Status node**.Verify new row has been displayed in the list and the **ClientOperationId** is equal to the ClientOperationId from the **Scheduled Scripts** node.
 7. Click on **View Status** and ensure that the script output displays.
-   
+
    ![Screenshot of script - schedule monitoring,](./media/run-scripts/scripts-schedulemonitoring.jpg)
 
 ## Script output
 
-Client's return script output using JSON formatting by piping the script's results to the [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet. The JSON format consistently returns readable script output. For scripts that do not return objects as output, the ConvertTo-Json cmdlet converts the output to a simple string that the client returns instead of JSON.  
+Client's return script output using JSON formatting by piping the script's results to the [ConvertTo-Json](/powershell/module/microsoft.powershell.utility/convertto-json) cmdlet. The JSON format consistently returns readable script output. For scripts that do not return objects as output, the ConvertTo-Json cmdlet converts the output to a simple string that the client returns instead of JSON.
 
 - Scripts that get an unknown result, or where the client was offline, won't show in the charts or data set. <!--507179-->
 - Avoid returning large script output since it's truncated to 4 KB. <!--508488-->
@@ -347,7 +347,7 @@ You can view detailed script output in raw or structured JSON format. This forma
 
 ### Example: Script output is convertible to valid JSON
 
-Command: `$PSVersionTable.PSVersion`  
+Command: `$PSVersionTable.PSVersion`
 
 ``` Output
 Major  Minor  Build  Revision
@@ -357,7 +357,7 @@ Major  Minor  Build  Revision
 
 ### Example: Script output isn't valid JSON
 
-Command: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`  
+Command: `Write-Output (Get-WmiObject -Class Win32_OperatingSystem).Caption`
 
 ``` Output
 Microsoft Windows 10 Enterprise
@@ -365,12 +365,12 @@ Microsoft Windows 10 Enterprise
 
 ## Log files
 
-- On the client, by default in C:\Windows\CCM\logs:  
-  - **Scripts.log**  
-  - **CcmMessaging.log**  
+- On the client, by default in C:\Windows\CCM\logs:
+  - **Scripts.log**
+  - **CcmMessaging.log**
 
 - On the MP, by default in C:\SMS_CCM\Logs:
-  - **MP_RelayMsgMgr.log**  
+  - **MP_RelayMsgMgr.log**
 
 - On the site server, by default in C:\Program Files\Configuration Manager\Logs:
   - **SMS_Message_Processing_Engine.log**

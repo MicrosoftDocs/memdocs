@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Create trusted certificate profiles in Microsoft Intune
 description: Create and deploy trusted certificate profiles to deploy a trusted root certificate to managed devices in Intune. Trusted certificate profiles support use of Simple Certificate Enrollment Protocol (SCEP) and Public Key Cryptography Standards (PKCS) certificate profiles with Microsoft Intune.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 09/23/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: lacranda
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: wicale
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - certificates
@@ -50,7 +32,7 @@ You use this `.cer` file when you [create trusted certificate profiles](#create-
 
 ## Create trusted certificate profiles
 
-Before you create a SCEP, PKCS, or PKCS imported certificate profile, create and deploy a trusted certificate profile. Deploy the trusted certificate profile to the same groups that receive the other certificate profile types. This step makes sure that each device can recognize the legitimacy of your CA, including profiles VPN, Wi-Fi, and email profiles.
+Before you create a SCEP, PKCS, or PKCS imported certificate profile, create and deploy a trusted certificate profile. Deploy the trusted certificate profile to the same groups that receive the other certificate profile types. This step makes sure that each device can recognize the legitimacy of your CA, including VPN, Wi-Fi, and email profiles.
 
 SCEP certificate profiles directly reference a trusted certificate profile. PKCS certificate profiles don't directly reference the trusted certificate profile but do directly reference the server that hosts your CA. PKCS imported certificate profiles don't directly reference the trusted certificate profile but can use it on the device. Deploying a trusted certificate profile to devices ensures this trust is established. When a device doesn't trust the root CA, the SCEP or PKCS certificate profile policy fails.
 
@@ -59,7 +41,7 @@ Create a separate trusted certificate profile for each device platform you want 
 > [!IMPORTANT]
 > Trusted root profiles that you create for the platform *Windows 10 and later*, display in the Microsoft Intune admin center as profiles for the platform *Windows 8.1 and later*.
 >
-> This is a known issue with the presentation of the platform for Trusted certificate profiles. While the profile displays a platform of Windows 8.1 and later, it is functional for Windows 10/11.
+> This is a known issue with the presentation of the platform for Trusted certificate profiles. While the profile displays a platform of Windows 8.1 and later, it is functional for Windows 10 an Windows 11.
 
 > [!NOTE]
 > The *Trusted Certificate* profile in Intune can only be used to deliver either root or intermediate certificates. The purpose of deploying such certificates is to establish a chain of trust. Using the trusted certificate profile to deliver certificates other than root or intermediate certificates is not supported by Microsoft. You might be blocked from importing certificates which are not deemed to be root or intermediate certificates when selecting the trusted certificate profile in the Microsoft Intune admin center. Even if you are able to import and deploy a certificate which is neither a root or intermediate certificate using this profile type, you will likely encounter unexpected results between different platforms such as iOS and Android.
@@ -95,7 +77,7 @@ The following guidance can help you manually provision devices with a trusted ro
    2. When the certificate opens, the user must provide their PIN or otherwise authenticate to the device before they can manage the certificate.
 
 2. After authentication, the certificate opens and must be named before it can be saved to the Users certificate store. The certificate name must match the certificate name that's in the Trusted Root Certificate profile that is sent to the device.
-After you name the certificate, it can be saved.  
+After you name the certificate, it can be saved.
 
 3. After being saved, the certificate is ready for use. A user can confirm the certificate is in the correct location on the device:
    1. Open **Settings** > **Security** > **Trusted credentials**. The actual path to *Trusted credentials* can vary by device.
@@ -130,7 +112,7 @@ After you name the certificate, it can be saved.
 
 7. In **Configuration settings**, specify the `.cer` file for the trusted Root CA Certificate you previously exported.
 
-   For Windows 8.1 and Windows 10/11 devices only, select the **Destination Store** for the trusted certificate from:
+   For Windows devices only, select the **Destination Store** for the trusted certificate from:
 
    - **Computer certificate store - Root**
    - **Computer certificate store - Intermediate**
@@ -145,7 +127,7 @@ After you name the certificate, it can be saved.
 
    Select **Next**.
 
-10. (*Applies to Windows 10/11 only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
+10. (*Applies to Windows only*) In **Applicability Rules**, specify applicability rules to refine the assignment of this profile. You can choose to assign or not assign the profile based on the OS edition or version of a device.
 
     For more information, see [Applicability rules](../configuration/device-profile-create.md#applicability-rules) in *Create a device profile in Microsoft Intune*.
 
@@ -153,7 +135,7 @@ After you name the certificate, it can be saved.
 
 ## Next steps
 
-Create certificate profiles:  
+Create certificate profiles:
 - [Configure infrastructure to support SCEP certificates with Intune](../protect/certificates-scep-configure.md)
-- [Configure and manage PKCS certificates with Intune](../protect/certificates-pfx-configure.md)  
+- [Configure and manage PKCS certificates with Intune](../protect/certificates-pfx-configure.md)
 - [Create a PKCS imported certificate profile](../protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile)

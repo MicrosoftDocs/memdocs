@@ -12,49 +12,49 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CheckPortalUrl Method for Class SMS_ClientSettings
-The `CheckPortalUrl` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks whether the default application catalog website point in the default or custom client agent settings is set to `portalUrl`.  
+The `CheckPortalUrl` Windows Management Instrumentation (WMI) class method, in Configuration Manager, checks whether the default application catalog website point in the default or custom client agent settings is set to `portalUrl`.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-sint32 CheckPortalUrl(  
-     string PortalUrl,  
-     boolean isUsed  
-);  
-```  
+```
+sint32 CheckPortalUrl(
+     string PortalUrl,
+     boolean isUsed
+);
+```
 
-#### Parameters  
- `PortalUrl`  
- Data type: `String`  
+#### Parameters
+ `PortalUrl`
+ Data type: `String`
 
- Qualifiers: `[in]`  
+ Qualifiers: `[in]`
 
- PortalUrl.   
+ PortalUrl.
 
- `isUsed`  
- Data type: `Boolean`  
+ `isUsed`
+ Data type: `Boolean`
 
- Qualifiers: `[out]`  
+ Qualifiers: `[out]`
 
- isUsed.   
+ isUsed.
 
-## Return Values  
- An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_ClientSettings Server WMI Class](../../../../../develop/reference/core/clients/config/sms_clientsettings-server-wmi-class.md)

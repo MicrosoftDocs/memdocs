@@ -12,23 +12,23 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # PlatformApplicabilityConditions
-`PlatformApplicabilityConditions` contains a list of supported platforms for an operating system deployment driver in Configuration Manager.  
+`PlatformApplicabilityConditions` contains a list of supported platforms for an operating system deployment driver in Configuration Manager.
 
 > [!NOTE]
->  If `PlatformApplicabilityConditions` has no child nodes, it is assumed that the driver supports all platforms.  
+>  If `PlatformApplicabilityConditions` has no child nodes, it is assumed that the driver supports all platforms.
 
- **Type**: Parent.  
+ **Type**: Parent.
 
- **Instances**: One.  
+ **Instances**: One.
 
-## Attributes  
- None  
+## Attributes
+ None
 
-## See Also  
- [Operating System Deployment Driver Supported Platforms Schema](../../../develop/reference/osd/operating-system-deployment-driver-supported-platforms-schema.md)   
- [PlatformApplicabilityCondition](../../../develop/reference/osd/platformapplicabilitycondition.md)   
- [Query1](../../../develop/reference/osd/query1.md)   
+## See Also
+ [Operating System Deployment Driver Supported Platforms Schema](../../../develop/reference/osd/operating-system-deployment-driver-supported-platforms-schema.md)
+ [PlatformApplicabilityCondition](../../../develop/reference/osd/platformapplicabilitycondition.md)
+ [Query1](../../../develop/reference/osd/query1.md)
  [Query2](../../../develop/reference/osd/query2.md)

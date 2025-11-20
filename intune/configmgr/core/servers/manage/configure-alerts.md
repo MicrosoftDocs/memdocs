@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configure alerts in Configuration Manager
@@ -76,7 +76,7 @@ The following actions are available on alerts in these nodes:
 
 You can create an email subscription for alerts. When the site triggers an alert, it can then send you email notification.
 
-### Configure email notification for alerts  
+### Configure email notification for alerts
 
 Before you can subscribe to email alerts, you need to configure the site to send email notifications. You'll need information about an SMTP email server.
 
@@ -112,7 +112,7 @@ Before you can subscribe to email alerts, you need to configure the site to send
 
 1. Select **OK** to save the settings and to close the window.
 
-### Subscribe to email alerts  
+### Subscribe to email alerts
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Alerts**, and select either **Active Alerts** or **All Alerts**.
 

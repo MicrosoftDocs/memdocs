@@ -12,146 +12,146 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ObjectLockRequest Server WMI Class
-The `SMS_ObjectLockRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents object lock request information.  
+The `SMS_ObjectLockRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents object lock request information.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ObjectLockRequest :    
-{  
-    String AssignedMachine;  
-    String AssignedObjectLockContext;  
-    String AssignedSiteCode;  
-    DateTime AssignedTimeUTC;  
-    String AssignedUser;  
-    UInt32 LockState;  
-    String ObjectRelPath;  
-    String RequestID;  
-    UInt32 RequestState;  
-};  
-```  
+```
+Class SMS_ObjectLockRequest :
+{
+    String AssignedMachine;
+    String AssignedObjectLockContext;
+    String AssignedSiteCode;
+    DateTime AssignedTimeUTC;
+    String AssignedUser;
+    UInt32 LockState;
+    String ObjectRelPath;
+    String RequestID;
+    UInt32 RequestState;
+};
+```
 
-## Methods  
- The `SMS_ObjectLockRequest` class does not define any methods.  
+## Methods
+ The `SMS_ObjectLockRequest` class does not define any methods.
 
-## Properties  
- `AssignedMachine`  
- Data type: `String`  
+## Properties
+ `AssignedMachine`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates the currently assigned computer of the requested lock.  
+ Indicates the currently assigned computer of the requested lock.
 
- `AssignedObjectLockContext`  
- Data type: `String`  
+ `AssignedObjectLockContext`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates ObjectLockContext the lock is currently assigned to.  
+ Indicates ObjectLockContext the lock is currently assigned to.
 
- `AssignedSiteCode`  
- Data type: `String`  
+ `AssignedSiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates the current site of the requested lock.  
+ Indicates the current site of the requested lock.
 
- `AssignedTimeUTC`  
- Data type: `DateTime`  
+ `AssignedTimeUTC`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates the time at which the requested lock was assigned.  
+ Indicates the time at which the requested lock was assigned.
 
- `AssignedUser`  
- Data type: `String`  
+ `AssignedUser`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates the currently assigned user of the requested lock.  
+ Indicates the currently assigned user of the requested lock.
 
- `LockState`  
- Data type: `UInt32`  
+ `LockState`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates the current state of the requested lock. Possible values are:  
+ Indicates the current state of the requested lock. Possible values are:
 
 | Value | Lock state |
 | ----- | ---------- |
-|0|Unassigned|  
-|1|Assigned|  
-|2|Requested|  
-|3|PendingAssignment|  
-|4|TimedOut|  
-|5|NotFound|  
+|0|Unassigned|
+|1|Assigned|
+|2|Requested|
+|3|PendingAssignment|
+|4|TimedOut|
+|5|NotFound|
 
- `ObjectRelPath`  
- Data type: `String`  
+ `ObjectRelPath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The path of the object for which the lock is requested.  
+ The path of the object for which the lock is requested.
 
- `RequestID`  
- Data type: `String`  
+ `RequestID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Unique identifier of the request.  
+ Unique identifier of the request.
 
- `RequestState`  
- Data type: `UInt32`  
+ `RequestState`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Request state values. The request states `Granted`, `GrantedAfterTimeout` and `GrantedLockWasOrphaned` indicate a successful request and the user can then make and save modifications to the object. All other requests indicate an error.  
+ Request state values. The request states `Granted`, `GrantedAfterTimeout` and `GrantedLockWasOrphaned` indicate a successful request and the user can then make and save modifications to the object. All other requests indicate an error.
 
-|RequestStateID|RequestStateName|  
-|--------------------|----------------------|  
-|0|Unknown|  
-|2|Requested|  
-|3|RequestedCanceled|  
-|4|ResponseReceived|  
-|10|Granted|  
-|11|GrantedAfterTimeout|  
-|12|GrantedLockWasOrphaned|  
-|20|DeniedLockAlreadyAssigned|  
-|21|DeniedInvalidObjectVersion|  
-|22|DeniedLockNotFound|  
-|23|DeniedLockNotLocal|  
-|24|DeniedRequestTimedOut|  
-|50|Error|  
-|52|ErrorRequestNotFound|  
-|53|ErrorRequestTimedOut|  
+|RequestStateID|RequestStateName|
+|--------------------|----------------------|
+|0|Unknown|
+|2|Requested|
+|3|RequestedCanceled|
+|4|ResponseReceived|
+|10|Granted|
+|11|GrantedAfterTimeout|
+|12|GrantedLockWasOrphaned|
+|20|DeniedLockAlreadyAssigned|
+|21|DeniedInvalidObjectVersion|
+|22|DeniedLockNotFound|
+|23|DeniedLockNotLocal|
+|24|DeniedRequestTimedOut|
+|50|Error|
+|52|ErrorRequestNotFound|
+|53|ErrorRequestTimedOut|
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

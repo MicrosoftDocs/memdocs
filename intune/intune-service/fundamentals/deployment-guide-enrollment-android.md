@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Android device enrollment guide for Microsoft Intune
 description: Enroll Android and Android Enterprise corporate-owned work profile, personally owned devices with a work profile, fully managed, AOSP, and dedicated devices in Microsoft Intune. Decide which enrollment method to use, and get an overview of the administrator and end user tasks to enroll devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 04/23/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: chmaguir, priyar
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -67,7 +49,7 @@ These devices are personal or BYOD (bring your own device) Android devices that 
 
 ---
 | Feature | Use this enrollment option when |
-| --- | --- | 
+| --- | --- |
 | Use Google Mobile Services (GMS). | ✅ |
 | Devices are personal or BYOD. | ✅ <br/><br/> You can mark these devices as corporate or personal. |
 | You have new or existing devices. | ✅ |
@@ -201,7 +183,7 @@ Previously referred to as COPE. These devices are organization-owned, and have o
 | You have new or existing devices. | ✅ |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | Devices are associated with a single user. | ✅ |
-| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../configuration/device-restrictions-android-for-work.md#device-experience) profile, and assign this profile to this device. |
+| Devices are user-less, such as kiosk, dedicated, or shared. | ❌ <br/><br/>User-less devices should be enrolled using Android Enterprise dedicated devices. Also, an organization administrator can enroll. When the device is enrolled, create a [dedicated device](../configuration/device-restrictions-android-for-work.md) (Device experience) profile, and assign this profile to this device. |
 | Devices are personal or BYOD. | ❌ <br/><br/>BYOD or personal devices should be enrolled using [Android Enterprise personally owned devices with a work profile](#byod-android-enterprise-personally-owned-devices-with-a-work-profile) (in this article).|
 |Devices are managed by another MDM provider. | ❌ <br/><br/> To be fully managed by Intune, users need to unenroll from the current MDM provider, and then enroll in Intune. |
 | You use the optional device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
@@ -266,10 +248,10 @@ This task list provides an overview. For more specific information, go to enroll
 - Be sure your devices are [supported](supported-devices-browsers.md).
 - Factory reset the devices. This step is required. New devices might not require a factory reset.
 - Create an enrollment profile in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and have your device groups ready. For the specific steps, go to:
-  - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md) 
+  - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
   - [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
 - Enroll the devices in Intune. For the specific steps, go to:
-  - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md) 
+  - [AOSP corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
   - [AOSP corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
 
   During enrollment, the Microsoft Intune app and Microsoft Authenticator app automatically install and open on the device, which allows the device to enroll. The device is locked in the enrollment process until enrollment completes.
@@ -287,9 +269,9 @@ Admins can complete the enrollment themselves, and then give the devices to the 
 
 [!INCLUDE [users-dont-like-enroll](../includes/users-dont-like-enroll.md)]
 
-## Android device administrator  
+## Android device administrator
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]  
+ [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 These Android devices are corporate, or personal/BYOD (bring your own device) devices that can access organization email, apps, and other data.
 

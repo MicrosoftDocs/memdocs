@@ -12,149 +12,149 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DeviceEnrollmentProfile Server WMI Class
-The `SMS_DeviceEnrollmentProfile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a device enrollment profile in the database.  
+The `SMS_DeviceEnrollmentProfile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a device enrollment profile in the database.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DeviceEnrollmentProfile : SMS_BaseClass  
-{  
-    String CertAuthorities[];  
-    String CertCIUniqueID;  
-    String Description;  
-    String DevicesContainerDN;  
-    String DevicesGroup;  
-    String EnrollmentSiteCode;  
-    String ManagementSiteCode;  
-    String Name;  
-    UInt32 ProfileID;  
-    UInt32 ProfileType;  
-    UInt32 RecordExpiryMinutes;  
-};  
-```  
+```
+Class SMS_DeviceEnrollmentProfile : SMS_BaseClass
+{
+    String CertAuthorities[];
+    String CertCIUniqueID;
+    String Description;
+    String DevicesContainerDN;
+    String DevicesGroup;
+    String EnrollmentSiteCode;
+    String ManagementSiteCode;
+    String Name;
+    UInt32 ProfileID;
+    UInt32 ProfileType;
+    UInt32 RecordExpiryMinutes;
+};
+```
 
-## Methods  
- The `SMS_DeviceEnrollmentProfile` class does not define any methods.  
+## Methods
+ The `SMS_DeviceEnrollmentProfile` class does not define any methods.
 
-## Properties  
- `CertAuthorities`  
- Data type: `String` Array  
+## Properties
+ `CertAuthorities`
+ Data type: `String` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Each CA must have a properly configured template of CertTemplateName, and must chain to the root certificate trusted by the server hosting the ManagementUri.  
+ Each CA must have a properly configured template of CertTemplateName, and must chain to the root certificate trusted by the server hosting the ManagementUri.
 
- `CertCIUniqueID`  
- Data type: `String`  
+ `CertCIUniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Unique identifier for a certificate configuration item.  
+ Unique identifier for a certificate configuration item.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Text describing the profile.  
+ Text describing the profile.
 
- `DevicesContainerDN`  
- Data type: `String`  
+ `DevicesContainerDN`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The location where device accounts are created.  
+ The location where device accounts are created.
 
- `DevicesGroup`  
- Data type: `String`  
+ `DevicesGroup`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The Security Group with enroll rights on the CA template.  
+ The Security Group with enroll rights on the CA template.
 
- `EnrollmentSiteCode`  
- Data type: `String`  
+ `EnrollmentSiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The site code where devices should enroll.  
+ The site code where devices should enroll.
 
- `ManagementSiteCode`  
- Data type: `String`  
+ `ManagementSiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The site code from where device should be managed.  
+ The site code from where device should be managed.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the profile. This name must be unique.  
+ The name of the profile. This name must be unique.
 
- `ProfileID`  
- Data type: `UInt32`  
+ `ProfileID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Unique identifier to differentiate the profile.  
+ Unique identifier to differentiate the profile.
 
- `ProfileType`  
- Data type: `UInt32`  
+ `ProfileType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The type of the profile.  
+ The type of the profile.
 
 | Value | Profile type |
 | ----- | ------------ |
-|1|DM|  
-|2|AMT|  
+|1|DM|
+|2|AMT|
 
- `RecordExpiryMinutes`  
- Data type: `UInt32`  
+ `RecordExpiryMinutes`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of minutes for which the record is valid.  
+ Number of minutes for which the record is valid.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Device Management Server WMI Classes](../../../develop/reference/mdm/device-management-server-wmi-classes.md)

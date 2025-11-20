@@ -6,12 +6,12 @@ ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Baladelli
-ms.author: Baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Diagnostic and usage data for version 2409
@@ -342,7 +342,7 @@ For Configuration Manager version 2409, this level includes the following data:
 - Power plans with their peak and non-peak usage statistics
 
 - Power plan peak usage statistics
- 
+
 - Power plan setting options usage statistics
 
 ### Cloud services (Level 2)
@@ -392,9 +392,9 @@ For Configuration Manager version 2409, this level includes the following data:
 - Collections without a deployment
 
 - Count of collections synchronized to Microsoft Entra ID, including type and size
- 
+
 - Statistics for collection member counts and collection rule counts
- 
+
 - Statistics about the collection rule WMI class query dependencies
 
 ### Compliance settings (Level 2)
@@ -420,7 +420,7 @@ For Configuration Manager version 2409, this level includes the following data:
 - Count of OneDrive policies (created, deployed)
 
 - Count of compliance settings deployed by category, OS, and source (cloud vs on-premises)
- 
+
 - Company resource access profile settings usage
 
 ### Configuration Manager console (Level 2)
@@ -440,7 +440,7 @@ For Configuration Manager version 2409, this level includes the following data:
 - Selected console usage information
 
 - Unsigned extension policy
- 
+
 - Console dark mode usage
 
 ### Content (Level 2)
@@ -628,7 +628,7 @@ For Configuration Manager version 2409, this level includes the following data:
 - Windows Update fallback configuration settings
 
 - Type, size, and timeout settings of orchestration group scripts
- 
+
 - Software Update Point setting options statistics
 
 ### SQL/performance data (Level 2)

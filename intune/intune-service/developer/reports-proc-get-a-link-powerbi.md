@@ -1,38 +1,18 @@
 ---
-# required metadata
-title: Connect to the Data Warehouse with Power BI
-titleSuffix: Microsoft Intune
+title: Connect to the Data Warehouse With Power BI
 description: You can download a file for use with Microsoft Power BI that allows you to load interactive, dynamically generated reports for your Microsoft Intune tenant.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 5E5A35D3-88F8-441B-8A0B-C5D7A1E5137B
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Connect to the Data Warehouse with Power BI
+# Connect to the Data Warehouse With Power BI
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-You can use the Power BI Compliance app to load interactive, dynamically generated reports for your Intune tenant. Additionally, you can load your tenant data in Power BI using the OData link. Intune provides connection settings to your tenant so that you can view the following sample reports and charts related to:  
+You can use the Power BI Compliance app to load interactive, dynamically generated reports for your Intune tenant. Additionally, you can load your tenant data in Power BI using the OData link. Intune provides connection settings to your tenant so that you can view the following sample reports and charts related to:
 
 - Devices
 - Enrollment
@@ -93,11 +73,11 @@ With a client authenticated to Microsoft Entra ID, the OData URL connects to the
 6. Choose **Basic**.
 7. Type or paste the **OData URL** into the URL box.
 8. Select **OK**.
-9. If you have not authenticated to Microsoft Entra ID for your tenant from the Power BI desktop client, type your credentials. To gain access to your data, you must authorize with Microsoft Entra ID using OAuth 2.0.  
-    1. Select **Organizational account**.  
-    2. Type your username and password.  
-    3. Select **Sign In.**  
-    4. Select **Connect**.  
+9. If you have not authenticated to Microsoft Entra ID for your tenant from the Power BI desktop client, type your credentials. To gain access to your data, you must authorize with Microsoft Entra ID using OAuth 2.0.
+    1. Select **Organizational account**.
+    2. Type your username and password.
+    3. Select **Sign In.**
+    4. Select **Connect**.
 10. Select **Load**.
 
 ## Next steps

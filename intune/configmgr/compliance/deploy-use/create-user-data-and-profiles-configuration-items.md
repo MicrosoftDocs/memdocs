@@ -6,27 +6,27 @@ ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: sheetg09
+author: LauraWi
 manager: apoorvseth
-ms.author: sheetg
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Create user data and profiles configuration items in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-User data and profiles configuration items in Configuration Manager contain settings that can manage folder redirection, offline files, and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. For example, you can:  
+User data and profiles configuration items in Configuration Manager contain settings that can manage folder redirection, offline files, and roaming profiles on computers that run Windows 8 and later for users in your hierarchy. For example, you can:
 
-- Redirect a user's Documents folder to a network share.  
+- Redirect a user's Documents folder to a network share.
 
-- Ensure that specified files stored on the network are available on a user's computer when the network connection is unavailable.  
+- Ensure that specified files stored on the network are available on a user's computer when the network connection is unavailable.
 
-- Configure which files in a user's roaming profile are synchronized with a network share when the user logs on and off.  
+- Configure which files in a user's roaming profile are synchronized with a network share when the user logs on and off.
 
-Unlike other configuration items in Configuration Manager, you don't add user data and profile configuration items to a configuration baseline, which you then deploy. Instead, you deploy the configuration item directly by using the **Deploy User Data and Profiles Configuration Item** dialog box.  
+Unlike other configuration items in Configuration Manager, you don't add user data and profile configuration items to a configuration baseline, which you then deploy. Instead, you deploy the configuration item directly by using the **Deploy User Data and Profiles Configuration Item** dialog box.
 
 You can only deploy user data and profiles configuration items to user collections.
 
@@ -35,7 +35,7 @@ You can only deploy user data and profiles configuration items to user collectio
 
 ## Enable user data and profiles for compliance settings
 
-Use the following procedure to configure the default client setting for user data and profiles compliance settings, which will apply to all computers in your hierarchy. If you want this setting to apply to only some computers, create a custom device client setting and assign it to a collection that contains the computers for which you want to use user data and profiles compliance settings. For more information about how to create custom device settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
+Use the following procedure to configure the default client setting for user data and profiles compliance settings, which will apply to all computers in your hierarchy. If you want this setting to apply to only some computers, create a custom device client setting and assign it to a collection that contains the computers for which you want to use user data and profiles compliance settings. For more information about how to create custom device settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
 1. In the Configuration Manager console, go to **Administration** > **Client Settings** > **Default Settings**.
 

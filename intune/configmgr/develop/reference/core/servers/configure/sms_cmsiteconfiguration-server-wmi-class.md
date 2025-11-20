@@ -12,171 +12,171 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CMSiteConfiguration Server WMI Class
-The `SMS_CMSiteConfiguration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that returns the site's monitored configuration status, such as the SQL Server port, SQL Server Service Broker port, and SQL Server Firewall port.  
+The `SMS_CMSiteConfiguration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that returns the site's monitored configuration status, such as the SQL Server port, SQL Server Service Broker port, and SQL Server Firewall port.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CMSiteConfiguration : SMS_BaseClass  
-{  
-    String Configuration;  
-    DateTime LastEvaluatingTime;  
-    UInt32 MessageID;  
-    String Param1;  
-    String Param2;  
-    String Param3;  
-    String Param4;  
-    String Param5;  
-    String Param6;  
-    UInt32 RoleID;  
-    String RoleName;  
-    String SiteCode;  
-    UInt32 State;  
-};  
-```  
+```
+Class SMS_CMSiteConfiguration : SMS_BaseClass
+{
+    String Configuration;
+    DateTime LastEvaluatingTime;
+    UInt32 MessageID;
+    String Param1;
+    String Param2;
+    String Param3;
+    String Param4;
+    String Param5;
+    String Param6;
+    UInt32 RoleID;
+    String RoleName;
+    String SiteCode;
+    UInt32 State;
+};
+```
 
-## Methods  
- The `SMS_CMSiteConfiguration` class does not define any methods.  
+## Methods
+ The `SMS_CMSiteConfiguration` class does not define any methods.
 
-## Properties  
- `Configuration`  
- Data type: `String`  
+## Properties
+ `Configuration`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Configuration.   
+ Configuration.
 
- `LastEvaluatingTime`  
- Data type: `DateTime`  
+ `LastEvaluatingTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last evaluation time.   
+ Last evaluation time.
 
- `MessageID`  
- Data type: `UInt32`  
+ `MessageID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Message identifier.   
+ Message identifier.
 
- `Param1`  
- Data type: `String`  
+ `Param1`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Parameter 1.   
+ Parameter 1.
 
- `Param2`  
- Data type: `String`  
+ `Param2`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Parameter 2.   
+ Parameter 2.
 
- `Param3`  
- Data type: `String`  
+ `Param3`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Parameter 3.   
+ Parameter 3.
 
- `Param4`  
- Data type: `String`  
+ `Param4`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Parameter 4.   
+ Parameter 4.
 
- `Param5`  
- Data type: `String`  
+ `Param5`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Parameter 5.   
+ Parameter 5.
 
- `Param6`  
- Data type: `String`  
+ `Param6`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Parameter 6.   
+ Parameter 6.
 
- `RoleID`  
- Data type: `UInt32`  
+ `RoleID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Role identifier.   
+ Role identifier.
 
- `RoleName`  
- Data type: `String`  
+ `RoleName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Role name.   
+ Role name.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Site code.   
+ Site code.
 
- `State`  
- Data type: `UInt32`  
+ `State`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- State.   
+ State.
 
-|Value|State|  
-|-|-|  
-|0|Valid|  
-|1|Failed without Remediation|  
-|2|Failed with remediaton|  
-|99|Unknown|  
+|Value|State|
+|-|-|
+|0|Valid|
+|1|Failed without Remediation|
+|2|Failed with remediaton|
+|99|Unknown|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)

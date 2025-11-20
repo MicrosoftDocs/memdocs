@@ -11,7 +11,7 @@ author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Microsoft Intune tenant attach: Prerequisites
@@ -41,8 +41,8 @@ The Microsoft Intune family of products is an integrated solution for managing a
   - Tenant sync to Intune
   - Device sync to Intune
   - Device actions in the Microsoft Intune admin center
- 
-- The geographic location of the Azure tenant and the service connection point should be the same. 
+
+- The geographic location of the Azure tenant and the service connection point should be the same.
 
 - At least one Intune license for you as the administrator to access the Microsoft Intune admin center. <!--10254915-->
 
@@ -60,7 +60,7 @@ The user accounts performing device actions have the following prerequisites:
   - For Configuration Manager version 2103, and later: </br>
    Has been discovered with either [Microsoft Entra user discovery](../core/servers/deploy/configure/about-discovery-methods.md#azureaddisc) or [Active Directory user discovery](../core/servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser). <!--9089764-->
 - The **Initiate Configuration Manager action** permission under **Remote tasks** in the Microsoft Intune admin center.
-  - For more information about adding or verifying permissions in the admin center, see [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md#roles).
+  - For more information about adding or verifying permissions in the admin center, see [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md#rbac-roles).
 
 ## Internet endpoints
 

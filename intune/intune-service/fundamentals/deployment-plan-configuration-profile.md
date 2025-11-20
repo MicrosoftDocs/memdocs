@@ -1,30 +1,15 @@
 ---
-# required metadata
-
 title: Configure security, email, VPN, and Wi-Fi device configuration profiles
-titleSuffix: Microsoft Intune
 description: Step 4 to deploy device configuration profiles as part of the minimum set of policies for your devices using Microsoft Intune. The starting point is to enable the firewall, install AV, scan for malware, install software updates, create a strong PIN policy, and create email, VPN, and Wi-Fi device configuration profiles.
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 08/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 
-# optional metadata
 
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite:
-search.appverid: MET150
-ms.custom: 
-ms.collection: 
-- M365-identity-device-management 
+ms.collection:
+- M365-identity-device-management
 - highpri
-- tier1
 ---
 
 # Step 4 - Configure device features and settings to secure devices and access resources
@@ -82,7 +67,7 @@ In your baseline, at a minimum, Microsoft recommends the following security poli
 
 This section lists the Intune and Microsoft services you can use to create these security policies.
 
-For a more granular list of Windows settings and their recommended values, go to [Windows security baselines](../protect/security-baselines.md).  
+For a more granular list of Windows settings and their recommended values, go to [Windows security baselines](../protect/security-baselines.md).
 
 ### Antivirus and scanning
 
@@ -181,10 +166,10 @@ Your policy options:
 
 For a list of the settings you can configure, go to:
 
-- **Android Enterprise** device restrictions profile:
-  - [Corporate owned devices > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
-  - [Personally owned devices with a work profile > **Work profile password** and **Password**](../configuration/device-restrictions-android-enterprise-personal.md)
-- **Android AOSP** [Device restrictions profile > **Device password**](../configuration/device-restrictions-android-aosp.md)
+- **Android** device restrictions profile:
+  - [Android Enterprise > Corporate owned > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
+  - [Android Enterprise > Personally owned > **Work profile password** and **Password**](../configuration/device-restrictions-android-for-work.md)
+  - [Android AOSP > **Device password**](../configuration/device-restrictions-android-for-work.md)
 - **iOS/iPadOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
 - **macOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
 - **Windows**:
@@ -211,9 +196,9 @@ Your policy options:
 
 For more information on these features and/or the settings you can configure, go to:
 
-- **Android Enterprise** [Device restrictions profile > **System update**](../configuration/device-restrictions-android-for-work.md)
-- **iOS/iPadOS** [Software update policies](../protect/software-updates-ios.md)
-- **macOS** [Software update policies](../protect/software-updates-macos.md)
+- **Android Enterprise** [Device restrictions profile > Corporate owned > System update](../configuration/device-restrictions-android-for-work.md)
+- **iOS/iPadOS** [Managed software updates](../protect/updates/apple.md)
+- **macOS** [Managed software updates](../protect/updates/apple.md)
 - **Windows**:
   - [Feature updates policy](../protect/windows-10-feature-updates.md)
   - [Expedited updates policy](../protect/windows-10-expedite-updates.md)
@@ -372,12 +357,7 @@ Microsoft recommends the following level 2 security policies:
 
   On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings. In Intune, you can create a device restrictions policy that configures lock screen settings.
 
-  For a list of the password and lock screen settings you can configure, go to the following articles:  
-
-  - [Organization owned devices - Device password](../configuration/device-restrictions-android-for-work.md#device-password)
-  - [Organization owned devices - Work profile password](../configuration/device-restrictions-android-for-work.md#work-profile-password)
-  - [Personally owned devices - Work profile password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
-  - [Personally owned devices - Device password](../configuration/device-restrictions-android-enterprise-personal.md#password)
+  For a list of the password and lock screen settings you can configure, review the **Device password** and **Work profile password** settings in [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md) for corporate-owned and personally owned devices.
 
   # [iOS/iPadOS](#tab/ios-disk)
 
@@ -405,12 +385,9 @@ Microsoft recommends the following level 2 security policies:
 
   # [Android](#tab/android-password)
 
-  On Android devices, you can use device restrictions policies to set password rules:
+  On Android devices, you can use device restrictions policies to set password rules.
 
-  - [Organization owned devices - Device password settings](../configuration/device-restrictions-android-for-work.md#device-password)
-  - [Organization owned devices - Work profile password settings](../configuration/device-restrictions-android-for-work.md#work-profile-password)
-  - [Personally owned devices - Work profile password settings](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password)
-  - [Personally owned devices - Device password settings](../configuration/device-restrictions-android-enterprise-personal.md#password)
+  For a list of the password and lock screen settings you can configure, review the **Device password** and **Work profile password** settings in [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md) for corporate-owned and personally owned devices.
 
   # [iOS/iPadOS](#tab/ios-password)
 
@@ -442,7 +419,7 @@ Microsoft recommends the following level 2 security policies:
   - **[Device restrictions templates](../configuration/device-restrictions-configure.md)** have many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
 
     You can use these templates on the following platforms:
-  
+
     - Android
     - iOS/iPadOS
     - macOS
@@ -452,10 +429,6 @@ Microsoft recommends the following level 2 security policies:
 
     - iOS/iPadOS
     - macOS
-    - Windows
-
-  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the ADMX templates on the following platform:
-
     - Windows
 
 - If you use **on-premises GPOs** and want to know if these same settings are available in Intune, then use [Group Policy analytics](../configuration/group-policy-analytics.md). This feature analyzes your GPOs and depending on the analysis, can import them into an Intune settings catalog policy.
@@ -515,7 +488,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
-  For more information on this feature, go to [Android Common Criteria mode](../configuration/device-restrictions-android-for-work.md#system-security).
+  For more information on this feature, search for Common Criteria mode at [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md).
 
 - Create policies that **apply to the Windows firmware layer**. These policies can help prevent malware from communicating with the Windows OS processes.
 
@@ -527,7 +500,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   - **Android Enterprise**:
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
-    - [Dedicated devices that run as a kiosk device settings](../configuration/device-restrictions-android-for-work.md#dedicated-devices)
+    - [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > Corporate owned.
 
   - **Android device administrator**
     - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
@@ -557,7 +530,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 - **Deploy shell scripts**:
 
   - [**macOS**: Use shell scripts](../apps/macos-shell-scripts.md)
-  - [**Windows**: Use Windows PowerShell scripts](../apps/intune-management-extension.md)
+  - [**Windows**: Use Windows PowerShell scripts](../apps/powershell-scripts.md)
 
 ## Follow the minimum recommended baseline policies
 

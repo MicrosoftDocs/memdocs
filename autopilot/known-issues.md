@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 04/04/2025
+ms.date: 08/13/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -41,6 +34,50 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Deployment duration in the Windows Autopilot deployment report might include the time for user to sign in at the Windows lock screen
+
+Date added: *August 13, 2025*
+
+The deployment duration value in the Windows Autopilot report includes the time between enrollment and completion of the **Account setup** phase of the Enrollment status page (ESP). As a result, if the ESP is configured to show during the **Account setup** phase and a reboot occurred during OOBE, the user has to sign in again at the Windows lock screen before the **Account setup** phase can start. The time it takes for the user to sign in is going to be included in the total deployment duration.
+
+### Enrollment status page Account setup phase isn't shown when signing in via FIDO2 (YubiKey) during self-deploying mode
+
+Date added: *August 1, 2025*
+
+When Windows Autopilot is used in self-deploying mode with Shared PC mode configured, the Enrollment status page (ESP) Account setup phase isn't shown for users signing in with FIDO2 (YubiKey). Account setup is shown when users sign in via username/password sign-ins. The issue is being investigated.
+
+### TPM attestation isn't working for some ST Micro and Nuvoton TPMs
+
+Date added: *May 9, 2025*<br>
+Date updated: *August 1, 2025*
+
+The OEM has resolved the issue. Lenovo customers should work with Lenovo support if they encounter an issue.
+
+Platforms with the latest models of TPMs manufactured by ST Micro and Nuvoton that support RSA 3072bit might fail TPM attestation and cause failures during pre-provisioning and self-deploying mode. The issue is being investigated.
+
+### Known issues with the Intune Connector for AD version 6.2501.2000.5
+
+Date added: *April 8, 2025*<br>
+Date updated: *April 18, 2025*
+
+The following issues are under active investigation:
+
+- **Error `MSA account <accountName> is not valid` when signing in.**
+
+  This error occurs when the connector successfully creates the MSA but fails to retrieve the data from the domain controller. Various issues can cause the error, including replication delays between domain controllers in single domain, or when the user account exists in a different domain to the connector machine.
+
+  This issue is resolved in build **6.2504.2001.8.**
+
+- **Error `Failed to create a managed service account - Element not found`.**
+
+- **Error `Cannot start service ODJConnectorSvc on computer '.'. ---> System.ComponentModel.Win32Exception: The service did not start due to a logon failure` after the MSA is created.**
+
+  This error occurs when the service can't run as the MSA. The service not being able to run as the MSA can be caused by various issues, including group or local policy restricting **Log on as a service** privileges. For more information on how to mitigate this error, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
+
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`**
+
+  For information on how to mitigate this error, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#troubleshooting-the-intune-connector-for-active-directory).
+
 ### TPM attestation isn't working for TPMs which use high-range RSA 3072EK
 
 Date added: *April 4, 2025*
@@ -55,8 +92,7 @@ The Windows Autopilot profile setting which enables automatic configuration of t
 
 ### Windows Autopilot report incorrectly shows failure even though the deployment was successful
 
-Date added: *February 11, 2025*
-
+Date added: *February 11, 2025*<br>
 Date updated: *March 20, 2025*
 
 This issue is resolved.

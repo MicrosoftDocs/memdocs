@@ -1,37 +1,15 @@
 ---
-# required metadata
-
-title: Create and assign an app protection policy
-titleSuffix: Microsoft Intune
+title: Create and Assign an App Protection Policy
 description: In this article, you use Microsoft Intune to create and assign and app protection policy.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.topic: how-to
 ms.date: 02/28/2025
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 2586fce0-5dca-4686-b9c4-791778838401
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - FocusArea_Apps_Protect
 ---
 
-# Step 9: Create and assign an app protection policy
+# Step 9: Create and Assign an App Protection Policy
 
 In this article, you use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
 
@@ -45,13 +23,18 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-Sign in to the [Intune](https://aka.ms/intuneportal) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you've created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Application Manager](../fundamentals/role-based-access-control-reference.md#application-manager)** Intune role.
+
+If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+> [!CAUTION]
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create an app protection policy
 
 Use the following steps to create an app protection policy:
 
-1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **Protection** > **Create Policy** > **Windows 10**.
+1. In [Intune](https://aka.ms/intuneportal), select **Apps** > **Protection** > **Create** > **Windows 10**.
 2. Enter the following details:
 
     - **Name**: *Windows 10 content protection*

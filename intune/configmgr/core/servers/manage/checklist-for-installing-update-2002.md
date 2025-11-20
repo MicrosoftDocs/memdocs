@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Checklist for installing update 2002 for Configuration Manager
@@ -55,7 +55,7 @@ When a site server installs the update, it automatically updates all of the site
 
 The first time you use a Configuration Manager console after the update has finished, you're prompted to update that console. You can also run the Configuration Manager setup on the computer that hosts the console, and choose the option to update the console. Install the update to the console as soon as possible. For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md).
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > When you install an update at the CAS, be aware of the following limitations and delays that exist until all child primary sites also complete the update installation:
 >
 > - **Client upgrades** don't start. This includes automatic updates of clients and pre-production clients. Additionally, you can't promote pre-production clients to production until the last site completes the update installation. After the last site completes the update installation, client updates begin based on your configuration choices.
@@ -76,7 +76,7 @@ At this time, version 2002 is released for the early update ring. To install thi
 <!--
 Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
-> [!Note]  
+> [!Note]
 > The version 2002 update is only applicable to sites running version 1810 or later.
 
 To opt-in to the early update ring:
@@ -92,7 +92,7 @@ To opt-in to the early update ring:
 
 The version 2002 update should now be available in the console.
 
-> [!Important]  
+> [!Important]
 > This script only adds your site to the early update ring for version 2002. It's not a permanent change.
  -->
 
@@ -135,10 +135,10 @@ Install a minimum version of SQL Server 2012 Native Client, which includes suppo
 
 ### Review the site and hierarchy status for unresolved issues
 
-A site update can fail because of existing operational problems. Before you update a site, resolve all operational issues for the following systems:  
+A site update can fail because of existing operational problems. Before you update a site, resolve all operational issues for the following systems:
 
-- The site server  
-- The site database server  
+- The site server
+- The site database server
 - Remote site system roles on other servers
 
 For more information, see [Use the status system](use-status-system.md).
@@ -236,7 +236,7 @@ To run a prerequisite check from the console, go to the **Administration** works
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. Therefore, after running the prerequisite checker but before installing the update, if you need to perform a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
@@ -259,28 +259,28 @@ Consider restarting remote site systems that don't successfully update at first.
 
 ### Confirm site-to-site replication is active
 
-In the Configuration Manager console, go to the following locations to view the status, and make sure that replication is active:  
+In the Configuration Manager console, go to the following locations to view the status, and make sure that replication is active:
 
-- **Monitoring** workspace, **Site Hierarchy** node  
+- **Monitoring** workspace, **Site Hierarchy** node
 
-- **Monitoring** workspace, **Database Replication** node  
+- **Monitoring** workspace, **Database Replication** node
 
-For more information, see the following articles:  
+For more information, see the following articles:
 
 - [Monitor hierarchy and replication infrastructure](monitor-hierarchy.md)
-- [About the Replication Link Analyzer](monitor-replication.md#BKMK_RLA)  
+- [About the Replication Link Analyzer](monitor-replication.md#BKMK_RLA)
 
 ### Update Configuration Manager consoles
 
-Update all remote Configuration Manager consoles to the same version. You're prompted to update the console when:  
+Update all remote Configuration Manager consoles to the same version. You're prompted to update the console when:
 
-- You open the console.  
+- You open the console.
 
-- You go to a new node in the console.  
+- You go to a new node in the console.
 
 ### Reconfigure database replicas for management points
 
-After you update a primary site, reconfigure the database replica for management points that you uninstalled before you updated the site. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).  
+After you update a primary site, reconfigure the database replica for management points that you uninstalled before you updated the site. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
 
 ### Reconfigure availability groups
 
@@ -288,11 +288,11 @@ If you use an availability group, reset the failover configuration to automatic.
 
 ### Reconfigure any disabled maintenance tasks
 
-If you disabled database [maintenance tasks](maintenance-tasks.md) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.  
+If you disabled database [maintenance tasks](maintenance-tasks.md) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.
 
 ### Update clients
 
-Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).
 
 ### Third-party extensions
 

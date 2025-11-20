@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SQL Server performance
@@ -36,9 +36,9 @@ DECLARE @RetentionPeriod INT = 0;
 DECLARE @CTCutOffTime DATETIME;
 DECLARE @CTMinTime DATETIME;
 
-SELECT @RetentionPeriod=retention_period,  
-    @RetentionUnit=retention_period_units  
-FROM sys.change_tracking_databases  
+SELECT @RetentionPeriod=retention_period,
+    @RetentionUnit=retention_period_units
+FROM sys.change_tracking_databases
 WHERE database_id = DB_ID();
 
 IF @RetentionUnit = 1

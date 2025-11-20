@@ -6,12 +6,12 @@ ms.date: 01/05/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Planning for client deployment to Mac computers in Configuration Manager
 
@@ -20,60 +20,60 @@ ms.reviewer: mstewart,aaroncz
 > [!IMPORTANT]
 > Starting in January 2022, this feature of Configuration Manager is deprecated.<!-- 12927803 --> For more information, see [Mac computers](../../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md#mac-computers).
 
-You can install the Configuration Manager client on Mac computers that run macOS X and use the following management capabilities:  
+You can install the Configuration Manager client on Mac computers that run macOS X and use the following management capabilities:
 
-- **Hardware inventory**  
+- **Hardware inventory**
 
-   You can use Configuration Manager hardware inventory to collect information about the hardware and installed applications on Mac computers. This information can then be viewed in Resource Explorer in the Configuration Manager console and used to create collections, queries and reports. For more information, see [How to use Resource Explorer to view hardware inventory](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).  
+   You can use Configuration Manager hardware inventory to collect information about the hardware and installed applications on Mac computers. This information can then be viewed in Resource Explorer in the Configuration Manager console and used to create collections, queries and reports. For more information, see [How to use Resource Explorer to view hardware inventory](../../../../core/clients/manage/inventory/use-resource-explorer-to-view-hardware-inventory.md).
 
-   Configuration Manager collects the following hardware information from Mac computers:  
+   Configuration Manager collects the following hardware information from Mac computers:
 
-  -   Processor  
+  -   Processor
 
-  -   Computer System  
+  -   Computer System
 
-  -   Disk Drive  
+  -   Disk Drive
 
-  -   Disk Partition  
+  -   Disk Partition
 
-  -   Network Adapter  
+  -   Network Adapter
 
-  -   Operating System  
+  -   Operating System
 
-  -   Service  
+  -   Service
 
-  -   Process  
+  -   Process
 
-  -   Installed Software  
+  -   Installed Software
 
-  -   Computer System Product  
+  -   Computer System Product
 
-  -   USB Controller  
+  -   USB Controller
 
-  -   USB Device  
+  -   USB Device
 
-  -   CDROM Drive  
+  -   CDROM Drive
 
-  -   Video Controller  
+  -   Video Controller
 
-  -   Desktop Monitor  
+  -   Desktop Monitor
 
-  -   Portable Battery  
+  -   Portable Battery
 
-  -   Physical Memory  
+  -   Physical Memory
 
-  -   Printer  
+  -   Printer
 
-  > [!IMPORTANT]  
-  >  You cannot extend the hardware information that is collected from Mac computers during hardware inventory.  
+  > [!IMPORTANT]
+  >  You cannot extend the hardware information that is collected from Mac computers during hardware inventory.
 
-- **Compliance settings**  
+- **Compliance settings**
 
    You can use Configuration Manager compliance settings to view the compliance of and remediate macOS X preference (.plist) settings. For example, you could enforce settings for the home page in the Safari web browser or ensure that the Apple firewall is enabled. You can also use shell scripts to monitor and remediate settings in macOS X.
 
-- **Application management**  
+- **Application management**
 
-   Configuration Manager can deploy software to Mac computers. You can deploy the following software formats to Mac computers:  
+   Configuration Manager can deploy software to Mac computers. You can deploy the following software formats to Mac computers:
 
   - Apple disk image (.DMG)
 
@@ -83,23 +83,23 @@ You can install the Configuration Manager client on Mac computers that run macOS
 
   - macOS X application (.APP)
 
-  When you install the Configuration Manager client on Mac computers, you cannot use the following management capabilities that are supported by the Configuration Manager client on Windows-based computers:  
+  When you install the Configuration Manager client on Mac computers, you cannot use the following management capabilities that are supported by the Configuration Manager client on Windows-based computers:
 
-- Client push installation  
+- Client push installation
 
-- Operating system deployment  
+- Operating system deployment
 
-- Software updates  
+- Software updates
 
-  > [!NOTE]  
-  >  You can use Configuration Manager application management to deploy required macOS X software updates to Mac computers. In addition, you can use compliance settings to make sure that computers have any required software updates.  
+  > [!NOTE]
+  >  You can use Configuration Manager application management to deploy required macOS X software updates to Mac computers. In addition, you can use compliance settings to make sure that computers have any required software updates.
 
-- Maintenance windows  
+- Maintenance windows
 
-- Remote control  
+- Remote control
 
-- Power management  
+- Power management
 
-- Client status client check and remediation  
+- Client status client check and remediation
 
   For more information about how to install and configure the Configuration Manager Mac client, see [How to deploy clients to Macs](../../../../core/clients/deploy/deploy-clients-to-macs.md).

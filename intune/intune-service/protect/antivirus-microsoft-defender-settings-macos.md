@@ -1,29 +1,14 @@
 ---
 title: macOS Antivirus policy settings for Microsoft Defender Antivirus for Intune | Microsoft Docs
 description: See a list of the settings in the Microsoft Defender Antivirus profile for macOS. This profile is s part of Endpoint security Antivirus policy for macOS in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/12/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
-ms.reviewer: laarrizz 
+ms.reviewer: laarrizz
 ---
 
 # Settings for Microsoft Defender for Endpoint for Mac in Microsoft Intune
@@ -123,7 +108,7 @@ For details about these settings, see the settings entry in [Set preferences for
   - *True*
   - *Not configured*
 
-- **Enforcement level**  
+- **Enforcement level**
   - *Passive* (*default*)
   - *Real time*
   - *On Demand*

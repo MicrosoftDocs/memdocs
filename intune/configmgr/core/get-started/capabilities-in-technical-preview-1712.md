@@ -12,18 +12,18 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1712 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1712. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. 
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1712. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.
 
-Review [Technical Preview for Configuration Manager](technical-preview.md) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+Review [Technical Preview for Configuration Manager](technical-preview.md) before installing this version of the technical preview. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-<!--  Known Issues Template   
+<!--  Known Issues Template
 **Known Issues in this Technical Preview:**
 -   **Issue Name**. Details
     Workaround details.
@@ -40,16 +40,16 @@ Review [Technical Preview for Configuration Manager](technical-preview.md) befor
   <!--sms489412-->
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 <!--  Section Template
 ##  FEATURE
 <-- TFS ID - need to fix comment md here
 ### Procedure 1
-### Try it out!  
+### Try it out!
  Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
  -  Task 1
- -  Task 2              
+ -  Task 2
 -->
 
 ## Do not automatically upgrade superseded applications
@@ -72,7 +72,7 @@ When using multi-select mode in the **Applications** tab, the following criteria
 Deploy to a user or device multiple applications for installation, as either available or required (with the deadline in the future). Do not require administrator approval. For more information, see [Deploy applications](../../apps/deploy-use/deploy-applications.md).
 
 **In Software Center:**
- 1. The **Applications** tab should open by default. 
+ 1. The **Applications** tab should open by default.
  2. To enter multi-select mode in the list view, click the new icon ![Software Center multi-select icon](media/software-center-multi-select-apps.png) in the upper right corner.
  3. Select two or more apps to install by clicking the checkbox to the left of the apps in the list.
  4. Click the **Install Selected** button.
@@ -98,7 +98,7 @@ In the Configuration Manager console:
    1. Select the **Client Cache Settings** group.
    1. Set the **Enable Configuration Manager client in full OS to share content** setting to **Yes**.
    1. Set the **Enable PXE responder service** setting to **Yes**.
-   1. For the **Create a self-signed certificate or import a PKI client certificate** setting, click **Provide a certificate**. Select **Import certificate** if your test environment has PKI, otherwise click **OK** to create a self-signed certificate. 
+   1. For the **Create a self-signed certificate or import a PKI client certificate** setting, click **Provide a certificate**. Select **Import certificate** if your test environment has PKI, otherwise click **OK** to create a self-signed certificate.
    1. Configure the remaining settings as necessary for your test environment. (The default settings should work unless there are specific network or security requirements.)
 3. Deploy the task sequence and custom client settings to a collection of target clients to be PXE responders. Wait for the policies to apply and the task sequence to run.
 4. Start another client on the same subnet to PXE/network boot as normal.
@@ -108,9 +108,9 @@ In the Configuration Manager console:
 - The boot image from the Download Package Content step does not show in the custom task sequence's list of references. Also the **Distribute Content** action is not available. <!-- sms504017 -->
 
 
-## Change in the Configuration Manager client install  
+## Change in the Configuration Manager client install
 As a result of your feedback, Silverlight is no longer installed on clients automatically.<!--1356195-->
-  
+
 
 ## Change to the Surface device dashboard
 The Surface dashboard now displays firmware versions for Surface devices rather than operating system version. In the console, go to **Monitoring** > **Surface Devices**. You can view the following items:
@@ -120,16 +120,16 @@ The Surface dashboard now displays firmware versions for Surface devices rather 
  <!--1355788-->
 
 
-## Improvements to Office 365 Client Management dashboard 
-The Office 365 Client Management dashboard now displays a list of relevant devices when graph sections are selected. In the console, go to **Software Library** >**Overview** >**Office 365 Client Management**. The dashboard is displayed on the right. Selecting criteria from the chart shows a list of devices.  
+## Improvements to Office 365 Client Management dashboard
+The Office 365 Client Management dashboard now displays a list of relevant devices when graph sections are selected. In the console, go to **Software Library** >**Overview** >**Office 365 Client Management**. The dashboard is displayed on the right. Selecting criteria from the chart shows a list of devices.
 <!--1357281-->
 
 
-## Improvements to the Configuration Manager console 
+## Improvements to the Configuration Manager console
 We have made the following improvements to the Configuration Manager console, which were a result of your feedback.
 
 - Device list displays primary user: Device lists under Assets and Compliance, Devices, now display the primary user by default. The last logged on user can also be added as an optional column. <!-- 1357280 -->
-- Renamed collections display in existing collection membership rules: If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282--> 
+- Renamed collections display in existing collection membership rules: If a collection is a member of another collection and it is renamed, then the new name is updated under membership rules.<!--1357282-->
 
 
 ## Improvements to operating system deployment
@@ -152,4 +152,4 @@ Continue to use our product feedback site to vote on new feature ideas in Config
 <!-- When we have another H2 in this topic, Add this Next Steps section back in.  -->
 
 ## Next steps
-For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).    
+For information about installing or updating the technical preview branch, see [Technical Preview for Configuration Manager](technical-preview.md).

@@ -1,27 +1,13 @@
 ---
 title: Use Microsoft Tunnel VPN with Android devices that don't enroll with Microsoft Intune
 description: Add support for Mobile Application Management (MAM) for Android to the Microsoft Tunnel Gateway. Tunnel support for MAM expands access to your organizational resources for devices that can't or haven't enrolled with Microsoft Intune
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: ochukwunyere
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.subservice: suite
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-intune-suite
 ---
@@ -44,7 +30,7 @@ To extend your existing [Microsoft Tunnel configuration](../protect/microsoft-tu
 
 With these policies in place, your existing Site and Server configurations for Tunnel support access from devices that aren't enrolled in Intune. In addition, you can choose to deploy your configurations for MAM Tunnel to enrolled devices instead of using MDM Tunnel configurations. However, an enrolled device must use only the MDM Tunnel configurations or the MAM Tunnel configurations, but not both. For example, enrolled devices can't have an app like Microsoft Edge that uses MAM tunnel configurations while other apps use MDM Tunnel configurations.
 
-**Try the interactive demo**:  
+**Try the interactive demo**:
 The [Microsoft Tunnel for Mobile Application Management for Android]( https://regale.cloud/Microsoft/viewer/1896/microsoft-tunnel-for-mobile-application-management-for-android/index.html#/0/0) interactive demo shows how Tunnel for MAM extends the Microsoft Tunnel VPN Gateway to support Android devices not enrolled with Intune.
 
 ## Prerequisites
@@ -61,7 +47,7 @@ Users of devices that aren't enrolled with Intune must install the following app
 
 1. **Microsoft Defender** – Get it from [Microsoft Defender - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.scmx&hl=en_US&gl=US&pli=1). Microsoft Defender includes the tunnel client app that the device uses to connect to Microsoft Tunnel. To support Tunnel for MAM, Microsoft Defender for Endpoint must be version **1.0.4722.0101** or higher.
 
-2. **Microsoft Edge** – Get it from [Microsoft Edge: Web Browser - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US&gl=US). 
+2. **Microsoft Edge** – Get it from [Microsoft Edge: Web Browser - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.emmx&hl=en_US&gl=US).
 
 3. **Company Portal** – Get it at [Intune Company Portal - Apps on Google Play](https://play.google.com/store/apps/details?id=com.microsoft.windowsintune.companyportal&hl=en_US&gl=US). Devices must install the Company Portal app, even though users won't need to sign into the app or enroll their device with Intune.
 
@@ -83,7 +69,7 @@ Microsoft Tunnel for MAM on Android is supported with the following sovereign cl
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-Microsoft Tunnel for MAM on Android isn’t supported on Microsoft Azure operated by 21Vianet.
+Microsoft Tunnel for MAM on Android isn't supported on Microsoft Azure operated by 21Vianet.
 
 Microsoft Tunnel for MAM on Android doesn't support Federal Information Processing Standard (FIPS).
 
@@ -129,19 +115,19 @@ Create an App configuration policy to configure Microsoft Defender for Endpoint 
    - For *Site Name*, select an available site, and then click **OK**.
 
    - *Per-App VPN (Android only)* is an optional setting. Select public or custom apps, to restrict the use of use the Tunnel VPN connection to these specified apps.
-     > [!IMPORTANT]  
+     > [!IMPORTANT]
      >
      > To ensure seamless identity switching and accurate Tunnel notifications within Microsoft Edge, it's essential to include Edge in your per-app VPN list.
      >
-     > :::image type="content" source="./media/microsoft-tunnel-mam-android/edge_per_app.png" alt-text="Screen shot of the per-app configuration configuration with Microsoft Edge added."::: 
+     > :::image type="content" source="./media/microsoft-tunnel-mam-android/edge_per_app.png" alt-text="Screen shot of the per-app configuration configuration with Microsoft Edge added.":::
 
-     > [!IMPORTANT]  
+     > [!IMPORTANT]
      >
      > MAM Tunnel for Android doesn't support the use of *Always-on VPN*. When *Always-on VPN* is set to *Enable*, Tunnel does not connect successfully and sends connection failure notifications to the device user.
 
    - *Proxy* is an optional setting. Configure proxy settings to meet your on-premises network requirements.
 
-     > [!NOTE]  
+     > [!NOTE]
      > Proxy server configurations are not supported with versions of Android prior to version 10. For more information, see [VpnService.Builder](https://developer.android.com/reference/android/net/VpnService.Builder#setHttpProxy%28android.net.ProxyInfo%29) in that Android developer documentation.
 
    When ready, select **Next** to continue.
@@ -195,17 +181,17 @@ The new policy appears in the list of App configuration policies.
 
 Create an app protection policy to automatically start the Microsoft Tunnel VPN connection when the app is launched.
 
-> [!NOTE]  
+> [!NOTE]
 > When the app is started, the Tunnel VPN connection will attempt to start, once started, the device will have access to the on-premises network routes available via the Microsoft Tunnel Gateway. If you wish to limit the tunnel network access to specific apps, then configure the "Per-App VPN (Android only) settings.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **Create policy** > **Android**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Apps** > **Protection** > **Create** > **Android**.
 
 2. On the *Basics* tab, enter a *Name* for this policy, and a *Description (optional)*, and then select **Next**.
 
 3. On the *Apps* tab, click **Select public apps**, select **Microsoft Edge**, and then click **Select**.
 
    When Microsoft Edge is listed for *Public apps*, select **Next**.
-  
+
    :::image type="content" source="./media/microsoft-tunnel-mam-android/app-protection-edge.png" alt-text="Screen shot of configuring an app protection policy with Microsoft Edge as a public app.":::
 
 4. On the *Data protection* tab, scroll to the bottom and set *Start Microsoft Tunnel connection on app-launch* to **Yes**, and then select **Next**.
@@ -333,7 +319,7 @@ Using two or more app configuration policies for Microsoft Defender that specify
 
 **Workaround**: Target each device with a single app configuration policy for Microsoft Defender, ensuring each unenrolled device is configured to use only one Site.
 
-### Auto-Disconnect with Line of Business Apps 
+### Auto-Disconnect with Line of Business Apps
 We do not support auto disconnect in Line-of-Business (LOB) scenarios.
 
 If Edge is the only application listed in the per-app VPN configuration, the auto disconnect feature will function correctly.

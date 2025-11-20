@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # About upgrade, update, and install for site and hierarchy infrastructure
@@ -31,7 +31,7 @@ For more information, see [Upgrade to Configuration Manager](../servers/deploy/i
 
 
 ## Update
-*Update* is used for installing in-console updates for Configuration Manager, and for out-of-band updates which are updates that can't be delivered from within the Configuration Manager console. In-console updates can modify the version of your Current Branch site (or Technical Preview site) so that it runs a higher version. For example, if your site runs version 1806, you can install an update for version 1810. Updates can also install fixes for a known issue, without modifying the site version.      
+*Update* is used for installing in-console updates for Configuration Manager, and for out-of-band updates which are updates that can't be delivered from within the Configuration Manager console. In-console updates can modify the version of your Current Branch site (or Technical Preview site) so that it runs a higher version. For example, if your site runs version 1806, you can install an update for version 1810. Updates can also install fixes for a known issue, without modifying the site version.
 
 Typically, updates add security fixes, quality improvements, and new features to your existing deployment. If you use the Technical Preview branch, an update can install a newer version of the Technical Preview.
 - You choose when to install the in-console update, starting at the top-tier site of your hierarchy.
@@ -44,7 +44,7 @@ For more, see [Updates for Configuration Manager](../servers/manage/updates.md),
 
 
 ## Install
-*Install* is used when creating a new Configuration Manager hierarchy from scratch, or adding more sites to an existing hierarchy.  
+*Install* is used when creating a new Configuration Manager hierarchy from scratch, or adding more sites to an existing hierarchy.
 
 When you install a new primary site or central administration site, the location of setup.exe and its related source files that you use depend on your installation scenario.
 

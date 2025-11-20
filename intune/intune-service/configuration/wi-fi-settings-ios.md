@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Configure Wi-Fi settings for iOS/iPadOS devices in Microsoft Intune
-titleSuffix:
-description: Create or add a WiFi device configuration profile for iOS/iPadOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune. 
-keywords:
+description: Create or add a WiFi device configuration profile for iOS/iPadOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 06/25/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -77,7 +58,7 @@ This article describes the settings you can configure.
   - **Yes**: Forces devices to present their actual Wi-Fi MAC address instead of a random MAC address. **Yes** allows devices to be tracked by their MAC address. Only disable MAC address randomization when necessary, such as for network access control (NAC) support.
   - **No**: Enables MAC address randomization on devices. Users can't turn it off. When devices connect to a new network, devices present a randomized MAC address, instead of the physical MAC address.
 
-  This setting applies to:  
+  This setting applies to:
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 

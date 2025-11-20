@@ -1,26 +1,12 @@
 ---
 title: Use Microsoft Tunnel VPN gateway with Conditional Access policies
 description: Configure your Azure tenant to support using Conditional Access policies to grant access to the Intune Microsoft Tunnel VPN gateway solution.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 10/10/2024
+ms.date: 06/03/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: ochukwunyere
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure, has-azure-ad-ps-ref, azure-ad-ref-level-one-done
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-infrastructure
 ---
@@ -33,13 +19,16 @@ To support integration of Conditional Access and Microsoft Tunnel, use [Microsof
 
 ## Provision your tenant
 
-Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. Use the Microsoft Graph PowerShell module and run a PowerShell script to modify your tenant to add **Microsoft Tunnel Gateway** as a cloud app. After the tunnel is added as a cloud app, you can select it as part of a Conditional Access policy.
+Before you can configure Conditional Access policies for the tunnel, you must enable your tenant to support Microsoft Tunnel for Conditional Access. Use the *Microsoft Graph PowerShell* module and run a PowerShell script to modify your tenant to add **Microsoft Tunnel Gateway** as a cloud app. After the tunnel is added as a cloud app, you can select it as part of a Conditional Access policy.
 
-1. [Download and install](/powershell/azure/active-directory/install-adv2?view=azureadps-2.0&preserve-view=true) the **AzureAD PowerShell module**.
+> [!IMPORTANT]
+> Support for AzureAD PowerShell ended in March 2025, and is replaced by Microsoft Graph PowerShell. For more information, see [Action required: MSOnline and AzureAD PowerShell retirement - 2025 info and resources](https://techcommunity.microsoft.com/blog/microsoft-entra-blog/action-required-msonline-and-azuread-powershell-retirement---2025-info-and-resou/4364991).
 
-2. Download the PowerShell script named **mst-ca-provisioning.ps1** from aka.ms/mst-ca-provisioning.
+1. [Download and install](/powershell/microsoftgraph/installation) the **Microsoft.Graph module**.
 
-3. Using credentials that have the Azure Role permissions [equivalent to **Intune Administrator**](/azure/active-directory/roles/permissions-reference#global-administrator), run the script from any location in your environment, to provision your tenant.
+2. Download the PowerShell script named **mst-ca-provisioning.ps1** from [https://aka.ms/mst-ca-provisioning](https://aka.ms/mst-ca-provisioning).
+
+3. Using credentials that have the Microsoft Entra ID Role permissions [equivalent to **Intune Administrator**](/entra/identity/role-based-access-control/permissions-reference#intune-administrator), run the script from any location in your environment, to provision your tenant.
 
    The script modifies your tenant by creating a service principal with the following details:
 
@@ -63,7 +52,7 @@ If you'll use Conditional Access policy to limit user access, we recommend confi
    1. Select **Include** > **All users**.
    2. Next, select **Exclude**, and then configure the groups you want to *grant access to*, and then save the user and Group configuration.
 
-4. Under **Cloud apps or actions** > **Select apps**, select the **Microsoft Tunnel Gateway app**.
+4. Under **Target resources** > choose **Resources** for Select what this policy applies to, under include pane **Select resources**, select the **Microsoft Tunnel Gateway**.
 
 5. Below *Access controls*, select **Grant**, select **Block access**, and then save the configuration.
 

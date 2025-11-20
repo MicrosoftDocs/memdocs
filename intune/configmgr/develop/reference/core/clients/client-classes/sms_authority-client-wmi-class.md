@@ -12,122 +12,122 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_Authority Client WMI Class
-The `SMS_Authority` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the Configuration Manager site that manages the client.  
+The `SMS_Authority` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents the Configuration Manager site that manages the client.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_Authority : CCM_Authority  
-{  
-      String Capabilities;  
-      String CurrentManagementPoint;  
-      UInt32 Index;  
-      String Name;  
-      UInt32 PolicyOrder;  
-      String PolicyRequestTarget;  
-      String Protocol;  
-      String SigningCertificate;  
-      UInt32 Version;  
-};  
-```  
+```
+Class SMS_Authority : CCM_Authority
+{
+      String Capabilities;
+      String CurrentManagementPoint;
+      UInt32 Index;
+      String Name;
+      UInt32 PolicyOrder;
+      String PolicyRequestTarget;
+      String Protocol;
+      String SigningCertificate;
+      UInt32 Version;
+};
+```
 
-## Methods  
- The `SMS_Authority` class does not define any methods.  
+## Methods
+ The `SMS_Authority` class does not define any methods.
 
-## Properties  
- `Capabilities`  
- Data type: `String`  
+## Properties
+ `Capabilities`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Reserved.  
+ Reserved.
 
- `CurrentManagementPoint`  
- Data type: `String`  
+ `CurrentManagementPoint`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The current management point for the site.  
+ The current management point for the site.
 
- `Index`  
- Data type: `UInt32`  
+ `Index`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- For assigned Management Point rotation.  
+ For assigned Management Point rotation.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Name of the authority.  
+ Name of the authority.
 
- `PolicyOrder`  
- Data type: `UInt32`  
+ `PolicyOrder`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Determines the priority of the authority when resolving policy conflicts. The lower the order, the higher the priority of the authority's policy.  
+ Determines the priority of the authority when resolving policy conflicts. The lower the order, the higher the priority of the authority's policy.
 
- `PolicyRequestTarget`  
- Data type: `String`  
+ `PolicyRequestTarget`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Specifies the target for requesting policy assignments. If this value is NULL, no policy is requested for this authority.  
+ Specifies the target for requesting policy assignments. If this value is NULL, no policy is requested for this authority.
 
- `Protocol`  
- Data type: `String`  
+ `Protocol`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Reserved.  
+ Reserved.
 
- `SigningCertificate`  
- Data type: `String`  
+ `SigningCertificate`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The site signing certificate. This is only relevant in native mode.  
+ The site signing certificate. This is only relevant in native mode.
 
- `Version`  
- Data type: `UInt32`  
+ `Version`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The version of the authority.  
+ The version of the authority.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
+## See Also
  [Client Framework and Data Transfer Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/client-framework-and-data-transfer-client-wmi-classes.md)

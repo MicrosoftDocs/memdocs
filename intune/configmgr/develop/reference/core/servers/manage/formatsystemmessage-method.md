@@ -12,40 +12,40 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # FormatSystemMessage Method
-The `FormatSystemMessage` method, in Configuration Manager, formats a system error message by using the error code and optional insertion strings.  
+The `FormatSystemMessage` method, in Configuration Manager, formats a system error message by using the error code and optional insertion strings.
 
-## Syntax  
+## Syntax
 
-```  
-[VBScript]  
-SMSFormatMessageCtl.FormatSystemMessage  
-```  
+```
+[VBScript]
+SMSFormatMessageCtl.FormatSystemMessage
+```
 
-#### Parameters  
- `MessageID`  
- Data type: `int`  
+#### Parameters
+ `MessageID`
+ Data type: `int`
 
- Error message ID.  
+ Error message ID.
 
- `InsertionStrings`  
- Data type: `object`  
+ `InsertionStrings`
+ Data type: `object`
 
- Optional list of insertion strings.  
+ Optional list of insertion strings.
 
-## Return Value  
- A string.  
+## Return Value
+ A string.
 
-## Requirements  
- FormatMessageCtl.dll.  
+## Requirements
+ FormatMessageCtl.dll.
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMSFormatMessageCtl Class](../../../../../develop/reference/core/servers/manage/smsformatmessagectl-class.md)

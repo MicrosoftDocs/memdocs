@@ -12,70 +12,70 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # GetEvaluationState Method in Class CCM_ApplicationPolicy
 
 The `GetEvaluationState` Windows Management Instrumentation (WMI) class method in Configuration Manager.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 GetEvaluationState   
-{  
-    [IN]    String PolicyId  
-    [IN]    String PolicyRevision  
-    [IN]    Boolean IsMachineTarget  
-    [OUT]   Object PolicyEvalState  
-    [OUT]   Object AppEvalState  
-};  
-```  
+```
+uint32 GetEvaluationState
+{
+    [IN]    String PolicyId
+    [IN]    String PolicyRevision
+    [IN]    Boolean IsMachineTarget
+    [OUT]   Object PolicyEvalState
+    [OUT]   Object AppEvalState
+};
+```
 
-## Parameters  
- `PolicyId`  
- Data type: `String`  
+## Parameters
+ `PolicyId`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Policy identifier.    
+ Policy identifier.
 
- `PolicyRevision`  
- Data type: `String`  
+ `PolicyRevision`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Policy revision.    
+ Policy revision.
 
- `IsMachineTarget`  
- Data type: `Boolean`  
+ `IsMachineTarget`
+ Data type: `Boolean`
 
- Qualifiers: [id("2"), in]  
+ Qualifiers: [id("2"), in]
 
- `true` if it's a device targeted application.    
+ `true` if it's a device targeted application.
 
- `PolicyEvalState`  
- Data type: `CCM_EvaluationState`  
+ `PolicyEvalState`
+ Data type: `CCM_EvaluationState`
 
- Qualifiers: [id("3"), out]  
+ Qualifiers: [id("3"), out]
 
- Policy evaluation state.   
+ Policy evaluation state.
 
- `AppEvalState`  
- Data type: `CCM_EvalutationState`  
+ `AppEvalState`
+ Data type: `CCM_EvalutationState`
 
- Qualifiers: [id("4"), out]  
+ Qualifiers: [id("4"), out]
 
- Application evaluation state.   
+ Application evaluation state.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

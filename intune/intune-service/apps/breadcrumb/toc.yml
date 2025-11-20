@@ -1,15 +1,15 @@
 items:
 - name: Microsoft Intune
-  tocHref: /mem/
-  topicHref: /mem/index
+  tocHref: /intune/
+  topicHref: /intune/index
   items:
   - name: Intune service
-    tocHref: /mem/intune-service/
-    topicHref: /mem/intune-service/
+    tocHref: /intune/intune-service/
+    topicHref: /intune/intune-service/
     items:
     - name: Apps
-      tocHref: /mem/intune-service/fundamentals/
-      topicHref: /mem/intune-service/apps/
+      tocHref: /intune/intune-service/fundamentals/
+      topicHref: /intune/intune-service/
     - name: Apps
-      tocHref: /mem/intune-service/protect/
-      topicHref: /mem/intune-service/apps/
+      tocHref: /intune/intune-service/protect/
+      topicHref: /intune/intune-service/

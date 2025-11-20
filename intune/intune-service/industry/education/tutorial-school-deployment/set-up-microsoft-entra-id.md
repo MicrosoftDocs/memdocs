@@ -5,9 +5,6 @@ ms.date: 5/2/2024
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
-ms.manager: dougeby
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Set up Microsoft Entra ID
@@ -165,7 +162,6 @@ To allow Microsoft Entra join:
 > [!NOTE]
 > To create a bulk enrollment token (used by a provisioning package to perform Entra join), you must have a supported Microsoft Entra role assignment and must not be scoped to an administrative unit in Microsoft Entra ID. The supported roles are:
 >
-> - Global Administrator
 > - Cloud Device Administrator
 > - Intune Administrator
 > - Password Administrator

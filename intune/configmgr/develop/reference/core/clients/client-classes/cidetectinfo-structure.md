@@ -12,27 +12,27 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CIDetectInfo Structure
-In Configuration Manager, the `CIDetectInfo` structure contains identity information for baseline configuration item detection.  
+In Configuration Manager, the `CIDetectInfo` structure contains identity information for baseline configuration item detection.
 
-## Syntax  
+## Syntax
 
-```  
-struct CIDetectInfo  
-{  
-      LPWSTR szCIID;  
-      LPWSTR szVersion;  
-};  
-```  
+```
+struct CIDetectInfo
+{
+      LPWSTR szCIID;
+      LPWSTR szVersion;
+};
+```
 
-## Members  
- szCIID  
- ID of the configuration item.  
+## Members
+ szCIID
+ ID of the configuration item.
 
- szVersion  
- Version of the configuration item.  
+ szVersion
+ Version of the configuration item.
 
-## See Also  
+## See Also
  [Compliance Settings (DCM) Client Interfaces](../../../../../develop/reference/core/clients/client-classes/compliance-settings--dcm--client-interfaces.md)

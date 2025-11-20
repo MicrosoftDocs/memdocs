@@ -1,27 +1,12 @@
 ---
 title: Install the Microsoft Tunnel VPN for Microsoft Intune
 description: Install and configure Microsoft Tunnel Gateway on a Linux server to support Intune managed cloud-based devices in connecting to your on-premises infrastructure.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 03/06/2025
+ms.date: 04/07/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: ochukwunyere
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-infrastructure
 ---
@@ -131,9 +116,9 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
    - Download the tool directly by using a web browser. Go to <https://aka.ms/microsofttunneldownload> to download the file **mstunnel-setup**.
 
    - Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Tenant administration** > **Microsoft Tunnel Gateway**, select the **Servers** tab,  select **Create** to open the *Create a server* pane, and then select **Download script**.
-   
+
      ![Screen capture for download of installation script](./media/microsoft-tunnel-configure/download-installation-script.png)
-     
+
    - Use a Linux command to download the tunnel software directly. For example, on the server where you'll install the tunnel, you can use **wget** or **curl** to open the link [https://aka.ms/microsofttunneldownload](https://aka.ms/microsofttunneldownload).
 
       For example, to use **wget** and log details to *mstunnel-setup* during the download, run `wget --output-document=mstunnel-setup https://aka.ms/microsofttunneldownload`
@@ -204,7 +189,7 @@ However, if you plan to install the Microsoft Tunnel Gateway to a rootless Podma
 
 7. After the installation script finishes, you can navigate in Microsoft Intune admin center to the **Microsoft Tunnel Gateway** tab to view high-level status for the tunnel. You can also open the **Health status** tab to confirm that the server is online.
 
-8. If you're using RHEL 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
+8. If you're using Red Hat Enterprise Linux (RHEL) 8.4 or later, be sure to restart the Tunnel Gateway server by entering `mst-cli server restart` before you attempt to connect clients to it.
 
 ### Configure Podman to use the proxy to download image updates
 
@@ -212,7 +197,7 @@ After installing the Tunnel Gateway server, you can configure Podman to use the 
 
 1. On the tunnel server, use a command prompt to run the following command to open an editor for the override file for the Microsoft Tunnel service:
 
-   `systemctl edit --force mstunnel_monitor`  
+   `systemctl edit --force mstunnel_monitor`
 
 2. Add the following three lines to the file. Replace each instance of *address* with your proxy DN or address, and then save the file. For example, if the *address* of your proxy is `10.10.10.1`  and available on port `3128`, the first line after [Service] might appear as `Environment=”http_proxy=http//10.10.10.1:3128”` and the following line as `Environment=”https_proxy=http//10.10.10.1:3128”`
 
@@ -262,7 +247,7 @@ Trusted root certificates must be added to the Tunnel containers when:
 
 ## Change the Tunnel Servers VPN session timeout
 
-You can use the Microsoft Graph Beta and PowerShell to change the Tunnel Server VPN session timeout. By default, the Tunnel Server VPN session will persist for an hour. You can set a shorter session timeout by using a Windows machine and PowerShell to change the session timeout. 
+You can use the Microsoft Graph Beta and PowerShell to change the Tunnel Server VPN session timeout. By default, the Tunnel Server VPN session will persist for an hour. You can set a shorter session timeout by using a Windows machine and PowerShell to change the session timeout.
 
 By default, the Tunnel Server VPN session persists for an hour. You can use the Microsoft Graph Beta and PowerShell to set a shorter session timeout of your choice, for example, five or 10 minutes.
 
@@ -273,7 +258,7 @@ Install the Microsoft Graph Beta PowerShell module named *Microsoft.Graph.Beta* 
 
 ### PowerShell commands to change the VPN session timeout
 
-On the Windows machine where you've imported the Graph module, use an admin account to run the following PowerShell commands. 
+On the Windows machine where you've imported the Graph module, use an admin account to run the following PowerShell commands.
 
 In the following PowerShell commands, replace variables, which appear similar to `<id>`, with the intended value surrounded by double quotes. For example, if the *ID* from step 2 is equal to *12345-abcde-67890-fghij*, the command line for step 3 would appear as `Get-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId "12345-abcde-67890-fghij" | Format-List`
 
@@ -387,30 +372,33 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
 
 3. On the **Basics** tab, enter a *Name* and *Description* *(optional)* and select **Next**.
 
-4. For *Connection type*, select **Microsoft Tunnel** and then configure the following items:
+1. For *Connection type*, select **Microsoft Tunnel** and then configure the following items:
 
    - **Base VPN**:
      - For *Connection name*, specify a name to display to users.
-     - For *Microsoft Tunnel Site*, select the tunnel Site that this VPN profile uses.
+     - For *Microsoft Tunnel Site*, click on *Select a site* and then select the tunnel Site that this VPN profile uses.
 
      > [!NOTE]
-     >
      > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it's crucial to configure the 'On Demand' rules to activate the 'Disconnect on Sleep' setting effectively. Failure to do so results in both the Tunnel VPN and Defender VPN being disconnected when the iOS device enters sleep mode, while the VPN is turned on.
+     >
+     > However, due to a conflict between how a Single Sign-On (SSO) applications obtain access tokens and how Tunnel VPN on-demand rules work, setting up an on-demand rule to connect to all domains when also using 'Deisconnect on Sleep' is not supported when using SSO.
+     >
+     > In general, configuring On Demand rules for per-app VPNs is recommended, as it allows apps to initiate VPN connections as needed and ensures that the 'Disconnect on Sleep' setting functions as intended.
 
-   - **Per-app VPN**:  
+   - **Per-app VPN**:
      To enable a per-app VPN, select **Enable**. Extra configuration steps are required for iOS per-app VPNs. When the per-app VPN is configured, iOS ignores your split tunneling rules.
 
      For more information, see [Per-App VPN for iOS/iPadOS](../configuration/vpn-setting-configure-per-app.md).
 
-   - **On-Demand VPN Rules**:  
+   - **On-Demand VPN Rules**:
      Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
 
      For more information, see [Automatic VPN settings](../configuration/vpn-settings-ios.md#automatic-vpn).
 
-   - **Proxy**:  
+   - **Proxy**:
      Configure proxy server details for your environment.
 
-> [!NOTE]  
+> [!NOTE]
 > When using both Microsoft Tunnel VPN connection and Defender Web Protection in combined mode on iOS devices, it's crucial to configure the 'On-Demand' rules to activate the 'Disconnect on Sleep' setting effectively. To configure the on-demand rule when configuring the Tunnel VPN profile:
 >
 > 1. On the Configuration setting page, expand the *On-Demand VPN Rules* section.
@@ -466,7 +454,7 @@ If you use Microsoft Defender for Endpoint for Microsoft Tunnel but not MTD, the
 
 ### Add app configuration support for Microsoft Defender for Endpoint to a VPN profile for Microsoft Tunnel
 
-Use the following information to configure the custom settings in a VPN profile to configure Microsoft Defender for Endpoint [in place of a separate app configuration profile](advanced-threat-protection-manage-android.md). Available settings vary by platform.
+Use the following information to configure the custom settings in a VPN profile to configure Microsoft Defender for Endpoint [in place of a separate app configuration profile](microsoft-defender-configure-android.md). Available settings vary by platform.
 
 **For Android Enterprise devices**:
 
@@ -503,6 +491,34 @@ By configuring TunnelOnly mode, all Defender for Endpoint functionality is disab
 Guest accounts and Microsoft Accounts (MSA) that aren't specific to your organization's tenant aren't supported for cross-tenant access using Microsoft Tunnel VPN. This means that these types of accounts can't be used to access internal resources securely through the VPN. It's important to keep this limitation in mind when setting up secure access to internal resources using Microsoft Tunnel VPN.
 
 For more information about the EU Data Boundary, see [EU Data Boundary for the Microsoft Cloud | Frequently Asked Questions](https://techcommunity.microsoft.com/t5/security-compliance-and-identity/eu-data-boundary-for-the-microsoft-cloud-frequently-asked/ba-p/2329098) on the Microsoft security and compliance blog.
+
+## Install Linux system auditing after installing the Tunnel server
+
+Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the optional package for *auditd* installed to `/etc/audit/auditd.conf`.
+
+If you you've already installed a Tunnel Server on Linux and auditd is missing, use the information in the following procedure to install it. For information about installing auditd on a Linux server *before* you install Microsoft Tunnel, see [Manually install auditd for Linux system auditing](../protect/microsoft-tunnel-prerequisites.md#manually-install-auditd-for-linux-system-auditing) in Microsoft Tunnel prerequisites.
+
+### Install auditd on a Tunnel server
+
+When Microsoft Tunnel server is already installed on a Linux server, you can use the [mst-cli command-line tool](../protect/microsoft-tunnel-reference.md#mst-cli-command-line-tool-for-microsoft-tunnel-gateway) and the following steps to install *auditd*.
+
+Before you start the install procedure, use the following link to download the **mst.rules** file from Microsoft: [https://aka.ms/TunnelAuditdRules](https://aka.ms/TunnelAuditdRules). *(The link downloads a small text file named mst.rules.)*
+
+1. Install the auditd library and plugins. Run the following command on the Linux server:
+
+   - Ubuntu: `sudo apt install auditd audispd-plugins`
+   - RHEL:  `sudo dnf install audit audit-libs audispd-plugins` *(By default, RHEL should already have auditd installed.)*
+
+2. Copy the Tunnel mst.rules auditd rules to the Linux server:
+
+   - Copy the mst.rules file to your server, and then run the following command to move them to the correct folder: `sudo cp /path/to/mst.rules /etc/audit/rules.d`
+
+3. To load the new auditd rules, run the following command: `sudo augenrules --load`
+
+4. Validate that the new rules are applied. Run `sudo auditctl -l'
+
+The logs are saved in `/var/log/audit/audit.log`. You can use the `sudo ausearch` command to search that log.  For example, `sudo ausearch -f TARGET_DIRECTORY`.
+
 
 ## Upgrade Microsoft Tunnel
 
@@ -603,5 +619,5 @@ To uninstall the product, run **mst-cli uninstall** from the Linux server as roo
 
 ## Related content
 
-[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)  
+[Use Conditional Access with the Microsoft Tunnel](microsoft-tunnel-conditional-access.md)
 [Monitor Microsoft Tunnel](microsoft-tunnel-monitor.md)

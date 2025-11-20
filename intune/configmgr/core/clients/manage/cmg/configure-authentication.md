@@ -6,11 +6,11 @@ ms.date: 08/02/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -180,8 +180,8 @@ Configure an on-premises management point to allow connections from the CMG with
 
 <a name="bkmk_note1"></a>
 
-> [!Note]  
-> **Note 1**: This configuration requires the client has a [client authentication certificate](#pki-certificate), and only supports device-centric scenarios.  
+> [!Note]
+> **Note 1**: This configuration requires the client has a [client authentication certificate](#pki-certificate), and only supports device-centric scenarios.
 
 ##### For on-premises clients communicating with the on-premises management point
 
@@ -194,7 +194,7 @@ Configure an on-premises management point with the following client connection m
 | Microsoft Entra joined  | HTTPS       |
 | Hybrid-joined    | HTTP, HTTPS |
 
-> [!NOTE]  
+> [!NOTE]
 > On-premises AD domain-joined clients support both device- and user-centric scenarios communicating with an HTTP or HTTPS management point.
 >
 > On-premises Microsoft Entra joined and hybrid-joined clients can communicate via HTTP for device-centric scenarios, but need E-HTTP or HTTPS to enable user-centric scenarios. Otherwise they behave the same as workgroup clients.
@@ -202,6 +202,6 @@ Configure an on-premises management point with the following client connection m
 ## Next steps
 
 You're now ready to create the CMG in Configuration Manager:
-  
+
 > [!div class="nextstepaction"]
 > [Set up CMG](setup-cloud-management-gateway.md)

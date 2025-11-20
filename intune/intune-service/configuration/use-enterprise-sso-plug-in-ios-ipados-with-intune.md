@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Configure iOS/iPadOS Enterprise SSO app extension with MDMs
 description: Learn more about the Microsoft Enterprise single sign-on (SSO) plug-in. Add or create an iOS or iPadOS device configuration profile using the Microsoft Enterprise SSO plug-in app extension in Microsoft Intune, Jamf Pro, and other MDM solution providers.
-keywords: Enterprise SSO plug-in, Microsoft Intune
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 05/01/2024
+ms.date: 07/14/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: miepping, tbc, alessanc
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -65,7 +48,7 @@ To use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices:
   - iOS/iPadOS 13.0 and newer
 - The Microsoft Authenticator app must be installed on the device.
 
-  Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Jamf Pro. For a list of options on how to install the Microsoft Authenticator app, go to [Managing macOS installers using Jamf Pro](https://docs.jamf.com/10.24.1/jamf-pro/administrator-guide/Managing_macOS_Installers.html) (opens Jamf Pro's web site).
+  Users can install the Microsoft Authenticator app manually. Or, admins can deploy the app using Jamf Pro. For instructions, see [Deploying the Microsoft Authenticator App to End Users](https://learn.jamf.com/bundle/technical-paper-microsoft-intune-current/page/Deploying_the_Microsoft_Authenticator_App.html) on the Jamf Learning Hub.
 
 - The Enterprise SSO plug-in requirements are configured, including the [Apple network configuration URLs](/entra/identity-platform/apple-sso-plugin#requirements).
 - **[Jamf Pro and Intune integration for device compliance](../protect/conditional-access-integrate-jamf.md) is not required to use the SSO app extension.**
@@ -119,12 +102,12 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid
 
       :::image type="content" source="./media/apple-enterprise-sso-plug-in/ios-ipados-device-features-sso-extension-type.png" alt-text="Screenshot that shows the SSO app extension type and Microsoft Entra ID for iOS/iPadOS in Intune.":::
 
-    - **Enable shared device mode**:  
+    - **Enable shared device mode**:
 
       - **Not configured**: Intune doesn't change or update this setting.
 
         For most scenarios, including Shared iPad, personal devices, and devices with or without user affinity, select this option.
-      - **Yes**: Select this option **only** if the targeted devices are using Microsoft Entra shared device mode. For more information, go to [Shared device mode overview](/entra/identity-platform/msal-shared-devices).  
+      - **Yes**: Select this option **only** if the targeted devices are using Microsoft Entra shared device mode. For more information, go to [Shared device mode overview](/entra/identity-platform/msal-shared-devices).
 
     - **App bundle ID**: Enter a list of bundle IDs for apps that don't support MSAL **and** are allowed to use SSO. For more information, go to [Applications that don't use MSAL](/azure/active-directory/develop/apple-sso-plugin#enable-sso-for-apps-that-dont-use-a-microsoft-identity-platform-library).
 
@@ -233,7 +216,7 @@ In the MDM portal, create a device configuration profile. This profile include
 
 When the device checks in with the MDM service, it receives this profile.
 
---- 
+---
 
 [!INCLUDE [Apple iOS End User Experience Boilerplate](../includes/apple-enterprise-sso-ios-end-user-experience-boilerplate.md)]
 

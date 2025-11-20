@@ -12,12 +12,12 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Obsolete classes
 
-Obsolete WMI classes in Configuration Manager.  
+Obsolete WMI classes in Configuration Manager.
 
 - SMS_AdvertisementStatusRootSummarizer server WMI class
 
@@ -47,9 +47,9 @@ Obsolete WMI classes in Configuration Manager.
 
 - SMS_LocalizedNameLookup server WMI class
 
-- SMS_NAPRestrictionErrorSummary Server WMI Class  
+- SMS_NAPRestrictionErrorSummary Server WMI Class
 
-- SMS_NAPRestrictionSummary Server WMI Class  
+- SMS_NAPRestrictionSummary Server WMI Class
 
 - SMS_NAPSystemInfo Server WMI Class
 

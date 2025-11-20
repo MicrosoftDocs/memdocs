@@ -1,30 +1,10 @@
 ---
-# required metadata
 title: User - Intune Data Warehouse
-titleSuffix: Microsoft Intune
 description: Reference topic for the User category of entity collections in the Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: C29A6EEA-72B7-427E-9601-E05B408F3BB0
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

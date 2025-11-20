@@ -11,7 +11,7 @@ manager: apoorvseth
 ms.author: banreetkaur
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Service windows for site servers

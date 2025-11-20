@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ICIINFO::GetContextInfo Method
-The `ICIINFO::GetContextInfo` method, in Configuration Manager, gets the context information by name from the configuration item.  
+The `ICIINFO::GetContextInfo` method, in Configuration Manager, gets the context information by name from the configuration item.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT GetContextInfo(  
-     LPCWSTR pszName,  
-     LPWSTR* ppszContext  
-);  
-```  
+```
+[IDL]
+HRESULT GetContextInfo(
+     LPCWSTR pszName,
+     LPWSTR* ppszContext
+);
+```
 
-#### Parameters  
- `pszName`  
- Data type: `LPCWSTR`  
+#### Parameters
+ `pszName`
+ Data type: `LPCWSTR`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Pointer to a null-terminated string specifying the name of the context information to retrieve.  
+ Pointer to a null-terminated string specifying the name of the context information to retrieve.
 
- `ppszContext`  
- Data type: `LPWSTR`  
+ `ppszContext`
+ Data type: `LPWSTR`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Pointer to a null-terminated string specifying the retrieved context information.  
+ Pointer to a null-terminated string specifying the retrieved context information.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+## Return Values
+ An `HRESULT` code. Possible values include, but are not limited to, the following:
 
- S_OK  
- The method succeeded. All other return values indicate failure.  
+ S_OK
+ The method succeeded. All other return values indicate failure.
 
-## Remarks  
- This method is used in setting information that is retrieved by certain class handlers in the System Definition Model (SDM) agent.  
+## Remarks
+ This method is used in setting information that is retrieved by certain class handlers in the System Definition Model (SDM) agent.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
+## See Also
  [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md)

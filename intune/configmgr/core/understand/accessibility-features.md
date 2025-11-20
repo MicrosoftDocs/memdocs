@@ -10,10 +10,10 @@ author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
     - tier3
     - essentials-accessibility
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Accessibility features in Configuration Manager

@@ -6,12 +6,12 @@ ms.date: 04/05/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
+author: LauraWi
 manager: apoorvseth
-ms.author: baladell
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Management tasks for Configuration Manager applications

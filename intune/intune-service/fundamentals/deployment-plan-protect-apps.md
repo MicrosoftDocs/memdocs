@@ -1,32 +1,16 @@
 ---
-# required metadata
-
-title: Add, configure, and protect apps with Intune
-titleSuffix: Microsoft Intune
+title: Add, Configure, and Protect Apps with Intune
 description: Add, configure, and protect apps with Intune.
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
 ms.date: 04/16/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite:
-search.appverid: MET150
-ms.custom: 
-ms.collection: 
-- M365-identity-device-management 
+ms.collection:
+- M365-identity-device-management
 - highpri
-- tier1
 ---
-# Step 2 - Add, configure, and protect apps with Intune
+# Step 2 - Add, Configure, and Protect Apps with Intune
 
 The next step when deploying Intune is to add and protect apps that access organization data.
 
@@ -117,7 +101,7 @@ Before adding apps to Intune, consider reviewing the support app types and asses
 
 Intune includes a number of Microsoft apps based on the Microsoft license that you use for Intune. To learn more about the different Microsoft enterprise licenses available that include Intune, see [Microsoft Intune licensing](licenses.md). To compare the different Microsoft apps that are available with Microsoft 365, see the [licensing options available with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans). To see all the options for each plan (including the available Microsoft apps), download the full [Microsoft subscription comparison table](https://go.microsoft.com/fwlink/?linkid=2139145) and locate the plans that include Microsoft Intune.
 
-One of the available app types is Microsoft 365 apps for Windows 10 devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows 10. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
+One of the available app types is Microsoft 365 apps for Windows devices. By selecting this app type in Intune, you can assign and install Microsoft 365 apps to devices you manage that run Windows. You can also assign and install apps for the Microsoft Project Online desktop client and Microsoft Visio Online Plan 2, if you own licenses for them. The available Microsoft 365 apps are displayed as a single entry in the list of apps in the Intune console within Azure.
 
 Add the following core Microsoft apps to Intune:
 
@@ -136,7 +120,7 @@ Add the following core Microsoft apps to Intune:
 For more information about adding Microsoft apps to Intune, go to the following topics:
 
 - [Add apps to Microsoft Intune](../apps/apps-add.md)
-- [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](../apps/apps-add-office365.md)
+- [Add Microsoft 365 Apps to Windows devices with Microsoft Intune](../apps/apps-add-office365.md)
 
 ### Add store apps (optional)
 
@@ -213,7 +197,7 @@ For more information about configuring email, go to the following topic:
 
 ## Protect apps using Intune
 
-App protection policies (APP) are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
+App protection policies are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move "corporate" data, or a set of actions that are prohibited or monitored when the user is inside the app. A managed app is an app that has app protection policies applied to it, and can be managed by Intune.
 
 Mobile Application Management (MAM) app protection policies allows you to manage and protect your organization's data within an application. Many productivity apps, such as the Microsoft Office apps, can be managed by Intune MAM. See the official list of Microsoft Intune protected apps available for public use.
 
@@ -235,9 +219,9 @@ For more information about app protection in Intune, go to the following topics:
 
 ### Levels of app protection
 
-As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune's mobile application management solution for protecting against data leakage is App Protection Policies (APP). APP are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled.
+As more organizations implement mobile device strategies for accessing work or school data, protecting against data leakage becomes paramount. Intune's mobile application management solution for protecting against data leakage is app protection policies. App protection policies are rules that ensure an organization's data remains safe or contained in a managed app, regardless of whether the device is enrolled.
 
-When configuring App Protection Policies, the different settings and options available allow organizations to customize the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows 10](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its APP data protection framework for mobile app management.  
+When configuring app protection policies, the different settings and options available allow organizations to customize the protection to their specific needs. Due to this flexibility, it may not be obvious which permutation of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening endeavors, Microsoft has introduced a new taxonomy for [security configurations in Windows](https://aka.ms/secconframework), and Intune is leveraging a similar taxonomy for its APP data protection framework for mobile app management.
 
 The APP data protection configuration framework is organized into three distinct configuration scenarios:
 

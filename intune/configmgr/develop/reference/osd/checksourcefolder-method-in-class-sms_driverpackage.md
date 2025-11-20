@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CheckSourceFolder Method in Class SMS_DriverPackage
-The `CheckSourceFolder` Windows Management Instrumentation (WMI) class method in Configuration Manager that checks the state of an empty driver source folder.  
+The `CheckSourceFolder` Windows Management Instrumentation (WMI) class method in Configuration Manager that checks the state of an empty driver source folder.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 CheckSourceFolder   
-{  
-    [IN]    String SourceFolder  
-    [OUT]   SInt32 Result  
-};  
-```  
+```
+uint32 CheckSourceFolder
+{
+    [IN]    String SourceFolder
+    [OUT]   SInt32 Result
+};
+```
 
-## Parameters  
- `SourceFolder`  
- Data type: `String`  
+## Parameters
+ `SourceFolder`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Source folder.  
+ Source folder.
 
- `Result`  
- Data type: `SInt32`  
+ `Result`
+ Data type: `SInt32`
 
- Qualifiers: [id("1"), out]  
+ Qualifiers: [id("1"), out]
 
- Results of check. Possible values are:  
+ Results of check. Possible values are:
 
 | Value | Result |
 | ----- | ------ |
-|0|No error.|  
-|1|The folder isn't in UNC format.|  
-|2|Can't read/write to the folder.|  
-|4|The folder isn't empty.|  
-|8|The folder is already used by another driver package.|  
+|0|No error.|
+|1|The folder isn't in UNC format.|
+|2|Can't read/write to the folder.|
+|4|The folder isn't empty.|
+|8|The folder is already used by another driver package.|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

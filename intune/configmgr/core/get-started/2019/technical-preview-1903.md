@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 1903
@@ -25,7 +25,7 @@ Review the [technical preview](../technical-preview.md) article before installin
 
 <br>
 
-**The following sections describe the new features to try out in this version:**  
+**The following sections describe the new features to try out in this version:**
 
 <!-- [!INCLUDE [Replace toast notifications with dialog window](includes/1903/3555947.md)] -->
 

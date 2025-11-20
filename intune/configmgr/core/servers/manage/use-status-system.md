@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Use the status system in Configuration Manager
@@ -177,7 +177,7 @@ With status filter rules, the site can take action when specific status message 
 > [!NOTE]
 > Configuration Manager only requires that a new status filter rule has a name. If you create a rule, but you don't specify any criteria to process status messages, the status filter rule has no effect. This behavior allows you to create and organize rules before you configure the criteria for each rule.
 
-## Configure status reporting  
+## Configure status reporting
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node.
 
@@ -191,7 +191,7 @@ With status filter rules, the site can take action when specific status message 
 
 ## Monitor the status system
 
-System status in Configuration Manager provides an overview of the general operations of sites and site server operations of your hierarchy. It can reveal operational problems for site system servers or components. You can use the system status to review specific details for different Configuration Manager operations. You monitor system status from the **System Status** node of the **Monitoring** workspace in the Configuration Manager console.  
+System status in Configuration Manager provides an overview of the general operations of sites and site server operations of your hierarchy. It can reveal operational problems for site system servers or components. You can use the system status to review specific details for different Configuration Manager operations. You monitor system status from the **System Status** node of the **Monitoring** workspace in the Configuration Manager console.
 
 Most Configuration Manager site system roles and components generate status messages. Status message details are logged in each component's operational log, but are also submitted to the site database. The site then summarizes and presents them in a general health rollup for each component or site system. These status message rollups provide information details for regular operations, and details of warnings and errors. You can configure the thresholds at which the site triggers warnings or errors. Tune the system in your environment to make sure rollup information ignores known issues that aren't relevant to you. Also configure it to call attention to actual problems that you need to investigate.
 

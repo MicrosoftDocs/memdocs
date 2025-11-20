@@ -12,45 +12,45 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # CCM_DTS_PRIORITY enumeration
 
-The **CCM_DTS_PRIORITY** enumeration indicates the priority of the download.  
+The **CCM_DTS_PRIORITY** enumeration indicates the priority of the download.
 
-## Syntax  
+## Syntax
 
 ```
-typedef enum  
-{  
+typedef enum
+{
     CCM_DTS_PRIORITY_FOREGROUND,
     CCM_DTS_PRIORITY_HIGH,
     CCM_DTS_PRIORITY_NORMAL,
     CCM_DTS_PRIORITY_LOW,
-}CCM_DTS_PRIORITY;  
+}CCM_DTS_PRIORITY;
 
-```  
+```
 
-## Members  
+## Members
 
-|Priority flag|Description|  
-|-|-|  
-|CCM_DTS_PRIORITY_FOREGROUND|The highest priority.|  
-|CCM_DTS_PRIORITY_HIGH|High priority.|  
-|CCM_DTS_PRIORITY_NORMAL|Normal priority.|  
-|CCM_DTS_PRIORITY_LOW|Low priority.|  
+|Priority flag|Description|
+|-|-|
+|CCM_DTS_PRIORITY_FOREGROUND|The highest priority.|
+|CCM_DTS_PRIORITY_HIGH|High priority.|
+|CCM_DTS_PRIORITY_NORMAL|Normal priority.|
+|CCM_DTS_PRIORITY_LOW|Low priority.|
 
 ## Remarks
 
-The only strict requirement is that jobs at a lower priority do not block progress of jobs at a higher priority. Providers must respect this.  
+The only strict requirement is that jobs at a lower priority do not block progress of jobs at a higher priority. Providers must respect this.
 
-## Requirements  
+## Requirements
 
 ### Runtime requirements
 
-For more information, see [Configuration Manager client runtime requirements](../../../../core/reqs/client-runtime-requirements.md).  
+For more information, see [Configuration Manager client runtime requirements](../../../../core/reqs/client-runtime-requirements.md).
 
 ### Development requirements
 
-For more information, see [Configuration Manager client development requirements](../../../../core/reqs/client-development-requirements.md).  
+For more information, see [Configuration Manager client development requirements](../../../../core/reqs/client-development-requirements.md).

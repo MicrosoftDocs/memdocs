@@ -12,344 +12,344 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_AppDeploymentType Client WMI Class
-The `CCM_AppDeploymentType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application deployment type.   
+The `CCM_AppDeploymentType` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application deployment type.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_AppDeploymentType : CCM_SoftwareBase  
-{  
-    String AllowedActions[];  
-    String ApplicabilityState;  
-    String ConfigureState;  
-    UInt32 ContentSize;  
-    DateTime Deadline;  
-    Object Dependencies[];  
-    String DeploymentReport;  
-    String Description;  
-    UInt32 ErrorCode;  
-    UInt32 EstimatedInstallTime;  
-    UInt32 EvaluationState;  
-    String FullName;  
-    String Id;  
-    String InstallState;  
-    DateTime LastEvalTime;  
-    UInt32 MaxExecuteTime;  
-    String Name;  
-    DateTime NextUserScheduledTime;  
-    UInt32 PercentComplete;  
-    String PostInstallAction;  
-    String Publisher;  
-    Boolean RequiresUserInteraction;  
-    String ResolvedState;  
-    UInt32 RetriesRemaining;  
-    String Revision;  
-    String SupersessionState;  
-    UInt32 Type;  
-};  
-```  
+```
+Class CCM_AppDeploymentType : CCM_SoftwareBase
+{
+    String AllowedActions[];
+    String ApplicabilityState;
+    String ConfigureState;
+    UInt32 ContentSize;
+    DateTime Deadline;
+    Object Dependencies[];
+    String DeploymentReport;
+    String Description;
+    UInt32 ErrorCode;
+    UInt32 EstimatedInstallTime;
+    UInt32 EvaluationState;
+    String FullName;
+    String Id;
+    String InstallState;
+    DateTime LastEvalTime;
+    UInt32 MaxExecuteTime;
+    String Name;
+    DateTime NextUserScheduledTime;
+    UInt32 PercentComplete;
+    String PostInstallAction;
+    String Publisher;
+    Boolean RequiresUserInteraction;
+    String ResolvedState;
+    UInt32 RetriesRemaining;
+    String Revision;
+    String SupersessionState;
+    UInt32 Type;
+};
+```
 
-## Methods  
- The following table lists the methods in the `CCM_AppDeploymentType` class.  
+## Methods
+ The following table lists the methods in the `CCM_AppDeploymentType` class.
 
--   [GetDeploymentTypeForUser Method in Class CCM_AppDeploymentType](../../../../../develop/reference/core/clients/sdk/getdeploymenttypeforuser-method-in-class-ccm_appdeploymenttype.md)  
+-   [GetDeploymentTypeForUser Method in Class CCM_AppDeploymentType](../../../../../develop/reference/core/clients/sdk/getdeploymenttypeforuser-method-in-class-ccm_appdeploymenttype.md)
 
--   [GetProperty Method in Class CCM_AppDeploymentType](../../../../../develop/reference/core/clients/sdk/getproperty-method-in-class-ccm_appdeploymenttype.md)  
+-   [GetProperty Method in Class CCM_AppDeploymentType](../../../../../develop/reference/core/clients/sdk/getproperty-method-in-class-ccm_appdeploymenttype.md)
 
--   [GetTargetedUsers Method in Class CCM_AppDeploymentType](../../../../../develop/reference/core/clients/sdk/gettargetedusers-method-in-class-ccm_appdeploymenttype.md)  
+-   [GetTargetedUsers Method in Class CCM_AppDeploymentType](../../../../../develop/reference/core/clients/sdk/gettargetedusers-method-in-class-ccm_appdeploymenttype.md)
 
-## Properties  
- `AllowedActions`  
- Data type: `String Array`  
+## Properties
+ `AllowedActions`
+ Data type: `String Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Allowed actions.    
+ Allowed actions.
 
- `ApplicabilityState`  
- Data type: `String`  
+ `ApplicabilityState`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [values]  
+ Qualifiers: [values]
 
- Applicability state. Possible values are:    
+ Applicability state. Possible values are:
 
 |Value|
-|-|  
-|Unknown|  
-|Applicable|  
-|NotApplicable|  
+|-|
+|Unknown|
+|Applicable|
+|NotApplicable|
 
- `ConfigureState`  
- Data type: `String`  
+ `ConfigureState`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [values]  
+ Qualifiers: [values]
 
- Configure state.    
+ Configure state.
 
- `ContentSize`  
- Data type: `UInt32`  
+ `ContentSize`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Content size.    
+ Content size.
 
- `Deadline`  
- Data type: `DateTime`  
+ `Deadline`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Deadline.    
+ Deadline.
 
- `Dependencies`  
- Data type: `Object Array`  
+ `Dependencies`
+ Data type: `Object Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Dependencies.    
+ Dependencies.
 
- `DeploymentReport`  
- Data type: `String`  
+ `DeploymentReport`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- Deployment report.    
+ Deployment report.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Deployment type description.    
+ Deployment type description.
 
- `ErrorCode`  
- Data type: `UInt32`  
+ `ErrorCode`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Error code.    
+ Error code.
 
- `EstimatedInstallTime`  
- Data type: `UInt32`  
+ `EstimatedInstallTime`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Estimated installation time.   
+ Estimated installation time.
 
- `EvaluationState`  
- Data type: `UInt32`  
+ `EvaluationState`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Evaluation state.    
+ Evaluation state.
 
- `FullName`  
- Data type: `String`  
+ `FullName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Full name.    
+ Full name.
 
- `Id`  
- Data type: `String`  
+ `Id`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier.    
+ Identifier.
 
- `InstallState`  
- Data type: `String`  
+ `InstallState`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [values]  
+ Qualifiers: [values]
 
- Installation state. Possible values are:    
+ Installation state. Possible values are:
 
 |Value|
-|-|  
-|NotInstalled|  
-|Unknown|  
-|Error|  
-|Installed|  
-|NotEvaluated|  
-|NotUpdated|  
+|-|
+|NotInstalled|
+|Unknown|
+|Error|
+|Installed|
+|NotEvaluated|
+|NotUpdated|
 
- `LastEvalTime`  
- Data type: `DateTime`  
+ `LastEvalTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last evaluation time.    
+ Last evaluation time.
 
- `MaxExecuteTime`  
- Data type: `UInt32`  
+ `MaxExecuteTime`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Maximum execution time.    
+ Maximum execution time.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name.    
+ Name.
 
- `NextUserScheduledTime`  
- Data type: `DateTime`  
+ `NextUserScheduledTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Next user scheduled time.    
+ Next user scheduled time.
 
- `PercentComplete`  
- Data type: `UInt32`  
+ `PercentComplete`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Percent complete.    
+ Percent complete.
 
- `PostInstallAction`  
- Data type: `String`  
+ `PostInstallAction`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [values]  
+ Qualifiers: [values]
 
- Post installation action. Possible values are:   
-
-|Value|
-|-|  
-|NoAction|  
-|BasedOnExitCode|  
-|ProgramReboot|  
-|ForceReboot|  
-|ForceLogOff|  
-
- `Publisher`  
- Data type: `String`  
-
- Access type: Read/Write  
-
- Qualifiers: none  
-
- Publisher.    
-
- `RequiresUserInteraction`  
- Data type: `Boolean`  
-
- Access type: Read/Write  
-
- Qualifiers: none  
-
- Requires user interaction.    
-
- `ResolvedState`  
- Data type: `String`  
-
- Access type: Read/Write  
-
- Qualifiers: [values]  
-
- Resolved state. Possible values are:    
+ Post installation action. Possible values are:
 
 |Value|
-|-|  
-|None|  
-|NotInstalled|  
-|Installed|  
-|Unknown|  
+|-|
+|NoAction|
+|BasedOnExitCode|
+|ProgramReboot|
+|ForceReboot|
+|ForceLogOff|
 
- `RetriesRemaining`  
- Data type: `UInt32`  
+ `Publisher`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Retries remaining.    
+ Publisher.
 
- `Revision`  
- Data type: `String`  
+ `RequiresUserInteraction`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: none
 
- Revision.    
+ Requires user interaction.
 
- `SupersessionState`  
- Data type: `String`  
+ `ResolvedState`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [values]  
+ Qualifiers: [values]
 
- Supersession state. Possible values are:    
+ Resolved state. Possible values are:
 
 |Value|
-|-|  
-|Unknown|  
-|None|  
-|Superseded|  
-|Superseding|  
+|-|
+|None|
+|NotInstalled|
+|Installed|
+|Unknown|
 
- `Type`  
- Data type: `UInt32`  
+ `RetriesRemaining`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Type.    
+ Retries remaining.
 
-## Remarks  
+ `Revision`
+ Data type: `String`
 
-## Requirements  
+ Access type: Read/Write
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+ Qualifiers: [key]
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+ Revision.
+
+ `SupersessionState`
+ Data type: `String`
+
+ Access type: Read/Write
+
+ Qualifiers: [values]
+
+ Supersession state. Possible values are:
+
+|Value|
+|-|
+|Unknown|
+|None|
+|Superseded|
+|Superseding|
+
+ `Type`
+ Data type: `UInt32`
+
+ Access type: Read/Write
+
+ Qualifiers: none
+
+ Type.
+
+## Remarks
+
+## Requirements
+
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
+
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

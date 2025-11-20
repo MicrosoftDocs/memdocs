@@ -1,45 +1,31 @@
 ---
-# required metadata
-
 title: Configure security baseline policies in Microsoft Intune
 description: Deploy security baselines that establish a default and recommended security postures on Windows devices you manage with Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 07/31/2024
-ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
+ms.date: 06/02/2025
+ms.topic: concept-article
 ms.reviewer: juidaewo
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom:
   - intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - ContentEnagagementFY24
 - sub-secure-endpoints
 ---
- 
+
 # Manage security baseline profiles in Microsoft Intune
 
-To help protect your users and Windows devices, you can configure and deploy distinct instances of Microsoft Intune security baseline profiles to different groups of Windows devices and users. There are different baselines for different products, and each is a group of preconfigured settings that represent the recommended security posture from that products security team. You can deploy a default (unmodified) baseline or customized your profiles to configure devices with the settings that your organization requires.
+To help protect your users and Windows devices, you can configure and deploy distinct instances of Microsoft Intune security baseline profiles to different groups of Windows devices and users. There are different baselines for different products, and each is a group of preconfigured settings that represent the recommended security posture from that products security team. You can deploy a default (unmodified) baseline or customize your profiles to configure devices with the settings that your organization requires.
 
 For a list of available security baselines, see [Security baselines overview](../protect/security-baselines.md#available-security-baselines).
 
 This feature applies to:
 
-- Windows 10 version 1809 and later
 - Windows 11
+- Windows 10 version 1809 and later
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Overview of security baselines
 
@@ -56,22 +42,44 @@ We recommend updating older baseline versions to the latest version as soon as i
 Common tasks when working with security baselines include:
 
 - [Create a new profile instance](#create-a-profile-for-a-security-baseline) – Configure the settings you want to use and assign the baseline to groups.
-- [Update an older version baseline to the most current baseline version](#update-a-profile-to-the-latest-version) – Change the baseline version in use by a profile.
+- [Update an older version baseline to the most current baseline version](#update-a-baseline-profile-to-the-latest-version) – Change the baseline version in use by a profile.
 - [Remove a baseline assignment](#remove-a-security-baseline-assignment) - Learn what happens when you stop managing settings with a security baseline.
 
 ## Prerequisites
 
-- Use of Intune to deploy security baselines requires a Microsoft Intune Plan 1 subscription.
+Find out what you need to manage Intune security baselines.
+
+### Licensing
+
+- Use of Intune to deploy security baselines requires a Microsoft Intune Plan 1 subscription. See [Microsoft Intune licensing](../fundamentals/licenses.md).
 
   > [!TIP]
   >
-  > Intune provides an easy to use user interface to configure and deploy security baselines, but does not create nor define the security baselines. Outside of Intune, other options to deploy security baselines are available, like those available from the [***Security Compliance Toolkit***](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
+  > Intune provides an easy-to-use user interface to configure and deploy security baselines but doesn't create nor define the security baselines. Outside of Intune, other options to deploy security baselines are available, like those available from the [***Security Compliance Toolkit***](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/security-compliance-toolkit-10).
 
 - Use of baselines through Intune requires you to have an active subscription for the managed product, when applicable. For example, use of the Microsoft Defender for Endpoint baseline doesn't grant rights to use Microsoft Defender. Instead, the baseline provides a method to configure and manage settings that are present on devices that are licensed for and managed by Microsoft Defender for Endpoint.
 
-- To manage baselines in Intune, your account must have the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles) built-in role.
+### Role-based access controls for managing Intune security baselines
+
+To manage security baselines in Intune, your account must be assigned an Intune role-based access control (RBAC) role that includes following categories and permissions sufficient to complete the desired task:
+
+- **Organization**:
+    - Read
+
+- **Security baselines**:
+  - Assign
+  - Create
+  - Delete
+  - Read
+  - Update
+
+You can add these permissions to your own [custom RBAC roles](../fundamentals/create-custom-role.md) or use an Intune [built-in RBAC role](../fundamentals/role-based-access-control-reference.md).
+
+The least privileged built-in Intune role that supports managing security baselines is the [Policy and Profile Manager](../fundamentals/role-based-access-control.md#built-in-roles).
 
 ## Create a profile for a security baseline
+
+The following guidance can be used anytime you create a new security baseline profile.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -79,26 +87,26 @@ Common tasks when working with security baselines include:
 
    ![Select a security baseline to configure](./media/security-baselines-configure/available-baselines.png)
 
-3. Select the baseline you'd like to use, and then select **Create profile**.
+3. Select the baseline you'd like to use, and then select **Create policy**.
 
 4. On the **Basics** tab, specify the following properties:
 
    - **Name**: Enter a name for your security baselines profile. For example, enter *Standard profile for Defender for Endpoint*.
 
-   - **Description**: Enter some text that describes what this baseline does. The description is for you to enter any text you want. It's optional, but recommended.
+   - **Description**: Enter some text that describes what this baseline does. The description is for you to enter any text you want. It's optional but recommended.
 
-   Select **Next** to go to the next tab. After you advance to a new tab, you can select the tab name to return to a previously viewed tab.
+   Select **Next** to move to the next tab. After you advance to a new tab, you can select the tab name to return to a previously viewed tab.
 
 5. On the Configuration settings tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
 
    - Select a group to expand and review the available settings.
    - The insights for a setting are available beside a light bulb icon. Settings insights provide confidence in configurations by adding insights that similar organizations adopted successfully. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).
-   - Use the *Search* bar and specify keywords that filter the view to display only those groups that contain your search criteria.
+   - Use the *Search* bar and specify keywords that filter the view to view only those groups that contain your search criteria.
 
-   Each setting in a baseline has a default configuration preset for that baseline version. Some will not be configured, while others are set to configure specific values or conditions on a device. The default presets found in a baseline represent the recommended security posture from that products security team. When configuring a baseline:
+   Each setting in a baseline has a default configuration preset for that baseline version. Some aren't configured, while others are set to configure specific values or conditions on a device. The default presets found in a baseline represent the recommended security posture from that product's security team. When configuring a baseline:
 
-   - Be sure to review each setting and when necessary reconfigure a default preset when your business needs require a different configuration.
-   - Be aware that different baselines types and versions can include settings that are found in other baselines, and each might recommend a different default value for a setting.
+   - Be sure to review each setting and when necessary, reconfigure a default preset when your business needs require a different configuration.
+   - Be aware that different baseline types and versions can include settings that are also in other baselines, and each might recommend a different default value for a setting.
 
    ![Expand a group to view the settings for that group](./media/security-baselines-configure/sample-list-of-settings.png)
 
@@ -107,8 +115,7 @@ Common tasks when working with security baselines include:
 7. On the **Assignments** tab, select **Select groups to include** and then assign the baseline to one or more groups. Use **Select groups to exclude** to fine-tune the assignment.
 
    > [!NOTE]
-   >
-   > Security baselines must be assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines may be needed when assigning both user and device-based settings.
+   > Security baselines are assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines might be needed when assigning both user and device-based settings.
 
    ![Assign a profile](./media/security-baselines-configure/assignments.png)
 
@@ -117,22 +124,78 @@ Common tasks when working with security baselines include:
    As soon as you create the profile, Intune pushes it to the assigned group, which applies it immediately.
 
    > [!TIP]
-   >
    > If you save a profile without first assigning it to groups, you can later edit the profile to do so.
 
    ![Review the baseline](./media/security-baselines-configure/review.png)
 
-9. After you create a profile, edit it by going to **Endpoint security** > **Security baselines**, select the baseline type that you configured, and then select **Profiles**. Select the profile from the list of available profiles, and then select **Properties**. You can edit settings from all the available configuration tabs, and select **Review + save** to commit your changes.
+9. After you create a profile, edit it by going to **Endpoint security** > **Security baselines**, select the baseline type that you configured, and then select **Profiles**. Select the profile from the list of available profiles, and then select **Properties**. You can edit settings from all the available configuration tabs and select **Review + save** to commit your changes.
 
-## Update a profile to the latest version
-
-The information in this section applies to updating a baseline instance that was created *before May 2023*, to a version of that same baseline that was released *after May 2023*.
+## Update a baseline profile to the latest version
 
 > [!NOTE]
+> The information in this section applies to updating a baseline profile that was created in *May 2023  or later* to a more recent version of that same baseline.
 >
-> In May, 2023, Intune began rollout of a new security baseline format for each new baseline release or update. Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing behavior when *moving to* a baseline version released in May, 2023 or later.
->
-> The previous behavior remains available for use when updating baselines that have not yet received a new version that uses the new format. For guidance, see [Update baselines that use the previous format](#update-baselines-that-use-the-previous-format).
+> The format of security baselines changed in May 2023. Due to this change, the update process for baseline profiles created before May 2023 to later versions represent separate scenarios. For updates to baselines created before May 2023, see the following content in this article that applies to your baseline update scenario:
+> - [Update baselines made before May 2023 to a baseline version released in May 2023 or later](#update-baselines-made-before-may-2023-to-a-baseline-version-released-in-may-2023-or-later)
+> - [Update older baselines to newer versions when the newest version predates May 2023](#update-older-baselines-to-a-newer-version-when-the-newest-version-predates-may-2023)
+
+When a new version for a baseline becomes available, plan to update your existing profiles to the new version.
+
+**When a new version of any baseline type is released:**
+- Existing profiles for that baseline type don’t automatically upgrade to the new version.
+- The settings in your existing profiles become read-only. While you can continue to use those profiles and edit their name, description, and assignments, you can’t modify the configuration of any settings in them.
+
+**When you update the version of a baseline profile:**
+- Updates always use the latest available version of the same baseline type. You can't update a baseline to anything other than the most recently released version.
+- The update process creates a new instance of the baseline based on the latest version as a side-by-side copy of the original profile. As part of the update, you have the choice to:
+
+  - **Keep customizations** – Intune applies all the settings customizations from the original baseline that you're upgrading to the new baselines template. The result is that the new  baseline instance retains (includes) all your organization's specific modifications.
+  - **Discard customizations** – Intune creates a new 'default' baseline instance using the new version. None of your settings customizations are automatically applied.
+
+- During the update, you must provide the new instance with a *name* but can't edit the other details in the profile until after it's created. Both scope tags and assignments aren't carried over and remain blank. However, you can review the configuration settings of the profile before saving it.
+
+**After the update process completes:**
+- You can edit the new baseline instance including customizing settings, adding assignments, and configuring scope tags.
+- The original baseline is left unchanged and retains its setting configurations, name, scope tags, and assignments. To avoid configuration conflicts, be sure to remove configurations like scope tags and assignments from the original baseline instance when adding the same to the updated baseline.
+- Once the older baseline version is no longer assigned to any groups, you can delete it from your tenant if you choose.
+
+### Update a baseline to the latest version
+*Applies to updating a baseline profile that was created in May 2023 or later.*
+
+1. Sign in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **Security baselines** > *select the baseline type* with the profile you want to update. On the baselines Profiles page, select the checkbox for the baseline instance that you want to update and then select **Update Version**. Intune displays the *Update Version* pane.
+
+2. On the *Update Version* pane, select the update method to use:
+   - **Accept baseline changes but keep my existing setting customizations** - Creates a new instance of the baseline profile using the latest version. Your current custom settings are preserved and applied to the new profile.
+   - **Accept baseline changes and discard existing setting customizations** - Creates a new instance of the baseline profile using the latest version. None of the customizations from the profile being updated are added to the new profile. The new profile uses its default settings configuration.
+
+   After selecting an update method, select **Create** to open the *Upgrade Policy* workflow for the new baseline profile you're creating.
+
+3. On the **Basics** tab, specify a *Name* for this new profile. The *Description* field is already populated but can be edited at this time.
+
+4. On the **Configuration settings** tab, you can review the configuration of the baseline's settings. If you choose to keep existing setting customizations, you see them here and can make other customizations if you choose.
+
+5. For **Scope tags**, configuration is optional. The update process doesn't apply the scope tags from the older profile to this new profile. You can choose to configure scope tags now or return to edit the profile to add them later.
+
+6. For **Assignments**, plan to assign the new profile to user groups or device groups. The update process doesn't apply the assignments from the older profile to this new profile. You can choose to configure assignments for this profile now and also return to edit the profile and add them later.
+
+   If you do configure assignments at this time, plan to revisit the older profiles assignments to remove or modify them as necessary to avoid creating [conflicts](../protect/security-baselines-monitor.md#resolve-conflicts-for-security-baselines) between the old and new profiles.
+
+   > [!NOTE]
+   > Security baselines are assigned to either user groups or device groups based on scope of the settings being used. Because of this, multiple baselines might be needed when assigning both user and device-based settings.
+
+7. On the **Review** tab, review the details for the baseline, and then select **Create** to save the new profile.
+
+   When saved, a profile immediately deploys to all assigned groups.
+
+### Test the updated baseline
+
+During the update of a baseline, Intune creates a copy of the original profile but doesn’t include the group assignments. This means the new baseline instance doesn’t deploy to any devices at the time you make a copy or at the time you update it to a new version.
+After you update the profile to the latest version, you can edit the settings in that new profile instance. This includes assigning the new baseline profile to groups of devices and editing the profiles settings to meet your organization’s expectations.
+
+## Update baselines made before May 2023 to a baseline version released in May 2023 or later
+
+> [!NOTE]
+> The information in this section applies to updating baseline profiles created before May 2023 when the most recent baseline version that is available was released in May 2023 or later.
 
 After May 2023, when a new version for a baseline is released, plan to update your existing profiles to the new version. When moving from an older format to the new baseline format (from a version released before May 2023 to one released in May 2023 or later):
 
@@ -140,32 +203,32 @@ After May 2023, when a new version for a baseline is released, plan to update yo
 
 - Baseline versions released before May 2023 don’t upgrade to the new format. Instead, create a new profile that uses the new format and configure the settings from the old baseline in that new baseline format. Recreation of the profile is a one-time process that is required to move a baseline from the old format to the new baseline format.
 
-  To assist you in this process Intune can export the old profile to a CSV format that identifies each setting based on the name of the setting as it appears in the new profile version, along with its configuration.
+  To assist you in this process, Intune can export the old profile to a CSV format that identifies each setting based on the name of the setting as it appears in the new profile version, along with its configuration.
 
-- After creating a new baseline that can replace your older baseline version, the older profile remains unchanged and you can continue to use it. You can continue to deploy, reassign, and edit the settings in the older baseline format.
+- After creating a new baseline that can replace your older baseline version, the older profile remains unchanged, and you can continue to use it. You can continue to deploy, reassign, and edit the settings in the older baseline format.
 
   > [!TIP]
   >
-  > Support to edit settings in an older baseline version after updating to a new version is a change from past behavior. This behavior is possible only when moving from baselines versions created before May 2023 to versions created in May 2023 or later because the new baseline format exists side-by-side with the older baseline format instead of replacing it. Later, when updating a baseline instance that was created in May 2023 or later to a newer version, the original behavior where you cannot edit settings in the older version returns.
+  > Support to edit settings in an older baseline version after updating to a new version is a change from past behavior. This behavior is possible only when moving from baselines versions created before May 2023 to versions created in May 2023 or later because the new baseline format exists side-by-side with the older baseline format instead of replacing it. Later, when updating a baseline instance that was created in May 2023 or later to a newer version, the original behavior where you can't edit settings in the older version returns.
 
-  We recommend planning to discontinue use of the older format and deploying a profile based on the latest version as soon as possible. The older profiles don't receive updates while the newer versions released in May 2023:
+  We recommend planning to discontinue use of the older format and deploy a profile based on the latest version as soon as possible. The older profiles don't receive updates while the newer versions released in May 2023:
 
   - Use the new settings format in the Intune UI that directly aligns to the configuration service provider (CSP) source for each setting.
   - Are preconfigured with default configurations that the relevant security teams recommend.
 
 ### Update a baseline to the new format
 
-To update a baseline that was created before May 2023 to the new format, you must create a new baseline instance. To assist you in recreating the original baselines configuration, you can have Intune export your current baselines configuration as a .CSV file. The export includes:
+To update a baseline that was created before May 2023 to the new format, you must create a new baseline instance. To assist you in recreating the original baselines configuration, you can have Intune export your current baselines configuration as a .CSV file. Exports include:
 
 - Each setting from the older baseline is identified by using the name of the setting as it appears in the new baseline. While the name of the setting isn't presented verbatim in the .csv, you can find the path for the setting, which contains part of the setting name in it.
 - How each setting in the older baseline was configured.
 - If the configuration of a setting from the old baseline matches the default configuration from the new baseline.
 
-With the information from the export, you can rapidly reconfigure the new baseline to use the same values as the older baseline instance.
+With the information from an export, you can rapidly reconfigure the new baseline to use the same values as the older baseline instance.
 
 1. Sign in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Endpoint security** > **Security baselines** > *select the baseline type*, and then select the checkbox for the baseline profile (instance) that you want to replicate in the new baseline format, and then select **Change Version**. Intune displays the *Change Version* pane.
 
-   In the following screenshot, we’ve drilled into the *Security Baseline for Microsoft Edge*. We have two profiles at this time. One is a new profile for Microsoft Edge v112, and the other is an older profile from September 2020. The older profile also displays an arrow icon to indicate that there's a newer version to replace it.
+   The following screenshot displays a view of the *Security Baseline for Microsoft Edge*. We have two profiles at this time. One is a new profile for Microsoft Edge v112, and the other is an older profile from September 2020. The older profile also displays an arrow icon to indicate that there's a newer version to replace it.
 
    :::image type="content" source="./media/security-baselines-configure/select-a-baseline-profile-to-update.png" alt-text="Screen shot that shows the navigation path in the Intune admin center, to open the Change Version pane." lightbox="./media/security-baselines-configure/select-a-baseline-profile-to-update.png":::
 
@@ -177,7 +240,7 @@ With the information from the export, you can rapidly reconfigure the new baseli
 
    The *Change Version* pane also includes a button to **Create** a new profile for the selected baseline, which has the same function as the *Create profile* option that is more commonly used to create new baseline instances.
 
-   The following screen capture shows an export for the Microsoft Edge profile version 85, as viewed in Microsoft Excel. Of the new Microsoft Edge baselines 17 settings that were found in the older profile, only one setting has changed: **Enable site isolation for every site** was set to **Disabled** in the older baseline. In the newer baseline, the setting now defaults to **Enabled**:
+   The following screen capture shows an export for the Microsoft Edge profile version 85, as viewed in Microsoft Excel. Of the new Microsoft Edge baselines 17 settings that were found in the older profile, only one setting is changed: **Enable site isolation for every site** was set to **Disabled** in the older baseline. In the newer baseline, the setting now defaults to **Enabled**:
 
    :::image type="content" source="./media/security-baselines-configure/csv-export-of-baseline-configuration.png" alt-text="Screen shot that shows an export of the Microsoft Edge baseline profile as a .csv file." lightbox="./media/security-baselines-configure/csv-export-of-baseline-configuration.png":::
 
@@ -195,20 +258,15 @@ With the information from the export, you can rapidly reconfigure the new baseli
 
    Later, when you create and configure the new profile, you can use the list from the CSV export to ensure each setting from the previous profile is set in the new profile with the same configuration.
 
-## Update baselines that use the previous format
-
-The information in this section applies to updating an existing baseline created before May 2023 to a version of that same baseline that was also released before May 2023.
+## Update older baselines to a newer version when the newest version predates May 2023
 
 > [!NOTE]
->
-> In May 2023, Intune began rollout of a new security baseline format for each new baseline release or update. Intune also introduced a new update process for migrating an existing security baseline profile to a newly released security baseline. This new behavior replaces existing behavior when moving to a baseline version released in May 2023 or later.
->
-> The following guidance is for use when updating a baseline to a newer version that was released before May 2023. If you’re updating a baseline to a version that was released in May 2023 or later, see [Update a profile to the latest version](#update-a-profile-to-the-latest-version).
+> The information in this section applies to updating a baseline profile that was created before May 2023 when the most recent baseline version that is available was also released before May 2023.
 
 When a new version for a baseline becomes available, plan to update your existing profiles to the new version:
 
 - Existing profiles don’t upgrade to new versions automatically.
-- Settings in baseline profiles that don’t use the latest version become read-only. You can continue using those older profiles, including editing their name, description, and assignments, but you can't edit settings for them or create new profiles based on those older versions.
+- Settings in baseline profiles that don’t use the latest version become read-only. You can continue using those older profiles, including editing their name, description, and assignments. However, you can't edit the settings in them or create new profiles based on those older versions.
 
 We recommend you [test the version](#test-the-conversion-and-updated-baseline) update on a copy of your existing profiles before you update your live profiles.
 
@@ -228,7 +286,7 @@ During conversion:
 
 - Settings that aren't in the new baseline version you select are removed and no longer enforced by this security baseline profile.
 
-  When a setting is no longer managed by a baseline profile, that setting doesn't reset on the device. Instead, the setting on the device remains set to its last configuration until some other process manages the setting to change it. Examples of processes that can change a setting after you stop managing it include a different baseline profile, a group policy setting, or manual configuration that's made on the device.
+  When a setting is no longer managed by a baseline profile, that setting doesn't reset on the device. Instead, the setting on the device remains set to its last configuration until some other process manages the setting to change it. Examples of processes that can change a setting after you stop managing it include a different baseline profile, a group policy setting, or manual configuration that's been applied on the device.
 
 After the conversion to the new baseline version is complete:
 
@@ -239,12 +297,12 @@ After the conversion to the new baseline version is complete:
 
 Before you update a baseline profile to a new version, create a copy of it so you can test the new version of your profile on a group of devices. See [Duplicate a security baseline](#duplicate-a-security-baseline) later in this article.
 
-- When you create a copy, group assignments aren't included, which means your baseline copy won't deploy to any devices at the time you make a copy or at the time you update it to a new version.
+- When you create a copy, group assignments aren't included, which means your baseline copy doesn't deploy to any devices at the time you make a copy or at the time you update it to a new version.
 - After you update the profile to the latest version, you can edit its settings. You can assign the updated copy to a group of devices and edit it to introduce changes to individual settings in the profile.
 
 ### To change the baseline version for a profile
 
-Before you update the version of a profile that's assigned to groups, [test the version update](#test-the-conversion-and-updated-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
+Before you update the version of a profile that has assigned groups, [test the version update](#test-the-conversion-and-updated-baseline) on a copy of profile so you can then validate the new baselines settings on test group of devices.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -258,7 +316,7 @@ Before you update the version of a profile that's assigned to groups, [test the 
 
    ![select a version](./media/security-baselines-configure/select-instance.png)
 
-5. Select **Review update** to download a CSV file that displays the difference between the profiles current instance version and the new version you've selected. Review this file so that you understand which settings are new or removed, and what the default values for these settings are in the updated profile.
+5. Select **Review update** to download a CSV file that displays the difference between the profile's current version and the new version. Review this file so that you understand which settings are new or removed, and what the default values for these settings are in the updated profile.
 
    When ready, continue to the next step.
 
@@ -278,9 +336,9 @@ Other processes that might later change settings on the device include a differe
 
 You can create duplicates of your security baselines. Duplicating a baseline can be useful when you want to assign a similar but distinct baseline to a subset of devices. By creating a duplicate, you don't need to manually recreate the entire baseline. Instead, you can duplicate any of your current baselines and then introduce only the changes the new instance requires. You might only change a specific setting and the group the baseline is assigned to.
 
-When you create a duplicate, give the copy a new name. The copy is made with the same setting configurations and scope tags as the original, but doesn't have any assignments. You must edit the new baseline to add assignments.
+When you create a duplicate, give the copy a new name. The copy is made with the same setting configurations and scope tags as the original but doesn't have any assignments. You must edit the new baseline to add assignments.
 
-All security baselines support creating a duplicate.
+All security baselines support creating duplicates.
 
 After you duplicate a baseline, review and edit the new instance to make changes to its configuration.
 
@@ -305,19 +363,20 @@ After a *Refresh*, the new baseline profile appears in the admin center.
 
    You can *Edit* a profiles *Configuration settings* only when that profile uses the latest version of that security baseline. For profiles that use older versions, you can expand **Settings** to view the configuration of settings in the profile, but you can't modify them. After a profile is updated to the most recent baseline version, you'll be able to edit the profiles settings.
 
-3. After you’ve made changes, select **Save** to save your edits. You save edits to one category before you can introduce edits to additional categories.
+3. After you make changes, select **Save** to save your edits. You must save edits to one category before you can introduce edits to other categories.
 
-## Older baseline versions
+## About older baseline versions
 
-Microsoft Intune updates the versions of built-in security baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers will use the latest baseline version as a starting point to their Device Configuration profiles.
-
+Microsoft Intune updates the versions of built-in security baselines depending on the changing needs of a typical organization. Each new release results in a version update to a particular baseline. The expectation is that customers use the latest baseline version as a starting point for their Device Configuration profiles.
+<!--
 When there are no longer any profiles that use an older baseline listed in your tenant, Microsoft Intune lists the latest baseline version available.
+-->
 
-If you have a profile associated with an older baseline, that older baseline continues to be listed.
+If you have a baseline profile associated with an older baseline version in use, that older baseline profile continues to be listed.
 
 ## Co-managed devices
 
-Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10/11 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager, and also want the benefits of the cloud.
+Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager and also want the benefits of the cloud.
 
 When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](/configmgr/comanage/workloads#device-configuration) provides more information.
 

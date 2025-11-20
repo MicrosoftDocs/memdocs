@@ -11,21 +11,21 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configuration Manager Executable Action
-In Configuration Manager, the executable action runs a program or opens a file by using the program registered with Windows for that file type.  
+In Configuration Manager, the executable action runs a program or opens a file by using the program registered with Windows for that file type.
 
- The following attributes and elements are specific to an action that runs a program:  
+ The following attributes and elements are specific to an action that runs a program:
 
--   The `ActionDescription` element `Class` attribute is set to `Executable`.  
+-   The `ActionDescription` element `Class` attribute is set to `Executable`.
 
--   The `Executable` element is parent to `FilePath``,` the path to the program, and to `Parameters`, the parameters passed to the executable.  
+-   The `Executable` element is parent to `FilePath``,` the path to the program, and to `Parameters`, the parameters passed to the executable.
 
-## Sample Executable Action XML  
+## Sample Executable Action XML
 
-```  
+```
 <ActionDescription Class="Executable" DisplayName="Test Action (execute)" MnemonicDisplayName="A test item" Description="A test item Description">
   <ShowOn>
     <string>DefaultHomeTab</string>
@@ -75,11 +75,11 @@ In Configuration Manager, the executable action runs a program or opens a file b
     <FilePath>https://go.microsoft.com/fwlink/?LinkId=67307</FilePath>
   </Executable>
 </ActionDescription>
-```  
+```
 
- Other elements and attributes are documented in [ActionDescription](/previous-versions/system-center/developer/cc147252(v=msdn.10)).  
+ Other elements and attributes are documented in [ActionDescription](/previous-versions/system-center/developer/cc147252(v=msdn.10)).
 
-## See Also  
- [Configuration Manager Actions](../../../../develop/core/servers/console/configuration-manager-actions.md)   
- [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)   
+## See Also
+ [Configuration Manager Actions](../../../../develop/core/servers/console/configuration-manager-actions.md)
+ [How to Create a Configuration Manager Action](../../../../develop/core/servers/console/how-to-create-a-configuration-manager-action.md)
  [How to Find a Configuration Manager Node GUID](../../../../develop/core/servers/console/how-to-find-a-configuration-manager-console-node-guid.md)

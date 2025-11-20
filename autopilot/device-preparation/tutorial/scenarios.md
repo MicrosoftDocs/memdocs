@@ -1,19 +1,12 @@
 ---
 title: Windows Autopilot device preparation scenarios
 description: Describes the different Windows Autopilot device preparation scenarios.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 04/02/2025
+ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
   - essentials-get-started
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -24,8 +17,8 @@ The following table summarizes the scenarios that are available in Windows Autop
 
 | **Scenario** | **Purpose** | **Description** |
 | --- | --- | --- |
-| **Windows Autopilot device preparation user-driven mode** | Set up device for a single user | User runs deployment |
-| **Windows Autopilot device preparation automatic mode** | Set up Windows 365 Frontline in shared mode | Device preparation policy is configured in the Cloud PC provisioning policy and deployment runs automatically after Cloud PCs are created |
+| **Windows Autopilot device preparation user-driven Microsoft Entra join mode** | Set up device for a single user | User runs deployment |
+| **Windows Autopilot device preparation automatic mode for Windows 365** | Set up Windows 365 Frontline in shared mode | Device preparation policy is configured in the Cloud PC provisioning policy and deployment runs automatically after Cloud PCs are created |
 
 > [!NOTE]
 >
@@ -35,8 +28,8 @@ The following table summarizes the scenarios that are available in Windows Autop
 
 The following list contains links to Windows Autopilot device preparation scenario walkthroughs. The walkthroughs contain step by step instructions on how to configure each of the Windows Autopilot device preparation scenarios:
 
-1. Windows Autopilot device preparation user-driven mode:
-   1. [Microsoft Entra join](user-driven/entra-join-workflow.md).
+1. [Windows Autopilot device preparation user-driven Microsoft Entra join mode](user-driven/entra-join-workflow.md).
+2. [Windows Autopilot device preparation automatic mode for Windows 365](automatic/automatic-workflow.md).
 
 ## Related content
 

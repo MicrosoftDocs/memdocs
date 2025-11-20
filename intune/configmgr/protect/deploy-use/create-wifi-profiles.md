@@ -6,11 +6,11 @@ ms.date: 03/29/2022
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -21,9 +21,9 @@ ms.collection: tier3
 > [!IMPORTANT]
 > Starting in version 2203, this company resource access feature is no longer supported.<!-- 9315387 --> For more information, see [Frequently asked questions about resource access deprecation](../plan-design/resource-access-deprecation-faq.yml).
 
-Use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.  
+Use Wi-Fi profiles in Configuration Manager to deploy wireless network settings to users in your organization. By deploying these settings, you make it easier for your users to connect to Wi-Fi.
 
-For example, you have a Wi-Fi network that you want to enable all Windows laptops to connect to. Create a Wi-Fi profile containing the settings necessary to connect to the wireless network. Then, deploy the profile to all users that have Windows laptops in your hierarchy. Users of these devices see your network in the list of wireless networks and can readily connect to this network.  
+For example, you have a Wi-Fi network that you want to enable all Windows laptops to connect to. Create a Wi-Fi profile containing the settings necessary to connect to the wireless network. Then, deploy the profile to all users that have Windows laptops in your hierarchy. Users of these devices see your network in the list of wireless networks and can readily connect to this network.
 
 You can configure Wi-Fi profiles for the following OS versions:
 
@@ -82,11 +82,11 @@ When you create a Wi-Fi profile, you can include a wide range of security settin
 1. On the **Security Configuration** page, specify the following information:
 
     > [!IMPORTANT]
-    > If you're creating a Wi-Fi profile for [on-premises MDM](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md), the current branch of Configuration Manager only supports the following Wi-Fi security configurations:  
+    > If you're creating a Wi-Fi profile for [on-premises MDM](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md), the current branch of Configuration Manager only supports the following Wi-Fi security configurations:
     >
-    > - Security types: **WPA2 Enterprise** or **WPA2 Personal**  
-    > - Encryption types: **AES** or **TKIP**  
-    > - EAP types: **Smart Card or other certificate** or **PEAP**  
+    > - Security types: **WPA2 Enterprise** or **WPA2 Personal**
+    > - Encryption types: **AES** or **TKIP**
+    > - EAP types: **Smart Card or other certificate** or **PEAP**
 
     - **Security type**: Select the security protocol that the wireless network uses, or select **No authentication (Open)** if the network is unsecured.
 

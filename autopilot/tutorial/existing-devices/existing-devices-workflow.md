@@ -1,18 +1,11 @@
 ---
 title: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager
 description: Overview for Windows Autopilot deployment for existing devices in Intune and Configuration Manager.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 05/23/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -81,7 +74,9 @@ The following steps are needed to configure and then perform a Windows Autopilot
 
 > [!IMPORTANT]
 >
-> If enrollment restrictions are configured to block personal devices from enrolling, Windows Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
+> - If enrollment restrictions are configured to block personal devices from enrolling, Windows Autopilot for existing devices can't be used. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices).
+>
+> - Any devices registered using a .json file during a hybrid join scenario are normally enrolled as a Corporate device.
 
 ## Walkthrough
 

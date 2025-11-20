@@ -6,12 +6,12 @@ ms.date: 03/23/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: concept-article
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # About discovery methods for Configuration Manager

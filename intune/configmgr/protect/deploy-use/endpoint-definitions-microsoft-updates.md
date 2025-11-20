@@ -6,11 +6,11 @@ ms.date: 11/18/2019
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -31,10 +31,10 @@ When you select to download definition updates from Microsoft Update, clients wi
 
 > [!IMPORTANT]
 >  Clients must have access to Microsoft Update on the Internet to be able use this method to download definition updates.
-> 
-> 
+>
+>
 > [!div class="button"]
 > [Next step >](endpoint-antimalware-policies.md)
-> 
+>
 > [!div class="button"]
 > [Back >](endpoint-configure-alerts.md)

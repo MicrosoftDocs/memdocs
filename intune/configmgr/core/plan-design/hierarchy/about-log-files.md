@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # About log files in Configuration Manager
@@ -74,27 +74,27 @@ For more information, see [Client installation properties](../../clients/deploy/
 
 ### Configure logging options by using Configuration Manager Service Manager
 
-You can change where Configuration Manager stores the log files, and their size.  
+You can change where Configuration Manager stores the log files, and their size.
 
-To modify the size of log files, change the name and location of the log file, or to force multiple components to write to a single log file, do the following steps:  
+To modify the size of log files, change the name and location of the log file, or to force multiple components to write to a single log file, do the following steps:
 
-#### Modify logging for a component  
+#### Modify logging for a component
 
-1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **System Status**, and then select either the **Site Status** or **Component Status** node.  
+1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **System Status**, and then select either the **Site Status** or **Component Status** node.
 
-2. In the ribbon, select **Start**, and then select **Configuration Manager Service Manager**.  
+2. In the ribbon, select **Start**, and then select **Configuration Manager Service Manager**.
 
-3. When Configuration Manager Service Manager opens, connect to the site that you want to manage. If the site that you want to manage isn't shown, select **Site**, select **Connect**, and then enter the name of the site server for the correct site.  
+3. When Configuration Manager Service Manager opens, connect to the site that you want to manage. If the site that you want to manage isn't shown, select **Site**, select **Connect**, and then enter the name of the site server for the correct site.
 
-4. Expand the site and go to **Components** or **Servers**, depending on where the components that you want to manage are located.  
+4. Expand the site and go to **Components** or **Servers**, depending on where the components that you want to manage are located.
 
-5. In the right pane, select one or more components.  
+5. In the right pane, select one or more components.
 
-6. On the **Component** menu, select **Logging**.  
+6. On the **Component** menu, select **Logging**.
 
-7. In the **Configuration Manager Component Logging** dialog box, complete the available configuration options for your selection.  
+7. In the **Configuration Manager Component Logging** dialog box, complete the available configuration options for your selection.
 
-8. Select **OK** to save the configuration.  
+8. Select **OK** to save the configuration.
 
 ### Configure logging options by using the Windows Registry
 

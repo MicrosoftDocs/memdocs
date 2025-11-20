@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot for pre-provisioned deployment
 description: Windows Autopilot for pre-provisioned deployment.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-ms.reviewer: madakeva
-manager: aaroncz
-author: frankroj
-ms.author: frankroj
-ms.date: 09/13/2024
+ms.date: 04/09/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -119,10 +112,6 @@ After the customer or IT Admin targets all the apps and settings they want for t
   - The user assigned to the device (if there's one).
   - A QR code containing a unique identifier for the device. This code can be used to look up the device in Intune, which might be needed to make configuration changes. For example, assign a user or add the device to groups needed for app or policy targeting.
 
-    > [!NOTE]
-    >
-    > The QR codes can be scanned using a companion app. The app also configures the device to specify who it belongs to. The Windows Autopilot team created an open-source sample of a companion app that integrates with Intune by using the Graph API. It's available on [GitHub](https://github.com/Microsoft/WindowsAutopilotCompanion).
-
 - Validate the information displayed. If any changes are needed, make the changes, and then select **Refresh** to redownload the updated Windows Autopilot profile details.
 
 - Select **Provision** to begin the provisioning process.
@@ -140,6 +129,7 @@ If the pre-provisioning process completes successfully:
 If the pre-provisioning process fails:
 
 - An error status screen appears with information about the device, including the same details presented previously. For example, Windows Autopilot profile, organization name, assigned user, and QR code. The elapsed time for the pre-provisioning steps is also provided.
+
 - Diagnostic logs can be gathered from the device, and then it can be reset to start the process over again.
 
 ### User flow
@@ -148,7 +138,7 @@ If the pre-provisioning process fails:
 
 > [!IMPORTANT]
 >
-> - In order to make sure tokens are refreshed properly between the Technician flow and the User flow, wait at least 90 minutes after running the Technician flow before running the User flow. This scenario mainly affects lab and testing scenarios when the User flow is run within 90 minutes after the Technician flow completes.
+> - Wait at least 90 minutes after running the Technician flow before running the User flow. Waiting makes sure tokens are refreshed properly between the Technician flow and the User flow. This scenario mainly affects lab and testing scenarios when the User flow is run within 90 minutes after the Technician flow completes.
 >
 > - The User flow should be run within six months after the Technician flow finishes. Waiting more than six months can cause the certificates used by the Intune Management Engine (IME) to no longer be valid leading to errors such as:
 >
@@ -170,7 +160,7 @@ If the pre-provisioning process completed successfully and the device was reseal
 
   > [!NOTE]
   >
-  > In certain circumstances, Microsoft Entra credentials might also be prompted for during a Microsoft Entra hybrid join scenario. For example, if ADFS isn't being used.
+  > In certain circumstances, Microsoft Entra credentials might also be prompted for during a Microsoft Entra hybrid join scenario. For example, if Active Directory Federation Service (ADFS) isn't being used.
 
 - More policies and apps are delivered to the device, as tracked by the Enrollment Status Page (ESP). Once complete, the user can access the desktop.
 

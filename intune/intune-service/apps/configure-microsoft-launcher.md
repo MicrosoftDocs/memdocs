@@ -1,34 +1,12 @@
 ---
-# required metadata
-
-title: Configure Microsoft Launcher for Android Enterprise with Intune 
-titleSuffix: 
-description: Use Intune configuration policies with Microsoft Launcher. 
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+title: Configure Microsoft Launcher for Android Enterprise With Intune
+description: Use Intune configuration policies with Microsoft Launcher.
 ms.date: 02/24/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: priyar
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-azure
 ---
 
 # Configure Microsoft Launcher
@@ -101,7 +79,7 @@ In addition to the list of configurable settings listed in the Configuration Des
 ```JSON
 {
     "key": "com.microsoft.launcher.HomeScreen.Applications",
-    "valueBundleArray": 
+    "valueBundleArray":
     [
         {
             "managedProperty": [
@@ -124,7 +102,7 @@ In addition to the list of configurable settings listed in the Configuration Des
 ```JSON
 {
     "key": "com.microsoft.launcher.HomeScreen.AppOrder",
-    "valueBundleArray": 
+    "valueBundleArray":
     [
         {
             "managedProperty": [
@@ -153,47 +131,47 @@ In addition to the list of configurable settings listed in the Configuration Des
 ### Set Pinned Web link
 
 ```JSON
-{ 
-    "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
-    "valueBundleArray": [ 
-        { 
-            "managedProperty": [ 
-                { 
+{
+    "key": "com.microsoft.launcher.HomeScreen.WebLinks",
+    "valueBundleArray": [
+        {
+            "managedProperty": [
+                {
                     "key": "label",
-                    "valueString": "weblink" 
-                },  
-                { 
-                    "key": "link", 
-                    "valueString": "https://www.microsoft.com" 
-                } 
-            ] 
+                    "valueString": "weblink"
+                },
+                {
+                    "key": "link",
+                    "valueString": "https://www.microsoft.com"
+                }
+            ]
         }
-    ] 
+    ]
 },
-{ 
-    "key": "com.microsoft.launcher.HomeScreen.AppOrder",  
-    "valueBundleArray": [ 
-        { 
-            "managedProperty": [ 
-                { 
-                    "key": "type",  
-                    "valueString": "weblink" 
-                },  
-                { 
-                    "key": "position",  
+{
+    "key": "com.microsoft.launcher.HomeScreen.AppOrder",
+    "valueBundleArray": [
+        {
+            "managedProperty": [
+                {
+                    "key": "type",
+                    "valueString": "weblink"
+                },
+                {
+                    "key": "position",
                     "valueInteger": 2
-                },  
-                { 
-                    "key": "label",  
-                    "valueString": "Microsoft" 
-                },  
-                { 
-                    "key": "link",  
-                    "valueString": "https://www.microsoft.com" 
-                } 
-            ] 
+                },
+                {
+                    "key": "label",
+                    "valueString": "Microsoft"
+                },
+                {
+                    "key": "link",
+                    "valueString": "https://www.microsoft.com"
+                }
+            ]
         }
-    ] 
+    ]
 }
 ```
 
@@ -203,154 +181,44 @@ The following is an example JSON script with all the available configuration key
 
 ```JSON
 {
-    "kind": "androidenterprise#managedConfiguration", 
-    "productId": "app:com.microsoft.launcher", 
+    "kind": "androidenterprise#managedConfiguration",
+    "productId": "app:com.microsoft.launcher",
     "managedProperty": [
         {
-            "key": "management_mode_key", 
+            "key": "management_mode_key",
             "valueString": "Default"
-        }, 
-        {
-            "key": "com.microsoft.launcher.Feed.Enable.UserChangeAllowed", 
-            "valueBool": false
-        }, 
-        {
-            "key": "com.microsoft.launcher.Feed.Enable", 
-            "valueBool": true
-        }, 
-        {
-            "key": "com.microsoft.launcher.Wallpaper.Url.UserChangeAllowed", 
-            "valueBool": false
-        }, 
-        {
-            "key": "com.microsoft.launcher.Wallpaper.Url", 
-            "valueString": "http://www.contoso.com/wallpaper.png"
-        }, 
-        {
-            "key": "com.microsoft.launcher.HomeScreen.GridSize", 
-            "valueString": "5;5"
-        }, 
-        {
-            "key": "com.microsoft.launcher.HomeScreen.Applications", 
-            "valueBundleArray": [
-                {
-                    "managedProperty": [
-                        {
-                            "key": "package", 
-                            "valueString": "com.ups.mobile.android"
-                        }, 
-                        {
-                            "key": "class", 
-                            "valueString": ""
-                        }
-                    ]
-                }, 
-                {
-                    "managedProperty": [
-                        {
-                            "key": "package", 
-                            "valueString": "com.microsoft.teams"
-                        }, 
-                        {
-                            "key": "class", 
-                            "valueString": ""
-                        }
-                    ]
-                }, 
-                {
-                    "managedProperty": [
-                        {
-                            "key": "package", 
-                            "valueString": "com.microsoft.bing"
-                        }, 
-                        {
-                            "key": "class", 
-                            "valueString": ""
-                        }
-                    ]
-                }
-            ]
-        }, 
-        { 
-            "key": "com.microsoft.launcher.HomeScreen.WebLinks",  
-            "valueBundleArray": [ 
-                { 
-                    "managedProperty": [ 
-                        { 
-                            "key": "label",
-                            "valueString": "News" 
-                        },  
-                        { 
-                            "key": "link", 
-                            "valueString": "https://www.contoso.com" 
-                        } 
-                    ] 
-                }
-            ] 
         },
         {
-            "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed", 
+            "key": "com.microsoft.launcher.Feed.Enable.UserChangeAllowed",
             "valueBool": false
-        }, 
+        },
         {
-            "key": "com.microsoft.launcher.HomeScreen.AppOrder", 
+            "key": "com.microsoft.launcher.Feed.Enable",
+            "valueBool": true
+        },
+        {
+            "key": "com.microsoft.launcher.Wallpaper.Url.UserChangeAllowed",
+            "valueBool": false
+        },
+        {
+            "key": "com.microsoft.launcher.Wallpaper.Url",
+            "valueString": "http://www.contoso.com/wallpaper.png"
+        },
+        {
+            "key": "com.microsoft.launcher.HomeScreen.GridSize",
+            "valueString": "5;5"
+        },
+        {
+            "key": "com.microsoft.launcher.HomeScreen.Applications",
             "valueBundleArray": [
                 {
                     "managedProperty": [
                         {
-                            "key": "type", 
-                            "valueString": "application"
-                        }, 
-                        {
-                            "key": "position", 
-                            "valueInteger": 17
-                        }, 
-                        {
-                            "key": "package", 
+                            "key": "package",
                             "valueString": "com.ups.mobile.android"
-                        }, 
+                        },
                         {
-                            "key": "class", 
-                            "valueString": ""
-                        }
-                    ]
-                }, 
-                {
-                    "managedProperty": [
-                        {
-                            "key": "type", 
-                            "valueString": "application"
-                        }, 
-                        {
-                            "key": "position", 
-                            "valueInteger": 18
-                        }, 
-                        {
-                            "key": "package", 
-                            "valueString": "com.microsoft.teams"
-                        }, 
-                        {
-                            "key": "class", 
-                            "valueString": ""
-                        }
-                    ]
-                }, 
-                {
-                    "managedProperty": [
-                        {
-                            "key": "type", 
-                            "valueString": "application"
-                        }, 
-                        {
-                            "key": "position", 
-                            "valueInteger": 19
-                        }, 
-                        {
-                            "key": "package", 
-                            "valueString": "com.microsoft.bing"
-                        }, 
-                        {
-                            "key": "class", 
+                            "key": "class",
                             "valueString": ""
                         }
                     ]
@@ -358,19 +226,129 @@ The following is an example JSON script with all the available configuration key
                 {
                     "managedProperty": [
                         {
-                            "key": "type", 
-                            "valueString": "weblink"
-                        }, 
+                            "key": "package",
+                            "valueString": "com.microsoft.teams"
+                        },
                         {
-                            "key": "position", 
-                            "valueInteger": 20
-                        }, 
+                            "key": "class",
+                            "valueString": ""
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
                         {
-                            "key": "label", 
+                            "key": "package",
+                            "valueString": "com.microsoft.bing"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": ""
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "com.microsoft.launcher.HomeScreen.WebLinks",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "label",
                             "valueString": "News"
-                        }, 
+                        },
                         {
-                            "key": "link", 
+                            "key": "link",
+                            "valueString": "https://www.contoso.com"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "key": "com.microsoft.launcher.HomeScreen.AppOrder.UserChangeAllowed",
+            "valueBool": false
+        },
+        {
+            "key": "com.microsoft.launcher.HomeScreen.AppOrder",
+            "valueBundleArray": [
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 17
+                        },
+                        {
+                            "key": "package",
+                            "valueString": "com.ups.mobile.android"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": ""
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 18
+                        },
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.teams"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": ""
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type",
+                            "valueString": "application"
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 19
+                        },
+                        {
+                            "key": "package",
+                            "valueString": "com.microsoft.bing"
+                        },
+                        {
+                            "key": "class",
+                            "valueString": ""
+                        }
+                    ]
+                },
+                {
+                    "managedProperty": [
+                        {
+                            "key": "type",
+                            "valueString": "weblink"
+                        },
+                        {
+                            "key": "position",
+                            "valueInteger": 20
+                        },
+                        {
+                            "key": "label",
+                            "valueString": "News"
+                        },
+                        {
+                            "key": "link",
                             "valueString": "https://www.contoso.com"
                         }
                     ]

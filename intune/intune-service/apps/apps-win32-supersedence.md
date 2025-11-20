@@ -1,29 +1,16 @@
 ---
-title: Add Win32 app supersedence
-titleSuffix: Microsoft Intune
-description: Learn how to use Win32 app supersedence with Microsoft Intune. 
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+title: Add Win32 App Supersedence
+description: Learn how to use Win32 app supersedence with Microsoft Intune.
 ms.date: 02/20/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---
 
-# Add Win32 app supersedence
+# Add Win32 App Supersedence
 
 After you [add a Win32 app to Intune](apps-win32-add.md), you can use Intune to create one or more supersedence relationships between apps. In general, supersedence is where you update or replace something. In Intune, supersedence enables you to update and replace existing Win32 apps with newer versions of the same app or an entirely different Win32 app. This article provides an overview of the supersedence feature.
 
@@ -108,8 +95,8 @@ Interactions between dependencies and supersedence include the following:
 - Enforcement prefers supersedence over dependency, but if there's a conflict state, Intune will report it.
     - **Specific example:** A depends on B, C supersedes B. A will report a conflict state.
     - **Specific example #2:** A depends on B, C replaces A; C installs and A gets replaced. B gets left.
-- Supersedence won't go through in specific scenarios. 
-    - **Example:** A depends on B and C, and B supersedes C.  
+- Supersedence won't go through in specific scenarios.
+    - **Example:** A depends on B and C, and B supersedes C.
 
 ## Basic Supersedence Examples
 
@@ -160,7 +147,7 @@ To better understand the behavior of a supersedence chain, the following table p
 
 ## Supersedence Limitations
 
-There can only be a maximum of 11 nodes in a single supersedence graph. The nodes include the superseding app, the superseded apps, and all subsequent related apps. 
+There can only be a maximum of 11 nodes in a single supersedence graph. The nodes include the superseding app, the superseded apps, and all subsequent related apps.
 In the following Supersedence diagram, there are five nodes in total. Hence, five more nodes could be created until the max node count is reached.
 
 ![Supersedence maximum node count example](./media/apps-win32-supersedence/apps-win32-supersedence-05.png)
@@ -171,7 +158,7 @@ Other supersedence limitations:
 
 ## Use auto-update with app supersedence
 
-You can automatically update Win32 applications on an enrolled end user's device that have been deployed from the Company Portal. These Win32 apps that have been deployed as *available* can automatically be updated by setting both a supersedence relationship for the app and selecting **Auto-update** when setting the assignment. Additionally, the assignment type must be **Available for enrolled devices**. 
+You can automatically update Win32 applications on an enrolled end user's device that have been deployed from the Company Portal. These Win32 apps that have been deployed as *available* can automatically be updated by setting both a supersedence relationship for the app and selecting **Auto-update** when setting the assignment. Additionally, the assignment type must be **Available for enrolled devices**.
 
 Users who had the superseded app installed from the Company Portal will automatically receive the superseding app. The supersedence auto-update only applies for *available* assignments, meaning users who have the superseded app through *required* intent won't receive the superseding app.
 
@@ -194,7 +181,7 @@ The following steps help you create an auto-update supersedence relationship bet
 
 ### Auto-update performance
 
-In order for the user to receive the auto-update for the superseding app, two device check-ins for available apps are required.  
+In order for the user to receive the auto-update for the superseding app, two device check-ins for available apps are required.
 
 The first available check-in will commonly happen between 1-8 hours after the assignment is created. The second available check-in will commonly happen 8 hours after the first check-in. The total time to receive the superseding app will be 8-16 hours. In the best case scenario, auto-update performance is quicker.
 
@@ -206,16 +193,16 @@ When an app is targeted with available intent to a group that contains the user,
 
 1.	You remove the user from the Group membership of the targeted group in the Microsoft Entra admin center.
 2.	You removed the assignment to the targeted group.
-3.	You changed the intent of the app from **Available** to something else. For example, you could change the intent to **Uninstall** or **Exclude**. 
+3.	You changed the intent of the app from **Available** to something else. For example, you could change the intent to **Uninstall** or **Exclude**.
 
-It’s important to note that even if you retarget the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed. 
+It’s important to note that even if you retarget the app with **Available** intent later, the auto-update supersedence won't occur because user consent has been removed.
 
 > [!NOTE]
 > The **Uninstall** intent takes precedence over **Available** intent.
 
 ### Auto-update retry behavior
 
-If the superseding app failed to auto-update and install for any reason, Intune will retry indefinitely until the user requests an install of the app from the Company Portal. When the user requests to install the app, Intune will change the request type in the backend to reflect that the user installed and stop installation retries from continuing. 
+If the superseding app failed to auto-update and install for any reason, Intune will retry indefinitely until the user requests an install of the app from the Company Portal. When the user requests to install the app, Intune will change the request type in the backend to reflect that the user installed and stop installation retries from continuing.
 
 ### Auto-update scenarios
 
@@ -230,13 +217,13 @@ Below are specific cases where app B has been created to supersede app A.
 | Upgrade   failure  | Intune attempts to auto-update   app A to app B but the installation of app B failed and app A was already   removed from the device. | Users won't be able to   reinstall app A from the Company Portal as it's superseded by app B, but are   able to try to reinstall app B from the Company Portal. |
 
 
-Limitations: 
+Limitations:
 
 - Any Application Assignment Changes will result in deleting the component that's responsible of auto-updating the App.
 
 - This Component can't be manually configured, it's created once App is installed via Company Portal by End-User.
 
-- App Assignment Must be well-studied prior deployment to avoid any changes in assignment after installation and breaking the auto-update eventually.  
+- App Assignment Must be well-studied prior deployment to avoid any changes in assignment after installation and breaking the auto-update eventually.
 
 ## Next steps
 

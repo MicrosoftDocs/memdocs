@@ -6,12 +6,12 @@ ms.date: 03/28/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configuration Manager console changes and tips
@@ -185,8 +185,8 @@ The default search will now include all workspaces that are when you search to a
    - Search for any string say "Devices" from any node n1 (Assume n1 is a parent node containing other nodes)
    - Search for any string say "Computer" from any node n2 (Assume n2 is a child node with no node inside it)
 
- :::image type="content" source="./media/24501008-recentsearch.png" alt-text="Screenshot showing recent search list of global search box in the CM console."::: 
- 
+ :::image type="content" source="./media/24501008-recentsearch.png" alt-text="Screenshot showing recent search list of global search box in the CM console.":::
+
   > [!NOTE]
   > Recent searches dropdown can be collapsed by clicking outside on the window
 
@@ -224,7 +224,7 @@ You can set security scopes on folders. If you have access to an object in the f
 
 ### Views sort by integer values
 
-We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:  
+We've made improvements to how various views sort data. For example, in the **Deployments** node of the **Monitoring** workspace, the following columns now sort as numbers instead of string values:
 
 - Number Errors
 - Number In Progress
@@ -258,7 +258,7 @@ For more information, see [Product Feedback](../../understand/product-feedback.m
 
 ### Co-management Eligible Devices collection
 <!--12377291-->
-*(Introduced in version 2111)* 
+*(Introduced in version 2111)*
 
 There's a new built-in device collection for **Co-management Eligible Devices**. The **Co-management Eligible Devices** collection uses incremental updates and a daily full update to keep the collection up to date.
 
@@ -274,7 +274,7 @@ When you show the members of a device collection, and select a device in the lis
 <!--9502958-->
 *(Introduced in version 2107)*
 
-You can now navigate to a collection from the **Collections** tab in the **Devices** node. Select **View Collection** from either the ribbon or the right-click menu in the tab. 
+You can now navigate to a collection from the **Collections** tab in the **Devices** node. Select **View Collection** from either the ribbon or the right-click menu in the tab.
 
 :::image type="content" source="./media/9502958-collection.png" alt-text="Screenshot of the Collections tab in the Devices node.":::
 
@@ -322,13 +322,13 @@ Copy discovery data from devices and users in the console. Copy the details to t
 
 There are various ways to display a list of devices under the **Devices** node in the **Assets and Compliance** workspace.
 
-- In the **Assets and Compliance** workspace, select the **Device Collections** node. Select a device collection, and choose the action to **Show members**. This action opens a subnode of the **Devices** node with a device list for that collection.  
+- In the **Assets and Compliance** workspace, select the **Device Collections** node. Select a device collection, and choose the action to **Show members**. This action opens a subnode of the **Devices** node with a device list for that collection.
 
-  - When you select the collection subnode, you can now start **CMPivot** from the Collection group of the ribbon.  
+  - When you select the collection subnode, you can now start **CMPivot** from the Collection group of the ribbon.
 
-- In the **Monitoring** workspace, select the **Deployments** node. Select a deployment, and choose the **View Status** action in the ribbon. In the deployment status pane, double-click the total assets to drill-through to a device list.  
+- In the **Monitoring** workspace, select the **Deployments** node. Select a deployment, and choose the **View Status** action in the ribbon. In the deployment status pane, double-click the total assets to drill-through to a device list.
 
-  - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
+  - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.
 
 ### Collections tab in devices node
 <!--4616810-->
@@ -356,14 +356,14 @@ You can search for a MAC address in a device view of the Configuration Manager c
 
 ### View users for a device
 
-The following columns are available in the **Devices** node:  
+The following columns are available in the **Devices** node:
 
-- **Primary user(s)** <!--1357280-->  
+- **Primary user(s)** <!--1357280-->
 
-- **Currently logged on user** <!--1358202-->  
+- **Currently logged on user** <!--1358202-->
 
-    > [!NOTE]  
-    > Viewing the currently logged on user requires [user discovery](../deploy/configure/configure-discovery-methods.md#bkmk_config-adud) and [user device affinity](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).  
+    > [!NOTE]
+    > Viewing the currently logged on user requires [user discovery](../deploy/configure/configure-discovery-methods.md#bkmk_config-adud) and [user device affinity](../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
 
 For more information on how to show a non-default column, see [How to use the admin console](admin-console.md#columns).
 
@@ -392,7 +392,7 @@ You can organize software update groups and packages by using folders. This chan
 <!--8325332, 9506942, 9506938, 9506934-->
 *(Introduced in version 2107)*
 
-You can use the **All Subfolders** search option for the following nodes: 
+You can use the **All Subfolders** search option for the following nodes:
 - **Boot Images** node
 - **Operating System Upgrade Packages** node
 - **Operating System Images** node
@@ -463,11 +463,11 @@ In the **Software Library** workspace, expand **Application Management**, go to 
 1. Select an application that has a deployment type with a detection method. For example, a Windows Installer detection method.
 1. In the details pane, switch to the **Deployment Types** tab.
 1. Open the properties of a deployment type, and switch to the **Detection Method** tab. Select **Add Clause**.
-1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.  
+1. Change the **Setting Type** to **Registry** and select **Browse** to open the **Browse Registry** window. You can now maximize this window.
 
 ### Edit a task sequence by default
 
-In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.  
+In the **Software Library** workspace, expand **Operating Systems**, and select the **Task Sequences** node. **Edit** is now the default action when opening a task sequence. Previously the default action was **Properties**.
 
 ### Go to the collection from an application deployment
 
@@ -507,11 +507,11 @@ In the **Monitoring** workspace, select the **Script Status** node. It now lists
 ### Copy details in monitoring views
 
 <!--1357856-->
-Copy information from the **Asset Details** pane for the following monitoring nodes:  
+Copy information from the **Asset Details** pane for the following monitoring nodes:
 
-- **Content Distribution Status**  
+- **Content Distribution Status**
 
-- **Deployment Status**  
+- **Deployment Status**
 
 ![Deployment Status view, copy asset details](media/1810-deployment-status.PNG)
 

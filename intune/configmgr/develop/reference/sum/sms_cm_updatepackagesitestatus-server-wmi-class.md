@@ -12,148 +12,148 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CM_UpdatePackageSiteStatus Server WMI Class
-The  `SMS_CM_UpdatePackageSiteStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to get the update package installation status per site.  
+The  `SMS_CM_UpdatePackageSiteStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that is used to get the update package installation status per site.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CM_UpdatePackageSiteStatus : SMS_BaseClass  
-{  
-    DateTime LastUpdateTime;    
-    String Name;  
-    String PackageGuid;  
-    SInt32 PrereqFlag;  
-    String SiteCode;  
-    String SiteName;  
-    SInt32 SiteNumber;  
-    String SiteServerName;  
-    Sint32 SiteType;  
-    Sint32 State;  
-};  
+```
+Class SMS_CM_UpdatePackageSiteStatus : SMS_BaseClass
+{
+    DateTime LastUpdateTime;
+    String Name;
+    String PackageGuid;
+    SInt32 PrereqFlag;
+    String SiteCode;
+    String SiteName;
+    SInt32 SiteNumber;
+    String SiteServerName;
+    Sint32 SiteType;
+    Sint32 State;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_CM_UpdatePackageSiteStatus` class.  
+## Methods
+ The following table lists the methods in the `SMS_CM_UpdatePackageSiteStatus` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[UpdatePackageSiteState Method in Class SMS_CM_UpdatePackageSiteStatus](../../../develop/reference/sum/updatepackagesitestate-method-in-class-sms_cm_updatepackagesitestatus.md)|Updates the package installation state of the site.|  
+|Method|Description|
+|------------|-----------------|
+|[UpdatePackageSiteState Method in Class SMS_CM_UpdatePackageSiteStatus](../../../develop/reference/sum/updatepackagesitestate-method-in-class-sms_cm_updatepackagesitestatus.md)|Updates the package installation state of the site.|
 
-## Properties  
- `LastUpdateTime`  
- Data type: `DateTime`  
+## Properties
+ `LastUpdateTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date and time that the state was last updated.  
+ The date and time that the state was last updated.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The name of the update package.  
+ The name of the update package.
 
- `PackageGuid`  
- Data type: `String`  
+ `PackageGuid`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, key, not_null]  
+ Qualifiers: [read, key, not_null]
 
- The unique identifier of the package.  
+ The unique identifier of the package.
 
- `PrereqFlag`  
- Data type: `SInt32`  
+ `PrereqFlag`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Prerequisite flag. Possible values are: bits:  
+ Prerequisite flag. Possible values are: bits:
 
-| Value | Description |  
-| ----- | ----------- |  
-|0x1|Prereq only|  
-|0x2|CONTINUE_ON_PREREQ_WARNING|  
+| Value | Description |
+| ----- | ----------- |
+|0x1|Prereq only|
+|0x2|CONTINUE_ON_PREREQ_WARNING|
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The site code.  
+ The site code.
 
- `SiteName`  
- Data type: `String`  
+ `SiteName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The name of the site.  
+ The name of the site.
 
- `SiteNumber`  
- Data type: `SInt32`  
+ `SiteNumber`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, key, not_null]  
+ Qualifiers: [read, key, not_null]
 
- The unique identifier of the site.  
+ The unique identifier of the site.
 
- `SiteServerName`  
- Data type: `String`  
+ `SiteServerName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The site server name.  
+ The site server name.
 
- `SiteType`  
- Data type: `SInt32`  
+ `SiteType`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The site type.  
+ The site type.
 
- `State`  
- Data type: `SInt32`  
+ `State`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The state of the installation.  
+ The state of the installation.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Create discovery scripts for custom compliance policy in Microsoft Intune
 description: Create scripts for Linux or Windows devices to discover the settings you define as custom compliance settings for Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 05/15/2024
+ms.date: 09/04/2025
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -40,7 +23,7 @@ The discovery script deploys to devices as part of your custom compliance polici
 
 All discovery scripts:
 
-- Are added to Intune *before* you create a compliance policy. After being added, scripts are available to select when you create a compliance policy with custom settings.
+- Are added to Intune before you create a compliance policy. After being added, scripts are available to select when you create a compliance policy with custom settings.
   - Each discovery script can only be used with one compliance policy, and each compliance policy can only include one discovery script.
   - Discovery scripts that are assigned to a compliance policy can't be deleted until the script is unassigned from the policy.
 - Run on a device that receives the compliance policy. The script evaluates the conditions of the JSON file you upload when creating a custom compliance policy.
@@ -67,14 +50,14 @@ The following example is a sample PowerShell script that you could use for Windo
 
 ```powershell
 $WMI_ComputerSystem = Get-WMIObject -class Win32_ComputerSystem
-$WMI_BIOS = Get-WMIObject -class Win32_BIOS 
+$WMI_BIOS = Get-WMIObject -class Win32_BIOS
 $TPM = Get-Tpm
 
 $hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}
 return $hash | ConvertTo-Json -Compress
 ```
 
-Following is an example of the output of the sample script fro Windows:
+Following is an example of the output of the sample script for Windows:
 
 ```powershell
 {"BiosVersion":"1.24","Manufacturer":"Microsoft Corporation","TPMChipPresent":true}
@@ -94,7 +77,7 @@ For example, if your script should use the Bash shell as the interpreter, add th
 
 If you want to use Python for your script, indicate where the interpreter is installed. For example, add the following to the top of your script: `[ !/usr/bin/python3 ]` or `[ !/usr/bin/env python ]`
 
-**Recommended best practice**: To enable your scripts to handle scenarios like interrupts or cancellation signals, implement graceful termination mechanisms. When a script properly caches and handles these signals, the script can perform cleanup tasks and exist gracefully, ensuring resources are released correctly. For example, you can catch specific signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to run when these signals are received. These actions can include closing open files, releasing acquired locks, or cleaning up temporary resources. Proper handling of signals helps to maintain script integrity and improve overall user experience.
+**Recommended best practice**: To enable your scripts to handle scenarios like interrupts or cancellation signals, implement graceful termination mechanisms. When a script properly caches and handles these signals, the script can perform cleanup tasks and exit gracefully, ensuring resources are released correctly. For example, you can catch specific signals like SIGINT (interrupt signal) or SIGTERM (termination signal) and define custom actions to run when these signals are received. These actions can include closing open files, releasing acquired locks, or cleaning up temporary resources. Proper handling of signals helps to maintain script integrity and improve overall user experience.
 
 For more information, see the [Intune Linux Custom Compliance Samples](https://github.com/microsoft/shell-intune-samples/tree/master/Linux) guide.
 
@@ -103,15 +86,15 @@ For more information, see the [Intune Linux Custom Compliance Samples](https://g
 Before deploying your script in production, test it in an isolated environment to ensure the syntax you use behaves as expected.
 
 1. Sign into [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Device compliance** > **Scripts** > **Add** > *(choose your platform)*.
-2. On **Basics**, provide a *Name*.
-3. On **Settings**, add your script to *Detection script*. Review your script carefully. Intune doesn’t validate the script for syntax or programmatic errors.
+2. On **Basics**, provide a **Name**.
+3. On **Settings**, add your script to **Detection script**. Review your script carefully. Intune doesn’t validate the script for syntax or programmatic errors.
 4. ***For Windows only*** - On **Settings**, configure the following behavior for the PowerShell script:
 
-   - **Run this script using the logged on credentials** – By default, the script runs in the System context on the device. Set this value to Yes to have it run in the context of the logged-on user. If the user isn’t logged in, the script defaults back to the System context.
+   - **Run this script using the logged on credentials** – By default, the script runs in the System context on the device. Set this value to **Yes** to have it run in the context of the logged-on user. If the user isn’t logged in, the script defaults back to the System context.
    - **Enforce script signature check** – For more information, see [about_Signing](/powershell/module/microsoft.powershell.core/about/about_signing?view=powershell-7.1&preserve-view=true) in the PowerShell documentation.
-   - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to *Yes* to force the script to run using the 64-bit host instead.
+   - **Run script in 64 bit PowerShell Host** – By default, the script runs using the 32-bit PowerShell host. Set this value to **Yes** to force the script to run using the 64-bit host instead.
 
-5. Complete the script creation process. The script is now visible in the *Scripts* pane of the Microsoft Intune admin center and is available to select when configuring compliance policies.
+5. Complete the script creation process. The script is now visible in the **Scripts** pane of the Microsoft Intune admin center and is available to select when configuring compliance policies.
 
 Because the workflow for uploading these scripts to the Microsoft Intune admin center doesn't support scope tags, you must be assigned the default scope tag to create, edit, or see custom compliance discovery scripts.
 

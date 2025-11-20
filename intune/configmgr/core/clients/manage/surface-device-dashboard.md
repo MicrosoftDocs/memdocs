@@ -2,8 +2,8 @@
 title: Surface Device Dashboard
 titleSuffix: Configuration Manager
 description: Review information about Surface devices using the dashboard.
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 11/15/2021
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Surface device dashboard in Configuration Manager

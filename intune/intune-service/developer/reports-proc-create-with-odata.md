@@ -1,34 +1,14 @@
 ---
-# required metadata
-title: Create an Intune report from the OData feed with Power BI
-titleSuffix: Microsoft Intune
+title: Create an Intune Report From the OData Feed With Power BI
 description: Create a treemap visualization using Power BI Desktop with an interactive filter from the Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: A2C8A336-29D3-47DF-BB4A-62748339391D
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Create an Intune report from the OData feed with Power BI
+# Create an Intune Report From the OData Feed With Power BI
 
 This article explains how to create a treemap visualization of your Intune data using Power BI Desktop that users an interactive filter. For example, your CFO might like to know how the overall distribution of devices compares between company-owned devices and personal devices. The treemap provides insight into the total number of device types. You can review the number of iOS/iPadOS, Android, and Windows devices that are either company owned or personally owned.
 
@@ -54,7 +34,7 @@ Install the latest version of Power BI Desktop. You can download Power BI Deskto
 
 ## Connect to the OData feed for the Intune Data Warehouse for your tenant
 
-> [!Note]  
+> [!Note]
 > You need permission to **Reports** in Intune. For more information, see [Authorization](reports-api-url.md#authorization).
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
@@ -100,7 +80,7 @@ A treemap chart shows hierarchical data as boxes within boxes. Each branch of th
 2. In the **Fields** pane, find the `devices` table.
 3. Expand the `devices` table and select the `manufacturer` data field.
 4. Drag the `manufacturer` data field to the report canvas and drop it on the **Treemap** chart.
-5. Drag the `deviceKey` data field from the `devices` table to the **Visualizations** pane and drop it on under the **Values** section in the box labeled **Add data fields here**.  
+5. Drag the `deviceKey` data field from the `devices` table to the **Visualizations** pane and drop it on under the **Values** section in the box labeled **Add data fields here**.
 
 You now have a visual that shows the distribution of manufacturers of devices within your organization.
 
@@ -113,7 +93,7 @@ You can add a filter to your treemap so that you can answer additional questions
 1. To add a filter, select the report canvas, and then select the **Slicer icon** (![Treemap with data model and supported relationships.](./media/reports-proc-create-with-odata/reports-create-slicer.png)) under **Visualizations**. The empty **Slicer** visualization will appear on the canvas.
 2. In the **Fields** pane, find the `ownerTypes` table.
 3. Expand the `ownerTypes` table and select the `ownerTypeName` data field.
-4. Drag the `onwerTypeName` data field from the `ownerTypes` table to the **Filters** pane and drop it on under the **Filters on this page** section in the box labeled **Add data fields here**.  
+4. Drag the `onwerTypeName` data field from the `ownerTypes` table to the **Filters** pane and drop it on under the **Filters on this page** section in the box labeled **Add data fields here**.
 
    Under the `OwnerTypes` table, there's a data field called `OwnerTypeKey`that contains a data as to whether a device is company-owned or personal. Since you would like to show friendly names in this filter, look for the `ownerTypes` table and drag the **ownerTypeName** to the Slicer. This example shows how the data model supports relationships between tables.
 

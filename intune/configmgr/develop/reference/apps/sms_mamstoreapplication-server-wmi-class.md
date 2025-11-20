@@ -12,99 +12,99 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MAMStoreApplication Server WMI Class
-The `SMS_MAMStoreApplication` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents mobile application management (MAM) store application lists.  
+The `SMS_MAMStoreApplication` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents mobile application management (MAM) store application lists.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MAMStoreApplication : SMS_BaseClass  
-{  
-     String IdentityIdentifier;  
-     Boolean IsManagedBrowser;  
-     String MAMSDKVersion;  
-     Boolean PinToProfile;  
-     UInt32 StoreIdentifier;  
-     String StoreApplicationIdentifier;  
-};  
+```
+Class SMS_MAMStoreApplication : SMS_BaseClass
+{
+     String IdentityIdentifier;
+     Boolean IsManagedBrowser;
+     String MAMSDKVersion;
+     Boolean PinToProfile;
+     UInt32 StoreIdentifier;
+     String StoreApplicationIdentifier;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_MAMStoreApplication` class does not define any methods.  
+## Methods
+ The `SMS_MAMStoreApplication` class does not define any methods.
 
-## Properties  
- `IdentityIdentifier`  
- Data type: `String`  
+## Properties
+ `IdentityIdentifier`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- Identity identifier.  
+ Identity identifier.
 
- `IsManagedBrowser`  
- Data type: `Boolean`  
+ `IsManagedBrowser`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- True if managed browser MAM application.  
+ True if managed browser MAM application.
 
- `MAMSDKVersion`  
- Data type: `String`  
+ `MAMSDKVersion`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- Version of the MAM SDK.  
+ Version of the MAM SDK.
 
- `PinToProfile`  
- Data type: `Boolean`  
+ `PinToProfile`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- True if this application pin to profile.  
+ True if this application pin to profile.
 
- `StoreIdentifier`  
- Data type: `UInt32`  
+ `StoreIdentifier`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- Store identifier.  
+ Store identifier.
 
- `StoreApplicationIdentifier`  
- Data type: `String`  
+ `StoreApplicationIdentifier`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- Store application identifier.  
+ Store application identifier.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

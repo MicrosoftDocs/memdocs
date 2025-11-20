@@ -1,13 +1,6 @@
 ---
 title: Compare Windows Autopilot device preparation and Windows Autopilot
 description: Compare Windows Autopilot device preparation and Windows Autopilot features and when to use each.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
 ms.date: 04/02/2025
 ms.topic: overview
 ms.collection:

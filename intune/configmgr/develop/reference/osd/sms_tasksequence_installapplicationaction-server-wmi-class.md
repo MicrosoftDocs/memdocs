@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_TaskSequence_InstallApplicationAction server WMI class
@@ -24,36 +24,36 @@ The following syntax is simplified from Managed Object Format (MOF) code and inc
 ## Syntax
 
 ```MOF
-Class SMS_TaskSequence_InstallApplicationAction : SMS_TaskSequence_Action  
-{  
-    SMS_TaskSequence_ApplicationInfo AppInfo[];  
-    String ApplicationName;  
-    String BaseVariableName;  
+Class SMS_TaskSequence_InstallApplicationAction : SMS_TaskSequence_Action
+{
+    SMS_TaskSequence_ApplicationInfo AppInfo[];
+    String ApplicationName;
+    String BaseVariableName;
     boolean ClearCache;
-    SMS_TaskSequence_Condition Condition;  
-    Boolean ContinueOnError;  
-    Boolean ContinueOnInstallError;  
-    String Description;  
-    Boolean Enabled;  
-    String Name;  
-    UInt32 NumApps;  
-    String RetryCount;  
-    String SupportedEnvironment;  
-    UInt32 Timeout;  
-};  
-```  
+    SMS_TaskSequence_Condition Condition;
+    Boolean ContinueOnError;
+    Boolean ContinueOnInstallError;
+    String Description;
+    Boolean Enabled;
+    String Name;
+    UInt32 NumApps;
+    String RetryCount;
+    String SupportedEnvironment;
+    UInt32 Timeout;
+};
+```
 
 ## Methods
 
-The `SMS_TaskSequence_InstallApplicationAction` class doesn't define any methods.  
+The `SMS_TaskSequence_InstallApplicationAction` class doesn't define any methods.
 
 ## Properties
 
 ### `AppInfo`
 
-Data type: `SMS_TaskSequence_ApplicationInfo` Array  
+Data type: `SMS_TaskSequence_ApplicationInfo` Array
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[variablename]`
 
@@ -61,9 +61,9 @@ An array of [SMS_TaskSequence_ApplicationInfo server WMI class](../../../develop
 
 ### `ApplicationName`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[commandlinearg, tasksequenceapplication]`
 
@@ -71,9 +71,9 @@ Comma-separated list of application model names for the step to install.
 
 ### `BaseVariableName`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[commandlinearg, requiredifnull]`
 
@@ -89,29 +89,29 @@ Set to `true` to clear application content from the cache after installing. This
 
 ### `Condition`
 
-Data type: `SMS_TaskSequence_Condition`  
+Data type: `SMS_TaskSequence_Condition`
 
-Access type: Read/Write  
+Access type: Read/Write
 
-Qualifiers: none  
+Qualifiers: none
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `ContinueOnError`
 
-Data type: `Boolean`  
+Data type: `Boolean`
 
-Access type: Read/Write  
+Access type: Read/Write
 
-Qualifiers: none  
+Qualifiers: none
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `ContinueOnInstallError`
 
-Data type: `Boolean`  
+Data type: `Boolean`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[commandlinearg, requiredifnotnull]`
 
@@ -119,49 +119,49 @@ Set `true` to continue if there's an installation error. This property is requir
 
 ### `Description`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[allowedlen]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `Enabled`
 
-Data type: `Boolean`  
+Data type: `Boolean`
 
-Access type: Read/Write  
+Access type: Read/Write
 
-Qualifiers: none  
+Qualifiers: none
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `Name`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[allowedlen]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `NumApps`
 
-Data type: `UInt32`  
+Data type: `UInt32`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[variablename]`
 
-Size of the array indicated by the `AppInfo` property. The task sequence variable associated with this property is `OSDAppCount`.  
+Size of the array indicated by the `AppInfo` property. The task sequence variable associated with this property is `OSDAppCount`.
 
 ### `RetryCount`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[retrycount]`
 
@@ -169,32 +169,32 @@ The number of retries. The default value is `2`.
 
 ### `SupportedEnvironment`
 
-Data type: `String`  
+Data type: `String`
 
-Access type: Read/Write  
+Access type: Read/Write
 
 Qualifiers: `[not_null, valuemap]`
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ### `Timeout`
 
-Data type: `UInt32`  
+Data type: `UInt32`
 
-Access type: Read/Write  
+Access type: Read/Write
 
-Qualifiers: none  
+Qualifiers: none
 
-For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+For more information, see [SMS_TaskSequence_Action server WMI class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
 ## Remarks
 
 Class qualifiers for this class include:
 
 ```
-[CommandLine("smsappinstall.exe /app:%1 /basevar:%2 /continueOnError:%3"),  
+[CommandLine("smsappinstall.exe /app:%1 /basevar:%2 /continueOnError:%3"),
 
-ActionCategory{"Software,1,2"},     ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "InstallApplicationControl", "TaskSequenceOptionControl"}]  
+ActionCategory{"Software,1,2"},     ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "InstallApplicationControl", "TaskSequenceOptionControl"}]
 ```
 
 For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager class and property qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).

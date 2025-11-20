@@ -6,11 +6,11 @@ ms.date: 10/08/2024
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -27,19 +27,19 @@ The **Third-Party Software Update Catalogs** node in the Configuration Manager c
     - The amount of required storage varies based on the vendor, types of updates, and specific updates that you publish for deployment.
     - If you need to move the `WSUSContent` directory to another drive with more free space, see the [How to change the location where WSUS stores updates locally](/archive/blogs/sus/wsus-how-to-change-the-location-where-wsus-stores-updates-locally) blog post.
 - The third-party software update synchronization service requires internet access.
-    - For the partner catalogs list, download.microsoft.com over HTTPS port 443 is needed. 
+    - For the partner catalogs list, download.microsoft.com over HTTPS port 443 is needed.
     -  Internet access to any third-party catalogs and update content files. Additional ports other than 443 may be needed.
     - Third-party updates use the same proxy settings as the SUP.
 
-## Additional requirements when the SUP is remote from the top-level site server 
+## Additional requirements when the SUP is remote from the top-level site server
 
 1. SSL should be enabled on the SUP when it's remote. This requires a server authentication certificate generated from an internal certificate authority or via a public provider.
     - [Configure SSL on WSUS](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#25-secure-wsus-with-the-secure-sockets-layer-protocol)
-        - When you configure SSL on WSUS, note some of the web services and the virtual directories are always HTTP and not HTTPS. 
-        - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.   
+        - When you configure SSL on WSUS, note some of the web services and the virtual directories are always HTTP and not HTTPS.
+        - Configuration Manager downloads third-party content for software update packages from your WSUS content directory over HTTP.
     - [Configure SSL on the SUP](../get-started/install-a-software-update-point.md#configure-ssl-communications-to-wsus)
 
-2. When setting the third-party updates WSUS signing certificate configuration to **Configuration Manager manages the certificate** in the Software Update Point Component Properties, the following configurations are required to allow the creation of the self-signed WSUS signing certificate: 
+2. When setting the third-party updates WSUS signing certificate configuration to **Configuration Manager manages the certificate** in the Software Update Point Component Properties, the following configurations are required to allow the creation of the self-signed WSUS signing certificate:
    - Remote registry should be enabled on the SUP server.
    - The **WSUS server connection account** should have remote registry permissions on the SUP/WSUS server.
 
@@ -123,7 +123,7 @@ When you subscribe to a third-party catalog in the Configuration Manager console
     ![Third-party updates subscribe to catalog](media/third-party-updates-subscribe.png)
 1. Review and approve the catalog certificate on the **Review and approve** page of the wizard.
    > [!NOTE]
-   > 
+   >
    > When you subscribe to a third-party software update catalog, the certificate that you review and approve in the wizard is added to the site. This certificate is of type **Third-party Software Updates Catalog**. You can manage it from the **Certificates** node under **Security** in the **Administration** workspace.
 1. If the third-party catalog is v3, you'll be offered pages to **Select Categories** and **Stage Content**. For more information about configuring these options, see the [Third-party v3 catalog options](#bkmk_v3) section.
 1. Choose your options on the **Schedule** page:
@@ -191,7 +191,7 @@ You can edit an existing subscription by selecting **Properties** from the ribbo
 1. In the **Third-Party Software Update Catalogs** node, right-click on the catalog and select **Properties** or select **Properties** from the ribbon.
 1. You can view the following information from the **General tab**, but not edit the information:
     > [!NOTE]
-    > If you need to change any of the information here, you have to add a new custom catalog.  
+    > If you need to change any of the information here, you have to add a new custom catalog.
     > Provided the download URL is unchanged, the existing catalog must be removed before one with the same download URL can be added.
 
     - **Download URL**: The HTTPS address of the custom catalog.
@@ -217,7 +217,7 @@ You can edit an existing subscription by selecting **Properties** from the ribbo
 
 ## Unsubscribe from catalog and delete custom catalogs
 
-In the **Third-Party Software Update Catalogs** node, right-click on the catalog and select **Unsubscribe** to stop synchronizing the catalog.  
+In the **Third-Party Software Update Catalogs** node, right-click on the catalog and select **Unsubscribe** to stop synchronizing the catalog.
 You can also use the **Unsubscribe** option from the ribbon. When you unsubscribe from a catalog, the approval for catalog signing and update content certificates are removed. Existing updates aren't removed, but you may not be able to deploy them. With custom catalogs, you also have the option of deleting it after you've unsubscribed. Select **Delete Custom Catalog** from either the ribbon or the right-click menu for the catalog. Deleting the custom catalog removes it from view in the **Third-Party Software Update Catalogs** node.
 
 ## Monitoring progress of third-party software updates

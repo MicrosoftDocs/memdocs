@@ -1,36 +1,16 @@
 ---
-# required metadata
-title: Add iOS store apps to Microsoft Intune
-titleSuffix:
+title: Add iOS Store Apps to Microsoft Intune
 description: Learn about adding iOS store apps to Microsoft Intune. You can assign apps using this method if the apps are free of charge in the App Store.
-keywords: Intune
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 01/06/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: c59514d7-1256-4576-9380-e7a0b85a0378
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 - FocusArea_Apps_Store
 ---
 
-# Add iOS store apps to Microsoft Intune
+# Add iOS Store Apps to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -53,7 +33,7 @@ You can assign apps by using this method only if they are free of charge in the 
    The **Add app** steps are displayed.
 5. Select **Search the App Store**.
 6. In the **Search the App Store** pane, select the App Store country/region locale.
-7. In the **Search** box, type the name (or part of the name) of the app.  
+7. In the **Search** box, type the name (or part of the name) of the app.
     Intune searches the store and returns a list of relevant results.
 8. In the results list, select the app you want, and then select **Select**.<br>
 
@@ -77,7 +57,7 @@ You can assign apps by using this method only if they are free of charge in the 
 10. Click **Next** to display the **Scope tags** page.
 11. Click **Select scope tags** to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
 12. Click **Next** to display the **Assignments** page.
-13. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md). 
+13. Select the group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 14. Click **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 15. When you are done, click **Create** to add the app to Intune.
 

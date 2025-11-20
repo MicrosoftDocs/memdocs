@@ -11,14 +11,14 @@ ms.author: brianhun
 manager: dougeby
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Checklist for installing update 2503 for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-When you use the current branch of Configuration Manager, you can install the in-console update for version 2503 to update your hierarchy from a previous version. 
+When you use the current branch of Configuration Manager, you can install the in-console update for version 2503 to update your hierarchy from a previous version.
 
 To get the update for version 2503, you must use a service connection point at the top-level site of your hierarchy. This site system role can be in online or offline mode. To download the update when your service connection point is offline, [use the service connection tool](use-the-service-connection-tool.md).
 
@@ -54,7 +54,7 @@ When a site server installs the update, it automatically updates all of the site
 
 The first time you use a Configuration Manager console after finishing the installation, you're prompted to update that console. You can also run the Configuration Manager setup on the computer that hosts the console, and choose the option to update the console. Install the update to the console as soon as possible. For more information, see [Install the Configuration Manager console](../deploy/install/install-consoles.md).
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > When you install an update at the CAS, be aware of the following limitations and delays that exist until all child primary sites also complete the update installation:
 >
 > - **Client upgrades** don't start, including automatic updates of clients and pre-production clients. Additionally, you can't promote pre-production clients to production until the last site completes the update installation. After the last site completes the update installation, client updates begin based on your configuration choices.
@@ -91,7 +91,7 @@ The version 2503 update should now be available in the console.
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2503. It's not a permanent change.
 
-<!-- As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
 ## Pre-update checklist
 
@@ -131,10 +131,10 @@ Starting with version 2309 and later, Configuration Manager requires the install
 
 ### Review the site and hierarchy status for unresolved issues
 
-A site update can fail because of existing operational problems. Before you update a site, resolve all operational issues for the following systems:  
+A site update can fail because of existing operational problems. Before you update a site, resolve all operational issues for the following systems:
 
-- The site server  
-- The site database server  
+- The site server
+- The site database server
 - Remote site system roles on other servers
 
 For more information, see [Use the status system](use-status-system.md).
@@ -258,7 +258,7 @@ To run a prerequisite check from the console, go to the **Administration** works
 
 For more information, see the section to **Run the prerequisite checker before installing an update** in [Before you install an in-console update](prepare-in-console-updates.md#before-you-install-an-in-console-update).
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > When the prerequisite checker runs, the process updates some product source files that are used for site maintenance tasks. After running the prerequisite checker, but before installing the update, if you need to do a site maintenance task, run **Setupwpf.exe** (Configuration Manager Setup) from the CD.Latest folder on the site server.
 
 ### Update sites
@@ -281,28 +281,28 @@ Consider restarting remote site systems that don't successfully update at first.
 
 ### Confirm site-to-site replication is active
 
-In the Configuration Manager console, go to the following locations to view the status, and make sure that replication is active:  
+In the Configuration Manager console, go to the following locations to view the status, and make sure that replication is active:
 
-- **Monitoring** workspace, **Site Hierarchy** node  
+- **Monitoring** workspace, **Site Hierarchy** node
 
-- **Monitoring** workspace, **Database Replication** node  
+- **Monitoring** workspace, **Database Replication** node
 
-For more information, see the following articles:  
+For more information, see the following articles:
 
 - [Monitor hierarchy and replication infrastructure](monitor-hierarchy.md)
-- [About the Replication Link Analyzer](monitor-replication.md#BKMK_RLA)  
+- [About the Replication Link Analyzer](monitor-replication.md#BKMK_RLA)
 
 ### Update Configuration Manager consoles
 
-Update all remote Configuration Manager consoles to the same version. You're prompted to update the console when:  
+Update all remote Configuration Manager consoles to the same version. You're prompted to update the console when:
 
-- You open the console.  
+- You open the console.
 
-- You go to a new node in the console.  
+- You go to a new node in the console.
 
 ### Reconfigure database replicas for management points
 
-After you update a primary site, reconfigure the database replica for management points that you uninstalled before you updated the site. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).  
+After you update a primary site, reconfigure the database replica for management points that you uninstalled before you updated the site. For more information, see [Database replicas for management points](../deploy/configure/database-replicas-for-management-points.md).
 
 ### Reconfigure availability groups
 
@@ -310,7 +310,7 @@ If you use an availability group, reset the failover configuration to automatic.
 
 ### Reconfigure any disabled maintenance tasks
 
-If you disabled database [maintenance tasks](maintenance-tasks.md) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.  
+If you disabled database [maintenance tasks](maintenance-tasks.md) at a site before installing the update, reconfigure those tasks. Use the same settings that were in place before the update.
 
 ### Restore hardware inventory customizations
 
@@ -328,7 +328,7 @@ When you customize hardware inventory classes, review their configuration after 
 
 ### Update clients
 
-Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).  
+Update clients per the plan you created, especially if you configured client piloting before installing the update. For more information, see [How to upgrade clients for Windows computers](../../clients/manage/upgrade/upgrade-clients-for-windows-computers.md).
 
 ### Partner extensions
 

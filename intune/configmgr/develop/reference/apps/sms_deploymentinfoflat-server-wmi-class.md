@@ -12,111 +12,111 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DeploymentInfoFlat Server WMI Class
-The `SMS_DeploymentInfoFlat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all kinds of flattened deployment relations (includes dependence and supersedence).  
+The `SMS_DeploymentInfoFlat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all kinds of flattened deployment relations (includes dependence and supersedence).
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DeploymentInfoFlat : SMS_BaseClass  
-{  
-    String CollectionID;  
-    String CollectionName;  
-    String DeploymentID;  
-    String DeploymentName;  
-    UInt32 DeploymentTypeID;  
-    String TargetName;  
-    UInt32 TargetSecurityTypeID;  
-    String TargetSubName;  
-};  
-```  
+```
+Class SMS_DeploymentInfoFlat : SMS_BaseClass
+{
+    String CollectionID;
+    String CollectionName;
+    String DeploymentID;
+    String DeploymentName;
+    UInt32 DeploymentTypeID;
+    String TargetName;
+    UInt32 TargetSecurityTypeID;
+    String TargetSubName;
+};
+```
 
-## Methods  
- The `SMS_DeploymentInfoFlat` class doesn't define any methods.  
+## Methods
+ The `SMS_DeploymentInfoFlat` class doesn't define any methods.
 
-## Properties  
- `CollectionID`  
- Data type: `String`  
+## Properties
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Existing collection to which the advertisement is targeted.  
+ Existing collection to which the advertisement is targeted.
 
- `CollectionName`  
- Data type: `String`  
+ `CollectionName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the collection to which the advertisement is advertising.  
+ Name of the collection to which the advertisement is advertising.
 
- `DeploymentID`  
- Data type: `String`  
+ `DeploymentID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique auto-generated key.  
+ Unique auto-generated key.
 
- `DeploymentName`  
- Data type: `String`  
+ `DeploymentName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Plain text name of the deployment (advertisement/assignment).  
+ Plain text name of the deployment (advertisement/assignment).
 
- `DeploymentTypeID`  
- Data type: `UInt32`  
+ `DeploymentTypeID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration, key]  
+ Qualifiers: [enumeration, key]
 
- Deployment type identifier.  
+ Deployment type identifier.
 
- `TargetName`  
- Data type: `String`  
+ `TargetName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Package name, if the target is a package. Application name, if it's an application. Update name, if it's an update.  
+ Package name, if the target is a package. Application name, if it's an application. Update name, if it's an update.
 
- `TargetSecurityTypeID`  
- Data type: `UInt32`  
+ `TargetSecurityTypeID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Security type identifier of the object type. For example, if the object is a package, its `2`.  
+ Security type identifier of the object type. For example, if the object is a package, its `2`.
 
- `TargetSubName`  
- Data type: `String`  
+ `TargetSubName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Program name if it's a package, otherwise leave this value empty.  
+ Program name if it's a package, otherwise leave this value empty.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

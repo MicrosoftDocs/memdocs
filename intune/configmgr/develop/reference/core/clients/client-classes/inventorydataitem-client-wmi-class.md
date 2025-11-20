@@ -12,199 +12,199 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # InventoryDataItem Client WMI Class
-In Configuration Manager, the `InventoryDataItem` class is a client Windows Management Instrumentation (WMI) class that defines an inventory collection query.  
+In Configuration Manager, the `InventoryDataItem` class is a client Windows Management Instrumentation (WMI) class that defines an inventory collection query.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class InventoryDataItem : SMS_InventoryAgent_Policy  
-{  
-      String AssocClass[];  
-      InventoryDataContext Context[];  
-      String DataItemID;  
-      String Filter;  
-      String InventoryActionID;  
-      String ItemClass;  
-      String Namespace;  
-      String PolicyID;  
-      String PolicyInstanceID;  
-      UInt32 PolicyPrecedence;  
-      String PolicyRuleID;  
-      String PolicySource;  
-      String PolicyVersion;  
-      String Properties;  
-      PropertyRule ReportRules[];  
-      UInt32 Timeout;  
-};  
-```  
+```
+Class InventoryDataItem : SMS_InventoryAgent_Policy
+{
+      String AssocClass[];
+      InventoryDataContext Context[];
+      String DataItemID;
+      String Filter;
+      String InventoryActionID;
+      String ItemClass;
+      String Namespace;
+      String PolicyID;
+      String PolicyInstanceID;
+      UInt32 PolicyPrecedence;
+      String PolicyRuleID;
+      String PolicySource;
+      String PolicyVersion;
+      String Properties;
+      PropertyRule ReportRules[];
+      UInt32 Timeout;
+};
+```
 
-## Methods  
- The `InventoryDataItem` class does not define any methods.  
+## Methods
+ The `InventoryDataItem` class does not define any methods.
 
-## Properties  
- `AssocClass`  
- Data type: `String` Array  
+## Properties
+ `AssocClass`
+ Data type: `String` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Reserved for future use.  
+ Reserved for future use.
 
- `Context`  
- Data type: `InventoryDataContext` Array  
+ `Context`
+ Data type: `InventoryDataContext` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Optional context qualifier for the class query. For more information, see [InventoryDataContext Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydatacontext-client-wmi-class.md).  
+ Optional context qualifier for the class query. For more information, see [InventoryDataContext Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydatacontext-client-wmi-class.md).
 
- `DataItemID`  
- Data type: `String`  
+ `DataItemID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [realkey]  
+ Qualifiers: [realkey]
 
- Unique identifier for an [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) object.  
+ Unique identifier for an [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) object.
 
- `Filter`  
- Data type: `String`  
+ `Filter`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Class query property filter, for example, NumberOfProcessors=1 AND DomainRole=1. The Inventory Agent uses this field to build the WQL WHERE clause for the class instance query.  
+ Class query property filter, for example, NumberOfProcessors=1 AND DomainRole=1. The Inventory Agent uses this field to build the WQL WHERE clause for the class instance query.
 
- `InventoryActionID`  
- Data type: `String`  
+ `InventoryActionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- ID that matches the `InventoryActionID` value for an associated [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md) object. The Inventory Agent uses this value to find the [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) class for a particular inventory action.  
+ ID that matches the `InventoryActionID` value for an associated [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md) object. The Inventory Agent uses this value to find the [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) class for a particular inventory action.
 
- `ItemClass`  
- Data type: `String`  
+ `ItemClass`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [realkey]  
+ Qualifiers: [realkey]
 
- WMI instance class to query, for example, Win32_ComputerSystem.  
+ WMI instance class to query, for example, Win32_ComputerSystem.
 
- `Namespace`  
- Data type: `String`  
+ `Namespace`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [realkey]  
+ Qualifiers: [realkey]
 
- WMI namespace to query, for example, \\\\\\\\.\\\root\\\cimv2.  
+ WMI namespace to query, for example, \\\\\\\\.\\\root\\\cimv2.
 
- `PolicyID`  
- Data type: `String`  
+ `PolicyID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique ID of the policy.  
+ Unique ID of the policy.
 
- `PolicyInstanceID`  
- Data type: `String`  
+ `PolicyInstanceID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique ID of the policy instance.  
+ Unique ID of the policy instance.
 
- `PolicyPrecedence`  
- Data type: `UInt32`  
+ `PolicyPrecedence`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Precedence for the policy.  
+ Precedence for the policy.
 
- `PolicyRuleID`  
- Data type: `String`  
+ `PolicyRuleID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique ID of the rule used to create the policy.  
+ Unique ID of the rule used to create the policy.
 
- `PolicySource`  
- Data type: `String`  
+ `PolicySource`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Source of the policy.  
+ Source of the policy.
 
- `PolicyVersion`  
- Data type: `String`  
+ `PolicyVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Version of the policy.  
+ Version of the policy.
 
- `Properties`  
- Data type: `String`  
+ `Properties`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Class properties to query, for example, Domain, Name, and UserName. The Inventory Agent uses this property to build the WQL SELECT clause for the class instance query.  
+ Class properties to query, for example, Domain, Name, and UserName. The Inventory Agent uses this property to build the WQL SELECT clause for the class instance query.
 
- `ReportRules`  
- Data type: `PropertyRule` Array  
+ `ReportRules`
+ Data type: `PropertyRule` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Reserved for future use.  
+ Reserved for future use.
 
- `Timeout`  
- Data type: `UInt32`  
+ `Timeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Maximum time that the agent waits for the `InventoryDataItem` class query to complete before canceling the query. This property overrides `DefaultTimeOut` property in the [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md) class.  
+ Maximum time that the agent waits for the `InventoryDataItem` class query to complete before canceling the query. This property overrides `DefaultTimeOut` property in the [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md) class.
 
-## Remarks  
- The Inventory Agent uses each instance of this class to build a WMI query for the referenced class; for example, `SELECT Name FROM Win32_ComputerSystem WHERE  DomainRole=1`.  
+## Remarks
+ The Inventory Agent uses each instance of this class to build a WMI query for the referenced class; for example, `SELECT Name FROM Win32_ComputerSystem WHERE  DomainRole=1`.
 
- The Inventory Agent collects items returned by [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) queries and builds a report based on the results. Each `InventoryDataItem` object contains a reference to an [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md) object. Multiple `InventoryDataItem` queries are used to build the combined report for an `InventoryAction` object.  
+ The Inventory Agent collects items returned by [InventoryDataItem Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydataitem-client-wmi-class.md) queries and builds a report based on the results. Each `InventoryDataItem` object contains a reference to an [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md) object. Multiple `InventoryDataItem` queries are used to build the combined report for an `InventoryAction` object.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
- [Inventory Agent Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/inventory-agent-client-wmi-classes.md)   
- [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md)   
+## See Also
+ [Inventory Agent Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/inventory-agent-client-wmi-classes.md)
+ [InventoryAction Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventoryaction-client-wmi-class.md)
  [InventoryDataContext Client WMI Class](../../../../../develop/reference/core/clients/client-classes/inventorydatacontext-client-wmi-class.md)

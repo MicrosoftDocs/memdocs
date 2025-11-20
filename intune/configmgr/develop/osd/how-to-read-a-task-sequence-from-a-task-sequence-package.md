@@ -12,103 +12,103 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Read a Task Sequence from a Task Sequence Package
-You read a task sequence from a task sequence package, in Configuration Manager, by calling the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class [GetSequence](../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md) method. GetSequence returns an [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) object that you can change and then put back in the package by using the [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method. For an example of using SetSequence, see [How to Create an Operating System Deployment Task Sequence Package](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-package.md).  
+You read a task sequence from a task sequence package, in Configuration Manager, by calling the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class [GetSequence](../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md) method. GetSequence returns an [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) object that you can change and then put back in the package by using the [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md) method. For an example of using SetSequence, see [How to Create an Operating System Deployment Task Sequence Package](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-package.md).
 
-### To read a task sequence from a task sequence package  
+### To read a task sequence from a task sequence package
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](../core/understand/sms-provider-fundamentals.md).
 
-2.  Query the SMS Provider for the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) that you want to load the sequence from.  
+2.  Query the SMS Provider for the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) that you want to load the sequence from.
 
-3.  Call the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class [GetSequence](../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md) method to get the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) object.  
+3.  Call the [SMS_TaskSequencePackage](../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md) class [GetSequence](../../develop/reference/osd/getsequence-method-in-class-sms_tasksequencepackage.md) method to get the [SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md) object.
 
-4.  Make changes to the task sequence and put them back into the package by using [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md).  
+4.  Make changes to the task sequence and put them back into the package by using [SetSequence](../../develop/reference/osd/setsequence-method-in-class-sms_tasksequencepackage.md).
 
-## Example  
- The following example method returns the task sequence object ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) from the supplied package.  
+## Example
+ The following example method returns the task sequence object ([SMS_TaskSequence](../../develop/reference/osd/sms_tasksequence-server-wmi-class.md)) from the supplied package.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).
 
-```vbs  
-Function ReadTaskSequence(connection, taskSequencePackage)  
-    ' Get the parameters object.  
-    Set packageClass = connection.Get("SMS_TaskSequencePackage")  
+```vbs
+Function ReadTaskSequence(connection, taskSequencePackage)
+    ' Get the parameters object.
+    Set packageClass = connection.Get("SMS_TaskSequencePackage")
 
-    Set objInParam = packageClass.Methods_("GetSequence"). _  
-        inParameters.SpawnInstance_()  
+    Set objInParam = packageClass.Methods_("GetSequence"). _
+        inParameters.SpawnInstance_()
 
-    ' Add the input parameters.  
-     objInParam.Properties_.Item("TaskSequencePackage") =  taskSequencePackage  
+    ' Add the input parameters.
+     objInParam.Properties_.Item("TaskSequencePackage") =  taskSequencePackage
 
-    ' Get the sequence.  
-     Set objOutParams = connection.ExecMethod("SMS_TaskSequencePackage", "GetSequence", objInParam)  
-     Set ReadTaskSequence = objOutParams.TaskSequence  
-End Function  
-```  
+    ' Get the sequence.
+     Set objOutParams = connection.ExecMethod("SMS_TaskSequencePackage", "GetSequence", objInParam)
+     Set ReadTaskSequence = objOutParams.TaskSequence
+End Function
+```
 
-```c#  
-public IResultObject ReadTaskSequence(  
-    WqlConnectionManager connection,   
-    IResultObject taskSequencePackage)  
-{  
-    IResultObject taskSequence = null;  
-    try  
-    {  
-        Dictionary<string, object> parameters = new Dictionary<string, object>();  
-        parameters.Add("TaskSequencePackage", taskSequencePackage);  
+```c#
+public IResultObject ReadTaskSequence(
+    WqlConnectionManager connection,
+    IResultObject taskSequencePackage)
+{
+    IResultObject taskSequence = null;
+    try
+    {
+        Dictionary<string, object> parameters = new Dictionary<string, object>();
+        parameters.Add("TaskSequencePackage", taskSequencePackage);
 
-        IResultObject outParams = connection.ExecuteMethod("SMS_TaskSequencePackage", "GetSequence", parameters);  
-        taskSequence = outParams.GetSingleItem("TaskSequence");  
+        IResultObject outParams = connection.ExecuteMethod("SMS_TaskSequencePackage", "GetSequence", parameters);
+        taskSequence = outParams.GetSingleItem("TaskSequence");
 
-        return taskSequence;  
-    }  
-    catch (Exception e)  
-    {  
-        Console.WriteLine("failed to hydrate: " + e.Message);  
-        throw;  
-    }  
-}  
+        return taskSequence;
+    }
+    catch (Exception e)
+    {
+        Console.WriteLine("failed to hydrate: " + e.Message);
+        throw;
+    }
+}
 
-```  
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
-|Parameter|Type|Description|  
-|---------------|----------|-----------------|  
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|-   A valid connection to the SMS Provider.|  
+|Parameter|Type|Description|
+|---------------|----------|-----------------|
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|-   A valid connection to the SMS Provider.|
 
-## Compiling the Code  
- This C# example requires:  
+## Compiling the Code
+ This C# example requires:
 
-### Namespaces  
- System  
+### Namespaces
+ System
 
- System.Collections.Generic  
+ System.Collections.Generic
 
- System.Text  
+ System.Text
 
- Microsoft.ConfigurationManagement.ManagementProvider  
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
-### Assembly  
- microsoft.configurationmanagement.managementprovider  
+### Assembly
+ microsoft.configurationmanagement.managementprovider
 
- adminui.wqlqueryengine  
+ adminui.wqlqueryengine
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).
 
-## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
+## .NET Framework Security
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).
 
-## See Also  
+## See Also
  [Objects overview](../core/understand/configuration-manager-objects-overview.md)
- [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)   
- [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)   
- [How to Create an Operating System Deployment Task Sequence Package](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-package.md)   
+ [How to Connect to an SMS Provider in Configuration Manager by Using Managed Code](../../develop/core/understand/how-to-connect-to-an-sms-provider-by-using-managed-code.md)
+ [How to Connect to an SMS Provider in Configuration Manager  by Using WMI](../../develop/core/understand/how-to-connect-to-an-sms-provider-in-configuration-manager-by-using-wmi.md)
+ [How to Create an Operating System Deployment Task Sequence Package](../../develop/osd/how-to-create-an-operating-system-deployment-task-sequence-package.md)
  [Task sequence overview](operating-system-deployment-task-sequences-overview.md)
  [How to Enumerate the Available Operating System Deployment Task Sequences](../../develop/osd/how-to-enumerate-the-available-operating-system-deployment-task-sequences.md)

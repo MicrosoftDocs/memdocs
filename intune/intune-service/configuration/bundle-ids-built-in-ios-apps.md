@@ -1,28 +1,11 @@
 ---
-# required metadata
 title: iOS/iPadOS bundle IDs for built-in apps in Microsoft Intune
-titleSuffix:
 description: See a list of the bundle IDs for the built-in iOS and iPadOS apps. Use these bundle IDs to explicitly allow apps in device configuration profiles and policies in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 06/27/2024
+ms.date: 09/22/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: Low
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -59,6 +42,7 @@ This feature applies to:
 | com.apple.DocumentsApp      | Files        | Apple     |
 | com.apple.mobileme.fmf1     | Find Friends | Apple     |
 | com.apple.mobileme.fmip1    | Find iPhone  | Apple     |
+| com.apple.games             | Games        | Apple     |
 | com.apple.gamecenter        | Game Center  | Apple     |
 | com.apple.mobilegarageband  | GarageBand   | Apple     |
 | com.apple.Health            | Health       | Apple     |
@@ -83,6 +67,7 @@ This feature applies to:
 | com.apple.Photo-Booth       | Photo Booth  | Apple     |
 | com.apple.mobileslideshow   | Photos       | Apple     |
 | com.apple.podcasts          | Podcasts     | Apple     |
+| com.apple.preview           | Preview      | Apple     |
 | com.apple.reminders         | Reminders    | Apple     |
 | com.apple.mobilesafari      | Safari       | Apple     |
 | com.apple.Preferences       | Settings     | Apple     |

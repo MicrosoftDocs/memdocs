@@ -12,172 +12,172 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_InstanceEvent Client WMI Class
-The `CCM_InstanceEvent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an instance event.   
+The `CCM_InstanceEvent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an instance event.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_InstanceEvent : __ExtrinsicEvent  
-{  
-    UInt32 ActionType;  
-    String ClassName;  
-    UInt32 MessageLevel;  
-    UInt8 SECURITY_DESCRIPTOR[];  
-    UInt32 SessionID;  
-    String TargetInstancePath;  
-    UInt64 TIME_CREATED;  
-    String UserSID;  
-    String Value;  
-    UInt32 Verbosity;  
-};  
-```  
+```
+Class CCM_InstanceEvent : __ExtrinsicEvent
+{
+    UInt32 ActionType;
+    String ClassName;
+    UInt32 MessageLevel;
+    UInt8 SECURITY_DESCRIPTOR[];
+    UInt32 SessionID;
+    String TargetInstancePath;
+    UInt64 TIME_CREATED;
+    String UserSID;
+    String Value;
+    UInt32 Verbosity;
+};
+```
 
-## Methods  
- The `CCM_InstanceEvent` class does not define any methods.  
+## Methods
+ The `CCM_InstanceEvent` class does not define any methods.
 
-## Properties  
- `ActionType`  
- Data type: `UInt32`  
+## Properties
+ `ActionType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [valuemap, values]  
+ Qualifiers: [valuemap, values]
 
- Action type. Possible values are:    
+ Action type. Possible values are:
 
-|Value|Action type|  
-|-|-|  
-|1|Update|  
-|2|Delete|  
-|3|Reboot|  
-|4|RebootCountdonwStart|  
-|5|Logoff|  
-|6|ProgramAvailable|  
-|7|ProgramDownloadProgress|  
-|8|OptionalProgramReady|  
-|9|AssignedProgramReady|  
-|10|ProgramExecuteComplete|  
-|11|UpdateAvailable|  
-|12|UpdateDeleted|  
-|13|UpdateManadatoryInstallStart|  
-|14|UpdateInstallComplete|  
-|15|InstallJobStart|  
-|16|InstallJobComplete|  
-|19|AppEvaluationStarted|  
-|20|AppEvaluationComplete|  
-|21|AppAvailable|  
-|22|AppEnforcementStarted|  
-|23|AppEnforcementProgress|  
-|24|AppEnforcementSuccess|  
-|25|AppEnforcementFailure|  
-|26|AppRemoved|  
+|Value|Action type|
+|-|-|
+|1|Update|
+|2|Delete|
+|3|Reboot|
+|4|RebootCountdonwStart|
+|5|Logoff|
+|6|ProgramAvailable|
+|7|ProgramDownloadProgress|
+|8|OptionalProgramReady|
+|9|AssignedProgramReady|
+|10|ProgramExecuteComplete|
+|11|UpdateAvailable|
+|12|UpdateDeleted|
+|13|UpdateManadatoryInstallStart|
+|14|UpdateInstallComplete|
+|15|InstallJobStart|
+|16|InstallJobComplete|
+|19|AppEvaluationStarted|
+|20|AppEvaluationComplete|
+|21|AppAvailable|
+|22|AppEnforcementStarted|
+|23|AppEnforcementProgress|
+|24|AppEnforcementSuccess|
+|25|AppEnforcementFailure|
+|26|AppRemoved|
 
- `ClassName`  
- Data type: `String`  
+ `ClassName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Event target class.    
+ Event target class.
 
- `MessageLevel`  
- Data type: `UInt32`  
+ `MessageLevel`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [valuemap, values]  
+ Qualifiers: [valuemap, values]
 
- Message level. Possible values are:    
+ Message level. Possible values are:
 
-|Value|Message level|  
-|-|-|  
-|0|Informational|  
-|1|Warning|  
-|2|Error|  
+|Value|Message level|
+|-|-|
+|0|Informational|
+|1|Warning|
+|2|Error|
 
- `SECURITY_DESCRIPTOR`  
- Data type: `UInt8 Array`  
+ `SECURITY_DESCRIPTOR`
+ Data type: `UInt8 Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Security descriptor.   
+ Security descriptor.
 
- `SessionID`  
- Data type: `UInt32`  
+ `SessionID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- User logon session identifier.   
+ User logon session identifier.
 
- `TargetInstancePath`  
- Data type: `String`  
+ `TargetInstancePath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Event target instance path.    
+ Event target instance path.
 
- `TIME_CREATED`  
- Data type: `UInt64`  
+ `TIME_CREATED`
+ Data type: `UInt64`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time created.   
+ Time created.
 
- `UserSID`  
- Data type: `String`  
+ `UserSID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- User identifier (SID).    
+ User identifier (SID).
 
- `Value`  
- Data type: `String`  
+ `Value`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Value for an event.    
+ Value for an event.
 
- `Verbosity`  
- Data type: `UInt32`  
+ `Verbosity`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [valuemap, values]  
+ Qualifiers: [valuemap, values]
 
- Verbosity. Possible values are:  
+ Verbosity. Possible values are:
 
-|Value|Verbosity|  
-|-|-|  
-|10|Low|  
-|20|Medium_Low|  
-|30|Medium|  
-|40|Medium_High|  
-|50|High|  
+|Value|Verbosity|
+|-|-|
+|10|Low|
+|20|Medium_Low|
+|30|Medium|
+|40|Medium_High|
+|50|High|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

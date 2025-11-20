@@ -12,271 +12,271 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_G_System_EndpointProtectionStatus Server WMI Class
-The `SMS_G_System_EndpointProtectionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents status of Endpoint Protection.  
+The `SMS_G_System_EndpointProtectionStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents status of Endpoint Protection.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_G_System_EndpointProtectionStatus : SMS_G_System  
-{  
-    Boolean AmFullscanRequired;  
-    Boolean AmManualStepsRequired;  
-    Boolean AmOfflineScanRequired;  
-    Boolean AmRecentlyCleaned;  
-    Boolean AmRemediationFailed;  
-    Boolean AmRestartRequired;  
-    Boolean AmThreatActivity;  
-    Boolean AtRisk;  
-    Boolean EnforcementFailed;  
-    Boolean EnforcementSucceeded;  
-    Boolean Inactive;  
-    Boolean InstallFailed;  
-    Boolean NoSignature;  
-    Boolean NotClient;  
-    Boolean NotYetInstalled;  
-    Boolean PendingReboot;  
-    Boolean Protected;  
-    UInt32 ResourceID;  
-    Boolean SignatureOlderThan7Days;  
-    Boolean SignatureUpTo1DayOld;  
-    Boolean SignatureUpTo3DaysOld;  
-    Boolean SignatureUpTo7DaysOld;  
-    Boolean Unhealthy;  
-    Boolean Unsupported;  
-};  
-```  
+```
+Class SMS_G_System_EndpointProtectionStatus : SMS_G_System
+{
+    Boolean AmFullscanRequired;
+    Boolean AmManualStepsRequired;
+    Boolean AmOfflineScanRequired;
+    Boolean AmRecentlyCleaned;
+    Boolean AmRemediationFailed;
+    Boolean AmRestartRequired;
+    Boolean AmThreatActivity;
+    Boolean AtRisk;
+    Boolean EnforcementFailed;
+    Boolean EnforcementSucceeded;
+    Boolean Inactive;
+    Boolean InstallFailed;
+    Boolean NoSignature;
+    Boolean NotClient;
+    Boolean NotYetInstalled;
+    Boolean PendingReboot;
+    Boolean Protected;
+    UInt32 ResourceID;
+    Boolean SignatureOlderThan7Days;
+    Boolean SignatureUpTo1DayOld;
+    Boolean SignatureUpTo3DaysOld;
+    Boolean SignatureUpTo7DaysOld;
+    Boolean Unhealthy;
+    Boolean Unsupported;
+};
+```
 
-## Methods  
- The `SMS_G_System_EndpointProtectionStatus` class does not define any methods.  
+## Methods
+ The `SMS_G_System_EndpointProtectionStatus` class does not define any methods.
 
-## Properties  
- `AmFullscanRequired`  
- Data type: `Boolean`  
+## Properties
+ `AmFullscanRequired`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is pending a full scan due to threat action.  
+ `true` if the client is pending a full scan due to threat action.
 
- `AmManualStepsRequired`  
- Data type: `Boolean`  
+ `AmManualStepsRequired`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is pending manual steps due to threat action.  
+ `true` if the client is pending manual steps due to threat action.
 
- `AmOfflineScanRequired`  
- Data type: `Boolean`  
+ `AmOfflineScanRequired`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is pending an offline scan due to threat action.  
+ `true` if the client is pending an offline scan due to threat action.
 
- `AmRecentlyCleaned`  
- Data type: `Boolean`  
+ `AmRecentlyCleaned`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if a threat was detected and cleaned recently.  
+ `true` if a threat was detected and cleaned recently.
 
- `AmRemediationFailed`  
- Data type: `Boolean`  
+ `AmRemediationFailed`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client failed to remediate the threat.  
+ `true` if the client failed to remediate the threat.
 
- `AmRestartRequired`  
- Data type: `Boolean`  
+ `AmRestartRequired`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is pending a reboot due to threat action.  
+ `true` if the client is pending a reboot due to threat action.
 
- `AmThreatActivity`  
- Data type: `Boolean`  
+ `AmThreatActivity`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if a threat was detected.  
+ `true` if a threat was detected.
 
- `AtRisk`  
- Data type: `Boolean`  
+ `AtRisk`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client has the policy to enable EndPoint Protection, however, the SCEP agent is not successfully installed (or pending a reboot to finish the installation), no signature is installed, the signature is too old, the client is inactive (from client status perspective) or the client failed to apply antimalware policy and so on.  
+ `true` if the client has the policy to enable EndPoint Protection, however, the SCEP agent is not successfully installed (or pending a reboot to finish the installation), no signature is installed, the signature is too old, the client is inactive (from client status perspective) or the client failed to apply antimalware policy and so on.
 
- `EnforcementFailed`  
- Data type: `Boolean`  
+ `EnforcementFailed`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client failed to apply policy.  
+ `true` if the client failed to apply policy.
 
- `EnforcementSucceeded`  
- Data type: `Boolean`  
+ `EnforcementSucceeded`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client successfully applied policy.  
+ `true` if the client successfully applied policy.
 
- `Inactive`  
- Data type: `Boolean`  
+ `Inactive`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is inactive.  
+ `true` if the client is inactive.
 
- `InstallFailed`  
- Data type: `Boolean`  
+ `InstallFailed`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client failed to install the Endpoint Protection client.  
+ `true` if the client failed to install the Endpoint Protection client.
 
- `NoSignature`  
- Data type: `Boolean`  
+ `NoSignature`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if no signature is installed on this client.  
+ `true` if no signature is installed on this client.
 
- `NotClient`  
- Data type: `Boolean`  
+ `NotClient`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if this is not a Configuration Manager client.  
+ `true` if this is not a Configuration Manager client.
 
- `NotYetInstalled`  
- Data type: `Boolean`  
+ `NotYetInstalled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the Endpoint Protection client is not installed.  
+ `true` if the Endpoint Protection client is not installed.
 
- `PendingReboot`  
- Data type: `Boolean`  
+ `PendingReboot`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is pending a restart to complete the Endpoint Protection installation.  
+ `true` if the client is pending a restart to complete the Endpoint Protection installation.
 
- `Protected`  
- Data type: `Boolean`  
+ `Protected`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is well protected.  
+ `true` if the client is well protected.
 
- `ResourceID`  
- Data type: `UInt32`  
+ `ResourceID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Client resource identifier.  
+ Client resource identifier.
 
- `SignatureOlderThan7Days`  
- Data type: `Boolean`  
+ `SignatureOlderThan7Days`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the signature is older than 7 days.  
+ `true` if the signature is older than 7 days.
 
- `SignatureUpTo1DayOld`  
- Data type: `Boolean`  
+ `SignatureUpTo1DayOld`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the signature is up to 1 day old.  
+ `true` if the signature is up to 1 day old.
 
- `SignatureUpTo3DaysOld`  
- Data type: `Boolean`  
+ `SignatureUpTo3DaysOld`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the signature is up from 1 to 3 days old.  
+ `true` if the signature is up from 1 to 3 days old.
 
- `SignatureUpTo7DaysOld`  
- Data type: `Boolean`  
+ `SignatureUpTo7DaysOld`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the signature is up from 3 to 7 days old.  
+ `true` if the signature is up from 3 to 7 days old.
 
- `Unhealthy`  
- Data type: `Boolean`  
+ `Unhealthy`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is unhealthy from a client status perspective.  
+ `true` if the client is unhealthy from a client status perspective.
 
- `Unsupported`  
- Data type: `Boolean`  
+ `Unsupported`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the Endpoint Protection client is not supported on this client platform.  
+ `true` if the Endpoint Protection client is not supported on this client platform.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

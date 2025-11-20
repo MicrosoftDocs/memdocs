@@ -11,26 +11,26 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Support for Active Directory domains in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-All Configuration Manager site systems must be members of a supported Active Directory domain. Configuration Manager client computers can be domain members or workgroup members.  
+All Configuration Manager site systems must be members of a supported Active Directory domain. Configuration Manager client computers can be domain members or workgroup members.
 
 ## Requirements and limitations
 
-- Domain membership also applies to site systems that support internet-based client management in a perimeter network. (These networks are also known as a DMZ, demilitarized zone, and screened subnet).  
+- Domain membership also applies to site systems that support internet-based client management in a perimeter network. (These networks are also known as a DMZ, demilitarized zone, and screened subnet).
 
-- It's not supported to change the following configurations for a computer that hosts a site system role:  
+- It's not supported to change the following configurations for a computer that hosts a site system role:
 
   - Domain membership, including if you remove a site system from the domain, and then rejoin the same domain.
 
-  - Domain name  
+  - Domain name
 
-  - Computer name  
+  - Computer name
 
   Before making these changes, uninstall the site system role. To make these changes to a site server, uninstall the site first. You can also consider creating a [site server in passive mode](../../servers/deploy/configure/site-server-high-availability.md) to help manage this change on a site server.
 
@@ -38,13 +38,13 @@ All Configuration Manager site systems must be members of a supported Active Dir
 
 ## <a name="bkmk_Disjoint"></a> Disjoint namespace
 
-You can install Configuration Manager site systems and clients in a domain that has a *disjoint namespace*.  
+You can install Configuration Manager site systems and clients in a domain that has a *disjoint namespace*.
 
-In a disjoint namespace, the primary DNS suffix of a computer doesn't match the Active Directory DNS domain name of that computer. Another disjoint namespace scenario occurs if the NetBIOS domain name of a domain controller doesn't match the Active Directory DNS domain name.  
+In a disjoint namespace, the primary DNS suffix of a computer doesn't match the Active Directory DNS domain name of that computer. Another disjoint namespace scenario occurs if the NetBIOS domain name of a domain controller doesn't match the Active Directory DNS domain name.
 
 ### Disjoint scenarios
 
-The following sections identify the supported scenarios for a disjoint namespace.  
+The following sections identify the supported scenarios for a disjoint namespace.
 
 #### Scenario 1
 
@@ -66,7 +66,7 @@ In this scenario, the primary DNS suffix of a site system differs from the Activ
 
 ### Configure disjoint namespace
 
-To allow a computer to access domain controllers that are disjoint, change the **msDS-AllowedDNSSuffixes** Active Directory attribute on the domain object container. Add both DNS suffixes to the attribute.  
+To allow a computer to access domain controllers that are disjoint, change the **msDS-AllowedDNSSuffixes** Active Directory attribute on the domain object container. Add both DNS suffixes to the attribute.
 
 To make sure that the *DNS suffix search list* contains all the DNS namespaces in the organization, configure the search list for each computer in the disjoint domain. Include the following suffixes in the list of namespaces:
 
@@ -74,17 +74,17 @@ To make sure that the *DNS suffix search list* contains all the DNS namespaces i
 - The DNS domain name
 - Any additional namespaces for other servers that Configuration Manager might communicate with
 
-You can use group policy to configure the **Domain Name System (DNS) suffix search** list.  
+You can use group policy to configure the **Domain Name System (DNS) suffix search** list.
 
-> [!IMPORTANT]  
-> When you reference a computer in Configuration Manager, enter the computer by using its primary DNS suffix. This suffix should match the fully qualified domain name that's registered as the **dnsHostName** attribute in the Active Directory domain and the service principal name that's associated with the system.  
+> [!IMPORTANT]
+> When you reference a computer in Configuration Manager, enter the computer by using its primary DNS suffix. This suffix should match the fully qualified domain name that's registered as the **dnsHostName** attribute in the Active Directory domain and the service principal name that's associated with the system.
 
 ## <a name="bkmk_SLD"></a> Single label domains
 
-Configuration Manager supports site systems and clients in a single label domain when the following criteria are met:  
+Configuration Manager supports site systems and clients in a single label domain when the following criteria are met:
 
-- Configure the single label domain in Active Directory Domain Services with a disjoint DNS namespace that has a valid top-level domain.  
+- Configure the single label domain in Active Directory Domain Services with a disjoint DNS namespace that has a valid top-level domain.
 
-  **For example:** The single label domain of Contoso is configured to have a disjoint namespace in DNS of contoso.com. When you specify the DNS suffix in Configuration Manager for a computer in the Contoso domain, you specify "Contoso.com" and not "Contoso".  
+  **For example:** The single label domain of Contoso is configured to have a disjoint namespace in DNS of contoso.com. When you specify the DNS suffix in Configuration Manager for a computer in the Contoso domain, you specify "Contoso.com" and not "Contoso".
 
-- The distributed component object model (DCOM) connections between site servers in the system context must be successful by using Kerberos authentication.  
+- The distributed component object model (DCOM) connections between site servers in the system context must be successful by using Kerberos authentication.

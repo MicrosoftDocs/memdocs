@@ -12,68 +12,68 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_Download_Provider WMI Class
-The **CCM_Download_Provider** class, in Configuration Manager, defines and registers a non-Microsoft download plug-in provider.  
+The **CCM_Download_Provider** class, in Configuration Manager, defines and registers a non-Microsoft download plug-in provider.
 
-## Syntax  
+## Syntax
 
-```  
-class CCM_Download_Provider: CCM_Policy  
-{  
-    string  LogicalName;  
-    string  CLSID;   
-    uint32  Priority;   
-    String  GlobalSettings;   
-    string  Reserved;   
-};  
+```
+class CCM_Download_Provider: CCM_Policy
+{
+    string  LogicalName;
+    string  CLSID;
+    uint32  Priority;
+    String  GlobalSettings;
+    string  Reserved;
+};
 
-```  
+```
 
-#### Parameters  
- `LogicalName`  
- Data type: String  
+#### Parameters
+ `LogicalName`
+ Data type: String
 
- Qualifiers: [in, RealKey, NotNull: ToInstance ToSubClass]  
+ Qualifiers: [in, RealKey, NotNull: ToInstance ToSubClass]
 
- The name of the non-Microsoft provider. This field must match the value specified to the SMS provider.  
+ The name of the non-Microsoft provider. This field must match the value specified to the SMS provider.
 
- `CLSID`  
- Data type: String  
+ `CLSID`
+ Data type: String
 
- Qualifiers: [in, NotNull: ToInstance, ToSubClass]  
+ Qualifiers: [in, NotNull: ToInstance, ToSubClass]
 
- The COM class ID corresponding to the interface implementation.  
+ The COM class ID corresponding to the interface implementation.
 
- `Priority`  
- Data type: String  
+ `Priority`
+ Data type: String
 
- Qualifiers: [in, NotNull: ToInstance ToSubClass]  
+ Qualifiers: [in, NotNull: ToInstance ToSubClass]
 
- Priority in the face of multiple alternate provider choices. For future use. Must be nonzero.  
+ Priority in the face of multiple alternate provider choices. For future use. Must be nonzero.
 
- `GlobalSettings`  
- Data type: String  
+ `GlobalSettings`
+ Data type: String
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Provider specific data. Use this for any client-wide configuration for the provider.  
+ Provider specific data. Use this for any client-wide configuration for the provider.
 
- `Reserved`  
- Data type: String  
+ `Reserved`
+ Data type: String
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Reserved for future use.  
+ Reserved for future use.
 
-## Return Values  
- None.  
+## Return Values
+ None.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).

@@ -12,68 +12,68 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # VerifySignature Method in Class CCM_SoftwareCatalogUtilities
-The `VerifySignature` Windows Management Instrumentation (WMI) class method in Configuration Manager that verifies the data signature.   
+The `VerifySignature` Windows Management Instrumentation (WMI) class method in Configuration Manager that verifies the data signature.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 VerifySignature   
-{  
-    [IN]    String Data  
-    [IN]    String DataSignature  
-    [IN]    String WebServiceID  
-    [IN]    Boolean VerifyUserAndTimestamp  
-    [OUT]   Boolean SignatureVerificationPassed  
-};  
-```  
+```
+uint32 VerifySignature
+{
+    [IN]    String Data
+    [IN]    String DataSignature
+    [IN]    String WebServiceID
+    [IN]    Boolean VerifyUserAndTimestamp
+    [OUT]   Boolean SignatureVerificationPassed
+};
+```
 
-## Parameters  
- `Data`  
- Data type: `String`  
+## Parameters
+ `Data`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Data to verify.   
+ Data to verify.
 
- `DataSignature`  
- Data type: `String`  
+ `DataSignature`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Data signature.    
+ Data signature.
 
- `WebServiceID`  
- Data type: `String`  
+ `WebServiceID`
+ Data type: `String`
 
- Qualifiers: [id("2"), in]  
+ Qualifiers: [id("2"), in]
 
- Web Service identifier.    
+ Web Service identifier.
 
- `VerifyUserAndTimestamp`  
- Data type: `Boolean`  
+ `VerifyUserAndTimestamp`
+ Data type: `Boolean`
 
- Qualifiers: [id("3"), in]  
+ Qualifiers: [id("3"), in]
 
- `true` to verify the user and timestamp.   
+ `true` to verify the user and timestamp.
 
- `SignatureVerificationPassed`  
- Data type: `Boolean`  
+ `SignatureVerificationPassed`
+ Data type: `Boolean`
 
- Qualifiers: [id("4"), out]  
+ Qualifiers: [id("4"), out]
 
- `true` if the data signature is valid.    
+ `true` if the data signature is valid.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

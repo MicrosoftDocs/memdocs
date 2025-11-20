@@ -1,27 +1,12 @@
 ---
-# required metadata
-
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-keywords:
-author: dougeby
-ms.author: dougeby
-manager: dougeby
-ms.date: 04/01/2025
+author: brenduns
+ms.author: brenduns
+ms.date: 11/13/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
- 
-# optional metadata
-
-#audience:
-
-ms.reviewer: lebacon
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
+ms.reviewer: intuner
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -31,7 +16,7 @@ ms.collection:
 
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
+- If we anticipate that you need to take action before a change, we'll publish a complementary post in the Office message center.
 - When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](whats-new.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
@@ -61,125 +46,105 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Management elevation rule support for file arguments and parameters<!--28077130 -->
+### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-Soon, the file elevation rules for Endpoint Privilege Management (EPM) will support use of arguments or parameters that you want to allow. Arguments and parameters that aren't explicitly allowed will be blocked from use. This capability helps to improve control of the context for file elevations.
-
-EPM is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md).
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
 ## App management
 
-### Microsoft Intune support for Apple AI features<!-- 12792722, 30550110, 30220799 -->
-
-Intune app protection policies will have new standalone settings for Apple AI features (Genmojis, Writing tools, and screen capture). Note that these standalone settings are supported by apps that have updated to version 19.7.12 or later for Xcode 15, and 20.4.0 or later for Xcode 16 of the Intune App SDK and App Wrapping Tool. Currently, these Apple AI features are blocked when the app protection policy **Send Org data to other apps** setting is configured to a value other than **All apps**.
-
-For more information, see [Microsoft Intune support for Apple Intelligence](https://techcommunity.microsoft.com/blog/intunecustomersuccess/microsoft-intune-support-for-apple-intelligence/4254037).
-
-### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
-
-Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
-
-For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
-
-Applies to:
-
-- Windows
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
-Applies to:
-
-- iOS/iPadOS
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
 
 <!-- *********************************************** -->
 
-### Android settings in the Settings Catalog <!-- 31524383 (was 26981326) -->
+## Device configuration
 
-The settings catalog will soon support Android Enterprise and AOSP.
+### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
 
-Currently, to configure Android settings, you use the built-in templates. The settings from these templates are also available in the settings catalog. More settings will continue to be added.
+On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
 
-In the Intune admin center, when you create a device configuration profile, you select the **Profile Type** (**Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > select your **Platform** > **Profile Type**). All the profile types are moved to **Profile Type** > **Templates**.
+In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
 
-This change:
+  - Set a recovery lock password
+  - Configure a password rotation schedule
+  - Clear a recovery lock password
 
-- Will be a UI change with no impact on your existing policies. Your existing policies don't change. You'll still be able to create, edit, and assign these policies the same way.
-- Will be the same UI experience as iOS/iPadOS, macOS, and Windows templates.
-
-To get started with settings catalog, go to [Use the settings catalog to configure settings on your devices](../configuration/settings-catalog.md).
-
-Applies to:
-
-- Android Enterprise
-- AOSP
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
 
 <!-- *********************************************** -->
 
 ## Device enrollment
 
-### Enrollment-time grouping for Android Enterprise corporate devices <!-- 17530981 -->
+### Configure Windows Backup for Organizations<!--29202026 -->
+      
+A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).  
 
-Soon to be available for Android Enterprise corporate-owned devices, *enrollment time grouping* enables you to assign a static Microsoft Entra group to devices at enrollment time. When a targeted Android device enrolls, it will receive all assigned policies, apps, and settings, typically by the time the user lands on the home screen. Intune admins will be able to configure one static Microsoft Entra group per enrollment profile under the **Device group** tab.
+### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
 
+As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
 
-### Custom device naming template for Android Enterprise corporate-owned devices<!-- 3465701 -->
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions include:
+- **App Store** (iOS/iPadOS 14.3+)
+- **Camera button** (iOS/iPadOS 18+)
+   - **Web content filtering** (iOS/iPadOS 18.2+)
+   - **Safety and handling** (iOS/iPadOS 18.4+)
+   - **Multitasking** (iOS/iPadOS 26+)
+   - **OS Showcase** (iOS/iPadOS 26+)
 
-You'll soon be able to use a custom template for naming Android Enterprise corporate-owned devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
-
-Applies to:
-
-- Android
+The screens you can skip during macOS enrollment include:
+- **App Store** (macOS 11.1+)
+- **Get Started** (macOS 15+)
+- **Software update** (macOS 15.4+)
+- **Additional privacy settings** (macOS 26+)
+- **OS Showcase** (macOS 26.1+)
+- **Update completed** (macOS 26.1+)
+- **Get Started** (macOS 15+)
 
 <!-- *********************************************** -->
 
 ## Device management
 
-### Intune ending support for custom profiles for personally owned work profile devices<!-- 27424084 -->
+### Windows Autopilot device preparation in automatic mode to be available for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps (public preview)<!-- 35518695 -->
 
-Starting in April 2025, Intune will no longer support custom profiles for Android Enterprise personally owned work profile devices. After this time:
+You will be able to use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and will apply immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You'll be able to monitor deployment status in the [Windows Autopilot device preparation deployment report](/autopilot/device-preparation/reporting-monitoring).
 
-- Admins won’t be able to create new custom profiles for personally owned work profile devices. However, admins can still view and edit previously created custom profiles.
+For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](/autopilot/device-preparation/tutorial/automatic/automatic-workflow).
 
-- Personally-owned work profile devices that currently have a custom profile assigned won't experience any immediate change of functionality. Because these profiles are no longer supported, the functionality set by these profiles might change in the future.
+For more information, see the following articles:
 
-- Intune technical support will no longer support custom profiles for personally owned work profile devices.
-
-All custom policies should be replaced with other policy types. Learn more about [Intune ending support for personally owned work profile custom profiles](https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414).
-
-### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
-
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
-
-For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
-
-### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
-
-We're adding a feature that will allow a customer to:
-
-- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
-- Configure a different RBAC permission and assign the permission to different RBAC roles
-
-Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
-
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
+- [Create provisioning policies for Windows 365 | Microsoft Learn](/windows-365/enterprise/create-provisioning-policy)
+- [Windows 365 Cloud Apps | Microsoft Learn](/windows-365/enterprise/cloud-apps)
+- [Use Autopilot device preparation with Cloud PCs | Microsoft Learn](/windows-365/enterprise/autopilot-device-preparation)
 
 <!-- *********************************************** -->
 
 ## Device security
 
-### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
+### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
-We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
+As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
 
-The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
+### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-Applies to:
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
-- Linux
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+For information about the currently available Intune security baselines, see [Security baselines overview](../protect/security-baselines.md).
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -187,10 +152,11 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-Applies to the following when you use the *Windows* platform:
-
-- Windows 10
-- Windows 11
+> [!div class="checklist"]
+> Applies to the following when you use the *Windows* platform:
+>
+> - Windows 10
+> - Windows 11
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
@@ -200,15 +166,21 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
+
+<!-- ## Monitor and troubleshoot -->
+
+
+<!-- *********************************************** -->
+
 <!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 
-## Tenant administration
+<!-- ## Role-based access control -->
 
-### Updates to Intune admin center home page<!-- 25914324 -->
+<!-- *********************************************** -->
 
-Microsoft Intune admin center's home page will be updated to include additional links to interactive demos, documentation, and training.
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 

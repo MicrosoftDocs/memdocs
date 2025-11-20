@@ -12,58 +12,58 @@ manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, parameters, return values, and requirements of the AddDistributionPoints method.
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # AddDistributionPoints Method in Class SMS_BootImagePackage
-The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the boot image package.  
+The `AddDistributionPoints` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the distribution points for the boot image package.
 
 > [!NOTE]
->  The `AddDistributionPoints` method allows a list of distribution points to be added to a package.  
+>  The `AddDistributionPoints` method allows a list of distribution points to be added to a package.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 AddDistributionPoints(  
-      String SiteCode[],  
-      String NALPath[]  
-);  
-```  
+```
+SInt32 AddDistributionPoints(
+      String SiteCode[],
+      String NALPath[]
+);
+```
 
-#### Parameters  
- `SiteCode`  
- Data type: `String` Array  
+#### Parameters
+ `SiteCode`
+ Data type: `String` Array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The code for the site to which to add the distribution points.  
+ The code for the site to which to add the distribution points.
 
- `NALPath`  
- Data type: `String` Array  
+ `NALPath`
+ Data type: `String` Array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Network abstraction layer (NAL) path to the distribution points.  
+ Network abstraction layer (NAL) path to the distribution points.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Remarks  
- It is not necessary to refresh the distribution points when using this method.  
+## Remarks
+ It is not necessary to refresh the distribution points when using this method.
 
- For more information about NAL paths, see [SMS_NAL_Methods Server WMI Class](../../../develop/reference/misc/sms_nal_methods-server-wmi-class.md).  
+ For more information about NAL paths, see [SMS_NAL_Methods Server WMI Class](../../../develop/reference/misc/sms_nal_methods-server-wmi-class.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md)   
+## See Also
+ [SMS_BootImagePackage Server WMI Class](../../../develop/reference/osd/sms_bootimagepackage-server-wmi-class.md)
  [SMS_NAL_Methods Server WMI Class](../../../develop/reference/misc/sms_nal_methods-server-wmi-class.md)

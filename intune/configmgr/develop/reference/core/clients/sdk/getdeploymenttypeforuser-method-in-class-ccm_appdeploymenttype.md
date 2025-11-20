@@ -12,60 +12,60 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetDeploymentTypeForUser Method in Class CCM_AppDeploymentType
-The `GetDeploymentTypeForUser` Windows Management Instrumentation (WMI) class method in Configuration Manager that retrieves the application deployment type property for a user.   
+The `GetDeploymentTypeForUser` Windows Management Instrumentation (WMI) class method in Configuration Manager that retrieves the application deployment type property for a user.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 GetDeploymentTypeForUser   
-{  
-    [IN]    String Id  
-    [IN]    String Revision  
-    [IN]    String User  
-    [OUT]   Object DeploymentType  
-};  
-```  
+```
+uint32 GetDeploymentTypeForUser
+{
+    [IN]    String Id
+    [IN]    String Revision
+    [IN]    String User
+    [OUT]   Object DeploymentType
+};
+```
 
-## Parameters  
- `Id`  
- Data type: `String`  
+## Parameters
+ `Id`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Identifier.    
+ Identifier.
 
- `Revision`  
- Data type: `String`  
+ `Revision`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Revision.    
+ Revision.
 
- `User`  
- Data type: `String`  
+ `User`
+ Data type: `String`
 
- Qualifiers: [id("2"), in]  
+ Qualifiers: [id("2"), in]
 
- User.    
+ User.
 
- `DeploymentType`  
- Data type: `CCM_AppDeploymentType`  
+ `DeploymentType`
+ Data type: `CCM_AppDeploymentType`
 
- Qualifiers: [id("3"), out]  
+ Qualifiers: [id("3"), out]
 
- Deployment type.    
+ Deployment type.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

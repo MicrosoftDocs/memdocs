@@ -12,203 +12,203 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_ApplyDataImageAction Server WMI Class
-The `SMS_TaskSequence_ApplyDataImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that applies an existing data image to a target computer.  
+The `SMS_TaskSequence_ApplyDataImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that applies an existing data image to a target computer.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_ApplyDataImageAction : SMS_TaskSequence_Action  
-{  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      UInt32 DestinationDisk;  
-      String DestinationLogicalDrive;  
-      UInt32 DestinationPartition;  
-      String DestinationVariable;  
-      Boolean Enabled;  
-      UInt32 ImageIndex;  
-      String ImagePackageID;  
-      String Name;  
-      String SupportedEnvironment;  
-      UInt32 Timeout;  
-      Boolean WipeDestinationPartition;  
-};  
-```  
+```
+Class SMS_TaskSequence_ApplyDataImageAction : SMS_TaskSequence_Action
+{
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      UInt32 DestinationDisk;
+      String DestinationLogicalDrive;
+      UInt32 DestinationPartition;
+      String DestinationVariable;
+      Boolean Enabled;
+      UInt32 ImageIndex;
+      String ImagePackageID;
+      String Name;
+      String SupportedEnvironment;
+      UInt32 Timeout;
+      Boolean WipeDestinationPartition;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_ApplyDataImageAction` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_ApplyDataImageAction` class does not define any methods.
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+## Properties
+ `Condition`
+ Data type: `SMS_TaskSequence_Condition`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ContinueOnError`  
- Data type: `Boolean`  
+ `ContinueOnError`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `DestinationDisk`  
- Data type: `UInt32`  
+ `DestinationDisk`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [CommandLineArg(6), ValueRange("0-99")]  
+ Qualifiers: [CommandLineArg(6), ValueRange("0-99")]
 
- Index of the disk to which to apply the image. The index can have a value of 1 through 99. For more information, see Remarks.  
+ Index of the disk to which to apply the image. The index can have a value of 1 through 99. For more information, see Remarks.
 
- `DestinationLogicalDrive`  
- Data type: `String`  
+ `DestinationLogicalDrive`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [CommandLineArg(8)]  
+ Qualifiers: [CommandLineArg(8)]
 
- Logical drive letter of the volume to which the image is applied. For more information, see Remarks.  
+ Logical drive letter of the volume to which the image is applied. For more information, see Remarks.
 
- `DestinationPartition`  
- Data type: `UInt32`  
+ `DestinationPartition`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [CommandLineArg(7), RequiredIfNotNull("DestinationDisk"), ValueRange("1-99")]  
+ Qualifiers: [CommandLineArg(7), RequiredIfNotNull("DestinationDisk"), ValueRange("1-99")]
 
- Index of the partition on the target disk specified by `DestinationDisk` to which the image is applied. The index can have a value of 1 through 99. For more information, see Remarks.  
+ Index of the partition on the target disk specified by `DestinationDisk` to which the image is applied. The index can have a value of 1 through 99. For more information, see Remarks.
 
- `DestinationVariable`  
- Data type: `String`  
+ `DestinationVariable`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [CommandLineArg(9)]  
+ Qualifiers: [CommandLineArg(9)]
 
- Task sequence variable containing the logical drive letter of the volume to which the image is applied. For more information, see the Remarks section later in this topic.  
+ Task sequence variable containing the logical drive letter of the volume to which the image is applied. For more information, see the Remarks section later in this topic.
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ImageIndex`  
- Data type: `UInt32`  
+ `ImageIndex`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null, ValueRange("1-2147483647"), VariableName("OSDDataImageIndex")]  
+ Qualifiers: [Not_Null, ValueRange("1-2147483647"), VariableName("OSDDataImageIndex")]
 
- Index of the image in the WIM file applied to the target computer. Possible index values are 1 through 2147483647. For more information, see the note in Remarks.  
+ Index of the image in the WIM file applied to the target computer. Possible index values are 1 through 2147483647. For more information, see the note in Remarks.
 
- The task sequence variable associated with this property is OSDDataImageIndex. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDDataImageIndex).  
+ The task sequence variable associated with this property is OSDDataImageIndex. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDDataImageIndex).
 
- `ImagePackageID`  
- Data type: `String`  
+ `ImagePackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null, CommandLineArg(1), TaskSequencePackage("image")]  
+ Qualifiers: [Not_Null, CommandLineArg(1), TaskSequencePackage("image")]
 
- Package ID of the image applied to the target computer. For more information, see [SMS_ImagePackage Server WMI Class](../../../develop/reference/osd/sms_imagepackage-server-wmi-class.md).  
+ Package ID of the image applied to the target computer. For more information, see [SMS_ImagePackage Server WMI Class](../../../develop/reference/osd/sms_imagepackage-server-wmi-class.md).
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+ Qualifiers: [AllowedLen("1-100")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `SupportedEnvironment`  
- Data type: `String`  
+ `SupportedEnvironment`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null:ToInstance]  
+ Qualifiers: [Not_Null:ToInstance]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- The default value of this property for this task sequence action is WinPE.  
+ The default value of this property for this task sequence action is WinPE.
 
- `Timeout`  
- Data type: `UInt32`  
+ `Timeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `WipeDestinationPartition`  
- Data type: `Boolean`  
+ `WipeDestinationPartition`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, VariableName("OSDWipeDestinationPartition")]  
+ Qualifiers: [not_null, VariableName("OSDWipeDestinationPartition")]
 
- `true` (default) to wipe the contents of the destination partition before the image is applied.  
+ `true` (default) to wipe the contents of the destination partition before the image is applied.
 
- The task sequence variable associated with this property is OSDWipeDestinationPartition. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDWipeDestinationPartition).  
+ The task sequence variable associated with this property is OSDWipeDestinationPartition. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDWipeDestinationPartition).
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
- [CommandLine("OSDApplyOS.exe /data:%1,%%OSDDataImageIndex%% \<?6: /target:%6,%7>\<?8: /target:%8>\<?9: /target:%%%9%%>"), ActionCategory{"Images,2,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "ApplyDataImageControl", "TaskSequenceOptionControl"}]  
+ [CommandLine("OSDApplyOS.exe /data:%1,%%OSDDataImageIndex%% \<?6: /target:%6,%7>\<?8: /target:%8>\<?9: /target:%%%9%%>"), ActionCategory{"Images,2,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "ApplyDataImageControl", "TaskSequenceOptionControl"}]
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
- The following properties can be set for the target of this task sequence action:  
+ The following properties can be set for the target of this task sequence action:
 
-- `DestinationDisk`  
+- `DestinationDisk`
 
-- `DestinationPartition`  
+- `DestinationPartition`
 
-- `DestinationLogicalDrive`  
+- `DestinationLogicalDrive`
 
-- `DestinationVariable`  
+- `DestinationVariable`
 
-  To install to a specific disk or partition, set `DestinationDisk` and `DestinationPartition` and set the other destination properties to `null`.  
+  To install to a specific disk or partition, set `DestinationDisk` and `DestinationPartition` and set the other destination properties to `null`.
 
-  To install to a logical volume, such as c:\\, set `DestinationLogicalDrive` and set the other properties to `null`.  
+  To install to a logical volume, such as c:\\, set `DestinationLogicalDrive` and set the other properties to `null`.
 
-  `DestinationVariable` can be set to a task sequence variable that contains the destination in the form of "1,1" to target disk 1, partition 1, or contains "c:" to target a logical volume.  
+  `DestinationVariable` can be set to a task sequence variable that contains the destination in the form of "1,1" to target disk 1, partition 1, or contains "c:" to target a logical volume.
 
-  Set all the destination properties to `null` to use the "next available" formatted volume as the target.  
+  Set all the destination properties to `null` to use the "next available" formatted volume as the target.
 
 > [!NOTE]
->  The value supplied for the `ImageIndex` property can be problematic if your application must range-check the property against a maximum value that is greater than 0x7fffffff (2147483647). In this case, your application cannot use the range qualifier on the property.  
+>  The value supplied for the `ImageIndex` property can be problematic if your application must range-check the property against a maximum value that is greater than 0x7fffffff (2147483647). In this case, your application cannot use the range qualifier on the property.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

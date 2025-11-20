@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_AppFailedVEsData Server WMI Class
@@ -21,134 +21,134 @@ The `SMS_AppFailedVEsData` Windows Management Instrumentation (WMI) class is an 
 
 The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_AppFailedVEsData : SMS_BaseClass  
-{  
-    UInt32 AssignmentID;  
-    String AssignmentUniqueID;  
-    String CollectionID;  
-    UInt32 ComplianceState;  
-    UInt32 DTCI;  
-    UInt64 DTResultID;  
-    UInt32 EnforcementState;  
-    UInt32 ErrorValue;  
-    String MachineName;  
-    String UserName;  
-    String VEDisplayName;  
-};  
-```  
+```
+Class SMS_AppFailedVEsData : SMS_BaseClass
+{
+    UInt32 AssignmentID;
+    String AssignmentUniqueID;
+    String CollectionID;
+    UInt32 ComplianceState;
+    UInt32 DTCI;
+    UInt64 DTResultID;
+    UInt32 EnforcementState;
+    UInt32 ErrorValue;
+    String MachineName;
+    String UserName;
+    String VEDisplayName;
+};
+```
 
-## Methods  
- The `SMS_AppFailedVEsData` class does not define any methods.  
+## Methods
+ The `SMS_AppFailedVEsData` class does not define any methods.
 
-## Properties  
- `AssignmentID`  
- Data type: `UInt32`  
+## Properties
+ `AssignmentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- AssignmentID    
+ AssignmentID
 
- `AssignmentUniqueID`  
- Data type: `String`  
+ `AssignmentUniqueID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- AssignmentUniqueID    
+ AssignmentUniqueID
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- CollectionID    
+ CollectionID
 
- `ComplianceState`  
- Data type: `UInt32`  
+ `ComplianceState`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- ComplianceState    
+ ComplianceState
 
- `DTCI`  
- Data type: `UInt32`  
+ `DTCI`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- DTCI    
+ DTCI
 
- `DTResultID`  
- Data type: `UInt64`  
+ `DTResultID`
+ Data type: `UInt64`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- DTResultID    
+ DTResultID
 
- `EnforcementState`  
- Data type: `UInt32`  
+ `EnforcementState`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [not_null, read]  
+ Qualifiers: [not_null, read]
 
- EnforcementState    
+ EnforcementState
 
- `ErrorValue`  
- Data type: `UInt32`  
+ `ErrorValue`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- ErrorValue    
+ ErrorValue
 
- `MachineName`  
- Data type: `String`  
+ `MachineName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- MachineName    
+ MachineName
 
- `UserName`  
- Data type: `String`  
+ `UserName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- UserName    
+ UserName
 
- `VEDisplayName`  
- Data type: `String`  
+ `VEDisplayName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, not_null, read]  
+ Qualifiers: [key, not_null, read]
 
- VEDisplayName    
+ VEDisplayName
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

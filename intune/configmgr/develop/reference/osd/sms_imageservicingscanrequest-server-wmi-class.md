@@ -12,66 +12,66 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ImageServicingScanRequest Server WMI Class
-The `SMS_ImageServicingScanRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents scan request for offline servicing image.  
+The `SMS_ImageServicingScanRequest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents scan request for offline servicing image.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ImageServicingScanRequest : SMS_BaseClass  
-{  
-    String ImagePackageID;  
-    DateTime LastRunDateTime;  
-    SInt32 Status;  
-};  
-```  
+```
+Class SMS_ImageServicingScanRequest : SMS_BaseClass
+{
+    String ImagePackageID;
+    DateTime LastRunDateTime;
+    SInt32 Status;
+};
+```
 
-## Methods  
- The `SMS_ImageServicingScanRequest` class does not define any methods.  
+## Methods
+ The `SMS_ImageServicingScanRequest` class does not define any methods.
 
-## Properties  
- `ImagePackageID`  
- Data type: `String`  
+## Properties
+ `ImagePackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID for offline servicing image that is installed on client computer.  
+ ID for offline servicing image that is installed on client computer.
 
- `LastRunDateTime`  
- Data type: `DateTime`  
+ `LastRunDateTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last run time for this offline image.  
+ Last run time for this offline image.
 
- `Status`  
- Data type: `SInt32`  
+ `Status`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Status for this offline image installation  
+ Status for this offline image installation
 
-| Value | Installation status |  
-| ----- | ------------------- |  
-|1|Success|  
-|2|Failed|  
+| Value | Installation status |
+| ----- | ------------------- |
+|1|Success|
+|2|Failed|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

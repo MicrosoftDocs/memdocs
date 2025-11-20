@@ -6,12 +6,12 @@ ms.date: 04/08/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Modify a CMG
@@ -192,9 +192,9 @@ You can reuse the same service name and CMG server authentication certificate, b
 
 Use the Configuration Manager console to stop and start the service if you need to.
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.
 
-1. Select the CMG instance.  
+1. Select the CMG instance.
 
 1. In the ribbon, select one of the following actions:
 
@@ -217,9 +217,9 @@ You can also use PowerShell to stop and start a CMG:
 
 To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
 
-1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.  
+1. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select the **Cloud Management Gateway** node.
 
-1. Select the CMG instance.  
+1. Select the CMG instance.
 
 1. In the Details pane at the bottom of the window, look for the **Deployment Model** attribute.
 
@@ -230,7 +230,7 @@ To determine the current deployment model of a CMG:<!--SCCMDocs issue #611-->
     > [!IMPORTANT]
     > CMG deployments using Azure Service Manager are deprecated. Support will be removed in a later version of Configuration Manager. Redeploy a new CMG to use the Azure Resource Manager deployment method.
 
-You can also add the **Deployment Model** attribute as a column to the list view.  
+You can also add the **Deployment Model** attribute as a column to the list view.
 
 ## Modifications in the Azure portal
 

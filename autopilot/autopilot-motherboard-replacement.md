@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot motherboard replacement
 description: Understand how Windows Autopilot deployments function when the motherboard is replaced on a device.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 08/13/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -288,6 +281,12 @@ For the **Supported** column in the following table:
 > [!IMPORTANT]
 >
 > When parts are scavenged from another Windows Autopilot device, Microsoft recommends to unregister the scavenged device from Windows Autopilot, scavenge it, and then **never register the scavenged device again for Windows Autopilot**. Reusing parts in this way might cause two active devices to end up with the same ID with no possibility of distinguishing between the two.
+>
+> To resolve the issue when two active devices end up with the same ID, follow these steps:
+>
+> 1. [Deregister affected devices](#deregister-a-device) from Microsoft Intune.
+> 1. Collect hardware hashes directly from physical devices rather than relying on OEM-provided hash data.
+> 1. To ensure correct association of device serial numbers, re-register the devices in Windows Autopilot using the hashes collected from the physical devices in the previous step.
 
 The following parts can be replaced without compromising Windows Autopilot enablement or requiring special additional repair steps:
 

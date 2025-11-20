@@ -12,199 +12,199 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_BulkEnrollmentProfiles Server WMI Class
-The  `SMS_BulkEnrollmentProfiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents bulk enrollment profiles for Windows Embedded handheld devices.  
+The  `SMS_BulkEnrollmentProfiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents bulk enrollment profiles for Windows Embedded handheld devices.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_BulkEnrollmentProfiles : SMS_BaseClass  
-{  
-    String Certificate_CI_UniqueID[];  
-    UInt32 EnrollmentProxyPointType;  
-    String EnrollProxyPointServerNames[];  
-    DateTime ExpirationDate;  
-    String FriendlyNamePrefix;  
-    UInt32 ID;  
-    Boolean IsEnabled;  
-    String ProfileDescription;  
-    UInt32 ProfileID;  
-    String ProfileName;  
-    UInt32 ProxyPort;  
-    String ProxyServer;  
-    String Thumbprint;  
-    String UserName;  
-    String Wifi_CI_UniqueID;  
-};  
+```
+Class SMS_BulkEnrollmentProfiles : SMS_BaseClass
+{
+    String Certificate_CI_UniqueID[];
+    UInt32 EnrollmentProxyPointType;
+    String EnrollProxyPointServerNames[];
+    DateTime ExpirationDate;
+    String FriendlyNamePrefix;
+    UInt32 ID;
+    Boolean IsEnabled;
+    String ProfileDescription;
+    UInt32 ProfileID;
+    String ProfileName;
+    UInt32 ProxyPort;
+    String ProxyServer;
+    String Thumbprint;
+    String UserName;
+    String Wifi_CI_UniqueID;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_BulkEnrollmentProfiles` class.  
+## Methods
+ The following table lists the methods in the `SMS_BulkEnrollmentProfiles` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[GenerateProvisioningXML Method in Class SMS_BulkEnrollmentProfiles](../../../develop/reference/mdm/generateprovisioningxml-method-in-class-sms_bulkenrollmentprofiles.md)|Generates provisioning data in XML format.|  
+|Method|Description|
+|------------|-----------------|
+|[GenerateProvisioningXML Method in Class SMS_BulkEnrollmentProfiles](../../../develop/reference/mdm/generateprovisioningxml-method-in-class-sms_bulkenrollmentprofiles.md)|Generates provisioning data in XML format.|
 
-## Properties  
- `Certificate_CI_UniqueID`  
- Data type: `String Array`  
+## Properties
+ `Certificate_CI_UniqueID`
+ Data type: `String Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The unique ID for a certificate configuration item.  
+ The unique ID for a certificate configuration item.
 
- `EnrollmentProxyPointType`  
- Data type: `UInt32`  
+ `EnrollmentProxyPointType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Specifies the type of URL for all enrollment proxy points. Possible values are:  
+ Specifies the type of URL for all enrollment proxy points. Possible values are:
 
 | Value | Enrollment Proxy Point type |
 | ----- | --------------------------- |
-|0|NONE|  
-|1|INTERNET|  
-|2|INTRANET|  
+|0|NONE|
+|1|INTERNET|
+|2|INTRANET|
 
- `EnrollProxyPointServerNames`  
- Data type: `String Array`  
+ `EnrollProxyPointServerNames`
+ Data type: `String Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the enrollment proxy point server.  
+ The name of the enrollment proxy point server.
 
- `ExpirationDate`  
- Data type: `DateTime`  
+ `ExpirationDate`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The expiration date of the certificate.  
+ The expiration date of the certificate.
 
- `FriendlyNamePrefix`  
- Data type: `String`  
+ `FriendlyNamePrefix`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The friendly name prefix for the device.  
+ The friendly name prefix for the device.
 
- `ID`  
- Data type: `UInt32`  
+ `ID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- A unique profile ID.  
+ A unique profile ID.
 
- `IsEnabled`  
- Data type: `Boolean`  
+ `IsEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates whether the profile is enabled.  
+ Indicates whether the profile is enabled.
 
- `ProfileDescription`  
- Data type: `String`  
+ `ProfileDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- A description of the profile.  
+ A description of the profile.
 
- `ProfileID`  
- Data type: `UInt32`  
+ `ProfileID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The ID of the device enrollment profile.  
+ The ID of the device enrollment profile.
 
- `ProfileName`  
- Data type: `String`  
+ `ProfileName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the device enrollment profile.  
+ The name of the device enrollment profile.
 
- `ProxyPort`  
- Data type: `UInt32`  
+ `ProxyPort`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The proxy port number.  
+ The proxy port number.
 
- `ProxyServer`  
- Data type: `String`  
+ `ProxyServer`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The proxy server.  
+ The proxy server.
 
- `Thumbprint`  
- Data type: `String`  
+ `Thumbprint`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The thumbprint of the certificate.  
+ The thumbprint of the certificate.
 
- `UserName`  
- Data type: `String`  
+ `UserName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The user name.  
+ The user name.
 
- `Wifi_CI_UniqueID`  
- Data type: `String`  
+ `Wifi_CI_UniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The unique ID for a Wi-Fi configuration item.  
+ The unique ID for a Wi-Fi configuration item.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

@@ -6,19 +6,19 @@ ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: Baladelli    
-ms.author: Baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to use the Configuration Manager console
 
 *Applies to: Configuration Manager (current branch)*
 
-Administrators use the Configuration Manager console to manage the Configuration Manager environment. This article covers the fundamentals of navigating the console.  
+Administrators use the Configuration Manager console to manage the Configuration Manager environment. This article covers the fundamentals of navigating the console.
 
 ## <a name="bkmk_open"></a> Open the console
 
@@ -202,14 +202,14 @@ The **Documentation** node has no explicit proxy configuration. It uses any OS-d
 <!--9070525-->
 *(Introduced in version 2203)*
 
-Starting in version 2203, the Configuration Manager console offers a dark theme. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme. As of version 2303, the main screen of the console and delete secondary site wizards adhere to the dark theme.  
+Starting in version 2203, the Configuration Manager console offers a dark theme. To use the theme, select the arrow from the top left of the ribbon, then choose **Switch console theme**. Select **Switch console theme** again to return to the light theme. As of version 2303, the main screen of the console and delete secondary site wizards adhere to the dark theme.
 
 :::image type="content" source="./media/9070525-console-dark-theme.png" alt-text="Screenshot of the Configuration Manager using the dark theme for the console. The 'Switch console theme' option is displayed in the upper right corner of the image.":::
 
 ### Known issue
 
 - Console restart is required on doing the theme switch, as the node navigation pane might not properly render when you move to a new workspace.
-- Currently, there are locations in the console that may not display the dark theme correctly. We are continuously working to improve the dark theme. 
+- Currently, there are locations in the console that may not display the dark theme correctly. We are continuously working to improve the dark theme.
 
 
 ## Connect via Windows PowerShell
@@ -222,14 +222,14 @@ For more information, see [Get started with Configuration Manager cmdlets](/powe
 
 The Configuration Manager console has the following command-line options:
 
-|Option|Description|  
-|------------|-----------------|  
-|`/sms:debugview=1`|A DebugView is included in all ResultViews that specify a view. DebugView shows raw properties (names and values).|  
-|`/sms:NamespaceView=1`|Shows namespace view in the console.|  
-|`/sms:ResetSettings`|The console ignores user-persisted connection and view states. The window size isn't reset.|  
-|`/sms:IgnoreExtensions`|Disables any Configuration Manager extensions.|  
-|`/sms:NoRestore`|The console ignores previous persisted node navigation.|  
-|`/server=[ServerName]`|Connect to a CAS or Primary site server by specifying the fully qualified domain name (FQDN) or server name for that site.|  
+|Option|Description|
+|------------|-----------------|
+|`/sms:debugview=1`|A DebugView is included in all ResultViews that specify a view. DebugView shows raw properties (names and values).|
+|`/sms:NamespaceView=1`|Shows namespace view in the console.|
+|`/sms:ResetSettings`|The console ignores user-persisted connection and view states. The window size isn't reset.|
+|`/sms:IgnoreExtensions`|Disables any Configuration Manager extensions.|
+|`/sms:NoRestore`|The console ignores previous persisted node navigation.|
+|`/server=[ServerName]`|Connect to a CAS or Primary site server by specifying the fully qualified domain name (FQDN) or server name for that site.|
 
 ## Next steps
 

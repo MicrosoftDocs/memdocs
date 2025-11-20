@@ -11,14 +11,14 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: high
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Intune role-based access control for tenant-attached clients
 <!--8126836, 6415648, 8348644, IN14996522, 13058986-->
 *Applies to: Configuration Manager (current branch)*
 
-Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with the [Help Desk Operator role](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. [Intune role-based access control](../../intune-service/fundamentals/create-custom-role.md) manages the permissions to all cloud-attached device pages in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), such as [device timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json).  
+Starting in Configuration Manager version 2207, you can use Intune role-based access control (RBAC) when interacting with [tenant attached devices](../tenant-attach/client-details.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with the [Help Desk Operator role](../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. [Intune role-based access control](../../intune-service/fundamentals/create-custom-role.md) manages the permissions to all cloud-attached device pages in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), such as [device timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [CMPivot](../tenant-attach/cmpivot-start.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json).
 
 > [!IMPORTANT]
 > Currently, any enforcement of Intune role-based access control for displaying and taking actions on tenant-attached devices from the Microsoft Intune admin center is optional. We recommend all admins with cloud-connected Configuration Manager environments begin [verifying the role-based access control permissions from Intune](#bkmk_verify-intune-rbac).
@@ -47,7 +47,7 @@ To use Intune role-based access control for tenant attach rather than Configurat
 1. From the Configuration Manager console, go to, **Administration** > **Cloud Services** > **Cloud Attach**.
 1. The location of the role-based access control option varies depending on if your environment is already cloud-attached or not.
    - If your environment is already cloud-attached, open the properties for **CoMgmtSettingsProd**. If you don't have devices uploaded to the admin center, configure that option first. For more information, see [Enable cloud attach](enable.md).
-   - If your environment isn't cloud-attached, select **Configure Cloud Attach** to open the **Cloud Attach Configuration wizard**. 
+   - If your environment isn't cloud-attached, select **Configure Cloud Attach** to open the **Cloud Attach Configuration wizard**.
 1. On the **Configure upload** tab, or page in the wizard, clear the checkbox for the following option under the **Role-based Access Control** heading:
 
    **Enforce Configuration Manager RBAC for cloud console requests that interact with Configuration Manager**
@@ -58,7 +58,7 @@ To use Intune role-based access control for tenant attach rather than Configurat
 
 ## <a name="bkmk_enable-intune"></a> Enable role-based access control from Intune
 
-To enable Intune to manage user permissions for cloud-attached devices, use the following steps:  
+To enable Intune to manage user permissions for cloud-attached devices, use the following steps:
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and sign in as a user that has the **Roles/Update** permission. For more information about the permission, see [custom role permissions in Intune](../../intune-service/fundamentals/create-custom-role.md).
 1. Select **Tenant administration** > **Connectors and tokens** > **Microsoft Endpoint Configuration Manager**.
@@ -71,11 +71,11 @@ To enable Intune to manage user permissions for cloud-attached devices, use the 
 
 ## <a name="bkmk_verify-intune-rbac"></a> Verify role-based access control permissions from Intune
 
-Once Intune is set to the role-based access control authority, verify the permissions for your roles. If needed, you can add these permissions to [custom roles](../../intune-service/fundamentals/create-custom-role.md) you created in Intune.  
+Once Intune is set to the role-based access control authority, verify the permissions for your roles. If needed, you can add these permissions to [custom roles](../../intune-service/fundamentals/create-custom-role.md) you created in Intune.
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and sign in.
 1. Select **Tenant administration** > **Roles**.
-1. Select a role, such as **Application Manager**, and review the permissions listed for **Cloud attached devices**. If needed, edit permissions for any [custom roles](../../intune-service/fundamentals/create-custom-role.md) you created in Intune.  
+1. Select a role, such as **Application Manager**, and review the permissions listed for **Cloud attached devices**. If needed, edit permissions for any [custom roles](../../intune-service/fundamentals/create-custom-role.md) you created in Intune.
 
 The following Intune permissions control access to the Configuration Manager cloud-attached devices:
 
@@ -109,7 +109,7 @@ If the **Use Intune RBAC** toggle in Intune is set to **Off**, then Configuratio
 
 ### What happens if my test hierarchy is configured to use Intune RBAC, but my production hierarchy isn't and they are in the same tenant?
 
-The **Use Intune RBAC** setting applies to all of the Configuration Manager hierarchies listed in the tenant. Cloud-only users can access tenant-attached devices that are uploaded from the test hierarchy because you've also cleared the checkbox to enforce Configuration Manager RBAC. If a cloud-only user tries to access a tenant-attached device uploaded from the production environment, they'll receive an error since production devices are enforcing Configuration Manager RBAC. The cloud-only user will receive an error similar to the following message: 
+The **Use Intune RBAC** setting applies to all of the Configuration Manager hierarchies listed in the tenant. Cloud-only users can access tenant-attached devices that are uploaded from the test hierarchy because you've also cleared the checkbox to enforce Configuration Manager RBAC. If a cloud-only user tries to access a tenant-attached device uploaded from the production environment, they'll receive an error since production devices are enforcing Configuration Manager RBAC. The cloud-only user will receive an error similar to the following message:
 `Unable to get device information. Make sure Azure AD and AD user discovery are configured and the user is discovered by both. Verify that the user has proper permissions in Configuration Manager.`
 
 

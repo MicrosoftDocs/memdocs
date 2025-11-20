@@ -1,34 +1,22 @@
 ---
-title: Troubleshoot Win32 apps in Microsoft Intune
-titleSuffix:
+title: Troubleshoot Win32 Apps in Microsoft Intune
 description: Learn about the most common methods to troubleshoot Win32 app issues with Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 09/17/2024
+ms.date: 10/02/2025
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---
 
-# Troubleshoot Win32 app issues
+# Troubleshoot Win32 App Issues
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 When you're troubleshooting Win32 apps used in Microsoft Intune, you can use a number of methods. This article provides troubleshooting details and information to help you solve Win32 app problems. For more information, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting) resources.
 
 > [!NOTE]
-> This app management capability supports both 32-bit and 64-bit operating system architectures for Windows applications.
+> This app management capability supports 32-bit Windows, 64-bit Windows, and ARM64 operating system architectures for Windows applications.
 
 > [!IMPORTANT]
 > When you're deploying Win32 apps, consider using the [Intune Management Extension](../apps/intune-management-extension.md) approach exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business (LOB) apps during Windows Autopilot enrollment, the app installation might fail. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported. The Intune management extension is installed automatically when a PowerShell script or Win32 app is assigned to the user or device.
@@ -51,7 +39,17 @@ When an installation issue occurs with a Win32 app, you can choose the **Collect
 
 Agent logs on the client machine are commonly in *C:\ProgramData\Microsoft\IntuneManagementExtension\Logs*. You can use *CMTrace.exe* to view these log files. For more information, see [CMTrace](/configmgr/core/support/cmtrace).
 
-![Screenshot of the Agent logs on the client machine.](./media/apps-win32-app-management/apps-win32-app-10.png)
+![User's image](media/apps-win32-troubleshoot/image.png)
+
+| Log File | Description |
+|----------|-------------|
+| IntuneManagementExtension.log | Main client log. Contains agent check in, policy request, policy processing and reporting activities |
+| AgentExecutor.log | Tracks PowerShell script execution details |
+| ClientHealth.log | Tracks SideCar agent client heath activities |
+| _IntuneManagementExtension.log | Saved copy of IntuneManagementExtension.log after log rolls over |
+| AppActionProcessor.log | Tracks the Application Action Processor. This includes information about detection and applicability checks |
+| AppWorkload.log | Main app workload log. This includes apps check-ins, app installs, app applicability and app detection logging |
+| HealthScripts.log | Tracks Remediation script execution details. All workloads that leverage Remediation scripts would find logging for their features here, including custom compliance scripts, managed installer, hardware configuration, and on-demand proactive remediations. |
 
 > [!IMPORTANT]
 > To allow proper installation and execution of LOB Win32 apps, antimalware settings should exclude the following directories from being scanned:<p>
@@ -108,7 +106,7 @@ In the preceding PowerShell command, replace `<path to binary file>` with your f
 ## Additional troubleshooting areas to consider
 - Check targeting to make sure the agent is installed on the device. A Win32 app targeted to a group or a PowerShell Script targeted to a group will create an agent installation policy for a security group.
 - Check the OS version: Windows 10 1607 and later.
-- Check the Windows 10 SKU. Windows 10 S, or Windows versions running with S-mode enabled, doesn't support MSI installation.
+- Check the Windows SKU. Windows S, or Windows versions running with S-mode enabled, doesn't support MSI installation.
 
 For more information about troubleshooting Win32 apps, see [Win32 app installation troubleshooting](/troubleshoot/mem/intune/troubleshoot-app-install#win32-app-installation-troubleshooting). For information about app types on ARM64 devices, see [App types supported on ARM64 devices](/troubleshoot/mem/intune/troubleshoot-app-install#app-types-supported-on-arm64-devices).
 

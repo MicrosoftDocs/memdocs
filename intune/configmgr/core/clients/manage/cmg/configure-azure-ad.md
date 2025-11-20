@@ -6,11 +6,11 @@ ms.date: 09/26/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -79,7 +79,7 @@ If clients use PKI-issued client authentication certificates, then the two clien
 
     - **Application name**: A friendly name for the app.
 
-    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Microsoft Entra ID. By default this value is `https://ConfigMgrService`.  
+    - **HomePage URL**: This value isn't used by Configuration Manager, but required by Microsoft Entra ID. By default this value is `https://ConfigMgrService`.
 
     - **App ID URI**: This value needs to be unique in your Microsoft Entra tenant. It's in the access token used by the Configuration Manager client to request access to the service. By default this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
@@ -95,9 +95,9 @@ If clients use PKI-issued client authentication certificates, then the two clien
 1. In the _Server App_ window, make sure your new app is selected, then select **OK** to save and close the window.
 
 > [!NOTE]
-> 
+>
 > Starting in Configuration Manager current branch version 2309, We have enhanced security of web (server) app for the creation of CMG. For new CMG creation, users can select tenant and the app name using the Microsoft Entra tenant name. After selecting tenant and app name the sign-in button appears, follow rest of the process as per the setup CMG.
-> 
+>
 > Pre-existing CMG customers must update their web server app by navigating to Microsoft Entra tenants node --> select the tenant --> select the server app --> click on "update application settings".
 
 ## Create the native (client) app registration
@@ -191,6 +191,6 @@ You can optionally automate aspects of these configurations using PowerShell.<!-
 ## Next steps
 
 Continue your CMG setup by deciding which type of client authentication to use:
-  
+
 > [!div class="nextstepaction"]
 > [Configure client authentication](configure-authentication.md)

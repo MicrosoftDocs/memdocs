@@ -1,32 +1,15 @@
 ---
-# required metadata
-
-title: Windows 10/11 shared device settings - Microsoft Intune
+title: Windows shared device settings - Microsoft Intune
 description: Add and use Windows 10/11 to configure devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft Surface. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 04/15/2024
+ms.date: 04/28/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
-# Windows 10/11 settings to manage shared devices using Intune
+# Windows settings to manage shared devices using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -97,7 +80,11 @@ These settings use the [SharedPC CSP](/windows/client-management/mdm/sharedpc-cs
   - **Enabled**: Uses the recommended settings for devices used in schools, which are more restrictive.
   - **Disabled**: The default and recommended education policies aren't used.
 
-  For more information on what the education policies do, go to [Windows configuration recommendations for education customers](/education/windows/configure-windows-for-education).
+  To learn more, see:
+
+  - [Shared PC technical reference - SetEDUPolicy](/windows/configuration/shared-pc/shared-pc-technical#setedupolicy)
+  - [SetEduPolicies CSP](/windows/client-management/mdm/sharedpc-csp#setedupolicies)
+  - [Common Education device restrictions](/intune/intune-service/industry/education/tutorial-school-deployment/common-config-settings-catalog-device-restrictions)
 
 > [!TIP]
 > [Set up a shared or guest PC](/windows/configuration/set-up-shared-or-guest-pc) (opens another docs web site) is a great resource on this Windows client feature, including concepts and group policies that can be set in shared mode.

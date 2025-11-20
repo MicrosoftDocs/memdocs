@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Device features and settings in Microsoft Intune
-description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, Windows Information Protection, administrative templates, and custom device configuration settings in the Microsoft Intune admin center. Use these profiles to manage and protect data and devices in your company.
-keywords:
+description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, and custom device configuration settings in the Microsoft Intune admin center. Use these profiles to manage and protect data and devices in your company.
 author: MandiOhlinger
-
 ms.author: mandia
-manager: dougeby
-ms.date: 09/23/2024
+ms.date: 10/14/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -40,9 +20,9 @@ When you configure device features using configuration profile, you can help you
 
 You can create profiles for different devices and different platforms, including Android, iOS/iPadOS, macOS, and Windows. There are some configuration settings that are unique to each platform. It's also common to have many device profiles for each platform, ranging from antivirus settings to custom settings.
 
-When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups. 
+When the profiles are ready, you use Intune to apply or "assign" the profile to user groups or device groups.
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 As part of your mobile device management (MDM) solution, use these configuration profiles to complete different tasks. Some profile examples include:
 
@@ -63,22 +43,11 @@ In Intune, for most platforms, when you create a device configuration profile, y
 
 The settings catalog lists all the settings you can configure, and all in one place. Templates include a logical grouping of settings that configure a feature or concept, like email, kiosk devices, and device firmware.
 
-Intune has many templates that include groups of settings that focus on different parts of device management, including accessing resources (VPN, Wi-Fi), security (antivirus, firewall, certificates), and Group Policy Objects (ADMX administrative templates).
+Intune has many templates that include groups of settings that focus on different parts of device management, including accessing resources (VPN, Wi-Fi), security (antivirus, firewall, certificates).
 
 You can create a baseline of profiles that all devices must have, or you can configure specific features based on your organization needs and levels of security. For more information, go to [Levels of protection and configuration in Microsoft Intune](../fundamentals/protection-configuration-levels.md).
 
 This article gives an overview of the different types of profiles you can create. Use these profiles to allow or prevent some features on the devices.
-
-## Administrative templates and Group policy
-
-[Administrative templates](administrative-templates-windows.md) include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office apps. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.
-
-[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
-
-This feature supports:
-
-- Windows 11
-- Windows 10
 
 ## Certificates
 
@@ -93,9 +62,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 8.1
+- Windows
 
 ## Custom profile
 
@@ -104,22 +71,19 @@ This feature supports:
 This feature supports:
 
 - Android device administrator
-- Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Delivery optimization
 
-[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates. These settings are replacing the **Software Updates** > **Windows 10 update ring** settings.
+[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates.
 
 Use these settings to control how software updates are downloaded to devices in your organization. For example, you can let users get their own updates, or get updates using the delivery optimization cloud services in a device profile.
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Derived credential
 
@@ -149,8 +113,7 @@ With [BIOS configuration](bios-configuration.md), administrators can password-pr
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Device restrictions
 
@@ -165,9 +128,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 10 Team
+- Windows
 
 ## Domain join
 
@@ -175,35 +136,32 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Edition upgrade and mode switch
 
-[Windows 10/11 edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows client to a newer edition.
+[Windows edition upgrades](edition-upgrade-configure-windows-10.md) automatically upgrades devices that run some versions of Windows client to a newer edition.
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Education
 
-[Education settings - Windows 10](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
+[Education settings - Windows](education-settings-configure.md) configure options for the [Windows Take a Test app](/education/windows/take-tests-in-windows-10). When you configure these options, no other apps can run on the device until the test is complete.
 
 [Education settings - iOS/iPadOS](../fundamentals/education-settings-configure-ios-shared.md) uses the iOS/iPadOS Classroom app to guide learning, and control student devices in the classroom. You can configure iPad devices so many students can share a single device.
 
 ## Email
 
-[Email settings](email-settings-configure.md) creates, assigns, and monitors Exchange ActiveSync email settings on the devices. Email profiles help with consistency, reduce support calls, and let end-users access company email on their personal devices, without any required setup on their part. 
+[Email settings](email-settings-configure.md) creates, assigns, and monitors Exchange ActiveSync email settings on the devices. Email profiles help with consistency, reduce support calls, and let end-users access company email on their personal devices, without any required setup on their part.
 
 This feature supports:
 
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Endpoint protection
 
@@ -219,8 +177,7 @@ To onboard Microsoft Defender for Endpoint with Microsoft Intune, see [Configure
 This feature supports:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## eSIM cellular
 
@@ -228,8 +185,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10 Fall Creators Update and newer
+- Windows
 
 ## Extensions
 
@@ -250,10 +206,11 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11 (single app kiosk only)
-- Windows 10
+- Windows
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+  Windows 11 supports single app kiosk only.
+
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
 
 ## MX profile (Zebra)
 
@@ -265,12 +222,11 @@ This feature supports:
 
 ## Microsoft Defender for Endpoint
 
-[Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
+[Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) integrates with Intune to monitor and help protect devices. You set risk levels, and determine what happens if devices exceed that level. When combined with Conditional Access, you can help prevent malicious activity in your organization.
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Network boundary
 
@@ -278,8 +234,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## OEMConfig
 
@@ -302,7 +257,7 @@ This feature supports:
 > [!TIP]
 > macOS settings are continually being added to the [settings catalog](settings-catalog.md). Some of these settings can replace preference files. For more information, go to [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md).
 
-## Settings catalog
+## Settings catalog and Group Policy analytics
 
 The [settings catalog](settings-catalog.md) lists all the available settings you can configure, and all in one place. It's not template, or a logical grouping of settings. The settings catalog is similar to configuring on-premises Group Policy Objects (GPOs), but is cloud native.
 
@@ -314,19 +269,25 @@ This feature supports:
 
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
+- Android Enterprise
+- Android (AOSP)
+- Windows
+
+[Group Policy analytics](group-policy-analytics.md) analyzes your on-premises GPOs. It's a tool that helps you determine how your GPOs translate in the cloud. The output shows any deprecated settings and the settings that are available (or not available) to MDM providers, including Microsoft Intune.
+
+This feature supports:
+
+- Windows
 
 ## Shared multi-user device
 
-[Windows 10/11](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
+[Windows](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md) includes settings to manage devices with multiple users. These devices are known as shared devices, or shared PCs. When a user signs in to the device, you choose if the user can change the sleep options, or save files on the device. In another example, to save space, you can create a profile that deletes inactive credentials from Windows HoloLens devices.
 
 These shared multi-user device settings allow administrators to control some of the device features, and manage these shared devices using Intune.
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 - Windows Holographic for Business
 
 ## Shell scripts
@@ -335,44 +296,42 @@ On Linux devices, you can [add existing Bash scripts](../configuration/device-pr
 
 On macOS devices, you can [add existing shell scripts](../apps/macos-shell-scripts.md), and then deploy these scripts to your macOS devices.
 
-On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/intune-management-extension.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
+On Windows devices, you can use the Intune Management Extension to upload your [PowerShell scripts](../apps/powershell-scripts.md) in Intune, and then run these scripts on your devices. Also see what's required to use the extension, how to add them to Intune, and other important information.
 
 This feature supports:
 
 - Linux
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Update policies
 
-[iOS/iPadOS update policies](../protect/software-updates-ios.md) shows you how to create and assign iOS/iPadOS policies to install software updates on your iOS/iPadOS devices. You can also review the installation status.
+[iOS/iPadOS and macOS managed software updates](../protect/updates/apple.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
 
-For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md). 
+For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md).
 
 This feature supports:
 
 - iOS/iPadOS
+- macOS
 
 ## VPN
 
-[VPN settings](vpn-settings-configure.md) assigns VPN profiles to users and devices in your organization, so they can easily and securely connect to the network. 
+[VPN settings](vpn-settings-configure.md) assigns VPN profiles to users and devices in your organization, so they can easily and securely connect to the network.
 
-Virtual private networks (VPNs) give users secure remote access to your company network. Devices use a VPN connection profile to start a connection with your VPN server. 
+Virtual private networks (VPNs) give users secure remote access to your company network. Devices use a VPN connection profile to start a connection with your VPN server.
 
-This feature supports: 
+This feature supports:
 
 - Android device administrator
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 8.1
+- Windows
 
 ## Wi-Fi
 
-[Wi-Fi settings](wi-fi-settings-configure.md) assigns wireless network settings to users and devices. When you assign a WiFi profile, users get access to your corporate WiFi without having to configure it themselves. 
+[Wi-Fi settings](wi-fi-settings-configure.md) assigns wireless network settings to users and devices. When you assign a WiFi profile, users get access to your corporate WiFi without having to configure it themselves.
 
 This feature supports:
 
@@ -381,9 +340,7 @@ This feature supports:
 - Android Enterprise
 - iOS/iPadOS
 - macOS
-- Windows 11
-- Windows 10
-- Windows 8.1 (import only)
+- Windows
 
 ## Windows health monitoring
 
@@ -391,8 +348,7 @@ This feature supports:
 
 This feature supports:
 
-- Windows 11
-- Windows 10
+- Windows
 
 ## Wired networks
 
@@ -403,8 +359,7 @@ When you assign the profile, users get access to your corporate wired network wi
 This feature supports:
 
 - macOS
-- Windows 11
-- Windows 10
+- Windows
 
 ## Zebra Mobility Extensions (MX)
 

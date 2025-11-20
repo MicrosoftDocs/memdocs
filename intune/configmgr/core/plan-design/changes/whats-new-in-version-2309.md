@@ -6,12 +6,12 @@ ms.date: 11/15/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: whats-new
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2309 of Configuration Manager current branch
@@ -19,7 +19,7 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 Update 2309 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2207 or later. This article summarizes the changes and new features in Configuration Manager, version 2309.
-                                                                                                                                                                                                                                                                                                                          
+
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2309.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
@@ -44,7 +44,7 @@ Starting in Configuration Manager current branch version 2309, you can now sched
 
 For more information, see [Schedule scripts' runtime](../../../apps/deploy-use/create-deploy-scripts.md#schedule-scripts-runtime)
 
-### External service notification Run details from Azure Logic application  
+### External service notification Run details from Azure Logic application 
 
 Starting in Configuration Manager current branch version 2309, when Azure Logic App generates notifications related to specific events, CM can now capture and display these notifications. This integration enables the monitoring of Azure Logic App notifications directly within the MCM console, providing a centralized location for tracking critical events, taking appropriate actions and maintains a high level of operational efficiency.
 
@@ -54,9 +54,9 @@ For more information, see [External service notification](../../servers/manage/e
 
 ### New Site Maintenance task “Delete Aged Task Execution Status Messages” is now available on primary servers to clean up data older than 30 days or configured number of days
 
-Starting in Configuration Manager current branch version 2309, you can now enable this feature by utilizing the Site Maintenance Window or using PowerShell Commandlet. By default, it has been set to run on Saturday and delete the data older than 30 days. It does so by cleaning up [dbo].TaskExecutionStatus Table  
+Starting in Configuration Manager current branch version 2309, you can now enable this feature by utilizing the Site Maintenance Window or using PowerShell Commandlet. By default, it has been set to run on Saturday and delete the data older than 30 days. It does so by cleaning up [dbo].TaskExecutionStatus Table 
 
-Example: 
+Example:
 PowerShell Commandlet: ```Set-CMSiteMaintenanceTask -Sitecode "XXX" -MaintenanceTaskName "Delete Aged Task Execution Status Messages" -DaysOfWeek Friday ```
 
 For more information, see [Delete Aged Task Execution Status Messages](../../servers/manage/reference-for-maintenance-tasks.md#delete-aged-task-execution-status-messages).
@@ -73,13 +73,13 @@ For more information, see [Device restart notifications](../../clients/deploy/de
 
 We've extended the Offset parameter for **Maintenance windows**.The cmdlet New-CMMaintenanceWindow is used to create a maintenance window for a collection. Earlier the Offset parameter could be set only between 0 and 4. Now it has been extended between 0 to 7.
 
-Example: 
+Example:
 PowerShell Commandlet: ``` New-CMSchedule -Start (Get-Date) -DayOfWeek Monday -WeekOrder Second -RecurCount 1 -OffSetDay 6 ```
 
 
 ## OS deployment
 
-### OSD preferred MP option for PXE boot scenario  
+### OSD preferred MP option for PXE boot scenario 
 
 Starting in Configuration Manager current branch version 2309, Preferred Management Point (MP) option will now allow **PXE clients** to communicate to an initial lookup MP and receive the list of MP(s) to be used for further communication. When the option is enabled, it allows an MP to redirect the PXE client to another MP, based on the client location in the site boundaries.
 
@@ -87,7 +87,7 @@ Starting in Configuration Manager current branch version 2309, Preferred Managem
 
 For more information, see [Install-and-configure-distribution-points](../../servers/deploy/configure/install-and-configure-distribution-points.md)
 
-### Enable Bitlocker through ProvisionTS  
+### Enable Bitlocker through ProvisionTS 
 
 In Configuration Manager current branch version 2309, Escrowing recovery key to Config Manager Database is now supported using ProvisionTS. **ProvisionTS** is the task sequence that is executed at the time of provisioning. As a result device can escrow the key to Config Manager Database instantly.
 
@@ -95,7 +95,7 @@ For more information, see [Preprovision-bitlocker-in-windows-pe](../../../osd/de
 
 ### Windows 11 Edition Upgrade using CM Policy settings 
 
-Starting in Configuration Manager current branch version 2309,administrator can now create a policy using edition upgrade in Configuration Manager to update the **Windows 11 edition**.   
+Starting in Configuration Manager current branch version 2309,administrator can now create a policy using edition upgrade in Configuration Manager to update the **Windows 11 edition**.
 
 :::image type="content" source="media/17668419-edition-upgrade-windows11.png" alt-text="A screenshot of the windows 11 edition upgrade wizard.":::
 
@@ -125,7 +125,7 @@ For more information, see [Configure Azure Active Directory for CMG](../../clien
 
 ### New Cloud Management Gateway (CMG) creation via PowerShell 
 
-You can now create CMG **web (server) app** via PowerShell cmdlet, you need to specify TenantID in the argument: 
+You can now create CMG **web (server) app** via PowerShell cmdlet, you need to specify TenantID in the argument:
 
 PowerShell Commandlet:  ``` Set-UpdateServerApplication – 'TenantID' ```
 
@@ -133,7 +133,7 @@ If you try to create the CMG before updating RedirectUrl, you get an error "Your
 
 PowerShell command: ``` Set-UpdateServerApplication ``` to update your App, and then try again to create CMG.
 
->[!NOTE] 
+>[!NOTE]
 > For new customers, before creating CMG, create Azure AD web server app and execute the new PowerShell commandlet script.
 
 For more information, see [New-CMCloudManagementGateway](/powershell/module/configurationmanager/new-cmcloudmanagementgateway)
@@ -155,7 +155,7 @@ For more information on changes to the Windows PowerShell cmdlets for Configurat
 
 As of November 1, 2023, version 2309 is globally available for all customers to install.
 
->[!NOTE] 
+>[!NOTE]
 > For exisiting Fast ring current branch 2309 customers, you will see Slow ring upgrade package in console. Install 2309 Slow ring package to be in production current branch.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2309](../../servers/manage/checklist-for-installing-update-2309.md).

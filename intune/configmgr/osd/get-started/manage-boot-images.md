@@ -6,11 +6,11 @@ ms.date: 12/01/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -26,15 +26,15 @@ Configuration Manager provides two default boot images: One to support x86 platf
 
 Consider the following behaviors for any of the actions described for default boot images:
 
-- The source driver objects must be valid. These objects include the driver source files. If the objects aren't valid, the site doesn't add the drivers to the boot images.  
+- The source driver objects must be valid. These objects include the driver source files. If the objects aren't valid, the site doesn't add the drivers to the boot images.
 
-- Boot images that aren't based on the default boot images, even if they use the same Windows PE version, aren't modified.  
+- Boot images that aren't based on the default boot images, even if they use the same Windows PE version, aren't modified.
 
-- Redistribute the modified boot images to distribution points.  
+- Redistribute the modified boot images to distribution points.
 
-- Recreate any media that uses the modified boot images.  
+- Recreate any media that uses the modified boot images.
 
-- If you don't want your customized/default boot images automatically updated, don't store them in the default location.  
+- If you don't want your customized/default boot images automatically updated, don't store them in the default location.
 
 > [!NOTE]
 > The Configuration Manager log tool (**CMTrace**) is added to all boot images in the **Software Library**. When you're in Windows PE, start the tool by typing `cmtrace` from the command prompt.
@@ -72,11 +72,11 @@ The **Boot Images** node also includes a new column for (**Client Version**). Us
 
 After you update the Windows ADK on the site server, the console won't immediately show the new version. If you use one these actions to update a boot image, the site uses the latest ADK version. To get the console to display the current ADK version, restart the WMI service. For more information, see [Starting and Stopping the WMI Service](/windows/win32/wmisdk/starting-and-stopping-the-wmi-service).<!-- 2839864 -->
 
-## Customize a boot image  
+## Customize a boot image
 
-When a boot image is based on the WinPE version from the supported version of the Windows ADK, you can customize or [modify a boot image](#modify-a-boot-image) from the console. When you upgrade a site and install a new version of the Windows ADK, custom boot images aren't updated with the new version of Windows ADK. When that happens, you can't customize the boot images in the Configuration Manager console. However, they continue to work as they did before the upgrade.  
+When a boot image is based on the WinPE version from the supported version of the Windows ADK, you can customize or [modify a boot image](#modify-a-boot-image) from the console. When you upgrade a site and install a new version of the Windows ADK, custom boot images aren't updated with the new version of Windows ADK. When that happens, you can't customize the boot images in the Configuration Manager console. However, they continue to work as they did before the upgrade.
 
-When a boot image is based on a different version of the Windows ADK installed on a site, you must customize the boot images. Use another method to customize these boot images, such as using the Deployment Image Servicing and Management (DISM) command-line tool. DISM is part of the Windows ADK. For more information, see [Customize boot images](customize-boot-images.md).  
+When a boot image is based on a different version of the Windows ADK installed on a site, you must customize the boot images. Use another method to customize these boot images, such as using the Deployment Image Servicing and Management (DISM) command-line tool. DISM is part of the Windows ADK. For more information, see [Customize boot images](customize-boot-images.md).
 
 ## Add a boot image
 
@@ -92,105 +92,105 @@ For more information, see the following articles:
 
 Use the following process to add a boot image in Configuration Manager:
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.
 
-2. On the **Home** tab of the ribbon, in the **Create** group, select **Add Boot Image**. This action starts the Add Boot Image Wizard.  
+2. On the **Home** tab of the ribbon, in the **Create** group, select **Add Boot Image**. This action starts the Add Boot Image Wizard.
 
-3. On the **Data Source** page, specify the following options:  
+3. On the **Data Source** page, specify the following options:
 
     - In the **Path** box, specify the path to the boot image WIM file. The specified path must be a valid network path in the UNC format. For example: `\\ServerName\ShareName\BootImageName.wim`
 
-    - Select the boot image from the **Boot Image** drop-down list. If the WIM file contains multiple boot images, select the appropriate image.  
+    - Select the boot image from the **Boot Image** drop-down list. If the WIM file contains multiple boot images, select the appropriate image.
 
-4. On the **General** page, specify the following options:  
+4. On the **General** page, specify the following options:
 
-    - In the **Name** box, specify a unique name for the boot image.  
+    - In the **Name** box, specify a unique name for the boot image.
 
-    - In the **Version** box, specify a version number for the boot image.  
+    - In the **Version** box, specify a version number for the boot image.
 
-    - In the **Comment** box, specify a brief description of how you use the boot image.  
+    - In the **Comment** box, specify a brief description of how you use the boot image.
 
-5. Complete the wizard.  
+5. Complete the wizard.
 
 The boot image is now listed in the **Boot Image** node. Before using the boot image to deploy an OS, distribute the boot image to distribution points.
 
 > [!TIP]
-> In the **Boot Image** node of the console, the **Size (KB)** column displays the decompressed size for each boot image. When the site sends a boot image over the network, it sends a compressed copy. This copy is typically smaller than the size listed in the **Size (KB)** column.  
+> In the **Boot Image** node of the console, the **Size (KB)** column displays the decompressed size for each boot image. When the site sends a boot image over the network, it sends a compressed copy. This copy is typically smaller than the size listed in the **Size (KB)** column.
 
 ## Distribute boot images
 
 Boot images are distributed to distribution points in the same way as you distribute other content. Before you deploy an OS or create media, distribute the boot image to at least one distribution point.
 
-For more information on how to distribute a boot image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).  
+For more information on how to distribute a boot image, see [Distribute content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_distribute).
 
-To use PXE to deploy an OS, consider the following points before you distribute the boot image:  
+To use PXE to deploy an OS, consider the following points before you distribute the boot image:
 
-- Configure the distribution point to accept PXE requests.  
-- Distribute both an x86 and an x64 PXE-enabled boot image to at least one PXE-enabled distribution point.  
-- Configuration Manager distributes the boot images to the **RemoteInstall** folder on the PXE-enabled distribution point.  
-  
-For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+- Configure the distribution point to accept PXE requests.
+- Distribute both an x86 and an x64 PXE-enabled boot image to at least one PXE-enabled distribution point.
+- Configuration Manager distributes the boot images to the **RemoteInstall** folder on the PXE-enabled distribution point.
+
+For more information about using PXE to deploy operating systems, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
 ## Modify a boot image
 
-Add or remove device drivers to the image, or edit the properties of the boot image. The drivers that you add or remove can include network or storage drivers. Consider the following factors when you modify boot images:  
+Add or remove device drivers to the image, or edit the properties of the boot image. The drivers that you add or remove can include network or storage drivers. Consider the following factors when you modify boot images:
 
-- Before adding drivers to the boot image, import and enable them in the device driver catalog.  
+- Before adding drivers to the boot image, import and enable them in the device driver catalog.
 
-- When you modify a boot image, the boot image doesn't change any of the associated packages that the boot image references.  
+- When you modify a boot image, the boot image doesn't change any of the associated packages that the boot image references.
 
-- After you make changes to a boot image, **update** the boot image on the distribution points that already have it. This process makes the most current version of the boot image available to clients. For more information, see [Manage content you've distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).  
+- After you make changes to a boot image, **update** the boot image on the distribution points that already have it. This process makes the most current version of the boot image available to clients. For more information, see [Manage content you've distributed](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_manage).
 
 ### Modify the properties of a boot image
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.
 
-2. Select the boot image that you want to modify.  
+2. Select the boot image that you want to modify.
 
-3. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+3. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
 
-4. Set any of the following settings to change the behavior of the boot image:  
+4. Set any of the following settings to change the behavior of the boot image:
 
 #### Images
 
-On the **Images** tab, if you change the properties of the boot image by using an external tool, select **Reload**.  
+On the **Images** tab, if you change the properties of the boot image by using an external tool, select **Reload**.
 
 #### Drivers
 
-On the **Drivers** tab, add the Windows device drivers that WinPE requires to boot. Consider the following points when you add device drivers:  
+On the **Drivers** tab, add the Windows device drivers that WinPE requires to boot. Consider the following points when you add device drivers:
 
-- Make sure that the drivers that you add to the boot image match the architecture of the boot image.  
+- Make sure that the drivers that you add to the boot image match the architecture of the boot image.
 
-- To only display drivers for the architecture of the boot image, select **Hide drivers that do not match the architecture of the boot image**. The architecture of the driver is based on the architecture reported in the INF from the manufacturer.  
+- To only display drivers for the architecture of the boot image, select **Hide drivers that do not match the architecture of the boot image**. The architecture of the driver is based on the architecture reported in the INF from the manufacturer.
 
-- WinPE already comes with many drivers built-in. Add only network and storage drivers that aren't included in WinPE.  
+- WinPE already comes with many drivers built-in. Add only network and storage drivers that aren't included in WinPE.
 
-- Add only network and storage drivers to the boot image, unless there are requirements for other drivers in WinPE.  
+- Add only network and storage drivers to the boot image, unless there are requirements for other drivers in WinPE.
 
-- To only display storage and network drivers, select **Hide drivers that are not in a storage or network class (for boot images)**. This option also hides other drivers that aren't typically needed for boot images, such as video or modem drivers.  
+- To only display storage and network drivers, select **Hide drivers that are not in a storage or network class (for boot images)**. This option also hides other drivers that aren't typically needed for boot images, such as video or modem drivers.
 
-- To hide drivers that don't have a valid digital signature, select **Hide drivers that are not digitally signed**.  
+- To hide drivers that don't have a valid digital signature, select **Hide drivers that are not digitally signed**.
 
-> [!NOTE]  
-> Import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers](manage-drivers.md).  
+> [!NOTE]
+> Import device drivers into the drivers catalog before you add them to a boot image. For information about how to import device drivers, see [Manage drivers](manage-drivers.md).
 
 #### Customization
 
-On the **Customization** tab, select any of the following settings:  
+On the **Customization** tab, select any of the following settings:
 
-- Select the **Enable Prestart Commands** option to specify a command to run before the task sequence runs. When you enable this option, also specify the command line to run and any support files required by the command.  
+- Select the **Enable Prestart Commands** option to specify a command to run before the task sequence runs. When you enable this option, also specify the command line to run and any support files required by the command.
 
-    > [!WARNING]  
-    > Add `cmd /c` to the start of the command line. If you don't specify `cmd /c`, the command won't close after it runs. The deployment continues to wait for the command to finish and won't start any other configured commands or actions.  
+    > [!WARNING]
+    > Add `cmd /c` to the start of the command line. If you don't specify `cmd /c`, the command won't close after it runs. The deployment continues to wait for the command to finish and won't start any other configured commands or actions.
 
-    > [!TIP]  
-    > During task sequence media creation, the wizard writes the package ID and prestart command line to the **CreateTSMedia.log** file. This information includes the value for any task sequence variables. This log is on the computer that runs the Configuration Manager console. Review this log file to verify the values for the task sequence variables.  
+    > [!TIP]
+    > During task sequence media creation, the wizard writes the package ID and prestart command line to the **CreateTSMedia.log** file. This information includes the value for any task sequence variables. This log is on the computer that runs the Configuration Manager console. Review this log file to verify the values for the task sequence variables.
 
-- Set the **Windows PE Background** settings to specify whether you want to use the default WinPE background or a custom background.  
+- Set the **Windows PE Background** settings to specify whether you want to use the default WinPE background or a custom background.
 
-- Configure the **Windows PE scratch space (MB)**, which is temporary storage (RAM drive) used by WinPE. For example, when an application is run within WinPE and needs to write temporary files, WinPE redirects the files to the scratch space in memory to simulate the presence of a hard disk. By default, this amount is 512 MB for devices with more than 1 GB of RAM, otherwise the default is 32 MB.  
+- Configure the **Windows PE scratch space (MB)**, which is temporary storage (RAM drive) used by WinPE. For example, when an application is run within WinPE and needs to write temporary files, WinPE redirects the files to the scratch space in memory to simulate the presence of a hard disk. By default, this amount is 512 MB for devices with more than 1 GB of RAM, otherwise the default is 32 MB.
 
-- Select **Enable command support (testing only)** to open a command prompt by using the **F8** key while the boot image is deployed. This option is useful for troubleshooting while you're testing your deployment. Using this setting in a production deployment isn't advised because of security concerns.  
+- Select **Enable command support (testing only)** to open a command prompt by using the **F8** key while the boot image is deployed. This option is useful for troubleshooting while you're testing your deployment. Using this setting in a production deployment isn't advised because of security concerns.
 
 - **Set default keyboard layout in WinPE**: <!--4910348-->Configure the default keyboard layout for a boot image. If you select a language other than en-us, Configuration Manager still includes en-us in the available input locales. On the device, the initial keyboard layout is the selected locale, but the user can switch the device to en-us if needed.
 
@@ -199,7 +199,7 @@ On the **Customization** tab, select any of the following settings:
 
 #### Optional Components
 
-On the **Optional Components** tab, specify the components that are added to Windows PE for use with Configuration Manager. For more information about available optional components, see [WinPE: Add packages (Optional Components Reference)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).  
+On the **Optional Components** tab, specify the components that are added to Windows PE for use with Configuration Manager. For more information about available optional components, see [WinPE: Add packages (Optional Components Reference)](/windows-hardware/manufacture/desktop/winpe-add-packages--optional-components-reference).
 
 The following components are required by Configuration Manager and always added to boot images:
 
@@ -212,7 +212,7 @@ The **Components** list shows additional items that are added to this boot image
 
 The following components are commonly used by customers:
 
-- Microsoft .NET (WinPE-NetFX): This component is a prerequisite for PowerShell. It's one of the larger optional components.  
+- Microsoft .NET (WinPE-NetFX): This component is a prerequisite for PowerShell. It's one of the larger optional components.
 - Windows PowerShell (WinPE-PowerShell): This component requires .NET, and adds limited PowerShell support. If you run custom PowerShell scripts during the WinPE phase of your task sequence, add this component. There are other components that may be required for other PowerShell cmdlets.
 - HTML (WinPE-HTA): If you run custom HTML applications during the WinPE phase of your task sequence, add this component.
 
@@ -220,17 +220,17 @@ For more information about adding languages, see [Configure multiple languages](
 
 #### Data Source
 
-On the **Data Source** tab, update any of the following settings:  
+On the **Data Source** tab, update any of the following settings:
 
-- To change the source file of the boot image, set **Image path** and **Image index**.  
+- To change the source file of the boot image, set **Image path** and **Image index**.
 
-- To create a schedule for when the site updates the boot image, select **Update distribution points on a schedule**.  
+- To create a schedule for when the site updates the boot image, select **Update distribution points on a schedule**.
 
-- If you don't want the content of this package to age out of the client cache to make room for other content, select **Persist content in client cache**.  
+- If you don't want the content of this package to age out of the client cache to make room for other content, select **Persist content in client cache**.
 
-- To specify that the site only distributes changed files when it updates the boot image package on the distribution point, select **Enable binary differential replication** (BDR). This setting minimizes the network traffic between sites. BDR is especially useful when the boot image package is large and the changes are relatively small.  
+- To specify that the site only distributes changed files when it updates the boot image package on the distribution point, select **Enable binary differential replication** (BDR). This setting minimizes the network traffic between sites. BDR is especially useful when the boot image package is large and the changes are relatively small.
 
-- If you use the boot image in a PXE-enabled deployment, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+- If you use the boot image in a PXE-enabled deployment, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
 #### Data Access
 
@@ -238,23 +238,23 @@ On the **Data Access** tab, you can configure package share settings. If needed 
 
 #### Distribution Settings
 
-On the **Distribution Settings** tab, select any of the following settings:  
+On the **Distribution Settings** tab, select any of the following settings:
 
-- In the **Distribution priority** list, specify the priority level. Configuration Manager uses this priority list when the site distributes multiple packages to the same distribution point.  
+- In the **Distribution priority** list, specify the priority level. Configuration Manager uses this priority list when the site distributes multiple packages to the same distribution point.
 
-- If you want to enable on-demand content distribution to preferred distribution points, select **Enable for on-demand distribution**. When you enable this setting, if a client requests the content for the package and the content isn't available on any distribution points, then the management point distributes the content. For more information, see [On-demand content distribution](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution).  
+- If you want to enable on-demand content distribution to preferred distribution points, select **Enable for on-demand distribution**. When you enable this setting, if a client requests the content for the package and the content isn't available on any distribution points, then the management point distributes the content. For more information, see [On-demand content distribution](../../core/plan-design/hierarchy/fundamental-concepts-for-content-management.md#on-demand-content-distribution).
 
-- To specify how you want the site to distribute the boot image to distribution points that are enabled for prestaged content, set the **Prestaged distribution point settings**. For more information about prestaged content, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).  
+- To specify how you want the site to distribute the boot image to distribution points that are enabled for prestaged content, set the **Prestaged distribution point settings**. For more information about prestaged content, see [Prestage content](../../core/servers/deploy/configure/deploy-and-manage-content.md#bkmk_prestage).
 
 #### Content Locations
 
-On the **Content Locations** tab, select the distribution point or distribution point group, and use the following actions:  
+On the **Content Locations** tab, select the distribution point or distribution point group, and use the following actions:
 
-- **Validate**: Check the integrity of the boot image package on the selected distribution point or distribution point group.  
+- **Validate**: Check the integrity of the boot image package on the selected distribution point or distribution point group.
 
-- **Redistribute**: Distribute the boot image to the selected distribution point or distribution point group again.  
+- **Redistribute**: Distribute the boot image to the selected distribution point or distribution point group again.
 
-- **Remove**: Delete the boot image from the selected distribution point or distribution point group.  
+- **Remove**: Delete the boot image from the selected distribution point or distribution point group.
 
 #### Security
 
@@ -262,35 +262,35 @@ On the **Security** tab, view the administrative users that have permissions to 
 
 ## Configure a boot image for PXE
 
-Before you can use a boot image for a PXE-based deployment, configure the boot image to deploy from a PXE-enabled distribution point.  
+Before you can use a boot image for a PXE-based deployment, configure the boot image to deploy from a PXE-enabled distribution point.
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Boot Images** node.
 
-2. Select the boot image that you want to modify.  
+2. Select the boot image that you want to modify.
 
-3. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.  
+3. On the **Home** tab of the ribbon, in the **Properties** group, select **Properties**.
 
-4. On the **Data Source** tab, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).  
+4. On the **Data Source** tab, select **Deploy this boot image from the PXE-enabled distribution point**. For more information, see [Use PXE to deploy Windows over the network](../deploy-use/use-pxe-to-deploy-windows-over-the-network.md).
 
 ## Configure multiple languages
 
 > [!TIP]
 > You can configure the default keyboard layout on the properties of a boot image. For more information, see [Customization](#customization).<!--4910348-->
 
-Boot images are language neutral. This functionality allows you to use one boot image to display the task sequence text in multiple languages while in WinPE. Include the appropriate language support from the boot image **Optional Components** tab. Then set the appropriate task sequence variable to indicate which language to display. The language of the deployed OS is independent from the language in WinPE. The language that WinPE displays to the user is determined as follows:  
+Boot images are language neutral. This functionality allows you to use one boot image to display the task sequence text in multiple languages while in WinPE. Include the appropriate language support from the boot image **Optional Components** tab. Then set the appropriate task sequence variable to indicate which language to display. The language of the deployed OS is independent from the language in WinPE. The language that WinPE displays to the user is determined as follows:
 
-- When a user runs the task sequence from an existing OS, Configuration Manager automatically uses the language configured for the user. When the task sequence automatically runs as the result of a mandatory deployment deadline, Configuration Manager uses the language of the OS.  
+- When a user runs the task sequence from an existing OS, Configuration Manager automatically uses the language configured for the user. When the task sequence automatically runs as the result of a mandatory deployment deadline, Configuration Manager uses the language of the OS.
 
-- For OS deployments that use PXE or media, set the language ID value in the **SMSTSLanguageFolder** variable as part of a prestart command. When the computer boots to WinPE, messages are displayed in the language that you specified in the variable. If there's an error accessing the language resource file in the specified folder, or you don't set the variable, WinPE displays messages in the default language.  
+- For OS deployments that use PXE or media, set the language ID value in the **SMSTSLanguageFolder** variable as part of a prestart command. When the computer boots to WinPE, messages are displayed in the language that you specified in the variable. If there's an error accessing the language resource file in the specified folder, or you don't set the variable, WinPE displays messages in the default language.
 
-    > [!NOTE]  
-    > When you protect media with a password, the text that prompts the user for the password is always displayed in the WinPE language.  
+    > [!NOTE]
+    > When you protect media with a password, the text that prompts the user for the password is always displayed in the WinPE language.
 
-Use the following procedure to set the WinPE language for PXE or media-initiated OS deployments.  
+Use the following procedure to set the WinPE language for PXE or media-initiated OS deployments.
 
 ### Set the Windows PE language for a PXE or media-initiated OS deployment
 
-1. Before you update the boot image, verify that the appropriate task sequence resource file (tsres.dll) is in the corresponding language folder on the site server. For example, the English resource file is in the following location: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`  
+1. Before you update the boot image, verify that the appropriate task sequence resource file (tsres.dll) is in the corresponding language folder on the site server. For example, the English resource file is in the following location: `<ConfigMgrInstallationFolder>\OSD\bin\x64\00000409\tsres.dll`
 
 2. As part of your prestart command, set the **SMSTSLanguageFolder** environment variable to the appropriate language ID. The language ID must be specified by using decimal and not hexadecimal format. For example, to set the language ID to English, specify the decimal value **1033**, not the hexadecimal value 00000409 of the folder name.
 

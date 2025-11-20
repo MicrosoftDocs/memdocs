@@ -12,224 +12,224 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MigrationDashboard Server WMI Class
-The `SMS_MigrationDashboard` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the migration feature dashboard.  
+The `SMS_MigrationDashboard` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the migration feature dashboard.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MigrationDashboard : SMS_BaseClass  
-{  
-    DateTime ClientMigrationLastUpdated;  
-    DateTime JobStatisticsLastUpdated;  
-    DateTime LastSuccessfulSynced;  
-    UInt32 NumOfDestinationSites;  
-    UInt32 NumOfJobCompleted;  
-    UInt32 NumOfJobFailed;  
-    UInt32 NumOfJobInProgress;  
-    UInt32 NumOfSourceSiteClients;  
-    UInt32 NumOfSourceSiteClientsExcluded;  
-    UInt32 NumOfSourceSiteClientsMigrated;  
-    UInt32 NumOfSourceSiteClientsRemaining;  
-    UInt32 NumOfSourceSiteObjects;  
-    UInt32 NumOfSourceSiteObjectsExcluded;  
-    UInt32 NumOfSourceSiteObjectsMigrated;  
-    UInt32 NumOfSourceSiteObjectsRemaining;  
-    UInt32 NumOfSourceSites;  
-    DateTime ObjectMigrationLastUpdated;  
-    String SourceCentralSiteFQDN;  
-    String Version;  
-};  
-```  
+```
+Class SMS_MigrationDashboard : SMS_BaseClass
+{
+    DateTime ClientMigrationLastUpdated;
+    DateTime JobStatisticsLastUpdated;
+    DateTime LastSuccessfulSynced;
+    UInt32 NumOfDestinationSites;
+    UInt32 NumOfJobCompleted;
+    UInt32 NumOfJobFailed;
+    UInt32 NumOfJobInProgress;
+    UInt32 NumOfSourceSiteClients;
+    UInt32 NumOfSourceSiteClientsExcluded;
+    UInt32 NumOfSourceSiteClientsMigrated;
+    UInt32 NumOfSourceSiteClientsRemaining;
+    UInt32 NumOfSourceSiteObjects;
+    UInt32 NumOfSourceSiteObjectsExcluded;
+    UInt32 NumOfSourceSiteObjectsMigrated;
+    UInt32 NumOfSourceSiteObjectsRemaining;
+    UInt32 NumOfSourceSites;
+    DateTime ObjectMigrationLastUpdated;
+    String SourceCentralSiteFQDN;
+    String Version;
+};
+```
 
-## Methods  
- The `SMS_MigrationDashboard` class does not define any methods.  
+## Methods
+ The `SMS_MigrationDashboard` class does not define any methods.
 
-## Properties  
- `ClientMigrationLastUpdated`  
- Data type: `DateTime`  
+## Properties
+ `ClientMigrationLastUpdated`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last time the migration monitored client status changed.  
+ The last time the migration monitored client status changed.
 
- `JobStatisticsLastUpdated`  
- Data type: `DateTime`  
+ `JobStatisticsLastUpdated`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last job statistics update time.  
+ Last job statistics update time.
 
- `LastSuccessfulSynced`  
- Data type: `DateTime`  
+ `LastSuccessfulSynced`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last time that the data gathering process was performed successfully.  
+ Last time that the data gathering process was performed successfully.
 
- `NumOfDestinationSites`  
- Data type: `UInt32`  
+ `NumOfDestinationSites`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of destination sites.  
+ Number of destination sites.
 
- `NumOfJobCompleted`  
- Data type: `UInt32`  
+ `NumOfJobCompleted`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of jobs completed.  
+ Number of jobs completed.
 
- `NumOfJobFailed`  
- Data type: `UInt32`  
+ `NumOfJobFailed`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of jobs failed.  
+ Number of jobs failed.
 
- `NumOfJobInProgress`  
- Data type: `UInt32`  
+ `NumOfJobInProgress`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of jobs in progress.  
+ Number of jobs in progress.
 
- `NumOfSourceSiteClients`  
- Data type: `UInt32`  
+ `NumOfSourceSiteClients`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of clients in the source site hierarchy.  
+ Total number of clients in the source site hierarchy.
 
- `NumOfSourceSiteClientsExcluded`  
- Data type: `UInt32`  
+ `NumOfSourceSiteClientsExcluded`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of clients excluded from the source site hierarchy.  
+ Total number of clients excluded from the source site hierarchy.
 
- `NumOfSourceSiteClientsMigrated`  
- Data type: `UInt32`  
+ `NumOfSourceSiteClientsMigrated`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of clients migrated from the source site hierarchy.  
+ Total number of clients migrated from the source site hierarchy.
 
- `NumOfSourceSiteClientsRemaining`  
- Data type: `UInt32`  
+ `NumOfSourceSiteClientsRemaining`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of clients remaining in the source site hierarchy.  
+ Total number of clients remaining in the source site hierarchy.
 
- `NumOfSourceSiteObjects`  
- Data type: `UInt32`  
+ `NumOfSourceSiteObjects`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of objects in the source site hierarchy.  
+ Total number of objects in the source site hierarchy.
 
- `NumOfSourceSiteObjectsExcluded`  
- Data type: `UInt32`  
+ `NumOfSourceSiteObjectsExcluded`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of objects excluded from the source site hierarchy.  
+ Total number of objects excluded from the source site hierarchy.
 
- `NumOfSourceSiteObjectsMigrated`  
- Data type: `UInt32`  
+ `NumOfSourceSiteObjectsMigrated`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of objects migrated from the source site hierarchy.  
+ Total number of objects migrated from the source site hierarchy.
 
- `NumOfSourceSiteObjectsRemaining`  
- Data type: `UInt32`  
+ `NumOfSourceSiteObjectsRemaining`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of objects remaining in the source site hierarchy.  
+ Total number of objects remaining in the source site hierarchy.
 
- `NumOfSourceSites`  
- Data type: `UInt32`  
+ `NumOfSourceSites`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of source sites.  
+ Number of source sites.
 
- `ObjectMigrationLastUpdated`  
- Data type: `DateTime`  
+ `ObjectMigrationLastUpdated`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last object migration update time.  
+ Last object migration update time.
 
- `SourceCentralSiteFQDN`  
- Data type: `String`  
+ `SourceCentralSiteFQDN`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Source central site FQDN.  
+ Source central site FQDN.
 
- `Version`  
- Data type: `String`  
+ `Version`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- The version of the source site.  
+ The version of the source site.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
-## Remarks  
- You can use the migration feature dashboard to get the overall status of migration. For example, you can get the current active source hierarchy, how many objects got migrated, the last successful data gathering, and other status information.  
+## Remarks
+ You can use the migration feature dashboard to get the overall status of migration. For example, you can get the current active source hierarchy, how many objects got migrated, the last successful data gathering, and other status information.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).

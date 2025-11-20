@@ -1,34 +1,19 @@
 ---
-title: Application reliability in Endpoint analytics
-description: Get details about application reliability in Endpoint analytics
-titleSuffix: Microsoft Intune
-ms.date: 10/20/2023
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
-ms.topic: article
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.localizationpriority: high
+title: Application Reliability in Endpoint Analytics
+description: Explore application reliability in Microsoft Intune endpoint analytics to analyze app crashes, improve user productivity, and enhance device performance.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
-# Application reliability in Endpoint analytics
+# Application reliability in endpoint analytics
 <!--IN5653073-->
 The application reliability report provides insight into potential issues for desktop applications on managed devices. You can quickly identify the top applications that are impacting end-user productivity, and see aggregate app usage along with app failure metrics for these applications. From the report, drill into specific device data and view a timeline of app reliability events to troubleshoot end-user impacting issues.
 
-:::image type="content" source="media/5659073-application-reliability.png" alt-text="Application reliability report in Endpoint analytics" lightbox="media/5659073-application-reliability.png":::
-
-## Prerequisites
-
-- Devices are enrolled in Endpoint analytics.
-  - [Enroll Configuration Manager devices](enroll-configmgr.md)
-  - [Enroll Intune devices](enroll-intune.md)
-  - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
-- Devices enrolled from Configuration Manager need client version 2006, or later installed
+:::image type="content" source="media/5659073-application-reliability.png" alt-text="Application reliability report in endpoint analytics" lightbox="media/5659073-application-reliability.png":::
 
 ## App reliability score
 
-The **App reliability score** provides a high-level view of desktop application robustness across your environment. As with other Endpoint analytics scores, the **App reliability score** is a number between 0 and 100. The score is calculated from the app reliability scores of each desktop application in your environment that's found in the **App performance** tab.
+The **App reliability score** provides a high-level view of desktop application robustness across your environment. As with other endpoint analytics scores, the **App reliability score** is a number between 0 and 100. The score is calculated from the app reliability scores of each desktop application in your environment that's found in the **App performance** tab.
 
 Each application on the **App performance** tab is assigned an **App reliability score** based on:
 
@@ -43,7 +28,7 @@ The **App performance** tab uses data from the past 14 days to show reliability 
 
 - Applications with either an active device count that's greater than 5, or a count greater than 2% of the total number of your tenant's enrolled devices, whichever is larger. Including these applications helps to filter out noise and ensures that calculations are made across a sufficient number of devices to be meaningful.
 
-:::image type="content" source="media/5659073-app-performance-tab.png" alt-text="Application performance tab in Endpoint analytics" lightbox="media/5659073-app-performance-tab.png":::
+:::image type="content" source="media/5659073-app-performance-tab.png" alt-text="Application performance tab in endpoint analytics" lightbox="media/5659073-app-performance-tab.png":::
 
 For each application in the report, the following data is provided:
 
@@ -78,7 +63,7 @@ Selecting an app name in the table from **App performance** opens **App performa
 - **App versions**: This tab allows you to compare the number of **App crashes** and number of unique **Devices with crashes** across different versions of the application over the past 14 days. This information can be useful in determining which version of an application is the most reliable. The information can assist with troubleshooting a potential issue with certain versions of an application. You might also find these insights valuable when deciding which version of an application to deploy, whether to install an update or roll back an update.
 - **OS versions**: This tab compares the **Mean time to failure** for the application across different versions of Windows. This information can be helpful for identifying potential correlations between OS version and application issues.
 
-:::image type="content" source="media/5659073-app-performance-details.png" alt-text="Application performance details in Endpoint analytics" lightbox="media/5659073-app-performance-details.png":::
+:::image type="content" source="media/5659073-app-performance-details.png" alt-text="Application performance details in endpoint analytics" lightbox="media/5659073-app-performance-details.png":::
 
 ## Device performance tab
 
@@ -90,22 +75,17 @@ The **Device performance** tab displays application reliability insights for eac
 Selecting a device name opens the **Application reliability** tab for that device. This tab displays a timeline of app crash and app unresponsive events for the device over a specified period of time, up to 14 days. Use the **Filter** option at the top of the timeline to select a custom time range.
 
 > [!NOTE]
-> In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
-
-## Known issues
-
-[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
+> In the **Device performance** tabs of endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](device-scopes.md).
 
 ### Some eligible, enrolled devices aren't appearing in the report due to a client certificate issue
 
 **Scenario**: In certain uncommon situations, devices might be missing from the **Application reliability** report. You can determine how many devices are reporting application reliability data by looking at the number of records in the table on the **Device performance** tab of the **Application reliability** report.
 
-**Impacted devices**: This issue affects devices enrolled in Endpoint analytics from Configuration Manager that are unable to download a required ServiceCertificate policy. Without this policy, devices can't report application reliability data to Endpoint analytics.
+**Impacted devices**: This issue affects devices enrolled in endpoint analytics from Configuration Manager that are unable to download a required ServiceCertificate policy. Without this policy, devices can't report application reliability data to endpoint analytics.
 
 > [!IMPORTANT]
 > This isn't a common issue. Before proceeding the mitigation, verify that your missing devices:
 >
-> - Meet the [prerequisites](#prerequisites) for the **Application reliability** report
 > - Are actively being used
 > - Have had sufficient time to start reporting data
 
@@ -114,17 +94,17 @@ Use the following script to determine if the issue impacts a device:
 ```powershell
 $query = "SELECT * FROM CCM_PendingPolicyState WHERE PolicyID=""B27D9CFC-84AD-0AF8-9DF1-23EE05E8C05D"""
 $obj = Get-WmiObject -Query $query -Namespace "root\ccm\policyagent"
- 
+
 foreach ($value in $obj)
 {
     if ($value.State  -eq 1)
     {
         Write-Host "Found ServiceCertificate policy in the pending policy list."
     }
-} 
+}
 ```
 
-**Mitigation**: Run the following script on affected devices to force a download of the updated ServiceCertificate policy state. When you complete all the steps, the issue is resolved and allows the device to start uploading application reliability data. Allow up to 72 hours to start seeing data in the Endpoint analytics portal.
+**Mitigation**: Run the following script on affected devices to force a download of the updated ServiceCertificate policy state. When you complete all the steps, the issue is resolved and allows the device to start uploading application reliability data. Allow up to 72 hours to start seeing data in the endpoint analytics portal.
 
 ```vbscript
 On Error Resume Next

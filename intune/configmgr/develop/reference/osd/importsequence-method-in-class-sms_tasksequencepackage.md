@@ -12,49 +12,49 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ImportSequence Method in Class SMS_TaskSequencePackage
-The `ImportSequence` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a task sequence package file based on the provided XML data of a previously exported task sequence package.  
+The `ImportSequence` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports a task sequence package file based on the provided XML data of a previously exported task sequence package.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 ImportSequence(  
-      String SequenceXML,  
-      SMS_TaskSequence TaskSequence  
-);  
-```  
+```
+SInt32 ImportSequence(
+      String SequenceXML,
+      SMS_TaskSequence TaskSequence
+);
+```
 
-#### Parameters  
- `SequenceXML`  
- Data type: `String`  
+#### Parameters
+ `SequenceXML`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- A `string` variable which contains the XML data of the task sequence package to import.  
+ A `string` variable which contains the XML data of the task sequence package to import.
 
- `TaskSequence`  
- Data type: `SMS_TaskSequence`  
+ `TaskSequence`
+ Data type: `SMS_TaskSequence`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- The produced `SMS_TaskSequence` object.  
+ The produced `SMS_TaskSequence` object.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_TaskSequencePackage Server WMI Class](../../../develop/reference/osd/sms_tasksequencepackage-server-wmi-class.md)

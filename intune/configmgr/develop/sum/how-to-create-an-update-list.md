@@ -12,176 +12,176 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Create an Update List
-You create an update list that contains a set of software updates, in Configuration Manager, by creating an instance of the [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) class and populating the properties.  
+You create an update list that contains a set of software updates, in Configuration Manager, by creating an instance of the [SMS_AuthorizationList](../../develop/reference/sum/sms_authorizationlist-server-wmi-class.md) class and populating the properties.
 
-### To create an update list  
+### To create an update list
 
-1.  Set up a connection to the SMS Provider.  
+1.  Set up a connection to the SMS Provider.
 
-2.  Create the new update list object using the `SMS_AuthorizationList` class.  
+2.  Create the new update list object using the `SMS_AuthorizationList` class.
 
-3.  Populate the new update list properties.  
+3.  Populate the new update list properties.
 
-4.  Save the new update list and properties.  
+4.  Save the new update list and properties.
 
-## Example  
- The following example method shows how to create an update list that contains a set of software updates by creating an instance of the `SMS_AuthorizationList` class and populating the properties.  
+## Example
+ The following example method shows how to create an update list that contains a set of software updates by creating an instance of the `SMS_AuthorizationList` class and populating the properties.
 
 > [!IMPORTANT]
->  The `LocalizedInformation` property that is used in this example requires an object array (embedded array) of the description information.  
+>  The `LocalizedInformation` property that is used in this example requires an object array (embedded array) of the description information.
 
- In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.  
+ In the example, the `LocaleID` property is hard-coded to English (U.S.). If you need the locale for non-U.S. installations, you can get it from the [SMS_Identification Server WMI Class](../../develop/reference/core/servers/configure/sms_identification-server-wmi-class.md) `LocaleID` property.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).
 
- The following example shows the subroutine call in Visual Basic:  
+ The following example shows the subroutine call in Visual Basic:
 
 ```vbscript
 
-' Prework for CreateSUMUpdateList  
-' Create the array of CI_IDs.  
-dim newUpdates   
-newUpdates = Array(9)  
+' Prework for CreateSUMUpdateList
+' Create the array of CI_IDs.
+dim newUpdates
+newUpdates = Array(9)
 
-' Create and populate an SMS_CI_LocalizedProperties object.  
-set SMSCILocalizedProperties = swbemservices.Get("SMS_CI_LocalizedProperties").SpawnInstance_  
+' Create and populate an SMS_CI_LocalizedProperties object.
+set SMSCILocalizedProperties = swbemservices.Get("SMS_CI_LocalizedProperties").SpawnInstance_
 
-SMSCILocalizedProperties.Description = "Test Description"  
-SMSCILocalizedProperties.DisplayName = "Test Display Name"  
-SMSCILocalizedProperties.InformativeURL = "Test URL"  
-SMSCILocalizedProperties.LocaleID = "1033"  
+SMSCILocalizedProperties.Description = "Test Description"
+SMSCILocalizedProperties.DisplayName = "Test Display Name"
+SMSCILocalizedProperties.InformativeURL = "Test URL"
+SMSCILocalizedProperties.LocaleID = "1033"
 
-' Create an array to hold the SMS_CI_LocalizedProperties object.  
-dim newDescriptionInfo  
-newDescriptionInfo = Array(SMSCILocalizedProperties)  
+' Create an array to hold the SMS_CI_LocalizedProperties object.
+dim newDescriptionInfo
+newDescriptionInfo = Array(SMSCILocalizedProperties)
 
-' Call the CreateSUMUpdateList method.  
-Call CreateSUMUpdateList(swbemServices,       _  
-                         newUpdates,          _  
-                         newDescriptionInfo)  
-```  
+' Call the CreateSUMUpdateList method.
+Call CreateSUMUpdateList(swbemServices,       _
+                         newUpdates,          _
+                         newDescriptionInfo)
+```
 
- The following example shows the method call in C#:  
+ The following example shows the method call in C#:
 
 ```csharp
 
-// Prework for CreateSUMUpdateList  
-// Create array list (to hold the array of Localized Properties).  
-List<IResultObject> newDescriptionInfo = new List <IResultObject>();    
-IResultObject SMSCILocalizedProperties = WMIConnection.CreateEmbeddedObjectInstance("SMS_CI_LocalizedProperties");  
+// Prework for CreateSUMUpdateList
+// Create array list (to hold the array of Localized Properties).
+List<IResultObject> newDescriptionInfo = new List <IResultObject>();
+IResultObject SMSCILocalizedProperties = WMIConnection.CreateEmbeddedObjectInstance("SMS_CI_LocalizedProperties");
 
-// Populate the initial array values (this could be a loop to added more localized info).  
-SMSCILocalizedProperties["Description"].StringValue = "4 CI_IDs - 9,34,53,72 ";  
-SMSCILocalizedProperties["DisplayName"].StringValue = "Test Display Name";   
-SMSCILocalizedProperties["InformativeURL"].StringValue = "Test URL";  
-SMSCILocalizedProperties["LocaleID"].StringValue = "1033";  
+// Populate the initial array values (this could be a loop to added more localized info).
+SMSCILocalizedProperties["Description"].StringValue = "4 CI_IDs - 9,34,53,72 ";
+SMSCILocalizedProperties["DisplayName"].StringValue = "Test Display Name";
+SMSCILocalizedProperties["InformativeURL"].StringValue = "Test URL";
+SMSCILocalizedProperties["LocaleID"].StringValue = "1033";
 
-// Add the 'embedded properties' to newDescriptionInfo.  
-newDescriptionInfo.Add(SMSCILocalizedProperties);  
+// Add the 'embedded properties' to newDescriptionInfo.
+newDescriptionInfo.Add(SMSCILocalizedProperties);
 
-// Create the array of CI_IDs.  
-int[] newCI_ID = new int[] { 9, 34, 53, 72 };  
+// Create the array of CI_IDs.
+int[] newCI_ID = new int[] { 9, 34, 53, 72 };
 
-// Call the CreateSUMUpdateList method.  
-SUMSnippets.CreateSUMUpdateList(WMIConnection,  
-                                newCI_ID,  
-                                newDescriptionInfo);  
+// Call the CreateSUMUpdateList method.
+SUMSnippets.CreateSUMUpdateList(WMIConnection,
+                                newCI_ID,
+                                newDescriptionInfo);
 
-```  
+```
 
-```vbscript  
+```vbscript
 
-Sub CreateSUMUpdateList(connection,         _  
-                        newUpdates,         _  
-                        newDescriptionInfo)                                  
+Sub CreateSUMUpdateList(connection,         _
+                        newUpdates,         _
+                        newDescriptionInfo)
 
-    ' Create the new UpdateList object.   
-    Set newUpdateList = connection.Get("SMS_AuthorizationList").SpawnInstance_  
+    ' Create the new UpdateList object.
+    Set newUpdateList = connection.Get("SMS_AuthorizationList").SpawnInstance_
 
-    ' Populate the UpdateList properties.  
-    ' Updates is an int32 array that maps to the CI_ID in SMS_SoftwareUpdate.  
-    newUpdateList.Updates = newUpdates  
-    ' Need to pass embedded properties (LocalizedInformation) here.   
-    newUpdateList.LocalizedInformation = newDescriptionInfo  
+    ' Populate the UpdateList properties.
+    ' Updates is an int32 array that maps to the CI_ID in SMS_SoftwareUpdate.
+    newUpdateList.Updates = newUpdates
+    ' Need to pass embedded properties (LocalizedInformation) here.
+    newUpdateList.LocalizedInformation = newDescriptionInfo
 
-    ' Save the new UpdateList and properties.  
-    newUpdateList.Put_   
+    ' Save the new UpdateList and properties.
+    newUpdateList.Put_
 
-    ' Output the new UpdateList name.  
-    Wscript.Echo "Created Update List " & newUpdateList.LocalizedDisplayName                    
+    ' Output the new UpdateList name.
+    Wscript.Echo "Created Update List " & newUpdateList.LocalizedDisplayName
 
-End Sub  
-```  
+End Sub
+```
 
-```csharp  
+```csharp
 
-public void CreateSUMUpdateList(WqlConnectionManager connection,                                   
-                                 int [] newUpdates,  
-                                 List<IResultObject> newDescriptionInfo)  
-{  
-    try  
-    {  
-        // Create the new SMS_AuthorizationList object.  
-        IResultObject newUpdateList = connection.CreateInstance("SMS_AuthorizationList");  
+public void CreateSUMUpdateList(WqlConnectionManager connection,
+                                 int [] newUpdates,
+                                 List<IResultObject> newDescriptionInfo)
+{
+    try
+    {
+        // Create the new SMS_AuthorizationList object.
+        IResultObject newUpdateList = connection.CreateInstance("SMS_AuthorizationList");
 
-        // Populate the new SMS_AuthorizationList object properties.  
-        // Updates is an int32 array that maps to the CI_ID in SMS_SoftwareUpdate.  
-        newUpdateList["Updates"].IntegerArrayValue = newUpdates;  
-        // Pass embedded properties (LocalizedInformation) here.  
-        newUpdateList.SetArrayItems("LocalizedInformation", newDescriptionInfo);  
+        // Populate the new SMS_AuthorizationList object properties.
+        // Updates is an int32 array that maps to the CI_ID in SMS_SoftwareUpdate.
+        newUpdateList["Updates"].IntegerArrayValue = newUpdates;
+        // Pass embedded properties (LocalizedInformation) here.
+        newUpdateList.SetArrayItems("LocalizedInformation", newDescriptionInfo);
 
-        // Save changes.  
-        newUpdateList.Put();  
+        // Save changes.
+        newUpdateList.Put();
 
-        Console.WriteLine();  
-        Console.WriteLine("Created Update List. " );  
+        Console.WriteLine();
+        Console.WriteLine("Created Update List. " );
 
-    }  
+    }
 
-    catch (SmsException ex)  
-    {  
-        Console.WriteLine("Failed to create update list. Error: " + ex.Message);  
-        throw;  
-    }  
-}  
+    catch (SmsException ex)
+    {
+        Console.WriteLine("Failed to create update list. Error: " + ex.Message);
+        throw;
+    }
+}
 
-```  
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
 |Parameter|Type|Description|
 |---------|----|-----------|
-|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`newUpdates`|-   Managed: `Integer` array<br />-   VBScript: `Integer` array|An array of the updates that is associated with the Update List.|  
-|`newDescriptionInfo`|-   Managed: `Object` array<br />-   VBScript: `Object` array|An object array (embedded properties) of the type `LocalizedInformation`.|  
+|`Connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|
+|`newUpdates`|-   Managed: `Integer` array<br />-   VBScript: `Integer` array|An array of the updates that is associated with the Update List.|
+|`newDescriptionInfo`|-   Managed: `Object` array<br />-   VBScript: `Object` array|An object array (embedded properties) of the type `LocalizedInformation`.|
 
-## Compiling the Code  
- This C# example requires:  
+## Compiling the Code
+ This C# example requires:
 
-### Namespaces  
- System  
+### Namespaces
+ System
 
- System.Collections.Generic  
+ System.Collections.Generic
 
- System.Text  
+ System.Text
 
- Microsoft.ConfigurationManagement.ManagementProvider  
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
-### Assembly  
- adminui.wqlqueryengine  
+### Assembly
+ adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider  
+ microsoft.configurationmanagement.managementprovider
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).
 
-## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).  
+## .NET Framework Security
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).
 
 ## See also
 

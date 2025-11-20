@@ -12,69 +12,69 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientDeploymentFailureBucket Server WMI Class
-The  `SMS_ClientDeploymentFailureBucket` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment failure bucket that is used to get the total number of clients with the same failed state message ID.  
+The  `SMS_ClientDeploymentFailureBucket` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment failure bucket that is used to get the total number of clients with the same failed state message ID.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientDeploymentFailureBucket: SMS_BaseClass  
-{  
-    UInt32 ClientCount;  
-    String CollectionID;  
-    UInt32 LastMessageStateID;  
-};  
+```
+Class SMS_ClientDeploymentFailureBucket: SMS_BaseClass
+{
+    UInt32 ClientCount;
+    String CollectionID;
+    UInt32 LastMessageStateID;
+};
 
-```  
+```
 
-## Methods  
- The  `SMS_ClientDeploymentFailureBucket` class does not define any methods.  
+## Methods
+ The  `SMS_ClientDeploymentFailureBucket` class does not define any methods.
 
-## Properties  
- `ClientCount`  
- Data type: `UInt32`  
+## Properties
+ `ClientCount`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The total number of clients with the specified LastMessageStateID.  
+ The total number of clients with the specified LastMessageStateID.
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The ID of the collection of which the clients are members.  
+ The ID of the collection of which the clients are members.
 
- `LastMessageStateID`  
- Data type: `UInt32`  
+ `LastMessageStateID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The ID of the last client deployment state message.  
+ The ID of the last client deployment state message.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Use Zebra Mobility Extensions on Android devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use Zebra devices running Android with Zebra Mobility Extensions (MX). See all the steps, including install the Company Portal app, sideload the app, assign device administrator role, create a StageNow profile, and more.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 06/27/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: Low
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jieyan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -83,16 +64,13 @@ The following steps provide an overview. For specific details, go to Zebra's doc
 
 Continue to publish the profile, and consume it with the StageNow app on the device. The Company Portal app is installed and opened on the device.
 
-> [!TIP]
-> To learn more about StageNow, go to [StageNow Android device staging](https://www.zebra.com/us/en/software/mobile-computer-software/stagenow.html) (opens Zebra's web site).
-
 ## Step 2 - Confirm the Company Portal app has device administrator role
 
 The Company Portal app requires Device Administrator to manage Android devices. To activate the Device Administrator role, some Zebra devices include a user interface (UI) on the device. If the device includes a UI, the Company Portal app prompts the end user to grant Device Administrator during [enrollment](#step-3---enroll-the-device-in-intune) (in this article).
 
 If a UI isn't available, use the **DevAdmin Manager** in StageNow to create a profile that manually grants Device Administrator to the Company Portal app.
 
-The following steps provide an overview. For specific details, go to Zebra's documentation. [Set battery swap mode as device administrator](https://zebratechnologies.force.com/s/article/Set-Battery-Swap-Mode-as-Device-Administrator-using-StageNow-Tool) (opens Zebra's website) may be a good resource.
+The following steps provide an overview. For specific details, go to Zebra's documentation. [Set battery swap mode as device administrator](https://supportcommunity.zebra.com/s/article/Set-Battery-Swap-Mode-as-Device-Administrator-using-StageNow-Tool) (opens Zebra's website) may be a good resource.
 
 1. In StageNow, create a profile and select **Xpert Mode**.
 2. Add **DevAdmin Manager** to the profile.
@@ -123,7 +101,7 @@ When you create the profile in StageNow, on the last step, select **Export to MD
   Or, you can use built-in features in Intune to get these changes, including:
 
   - App management features to [add](../apps/apps-add.md), [deploy](../apps/apps-deploy.md), update, and [monitor](../apps/apps-monitor.md) apps.
-  - Manage [system and app updates](device-restrictions-android-for-work.md#fully-managed-dedicated-and-corporate-owned-work-profile) on devices running Android Enterprise
+  - Manage [system and app updates](device-restrictions-android-for-work.md) on devices running Android Enterprise
 
 After you test the file, the next step is to deploy the profile to devices using Intune.
 
@@ -176,7 +154,7 @@ The next time the device checks for configuration updates, the MX profile is dep
 
 ## Update a Zebra MX configuration after it's assigned
 
-To update the MX-specific configuration of a Zebra device, you can: 
+To update the MX-specific configuration of a Zebra device, you can:
 
 - Create an updated StageNow XML file, edit the existing Intune MX profile, and upload the new StageNow XML file. This new file overwrites the previous policy in the profile, and replaces the previous configuration.
 - Create a new StageNow XML file that configures different settings, create a new Intune MX profile, upload the new StageNow XML file, and assign it to the same group. In this scenario, multiple profiles are deployed. If the new profile configures settings that already exist in existing profiles, conflicts occur.

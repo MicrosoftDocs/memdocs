@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Install the Certificate Connector for Microsoft Intune
-description: Learn how to install and configure the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation. 
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+description: Learn how to install and configure the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation.
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 10/09/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: lacranda
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: wicale
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - certificates
@@ -41,7 +23,7 @@ To support your use of certificates with Intune, you can install the Certificate
 
 2. Select **Tenant administration** > **Connectors and tokens** > **Certificate connectors** > **Add**.
 
-3. On the *Install the certificate connector* pane, select the *certificate connector* link to download the connector software. Save the file to a location that’s accessible from the server where you're going to install the connector.
+3. On the *Install the certificate connector* pane, select the *certificate connector* link to download the connector software. Save the file to a location that's accessible from the server where you're going to install the connector.
 
    :::image type="content" source="./media/certificate-connector-install/download-certificate-connector.png" alt-text="Download the certificate connector software.":::
 
@@ -66,12 +48,14 @@ To support your use of certificates with Intune, you can install the Certificate
 
    - **Close** - This option closes the connector installation without configuring the connector. If you choose to *Close* the install at this time, later you can run the **Certificate Connector for Microsoft Intune** wizard to launch the connector configuration program. By default, the wizard is found in *C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Microsoft Intune*.
 
-After a connector installs, you can run the installation program again to uninstall the connector.
+   After a connector installs, you can run the installation program again to uninstall the connector.
 
 > [!TIP]
 > The installer will attempt to install the .NET Framework 4.7.2. If you experience issues during this process you can choose to pre-install the .NET Framework using the [Microsoft .NET Framework 4.7.2 offline installer for Windows](https://support.microsoft.com/topic/microsoft-net-framework-4-7-2-offline-installer-for-windows-05a72734-2127-a15d-50cf-daf56d5faec2)
 
 ## Configure the certificate connector
+> [!Note]
+> If the connector is installed on Windows Server 2019 or an earlier version, the Microsoft Edge browser must be manually installed before starting the Certificate Connector for Microsoft Intune wizard.
 
 To configure the certificate connector, you use the **Certificate Connector for Microsoft Intune** wizard. The configuration can start automatically when you choose *Configure Now* at the end of a certificate connector install, or manually by opening an elevated command prompt and running **C:\Program Files\Microsoft Intune\PFXCertificateConnector\ConnectorUI\PFXCertificateConnectorUI.exe**. An example follows. The command must be run as an administrator.
 
@@ -84,7 +68,7 @@ Each time **Certificate Connector for Microsoft Intune** starts on a server you 
 :::image type="content" source="./media/certificate-connector-install/begin-connector-configuration.png" alt-text="Welcome page of the Certificate Connector for Microsoft Intune wizard.":::
 
 > [!TIP]
-> When you run **Certificate Connector for Microsoft Intune** to modify a previously configure connector, you won’t see the *Microsoft Entra sign-in* page. This is because the connector has already been authenticated to your Microsoft Entra ID.
+> When you run **Certificate Connector for Microsoft Intune** to modify a previously configure connector, you won't see the *Microsoft Entra sign-in* page. This is because the connector has already been authenticated to your Microsoft Entra ID.
 
 Use the following procedure to both configure a new connector and modify a previously configured connector.
 
@@ -114,7 +98,7 @@ Use the following procedure to both configure a new connector and modify a previ
 
 5. On the *Prerequisites* page, the wizard runs several checks on the server before the configuration can begin. Review and resolve any errors or warnings before you continue.
 
-6. On the *Microsoft Entra sign-in* page (which appears as *Azure AD Sign-In*), select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. Then when prompted, authenticate your access. An Intune license is required for the account that you sign in with which can be either a Global Administrator or an Intune Administrator.
+6. On the *Microsoft Entra sign-in* page (which appears as *Azure AD Sign-In*), select the environment that hosts your Microsoft Entra ID, and then select **Sign In**. Then when prompted, authenticate your access. An Intune license is required for the account that you sign in with, which can be an Intune Administrator.
 
    Unless you use a government cloud, use the default of **Public Commercial Cloud** for *Environment*.
 
@@ -128,9 +112,9 @@ Use the following procedure to both configure a new connector and modify a previ
 
    :::image type="content" source="./media/certificate-connector-install/connector-configuration-complete.png" alt-text="Successful configuration of the certificate connector.":::
 
-   If configuration isn’t successful, the wizard displays details about the errors to help you resolve the problem.
+   If configuration isn't successful, the wizard displays details about the errors to help you resolve the problem.
 
-After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
+   After the configuration completes successfully and the wizard closes, the Certificate Connector for Microsoft Intune is now ready for use.
 
 > [!TIP]
 > It might be helpful to rename the connector to reference the server the connector is installed on.

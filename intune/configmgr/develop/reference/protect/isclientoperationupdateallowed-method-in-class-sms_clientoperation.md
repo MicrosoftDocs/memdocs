@@ -12,36 +12,36 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # IsClientOperationUpdateAllowed Method in Class SMS_ClientOperation
-The `IsClientOperationUpdateAllowed` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether a user has permission to update an operation.   
+The `IsClientOperationUpdateAllowed` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks whether a user has permission to update an operation.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 IsClientOperationUpdateAllowed   
-{  
-    [IN]    UInt32 OperationID  
-};  
-```  
+```
+uint32 IsClientOperationUpdateAllowed
+{
+    [IN]    UInt32 OperationID
+};
+```
 
-## Parameters  
- `OperationID`  
- Data type: `UInt32`  
+## Parameters
+ `OperationID`
+ Data type: `UInt32`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- OperationID.    
+ OperationID.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

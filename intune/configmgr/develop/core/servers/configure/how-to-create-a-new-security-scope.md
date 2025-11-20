@@ -12,82 +12,82 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Create a New Security Scope
-Creating a security scope in Configuration Manager is simple. All security scopes are defined by the `SMS_SecuredCategory` Windows Management Instrumentation (WMI) class. Only two properties are required when you are creating a new security scope, the name and description.  
+Creating a security scope in Configuration Manager is simple. All security scopes are defined by the `SMS_SecuredCategory` Windows Management Instrumentation (WMI) class. Only two properties are required when you are creating a new security scope, the name and description.
 
-### To create a new security scope  
+### To create a new security scope
 
-1.  Set up a connection to the SMS Provider.  
+1.  Set up a connection to the SMS Provider.
 
-2.  Create an instance of the `SMS_SecuredCategory` WMI class  
+2.  Create an instance of the `SMS_SecuredCategory` WMI class
 
-3.  Set the `CategoryName` and `CategoryDescription` properties.  
+3.  Set the `CategoryName` and `CategoryDescription` properties.
 
-4.  Save the security scope.  
+4.  Save the security scope.
 
-## Example  
- The following example creates a new security scope:  
+## Example
+ The following example creates a new security scope:
 
-```vbs  
-Sub CreateSecurityScope(connection, scopeName, scopeDescription)  
+```vbs
+Sub CreateSecurityScope(connection, scopeName, scopeDescription)
 
-    Dim scope  
+    Dim scope
 
-    ' Create a new security scope instance.  
-    Set scope = connection.Get("SMS_SecuredCategory").SpawnInstance_()  
+    ' Create a new security scope instance.
+    Set scope = connection.Get("SMS_SecuredCategory").SpawnInstance_()
 
-    ' Set the required properties.  
-    scope.CategoryName = scopeName    scope.CategoryDescription = scopeDescription  
+    ' Set the required properties.
+    scope.CategoryName = scopeName    scope.CategoryDescription = scopeDescription
 
-    ' Save the security scope.  
-    scope.Put_  
+    ' Save the security scope.
+    scope.Put_
 
-End Sub  
-```  
+End Sub
+```
 
-```c#  
-public void CreateSecurityScope(WqlConnectionManager connection, string scopeName, string scopeDescription)  
-{  
-    // Create a new security scope instance.  
-    IResultObject secScope = connection.CreateInstance("SMS_SecuredCategory");  
+```c#
+public void CreateSecurityScope(WqlConnectionManager connection, string scopeName, string scopeDescription)
+{
+    // Create a new security scope instance.
+    IResultObject secScope = connection.CreateInstance("SMS_SecuredCategory");
 
-    // Set the required properties.  
-    secScope.Properties["CategoryName"].StringValue = scopeName;  
-    secScope.Properties["CategoryDescription"].StringValue = scopeDescription;  
+    // Set the required properties.
+    secScope.Properties["CategoryName"].StringValue = scopeName;
+    secScope.Properties["CategoryDescription"].StringValue = scopeDescription;
 
-    // Save the security scope.  
-    secScope.Put();  
-}  
-```  
+    // Save the security scope.
+    secScope.Put();
+}
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`scopeName`|`String`|The name of security scope.|  
-|`scopeDescription`|`String`|The description of security scope.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|
+|`scopeName`|`String`|The name of security scope.|
+|`scopeDescription`|`String`|The description of security scope.|
 
-## Compiling the Code  
- The C# example requires:  
+## Compiling the Code
+ The C# example requires:
 
-### Namespaces  
- Microsoft.ConfigurationManagement.ManagementProvider  
+### Namespaces
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
-### Assembly  
- adminui.wqlqueryengine  
+### Assembly
+ adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider  
+ microsoft.configurationmanagement.managementprovider
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## See Also  
- [How to Delete a Security Scope](../../../../develop/core/servers/configure/how-to-delete-a-security-scope.md)   
- [How to Associate an Object with a Security Scope](../../../../develop/core/servers/configure/how-to-associate-an-object-with-a-security-scope.md)   
- [How to Remove an Object Association with a Security Scope](../../../../develop/core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md)   
+## See Also
+ [How to Delete a Security Scope](../../../../develop/core/servers/configure/how-to-delete-a-security-scope.md)
+ [How to Associate an Object with a Security Scope](../../../../develop/core/servers/configure/how-to-associate-an-object-with-a-security-scope.md)
+ [How to Remove an Object Association with a Security Scope](../../../../develop/core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md)
  [SMS_SecuredCategory Server WMI Class](../../../../develop/reference/core/servers/configure/sms_securedcategory-server-wmi-class.md)

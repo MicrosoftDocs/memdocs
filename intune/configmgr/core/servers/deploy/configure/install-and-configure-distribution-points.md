@@ -2,16 +2,16 @@
 title: Manage distribution points
 titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
-ms.date: 09/18/2022
+ms.date: 07/17/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz,frakroj
+ms.reviewer: frankroj,mstewart
 ---
 
 # Install and configure distribution points in Configuration Manager
@@ -352,7 +352,7 @@ The following settings are on the **Communication** page of the Create Site Syst
 
     When you configure all your management points in the site for HTTP, select the option to **Create self-signed certificate**. When you configure the management points for HTTPS, use the option to **Import certificate** from PKI. In other words, don't use self-signed certificates on distribution points when management points use certificates. Issues may occur otherwise. For example, distribution points won't send state messages.<!-- 13860499 -->
 
-    To import the certificate, browse to a valid Public Key Cryptography Standard (PKCS #12) file. This PFX or CER file has the PKI certificate with the following requirements for Configuration Manager:
+    To import the certificate, browse to a valid Public Key Cryptography Standard (PKCS #12) file. This PFX file has the PKI certificate with the following requirements for Configuration Manager:
 
   - The intended use includes client authentication
 
@@ -437,6 +437,13 @@ Select the option to **Enable PXE support for clients**, and then configure the 
   - **Do not allow user device affinity**: Choose this setting to specify that users aren't associated with the destination computer. This setting is the default.
 
     For more information about user device affinity, see [Link users and devices with user device affinity](../../../../apps/deploy-use/link-users-and-devices-with-user-device-affinity.md).
+
+    > [!NOTE]
+    > When setting user device affinity during a task sequence, the value configured here needs to match the value specified for the **SMSTSAssignUsersMode** variable.
+    > 
+    > If the values don't match, then device affinity isn't set.
+    >
+    > For more information, see [Task sequence variables](../../../../osd/understand/task-sequence-variables.md#SMSTSAssignUsersMode).
 
 - **Network interfaces**: Specify that the distribution point responds to PXE requests from all network interfaces or from specific network interfaces. If the distribution point responds to specific network interfaces, then provide the MAC address for each network interface.
 

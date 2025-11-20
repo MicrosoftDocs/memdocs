@@ -6,13 +6,13 @@ ms.date: 03/17/2023
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: whats-new
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2303
@@ -40,7 +40,7 @@ The following sections describe the new features to try out in this version:
 <!--## Other Updates
 <!--15358429-->
 <!--Offset for recurring monthly maintenance window schedules.-->
-<!--Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.-->  
+<!--Based upon your feedback, you can now offset monthly maintenance window schedules to better align deployments with the release of monthly security updates. For example, using a maximum offset of seven days after the second Tuesday of the month, sets the maintenance window for next Monday.-->
 
 ## Next steps
 

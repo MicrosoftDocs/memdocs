@@ -6,11 +6,11 @@ ms.date: 04/29/2017
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Configure options for Updates Publisher
@@ -21,7 +21,7 @@ Review and configure the options and related settings that affect the operation 
 
 To access the Updates Publisher options, in upper left corner of the console, click on the **Updates Publisher** **Properties** tab, and then choose **Options**.
 
-![Options](media/properties1.png)   
+![Options](media/properties1.png)
 
 
 Options are divided into the following:
@@ -41,7 +41,7 @@ You must configure Updates Publisher to work with update server like Windows Ser
 
   If your update server is remote from your Updates Publisher server, specify the fully qualified domain name (FQDN) of the server, and if you'll connect by SSL. When you connect by SSL, the default port changes from 8530 to 8531. Ensure the port you set matches what is in use by your update server.
 
-  > [!TIP]  
+  > [!TIP]
   > If you do not configure an update server, you can still use Updates Publisher to author software updates.
 
 - **Configure the signing certificate**. You must configure and successfully connect to an update server before you can configure the signing certificate.
@@ -112,7 +112,7 @@ Advanced options include the following:
  Updates Publisher can automatically check for new updates each time it opens. You can also opt into receiving preview builds of Updates Publisher.
 
 To manually check for updates, in the Updates Publisher console click on
-![Properties](media/properties2.png)  
+![Properties](media/properties2.png)
 to open the **Updates Publisher Properties**, and then choose **Check for update**.
 
 After Updates Publisher finds a new update, it displays the **Update Available** window and you can then choose to install it. If you choose to not install the update, it's offered the next time you open the console.

@@ -1,30 +1,10 @@
 ---
-# required metadata
 title: Devices - Intune Data Warehouse
-titleSuffix: Microsoft Intune
 description: Reference article for the Devices category of entity collections in the Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 6955E12D-70D7-4802-AE3B-8B276F01FA4F
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -76,7 +56,7 @@ The **deviceTypes** entity represents the device type referenced by other data w
 | 101 |Palm |Palm device |
 | 255 |Unknown |Unknown device type |
 
-## enrollmentActivities 
+## enrollmentActivities
 The **enrollmentActivity** entity indicates the activity of a device enrollment.
 
 | Property                      | Description                                                               |
@@ -90,7 +70,7 @@ The **enrollmentActivity** entity indicates the activity of a device enrollment.
 | osVersion                     | The operating system version of the device.                               |
 | count                         | Total count of enrollment activities matching the classifications above.  |
 
-## enrollmentEventStatuses 
+## enrollmentEventStatuses
 The **enrollmentEventStatus** entity indicates the result of a device enrollment.
 
 | Property                   | Description                                                                       |
@@ -106,8 +86,8 @@ The **enrollmentEventStatus** entity indicates the result of a device enrollment
 | Failed                     | A failed device enrollment             |
 | Not Available              | The enrollment status is unavailable.  |
 
-## enrollmentFailureCategories 
-The **EnrollmentFailureCategory** entity indicates why a device enrollment failed. 
+## enrollmentFailureCategories
+The **EnrollmentFailureCategory** entity indicates why a device enrollment failed.
 
 | Property                       | Description                                                                                 |
 |--------------------------------|---------------------------------------------------------------------------------------------|
@@ -133,8 +113,8 @@ The **EnrollmentFailureCategory** entity indicates why a device enrollment faile
 | ClientDisconnected              | Client timed out or enrollment was aborted by end user.                                                        |
 | UserAbandonment                 | Enrollment was abandoned by end user. (End user started onboarding but failed to complete it in timely manner)  |
 
-## enrollmentFailureReasons  
-The **EnrollmentFailureReason** entity indicates a more detailed reason for a device enrollment failure within a given failure category.  
+## enrollmentFailureReasons
+The **EnrollmentFailureReason** entity indicates a more detailed reason for a device enrollment failure within a given failure category.
 
 | Property                     | Description                                                                               |
 |------------------------------|-------------------------------------------------------------------------------------------|
@@ -172,8 +152,8 @@ The **ownerType** entity indicates whether a device is corporate, personally own
 | ownerTypeKey |Unique identifier of the owner type in the data warehouse - surrogate key. | |
 | ownerTypeName |Represents the owner type of the devices:  <br>Company - device is enterprise owned. <br>Personal - device is personally owned (BYOD).  <br>Unknown - no information on this device. |Company Personal Unknown |
 
-> [!Note]  
-> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices). 
+> [!Note]
+> For the `ownerTypeName` in AzureAD when creating Dynamic Groups for devices, you need to set the filter value `deviceOwnership` as `Company`. For more information, see [Rules for devices](/azure/active-directory/users-groups-roles/groups-dynamic-membership#rules-for-devices).
 
 ## managementStates
 
@@ -270,12 +250,12 @@ The **devices** entity lists all enrolled devices under management and their cor
 | windowsOsEdition           | Windows Operating System edition.                                                                                                                             |
 | ethernetMacAddress           | The unique network identifier of this device.                                                                                                                                        |
 | model                      | The device model.                                                                                                                                                                      |
-| office365Version           | The version of Microsoft 365 that is installed on the device. `Office365Version` is only collected when the Intune management extension agent is installed on a Windows machine. The admin must also create and assign a PowerShell or Win32 App for the agent to be installed. For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/intune-management-extension.md) and [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).<p>**NOTE**:<br>There's a known issue with the Intune Data Warehouse **devices** table. The `office365Version` property for the device record may be null. This property is currently under maintenance and may be subject to deprecation. Therefore, you should consider not using this property value for reporting purposes.                                                                                                                               |
+| office365Version           | The version of Microsoft 365 that is installed on the device. `Office365Version` is only collected when the Intune management extension agent is installed on a Windows machine. The admin must also create and assign a PowerShell or Win32 App for the agent to be installed. For more information, see [Use PowerShell scripts on Windows 10 devices in Intune](../apps/powershell-scripts.md) and [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).<p>**NOTE**:<br>There's a known issue with the Intune Data Warehouse **devices** table. The `office365Version` property for the device record may be null. This property is currently under maintenance and may be subject to deprecation. Therefore, you should consider not using this property value for reporting purposes.                                                                                                                               |
 | SubnetAddressV4Wifi           | The subnet address for IPV4 Wifi connection.                                                                                                                             |
 | IpAddressV4Wifi           | The IP address for IPV4 Wifi connection.                                                                                                                             |
 
 > [!NOTE]
-> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#managed-device-properties).
+> For more information about Windows SKU enum values,  see [Device properties](../fundamentals/filters-device-properties.md#available-properties).
 
 ## devicePropertyHistories
 
@@ -293,6 +273,6 @@ The **devicePropertyHistory** entity has the same properties as the devices tabl
 | complianceStateKey         | A key to ComplianceState.                                                                                                                                                            |
 | OSVersion                  | OS version.                                                                                                                                                                          |
 | jailBroken                 | Whether the device is jail broken or rooted.                                                                                                                                         |
-| deviceCategoryKey          | Key of device category attribute for this device. 
+| deviceCategoryKey          | Key of device category attribute for this device.
 | physicalMemoryInBytes      | The physical memory in bytes.                                                                                                                                                          |
 | totalStorageSpaceInBytes   | Total storage capacity in bytes.                                                                                                                                                                |

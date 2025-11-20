@@ -12,114 +12,114 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_Permission Server WMI Class
-The `SMS_Permission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents RBAC Security User Permissions.  
+The `SMS_Permission` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents RBAC Security User Permissions.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_Permission : SMS_BaseClass  
-{  
-    UInt32 AdminID;  
-    String CategoryID;  
-    String CategoryName;  
-    UInt32 CategoryTypeID;  
-    Boolean GrantedToCurrentUser;  
-    String LogonName;  
-    String RoleID;  
-    String RoleName;  
-};  
-```  
+```
+Class SMS_Permission : SMS_BaseClass
+{
+    UInt32 AdminID;
+    String CategoryID;
+    String CategoryName;
+    UInt32 CategoryTypeID;
+    Boolean GrantedToCurrentUser;
+    String LogonName;
+    String RoleID;
+    String RoleName;
+};
+```
 
-## Methods  
- The `SMS_Permission` class doesn't define any methods.  
+## Methods
+ The `SMS_Permission` class doesn't define any methods.
 
-## Properties  
- `AdminID`  
- Data type: `UInt32`  
+## Properties
+ `AdminID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID of the admin account.  
+ ID of the admin account.
 
- `CategoryID`  
- Data type: `String`  
+ `CategoryID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID of the RBA security category.  
+ ID of the RBA security category.
 
- `CategoryName`  
- Data type: `String`  
+ `CategoryName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the RBA security category.  
+ Name of the RBA security category.
 
- `CategoryTypeID`  
- Data type: `UInt32`  
+ `CategoryTypeID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [enumeration, key]  
+ Qualifiers: [enumeration, key]
 
- The type of the category. Possible values are listed below. The default value is 29.  
+ The type of the category. Possible values are listed below. The default value is 29.
 
-|Value|Category type|  
-|-|-|  
-|1|Collection|  
-|29|SecuredScope|  
+|Value|Category type|
+|-|-|
+|1|Collection|
+|29|SecuredScope|
 
- `GrantedToCurrentUser`  
- Data type: `Boolean`  
+ `GrantedToCurrentUser`
+ Data type: `Boolean`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: None  
+ Qualifiers: None
 
- This value will be true if this permission is granted to current user directly or indirectly (through a Security Group).  
+ This value will be true if this permission is granted to current user directly or indirectly (through a Security Group).
 
- `LogonName`  
- Data type: `String`  
+ `LogonName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: None  
+ Qualifiers: None
 
- Sign-in name of the user.  
+ Sign-in name of the user.
 
- `RoleID`  
- Data type: `String`  
+ `RoleID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID of the role.  
+ ID of the role.
 
- `RoleName`  
- Data type: `String`  
+ `RoleName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the role.  
+ Name of the role.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

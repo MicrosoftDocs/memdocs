@@ -12,180 +12,180 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientSettingsDefault Server WMI Class
-The `SMS_ClientSettingsDefault` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents simple read-only default client settings properties.  
+The `SMS_ClientSettingsDefault` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents simple read-only default client settings properties.
 
 > [!NOTE]
->  Nothing in this class should be modified.  
+>  Nothing in this class should be modified.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientSettingsDefault : SMS_BaseClass  
-{  
-    UInt32 AssignmentCount;  
-    String CreatedBy;  
-    DateTime DateCreated;  
-    DateTime DateModified;  
-    String Description;  
-    Boolean Enabled;  
-    UInt32 Flags;  
-    String LastModifiedBy;  
-    String Name;  
-    UInt32 Priority;  
-    UInt32 SettingsID;  
-    String SiteCode;  
-    UInt32 Type;  
-    String UniqueID;  
-};  
-```  
+```
+Class SMS_ClientSettingsDefault : SMS_BaseClass
+{
+    UInt32 AssignmentCount;
+    String CreatedBy;
+    DateTime DateCreated;
+    DateTime DateModified;
+    String Description;
+    Boolean Enabled;
+    UInt32 Flags;
+    String LastModifiedBy;
+    String Name;
+    UInt32 Priority;
+    UInt32 SettingsID;
+    String SiteCode;
+    UInt32 Type;
+    String UniqueID;
+};
+```
 
-## Methods  
- The `SMS_ClientSettingsDefault` class doesn't define any methods.  
+## Methods
+ The `SMS_ClientSettingsDefault` class doesn't define any methods.
 
-## Properties  
- `AssignmentCount`  
- Data type: `UInt32`  
+## Properties
+ `AssignmentCount`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- `AssignmentCount` is 0 only. In general, the default client settings apply to all clients in the hierarchy, unless overridden by values defined in `SMS_ClientSettings`, which applies to certain collections.  
+ `AssignmentCount` is 0 only. In general, the default client settings apply to all clients in the hierarchy, unless overridden by values defined in `SMS_ClientSettings`, which applies to certain collections.
 
- `CreatedBy`  
- Data type: `String`  
+ `CreatedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read, sizelimit("512")]  
+ Qualifiers: [notnull, read, sizelimit("512")]
 
- Name of the user who created the client settings.  
+ Name of the user who created the client settings.
 
- `DateCreated`  
- Data type: `DateTime`  
+ `DateCreated`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read]  
+ Qualifiers: [notnull, read]
 
- The date and time when the client settings are created.  
+ The date and time when the client settings are created.
 
- `DateModified`  
- Data type: `DateTime`  
+ `DateModified`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read]  
+ Qualifiers: [notnull, read]
 
- The date and time when the client settings are modified.  
+ The date and time when the client settings are modified.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [notnull]  
+ Qualifiers: [notnull]
 
- Description is specified internally.  
+ Description is specified internally.
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [notnull]  
+ Qualifiers: [notnull]
 
- Reserved for future use.  
+ Reserved for future use.
 
- `Flags`  
- Data type: `UInt32`  
+ `Flags`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [notnull]  
+ Qualifiers: [notnull]
 
- Reserved for future use.  
+ Reserved for future use.
 
- `LastModifiedBy`  
- Data type: `String`  
+ `LastModifiedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read, sizelimit("512")]  
+ Qualifiers: [notnull, read, sizelimit("512")]
 
- Name of the user who last modified the client settings.  
+ Name of the user who last modified the client settings.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [notnull]  
+ Qualifiers: [notnull]
 
- The name of the component.  
+ The name of the component.
 
- `Priority`  
- Data type: `UInt32`  
+ `Priority`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [notnull]  
+ Qualifiers: [notnull]
 
- Compared to `SMS_ClientSettings`, the priority is the lowest for `SMS_ClientSettingsDefault` (highest number) and shouldn't be changed.  
+ Compared to `SMS_ClientSettings`, the priority is the lowest for `SMS_ClientSettingsDefault` (highest number) and shouldn't be changed.
 
- `SettingsID`  
- Data type: `UInt32`  
+ `SettingsID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- For internal use only.  
+ For internal use only.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read]  
+ Qualifiers: [notnull, read]
 
- Three-letter site code for the CAS site.  
+ Three-letter site code for the CAS site.
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [notnull]  
+ Qualifiers: [notnull]
 
- Type is used to indicate if this setting is 'Device,' 'User,' or 'Default.' For `SMS_ClientSettingsDefault`, it's 0 meaning 'Default.'  
+ Type is used to indicate if this setting is 'Device,' 'User,' or 'Default.' For `SMS_ClientSettingsDefault`, it's 0 meaning 'Default.'
 
-|Value|Setting type|  
-|-|-|  
-|0|Default|  
-|1|Device|  
-|2|User|  
+|Value|Setting type|
+|-|-|
+|0|Default|
+|1|Device|
+|2|User|
 
- `UniqueID`  
- Data type: `String`  
+ `UniqueID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read, sizelimit("64")]  
+ Qualifiers: [notnull, read, sizelimit("64")]
 
- The unique ID of the object.  
+ The unique ID of the object.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

@@ -6,12 +6,12 @@ ms.date: 10/05/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # User notifications
@@ -67,7 +67,7 @@ Configuring this deployment setting changes the user experience for this scenari
 
 From the following toast notification:
 
-![Toast notification that Software changes are required](media/3555947-required-toast.png)  
+![Toast notification that Software changes are required](media/3555947-required-toast.png)
 
 To the following dialog window:
 
@@ -75,7 +75,7 @@ To the following dialog window:
 
 ### Restart required
 
-In the [Computer Restart](../../core/clients/deploy/about-client-settings.md#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.  
+In the [Computer Restart](../../core/clients/deploy/about-client-settings.md#computer-restart) group of client settings, enable the following option: **When a deployment requires a restart, show a dialog window to the user instead of a toast notification**.
 
 Configuring this client setting changes the user experience for all required deployments that require a restart of the following types:
 
@@ -85,7 +85,7 @@ Configuring this client setting changes the user experience for all required dep
 
 From the following toast notification:
 
-![Toast notification that Restart required](media/3555947-restart-toast.png)  
+![Toast notification that Restart required](media/3555947-restart-toast.png)
 
 To the following dialog window:
 

@@ -1,30 +1,10 @@
 ---
-# required metadata
-title: Use the Intune Data Warehouse 
-titleSuffix: Microsoft Intune
-description: Use the Intune Data Warehouse to build reports that provide insight into your enterprise mobile environment. 
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
+title: Use the Intune Data Warehouse
+description: Use the Intune Data Warehouse to build reports that provide insight into your enterprise mobile environment.
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 57019B11-DF9B-4D8A-95FE-254C75398DDE
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -48,7 +28,7 @@ The Data Warehouse provides you access to more information about your mobile env
 > [!Note]
 > If you are a using co-managed mobile device management (MDM) with Microsoft Configuration Manager and Microsoft Intune, you need to retrieve your data from Configuration Manager. The Intune Data Warehouse only contains Intune data. You can use a Configuration Manager Power BI dashboard for your custom reports. For related information, see [Power BI Desktop](/configmgr/develop/adminservice/usage#power-bi-desktop).
 
-> [!Important]  
+> [!Important]
 > You can now use the v1.0 version of the Intune Data Warehouse by setting the query parameter `api-version=v1.0`. Updates to collections in the Data Warehouse are additive in nature and do not break existing scenarios.<br><br>
 > You can try out the latest functionality of the Data Warehouse by using the beta version. To use the beta version, your URL must contain the query parameter `api-version=beta`. The beta version offers features before they are made generally available as a supported service. As Intune adds new features, the beta version may change behavior and data contracts. Any custom code or reporting tools dependent on the beta version may break with ongoing updates.
 

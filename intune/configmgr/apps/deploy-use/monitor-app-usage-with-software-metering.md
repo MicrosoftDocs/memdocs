@@ -6,12 +6,12 @@ ms.date: 09/20/2017
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-ms.author: sheetg
-author: sheetg09 
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Software metering in Configuration Manager

@@ -12,146 +12,146 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_PartitionSettings Server WMI Class
-The `SMS_TaskSequence_PartitionSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings to use when creating and formatting a partition on a hard disk drive.  
+The `SMS_TaskSequence_PartitionSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the settings to use when creating and formatting a partition on a hard disk drive.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_PartitionSettings  
-{  
-      Boolean AssignVolumeLetter;  
-      Boolean Bootable;  
-      String FileSystem;  
-      Boolean QuickFormat;  
-      UInt32 Size;  
-      String SizeUnits;  
-      String Type;  
-      String VolumeLetterVariable;  
-      String VolumeName;  
-};  
-```  
+```
+Class SMS_TaskSequence_PartitionSettings
+{
+      Boolean AssignVolumeLetter;
+      Boolean Bootable;
+      String FileSystem;
+      Boolean QuickFormat;
+      UInt32 Size;
+      String SizeUnits;
+      String Type;
+      String VolumeLetterVariable;
+      String VolumeName;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_PartitionSettings` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_PartitionSettings` class does not define any methods.
 
-## Properties  
- `AssignVolumeLetter`  
- Data type: `Boolean`  
+## Properties
+ `AssignVolumeLetter`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if a volume letter will be assigned to the partition. The default value is `true`.  
+ `true` if a volume letter will be assigned to the partition. The default value is `true`.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `Bootable`  
- Data type: `Boolean`  
+ `Bootable`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- `true` to set the partition as the active partition. The default value is `false`.  
+ `true` to set the partition as the active partition. The default value is `false`.
 
- `FileSystem`  
- Data type: `String`  
+ `FileSystem`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- File system to use when formatting the partition. Possible values are:  
+ File system to use when formatting the partition. Possible values are:
 
-- FAT32  
+- FAT32
 
-- NTFS  
+- NTFS
 
-  `QuickFormat`  
-  Data type: `Boolean`  
+  `QuickFormat`
+  Data type: `Boolean`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: [not_null]  
+  Qualifiers: [not_null]
 
-  `true` to perform a quick format. Set this property to `false` to perform a full format.  
+  `true` to perform a quick format. Set this property to `false` to perform a full format.
 
-  `Size`  
-  Data type: `UInt32`  
+  `Size`
+  Data type: `UInt32`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: None  
+  Qualifiers: None
 
-  Size of the partition to create. The units are defined by the `SizeUnits` property.  
+  Size of the partition to create. The units are defined by the `SizeUnits` property.
 
-  `SizeUnits`  
-  Data type: `String`  
+  `SizeUnits`
+  Data type: `String`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: None  
+  Qualifiers: None
 
-  Units in which the `Size` property is specified. Possible values are:  
+  Units in which the `Size` property is specified. Possible values are:
 
-| Value | Size units |  
-| ----- | ---------- |  
-|MB|Megabytes|  
-|GB|Gigabytes|  
-|Percent|Percentage of free space remaining on disk|  
+| Value | Size units |
+| ----- | ---------- |
+|MB|Megabytes|
+|GB|Gigabytes|
+|Percent|Percentage of free space remaining on disk|
 
- `Type`  
- Data type: `String`  
+ `Type`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- Type of partition to create. Possible values are:  
+ Type of partition to create. Possible values are:
 
-- Primary  
+- Primary
 
-- Extended  
+- Extended
 
-- Logical  
+- Logical
 
-- Hidden  
+- Hidden
 
-- EFI  
+- EFI
 
-- MSR  
+- MSR
 
-  `VolumeLetterVariable`  
-  Data type: `String`  
+  `VolumeLetterVariable`
+  Data type: `String`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: None  
+  Qualifiers: None
 
-  Name of a task sequence variable that receives the drive letter of the newly created partition.  
+  Name of a task sequence variable that receives the drive letter of the newly created partition.
 
-  `VolumeName`  
-  Data type: `String`  
+  `VolumeName`
+  Data type: `String`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: None  
+  Qualifiers: None
 
-  Name to assign to the volume when it is formatted.  
+  Name to assign to the volume when it is formatted.
 
-## Remarks  
- There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+## Remarks
+ There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

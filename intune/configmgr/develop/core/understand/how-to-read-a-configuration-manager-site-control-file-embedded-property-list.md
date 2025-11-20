@@ -12,127 +12,127 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Read a Configuration Manager Site Control File Embedded Property List
-In Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) object for the embedded object from the resources *PropLists* property array.  
+In Configuration Manager, you read an embedded property list from a site control file resource by getting the [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) object for the embedded object from the resources *PropLists* property array.
 
- An embedded property list has the following properties that you can set. For more information, see [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md).  
+ An embedded property list has the following properties that you can set. For more information, see [SMS_EmbeddedPropertyList](../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md).
 
-|Value|Description|  
-|-----------|-----------------|  
-|PropertyListName|The embedded property name.|  
-|Values|An array of string values. Each array item represents a single property list item.|  
+|Value|Description|
+|-----------|-----------------|
+|PropertyListName|The embedded property name.|
+|Values|An array of string values. Each array item represents a single property list item.|
 
 > [!CAUTION]
->  Making changes to the site control file can cause irreparable damage to your Configuration Manager site.  
+>  Making changes to the site control file can cause irreparable damage to your Configuration Manager site.
 
-### To read  a site control file embedded property list  
+### To read  a site control file embedded property list
 
-1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).  
+1.  Set up a connection to the SMS Provider. For more information, see [SMS Provider fundamentals](sms-provider-fundamentals.md).
 
-2.  Using the connection object from step one, get a site control file resource. For more information, see [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md).  
+2.  Using the connection object from step one, get a site control file resource. For more information, see [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md).
 
-3.  Get the `SMS_EmbeddedPropertyList` for the required embedded property list.  
+3.  Get the `SMS_EmbeddedPropertyList` for the required embedded property list.
 
-4.  Access the property list values by using the `SMS_EmbeddedPropertyList` object *Values* property array.  
+4.  Access the property list values by using the `SMS_EmbeddedPropertyList` object *Values* property array.
 
-## Example  
- The following example method populates the supplied `values` parameter with the *Values* array of the embedded property list `SMS_EmbeddedPropertyList` identified by the `propertyListName` parameter. `true` is returned if the embedded property list is found; otherwise, `false` is returned.  
+## Example
+ The following example method populates the supplied `values` parameter with the *Values* array of the embedded property list `SMS_EmbeddedPropertyList` identified by the `propertyListName` parameter. `true` is returned if the embedded property list is found; otherwise, `false` is returned.
 
- To view code that calls these functions, see [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md) or see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md).  
+ To view code that calls these functions, see [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md) or see [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md).
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../develop/core/understand/calling-code-snippets.md).
 
-```vbs  
+```vbs
 
-Function GetScfEmbeddedPropertyList(resource,  _  
-        propertyListName,               _  
-        ByRef values)  
+Function GetScfEmbeddedPropertyList(resource,  _
+        propertyListName,               _
+        ByRef values)
 
-    Dim scfPropertyList  
+    Dim scfPropertyList
 
-    If IsNull(resource.PropLists) = True Then  
-        GetScfPropertyList = False  
-        Exit Function  
-    End If      
+    If IsNull(resource.PropLists) = True Then
+        GetScfPropertyList = False
+        Exit Function
+    End If
 
-    For each scfPropertyList in resource.PropLists  
-       if   scfPropertyList.PropertyListName = propertyListName Then  
-            ' Found property list, so return the values array.  
-            values = scfPropertyList.Values  
-            GetScfEmbeddedPropertyList = True  
-            Exit Function  
-        End If  
-     Next    
+    For each scfPropertyList in resource.PropLists
+       if   scfPropertyList.PropertyListName = propertyListName Then
+            ' Found property list, so return the values array.
+            values = scfPropertyList.Values
+            GetScfEmbeddedPropertyList = True
+            Exit Function
+        End If
+     Next
 
-     ' Did not find the property list.  
-     GetScfEmbeddedPropertyList = False  
-End Function  
+     ' Did not find the property list.
+     GetScfEmbeddedPropertyList = False
+End Function
 
-```  
+```
 
-```c#  
-public bool GetScfEmbeddedPropertyList(  
-    IResultObject resource,  
-    string propertyListName,  
-    out ArrayList values)  
-{  
-    values = new ArrayList();  
-    try  
-    {  
-        if (resource.EmbeddedPropertyLists.ContainsKey(propertyListName))  
-        {  
-            values.AddRange(resource.EmbeddedPropertyLists[propertyListName]["Values"].StringArrayValue);  
-            return true;  
-        }  
-    }  
-    catch(SmsException e)  
-    {  
-        Console.WriteLine("Couldn't get the embedded property list: " + e.Message);  
-    }  
-    return false;  
+```c#
+public bool GetScfEmbeddedPropertyList(
+    IResultObject resource,
+    string propertyListName,
+    out ArrayList values)
+{
+    values = new ArrayList();
+    try
+    {
+        if (resource.EmbeddedPropertyLists.ContainsKey(propertyListName))
+        {
+            values.AddRange(resource.EmbeddedPropertyLists[propertyListName]["Values"].StringArrayValue);
+            return true;
+        }
+    }
+    catch(SmsException e)
+    {
+        Console.WriteLine("Couldn't get the embedded property list: " + e.Message);
+    }
+    return false;
 
-}  
+}
 
-```  
+```
 
- The sample method has the following parameters:  
+ The sample method has the following parameters:
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`Resource`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemobject)|The site control file resource that contains the embedded property.|  
-|`propertyListName`|-   Managed: `String`<br />-   VBScript: `String`|The embedded property list to be read.|  
-|`Values`|-   Managed: `String` array<br />-   VBScript: `String` array|The `SMS_EmbeddedProperty` class Values property. An array of string values.|  
+|`Resource`|-   Managed: `IResultObject`<br />-   VBScript: [SWbemObject](/windows/win32/wmisdk/swbemobject)|The site control file resource that contains the embedded property.|
+|`propertyListName`|-   Managed: `String`<br />-   VBScript: `String`|The embedded property list to be read.|
+|`Values`|-   Managed: `String` array<br />-   VBScript: `String` array|The `SMS_EmbeddedProperty` class Values property. An array of string values.|
 
-## Compiling the Code  
- The C# example has the following compilation requirements:  
+## Compiling the Code
+ The C# example has the following compilation requirements:
 
-### Namespaces  
- System  
+### Namespaces
+ System
 
- System.Collections.Generic  
+ System.Collections.Generic
 
- System.Collections  
+ System.Collections
 
- System.Text  
+ System.Text
 
- Microsoft.ConfigurationManagement.ManagementProvider  
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
-### Assembly  
- microsoft.configurationmanagement.managementprovider  
+### Assembly
+ microsoft.configurationmanagement.managementprovider
 
- adminui.wqlqueryengine  
+ adminui.wqlqueryengine
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## .NET Framework Security  
- For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../develop/core/servers/configure/role-based-administration.md).  
+## .NET Framework Security
+ For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../../develop/core/servers/configure/role-based-administration.md).
 
-## See Also  
- [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)  
- [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)   
+## See Also
+ [About the Configuration Manager Site Control File](../../../develop/core/understand/about-the-configuration-manager-site-control-file.md)
+ [How to Read and Write to the Configuration Manager Site Control File by Using Managed Code](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-managed-code.md)
  [How to Read and Write to the Configuration Manager Site Control File by Using WMI](../../../develop/core/understand/how-to-read-and-write-to-the-site-control-file-by-using-wmi.md)

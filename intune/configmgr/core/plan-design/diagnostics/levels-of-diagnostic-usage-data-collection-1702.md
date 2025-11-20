@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Levels of diagnostic usage data collection for version 1702 of Configuration Manager
@@ -32,7 +32,7 @@ Changes from previous versions are noted with ***[New]***, ***[Updated]***, ***[
 ##  <a name="bkmk_change"></a> How to change the level
  Administrators who have a role-based administrative scope that includes **Modify** permissions on the **Site** object class can change the level of data collected in the Diagnostics and Usage Data settings in the Configuration Manager console.
 
-You change the data collection level from within the console by navigating to **Administration** > **Overview** > **Site Configuration** > **Sites**. Open **Hierarchy Settings**, and then select the data level you want to use.  
+You change the data collection level from within the console by navigating to **Administration** > **Overview** > **Site Configuration** > **Sites**. Open **Hierarchy Settings**, and then select the data level you want to use.
 
 
 
@@ -75,13 +75,13 @@ For Configuration Manager version 1702, this level includes the following:
 - Distribution point and management point types and basic configuration information (protected, prestaged, PXE, multicast, SSL state, pull/peer distribution points, MDM-enabled, SSL-enabled, etc.)
 
 - Setup Information:
-     - Build, install type, language packs, features that you enabled   
+     - Build, install type, language packs, features that you enabled
 
      - Pre-release use, setup media type, branch type
 
-     - Software Assurance expiration date      
+     - Software Assurance expiration date
 
-     - Update pack deployment status and errors, download progress, and prerequisite errors 
+     - Update pack deployment status and errors, download progress, and prerequisite errors
 
      - Use of update fast ring
 
@@ -103,7 +103,7 @@ This level is recommended because it provides Microsoft with the minimum data th
 
 For Configuration Manager version 1702, this level includes the following:
 
-- **Application management:**  
+- **Application management:**
 
    - App requirements (count of built-in conditions is referenced by deployment technology)
 
@@ -111,7 +111,7 @@ For Configuration Manager version 1702, this level includes the following:
 
    - Application approval statistics and usage frequency
 
-   - ***[Updated]*** Application deployment information (use of install versus uninstall, requires approval, user interaction enabled/disabled, dependency, supersedence, and usage count of install behavior feature)  
+   - ***[Updated]*** Application deployment information (use of install versus uninstall, requires approval, user interaction enabled/disabled, dependency, supersedence, and usage count of install behavior feature)
 
    - Application policy size and complexity statistics
 
@@ -125,19 +125,19 @@ For Configuration Manager version 1702, this level includes the following:
 
    - Count of App-V environments and deployment properties
 
-   - Count of application applicability by operating system  
+   - Count of application applicability by operating system
 
    - ***[New]*** Count of applications that are referenced by a task sequence
 
-   - Count of packages by type  
+   - Count of packages by type
 
-   - Count of package/program deployments  
+   - Count of package/program deployments
 
-   - Count of Windows 10 licensed application licenses  
+   - Count of Windows 10 licensed application licenses
 
-   - Count of Windows Store for Business apps and sync statistics (including summarized types of apps, licensed app status, and number of online and offline licensed apps)  
+   - Count of Windows Store for Business apps and sync statistics (including summarized types of apps, licensed app status, and number of online and offline licensed apps)
 
-   - Maintenance window type and duration  
+   - Maintenance window type and duration
 
    - Minimum/maximum/average number of application deployments per user/device per time period
 
@@ -146,14 +146,14 @@ For Configuration Manager version 1702, this level includes the following:
 
    - MSI configuration options and counts
 
-   - ***[New]*** Statistics on end-user interaction with notification for required software deployments   
+   - ***[New]*** Statistics on end-user interaction with notification for required software deployments
 
    - Universal Data Access (UDA) usage, how created
 
 
 
 
-- **Client:**  
+- **Client:**
 
    - Active Management Technology (AMT) client version
 
@@ -168,19 +168,19 @@ For Configuration Manager version 1702, this level includes the following:
    - Client health statistics and top issue summary
 
    - Client notification operation action status (how many times each is run, max number of targeted clients, and average success rate)
-   - Count of client installations from each source location type  
+   - Count of client installations from each source location type
 
-   - Count of client installation failures  
+   - Count of client installation failures
 
-   - ***[New]*** Count of devices virtualized by Hyper-V or Azure  
+   - ***[New]*** Count of devices virtualized by Hyper-V or Azure
 
-   - Count of Software Center actions   
+   - Count of Software Center actions
 
    - ***[New]*** Count of UEFI-enabled devices
 
    - Deployment methods used for client and count of clients per deployment method
 
-   - List/count of enabled client agents  
+   - List/count of enabled client agents
 
    - Operating system age in months
 
@@ -216,15 +216,15 @@ For Configuration Manager version 1702, this level includes the following:
 
 
 
-- **Compliance settings:**  
+- **Compliance settings:**
 
-    - Basic configuration baseline information (count, number of deployments, and number of references)  
+    - Basic configuration baseline information (count, number of deployments, and number of references)
 
-    - Count of configuration items by type  
+    - Count of configuration items by type
 
-    - Count of deployments that reference built-in settings (now capturing remediate setting)  
+    - Count of deployments that reference built-in settings (now capturing remediate setting)
 
-    - Count of rules and deployments created for custom settings (now capturing remediate setting)  
+    - Count of rules and deployments created for custom settings (now capturing remediate setting)
     -  Count of deployed Simple Certificate Enrollment Protocol (SCEP), VPN, Wi-Fi, certificate (.pfx), and Compliance Policy templates
 
     - Count of SCEP certificate, VPN, Wi-Fi, certificate (.pfx) and Compliance Policy deployments by platform
@@ -233,37 +233,37 @@ For Configuration Manager version 1702, this level includes the following:
 
 
 
-- **Content:**  
+- **Content:**
 
-    - Boundary group information (count of boundaries and site systems that are assigned to each boundary group)  
+    - Boundary group information (count of boundaries and site systems that are assigned to each boundary group)
 
     - Boundary group relationships and fallback configuration
 
     - Client content download statistics
 
-    - Count of boundaries by type  
+    - Count of boundaries by type
 
     - Count of peer cache clients and usage statistics
 
-    - Distribution Manager configuration information (threads, retry delay, number of retries, and pull distribution point settings)  
+    - Distribution Manager configuration information (threads, retry delay, number of retries, and pull distribution point settings)
 
     - Distribution point configuration information (use of branch cache and distribution point monitoring)
 
-    - Distribution point group information (count of packages and distribution points that are assigned to each distribution point group)  
+    - Distribution point group information (count of packages and distribution points that are assigned to each distribution point group)
 
 
 
-- **Endpoint Protection:**  
+- **Endpoint Protection:**
 
    - Endpoint Policies (count of policies and whether policies are deployed)
 
-   - Count of alerts that are configured for Endpoint Protection feature  
+   - Count of alerts that are configured for Endpoint Protection feature
 
-   - Count of collections that are selected to appear in Endpoint Protection dashboard  
+   - Count of collections that are selected to appear in Endpoint Protection dashboard
 
-   - Endpoint Protection deployment errors (count of Endpoint Protection policy deployment error codes)  
+   - Endpoint Protection deployment errors (count of Endpoint Protection policy deployment error codes)
 
-   - Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group)<br /><br /> This does not include any information about the settings included in the policy.  
+   - Endpoint Protection antimalware and Windows Firewall policy usage (number of unique policies assigned to group)<br /><br /> This does not include any information about the settings included in the policy.
 
 
 
@@ -273,17 +273,17 @@ For Configuration Manager version 1702, this level includes the following:
 
 
 
-- **Mobile device management (MDM):**  
+- **Mobile device management (MDM):**
 
     - Count of issued mobile device actions: lock, pin rest, wipe, retire, and Sync now commands
 
-    - Count of mobile device policies  
+    - Count of mobile device policies
 
-    - Count of mobile devices that are managed by Configuration Manager and Microsoft Intune and how they were enrolled (bulk, user-based)  
+    - Count of mobile devices that are managed by Configuration Manager and Microsoft Intune and how they were enrolled (bulk, user-based)
 
-    - Count of users who have multiple enrolled mobile devices  
+    - Count of users who have multiple enrolled mobile devices
 
-    - Mobile device polling schedule and statistics for mobile device check-in duration  
+    - Mobile device polling schedule and statistics for mobile device check-in duration
 
 
 
@@ -298,18 +298,18 @@ For Configuration Manager version 1702, this level includes the following:
 
 
 
-- **On-premises mobile device management (MDM):**  
+- **On-premises mobile device management (MDM):**
 
-    - Count of Windows 10 bulk enrollment packages and profiles  
+    - Count of Windows 10 bulk enrollment packages and profiles
 
-    - Deployment success/failure statistics for on-premises MDM application deployments  
-
-
+    - Deployment success/failure statistics for on-premises MDM application deployments
 
 
-- **Operating system deployment:**  
 
-    - Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences  
+
+- **Operating system deployment:**
+
+    - Count of boot images, drivers, driver packages, multicast-enabled distribution points, PXE-enabled distribution points, and task sequences
 
     - Count of edition upgrade policies
 
@@ -323,57 +323,57 @@ For Configuration Manager version 1702, this level includes the following:
 
 
 
-- **Software Updates:**  
+- **Software Updates:**
 
-    - Available and deadline deltas that are used in automatic deployment rules  
+    - Available and deadline deltas that are used in automatic deployment rules
 
-    - Average and maximum number of assignments per update  
+    - Average and maximum number of assignments per update
 
-    - Client update evaluation and scan schedules  
+    - Client update evaluation and scan schedules
 
     - Classifications that are synced by Software Update Point
 
-    - Cluster patching statistics  
+    - Cluster patching statistics
 
     - Configuration of Windows 10 express updates
 
-    - Configurations that are used for active Windows 10 servicing plans  
+    - Configurations that are used for active Windows 10 servicing plans
 
-    - Count of deployed Microsoft 365 updates  
+    - Count of deployed Microsoft 365 updates
 
-    - Count of update groups and assignments  
+    - Count of update groups and assignments
 
-    - Count of update packages and the maximum/minimum/average number of distribution points that are targeted with packages  
+    - Count of update packages and the maximum/minimum/average number of distribution points that are targeted with packages
 
-    - Count of updates that are created and deployed with System Center Update Publisher  
+    - Count of updates that are created and deployed with System Center Update Publisher
 
     - Count of Windows 10 clients that use Windows Update client policies
-    - Number of automatic deployment rules that are tied to synchronization  
+    - Number of automatic deployment rules that are tied to synchronization
 
-    - Number of automatic deployment rules that create new or add updates to an existing group  
+    - Number of automatic deployment rules that create new or add updates to an existing group
 
-    - Number of automatic deployment rules that have multiple deployments  
-    - Number of update groups and minimum/maximum/average number of updates per group  
+    - Number of automatic deployment rules that have multiple deployments
+    - Number of update groups and minimum/maximum/average number of updates per group
 
-    - Number of updates and percentage of updates that are deployed, expired, superseded, downloaded, and contain EULAs  
+    - Number of updates and percentage of updates that are deployed, expired, superseded, downloaded, and contain EULAs
 
     - Software update point load balancing statistics
 
-    - Software update point synchronization schedule  
+    - Software update point synchronization schedule
 
-    - Total/average number of collections that have software update deployments and the maximum/average number of deployed updates  
+    - Total/average number of collections that have software update deployments and the maximum/average number of deployed updates
 
-    - Update scan error codes and machine count  
+    - Update scan error codes and machine count
 
-    - Windows 10 dashboard content versions  
+    - Windows 10 dashboard content versions
 
 
 
-- **SQL/performance data:**  
+- **SQL/performance data:**
 
     - ***[New]*** Configuration and duration of site summarization
 
-    - Count of largest database tables  
+    - Count of largest database tables
 
     - Discovery operational statistics (count of objects found)
 
@@ -395,7 +395,7 @@ For Configuration Manager version 1702, this level includes the following:
 
     - Count of sites with Wake on LAN (WOL)
 
-    - Reporting usage and performance statistics  
+    - Reporting usage and performance statistics
 
 
 

@@ -1,42 +1,20 @@
 ---
-# required metadata
-
-title: Add Android store apps to Microsoft Intune
-titleSuffix: 
+title: Add Android Store Apps to Microsoft Intune
 description: Learn how to add Android store apps from the Google Play store to Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 01/06/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 4433000a-23e9-4cad-a818-48c28eedc1f5
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Store
-ms.custom: intune-azure
 ---
 
-# Add Android store apps to Microsoft Intune
+# Add Android Store Apps to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune. 
+Before you assign an app to a device or a group of users, you must first add the app to Microsoft Intune.
 
 ## Add an app
 
@@ -47,7 +25,7 @@ You can add an Android store app to Intune from the portal by doing the followin
 3. In the **Select app type** pane, under the available **Store app** types, select **Android store app**.
 4. Click **Select**.<br>
    The **Add app** steps are displayed.
-5. To configure the **App information** for the Android app, navigate to the [Google Play store](https://play.google.com/store) and search for the app you want to deploy. Display the app page and make a note of the app details. 
+5. To configure the **App information** for the Android app, navigate to the [Google Play store](https://play.google.com/store) and search for the app you want to deploy. Display the app page and make a note of the app details.
 6. In the **App information** page, add the app details:
     - **Name**: Enter the name of the app as it is to be displayed in the company portal. Make sure that any app name that you use is unique. If an app name is duplicated, only one name is displayed to users in the company portal.
     - **Description**: Enter a description for the app. This description is displayed to users in the company portal.

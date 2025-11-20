@@ -2,15 +2,15 @@
 title: Prerequisites for software updates
 titleSuffix: Configuration Manager
 description: Learn about prerequisites for software updates in Configuration Manager.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 06/20/2024
 ms.topic: article
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

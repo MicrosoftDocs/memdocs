@@ -12,68 +12,68 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # RestoreQuarantinedItem Method in Class SMS_ClientOperation
-The `RestoreQuarantinedItem` Windows Management Instrumentation (WMI) class method in Configuration Manager that restores quarantined items to all members in a collection infected by specified threat.   
+The `RestoreQuarantinedItem` Windows Management Instrumentation (WMI) class method in Configuration Manager that restores quarantined items to all members in a collection infected by specified threat.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 RestoreQuarantinedItem   
-{  
-    [IN]    UInt64 ThreatID  
-    [IN]    String ThreatName  
-    [IN]    Boolean IncludeDependencies  
-    [IN]    String TargetCollectionID  
-    [OUT]   UInt32 OperationID  
-};  
-```  
+```
+uint32 RestoreQuarantinedItem
+{
+    [IN]    UInt64 ThreatID
+    [IN]    String ThreatName
+    [IN]    Boolean IncludeDependencies
+    [IN]    String TargetCollectionID
+    [OUT]   UInt32 OperationID
+};
+```
 
-## Parameters  
- `ThreatID`  
- Data type: `UInt64`  
+## Parameters
+ `ThreatID`
+ Data type: `UInt64`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- ThreatID.    
+ ThreatID.
 
- `ThreatName`  
- Data type: `String`  
+ `ThreatName`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- ThreatName.    
+ ThreatName.
 
- `IncludeDependencies`  
- Data type: `Boolean`  
+ `IncludeDependencies`
+ Data type: `Boolean`
 
- Qualifiers: [id("2"), in]  
+ Qualifiers: [id("2"), in]
 
- IncludeDependencies.    
+ IncludeDependencies.
 
- `TargetCollectionID`  
- Data type: `String`  
+ `TargetCollectionID`
+ Data type: `String`
 
- Qualifiers: [id("3"), in]  
+ Qualifiers: [id("3"), in]
 
- TargetCollectionID.    
+ TargetCollectionID.
 
- `OperationID`  
- Data type: `UInt32`  
+ `OperationID`
+ Data type: `UInt32`
 
- Qualifiers: [id("4"), out]  
+ Qualifiers: [id("4"), out]
 
- OperationID.    
+ OperationID.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

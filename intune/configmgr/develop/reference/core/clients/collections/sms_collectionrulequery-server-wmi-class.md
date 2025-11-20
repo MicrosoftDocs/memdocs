@@ -12,72 +12,72 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CollectionRuleQuery Server WMI Class
-The `SMS_CollectionRuleQuery` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a member of a collection based on the results of a query.  
+The `SMS_CollectionRuleQuery` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a member of a collection based on the results of a query.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CollectionRuleQuery : SMS_CollectionRule  
-{  
-      String QueryExpression;  
-      UInt32 QueryID;  
-      String RuleName;  
-};  
-```  
+```
+Class SMS_CollectionRuleQuery : SMS_CollectionRule
+{
+      String QueryExpression;
+      UInt32 QueryID;
+      String RuleName;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_CollectionRuleQuery` class.  
+## Methods
+ The following table lists the methods in the `SMS_CollectionRuleQuery` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[ValidateQuery Method in Class SMS_CollectionRuleQuery](../../../../../develop/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md)|Validates the collection rule query.|  
+|Method|Description|
+|------------|-----------------|
+|[ValidateQuery Method in Class SMS_CollectionRuleQuery](../../../../../develop/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md)|Validates the collection rule query.|
 
-## Properties  
- `QueryExpression`  
- Data type: `String`  
+## Properties
+ `QueryExpression`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- WQL SELECT statement having results that are used to populate the collection. The statement must specify a resource class name. The default value is "".  
+ WQL SELECT statement having results that are used to populate the collection. The statement must specify a resource class name. The default value is "".
 
- Your application can use the `LimitToCollectionID` property to further limit the results. Note that the SMS Provider might alter the text of the query to make it more amenable to collection evaluation.  
+ Your application can use the `LimitToCollectionID` property to further limit the results. Note that the SMS Provider might alter the text of the query to make it more amenable to collection evaluation.
 
- `QueryID`  
- Data type: `UInt32`  
+ `QueryID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Auto-generated ID that is only useful when deleting a rule.  
+ Auto-generated ID that is only useful when deleting a rule.
 
- `RuleName`  
- Data type: `String`  
+ `RuleName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md).  
+ See [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md).
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Embedded  
+- Embedded
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

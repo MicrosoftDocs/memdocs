@@ -6,12 +6,12 @@ ms.date: 12/19/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Upgrade on-premises infrastructure that supports Configuration Manager
@@ -160,7 +160,7 @@ When you have more than one Configuration Manager site in a hierarchy, each site
 
 Configuration Manager supports the in-place upgrade of SQL Server to the following versions:
 
-- SQL Server 2022 
+- SQL Server 2022
 - SQL Server 2019
 - SQL Server 2017
 - SQL Server 2016

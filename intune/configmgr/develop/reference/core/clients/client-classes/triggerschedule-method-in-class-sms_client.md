@@ -12,30 +12,30 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # TriggerSchedule Method in Class SMS_Client
-The `TriggerSchedule` method, in Configuration Manager, triggers the client to run the specified schedule.  
+The `TriggerSchedule` method, in Configuration Manager, triggers the client to run the specified schedule.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-UInt32 TriggerSchedule(  
-     String sScheduleID  
-);  
-```  
+```
+UInt32 TriggerSchedule(
+     String sScheduleID
+);
+```
 
-#### Parameters  
- `sScheduleID`  
- Data type: `String`  
+#### Parameters
+ `sScheduleID`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- GUID of the schedule to be triggered.  
+ GUID of the schedule to be triggered.
 
- Complete GUID List:  
+ Complete GUID List:
 
 |Schedule  |GUID  |
 |---------|---------|
@@ -87,18 +87,18 @@ UInt32 TriggerSchedule(
 |External event detection|{00000000-0000-0000-0000-000000000223}|
 
 
-## Return Values  
- A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## Examples 
+## Examples
 
 ### Example 1: Trigger hardware inventory via PowerShell using the `WMICLASS` type accelerator
 
@@ -120,10 +120,10 @@ Invoke-CimMethod -Namespace 'root\CCM' -ClassName SMS_Client -MethodName Trigger
 
 ## See also
 
- [SMS_Client Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md)   
- [EvaluateMachinePolicy method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md)   
- [GetAssignedSite method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/getassignedsite-method-in-class-sms_client.md)   
- [RequestMachinePolicy method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md)   
- [ResetPolicy method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/resetpolicy-method-in-class-sms_client.md)   
- [SetAssignedSite method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/setassignedsite-method-in-class-sms_client.md)   
+ [SMS_Client Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md)
+ [EvaluateMachinePolicy method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/evaluatemachinepolicy-method-in-class-sms_client.md)
+ [GetAssignedSite method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/getassignedsite-method-in-class-sms_client.md)
+ [RequestMachinePolicy method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/requestmachinepolicy-method-in-class-sms_client.md)
+ [ResetPolicy method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/resetpolicy-method-in-class-sms_client.md)
+ [SetAssignedSite method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/setassignedsite-method-in-class-sms_client.md)
  [SetGlobalLoggingConfiguration method in Class SMS_Client](../../../../../develop/reference/core/clients/client-classes/setgloballoggingconfiguration-method-in-class-sms_client.md)

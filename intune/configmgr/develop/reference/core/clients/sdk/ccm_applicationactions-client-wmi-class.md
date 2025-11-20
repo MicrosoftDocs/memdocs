@@ -12,61 +12,61 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_ApplicationActions Client WMI Class
-The `CCM_ApplicationActions` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application actions.   
+The `CCM_ApplicationActions` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application actions.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_ApplicationActions :    
-{  
-    DateTime NextGlobalRevalTime;  
-    DateTime NextRetryTime;  
-    DateTime NextServiceWindowTime;  
-};  
-```  
+```
+Class CCM_ApplicationActions :
+{
+    DateTime NextGlobalRevalTime;
+    DateTime NextRetryTime;
+    DateTime NextServiceWindowTime;
+};
+```
 
-## Methods  
- The `CCM_ApplicationActions` class does not define any methods.  
+## Methods
+ The `CCM_ApplicationActions` class does not define any methods.
 
-## Properties  
- `NextGlobalRevalTime`  
- Data type: `DateTime`  
+## Properties
+ `NextGlobalRevalTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Next global reevaluation time.    
+ Next global reevaluation time.
 
- `NextRetryTime`  
- Data type: `DateTime`  
+ `NextRetryTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Next retry time    
+ Next retry time
 
- `NextServiceWindowTime`  
- Data type: `DateTime`  
+ `NextServiceWindowTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Next service window time.    
+ Next service window time.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

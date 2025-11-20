@@ -6,11 +6,11 @@ ms.date: 03/05/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: troubleshooting
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -49,7 +49,7 @@ When you apply software updates to the image, optimize the output by removing an
 ``` Command
 dism /Mount-Image /ImageFile:C:\Data\install.wim /MountDir:C:\Mountdir
 dism /Image:C:\Mountdir /Cleanup-Image /StartComponentCleanup /ResetBase
-dism /Unmount-Image /MountDir:C:\Mountdir /Commit  
+dism /Unmount-Image /MountDir:C:\Mountdir /Commit
 ```
 
 There's an option to automate this process. For more information, see [Optimized image servicing](../get-started/manage-operating-system-images.md#optimized-image-servicing).<!--3555951-->
@@ -58,8 +58,8 @@ There's an option to automate this process. For more information, see [Optimized
 
 When you design your imaging process, there are several options that can affect the installation of software updates:
 
-- [Periodically recapture the image](#bkmk_goldimage)  
-- [Use offline servicing](#bkmk_offline)  
+- [Periodically recapture the image](#bkmk_goldimage)
+- [Use offline servicing](#bkmk_offline)
 - [Use default image only](#bkmk_installwim)
 
 ### <a name="bkmk_goldimage"></a> Periodically recapture the image
@@ -136,17 +136,17 @@ This flowchart diagram shows the process when you include the Install Software U
 
 [View the diagram at full size](media/ts-step-install-software-updates.svg)
 
-![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.svg)  
+![Flowchart diagram for the Install Software Updates task sequence step](media/ts-step-install-software-updates.svg)
 
 1. **Process starts on the client**: A task sequence running on a client includes the Install Software updates step.
 2. **Compile and evaluate policies**: The client compiles all software update policies into WMI RequestedConfigs namespace. (CIAgent.log)
-3. *Is this instance the first time it's called?*  
-    1. **Yes**: Go to **Full scan**  
+3. *Is this instance the first time it's called?*
+    1. **Yes**: Go to **Full scan**
     2. **No**: *Is the step configured with the option to [Evaluate software updates from cached scan results](task-sequence-steps.md#evaluate-software-updates-from-cached-scan-results)?*
         1. **Yes**: Go to **Scan from cached results**
         2. **No**: Go to **Full scan**
 4. Scan process: either a full scan or scan from cached results, with monitoring process in parallel.
-    1. **Full scan**: The task sequence engine calls the software update agent via Update Scan API to do a *full* scan. (WUAHandler.log, ScanAgent.log)  
+    1. **Full scan**: The task sequence engine calls the software update agent via Update Scan API to do a *full* scan. (WUAHandler.log, ScanAgent.log)
         1. **SUM agent scan - full**: Normal scan process via Windows Update Agent (WUA), which communicates with software update point running WSUS. It adds any applicable updates to the local update store. (WindowsUpdate.log, UpdateStore.log)
     2. **Scan from cached results**: The task sequence engine calls the software update agent via Update Scan API to scan against cached metadata. (WUAHandler.log, ScanAgent.log)
         1. **SUM agent scan - cached**: The Windows Update Agent (WUA) checks against updates already cached in the local update store. (WindowsUpdate.log, UpdateStore.log)

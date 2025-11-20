@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Manage attack surface reduction settings with Microsoft Intune
-description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune. 
-keywords:
+description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 08/19/2024
+ms.date: 06/20/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -33,7 +15,7 @@ ms.reviewer: laarrizz
 
 # Use Microsoft Intune policy to manage rules for attack surface reduction
 
-When Defender antivirus is in use on your Windows 10 and Windows 11 devices, you can use Microsoft Intune endpoint security policies for *attack surface reduction* to manage those settings on your devices.
+When Defender antivirus is in use on your Windows devices, you can use Microsoft Intune endpoint security policies for *attack surface reduction* to manage those settings on your devices.
 
 You can use attack surface reduction (ASR) policies to reduce the attack surface of devices by minimizing the places where your organization is vulnerable to cyberthreats and attacks. Intune ASR policies support the following profiles:
 
@@ -47,18 +29,17 @@ For more information, see [Overview of attack surface reduction]( /windows/secur
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 - Windows Server *(through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
 
 ## Prerequisites for Attack surface reduction profiles
 
-- Devices must run Windows 10 or Windows 11
+- Devices must run Windows
 - Defender antivirus must be the primary antivirus on the device
 
 **Support for Security Management for Microsoft Defender for Endpoint**:
 
-When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support devices you've onboarded to Defender without enrollment with Intune, Attack surface reduction applies to devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) to support devices you've onboarded to Defender without enrollment with Intune, Attack surface reduction applies to devices that run Windows and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 **Support for Configuration Manager clients**:
 
@@ -76,6 +57,8 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 The available profiles for attack surface reduction policy depend on the platform you select.
 
+Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
+
 > [!NOTE]
 >
 > Beginning in April 2022, new profiles for Attack surface reduction policy have begun to release. When a new profile becomes available, it uses the same name of the profile it replaces and includes the same settings as the older profile but in the newer settings format as seen in the Settings Catalog. Your previously created instances of these profiles remain available to use and edit, but all new instances you create will be in the new format. The following profiles have been updated:
@@ -89,7 +72,7 @@ The available profiles for attack surface reduction policy depend on the platfor
 
 **Platform: Windows**:
 
-Profiles for this platform are supported on Windows 10 and Windows 11 devices enrolled with Intune.
+Profiles for this platform are supported on Windows devices enrolled with Intune.
 
 - Attack Surface Reduction Rules
 
@@ -134,7 +117,7 @@ Available profiles for this platform include:
 - **Application control** - Application control settings can help mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel). Manage settings that can block unsigned scripts and MSIs, and restrict Windows PowerShell to run in Constrained Language Mode.
 
   To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
-  
+
     > [!NOTE]
     > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
 
@@ -151,7 +134,7 @@ Available profiles for this platform include:
 
 ### Devices managed by Defender for Endpoint security settings management
 
-When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows* platform to manage settings on devices that run Windows 10, Windows 11, and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
+When you use the [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md) scenario to support devices managed by Defender that aren't enrolled with Intune, you can use the *Windows* platform to manage settings on devices that run Windows and Windows Server. For more information, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
 Profiles supported for this scenario include:
 
@@ -221,9 +204,6 @@ Intune supports the following two settings to exclude specific file and folder p
   When you set an applicable setting in an attack surface reduction rule profile to anything other than *Not configured*, Intune presents the option to use **ASR Only Per Rule Exclusions** for that individual setting. With this option, you can configure a file and folder exclusion that are isolated to individual settings, which is in contrast to use of the global setting **Attack Surface Reduction Only Exclusions** which applies its exclusions to all settings on the device.
 
   By default, **ASR Only Per Rule Exclusions** is set to **Not configured**.
-  
-  > [!IMPORTANT]
-  > ASR policies do not support merge functionality for *ASR Only Per Rule Exclusions* and a policy conflict can result when multiple policies that configure *ASR Only Per Rule Exclusions* for the same device conflict. To avoid conflicts, combine the configurations for *ASR Only Per Rule Exclusions* into a single ASR policy. We are investigating adding policy merge for *ASR Only Per Rule Exclusions* in a future update.
 
 ## Policy merge for settings
 

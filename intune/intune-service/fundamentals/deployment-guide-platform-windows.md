@@ -1,34 +1,16 @@
 ---
-# required metadata
-
 title: Deployment guide for Windows device management | Microsoft Intune
 description: Use our platform deployment guide to set up Windows device management in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 08/21/2024
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
 ms.collection:
 - M365-identity-device-management
-- tier1
 ---
 
-# Deployment guide: Manage devices running Windows 10/11
+# Deployment guide: Manage devices running Windows  
 
 This guide describes how to protect and manage Windows apps and endpoints using Microsoft Intune, and includes our setup recommendations and resources from prerequisites to enrollment.
 
@@ -42,7 +24,9 @@ For each section in this guide, review the associated tasks. Some tasks are requ
 * [Assign licenses to users](licenses-assign.md)
 * [Set mobile device management authority](mdm-authority-set.md)
 
-For information about Microsoft Intune roles and permissions, see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md). The Microsoft Entra [Global Administrator and Intune Administrator](/entra/identity/role-based-access-control/permissions-reference) roles have full rights within Microsoft Intune. These roles are highly privileged and have more access than needed for many device management tasks in Microsoft Intune. We recommend you use the least privileged built-in role that's available to complete tasks.
+We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.
+
+For more information on the built-in roles and what they can do, see [Role-based access control (RBAC) with Intune](role-based-access-control.md) and [Built-in role permissions for Intune](role-based-access-control-reference.md).
 
 For more details and recommendations about how to prepare your organization, onboard, or adopt Intune for mobile device management, see [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md).
 
@@ -77,10 +61,10 @@ Use Intune endpoint security features to configure device security and to manage
 | ---- | ------ |
 |[Manage devices with endpoint security features](../protect/endpoint-security-manage-devices.md)|Use the endpoint security settings in Intune to effectively manage device security and remediate issues for devices.|
 |[Add endpoint protection settings](../protect/endpoint-protection-configure.md)| Configure common endpoint protection security features, such as firewall, BitLocker, and Microsoft Defender. For a description of the settings in this area, see the [endpoint protection settings reference](../protect/endpoint-protection-windows-10.md).   |
-|[Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)|When you integrate Intune with Microsoft Defender for Endpoint, you not only help prevent security breaches, but you can take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM.|
+|[Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md)|When you integrate Intune with Microsoft Defender for Endpoint, you not only help prevent security breaches, but you can take advantage of Microsoft Defender for Endpoints Threat & Vulnerability Management (TVM) and use Intune to remediate endpoint weakness identified by TVM.|
 |[Manage BitLocker policy](../protect/encrypt-devices.md)| Ensure that devices are encrypted upon enrollment by creating a policy that configures BitLocker on managed devices. |
 |[Manage security baseline profiles](../protect/security-baselines-configure.md)| Use the security baselines in Intune to help you secure and protect your users and devices. A security baseline includes the best practices and recommendations for settings that impact security.  |
-|[Use Windows Update client policies for software updates](/windows/deployment/update/waas-configure-wufb)|Configure a Windows Update rollout strategy with Windows Update client policies. This article introduces you to the policy types you can use to manage Windows 10/11 software updates, and how to transition from update ring deferrals to a feature updates policy. |
+|[Use Windows Update client policies for software updates](/windows/deployment/update/waas-configure-wufb)|Configure a Windows Update rollout strategy with Windows Update client policies. This article introduces you to the policy types you can use to manage Windows software updates, and how to transition from update ring deferrals to a feature updates policy. |
 
 
 ## Step 5: Configure device settings
@@ -89,12 +73,12 @@ Use Microsoft Intune to enable or disable Windows settings and features on devic
 
 | Task | Detail |
 | ---- | ------ |
-|[Create a device profile](../configuration/device-profile-create.md) |Create a device profile in Microsoft Intune and find resources about all device profile types. You can also use the [settings catalog](../configuration/settings-catalog.md) to create a policy from scratch.|
-|[Configure group policy settings](../configuration/administrative-templates-windows.md) |Use Windows 10 templates to configure group policy settings in Microsoft Intune. Administrative templates include hundreds of settings that you can configure for Internet Explorer, Microsoft Edge, OneDrive, remote desktop, Word, Excel, and other Office programs. These templates give administrators a simplified view of settings similar to group policy, and they're 100% cloud-based.|
-|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference for Windows 10 and later](../configuration/wi-fi-settings-windows.md).|
+|[Create a device profile](../configuration/device-profile-create.md) |Create a device profile in Microsoft Intune and find resources about all device profile types.|
+|[Configure device settings](../configuration/settings-catalog.md) | Use the settings catalog to configure settings in Microsoft Intune. The settings catalog includes hundreds of settings that you can configure for Microsoft Edge, OneDrive, remote desktop, Office apps, and more. These settings have a similar feel to Group Policy Objects (GPO), and they're 100% cloud-based.|
+|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference for Windows](../configuration/wi-fi-settings-windows.md).|
 |[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-windows-10.md). |
 |[Configure email profile](../configuration/email-settings-configure.md)|Configure email settings so that people can connect to a mail server and access their work or school email. For a description of the settings in this area, see the [email settings reference](../configuration/email-settings-windows-10.md).|
-|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference for Windows 10/11](../configuration/device-restrictions-windows-10.md) and [Windows 10 Teams](../configuration/device-restrictions-windows-10-teams.md). |
+|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference for Windows](../configuration/device-restrictions-windows-10.md). |
 |[Configure custom profile](../configuration/custom-settings-configure.md)|Add and assign device settings and features that aren't built into Intune. For a description of the settings in this area, see the [custom settings reference](../configuration/custom-settings-windows-10.md).|
 |[Configure BIOS settings](../configuration/device-firmware-configuration-interface-windows.md)|Set up Intune so that you can control UEFI (BIOS) settings on enrolled devices, using the Device Firmware Configuration Interface (DFCI)|
 |[Configure Domain Join](../configuration/domain-join-configure.md)|If you're planning to enroll Microsoft Entra joined devices, be sure to create a domain join profile so that Intune knows which on-premises domain to join.|
@@ -115,7 +99,7 @@ Set up authentication methods in Intune to ensure that only authorized people ac
 | ---- | ------ |
 |[Require multi-factor authentication (MFA)](../enrollment/multi-factor-authentication.md)| Require people to supply two forms of credentials at time of device enrollment. This policy works in conjunction with Microsoft Entra Conditional Access policies.|
 |[Create a trusted certificate profile](../protect/certificates-trusted-root.md)|Create and deploy a trusted certificate profile before you create a SCEP, PKCS, or PKCS imported certificate profile. The trusted certificate profile deploys the trusted root certificate to devices and users using SCEP, PKCS, and PKCS imported certificates. |
-|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what’s needed to use SCEP certificates with Intune, and configure the required infrastructure. Then you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|
+|[Use SCEP certificates with Intune ](../protect/certificates-scep-configure.md)| Learn what's needed to use SCEP certificates with Intune, and configure the required infrastructure. Then you can [create a SCEP certificate profile](../protect/certificates-profile-scep.md) or [set up a third-party certification authority with SCEP](../protect/certificate-authority-add-scep-overview.md).|
 |[Use PKCS certificates with Intune](../protect/certificates-pfx-configure.md)|Configure required infrastructure (such as on-premises certificate connectors), export a PKCS certificate, and add the certificate to an Intune device configuration profile. |
 |[Use imported PKCS certificates with Intune](../protect/certificates-imported-pfx-configure.md)|Set up imported PKCS certificates, which enable you to [set up and use S/MIME to encrypt email](../protect/certificates-s-mime-encryption-sign.md).
 |[Set up a derived credentials issuer](../protect/derived-credentials.md)| Provision Windows devices with certificates that are derived from user smart cards.
@@ -134,7 +118,7 @@ As you set up apps and app policies, think about your organization's requirement
 |[Add Microsoft 365 apps](../apps/apps-add-office365.md) |Add Microsoft 365 Apps for enterprise. |
 |[Assign apps to groups ](../apps/apps-deploy.md)|After you add apps to Intune, assign them to users and devices.|
 |[Include and exclude app assignments ](../apps/apps-inc-exl-assignments.md)|Control access and availability to an app by including and excluding selected groups from assignment.|
-|[Use PowerShell scripts](../apps/intune-management-extension.md)|Upload PowerShell scripts to extend Windows device management capabilities in Intune and make it easier to move to modern management.|
+|[Use PowerShell scripts](../apps/powershell-scripts.md)|Upload PowerShell scripts to extend Windows device management capabilities in Intune and make it easier to move to modern management.|
 
 ## Step 8: Enroll devices
 
@@ -159,8 +143,8 @@ After devices are set up, you can use supported remote actions to manage and tro
 
 | Task | Detail |
 | ---- | ------ |
-|[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
-|[Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
+|[Take remote action on devices](../remote-actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
+|[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
 |[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Use Intune to remediate endpoint weakness identified by Microsoft Defender for Endpoint. Before you can work with security tasks, you must integrate Microsoft Defender for Endpoint with Intune. |
 
 <!-- org msg moved to m365 admin center
@@ -183,7 +167,7 @@ The resources in this section are in the Microsoft Intune User Help documentatio
 | ---- | ------ |
 |[Install Intune Company Portal app for Windows](../user-help/sign-in-to-the-company-portal.md)| Learn where to get the Company Portal app and how to sign in. |
 |[Update Company Portal app](../user-help/install-a-new-version-of-the-company-portal-app.md)| This article describes how to install the latest version of Company Portal and how to turn on automatic app updates. |
-|[Enroll a device](../user-help/enroll-windows-10-device.md)| This article describes how to enroll personal devices running Windows 10 or Windows 11. |
+|[Enroll a device](../user-help/enroll-windows-10-device.md)| This article describes how to enroll personal devices running Windows. |
 |[Unenroll a device](../user-help/unenroll-your-device-from-intune-windows.md)| This article describes how to unenroll a device from Intune and delete the stored cache and logs for Company Portal. |
 
 ## Next steps

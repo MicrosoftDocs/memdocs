@@ -6,11 +6,11 @@ ms.date: 04/18/2024
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -18,7 +18,7 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients. You can [add custom catalogs](third-party-software-updates.md#add-a-custom-catalog) from third-party vendors. 
+The **Third-Party Software Update Catalogs** node in the Configuration Manager console allows you to subscribe to third-party catalogs, publish their updates to your software update point (SUP), and then deploy them to clients. You can [add custom catalogs](third-party-software-updates.md#add-a-custom-catalog) from third-party vendors.
 
 ## Third-party update catalogs available for import
 <!--9989251-->
@@ -39,7 +39,7 @@ To make it easier to find custom catalogs, we're providing a list of links as a 
 
 ## Open this article from the Configuration Manager console
 <!--9989251-->
-Starting in Configuration Manager 2107, you can  choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node to get to this article. Right-clicking on **Third-Party Software Update Catalogs** node displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to this page.  
+Starting in Configuration Manager 2107, you can  choose **More Catalogs** from the ribbon in the **Third-party software update catalogs** node to get to this article. Right-clicking on **Third-Party Software Update Catalogs** node displays a **More Catalogs** menu item.  Selecting **More Catalogs** opens a link to this page.
 
 :::image type="content" source="./media/9989251-more-catalogs.png" alt-text="Screenshot of the Third-Party Software Update Catalogs node with the More Catalogs icon in the ribbon":::
 

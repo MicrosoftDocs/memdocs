@@ -6,11 +6,11 @@ ms.date: 10/05/2021
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Use Group Policy settings to manage Endpoint Protection in previous versions of Windows
@@ -28,7 +28,7 @@ ms.collection: tier3
     - Windows Server 2008 SP2
     - Windows Vista
 
-You may have a number of down-level or legacy Windows devices that are enabled with Endpoint Protection—but are outside of your Configuration Manager hierarchy. For example, devices in a demilitarized zone or devices that are integrated through mergers and acquisitions. 
+You may have a number of down-level or legacy Windows devices that are enabled with Endpoint Protection—but are outside of your Configuration Manager hierarchy. For example, devices in a demilitarized zone or devices that are integrated through mergers and acquisitions.
 
 You can manage Endpoint Protection in such devices using Group Policy settings, described as follows:
 
@@ -44,13 +44,13 @@ You can manage Endpoint Protection in such devices using Group Policy settings, 
 
 On a down-level Windows device that is managed by Endpoint Protection, copy the Endpoint Protection policy definition files.
 
-1. Go to **C:\Program Files\Microsoft Security Client\Admx**. 
+1. Go to **C:\Program Files\Microsoft Security Client\Admx**.
 
 2. Compress the following files into a zip file, for example **SCEP_admx.zip**:
     - **EndPointProtection.adml**
     - **EndPointProtection.admx**
 3. Copy the zip file into a temporary folder. For example, **C:\temp_SCEP_GPO_admx**.
-4. Extract the file. 
+4. Extract the file.
 
 > [!NOTE]
 > The registry keys to configure Endpoint Protection policy settings are located in **Hkey_Local_Machine\Software\Policies\Microsoft\Microsoft Antimalware**.
@@ -61,14 +61,14 @@ If you are using a [Central Store for Group Policy Administrative Templates](htt
 
 1. Go to the folder where you extracted the Endpoint Protection policy definition files.
 2. Copy the .admx and .adml files into the **PolicyDefinitions** folder on the domain controller:
-    1. Copy **EndPointProtection.admx** into **\\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions**. 
-    2. Copy **EndPointProtection.adml** into **\\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions\\en-US**.  
+    1. Copy **EndPointProtection.admx** into **\\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions**.
+    2. Copy **EndPointProtection.adml** into **\\\\\<forest.root\>\\SYSVOL\\\<domain\>\\Policies\\PolicyDefinitions\\en-US**.
 
     For example:
-    
+
     - Copy **EndPointProtection.admx** into **\\DC\SYSVOL\contoso.com\Policies\PolicyDefinitions**.
     - Copy **EndPointProtection.adml** into **\\DC\SYSVOL\contoso.com\Policies\PolicyDefinitions\en-US**.
-    
+
     where **DC** is the name of your Domain Controller and **contoso.com** is your domain.
 
 3. Open the [Group Policy Management Console](/internet-explorer/ie11-deploy-guide/group-policy-and-group-policy-mgmt-console-ie11) and create a new Group Policy Object (GPO) in your domain, for example **Endpoint Protection**.
@@ -85,14 +85,14 @@ Instead of using Central Store for loading Endpoint Protection policy definition
 
 1. Go to the folder where you extracted the Endpoint Protection policy definition files.
 2. Copy the .admx and .adml files into your local PolicyDefinitions folder.
-    1. Copy **EndPointProtection.admx** into **%SystemRoot%/PolicyDefinitions**. 
+    1. Copy **EndPointProtection.admx** into **%SystemRoot%/PolicyDefinitions**.
     2. Copy **EndPointProtection.adml** into **%SystemRoot%/PolicyDefinitions/en-US**.
-    
+
     For example:
 
     - Copy **EndPointProtection.admx** into **C:\Windows\PolicyDefinitions**.
     - Copy **EndPointProtection.adml** into **C:\Windows\PolicyDefinitions\en-US**.
-    
+
 3. Open Local Group Policy Editor.
 4. Go to **Computer Configuration** > **Administrative Templates** > **Windows Components** > **Endpoint Protection**.
 

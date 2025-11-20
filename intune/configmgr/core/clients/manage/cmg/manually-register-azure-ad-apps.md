@@ -6,11 +6,11 @@ ms.date: 03/11/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -188,7 +188,7 @@ When you select **Import** from the _Server app_ window, it opens the _Import ap
 After entering the information, select **Verify**. Then select **OK** to close the _Import apps_ window.
 
 > [!Important]
-> When you use an imported Microsoft Entra app, you aren't notified of an upcoming expiration date from [console notifications](../../../servers/manage/admin-console-notifications.md). <!--10568158--> 
+> When you use an imported Microsoft Entra app, you aren't notified of an upcoming expiration date from [console notifications](../../../servers/manage/admin-console-notifications.md). <!--10568158-->
 
 ### Import native (client) app
 
@@ -203,6 +203,6 @@ After entering the information, select **Verify**. Then select **OK** to close t
 ## Next steps
 
 After you manually register the two apps in the Azure portal, use the process in the following article to import the apps:
-  
+
 > [!div class="nextstepaction"]
 > [Configure Microsoft Entra ID for CMG](configure-azure-ad.md)

@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2201
@@ -38,7 +38,7 @@ The following sections describe the new features to try out in this version:
 [!INCLUDE [Improved notice for content on task sequence media](includes/2201/12895956.md)]
 
 <!-- ## General known issues  -->
- 
+
 <!--  [!INCLUDE [11018755](includes/2112/known-issue-11018755.md)] -->
 
 

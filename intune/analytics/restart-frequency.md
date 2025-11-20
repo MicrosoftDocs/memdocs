@@ -1,29 +1,13 @@
 ---
-title: Restart frequency in endpoint analytics
-titleSuffix: Microsoft Intune
-description: Get details about device restart frequency in endpoint analytics
-ms.date: 10/23/2023
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
-ms.topic: article
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.localizationpriority: high
+title: Restart Frequency in Endpoint Analytics
+description: Analyze restart frequency in Microsoft Intune endpoint analytics to identify device reboot patterns, troubleshoot issues, and improve reliability.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Restart frequency in endpoint analytics
 <!--IN6225459-->
 In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can affect a user's experience. A device that reboots daily due to Stop errors results in poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
-
-## Prerequisites
-
-- Devices are enrolled in endpoint analytics.
-  - [Enroll Configuration Manager devices](enroll-configmgr.md)
-  - [Enroll Intune devices](enroll-intune.md)
-  - After enrollment, client devices require a restart to fully enable all analytics. <!--7698085-->
-- Devices meet the endpoint analytics [startup performance](startup-performance.md) requirements.
-- Devices enrolled from Configuration Manager need client version 2006, or later installed
 
 ## Restart categories
 
@@ -43,25 +27,23 @@ Each restart is categorized into one of six categories. They're described as eit
 
 The difference between **Shutdown (no update)** and **Restart (no update)** is the user's action. A shutdown or restart doesn't have to be initiated through the start menu, it could be initiated other ways too.
 
-:::image type="content" source="media/shutdown-restart.png" alt-text="Shutdown and restart in the Windows Start menu":::
-
 ## Device performance tab
 
 In the device performance tab, two default columns are available; total number of restarts and the number of Stop errors (blue screen errors) each device has had in the last 30 days. You can sort by these columns to find problematic devices. You can also use this tab to review the total number of devices that have sent restart records. For example, the screenshot shows 31 records, meaning 31 devices have sent restart data.
 
 > [!NOTE]
-> In the **Device performance** tabs of Endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
+> In the **Device performance** tabs of Endpoint analytics, admins only see the devices they have access to based on their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
 
 ## Model performance tab
 
-In the model performance tab, two default columns have been added so you can review both the average number of restarts and the average number of Stop errors (blue screen errors) per model over the last 30 days. Sort by these columns to find problematic device models. Only models with at least 10 devices are shown to ensure the averages are done across enough devices to be meaningful.
+In the model performance tab, two default columns allow you to review both the average number of restarts and the average number of Stop errors (blue screen errors) per model over the last 30 days. Sort these columns to find problematic device models. Only models with at least 10 devices are shown to ensure the averages are done across enough devices to be meaningful.
 
 ## Restart frequency tab
 
 The new restart frequency tab shows aggregates of restart frequency counts for each of the [restart categories](#restart-categories) over the last 30 days. For each restart category, the following information is displayed:
 
-- Number of devices that have had at least one restart in that category
-- The average number of restarts per device across all devices, to understand the total impact.
+- Number of devices with at least one restart in that category
+- The average number of restarts per device across all devices, to understand the total effect.
   - This average is all devices, not just the ones that had at least one restart in the category.
 
 The trend chart indicates how the rolling 30-day average changes over time. If there's a regression, you can see it and identify when it started. Click through the metrics table to go to the [**Device performance** tab](#device-performance-tab), which is sorted by the number of restarts, so you can quickly identify the devices with the most restarts.
@@ -70,12 +52,12 @@ The trend chart indicates how the rolling 30-day average changes over time. If t
 
 ## Devices page
 
-Select a particular device in the [**Device performance** tab](#device-performance-tab),to go to the device's **Startup performance** tab. The table called **OS version history** is renamed to **OS restart history**.
+Select a particular device in the [**Device performance** tab](#device-performance-tab), to go to the device's **Startup performance** tab. The table called **OS version history** is renamed to **OS restart history**.
 
 The **OS restart history** table has the following information:
 
 - The **Restart category** for each reboot
-- For Stop errors (blue screen errors), the following additional information is available: 
+- For Stop errors (blue screen errors), the following additional information is available:
   - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2) also called the bug check code
   - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
 

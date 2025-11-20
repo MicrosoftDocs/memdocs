@@ -12,189 +12,189 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SCI_SysResUse Server WMI Class
-The `SMS_SCI_SysResUse` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a specific usage of a server or other network resource.  
+The `SMS_SCI_SysResUse` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a specific usage of a server or other network resource.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SCI_SysResUse : SMS_SiteControlItem  
-{  
-    UInt32 FileType;  
-    String ItemName;  
-    String ItemType;  
-    String NALPath;  
-    String NALType;  
-    String NetworkOSPath;  
-    SMS_EmbeddedPropertyList PropLists[];  
-    SMS_EmbeddedProperty Props[];  
-    UInt32 RoleCount;  
-    String RoleName;  
-    SMS_ServiceWindow ServiceWindows[];  
-    String SiteCode;  
-    UInt32 SslState;  
-    UInt32 Type;  
-};  
-```  
+```
+Class SMS_SCI_SysResUse : SMS_SiteControlItem
+{
+    UInt32 FileType;
+    String ItemName;
+    String ItemType;
+    String NALPath;
+    String NALType;
+    String NetworkOSPath;
+    SMS_EmbeddedPropertyList PropLists[];
+    SMS_EmbeddedProperty Props[];
+    UInt32 RoleCount;
+    String RoleName;
+    SMS_ServiceWindow ServiceWindows[];
+    String SiteCode;
+    UInt32 SslState;
+    UInt32 Type;
+};
+```
 
-## Methods  
- The `SMS_SCI_SysResUse` class doesn't define any methods.  
+## Methods
+ The `SMS_SCI_SysResUse` class doesn't define any methods.
 
-## Properties  
- `FileType`  
- Data type: `UInt32`  
+## Properties
+ `FileType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration, key, enumeration, key]  
+ Qualifiers: [enumeration, key, enumeration, key]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `ItemName`  
- Data type: `String`  
+ `ItemName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, key, read]  
+ Qualifiers: [key, key, read]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `ItemType`  
- Data type: `String`  
+ `ItemType`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, key, read]  
+ Qualifiers: [key, key, read]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `NALPath`  
- Data type: `String`  
+ `NALPath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Path to the NAL resource. The default value is "".  
+ Path to the NAL resource. The default value is "".
 
- `NALType`  
- Data type: `String`  
+ `NALType`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Friendly name for the `NetworkOSPath` value. For example, "Windows NT Server". The default value is "".  
+ Friendly name for the `NetworkOSPath` value. For example, "Windows NT Server". The default value is "".
 
- `NetworkOSPath`  
- Data type: `String`  
+ `NetworkOSPath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The network operating system path. The default value is "".  
+ The network operating system path. The default value is "".
 
- `PropLists`  
- Data type: `SMS_EmbeddedPropertyList` Array  
+ `PropLists`
+ Data type: `SMS_EmbeddedPropertyList` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) objects for the network resource.  
+ [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) objects for the network resource.
 
- `Props`  
- Data type: `SMS_EmbeddedProperty` Array  
+ `Props`
+ Data type: `SMS_EmbeddedProperty` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md) objects for the network resource.  
+ [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md) objects for the network resource.
 
- `RoleCount`  
- Data type: `UInt32`  
+ `RoleCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of roles.  
+ The number of roles.
 
- `RoleName`  
- Data type: `String`  
+ `RoleName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [sizelimit("64"), stringenumeration]  
+ Qualifiers: [sizelimit("64"), stringenumeration]
 
- Role of the server. The default value is "".  
+ Role of the server. The default value is "".
 
- `ServiceWindows`  
- Data type: `SMS_ServiceWindow` Array  
+ `ServiceWindows`
+ Data type: `SMS_ServiceWindow` Array
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, lazy]  
+ Qualifiers: [read, lazy]
 
- List of service windows.  
+ List of service windows.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, key, sizelimit]  
+ Qualifiers: [key, key, sizelimit]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `SslState`  
- Data type: `UInt32`  
+ `SslState`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, valuemap, values]  
+ Qualifiers: [read, valuemap, values]
 
- SSL state description. Possible values are:  
+ SSL state description. Possible values are:
 
-|Value|SSL state|  
-|-|-|  
-|0|HTTP|  
-|1|HTTPS|  
-|2|Not applicable. The property is only applicable for a site system role that is client facing.|  
-|3|Always HTTPS|  
-|4|Always HTTP|  
+|Value|SSL state|
+|-|-|
+|0|HTTP|
+|1|HTTPS|
+|2|Not applicable. The property is only applicable for a site system role that is client facing.|
+|3|Always HTTPS|
+|4|Always HTTP|
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Returns the site server type if the site system role is colocated on the site server.  Possible values are:  
+ Returns the site server type if the site system role is colocated on the site server.  Possible values are:
 
-|Value|Site server type|  
-|-|-|  
-|1|The site system role is colocated on the secondary site server.|  
-|2|The site system role is colocated on the primary site server.|  
-|4|The site system role is colocated on the CAS site server.|  
-|8|The site system role isn't colocated with any site server.|  
+|Value|Site server type|
+|-|-|
+|1|The site system role is colocated on the secondary site server.|
+|2|The site system role is colocated on the primary site server.|
+|4|The site system role is colocated on the CAS site server.|
+|8|The site system role isn't colocated with any site server.|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)

@@ -1,8 +1,6 @@
 ---
 author: brenduns
 ms.author: brenduns
-ms.service: microsoft-intune
-ms.subservice: protect
 ms.topic: include
 ms.date: 12/18/2020
 ---
@@ -13,7 +11,7 @@ ms.date: 12/18/2020
 
    - You can't select this option if your Configuration Manager hierarchy isn't tenant attached.
    - The collections available for this option are limited by the [collection scope selected for tenant attach upload](../../../configmgr/tenant-attach/device-sync-actions.md#bkmk_edit). <!--CM7423168-->
-  
+
    ![Configure cloud sync](../media/tenant-attach-intune/cloud-sync.png)
 
 3. Select **Add** and then select the Microsoft Entra group that you would like to synchronize with **Collect membership results**.

@@ -1,34 +1,14 @@
 ---
-# required metadata
-title: Data Warehouse data model
-titleSuffix: Microsoft Intune
+title: Data Warehouse Data Model
 description: The Microsoft Intune Data Warehouse samples data daily to provide a historical view of your continually changing mobile environment.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 4D04D3D9-4B6C-41CD-AAF8-466AF8FA6032
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Microsoft Intune Data Warehouse data model
+# Microsoft Intune Data Warehouse Data Model
 
 The Intune Data Warehouse samples data daily to provide a historical view of your continually changing environment of mobile devices. The view is composed of related entities in time.
 

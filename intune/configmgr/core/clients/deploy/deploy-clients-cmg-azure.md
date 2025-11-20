@@ -6,12 +6,12 @@ ms.date: 02/16/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Install and assign Configuration Manager clients using Microsoft Entra ID for authentication
@@ -25,25 +25,25 @@ Setting up Microsoft Entra ID may be easier for some customers than setting up a
 
 ## Before you begin
 
-- A Microsoft Entra tenant is a prerequisite  
+- A Microsoft Entra tenant is a prerequisite
 
-- Device requirements:  
+- Device requirements:
 
   - A supported version of Windows 10 or later
 
-  - Joined to Microsoft Entra ID, either pure cloud domain-joined, or Microsoft Entra hybrid joined  
+  - Joined to Microsoft Entra ID, either pure cloud domain-joined, or Microsoft Entra hybrid joined
 
-- User requirements:  
+- User requirements:
 
   - The signed in user must be a Microsoft Entra identity.
 
   - If the user is a federated or synchronized identity, configure both Configuration Manager [Active Directory user discovery](../../servers/deploy/configure/about-discovery-methods.md#bkmk_aboutUser) and [Microsoft Entra user discovery](../../servers/deploy/configure/about-discovery-methods.md#azureaddisc). For more information about hybrid identities, see [Define a hybrid identity adoption strategy](/azure/active-directory/hybrid/plan-hybrid-identity-design-considerations-identity-adoption-strategy).<!--497750-->
 
-- In addition to the [existing prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#management-point) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.  
+- In addition to the [existing prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md#management-point) for the management point site system role, also enable **ASP.NET 4.5** on this server. Include any other options that are automatically selected when enabling ASP.NET 4.5.
 
 - Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/configure-authentication.md#enable-management-point-for-https).
 
-- Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Microsoft Entra ID, you don't need a CMG.  
+- Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Microsoft Entra ID, you don't need a CMG.
 
 > [!TIP]
 > Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Microsoft Entra ID, and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).<!--5686290-->
@@ -65,14 +65,14 @@ These client settings help configure Windows devices to be hybrid-joined. They a
 
 1. Configure the following client settings in the **Cloud Services** group. For more information, see [How to configure client settings](configure-client-settings.md).
 
-    - **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. Devices can get the content from the CMG.<!--495533-->  
+    - **Allow access to cloud distribution point**: Enable this setting to help internet-based devices get the required content to install the Configuration Manager client. Devices can get the content from the CMG.<!--495533-->
 
     - **Automatically register new Windows 10 or later domain joined devices with Microsoft Entra ID**: Set to **Yes** or **No**. The default setting is **Yes**. This behavior is also the default in Windows.
 
         > [!TIP]
         > Hybrid-joined devices are joined to an on-premises Active Directory domain and registered with Microsoft Entra ID. For more information, see [Microsoft Entra hybrid joined devices](/azure/active-directory/devices/concept-azure-ad-join-hybrid).<!-- MEMDocs#325 -->
 
-    - **Enable clients to use a cloud management gateway**: Set to **Yes** (default), or **No**.  
+    - **Enable clients to use a cloud management gateway**: Set to **Yes** (default), or **No**.
 
 2. Deploy the client settings to the required collection of devices. Don't deploy these settings to user collections.
 
@@ -84,7 +84,7 @@ To confirm the device is hybrid-joined, run `dsregcmd.exe /status` in a command 
 
 To manually install the client using Microsoft Entra identity, first review the general process on [How to install clients manually](deploy-clients-to-windows-computers.md#BKMK_Manual).
 
-> [!Note]  
+> [!Note]
 > The device needs access to the internet to contact Microsoft Entra ID, but doesn't need to be internet-based.
 
 The following example shows the general structure of the command line:

@@ -116,9 +116,9 @@ sections:
           - [Co-management prerequisites](../../comanage/overview.md#prerequisites)
           - [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
           - [Tenant attach prerequisites](../../tenant-attach/prerequisites.md)
-          - [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)
+          - [Endpoint analytics licensing prerequisites](../../../analytics/index.md#prerequisites)
           - [Use Conditional Access with Intune](../../../intune-service/protect/conditional-access.md#ways-to-use-conditional-access-with-intune)
-          - [TeamViewer prerequisites](../../../intune-service/remote-actions/teamviewer-support.md#prerequisites)
+          - [TeamViewer prerequisites](../../../intune-service/fundamentals/teamviewer-support.md#prerequisites)
 
       - question: |
           I have Enterprise Mobility + Security and it expired, what must I do now?
@@ -172,7 +172,7 @@ sections:
           I have purchased EMS or Microsoft 365 through a Cloud Solution Provider (CSP), do I have rights to use Configuration Manager?
         answer: |
 
-          Yes, you have rights to use Configuration Manager to manage clients covered by the EMS license. First download and install the [evaluation software](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager). Then contact your CSP partner to obtain the license key from the Microsoft Partner Center support team, specifically CSP.<!--SCCMDocs#472,OSGS 33035978--> When your CSP partner talks with Microsoft Support, they should ask them to reference the internal article ID 4033838.<!--SCCMDocs#493-->
+          Yes, you have rights to use Configuration Manager to manage clients covered by the EMS license. First download and install the [evaluation software](https://www.microsoft.com/evalcenter/download-microsoft-endpoint-configuration-manager). Then contact your CSP partner to obtain the license key from the Microsoft Partner Center support team, specifically CSP.<!--SCCMDocs#472,OSGS 33035978--> When your CSP partner talks with Microsoft Support, they should ask them to reference the internal article ID 5037094.<!--SCCMDocs#493-->
 
 
 

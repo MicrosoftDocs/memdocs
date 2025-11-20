@@ -12,32 +12,32 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # AppContentInfo Structure
-In Configuration Manager, the `AppContentInfo` structure contains information about the application content.  
+In Configuration Manager, the `AppContentInfo` structure contains information about the application content.
 
-## Syntax  
+## Syntax
 
-```  
-struct AppContentInfo  
-{  
-    LPCWSTR szContentId;  
-    LPCWSTR szContentVersion;  
-    LPCWSTR szLocalPath;  
-};  
-```  
+```
+struct AppContentInfo
+{
+    LPCWSTR szContentId;
+    LPCWSTR szContentVersion;
+    LPCWSTR szLocalPath;
+};
+```
 
-## Members  
- `szContentId`  
- The content id.  
+## Members
+ `szContentId`
+ The content id.
 
- `szContentVersion`  
- The content version.  
+ `szContentVersion`
+ The content version.
 
- `szLocalPath`  
- The local path.  
+ `szLocalPath`
+ The local path.
 
-## See Also  
- [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+## See Also
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

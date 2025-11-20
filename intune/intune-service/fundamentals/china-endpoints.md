@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Network endpoints for China deployments - Microsoft Intune
-titleSuffix: 
 description: Review China endpoints for Intune.
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 12/19/2024
+author: MandiOhlinger
+ms.author: mandia
+ms.date: 06/09/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: srink
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -43,28 +23,36 @@ You can modify proxy server settings on individual client computers. You can als
 
 Managed devices require configurations that let **All Users** access services through firewalls.
 
-For more information about Windows 10 auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enrollment-create-cname.md#windows-auto-enrollment-and-device-registration).  
+For more information about Windows auto-enrollment and device registration for U.S. customers, see [Windows auto enrollment and device registration ](../enrollment/windows-enrollment-create-cname.md#windows-auto-enrollment-and-device-registration).
 
 The following tables list the ports and services that the Intune client accesses:
 
 |**Endpoint**|**IP address**|
-|---------------------|-----------|
+|---|---|
 |*.manage.microsoftonline.cn | 40.73.38.143<br>139.217.97.81<br>52.130.80.24<br>40.73.41.162<br>40.73.58.153<br>139.217.95.85 <br> 143.64.196.128/25 <br> 40.162.2.128/25 <br> 139.219.250.128/25 <br> 163.228.221.128/25 <br>|
 
 ## Intune customer designated endpoints in China
 
-- Azure portal: https:\//portal.azure.cn/
-- Microsoft 365: https:\//portal.partner.microsoftonline.cn/
-- Intune Company Portal: https:\//portal.manage.microsoftonline.cn/
-- Microsoft Intune admin center: https:\//intune.microsoftonline.cn/
+- Azure portal: `https:\//portal.azure.cn/`
+- Microsoft 365: `https:\//portal.partner.microsoftonline.cn/`
+- Intune Company Portal: `https:\//portal.manage.microsoftonline.cn/`
+- Microsoft Intune admin center: `https:\//intune.microsoftonline.cn/`
 
-## Network requirements for PowerShell scripts and Win32 apps  
+## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune to deploy PowerShell scripts or Win32 apps, you'll also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
-|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
+|CNPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | imeswdsc-afd-pri.manage.microsoft.com<br>imeswdsc-afd-sec.manage.microsoft.com<br>imeswdsc-afd-hotfix.manage.microsoft.com<br>sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |
+
+## Network requirements for macOS app and script deployments
+
+If you're using Intune to deploy apps or scripts on macOS, you also need to grant access to endpoints in which your tenant currently resides.
+
+|Azure Scale Unit (ASU) | Storage Name | CDN |
+| --- | --- |--- |
+|CNPASU01| macsidecarap<br>macsidecarprodap |macsidecarap.manage.microsoft.com<br>macsidecarprodap.azureedge.net<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) |
 
 ## Partner service endpoints
 
@@ -80,7 +68,6 @@ Intune operated by 21Vianet depends on the following partner service endpoints:
 
 [!INCLUDE [Intune notices](../includes/apple-device-network-information.md)]
 
-## Next steps
+## Related articles
 
 [Learn more about Intune operated by 21Vianet in China](china.md)
-

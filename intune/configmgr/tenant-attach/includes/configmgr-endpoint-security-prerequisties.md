@@ -8,7 +8,7 @@ ms.date: 07/17/2022
 ms.localizationpriority: high
 author:  gowdhamankarthikeyan
 ms.author: gokarthi
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

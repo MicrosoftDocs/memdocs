@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_Policy_AuthorityData Client WMI Class
-In Configuration Manager, the `CCM_Policy_AuthorityData` class is a client Windows Management Instrumentation (WMI) class that stores information about policy from a particular authority.  
+In Configuration Manager, the `CCM_Policy_AuthorityData` class is a client Windows Management Instrumentation (WMI) class that stores information about policy from a particular authority.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_Policy_AuthorityData : CCM_Policy_Config  
-{  
-      DateTime LastReplyTime;  
-      String Name;  
-      String ServerCookie;  
-};  
-```  
+```
+Class CCM_Policy_AuthorityData : CCM_Policy_Config
+{
+      DateTime LastReplyTime;
+      String Name;
+      String ServerCookie;
+};
+```
 
-## Methods  
- The `CCM_Policy_AuthorityData` class does not define any methods.  
+## Methods
+ The `CCM_Policy_AuthorityData` class does not define any methods.
 
-## Properties  
- `LastReplyTime`  
- Data type: `DateTime`  
+## Properties
+ `LastReplyTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The last date and time when the authority replied to a request for policy assignments. If this value is older than the value of `PolicyTimeUntilAck` in the authority's [CCM_PolicyAgent_Configuration Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policyagent_configuration-client-wmi-class.md) object, the policy requests an acknowledgment. If the value is older than the value of `PolicyTimeUntilExpire`, the policy is expired.  
+ The last date and time when the authority replied to a request for policy assignments. If this value is older than the value of `PolicyTimeUntilAck` in the authority's [CCM_PolicyAgent_Configuration Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policyagent_configuration-client-wmi-class.md) object, the policy requests an acknowledgment. If the value is older than the value of `PolicyTimeUntilExpire`, the policy is expired.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Name of the authority to which the data applies.  
+ Name of the authority to which the data applies.
 
- `ServerCookie`  
- Data type: `String`  
+ `ServerCookie`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The last `ServerCookie` value received from the authority in a `ReplyAssignments` message.  
+ The last `ServerCookie` value received from the authority in a `ReplyAssignments` message.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
- [Policy Agent Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/policy-agent-client-wmi-classes.md)   
+## See Also
+ [Policy Agent Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/policy-agent-client-wmi-classes.md)
  [CCM_PolicyAgent_Configuration Client WMI Class](../../../../../develop/reference/core/clients/client-classes/ccm_policyagent_configuration-client-wmi-class.md)

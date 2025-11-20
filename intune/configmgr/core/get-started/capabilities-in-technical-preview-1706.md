@@ -12,16 +12,16 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1706 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1706. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.     
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1706. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-<!--  Known Issues Template   
+<!--  Known Issues Template
 **Known Issues in this Technical Preview:**
 - **Issue Name**. Details
     Workaround details.
@@ -36,16 +36,16 @@ This article introduces the features that are available in the Technical Preview
 
     For example, if admins set **Block USB debugging on device** to **true**, all devices that don't have USB debugging enabled are marked as non-compliant.
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 <!--  Rough Section Template
 ##  FEATURE
 
 ### Procedure 1
-### Try it out!  
+### Try it out!
  Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
  -  Task 1
- -  Task 2              
+ -  Task 2
 -->
 
 ## Improved boundary groups for software update points
@@ -118,7 +118,7 @@ To install a passive mode site server, you use the **Create Site System Server W
 
     - The SMS_Provider does not install on the site server in passive mode. Because you must connect to an SMS_Provider for the site to manually promote the passive mode site server to active mode, we recommend [installing at least one additional instance of the provider](../plan-design/hierarchy/plan-for-the-sms-provider.md) on an additional computer.
 
-**Known Issue**:   
+**Known Issue**:
 With this release, **Status** for the following conditions appear in the console as numerical values instead of readable text:
 - 131071 – Site server installation failed
 - 720895 – Site server role uninstallation failed
@@ -225,9 +225,9 @@ To solve this problem, you can now specify both an installation content location
 6. Click **OK** to close the deployment type properties dialog box.
 
 
-## Accessibility improvements  
+## Accessibility improvements
 <!--1253000 -->
-This preview introduces several improvements to the [accessibility features](../understand/accessibility-features.md) in the Configuration Manager console. These include:     
+This preview introduces several improvements to the [accessibility features](../understand/accessibility-features.md) in the Configuration Manager console. These include:
 
 **New keyboard shortcuts to move around the console:**
 - Ctrl + M - Sets focus on the main (central) pane.
@@ -248,12 +248,12 @@ This preview introduces several improvements to the [accessibility features](../
 
 ## Changes to the Azure Services Wizard to support Upgrade Readiness
 <!-- 1353331 -->
-Beginning with this release, use the Azure Services Wizard to configure a connection from Configuration Manager to Upgrade Readiness. The use of the wizard simplifies configuration of the connector by using a common wizard for related Azure services.   
+Beginning with this release, use the Azure Services Wizard to configure a connection from Configuration Manager to Upgrade Readiness. The use of the wizard simplifies configuration of the connector by using a common wizard for related Azure services.
 
-Although the method to configure the connection has changed, prerequisites for the connection and how you use Upgrade Readiness remain unchanged.   
+Although the method to configure the connection has changed, prerequisites for the connection and how you use Upgrade Readiness remain unchanged.
 
 ### Prerequisites for Upgrade Readiness
-The prerequisites for a connection to Upgrade Readiness are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:  
+The prerequisites for a connection to Upgrade Readiness are unchanged from those detailed for the Current Branch of Configuration Manager. They are repeated here for convenience:
 
 **Prerequisites**
 - In order to add the connection, your Configuration Manager environment must first configure a [service connection point](../servers/deploy/configure/about-the-service-connection-point.md) in an [online mode](../servers/deploy/configure/about-the-service-connection-point.md#bkmk_modes). When you add the connection to your environment, it will also install the Microsoft Monitoring Agent on the machine running this site system role.
@@ -261,7 +261,7 @@ The prerequisites for a connection to Upgrade Readiness are unchanged from those
 - Create a client key for the registered management tool in Microsoft Entra ID.
 - In the Azure portal, provide the registered web app with permission to access OMS.
 
-> [!IMPORTANT]       
+> [!IMPORTANT]
 > When configuring permission to access OMS, be sure to choose the **Contributor** role, and assign it permissions to the resource group of the registered app.
 
 After the prerequisites are configured, you are ready to use the Wizard to create the connection.
@@ -277,7 +277,7 @@ After the prerequisites are configured, you are ready to use the Wizard to creat
     - Provide a friendly name for the Microsoft Entra tenant Name. Then, specify the Tenant ID, Application Name, Client ID, secret key for the Azure web app, and the App ID URI.
     - Click **Verify**, and if successful, click **OK** to continue.
 
-5.  On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.  
+5.  On the **Configuration** page, specify the subscription, resource group, and Windows Analytics Workspace you want to use with this connection to Upgrade Readiness.
 
 6. Click **Next** to go to the **Summary** page, and then complete the wizard to create the connection.
 
@@ -422,12 +422,12 @@ Windows 10 devices managed by Windows Update client policies must have Internet 
 1. In **Software Library** > **Windows 10 Servicing** > **Windows Update for Business Policies**
 2. On the **Home** tab, in the **Create** group, select **Create Windows Update for Business Policy** to open the Create Windows Update for Business Policy Wizard.
 3. On the **General** page, provide a name and description for the policy.
-4. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates.    
+4. On the **Deferral Policies** page, configure whether to defer or pause Feature Updates.
     Feature Updates are generally new features for Windows. After you configure the **Branch readiness level** setting, you can then define if, and for how long, you would like to defer receiving Feature Updates following their availability from Microsoft.
     - **Branch readiness level**: Set the branch for which the device will receive Windows updates (Current Branch or Current Branch for Business).
     - **Deferral period (days)**:  Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
-    - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.   
-5. Choose whether to defer or pause Quality Updates.     
+    - **Pause Features Updates starting**: Select whether to pause devices from receiving Feature Updates for a period of up to 60 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Feature Updates by clearing the checkbox.
+5. Choose whether to defer or pause Quality Updates.
     Quality Updates are generally fixes and improvements to existing Windows functionality and are typically published the first Tuesday of every month, though can be released at any time by Microsoft. You can define if, and for how long, you would like to defer receiving Quality Updates following their availability.
     - **Deferral period (days)**: Specify the number of days for which Feature Updates will be deferred. You can defer receiving these Feature Updates for a period of 180 days from their release.
     - **Pause Quality Updates starting**: Select whether to pause devices from receiving Quality Updates for a period of up to 35 days from the time you pause the updates. After the maximum days have passed, pause functionality will automatically expire and the device will scan Windows Updates for applicable updates. Following this scan, you can pause the updates again. You can unpause Quality Updates by clearing the checkbox.

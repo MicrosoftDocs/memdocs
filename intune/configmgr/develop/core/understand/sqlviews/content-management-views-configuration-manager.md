@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Content management views in Configuration Manager
@@ -124,4 +124,4 @@ It's unlikely that this view will be joined to other views.
 
 ## See also
 
-[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

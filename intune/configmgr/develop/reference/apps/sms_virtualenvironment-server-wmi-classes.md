@@ -12,82 +12,82 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_VirtualEnvironment Server WMI Classes
-The `SMS_VirtualEnvironment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents   
+The `SMS_VirtualEnvironment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_UserApplicationRequestHistoryItem :    
-{  
-    boolean IsReadOnly;;  
-    SMS_CI_LocalizedProperties LocalizedInformation[];  
-    uint32 NumReferringApplications;  
-    uint32 NumReferringDeploymentTypes;  
-    uint32 ReferringDeploymentTypes[];  
-};  
-```  
+```
+Class SMS_UserApplicationRequestHistoryItem :
+{
+    boolean IsReadOnly;;
+    SMS_CI_LocalizedProperties LocalizedInformation[];
+    uint32 NumReferringApplications;
+    uint32 NumReferringDeploymentTypes;
+    uint32 ReferringDeploymentTypes[];
+};
+```
 
-## Methods  
- The `SMS_UserApplicationRequestHistoryItem` class does not define any methods.  
+## Methods
+ The `SMS_UserApplicationRequestHistoryItem` class does not define any methods.
 
-## Properties  
- `IsReadOnly`  
- Data type: `Boolean`  
+## Properties
+ `IsReadOnly`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Flag to indicate the virtual environment is read-only.  
+ Flag to indicate the virtual environment is read-only.
 
- `LocalizedInformation`  
- Data type: `SMS_CI_LocalizedProperties` Array  
+ `LocalizedInformation`
+ Data type: `SMS_CI_LocalizedProperties` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- Localized information.  
+ Localized information.
 
- `NumReferringApplications`  
- Data type: `UInt32`  
+ `NumReferringApplications`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [read, not_null]  
+ Qualifiers: [read, not_null]
 
- The number of referring applications.  
+ The number of referring applications.
 
- `NumReferringDeploymentTypes`  
- Data type: `UInt32`  
+ `NumReferringDeploymentTypes`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [read, not_null]  
+ Qualifiers: [read, not_null]
 
- The number of referring deployment types.  
+ The number of referring deployment types.
 
- `ReferringDeploymentTypes`  
- Data type: `UInt32` Array  
+ `ReferringDeploymentTypes`
+ Data type: `UInt32` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- A list of CI_IDs of the referring deployment types.  
+ A list of CI_IDs of the referring deployment types.
 
-## Remarks  
+## Remarks
 
-## Requirements  
- Each time a request is updated, an instance of this class is created to track the history of the request.  
+## Requirements
+ Each time a request is updated, an instance of this class is created to track the history of the request.
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

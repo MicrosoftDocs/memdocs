@@ -1,13 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.reviewer: madakeva
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
 ms.date: 02/27/2025
-ms.localizationpriority: medium
 ---
 
 <!-- This file is shared by the following articles:
@@ -25,9 +18,10 @@ Headings are driven by article context. -->
 > This step is only needed under one of the following conditions:
 >
 > - The administrator that installed and configured the Intune Connector for Active Directory didn't have appropriate rights as outlined in [Intune Connector for Active Directory Requirements](../windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).
+> - The administrator that installed and configured the Intune Connector had appropriate rights as outlined above, but the [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts) could not be granted permission to create computer objects in the organizational unit(s) specified during the Intune Connector installation. For more information, see [Configure the new Microsoft Intune connector for Active Directory with the least privilege principle](https://techcommunity.microsoft.com/blog/intunecustomersuccess/configure-the-new-microsoft-intune-connector-for-active-directory-with-the-least/4432478).
 > - The `ODJConnectorEnrollmentWizard.exe.config` XML file wasn't modified to add OUs that the MSA should have permissions for.
 
-The purpose of Intune Connector for Active Directory is to join computers to a domain and add them to an OU. For this reason, the [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts) being used for the Intune Connector for Active Directory needs to have permissions to create computer accounts in the OU where the computers are joined to the on-premises domain.
+The purpose of Intune Connector for Active Directory is to join computers to a domain and add them to an OU. For this reason, the Managed Service Account being used for the Intune Connector for Active Directory needs to have permissions to create computer accounts in the OU where the computers are joined to the on-premises domain.
 
 With default permissions in Active Directory, domain joins by the Intune Connector for Active Directory might initially work without any permission modifications to the OU in Active Directory. However after MSA attempts to join more than 10 computers to the on-premises domain, it would stop working because by default, Active Directory only allows any single account to join up to 10 computers to the on-premises domain.
 

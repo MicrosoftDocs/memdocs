@@ -6,11 +6,11 @@ ms.date: 03/29/2022
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -33,6 +33,6 @@ Wi-Fi and VPN profiles provide a convenient method to centrally distribute and m
 
 You can use Wi-Fi and VPN profiles to configure client devices to connect to Wi-Fi and VPN servers. Then use Configuration Manager to evaluate whether those devices become compliant after the profiles are applied. The management point sends compliance information to the site server, and the information is stored in the site database. The information is encrypted when devices send it to the management point, but it isn't stored in encrypted format in the site database. The database retains the information until the site maintenance task **Delete Aged Configuration Management Data** deletes it. The default deletion interval is 90 days, but you can change it. Compliance information isn't sent to Microsoft.
 
-By default, devices don't evaluate Wi-Fi and VPN profiles. In addition, you must configure the profiles, and then deploy them to users.  
+By default, devices don't evaluate Wi-Fi and VPN profiles. In addition, you must configure the profiles, and then deploy them to users.
 
-Before you configure Wi-Fi or VPN profiles, consider your privacy requirements.  
+Before you configure Wi-Fi or VPN profiles, consider your privacy requirements.

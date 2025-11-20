@@ -1,39 +1,21 @@
 ---
-# required metadata
-title: Reference for Policy entities
-titleSuffix: Microsoft Intune
+title: Reference for Policy Entities
 description: Reference topic for the Policy category of entity collections in the Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Reference for Policy entities
+# Reference for Policy Entities
 
 The **policies** category contains entities for mobile devices that track information such as:
 
-- Inventory of device configuration profiles, app configuration profiles, and compliance policies  
-- Number of devices in the succeeded, pending, failed, or error state per day  
-- Number of users in the succeeded, pending, failed, or error state per day  
-- Cumulative number of devices in the succeeded, pending, failed, or error state  
+- Inventory of device configuration profiles, app configuration profiles, and compliance policies
+- Number of devices in the succeeded, pending, failed, or error state per day
+- Number of users in the succeeded, pending, failed, or error state per day
+- Cumulative number of devices in the succeeded, pending, failed, or error state
 
 ## policies
 
@@ -115,7 +97,7 @@ The following table summarizes the assignment status of compliance policies to d
 |nonCompliant      |Number of devices that failed to apply one or more device compliance policies targeted by the admin or where the user hasn't complied with the policies targeted by the admin.|43 |
 |error      |Number of devices that failed to communicate with Intune or Microsoft Entra ID, and returned an error message. |3|
 
-### compliancePolicyStatusDevicePerPolicyActivities 
+### compliancePolicyStatusDevicePerPolicyActivities
 
 The following table summarizes the assignment status of compliance policies to devices on a per policy and a per policy type basis. It lists the count of devices found in each compliance state for each assigned compliance policy.
 

@@ -6,12 +6,12 @@ ms.date: 12/16/2024
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Deploy applications with Configuration Manager
@@ -39,10 +39,10 @@ In some situations, consider another feature as a better solution:
 
 1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Application Management**, and select either the **Applications** or **Application Groups** node.
 
-1. Select an application or application group from the list to deploy. In the ribbon, select **Deploy**.  
+1. Select an application or application group from the list to deploy. In the ribbon, select **Deploy**.
 
 > [!NOTE]
-> When you view the properties of an existing deployment, the following sections correspond to tabs of the deployment properties window:  
+> When you view the properties of an existing deployment, the following sections correspond to tabs of the deployment properties window:
 >
 > - [General](#bkmk_deploy-general)
 > - [Content](#bkmk_deploy-content)
@@ -53,15 +53,15 @@ In some situations, consider another feature as a better solution:
 
 ## <a name="bkmk_deploy-general"></a> General information
 
-On the **General** page of the Deploy Software wizard, specify the following information:  
+On the **General** page of the Deploy Software wizard, specify the following information:
 
-- **Software**: This value displays the application to deploy. Select **Browse** to choose a different application.  
+- **Software**: This value displays the application to deploy. Select **Browse** to choose a different application.
 
 - **Collection**: Select **Browse** to choose the target collection for this application deployment.
 
-- **Use default distribution point groups associated to this collection**: Store the application content on the collection's default distribution point group. If you haven't associated the selected collection with a distribution point group, this option is grayed out.  
+- **Use default distribution point groups associated to this collection**: Store the application content on the collection's default distribution point group. If you haven't associated the selected collection with a distribution point group, this option is grayed out.
 
-- **Automatically distribute content for dependencies**: If any of the deployment types in the application have dependencies, then the site also sends dependent application content to distribution points.  
+- **Automatically distribute content for dependencies**: If any of the deployment types in the application have dependencies, then the site also sends dependent application content to distribution points.
 
     >[!NOTE]
     > If you update the dependent application after deploying the primary application, the site doesn't automatically distribute any new content for the dependency.
@@ -122,7 +122,7 @@ The application approval behavior depends upon whether you enable the recommende
 
 - **An administrator must approve a request for this application on the device**: If you enable the optional feature, the administrator approves any user requests for the application before the user can install it on the requested device. If the administrator approves the request, the user is only able to install the application on that device. The user must submit another request to install the application on another device. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.
 
-- **Require administrator approval if users request this application**: If you don't enable the optional feature, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.  
+- **Require administrator approval if users request this application**: If you don't enable the optional feature, the administrator approves any user requests for the application before the user can install it. This option is grayed out when the deployment purpose is **Required**, or when you deploy the application to a device collection.
 
 For more information, see [Approve applications](app-approval.md).
 
@@ -148,7 +148,7 @@ If the application you're deploying supersedes another application, set the inst
 
 You might want to give users more time to install required applications *beyond* any deadlines you set. This behavior is typically required when a computer is turned off for a long time, and needs to install many applications. For example, when a user returns from vacation, they have to wait for a long time as the client installs overdue deployments. To help solve this problem, define an enforcement grace period.
 
-- First, configure this grace period with the property **Grace period for enforcement after deployment deadline (hours)** in client settings. For more information, see the [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent) group. Specify a value between **1** and **120** hours.  
+- First, configure this grace period with the property **Grace period for enforcement after deployment deadline (hours)** in client settings. For more information, see the [Computer agent](../../core/clients/deploy/about-client-settings.md#computer-agent) group. Specify a value between **1** and **120** hours.
 
 - On the **Scheduling** page of a required application deployment, enable the option to **Delay enforcement of this deployment according to user preferences, up to the grace period defined in client settings**. The enforcement grace period applies to all deployments with this option enabled and targeted to devices to which you also deployed the client setting.
 
@@ -165,15 +165,15 @@ After the deadline, the client installs the application in the first non-busines
 
 On the **User Experience** page, specify information about how users can interact with the application installation.
 
-- **User notifications**: Specify whether to display notification in Software Center at the configured available time. This setting also controls whether to notify users on the client computers. For available deployments, you can't select the option to **Hide in Software Center and all notifications**.  
+- **User notifications**: Specify whether to display notification in Software Center at the configured available time. This setting also controls whether to notify users on the client computers. For available deployments, you can't select the option to **Hide in Software Center and all notifications**.
 
   - **When software changes are required, show a dialog window to the user instead of a toast notification**<!--3555947-->: Select this option to change the user experience to be more intrusive. It only applies to required deployments. For more information, see [User notifications](../plan-design/user-notifications.md#replace-toast-notifications-with-dialog-window).
 
-- **Software Installation** and **System restart**: Only configure these settings for required deployments. They specify the behaviors when the deployment reaches the deadline outside of any defined maintenance windows. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).  
+- **Software Installation** and **System restart**: Only configure these settings for required deployments. They specify the behaviors when the deployment reaches the deadline outside of any defined maintenance windows. For more information about maintenance windows, see [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).
 
-- **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later.  
+- **Write filter handling for Windows Embedded devices**: This setting controls the installation behavior on Windows Embedded devices that are enabled with a write filter. Choose the option to commit changes at the installation deadline or during a maintenance window. When you select this option, a restart is required and the changes persist on the device. Otherwise, the application is installed to the temporary overlay, and committed later.
 
-  - When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window. For more information about maintenance windows and Windows Embedded devices, see [Create Windows Embedded applications](../get-started/creating-windows-embedded-applications.md).  
+  - When you deploy a software update to a Windows Embedded device, make sure the device is a member of a collection that has a configured maintenance window. For more information about maintenance windows and Windows Embedded devices, see [Create Windows Embedded applications](../get-started/creating-windows-embedded-applications.md).
 
 ## <a name="bkmk_deploy-alerts"></a> Alerts
 

@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Health attestation for Configuration Manager
@@ -80,10 +80,10 @@ To view the device health attestation status, in the Configuration Manager conso
 
 Configuration Manager device health attestation displays the following information:
 
-- **Health Attestation Status** - Shows the share of devices in compliant, noncompliant, error, and unknown states  
+- **Health Attestation Status** - Shows the share of devices in compliant, noncompliant, error, and unknown states
 
-- **Devices Reporting Health Attestation** - Shows the percentage of devices reporting Health Attestation status  
+- **Devices Reporting Health Attestation** - Shows the percentage of devices reporting Health Attestation status
 
-- **Noncompliant Devices by Client Type** - Shows share of mobile devices and computers that are noncompliant  
+- **Noncompliant Devices by Client Type** - Shows share of mobile devices and computers that are noncompliant
 
 - **Top Missing Health Attestation Settings** - Shows the number of devices missing the health attestation setting, listed per setting

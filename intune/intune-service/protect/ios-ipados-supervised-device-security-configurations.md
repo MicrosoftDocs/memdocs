@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: iOS/iPadOS supervised device security configurations
-titleSuffix: Microsoft Intune
-description: Learn the settings suggested for iOS/iPadOS supervised device basic and high security.
-keywords:
+description: Review example supervised device security configurations of basic, enhanced, and high security for iOS devices.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/20/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -39,7 +19,7 @@ When using these examples, work with your security team to evaluate the threat e
 
 For more information on each policy setting, see [iOS/iPadOS device settings in Microsoft Intune](../configuration/device-restrictions-ios.md).
 
-## Supervised basic security (Level 1)
+## Supervised basic security (level 1)
 
 Level 1 is the minimum security configuration for an enterprise mobile device owned by the organization.
 
@@ -82,7 +62,7 @@ The following table lists only configured settings. Settings not listed in the t
 | Password | Block password sharing | Yes |  |
 | Password | Require Touch ID or Face ID authentication for AutoFill of password or credit card information | Yes |  |
 
-## Supervised enhanced security (Level 2)
+## Supervised enhanced security (level 2)
 
 Level 2 is the recommended configuration for supervised devices where users access more sensitive information. These devices are a natural target in enterprises today. These settings don't assume a large staff of highly skilled security personnel. Therefore, they should be accessible to most enterprise organizations. This configuration is applicable to most mobile users accessing work or school data on a device.
 
@@ -106,14 +86,16 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 | Connected Devices | Block access to USB in Files app | Yes |  |
 | General | Block sending diagnostic and usage data to Apple | Yes |  |
 
-## Supervised high security (Level 3)
+## Supervised high security (level 3)
 
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who are uniquely targeted by adversaries. Such organizations are typically targeted by well-funded and sophisticated adversaries.
+- Specific users and groups who are uniquely targeted by adversaries.
 
-This configuration expands upon Level 2 by:
+Such organizations are typically targeted by well-funded and sophisticated adversaries.
+
+This configuration expands upon level 2 by:
 
 - Enacting stronger password policies.
 - Disabling device functionality (like AirPrint).

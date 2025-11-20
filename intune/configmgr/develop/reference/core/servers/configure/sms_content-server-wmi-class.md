@@ -12,165 +12,165 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_Content Server WMI Class
-The `SMS_Content` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides additional information about a `CI_Content` instance.  
+The `SMS_Content` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides additional information about a `CI_Content` instance.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_Content : SMS_BaseClass  
-{  
-    String ContentDescription;  
-    UInt32 ContentFlags;  
-    String ContentHash;  
-    UInt32 ContentHashVersion;  
-    SInt32 ContentID;  
-    String ContentSource;  
-    UInt32 ContentType;  
-    String ContentUniqueID;  
-    UInt32 ContentVersion;  
-    UInt32 ObjectTypeID;  
-    String RelatedContentID;  
-    String SecurityKey;  
-};  
-```  
+```
+Class SMS_Content : SMS_BaseClass
+{
+    String ContentDescription;
+    UInt32 ContentFlags;
+    String ContentHash;
+    UInt32 ContentHashVersion;
+    SInt32 ContentID;
+    String ContentSource;
+    UInt32 ContentType;
+    String ContentUniqueID;
+    UInt32 ContentVersion;
+    UInt32 ObjectTypeID;
+    String RelatedContentID;
+    String SecurityKey;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_Content` class.  
+## Methods
+ The following table lists the methods in the `SMS_Content` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[IsOfficeContent Method in Class SMS_Content](../../../../../develop/reference/core/servers/configure/isofficecontent-method-in-class-sms_content.md)|Specifies whether content is Microsoft Office content.|  
+|Method|Description|
+|------------|-----------------|
+|[IsOfficeContent Method in Class SMS_Content](../../../../../develop/reference/core/servers/configure/isofficecontent-method-in-class-sms_content.md)|Specifies whether content is Microsoft Office content.|
 
-## Properties  
- `ContentDescription`  
- Data type: `String`  
+## Properties
+ `ContentDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description of the content.  
+ Description of the content.
 
- `ContentFlags`  
- Data type: `UInt32`  
+ `ContentFlags`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This specifies additional attributes for content instance.  
+ This specifies additional attributes for content instance.
 
-|Value|Content flag|  
-|-|-|  
-|8|DOWNLOAD_ON_DEMAND_FROM_LOCAL_DP|  
-|12|DOWNLOAD_FROM_LOCAL_DISPPOINT|  
-|13|DOWNLOAD_LOCAL_PARTIALDOWNLOADTOLOCAL|  
-|14|DOWNLOAD_FROM_REMOTE_DISPPOINT|  
-|15|DOWNLOAD_REMOTE_PARTIALDOWNLOADTOLOCAL|  
-|16|DOWNLOAD_ENABLE_PEER_CACHING|  
-|17|DP_NO_FALLBACK_UNPROTECTED|  
-|24|DO_NOT_DOWNLOAD|  
-|25|PERSIST_IN_CACHE|  
+|Value|Content flag|
+|-|-|
+|8|DOWNLOAD_ON_DEMAND_FROM_LOCAL_DP|
+|12|DOWNLOAD_FROM_LOCAL_DISPPOINT|
+|13|DOWNLOAD_LOCAL_PARTIALDOWNLOADTOLOCAL|
+|14|DOWNLOAD_FROM_REMOTE_DISPPOINT|
+|15|DOWNLOAD_REMOTE_PARTIALDOWNLOADTOLOCAL|
+|16|DOWNLOAD_ENABLE_PEER_CACHING|
+|17|DP_NO_FALLBACK_UNPROTECTED|
+|24|DO_NOT_DOWNLOAD|
+|25|PERSIST_IN_CACHE|
 
- `ContentHash`  
- Data type: `String`  
+ `ContentHash`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Hash of the content.  
+ Hash of the content.
 
- `ContentHashVersion`  
- Data type: `UInt32`  
+ `ContentHashVersion`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- This specifies the hash version used to calculate the content hash.  
+ This specifies the hash version used to calculate the content hash.
 
- `ContentID`  
- Data type: `SInt32`  
+ `ContentID`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifier for the content.  
+ Identifier for the content.
 
- `ContentSource`  
- Data type: `String`  
+ `ContentSource`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This specifies the source location where content files are stored.  
+ This specifies the source location where content files are stored.
 
- `ContentType`  
- Data type: `UInt32`  
+ `ContentType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Type of the content.  
+ Type of the content.
 
- `ContentUniqueID`  
- Data type: `String`  
+ `ContentUniqueID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Unique identifier for the content.  
+ Unique identifier for the content.
 
- `ContentVersion`  
- Data type: `UInt32`  
+ `ContentVersion`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Version of the content.  
+ Version of the content.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The security type of the content.  
+ The security type of the content.
 
- `RelatedContentID`  
- Data type: `String`  
+ `RelatedContentID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Specifies the related content associated with this content.  
+ Specifies the related content associated with this content.
 
- `SecurityKey`  
- Data type: `String`  
+ `SecurityKey`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The security key of the content. Content may be secured by application or package.  
+ The security key of the content. Content may be secured by application or package.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

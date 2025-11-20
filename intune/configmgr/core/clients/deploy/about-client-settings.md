@@ -6,12 +6,12 @@ ms.date: 03/28/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: reference
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # About client settings in Configuration Manager

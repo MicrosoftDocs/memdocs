@@ -6,12 +6,12 @@ ms.date: 04/01/2020
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Plan for reporting in Configuration Manager
@@ -53,7 +53,7 @@ Security for reporting is much like other objects in Configuration Manager where
 
 Unlike other objects in Configuration Manager, the security rights that you set for administrative users in the Configuration Manager console are also configured in Reporting Services. When you configure security rights in the Configuration Manager console, the reporting services point connects to Reporting Services and sets appropriate permissions for reports.
 
-For example, the **Software Update Manager** security role has the **Run Report** and **Modify Report** permissions. Users with the **Software Update Manager** role can only run and modify reports for software updates. The Configuration Manager console doesn't display reports for other objects to this role. The exception to this behavior is that some reports aren't associated with specific Configuration Manager securable objects. For these reports, the administrative user must have the **Read** right for the **Site** permission to run the reports and the **Modify** right for the **Site** permission to modify the reports.  
+For example, the **Software Update Manager** security role has the **Run Report** and **Modify Report** permissions. Users with the **Software Update Manager** role can only run and modify reports for software updates. The Configuration Manager console doesn't display reports for other objects to this role. The exception to this behavior is that some reports aren't associated with specific Configuration Manager securable objects. For these reports, the administrative user must have the **Read** right for the **Site** permission to run the reports and the **Modify** right for the **Site** permission to modify the reports.
 
 > [!IMPORTANT]
 > For users from a different domain than that of the reporting services point account to successfully run reports, establish a two-way trust between the two domains.
@@ -80,7 +80,7 @@ Consider the following recommendations and tips for reporting in Configuration M
 
 Configuration Manager reports display information that it collects during standard Configuration Manager management operations. For example, you can display a report of information that Configuration Manager collected from discovery or inventory. Reports can also contain the current status information for client management operations, such as deploying software, and checking for compliance.
 
-For more information about any security recommendations and privacy information for Configuration Manager operations that might generate data that you can view in reports, see [Security and privacy for Configuration Manager](../../../security/index.yml).  
+For more information about any security recommendations and privacy information for Configuration Manager operations that might generate data that you can view in reports, see [Security and privacy for Configuration Manager](../../../security/index.yml).
 
 ## Next steps
 

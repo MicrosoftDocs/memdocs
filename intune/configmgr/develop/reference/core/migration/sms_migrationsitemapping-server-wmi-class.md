@@ -12,335 +12,335 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_MigrationSiteMapping server WMI class
 
-The `SMS_MigrationSiteMapping` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a mapping between the Configuration Manager source site and the Configuration Manager top site.  
+The `SMS_MigrationSiteMapping` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a mapping between the Configuration Manager source site and the Configuration Manager top site.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MigrationSiteMapping : SMS_BaseClass  
-{  
-    String Account;  
-    String AccountForSql;  
-    String ContentDestination;  
-    DateTime DateLastBegin;  
-    DateTime DateLastSynced;  
-    DateTime DateLastUpdated;  
-    DateTime DateNextRun;  
-    String DestinationSiteCode;  
-    String DestinationSiteFQDN;  
-    Boolean EnableDPSharing;  
-    Boolean IsCentral;  
-    Boolean IsDecommissioned;  
-    Boolean IsDeleted;  
-    UInt32 JobIDs[];  
-    UInt32 MigratedClientNumber;  
-    UInt32 MigratedObjectNumber;  
-    String ModifiedBy;  
-    String ParentSiteCode;  
-    String ParentSiteServer;  
-    String ScheduleToken;  
-    UInt32 SiteMappingID;  
-    String SourceSiteCode;  
-    String SourceSiteFQDN;  
-    UInt32 Status;  
-    UInt32 SyncedEntities[];  
-    UInt32 TotalClientNumber;  
-    UInt32 TotalObjectNumber;  
-};  
-```  
+```
+Class SMS_MigrationSiteMapping : SMS_BaseClass
+{
+    String Account;
+    String AccountForSql;
+    String ContentDestination;
+    DateTime DateLastBegin;
+    DateTime DateLastSynced;
+    DateTime DateLastUpdated;
+    DateTime DateNextRun;
+    String DestinationSiteCode;
+    String DestinationSiteFQDN;
+    Boolean EnableDPSharing;
+    Boolean IsCentral;
+    Boolean IsDecommissioned;
+    Boolean IsDeleted;
+    UInt32 JobIDs[];
+    UInt32 MigratedClientNumber;
+    UInt32 MigratedObjectNumber;
+    String ModifiedBy;
+    String ParentSiteCode;
+    String ParentSiteServer;
+    String ScheduleToken;
+    UInt32 SiteMappingID;
+    String SourceSiteCode;
+    String SourceSiteFQDN;
+    UInt32 Status;
+    UInt32 SyncedEntities[];
+    UInt32 TotalClientNumber;
+    UInt32 TotalObjectNumber;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_MigrationSiteMapping` class.  
+## Methods
+ The following table lists the methods in the `SMS_MigrationSiteMapping` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[ActivateHierarchy Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/activatehierarchy-method-in-class-sms_migrationsitemapping.md)|Activates the hierarchy.|  
-|[CleanupHierarchyData Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/cleanuphierarchydata-method-in-class-sms_migrationsitemapping.md)|Cleans up hierarchy data.|  
-|[CheckDecommissionState Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/checkdecommissionstate-method-in-class-sms_migrationsitemapping.md)|Checks to see if site mapping can be decommissioned.|  
-|[Decommission Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/decommission-method-in-class-sms_migrationsitemapping.md)|Decommissions site mapping.|  
-|[Resuscitate Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/resuscitate-method-in-class-sms_migrationsitemapping.md)|Resuscitates site mapping.|  
-|[Sync Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/sync-method-in-class-sms_migrationsitemapping.md)|Synchronizes the entities on the source site.|  
+|Method|Description|
+|------------|-----------------|
+|[ActivateHierarchy Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/activatehierarchy-method-in-class-sms_migrationsitemapping.md)|Activates the hierarchy.|
+|[CleanupHierarchyData Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/cleanuphierarchydata-method-in-class-sms_migrationsitemapping.md)|Cleans up hierarchy data.|
+|[CheckDecommissionState Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/checkdecommissionstate-method-in-class-sms_migrationsitemapping.md)|Checks to see if site mapping can be decommissioned.|
+|[Decommission Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/decommission-method-in-class-sms_migrationsitemapping.md)|Decommissions site mapping.|
+|[Resuscitate Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/resuscitate-method-in-class-sms_migrationsitemapping.md)|Resuscitates site mapping.|
+|[Sync Method in Class SMS_MigrationSiteMapping](../../../../develop/reference/core/migration/sync-method-in-class-sms_migrationsitemapping.md)|Synchronizes the entities on the source site.|
 
-## Properties  
- `Account`  
- Data type: `String`  
+## Properties
+ `Account`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- SDK Account used for migration.  
+ SDK Account used for migration.
 
- `AccountForSql`  
- Data type: `String`  
+ `AccountForSql`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- SQL Server account used for migration.  
+ SQL Server account used for migration.
 
- `ContentDestination`  
- Data type: `String`  
+ `ContentDestination`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The destination of the content of the packages from this site..  
+ The destination of the content of the packages from this site..
 
- `DateLastBegin`  
- Data type: `DateTime`  
+ `DateLastBegin`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Last begin time.  
+ Last begin time.
 
- `DateLastSynced`  
- Data type: `DateTime`  
+ `DateLastSynced`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Last sync time.  
+ Last sync time.
 
- `DateLastUpdated`  
- Data type: `DateTime`  
+ `DateLastUpdated`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Updated time.  
+ Updated time.
 
- `DateNextRun`  
- Data type: `DateTime`  
+ `DateNextRun`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Next run time.  
+ Next run time.
 
- `DestinationSiteCode`  
- Data type: `String`  
+ `DestinationSiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Destination site code.  
+ Destination site code.
 
- `DestinationSiteFQDN`  
- Data type: `String`  
+ `DestinationSiteFQDN`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Destination site FQDN.  
+ Destination site FQDN.
 
- `EnableDPSharing`  
- Data type: `Boolean`  
+ `EnableDPSharing`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if it should gather distribution point information.  
+ `true` if it should gather distribution point information.
 
- `IsCentral`  
- Data type: `Boolean`  
+ `IsCentral`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the source site is a central site.  
+ `true` if the source site is a central site.
 
- `IsDecommissioned`  
- Data type: `Boolean`  
+ `IsDecommissioned`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- `true` if the site has stopped gathering data.  
+ `true` if the site has stopped gathering data.
 
- `IsDeleted`  
- Data type: `Boolean`  
+ `IsDeleted`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- `true` if the site mapping has been deleted.  
+ `true` if the site mapping has been deleted.
 
- `JobIDs`  
- Data type: `UInt32 Array`  
+ `JobIDs`
+ Data type: `UInt32 Array`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [lazy, read]  
+ Qualifiers: [lazy, read]
 
- Jobs associated with this site mapping.  
+ Jobs associated with this site mapping.
 
- `MigratedClientNumber`  
- Data type: `UInt32`  
+ `MigratedClientNumber`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Total number of migrated clients.  
+ Total number of migrated clients.
 
- `MigratedObjectNumber`  
- Data type: `UInt32`  
+ `MigratedObjectNumber`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Total number of migrated objects.  
+ Total number of migrated objects.
 
- `ModifiedBy`  
- Data type: `String`  
+ `ModifiedBy`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Modified by.  
+ Modified by.
 
- `ParentSiteCode`  
- Data type: `String`  
+ `ParentSiteCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Parent site code for source site.  
+ Parent site code for source site.
 
- `ParentSiteServer`  
- Data type: `String`  
+ `ParentSiteServer`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Parent site server for source site.  
+ Parent site server for source site.
 
- `ScheduleToken`  
- Data type: `String`  
+ `ScheduleToken`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Schedule token for the site mapping synchronization.  
+ Schedule token for the site mapping synchronization.
 
- `SiteMappingID`  
- Data type: `UInt32`  
+ `SiteMappingID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Primary site mapping ID.  
+ Primary site mapping ID.
 
- `SourceSiteCode`  
- Data type: `String`  
+ `SourceSiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Source site code.  
+ Source site code.
 
- `SourceSiteFQDN`  
- Data type: `String`  
+ `SourceSiteFQDN`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Source site FQDN.  
+ Source site FQDN.
 
- `Status`  
- Data type: `UInt32`  
+ `Status`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration, read]  
+ Qualifiers: [enumeration, read]
 
- Site mapping synchronization status.  
+ Site mapping synchronization status.
 
-|Value|Site mapping status|  
-|-|-|  
-|0|Have not gathered data|  
-|1|Ready for next data gathering process|  
-|2|Gathering data|  
-|3|Failed|  
-|4|Stopped|  
-|258|Gathering hierarchy data|  
-|259|Failed (Unauthorized Access)|  
-|514|Gathering object data|  
-|515|Failed (Network Timeout)|  
-|770|Gathering client data|  
-|771|Failed (No Permission to Source Site WMI)|  
-|1026|Gathering package status data|  
-|1027|Failed (SQL Error)|  
-|1283|Failed (Child Primary Site)|  
-|1539|Failed (Same Hierarchy)|  
-|1795|Failed (Unsupported Site Version)|  
-|2051|Failed (No Permission to fnSCCMMultiByteToWideChar)|  
-|2307|Failed (Duplicated site code with current hierarchy)|  
-|4099|Failed (Duplicated site code with another source hierarchy)|  
+|Value|Site mapping status|
+|-|-|
+|0|Have not gathered data|
+|1|Ready for next data gathering process|
+|2|Gathering data|
+|3|Failed|
+|4|Stopped|
+|258|Gathering hierarchy data|
+|259|Failed (Unauthorized Access)|
+|514|Gathering object data|
+|515|Failed (Network Timeout)|
+|770|Gathering client data|
+|771|Failed (No Permission to Source Site WMI)|
+|1026|Gathering package status data|
+|1027|Failed (SQL Error)|
+|1283|Failed (Child Primary Site)|
+|1539|Failed (Same Hierarchy)|
+|1795|Failed (Unsupported Site Version)|
+|2051|Failed (No Permission to fnSCCMMultiByteToWideChar)|
+|2307|Failed (Duplicated site code with current hierarchy)|
+|4099|Failed (Duplicated site code with another source hierarchy)|
 
- `SyncedEntities`  
- Data type: `UInt32 Array`  
+ `SyncedEntities`
+ Data type: `UInt32 Array`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [lazy, read]  
+ Qualifiers: [lazy, read]
 
- Entities synchronized from this site mapping.  
+ Entities synchronized from this site mapping.
 
- `TotalClientNumber`  
- Data type: `UInt32`  
+ `TotalClientNumber`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Total number of clients.  
+ Total number of clients.
 
- `TotalObjectNumber`  
- Data type: `UInt32`  
+ `TotalObjectNumber`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Total number of objects.  
+ Total number of objects.
 
-## Remarks  
- Once a source site is configured for data gathering, it should appear as an instance of this class. This instance controls many aspects of the data gathering, such as the schedule, whether distribution point sharing is enabled, and so on. It also has some monitoring data such as status, the total object number and the total client number.  
+## Remarks
+ Once a source site is configured for data gathering, it should appear as an instance of this class. This instance controls many aspects of the data gathering, such as the schedule, whether distribution point sharing is enabled, and so on. It also has some monitoring data such as status, the total object number and the total client number.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).

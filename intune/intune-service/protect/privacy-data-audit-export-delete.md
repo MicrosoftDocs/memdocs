@@ -1,39 +1,19 @@
 ---
-# required metadata
-
 title: Audit, export or delete personal data collected by Intune
-titleSuffix: Microsoft Intune
 description: Learn how to audit, export, or delete personal data that is collected by Intune.
-keywords: GDPR, personal data, privacy
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
-ms.date: 12/07/2023
+author: paolomatarazzo
+ms.author: paoloma
+ms.date: 04/10/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: kerimh
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - essentials-privacy
 - sub-data-privacy
 ---
 
-# Audit, export, or delete personal data in Intune
+# Audit export or delete personal data in Intune
 
 Intune admins can use audit logs to track activities surrounding personal data. Admins can also export and delete personal data.
 
@@ -41,15 +21,15 @@ Intune admins can use audit logs to track activities surrounding personal data. 
 
 ## Audit personal data
 
-Audit logs provide tenant admins with a record of activities that generate a change in Microsoft Intune. Audit logs are available for many manage activities and typically create, update (edit), delete, and assign actions. Remote tasks that generate audit events can also be reviewed. These audit logs might contain personal data from users whose devices are enrolled in Intune.  
+Audit logs provide tenant admins with a record of activities that generate a change in Microsoft Intune. Audit logs are available for many manage activities and typically create, update (edit), delete, and assign actions. Remote tasks that generate audit events can also be reviewed. These audit logs might contain personal data from users whose devices are enrolled in Intune.
 
-For security purposes, Intune maintains audit logs for user and device actions for one year. These logs are automatically deleted after the one-year retention period.
+For security purposes, Intune maintains audit logs for user and device actions for two years. These logs are automatically deleted after the two-year retention period.
 
-To review audit logs, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md). 
+To review audit logs, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md).
 
 Admins can't delete audit logs.
 
-These audit events are retained for one year. Tenant admins can request audit logs using [this support request form](https://privacy.microsoft.com/en-US/privacy-questions?).
+These audit events are retained for two years. Tenant admins can request audit logs using [this support request form](https://privacy.microsoft.com/en-US/privacy-questions?).
 
 ## Export personal data
 
@@ -86,7 +66,7 @@ The **Retire** action removes Intune provisioned data like company applications,
 
 ### BIOS passwords
 
-If Intune has configured a BIOS password for the device as part of BIOS configuration management, the BIOS password will remain on the device until explicitly removed. BIOS passwords could be removed by editing the **BIOS configuration and other settings** policy, or locally on the device by changing the existing password.
+If Intune has configured a BIOS password for the device as part of BIOS configuration management, the BIOS password remains on the device until explicitly removed. BIOS passwords could be removed by editing the **BIOS configuration and other settings** policy, or locally on the device by changing the existing password.
 
 ### Delete a tenant from Microsoft Intune
 

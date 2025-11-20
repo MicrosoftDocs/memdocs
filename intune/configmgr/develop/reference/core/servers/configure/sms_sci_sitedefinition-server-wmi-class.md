@@ -12,301 +12,301 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SCI_SiteDefinition Server WMI Class
-The `SMS_SCI_SiteDefinition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains general definitions for the site (for example, name) and for accounts (for example, SQL) used by Configuration Manager server components.  
+The `SMS_SCI_SiteDefinition` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains general definitions for the site (for example, name) and for accounts (for example, SQL) used by Configuration Manager server components.
 
 > [!NOTE]
->  This class is vital to the operation of the site control infrastructure. Changing the values for an existing site might render the site control file unusable for further configuration. Existing objects for functioning sites should not be changed.  
+>  This class is vital to the operation of the site control infrastructure. Changing the values for an existing site might render the site control file unusable for further configuration. Existing objects for functioning sites should not be changed.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SCI_SiteDefinition : SMS_SiteControlItem   
-{  
-     String AddressPublicKey;  
-     UInt32 FileType;  
-     String InstallDirectory;  
-     String ItemName;  
-     String ItemType;  
-     String ParentSiteCode;  
-     SMS_EmbeddedPropertyList PropLists[];  
-     SMS_EmbeddedProperty Props[];  
-     String ServiceAccount;  
-     String ServiceAccountDomain;  
-     String ServiceAccountPassword;  
-     String ServiceExchangeKey;  
-     String ServicePlaintextAccount;  
-     String ServicePublicKey;  
-     String SiteCode;  
-     String SiteName;  
-     String SiteServerDomain;  
-     String SiteServerName;  
-   String SiteServerPlatform;  
-     UInt32 SiteType;  
-     String SQLAccount;  
-     String SQLAccountPassword;  
-     String SQLDatabaseName;  
-     String SQLPublicKey;  
-     String SQLServerName;  
-};  
-```  
+```
+Class SMS_SCI_SiteDefinition : SMS_SiteControlItem
+{
+     String AddressPublicKey;
+     UInt32 FileType;
+     String InstallDirectory;
+     String ItemName;
+     String ItemType;
+     String ParentSiteCode;
+     SMS_EmbeddedPropertyList PropLists[];
+     SMS_EmbeddedProperty Props[];
+     String ServiceAccount;
+     String ServiceAccountDomain;
+     String ServiceAccountPassword;
+     String ServiceExchangeKey;
+     String ServicePlaintextAccount;
+     String ServicePublicKey;
+     String SiteCode;
+     String SiteName;
+     String SiteServerDomain;
+     String SiteServerName;
+   String SiteServerPlatform;
+     UInt32 SiteType;
+     String SQLAccount;
+     String SQLAccountPassword;
+     String SQLDatabaseName;
+     String SQLPublicKey;
+     String SQLServerName;
+};
+```
 
-## Methods  
- The `SMS_SCI_SiteDefinition` class does not define any methods.  
+## Methods
+ The `SMS_SCI_SiteDefinition` class does not define any methods.
 
-## Properties  
- `AddressPublicKey`  
- Data type: `String`  
+## Properties
+ `AddressPublicKey`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `FileType`  
- Data type: `UInt32`  
+ `FileType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, enumeration:ToSubClass]  
+ Qualifiers: [key, enumeration:ToSubClass]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `InstallDirectory`  
- Data type: `String`  
+ `InstallDirectory`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Directory on the site server where the Configuration Manager tree starts. The default value is "".  
+ Directory on the site server where the Configuration Manager tree starts. The default value is "".
 
- `ItemName`  
- Data type: `String`  
+ `ItemName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `ItemType`  
- Data type: `String`  
+ `ItemType`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `ParentSiteCode`  
- Data type: `String`  
+ `ParentSiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [SizeLimit("3")]  
+ Qualifiers: [SizeLimit("3")]
 
- Three-letter site code of the parent site (if there is one). The default value is "".  
+ Three-letter site code of the parent site (if there is one). The default value is "".
 
- `PropLists`  
- Data type: `SMS_EmbeddedPropertyList` Array  
+ `PropLists`
+ Data type: `SMS_EmbeddedPropertyList` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) objects for the site.  
+ [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md) objects for the site.
 
- `Props`  
- Data type: `SMS_EmbeddedProperty` Array  
+ `Props`
+ Data type: `SMS_EmbeddedProperty` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md) objects for the site.  
+ [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md) objects for the site.
 
- `ServiceAccount`  
- Data type: String  
+ `ServiceAccount`
+ Data type: String
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `ServiceAccountDomain`  
- Data type: `String`  
+ `ServiceAccountDomain`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `ServiceAccountPassword`  
- Data type: `String`  
+ `ServiceAccountPassword`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `ServiceExchangeKey`  
- Data type: `String`  
+ `ServiceExchangeKey`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Public exchange key used to encrypt the value of `ServicePublicKey`. Provide no value for this property if `ServicePublicKey` is not encrypted.  
+ Public exchange key used to encrypt the value of `ServicePublicKey`. Provide no value for this property if `ServicePublicKey` is not encrypted.
 
- `ServicePlaintextAccount`  
- Data type: `String`  
+ `ServicePlaintextAccount`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `ServicePublicKey`  
- Data type: `String`  
+ `ServicePublicKey`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, SizeLimit("3")]  
+ Qualifiers: [key, SizeLimit("3")]
 
- See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).  
+ See [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md).
 
- `SiteName`  
- Data type: `String`  
+ `SiteName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Unique friendly site name of the site server. The default value is "".  
+ Unique friendly site name of the site server. The default value is "".
 
- `SiteServerDomain`  
- Data type: `String`  
+ `SiteServerDomain`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Domain in which the site server participates. The default value is "".  
+ Domain in which the site server participates. The default value is "".
 
- `SiteServerName`  
- Data type: `String`  
+ `SiteServerName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the Windows NT site server. The default value is "".  
+ Name of the Windows NT site server. The default value is "".
 
- `SiteServerPlatform`  
- Data type: `String`  
+ `SiteServerPlatform`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [StringEnumeration]  
+ Qualifiers: [StringEnumeration]
 
- Processor platform of the site server. Possible values are:  
+ Processor platform of the site server. Possible values are:
 
-- AMD64  
+- AMD64
 
-  `SiteType`  
-  Data type: `UInt32`  
+  `SiteType`
+  Data type: `UInt32`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: [ResIDValueLookup("SiteType")]  
+  Qualifiers: [ResIDValueLookup("SiteType")]
 
-  Type of site. Possible values are listed for the `Type` property of [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).  
+  Type of site. Possible values are listed for the `Type` property of [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).
 
-  For this class, the default value is PRIMARY (2).  
+  For this class, the default value is PRIMARY (2).
 
-|Value|Site type|  
-|-|-|  
-|1|Secondary|  
-|2|Primary|  
-|4|CAS|  
+|Value|Site type|
+|-|-|
+|1|Secondary|
+|2|Primary|
+|4|CAS|
 
- `SQLAccount`  
- Data type: `String`  
+ `SQLAccount`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `SQLAccountPassword`  
- Data type: `String`  
+ `SQLAccountPassword`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `SQLDatabaseName`  
- Data type: `String`  
+ `SQLDatabaseName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the SQL Server database on the server. The default value is "".  
+ Name of the SQL Server database on the server. The default value is "".
 
- `SQLPublicKey`  
- Data type: `String`  
+ `SQLPublicKey`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- This property is deprecated.  
+ This property is deprecated.
 
- `SQLServerName`  
- Data type: `String`  
+ `SQLServerName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the computer running SQL Server for this installation. The default value is "".  
+ Name of the computer running SQL Server for this installation. The default value is "".
 
-## Remarks  
- There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+## Remarks
+ There are no special class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)   
- [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)   
- [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md)   
+## See Also
+ [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)
+ [SMS_EmbeddedProperty Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedproperty-server-wmi-class.md)
+ [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md)
  [SMS_SiteControlItem Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_sitecontrolitem-server-wmi-class.md)

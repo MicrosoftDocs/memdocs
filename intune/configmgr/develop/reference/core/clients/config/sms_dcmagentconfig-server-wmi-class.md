@@ -12,112 +12,112 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DCMAgentConfig Server WMI Class
-The `SMS_DCMAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers retrieve compliance settings.  
+The `SMS_DCMAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers retrieve compliance settings.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DCMAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    Boolean Enabled;  
-    Boolean EnableUserStateManagement;  
-    UInt32 PerProviderTimeout;  
-    UInt32 PerScanDefaultPriority;  
-    UInt32 PerScanTimeout;  
-    UInt32 PerScanTTL;  
-};  
-```  
+```
+Class SMS_DCMAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    Boolean Enabled;
+    Boolean EnableUserStateManagement;
+    UInt32 PerProviderTimeout;
+    UInt32 PerScanDefaultPriority;
+    UInt32 PerScanTimeout;
+    UInt32 PerScanTTL;
+};
+```
 
-## Methods  
- The `SMS_DCMAgentConfig` class doesn't define any methods.  
+## Methods
+ The `SMS_DCMAgentConfig` class doesn't define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The Settings Management Agent identifier is 1.  
+ Identifies the client agent component. The Settings Management Agent identifier is 1.
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the agent is enabled.  
+ `true` if the agent is enabled.
 
- `EnabledUserStateManagement`  
- Data type: `Boolean`  
+ `EnabledUserStateManagement`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` to enable user state management.  
+ `true` to enable user state management.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `PerProviderTimeout`  
- Data type: `UInt32`  
+ `PerProviderTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicated the timeout value for accessing the provider.  
+ Indicated the timeout value for accessing the provider.
 
- `PerScanDefaultPriority`  
- Data type: `UInt32`  
+ `PerScanDefaultPriority`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Priority of the Settings Management evaluation job. Possible values are:  
+ Priority of the Settings Management evaluation job. Possible values are:
 
-|Value|Settings scan priority|  
-|-|-|  
-|priIdle|Idle|  
-|priNormal|Normal (recommended)|  
-|priHigh|High|  
-|priForeground|Foreground|  
+|Value|Settings scan priority|
+|-|-|
+|priIdle|Idle|
+|priNormal|Normal (recommended)|
+|priHigh|High|
+|priForeground|Foreground|
 
- `PerScanTimeout`  
- Data type: `UInt32`  
+ `PerScanTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time after which an in-progress Settings Management evaluation will be canceled.  
+ Time after which an in-progress Settings Management evaluation will be canceled.
 
- This property is deprecated.  
+ This property is deprecated.
 
- `PerScanTTL`  
- Data type: `UInt32`  
+ `PerScanTTL`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time to live (TTL) for the baseline evaluation result. If a baseline is evaluated and then quickly evaluated again, the second evaluation may be ignored depending TTL value.  
+ Time to live (TTL) for the baseline evaluation result. If a baseline is evaluated and then quickly evaluated again, the second evaluation may be ignored depending TTL value.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

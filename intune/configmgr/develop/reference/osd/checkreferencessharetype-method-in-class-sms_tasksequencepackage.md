@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CheckReferencesShareType Method in Class SMS_TaskSequencePackage
-The `CheckReferencesShareType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks all referred packages for this task sequence and returns all packages that aren't shared.  
+The `CheckReferencesShareType` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that checks all referred packages for this task sequence and returns all packages that aren't shared.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 CheckReferencesShareType   
-{  
-    [IN]    String PackageID  
-    [OUT]   Boolean CanRunFromDP  
-    [OUT]   String PacakgeIds[]  
-    [OUT]   String PackageNames[]  
-};  
-```  
+```
+uint32 CheckReferencesShareType
+{
+    [IN]    String PackageID
+    [OUT]   Boolean CanRunFromDP
+    [OUT]   String PacakgeIds[]
+    [OUT]   String PackageNames[]
+};
+```
 
-## Parameters  
- `PackageID`  
- Data type: `String`  
+## Parameters
+ `PackageID`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Task sequence package identifier.  
+ Task sequence package identifier.
 
- `CanRunFromDP`  
- Data type: `Boolean`  
+ `CanRunFromDP`
+ Data type: `Boolean`
 
- Qualifiers: [id("1"), out]  
+ Qualifiers: [id("1"), out]
 
- `true` if the package can be run from the distribution point.  
+ `true` if the package can be run from the distribution point.
 
- `PacakgeIds`  
- Data type: `String Array`  
+ `PacakgeIds`
+ Data type: `String Array`
 
- Qualifiers: [id("2"), out]  
+ Qualifiers: [id("2"), out]
 
- Package identifiers for all referred packages for this task sequence that aren't shared.  
+ Package identifiers for all referred packages for this task sequence that aren't shared.
 
 > [!NOTE]
->  The incorrect spelling of the variable "PacakgeIds" is hardcoded in WMI.  
+>  The incorrect spelling of the variable "PacakgeIds" is hardcoded in WMI.
 
- `PackageNames`  
- Data type: `String Array`  
+ `PackageNames`
+ Data type: `String Array`
 
- Qualifiers: [id("3"), out]  
+ Qualifiers: [id("3"), out]
 
- Package names for all referred packages for this task sequence that aren't shared.  
+ Package names for all referred packages for this task sequence that aren't shared.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

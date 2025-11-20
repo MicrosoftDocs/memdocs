@@ -12,133 +12,133 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TopThreatsDetected Server WMI Class
-The `SMS_TopThreatsDetected` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats found in the last 24 hours per collection.  
+The `SMS_TopThreatsDetected` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that summarizes the top threats found in the last 24 hours per collection.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TopThreatsDetected : SMS_BaseClass  
-{  
-    String CollectionID;  
-    UInt32 MemberCount;  
-    UInt32 Rank;  
-    UInt32 ThreatCategoryID;  
-    UInt64 ThreatID;  
-    String ThreatName;  
-    UInt32 TotalMemberCount;  
-};  
-```  
+```
+Class SMS_TopThreatsDetected : SMS_BaseClass
+{
+    String CollectionID;
+    UInt32 MemberCount;
+    UInt32 Rank;
+    UInt32 ThreatCategoryID;
+    UInt64 ThreatID;
+    String ThreatName;
+    UInt32 TotalMemberCount;
+};
+```
 
-## Methods  
- The `SMS_TopThreatsDetected` class does not define any methods.  
+## Methods
+ The `SMS_TopThreatsDetected` class does not define any methods.
 
-## Properties  
- `CollectionID`  
- Data type: `String`  
+## Properties
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier of the collection summarized.  
+ Identifier of the collection summarized.
 
- `MemberCount`  
- Data type: `UInt32`  
+ `MemberCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of members with a threat.  
+ Count of members with a threat.
 
- `Rank`  
- Data type: `UInt32`  
+ `Rank`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Rank of threat exposure in collection (1 is greatest).  
+ Rank of threat exposure in collection (1 is greatest).
 
- `ThreatCategoryID`  
- Data type: `UInt32`  
+ `ThreatCategoryID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Category identifier of threat. Possible values are:  
+ Category identifier of threat. Possible values are:
 
-|CategoryID|Category|  
-|----------------|--------------|  
-|1|Adware|  
-|2|Spyware|  
-|3|Password Stealer|  
-|4|Trojan Downloader|  
-|5|Worm|  
-|6|Backdoor|  
-|8|Trojan|  
-|9|Email Flooder|  
-|11|Dialer|  
-|12|Monitoring Software|  
-|13|Browser Modifier|  
-|19|Joke Program|  
-|21|Software Bundler|  
-|22|Trojan Notifier|  
-|23|Settings Modifier|  
-|27|Potentially Unwanted Software|  
-|30|Exploit|  
-|32|Malware Creation Tool|  
-|33|Remote Control Software|  
-|34|Tool|  
-|36|Trojan Denial of Service|  
-|37|Trojan Dropper|  
-|38|Trojan Mass Mailer|  
-|39|Trojan Monitoring Software|  
-|40|Trojan Proxy Server|  
-|42|Virus|  
-|43|Permitted|  
-|44|Not Yet Classified|  
-|46|Suspicious Behavior|  
+|CategoryID|Category|
+|----------------|--------------|
+|1|Adware|
+|2|Spyware|
+|3|Password Stealer|
+|4|Trojan Downloader|
+|5|Worm|
+|6|Backdoor|
+|8|Trojan|
+|9|Email Flooder|
+|11|Dialer|
+|12|Monitoring Software|
+|13|Browser Modifier|
+|19|Joke Program|
+|21|Software Bundler|
+|22|Trojan Notifier|
+|23|Settings Modifier|
+|27|Potentially Unwanted Software|
+|30|Exploit|
+|32|Malware Creation Tool|
+|33|Remote Control Software|
+|34|Tool|
+|36|Trojan Denial of Service|
+|37|Trojan Dropper|
+|38|Trojan Mass Mailer|
+|39|Trojan Monitoring Software|
+|40|Trojan Proxy Server|
+|42|Virus|
+|43|Permitted|
+|44|Not Yet Classified|
+|46|Suspicious Behavior|
 
- `ThreatID`  
- Data type: `UInt64`  
+ `ThreatID`
+ Data type: `UInt64`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Threat identifier.  
+ Threat identifier.
 
- `ThreatName`  
- Data type: `String`  
+ `ThreatName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the threat.  
+ Name of the threat.
 
- `TotalMemberCount`  
- Data type: `UInt32`  
+ `TotalMemberCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total count of members in the collection.  
+ Total count of members in the collection.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

@@ -6,67 +6,67 @@ ms.date: 07/30/2018
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-ms.author: baladell 
-author: BalaDelli
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Content Library Explorer
 
 *Applies to: Configuration Manager (current branch)*
 
-Content Library Explorer is one of the [Configuration Manager tools](tools.md). Use the tool for the following activities:  
+Content Library Explorer is one of the [Configuration Manager tools](tools.md). Use the tool for the following activities:
 
-- Explore the content library on a specific distribution point  
+- Explore the content library on a specific distribution point
 
-- Troubleshoot issues with the content library  
+- Troubleshoot issues with the content library
 
-- Copy packages, contents, folders, and files out of the content library  
+- Copy packages, contents, folders, and files out of the content library
 
-- Redistribute packages to the distribution point  
+- Redistribute packages to the distribution point
 
-- Validate packages on remote distribution points  
+- Validate packages on remote distribution points
 
 
 
 ## Requirements
 
-- Run the tool using an account that has administrative access to:  
+- Run the tool using an account that has administrative access to:
 
-    - The target distribution point  
+    - The target distribution point
 
-    - The WMI provider on the site server  
+    - The WMI provider on the site server
 
-    - The Configuration Manager provider  
+    - The Configuration Manager provider
 
-- Only the **Full Administrator** and **Read-Only Analyst** roles have sufficient rights to view all information from this tool.  
+- Only the **Full Administrator** and **Read-Only Analyst** roles have sufficient rights to view all information from this tool.
 
-    - Other roles, such as **Application Administrator**, can view partial information. For more information, see [Disabled packages](#bkmk_disabled-packages).  
+    - Other roles, such as **Application Administrator**, can view partial information. For more information, see [Disabled packages](#bkmk_disabled-packages).
 
-    - The **Read-Only Analyst** can't redistribute packages from this tool.  
+    - The **Read-Only Analyst** can't redistribute packages from this tool.
 
-- Run the tool from any computer, as long as it can connect to:  
+- Run the tool from any computer, as long as it can connect to:
 
-    - The target distribution point  
+    - The target distribution point
 
-    - The primary site server  
+    - The primary site server
 
-    - The Configuration Manager provider  
+    - The Configuration Manager provider
 
-- If the distribution point is colocated with the site server, it's still necessary to have administrative access to the site server.  
+- If the distribution point is colocated with the site server, it's still necessary to have administrative access to the site server.
 
 
 
-## Usage 
+## Usage
 
 When you start **ContentLibraryExplorer.exe**, enter the fully qualified domain name (FQDN) of the target distribution point. It then connects to the distribution point. If the distribution point is part of a secondary site, it prompts you for the FQDN of the primary site server, and the primary site code.
 
 In the left pane, view the packages that are distributed to this distribution point. Expand the packages, and explore their folder structure. This structure matches the folder structure from which you created the package.
 
-When you select a folder, it displays in the right pane any files within the folder. This view includes the following information: 
+When you select a folder, it displays in the right pane any files within the folder. This view includes the following information:
 - File name
 - File size
 - Which drive it's on
@@ -78,15 +78,15 @@ The tool also connects to the Configuration Manager provider. This connection is
 
 ### <a name="bkmk_disabled-packages"></a> Disabled packages
 
-Some packages are present on the distribution point but not visible in the Configuration Manager console. These packages are marked with an asterisk (\*). No actions may be performed on these packages. Other packages may also be marked with an asterisk and have actions disabled. 
+Some packages are present on the distribution point but not visible in the Configuration Manager console. These packages are marked with an asterisk (\*). No actions may be performed on these packages. Other packages may also be marked with an asterisk and have actions disabled.
 
-There are three primary reasons for disabled packages:  
+There are three primary reasons for disabled packages:
 
-- The package is the Configuration Manager client upgrade. This package includes "ccmsetup.exe".  
+- The package is the Configuration Manager client upgrade. This package includes "ccmsetup.exe".
 
-- Your user account can't access the package, likely due to role-based administration. For instance, the **Application Author** role can't see driver packages in the console, so any driver packages on the distribution point are marked as disabled.  
+- Your user account can't access the package, likely due to role-based administration. For instance, the **Application Author** role can't see driver packages in the console, so any driver packages on the distribution point are marked as disabled.
 
-- The package is orphaned on the distribution point.  
+- The package is orphaned on the distribution point.
 
 
 ### Validate packages
@@ -109,11 +109,11 @@ Search for packages using **Edit** > **Find Package**. This action searches for 
 
 ## Limitations
 
-- The tool can't manipulate the content library directly in any way. Changes to the content library may result in malfunctions.  
+- The tool can't manipulate the content library directly in any way. Changes to the content library may result in malfunctions.
 
-- The tool can redistribute packages, but only to the target distribution point.  
+- The tool can redistribute packages, but only to the target distribution point.
 
-- When you colocate the distribution point with the site server, you can't validate package data. Use the Configuration Manager console instead. The tool still inspects the package to make sure that all the content is present, though not necessarily intact.  
+- When you colocate the distribution point with the site server, you can't validate package data. Use the Configuration Manager console instead. The tool still inspects the package to make sure that all the content is present, though not necessarily intact.
 
 - You can't delete content with this tool.
 

@@ -12,13 +12,13 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1705 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1705. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1705. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md) to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 **Known Issues in this Technical Preview:**
 -   **Operations Manager Suite connector does not upgrade**. When you upgrade from a previous version of the Technical Preview that had the OMS connector configured, that connector is not upgraded and is no longer available in the console. After upgrade, you must [use the Azure Services wizard](capabilities-in-technical-preview-1705.md#use-azure-services-wizard-to-configure-a-connection-to-oms) and reestablish connection to your OMS workspace.
@@ -32,26 +32,26 @@ This article introduces the features that are available in the Technical Preview
     Workaround details.
 -->
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 <!--  Rough Section Template
 ##  FEATURE
 
 ### Procedure 1
-### Try it out!  
+### Try it out!
  Try to complete the following tasks and then send us **Feedback** from the **Home** tab of the Ribbon to let us know how it worked:
  -  Task 1
- -  Task 2              
+ -  Task 2
 -->
 
-## Update reset tool  
+## Update reset tool
 You can use the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**, to fix issues when in-console updates have problems downloading or replicating. This tool is included with Technical Preview version 1705. You can find it on the site server of your technical preview site after you install the preview in the ***\cd.latest\SMSSETUP\TOOLS*** folder.
 
 You can use this tool with Technical Preview versions 1606 or later. This backwards support is provided so the tool can be used with a range of  technical preview update scenarios, and without having to wait until the next technical preview becomes available.
 
-You can use this tool when an in-console update has not yet installed and is in a failed state. A failed state can mean the update download remains in progress but is stuck and taking an excessively long time, perhaps hours longer than your historical expectations for update packages of similar size. It can also be a failure to replicate the update to child primary sites.  
+You can use this tool when an in-console update has not yet installed and is in a failed state. A failed state can mean the update download remains in progress but is stuck and taking an excessively long time, perhaps hours longer than your historical expectations for update packages of similar size. It can also be a failure to replicate the update to child primary sites.
 
-When you run the tool, it runs against the update that you specify. By default, the tool does not delete successfully installed or downloaded updates.  
+When you run the tool, it runs against the update that you specify. By default, the tool does not delete successfully installed or downloaded updates.
 
 ### Prerequisites
 The account you use to run the tool requires the following permissions:
@@ -62,13 +62,13 @@ The account you use to run the tool requires the following permissions:
 You will need the GUID of the update package that you want to reset. To get the GUID:
 -   In the console go to **Administration** > **Updates and Servicing** and then in the display pane, right-click the heading of one of the columns (like **State**), then select **Package Guid**. This adds that column to the display, and the column shows the update package GUID.
 
-> [!TIP]  
+> [!TIP]
 > To copy the GUID, select the row for the update package you want to reset, and then use CTRL+C to copy that row. If you paste your copied selection into a text editor, you can then copy only the GUID for use as a command line parameter when you run the tool.
 
-### Run the tool    
+### Run the tool
 The tool must be run on the top-level site of the hierarchy.
 
-When you run the tool, you use command line parameters to specify the SQL Server at the top-tier site of the hierarchy, the site database name, and the GUID of the update package you want to reset. The tool then identifies the additional servers it needs to access, based on the updates status.   
+When you run the tool, you use command line parameters to specify the SQL Server at the top-tier site of the hierarchy, the site database name, and the GUID of the update package you want to reset. The tool then identifies the additional servers it needs to access, based on the updates status.
 
 If the update package is in a *post download* state, the tool does not clean up the package. As an option, you can force the removal of a successfully downloaded update by using the force delete parameter (See command line parameters later in this topic).
 
@@ -76,7 +76,7 @@ After the tool runs:
 -   If a package was deleted, restart the top-tier sites SMS_Executive service and then check for updates to download the package again.
 -   If a package was not deleted, you do not need to take any action as the update will reinitialize and restart replication or installation.
 
-**Command line parameters:**  
+**Command line parameters:**
 
 
 |                        Parameter                         |                                                            Description                                                            |
@@ -87,15 +87,15 @@ After the tool runs:
 |           **-I &lt;SQL Server instance name>**           |                   *Optional* <br> Use this to identify the instance of SQL Server that hosts the site database.                   |
 |                       **-FDELETE**                       |                      *Optional* <br> Use this to force deletion of a successfully downloaded update package.                      |
 
- **Examples:**  
+ **Examples:**
  In a typical scenario, you want to reset an update that has download problems. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
  In a more extreme scenario, you want to force deletion of problematic update package. Your SQL Servers FQDN is *server1.fabrikam.com*, the site database is *CM_XYZ*, and the package GUID is *61F16B3C-F1F6-4F9F-8647-2A524B0C802C*.  You run: ***CMUpdateReset.exe  -FDELETE -S server1.fabrikam.com -D CM_XYZ -P 61F16B3C-F1F6-4F9F-8647-2A524B0C802C***
 
-### Test the tool with the Technical Preview  
+### Test the tool with the Technical Preview
 You can use this tool with Technical Preview versions 1606 or later. This backwards support is provided so that the tool can be used with a larger number of technical preview update scenarios, without having to wait until the next technical preview version is available.
 
-Run the tool on an update package for a technical preview prior to that update completing its prerequisite check. A completed prerequisite check state is identified by the one of the following Status for the package in **Administration** > **Updates and Servicing**:  
+Run the tool on an update package for a technical preview prior to that update completing its prerequisite check. A completed prerequisite check state is identified by the one of the following Status for the package in **Administration** > **Updates and Servicing**:
 -   **Prerequisite check passed**
 -   **Prerequisite check passed with warning**
 -   **Prerequisite check failed**
@@ -110,14 +110,14 @@ With this release, issues with how the Configuration Manager console scales and 
 Beginning with this technical preview, Peer Cache [no longer uses the Network Access Account](../plan-design/hierarchy/client-peer-cache.md) to authenticate download requests from peers.
 
 
-## Improvements for SQL Server Always On Availability Groups  
-With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager.  This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
+## Improvements for SQL Server Always On Availability Groups
+With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager.  This means you can add additional replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.
 
 - Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica.  See [site database recovery options](../servers/manage/recover-sites.md#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
 
 - This release does not support failover to use the asynchronous commit replica as your site database.
-  > [!CAUTION]  
-  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.  
+  > [!CAUTION]
+  > Because Configuration Manager does not validate the state of the asynchronous commit replica to confirm it is current, and [by design such a replica can be out of sync](/sql/database-engine/availability-groups/windows/overview-of-always-on-availability-groups-sql-server#AvailabilityModes), use of an asynchronous commit replica as the site database can put the integrity of your site and data at risk.
 
 - You can use the same number and type of replicas in an availability group as supported by the version of SQL Server that you use.   (Prior support was limited to two synchronous commit replicas.)
 
@@ -127,7 +127,7 @@ To add an asynchronous replica to an [availability group you use with Configurat
 ### Use the asynchronous replica to recover your site
 Before you use an asynchronous replica to recover your site database, you must stop the active primary site to prevent additional writes to the site database. After you stop the site, you can use an asynchronous replica in place of using a [manually recovered database](../servers/manage/recover-sites.md#use-a-site-database-that-has-been-manually-recovered).
 
-To stop the site, you can use the [hierarchy maintenance tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**   
+To stop the site, you can use the [hierarchy maintenance tool](../servers/manage/hierarchy-maintenance-tool-preinst.exe.md) to stop key services on the site server. Use the command line: **Preinst.exe /stopsite**
 
 Stopping the site is equivalent to stopping the Site Component Manager service (sitecomp) followed by the SMS_Executive service, on the site server.
 
@@ -258,12 +258,12 @@ Then, use the instructions in [How to deploy clients to Windows computers](../cl
 ## Use Azure Services Wizard to configure a connection to OMS
 Beginning with the 1705 technical preview release, you use the **Azure Services Wizard** to configure your connection from Configuration Manager to Operations Management Suite (OMS) cloud service. The wizard replaces previous workflows to configure this connection.
 
--   The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Microsoft Entra ID.  
+-   The wizard is used to configure cloud services for Configuration Manager, like OMS, Windows Store for Business (WSfB), and Microsoft Entra ID.
 
 -   Configuration Manager connects to OMS for features like Log Analytics or Upgrade Readiness.
 
 ### Prerequisites for the OMS Connector
-Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/azure/azure-monitor/platform/collect-sccm). That information is repeated here:  
+Prerequisites to configure a connection to OMS are unchanged from those [documented for the Current Branch version 1702](/azure/azure-monitor/platform/collect-sccm). That information is repeated here:
 
 -   Providing Configuration Manager permission to OMS.
 
@@ -282,9 +282,9 @@ Prerequisites to configure a connection to OMS are unchanged from those [documen
 
 4.  Select a web app:
 
-    -   **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.   
+    -   **Import**: To use a web app that already exists in your Azure subscription, click **Import**. Provide a friendly name for the app and the tenant, and then specify the Tenant ID, Client ID, and the secret key for the Azure web app that you want Configuration Manager to use. After you **Verify** the information, click **OK** to continue.
 
-    > [!NOTE]   
+    > [!NOTE]
     > When you configure OMS with this preview, OMS only supports the *import* function for a web app. Creating a new web app is not supported. Similarly, you cannot reuse an existing app for OMS.
 
 5.  If you accomplished all the other procedures successfully, then the information on the **OMS Connection Configuration** screen will automatically appear on this page. Information for the connection settings should appear for your **Azure subscription**, **Azure resource group**, and **Operations Management Suite Workspace**.

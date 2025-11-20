@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Add and assign MTD apps to Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Use Intune to add Mobile Threat Defense (MTD) apps, Microsoft Authenticator app, and iOS configuration policy in Microsoft Intune
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 07/19/2024
+ms.date: 06/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 00356258-76a8-4a84-9cf5-64ceedb58e72
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -52,9 +33,9 @@ Complete the following steps in Intune. Make sure you're familiar with the proce
 
 ## Configure Microsoft Authenticator for iOS
 
-For iOS devices, you need the [Microsoft Authenticator](/azure/multi-factor-authentication/end-user/microsoft-authenticator-app-how-to) so users can have their identities checked by Microsoft Entra ID. Additionally, you need an iOS app configuration policy that sets the MTD iOS app you use with Intune.
+For iOS devices, you need the [Microsoft Authenticator](https://support.microsoft.com/account-billing/download-microsoft-authenticator-351498fc-850a-45da-b7b6-27e523b8702a) so users can have their identities checked by Microsoft Entra ID. Additionally, you need an iOS app configuration policy that sets the MTD iOS app you use with Intune.
 
-See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Microsoft Authenticator app store URL](https://itunes.apple.com/us/app/microsoft-authenticator/id983156458?mt=8) when you configure **App information**.
+See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Microsoft Authenticator app store URL](https://apps.apple.com/us/app/microsoft-authenticator/id983156458) when you configure **App information**.
 
 ## Configure your MTD apps with an app configuration policy
 
@@ -108,24 +89,24 @@ For general guidance about Intune app configuration policies, see the following 
 
   1. In the **Jamf Portal**, select the **Add** button under **Configuration settings** format.
   2. Select **Activation Profile URL** from the list of **Configuration Keys**. Select **OK**.
-  3. For **Activation Profile URL** select **string** from the **Value type** menu then copy the **Shareable Link URL** from the desired Activation Profile in RADAR.
+  3. For **Activation Profile URL** select **string** from the **Value type** menu then copy the **Shareable Link URL** from the desired Activation Profile in Jamf Security Cloud.
   4. In the **Intune admin center app configuration UI**, select **Settings**, define **Configuration settings format > Use Configuration Designer** and paste the **Shareable Link URL**.
 
   > [!NOTE]
   >
-  > Unlike iOS, you will need to define a unique Android Enterprise app configuration policy for each Activation Profile. If you don’t require multiple Activation Profiles, you may use a single Android app configuration for all target devices. When creating Activation Profiles in Jamf, be sure to select Microsoft Entra ID under the Associated User configuration to ensure Jamf is able to synchronize the device with Intune via UEM Connect.
+  > Unlike iOS, you'll need to define a unique Android Enterprise app configuration policy for each Activation Profile. If you don't require multiple Activation Profiles, you can use a single Android app configuration for all target devices. When creating Activation Profiles in Jamf, be sure to select Microsoft Entra ID under the Associated User configuration to ensure Jamf is able to synchronize the device with Intune via UEM Connect.
 
 - **iOS**:  
-  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Jamf iOS app configuration policy using the information below when prompted.
+  See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Jamf iOS app configuration policy using the following information when prompted.
 
-  1. In **Jamf Portal**, navigate to **Devices > Activations** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
+  1. In **Jamf Security Cloud**, navigate to **Devices > Activation profiles** and select any activation profile. Select **Deployment Strategies > Managed Devices > Microsoft Intune** and locate the **iOS App Configuration settings**.
   2. Expand the box to reveal the iOS app configuration XML and copy it to your system clipboard.
   3. In **Intune admin center app configuration UI Settings,** define **Configuration settings format > Enter XML data**.
   4. Paste the XML in the app configuration text box.
 
   > [!NOTE]
   >
-  > A single iOS configuration policy may be used across all devices that are to be provisioned with Jamf.  
+  > A single iOS configuration policy can be used across all devices that are to be provisioned with Jamf.
 
 ### Lookout for Work app configuration policy
 
@@ -133,7 +114,7 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
 ### Pradeo app configuration policy
 
-Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
+Pradeo doesn't support application configuration policy on iOS/iPadOS. Instead, to get a configured app, work with Pradeo to implement custom IPA or APK files that are preconfigured with the settings you want.
 
 ### SentinelOne app configuration policy
 
@@ -149,11 +130,11 @@ Pradeo doesn't support application configuration policy on iOS/iPadOS.  Instead,
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
-  | Configuration key  | Value type | Configuration value  |
+  | Configuration key | Value type | Configuration value |
   |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the SentinelOne console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the SentinelOne console  |
+  |  MDMDeviceID | string | `{{AzureADDeviceId}}` |
+  |  tenantid | string | Copy value from admin console *Manage* page in the SentinelOne console |
+  |  defaultchannel | string | Copy value from admin console *Manage* page in the SentinelOne console |
 
 ### SEP Mobile app configuration policy
 
@@ -172,7 +153,7 @@ Use the same Microsoft Entra account previously configured in the [Symantec Endp
 
   > [!NOTE]
   >
-  > If you are unable to retrieve the files, contact [Symantec Endpoint Protection Mobile Enterprise Support](https://support.symantec.com/en_US/contact-support.html).
+  > If you're unable to retrieve the files, contact [Symantec Endpoint Protection Mobile Enterprise Support](https://support.symantec.com/en_US/contact-support.html).
 
 ### Sophos Mobile app configuration policy
 
@@ -185,22 +166,22 @@ Create the iOS app configuration policy as described in the [using iOS app confi
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
-  | Configuration key  | Value type | Configuration value  |
+  | Configuration key | Value type | Configuration value |
   |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
+  |  MDMDeviceID | string | `{{AzureADDeviceId}}` |
+  |  tenantid | string | Copy value from admin console *Manage* page in the Trellix console |
+  |  defaultchannel | string | Copy value from admin console *Manage* page in the Trellix console |
 
 - **iOS**:  
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Trellix Mobile Security iOS app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
-  | Configuration key  | Value type | Configuration value  |
+  | Configuration key | Value type | Configuration value |
   |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the Trellix console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Trellix console  |
+  |  MDMDeviceID | string | `{{AzureADDeviceId}}`  |
+  |  tenantid | string | Copy value from admin console *Manage* page in the Trellix console |
+  |  defaultchannel | string | Copy value from admin console *Manage* page in the Trellix console |
 
 ### Trend Micro Mobile Security as a Service app configuration policy
 
@@ -208,27 +189,28 @@ See the instructions for [using Microsoft Intune app configuration policies for 
 
 ### Zimperium app configuration policy
 
-- **Android Enterprise**:  
+- **Android Enterprise**:
+
   See the instructions for [using Microsoft Intune app configuration policies for Android](../apps/app-configuration-policies-use-android.md) to add the Zimperium Android app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
-  | Configuration key  | Value type | Configuration value  |
+  | Configuration key | Value type | Configuration value |
   |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the Zimperium console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Zimperium console  |
+  |  MDMDeviceID | string | `{{AzureADDeviceId}}` |
+  |  tenantid | string | Copy value from admin console *Manage* page in the Zimperium console |
+  |  defaultchannel | string | Copy value from admin console *Manage* page in the Zimperium console |
 
 - **iOS**:  
   See the instructions for [using Microsoft Intune app configuration policies for iOS](../apps/app-configuration-policies-use-ios.md) to add the Zimperium iOS app configuration policy.
 
   For **Configuration settings format**, select **Use configuration designer**, and add the following settings:
 
-  | Configuration key  | Value type | Configuration value  |
+  | Configuration key | Value type | Configuration value |
   |---|---|---|
-  |  MDMDeviceID | string  | `{{AzureADDeviceId}}`  |
-  |  tenantid | string  | Copy value from admin console “Manage” page in the Zimperium console |
-  |  defaultchannel | string   | Copy value from admin console “Manage” page in the Zimperium console  |
+  |  MDMDeviceID | string | `{{AzureADDeviceId}}` |
+  |  tenantid | string | Copy value from admin console *Manage* page in the Zimperium console |
+  |  defaultchannel | string | Copy value from admin console *Manage* page in the Zimperium console |
 
 ## Assigning Mobile Threat Defense apps to end users via Intune
 
@@ -256,7 +238,7 @@ Choose the section that corresponds to your MTD provider:
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/activeshield/id980234260?mt=8&uo=4) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/activeshield/id980234260) for the **Appstore URL**.
 
 ### Assigning Check Point Harmony Mobile Protect
 
@@ -273,7 +255,7 @@ Choose the section that corresponds to your MTD provider:
   - Use the URL for [CrowdStrike Falcon](https://play.google.com/store/apps/details?id=com.crowdstrike.falconmobile) from the app store for the **Appstore URL**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). 
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
   - Use the URL for [CrowdStrike Falcon](https://apps.apple.com/us/app/crowdstrike-falcon/id1458815656) from the app store for the **Appstore URL**.
 
 ### Assigning Jamf
@@ -290,10 +272,10 @@ Choose the section that corresponds to your MTD provider:
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Lookout for work Google app store URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise) for the **Appstore URL**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Lookout for Work iOS app store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Lookout for Work iOS app store URL](https://itunes.apple.com/us/app/lookout-for-work/id997193468) for the **Appstore URL**.
 
 - **Lookout for Work app outside the Apple store**:
-  - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate. Contact Lookout for Work for detailed instructions on this process. 
+  - You must re-sign the Lookout for Work iOS app. Lookout distributes its Lookout for Work iOS app outside of the iOS App Store. Before distributing the app, you must re-sign the app with your iOS Enterprise Developer Certificate. Contact Lookout for Work for detailed instructions on this process.
 
   - **Enable Microsoft Entra authentication for Lookout for Work iOS app users.**
 
@@ -309,18 +291,18 @@ Choose the section that corresponds to your MTD provider:
 
     > [!NOTE]
     >
-    > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad#optional-configure-a-native-client-application) for more details.
+    > See [Configure your App Service or Azure Functions app to use Microsoft Entra sign-in](/azure/app-service/configure-authentication-provider-aad?tabs=workforce-configuration#-configure-client-apps-to-access-app-service) for more details.
 
-  - **Add the Lookout for Work ipa file.**
+  - **Add the Lookout for Work ipa file.**  
     - Upload the re-signed .ipa file as described in the [Add iOS LOB apps with Intune](../apps/lob-apps-ios.md) article. You also need to set the minimum OS version to iOS 8.0 or later.
 
 ### Assigning Pradeo
 
 - **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Pradeo app store URL](https://play.google.com/store/apps/details?id=net.pradeo.service&hl=en_US) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Pradeo app store URL](https://play.google.com/store/apps/details?id=net.pradeo.service) for the **Appstore URL**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo app store URL](https://www.apple.com/app-store) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Pradeo app store URL](https://apps.apple.com/us/app/pradeo-security/id6743930611) for the **Appstore URL**.
 
 ### Assigning SentinelOne
 
@@ -336,15 +318,15 @@ Choose the section that corresponds to your MTD provider:
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Sophos app store URL](https://play.google.com/store/apps/details?id=com.sophos.smsec) for the **Appstore URL**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [ActiveShield app store URL](https://itunes.apple.com/us/app/sophos-mobile-security/id1086924662) for the **Appstore URL**.
 
 ### Assigning Symantec Endpoint Protection Mobile
 
 - **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [SEP Mobile app store URL](https://play.google.com/store/apps/details?id=com.skycure.skycure) for the **Appstore URL**.  For **Minimum operating system**, select **Android 4.0 (Ice Cream Sandwich)**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [SEP Mobile app store URL](https://play.google.com/store/apps/details?id=com.skycure.skycure) for the **Appstore URL**. For **Minimum operating system**, select **Android 4.0 (Ice Cream Sandwich)**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SEP Mobile app store URL](https://itunes.apple.com/us/app/skycure/id695620821?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [SEP Mobile app store URL](https://itunes.apple.com/us/app/skycure/id695620821) for the **Appstore URL**.
 
 ### Assigning Trellix Mobile Security
 
@@ -357,10 +339,10 @@ Choose the section that corresponds to your MTD provider:
 ### Assigning Zimperium
 
 - **Android**:
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium app store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips&hl=en) for the **Appstore URL**.
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Zimperium app store URL](https://play.google.com/store/apps/details?id=com.zimperium.zips) for the **Appstore URL**.
 
 - **iOS**:
-  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459?mt=8) for the **Appstore URL**.
+  - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Zimperium app store URL](https://itunes.apple.com/us/app/zimperium-zips/id1030924459) for the **Appstore URL**.
 
 ## Next steps
 

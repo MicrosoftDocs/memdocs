@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2207 of Configuration Manager current branch
@@ -26,7 +26,7 @@ To take full advantage of new Configuration Manager features, after you update t
 
 ## Cloud-attached management
 
-### Use Intune role-based access control (RBAC) for tenant attached devices 
+### Use Intune role-based access control (RBAC) for tenant attached devices
 <!--8126836, 6415648, 8348644, IN14996522, 13058986-->
 
 You can now use Intune role-based access control (RBAC) when interacting with tenant attached devices from the Microsoft Intune admin center. For example, when using Intune as the role-based access control authority, a user with Intune's [Help Desk Operator role](../../../../intune-service/fundamentals/role-based-access-control.md#built-in-roles) doesn't need an assigned security role or additional permissions from Configuration Manager. For more information, see [Intune role-based access control for tenant attached clients](../../../cloud-attach/use-intune-rbac.md).
@@ -34,13 +34,13 @@ You can now use Intune role-based access control (RBAC) when interacting with te
 ### Enhanced security for Configuration Manager administration service
 <!--12952905-->
 We're introducing a new cloud application with limited access to the administration service. This feature allows cloud management gateway (CMG) to segment the admin privileges between a management point, and the administration service. This enables CMG to restrict access to the administration service. This feature gives admins granular access controls through which users can have access to the administration service and to enforce MFA if necessary.
- 
+
 For more information, see [Configure Azure services for use with Configuration Manager](../../servers/deploy/configure/azure-services-wizard.md).
 
 ### Simplified application deployment approval
 <!--13351390#-->
 
-An administrator can now approve or deny the request for deploying an application on a device from anywhere they have internet access by selecting a link in the email notification. This feature requires admins to manually add the CMG URL in the Azure Active Directory app as single page application redirect URI. 
+An administrator can now approve or deny the request for deploying an application on a device from anywhere they have internet access by selecting a link in the email notification. This feature requires admins to manually add the CMG URL in the Azure Active Directory app as single page application redirect URI.
 
 For more information, see [Create an app registration in Azure AD for your app service app](../../../apps/deploy-use/app-approval.md#to-take-action-from-internet).
 
@@ -48,7 +48,7 @@ For more information, see [Create an app registration in Azure AD for your app s
 
 ### Include and prefer a cloud source for a management point in a default boundary group
 <!--10674394-->
-Until 2203 current branch, you didn’t have an option to prefer a CMG as a management point in a default boundary group. The clients falling back to a default boundary group could only communicate to non-cloud-based management points. 
+Until 2203 current branch, you didn’t have an option to prefer a CMG as a management point in a default boundary group. The clients falling back to a default boundary group could only communicate to non-cloud-based management points.
 
 When a site is initially installed, there's a default site boundary group created for each site, and all the clients use it by default until they're assigned to a custom boundary group.
 
@@ -68,7 +68,7 @@ For more information, see the [compliance settings group of client settings](../
 <!--## Collections-->
 
 
- 
+
 <!-- ## Software Center -->
 
 ## Software updates
@@ -85,14 +85,14 @@ For more information, see [Process to create a folder for automatic deployment r
 
 Based upon your feedback, we have enhanced monthly maintenance windows scheduling. You can now set monthly maintenance window schedules to better align deployments with the release of monthly software updates by configuring offsets. For example, using an offset of two days after the second Tuesday of the month, sets the maintenance window for Thursday.
 
-For more information, see [How to use maintenance windows in Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md). 
+For more information, see [How to use maintenance windows in Configuration Manager](../../../core/clients/manage/collections/use-maintenance-windows.md).
 
 <!--## OS deployment-->
 
 
 ## Endpoint Protection
 
-### Improved Microsoft Defender for Endpoint (MDE) onboarding for Windows Server 2012 R2 and Windows Server 2016 
+### Improved Microsoft Defender for Endpoint (MDE) onboarding for Windows Server 2012 R2 and Windows Server 2016
 <!--9265511-->
 Configuration Manager version 2207 now supports automatic deployment of modern, unified Microsoft Defender for Endpoint for Windows Server 2012 R2 & 2016. Windows Server 2012 and 2016 devices that are targeted with Microsoft Defender for Endpoint onboarding policy will use the unified agent versus the existing Microsoft Monitoring Agent based solution, if configured through Client Settings.
 
@@ -101,16 +101,16 @@ For more information, see [Microsoft Defender for Endpoint onboarding](../../../
 ### Enhanced protection for untrusted environments
 <!-- 14059872 -->
 
-1. Windows Defender Application Guard is now called Microsoft Defender Application Guard in the console. 
+1. Windows Defender Application Guard is now called Microsoft Defender Application Guard in the console.
 
-1. The **General** settings page in the Microsoft Defender Application Guard now allows you to create policies within Configuration Manager to protect your employees using Microsoft Edge and isolated Windows environments. 
+1. The **General** settings page in the Microsoft Defender Application Guard now allows you to create policies within Configuration Manager to protect your employees using Microsoft Edge and isolated Windows environments.
 
-1. The **Application Behavior** settings page allows you to enable or disable cameras and microphones, along with certificate matching of the thumbprints to the isolated container. 
+1. The **Application Behavior** settings page allows you to enable or disable cameras and microphones, along with certificate matching of the thumbprints to the isolated container.
 
 1. The following items were removed:
    - The Enterprise sites can load non-enterprise content, such as third-party plug-in settings, under the **Host interaction** page.
    - The file trust criteria policy, under the **File Management** page.
-   
+
 For more information, see [Create and deploy Microsoft Defender Application Guard policy](../../../protect/deploy-use/create-deploy-application-guard-policy.md#create-a-policy-and-to-browse-the-available-settings).
 
 <!--## Application management-->
@@ -125,16 +125,16 @@ For more information, see [Create and deploy Microsoft Defender Application Guar
 
 ### Improvements to the console
 
-- When performing a search on any node in the console, the search bar will now include a **Path** criteria to show that subfolders in the node are included in the search. 
-    
+- When performing a search on any node in the console, the search bar will now include a **Path** criteria to show that subfolders in the node are included in the search.
+
   - The path criteria is informational and can’t be edited.
 
-  - By default, all subfolders will be searched when you perform a search in any node that contains subfolders. You can narrow down the search by selecting the “Current Node” option from the search toolbar. 
+  - By default, all subfolders will be searched when you perform a search in any node that contains subfolders. You can narrow down the search by selecting the “Current Node” option from the search toolbar.
 
 ### Improvements to the dark theme
 
 The dark theme has been available as a pre-release feature since 2203. In this release we've extended the dark theme to additional components such as buttons, context menus, and hyperlinks. Enable this pre-release feature to experience the dark theme.
-  
+
 
 <!--14908615-->
 

@@ -12,33 +12,33 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ITSEnvClass::GetVariables Method
-In Configuration Manager, the `GetVariables` method gets the variables for the operating system deployment task sequence environment.  
+In Configuration Manager, the `GetVariables` method gets the variables for the operating system deployment task sequence environment.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT GetVariables(  
-     VARIANT* variables  
-);  
-```  
+```
+[IDL]
+HRESULT GetVariables(
+     VARIANT* variables
+);
+```
 
-#### Parameters  
- `variables`  
- Data type: `VARIANT`  
+#### Parameters
+ `variables`
+ Data type: `VARIANT`
 
- Qualifiers: [out, retval]  
+ Qualifiers: [out, retval]
 
- Pointer to the environment variables.  
+ Pointer to the environment variables.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following value.  
+## Return Values
+ An `HRESULT` code. Possible values include, but are not limited to, the following value.
 
- S_OK  
- The method succeeded.  
+ S_OK
+ The method succeeded.
 
-## See Also  
+## See Also
  [ITSEnvClass Interface](../../../../../develop/reference/core/clients/client-classes/itsenvclass-interface.md)

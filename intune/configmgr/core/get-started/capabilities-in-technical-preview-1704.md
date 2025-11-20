@@ -12,21 +12,21 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1704 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1704. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1704. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ## Configure Android apps with app configuration policies
 You can use app configuration policies in Configuration Manager to distribute settings that might be required when a user runs an app on Android for Work devices. Android app configuration policies are available only on devices running Android for Work and apply to approved apps from the Play for Work store.
 
-### Try it out                 
+### Try it out
 
 In the Configuration Manager console, choose **Software Library** > **Application Management** > **App Configuration Policies** and choose **Create App Configuration Policy**. On the **General** page of the wizard, you can now **Select a configuration policy type**. Specify the platform targeted by the app configuration policy: **Configuration policy for Android for Work apps**. You can then either **Specify name and value pairs** or **Browse to a property list JSON file**. The new app configuration policy is shown in the **Software Library** workspace, in the **App Configuration Policies** node. To associate an app configuration policy with the deployment of an Android for Work app, deploy the application as you normally would by using the procedure in the [Deploy applications](../../apps/deploy-use/deploy-applications.md) topic.
 
@@ -34,7 +34,7 @@ In the Configuration Manager console, choose **Software Library** > **Applicatio
 Hardware inventory now collects information about whether Secure Boot is enabled on clients. This information is stored in the **SMS_Firmware** class (introduced in version 1702) and enabled in hardware inventory by default. For more information about hardware inventory, see  [How to configure hardware inventory](../clients/manage/inventory/configure-hardware-inventory.md).
 
 ## Add child task sequences to a task sequence
-In this version, you can add a new task sequence step that runs another task sequence, which creates a parent/child relationship between the task sequences. This allows you to create more modular task sequences that you can re-use.  
+In this version, you can add a new task sequence step that runs another task sequence, which creates a parent/child relationship between the task sequences. This allows you to create more modular task sequences that you can re-use.
 
 Consider the following when you add a child task sequence to a task sequence:
 
@@ -43,13 +43,13 @@ Consider the following when you add a child task sequence to a task sequence:
 - The environment is global. For example, if a variable is set by the parent task sequence and then changed by the child task sequence, the variable remains changed moving forward. Similarly, if the child task sequence creates a new variable, the variable is available for the remaining steps in the parent task sequence.
 - Status messages are sent per normal for a single task sequence operation.
 - The task sequences write entries to the smsts.log file, with new log entries that make it clear when a child task sequence starts.
-- In the Technical Preview for Configuration Manager, version 1704, if the child task sequences references any package and you run the parent task sequence from Software Center, the client will not find the package content when the child task sequence is run. In this scenario, you must run the task sequence from media (boot media, PXE, etc.).  
+- In the Technical Preview for Configuration Manager, version 1704, if the child task sequences references any package and you run the parent task sequence from Software Center, the client will not find the package content when the child task sequence is run. In this scenario, you must run the task sequence from media (boot media, PXE, etc.).
 
     If the child task sequence uses steps like **Run Command Line** (without any package reference), **Format**, **BitLocker**, etc., then the task sequence will run successfully from Software Center.
 
 ### To add a child task sequence to a task sequence
 1. In the task sequence editor, click **Add**, select **General**, and click **Run Task Sequence**.
-2. Click **Browse** to select the child task sequence.  
+2. Click **Browse** to select the child task sequence.
 
 ## Reload boot images with current Windows PE version
 When you run **Update Distribution Points** on a selected boot image, you can now choose to reload the latest version of Windows PE (from the Windows ADK installation directory) in the boot image. The **General** page of the wizard provides information about the Windows ADK version installed on the site server, the Windows ADK version from which Windows PE was used in the boot image, and the version of the Configuration Manager client. You can use this information to help you decide whether to reload the boot image. Also, a new column (**Client Version**) has been added when you view boot images in the **Boot Images** node so you know what version of the Configuration Manager client each boot image uses.

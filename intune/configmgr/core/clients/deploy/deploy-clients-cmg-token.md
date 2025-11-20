@@ -6,12 +6,12 @@ ms.date: 02/16/2022
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Token-based authentication for cloud management gateway
@@ -109,7 +109,7 @@ Create a new bulk registration token.
 Example: `BulkRegistrationTokenTool.exe /new`
 
 The tool displays the following information:
-  
+
 - A GUID that the site uses to track issued tokens
 - The token validity period, which is three days by default.
 - The bulk registration token.
@@ -146,7 +146,7 @@ You can filter or sort on the **Type** column. Identify specific bulk registrati
 
 ## Token Signing
 
-The token the client gets the from the Management Point (when registered internally) or when installed using the Bulk token is signed by the *SMS Token Signing Certificate*. 
+The token the client gets the from the Management Point (when registered internally) or when installed using the Bulk token is signed by the *SMS Token Signing Certificate*.
 This is a self-signed certificate created by the Certificate Manager component using the **SMS Issuing** root certificate. The Configuration Manager-issued token includes the reference of the SMS Token Signing Certificate, apart from other auth headers when sending a request to the Management Point via the CMG.
 
 While it's not typical that the SMS Issuing or the SMS Token Signing Certificate needs to be renewed, there are some uncertain scenarios that can require the certificate be renewed:

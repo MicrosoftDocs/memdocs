@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1611 for Configuration Manager
 
@@ -20,21 +20,21 @@ ms.reviewer: mstewart,aaroncz
 
 
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1611. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory article, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1611. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory article, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
-**Known Issues in this Technical Preview:**   
+**Known Issues in this Technical Preview:**
 - ***Prerequisite status***: When you install version 1611, the overall status for prerequisites might show as passed with warnings, but doesn't list which prerequisites caused the warnings. These warnings can be caused by the following two prerequisites:
   - SQL Server Index Create Memory options
-  - Checks for supported SQL Server version  
+  - Checks for supported SQL Server version
 
   Because these alerts are only warnings, they can be ignored.
 
-- ***PowerShell***: When you connect to Windows PowerShell from the Configuration Manager console, you might receive the following error: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml is not digitally signed**.  
+- ***PowerShell***: When you connect to Windows PowerShell from the Configuration Manager console, you might receive the following error: **Microsoft.ConfigurationManagement.PowerShell.Types.ps1xml is not digitally signed**.
 
    You can resolve this issue by replacing certain files with signed versions from version 1610. Copy all files with the following extensions from the **&lt;install directory>\AdminConsole\bin\\** folder in your version 1610 installation: **.psd1**, **.ps1xml**, and **.psm1**. Paste these files into the **&lt;install directory>\AdminConsole\bin\\** folder in your Technical Preview 1611 installation, overwriting the 1611 version of the files.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ## Pre-cache content for available deployments and task sequences
 In this technical preview, for available deployments and task sequences, you can choose to use the pre-cache feature to have clients download only relevant content before a user installs the content.
@@ -52,12 +52,12 @@ The pre-cache content feature gives you the option to allow the client to only d
 
     ![pre-cache properties](media/precacheproperties2.png)
 
-    ![pre-cache options](media/precacheoptions2.png)  
+    ![pre-cache options](media/precacheoptions2.png)
 
 3. Deploy the task sequence. For the pre-cache feature, do the following configuration:
     - On the **General** tab, select **Pre-download content for this task sequence**.
     - On the **Deployment settings** tab, configure the task sequence with the **Available** for **Purpose**. If you create a **Required** deployment, the pre-cache functionality won't work.
-    - On the **Scheduling** tab, for the **Schedule when this deployment will be available** setting, choose a time in the future that gives clients enough time to pre-cache the content before the deployment is made available to users. For example, you can set the available time to be 3 hours in the future to allow enough time for the content to be pre-cached.  
+    - On the **Scheduling** tab, for the **Schedule when this deployment will be available** setting, choose a time in the future that gives clients enough time to pre-cache the content before the deployment is made available to users. For example, you can set the available time to be 3 hours in the future to allow enough time for the content to be pre-cached.
     - On the **Distribution Points** tab, configure the **Deployment options** settings. If the content isn't pre-cached on a client before a user starts the installation, these settings are used.
 
 

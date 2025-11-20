@@ -12,115 +12,115 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_InventoryClass Server WMI Class
-The `SMS_InventoryClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents inventory classes that exist in the system.  
+The `SMS_InventoryClass` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents inventory classes that exist in the system.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_InventoryClass :    
-{  
-    String ClassName;  
-    Boolean IsDeletable;  
-    String Namespace;  
-    InventoryClassProperty Properties[];  
-    String SMSClassID;  
-    String SMSContext;  
-    String SMSDeviceUri;  
-    String SMSGroupName;  
-};  
-```  
+```
+Class SMS_InventoryClass :
+{
+    String ClassName;
+    Boolean IsDeletable;
+    String Namespace;
+    InventoryClassProperty Properties[];
+    String SMSClassID;
+    String SMSContext;
+    String SMSDeviceUri;
+    String SMSGroupName;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_InventoryClass` class.  
+## Methods
+ The following table lists the methods in the `SMS_InventoryClass` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|GetInventoryClassesFromMof Method in Class SMS_InventoryClass|For internal use only.|  
+|Method|Description|
+|------------|-----------------|
+|GetInventoryClassesFromMof Method in Class SMS_InventoryClass|For internal use only.|
 
-## Properties  
- `ClassName`  
- Data type: `String`  
+## Properties
+ `ClassName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The WMI name of the inventory class.  
+ The WMI name of the inventory class.
 
- `IsDeletable`  
- Data type: `Boolean`  
+ `IsDeletable`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- For internal use only.  
+ For internal use only.
 
- `Namespace`  
- Data type: `String`  
+ `Namespace`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The WMI namespace.  
+ The WMI namespace.
 
- `Properties`  
- Data type: `Object Array`  
+ `Properties`
+ Data type: `Object Array`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The properties of this class.  
+ The properties of this class.
 
- `SMSClassID`  
- Data type: `String`  
+ `SMSClassID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The Class ID that will be used to generate the database table, view and the UI SDK class.  
+ The Class ID that will be used to generate the database table, view and the UI SDK class.
 
- `SMSContext`  
- Data type: `String`  
+ `SMSContext`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- SMS contexts in XML format. This can support multiple contexts.  
+ SMS contexts in XML format. This can support multiple contexts.
 
- `SMSDeviceUri`  
- Data type: `String`  
+ `SMSDeviceUri`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- SMS device URI in XML format. This could support multiple device URIs.  
+ SMS device URI in XML format. This could support multiple device URIs.
 
- `SMSGroupName`  
- Data type: `String`  
+ `SMSGroupName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The default class name displayed in the MOF editor and Resource Explorer, if no localized resources are provided.  
+ The default class name displayed in the MOF editor and Resource Explorer, if no localized resources are provided.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

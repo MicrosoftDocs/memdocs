@@ -1,41 +1,19 @@
 ---
-# required metadata
-
-title: Add an unmanaged macOS PKG app to Microsoft Intune
-titleSuffix:
+title: Add an Unmanaged macOS PKG App to Microsoft Intune
 description: Learn about how to add an unmanaged macOS PKG app to Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 07/12/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - macOS
 - highpri
 - FocusArea_Apps_MacOS
 ---
 
-# Add an unmanaged macOS PKG app to Microsoft Intune
+# Add an Unmanaged macOS PKG App to Microsoft Intune
 
-Use the information in this article to help you add an unmanaged macOS PKG app to Microsoft Intune. To deploy a managed PKG app, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune.](../apps/lob-apps-macos.md) 
+Use the information in this article to help you add an unmanaged macOS PKG app to Microsoft Intune. To deploy a managed PKG app, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune.](../apps/lob-apps-macos.md)
 
 ## Prerequisites
 
@@ -129,9 +107,9 @@ You can use detection rules to choose how an app installation is detected on a m
 > [!TIP]
 >
 > The `CFBundleIdentifier` and `CFBundleShortVersionString` can be found under the ```<app_name>.app/Contents/Info.plist``` file of an installed app on a Mac.
-> 
+>
 > Alternatively, Mac Terminal can be used to look up and confirm the included app details of an installed app at a known location.
-> 
+>
 > For example, to look up the bundle ID and build number of Company Portal, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`<br>Then, run the following:<br> `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleShortVersionString` <br/><br/>For apps added to Intune, [you can use the Intune admin center to get the app bundle ID](../apps/get-app-bundle-id-intune-admin-center.md).
 
 ## Step 5 – Select scope tags (optional)

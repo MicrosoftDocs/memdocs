@@ -1,36 +1,17 @@
 ---
-# required metadata
-
-title: Try Microsoft Intune for free
-titleSuffix: 
+title: Try Microsoft Intune for Free
 description: Create a free trial subscription, understand supported configurations and networking requirements, and optionally configure your domain name.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
 
-# Try Microsoft Intune for free
+# Try Microsoft Intune for Free
 
 Microsoft Intune helps you protect your workforce's corporate data by managing devices and apps. In this article, you'll create a free subscription to try Intune in a test environment.
 
@@ -138,7 +119,7 @@ For more information about the MDM authority, see [Set the mobile device managem
 
 ## Configure your custom domain name (Optional)
 
-As mentioned above, if your organization has its own custom domain that you want to use without **.onmicrosoft.com**, you can change it in the Microsoft 365 admin center. You can add, verify, and configure your custom domain name using the following steps.  
+As mentioned above, if your organization has its own custom domain that you want to use without **.onmicrosoft.com**, you can change it in the Microsoft 365 admin center. You can add, verify, and configure your custom domain name using the following steps.
 
 > [!IMPORTANT]
 > You cannot rename or remove the *initial* **onmicrosoft.com** part of the domain name. However, you can add, verify or remove *custom* domain names used with Intune to keep your business identity clear. For more information, see [Configure a custom domain name](custom-domain-name-configure.md).

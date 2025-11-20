@@ -12,51 +12,51 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ImageServicingScheduledUpdate Server WMI Class
-The `SMS_ImageServicingScheduledUpdate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all schedules for one software update in offline servicing image.  
+The `SMS_ImageServicingScheduledUpdate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all schedules for one software update in offline servicing image.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ImageServicingScheduledUpdate : SMS_BaseClass  
-{  
-    SInt32 ScheduleID;  
-    SInt32 UpdateID;  
-};  
-```  
+```
+Class SMS_ImageServicingScheduledUpdate : SMS_BaseClass
+{
+    SInt32 ScheduleID;
+    SInt32 UpdateID;
+};
+```
 
-## Methods  
- The `SMS_ImageServicingScheduledUpdate` class does not define any methods.  
+## Methods
+ The `SMS_ImageServicingScheduledUpdate` class does not define any methods.
 
-## Properties  
- `ScheduleID`  
- Data type: `SInt32`  
+## Properties
+ `ScheduleID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID for software update installation schedule.  
+ ID for software update installation schedule.
 
- `UpdateID`  
- Data type: `SInt32`  
+ `UpdateID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- ID for software update in offline servicing image.  
+ ID for software update in offline servicing image.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

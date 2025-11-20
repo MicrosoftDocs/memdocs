@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # IProgressUI::ShowRebootDialog method
 
-In Configuration Manager, the `ShowRebootDialog` method displays customizable reboot warning dialog box.  
+In Configuration Manager, the `ShowRebootDialog` method displays customizable reboot warning dialog box.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT ShowRebootDialog(  
-     BSTR pszOrgName,  
-     BSTR pszTaskSequenceName,  
-     BSTR pszCustomTitle,  
-     BSTR pszRebootMessage,  
-     ULONG uErrorCode,  
-     ULONG uTimeoutInSeconds,  
-);  
-```  
+```
+[IDL]
+HRESULT ShowRebootDialog(
+     BSTR pszOrgName,
+     BSTR pszTaskSequenceName,
+     BSTR pszCustomTitle,
+     BSTR pszRebootMessage,
+     ULONG uErrorCode,
+     ULONG uTimeoutInSeconds,
+);
+```
 
 ### Parameters
 
 #### `pszOrgName`
 
-Data type: `BSTR`  
+Data type: `BSTR`
 
-Qualifiers: [in]  
+Qualifiers: [in]
 
-Pointer to the organization name that's shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.  
+Pointer to the organization name that's shown in the progress dialog box. The value can be retrieved from the `_SMSTSOrgName` environment variable.
 
 #### `pszTaskSequenceName`
-Data type: `BSTR`  
+Data type: `BSTR`
 
-Qualifiers: [in]  
+Qualifiers: [in]
 
-Pointer to the name of the task sequence that's currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.  
+Pointer to the name of the task sequence that's currently running. The value can be retrieved from the `_SMSTSPackageName` environment variable.
 
 #### `pszCustomTitle`
-Data type: `BSTR`  
+Data type: `BSTR`
 
-Qualifiers: [in]  
+Qualifiers: [in]
 
-Pointer to the text for a custom message that replaces the default title text displayed in the reboot dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.  
+Pointer to the text for a custom message that replaces the default title text displayed in the reboot dialog box. Pass an empty string if there's no custom message to show. The value can be obtained from the `_SMSTSCustomProgressDialogMessage` environment variable.
 
 #### `pszRebootMessage`
 
-Data type: `BSTR`  
+Data type: `BSTR`
 
-Qualifiers: [in]  
+Qualifiers: [in]
 
 Pointer to the text for the custom message that will be displayed in the reboot dialog box. Pass an empty string if there's no custom message to show.
 
 #### `uTimeoutInSeconds`
-Data type: `ULONG`  
+Data type: `ULONG`
 
-Qualifiers: [in]  
+Qualifiers: [in]
 
 Pointer to the value for the number of seconds the dialog box is displayed before closing. The value can be obtained from the `SMSTSErrorDialogTimeout` environment variable, which isn't configured in the task sequence by default. If an empty string is specified for `uTimeoutInSeconds` and `SMSTSErrorDialogTimeout` isn't specified, a default of 900 seconds will be used.
 
@@ -76,15 +76,15 @@ Pointer to the value for the number of seconds the dialog box is displayed befor
 
 An `HRESULT` code. Possible values include, but aren't limited to, the following value. There are no `HRESULT` values returned that are specific to this method.
 
-S_OK  
-The method succeeded.  
+S_OK
+The method succeeded.
 
 ## See also
 
-- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)  
+- [OS deployment client COM automation classes](operating-system-deployment-client-com-automation-classes.md)
 
-- [IProgressUI interface](iprogressui-interface.md)  
+- [IProgressUI interface](iprogressui-interface.md)
 
-- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)  
+- [About reporting Configuration Manager custom action progress](../../../../osd/about-reporting-configuration-manager-custom-action-progress.md)
 
-- [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)  
+- [How to use task sequence variables in a running Configuration Manager task sequence](../../../../osd/how-to-use-task-sequence-variables-in-a-running-task-sequence.md)

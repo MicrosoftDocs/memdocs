@@ -1,31 +1,20 @@
 ---
-title: Guided scenarios overview
-titleSuffix: Microsoft Intune
+title: Guided Scenarios Overview
 description: Learn about the Intune guided scenarios available in the Microsoft 365 Device Management portal.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
 ms.date: 05/16/2024
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Intune guided scenarios overview
+# Intune Guided Scenarios Overview
 
 A guided scenario is a customized series of steps centered around one end-to-end use-case. Common scenarios are based on the role an admin, user, or device plays in your organization. These roles typically require a collection of carefully orchestrated profiles, settings, applications, and security controls. The goal is to provide the best user experience and security.
 
-If you're not familiar with the steps and resources to implement a particular scenario, then start with guided scenarios. The guided scenarios assemble policies, apps, assignments, and other management configurations automatically. Additionally, the guided scenarios may deliberately omit certain options not applicable or uncommon for the given scenario. 
+If you're not familiar with the steps and resources to implement a particular scenario, then start with guided scenarios. The guided scenarios assemble policies, apps, assignments, and other management configurations automatically. Additionally, the guided scenarios may deliberately omit certain options not applicable or uncommon for the given scenario.
 
 Guided scenarios aren't a different management space from Intune's normal workflows. These workflows are used with Intune's existing workflows for profiles, apps, and policies. Upon completing a guided scenario, all future management of the scenario must take place in the existing menus for policies, apps, and profiles. A guided scenario doesn't save a "guided scenario" resource type, or track future changes made to the resources. Every resource created by a guided scenario shows in its respective workload. All options, even those options omitted in the guided scenario, are available for editing in the existing menus.
 
@@ -38,18 +27,18 @@ The following guided scenarios are available:
 - [Secure Office apps for mobile](guided-scenarios-office-mobile.md)
 - [Deploy Edge for mobile](guided-scenarios-edge.md)
 - [Set up a test device to try out cloud management](guided-scenarios-cloud-managed-pc.md)
-- [Deploy Windows 10 and later in cloud configuration](cloud-configuration.md)
+- [Deploy Windows in cloud configuration](cloud-configuration.md)
 - [Windows 365 Boot](/windows-365/enterprise/windows-365-boot-guide)
 
 ## Guided scenario functionality
 
 Guided scenarios offer specific functionality. The following details help explain what you can and can't do while following a guided scenario.
 
-### Launching  
+### Launching
 
 All guided scenarios are available from the **[Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)** > **Troubleshooting + support** > **Guided scenarios**.
 
-Guided scenarios start with an introduction. It explains the purpose of the scenario, and any prerequisites required to complete the setup. At this point, your admin permissions are checked to verify you have all the necessary privileges to complete the scenario.  
+Guided scenarios start with an introduction. It explains the purpose of the scenario, and any prerequisites required to complete the setup. At this point, your admin permissions are checked to verify you have all the necessary privileges to complete the scenario.
 
 After all prerequisite checks pass, the scenario offers appropriate settings for customization. Guided scenarios only require input for a minimum number of settings. They hide uncommon or advanced settings until needed, or based on special circumstances. Each guided scenario links to documentation that provides more details.
 

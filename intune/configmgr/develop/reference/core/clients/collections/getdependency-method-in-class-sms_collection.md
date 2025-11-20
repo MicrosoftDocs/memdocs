@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # GetDependency method in class SMS_Collection
@@ -21,7 +21,7 @@ Starting in version 2010, the `GetDependency` WMI class method in Configuration 
 
 The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
 ```MOF
 sint32 GetDependency(

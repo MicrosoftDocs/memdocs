@@ -12,64 +12,64 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ManageDeploymentForDevice Method in Class SMS_Application
 > [!WARNING]
->  This method is reserved for future use.  
+>  This method is reserved for future use.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 ManageDeploymentForDevice (  
-     String   AssignmentUniqueID,  
-     String   ClientGUID,  
-     UInt32   Action  
-);  
+```
+SInt32 ManageDeploymentForDevice (
+     String   AssignmentUniqueID,
+     String   ClientGUID,
+     UInt32   Action
+);
 
-```  
+```
 
-#### Parameters  
- `AssignmentUniqueID`  
- Data type: `String`  
+#### Parameters
+ `AssignmentUniqueID`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Identifier for the application deployment.  
+ Identifier for the application deployment.
 
- `ClientGUID`  
- Data type: `String`  
+ `ClientGUID`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Unique identifier of a client.  
+ Unique identifier of a client.
 
- `Action`  
- Data type: `UInt32`  
+ `Action`
+ Data type: `UInt32`
 
- Qualifiers: [in, enumeration]  
+ Qualifiers: [in, enumeration]
 
- Activate or deactivate deployment. Possible values are:  
+ Activate or deactivate deployment. Possible values are:
 
-|Value|Activate or deactivate|  
-|-|-|  
-|1|Activate|  
-|2|Deactivate|  
+|Value|Activate or deactivate|
+|-|-|
+|1|Activate|
+|2|Deactivate|
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_Application Server WMI Class](../../../develop/reference/apps/sms_application-server-wmi-class.md)   
+## See Also
+ [SMS_Application Server WMI Class](../../../develop/reference/apps/sms_application-server-wmi-class.md)

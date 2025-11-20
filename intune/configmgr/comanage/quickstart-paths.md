@@ -6,21 +6,21 @@ ms.date: 10/05/2021
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Paths to co-management
 
 There are two primary ways for you to set up co-management. It's important to understand the prerequisites for each path. They each require some combination of Microsoft Entra ID, Configuration Manager, Microsoft Intune, and Windows 10 or later.
 
-1. [Auto-enroll existing Configuration Manager-managed devices into Intune](#bkmk_path1)  
+1. [Auto-enroll existing Configuration Manager-managed devices into Intune](#bkmk_path1)
 
-2. [Bootstrap the Configuration Manager client with modern provisioning](#bkmk_path2)  
+2. [Bootstrap the Configuration Manager client with modern provisioning](#bkmk_path2)
 
 >[!Tip]
 > As we talk with our customers that are using Microsoft Intune to deploy, manage, and secure their client devices, we often get questions regarding co-managing devices and Microsoft Entra hybrid joined devices. Many customers confuse these two topics – the first is a management option, while the second is an identity option. See the blog post [Understanding hybrid Microsoft Entra ID and co-management scenarios](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/understanding-hybrid-azure-ad-join-and-co-management/ba-p/2221201). This blog aims to clarify Microsoft Entra hybrid join and co-management, how they work together but are not the same thing.
@@ -33,7 +33,7 @@ Taking this path can get your existing Configuration Manager-managed devices qui
 
 Here's what you need to set it up:
 - Hybrid Microsoft Entra ID
-    - One of the following [Microsoft Entra hybrid identity options](/azure/active-directory/hybrid/plan-connect-user-signin):  
+    - One of the following [Microsoft Entra hybrid identity options](/azure/active-directory/hybrid/plan-connect-user-signin):
        - [Password hash synchronization](/azure/active-directory/hybrid/plan-connect-user-signin#password-hash-synchronization) with [Seamless Single Sign-on (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
        - [Pass-through authentication](/azure/active-directory/hybrid/how-to-connect-pta) with [Seamless Single Sign-on (SSO)](/azure/active-directory/hybrid/how-to-connect-sso)
        - [Federated SSO (with Active Directory Federation Services (AD FS))](/azure/active-directory/hybrid/plan-connect-user-signin#federation-that-uses-a-new-or-existing-farm-with-ad-fs-in-windows-server-2012-r2)
@@ -54,9 +54,9 @@ This path is for those devices that are first enrolled with Intune. They are clo
 
 Here's what you need to set it up:
 
-1. [Setup enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md)  
-2. [Create the cloud services in Azure](../core/servers/deploy/configure/azure-services-wizard.md)  
-3. [Configure the management point and clients to use the cloud management gateway](../core/clients/manage/cmg/setup-cloud-management-gateway.md)  
-4. [Use Intune to deploy the Configuration Manager client](how-to-prepare-Win10.md)  
+1. [Setup enhanced HTTP](../core/plan-design/hierarchy/enhanced-http.md)
+2. [Create the cloud services in Azure](../core/servers/deploy/configure/azure-services-wizard.md)
+3. [Configure the management point and clients to use the cloud management gateway](../core/clients/manage/cmg/setup-cloud-management-gateway.md)
+4. [Use Intune to deploy the Configuration Manager client](how-to-prepare-Win10.md)
 
 For a tutorial on this path, see [Tutorial: Enable co-management for new internet-based devices](tutorial-co-manage-new-devices.md).

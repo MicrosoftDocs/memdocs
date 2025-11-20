@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientDataSourcesPolicy Server WMI Class
-The  `SMS_ClientDataSourcesPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client policy data sources.  
+The  `SMS_ClientDataSourcesPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client policy data sources.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientDataSourcesPolicy : SMS_BaseClass  
-{  
-    UInt64 BranchCacheBytes;  
-    UInt64 ManagementPointBytes;  
-};  
+```
+Class SMS_ClientDataSourcesPolicy : SMS_BaseClass
+{
+    UInt64 BranchCacheBytes;
+    UInt64 ManagementPointBytes;
+};
 
-```  
+```
 
-## Methods  
- The  `SMS_ClientDataSourcesPolicy`  class does not define any methods.  
+## Methods
+ The  `SMS_ClientDataSourcesPolicy`  class does not define any methods.
 
-## Properties  
- `BranchCacheBytes`  
- Data type: `UInt64`  
+## Properties
+ `BranchCacheBytes`
+ Data type: `UInt64`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of bytes from the branch cache.  
+ The number of bytes from the branch cache.
 
- `ManagementPointBytes`  
- Data type: `UInt64`  
+ `ManagementPointBytes`
+ Data type: `UInt64`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of bytes from management points.  
+ The number of bytes from management points.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-- Singleton  
+- Singleton
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

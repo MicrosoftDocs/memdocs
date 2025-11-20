@@ -12,44 +12,44 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetOnlineCount Method in Class SMS_CN_ClientStatus
-The `GetOnlineCount` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets an online count of the selected clients of the target collection.  
+The `GetOnlineCount` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets an online count of the selected clients of the target collection.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 GetOnlineCount  
-{  
-    [IN]    String TargetCollectionID  
-    [IN]    Uint32 TargetResourceIDs[]  
-};  
-```  
+```
+uint32 GetOnlineCount
+{
+    [IN]    String TargetCollectionID
+    [IN]    Uint32 TargetResourceIDs[]
+};
+```
 
-## Parameters  
- `TargetCollectionID`  
- Data type: `String`  
+## Parameters
+ `TargetCollectionID`
+ Data type: `String`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Target collection identifier.  
+ Target collection identifier.
 
- `TargetResourceIDs`  
- Data type: `UInt32` Array  
+ `TargetResourceIDs`
+ Data type: `UInt32` Array
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Target client resource identifiers.  
+ Target client resource identifiers.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

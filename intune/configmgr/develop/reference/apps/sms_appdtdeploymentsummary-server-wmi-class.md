@@ -12,221 +12,221 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_AppDTDeploymentSummary Server WMI Class
-The `SMS_AppDTDeploymentSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the deployment type-level summary of application deployment.  
+The `SMS_AppDTDeploymentSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the deployment type-level summary of application deployment.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_AppDTDeploymentSummary : SMS_BaseClass  
-{  
-    UInt32 AppCI;  
-    String AppModelName;  
-    UInt32 AssignmentID;  
-    String AssignmentUniqueID;  
-    String CollectionID;  
-    String CollectionName;  
-    UInt32 DeploymentIntent;  
-    DateTime DeploymentTime;  
-    String Description;  
-    UInt32 DTCI;  
-    String DTModelName;  
-    DateTime ModificationTime;  
-    SInt32 NumberAlreadyPresent;  
-    SInt32 NumberErrors;  
-    SInt32 NumberInProgress;  
-    SInt32 NumberInstalled;  
-    SInt32 NumberReqsNotMet;  
-    DateTime SummarizationTime;  
-    String Technology;  
-};  
-```  
+```
+Class SMS_AppDTDeploymentSummary : SMS_BaseClass
+{
+    UInt32 AppCI;
+    String AppModelName;
+    UInt32 AssignmentID;
+    String AssignmentUniqueID;
+    String CollectionID;
+    String CollectionName;
+    UInt32 DeploymentIntent;
+    DateTime DeploymentTime;
+    String Description;
+    UInt32 DTCI;
+    String DTModelName;
+    DateTime ModificationTime;
+    SInt32 NumberAlreadyPresent;
+    SInt32 NumberErrors;
+    SInt32 NumberInProgress;
+    SInt32 NumberInstalled;
+    SInt32 NumberReqsNotMet;
+    DateTime SummarizationTime;
+    String Technology;
+};
+```
 
-## Methods  
- The `SMS_AppDTDeploymentSummary` class does not define any methods.  
+## Methods
+ The `SMS_AppDTDeploymentSummary` class does not define any methods.
 
-## Properties  
- `AppCI`  
- Data type: `UInt32`  
+## Properties
+ `AppCI`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).
 
- `AppModelName`  
- Data type: `String`  
+ `AppModelName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Model Name of the application.  
+ Model Name of the application.
 
- `AssignmentID`  
- Data type: `UInt32`  
+ `AssignmentID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).
 
- `AssignmentUniqueID`  
- Data type: `String`  
+ `AssignmentUniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).The ID of the collection to which the deployment was deployed.  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).The ID of the collection to which the deployment was deployed.
 
- `CollectionName`  
- Data type: `String`  
+ `CollectionName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).
 
- `DeploymentIntent`  
- Data type: `UInt32`  
+ `DeploymentIntent`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).
 
- `DeploymentTime`  
- Data type: `DateTime`  
+ `DeploymentTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time the deployment was created.  
+ Time the deployment was created.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description of the deployment type.  
+ Description of the deployment type.
 
- `DTCI`  
- Data type: `UInt32`  
+ `DTCI`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).
 
- `DTModelName`  
- Data type: `String`  
+ `DTModelName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Model name of the deployment type.  
+ Model name of the deployment type.
 
- `ModificationTime`  
- Data type: `DateTime`  
+ `ModificationTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time that the deployment type was last modified.  
+ Time that the deployment type was last modified.
 
- `NumberAlreadyPresent`  
- Data type: `SInt32`  
+ `NumberAlreadyPresent`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of clients that have this deployment type installed.  
+ Number of clients that have this deployment type installed.
 
- `NumberErrors`  
- Data type: `SInt32`  
+ `NumberErrors`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of clients that return an error during an installation.  
+ Number of clients that return an error during an installation.
 
- `NumberInProgress`  
- Data type: `SInt32`  
+ `NumberInProgress`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of clients that have this deployment type installation in progress.  
+ Number of clients that have this deployment type installation in progress.
 
- `NumberInstalled`  
- Data type: `SInt32`  
+ `NumberInstalled`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of clients that have this deployment type installed.  
+ Number of clients that have this deployment type installed.
 
- `NumberReqsNotMet`  
- Data type: `SInt32`  
+ `NumberReqsNotMet`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Number of clients that do not meet the requirements of this deployment type.  
+ Number of clients that do not meet the requirements of this deployment type.
 
- `SummarizationTime`  
- Data type: `DateTime`  
+ `SummarizationTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Time when summarization occurs.  
+ Time when summarization occurs.
 
- `Technology`  
- Data type: `String`  
+ `Technology`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).  
+ See [SMS_AppDeploymentAssetDetails Server WMI Class](../../../develop/reference/apps/sms_appdeploymentassetdetails-server-wmi-class.md).
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

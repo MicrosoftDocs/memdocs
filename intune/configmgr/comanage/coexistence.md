@@ -6,12 +6,12 @@ ms.date: 10/05/2021
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Third-party MDM coexistence with Configuration Manager
@@ -20,12 +20,12 @@ When you concurrently manage Windows 10 or later devices with both Configuration
 
 The Configuration Manager client can coexist with a third-party MDM service on a device running Windows 10 version 1709 or later, and that's joined to Microsoft Entra ID. The device can be either of the following types:
 
-- [Microsoft Entra joined](/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")  
+- [Microsoft Entra joined](/azure/active-directory/devices/azureadjoin-plan) only. (This type is sometimes referred to as "cloud domain-joined")
 
-- [Hybrid domain-joined](/azure/active-directory/devices/hybrid-azuread-join-plan), where the device is joined to your on-premises Active Directory and registered with your Microsoft Entra ID.  
+- [Hybrid domain-joined](/azure/active-directory/devices/hybrid-azuread-join-plan), where the device is joined to your on-premises Active Directory and registered with your Microsoft Entra ID.
 
-> [!Note]  
-> It doesn't support [personally-owned devices](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).  
+> [!Note]
+> It doesn't support [personally-owned devices](/windows/client-management/mdm/mdm-enrollment-of-windows-devices#connecting-personally-owned-devices-bring-your-own-device).
 
 When the Configuration Manager client detects that a third-party MDM service is also managing the device, it automatically deactivates certain workloads in Configuration Manager. This behavior allows the MDM service to take over these functions. It also prevents conflicting settings on the client that could adversely impact the device and user experience. The following workloads in Configuration Manager are deactivated in this case:
 

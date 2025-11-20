@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -59,7 +59,7 @@ Typically, this error is caused by an issue with the admin account. Below are th
 - If the service connection point or site server were recently rebooted, this error occurs temporarily.
 - A site upgrade or a transient network error can cause this message to occur temporarily.
 - For Configuration Manager versions 2103 and earlier, it's possible that the cache has expired and the SQL connection is stale. Restart **SMS_Executive** service on the machine running the [service connection point (SCP)](../core/servers/deploy/configure/about-the-service-connection-point.md) role if you see errors similar to the following in the SCP's **CMGatewayNotificationWorker.log**: <!--10380979-->
-      
+
     ```text
     [Critical][CMGatewayNotificationWorker][0][System.InvalidOperationException][0x80131509]
     ExecuteReader requires an open and available Connection. The connection's current state is closed.

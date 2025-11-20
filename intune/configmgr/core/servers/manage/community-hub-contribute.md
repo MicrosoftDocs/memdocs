@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Contribute to the Community hub
@@ -19,10 +19,10 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 > [!IMPORTANT]
-> Starting in March 2023, this feature of Configuration Manager is being removed. 
-All future versions, starting with 2303 will not have the Community hub node in the admin console. The Community hub node in older versions will be redirected to [deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).  
+> Starting in March 2023, this feature of Configuration Manager is being removed.
+All future versions, starting with 2303 will not have the Community hub node in the admin console. The Community hub node in older versions will be redirected to [deprecated features](../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md).
 
-[Community hub](community-hub.md) fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. You can share the following objects for use by others in the Configuration Manager community:  
+[Community hub](community-hub.md) fosters creativity by building on others work and having other people build on yours. GitHub already has industry-wide processes and tools built for sharing. Now, the Community hub can leverage those tools directly in the Configuration Manager console as foundational pieces for driving this new community. You can share the following objects for use by others in the Configuration Manager community:
 
 [!INCLUDE [Community hub object type information](includes/community-hub-object-types.md)]
 
@@ -84,14 +84,14 @@ You can update content you've contributed to the Community hub.
 
 1. Select an item that you previously contributed. Currently, you can only edit items that you contributed.
 1. In the item details, select **Push Update** to open the contribute item wizard.
-1. Edit the **Description** of the item to note what changes were made.  
+1. Edit the **Description** of the item to note what changes were made.
 1. Select **Next** to upload the item.
 1. Once the item is uploaded, you'll be given the pull request URL of the change for monitoring.
 1. Select **Close** when you're done to exit the wizard.
 
 ## <a name="bkmk_delete"></a> Delete a contribution you made
 <!--10416767-->
-You can delete contributions you've made if you no longer want it to be displayed in the Community hub. There are two ways to delete your contributions.  
+You can delete contributions you've made if you no longer want it to be displayed in the Community hub. There are two ways to delete your contributions.
 
 Method 1:
 1. Go to **Community** > **Community hub** > **Your hub**.
@@ -123,7 +123,7 @@ To use branding:
 
 <!--using include for shared content for 9965423-->
 
-[!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)] 
+[!INCLUDE [Publish to Community hub from CMPivot](includes/cmpivot-publish.md)]
 
 ## Object type information
 
@@ -139,7 +139,7 @@ When you contribute a [configuration baseline](../../../compliance/deploy-use/cr
 ### Console extensions
 <!--3555909-->
 
-You contribute extensions the same way you would any other community hub object. However, for there are additional requirements and additional information you need to supply for an extension. When you contribute a console extension to Community hub, the content must be signed. Content for console extensions isn't hosted by Microsoft. When you contribute your item, you'll be asked to provide a location to the signed `.cab` file along with other information for the extension. The following items are required for contributing extensions:  
+You contribute extensions the same way you would any other community hub object. However, for there are additional requirements and additional information you need to supply for an extension. When you contribute a console extension to Community hub, the content must be signed. Content for console extensions isn't hosted by Microsoft. When you contribute your item, you'll be asked to provide a location to the signed `.cab` file along with other information for the extension. The following items are required for contributing extensions:
 
 - **Content URL**: Location for the downloadable `.cab` file
 - **SHA-256 hash of the content**: SHA-256 hash of the `.cab` file

@@ -6,11 +6,11 @@ ms.date: 07/15/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -20,8 +20,8 @@ ms.collection: tier3
 
 Configuration Manager supports various methods to deploy a task sequence to remote clients over the internet. You can deploy a Windows upgrade, use bootable media, or start it from Software Center. This article covers the particular configurations for these scenarios. First use [Deploy a task sequence](deploy-a-task-sequence.md) to create the basic deployment. Then use the configurations in this article to customize it for internet-based clients.
 
-> [!WARNING]  
-> You can manage the behavior for high-risk task sequence deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys an OS is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).  
+> [!WARNING]
+> You can manage the behavior for high-risk task sequence deployments. A high-risk deployment is a deployment that is automatically installed and has the potential to cause unwanted results. For example, a task sequence that has a purpose of **Required** that deploys an OS is considered a high-risk deployment. For more information, see [Settings to manage high-risk deployments](../../core/servers/manage/settings-to-manage-high-risk-deployments.md).
 
 ## Allow task sequence to run on internet
 

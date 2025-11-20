@@ -12,67 +12,67 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_OSDeploymentConfig Server WMI Class
-The `SMS_OSDeploymentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all OSD-related constants and settings with their ADK-specific values.  
+The `SMS_OSDeploymentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all OSD-related constants and settings with their ADK-specific values.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_OSDeploymentConfig : SMS_BaseClass  
-{  
-    String DeploymentKitVersion;  
-    String DeploymentPropertyName;  
-    String DeploymentPropertyValue;  
-};  
+```
+Class SMS_OSDeploymentConfig : SMS_BaseClass
+{
+    String DeploymentKitVersion;
+    String DeploymentPropertyName;
+    String DeploymentPropertyValue;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_OSDeploymentConfig` class does not define any methods.  
+## Methods
+ The `SMS_OSDeploymentConfig` class does not define any methods.
 
-## Properties  
- `DeploymentKitVersion`  
- Data type: `String`  
+## Properties
+ `DeploymentKitVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- The version of the deployment kit with which this property is associated.  
+ The version of the deployment kit with which this property is associated.
 
- `DeploymentPropertyName`  
- Data type: `String`  
+ `DeploymentPropertyName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- The name of the property.  
+ The name of the property.
 
- `DeploymentPropertyValue`  
- Data type: `String`  
+ `DeploymentPropertyValue`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The value of the property.  
+ The value of the property.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot device preparation requirements
 description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 04/02/2025
+ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -20,7 +13,6 @@ ms.custom:
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
-
 
 # Windows Autopilot device preparation requirements
 
@@ -55,8 +47,8 @@ Windows Autopilot device preparation depends on specific features available in W
 #### Windows 11
 
 - Windows 11, version 24H2 or later.
-- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
-- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
+- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows 11, version 23H2 installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
+- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - Windows 11, version 22H2 installation media dated April 2024 or later has [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) included.
 
 > [!IMPORTANT]
 >
@@ -65,10 +57,9 @@ Windows Autopilot device preparation depends on specific features available in W
 
 #### Windows 365 Cloud PCs
 
-- Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b) or later.
-- Windows 11, version 23H2 with [KB5045594](https://support.microsoft.com/en-us/topic/october-22-2024-kb5045594-os-build-19045-5073-preview-f307a4b0-f62d-4c28-9062-44207aea55c3) or later.
-- Windows 11, version 22H2 with [KB5044380](https://support.microsoft.com/en-us/topic/october-22-2024-kb5044380-os-builds-22621-4391-and-22631-4391-preview-9a8db86a-815d-470a-be95-1aa2ad1feb05) or later.
-
+- Windows 11, version 24H2 with [KB5052093](https://support.microsoft.com/en-us/topic/february-25-2025-kb5052093-os-build-26100-3323-preview-053856ea-f984-4bdb-866c-5f356f5a451b) or later - The Windows 11, version 24H2 images in the Windows 365 image gallery are updated with the latest updates, including KB5052093. However when creating custom images, make sure to use Windows 11, version 24H2 installation media dated March 2025 or later which has KB5052093 included.
+- Windows 11, version 23H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - The Windows 11, version 23H2 images in the Windows 365 image gallery are updated with the latest updates, including KB5035942. However when creating custom images, make sure to use Windows 11, version 23H2 installation media dated March 2025 or later which has KB5035942 included.
+- Windows 11, version 22H2 with [KB5035942](https://support.microsoft.com/topic/march-26-2024-kb5035942-os-builds-22621-3374-and-22631-3374-preview-3ad9affc-1a91-4fcb-8f98-1fe3be91d8df) or later - The Windows 11, version 22H2 images in the Windows 365 image gallery are updated with the latest updates, including KB5035942. However when creating custom images, make sure to use Windows 11, version 22H2 installation media dated March 2025 or later which has KB5035942 included.
 
 The following editions are supported:
 
@@ -119,7 +110,10 @@ Microsoft Entra ID validates user credentials. Additionally, the device is joine
 
 #### Microsoft Intune
 
-Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
+Once authenticated, Microsoft Entra ID triggers enrollment of the device into the Intune mobile device management (MDM) service. For more information about Intune's network communication requirements, see the following articles:
+
+- [Network endpoints for Microsoft Intune](/mem/intune-service/fundamentals/intune-endpoints).
+- [Network requirements for PowerShell scripts and Win32 apps](/intune/intune-service/fundamentals/intune-endpoints).
 
 #### Windows Autopilot device preparation automatic device diagnostics collection
 

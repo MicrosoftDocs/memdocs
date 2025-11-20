@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to view diagnostics and usage data for Configuration Manager
@@ -60,7 +60,7 @@ When you view the raw data, a common hashed value appears in each row of data. T
       #otherwise hash as string (unicode)
       $ue = New-Object System.Text.UnicodeEncoding
       $bytesToHash = $ue.GetBytes($value)
-    }  
+    }
       # Load Hash Provider (https://en.wikipedia.org/wiki/SHA-2)
     $hashAlgorithm = [System.Security.Cryptography.SHA256Cng]::Create()
     # Hash the input

@@ -1,33 +1,15 @@
 ---
-title: Help desk troubleshooting dashboard
-titleSuffix: Microsoft Intune
+title: Help Desk Troubleshooting Dashboard
 description: Help desk staff use the troubleshooting pane to solve users' technical problems.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+author: nicholasswhite
+ms.author: nwhite
 ms.date: 06/14/2024
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 1f39c02a-8d8a-4911-b4e1-e8d014dbce95
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jlynn
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
-# Use the troubleshooting dashboard to help users at your company
+# Use the Troubleshooting Dashboard to Help Users at Your Company
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -61,7 +43,7 @@ The **Troubleshooting** pane provides the following tabs for a selected user and
 
 ## View user troubleshooting details
 
-In the **Troubleshooting** pane provides specific details for each Intune end-user. User information can help you understand the current state of users and their devices.  
+In the **Troubleshooting** pane provides specific details for each Intune end-user. User information can help you understand the current state of users and their devices.
 
 1. Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Troubleshooting + support** > **Troubleshoot**.
@@ -142,7 +124,7 @@ The **Applications** tab provides managed app install status, assigned, platform
 
 ### App protection policy
 
-The **App protection policy** tab provides the name, platform, and enrollment details for app protection policies. An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps. 
+The **App protection policy** tab provides the name, platform, and enrollment details for app protection policies. An app protection policy is available to mobile apps that integrate with EMS technologies. These policies give a baseline of protection for your corporate data when it is downloaded to mobile apps, including the Office mobile apps.
 
 | Column | Description |
 |---|---|
@@ -192,9 +174,9 @@ The **Diagnostics** tab provides the device name or application, platform, creat
 Use the following resources to help collect device data when troubleshooting user's device issues:
 
 - [Report a problem in Company Portal for iOS](../user-help/send-logs-to-microsoft-ios.md)
-- [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md)  
+- [Report a problem in Company Portal or Intune app for Android](../user-help/send-logs-to-your-it-admin-by-email-android.md)
 
-You can access and download user-submitted logs under [**Diagnostics**](#diagnostics).  
+You can access and download user-submitted logs under [**Diagnostics**](#diagnostics).
 
 ## Next steps
 
