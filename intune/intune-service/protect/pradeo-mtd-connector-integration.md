@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Set up Pradeo Mobile Threat Defense to integrate with Intune
-titleSuffix: Intune on Azure
 description: How to set up the Pradeo Mobile Threat Protection solution with Microsoft Intune to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/27/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 82872ba6-80f8-4cc9-adf4-0ccd8ff26dd2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -35,7 +15,7 @@ ms.collection:
 
 Complete the following steps to integrate the Pradeo Mobile Threat Defense solution with Intune.
 
-> [!NOTE]  
+> [!NOTE]
 > This Mobile Threat Defense vendor is not supported for unenrolled devices.
 
 ## Before you begin

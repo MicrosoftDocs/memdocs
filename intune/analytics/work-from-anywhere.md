@@ -1,44 +1,35 @@
 ---
-title: Work from anywhere report in Endpoint analytics
-titleSuffix: Microsoft Intune
-description: The Work from anywhere report in Endpoint analytics provides insights to help your end users be productive from anywhere.
-ms.date: 02/25/2025
-
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
-ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
-ms.collection: highpri
+title: Work From Anywhere Report in Endpoint Analytics
+description: Discover how the Work from Anywhere report in Microsoft Intune endpoint analytics provides insights into remote productivity, device readiness, and user experience.
+ms.date: 10/09/2025
+ms.topic: concept-article
 ---
 
 # Work from anywhere report
 <!--8668496-->
-The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.
+The ability for employees to work from anywhere productively is essential in today's world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.
 
 > [!NOTE]
 > The **Work from anywhere** report replaced the **Recommended software report**. You may notice changes in your scores because the calculations are different in the **Work from anywhere** report.
 
-## <a name="bkmk_score"></a> Work from anywhere score
+## Work from anywhere score
 
-The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all active Intune and Configuration Manager devices that have opted into [Endpoint analytics](overview.md).
+The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all active Intune and Configuration Manager devices that have opted into [endpoint analytics](overview.md).
 
 > [!NOTE]
-> A device is considered active and will appear in the **Work from anywhere** report if it has uploaded at least one Endpoint analytics event, such as a boot, sign-in, or application crash event, in the past 29 days.
+> A device is considered active and will appear in the **Work from anywhere** report if it has uploaded at least one endpoint analytics event, such as a boot, sign-in, or application crash event, in the past 29 days.
 
 The following metrics are weighted and used to compute the **Work from anywhere score**:
 
 - [Windows](#windows)
-- [Cloud management](#bkmk_management)
-- [Cloud identity](#bkmk_identity)
-- [Cloud provisioning](#bkmk_provisioning)
+- [Cloud management](#cloud-management)
+- [Cloud identity](#cloud-identity)
+- [Cloud provisioning](#cloud-provisioning)
 
 :::image type="content" source="media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics" lightbox="media/8668496-work-from-anywhere-score.png":::
 
 > [!NOTE]
-> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](device-scopes.md).
+> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](device-scopes.md).
 
 ## Windows
 
@@ -48,7 +39,7 @@ For information about the cost savings and benefits enabled by Windows, download
 
 :::image type="content" source="media/8668496-windows.png" alt-text="Screenshot of the Windows fly out showing graph and insights" lightbox="media/8668496-windows.png":::
 
-## <a name="bkmk_management"></a> Cloud management
+## Cloud management
 
 Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With the power of cloud management, you can achieve several productivity benefits. Your end-users benefit when they can access corporate resources away from the corporate network. Eliminating the need for and performance overhead of Group Policy also results in a better end-user experience.
 
@@ -56,26 +47,26 @@ The **Cloud management** metric measures the percent of PCs that have attached t
 
 Benefits of each cloud management type:<!--IN7207657-->
 
-|Benefits|[**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md)|[**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md)|[**Co-management**](../configmgr/comanage/overview.md)|[**Intune**](../intune-service/fundamentals/what-is-intune.md)|
-|---|---|---|---|---|
-| Manage your clients anywhere | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| View and take action on all Windows PCs from Microsoft Intune admin center| |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| Modernize your directory approach with Microsoft Entra ID | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-|Enhance Zero Trust with Conditional Access| | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| Make device provisioning easier by enabling Windows Autopilot |  | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| Gain more remote access with Intune | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| Split PC management workloads between cloud and on-premises | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| |
-| Simplify PC and driver updating with the cloud | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| Consistent end-user experience for managing enrolled devices and installed apps | | |:::image type="content" source="media/green-check.png" border="false" alt-text="Yes.":::| :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
-| Reduce complexity with always up-to-date cloud only infrastructure | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: | | | :::image type="content" source="media/green-check.png" border="false" alt-text="Yes."::: |
+| Benefits | [**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md) | [**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md) | [**Co-management**](../configmgr/comanage/overview.md) | [**Intune**](../intune-service/fundamentals/what-is-intune.md) |
+|--|:--:|:--:|:--:|:--:|
+| Manage your clients anywhere |  :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| View and take action on all Windows PCs from Microsoft Intune admin center |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| Modernize your directory approach with Microsoft Entra ID |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| Enhance Zero Trust with Conditional Access |  |  |  :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| Make device provisioning easier by enabling Windows Autopilot |  |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| Gain more remote access with Intune |  |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| Split PC management workloads between cloud and on-premises |  |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |  |
+| Simplify PC and driver updating with the cloud |  |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| Consistent end-user experience for managing enrolled devices and installed apps |  |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |  :::image type="icon" source="../media/icons/tables/check.svg"::: |
+| Reduce complexity with always up-to-date cloud only infrastructure |  :::image type="icon" source="../media/icons/tables/check.svg"::: |  |  |   :::image type="icon" source="../media/icons/tables/check.svg"::: |
 
-## <a name="bkmk_identity"></a> Cloud identity
+## Cloud identity
 
 Cloud identity provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming. The **Cloud identity** metric measures the percent of devices enrolled in Microsoft Entra ID or hybrid Microsoft Entra ID. Your Intune and co-managed devices are already enrolled in Microsoft Entra ID. The recommended remediation action for devices managed by Configuration Manager is to [enroll them in hybrid Microsoft Entra ID](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
 :::image type="content" source="media/8668496-cloud-identity.png" alt-text="Screenshot of the Cloud identity fly out showing insights for the metric" lightbox="media/8668496-cloud-identity.png":::
 
-## <a name="bkmk_provisioning"></a> Cloud provisioning
+## Cloud provisioning
 
 Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Windows Autopilot.
 
@@ -86,11 +77,11 @@ Cloud provisioning provides a simpler initial provisioning experience for Window
 The recommended remediation actions are to register and create deployment profiles for existing devices in Windows Autopilot using Microsoft [Intune](/autopilot/enrollment-autopilot).
 
 > [!NOTE]
-> Cloud provisioned devices that aren't enrolled into Endpoint analytics won't be populated.
+> Cloud provisioned devices that aren't enrolled into endpoint analytics won't be populated.
 
 :::image type="content" source="media/8668496-cloud-provisioning.png" alt-text="Screenshot of the cloud provisioning tab showing the device list" lightbox="media/8668496-cloud-provisioning.png":::
 
-## <a name="bkmk_windows11"></a> Windows 11 hardware readiness
+## Windows 11 hardware readiness
 <!--IN9740163-->
 The **Windows** metric provides Windows 11 hardware readiness insights for devices that are enrolled via Intune, co-management, or Configuration Manager version 2107 or newer with tenant attach enabled. To determine how many of your enrolled devices meet the [minimum system requirements](/windows/whats-new/windows-11-requirements#hardware-requirements) for Windows 11, select **Windows** to open the flyout on the **Overview** page in **Work from anywhere**. A chart is displayed showing which specific hardware requirements are the top blockers in your organization.
 
@@ -100,16 +91,13 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 
 > [!NOTE]
 >
-> - In most cases, devices with a Windows 11 readiness status of **Unknown** are simply inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune-service/remote-actions/devices-wipe.md#automatically-hide-devices-with-cleanup-rules), or target only active devices with the [Intune data collection policy](enroll-intune.md#bkmk_onboard) that controls Endpoint analytics enrollment.
+> - In most cases, devices with a Windows 11 readiness status of **Unknown** are inactive. To verify this, review the [last check in time](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) from Intune. If you see a large number of inactive devices in the report, consider adjusting your [device clean up rules](../intune-service/fundamentals/device-cleanup-rules.md), or target only active devices with the [Intune data collection policy](configure.md) that controls endpoint analytics enrollment.
 > - Windows 11 hardware readiness insights do not impact your Work from anywhere score.
 
-## <a name="bkmk_np"></a> No commercial median
+## No commercial median
 
 The built-in baseline of **All organizations (median)** doesn't currently have metrics for the subscore metrics listed in this article.
 
-## Known issues
-
-[!INCLUDE [Endpoint analytics export to csv value mapping known issue](includes/known-issue-csv-mapping.md)]
 ## Next steps
 
 - View [Startup performance](startup-performance.md)

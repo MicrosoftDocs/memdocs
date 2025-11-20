@@ -5,19 +5,15 @@ ms.date: 5/2/2024
 ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
-ms.manager: dougeby
-no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ms.collection:
 - graph-interactive
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Common Education device restrictions
 
 There are many device restriction settings and configuration options you have available. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
-Intune includes *device restriction policies* that help administrators control a wide range of settings and features on Android, iOS/iPadOS, macOS, and Windows devices to protect your organization's resources.
+Intune includes *device restriction policies* that help administrators control a wide range of settings and features. Use these settings on Android, iOS/iPadOS, macOS, and Windows devices and help protect your organization's resources.
 
 To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog).
 
@@ -31,8 +27,8 @@ Configure these settings to personalize user experience and simplify the Windows
 | **Category** | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|---|
 | Authentication |**:::no-loc text="Preferred Aad Tenant Domain Name":::** | _domain_ | Simplifies the sign-in to Windows by automatically appending the domain to the username | [:::no-loc text="Authentication/PreferredAadTenantDomainName":::](/windows/client-management/mdm/policy-csp-authentication#preferredaadtenantdomainname) |
-| Personalization |**:::no-loc text="Desktop Image Url":::** | _url_ | An http or https Url to a jpg, jpeg or png image that needs to be downloaded and used as the Desktop Image or a file Url to a local image on the file system that needs to be used as the Desktop Image. | [:::no-loc text="Personalization/DesktopImageUrl":::](/windows/client-management/mdm/personalization-csp#desktopimageurl) |
-| Personalization |**:::no-loc text="Lock Screen Image Url":::** | _url_ | An http or https URL to a jpg, jpeg or png image that needs to be downloaded and used as the Lock Screen Image. | [:::no-loc text="Personalization/LockScreenImageUrl":::](/windows/client-management/mdm/personalization-csp#lockscreenimageurl) |
+| Personalization |**:::no-loc text="Desktop Image Url":::** | _url_ | An http or https URL to a jpg, jpeg, or png image that needs to be downloaded and used as the Desktop Image. Or, a file URL to a local image on the file system that needs to be used as the Desktop Image. | [:::no-loc text="Personalization/DesktopImageUrl":::](/windows/client-management/mdm/personalization-csp#desktopimageurl) |
+| Personalization |**:::no-loc text="Lock Screen Image Url":::** | _url_ | An http or https URL to a jpg, jpeg, or png image that needs to be downloaded and used as the Lock Screen Image. | [:::no-loc text="Personalization/LockScreenImageUrl":::](/windows/client-management/mdm/personalization-csp#lockscreenimageurl) |
 | Time Language Settings |**:::no-loc text="Configure Time Zone":::** | _timezone_ | Use Timezone column from [:::no-loc text="Default Time Zones":::](/windows-hardware/manufacture/desktop/default-time-zones) | [:::no-loc text="TimeLanguageSettings/ConfigureTimeZone":::](/windows/client-management/mdm/policy-csp-timelanguagesettings#configuretimezone) |
 
 ## General restrictions
@@ -43,10 +39,10 @@ Commonly applied device restrictions in education.
 
 | **Category** | **Name** | **Value** | **Notes** | **CSP** |
 |---|---|---|---|---|
-| Above Lock |**:::no-loc text="Allow Cortana Above Lock":::** | Block | The system will need to be unlocked for the user to interact with Cortana using speech. | [:::no-loc text="AboveLock/AllowCortanaAboveLock":::](/windows/client-management/mdm/policy-csp-abovelock#allowcortanaabovelock) |
+| Above Lock |**:::no-loc text="Allow Cortana Above Lock":::** | Block | The system needs to be unlocked for the user to interact with Cortana using speech. | [:::no-loc text="AboveLock/AllowCortanaAboveLock":::](/windows/client-management/mdm/policy-csp-abovelock#allowcortanaabovelock) |
 | Above Lock |**:::no-loc text="Allow Toasts":::** | Block | Block toast notifications above the device lock screen | [:::no-loc text="AboveLock/AllowToasts":::](/windows/client-management/mdm/policy-csp-abovelock#allowtoasts) |
 | Accounts |**:::no-loc text="Allow Adding Non Microsoft Accounts Manually":::** | Block | Block users from adding non-MSA email account. | [:::no-loc text="Accounts/AllowAddingNonMicrosoftAccountsManually":::](/windows/client-management/mdm/policy-csp-accounts#allowaddingnonmicrosoftaccountsmanually) |
-| Accounts |**:::no-loc text="Allow Microsoft Account Connection":::** | Block | Block users from using an MSA account for non-email related connection authentication and services. | [:::no-loc text="Accounts/AllowMicrosoftAccountConnection":::](/windows/client-management/mdm/policy-csp-accounts#allowmicrosoftaccountconnection) |
+| Accounts |**:::no-loc text="Allow Microsoft Account Connection":::** | Block | Block users from using a Microsoft Account for non-email related connection authentication and services. | [:::no-loc text="Accounts/AllowMicrosoftAccountConnection":::](/windows/client-management/mdm/policy-csp-accounts#allowmicrosoftaccountconnection) |
 | Administrative Templates > System > Power Management > Sleep Settings |**:::no-loc text="Specify the system hibernate timeout (on battery)":::** | Disabled | | [:::no-loc text="Power/HibernateTimeoutOnBattery":::](/windows/client-management/mdm/policy-csp-power#hibernatetimeoutonbattery) |
 | Administrative Templates > System > Power Management > Sleep Settings |**:::no-loc text="Specify the system sleep timeout (on battery)":::** | Enabled | Only enables the setting configuration. | [:::no-loc text="Power/StandbyTimeoutOnBattery":::](/windows/client-management/mdm/policy-csp-power#standbytimeoutonbattery) |
 | Administrative Templates > System > Power Management > Sleep Settings |**:::no-loc text="System Sleep Timeout (seconds):":::** | 3600 | | [:::no-loc text="Power/StandbyTimeoutOnBattery":::](/windows/client-management/mdm/policy-csp-power#standbytimeoutonbattery) |
@@ -62,19 +58,19 @@ Commonly applied device restrictions in education.
 | Bluetooth |**:::no-loc text="Allow Discoverable Mode":::** | Allow | Allow other Bluetooth-enabled devices discover the device. | [:::no-loc text="Bluetooth/AllowDiscoverableMode":::](/windows/client-management/mdm/policy-csp-bluetooth#allowdiscoverablemode) |
 | Bluetooth |**:::no-loc text="Allow Prompted Proximal Connections":::** | Block | Block users on these managed devices from using Swift Pair and other proximity based scenarios. | [:::no-loc text="Bluetooth/AllowPromptedProximalConnections":::](/windows/client-management/mdm/policy-csp-bluetooth#allowpromptedproximalconnections) |
 | Camera |**:::no-loc text="Allow Camera":::** | Allowed | | [:::no-loc text="Camera/AllowCamera":::](/windows/client-management/mdm/policy-csp-camera#allowcamera) |
-| Connectivity |**:::no-loc text="Allow Bluetooth":::** | Allow Bluetooth. The radio in the Bluetooth control panel will be functional and the user will be able to turn Bluetooth on. | | [:::no-loc text="Connectivity/AllowBluetooth":::](/windows/client-management/mdm/policy-csp-connectivity#allowbluetooth) |
-| Connectivity |**:::no-loc text="Allow Cellular Data Roaming":::** | Do not allow cellular data roaming. The user cannot turn it on. This value is not supported in Windows 10, version 1511. | | [:::no-loc text="Connectivity/AllowCellularDataRoaming":::](/windows/client-management/mdm/policy-csp-connectivity#allowcellulardataroaming) |
+| Connectivity |**:::no-loc text="Allow Bluetooth":::** | Allow Bluetooth. The radio in the Bluetooth control panel will be functional and the user will be able to turn on Bluetooth. | | [:::no-loc text="Connectivity/AllowBluetooth":::](/windows/client-management/mdm/policy-csp-connectivity#allowbluetooth) |
+| Connectivity |**:::no-loc text="Allow Cellular Data Roaming":::** | Do not allow cellular data roaming. The user cannot turn it on. | | [:::no-loc text="Connectivity/AllowCellularDataRoaming":::](/windows/client-management/mdm/policy-csp-connectivity#allowcellulardataroaming) |
 | Credential Providers |**:::no-loc text="Disable Automatic Re Deployment Credentials":::** | Disabled | Enables local Windows Autopilot Reset | [:::no-loc text="CredentialProviders/DisableAutomaticReDeploymentCredentials":::](/en-us/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials) |
 | Experience |**:::no-loc text="Allow Cortana":::** | Block | | [:::no-loc text="Experience/AllowCortana":::](/windows/client-management/mdm/policy-csp-experience#allowcortana) |
 | Experience |**:::no-loc text="Allow Manual MDM Unenrollment":::** | Block | Block the user from deleting the workplace account using the workplace control panel. | [:::no-loc text="Experience/AllowManualMDMUnenrollment":::](/windows/client-management/mdm/policy-csp-experience#allowmanualmdmunenrollment) |
-| Experience |**:::no-loc text="Allow Windows Spotlight (User)":::** | Block | Turn off Windows spotlight on lock screen, Windows Tips, Microsoft consumer features and other related features. | [:::no-loc text="Experience/AllowWindowsSpotlight":::](/windows/client-management/mdm/policy-csp-experience#allowwindowsspotlight) |
+| Experience |**:::no-loc text="Allow Windows Spotlight (User)":::** | Block | Turn off Windows spotlight on lock screen, Windows Tips, Microsoft consumer features, and other related features. | [:::no-loc text="Experience/AllowWindowsSpotlight":::](/windows/client-management/mdm/policy-csp-experience#allowwindowsspotlight) |
 | Experience |**:::no-loc text="Configure Chat Icon":::** | Disabled | Configures the Teams Chat icon on the taskbar for Windows 11 | [:::no-loc text="Experience/ConfigureChatIcon":::](/en-us/windows/client-management/mdm/policy-csp-experience#configurechaticon) |
-| Microsoft App Store |**:::no-loc text="Allow All Trusted Apps":::** | Explicit allow unlock. | Allow install of any LOB or developer-signed Windows Store app (which must be signed with a certificate chain that can be successfully validated by the local computer) | [:::no-loc text="ApplicationManagement/AllowAllTrustedApps":::](/windows/client-management/mdm/policy-csp-applicationmanagement#allowalltrustedapps) |
+| Microsoft App Store |**:::no-loc text="Allow All Trusted Apps":::** | Explicit allow unlock. | Allow install of any LOB or developer-signed Windows Store app. It must be signed with a certificate chain that can be successfully validated by the local computer. | [:::no-loc text="ApplicationManagement/AllowAllTrustedApps":::](/windows/client-management/mdm/policy-csp-applicationmanagement#allowalltrustedapps) |
 | Microsoft App Store |**:::no-loc text="Allow Developer Unlock":::** | Explicit deny. | Block developing Microsoft Store apps or installing them directly from an IDE. | [:::no-loc text="ApplicationManagement/AllowDeveloperUnlock":::](/windows/client-management/mdm/policy-csp-applicationmanagement#allowdeveloperunlock) |
 | Microsoft App Store |**:::no-loc text="Allow Shared User App Data":::** | Block | Windows app can't share app data with other instances of that app. | [:::no-loc text="ApplicationManagement/AllowSharedUserAppData":::](/windows/client-management/mdm/policy-csp-applicationmanagement#allowshareduserappdata) |
 | Power |**:::no-loc text="Allow Hibernate":::** | Block | Windows 11 only | [:::no-loc text="Power/AllowHibernate":::](/windows/client-management/mdm/policy-csp-power#allowhibernate) |
-| Power |**:::no-loc text="Energy Saver Battery Threshold On Battery":::** | 50 | Energy Saver will be automatically turned on at (and below) the specified level. | [:::no-loc text="Power/EnergySaverBatteryThresholdOnBattery":::](/windows/client-management/mdm/policy-csp-power#energysaverbatterythresholdonbattery) |
-| Power |**:::no-loc text="Energy Saver Battery Threshold Plugged In":::** | 40 | Energy Saver will be automatically turned on at (and below) the specified level. | [:::no-loc text="Power/EnergySaverBatteryThresholdPluggedIn":::](/windows/client-management/mdm/policy-csp-power#energysaverbatterythresholdpluggedin) |
+| Power |**:::no-loc text="Energy Saver Battery Threshold On Battery":::** | 50 | Energy Saver is automatically turned on at (and less than) the specified level. | [:::no-loc text="Power/EnergySaverBatteryThresholdOnBattery":::](/windows/client-management/mdm/policy-csp-power#energysaverbatterythresholdonbattery) |
+| Power |**:::no-loc text="Energy Saver Battery Threshold Plugged In":::** | 40 | Energy Saver is automatically turned on at (and less than) the specified level. | [:::no-loc text="Power/EnergySaverBatteryThresholdPluggedIn":::](/windows/client-management/mdm/policy-csp-power#energysaverbatterythresholdpluggedin) |
 | Power |**:::no-loc text="Select Lid Close Action On Battery":::** | Sleep | | [:::no-loc text="Power/SelectLidCloseActionOnBattery":::](/windows/client-management/mdm/policy-csp-power#selectlidcloseactiononbattery) |
 | Power |**:::no-loc text="Select Lid Close Action Plugged In":::** | Sleep | | [:::no-loc text="Power/SelectLidCloseActionPluggedIn":::](/windows/client-management/mdm/policy-csp-power#selectlidcloseactionpluggedin) |
 | Power |**:::no-loc text="Select Power Button Action On Battery":::** | Sleep | | [:::no-loc text="Power/SelectPowerButtonActionOnBattery":::](/windows/client-management/mdm/policy-csp-power#selectpowerbuttonactiononbattery) |
@@ -93,7 +89,7 @@ Commonly applied device restrictions in education.
 | Settings |**:::no-loc text="Allow Region":::** | Block | Block the user from changing the region settings. | [:::no-loc text="Settings/AllowRegion":::](/windows/client-management/mdm/policy-csp-settings#allowregion) |
 | Shared PC |**:::no-loc text="Enable Shared PC Mode":::** | False | | [:::no-loc text="SharedPC/EnableSharedPCMode":::](/windows/client-management/mdm/sharedpc-csp#enablesharedpcmode) |
 | Shared PC |**:::no-loc text="Restrict Local Storage":::** | False | | [:::no-loc text="SharedPC/RestrictLocalStorage":::](/windows/client-management/mdm/sharedpc-csp#restrictlocalstorage) |
-| Shared PC |**:::no-loc text="Set Edu Policies":::** | true | [:::no-loc text="Windows 10 configuration recommendations for education customers":::](/education/windows/configure-windows-for-education) | [:::no-loc text="SharedPC/SetEDUpolicies":::](/windows/client-management/mdm/sharedpc-csp#setedupolicies) |
+| Shared PC |**:::no-loc text="Set Edu Policies":::** | true | [:::no-loc text="Windows configuration recommendations for education customers":::](/education/windows/configure-windows-for-education) | [:::no-loc text="SharedPC/SetEDUpolicies":::](/windows/client-management/mdm/sharedpc-csp#setedupolicies) |
 | Task Manager |**:::no-loc text="Allow End Task":::** | Block | | [:::no-loc text="TaskManager/AllowEndTask":::](/windows/client-management/mdm/policy-csp-taskmanager#allowendtask) |
 | Widgets |**:::no-loc text="Allow Widgets":::** | Not allowed. | This policy applies to the entire widgets experience, including content on the taskbar. | [:::no-loc text="AllowNewsAndInterests":::](/windows/client-management/mdm/policy-csp-newsandinterests) |
 | Wi-Fi Settings |**:::no-loc text="Allow Auto Connect To Wi Fi Sense Hotspots":::** | Block | | [:::no-loc text="Wifi/AllowAutoConnectToWiFiSenseHotspots":::](/windows/client-management/mdm/policy-csp-wifi#allowautoconnecttowifisensehotspots) |
@@ -104,7 +100,7 @@ Commonly applied device restrictions in education.
 
 [!INCLUDE [graph-explorer-introduction](../../../includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Device restrictions":::**.
+This creates a policy in your tenant with the name **:::no-loc text="_MSLearn_Example_CommonEDU - Windows - Device restrictions":::**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies

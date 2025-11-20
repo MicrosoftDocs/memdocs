@@ -25,6 +25,7 @@ There are two methods in the Configuration Manager console to install site syste
 - **Create Site System Server**: Specify a new server as a site system server, and then install one or more roles. This method is the same as the **Add Site System Roles**, except for the first page. You first specify the name of the server and the site in which you want to install it.
 
 > [!TIP]
+> A best practice for security and operational resilience is to keep site system roles separate from the site server, rather than colocate them on the same computer.
 > When you install a role on a remote computer, Configuration Manager adds the computer account of the remote computer to a local group on the site server.
 >
 > When you install the site on a domain controller, the group on the site server is a domain group instead of a local group. In this case, the remote site system role doesn't immediately work. The site system server needs to restart, or you refresh the Kerberos ticket for the remote server's computer account. For more information, see [Accounts used](../../../plan-design/hierarchy/accounts.md).
@@ -50,7 +51,7 @@ Configuration Manager uses the **site system installation account** to install r
 
 1. On the **System Role Selection** page, select the site system roles that you want to add.
 
-1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
+1. Complete the wizard. Additional pages can appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
 > The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver).
@@ -70,7 +71,7 @@ Configuration Manager uses the **site system installation account** to install r
 
 1. On the **System Role Selection** page, select the site system roles that you want to add.
 
-1. Complete the wizard. Additional pages may appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
+1. Complete the wizard. Additional pages can appear for specific roles. For more information, see [Configuration options for site system roles](configuration-options-for-site-system-roles.md).
 
 > [!TIP]
 > The Windows PowerShell cmdlet, **New-CMSiteSystemServer**, performs the same function as this procedure. For more information, see [New-CMSiteSystemServer](/powershell/module/configurationmanager/new-cmsitesystemserver).

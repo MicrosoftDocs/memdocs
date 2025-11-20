@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Lookout Mobile Endpoint with Microsoft Intune
 description: How to set up Lookout Mobile Threat Defense (MTD) How to set up to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 07/31/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 3a730a5d-2a90-42b0-aa28-aadfc7a18788
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -65,7 +46,7 @@ The following platforms are supported for Lookout when enrolled in Intune:
 
 ## Prerequisites
 
-- Lookout Mobile Endpoint Security enterprise subscription  
+- Lookout Mobile Endpoint Security enterprise subscription
 - Microsoft Intune Plan 1 subscription
 - Microsoft Entra ID P1
 - Enterprise Mobility and Security (EMS) E3 or E5, with licenses assigned to users.

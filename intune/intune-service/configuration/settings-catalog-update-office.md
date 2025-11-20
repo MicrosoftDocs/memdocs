@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Update Microsoft 365 apps with the settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to update Microsoft 365 apps to the latest version, and choose how frequently Office checks for updates. See the device registry keys that are updated when an Intune policy to Office update is applied.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mayurjadhav
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -37,8 +20,7 @@ In this scenario, you create a settings catalog policy in Intune that updates Mi
 
 This feature applies to:
 
-- Windows 11
-- Windows 10
+- Windows
 - Microsoft 365
 
 ## Prerequisites
@@ -72,7 +54,7 @@ Use an Intune policy to set the update channel for Microsoft 365 apps. The updat
 3. When the policy is ready, [assign the policy](device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
 
     - [Sync the policy in Intune](../remote-actions/device-sync.md)
-    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app-windows-10-or-later)  
+    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## Check the Intune registry keys
 
@@ -148,7 +130,7 @@ To test your policy, you can force the policy settings on the device. The follow
 
 At this point, the Office update channel is successfully changed on the device. You can open a Microsoft 365 app for a user that receives this update to check status.
 
-## Force the Office synchronization to update account information  
+## Force the Office synchronization to update account information
 
 If you want to do more, you can force Office to get the latest version update. The following steps should only be done as a confirmation, or if you need the devices to get the latest version update from that channel quickly. Otherwise, let Office do its job, and update automatically.
 

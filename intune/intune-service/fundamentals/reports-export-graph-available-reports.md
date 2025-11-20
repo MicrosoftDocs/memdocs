@@ -1,35 +1,17 @@
 ---
-# required metadata
-
-title: Intune Graph API - Reports and properties | Microsoft Docs
+title: Intune Graph API - Reports and Properties | Microsoft Docs
 description: Learn about Intune reports and properties provided via Graph API.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
-ms.date: 07/21/2025
+ms.date: 09/08/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davidra
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Intune reports and properties available using Graph API
+# Intune Reports and Properties Available Using Graph API
 
 Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
@@ -44,7 +26,7 @@ Microsoft Intune exports reports through the following Microsoft Graph API endpo
 https://graph.microsoft.com/beta/deviceManagement/reports/exportJobs
 ```
 
-The following table contains the possible values for the `reportName` parameterparameter and the corresponding reports you can export.
+The following table contains the possible values for the `reportName` parameter and the corresponding reports you can export.
 
 | ReportName (Export Parameter) | Associated Report in Microsoft Intune |
 |------------------------------|----------------------------------------|
@@ -422,7 +404,7 @@ The following table contains the possible output when calling the `AppInvRawData
 |     UserId  |
 |     UserName  |
 
-You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties: 
+You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties:
 - ApplicationName
 - ApplicationPublisher
 - ApplicationShortVersion
@@ -746,7 +728,7 @@ To call this report, you need a minimum role-based access control permission of 
 
 The properties `LastOSUpdateTime` and `LastRebootTime` only populate in the report when the **OS Update Status** setting is enabled in the Google Admin Console. This setting can be found in the Google Admin Console under **Devices** > **Chrome** **Settings**.
 
-You can filter the `ChromeOSDevices` report using the following properties: 
+You can filter the `ChromeOSDevices` report using the following properties:
 - IntuneDeviceId
 - MostRecentUserEmail
 - MostRecentLogin
@@ -763,7 +745,7 @@ You can generate the ChromeOSDevices report using the Microsoft Graph API to mak
 
 ### Check the status of the ChromeOSDevices report
 
-You can check whether the ChromeOSDevices report has completed by using the Microsoft Graph API.
+You can check whether the ChromeOSDevices report is complete by using the Microsoft Graph API.
 
 | Microsoft Graph API endpoint | Method |
 |---|---|
@@ -1679,6 +1661,8 @@ The following table contains the possible output when calling the `DeviceRunStat
 | UserId |
 | UserName |
 
+[!INCLUDE [platform-scripts-column-mappings](../includes/platform-scripts-column-mappings.md)]
+
 There are no filters for this report.
 
 ## Devices
@@ -2276,9 +2260,9 @@ There are no filters for this report.
 > [!NOTE]
 > To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API allows you to select, to what you receive back.
 >
-> The column alias can only be accepted by the select parameter, and can’t be accepted by the filter parameter.
+> The select parameter accepts column aliases, but the filter parameter doesn't.
 >
-> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` will only be exported when they're included in the select parameter. These columns won't be exported by default.
+> The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` are only exported when they're included in the select parameter. These columns aren't exported by default.
 
 The following table contains the possible output when calling the `DevicesWithInventory` report:
 
@@ -2354,14 +2338,14 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `OwnerType`
 - `PartnerFeaturesBitmask`
 
-The `ProcessorArchitecture` mappings for Windows 10+ are the following:
+The following `ProcessorArchitecture` mappings apply to Windows:
 - 9 = x64
 - 5 = ARM
 - 12 = ARM64
 - 0 = x86
 - default = Unknown
 
-The `ProcessorArchitecture` mappings for macOS are the following:
+The following `ProcessorArchitecture` mappings apply to macOS:
 - 9 = x64
 - 12 = ARM64
 - default = unknown
@@ -3452,7 +3436,7 @@ The following table contains the possible output when calling the `EpmElevationR
 | FilePath |
 | FileVersion |
 | Hash |
-| Id |
+| ID |
 | InternalName |
 | IsSystemInitiated |
 | Justification |

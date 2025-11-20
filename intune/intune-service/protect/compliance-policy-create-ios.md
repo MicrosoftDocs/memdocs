@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: iOS/iPadOS device compliance settings in Microsoft Intune
 description: View the device compliance settings for iOS/iPadOS that you can manage with Microsoft Intune compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
-ms.date: 01/29/2025
+ms.date: 09/04/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-ms.assetid: 3cfb8222-d05b-49e3-ae6f-36ce1a16c61d
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -60,7 +41,7 @@ For details about the settings for each level:
 
 ## Email
 
-- **Unable to set up email on the device**  
+- **Unable to set up email on the device**
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - A managed email account is required. If the user already has an email account on the device, the email account must be removed so Intune can set one up correctly. If no email account exists on the device, the user should contact the IT administrator to configure a managed email account.
 
@@ -80,9 +61,9 @@ For details about email profiles, see [configure access to organization email us
   - **Block** - Mark rooted (jailbroken) devices as not compliant.
 
 - **Require the device to be at or under the Device Threat Level**  
-  *Supported for iOS 8.0 and later*  
+  *Supported for iOS 8.0 and later*
 
-   Select the maximum allowed device threat level evaluated by your mobile threat defense service. 
+   Select the maximum allowed device threat level evaluated by your mobile threat defense service.
    Use this setting to take the risk assessment as a condition for compliance. Choose the allowed threat level:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Secured** - This option is the most secure, and means that the device can't have any threats. a device with any level of threats is evaluated as noncompliant.
@@ -116,7 +97,7 @@ For details about email profiles, see [configure access to organization email us
 
 ## Microsoft Defender for Endpoint
 
-- **Require the device to be at or under the machine risk score**  
+- **Require the device to be at or under the machine risk score**
 
   Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
@@ -133,7 +114,7 @@ For details about email profiles, see [configure access to organization email us
 >
 > After a compliance or configuration policy is applied to an iOS/iPadOS device, users are prompted to set a passcode every 15 minutes. Users are continually prompted until a passcode is set. When a passcode is set for the iOS/iPadOS device, the encryption process automatically starts. The device remains encrypted until the passcode is disabled.
 
-- **Require a password to unlock mobile devices**  
+- **Require a password to unlock mobile devices**
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device. iOS/iPadOS devices that use a password are encrypted.
 
@@ -141,7 +122,7 @@ For details about email profiles, see [configure access to organization email us
   *Supported for iOS 8.0 and later*
 
   - **Not configured** (*default*) - Users can create simple passwords like **1234** or **1111**.
-  - **Block** - Users can't create simple passwords, such as **1234** or **1111**. 
+  - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
 - **Minimum password length**  
   *Supported for iOS 8.0 and later*
@@ -151,21 +132,21 @@ For details about email profiles, see [configure access to organization email us
 - **Required password type**  
   *Supported for iOS 8.0 and later*
 
-  Choose the password type required on the device. When set to **Not configured**, which is the default choice, Intune doesn't change or update this setting. Your options:  
-  
-  - **Not configured**: The password is determined by the device's default settings. A user's OS might allow simple passwords, like *0000* and *1234*.  
-  - **Alphanumeric**: The password must contain a mix of uppercase letters, lowercase letters, and numeric characters.  
-  - **Numeric**: The password at minimum must be a set of numeric characters, such as *123456789*. Alphabetic passwords and alphanumeric passwords are also supported.  
+  Choose the password type required on the device. When set to **Not configured**, which is the default choice, Intune doesn't change or update this setting. Your options:
+
+  - **Not configured**: The password is determined by the device's default settings. A user's OS might allow simple passwords, like *0000* and *1234*.
+  - **Alphanumeric**: The password must contain a mix of uppercase letters, lowercase letters, and numeric characters.
+  - **Numeric**: The password at minimum must be a set of numeric characters, such as *123456789*. Alphabetic passwords and alphanumeric passwords are also supported.
 
 - **Number of non-alphanumeric characters in password**  
-  Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password. 
+  Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password.
 
   Setting a higher number requires the user to create a password that is more complex.
 
 - **Maximum minutes after screen lock before password is required**  
   *Supported for iOS 8.0 and later*
 
-  Select how much time is allowed to pass after the screen locks before users have to enter a password to access their device. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **4 hours**.  
+  Select how much time is allowed to pass after the screen locks before users have to enter a password to access their device. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **4 hours**.
 
 - **Maximum minutes of inactivity until screen locks**  
   Select the amount of idle time allowed before the device locks its screen. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **15 minutes**.
@@ -173,12 +154,12 @@ For details about email profiles, see [configure access to organization email us
 - **Password expiration (days)**  
   *Supported for iOS 8.0 and later*
 
-  Enter how long, in days, a password is valid before the user must create a new one. 
+  Enter how long, in days, a password is valid before the user must create a new one.
 
 - **Number of previous passwords to prevent reuse**  
   *Supported for iOS 8.0 and later*
 
-  Enter the number of previously used passwords that can't be used. For example, if you enter 5, users can't reuse their 5 most recent passwords.    
+  Enter the number of previously used passwords that can't be used. For example, if you enter 5, users can't reuse their 5 most recent passwords.
 
 ### Device Security
 
@@ -190,9 +171,9 @@ For details about email profiles, see [configure access to organization email us
 
     To get the app bundle ID:
 
-    - The Apple website has a list of [built-in Apple apps](https://support.apple.com/HT211833).  
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).  
-    - For examples, see [Bundle IDs for built-in iOS/iPadOS apps](../configuration/bundle-ids-built-in-ios-apps.md).  
+    - The Apple website has a list of [built-in Apple apps](https://support.apple.com/HT211833).
+    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+    - For examples, see [Bundle IDs for built-in iOS/iPadOS apps](../configuration/bundle-ids-built-in-ios-apps.md).
 
   > [!NOTE]
   >

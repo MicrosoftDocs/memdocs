@@ -5,27 +5,23 @@ ms.date: 5/2/2024
 ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
-ms.manager: dougeby
-no-loc: [Microsoft, Windows, Autopatch, Autopilot]
 ms.collection:
 - graph-interactive
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Windows Update
 
 Microsoft Intune and Intune for Education can configure many Windows Update configuration settings. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
-Use Microsoft Intune or Intune for Education to manage the install of Windows 10/11 software updates from Windows Update client policies. You can configure update settings on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+Use Microsoft Intune or Intune for Education to manage the install of Windows software updates from Windows Update client policies. You can configure update settings on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
-## Update rings for Windows 10 and later
+## Update rings for Windows
 
-Update ring policies are a collection of settings that configure when devices that run Windows 10 and Windows 11 updates get installed.
+Update ring policies are a collection of settings that configure when devices that run Windows updates get installed.
 
 To learn more, see:
 
-- [Update rings for Windows 10 and later policy in Intune](/mem/intune-service/protect/windows-10-update-rings)
+- [Update rings for Windows policy in Intune](/intune/intune-service/protect/windows-10-update-rings)
 - [The Windows Update policies you should set and why](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/the-windows-update-policies-you-should-set-and-why/ba-p/3270914)
 - [YouTube: Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKvpS9zPyFt9fc9HgepQxaw9&index=1)
 - [YouTube: Windows Update for Business Fundamentals (Japanese)](https://youtu.be/o6_eGOyv-_g)
@@ -76,7 +72,7 @@ Content-Type: application/json
 
 Settings described in this section aren't available in an Update ring policy and should be configured using a settings catalog type configuration profile.
 
-To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog).
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/intune/intune-service/configuration/settings-catalog).
 
 > [!TIP]
 > When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
@@ -110,10 +106,8 @@ Windows feature updates contain new Windows features to improve the user experie
 
 Use the support lifecycle websites for each Windows operating system version and edition:
 
-- [Windows 10 Home, Pro, and Pro Education](/lifecycle/products/windows-10-home-and-pro);
-- [Windows 10 Enterprise and Education](/lifecycle/products/windows-10-enterprise-and-education);
-- [Windows 11 Home, Pro, and Pro Education](/lifecycle/products/windows-11-home-and-pro);
-- [Windows 11 Enterprise and Education](/lifecycle/products/windows-11-enterprise-and-education).
+- [Windows 11 Home, Pro, and Pro Education](/lifecycle/products/windows-11-home-and-pro)
+- [Windows 11 Enterprise and Education](/lifecycle/products/windows-11-enterprise-and-education)
 
 There are two ways to control how and when Windows feature updates are installed on Windows.
 
@@ -128,7 +122,7 @@ Using the **update ring** you configured earlier, set the **Feature update defer
 
 ### Control feature version
 
-A [Feature update policy](/mem/intune-service/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. Devices running older versions of Windows will update to the specified version. Devices with newer versions of Windows won't perform any feature updates.
+A [Feature update policy](/intune/intune-service/protect/windows-10-feature-updates) can be configured to set devices to a particular version of Windows. Devices running older versions of Windows will update to the specified version. Devices with newer versions of Windows won't perform any feature updates.
 
 To set a feature update policy:
 
