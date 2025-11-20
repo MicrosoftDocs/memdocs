@@ -1,32 +1,13 @@
 ---
-# required metadata
-
 title: What is Microsoft Intune
 description: Microsoft Intune manages users and devices, simplifies app management and automated policy deployment, and integrates with mobile threat defense. It connects to Managed Google Play, Apple tokens and certificates, and Teamviewer for remote assistance. Can use MDM or MAM to protect data, configure devices, and simplify access to company resources.
-keywords: what is Intune, mobile endpoint management, mobile application management
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/30/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.custom:
-- intro-overview
-- get-started
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
 - essentials-overview
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -149,14 +130,14 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   - [Windows Autopilot overview](/autopilot/overview)
   - [Windows Autopilot deployment for existing devices](/autopilot/existing-devices)
 
-- **[Endpoint analytics](../../analytics/overview.md)** for visibility and reporting on end user experiences, including device performance and reliability
+- **[Endpoint analytics](../../analytics/index.md)** for visibility and reporting on end user experiences, including device performance and reliability
 
   You can use Endpoint analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively improve end user experiences and reduce help desk tickets.
 
   For more specific information, go to:
 
-  - [What is Endpoint analytics](../../analytics/overview.md)
-  - [Enroll Intune devices into Endpoint analytics](../../analytics/enroll-intune.md)
+  - [Endpoint Analytics Overview](../../analytics/index.md)
+  - [Enroll Intune devices into Endpoint analytics](../../analytics/configure.md)
 
 - **[Microsoft 365](/deployoffice/about-microsoft-365-apps)** for end user productivity Office apps, including Outlook, Teams, Sharepoint, OneDrive, and more
 
@@ -164,7 +145,7 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Add Microsoft 365 Apps to Windows 10/11 devices with Microsoft Intune](../apps/apps-add-office365.md)
+  - [Add Microsoft 365 Apps to Windows devices with Microsoft Intune](../apps/apps-add-office365.md)
   - [Microsoft 365 docs: Manage devices with Intune](/microsoft-365/solutions/manage-devices-with-intune-overview)
 
 - **[Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint)** to help enterprises prevent, detect, investigate, and respond to threats
@@ -173,8 +154,8 @@ Microsoft Intune integrates with other Microsoft products and services that focu
 
   For more specific information, go to:
 
-  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md)
-  - [Configure Microsoft Defender for Endpoint in Intune](../protect/advanced-threat-protection-configure.md)
+  - [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md)
+  - [Configure Microsoft Defender for Endpoint in Intune](../protect/microsoft-defender-integrate.md)
 
 - **[Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)** for automatic patching of Windows, Microsoft 365 apps for enterprise, Microsoft Edge, and Microsoft Teams
 
@@ -203,7 +184,7 @@ The Intune admin center makes it easy to connect to different partner services, 
 
 - **TeamViewer for remote assist**: When you connect to your TeamViewer account, you can use TeamViewer to remotely assist devices.
 
-  For more information, go to [Use TeamViewer to remotely administer Intune devices](../remote-actions/teamviewer-support.md).
+  For more information, go to [Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md).
 
 With these services, Intune:
 

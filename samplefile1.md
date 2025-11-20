@@ -1,26 +1,12 @@
-# required metadata
-
+---
 title: [ARTICLE TITLE | SERVICE NAME]
 description:
-keywords:
 author: [GITHUB USERNAME]
 manager: [ALIAS]
 ms.date: 04/28/2016
 ms.topic: article
-ms.service:
-ms.assetid: [GET ONE FROM guidgenerator.com]
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus laoreet volutpat aliquet. Suspendisse venenatis ex vitae fringilla suscipit. Maecenas eu nibh vitae lorem porta mollis. Nam in nisi eu nisi hendrerit pretium. Nullam vel gravida felis. Pellentesque luctus massa mi. Proin ultricies egestas erat. Morbi ut tincidunt nulla, eu ornare urna. Fusce sit amet aliquam est, at efficitur erat. Curabitur blandit mauris in dolor luctus feugiat. Proin sit amet dignissim arcu. Proin turpis lorem, congue ut bibendum non, posuere in eros. Nullam gravida leo ac nulla venenatis, sit amet imperdiet metus eleifend. Nullam id pharetra elit.
 
 Aenean porta sit amet nisl quis posuere. In ut magna felis. Nulla quis euismod odio. Sed scelerisque nisi justo, sed egestas odio volutpat non. Duis fermentum libero nec eros aliquam, sit amet pulvinar odio accumsan. Sed scelerisque felis tristique arcu euismod lobortis. Nunc id volutpat lectus. In pharetra sapien a ullamcorper gravida. Sed ultricies tellus nec magna posuere tempus.

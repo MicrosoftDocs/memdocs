@@ -1,27 +1,12 @@
 ---
-# required metadata
-
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-keywords:
-author: laurawi
+author: brenduns
 ms.author: brenduns
-manager: laurawi
-ms.date: 08/21/2025
+ms.date: 11/13/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
- 
-# optional metadata
-
-#audience:
-
-ms.reviewer: lebacon
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
+ms.reviewer: intuner
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -61,66 +46,103 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Endpoint Privilege Management Dashboard for user readiness and elevation trends<!-- 26123334 -->
+### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-We’re working on a dashboard for Endpoint Privilege Management (EPM) that brings you insights to support having your users run as standard users in place of running with local admin permissions. First, the dashboard will report progress towards a Standard User Status to help you understand when your admin users might be ready to be moved to standard users. The dashboard will also help you understand the file elevation trends in your organization.
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
 ## App management
 
-### Offline Mode and Pre-Signed In Apps for Android Enterprise Dedicated Devices<!-- 30303710, 25476290 -->
-
-We're enhancing support for Android Enterprise dedicated devices with two new features in Managed Home Screen (MHS): Offline mode and App access without sign in.
-
-Offline Mode lets users access designated apps when the device is offline or unable to connect to the network. You can also configure a grace period before requiring users to sign in once connectivity is restored.
-
-App access without sign in lets users launch specific apps from the MHS sign-in screen--regardless of network status--via the MHS top bar. This can be helpful for apps that need to be available immediately, such as help desk or emergency tools.
-
-These features are intended for use on dedicated devices enrolled in Microsoft Entra Shared device mode and will be configurable via device configuration policy.
-
-Applies to:
-- Android Enterprise
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
-Applies to:
-
-- iOS/iPadOS
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
 
 <!-- *********************************************** -->
 
-<!-- ## Device configuration -->
+## Device configuration
 
+### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
+
+On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
+
+In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+
+  - Set a recovery lock password
+  - Configure a password rotation schedule
+  - Clear a recovery lock password
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
 
 <!-- *********************************************** -->
 
 ## Device enrollment
 
-### Intune to support Ubuntu 22.04 and later<!-- 32756619 -->
+### Configure Windows Backup for Organizations<!--29202026 -->
+      
+A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).  
 
-Microsoft Intune and the Microsoft Intune app for Linux will support Ubuntu 22.04 and later, while ending support for Ubuntu 20.04. Devices that are currently enrolled on Ubuntu 20.04 remain enrolled even when that version is no longer supported. New devices will be unable to enroll if they're running Ubuntu 20.04. To prepare for this change, check your Intune reporting to see what devices or users might be affected. In the admin center, go to **Devices** > **All devices** and filter OS by Linux. You can add more columns to help identify who in your organization has devices running Ubuntu 20.04. Notify your users to upgrade their devices to a supported Ubuntu version.
+### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
+
+As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
+
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions include:
+- **App Store** (iOS/iPadOS 14.3+)
+- **Camera button** (iOS/iPadOS 18+)
+   - **Web content filtering** (iOS/iPadOS 18.2+)
+   - **Safety and handling** (iOS/iPadOS 18.4+)
+   - **Multitasking** (iOS/iPadOS 26+)
+   - **OS Showcase** (iOS/iPadOS 26+)
+
+The screens you can skip during macOS enrollment include:
+- **App Store** (macOS 11.1+)
+- **Get Started** (macOS 15+)
+- **Software update** (macOS 15.4+)
+- **Additional privacy settings** (macOS 26+)
+- **OS Showcase** (macOS 26.1+)
+- **Update completed** (macOS 26.1+)
+- **Get Started** (macOS 15+)
 
 <!-- *********************************************** -->
 
 ## Device management
 
-### Configure Windows Backup for Organizations (public preview)<!-- 29202026 -->
+### Windows Autopilot device preparation in automatic mode to be available for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps (public preview)<!-- 35518695 -->
 
-Intune administrators will be able to configure a new feature in public preview called Windows Backup for Organizations. With this feature, you can back up your organization's Windows 10 or Windows 11 settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Announcing Windows Backup for Organizations - Windows IT Blog](https://techcommunity.microsoft.com/blog/windows-itpro-blog/announcing-windows-backup-for-organizations/4416659).
+You will be able to use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and will apply immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You'll be able to monitor deployment status in the [Windows Autopilot device preparation deployment report](/autopilot/device-preparation/reporting-monitoring).
+
+For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](/autopilot/device-preparation/tutorial/automatic/automatic-workflow).
+
+For more information, see the following articles:
+
+- [Create provisioning policies for Windows 365 | Microsoft Learn](/windows-365/enterprise/create-provisioning-policy)
+- [Windows 365 Cloud Apps | Microsoft Learn](/windows-365/enterprise/cloud-apps)
+- [Use Autopilot device preparation with Cloud PCs | Microsoft Learn](/windows-365/enterprise/autopilot-device-preparation)
 
 <!-- *********************************************** -->
 
 ## Device security
 
+### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
+
+As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
+
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-We’re adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices, and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
- 
-Applies to:
-- Windows
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 For information about the currently available Intune security baselines, see [Security baselines overview](../protect/security-baselines.md).
 
@@ -130,10 +152,11 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-Applies to the following when you use the *Windows* platform:
-
-- Windows 10
-- Windows 11
+> [!div class="checklist"]
+> Applies to the following when you use the *Windows* platform:
+>
+> - Windows 10
+> - Windows 11
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
@@ -143,7 +166,9 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
+
 <!-- ## Monitor and troubleshoot -->
+
 
 <!-- *********************************************** -->
 
@@ -151,11 +176,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Role-based access control
-
-### Multi-administrator approval support for role-based access control <!-- 26838684 -->
-
-Support for multiple administrative approval (MAA) is being expanded to include role-based access control. When this feature is enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This helps protect your organization from unauthorized or accidental role-based access control changes by enforcing dual authorization.
+<!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 

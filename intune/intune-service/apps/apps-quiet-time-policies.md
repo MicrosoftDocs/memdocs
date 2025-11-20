@@ -1,27 +1,14 @@
 ---
-title: Create quiet time policies in Microsoft Intune
-titleSuffix:
+title: Create Quiet Time Policies in Microsoft Intune
 description: Learn how to create quiet time policies for iOS/iPadOS and Android apps.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 09/23/2024
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-ms.assetid: 
 ms.reviewer: cdemello
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - highpri
 ---
 
-# Quiet time policies for iOS/iPadOS and Android apps
+# Quiet Time Policies for iOS/iPadOS and Android Apps
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -46,7 +33,7 @@ To create a quiet time policy, use the following steps:
 3. Select **Create policy**.
 4. Select **Policy Type**. You can choose the **Date Range** or the **Days of the week** policy types. For more information, see, [Quiet time policy types](#quiet-time-policy-types).
 5. Select **Create** to display the **Basics** page.
-6. On the **Basics** page, add a **Name** and optional **Description** for the quiet time policy. The **Platform** value is prepopulated with “Android; iOS/iPadOS.”<br>Select **Next** to display the **Configuration settings** page. 
+6. On the **Basics** page, add a **Name** and optional **Description** for the quiet time policy. The **Platform** value is prepopulated with “Android; iOS/iPadOS.”<br>Select **Next** to display the **Configuration settings** page.
 7. On the **Configuration settings** page, select how you want to apply quiet time settings. Each type of Quiet Time policy has different configuration values. For more information, see [Quiet time policy configuration settings](#quiet-time-policy-configuration-settings).<br>Select **Next** to display the **Scope tags** page.
 8. The **Scope tags** page allows you to optionally add scope tags for the app. For more information, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).<br>Select **Next** to display the **Assignments** page.
 9. The **Assignments** page allows you to assign the app protection policy to groups of users. You must apply the policy to a group of users to have the policy take effect.<br>Select **Next** to display the **Review + create** page.
@@ -78,14 +65,14 @@ To change policy configuration settings, use the following steps:
 
 ### Date Range policy
 
-The **Date Range** policy has a **Range Settings** configuration section. 
+The **Date Range** policy has a **Range Settings** configuration section.
 
 **Range Settings** section:
 
 |      Policy setting     |      Description     |
 |---|---|
-|    Start   |     Specify **Start** date and time to mute notifications.    | 
-|    End   |     Specify **End** date and time to mute notifications.    | 
+|    Start   |     Specify **Start** date and time to mute notifications.    |
+|    End   |     Specify **End** date and time to mute notifications.    |
 
 :::image type="content" source="./media/apps-quiet-time-policies/apps-quiet-time-policies-01.png" alt-text="Screenshot of the Microsoft Intune quiet time - Configure Date Range policy" border="true":::
 
@@ -115,5 +102,5 @@ The **Days of week** policy has the **Allday**, **Certain Hours**, and **End Use
 |---|---|
 |     Allow user to change settings    |     Select **Yes** to allow end users to make changes to this setting by editing their global quiet time settings. Select **No** to disallow end users from changing this setting by editing their global quiet time settings.   |
 
-:::image type="content" source="./media/apps-quiet-time-policies/apps-quiet-time-policies-02.png" alt-text="Screenshot of the Microsoft Intune quiet time - Configure days of the week policy" border="true":::  
+:::image type="content" source="./media/apps-quiet-time-policies/apps-quiet-time-policies-02.png" alt-text="Screenshot of the Microsoft Intune quiet time - Configure days of the week policy" border="true":::
 

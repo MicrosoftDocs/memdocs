@@ -1,38 +1,17 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide - Get started with MAM
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - Get Started With MAM
 description: Get started with Intune before incorporating Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 06/12/2025
+ms.date: 11/17/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
-# Intune App SDK for Android - Get started with MAM
+# Intune App SDK for Android - Get Started With MAM
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies into your native Java/Kotlin Android app. These policies are also known as MAM policies. An Intune-managed application is one that is integrated with the Intune App SDK. When Intune actively manages the app, Intune administrators can easily deploy app protection policies to your Intune-managed app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Stage 1: Plan the Integration].
@@ -44,7 +23,7 @@ The Microsoft Intune App SDK for Android lets you incorporate Intune app protect
 - Download the Intune App SDK.
 - Learn what files are included in the Intune App SDK.
 - Reference the Intune App SDK in your application.
-- Configure the Intune App Gradle Build Plugin OR utilize the command line build tool.
+- Configure the Intune App Gradle Build Plugin or use the command line build tool.
 - Confirm that the Intune App SDK is properly included in your build.
 
 ## Background
@@ -66,10 +45,9 @@ The Intune App SDK consists of the following files:
 - **Microsoft.Intune.MAM.SDK.aar**: The SDK components, except for the Support Library JAR files.
 - **com.microsoft.intune.mam.build.jar**: A Gradle plugin, which [aids in integrating the SDK].
 - **CHANGELOG.md**: Provides a record of changes made in each SDK version.
-- **THIRDPARTYNOTICES.TXT**:  An attribution notice that acknowledges third-party and/or OSS code that will be compiled into your app.
-- **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: This AAR contains
+- **Microsoft.Intune.MAM.SDK.DownlevelStubs.aar**: This Android Archive (AAR) contains
   stubs for Android system classes that are present only on newer
-  devices but that are referenced by methods in [MAMActivity]. Newer
+  devices but are referenced by methods in [MAMActivity]. Newer
   devices ignore these stub classes. This AAR is necessary only
   if your app performs reflection on classes deriving from
   `MAMActivity`, and **most apps do not need to include it**. The AAR
@@ -78,7 +56,7 @@ The Intune App SDK consists of the following files:
 ## Referencing Intune App libraries
 
 The Intune App SDK is a standard Android library with no external dependencies.
-**Microsoft.Intune.MAM.SDK.aar** contains both the interfaces necessary for enabling app protection policies and the code necessary to interoperate with the Microsoft Intune Company Portal app.
+**Microsoft.Intune.MAM.SDK.aar** contains the interfaces necessary for enabling app protection policies. It also contains the code necessary to interoperate with the Microsoft Intune Company Portal app.
 
 ### Android Studio
 
@@ -95,9 +73,9 @@ The **Microsoft.Intune.MAM.SDK.aar** is bound to create C# references that are s
 
 ### ProGuard
 
-Your application may already use [ProGuard] (or any other shrinking/obfuscation mechanism) as a build step.
+Your application might already use [ProGuard] (or any other shrinking/obfuscation mechanism) as a build step.
 The Intune App SDK has ProGuard configuration rules that must be included in that build step.
-Including the *.AAR* in your build, as described above, automatically integrates the SDK's configuration into the ProGuard step, so the necessary class files are kept. If you've properly included the *.AAR*, no other change is needed.
+Including the *.AAR* in your build, as previously described, automatically integrates the SDK's configuration into the ProGuard step, so the necessary class files are kept. If you included the *.AAR*, no other change is needed.
 
 The [Microsoft Authentication Library (MSAL)] ships with its own ProGuard configuration. If your app integrates MSAL, refer to the [MSAL documentation] for more detail.
 
@@ -109,25 +87,25 @@ These tools transform the class files generated by Java compilation; they don't 
 
 **The build tooling alone is not sufficient to fully integrate your application.**
 The tools perform [class and method replacements] only.
-They don't perform any more complex SDK integrations such as [Multi-Identity], [Registering for App Protection Policy], [Policy for limiting data transfer between apps and device or cloud storage locations], or [MSAL configuration], which must be completed before your app is fully Intune enabled.
+They don't perform any more complex SDK integrations such as [Multi-Identity], [Registering for App Protection Policy], [Policy for limiting data transfer between apps and device or cloud storage locations], or [MSAL configuration]. You must complete these integrations before your app is fully Intune enabled.
 Carefully review the rest of this documentation for integration points relevant to your app.
 
-### Impact on debugging
+### Debugging
 
-The build tooling performs replacements after compilation, which will change some method names.
-As a result, debugging breakpoints set on method names may be impacted and not halt as expected.
+The build tooling performs replacements after compilation. These replacements change some method names.
+As a result, debugging breakpoints set on method names might be impacted. They might not halt as expected.
 Line number breakpoints are unaffected.
 
 ### MAM in the Stack
 
-Because the Intune App SDK integration relies heavily on class and method replacements, you'll start seeing `mam` throughout your stack traces.
-When your app doesn't have with an account targeted with app protection policies, all this MAM code lies dormant: `MAMActivity` will work identical to `Activity`, `onMAMCreate` will work identical to `onCreate`, etc.
+The Intune App SDK integration relies heavily on class and method replacements. Because of this reliance, you see `mam` throughout your stack traces.
+When your app doesn't have an account targeted with app protection policies, all this MAM code lies dormant. For example, `MAMActivity` works identical to `Activity` and `onMAMCreate` works identical to `onCreate`.
 Whenever you see `mam` in a stack, first check:
 
 - Is the account targeted with app protection policies?
 - Is the Intune Company Portal installed?
 
-Unless the answer to both is "yes", the MAM code is acting as simple passthrough.
+Unless the answer to both is "yes," the MAM code acts as simple passthrough.
 
 ### What tool do I need?
 
@@ -135,7 +113,7 @@ If you build your app with Gradle, see [Integrating with the Gradle Build Plugin
 
 If you build your app with [.NET MAUI](https://dotnet.microsoft.com/apps/maui), see [Integrating with the .NET MAUI Targets].
 
-If you build your app with neither of the above, see [Integrating with the Command Line Tool].
+If you build your app with neither of the previous tools, see [Integrating with the Command Line Tool].
 
 ## Integrating with the Gradle Build Plugin
 
@@ -173,57 +151,56 @@ Test compilation isn't affected.
 
 ### Dependencies
 
-> [!NOTE]
-> You must be using version 3.6.1 or newer of the Android Gradle plugin and version 5.6.4 or newer of Gradle.
-
 The Gradle plugin has a dependency on [Javassist], which must be made available to Gradle's dependency resolution.
-**Javassist is used solely at build time when running the plugin and no Javassist code will be added to your app.**
+**Javassist is used solely at build time when running the plugin and no Javassist code is added to your app.**
+
+| MAM SDK | Javassist Version |
+|-|-|
+| ≥ 10.0.0 | 3.29.2-GA |
+| ≥ 7.0.0  | 3.27.0-GA |
+| < 7.0.0  | 3.22.0-GA |
 
 > [!NOTE]
-> Javassist versions may not be backwards compatible.
-> Generally, you should use the exact version expected by the Intune App SDK:
->
-> - Intune App SDK ≥ 10.0.0 requires Javassist 3.29.2-GA
-> - Intune App SDK ≥ 7.0.0 requires Javassist 3.27.0-GA
-> - Intune App SDK < 7.0.0 requires Javassist 3.22.0-GA
+> Javassist versions might not be backwards compatible.
+> Generally, you should use the exact version expected by the Intune App SDK.
 
-Additionally, when consuming MAM SDK 8.0.0+, you must ensure the following is set in your Gradle configuration:
+### Compatibility Matrix
 
-```groovy
-compileOptions {
-  sourceCompatibility JavaVersion.VERSION_1_8
-  targetCompatibility JavaVersion.VERSION_1_8
-}
-```
+The MAM SDK Build Plugin aligns with [Android build requirements and compatibility tables].
+Versions not listed here might or might not work.
+
+| MAM SDK | Android Version | Gradle | Android Gradle Plugin | Kotlin Version | Java Version |
+|-|-|-|-|-|-|
+| 10.0.0 | 14 |   8.2  | 8.2.2 | 1.9.25 | 17 |
+| 11.0.0 | 15 |   8.7  | 8.6.1 | 2.0.21 | 17 |
+| 12.0.0 | 16 | 8.11.1 | 8.9.1 | 2.1.21 | 17 |
 
 ### Exclusions
 
-Additional configurations may be provided to exclude specific components in your app from rewrites.
-Exclusions are predominantly useful for components that aren't relevant for MAM (i.e. don't handle or display corporate data).
+More configurations can be provided to exclude specific components in your app from rewrites.
+Exclusions are predominantly useful for components that aren't relevant for MAM (that is, don't handle or display corporate data).
 
 Exclusions can be configured for varying scopes:
 
 - `excludeProjects` allows excluding a list of Gradle projects. These exclusions are
-  useful for projects that don't interface with Android libraries or system APIs and/or
-  don't handle corporate data. For example, a project that exclusively contains native code
+  useful for projects that don't interface with Android libraries or system APIs. They're also useful for projects that don't handle corporate data. For example, a project that exclusively contains native code
   for performing low-level network operations might be a good candidate. If a project
-  broadly interfaces with Android libraries or system APIs, these exclusions should be
-  avoided.
+  broadly interfaces with Android libraries or system APIs, avoid these exclusions.
 - `excludeClasses` allows excluding a list of classes. These exclusions are useful
   for classes that don't handle or present corporate data. For example, splash
-  screens and onboarding `Activity`s are good candidates. Note that a class can't
+  screens and onboarding `Activity`s are good candidates. A class can't
   be excluded if any of its superclasses are processed.
 - `excludeVariants` enables excluding project variants. These exclusions can refer to
   either a complete variant name or a single flavor. They're especially useful
   if you want to build a non-MAM flavor of your app.
-  For example, if your app has build types `debug` and `release` with flavors {`noMAM`, `MAM`} and {`mock`, `production`} you could specify the following:
+  For example, if your app has build types `debug` and `release` with flavors {`noMAM`, `MAM`} and {`mock`, `production`} you could specify:
   - `noMAM` to exclude all variants with the noMAM flavor or
   - `noMAMMockDebug` to exclude only that exact variant.
 
 > [!CAUTION]
-> Exclusions should not be taken lightly.
+> Exclusions shouldn't be taken lightly.
 > Incorrectly applying exclusions can result in serious data leaks in your app.
-> Always validate the impact of any exclusion you apply.
+> Always validate the affect of any exclusion you apply.
 
 #### Example partial build.gradle with exclusions
 
@@ -256,7 +233,7 @@ This would have the following effects:
 
 The build plugin can generate an html report of the changes it makes.
 To request generation of this report, specify `report = true` in the `intunemam` configuration block.
-If generated, the report will be written to `outputs/logs` in the build directory.
+If generated, the report is written to `outputs/logs` in the build directory.
 
 ```groovy
 intunemam {
@@ -266,11 +243,11 @@ intunemam {
 
 ### Verification
 
-The build plugin can run additional verification to look for possible errors in processing classes.
+The build plugin can run more verifications to look for possible errors in processing classes.
 These checks help to safeguard against potential plugin-induced runtime failures.
 
 To request verification is performed in your build, specify `verify = true` in the `intunemam` configuration block.
-This may add several seconds to the time taken by the plugin's task.
+This might add several seconds to the time taken by the plugin's task.
 
 ```groovy
 intunemam {
@@ -286,7 +263,7 @@ If you don't have a Microsoft support contract, [open a GitHub issue][MAM SDK Gi
 
 To enable support for building incrementally, specify `incremental = true`
 in the `intunemam` configuration block.
-This feature increases build performance by processing only the input files that have changed.
+This feature increases build performance by processing only the input files that change.
 The default configuration for `incremental` is `false`.
 
 ```groovy
@@ -299,7 +276,7 @@ intunemam {
 
 Dynamic Feature Modules build separately from the app project. As such, Dynamic Feature Modules also need to apply the Gradle Build Plugin.
 
-Due to technical limitations in the APIs used by the Gradle plugin, app classes need to be reprocessed when transforming dynamic feature module classes. To ensure that this can be done, all feature modules should be configured with the same settings as the app it is designed for.
+The Gradle plugin has technical limitations in the APIs it uses. Because of these limitations, app classes need to be reprocessed when transforming dynamic feature module classes. To ensure that this reprocessing can be done, configure all feature modules with the same settings as the app.
 
 For example, if an app excludes a class, the dynamic feature module should also exclude that class.
 
@@ -308,14 +285,14 @@ For example, if an app excludes a class, the dynamic feature module should also 
 The Intune App SDK targets are distributed as part of the SDK as
 **Microsoft.Intune.Maui.Essentials.android.targets**.
 
-The targets will be automatically imported into your application at compile time once the
+The targets are automatically imported into your application at compile time once the
 [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) NuGet package is added.
 
 ## Integrating with the Command Line Build Tool
 
 The command-line build tool is available in the `BuildTool` folder of the SDK drop.
-It performs the same function as the Gradle plugin/.NET targets detailed above, but can be integrated into custom build systems.
-As it's more generic, it's more complex to invoke, so the Gradle plugin / .NET targets should be used whenever possible.
+It performs the same function as the Gradle plugin and .NET targets detailed above. However, the command-line tool can be integrated into custom build systems.
+Because the tool is more generic, it's more complex to invoke. Use the Gradle plugin or .NET targets whenever possible.
 
 ### Using the Command-Line Tool
 
@@ -324,14 +301,14 @@ located in the `BuildTool\bin` directory.
 
 The tool expects the following parameters.
 
-| Parameter          | Required | Description                                                                                                                                                                      |
-| --                 | --       | --                                                                                                                                                                               |
-| `--input`          | Yes      | A semi-colon delimited list of jar files and directories of class files to modify. This should include all jars/directories that you intend to rewrite.                          |
-| `--output`         | Yes      | A semi-colon delimited list of jar files and directories to store the modified classes to. There should be one output entry per input entry, and they should be listed in order. |
-| `--classpath`      | Yes      | The build classpath. This may contain both jars and class directories.                                                                                                           |
-| `--processed`      | No       | A semi-colon delimited list of jar files and directories containing classes that have already been processed by a previous invocation of the build tool.                   |
-| `--excludeClasses` | No       | A semi-colon delimited list containing the names of the classes that should be excluded from rewriting.                                                                          |
-| `--report`         | No       | Directory to write an HTML report about modified classes to. If not specified, no report is written.                                                                             |
+| Parameter | Required | Description |
+|-----------|----------|-------------|
+| `--input` | Yes | A semi-colon delimited list of JAR files and directories of class files to modify. Include all JARs and directories that you intend to rewrite. |
+| `--output` | Yes | A semi-colon delimited list of JAR files and directories to store the modified classes. Provide one output entry per input entry, listed in the same order. |
+| `--classpath` | Yes | The build classpath. This can contain both JAR files and class directories. |
+| `--processed` | No | A semi-colon delimited list of JAR files and directories containing classes that have already been processed by a previous invocation of the build tool. |
+| `--excludeClasses` | No | A semi-colon delimited list containing the names of classes that should be excluded from rewriting. |
+| `--report` | No | Directory to write an HTML report about modified classes to. If not specified, no report is written. |
 
 The optional `--processed` option is used to enable incremental builds.
 The set of files/directories listed here should be disjoint with the input and classpath lists.
@@ -354,12 +331,12 @@ This would have the following effects:
 - The `com.contoso.SplashActivity` class is **not** rewritten even if it's in `--input`
 
 > [!WARNING]
-> The build tool does not currently support aar files.
-> If your build system does not already extract `classes.jar` when dealing with aar files, you will need to do so before invoking the build tool.
+> The build tool doesn't currently support aar files.
+> If your build system doesn't already extract `classes.jar` when dealing with aar files, extract it before invoking the build tool.
 
 ## Setting MAMApplication
 
-If your app creates a subclass of `android.app.Application`, then the build plugin / command line tool will transform your application class.
+If your app creates a subclass of `android.app.Application`, then the build plugin or command line tool transforms your application class.
 
 If your app doesn't subclass `android.app.Application`, then you **must** set `"com.microsoft.intune.mam.client.app.MAMApplication"` as the `"android:name"` attribute in your AndroidManifest.xml's `<application>` tag.
 
@@ -369,46 +346,46 @@ If your app doesn't subclass `android.app.Application`, then you **must** set `"
 - Remove all unnecessary and unused libraries (for example, android.support.v4).
 
 After performing automatic replacements, the Intune App SDK still maintains the contract provided by the Android API.
-However, failure conditions may be triggered more frequently as a result of policy enforcement.
-These Android best practices will reduce the likelihood of failure:
+However, failure conditions might be triggered more frequently as a result of policy enforcement.
+These Android best practices reduce the likelihood of failure:
 
 - Android SDK functions that can return `null` now have a higher likelihood of returning `null`. Ensure that `null` checks protect these function calls.
 - Features that can be checked for, such as `clipboardManager.getPrimaryClipDescription()`, must be checked for through their MAM replacement APIs, such as `MAMClipboard.getPrimaryClipDescription(clipboardManager)`.
 - Any derived functions must call through to their super class versions.
-- Avoid use of any API in an ambiguous way. For example, using `Activity.startActivityForResult` without checking the `requestCode` will cause strange behavior.
+- Avoid use of any API in an ambiguous way. For example, using `Activity.startActivityForResult` without checking the `requestCode` causes strange behavior.
 
 ### Services
 
-Policy enforcement may affect Android [Service] interactions.
-Methods that establish a bound service connection such as `Context.bindService` may fail due to underlying policy enforcement in `Service.onBind` and may result in `ServiceConnection.onNullBinding` or `ServiceConnection.onServiceDisconnected`.
-Interacting with an established bound service may throw a `SecurityException` due to policy enforcement in `Binder.onTransact`.
+Policy enforcement might affect Android [Service] interactions.
+Methods that establish a bound service connection such as `Context.bindService` might fail due to underlying policy enforcement in `Service.onBind` and might result in `ServiceConnection.onNullBinding` or `ServiceConnection.onServiceDisconnected`.
+Interacting with an established bound service might throw a `SecurityException` due to policy enforcement in `Binder.onTransact`.
 
-Clients of bound services are strongly encouraged to check for exceptions thrown by the service rather than letting exceptions propagate to the rest of the client application.
+Clients of bound services are encouraged to check for exceptions thrown by the service. Don't let exceptions propagate to the rest of the client application.
 
 ## Exit Criteria
 
-After you've either configured the build plugin or integrated the command line tool into your build process, validate that it's running successfully:
+After you either configured the build plugin or integrated the command line tool into your build process, validate that it's running successfully:
 
 - Ensure that your build compiles and builds successfully.
 - Configure the `report` flag, then open the report document and confirm class and method replacements are occurring:
   - If using the plugin, follow the steps in [Reporting].
   - If using the command line tool, include the `--report` flag.
 - If using the plugin, configure the `verify` flag and ensure it doesn't produce errors. See [Verification].
-- Double check all exclusions (`excludeProjects`, `excludeClasses`, and `excludeVariants`) in build.gradle. Confirm that each exclusion is necessary and doesn't deal with protected data. Historically many data leak errors have occurred because of over-aggressive exclusions.
-- *Without the Intune Company Portal installed*, launch your compiled app, login with a Microsoft Entra user that isn't targeted with App Protection Policy, and confirm that app functions as expected.
-  - Logout and repeat this test *with* the Intune Company Portal installed.
+- Double check all exclusions (`excludeProjects`, `excludeClasses`, and `excludeVariants`) in build.gradle. Confirm that each exclusion is necessary and doesn't deal with protected data. Historically many data leak errors occur because of over-aggressive exclusions.
+- *Without the Intune Company Portal installed*, launch your compiled app. Sign in with a Microsoft Entra user that isn't targeted with App Protection Policy. Confirm that app functions as expected.
+  - Sign out and repeat this test *with* the Intune Company Portal installed.
 
 ## FAQ
 
 ### My app previously integrated the SDK without the build plugin; how can I use the build plugin?
 
-Older versions of the Intune App SDK didn't include any automated way to perform class and method replacements, and developers needed to perform these replacements manually in source code.
-If your app had previously integrated this way, it's safe to apply the build plugin (or command line build tool) without any source code modifications.
+Older versions of the Intune App SDK didn't include any automated way to perform class and method replacements. Developers needed to perform these replacements manually in source code.
+If your app is integrated this way, it's safe to apply the build plugin or command line build tool. You don't need any source code modifications.
 Your project must still list the MAM SDK as a dependency.
 
 ## Next Steps
 
-After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integration Essentials].
+After you completed all the [Exit Criteria], continue to [Stage 4: MAM Integration Essentials].
 
 <!-- Stage 3 links -->
 <!-- internal links -->
@@ -447,3 +424,4 @@ After you've completed all the [Exit Criteria], continue to [Stage 4: MAM Integr
 [Javassist]:https://jboss-javassist.github.io/javassist/
 [Service]:https://developer.android.com/reference/android/app/Service
 [Add your AAR or JAR as a dependency]: https://developer.android.com/studio/projects/android-library#psd-add-aar-jar-dependency
+[Android build requirements and compatibility tables]: https://developer.android.com/build/releases/gradle-plugin

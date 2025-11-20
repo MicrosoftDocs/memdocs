@@ -1,51 +1,32 @@
 ---
-# required metadata
-
-title: Supported filter device and app properties & operators in Microsoft Intune
-description: When using filters, get more information on the device properties, supported operators, and supported Windows OS SKUs, including examples. Use these features to create rule expressions in Microsoft Intune.
-keywords:
+title: Assignment filter properties and operators reference
+description: Reference guide for device and app properties, operators, and rule syntax when creating assignment filters in Microsoft Intune. Includes examples and supported values.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 03/06/2025
+ms.date: 11/19/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: gokarthi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
+ms.reviewer: mattcall
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# App and device properties, operators, and rule editing when creating filters in Microsoft Intune
+# App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune
 
-When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). When you assign the app or policy, you can also use [assignment filters](filters.md).
+[Assignment filters in Intune](filters.md) let you refine app and policy targeting based on device and app properties. This reference article describes the properties, operators, and rule syntax you can use when creating filters for managed devices and managed apps.
 
-You can use filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune).
+When you create an app, compliance policy, or configuration profile, you assign that app or policy to groups (users or devices). Assignment filters allow you to narrow the scope of your assignments based on specific criteria.
 
-When you create a filter, you enter the app or device properties to use in your filter. For example:
+You can use assignment filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune). When creating a filter, you specify properties like device manufacturer, OS version, or enrollment profile, and use operators to build rule expressions, like `startsWith` and `contains`.
 
-- In your managed device filter, enter the device manufacturer so the policy only applies to Microsoft devices.
-- In your managed app filter, enter the OS version so the policy only applies to devices with that specific OS version.
-
-Advanced rule editing is also available. You can use common operators, such as `and`, `contains`, and `startsWith` to create expressions. These expressions are saved and used in your filter.
-
-This article describes the different [managed device properties](#managed-device-properties), [managed app properties](#managed-app-properties), and [operators](#supported-operators) you can use in your filters, and gives examples.
+This article provides a complete reference for managed device properties, managed app properties, and supported operators you can use in your assignment filters, and includes practical examples.
 
 [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
-## Managed device properties
+## Available properties
+
+You can use assignment filters on **managed devices** (devices enrolled in Intune) and **managed apps** (apps managed by Intune). This section lists the available properties.
+
+# [Managed device properties](#tab/managed-device)
 
 You can use the following device properties in your managed device filter rules:
 
@@ -73,8 +54,7 @@ You can use the following device properties in your managed device filter rules:
   This property applies to:
 
   - macOS
-  - Windows 11
-  - Windows 10
+  - Windows
 
   > [!NOTE]
   > Currently, enrollment scenarios don't support the `cpuArchitecture` property. Support will be added in a future update (no ETA).
@@ -94,8 +74,27 @@ You can use the following device properties in your managed device filter rules:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 11
-  - Windows 10
+  - Windows
+
+- **`deviceManagementType` (Device Management Type)**: Create a filter rule based on the Intune device management type. Select from the following values using the `-eq` and `-ne` operators:
+
+  | Value | Supported platforms |
+  |-----------|------------------------|
+  | `Corporate-owned dedicated devices with Entra ID Shared mode` | Android |
+  | `Corporate-owned dedicated devices without Entra ID Shared mode` | Android |
+  | `Corporate-owned with work profile` | Android |
+  | `Corporate-owned fully managed` | Android |
+  | `Personally-owned work profile` | Android |
+  | `AOSP user-associated devices` | Android |
+  | `AOSP userless devices` | Android |
+
+  Example:
+
+  - `(app.deviceManagementType -eq "Corporate-owned dedicated devices without Entra ID Shared mode")`
+
+  This property applies:
+
+  - Android
 
 - **`deviceName` (Device Name)**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -112,10 +111,9 @@ You can use the following device properties in your managed device filter rules:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 11
-  - Windows 10
+  - Windows
 
-- **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators. 
+- **`deviceOwnership` (Ownership)**: Create a filter rule based on the device's ownership property in Intune. Select `Personal`, `Corporate`, or unknown values using the `-eq` and `-ne` operators.
 
   Example:
 
@@ -128,8 +126,7 @@ You can use the following device properties in your managed device filter rules:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 11
-  - Windows 10
+  - Windows
 
 - **`deviceTrustType` (Microsoft Entra join type)**: Create a filter rule based on the device's Microsoft Entra join type. Choose between Azure AD joined, Azure AD registered, Hybrid Azure AD joined,  or Unknown values (with `-eq`, `-ne`, `-in`, `-notIn` operators).
 
@@ -141,11 +138,10 @@ You can use the following device properties in your managed device filter rules:
 
   This property applies to:
 
-  - Windows 11
-  - Windows 10
+  - Windows
 
   > [!NOTE]
-  > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune filters article apply to Intune. They don't apply to Microsoft Entra ID.
+  > The `deviceTrustType` property exists in Microsoft Entra ID and Intune. The values in this Intune assignment filters article apply to Intune. They don't apply to Microsoft Entra ID.
 
 - **`enrollmentProfileName` (Enrollment profile name)**: Create a filter rule based on the enrollment profile name. This property is applied to a device when the device enrolls. It's a string value created by you, and matches the Windows Autopilot, Apple Automated Device Enrollment (ADE), or Google enrollment profile applied to the device. To see your enrollment profile names, sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and go to **Devices** > **Enroll devices**.
 
@@ -162,8 +158,7 @@ You can use the following device properties in your managed device filter rules:
   - Android Enterprise
   - Android (AOSP)
   - iOS/iPadOS
-  - Windows 11
-  - Windows 10
+  - Windows
 
 - **`IsRooted` (Rooted or jailbroken)**: Create a filter rule based on the device's rooted (Android) or jailbroken (iOS/iPadOS) device property. Select `True`, `False`, or unknown values using the `-eq` and `-ne` operators.
 
@@ -192,8 +187,7 @@ You can use the following device properties in your managed device filter rules:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 11
-  - Windows 10
+  - Windows
 
 - **`model` (Model)**: Create a filter rule based on the Intune device model property. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -208,7 +202,7 @@ You can use the following device properties in your managed device filter rules:
   - `(device.model -startsWith "iPhone 8")`
 
   > [!NOTE]
-  > Older iPad Pro models use the double prime symbol (`"`) instead of inch. If you use full string value operators, this symbol can cause filters to not evaluate correctly. For these models, use partial value operators to ensure that filters evaluate the model as intended. For example, for `iPad Pro (12.9")(2nd generation)` model devices, you can use `(device.model -contains "iPad Pro 12.9")` and `(device.model -contains "(2nd generation)")`.
+  > Older iPad Pro models use the double prime symbol (`"`) instead of inch. If you use full string value operators, this symbol can cause assignment filters to not evaluate correctly. For these models, use partial value operators to ensure that assignment filters evaluate the model as intended. For example, for `iPad Pro (12.9")(2nd generation)` model devices, you can use `(device.model -contains "iPad Pro 12.9")` and `(device.model -contains "(2nd generation)")`.
 
   This property applies to:
 
@@ -217,8 +211,7 @@ You can use the following device properties in your managed device filter rules:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 11
-  - Windows 10
+  - Windows
 
 - **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
 
@@ -228,7 +221,7 @@ You can use the following device properties in your managed device filter rules:
   - `(device.operatingSystemVersion -gt 10.0.22000.1000)`
   - `(device.operatingSystemVersion -le 10.0.22631.3235)`
 
-  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
+  For a list of supported operators, go to [Supported operators for operatingSystemVersion](#supported-operators-for-operatingsystemversion) (in this article).
 
   This property applies to:
 
@@ -237,8 +230,7 @@ You can use the following device properties in your managed device filter rules:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 11
-  - Windows 10
+  - Windows
 
   > [!NOTE]
   > The `operatingSystemVersion` property is in public preview. For more information on what that means, go to [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
@@ -246,7 +238,7 @@ You can use the following device properties in your managed device filter rules:
 - **`osVersion` (OS Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   > [!TIP]
-  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
+  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new assignment filters using this property. Existing assignment filters that use `osVersion` continue to work.
 
   Examples:
 
@@ -261,11 +253,10 @@ You can use the following device properties in your managed device filter rules:
   - Android (AOSP)
   - iOS/iPadOS
   - macOS
-  - Windows 11
-  - Windows 10
-  
+  - Windows
+
   > [!NOTE]
-  > For Apple devices, the `OSversion` property doesn't include Apple's Security Patch Version (SPV) information. The SPV is the letter after the version number, like `14.1.2a`. When creating filters for Apple devices, don't include the SPV in the `OSversion` rule syntax.
+  > For Apple devices, the `OSversion` property doesn't include Apple's Security Patch Version (SPV) information. The SPV is the letter after the version number, like `14.1.2a`. When creating assignment filters for Apple devices, don't include the SPV in the `OSversion` rule syntax.
 
 - **`operatingSystemSKU` (Operating System SKU)**: Create a filter rule based on the device's Windows client OS SKU. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -280,12 +271,12 @@ You can use the following device properties in your managed device filter rules:
   | Supported value | OS SKU definition |
   | ---- | --- |
   | **BusinessN** | Windows 10/11 Professional N (49) |
-  | **CloudEdition** | CloudEdition (Windows 11 SE (203) |
-  | **CloudEditionN** | CloudEditionN (Windows 11 SE N (202) |
+  | **CloudEdition** | CloudEdition (Windows 11 SE (203)) |
+  | **CloudEditionN** | CloudEditionN (Windows 11 SE N (202)) |
   | **Core** | Windows 10/11 Home (10/111) |
   | **CoreCountrySpecific** | Windows 10/11 Home China (99) |
   | **CoreN** | Windows 10/11 Home N (98) |
-  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |  
+  | **CoreSingleLanguage** | Windows 10/11 Home single language (100) |
   | **Education** | Windows 10/11 Education (121) |
   | **EducationN**  | Windows 10/11 Education (122) |
   | **Enterprise** | Windows 10/11 Enterprise (4) |
@@ -312,13 +303,14 @@ You can use the following device properties in your managed device filter rules:
 
   This property applies to:
 
-  - Windows 11
-  - Windows 10
+  - Windows
 
-> [!TIP]
-> In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
+> [!NOTE]
+>
+> - In Windows PowerShell, use the `Get-WmiObject -Class Win32_OperatingSystem |select operatingsystemSKU` command on a Windows device to return the SKU number.
+> - [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-## Managed app properties
+# [Managed app properties](#tab/managed-app)
 
 You can use the following app properties in your managed app filter rules:
 
@@ -386,7 +378,7 @@ You can use the following app properties in your managed app filter rules:
   - Windows
 
   > [!NOTE]
-  > The `app.deviceModel -startsWith "RealityDevice"` property is in preview and is only supported on the Microsoft Teams app. If your app protection policy is targeted to the iOS/iPadOS platform, it will also apply to visionOS. However, when targeting specific conditional launch settings to visionOS, such as "Min/Max OS version" or "Min app version", you can use the app property `app.deviceModel -startsWith "RealityDevice"` in your managed app filter rules.
+  > The `app.deviceModel -startsWith "RealityDevice"` property is in preview and is only supported on the Microsoft Teams app. If your app protection policy is targeted to the iOS/iPadOS platform, it also applies to visionOS. However, when targeting specific conditional launch settings to visionOS, like **Min/Max OS version** or **Min app version**, you can use the app property `app.deviceModel -startsWith "RealityDevice"` in your managed app filter rules.
 
 - **`operatingSystemVersion` (Operating System Version)**: Create a filter rule based on the Intune device operating system (OS) version. Enter a version value (using `-eq`, `-ne`, `-gt`, `-ge`, `-lt`, `-le` operators).
 
@@ -396,7 +388,7 @@ You can use the following app properties in your managed app filter rules:
   - `(app.operatingSystemVersion -gt 10.0.22000.1000)`
   - `(app.operatingSystemVersion -le 10.0.22631.3235)`
 
-  For a list of supported operators, go to [operatingSystemVersion supported operators](#operatingsystemversion-supported-operators) (in this article).
+  For a list of supported operators, go to [Supported operators for operatingSystemVersion](#supported-operators-for-operatingsystemversion) (in this article).
 
   This property applies to:
 
@@ -410,7 +402,7 @@ You can use the following app properties in your managed app filter rules:
 - **`osVersion` (OS Version)**: Create a filter rule based on the client reported operating system (OS) version. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
   > [!TIP]
-  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new filters using this property. Existing filters that use `osVersion` continue to work.
+  > The `osVersion` property is being deprecated. Instead, use the `operatingSystemVersion` property. When `operatingSystemVersion` is generally available (GA), the `osVersion` property will retire, and you won't be able to create new assignment filters using this property. Existing assignment filters that use `osVersion` continue to work.
 
   Examples:
 
@@ -423,6 +415,8 @@ You can use the following app properties in your managed app filter rules:
   - Android
   - iOS/iPadOS
   - Windows
+
+---
 
 ## Advanced rule editing
 
@@ -486,7 +480,7 @@ You can use the following operators in the rule syntax editor:
   - **Allowed values**: `-notContains` | `notContains`
   - **Example**: `(device.manufacturer -notContains "Samsung")`
 
-#### operatingSystemVersion supported operators
+#### Supported operators for operatingSystemVersion
 
 When you use the `operatingSystemVersion (Operating System Version)` property, you can use the following operators in the rule syntax editor:
 
@@ -523,6 +517,6 @@ When you use the `operatingSystemVersion (Operating System Version)` property, y
 ## Related articles
 
 - [Use filters when assigning your apps, policies, and profiles](filters.md)
-- [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Supported workloads when creating assignment filters](filters-supported-workloads.md)
 - [Filter performance recommendations](filters-performance-recommendations.md)
 - [Filter reports and troubleshooting](filters-reports-troubleshoot.md)

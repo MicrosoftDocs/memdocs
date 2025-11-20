@@ -1,35 +1,14 @@
 ---
-# required metadata
-
 title: Walkthrough-Create a settings catalog policy
 description: This tutorial or walkthrough steps through creating and comparing an on-premises Administrative Templates (ADMX) Group Policy and Microsoft Intune cloud-based settings catalog policy. It shows similar settings in on-premises and the Intune settings catalog to create and manage policies for Office, Windows, and Microsoft Edge on Windows 10/11 client devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/21/2025
 ms.topic: tutorial
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mayurjadhav
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
-
-#Customer intent: As an on-premises ADMX Group Policy administrator, I want to learn and use the settings catalog in the cloud so that I can control and manage Office, Windows, and Microsoft Edge settings on Windows devices.
 ---
 
 # Walkthrough - Create an Intune settings catalog policy and compare with on-premises ADMX
@@ -55,6 +34,7 @@ By the end of this lab, you can use Intune to manage your users, and deploy sett
 This feature applies to:
 
 - Windows
+- Microsoft Edge version 77 and newer
 
 > [!TIP]
 >
@@ -78,12 +58,12 @@ This feature applies to:
       - [Office administrative templates](https://www.microsoft.com/download/details.aspx?id=49030)
       - [Microsoft Edge policy file](https://www.microsoft.com/edge/business/download)
 
-  2. Create a group policy to push these templates to a Windows 11 Enterprise administrator computer in the same domain as the DC. In this walkthrough:
+  2. Create a group policy to push these templates to a Windows Enterprise administrator computer in the same domain as the DC. In this walkthrough:
 
       - The group policy we created with these templates is named **OfficeandEdge**. You'll see this name in the images.
-      - The Windows 11 Enterprise administrator computer we use is named the **Admin computer**.
+      - The Windows Enterprise administrator computer we use is named the **Admin computer**.
 
-      In most organizations, a domain administrator has two accounts:  
+      In most organizations, a domain administrator has two accounts:
         - A typical domain work account
         - A different domain administrator account used only for domain administrator tasks, like group policy
 
@@ -94,7 +74,7 @@ This feature applies to:
   - Sign in with a Domain Administrator account.
 
   - Add the **RSAT: Group Policy Management Tools**:
-  
+
     1. Open the **Settings** app > **System** > **Add an optional feature** > **View features**.
 
     1. Select **RSAT: Group Policy Management Tools** > **Add**.
@@ -110,7 +90,7 @@ This feature applies to:
 1. Open a Chromium-based web browser, like Microsoft Edge.
 2. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Sign in with the following account:
 
-    **User**: Enter the administrator account of your Microsoft 365 tenant subscription.  
+    **User**: Enter the administrator account of your Microsoft 365 tenant subscription.
     **Password**: Enter its password.
 
 The Intune admin center is focused on device management, and includes Azure services, like Microsoft Entra ID. You might not see the **Microsoft Entra ID** and **Azure** branding, but you're using them.
@@ -142,7 +122,7 @@ In these next steps, you create security groups, and add users to these groups. 
 2. Enter the following settings:
 
     - **Group type**: Select **Security**.
-    - **Group name**: Enter **All Windows 11 student devices**.
+    - **Group name**: Enter **All Windows student devices**.
     - **Membership type**: Select **Assigned**.
 
 3. Select **Members**, and add some devices.
@@ -238,7 +218,7 @@ In this section, we create a settings catalog policy in Intune, look at some set
 3. Select **Create**.
 4. In **Basics**, enter the following properties:
 
-    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, enter **Windows 11 student devices**.
+    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later. For example, enter **Windows student devices**.
     - **Description**: Enter a description for the profile. This setting is optional, but recommended.
 
 5. Select **Next**.
@@ -281,7 +261,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
     :::image type="content" source="./media/tutorial-settings-catalog-group-policy/prevent-enabling-lock-screen-camera-admx-policy.png" alt-text="Screenshot that shows how to see the on-premises Computer configuration setting options in group policy.":::
 
-5. In the Intune admin center, go to your **Windows 11 student devices** settings catalog policy.
+5. In the Intune admin center, go to your **Windows student devices** settings catalog policy.
 6. Select **Configuration settings** > **Edit** > **Add settings**. Search for **Personalization** and select the `Administrative templates\Control Panel\Personalization` category. Notice the available settings:
 
     :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-admx-personalization-category.png" alt-text="Screenshot that shows the ADMX personalization policy setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-admx-personalization-category.png":::
@@ -292,7 +272,7 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 
 ### Compare a user policy in Group Policy Management and Intune
 
-1. In your **Windows 11 student devices** settings catalog policy, select **Configuration settings** > **Edit** > **Add settings**. Search for `inprivate browsing`. Notice the settings options. The `(User)` setting applies to user configurations. The other setting applies to device configurations.
+1. In your **Windows student devices** settings catalog policy, select **Configuration settings** > **Edit** > **Add settings**. Search for `inprivate browsing`. Notice the settings options. The `(User)` setting applies to user configurations. The other setting applies to device configurations.
 
     :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-inprivate-browsing.png" alt-text="Screenshot that shows a user setting and a device setting in the Microsoft Intune settings catalog." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-inprivate-browsing.png":::
 
@@ -369,14 +349,14 @@ When no longer needed, you can:
 
 - Delete the groups you created:
 
-  - **All Windows 11 student devices**
+  - **All Windows student devices**
   - **All Windows devices**
   - **All Teachers**
 
 - Delete the settings catalog policies you created:
 
-  - **Windows 11 student devices**
-  - **OneDrive policies that apply to all Windows 10 users**
+  - **Windows student devices**
+  - **OneDrive policies that apply to all Windows users**
 
 ## Summary
 

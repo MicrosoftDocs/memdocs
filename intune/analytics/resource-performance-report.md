@@ -1,19 +1,14 @@
 ---
-title: Resource Performance report in Microsoft Intune Advanced Analytics
-titleSuffix: Microsoft Intune
-description: This article provides an overview of the resource performance report for cloud-managed Windows devices
-ms.date: 08/19/2024
-ms.service: microsoft-intune
-ms.subservice: endpoint-analytics
-ms.topic: article
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
-ms.localizationpriority: high
-
+title: Resource Performance Report in Microsoft Intune Advanced Analytics
+description: Explore the resource performance report in Microsoft Intune Advanced Analytics for CPU and RAM insights, device performance analysis, and proactive endpoint analytics.
+ms.date: 10/09/2025
+ms.topic: concept-article
+ms.subservice: suite
 ---
 
 # Resource Performance report in Microsoft Intune Advanced Analytics
+
+[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
 The resource performance report provides visibility into the performance of processors and RAM in cloud-managed Windows devices and its influence on user experience.
 
@@ -23,21 +18,11 @@ The insights show not only how much your score can improve by upgrading the CPU 
 
 ## License requirements
 
-With a Windows 365 license, you get access to this report for the Cloud PCs in your organization.  
+With a Windows 365 license, you get access to this report for the Cloud PCs in your organization.
 
-However, the report for physical devices is part of Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
-
-## Prerequisites
-
-For Advanced Analytics capabilities, including resource performance, devices should be cloud-managed; either Intune-only managed or Co-managed.
-
-After [enrollment](enroll-intune.md), client devices require a restart to fully enable all analytics.
-
-> [!NOTE]
-> It may take up to 48 hours after you buy licenses or start a trial to see Resource performance data in your tenant.
-
-> [!NOTE]
-> Resource performance report is currently not supported in US Government Community Cloud (GCC) High or U.S. Department of Defense (DoD) environments.
+The resource performance report is available for:
+- Windows 365 Cloud PCs and;
+- Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Resource performance report
 
@@ -49,35 +34,42 @@ After [enrollment](enroll-intune.md), client devices require a restart to fully 
 
 :::image type="content" source="media/resource-perf-report/report-home.png" lightbox="media/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
 
+Best practices:
+
+- IT administrators should periodically review the resource performance dashboard, to investigate poor performing devices from CPU or RAM spikes.
+- Identify cohorts of devices, either hardware type, or by groups of users, with poor performance.
+- Investigate performance issues and resolutions before users report persistent problems. Use the Enhanced Device Timeline and Device Query capabilities to find the root cause of issues.
+- Leverage performance data to optimize hardware replacement costs, extending the life of devices with no performance problem, or replacing underperforming devices sooner for improved user experience.
+
 ## Resource performance score
 
-The Resource performance score provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization’s Windows physical devices and Cloud PCs.
+The Resource performance score provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization's Windows physical devices and Cloud PCs.
 
 This score is a weighted average of CPU spike time score and RAM Spike time score.
 
 This score helps identify device resources that need to be replaced to improve user experience and boost productivity.
 
-#### CPU spike time score
+### CPU spike time score
 
-The CPU spike time score (from 0 to 100) is assigned based on the device’s usage duration and the CPU spike time %, which is the percentage of the usage duration in which the device experiences CPU spikes. High usage and spikes indicate a poor experience with the device and result in low scores. Conversely, low spikes indicate a good experience with the device and result in high scores.
+The CPU spike time score (from 0 to 100) is assigned based on the device's usage duration and the CPU spike time %, which is the percentage of the usage duration in which the device experiences CPU spikes. High usage and spikes indicate a poor experience with the device and result in low scores. Conversely, low spikes indicate a good experience with the device and result in high scores.
 
 **CPU spike time %**: The daily metric trends graph plots the ratio of CPU spike times to total usage time. This CPU spike % data is averaged over a 14-day period ending on the date at the bottom of the graph.
 
 Usage over 50% is considered a spike.
 
-- To improve the performance of CPU in Windows physical devices, you could upgrade the processors by increasing the number of cores or the clock speed, optimize the operating system or adjust power settings.  
+- To improve the performance of CPU in Windows physical devices, you could upgrade the processors by increasing the number of cores or the clock speed, optimize the operating system or adjust power settings.
 
 - To improve the performance of CPU in Cloud PCs, you could upgrade to a higher configuration of Cloud PCs.
 
-#### RAM spike time score
+### RAM spike time score
 
-The RAM spike time score (from 0 to 100) is assigned based on the device’s usage duration and the RAM spike time %, which is the percentage of the usage duration in which the device experiences RAM spikes. High usage and spikes indicate a poor experience with the device and result in low scores. Conversely, low spikes indicate a good experience with the device and result in high scores.
+The RAM spike time score (from 0 to 100) is assigned based on the device's usage duration and the RAM spike time %, which is the percentage of the usage duration in which the device experiences RAM spikes. High usage and spikes indicate a poor experience with the device and result in low scores. Conversely, low spikes indicate a good experience with the device and result in high scores.
 
 **RAM spike time %**: The daily metric trends graph plots the ratio of RAM spike times to total usage time. This RAM spike % data is averaged over a 14-day period ending on the date at the bottom of the graph. Usage over 75% is considered a spike.
 
- - To improve the performance of RAM in Windows physical devices, you could add more RAM, upgrade to higher-speed RAM, or modify UEFI/BIOS settings to optimize utilization.
+- To improve the performance of RAM in Windows physical devices, you could add more RAM, upgrade to higher-speed RAM, or modify UEFI/BIOS settings to optimize utilization.
 
- - To improve the performance of RAM in Cloud PCs, you could upgrade to a higher configuration of Cloud PCs.
+- To improve the performance of RAM in Cloud PCs, you could upgrade to a higher configuration of Cloud PCs.
 
 **Baseline** helps you see if you're meeting goals. You can set the baseline to the organizational median or a custom value.
 
@@ -87,7 +79,7 @@ The RAM spike time score (from 0 to 100) is assigned based on the device’s usa
 
 The Resource performance page provides a prioritized list of insights and recommendations, described in this section:
 
-#### High CPU usage in physical devices
+### High CPU usage in physical devices
 
 These Windows physical devices experience higher CPU spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
 
@@ -97,21 +89,21 @@ This category has two sub-categories:
 
 2. Physical device models that experience high CPU spike %.
 
-Besides giving visibility into devices that aren’t supporting your user’s goals, these insights also allow you to identify devices with underperforming CPUs that are within warranty and eligible for replacement.
+Besides giving visibility into devices that aren't supporting your user's goals, these insights also allow you to identify devices with underperforming CPUs that are within warranty and eligible for replacement.
 
-#### High RAM usage in physical devices
+### High RAM usage in physical devices
 
 These Windows physical devices experience higher RAM spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
 
 This category has two sub-categories: (1) physical devices that experience high RAM spike % and (2) physical device models that experience high RAM spike %.
 
-Besides giving visibility into devices that aren’t supporting your user’s goals, these insights also allow you to identify devices with underperforming RAM that are within warranty and eligible for replacement.
+Besides giving visibility into devices that aren't supporting your user's goals, these insights also allow you to identify devices with underperforming RAM that are within warranty and eligible for replacement.
 
-#### Cloud PCs
+### Cloud PCs
 
 These Windows 365 Cloud PCs experience higher CPU or RAM spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
 
-These insights provide visibility into Cloud PCs that aren’t supporting your user’s goals. Upgrading these devices to a higher configuration of Cloud PCs will improve the user experience.
+These insights provide visibility into Cloud PCs that aren't supporting your user's goals. Upgrading these devices to a higher configuration of Cloud PCs will improve the user experience.
 
 ## Reporting tabs
 
@@ -123,17 +115,17 @@ The tabs are:
 
 - Model performance
 
-#### Device performance tab
+### Device performance tab
 
 This tab provides CPU and RAM performance metrics and scores for all your Windows physical and Cloud PC devices. You can sort by a particular metric (for example, CPU spike time %) to see which devices have the worst scores for that metric to help with troubleshooting. You can filter the list of devices based on a range of a particular metric (for example, devices with RAM spike time score between 0 and 40). You can also search for a device by name.
 
-#### Model performance tab
+### Model performance tab
 
 This tab lets you see the CPU and RAM performance metrics and scores by device model, which can help you identify whether problems are isolated to particular models.
 
 ## Device-level details
 
-To get details on a specific Windows device in your organization, you can select a device’s name in the **Device performance** tab. You can also use the filters or search for a device to view the row corresponding to the device you're interested in learning more about.
+To get details on a specific Windows device in your organization, you can select a device's name in the **Device performance** tab. You can also use the filters or search for a device to view the row corresponding to the device you're interested in learning more about.
 
 :::image type="content" source="media/resource-perf-report/select-device.png" lightbox="media/resource-perf-report/select-device.png" alt-text="In the Device Performance tab, use filters or search for a device to view the device details":::
 
@@ -156,7 +148,14 @@ The device-level details page includes the CPU and RAM spike-time history over t
 
 - Column MachineType in the generated .csv file can take values Physical, CPC, and Others whereas the corresponding column Device Type in the report takes values physical, virtual, and unknown respectively.
 
-## Next steps
+---
+
+## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Device Query >](device-query.md)
+
+---
 
 For more information, go to:
 

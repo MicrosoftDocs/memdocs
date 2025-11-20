@@ -1,6 +1,10 @@
 items:
 - name: Hotfix documentation
   href: index.yml
+- name: Version 2509
+  items:
+  - name: KB 35877153 Summary of changes in 2509
+    href: 2509/35877153.md
 - name: Version 2503
   items:
   - name: KB 31909343 Summary of changes in 2503
@@ -9,6 +13,11 @@ items:
     href: 2503/32480179.md
   - name: KB 33177653 Azure for US Government update
     href: 2503/33177653.md
+  - name: KB 34503790 Revised security update for Microsoft Configuration Manager
+    href: 2503/34503790.md
+  - name: KB 32851084 Update rollup for version 2503
+    href: 2503/32851084.md
+
 - name: Version 2409
   items:
   - name: KB 30195272 Summary of changes in 2409
@@ -21,6 +30,10 @@ items:
     href: 2503/33177653.md
   - name: KB 33926600 Security update for Microsoft Configuration Manager
     href: 2409/33926600.md
+  - name: KB 34503790 Revised security update for Microsoft Configuration Manager
+    href: 2503/34503790.md
+  - name: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
+    href: 2409/35360093.md
 - name: Version 2403
   items:
   - name: KB 26186448 Summary of changes in 2403
@@ -35,6 +48,10 @@ items:
     href: 2503/33177653.md
   - name: KB 33926600 Security update for Microsoft Configuration Manager
     href: 2409/33926600.md
+  - name: KB 34503790 Revised security update for Microsoft Configuration Manager
+    href: 2503/34503790.md
+  - name: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
+    href: 2409/35360093.md
 - name: Version 2309
   items:
   - name: KB 24341484 Summary of changes in 2309
