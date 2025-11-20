@@ -31,6 +31,22 @@ This article lists the app types, compliance policies, device configuration prof
 
 You can use assignment filters for some common app policies on the following platforms. For a list of what's not supported on managed devices, go to [not supported](#not-supported-on-managed-devices) (in this article).
 
+# [Windows](#tab/windows-apps)
+
+### Windows
+
+| App type | Supported |
+| --- | --- |
+| Store app | ✅ |
+| Microsoft 365 apps | ✅ |
+| Microsoft Edge version 77 and newer | ✅ |
+| Microsoft Defender for Endpoint | N/A |
+| Web link | ❌ |
+| Windows web link | ✅ |
+| Line-of-business apps | ✅ |
+| Windows app (Win32) | ✅ |
+| Microsoft Store for Business | ✅ |
+
 # [Android](#tab/android-apps)
 
 ### Android Enterprise
@@ -90,22 +106,6 @@ You can use assignment filters for some common app policies on the following pla
 | Web link | ❌ |
 | Line-of-business apps | ✅ |
 
-# [Windows](#tab/windows-apps)
-
-### Windows
-
-| App type | Supported |
-| --- | --- |
-| Store app | ✅ |
-| Microsoft 365 apps | ✅ |
-| Microsoft Edge version 77 and newer | ✅ |
-| Microsoft Defender for Endpoint | N/A |
-| Web link | ❌ |
-| Windows web link | ✅ |
-| Line-of-business apps | ✅ |
-| Windows app (Win32) | ✅ |
-| Microsoft Store for Business | ✅ |
-
 ---
 
 ## [App configuration policies](../apps/app-configuration-policies-overview.md)
@@ -153,6 +153,53 @@ You can use assignment filters for some common app policies on the following pla
 > Some profile types are only available for specific platforms. For example, the **Device features** profile type includes settings that are only available for iOS/iPadOS and macOS devices.
 >
 > For a list of all device configuration profiles, and the platforms they apply to, go to [Apply features and settings on your devices](../configuration/device-profiles.md).
+
+# [Windows](#tab/windows-device-configuration)
+
+### Windows
+
+| Profile type | Supported |
+| --- | --- |
+| Update rings for Windows | ✅ |
+| &nbsp; | &nbsp; |
+| **Device configuration profile** | &nbsp; |
+| Custom | ✅ |
+| Derived credential | N/A |
+| Delivery optimization | ✅ |
+| Device restrictions | ✅ |
+| Device Restrictions (Windows 10 Team) | ✅ |
+| Device Features | N/A |
+| Device Firmware Configuration Interface (DFCI) on Windows on supported UEFI | ✅ |
+| Domain Join | ✅ |
+| Edition upgrade and S mode switch | ✅ |
+| Email | ✅ |
+| Endpoint analytics Remediations scripts|✅ |
+| Endpoint Protection | ✅ |
+| Enrollment device platform restrictions | ✅ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
+| Kiosk | ✅ |
+| Network boundary | ✅ |
+| PKCS certificate | ✅ |
+| PKCS imported certificate | ✅ |
+| SCEP certificate | ✅ |
+| Secure assessment (Education) | ✅ |
+| Settings catalog | ✅ |
+| Shared multi-user device | ✅ |
+| Trusted certificate | ✅ |
+| VPN | ✅ |
+| Wi-Fi | ✅ |
+| Wired network | ❌ |
+| Windows health monitoring | ✅ |
+| &nbsp; | &nbsp; |
+| **Endpoint Security profile** | &nbsp; |
+| Account protection | ✅ <br/> **Account protection**, **Local user group membership**, and **Local admin password solution (Windows LAPS)** |
+| Antivirus | ✅ |
+| Attack surface reduction | ✅ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
+| Disk encryption | ✅ |
+| Endpoint detection and response | ✅ |
+| Endpoint Privilege Management (EPM) |✅ |
+| Firewall | ✅ |
+| Microsoft Defender for Endpoint (Windows Desktop) | ✅ |
+| Security baselines | ❌ |
 
 # [Android](#tab/android-device-configuration)
 
@@ -295,53 +342,6 @@ You can use assignment filters for some common app policies on the following pla
 | Endpoint detection and response | N/A |
 | Firewall | ❌ |
 | Security baselines | N/A |
-
-# [Windows](#tab/windows-device-configuration)
-
-### Windows
-
-| Profile type | Supported |
-| --- | --- |
-| Update rings for Windows | ✅ |
-| &nbsp; | &nbsp; |
-| **Device configuration profile** | &nbsp; |
-| Custom | ✅ |
-| Derived credential | N/A |
-| Delivery optimization | ✅ |
-| Device restrictions | ✅ |
-| Device Restrictions (Windows 10 Team) | ✅ |
-| Device Features | N/A |
-| Device Firmware Configuration Interface (DFCI) on Windows on supported UEFI | ✅ |
-| Domain Join | ✅ |
-| Edition upgrade and S mode switch | ✅ |
-| Email | ✅ |
-| Endpoint analytics Remediations scripts|✅ |
-| Endpoint Protection | ✅ |
-| Enrollment device platform restrictions | ✅ <br/> Support for a subset of filter properties including device `osVersion`, `operatingSystemSKU`, and `enrollmentProfileName` |
-| Kiosk | ✅ |
-| Network boundary | ✅ |
-| PKCS certificate | ✅ |
-| PKCS imported certificate | ✅ |
-| SCEP certificate | ✅ |
-| Secure assessment (Education) | ✅ |
-| Settings catalog | ✅ |
-| Shared multi-user device | ✅ |
-| Trusted certificate | ✅ |
-| VPN | ✅ |
-| Wi-Fi | ✅ |
-| Wired network | ❌ |
-| Windows health monitoring | ✅ |
-| &nbsp; | &nbsp; |
-| **Endpoint Security profile** | &nbsp; |
-| Account protection | ✅ <br/> **Account protection**, **Local user group membership**, and **Local admin password solution (Windows LAPS)** |
-| Antivirus | ✅ |
-| Attack surface reduction | ✅ <br/> Excludes **Web protection (Microsoft Edge Legacy)**, **Application control**, and **App and browser isolation** |
-| Disk encryption | ✅ |
-| Endpoint detection and response | ✅ |
-| Endpoint Privilege Management (EPM) |✅ |
-| Firewall | ✅ |
-| Microsoft Defender for Endpoint (Windows Desktop) | ✅ |
-| Security baselines | ❌ |
 
 ---
 
