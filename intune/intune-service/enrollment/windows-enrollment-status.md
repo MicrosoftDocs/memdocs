@@ -61,7 +61,7 @@ Use the following steps to create an Intune profile that configures the enrollme
       - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
     - **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates the available quality updates, also known as monthly security update releases. Your options:
-      - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is shows the update progress.
+      - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page shows the update progress.
       - **No**: Monthly security update releases aren't installed during OOBE and the device continues to the desktop as usual. Messages regarding installation of monthly security update releases aren't displayed since they aren't installed.
 
       > [!IMPORTANT]
@@ -124,44 +124,38 @@ Intune applies the default profile to all users and all devices when no other ES
 
 ## Windows monthly security update release details
 
-When you configure the enrollment status page, you can choose to install [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates, during the OOBE. By default, these quality updates aren't installed during OOBE. ??seems contradictory to what's in [#supported-configurations](#supported-configurations)??
+When you configure the enrollment status page, you can choose to install [monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as quality updates, during the OOBE. By default, these quality updates aren't installed during OOBE.
 
-There are two parts to this feature:
+On Windows 11 versions with the `2025-06 D` quality update, the control that enables this feature is part of the operating system. On other Windows 11 versions, the feature is in the `2025-11 D` zero day package (ZDP) that's automatically installed before the ESP is displayed. So, to install quality updates during OOBE, you only need to configure the ESP policy in Intune.
 
-1. The control that enables this feature in the Windows operating system
-2. The **Install Windows quality updates (might restart the device)** Intune ESP profile setting that configures this feature
-
-The operating system control is included in the following 2025-06 D operating system updates:
-
-| OS version | KB article |
-| --- | --- |
-| Windows 11, version 24H2 | [KB5060829](https://support.microsoft.com/topic/june-26-2025-kb5060829-os-build-26100-4484-preview-e31ba7c2-ff65-4863-a462-a66e30840b1a) |
-| Windows 11, version 23H2 <br/> Windows 11, version 22H2 | [KB5060826](https://support.microsoft.com/topic/june-26-2025-kb5060826-os-builds-22621-5549-and-22631-5549-preview-65d38dd2-e149-4462-9699-e2482f60b16b) |
-
-On Windows 11 versions with these (or later) updates installed, the feature is built in. On Windows 11 versions without these (or later) updates installed, the feature is in a zero day package (ZDP) that's automatically installed before the ESP is displayed.
+> [!NOTE]
+> The operating system control is included in the following `2025-06 D` operating system updates:
+> 
+> | OS version | KB article |
+> | --- | --- |
+> | Windows 11, version 25H2 | Automatically included |
+> | Windows 11, version 24H2 | [KB5060829](https://support.microsoft.com/topic/june-26-2025-kb5060829-os-build-26100-4484-preview-e31ba7c2-ff65-4863-a462-a66e30840b1a) |
+> | Windows 11, version 23H2 <br/> Windows 11, version 22H2 | [KB5060826](https://support.microsoft.com/topic/june-26-2025-kb5060826-os-builds-22621-5549-and-22631-5549-preview-65d38dd2-e149-4462-9699-e2482f60b16b) |
 
 ### What you need to know
 
-- This setting only installs monthly security update releases. It doesn't install the other types of updates listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
+- The **Install Windows quality updates** Intune setting is available now. But, the OS doesn't enforce it yet. Enforcement is planned in the `2026-01 B` quality update.
 
-- The **Install Windows quality updates** setting can be configured on new and existing ESP profiles.
+- The **Install Windows quality updates** Intune setting only installs monthly security update releases. It doesn't install the other types of updates listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
+
+- The **Install Windows quality updates** Intune setting can be configured on new and existing ESP profiles.
 
   - On new ESP profiles, the setting default is **Yes**.
   - On existing ESP profiles, the setting default is **No**.
 
     To install the quality updates during OOBE, edit the existing ESP profile and set the **Install Windows quality updates** setting to **Yes**.
 
-    The 2026-11 D update changes the default value of the Install Windows updates setting ??Which setting? Do you mean the **Install Windows quality updates** Intune setting?? in Windows to be disabled by default. This change is included with the zero day package.
-
 - Installing the quality updates during OOBE adds 20-40 minutes to the provisioning process and might require restarts. If a restart occurs, the user isn't automatically signed into Windows. Restarts can break some autologon provisioning scenarios. In these scenarios, we recommend you set **Install Windows quality updates** to **No**.
 
 - Monthly security update releases aren't installed during OOBE when the device is on a metered network.
 
 > [!IMPORTANT]
-> The automatic installation of monthly security update releases and the new user interface isn't available until January 9th with the regular monthly security update. ??This sentence is unclear? What user interface??
-
-> [!IMPORTANT]
-> If admins set the **Block device use until all apps and profiles are installed** setting to **No** in an ESP profile, the device might exit ESP before the following items are applied. It can result in monthly security update releases being installed during OOBE, even when **Install Windows quality updates** is set to **No**.
+> If admins set the **Block device use until all apps and profiles are installed** setting to **No** in an ESP profile, the device might exit ESP before the following items are applied. It can result in monthly security update releases not being installed during OOBE, even when **Install Windows quality updates** is set to **Yes**.
 > - Windows Update for Business (WUfB) policies
 > - Monthly security update releases
 >
@@ -169,7 +163,7 @@ On Windows 11 versions with these (or later) updates installed, the feature is b
 
 ### Supported configurations
 
-Devices that meet all of the following conditions honor the **Install Windows quality updates** setting. Devices that don't meet these conditions don't honor the **Install Windows quality updates** setting and they always install monthly security update releases during OOBE. ??seems contradictory??
+Devices that meet all of the following conditions honor the **Install Windows quality updates** setting. Devices that don't meet the following conditions don't honor the **Install Windows quality updates** setting and they won't install monthly security update releases during OOBE.
 
 - Running a [currently supported version of Windows 11](/windows/release-health/windows11-release-information).
 - Assigned an ESP profile with the **Install Windows quality updates** Intune setting configured to **Yes**.
@@ -181,7 +175,7 @@ Devices that meet all of the following conditions honor the **Install Windows qu
 
 The following specific scenarios aren't supported and the **Install Windows quality updates** setting isn't honored:
 
-- **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. So, monthly security update releases are always installed during OOBE.
+- **Windows Autopilot device preparation** - Windows Autopilot device preparation doesn't use ESP, so this setting isn't applicable. Monthly security update releases can't be installed during OOBE.
 - **Windows Autopilot for pre-provisioned deployment Technician Flow** - Monthly security update releases aren't installed during the [Technician Flow](/autopilot/pre-provision#technician-flow) portion of a Windows Autopilot for pre-provisioned deployment. However, the **Install Windows quality updates** setting is honored during the [User Flow](/autopilot/pre-provision#user-flow) portion of a Windows Autopilot for pre-provisioned deployment.
 
 ### Update rings and Windows Autopatch
