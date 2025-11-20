@@ -51,7 +51,7 @@ Prerequisites:
 
 Level 1 configuration provides the minimum data protection for a Windows device while minimizing effects to users.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Windows APP Level 1 Basic
@@ -63,19 +63,19 @@ Level 1 configuration provides the minimum data protection for a Windows device 
 
 | Setting | Value |
 |--------|-------|
-| [Receive data from](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | All destinations |
-| [Send org data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | All sources |
-| [Allow cut, copy, and paste for](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | Any destination and any source |
-| [Printing org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#functionality) | Allow |
+| [Receive data from](app-protection-policy-settings-windows.md#data-transfer) | All destinations |
+| [Send org data to](app-protection-policy-settings-windows.md#data-transfer) | All sources |
+| [Allow cut, copy, and paste for](app-protection-policy-settings-windows.md#data-transfer) | Any destination and any source |
+| [Printing org data](app-protection-policy-settings-windows.md#functionality) | Allow |
 
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:  
 
 | Setting | Value |
 |--------|-------|
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 90 days / Wipe data |
-| [Max allowed device threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Low / Block access |
+| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 90 days / Wipe data |
+| [Max allowed device threat level](app-protection-policy-settings-windows.md#conditional-launch) | Low / Block access |
 
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
@@ -85,7 +85,7 @@ Level 1 configuration provides the minimum data protection for a Windows device 
 
 Level 2 configuration includes more controls for enhanced data protection.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enterprise enhanced data protection – Windows  
@@ -97,21 +97,21 @@ Level 2 configuration includes more controls for enhanced data protection.
 
 | Setting | Value |
 |--------|-------|
-| [Send org data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destinations |
-| [Receive data from](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No sources |
-| [Allow cut, copy, and paste for](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destination or source |
-| [Printing org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#functionality) | Allow |
+| [Send org data to](app-protection-policy-settings-windows.md#data-transfer) | No destinations |
+| [Receive data from](app-protection-policy-settings-windows.md#data-transfer) | No sources |
+| [Allow cut, copy, and paste for](app-protection-policy-settings-windows.md#data-transfer) | No destination or source |
+| [Printing org data](app-protection-policy-settings-windows.md#functionality) | Allow |
 
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Block access |
-| [Min OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10.0.22621.2506 / Block access |
-| [Max allowed device threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Medium / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 30 days / Wipe data |
+| [Disabled account](app-protection-policy-settings-windows.md#conditional-launch) | Block access |
+| [Min OS version](app-protection-policy-settings-windows.md#conditional-launch) | 10.0.22621.2506 / Block access |
+| [Max allowed device threat level](app-protection-policy-settings-windows.md#conditional-launch) | Medium / Block access |
+| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 30 days / Wipe data |
 
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
@@ -121,7 +121,7 @@ Level 2 configuration includes more controls for enhanced data protection.
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – Enterprise high data protection – Windows  
@@ -133,21 +133,21 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 | Setting | Value |
 |--------|-------|
-| [ReceiveDataFromOtherApps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No sources |
-| [SendOrgDataToOtherApps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destinations |
-| [RestrictCutCopyPasteIn](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#data-transfer) | No destination or source |
-| [PrintBlocked](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#functionality) | Block |
+| [ReceiveDataFromOtherApps](app-protection-policy-settings-windows.md#data-transfer) | No sources |
+| [SendOrgDataToOtherApps](app-protection-policy-settings-windows.md#data-transfer) | No destinations |
+| [RestrictCutCopyPasteIn](app-protection-policy-settings-windows.md#data-transfer) | No destination or source |
+| [PrintBlocked](app-protection-policy-settings-windows.md#functionality) | Block |
 
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:  
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Block access |
-| [Min OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 10.0.22621.2506 / Block access |
-| [Max allowed device threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | Medium / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 1440 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-windows#conditional-launch) | 30 days / Wipe data |
+| [Disabled account](app-protection-policy-settings-windows.md#conditional-launch) | Block access |
+| [Min OS version](app-protection-policy-settings-windows.md#conditional-launch) | 10.0.22621.2506 / Block access |
+| [Max allowed device threat level](app-protection-policy-settings-windows.md#conditional-launch) | Medium / Block access |
+| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 1440 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 30 days / Wipe data |
 
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
@@ -185,7 +185,7 @@ Prerequisites:
 
 Level 1 configuration provides the minimum data protection for an iOS/iPadOS device while minimizing effects to users.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 1 – Enterprise basic data protection – iOS/iPadOS  
@@ -200,46 +200,46 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Allow |
-| [Send org data to other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | All apps |
-| [Receive data from other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | All apps |
-| [Restrict cut, copy, and paste between apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Any app |
-| [Third-party keyboards](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Allow |
-| [Encrypt org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-ios#encryption) | Require |
-| [Sync policy managed app data with native contacts app](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
-| [Print org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
-| [Restrict web content transfer with other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Microsoft Edge |
-| [Org data notifications](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
-| [Genmoji](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
-| [Screen capture](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
-| [Writing tools](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
+| [Back up org data to](app-protection-policy-settings-ios.md#data-transfer) | Allow |
+| [Send org data to other apps](app-protection-policy-settings-ios.md#data-transfer) | All apps |
+| [Receive data from other apps](app-protection-policy-settings-ios.md#data-transfer) | All apps |
+| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-ios.md#data-transfer) | Any app |
+| [Third-party keyboards](app-protection-policy-settings-ios.md#data-transfer) | Allow |
+| [Encrypt org data](app-protection-policy-settings-ios.md#encryption) | Require |
+| [Sync policy managed app data with native contacts app](app-protection-policy-settings-ios.md#functionality) | Allow |
+| [Print org data](app-protection-policy-settings-ios.md#functionality) | Allow |
+| [Restrict web content transfer with other apps](app-protection-policy-settings-ios.md#functionality) | Microsoft Edge |
+| [Org data notifications](app-protection-policy-settings-ios.md#functionality) | Allow |
+| [Genmoji](app-protection-policy-settings-ios.md#functionality) | Allow |
+| [Screen capture](app-protection-policy-settings-ios.md#functionality) | Allow |
+| [Writing tools](app-protection-policy-settings-ios.md#functionality) | Allow |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:  
 
 | Setting | Value |
 |--------|--------|
-| [PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [PIN type](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Numeric |
-| [Simple PIN](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Select minimum PIN length](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | 4 |
-| [Touch ID instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require (1440 minutes) |
-| [Face ID instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Biometric instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [PIN reset after number of days](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | No |
-| [App PIN when device PIN is set](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [Work or school account credentials for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Not required |
-| [Recheck access requirements after](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | 30 minutes |
+| [PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [PIN type](app-protection-policy-settings-ios.md#access-requirements) | Numeric |
+| [Simple PIN](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Select minimum PIN length](app-protection-policy-settings-ios.md#access-requirements) | 4 |
+| [Touch ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Override biometrics with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require (1440 minutes) |
+| [Face ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Biometric instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [PIN reset after number of days](app-protection-policy-settings-ios.md#access-requirements) | No |
+| [App PIN when device PIN is set](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [Work or school account credentials for access](app-protection-policy-settings-ios.md#access-requirements) | Not required |
+| [Recheck access requirements after](app-protection-policy-settings-ios.md#access-requirements) | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Max PIN attempts](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 5 / Reset PIN |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 90 days / Wipe data |
-| [Jailbroken/rooted devices](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Block access |
+| [Max PIN attempts](app-protection-policy-settings-ios.md#conditional-launch) | 5 / Reset PIN |
+| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 90 days / Wipe data |
+| [Jailbroken/rooted devices](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
@@ -249,7 +249,7 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
 
 Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enterprise enhanced data protection – iOS/iPadOS  
@@ -264,55 +264,55 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Block |
-| [Send org data to other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Policy managed apps |
-| [Select apps to exempt](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
-| [Receive data from other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | All apps |
-| [Save copies of org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Block |
-| [Allow users to save copies to selected services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | OneDrive for Business, SharePoint Online, Photo Library |
-| [Transfer telecommunication data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Any dialer app |
-| [Transfer messaging data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Any messaging app |
-| [Restrict cut, copy, and paste between apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Policy managed apps with paste in |
-| [Third-party keyboards](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Allow |
-| [Encrypt org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-ios#encryption) | Require |
-| [Sync policy managed app data with native contacts app](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
-| [Print org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Allow |
-| [Restrict web content transfer with other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Microsoft Edge |
-| [Org data notifications](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block org data |
-| [Genmoji](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
-| [Screen capture](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
-| [Writing tools](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
+| [Back up org data to](app-protection-policy-settings-ios.md#data-transfer) | Block |
+| [Send org data to other apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps |
+| [Select apps to exempt](app-protection-policy-settings-ios.md#data-transfer) | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
+| [Receive data from other apps](app-protection-policy-settings-ios.md#data-transfer) | All apps |
+| [Save copies of org data](app-protection-policy-settings-ios.md#data-transfer) | Block |
+| [Allow users to save copies to selected services](app-protection-policy-settings-ios.md#data-transfer) | OneDrive for Business, SharePoint Online, Photo Library |
+| [Transfer telecommunication data to](app-protection-policy-settings-ios.md#data-transfer) | Any dialer app |
+| [Transfer messaging data to](app-protection-policy-settings-ios.md#data-transfer) | Any messaging app |
+| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps with paste in |
+| [Third-party keyboards](app-protection-policy-settings-ios.md#data-transfer) | Allow |
+| [Encrypt org data](app-protection-policy-settings-ios.md#encryption) | Require |
+| [Sync policy managed app data with native contacts app](app-protection-policy-settings-ios.md#functionality) | Allow |
+| [Print org data](app-protection-policy-settings-ios.md#functionality) | Allow |
+| [Restrict web content transfer with other apps](app-protection-policy-settings-ios.md#functionality) | Microsoft Edge |
+| [Org data notifications](app-protection-policy-settings-ios.md#functionality) | Block org data |
+| [Genmoji](app-protection-policy-settings-ios.md#functionality) | Block |
+| [Screen capture](app-protection-policy-settings-ios.md#functionality) | Block |
+| [Writing tools](app-protection-policy-settings-ios.md#functionality) | Block |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:  
 
 | Setting | Value |
 |--------|--------|
-| [PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [PIN type](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Numeric |
-| [Simple PIN](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Select minimum PIN length](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | 4 |
-| [Touch ID instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require (1440 minutes) |
-| [Face ID instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Biometric instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [PIN reset after number of days](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | No |
-| [App PIN when device PIN is set](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [Work or school account credentials for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Not required |
-| [Recheck access requirements after](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | 30 minutes |
+| [PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [PIN type](app-protection-policy-settings-ios.md#access-requirements) | Numeric |
+| [Simple PIN](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Select minimum PIN length](app-protection-policy-settings-ios.md#access-requirements) | 4 |
+| [Touch ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Override biometrics with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require (1440 minutes) |
+| [Face ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Biometric instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [PIN reset after number of days](app-protection-policy-settings-ios.md#access-requirements) | No |
+| [App PIN when device PIN is set](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [Work or school account credentials for access](app-protection-policy-settings-ios.md#access-requirements) | Not required |
+| [Recheck access requirements after](app-protection-policy-settings-ios.md#access-requirements) | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Block access |
-| [Min OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 14.8 / Block access |
-| [Min patch version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 2024-10-01 / Block access |
-| [Min app version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Latest / Warn |
-| [Max PIN attempts](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 5 / Reset PIN |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 30 days / Wipe data |
-| [Jailbroken/rooted devices](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Block access |
+| [Disabled account](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
+| [Min OS version](app-protection-policy-settings-ios.md#conditional-launch) | 14.8 / Block access |
+| [Min patch version](app-protection-policy-settings-ios.md#conditional-launch) | 2024-10-01 / Block access |
+| [Min app version](app-protection-policy-settings-ios.md#conditional-launch) | Latest / Warn |
+| [Max PIN attempts](app-protection-policy-settings-ios.md#conditional-launch) | 5 / Reset PIN |
+| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 30 days / Wipe data |
+| [Jailbroken/rooted devices](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
@@ -322,7 +322,7 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
 
-1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
+1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – Enterprise high data protection – iOS/iPadOS  
@@ -337,63 +337,62 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Block |
-| [Send org data to other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Policy managed apps |
-| [Select apps to exempt](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
-| [Receive data from other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Policy managed apps |
-| [Save copies of org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Block |
-| [Allow users to save copies to selected services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
-| [Transfer telecommunication data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | A specific dialer app |
-| [Dialer App URL Scheme](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | replace_with_dialer_app_url_scheme |
-| [Transfer messaging data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | A specific dialer app |
-| [Messaging App URL Scheme](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | replace_with_messaging_app_url_scheme |
-| [Restrict cut, copy, and paste between apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Policy managed apps with paste in |
-| [Open data into org documents](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Block |
-| [Third-party keyboards](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#data-transfer) | Block |
-| [Encrypt org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-ios#encryption) | Require |
-| [Sync policy managed app data with native contacts app](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
-| [Print org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
-| [Restrict web content transfer with other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Microsoft Edge |
-| [Org data notifications](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block org data |
-| [Genmoji](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
-| [Screen capture](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
-| [Writing tools](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#functionality) | Block |
+| [Back up org data to](app-protection-policy-settings-ios.md#data-transfer) | Block |
+| [Send org data to other apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps |
+| [Select apps to exempt](app-protection-policy-settings-ios.md#data-transfer) | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
+| [Receive data from other apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps |
+| [Save copies of org data](app-protection-policy-settings-ios.md#data-transfer) | Block |
+| [Allow users to save copies to selected services](app-protection-policy-settings-ios.md#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
+| [Transfer telecommunication data to](app-protection-policy-settings-ios.md#data-transfer) | A specific dialer app |
+| [Dialer App URL Scheme](app-protection-policy-settings-ios.md#data-transfer) | replace_with_dialer_app_url_scheme |
+| [Transfer messaging data to](app-protection-policy-settings-ios.md#data-transfer) | A specific dialer app |
+| [Messaging App URL Scheme](app-protection-policy-settings-ios.md#data-transfer) | replace_with_messaging_app_url_scheme |
+| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps with paste in |
+| [Open data into org documents](app-protection-policy-settings-ios.md#data-transfer) | Block |
+| [Third-party keyboards](app-protection-policy-settings-ios.md#data-transfer) | Block |
+| [Encrypt org data](app-protection-policy-settings-ios.md#encryption) | Require |
+| [Sync policy managed app data with native contacts app](app-protection-policy-settings-ios.md#functionality) | Block |
+| [Print org data](app-protection-policy-settings-ios.md#functionality) | Block |
+| [Restrict web content transfer with other apps](app-protection-policy-settings-ios.md#functionality) | Microsoft Edge |
+| [Org data notifications](app-protection-policy-settings-ios.md#functionality) | Block org data |
+| [Genmoji](app-protection-policy-settings-ios.md#functionality) | Block |
+| [Screen capture](app-protection-policy-settings-ios.md#functionality) | Block |
+| [Writing tools](app-protection-policy-settings-ios.md#functionality) | Block |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [PIN type](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Numeric |
-| [Simple PIN](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Block |
-| [Select minimum PIN length](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | 6 |
-| [Touch ID instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Face ID instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Biometric instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [Override Touch ID with PIN after timeout](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [PIN reset after number of days](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-ios#access-requirements) | Yes (90 days) |
-| [App PIN when device PIN is set](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [Work or school account credentials for access](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-ios#access-requirements) | Require |
-| [Recheck access requirements after](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#access-requirements) | 30 minutes |
-| [Timeout (minutes of inactivity)](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-ios#access-requirements) | 30 |
+| [PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [PIN type](app-protection-policy-settings-ios.md#access-requirements) | Numeric |
+| [Simple PIN](app-protection-policy-settings-ios.md#access-requirements) | Block |
+| [Select minimum PIN length](app-protection-policy-settings-ios.md#access-requirements) | 6 |
+| [Touch ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Face ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Biometric instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
+| [Override biometrics with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [Override Touch ID with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [PIN reset after number of days](app-protection-policy-settings-ios.md#access-requirements) | Yes (90 days) |
+| [App PIN when device PIN is set](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [Work or school account credentials for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
+| [Recheck access requirements after](app-protection-policy-settings-ios.md#access-requirements) | 30 minutes |
 
-10. On the **Conditional launch** tab, configure:  
+10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Jailbroken/rooted devices](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Wipe data |
-| [Max allowed threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Secured / Block access |
-| [Max OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 26.0.1 / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 30 days / Block access |
-| [Disabled account](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Block access |
-| [Min OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 14.8 / Block access |
-| [Min patch version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 2024-10-01 / Block access |
-| [Min app version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | Latest / Warn |
-| [Min SDK version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 21.1.0 / Block access |
-| [Max PIN attempts](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-ios#conditional-launch) | 5 / Reset PIN |
+| [Jailbroken/rooted devices](app-protection-policy-settings-ios.md#conditional-launch) | Wipe data |
+| [Max allowed threat level](app-protection-policy-settings-ios.md#conditional-launch) | Secured / Block access |
+| [Max OS version](app-protection-policy-settings-ios.md#conditional-launch) | 26.0.1 / Block access |
+| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 30 days / Block access |
+| [Disabled account](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
+| [Min OS version](app-protection-policy-settings-ios.md#conditional-launch) | 14.8 / Block access |
+| [Min patch version](app-protection-policy-settings-ios.md#conditional-launch) | 2024-10-01 / Block access |
+| [Min app version](app-protection-policy-settings-ios.md#conditional-launch) | Latest / Warn |
+| [Min SDK version](app-protection-policy-settings-ios.md#conditional-launch) | 21.1.0 / Block access |
+| [Max PIN attempts](app-protection-policy-settings-ios.md#conditional-launch) | 5 / Reset PIN |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
@@ -463,48 +462,51 @@ Level 1 configuration provides the minimum data protection for an Android device
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to Android backup services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Allow |
-| [Send org data to other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | All apps |
-| [Receive data from other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | All apps |
-| [Restrict cut, copy, and paste between other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Any app |
-| [Screen capture and Google Assistant](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Allow |
-| [Approved keyboards](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Not required |
-| [Encrypt org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#encryption) | Require |
-| [Encrypt org data on enrolled devices](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#encryption) | Require |
-| [Sync policy managed app data with native apps or add-ins](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#functionality) | Allow |
-| [Printing org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#functionality) | Allow |
-| [Restrict web content transfer with other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Microsoft Edge |
-| [Org data notifications](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Allow |
+| [Back up org data to Android backup services](app-protection-policy-settings-android.md#data-transfer) | Allow |
+| [Send org data to other apps](app-protection-policy-settings-android.md#data-transfer) | All apps |
+| [Receive data from other apps](app-protection-policy-settings-android.md#data-transfer) | All apps |
+| [Restrict cut, copy, and paste between other apps](app-protection-policy-settings-android.md#data-transfer) | Any app |
+| [Screen capture and Google Assistant](app-protection-policy-settings-android.md#functionality) | Allow |
+| [Approved keyboards](app-protection-policy-settings-android.md#data-transfer) | Not required |
+| [Encrypt org data](app-protection-policy-settings-android.md#encryption) | Require |
+| [Encrypt org data on enrolled devices](app-protection-policy-settings-android.md#encryption) | Require |
+| [Sync policy managed app data with native apps or add-ins](app-protection-policy-settings-android.md#functionality) | Allow |
+| [Printing org data](app-protection-policy-settings-android.md#functionality) | Allow |
+| [Restrict web content transfer with other apps](app-protection-policy-settings-android.md#functionality) | Microsoft Edge |
+| [Org data notifications](app-protection-policy-settings-android.md#functionality) | Allow |
+
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN required](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [PIN type](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Numeric |
-| [Simple PIN](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Allow |
-| [Select minimum PIN length](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 4 |
-| [Biometric instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Timeout (minutes of inactivity)](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 1440 |
-| [Class 3 Biometrics (Android 9.0+)](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Not required |
-| [Override Biometrics with PIN after biometric updates](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Not required |
-| [PIN reset after number of days](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | No |
-| [Select number of previous PIN values to maintain](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 0 |
-| [App PIN when device PIN is set](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Work or school account credentials for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Not required |
-| [Recheck access requirements after](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 30 minutes |
+| [PIN required](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [PIN type](app-protection-policy-settings-android.md#access-requirements) | Numeric |
+| [Simple PIN](app-protection-policy-settings-android.md#access-requirements) | Allow |
+| [Select minimum PIN length](app-protection-policy-settings-android.md#access-requirements) | 4 |
+| [Biometric instead of PIN for access](app-protection-policy-settings-android.md#access-requirements) | Allow |
+| [Override biometrics with PIN after timeout](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Timeout (minutes of inactivity)](app-protection-policy-settings-android.md#access-requirements) | 1440 |
+| [Class 3 Biometrics (Android 9.0+)](app-protection-policy-settings-android.md#access-requirements) | Not required |
+| [Override Biometrics with PIN after biometric updates](app-protection-policy-settings-android.md#access-requirements) | Not required |
+| [PIN reset after number of days](app-protection-policy-settings-android.md#access-requirements) | No |
+| [Select number of previous PIN values to maintain](app-protection-policy-settings-android.md#access-requirements) | 0 |
+| [App PIN when device PIN is set](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Work or school account credentials for access](app-protection-policy-settings-android.md#access-requirements) | Not required |
+| [Recheck access requirements after](app-protection-policy-settings-android.md#access-requirements) | 30 minutes |
+
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Max PIN attempts](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 5 / Reset PIN |
-| [Offline grace period](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 90 days / Wipe data |
-| [Jailbroken/rooted devices](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Block access |
-| [Play integrity verdict](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Basic integrity / Block access |
-| [Require threat scan on apps](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Block access |
-| [Require device lock](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Low Complexity / Block access |
+| [Max PIN attempts](app-protection-policy-settings-android.md#app-conditions) | 5 / Reset PIN |
+| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 90 days / Wipe data |
+| [Jailbroken/rooted devices](app-protection-policy-settings-android.md#device-conditions) | Block access |
+| [Play integrity verdict](app-protection-policy-settings-android.md#device-conditions) | Basic integrity / Block access |
+| [Require threat scan on apps](app-protection-policy-settings-android.md#device-conditions) | Block access |
+| [Require device lock](app-protection-policy-settings-android.md#device-conditions) | Low Complexity / Block access |
+
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
 13. Select **Next**, review the configuration, and then choose **Create**.  
@@ -528,56 +530,59 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to Android backup services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Block |
-| [Send org data to other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Policy managed apps |
-| [Receive data from other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | All apps |
-| [Save copies of org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Block |
-| [Allow users to save copies to selected services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | OneDrive for Business, SharePoint, Photo Library |
-| [Transfer telecommunication data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Any dialer app |
-| [Transfer messaging data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Any messaging app |
-| [Restrict cut, copy, and paste between apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Policy managed apps with paste in |
-| [Screen capture and Google Assistant](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Block |
-| [Approved keyboards](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Not required |
-| [Encrypt org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#encryption) | Require |
-| [Encrypt org data on enrolled devices](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#encryption) | Require |
-| [Sync policy managed app data with native apps or add-ins](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#functionality) | Allow |
-| [Printing org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#functionality) | Allow |
-| [Restrict web content transfer with other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Microsoft Edge |
-| [Org data notifications](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Block org data |
+| [Back up org data to Android backup services](app-protection-policy-settings-android.md#data-transfer) | Block |
+| [Send org data to other apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps |
+| [Receive data from other apps](app-protection-policy-settings-android.md#data-transfer) | All apps |
+| [Save copies of org data](app-protection-policy-settings-android.md#data-transfer) | Block |
+| [Allow users to save copies to selected services](app-protection-policy-settings-android.md#data-transfer) | OneDrive for Business, SharePoint, Photo Library |
+| [Transfer telecommunication data to](app-protection-policy-settings-android.md#data-transfer) | Any dialer app |
+| [Transfer messaging data to](app-protection-policy-settings-android.md#data-transfer) | Any messaging app |
+| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps with paste in |
+| [Screen capture and Google Assistant](app-protection-policy-settings-android.md#functionality) | Block |
+| [Approved keyboards](app-protection-policy-settings-android.md#data-transfer) | Not required |
+| [Encrypt org data](app-protection-policy-settings-android.md#encryption) | Require |
+| [Encrypt org data on enrolled devices](app-protection-policy-settings-android.md#encryption) | Require |
+| [Sync policy managed app data with native apps or add-ins](app-protection-policy-settings-android.md#functionality) | Allow |
+| [Printing org data](app-protection-policy-settings-android.md#functionality) | Allow |
+| [Restrict web content transfer with other apps](app-protection-policy-settings-android.md#functionality) | Microsoft Edge |
+| [Org data notifications](app-protection-policy-settings-android.md#functionality) | Block org data |
+
 8. Select **Next**
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN required](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [PIN type](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Numeric |
-| [Simple PIN](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Allow |
-| [Select minimum PIN length](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 4 |
-| [Biometric instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Timeout (minutes of inactivity)](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 1440 |
-| [Class 3 Biometrics (Android 9.0+)](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Not required |
-| [Override Biometrics with PIN after biometric updates](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Not required |
-| [PIN reset after number of days](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | No |
-| [Select number of previous PIN values to maintain](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 0 |
-| [App PIN when device PIN is set](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Work or school account credentials for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Not required |
-| [Recheck access requirements after](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 30 minutes |
+| [PIN required](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [PIN type](app-protection-policy-settings-android.md#access-requirements) | Numeric |
+| [Simple PIN](app-protection-policy-settings-android.md#access-requirements) | Allow |
+| [Select minimum PIN length](app-protection-policy-settings-android.md#access-requirements) | 4 |
+| [Biometric instead of PIN for access](app-protection-policy-settings-android.md#access-requirements) | Allow |
+| [Override biometrics with PIN after timeout](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Timeout (minutes of inactivity)](app-protection-policy-settings-android.md#access-requirements) | 1440 |
+| [Class 3 Biometrics (Android 9.0+)](app-protection-policy-settings-android.md#access-requirements) | Not required |
+| [Override Biometrics with PIN after biometric updates](app-protection-policy-settings-android.md#access-requirements) | Not required |
+| [PIN reset after number of days](app-protection-policy-settings-android.md#access-requirements) | No |
+| [Select number of previous PIN values to maintain](app-protection-policy-settings-android.md#access-requirements) | 0 |
+| [App PIN when device PIN is set](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Work or school account credentials for access](app-protection-policy-settings-android.md#access-requirements) | Not required |
+| [Recheck access requirements after](app-protection-policy-settings-android.md#access-requirements) | 30 minutes |
+
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 30 days / Wipe data |
-| [Min OS version](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | 9.0 / Block access |
-| [Min patch version](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | 2024-10-01 / Block access |
-| [Play integrity verdict](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Basic integrity and device integrity / Block access |
-| [Jailbroken/rooted devices](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Block access |
-| [Require threat scan on apps](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Block access |
-| [Require device lock](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#conditional-launch) | Medium / Block access |
-| [Samsung Knox device attestation](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#conditional-launch) | Block access on supported devices |
-| [Max PIN attempts](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 5 / Reset PIN |
+| [Disabled account](app-protection-policy-settings-android.md#app-conditions) | Block access |
+| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 30 days / Wipe data |
+| [Min OS version](app-protection-policy-settings-android.md#device-conditions) | 9.0 / Block access |
+| [Min patch version](app-protection-policy-settings-android.md#device-conditions) | 2024-10-01 / Block access |
+| [Play integrity verdict](app-protection-policy-settings-android.md#device-conditions) | Basic integrity and device integrity / Block access |
+| [Jailbroken/rooted devices](app-protection-policy-settings-android.md#device-conditions) | Block access |
+| [Require threat scan on apps](app-protection-policy-settings-android.md#device-conditions) | Block access |
+| [Require device lock](app-protection-policy-settings-android.md#conditional-launch) | Medium / Block access |
+| [Samsung Knox device attestation](app-protection-policy-settings-android.md#conditional-launch) | Block access on supported devices |
+| [Max PIN attempts](app-protection-policy-settings-android.md#app-conditions) | 5 / Reset PIN |
+
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
 13. Select **Next**, review the configuration, and then choose **Create**.
@@ -601,64 +606,64 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to Android backup services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Block |
-| [Send org data to other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Policy managed apps |
-| [Receive data from other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Policy managed apps |
-| [Save copies of org data](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Block |
-| [Allow users to save copies to selected services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | OneDrive for Business, SharePoint, Photo Library |
-| [Allow users to open data from selected services](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
-| [Transfer telecommunication data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Any policy-managed dialer app |
-| [Transfer messaging data to](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Any policy-managed messaging app |
-| [Restrict cut, copy, and paste between apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Policy managed apps with paste in |
-| [Open data into org documents](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Block |
-| [Approved keyboards](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#data-transfer) | Require (Microsoft SwiftKey Keyboard, Samsung Keyboard, Gboard – the Google Keyboard) |
-| [Screen capture and Google Assistant](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Block |
-| [Encrypt org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#encryption) | Require |
-| [Encrypt org data on enrolled devices](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#encryption) | Require |
-| [Sync policy managed app data with native apps or add-ins](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#functionality) | Block |
-| [Printing org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#functionality) | Block |
-| [Restrict web content transfer with other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Microsoft Edge |
-| [Org data notifications](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Block org data |
+| [Back up org data to Android backup services](app-protection-policy-settings-android.md#data-transfer) | Block |
+| [Send org data to other apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps |
+| [Receive data from other apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps |
+| [Save copies of org data](app-protection-policy-settings-android.md#data-transfer) | Block |
+| [Allow users to save copies to selected services](app-protection-policy-settings-android.md#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
+| [Allow users to open data from selected services](app-protection-policy-settings-android.md#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
+| [Transfer telecommunication data to](app-protection-policy-settings-android.md#data-transfer) | Any policy-managed dialer app |
+| [Transfer messaging data to](app-protection-policy-settings-android.md#data-transfer) | Any policy-managed messaging app |
+| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps with paste in |
+| [Open data into org documents](app-protection-policy-settings-android.md#data-transfer) | Block |
+| [Approved keyboards](app-protection-policy-settings-android.md#data-transfer) | Require (Microsoft SwiftKey Keyboard, Samsung Keyboard, Gboard – the Google Keyboard) |
+| [Screen capture and Google Assistant](app-protection-policy-settings-android.md#functionality) | Block |
+| [Encrypt org data](app-protection-policy-settings-android.md#encryption) | Require |
+| [Encrypt org data on enrolled devices](app-protection-policy-settings-android.md#encryption) | Require |
+| [Sync policy managed app data with native apps or add-ins](app-protection-policy-settings-android.md#functionality) | Block |
+| [Printing org data](app-protection-policy-settings-android.md#functionality) | Block |
+| [Restrict web content transfer with other apps](app-protection-policy-settings-android.md#functionality) | Microsoft Edge |
+| [Org data notifications](app-protection-policy-settings-android.md#functionality) | Block org data |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN required](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [PIN type](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Numeric |
-| [Simple PIN](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Block |
-| [Select minimum PIN length](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 6 |
-| [Biometric instead of PIN for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Timeout (minutes of inactivity)](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 30 |
-| [Class 3 Biometrics (Android 9.0+)](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Override Biometrics with PIN after biometric updates](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [PIN reset after number of days](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Yes (90 days) |
-| [Select number of previous PIN values to maintain](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 0 |
-| [App PIN when device PIN is set](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Work or school account credentials for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
-| [Recheck access requirements after](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 30 minutes |
+| [PIN required](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [PIN type](app-protection-policy-settings-android.md#access-requirements) | Numeric |
+| [Simple PIN](app-protection-policy-settings-android.md#access-requirements) | Block |
+| [Select minimum PIN length](app-protection-policy-settings-android.md#access-requirements) | 6 |
+| [Biometric instead of PIN for access](app-protection-policy-settings-android.md#access-requirements) | Allow |
+| [Override biometrics with PIN after timeout](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Timeout (minutes of inactivity)](app-protection-policy-settings-android.md#access-requirements) | 30 |
+| [Class 3 Biometrics (Android 9.0+)](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Override Biometrics with PIN after biometric updates](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [PIN reset after number of days](app-protection-policy-settings-android.md#access-requirements) | Yes (90 days) |
+| [Select number of previous PIN values to maintain](app-protection-policy-settings-android.md#access-requirements) | 0 |
+| [App PIN when device PIN is set](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Work or school account credentials for access](app-protection-policy-settings-android.md#access-requirements) | Require |
+| [Recheck access requirements after](app-protection-policy-settings-android.md#access-requirements) | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Require device lock](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | High Complexity / Block access |
-| [Jailbroken/rooted devices](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#conditional-launch) | Wipe data |
-| [Max allowed threat level](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#conditional-launch) | Secured / Block access |
-| [Max OS version](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#conditional-launch) | 16.0 / Block access |
-| [Samsung Knox device attestation](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#conditional-launch) | Wipe data |
-| [Offline grace period](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 10080 minutes / Block access |
-| [Offline grace period](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#conditional-launch) | 30 days / Block access |
-| [Disabled account](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | Block access |
-| [Min OS version](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | 9.0 / Block access |
-| [Min patch version](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | 2024-10-01 / Block access |
-| [Play integrity verdict](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Basic integrity and device integrity / Block access |
-| [Play integrity verdict evaluation type](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Check strong integrity |
-| [Require threat scan on apps](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | Block access |
-| [Max Company Portal version age (days)](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#device-conditions) | 180 / Block access |
-| [Max PIN attempts](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#app-conditions) | 5 / Reset PIN |
+| [Require device lock](app-protection-policy-settings-android.md#device-conditions) | High Complexity / Block access |
+| [Jailbroken/rooted devices](app-protection-policy-settings-android.md#conditional-launch) | Wipe data |
+| [Max allowed threat level](app-protection-policy-settings-android.md#conditional-launch) | Secured / Block access |
+| [Max OS version](app-protection-policy-settings-android.md#conditional-launch) | 16.0 / Block access |
+| [Samsung Knox device attestation](app-protection-policy-settings-android.md#conditional-launch) | Wipe data |
+| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 10080 minutes / Block access |
+| [Offline grace period](app-protection-policy-settings-android.md#conditional-launch) | 30 days / Block access |
+| [Disabled account](app-protection-policy-settings-android.md#app-conditions) | Block access |
+| [Min OS version](app-protection-policy-settings-android.md#device-conditions) | 9.0 / Block access |
+| [Min patch version](app-protection-policy-settings-android.md#device-conditions) | 2024-10-01 / Block access |
+| [Play integrity verdict](app-protection-policy-settings-android.md#device-conditions) | Basic integrity and device integrity / Block access |
+| [Play integrity verdict evaluation type](app-protection-policy-settings-android.md#device-conditions) | Check strong integrity |
+| [Require threat scan on apps](app-protection-policy-settings-android.md#device-conditions) | Block access |
+| [Max Company Portal version age (days)](app-protection-policy-settings-android.md#device-conditions) | 180 / Block access |
+| [Max PIN attempts](app-protection-policy-settings-android.md#app-conditions) | 5 / Reset PIN |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
