@@ -44,6 +44,8 @@ The agent analyzes these signals to assess the potential risk associated with ea
 >
 > Required licenses:
 > - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
+> - [Microsoft Entra ID P2](/entra/fundamentals/licensing)
+> - [Microsoft Defender Vulnerability Management](/defender-vulnerability-management/tvm-prerequisites)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 :::column-end:::
 :::row-end:::
@@ -147,7 +149,7 @@ At a high level, the agent does the following steps each time it runs:
 
 2. **Evaluation** - The agent evaluates Windows PowerShell scripts for Multi Admin Approval requests using predefined logic that's built in to the agent configuration.
 
-3. **Recommendations** - The agent reviews and then provides recomendations for a maximum of 10 requests per run.
+3. **Recommendations** - The agent reviews and then provides recommendations for a maximum of 10 requests per run.
 
    Suggestions are *suggestions* only. The approval or rejection of a request remains with an Intune administrator.
 
@@ -173,7 +175,7 @@ Before setting up and starting the agent for the first time, review the followin
 - An admin must manually start the agent. Once started, there’s no option to stop or pause it.
 - The agent can only be started from the Microsoft Intune admin center.
 - Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
-- The agent reviews and then provides recomendations for a maximum of 10 requests per run.
+- The agent reviews and then provides recommendations for a maximum of 10 requests per run.
 - Only one agent instance is supported per tenant/user context.
 
 ## Set up the agent
