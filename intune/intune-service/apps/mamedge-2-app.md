@@ -619,6 +619,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 | [Printing org data](https://learn.microsoft.com/en-us/intune/intune-service/apps/app-protection-policy-settings-android#functionality) | Block |
 | [Restrict web content transfer with other apps](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Microsoft Edge |
 | [Org data notifications](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#functionality) | Block org data |
+
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:
 
@@ -638,6 +639,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 | [App PIN when device PIN is set](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
 | [Work or school account credentials for access](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | Require |
 | [Recheck access requirements after](https://learn.microsoft.com/en-us/mem/intune/apps/app-protection-policy-settings-android#access-requirements) | 30 minutes |
+
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
