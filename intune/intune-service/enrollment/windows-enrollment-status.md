@@ -155,11 +155,11 @@ On Windows 11 versions with the `2025-06 D` quality update, the control that ena
 - Monthly security update releases aren't installed during OOBE when the device is on a metered network.
 
 > [!IMPORTANT]
-> If admins set the **Block device use until all apps and profiles are installed** setting to **No** in an ESP profile, the device might exit ESP before the following items are applied. It can result in monthly security update releases not being installed during OOBE, even when **Install Windows quality updates** is set to **Yes**.
+> To ensure that monthly security update releases are installed, set the **Block device use until all apps and profiles are installed** ESP profile setting to **Yes**. If it's set to **No**, the device might exit ESP before the following items are applied:
 > - Windows Update for Business (WUfB) policies
 > - Monthly security update releases
 >
-> To ensure that monthly security update releases are installed when **Install Windows quality updates** is set to **Yes**, make sure that the **Block device use until all apps and profiles are installed** setting is set to **Yes**.
+> **No** can result in monthly security update releases not being installed during OOBE, even when **Install Windows quality updates** is set to **Yes**.
 
 ### Supported configurations
 
