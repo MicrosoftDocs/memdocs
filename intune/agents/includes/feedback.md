@@ -2,7 +2,7 @@
 author: paolomatarazzo
 ms.author: paoloma
 ms-topic: include
-ms.date: 11/14/2025
+ms.date: 11/20/2025
 ---
 
 ## :::image type="icon" source="../icons/feedback.svg" border="false"::: Provide feedback

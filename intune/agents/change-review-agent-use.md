@@ -137,7 +137,7 @@ Security Copilot logs include all agent management actions and permission failur
 
 [!INCLUDE [errors](includes/errors.md)]
 
-### Security Copilot couldn’t retrieve details for this factor at this time
+### Security Copilot couldn't retrieve details for this factor at this time
 
 The agent was unable to retrieve details related to the specified factor. The exact reason for this failure is unknown.
 
@@ -145,6 +145,7 @@ The agent was unable to retrieve details related to the specified factor. The ex
 
 The agent cannot proceed because the request violates Microsoft's Responsible AI policies. This typically occurs when the system detects a prohibited action, like a prompt injection attempt.
 
+[!INCLUDE [feedback](includes/feedback.md)]
 
 ## Related content
 
