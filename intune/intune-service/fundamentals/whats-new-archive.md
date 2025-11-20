@@ -800,7 +800,7 @@ Applies to:
 
 Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices.
 
-To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties) for more information about filters for managed app properties.
+To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#available-properties) for more information about filters for managed app properties.
 
 Applies to:
 
