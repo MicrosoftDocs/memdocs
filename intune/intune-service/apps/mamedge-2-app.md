@@ -63,19 +63,19 @@ Level 1 configuration provides the minimum data protection for a Windows device 
 
 | Setting | Value |
 |--------|-------|
-| [Receive data from](app-protection-policy-settings-windows.md#data-transfer) | All destinations |
-| [Send org data to](app-protection-policy-settings-windows.md#data-transfer) | All sources |
-| [Allow cut, copy, and paste for](app-protection-policy-settings-windows.md#data-transfer) | Any destination and any source |
-| [Printing org data](app-protection-policy-settings-windows.md#functionality) | Allow |
+| Receive data from | All destinations |
+| Send org data to | All sources |
+| Allow cut, copy, and paste for | Any destination and any source |
+| Printing org data | Allow |
 
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:  
 
 | Setting | Value |
 |--------|-------|
-| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 90 days / Wipe data |
-| [Max allowed device threat level](app-protection-policy-settings-windows.md#conditional-launch) | Low / Block access |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 90 days / Wipe data |
+| Max allowed device threat level | Low / Block access |
 
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
@@ -97,21 +97,21 @@ Level 2 configuration includes more controls for enhanced data protection.
 
 | Setting | Value |
 |--------|-------|
-| [Send org data to](app-protection-policy-settings-windows.md#data-transfer) | No destinations |
-| [Receive data from](app-protection-policy-settings-windows.md#data-transfer) | No sources |
-| [Allow cut, copy, and paste for](app-protection-policy-settings-windows.md#data-transfer) | No destination or source |
-| [Printing org data](app-protection-policy-settings-windows.md#functionality) | Allow |
+| Send org data to | No destinations |
+| Receive data from | No sources |
+| Allow cut, copy, and paste for | No destination or source |
+| Printing org data | Allow |
 
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](app-protection-policy-settings-windows.md#conditional-launch) | Block access |
-| [Min OS version](app-protection-policy-settings-windows.md#conditional-launch) | 10.0.22621.2506 / Block access |
-| [Max allowed device threat level](app-protection-policy-settings-windows.md#conditional-launch) | Medium / Block access |
-| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 30 days / Wipe data |
+| Disabled account | Block access |
+| Min OS version | 10.0.22621.2506 / Block access |
+| Max allowed device threat level | Medium / Block access |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 30 days / Wipe data |
 
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
@@ -133,21 +133,21 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 | Setting | Value |
 |--------|-------|
-| [ReceiveDataFromOtherApps](app-protection-policy-settings-windows.md#data-transfer) | No sources |
-| [SendOrgDataToOtherApps](app-protection-policy-settings-windows.md#data-transfer) | No destinations |
-| [RestrictCutCopyPasteIn](app-protection-policy-settings-windows.md#data-transfer) | No destination or source |
-| [PrintBlocked](app-protection-policy-settings-windows.md#functionality) | Block |
+| ReceiveDataFromOtherApps | No sources |
+| SendOrgDataToOtherApps | No destinations |
+| RestrictCutCopyPasteIn | No destination or source |
+| PrintBlocked | Block |
 
 8. Select **Next**.  
 9. On the **Health checks** tab, configure:  
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](app-protection-policy-settings-windows.md#conditional-launch) | Block access |
-| [Min OS version](app-protection-policy-settings-windows.md#conditional-launch) | 10.0.22621.2506 / Block access |
-| [Max allowed device threat level](app-protection-policy-settings-windows.md#conditional-launch) | Medium / Block access |
-| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 1440 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-windows.md#conditional-launch) | 30 days / Wipe data |
+| Disabled account | Block access |
+| Min OS version | 10.0.22621.2506 / Block access |
+| Max allowed device threat level | Medium / Block access |
+| Offline grace period | 1440 minutes / Block access |
+| Offline grace period | 30 days / Wipe data |
 
 10. Select **Next**.  
 11. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
@@ -200,46 +200,46 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to](app-protection-policy-settings-ios.md#data-transfer) | Allow |
-| [Send org data to other apps](app-protection-policy-settings-ios.md#data-transfer) | All apps |
-| [Receive data from other apps](app-protection-policy-settings-ios.md#data-transfer) | All apps |
-| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-ios.md#data-transfer) | Any app |
-| [Third-party keyboards](app-protection-policy-settings-ios.md#data-transfer) | Allow |
-| [Encrypt org data](app-protection-policy-settings-ios.md#encryption) | Require |
-| [Sync policy managed app data with native contacts app](app-protection-policy-settings-ios.md#functionality) | Allow |
-| [Print org data](app-protection-policy-settings-ios.md#functionality) | Allow |
-| [Restrict web content transfer with other apps](app-protection-policy-settings-ios.md#functionality) | Microsoft Edge |
-| [Org data notifications](app-protection-policy-settings-ios.md#functionality) | Allow |
-| [Genmoji](app-protection-policy-settings-ios.md#functionality) | Allow |
-| [Screen capture](app-protection-policy-settings-ios.md#functionality) | Allow |
-| [Writing tools](app-protection-policy-settings-ios.md#functionality) | Allow |
+| Back up org data to | Allow |
+| Send org data to other apps | All apps |
+| Receive data from other apps | All apps |
+| Restrict cut, copy, and paste between apps | Any app |
+| Third-party keyboards | Allow |
+| Encrypt org data | Require |
+| Sync policy managed app data with native contacts app | Allow |
+| Print org data | Allow |
+| Restrict web content transfer with other apps | Microsoft Edge |
+| Org data notifications | Allow |
+| Genmoji | Allow |
+| Screen capture | Allow |
+| Writing tools | Allow |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:  
 
 | Setting | Value |
 |--------|--------|
-| [PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [PIN type](app-protection-policy-settings-ios.md#access-requirements) | Numeric |
-| [Simple PIN](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Select minimum PIN length](app-protection-policy-settings-ios.md#access-requirements) | 4 |
-| [Touch ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require (1440 minutes) |
-| [Face ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Biometric instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [PIN reset after number of days](app-protection-policy-settings-ios.md#access-requirements) | No |
-| [App PIN when device PIN is set](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [Work or school account credentials for access](app-protection-policy-settings-ios.md#access-requirements) | Not required |
-| [Recheck access requirements after](app-protection-policy-settings-ios.md#access-requirements) | 30 minutes |
+| PIN for access | Require |
+| PIN type | Numeric |
+| Simple PIN | Allow |
+| Select minimum PIN length | 4 |
+| Touch ID instead of PIN for access | Allow |
+| Override biometrics with PIN after timeout | Require (1440 minutes) |
+| Face ID instead of PIN for access | Allow |
+| Biometric instead of PIN for access | Allow |
+| PIN reset after number of days | No |
+| App PIN when device PIN is set | Require |
+| Work or school account credentials for access | Not required |
+| Recheck access requirements after | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Max PIN attempts](app-protection-policy-settings-ios.md#conditional-launch) | 5 / Reset PIN |
-| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 90 days / Wipe data |
-| [Jailbroken/rooted devices](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
+| Max PIN attempts | 5 / Reset PIN |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 90 days / Wipe data |
+| Jailbroken/rooted devices | Block access |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
@@ -264,55 +264,55 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to](app-protection-policy-settings-ios.md#data-transfer) | Block |
-| [Send org data to other apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps |
-| [Select apps to exempt](app-protection-policy-settings-ios.md#data-transfer) | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
-| [Receive data from other apps](app-protection-policy-settings-ios.md#data-transfer) | All apps |
-| [Save copies of org data](app-protection-policy-settings-ios.md#data-transfer) | Block |
-| [Allow users to save copies to selected services](app-protection-policy-settings-ios.md#data-transfer) | OneDrive for Business, SharePoint Online, Photo Library |
-| [Transfer telecommunication data to](app-protection-policy-settings-ios.md#data-transfer) | Any dialer app |
-| [Transfer messaging data to](app-protection-policy-settings-ios.md#data-transfer) | Any messaging app |
-| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps with paste in |
-| [Third-party keyboards](app-protection-policy-settings-ios.md#data-transfer) | Allow |
-| [Encrypt org data](app-protection-policy-settings-ios.md#encryption) | Require |
-| [Sync policy managed app data with native contacts app](app-protection-policy-settings-ios.md#functionality) | Allow |
-| [Print org data](app-protection-policy-settings-ios.md#functionality) | Allow |
-| [Restrict web content transfer with other apps](app-protection-policy-settings-ios.md#functionality) | Microsoft Edge |
-| [Org data notifications](app-protection-policy-settings-ios.md#functionality) | Block org data |
-| [Genmoji](app-protection-policy-settings-ios.md#functionality) | Block |
-| [Screen capture](app-protection-policy-settings-ios.md#functionality) | Block |
-| [Writing tools](app-protection-policy-settings-ios.md#functionality) | Block |
+| Back up org data to | Block |
+| Send org data to other apps | Policy managed apps |
+| Select apps to exempt | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
+| Receive data from other apps | All apps |
+| Save copies of org data | Block |
+| Allow users to save copies to selected services | OneDrive for Business, SharePoint Online, Photo Library |
+| Transfer telecommunication data to | Any dialer app |
+| Transfer messaging data to | Any messaging app |
+| Restrict cut, copy, and paste between apps | Policy managed apps with paste in |
+| Third-party keyboards | Allow |
+| Encrypt org data | Require |
+| Sync policy managed app data with native contacts app | Allow |
+| Print org data | Allow |
+| Restrict web content transfer with other apps | Microsoft Edge |
+| Org data notifications | Block org data |
+| Genmoji | Block |
+| Screen capture | Block |
+| Writing tools | Block |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:  
 
 | Setting | Value |
 |--------|--------|
-| [PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [PIN type](app-protection-policy-settings-ios.md#access-requirements) | Numeric |
-| [Simple PIN](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Select minimum PIN length](app-protection-policy-settings-ios.md#access-requirements) | 4 |
-| [Touch ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require (1440 minutes) |
-| [Face ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Biometric instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [PIN reset after number of days](app-protection-policy-settings-ios.md#access-requirements) | No |
-| [App PIN when device PIN is set](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [Work or school account credentials for access](app-protection-policy-settings-ios.md#access-requirements) | Not required |
-| [Recheck access requirements after](app-protection-policy-settings-ios.md#access-requirements) | 30 minutes |
+| PIN for access | Require |
+| PIN type | Numeric |
+| Simple PIN | Allow |
+| Select minimum PIN length | 4 |
+| Touch ID instead of PIN for access | Allow |
+| Override biometrics with PIN after timeout | Require (1440 minutes) |
+| Face ID instead of PIN for access | Allow |
+| Biometric instead of PIN for access | Allow |
+| PIN reset after number of days | No |
+| App PIN when device PIN is set | Require |
+| Work or school account credentials for access | Not required |
+| Recheck access requirements after | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
-| [Min OS version](app-protection-policy-settings-ios.md#conditional-launch) | 14.8 / Block access |
-| [Min patch version](app-protection-policy-settings-ios.md#conditional-launch) | 2024-10-01 / Block access |
-| [Min app version](app-protection-policy-settings-ios.md#conditional-launch) | Latest / Warn |
-| [Max PIN attempts](app-protection-policy-settings-ios.md#conditional-launch) | 5 / Reset PIN |
-| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 30 days / Wipe data |
-| [Jailbroken/rooted devices](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
+| Disabled account | Block access |
+| Min OS version | 14.8 / Block access |
+| Min patch version | 2024-10-01 / Block access |
+| Min app version | Latest / Warn |
+| Max PIN attempts | 5 / Reset PIN |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 30 days / Wipe data |
+| Jailbroken/rooted devices | Block access |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
@@ -337,62 +337,61 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to](app-protection-policy-settings-ios.md#data-transfer) | Block |
-| [Send org data to other apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps |
-| [Select apps to exempt](app-protection-policy-settings-ios.md#data-transfer) | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
-| [Receive data from other apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps |
-| [Save copies of org data](app-protection-policy-settings-ios.md#data-transfer) | Block |
-| [Allow users to save copies to selected services](app-protection-policy-settings-ios.md#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
-| [Transfer telecommunication data to](app-protection-policy-settings-ios.md#data-transfer) | A specific dialer app |
-| [Dialer App URL Scheme](app-protection-policy-settings-ios.md#data-transfer) | replace_with_dialer_app_url_scheme |
-| [Transfer messaging data to](app-protection-policy-settings-ios.md#data-transfer) | A specific dialer app |
-| [Messaging App URL Scheme](app-protection-policy-settings-ios.md#data-transfer) | replace_with_messaging_app_url_scheme |
-| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-ios.md#data-transfer) | Policy managed apps with paste in |
-| [Open data into org documents](app-protection-policy-settings-ios.md#data-transfer) | Block |
-| [Third-party keyboards](app-protection-policy-settings-ios.md#data-transfer) | Block |
-| [Encrypt org data](app-protection-policy-settings-ios.md#encryption) | Require |
-| [Sync policy managed app data with native contacts app](app-protection-policy-settings-ios.md#functionality) | Block |
-| [Print org data](app-protection-policy-settings-ios.md#functionality) | Block |
-| [Restrict web content transfer with other apps](app-protection-policy-settings-ios.md#functionality) | Microsoft Edge |
-| [Org data notifications](app-protection-policy-settings-ios.md#functionality) | Block org data |
-| [Genmoji](app-protection-policy-settings-ios.md#functionality) | Block |
-| [Screen capture](app-protection-policy-settings-ios.md#functionality) | Block |
-| [Writing tools](app-protection-policy-settings-ios.md#functionality) | Block |
+| Back up org data to | Block |
+| Send org data to other apps | Policy managed apps |
+| Select apps to exempt | skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services |
+| Receive data from other apps | Policy managed apps |
+| Save copies of org data | Block |
+| Allow users to save copies to selected services | OneDrive for Business, SharePoint, Camera, Photo Library |
+| Allow users to open data from selected services | OneDrive for Business, SharePoint, Camera, Photo Library |
+| Transfer telecommunication data to | Any policy-managed dialer app |
+| Transfer messaging data to | Any policy-managed messaging app |
+| Restrict cut, copy, and paste between apps | Policy managed apps with paste in |
+| Open data into org documents | Block |
+| Third-party keyboards | Block |
+| Encrypt org data | Require |
+| Sync policy managed app data with native contacts app | Block |
+| Print org data | Block |
+| Restrict web content transfer with other apps | Microsoft Edge |
+| Org data notifications | Block org data |
+| Genmoji | Block |
+| Screen capture | Block |
+| Writing tools | Block |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [PIN type](app-protection-policy-settings-ios.md#access-requirements) | Numeric |
-| [Simple PIN](app-protection-policy-settings-ios.md#access-requirements) | Block |
-| [Select minimum PIN length](app-protection-policy-settings-ios.md#access-requirements) | 6 |
-| [Touch ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Face ID instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Biometric instead of PIN for access](app-protection-policy-settings-ios.md#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [Override Touch ID with PIN after timeout](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [PIN reset after number of days](app-protection-policy-settings-ios.md#access-requirements) | Yes (90 days) |
-| [App PIN when device PIN is set](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [Work or school account credentials for access](app-protection-policy-settings-ios.md#access-requirements) | Require |
-| [Recheck access requirements after](app-protection-policy-settings-ios.md#access-requirements) | 30 minutes |
+| PIN for access | Require |
+| PIN type | Numeric |
+| Simple PIN | Block |
+| Select minimum PIN length | 6 |
+| Touch ID instead of PIN for access | Allow |
+| Face ID instead of PIN for access | Allow |
+| Biometric instead of PIN for access | Allow |
+| Override biometrics with PIN after timeout | Require |
+| Override Touch ID with PIN after timeout | Require |
+| PIN reset after number of days | Yes (90 days) |
+| App PIN when device PIN is set | Require |
+| Work or school account credentials for access | Require |
+| Recheck access requirements after | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Jailbroken/rooted devices](app-protection-policy-settings-ios.md#conditional-launch) | Wipe data |
-| [Max allowed threat level](app-protection-policy-settings-ios.md#conditional-launch) | Secured / Block access |
-| [Max OS version](app-protection-policy-settings-ios.md#conditional-launch) | 26.0.1 / Block access |
-| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-ios.md#conditional-launch) | 30 days / Block access |
-| [Disabled account](app-protection-policy-settings-ios.md#conditional-launch) | Block access |
-| [Min OS version](app-protection-policy-settings-ios.md#conditional-launch) | 14.8 / Block access |
-| [Min patch version](app-protection-policy-settings-ios.md#conditional-launch) | 2024-10-01 / Block access |
-| [Min app version](app-protection-policy-settings-ios.md#conditional-launch) | Latest / Warn |
-| [Min SDK version](app-protection-policy-settings-ios.md#conditional-launch) | 21.1.0 / Block access |
-| [Max PIN attempts](app-protection-policy-settings-ios.md#conditional-launch) | 5 / Reset PIN |
+| Jailbroken/rooted devices | Wipe data |
+| Max allowed threat level | Secured / Block access |
+| Max OS version | 26.0.1 / Block access |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 30 days / Block access |
+| Disabled account | Block access |
+| Min OS version | 14.8 / Block access |
+| Min patch version | 2024-10-01 / Block access |
+| Min app version | Latest / Warn |
+| Min SDK version | 21.1.0 / Block access |
+| Max PIN attempts | 5 / Reset PIN |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
@@ -462,50 +461,50 @@ Level 1 configuration provides the minimum data protection for an Android device
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to Android backup services](app-protection-policy-settings-android.md#data-transfer) | Allow |
-| [Send org data to other apps](app-protection-policy-settings-android.md#data-transfer) | All apps |
-| [Receive data from other apps](app-protection-policy-settings-android.md#data-transfer) | All apps |
-| [Restrict cut, copy, and paste between other apps](app-protection-policy-settings-android.md#data-transfer) | Any app |
-| [Screen capture and Google Assistant](app-protection-policy-settings-android.md#functionality) | Allow |
-| [Approved keyboards](app-protection-policy-settings-android.md#data-transfer) | Not required |
-| [Encrypt org data](app-protection-policy-settings-android.md#encryption) | Require |
-| [Encrypt org data on enrolled devices](app-protection-policy-settings-android.md#encryption) | Require |
-| [Sync policy managed app data with native apps or add-ins](app-protection-policy-settings-android.md#functionality) | Allow |
-| [Printing org data](app-protection-policy-settings-android.md#functionality) | Allow |
-| [Restrict web content transfer with other apps](app-protection-policy-settings-android.md#functionality) | Microsoft Edge |
-| [Org data notifications](app-protection-policy-settings-android.md#functionality) | Allow |
+| Back up org data to Android backup services | Allow |
+| Send org data to other apps | All apps |
+| Receive data from other apps | All apps |
+| Restrict cut, copy, and paste between other apps | Any app |
+| Screen capture and Google Assistant | Allow |
+| Approved keyboards | Not required |
+| Encrypt org data | Require |
+| Encrypt org data on enrolled devices | Require |
+| Sync policy managed app data with native apps or add-ins | Allow |
+| Printing org data | Allow |
+| Restrict web content transfer with other apps | Microsoft Edge |
+| Org data notifications | Allow |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN required](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [PIN type](app-protection-policy-settings-android.md#access-requirements) | Numeric |
-| [Simple PIN](app-protection-policy-settings-android.md#access-requirements) | Allow |
-| [Select minimum PIN length](app-protection-policy-settings-android.md#access-requirements) | 4 |
-| [Biometric instead of PIN for access](app-protection-policy-settings-android.md#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Timeout (minutes of inactivity)](app-protection-policy-settings-android.md#access-requirements) | 1440 |
-| [Class 3 Biometrics (Android 9.0+)](app-protection-policy-settings-android.md#access-requirements) | Not required |
-| [Override Biometrics with PIN after biometric updates](app-protection-policy-settings-android.md#access-requirements) | Not required |
-| [PIN reset after number of days](app-protection-policy-settings-android.md#access-requirements) | No |
-| [Select number of previous PIN values to maintain](app-protection-policy-settings-android.md#access-requirements) | 0 |
-| [App PIN when device PIN is set](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Work or school account credentials for access](app-protection-policy-settings-android.md#access-requirements) | Not required |
-| [Recheck access requirements after](app-protection-policy-settings-android.md#access-requirements) | 30 minutes |
+| PIN required | Require |
+| PIN type | Numeric |
+| Simple PIN | Allow |
+| Select minimum PIN length | 4 |
+| Biometric instead of PIN for access | Allow |
+| Override biometrics with PIN after timeout | Require |
+| Timeout (minutes of inactivity) | 1440 |
+| Class 3 Biometrics (Android 9.0+) | Not required |
+| Override Biometrics with PIN after biometric updates | Not required |
+| PIN reset after number of days | No |
+| Select number of previous PIN values to maintain | 0 |
+| App PIN when device PIN is set | Require |
+| Work or school account credentials for access | Not required |
+| Recheck access requirements after | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Max PIN attempts](app-protection-policy-settings-android.md#app-conditions) | 5 / Reset PIN |
-| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 90 days / Wipe data |
-| [Jailbroken/rooted devices](app-protection-policy-settings-android.md#device-conditions) | Block access |
-| [Play integrity verdict](app-protection-policy-settings-android.md#device-conditions) | Basic integrity / Block access |
-| [Require threat scan on apps](app-protection-policy-settings-android.md#device-conditions) | Block access |
-| [Require device lock](app-protection-policy-settings-android.md#device-conditions) | Low Complexity / Block access |
+| Max PIN attempts | 5 / Reset PIN |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 90 days / Wipe data |
+| Jailbroken/rooted devices | Block access |
+| Play integrity verdict | Basic integrity / Block access |
+| Require threat scan on apps | Block access |
+| Require device lock | Low Complexity / Block access |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.  
@@ -530,58 +529,58 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to Android backup services](app-protection-policy-settings-android.md#data-transfer) | Block |
-| [Send org data to other apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps |
-| [Receive data from other apps](app-protection-policy-settings-android.md#data-transfer) | All apps |
-| [Save copies of org data](app-protection-policy-settings-android.md#data-transfer) | Block |
-| [Allow users to save copies to selected services](app-protection-policy-settings-android.md#data-transfer) | OneDrive for Business, SharePoint, Photo Library |
-| [Transfer telecommunication data to](app-protection-policy-settings-android.md#data-transfer) | Any dialer app |
-| [Transfer messaging data to](app-protection-policy-settings-android.md#data-transfer) | Any messaging app |
-| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps with paste in |
-| [Screen capture and Google Assistant](app-protection-policy-settings-android.md#functionality) | Block |
-| [Approved keyboards](app-protection-policy-settings-android.md#data-transfer) | Not required |
-| [Encrypt org data](app-protection-policy-settings-android.md#encryption) | Require |
-| [Encrypt org data on enrolled devices](app-protection-policy-settings-android.md#encryption) | Require |
-| [Sync policy managed app data with native apps or add-ins](app-protection-policy-settings-android.md#functionality) | Allow |
-| [Printing org data](app-protection-policy-settings-android.md#functionality) | Allow |
-| [Restrict web content transfer with other apps](app-protection-policy-settings-android.md#functionality) | Microsoft Edge |
-| [Org data notifications](app-protection-policy-settings-android.md#functionality) | Block org data |
+| Back up org data to Android backup services | Block |
+| Send org data to other apps | Policy managed apps |
+| Receive data from other apps | All apps |
+| Save copies of org data | Block |
+| Allow users to save copies to selected services | OneDrive for Business, SharePoint, Photo Library |
+| Transfer telecommunication data to | Any dialer app |
+| Transfer messaging data to | Any messaging app |
+| Restrict cut, copy, and paste between apps | Policy managed apps with paste in |
+| Screen capture and Google Assistant | Block |
+| Approved keyboards | Not required |
+| Encrypt org data | Require |
+| Encrypt org data on enrolled devices | Require |
+| Sync policy managed app data with native apps or add-ins | Allow |
+| Printing org data | Allow |
+| Restrict web content transfer with other apps | Microsoft Edge |
+| Org data notifications | Block org data |
 
 8. Select **Next**
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN required](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [PIN type](app-protection-policy-settings-android.md#access-requirements) | Numeric |
-| [Simple PIN](app-protection-policy-settings-android.md#access-requirements) | Allow |
-| [Select minimum PIN length](app-protection-policy-settings-android.md#access-requirements) | 4 |
-| [Biometric instead of PIN for access](app-protection-policy-settings-android.md#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Timeout (minutes of inactivity)](app-protection-policy-settings-android.md#access-requirements) | 1440 |
-| [Class 3 Biometrics (Android 9.0+)](app-protection-policy-settings-android.md#access-requirements) | Not required |
-| [Override Biometrics with PIN after biometric updates](app-protection-policy-settings-android.md#access-requirements) | Not required |
-| [PIN reset after number of days](app-protection-policy-settings-android.md#access-requirements) | No |
-| [Select number of previous PIN values to maintain](app-protection-policy-settings-android.md#access-requirements) | 0 |
-| [App PIN when device PIN is set](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Work or school account credentials for access](app-protection-policy-settings-android.md#access-requirements) | Not required |
-| [Recheck access requirements after](app-protection-policy-settings-android.md#access-requirements) | 30 minutes |
+| PIN required | Require |
+| PIN type | Numeric |
+| Simple PIN | Allow |
+| Select minimum PIN length | 4 |
+| Biometric instead of PIN for access | Allow |
+| Override biometrics with PIN after timeout | Require |
+| Timeout (minutes of inactivity) | 1440 |
+| Class 3 Biometrics (Android 9.0+) | Not required |
+| Override Biometrics with PIN after biometric updates | Not required |
+| PIN reset after number of days | No |
+| Select number of previous PIN values to maintain | 0 |
+| App PIN when device PIN is set | Require |
+| Work or school account credentials for access | Not required |
+| Recheck access requirements after | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Disabled account](app-protection-policy-settings-android.md#app-conditions) | Block access |
-| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 30 days / Wipe data |
-| [Min OS version](app-protection-policy-settings-android.md#device-conditions) | 9.0 / Block access |
-| [Min patch version](app-protection-policy-settings-android.md#device-conditions) | 2024-10-01 / Block access |
-| [Play integrity verdict](app-protection-policy-settings-android.md#device-conditions) | Basic integrity and device integrity / Block access |
-| [Jailbroken/rooted devices](app-protection-policy-settings-android.md#device-conditions) | Block access |
-| [Require threat scan on apps](app-protection-policy-settings-android.md#device-conditions) | Block access |
-| [Require device lock](app-protection-policy-settings-android.md#conditional-launch) | Medium / Block access |
-| [Samsung Knox device attestation](app-protection-policy-settings-android.md#conditional-launch) | Block access on supported devices |
-| [Max PIN attempts](app-protection-policy-settings-android.md#app-conditions) | 5 / Reset PIN |
+| Disabled account | Block access |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 30 days / Wipe data |
+| Min OS version | 9.0 / Block access |
+| Min patch version | 2024-10-01 / Block access |
+| Play integrity verdict | Basic integrity and device integrity / Block access |
+| Jailbroken/rooted devices | Block access |
+| Require threat scan on apps | Block access |
+| Require device lock | Medium / Block access |
+| Samsung Knox device attestation | Block access on supported devices |
+| Max PIN attempts | 5 / Reset PIN |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.  
@@ -606,64 +605,63 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 | Setting | Value |
 |--------|--------|
-| [Back up org data to Android backup services](app-protection-policy-settings-android.md#data-transfer) | Block |
-| [Send org data to other apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps |
-| [Receive data from other apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps |
-| [Save copies of org data](app-protection-policy-settings-android.md#data-transfer) | Block |
-| [Allow users to save copies to selected services](app-protection-policy-settings-android.md#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
-| [Allow users to open data from selected services](app-protection-policy-settings-android.md#data-transfer) | OneDrive for Business, SharePoint, Camera, Photo Library |
-| [Transfer telecommunication data to](app-protection-policy-settings-android.md#data-transfer) | Any policy-managed dialer app |
-| [Transfer messaging data to](app-protection-policy-settings-android.md#data-transfer) | Any policy-managed messaging app |
-| [Restrict cut, copy, and paste between apps](app-protection-policy-settings-android.md#data-transfer) | Policy managed apps with paste in |
-| [Open data into org documents](app-protection-policy-settings-android.md#data-transfer) | Block |
-| [Approved keyboards](app-protection-policy-settings-android.md#data-transfer) | Require (Microsoft SwiftKey Keyboard, Samsung Keyboard, Gboard – the Google Keyboard) |
-| [Screen capture and Google Assistant](app-protection-policy-settings-android.md#functionality) | Block |
-| [Encrypt org data](app-protection-policy-settings-android.md#encryption) | Require |
-| [Encrypt org data on enrolled devices](app-protection-policy-settings-android.md#encryption) | Require |
-| [Sync policy managed app data with native apps or add-ins](app-protection-policy-settings-android.md#functionality) | Block |
-| [Printing org data](app-protection-policy-settings-android.md#functionality) | Block |
-| [Restrict web content transfer with other apps](app-protection-policy-settings-android.md#functionality) | Microsoft Edge |
-| [Org data notifications](app-protection-policy-settings-android.md#functionality) | Block org data |
+| Back up org data to Android backup services | Block |
+| Send org data to other apps | Policy managed apps |
+| Receive data from other apps | Policy managed apps |
+| Save copies of org data | Block |
+| Allow users to save copies to selected services | OneDrive for Business, SharePoint, Camera, Photo Library |
+| Allow users to open data from selected services | OneDrive for Business, SharePoint, Camera, Photo Library |
+| Transfer telecommunication data to | Any policy-managed dialer app |
+| Transfer messaging data to | Any policy-managed messaging app |
+| Restrict cut, copy, and paste between apps | Policy managed apps with paste in |
+| Open data into org documents | Block |
+| Third-party keyboards | Block |
+| Encrypt org data | Require |
+| Encrypt org data on enrolled devices | Require |
+| Sync policy managed app data with native apps or add-ins | Block |
+| Printing org data | Block |
+| Restrict web content transfer with other apps | Microsoft Edge |
+| Org data notifications | Block org data |
 
 8. Select **Next**.  
 9. On the **Access requirements** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [PIN required](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [PIN type](app-protection-policy-settings-android.md#access-requirements) | Numeric |
-| [Simple PIN](app-protection-policy-settings-android.md#access-requirements) | Block |
-| [Select minimum PIN length](app-protection-policy-settings-android.md#access-requirements) | 6 |
-| [Biometric instead of PIN for access](app-protection-policy-settings-android.md#access-requirements) | Allow |
-| [Override biometrics with PIN after timeout](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Timeout (minutes of inactivity)](app-protection-policy-settings-android.md#access-requirements) | 30 |
-| [Class 3 Biometrics (Android 9.0+)](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Override Biometrics with PIN after biometric updates](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [PIN reset after number of days](app-protection-policy-settings-android.md#access-requirements) | Yes (90 days) |
-| [Select number of previous PIN values to maintain](app-protection-policy-settings-android.md#access-requirements) | 0 |
-| [App PIN when device PIN is set](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Work or school account credentials for access](app-protection-policy-settings-android.md#access-requirements) | Require |
-| [Recheck access requirements after](app-protection-policy-settings-android.md#access-requirements) | 30 minutes |
+| PIN required | Require |
+| PIN type | Numeric |
+| Simple PIN | Block |
+| Select minimum PIN length | 6 |
+| Biometric instead of PIN for access | Allow |
+| Override biometrics with PIN after timeout | Require |
+| Timeout (minutes of inactivity) | 30 |
+| Class 3 Biometrics (Android 9.0+) | Require |
+| Override Biometrics with PIN after biometric updates | Require |
+| PIN reset after number of days | Yes (90 days) |
+| Select number of previous PIN values to maintain | 0 |
+| App PIN when device PIN is set | Require |
+| Work or school account credentials for access | Require |
+| Recheck access requirements after | 30 minutes |
 
 10. On the **Conditional launch** tab, configure:
 
 | Setting | Value |
 |--------|--------|
-| [Require device lock](app-protection-policy-settings-android.md#device-conditions) | High Complexity / Block access |
-| [Jailbroken/rooted devices](app-protection-policy-settings-android.md#conditional-launch) | Wipe data |
-| [Max allowed threat level](app-protection-policy-settings-android.md#conditional-launch) | Secured / Block access |
-| [Max OS version](app-protection-policy-settings-android.md#conditional-launch) | 16.0 / Block access |
-| [Samsung Knox device attestation](app-protection-policy-settings-android.md#conditional-launch) | Wipe data |
-| [Offline grace period](app-protection-policy-settings-android.md#app-conditions) | 10080 minutes / Block access |
-| [Offline grace period](app-protection-policy-settings-android.md#conditional-launch) | 30 days / Block access |
-| [Disabled account](app-protection-policy-settings-android.md#app-conditions) | Block access |
-| [Min OS version](app-protection-policy-settings-android.md#device-conditions) | 9.0 / Block access |
-| [Min patch version](app-protection-policy-settings-android.md#device-conditions) | 2024-10-01 / Block access |
-| [Play integrity verdict](app-protection-policy-settings-android.md#device-conditions) | Basic integrity and device integrity / Block access |
-| [Play integrity verdict evaluation type](app-protection-policy-settings-android.md#device-conditions) | Check strong integrity |
-| [Require threat scan on apps](app-protection-policy-settings-android.md#device-conditions) | Block access |
-| [Max Company Portal version age (days)](app-protection-policy-settings-android.md#device-conditions) | 180 / Block access |
-| [Max PIN attempts](app-protection-policy-settings-android.md#app-conditions) | 5 / Reset PIN |
+| Require device lock | High Complexity / Block access |
+| Jailbroken/rooted devices | Wipe data |
+| Max allowed threat level | Secured / Block access |
+| Max OS version | 16.0 / Block access |
+| Samsung Knox device attestation | Wipe data |
+| Offline grace period | 10080 minutes / Block access |
+| Offline grace period | 30 days / Block access |
+| Disabled account | Block access |
+| Min OS version | 9.0 / Block access |
+| Min patch version | 2024-10-01 / Block access |
+| Play integrity verdict | Basic integrity and device integrity / Block access |
+| Play integrity verdict evaluation type | Check strong integrity |
+| Require threat scan on apps | Block access |
+| Max Company Portal version age (days) | 180 / Block access |
+| Max PIN attempts | 5 / Reset PIN |
 
 11. Select **Next**.  
 12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.  
