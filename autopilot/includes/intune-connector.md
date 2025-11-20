@@ -198,6 +198,45 @@ To configure the MSA to allow creating objects in OUs, follow these steps:
 
 1. An **A Managed Service Account with name "<MSA_name>" was successfully set up** confirmation window appears. Select **OK** to close the window.
 
+#### Use a custom Managed Service Account (optional)
+
+Admins can choose to configure the connector to use their own Managed Service Account, as opposed to the MSA automatically set up by the connector. 
+
+##### MSA requirements:
+
+1. Provided account must be a service account with either of the following object categories in Active Directory 
+
+   1. CN=ms-DS-Group-Managed-Service-Account,CN=Schema,CN=Configuration,DC=contoso,DC=com
+   2. CN=ms-DS-Managed-Service-Account,CN=Schema,CN=Configuration,DC=contoso,DC=com
+
+2. The configuration value for the service account needs to be in the following format: <msaAccountName@domain> 
+
+3. Service account needs to exist in the same domain as the ODJ Connector’s server
+
+4. Service account needs to be installed on the server hosting the ODJ Connector. See [Install-ADServiceAccount] (powershell/module/activedirectory/install-adserviceaccount?view=windowsserver2025-ps) for more details.
+   1. If using sMSA, the account can only be linked to a single machine.
+   2. If using a gMSA, the server you’re installing the gMSA on needs to have access to the password.  
+
+5. Service account needs to have local **Log On as a Service** permission which could be set directly or via group membership. See [Enable service logon] (system-center/scsm/enable-service-log-on-sm?view=sc-sm-2025) for more details.
+
+6. Permission needs to be granted manually for service accounts to create computer objects for hybrid Autopilot flows. See [Increase the computer account limit in the Organizational Unit (OU)] (autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit?tabs=updated-connector)
+
+##### How to set up
+
+Update "ODJConnectorEnrollmentWizard.exe.config" (default location - C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard): 
+
+1. Add **<add key="TenantConfiguredManagedServiceAccount" value="{accountname}" />** in the **appSettings section**
+2. Sign in to the connector. 
+
+##### Disable OU updates
+
+Using your own MSA will disable the connector from making any OU updates, regardless of any configured in OrganizationalUnitsUsedForOfflineDomainJoin. To prevent errors, disable OU updates, update "ODJConnectorEnrollmentWizard.exe.config" (default location - C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard): 
+
+1. Add **<add key="DisableOUUpdates" value="true" />** in the **appSettings** section
+2. Sign in to the connector. 
+
+ 
+
 ### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
 
 > [!IMPORTANT]
