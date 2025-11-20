@@ -243,6 +243,8 @@ Include only devices with last activity before […]
 
 [!INCLUDE [remove](includes/remove.md)]
 
+[!INCLUDE [feedback](includes/feedback.md)]
+
 ## Next steps
 
 > [!div class="nextstepaction"]
