@@ -197,6 +197,8 @@ When it completes, the agent is ready to use. To learn more about using the agen
 
 [!INCLUDE [remove](includes/remove.md)]
 
+[!INCLUDE [feedback](includes/feedback.md)]
+
 ## Related content
 
 - [Use the Policy Configuration Agent](policy-configuration-agent-use.md)

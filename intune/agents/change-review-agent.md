@@ -10,7 +10,7 @@ ms.reviewer: zinebtakafi
 
 # Change Review Agent overview
 
-In public preview, the Microsoft Intune Change Review Agent uses Microsoft Security Copilot’s generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests.
+In public preview, the Microsoft Intune Change Review Agent uses Microsoft Security Copilot's generative AI to evaluate Multi Admin Approval requests for PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help administrators understand script behavior and associated risks. These insights help Intune administrators make informed decisions more quickly about whether to approve or deny requests.
 
 To generate these recommendations, the agent aggregates signals from multiple sources:
 
@@ -111,7 +111,7 @@ The agent analyzes these signals to assess the potential risk associated with ea
 >
 >    For details about mapping permissions to the Unified RBAC Security Reader role, see [Microsoft Entra Global roles access](/defender-xdr/compare-rbac-roles#microsoft-entra-global-roles-access) in the *Map Microsoft Defender XDR Unified role-based access control (RBAC)* article in the Defender documentation.
 >
->    Ensure the agent’s identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
+>    Ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 >
 > :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles) 
@@ -160,19 +160,19 @@ At a high level, the agent does the following steps each time it runs:
    - Needs more info - Risk couldn't be fully assessed. This request requires further review.
 
    Each recommendation includes supporting details that explain:
-   - The rationale behind the agent’s recommendation.
+   - The rationale behind the agent's recommendation.
    - What the script is intended to accomplish or do.
    - A detailed list of factors that the agent reviewed as part of its process.
 
 ## Agent identity
 
-The agent runs under the identity and permissions of the Intune admin account used during setup. The agent’s actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn’t run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
+The agent runs under the identity and permissions of the Intune admin account used during setup. The agent's actions are limited to the permissions of that account, and the identity refreshes with each run. If the agent doesn't run for 90 consecutive days, its authentication expires, and subsequent runs fail until its renewed. To maintain functionality, renew the agent identity before the 90-day limit.
 
 ## Operational considerations
 
 Before setting up and starting the agent for the first time, review the following considerations:
 
-- An admin must manually start the agent. Once started, there’s no option to stop or pause it.
+- An admin must manually start the agent. Once started, there's no option to stop or pause it.
 - The agent can only be started from the Microsoft Intune admin center.
 - Session details in the [Microsoft Security Copilot portal](https://go.microsoft.com/fwlink/?linkid=2247989) are visible only to the user who set up the agent.
 - The agent reviews and then provides recommendations for a maximum of 10 requests per run.
@@ -180,7 +180,7 @@ Before setting up and starting the agent for the first time, review the followin
 
 ## Set up the agent
 
-The agent operates under the identity and permissions of the Intune admin account used during setup. Its operations are limited to the permissions of that account, and the identity refreshes with each run. Any changes to the account’s permissions affect the agent’s capabilities during its next run.
+The agent operates under the identity and permissions of the Intune admin account used during setup. Its operations are limited to the permissions of that account, and the identity refreshes with each run. Any changes to the account's permissions affect the agent's capabilities during its next run.
 
 **To set up the Change Review Agent:**
 
@@ -198,6 +198,8 @@ To learn more about using the agent, see [Use the Change Review Agent](change-re
 
 <!--  ## Remove the agent  --  H2 header is in the Include:  -->
 [!INCLUDE [remove](includes/remove.md)]
+
+[!INCLUDE [feedback](includes/feedback.md)]
 
 ## Related content
 

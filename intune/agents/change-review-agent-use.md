@@ -145,8 +145,6 @@ The agent was unable to retrieve details related to the specified factor. The ex
 
 The agent cannot proceed because the request violates Microsoft's Responsible AI policies. This typically occurs when the system detects a prohibited action, like a prompt injection attempt.
 
-[!INCLUDE [feedback](includes/feedback.md)]
-
 ## Related content
 
 - [Change Review Agent in Intune](change-review-agent.md)
