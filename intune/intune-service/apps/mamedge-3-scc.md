@@ -1,6 +1,6 @@
 ---
 title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
-description: Step 3. Integrate Microsoft Entra Conditional Access with Microsoft Edge for Business.
+description: Step 3. Integrate Mobile Threat Defense signals with Microsoft Edge for Business app protection policies in Microsoft Intune.
 ms.date: 11/07/2025
 ms.topic: how-to
 ms.reviewer: samarti
@@ -33,6 +33,9 @@ Intune app protection policies help secure organizational data and help ensure c
 - **Apps**: Select the apps that you want to target from app protection policies. For this feature set, these apps are blocked or selectively wiped based on device risk assessment from your chosen Mobile Threat Defense vendor.
 - **Health Checks**: Under **Device conditions** you can select **Max allowed device threat level**.
 
+> [!IMPORTANT]
+> Configure your [Mobile Threat Defense connectors](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) before onboarding users to these policies. If your tenant uses both Microsoft Defender for Endpoint and another MTD partner and you don't designate a primary connector, Intune defaults to Microsoft Defender for Endpoint. For guidance on protecting unenrolled devices, see [Mobile Threat Defense for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md).
+
 ### Options for the threat level
 
 You can select one of the following threat level values:
@@ -53,8 +56,45 @@ You can select one of the following **Action** options:
 
 Assign the policy to groups of users. The devices used by the group's members are evaluated for access to corporate data on targeted apps via Intune app protection.
 
+### Recommended device condition settings
+
+Use the conditional launch settings to maintain progressive security across the Secure Enterprise Browser levels. Configure the following values where the platform supports the setting.
+
+#### Level 1 – Basic
+
+- **Offline grace period (Block access)**: Set to **10080** minutes.
+- **Offline grace period (Wipe data)**: Set to **90** days.
+- **Max allowed device threat level**: Select **Low**, with the **Block access** action.
+
+#### Level 2 – Enhanced
+
+- **Disabled account**: Set to **Block access**.
+- **Min OS version**: Enter **10.0.22621.2506** and select **Block access**.
+- **Max allowed device threat level**: Select **Medium**, with the **Block access** action.
+- **Offline grace period (Wipe data)**: Set to **30** days.
+
+#### Level 3 – High
+
+App conditions:
+
+- **Offline grace period (Block access)**: Set to **1440** minutes.
+- **Offline grace period (Wipe data)**: Set to **30** days.
+
+Device conditions:
+
+- **Min OS version**: Enter **10.0.22621.2506** and select **Block access**.
+- **Max OS version**: Enter **10.0.22641** and select **Warn**.
+- **Max allowed device threat level**: Select **Secured**, with the **Block access** action.
+- **Device threat level**: Select **High**, with the **Block access** action.
+- **Mobile Threat Defense apps**: Set to **Enabled/Required**, with the **Block access** action to enforce broker activation.
+- **SafetyNet device attestation**: Set to **Pass**, with the **Block access** action. This option appears for Android devices.
+- **Require device lockout remediation**: Set to **Enabled**, with the **Block access** action.
+
+> [!TIP]
+> These thresholds align with the Secure Enterprise Browser framework's Level 3 (High) posture. Use scope tags and assignments to target the correct Entra ID groups for each level.
+
 > [!IMPORTANT]
-> If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that don't meet the confugured threat level are either blocked or corporate data is selectively wiped through conditional launch. If blocked, they're prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
+> If you create an app protection policy for any protected app, the device's threat level is assessed. Depending on the configuration, devices that don't meet the configured threat level are either blocked or corporate data is selectively wiped through conditional launch. If blocked, they're prevented from accessing corporate resources until the threat on the device is resolved and reported to Intune by the chosen MTD vendor.
 
 ## Configure the MTD Connector
 
