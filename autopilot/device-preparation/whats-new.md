@@ -29,7 +29,8 @@ appliesto:
 Date added: *November 21, 2025*  
 
 Use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and applies immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You can monitor deployment status in the [Windows Autopilot device preparation deployment report](reporting-monitoring.md). For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](tutorial/automatic/automatic-workflow.md).  
-For related information, see the following articles:
+
+For related information, see the following articles:  
 - [Create provisioning policies for Windows 365](/windows-365/enterprise/create-provisioning-policy)  
 - [Windows 365 Cloud Apps](/windows-365/enterprise/cloud-apps)  
 - [Use Autopilot device preparation with Cloud PCs](/windows-365/enterprise/autopilot-device-preparation) 
