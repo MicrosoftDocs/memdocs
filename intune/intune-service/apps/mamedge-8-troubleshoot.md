@@ -1,7 +1,7 @@
 ---
 title: Step 8. Troubleshoot Microsoft Edge for Business Data Security
 description: Step 8. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
-ms.date: 10/28/2025
+ms.date: 11/21/2025
 ms.topic: troubleshooting
 ms.reviewer: samarti
 ms.custom:
@@ -13,76 +13,189 @@ ms.collection:
 
 # Step 8. Troubleshoot Microsoft Edge for Business Data Security
 
-Troubleshooting app protection policies and app configuration policies (ACP) in Microsoft Intune can involve several steps.
+Troubleshooting app protection policies and app configuration policies (ACP) in Microsoft Intune can involve several different checks. This section consolidates the most common issues and resolutions so that you can quickly diagnose problems and restore your secure enterprise browser experience.
 
-The following list provides common issues and potential solutions:
+Successful app protection policy deployment relies on correct assignments, policy configuration, and platform dependencies. Use these quick checks before diving deeper into troubleshooting.
 
-- **Verify Policy Assignment:** Ensure that the App Protection Policy is assigned to the correct user group. This ensures that the policy is applied to the intended users.
-- **Review Policy Settings:** Check that the necessary conditions and settings are properly defined in the policy. This helps ensure that your App Protection Policy is configured as intended.
-- **Update Microsoft Edge:** If Microsoft Edge is crashing during initialization, ensure that the app version and the operating system meet the required conditions.
-- **Policy Application:** If a policy setting isn't applied or no policy is applied at all, verify whether the user and Microsoft Edge for Business are targeted by the policy. Also, check if the user signed in to Microsoft Edge for Business using their targeted corporate account.
-- **Data Transfer to Unmanaged Apps:** Users can use the share extension to open work or school data in unmanaged apps, even with the data transfer policy set to Managed apps only or No apps. Intune APP can't control the share extension without managing the device. Therefore, Intune encrypts "corporate" data before sharing it outside the app.
-- **Microsoft Authenticator App Requirement:** The user might be prompted to install the Microsoft Authenticator app. This is needed when App Based Conditional Access is applied.
-- **Company Portal App Requirement on Android:** On Android, much of the app protection functionality is built into the Company Portal app. Device enrollment isn't required even though the Company Portal app is always required.
-- **Save As to Local Storage:** If apps aren't allowing Save As to Local Storage when the policy is enabled, remember the policy determines how apps handle this feature.
-- **App configuration settings not applying correctly:** If none of your app configuration policy settings are applying correctly to the app based on the communication channel used (Managed Apps or Managed Devices), review the publisher's documentation again for the string or settings used. You might want to try using the other option for device enrollment type of the policy.
-- **Sign in with your work account - Microsoft Edge for Business message:** If you encounter the 'Sign in with your work account' error message in Microsoft Edge for Business, it indicates that you have chosen an incorrect enrollment method, resulting in the App Protection Policy not being applied.
+## Quick checks
 
-    :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png" alt-text="Sign in with your work account in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business63.png":::
+Use this list when users report issues with Microsoft Edge for Business:
 
-Successful app protection policy deployment relies on proper configuration of settings and other dependencies. Always verify that you meet the prerequisites for deploying app protection policies.
+- **Verify policy assignment**  
+  Ensure that app protection policies and app configuration policies are assigned to the correct user or device groups, and that Microsoft Edge for Business is in scope for those assignments.
 
-If you continue to experience issues, it might be helpful to contact [Microsoft Support](../../get-support.md) for further assistance.
+- **Review policy settings**  
+  Confirm that the required settings for the selected security level are properly defined. Misconfigured data-transfer, clipboard, or sign-in settings often cause issues.
+
+- **Check Microsoft Edge version and OS support**  
+  When Microsoft Edge crashes at launch or policies do not appear to apply, verify that both the OS version and Microsoft Edge version meet the minimum supported requirements.
+
+- **Validate user sign-in**  
+  App protection policies only apply when a user signs into Microsoft Edge for Business using their Microsoft Entra ID work account. Personal or local accounts will not receive policy enforcement.
+
+- **Understand unmanaged share behavior**  
+  On mobile devices, the system share extension can bypass some restrictions unless the device is managed. In these situations, Intune encrypts corporate data before it leaves the app.
+
+- **Check app requirements**
+  - **Microsoft Authenticator** is required when App-based Conditional Access is enabled.
+  - **Company Portal (Android)** is required for APP enforcement even if the device is not enrolled.
+
+- **Confirm the configuration channel**  
+  If ACP settings are not applying, verify that you're using the correct configuration channel (managed apps vs. managed devices) and that identifiers, configuration keys, and JSON syntax match publisher documentation.
+
+- **“Sign in with your work account” message**  
+  This usually appears when the user signed in using an account that is not targeted by the app protection policy or when the enrollment method doesn’t match what the policy requires.
+
+## Policy deployment issues
+
+### Settings Catalog policies not applying
+
+- **Likely cause:** Device enrollment or sync issues  
+- **How to fix:**
+  - Verify device enrollment status and force sync from Company Portal
+
+### App protection policies not enforcing
+
+- **Likely cause:** User is signed into Edge with a personal profile  
+- **How to fix:**
+  - Confirm user has signed into Edge with Entra ID account
+
+### App configuration policies showing as failed
+
+- **Likely cause:** JSON syntax errors or invalid configuration values  
+- **How to fix:**
+  - Validate JSON configuration syntax and policy values
+
+### Conditional Access blocking unexpectedly
+
+- **Likely cause:** Device compliance evaluation failure  
+- **How to fix:**
+  - Check device compliance status and re-evaluate policies
+
+### Policy conflicts between security levels
+
+- **Likely cause:** Users or devices receiving multiple overlapping level assignments  
+- **How to fix:**
+  - Review group membership and policy assignments for overlaps
+
+## Platform-specific issues
+
+### Windows: Edge security baseline not applying
+
+- **Likely cause:** Unsupported Windows build or Microsoft Edge version  
+- **How to fix:**
+  - Confirm the device is on a supported Windows 11 build.
+
+### Windows: Application Guard not working
+
+- **Likely cause:** Feature not enabled or missing virtualization support  
+- **How to fix:**
+  - Enable Windows Defender Application Guard.
+
+### iOS/Android: APP policies not enforcing on BYOD
+
+- **Likely cause:** User not enrolled in MAM or hasn’t completed the Company Portal/Authenticator flow  
+- **How to fix:**
+  - Guide the user through MAM enrollment.
+
+### iOS/Android: ACP settings not applying
+
+- **Likely cause:** Outdated Edge mobile app  
+- **How to fix:**
+  - Update to the latest Microsoft Edge mobile version.
+
+### macOS: Settings Catalog policies failing
+
+- **Likely cause:** macOS version below minimum requirements  
+- **How to fix:**
+  - Verify minimum supported macOS versions for the targeted policies.
+
+## User experience issues
+
+### Users at Level 3 reporting blocked websites
+
+- **Likely cause:** Restrictive URL filtering  
+- **Recommended action:** Review and expand allowed URLs through change process
+
+### Mobile users unable to copy/paste
+
+- **Likely cause:** App Protection Policy restrictions  
+- **Recommended action:** Validate policy settings match intended restrictions
+
+### Authentication prompts too frequent
+
+- **Likely cause:** Aggressive Conditional Access settings  
+- **Recommended action:** Review session timeout and re-authentication policies
+
+### Features missing or disabled
+
+- **Likely cause:** Level 3 feature restrictions  
+- **Recommended action:** Confirm user assigned to correct security level group
+
+## Advanced troubleshooting
+
+### Policy conflicts
+
+- **Diagnostic steps:**  
+  1. Export current policies  
+  2. Compare overlapping settings  
+  3. Identify conflicting values  
+- **Resolution path:**
+  - Consolidate policies or adjust priority assignments
+
+### Performance issues
+
+- **Diagnostic steps:**  
+  1. Check device resources  
+  2. Review policy complexity  
+  3. Monitor network latency  
+- **Resolution path:**
+  - Optimize policy scope and reduce setting conflicts
+
+### Compliance gaps
+
+- **Diagnostic steps:**  
+  1. Run SCAP validation  
+  2. Compare against framework requirements  
+  3. Document exceptions  
+- **Resolution path:**
+  - Update policies to address gaps or document approved exceptions
 
 ## FAQ
 
-**Does Microsoft Edge for Business require a separate download?** 
+**Does Microsoft Edge for Business require a separate download?**  
+No. Microsoft Edge for Business is automatically triggered when a user signs in with a Microsoft Entra ID account.
 
-No. Microsoft Edge for Business is automatically triggered by signing in with a Microsoft Entra ID.
+**Is Windows Home edition supported for MAM for Windows?**  
+Yes. MAM for Windows supports Windows Home edition.
 
-**is Windows home version supported for MAM for Windows?**
+**Will all policies and configurations previously set by IT be applied to Edge for Business?**  
+Yes. Existing policies targeting Microsoft Edge are inherited when users sign in with their work profile.
 
-Yes, MAM for Windows does support the Windows Home Edition.
+**What effect does this have on users’ default browser settings?**  
+There is no change to a user’s default browser settings.
 
-**Will all policies and configurations previously set by IT be applied to Edge for Business?**
+**What happens to passwords, favorites, and related data?**  
+Passwords, favorites, and browsing data in the work profile are preserved. Personal and work windows remain separated.
 
-Yes, all policies and configurations currently in place are inherited by Microsoft Edge for Business.
-
-**What effect will this cause to my default browser settings?**
-
-There's no effect on users\' default browser settings.
-
-**What happens to favorites, passwords, and related data?** 
-
-Passwords, favorites, and data currently associated with the user's work profile are maintained in Microsoft Edge for Business. Passwords, favorites, and data aren't shared between the work browser window and the personal browser window.
-
-**How does MAM for Windows and Microsoft Edge management service differ?**
-
-When comparing MAM for Windows and the Microsoft Edge management service, it's crucial to understand the key differences and choose the right management option for your needs. If you're currently using Microsoft Intune, your focus should be on creating app protection policies and application configuration policies to configure the browser. This ensures a secure enterprise browser configuration for your users.
-
-However, if you're not using Microsoft Intune, the Microsoft Edge management service is the right choice for you. With this service, you can configure the Microsoft Edge for Business policy and configuration for your organization. For more information about Microsoft Edge management service, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecurityWhitepaper).
+**How do MAM for Windows and Microsoft Edge management service differ?**  
+If you use Intune, create app protection and app configuration policies to configure Microsoft Edge for Business.  
+If you do not use Intune, use the Microsoft Edge management service.  
+For more information, see: <https://aka.ms/EdgeSecurityWhitepaper>.
 
 ## Solution results
 
-After completing this solution, you'll have accomplished the following:
+After completing this solution, you will:
 
-- Created different scenarios to configure a **Microsoft Edge for Business** and **Microsoft Application Management** experience, from concept to implementation.
+- Configure Microsoft Edge for Business and Microsoft Application Management across multiple scenarios.
+- Understand the app protection policy framework and how it strengthens data security.
+- Implement Intune encryption and password single sign-on.
+- Build a secure app configuration baseline.
+- Configure Conditional Access policies for your organization.
+- Understand the end-user experience after policy deployment.
+- Apply troubleshooting patterns identified during Microsoft research and customer feedback.
 
-- Understand **app protection policy framework** is and how it can enhance security in your environment. This framework provides a robust layer of security for your environment. It allows admins to control how data is accessed and handled, ensuring that sensitive information is always protected.
+> [!IMPORTANT]
+> Security is a continuous process. Review and adjust your configurations as threats and requirements evolve.
 
-- Implemented **Intune Device Encryption and Password Single Sign-On**: With Intune encryption, data is secured at rest and in transit. The password single sign-on feature in Microsoft Edge for Business enhances user convenience without compromising security.
-
-- Created a baseline of **the app configuration policy** that helps achieve another level of security, from Intune encryption to password single sign-on in Microsoft Edge for Business.
-
-- Configured the **Conditional Access Policy**. This feature allows IT Pros to define and implement policies based on conditions such as user role, location, and risk level.
-
-- Understand the **end-user experience**, showing what behavior can be expected once you implement the Microsoft Intune app protection policy for Windows devices.
-
-- Understand key **troubleshooting examples**, some of which were identified during Microsoft's research, and others that were suggested by various professionals in the industry.
-
-Take advantage of these powerful features as an IT professional. You have the capability to build an environment that isn't only secure and efficient, but also user-friendly. Utilize Microsoft Edge for Business and Microsoft Application Management to strengthen your environment.
-
- > [!IMPORTANT]
-> Achieving security isn't a one-time event, but a continuous process of improvement and adaptation to new challenges. Keep improving your organization's security stance.
-
-Next, continue to apply the strategies detailed in this solution to your organization's environment.
+Continue applying these strategies and patterns to strengthen and refine your secure enterprise browser deployment.
