@@ -20,7 +20,7 @@ To request help for endpoint analytics, use the **Help and Support** option in t
 
 If the issue is more broadly for Intune than just endpoint analytics, follow the instructions in the [How to get support in Microsoft Intune](../get-support.md) article to open a new support request. For an issue that is more broadly for Configuration Manager than just endpoint analytics, go to [Microsoft support](https://aka.ms/cmcbsupport) to open a new support request.
 
-[![Help and support in Microsoft Endpoint Manager](media/help.png)](media/help.png#lightbox)
+[![Help and support in Microsoft Endpoint Manager](images/help.png)](images/help.png#lightbox)
 
 ## Share product feedback
 
@@ -28,7 +28,7 @@ If the issue is more broadly for Intune than just endpoint analytics, follow the
 
 To share your feedback about endpoint analytics, select the **Send a Smile** icon at the top of the portal on the right side. Use the text box to provide your feedback and select **Submit feedback** when done.
 
-![Send a Smile icon in Microsoft Endpoint Manager](media/endpoint-analytics-feedback.png)
+![Send a Smile icon in Microsoft Endpoint Manager](images/endpoint-analytics-feedback.png)
 
 ## See also
 

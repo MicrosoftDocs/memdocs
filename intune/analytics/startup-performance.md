@@ -19,7 +19,7 @@ The **startup score** helps IT get users from power-on to productivity quickly, 
 - **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 - **Sign-in score**: Based on the time from when credentials have been entered until the user can access a responsive desktop (meaning the desktop has rendered and the CPU usage has fallen below a moderate level or the device responds to an action initiated by the user). We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 
-[![Endpoint analytics startup performance page](media/startup-performance.png)](media/startup-performance.png#lightbox)
+[![Endpoint analytics startup performance page](images/startup-performance.png)](images/startup-performance.png#lightbox)
 
 > [!NOTE]
 > If you aren't seeing startup performance data from all your devices, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#troubleshooting-device-enrollment-and-startup-performance).

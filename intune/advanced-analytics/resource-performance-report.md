@@ -3,7 +3,6 @@ title: Resource Performance Report in Microsoft Intune Advanced Analytics
 description: Explore the resource performance report in Microsoft Intune Advanced Analytics for CPU and RAM insights, device performance analysis, and proactive endpoint analytics.
 ms.date: 10/09/2025
 ms.topic: concept-article
-ms.subservice: suite
 ---
 
 # Resource Performance report in Microsoft Intune Advanced Analytics
@@ -22,7 +21,7 @@ With a Windows 365 license, you get access to this report for the Cloud PCs in y
 
 The resource performance report is available for:
 - Windows 365 Cloud PCs and;
-- Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+- Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 ## Resource performance report
 
@@ -32,7 +31,7 @@ The resource performance report is available for:
 
 3. The Resource performance report page shows a **Resource performance score** tab, **Device performance** tab, and a **Model performance** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
 
-:::image type="content" source="media/resource-perf-report/report-home.png" lightbox="media/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
+:::image type="content" source="images/resource-perf-report/report-home.png" lightbox="images/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
 
 Best practices:
 
@@ -127,11 +126,11 @@ This tab lets you see the CPU and RAM performance metrics and scores by device m
 
 To get details on a specific Windows device in your organization, you can select a device's name in the **Device performance** tab. You can also use the filters or search for a device to view the row corresponding to the device you're interested in learning more about.
 
-:::image type="content" source="media/resource-perf-report/select-device.png" lightbox="media/resource-perf-report/select-device.png" alt-text="In the Device Performance tab, use filters or search for a device to view the device details":::
+:::image type="content" source="images/resource-perf-report/select-device.png" lightbox="images/resource-perf-report/select-device.png" alt-text="In the Device Performance tab, use filters or search for a device to view the device details":::
 
 The device-level details page includes the CPU and RAM spike-time history over the last 14 days for which this data is available. The page also includes device details such as model, manufacturer, processor name, number of processor cores, the processor base speed, RAM, and disk type.
 
-:::image type="content" source="media/resource-perf-report/rp-report.png" lightbox="media/resource-perf-report/rp-report.png" alt-text="This is a screenshot of device levels details":::
+:::image type="content" source="images/resource-perf-report/rp-report.png" lightbox="images/resource-perf-report/rp-report.png" alt-text="This is a screenshot of device levels details":::
 
 ## Limitations
 
@@ -161,7 +160,7 @@ For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
 
-- [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
 
 - [Device scopes](device-scopes.md)
 

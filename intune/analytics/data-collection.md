@@ -13,7 +13,7 @@ This article explains the data flow, data collection, and how to stop gathering 
 
 Endpoint analytics is available in all Intune locations in global Azure. Endpoint analytics respects the storage location elections made by the administrator for customer data. The following illustration shows how required functional data flows from individual devices through our data services, transient storage, and to your tenant.
 
-[![User experience data flow diagram](media/endpoint-analytics-dataflow.png)](media/endpoint-analytics-dataflow.png#lightbox)
+[![User experience data flow diagram](images/endpoint-analytics-dataflow.png)](images/endpoint-analytics-dataflow.png#lightbox)
 
 1. An administrator [starts gathering data](configure.md).
 

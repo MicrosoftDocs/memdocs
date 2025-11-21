@@ -3,12 +3,11 @@ title: Battery Health Report in Microsoft Intune Advanced Analytics
 description: Learn how the battery health report in Microsoft Intune Advanced Analytics provides insights into device battery performance, degradation, and proactive replacement strategies.
 ms.date: 10/09/2025
 ms.topic: concept-article
-ms.subservice: suite
 ---
 
 # Battery health
 
-[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
@@ -24,7 +23,7 @@ The insights show how much your score can improve by replacing batteries in affe
 2. Select **Report** > **Endpoint analytics** > **Battery health**.
 3. The Battery health report page shows an **Overview** tab, **Device performance** tab, **Model performance** tab, **OS performance** tab, and an **App impact** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
 
-   :::image type="content" source="media/battery-health/battery-health.png" lightbox="media/battery-health/battery-health.png" alt-text="This is a screenshot of the Battery Health tab in Advanced analytics":::
+   :::image type="content" source="images/battery-health/battery-health.png" lightbox="images/battery-health/battery-health.png" alt-text="This is a screenshot of the Battery Health tab in Advanced analytics":::
 
 The battery health report can be used to:
 
@@ -117,6 +116,6 @@ Batteries that have low design capacity (For example, devices designed to hold l
 For more information, go to:
 
 - [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
-- [Use Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md)
+- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
 - [Device scopes](device-scopes.md)
 - [Device query](device-query.md)

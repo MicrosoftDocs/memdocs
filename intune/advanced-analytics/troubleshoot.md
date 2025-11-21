@@ -3,12 +3,11 @@ title: Advanced Analytics Troubleshooting and Frequently Asked Questions
 description: Find troubleshooting steps and FAQs for Microsoft Intune Advanced Analytics, including endpoint analytics issues, data refresh, and dashboard customization.
 ms.date: 10/09/2025
 ms.topic: faq
-ms.subservice: suite
 ---
 
 # Advanced Analytics Troubleshooting and Frequently Asked Questions
 
-[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 

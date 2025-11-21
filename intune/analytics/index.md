@@ -161,4 +161,4 @@ Learn more about endpoint analytics:
   - [Application reliability](app-reliability.md)
   - [Work from anywhere](work-from-anywhere.md)
 - [Understand data collection](data-collection.md)
-- [Microsoft Intune Advanced Analytics](advanced-analytics.md)
+- [Microsoft Intune Advanced Analytics](../advanced-analytics/index.md)

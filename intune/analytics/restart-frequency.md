@@ -48,7 +48,7 @@ The new restart frequency tab shows aggregates of restart frequency counts for e
 
 The trend chart indicates how the rolling 30-day average changes over time. If there's a regression, you can see it and identify when it started. Click through the metrics table to go to the [**Device performance** tab](#device-performance-tab), which is sorted by the number of restarts, so you can quickly identify the devices with the most restarts.
 
-:::image type="content" source="media/restart-frequency-tab.png" alt-text="Restart frequency tab under Startup Performance" lightbox="media/restart-frequency-tab.png":::
+:::image type="content" source="images/restart-frequency-tab.png" alt-text="Restart frequency tab under Startup Performance" lightbox="images/restart-frequency-tab.png":::
 
 ## Devices page
 
@@ -61,7 +61,7 @@ The **OS restart history** table has the following information:
   - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2) also called the bug check code
   - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
 
-:::image type="content" source="media/device-page-os-restart-history.png" alt-text="OS restart history under the Device page" lightbox="media/device-page-os-restart-history.png":::
+:::image type="content" source="images/device-page-os-restart-history.png" alt-text="OS restart history under the Device page" lightbox="images/device-page-os-restart-history.png":::
 
 The **OS restart history** table is truncated to the 10 most recent restarts that occurred in the last 30 days. The table is low latency, so new restarts typically show up here before they appear in the daily aggregates shown in the **Device performance** tab.
 

@@ -39,6 +39,7 @@
       "searchScope": ["Intune"],
       "ms.suite": "ems",
       "ms.service": "microsoft-intune",
+      "manager": "laurawi",
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -127,16 +128,10 @@
         "intune-service/user-help/**/*.yml": "lenewsad",
         "analytics/**/*.md": "paolomatarazzo",
         "analytics/**/*.yml": "paolomatarazzo",
+        "advanced-analytics/**/*.md": "paolomatarazzo",
+        "advanced-analytics/**/*.yml": "paolomatarazzo",
         "solutions/**/*.md": "mandiohlinger",
         "solutions/**/*.yml": "mandiohlinger"
-      },
-      "manager": {
-        "intune-service/**/*.md": "laurawi",
-        "intune-service/**/*.yml": "laurawi",
-        "analytics/**/*.md": "laurawi",
-        "analytics/**/*.yml": "laurawi",
-        "solutions/**/*.md": "laurawi",
-        "solutions/**/*.yml": "laurawi"
       },
       "ms.author": {
         "intune-service/apps/**/*.md": "nwhite",
@@ -153,6 +148,8 @@
         "intune-service/user-help/**/*.yml": "lanewsad",
         "analytics/**/*.md": "paoloma",
         "analytics/**/*.yml": "paoloma",
+        "advanced-analytics/**/*.md": "paoloma",
+        "advanced-analytics/**/*.yml": "paoloma",
         "solutions/**/*.md": "mandia",
         "solutions/**/*.yml": "mandia"
       },
@@ -171,6 +168,8 @@
       "ms.subservice": {
         "analytics/**/*.md": "endpoint-analytics",
         "analytics/**/*.yml": "endpoint-analytics",
+        "advanced-analytics/**/*.md": "suite",
+        "advanced-analytics/**/*.yml": "suite",
         "intune-service/apps/**/*.md": "apps",
         "intune-service/apps/**/*.yml": "apps",
         "intune-service/configuration/**/*.md": "configuration",

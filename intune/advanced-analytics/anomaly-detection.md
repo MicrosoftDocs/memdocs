@@ -3,12 +3,11 @@ title: Anomaly Detection in Endpoint Analytics
 description: Learn how anomaly detection in Microsoft Intune endpoint analytics proactively monitors device health, detects issues, and provides actionable insights for IT admins.
 ms.date: 10/09/2025
 ms.topic: concept-article
-ms.subservice: suite
 ---
 
 # Anomaly Detection in endpoint analytics
 
-[!INCLUDE [intune-add-on-note](../../intune-service/includes/intune-add-on-note.md)]
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
@@ -35,7 +34,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
 ## Prerequisites
 
-- Licensing/Subscriptions: The advanced features in endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+- Licensing/Subscriptions: The advanced features in endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 - Permissions: Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)
 
@@ -46,19 +45,19 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 3. Select **Anomalies** tab. The **Anomalies** tab provides a quick overview of the anomalies detected in your organization.
 4. In this example, the **Anomalies** tab shows an *anomaly* with *medium severity* impact. You can add filters to refine the list.
 
-   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of endpoint analytics":::
+   :::image type="content" source="images/anomaly-detection/anomalies-tab.png" lightbox="images/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of endpoint analytics":::
 
 5. To see more information about a specific item, choose it from the list. You can see details like the name of the app, which devices are affected, when the issue was first detected and last occurred, and any device groups that might be contributing to the problem.
 
-   :::image type="content" source="media/anomaly-detection/details-of-anomaly.png" lightbox="media/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
+   :::image type="content" source="images/anomaly-detection/details-of-anomaly.png" lightbox="images/anomaly-detection/details-of-anomaly.png" alt-text="This is a screenshot of details displayed when you select an anomaly displayed in the Anomaly tab ":::
 
 6. Select a device correlation group from the list for a detailed view of the devices' common factors. Devices are correlated based on one or more shared attributes such as app version, driver update, OS version, and device model. You can see the number of devices currently affected by the anomaly and devices at risk of experiencing the anomaly. The prevalence rate also shows you the percentage of affected devices from an anomaly that are members of a correlation group.
 
-   :::image type="content" source="media/anomaly-detection/select-corelation-group.png" lightbox="media/anomaly-detection/select-corelation-group.png" alt-text="This is a screenshot showing Device correlation groups":::
+   :::image type="content" source="images/anomaly-detection/select-corelation-group.png" lightbox="images/anomaly-detection/select-corelation-group.png" alt-text="This is a screenshot showing Device correlation groups":::
 
 7. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. You can filter to view devices in specific correlation groups or show all devices affected by that anomaly in your organization. Additionally, the device timeline shows more anomalous events.
 
-   :::image type="content" source="media/anomaly-detection/affected-devices.png" lightbox="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
+   :::image type="content" source="images/anomaly-detection/affected-devices.png" lightbox="images/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
 
 ## Reviewing Anomaly Detection Data
 
