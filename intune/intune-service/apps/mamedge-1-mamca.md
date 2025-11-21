@@ -54,17 +54,16 @@ Use this policy to secure browser access from Windows, Android, and iOS devices 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy for the `SEB-Level1-Users` group:
-
-         - **Name:** CA Edge Level 1 – Basic  
-         - **Target resources:** **Cloud apps** > **Microsoft 365** (Office 365)  
-         - **Conditions:**  
-            - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
-            - **Client apps:** Select **Browser**  
-            - **Filter for devices:** **Exclude** devices where *is Compliant equals True* to focus on unmanaged/BYOD endpoints  
-         - **Grant:**  
-            - **Require multifactor authentication**  
-            - **Require app protection policy**  
-         - **Session:** Leave unconfigured for Level 1
+    - **Name:** CA Edge Level 1 – Basic  
+    - **Target resources:** **Cloud apps** > **Microsoft 365** (Office 365)  
+    - **Conditions:**  
+        - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
+        - **Client apps:** Select **Browser**  
+        - **Filter for devices:** **Exclude** devices where *is Compliant equals True* to focus on unmanaged/BYOD endpoints  
+    - **Grant:**  
+        - **Require multifactor authentication**  
+        - **Require app protection policy**  
+    - **Session:** Leave unconfigured for Level 1
 
     > [!NOTE]
     > Keep the policy in **Report-only** mode until you verify that it routes unmanaged devices through Microsoft Edge for Business with app protection.
@@ -79,23 +78,23 @@ Level 2 adds continuous verification with risk-based signals and requires that d
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy for the `SEB-Level2-Users` group:
 
-         - **Name:** CA Edge Level 2 – Enhanced Zero Trust  
-         - **Target resources:** **Cloud apps** > **All cloud apps**  
-         - **Conditions:**  
-            - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
-            - **Client apps:** Select **Browser**  
-            - **Sign-in risk:** Set to **Medium and above**  
-            - **Device risk:** Set to **Medium and above** (requires an integrated Mobile Threat Defense or Microsoft Defender for Endpoint signal)  
-            - **Locations:** Include **All locations** and **Exclude** your trusted named locations  
-            - **Filter for devices:** **Exclude** devices where *is Compliant equals True* so only noncompliant or unmanaged devices are subject to app protection enforcement  
-         - **Grant:**  
-            - **Require multifactor authentication**  
-            - **Require app protection policy**  
-            - **Require device to be marked as compliant**  
-         - **Session:**  
-            - **Use Conditional Access App Control** > **Monitor only**  
-            - **Sign-in frequency:** Set to **Every 4 hours**  
-            - **Persistent browser session:** Select **Never persistent**
+    - **Name:** CA Edge Level 2 – Enhanced Zero Trust  
+    - **Target resources:** **Cloud apps** > **All cloud apps**  
+    - **Conditions:**  
+        - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
+        - **Client apps:** Select **Browser**  
+        - **Sign-in risk:** Set to **Medium and above**  
+        - **Device risk:** Set to **Medium and above** (requires an integrated Mobile Threat Defense or Microsoft Defender for Endpoint signal)  
+        - **Locations:** Include **All locations** and **Exclude** your trusted named locations  
+        - **Filter for devices:** **Exclude** devices where *is Compliant equals True* so only noncompliant or unmanaged devices are subject to app protection enforcement  
+    - **Grant:**  
+        - **Require multifactor authentication**  
+        - **Require app protection policy**  
+    -     **Require device to be marked as compliant**  
+    - **Session:**  
+        - **Use Conditional Access App Control** > **Monitor only**  
+        - **Sign-in frequency:** Set to **Every 4 hours**  
+        - **Persistent browser session:** Select **Never persistent**
 
     > [!NOTE]
     > Run the policy in **Report-only** mode and review the Monitoring workbooks to confirm the impact before switching it to **On**.
@@ -110,27 +109,27 @@ Level 3 enforces the strictest access posture by allowing only managed, complian
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy for the `SEB-Level3-Users` group:
 
-         - **Name:** CA Edge Level 3 – High Zero Trust  
-         - **Target resources:** **Cloud apps** > **All cloud apps**  
-         - **Conditions:**  
-            - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
-            - **Client apps:** Select **Browser**  
-            - **Sign-in risk:** Set to **Low and above**  
-            - **User risk:** Set to **Low and above**  
-            - **Device risk:** Set to **Any risk level**  
-            - **Locations:** Include **All locations** and exclude only your most trusted named locations  
-            - **Filter for devices:** Configure a **Include** filter that requires *is Managed equals True* **and** *is Compliant equals True* so only managed, compliant devices meet the policy  
-         - **Grant:**  
-            - **Require multifactor authentication**  
-            - **Require app protection policy**  
-            - **Require device to be marked as compliant**  
-            - **Require password change** (for risky sign-ins)  
-            - **Require approved client app**  
-         - **Session:**  
-            - **Use Conditional Access App Control** > **Monitor and block downloads**  
-            - **Sign-in frequency:** Set to **Every 1 hour**  
-            - **Persistent browser session:** Select **Never persistent**  
-            - Enable **Continuous access evaluation**
+    - **Name:** CA Edge Level 3 – High Zero Trust  
+    - **Target resources:** **Cloud apps** > **All cloud apps**  
+    - **Conditions:**  
+        - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
+        - **Client apps:** Select **Browser**  
+        - **Sign-in risk:** Set to **Low and above**  
+        - **User risk:** Set to **Low and above**  
+        - **Device risk:** Set to **Any risk level**  
+        - **Locations:** Include **All locations** and exclude only your most trusted named locations  
+        - **Filter for devices:** Configure a **Include** filter that requires *is Managed equals True* **and** *is Compliant equals True* so only managed, compliant devices meet the policy  
+    - **Grant:**  
+        - **Require multifactor authentication**  
+        - **Require app protection policy**  
+        - **Require device to be marked as compliant**  
+        - **Require password change** (for risky sign-ins)  
+        - **Require approved client app**  
+    - **Session:**  
+        - **Use Conditional Access App Control** > **Monitor and block downloads**  
+        - **Sign-in frequency:** Set to **Every 1 hour**  
+        - **Persistent browser session:** Select **Never persistent**  
+        - Enable **Continuous access evaluation**
 
     > [!NOTE]
     > Keep this policy in **Report-only** mode while you validate device filters, risk signals, and session controls with a small pilot group.
@@ -145,14 +144,14 @@ Use this companion policy to ensure that desktop applications on Windows devices
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy and assign it to the `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` groups:
 
-         - **Name:** CA Desktop Apps – Compliance Required  
-         - **Target resources:** **Cloud apps** > **Microsoft 365**  
-         - **Conditions:**  
-            - **Device platforms:** Include **Windows**  
-            - **Client apps:** Select **Mobile apps and desktop clients**  
-         - **Grant:**  
-            - **Require device to be marked as compliant**  
-            - (Optional) **Require multifactor authentication** for additional assurance
+    - **Name:** CA Desktop Apps – Compliance Required  
+    - **Target resources:** **Cloud apps** > **Microsoft 365**  
+    - **Conditions:**  
+        - **Device platforms:** Include **Windows**  
+        - **Client apps:** Select **Mobile apps and desktop clients**  
+    - **Grant:**  
+        - **Require device to be marked as compliant**  
+        - (Optional) **Require multifactor authentication** for additional assurance
 
     > [!NOTE]
     > If you allow legacy authentication clients, create a separate policy to block or restrict them so they cannot bypass the browser protections.

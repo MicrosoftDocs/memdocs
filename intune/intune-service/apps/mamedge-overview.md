@@ -34,6 +34,9 @@ The target audience for this content includes:
 > [!NOTE]
 > This content is designed to help you use the full potential of Microsoft Edge for Business and Microsoft Application Management across all device platforms and management scenarios.
 
+> [!IMPORTANT]
+> The Secure Enterprise Browser framework references industry guidance such as NIST, DISA STIG, and CISA best practices. Applying the recommendations in this series alone doesn't guarantee compliance. Work with your compliance and security teams to validate requirements for your organization.
+
 ## Overview
 
 This guide provides comprehensive step-by-step instructions to implement the Secure Enterprise Browser experience using the data protection framework:
@@ -48,6 +51,39 @@ This guide provides comprehensive step-by-step instructions to implement the Sec
 8. **[Troubleshooting and FAQ](mamedge-8-troubleshoot.md)** - Troubleshoot app protection policies with validation examples and frequently asked questions.
 
 For more information about Microsoft Edge Security content, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecuritywhitepaper).
+
+### Security levels at a glance
+
+| Level | Purpose | Typical users | Design goal | Productivity impact | Standards alignment |
+| --- | --- | --- | --- | --- | --- |
+| **Level 1 – Basic** | Establishes foundational hygiene and a secure data boundary. | General staff (≈80%). | Low-friction rollout that enables broad adoption. | Minimal disruption. | NIST basic controls, DISA STIG CAT III. |
+| **Level 2 – Enhanced** | Strengthens data loss prevention (DLP) and tightens risky surfaces. | Managers, IT, HR, Finance (≈15%). | Reduce data exfiltration and enforce safer browsing. | Moderate—adds targeted prompts and blocks. | NIST moderate controls, DISA STIG CAT II. |
+| **Level 3 – High** | Applies maximum isolation and least-privilege browsing. | Executives, SecOps, Legal, sensitive roles (≈5%). | Contain high-risk activity with provable assurances. | High by design to protect sensitive data. | NIST high controls, DISA STIG CAT I, CISA critical controls. |
+
+These security levels describe **desired outcomes**. The linked implementation guides map those outcomes to policy tooling such as app protection policies, app configuration policies, settings catalog profiles, and conditional access.
+
+### Required Microsoft Entra ID groups
+
+Create security groups before building policies so you can target each level consistently:
+
+- **Device groups:** `SEB-Level1-Devices`, `SEB-Level2-Devices`, `SEB-Level3-Devices`, `SEB-Excluded-Devices`.
+- **User groups:** `SEB-Level1-Users`, `SEB-Level2-Users`, `SEB-Level3-Users`, `SEB-Excluded-Users`.
+
+The level-specific groups support progressive assignments, while the exclusion groups provide safe testing and emergency access paths.
+
+### Policy coverage across platforms
+
+Use the following matrix to confirm which policy types apply at each level and platform before you dive into the step-by-step articles:
+
+| Platform and policy type | Level 1 | Level 2 | Level 3 | Highlights |
+| --- | --- | --- | --- | --- |
+| Windows – Settings catalog | Core hygiene configuration. | Adds SmartScreen, application bound encryption, and broader extension controls. | Introduces Application Guard, URL allowlists, and strict update governance. | Primary device hardening for managed Windows endpoints. |
+| Windows – App protection policies | Basic data protection with minimal sharing limits. | Blocks copy/paste and enforces device health checks. | Enables high assurance with secured threat levels and printer blocking. | Protects work data on managed and unmanaged Windows devices. |
+| Windows – App configuration policies | Establishes home pages, password controls, and download policies. | Extends to certificate management, WebRTC, and session cleanup. | Forces allowlists, disables developer tools, and blocks downloads. | Deep browser customization without replacing device policies. |
+| macOS – Settings catalog | Implements baseline protections and update management. | Adds developer tool lock down, WebUSB/WebHID blocks, and SmartScreen DNS. | Forces allowlist-only browsing with download and clipboard restrictions. | The settings catalog is the primary control plane for macOS. |
+| iOS/iPadOS – App protection & configuration | Requires app PIN, encryption, and smart defaults. | Tightens backups, blocks screenshots, and limits sharing destinations. | Enforces biometric strength, URL allowlists, and high DLP settings. | Covers personal and corporate devices with MAM + ACP. |
+| Android – App protection & configuration | Provides fundamental encryption, PIN, and SmartScreen settings. | Adds backup blocking, Play Integrity checks, and social-media blocks. | Requires Class 3 biometrics, kiosk options, and allowlist-only access. | Mirrors iOS protections with Android-specific controls. |
+| Conditional Access (cross-platform) | Introduces browser-only access with MFA and APP requirements. | Adds device compliance, risk-based access, and session frequency controls. | Enforces high-trust locations, continuous access evaluation, and approved clients. | Complements policy configuration with identity-driven enforcement. |
 
 ## Secure Enterprise Browser
 
@@ -77,7 +113,7 @@ Why choose Microsoft Edge for Business?
 
 ### Is this a new browser?
 
-No, this isn’t a new browser. This is a new, dedicated Microsoft Edge experience built specifically for work. It allows organizations to configure it to maximize productivity and security. It retains the same functionality that users are already familiar with in Microsoft Edge. Additionally, it offers an optional feature of automatic switching between personal and corporate accounts, designed to meet the evolving needs of users and businesses. Signing in with a Microsoft Entra ID will automatically enable the Microsoft Edge for Business experience. 
+No, this isn’t a new browser. This is a new, dedicated Microsoft Edge experience built specifically for work. It allows organizations to configure it to maximize productivity and security. It retains the same functionality that users are already familiar with in Microsoft Edge. Additionally, it offers an optional feature of automatic switching between personal and corporate accounts, designed to meet the evolving needs of users and businesses. Signing in with a Microsoft Entra ID will automatically enable the Microsoft Edge for Business experience.
 
 ### Benefits
 
@@ -94,6 +130,7 @@ Microsoft Edge for Business offers a multitude of advantages:
 **Centralized management:** Microsoft Intune offers centralized policy management for Microsoft Edge for Business that simplifies the process, saving time and resources.
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to corporate data on personal devices. This capability uses the following functionality:
+
 - Intune application configuration policies (ACP) with Microsoft Edge for Business. Using ACP allows you to apply Microsoft Edge settings to better enable a secure browsing experience.
 - Intune app protection policies to secure organization data and ensure the client device is healthy.
 - Mobile Threat Protection (MTP) integrated with Intune app protection policies to detect local health threats on personal Windows and all mobile devices.
