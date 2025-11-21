@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/13/2025
+ms.date: 11/21/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -85,10 +85,6 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 <!-- *********************************************** -->
 
 ## Device enrollment
-
-### Configure Windows Backup for Organizations<!--29202026 -->
-      
-A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).  
 
 ### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
 
