@@ -214,13 +214,13 @@ This section describes the MSA requirements.
 
 * Service account needs to exist in the same domain as the ODJ Connector’s server.
 
-* Service account needs to be installed on the server hosting the ODJ Connector. For more information, see [Install-ADServiceAccount](powershell/module/activedirectory/install-adserviceaccount?view=windowsserver2025-ps).  
+* Service account needs to be installed on the server hosting the ODJ Connector. For more information, see [Install-ADServiceAccount](/powershell/module/activedirectory/install-adserviceaccount?view=windowsserver2025-ps).  
    * If using sMSA, the account can only be linked to a single machine.
    * If using a gMSA, the server you’re installing the gMSA on needs to have access to the password.  
 
-* Service account needs to have local **Log On as a Service** permission which could be set directly or via group membership. For more information, see [Enable service logon](system-center/scsm/enable-service-log-on-sm?view=sc-sm-2025).  
+* Service account needs to have local **Log On as a Service** permission which could be set directly or via group membership. For more information, see [Enable service logon](/system-center/scsm/enable-service-log-on-sm?view=sc-sm-2025).  
 
-* Permission needs to be granted manually for service accounts to create computer objects for hybrid Autopilot flows. For more information, see [Increase the computer account limit in the Organizational Unit (OU)](autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit?tabs=updated-connector).  
+* Permission needs to be granted manually for service accounts to create computer objects for hybrid Autopilot flows. For more information, see [Increase the computer account limit in the Organizational Unit (OU)](/autopilot/tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit?tabs=updated-connector).  
 
 ##### How to set up  
 
