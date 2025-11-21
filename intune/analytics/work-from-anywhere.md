@@ -29,7 +29,7 @@ The following metrics are weighted and used to compute the **Work from anywhereâ
 :::image type="content" source="images/work-from-anywhere/8668496-work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics" lightbox="images/work-from-anywhere/8668496-work-from-anywhere-score.png":::
 
 > [!NOTE]
-> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](device-scopes.md).
+> In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
 
 ## Windows
 
@@ -49,16 +49,16 @@ Benefits of each cloud management type:<!--IN7207657-->
 
 | Benefits | [**Cloud management gateway (CMG)**](../configmgr/core/clients/manage/cmg/overview.md) | [**Tenant attach**](../configmgr/tenant-attach/device-sync-actions.md) | [**Co-management**](../configmgr/comanage/overview.md) | [**Intune**](../intune-service/fundamentals/what-is-intune.md) |
 |--|:--:|:--:|:--:|:--:|
-| Manage your clients anywhere |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| View and take action on all Windows PCs from Microsoft Intune admin center |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| Modernize your directory approach with Microsoft Entra ID |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| Enhance Zero Trust with Conditional Access |  |  |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| Make device provisioning easier by enabling Windows Autopilot |  |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| Gain more remote access with Intune |  |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| Split PC management workloads between cloud and on-premises |  |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  |
-| Simplify PC and driver updating with the cloud |  |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| Consistent end-user experience for managing enrolled devices and installed apps |  |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
-| Reduce complexity with always up-to-date cloud only infrastructure |  :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |  |  |   :::image type="icon" source="../images/work-from-anywhere/icons/16/check.svg"::: |
+| Manage your clients anywhere |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| View and take action on all Windows PCs from Microsoft Intune admin center |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| Modernize your directory approach with Microsoft Entra ID |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| Enhance Zero Trust with Conditional Access |  |  |  :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| Make device provisioning easier by enabling Windows Autopilot |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| Gain more remote access with Intune |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| Split PC management workloads between cloud and on-premises |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  |
+| Simplify PC and driver updating with the cloud |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| Consistent end-user experience for managing enrolled devices and installed apps |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
+| Reduce complexity with always up-to-date cloud only infrastructure |  :::image type="icon" source="../media/icons/16/check.svg"::: |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |
 
 ## Cloud identity
 
