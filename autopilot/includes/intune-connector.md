@@ -207,10 +207,11 @@ This section describes the MSA requirements.
 
 * Provided account must be a service account with either of the following object categories in Active Directory:   
 
-   * CN=ms-DS-Group-Managed-Service-Account,CN=Schema,CN=Configuration,DC=contoso,DC=com
-   * CN=ms-DS-Managed-Service-Account,CN=Schema,CN=Configuration,DC=contoso,DC=com
+   * `CN=ms-DS-Group-Managed-Service-Account,CN=Schema,CN=Configuration,DC=contoso,DC=com`
+     
+   * `CN=ms-DS-Managed-Service-Account,CN=Schema,CN=Configuration,DC=contoso,DC=com`  
 
-* The configuration value for the service account needs to be in the following format: <msaAccountName@domain> 
+* The configuration value for the service account needs to be in the following format: `<msaAccountName@domain>` 
 
 * Service account needs to exist in the same domain as the ODJ Connector’s server.
 
@@ -224,16 +225,16 @@ This section describes the MSA requirements.
 
 ##### How to set up  
 
-Update *ODJConnectorEnrollmentWizard.exe.config*. Its default location is C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard.  
+Update `ODJConnectorEnrollmentWizard.exe.config`. Its default location is `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`.  
 
-1. In the **appSettings section**, add the following: ``<add key="TenantConfiguredManagedServiceAccount" value="{accountname}" />``     
+1. In the **appSettings section** of the file, add the following line: ``<add key="TenantConfiguredManagedServiceAccount" value="{accountname}" />``     
 2. Sign in to the connector.   
 
 ##### Disable OU updates
 
-Using your own MSA will disable the connector from making any OU updates, regardless of any configured in OrganizationalUnitsUsedForOfflineDomainJoin. To prevent errors, disable OU updates by updating *ODJConnectorEnrollmentWizard.exe.config*. Its default location is C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard.  
+Using your own MSA will disable the connector from making any OU updates, regardless of any configured in OrganizationalUnitsUsedForOfflineDomainJoin. To prevent errors, disable OU updates by updating `ODJConnectorEnrollmentWizard.exe.config`. Its default location is `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`.  
 
-1. In the **appSettings section**, add the following: ``<add key="DisableOUUpdates" value="true" />``    
+1. In the **appSettings section** of the file, add the following line: ``<add key="DisableOUUpdates" value="true" />``    
 2. Sign in to the connector.  
 
 ### [:::image type="icon" source="/autopilot/images/icons/software-18.svg"::: **Legacy Connector**](#tab/legacy-connector)
