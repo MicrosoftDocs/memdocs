@@ -156,7 +156,6 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 | Microsoft Edge\Additional | Limit cookies from specific websites to the current session | Enabled | [Limit cookies from specific websites to the current session](/deployedge/microsoft-edge-browser-policies/cookiessessiononlyforurls) |
 | Microsoft Edge\Additional | Configure Legacy SameSite cookie behavior setting | Disabled | [Configure Legacy SameSite cookie behavior setting](/deployedge/microsoft-edge-browser-policies/legacysamesitecookiebehaviorenabled) |
 | Microsoft Edge\Additional | Configure automatic client certificate selection | ["*.company.com"] | [Configure automatic client certificate selection](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) |
-| Microsoft Edge\Additional | Allow or deny screen capture | Disabled | [Allow or deny screen capture](/deployedge/microsoft-edge-browser-policies/screencaptureallowed) |
 | Microsoft Edge\Additional | Control printing | Enabled | [Control printing](/deployedge/microsoft-edge-browser-policies/printingenabled) |
 | Microsoft Edge\Additional | Set the system default printer as the default printer | Enabled | [Set the system default printer as the default printer](/deployedge/microsoft-edge-browser-policies/printpreviewusesystemdefaultprinter) |
 | Microsoft Edge\Additional | Control use of the WebHID API | Enabled, Do not allow any site to request access to HID devices via the WebHID API | [Control use of the WebHID API](/deployedge/microsoft-edge-browser-policies/defaultwebhidguardsetting) |
@@ -265,7 +264,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 
 12. Select **Next**.  
 13. For **Assignments**, assign to **SEB-Level2-Devices** group.  
-14. Select **Next** to review the settings. Then choose **Save**.   
+14. Select **Next** to review the settings. Then choose **Save**.
 
 ### Validation
 
