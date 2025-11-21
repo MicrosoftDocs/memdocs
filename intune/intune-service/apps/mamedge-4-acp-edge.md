@@ -473,22 +473,30 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | false | [Microsoft Entra password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
+| com.microsoft.intune.mam<br>.managedbrowser.PasswordSSO | false | [Microsoft Entra password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
+| com.microsoft.intune.mam<br>.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/intune/intune-service/apps/manage-microsoft-edge#microsoft-defender-smartscreen) |
 | EdgeMyApps | false | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
 | EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
+| EdgeImportPasswordsDisabled | true | [Disable importing passwords](/deployedge/microsoft-edge-mobile-policies#edgeimportpasswordsdisabled) |
 | EdgeNewTabPageLayout | 2 | [Configure new tab page layout](/deployedge/microsoft-edge-mobile-policies#edgenewtabpagelayout) |
 | EdgeEnableKioskMode | true | [Enable kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeenablekioskmode) |
 | EdgeShowAddressBarInKioskMode | false | [Show address bar in kiosk mode](/deployedge/microsoft-edge-mobile-policies#edgeshowaddressbarinkioskmode) |
+| SmartScreenEnabled | true | [SmartScreen enabled](/deployedge/microsoft-edge-mobile-policies#smartscreenenabled) |
+| SearchSuggestEnabled | false | [Disable search suggestions](/deployedge/microsoft-edge-mobile-policies#searchsuggestenabled) |
 | EdgeSyncDisabled | true | [Disable browser sync](/deployedge/microsoft-edge-mobile-policies#edgesyncdisabled) |
 | InPrivateModeAvailability | 1 | [Disable InPrivate mode](/deployedge/microsoft-edge-mobile-policies#inprivatemodeavailability) |
 | SavingBrowserHistoryDisabled | true | [Disable browser history saving](/deployedge/microsoft-edge-mobile-policies#savingbrowserhistorydisabled) |
+| DefaultPopupsSetting | 2 | [Default pop-ups setting](/deployedge/microsoft-edge-mobile-policies#defaultpopupssetting) |
 | TranslateEnabled | false | [Disable translate](/deployedge/microsoft-edge-mobile-policies#translateenabled) |
+| HideFirstRunExperience | true | [Hide first run experience](/deployedge/microsoft-edge-mobile-policies#hidefirstrunexperience) |
+| SSLErrorOverrideAllowed | false | [SSL error override allowed](/deployedge/microsoft-edge-mobile-policies#sslerroroverrideallowed) |
 | EdgeSharedDeviceSupportEnabled | false | [Disable shared device support](/deployedge/microsoft-edge-mobile-policies#edgeshareddevicesupportenabled) |
 | AutofillCreditCardEnabled | false | [Disable autofill for payment instructions](/deployedge/microsoft-edge-browser-policies/autofillcreditcardenabled) |
 | DownloadRestrictions | 2 | [Download restrictions](/deployedge/microsoft-edge-browser-policies/downloadrestrictions) |
 | ExperimentationAndConfigurationServiceControl | 0 | [Experimentation and configuration service control](/deployedge/microsoft-edge-mobile-policies#experimentationandconfigurationservicecontrol) |
 | DefaultBrowserSettingEnabled | false | [Set as default browser](/deployedge/microsoft-edge-mobile-policies#defaultbrowsersettingenabled) |
+| EdgeCopilotEnabled | false | [Enable Edge Copilot](/deployedge/microsoft-edge-mobile-policies#edgecopilotenabled) |
 | DefaultCookiesSetting | 4 | [Default cookies setting](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) |
 | DefaultJavaScriptSetting | 2 | [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) |
 | DefaultGeolocationSetting | 2 | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
