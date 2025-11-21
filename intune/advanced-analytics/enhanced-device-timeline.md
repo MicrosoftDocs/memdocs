@@ -54,5 +54,5 @@ For more information, go to:
 
 - [Anomaly detection](anomaly-detection.md)
 - [Device scopes](device-scopes.md)
-- [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
+- [What is Intune Advanced Analytics](index.md)
 - [Battery health](battery-health.md)

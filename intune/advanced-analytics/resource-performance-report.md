@@ -158,7 +158,7 @@ The device-level details page includes the CPU and RAM spike-time history over t
 
 For more information, go to:
 
-- [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
+- [What is Intune Advanced Analytics](index.md)
 
 - [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
 

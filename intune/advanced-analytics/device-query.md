@@ -20,7 +20,7 @@ Device query allows you to quickly gain on-demand information about the state of
   - The Intune Advanced Analytics Add-on
   - Microsoft Intune Suite
 
-- To use Device query on a device, the device must be enrolled in endpoint analytics. Learn [how to enroll a device in endpoint analytics](../configure.md).
+- To use Device query on a device, the device must be enrolled in endpoint analytics. Learn [how to enroll a device in endpoint analytics](../analytics/configure.md).
 
 - You can't opt out of cloud notifications (WNS)
 
@@ -276,4 +276,4 @@ Device query supports the following entities. To learn more about what propertie
 
 For more information, go to:
 
-- [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
+- [What is Intune Advanced Analytics](index.md)

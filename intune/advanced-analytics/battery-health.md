@@ -115,7 +115,7 @@ Batteries that have low design capacity (For example, devices designed to hold l
 
 For more information, go to:
 
-- [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
+- [What is Intune Advanced Analytics](index.md)
 - [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
 - [Device scopes](device-scopes.md)
 - [Device query](device-query.md)

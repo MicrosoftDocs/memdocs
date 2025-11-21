@@ -15,9 +15,9 @@ Custom device scopes use Scope tags to slice endpoint analytics reports to a sub
 
 Custom device scopes are supported on the following endpoint analytics reports:
 
-- [Startup performance](startup-performance.md)
-- [Work from anywhere](work-from-anywhere.md)
-- [Application reliability](app-reliability.md)
+- [Startup performance](../analytics/startup-performance.md)
+- [Work from anywhere](../analytics/work-from-anywhere.md)
+- [Application reliability](../analytics/app-reliability.md)
 - [Battery health](battery-health.md)
 
 ## Permissions
@@ -100,6 +100,6 @@ For more information, go to:
 
 - [Enhanced device timeline](enhanced-device-timeline.md)
 - [Anomaly detection](anomaly-detection.md)
-- [What is Intune Advanced Analytics](advanced-endpoint-analytics.md)
+- [What is Intune Advanced Analytics](index.md)
 - [Battery health](battery-health.md)
 - [Resource Performance report](resource-performance-report.md)
