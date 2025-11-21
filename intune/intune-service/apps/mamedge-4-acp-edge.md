@@ -46,8 +46,8 @@ Level 1 configuration provides foundational browser security controls while main
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 1 – Basic browser configuration – Windows ACP  
-   - **Description:** Basic browser customization for Microsoft Edge on Windows.
+   - **Name:** Edge Windows ACP Level 1 Basic  
+   - **Description:** Enhanced browser customization for Microsoft Edge Windows with comprehensive basic controls addressing ACP gap analysis
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge Windows**, then select **Select**.  
@@ -101,8 +101,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 2 – Enhanced browser configuration – Windows ACP  
-   - **Description:** Enhanced browser configuration with additional security controls for Microsoft Edge on Windows.  
+   - **Name:** Edge Windows ACP Level 2 Enhanced  
+   - **Description:** Advanced browser customization with enhanced security controls and comprehensive feature management  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge Windows**, then select **Select**.  
@@ -182,8 +182,8 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 3 – High security configuration – Windows ACP  
-   - **Description:** Maximum security browser configuration with zero-trust controls and comprehensive data-loss prevention for Microsoft Edge on Windows.  
+   - **Name:** Edge Windows ACP Level 3 High  
+   - **Description:** High browser customization with complete enterprise controls, zero-trust configuration, and comprehensive security isolation  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge Windows**, then select **Select**.  
@@ -321,8 +321,8 @@ Level 1 configuration provides foundational browser security controls while main
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 1 – Basic mobile browser configuration – Android ACP  
-   - **Description:** Basic browser configuration for Microsoft Edge on Android.  
+   - **Name:** Edge Android ACP Level 1 Basic  
+   - **Description:** Basic browser configuration for Microsoft Edge Android with essential security settings and fundamental mobile controls  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge (Android)**, then select **Select**.  
@@ -332,8 +332,8 @@ Level 1 configuration provides foundational browser security controls while main
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) |
-| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) |
+| com.microsoft.intune.mam<br>.managedbrowser.PasswordSSO | true | [Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) |
+| com.microsoft.intune.mam<br>.managedbrowser.SmartScreenEnabled | true | [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) |
 | EdgeMyApps | true | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
 | EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
@@ -398,8 +398,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 2 – Enhanced mobile browser configuration – Android ACP  
-   - **Description:** Enhanced browser configuration with additional security controls for Microsoft Edge on Android.  
+   - **Name:** Edge Android ACP Level 2 Enhanced  
+   - **Description:** Enhanced browser configuration for Microsoft Edge Android with additional security controls and data protection features  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge (Android)**, then select **Select**.  
@@ -409,8 +409,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) |
-| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) |
+| com.microsoft.intune.mam<br>.managedbrowser.PasswordSSO | true | [Microsoft Entra password single sign-on](manage-microsoft-edge.md#microsoft-entra-password-single-sign-on) |
+| com.microsoft.intune.mam<br>.managedbrowser.SmartScreenEnabled | true | [Microsoft Defender SmartScreen](manage-microsoft-edge.md#microsoft-defender-smartscreen) |
 | EdgeMyApps | true | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Enforce default HTTPS](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
 | EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
@@ -462,8 +462,8 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 3 – High security mobile browser configuration – Android ACP
-   - **Description:** Maximum security configuration for Microsoft Edge on Android, enforcing strict data protection and zero-trust controls.  
+   - **Name:** Edge Android ACP Level 3 High
+   - **Description:** High security browser configuration for Microsoft Edge Android with maximum restrictions, strict isolation, and comprehensive privacy controls  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge (Android)**, then select **Select**.  
@@ -580,8 +580,8 @@ Level 1 configuration provides foundational browser security controls while main
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 1 – Basic mobile browser configuration – iOS ACP  
-   - **Description:** Basic browser configuration for Microsoft Edge on iOS.  
+   - **Name:** Edge iOS ACP Level 1 Basic  
+   - **Description:** Basic browser configuration for Microsoft Edge iOS with essential security settings and fundamental mobile controls  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
@@ -641,8 +641,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 2 – Enhanced mobile browser configuration – iOS ACP  
-   - **Description:** Enhanced browser configuration with security controls for Microsoft Edge on iOS.  
+   - **Name:** Edge iOS ACP Level 2 Enhanced  
+   - **Description:** Enhanced browser configuration for Microsoft Edge iOS with additional security controls and data protection features  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
@@ -704,8 +704,8 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
-   - **Name:** Level 3 – High security mobile configuration – iOS ACP  
-   - **Description:** Maximum security browser configuration for Microsoft Edge on iOS.  
+   - **Name:** Edge iOS ACP Level 3 High  
+   - **Description:** High security browser configuration for Microsoft Edge iOS with maximum restrictions, strict isolation, and comprehensive privacy controls  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge (iOS/iPadOS)**, then select **Select**.  
