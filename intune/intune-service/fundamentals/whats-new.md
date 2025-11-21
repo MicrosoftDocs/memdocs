@@ -61,8 +61,8 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ### Device enrollment  
 
-#### Configure Windows Backup for Organizations <!--29202026 -->
------
+#### Configure Windows Backup for Organizations <!--29202026 -->  
+
 *Windows Backup for Organizations* is generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
 
 ### Device management
