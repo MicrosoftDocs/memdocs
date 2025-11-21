@@ -43,7 +43,7 @@ Windows app configuration policies provide browser customization through managed
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 1 – Basic browser configuration – Windows ACP  
@@ -98,7 +98,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 configuration adds enhanced security controls and restrictions for sensitive environments.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enhanced browser configuration – Windows ACP  
@@ -179,7 +179,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 Level 3 configuration enforces maximum security with zero-trust controls and comprehensive data-loss prevention.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – High security configuration – Windows ACP  
@@ -319,7 +319,7 @@ Android app configuration policies customize Microsoft Edge for Business behavio
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 1 – Basic mobile browser configuration – Android ACP  
@@ -396,7 +396,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 configuration adds enhanced security controls and restrictions for sensitive environments.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enhanced mobile browser configuration – Android ACP  
@@ -460,7 +460,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 Level 3 configuration enforces maximum security with zero-trust controls and comprehensive data-loss prevention.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – High security mobile browser configuration – Android ACP
@@ -578,7 +578,7 @@ iOS app configuration policies define and enforce browser behavior for Microsoft
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 1 – Basic mobile browser configuration – iOS ACP  
@@ -639,7 +639,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 configuration adds enhanced security controls and restrictions for sensitive environments.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 2 – Enhanced mobile browser configuration – iOS ACP  
@@ -702,7 +702,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 Level 3 configuration enforces maximum security with zero-trust controls and comprehensive data-loss prevention.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).  
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Level 3 – High security mobile configuration – iOS ACP  
