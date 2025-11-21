@@ -59,7 +59,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of November 17, 2025  
 
-### Devuce enrollment  
+### Device enrollment  
 
 #### Configure Windows Backup for Organizations <!--29202026 -->
 -----
