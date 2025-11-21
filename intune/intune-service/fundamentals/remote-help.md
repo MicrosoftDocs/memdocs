@@ -45,7 +45,7 @@ The Remote Help app supports the following capabilities in general across the su
 
 ## Platform-specific capabilities
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 - **Elevation**: Allows helpers to enter UAC credentials when prompted on the sharer's device. Enabling elevation also allows the helper to view and control the sharer's device when the sharer grants the helper access.
   
@@ -60,7 +60,7 @@ The Remote Help app supports the following capabilities in general across the su
 - **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages-for-chat).
 - **Web app for sharers** - In situations where the Sharer needs assistance but is unable to install the native application for macOS, the Sharer can use the Web App to share their screen to a helper. This web app provides view only capabilities to the helper, allowing them to guide the user through resolving issues.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 - **Conditional access support**: You can use Conditional Access policies to control how helpers and sharers access Remote Help. For example, you can require multifactor authentication (MFA) for helpers or restrict access to specific locations or compliant devices.
 - **Chat functionality**: Remote Help includes enhanced chat that maintains a continuous thread of all messages. This chat supports special characters and other languages including Chinese and Arabic. For more information on languages supported, see [Languages Supported](remote-help-plan.md#supported-languages-for-chat).
@@ -68,7 +68,7 @@ The Remote Help app supports the following capabilities in general across the su
   
   :::image type="content" source="media/remote-help/remote-help-unenrolled.png" alt-text="A screenshot of the opion to enable unenrolled devices":::
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 - **Unattended access**: Helpers can connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a fully managed device or as a dedicated device.
   
@@ -78,18 +78,18 @@ The Remote Help app supports the following capabilities in general across the su
 
 ## Demos and Videos
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 The [Remote Help]( https://regale.cloud/Microsoft/viewer/1746/remote-help/index.html#/0/0) interactive demo walks you through scenarios step-by-step with interactive annotations and navigation controls.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 Use the interactive demos to explore Remote Help on macOS:
 
 - [macOS native experience](https://regale.cloud/microsoft/play/1746/remote-help#/7/0)
 - [macOS web app experience](https://regale.cloud/microsoft/play/1746/remote-help#/6/0)
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 Check back in this space for demos and videos of Remote Help for Android.  
 
 ---
