@@ -86,31 +86,31 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 > To **enable**, **configure**, and **delete** the Device Offboarding Agent, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles, either:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles, either:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
 > - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles, either:
+> :::image type="icon" source="../media/icons/16/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions
 >
-> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Security Copilot owner](/copilot/security/authentication#security-copilot-roles) 
 >
 > ---
 >
 > To **use** the agent and perform offboarding actions, use an account with at least the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles, either:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles, either:
 > - [Read Only Operator](/intune/intune-service/fundamentals/role-based-access-control#built-in-roles) 
 > - [Custom role](/intune/intune-service/fundamentals/role-based-access-control#custom-roles) with **Audit data/Read** and **Organization/Read** permissions
 >
-> :::image type="icon" source="../media/icons/admin-center/entra.svg" border="false"::: Entra roles, either:
+> :::image type="icon" source="../media/icons/16/entra.svg" border="false"::: Entra roles, either:
 > - [Security Reader](/entra/identity/role-based-access-control/permissions-reference#security-reader)
 > - [Custom role](/entra/identity/role-based-access-control/custom-create) with **Microsoft.Directory/Devices/Standard/Read** permissions\
 >     To take action from within the agent, such as to [disable devices in Entra](/entra/identity/devices/manage-stale-devices#disable-devices), you must have the **[Disable devices](/entra/identity/role-based-access-control/custom-device-permissions#enable-or-disable-devices)** permission. You don't need this permission to run or view results from the agent.
 >
-> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Security Copilot contributor](/copilot/security/authentication#security-copilot-roles)
 
 :::column-end:::
