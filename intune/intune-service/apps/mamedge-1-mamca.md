@@ -11,110 +11,160 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business
+# Microsoft Entra Conditional Access with Microsoft Edge for Business
 
-The modern security perimeter extends beyond an organization's network perimeter to include user and device identity. Organizations now use identity-driven signals as part of their access control decisions. Microsoft Entra Conditional Access brings signals together to help enforce organizational policies. It's Microsoft's Zero Trust policy engine that takes signals from various sources into account when enforcing policy decisions.
+The modern security perimeter extends beyond an organization's network boundary to include user and device identity. Conditional Access brings identity-driven signals together to enforce organizational policies as part of a Zero Trust security model. It evaluates signals such as user risk, device compliance, and application context to determine whether access should be granted.
 
-Conditional Access policies at their simplest include *if-then* statements. If a user wants to access a resource, then they must complete an action. For example, if a user wants to access an application or service such as Microsoft 365, then they must perform multifactor authentication to gain access.
+Conditional Access policies at their simplest follow *if-then* logic. If a user attempts to access a Microsoft 365 resource, then they may be required to complete an action such as multifactor authentication (MFA).
 
-Identity-driven signals might include:
+Identity-driven signals may include:
 
-- User or group membership
-- IP Location information
-- Device compliance
-- Application
-- Real-time and calculated risk detection
+- User or group membership  
+- IP location information  
+- Device compliance state  
+- Target application  
+- Real-time and calculated risk detection  
 
-Conditional Access is enforced after initial authentication is completed. It isn't intended to be an organization's frontline of defense for scenarios like denial-of-service (DoS) attacks, but it can use signals from these events to determine access.
+Conditional Access is evaluated after authentication is completed. It is not intended to mitigate denial-of-service (DoS) attacks directly, but it can use signals from such events when making access decisions.
 
 ## Conditional Access compliance
 
-Protecting your organizational data involves preventing data loss. Data Loss Prevention (DLP) is effective only when your organizational data can't be accessed from any unprotected system or device. App protection policies can be used with Conditional Access (CA) to ensure that these policies aren't only supported but also enforced in a client application before granting access to protected resources, such as organizational data. This approach allows end-users with personal devices, including Windows, Android, and iOS, to use APP-managed applications, including Microsoft Edge for Business, to access Microsoft Entra resources without the need for full management of their personal device.
+Protecting organizational data requires preventing access from unprotected devices. Data Loss Prevention (DLP) is only effective when data cannot be accessed from systems that do not meet your organization’s minimum security requirements.
 
-This solution uses two Conditional Access policies to secure Microsoft Edge for Business:
+App protection policies (APP) work with Conditional Access to ensure that protected resources can only be accessed from managed or APP-protected applications, such as Microsoft Edge for Business. This enables end users on personal Windows, Android, and iOS devices to access Microsoft Entra resources without full device management.
 
-1. **Mobile devices policy**: Secures access from Android and iOS devices
-2. **Windows devices policy**: Secures browser access from Windows BYOD devices while allowing desktop app access for managed devices
+This solution uses three Conditional Access policies to secure Microsoft Edge for Business along with a companion policy that keeps Windows desktop apps limited to compliant devices:
 
-## Conditional Access policy for mobile devices
+- **Level 1 – Basic:** Browser access for Windows, Android, and iOS users who rely on app protection policies.  
+- **Level 2 – Enhanced Zero Trust:** Adds risk-based access controls, continuous verification, and device compliance requirements.  
+- **Level 3 – High Zero Trust:** Enforces the strictest access posture with managed devices only, password resets for risky sign-ins, and frequent reauthentication.  
+- **Browser-only companion policy:** Restricts Windows desktop apps such as Outlook or Word to managed, compliant devices.
 
-Secure your Microsoft Edge for Business on mobile devices with Microsoft Entra Conditional Access policies by using the following steps.
+## Before you begin
 
-In this scenario, you create a Conditional Access policy for mobile devices using Microsoft Intune. To create the policy, you must perform the following steps:
+- Confirm that your tenant has the necessary Microsoft Entra ID Premium and Microsoft Intune licenses for Conditional Access and app protection policies.  
+- Ensure the Microsoft Entra security groups `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` exist; these groups are used for assignments throughout the secure enterprise browser deployment. For step-by-step guidance, see [Use groups to organize users and devices for Microsoft Intune](../fundamentals/groups-add.md).  
+- Define trusted locations, device filters, and risk integrations (for example, Microsoft Defender for Endpoint or another Mobile Threat Defense provider) before assigning the policies.  
+- Plan to run each policy in **Report-only** mode first so you can validate the impact before enforcing it.
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+## Level 1 – Basic Conditional Access policy
 
-1. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
+Use this policy to secure browser access from Windows, Android, and iOS devices that rely on app protection policies instead of full device management.
 
-1. On the **Conditional Access policy** pane, set the following details:
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
+3. Configure the policy for the `SEB-Level1-Users` group:
 
-    - **Name:** Secure Enterprise Browser Policy - Mobile
-    - **Users:** All Users or Specific Group dedicated to using the policy.
-    - **Target Resources:** Cloud Apps - Office 365
-    - **Conditions:**
-        - **Device platforms:** Include - Android and iOS
-        - **Client Apps:** Browser
-        - **Filter for devices:** Exclude - is Compliant Equals True
-    - **Grant:** Require app protection policy
-    - **Session:** N/A
-
-    > [!NOTE]
-    > Set **Report-only** to **On** until you confirm that the policy is working as expected. Once confirmed, set this setting to **Off**.
-
-1. Select **Create** to enable the policy.
-
-## Conditional Access policy for Windows BYOD
-
-In an era where Bring Your Own Device (BYOD) is the norm, implementing Conditional Access policies specifically for Windows devices is critical toward securing your digital boundaries and ensuring seamless user experience.
-
-This policy ensures browser access uses app protection policies for BYOD scenarios, while desktop application access requires device compliance for managed devices.
-
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-1. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
-
-1. On the **Conditional Access policy** pane, set the following details:
-
-    - **Name:** Secure Enterprise Browser Policy - Windows
-    - **Users:** All Users or Specific Group dedicated to using the policy.
-    - **Target Resources:** Cloud Apps - Office 365
-    - **Conditions:**
-        - **Device platforms:** Include - Windows
-        - **Client Apps:** Browser
-        - **Filter for devices:** Exclude - is Compliant Equals True
-    - **Grant:** Require app protection policy
-    - **Session:** N/A
+         - **Name:** CA Edge Level 1 – Basic  
+         - **Target resources:** **Cloud apps** > **Microsoft 365** (Office 365)  
+         - **Conditions:**  
+            - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
+            - **Client apps:** Select **Browser**  
+            - **Filter for devices:** **Exclude** devices where *is Compliant equals True* to focus on unmanaged/BYOD endpoints  
+         - **Grant:**  
+            - **Require multifactor authentication**  
+            - **Require app protection policy**  
+         - **Session:** Leave unconfigured for Level 1
 
     > [!NOTE]
-    > Set **Report-only** to **On** until you confirm that the policy is working as expected. Once confirmed, set this setting to **Off**.
+    > Keep the policy in **Report-only** mode until you verify that it routes unmanaged devices through Microsoft Edge for Business with app protection.
 
-1. Select **Create** to enable the policy.
+4. Select **Create** to save the policy.
 
-## Browser only access for Windows BYOD
+## Level 2 – Enhanced Zero Trust Conditional Access policy
 
-To further enhance security, create another policy that restricts desktop application access to managed devices only. This ensures that unmanaged Windows devices can only access organizational resources through the browser.
+Level 2 adds continuous verification with risk-based signals and requires that devices are both compliant and protected by app protection policies.
 
-In the previous steps, you implemented Conditional Access as a required app protection policy for browser access. In the following steps, you configure a policy to ensure that the same resources aren't accessed from desktop apps on unmanaged devices.
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
+3. Configure the policy for the `SEB-Level2-Users` group:
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-1. Select **Endpoint security** > **Conditional Access** > **Create new policy**.
-
-1. On this new policy, you restrict access from desktop apps to managed devices only. Select target resources and select **Office 365** to follow the example in this page.
-
-1. Select the **device Platform** and select **Windows**.
-
-1. Select **Client Apps** and select **Mobile apps and desktop clients**.
+         - **Name:** CA Edge Level 2 – Enhanced Zero Trust  
+         - **Target resources:** **Cloud apps** > **All cloud apps**  
+         - **Conditions:**  
+            - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
+            - **Client apps:** Select **Browser**  
+            - **Sign-in risk:** Set to **Medium and above**  
+            - **Device risk:** Set to **Medium and above** (requires an integrated Mobile Threat Defense or Microsoft Defender for Endpoint signal)  
+            - **Locations:** Include **All locations** and **Exclude** your trusted named locations  
+            - **Filter for devices:** **Exclude** devices where *is Compliant equals True* so only noncompliant or unmanaged devices are subject to app protection enforcement  
+         - **Grant:**  
+            - **Require multifactor authentication**  
+            - **Require app protection policy**  
+            - **Require device to be marked as compliant**  
+         - **Session:**  
+            - **Use Conditional Access App Control** > **Monitor only**  
+            - **Sign-in frequency:** Set to **Every 4 hours**  
+            - **Persistent browser session:** Select **Never persistent**
 
     > [!NOTE]
-    > For legacy authentication clients, create a third CA to block them.
+    > Run the policy in **Report-only** mode and review the Monitoring workbooks to confirm the impact before switching it to **On**.
 
-1. Select **Grant** and select **Require device to be marked as compliant.** This provides access through desktop apps only for enrolled and compliant devices.
+4. Select **Create** to save the policy.
+
+## Level 3 – High Zero Trust Conditional Access policy
+
+Level 3 enforces the strictest access posture by allowing only managed, compliant devices to reach Microsoft 365 resources while applying additional safeguards for risky sign-ins.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
+3. Configure the policy for the `SEB-Level3-Users` group:
+
+         - **Name:** CA Edge Level 3 – High Zero Trust  
+         - **Target resources:** **Cloud apps** > **All cloud apps**  
+         - **Conditions:**  
+            - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
+            - **Client apps:** Select **Browser**  
+            - **Sign-in risk:** Set to **Low and above**  
+            - **User risk:** Set to **Low and above**  
+            - **Device risk:** Set to **Any risk level**  
+            - **Locations:** Include **All locations** and exclude only your most trusted named locations  
+            - **Filter for devices:** Configure a **Include** filter that requires *is Managed equals True* **and** *is Compliant equals True* so only managed, compliant devices meet the policy  
+         - **Grant:**  
+            - **Require multifactor authentication**  
+            - **Require app protection policy**  
+            - **Require device to be marked as compliant**  
+            - **Require password change** (for risky sign-ins)  
+            - **Require approved client app**  
+         - **Session:**  
+            - **Use Conditional Access App Control** > **Monitor and block downloads**  
+            - **Sign-in frequency:** Set to **Every 1 hour**  
+            - **Persistent browser session:** Select **Never persistent**  
+            - Enable **Continuous access evaluation**
 
     > [!NOTE]
-    > Consider adding additional security controls such as multifactor authentication (MFA) to this policy for enhanced protection.
+    > Keep this policy in **Report-only** mode while you validate device filters, risk signals, and session controls with a small pilot group.
 
-1. Select **Done** \> select **Create** and complete the Conditional Access policy creation as you performed on the previous step.
+4. Select **Create** to save the policy.
+
+## Browser-only access for Windows desktop apps
+
+Use this companion policy to ensure that desktop applications on Windows devices are only available when the device meets your management and compliance requirements.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
+3. Configure the policy and assign it to the `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` groups:
+
+         - **Name:** CA Desktop Apps – Compliance Required  
+         - **Target resources:** **Cloud apps** > **Microsoft 365**  
+         - **Conditions:**  
+            - **Device platforms:** Include **Windows**  
+            - **Client apps:** Select **Mobile apps and desktop clients**  
+         - **Grant:**  
+            - **Require device to be marked as compliant**  
+            - (Optional) **Require multifactor authentication** for additional assurance
+
+    > [!NOTE]
+    > If you allow legacy authentication clients, create a separate policy to block or restrict them so they cannot bypass the browser protections.
+
+4. Leave the policy in **Report-only** mode until you confirm that desktop apps remain accessible only from enrolled and compliant devices, then switch it to **On**.
+
+## Validate the policies
+
+- Monitor the built-in Conditional Access insights while the policies run in report-only mode for at least one to two weeks.  
+- Pilot the policies with a small user group before broad rollout and adjust exclusions or trusted locations if needed.  
+- Review sign-in logs to verify that risky or unmanaged scenarios are challenged with multifactor authentication, app protection requirements, or blocked outright.  
+- Document the final configuration so helpdesk teams can troubleshoot sign-in denials quickly.
 
 ## Next step
 
