@@ -13,7 +13,15 @@ While the agent run might fail due to insufficient SCUs, there are other possibl
 
 In this case, the agent may not have enough data to generate accurate suggestions, or its settings might not fully align with your organization's environment.
 
-To help improve future suggestions, use the like/dislike buttons :::image type="icon" source="../icons/feedback-buttons.svg" border="false"::: available on each suggestion to share your feedback.
+To help improve future suggestions, use the like/dislike buttons :::image type="icon" source="../../media/icons/16/like.svg" border="false"::: :::image type="icon" source="../../media/icons/16/dislike.svg" border="false"::: available on each suggestion to share your feedback.
+
+
+
+To help improve future suggestions, use the like/dislike buttons :::image type="icon" source="../../media/icons/18/like.svg" border="false"::: :::image type="icon" source="../../media/icons/18/dislike.svg" border="false"::: available on each suggestion to share your feedback.
+
+
+To help improve future suggestions, use the like/dislike buttons :::image type="icon" source="../../media/icons/24/like.svg" border="false"::: :::image type="icon" source="../../media/icons/24/dislike.svg" border="false"::: available on each suggestion to share your feedback.
+
 
 ###  You don't have access to this agent - Licenses
 
