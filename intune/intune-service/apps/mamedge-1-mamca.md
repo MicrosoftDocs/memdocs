@@ -55,7 +55,7 @@ Use this policy to secure browser access from Windows, Android, and iOS devices 
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
 3. Configure the policy for the `SEB-Level1-Users` group:
     - **Name:** CA Edge Level 1 – Basic  
-    - **Target resources:** **Cloud apps** > **Microsoft 365** (Office 365)  
+    - **Target resources: Cloud apps** > **Microsoft 365** (Office 365)  
     - **Conditions:**  
         - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
         - **Client apps:** Select **Browser**  
@@ -79,7 +79,7 @@ Level 2 adds continuous verification with risk-based signals and requires that d
 3. Configure the policy for the `SEB-Level2-Users` group:
 
     - **Name:** CA Edge Level 2 – Enhanced Zero Trust  
-    - **Target resources:** **Cloud apps** > **All cloud apps**  
+    - **Target resources: Cloud apps** > **All cloud apps**  
     - **Conditions:**  
         - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
         - **Client apps:** Select **Browser**  
@@ -110,7 +110,7 @@ Level 3 enforces the strictest access posture by allowing only managed, complian
 3. Configure the policy for the `SEB-Level3-Users` group:
 
     - **Name:** CA Edge Level 3 – High Zero Trust  
-    - **Target resources:** **Cloud apps** > **All cloud apps**  
+    - **Target resources: Cloud apps** > **All cloud apps**  
     - **Conditions:**  
         - **Device platforms:** Include **Windows**, **Android**, and **iOS**  
         - **Client apps:** Select **Browser**  
@@ -145,7 +145,7 @@ Use this companion policy to ensure that desktop applications on Windows devices
 3. Configure the policy and assign it to the `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` groups:
 
     - **Name:** CA Desktop Apps – Compliance Required  
-    - **Target resources:** **Cloud apps** > **Microsoft 365**  
+    - **Target resources: Cloud apps** > **Microsoft 365**  
     - **Conditions:**  
         - **Device platforms:** Include **Windows**  
         - **Client apps:** Select **Mobile apps and desktop clients**  

@@ -151,8 +151,7 @@ For more information related to security baselines and framework alignment, see:
 
 - [Security baselines overview](/mem/intune/protect/security-baselines)
 - [Windows security baselines](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)  
-- [Microsoft Defender for Endpoint Security Configuration Framework](/microsoft-365/security/defender-endpoint/security-configuration-framework)  
-- [Windows security baselines FAQ](/windows/security/threat-protection/windows-security-baselines-faq)
+- [Windows security baselines FAQ](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines)
 
 ## Next steps
 

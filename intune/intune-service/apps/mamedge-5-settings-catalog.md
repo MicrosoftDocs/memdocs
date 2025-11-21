@@ -62,11 +62,11 @@ Level 1 configuration provides foundational browser security controls while main
 |-----------|---------|-------|----------------|
 | Microsoft Edge\SmartScreen settings | Configure Microsoft Defender SmartScreen | Enabled | [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-browser-policies/smartscreenenabled) |
 | Microsoft Edge\Automatic HTTPS | Enable automatic HTTPS | Enabled | [Enable automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
-| Microsoft Edge\Content settings | Block third party cookies | Enabled | [Block third party cookies](/deployedge/microsoft-edge-browser-policies/thirdpartycookiesblocked) |
+| Microsoft Edge\Content settings | Block third party cookies | Enabled | [Block third party cookies](/deployedge/microsoft-edge-browser-policies/blockthirdpartycookies) |
 | Microsoft Edge\Content settings | Configure cookies | Disabled | [Configure cookies](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) |
 | Microsoft Edge\Content settings | Default pop-up window setting | Do not allow any site to show popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
 | Microsoft Edge\Content settings | Default notification setting | Do not allow any site to show desktop notifications (2) | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
-| Microsoft Edge\Content settings | Default geolocation setting | Don’t allow any site to track users’ physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationbehavior) |
+| Microsoft Edge\Content settings | Default geolocation setting | Don’t allow any site to track users’ physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
 | Microsoft Edge\Content settings | Allow or block video capture | Enabled | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) |
 | Microsoft Edge\Content settings | Allow or block audio capture | Enabled | [Allow or block audio capture](/deployedge/microsoft-edge-browser-policies/audiocaptureallowed) |
 | Microsoft Edge\Privacy & data protection | Block tracking of users' web-browsing activity | Strict (3) | [Block tracking of users' web-browsing activity](/deployedge/microsoft-edge-browser-policies/trackingprevention) |
@@ -75,7 +75,7 @@ Level 1 configuration provides foundational browser security controls while main
 | Microsoft Edge\Privacy & data protection | Enable search suggestions | Disabled | [Enable search suggestions](/deployedge/microsoft-edge-browser-policies/searchsuggestenabled) |
 | Microsoft Edge\Privacy & data protection | Send required and optional diagnostic data about browser usage | Off (0) | [Send required and optional diagnostic data about browser usage](/deployedge/microsoft-edge-browser-policies/diagnosticdata) |
 | Microsoft Edge\Privacy & data protection | Disable saving browser history | Enabled | [Disable saving browser history](/deployedge/microsoft-edge-browser-policies/savingbrowserhistorydisabled) |
-| Microsoft Edge\Privacy & data protection | Enable the Collections feature | Disabled | [Enable the Collections feature](/deployedge/microsoft-edge-browser-policies/browserdatacollectionenabled) |
+| Microsoft Edge\Privacy & data protection | EdgeCollectionsEnabled | Disabled | [Enable the Collections feature](/deployedge/microsoft-edge-browser-policies/edgecollectionsenabled) |
 | Microsoft Edge\Privacy Sandbox | Configure Do Not Track | Disabled | [Configure Do Not Track](/deployedge/microsoft-edge-browser-policies/configuredonottrack) |
 | Microsoft Edge\Privacy Sandbox | Enforce Google SafeSearch | Enabled | [Enforce Google SafeSearch](/deployedge/microsoft-edge-browser-policies/forcegooglesafesearch) |
 | Microsoft Edge\Privacy Sandbox | Enforce Bing SafeSearch | Enabled, Configure strict search restrictions in Bing | [Enforce Bing SafeSearch](/deployedge/microsoft-edge-browser-policies/forcebingsafesearch) |
@@ -98,11 +98,11 @@ Level 1 configuration provides foundational browser security controls while main
 | Microsoft Edge\Import Controls | Allow importing of browser settings |  | [Allow importing of browser settings](/deployedge/microsoft-edge-browser-policies/importbrowsersettings) |
 | Microsoft Edge\Startup, home page and new tab page | Configure the home page URL | https://copilot.microsoft.com/ | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
 | Microsoft Edge\Startup, home page and new tab page | Show Home button on toolbar | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-| Microsoft Edge\Startup, home page and new tab page | Configure the new tab page URL | https://copilot.microsoft.com/ | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) |
+| Microsoft Edge\Startup, home page and new tab page | Configure the new tab page URL | https://copilot.microsoft.com/ | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
 | Microsoft Edge\Startup, home page and new tab page | Allow quick links on the new tab page | Enabled | [Allow quick links on the new tab page](/deployedge/microsoft-edge-browser-policies/newtabpagequicklinksenabled) |
 | Microsoft Edge\Startup, home page and new tab page | Hide the First-run experience and splash screen | Enabled | [Hide the First-run experience and splash screen](/deployedge/microsoft-edge-browser-policies/hidefirstrunexperience) |
 | Microsoft Edge\Network settings | Control the mode of DNS-over-HTTPS | Enable > Enable DNS-over-HTTPS without insecure fallback | [Control the mode of DNS-over-HTTPS](/deployedge/microsoft-edge-browser-policies/dnsoverhttpsmode) |
-| Microsoft Edge\Network settings | Specify URI template of desired DNS-over-HTTPS resolver | https://cloudflare-dns.com/dns-query | [Specify URI template of desired DNS-over-HTTPS resolver](/deployedge/microsoft-edge-browser-policies/dnsoverhttpstemplates) |
+| Microsoft Edge\Network settings | Specify URI template of desired DNS-over-HTTPS resolver | `https://cloudflare-dns.com/dns-query` | [Specify URI template of desired DNS-over-HTTPS resolver](/deployedge/microsoft-edge-browser-policies/dnsoverhttpstemplates) |
 | Microsoft Edge\Network settings | DNS interception checks enabled | Enabled | [DNS interception checks enabled](/deployedge/microsoft-edge-browser-policies/dnsinterceptionchecksenabled) |
 | Microsoft Edge\Network settings | Allow QUIC protocol | Disabled | [Allow QUIC protocol](/deployedge/microsoft-edge-browser-policies/quicallowed) |
 | Microsoft Edge\Extensions | Control which extensions cannot be installed | ["external_component", "external_pref", "external_registry", "external_policy_download"] | [Control which extensions cannot be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallblocklist) |
@@ -150,7 +150,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 
 | Category | Setting | Value | Documentation |
 |-----------|---------|--------|----------------|
-| Microsoft Edge\SmartScreen settings | Configure Microsoft Defender SmartScreen to block potentially unwanted apps | Enabled | [Configure Microsoft Defender SmartScreen to block potentially unwanted apps](/deployedge/microsoft-edge-browser-policies/smartscreenpuadetectionenabled) |
+| Microsoft Edge\SmartScreen settings | Configure Microsoft Defender SmartScreen to block potentially unwanted apps | Enabled | [Configure Microsoft Defender SmartScreen to block potentially unwanted apps](/deployedge/microsoft-edge-browser-policies/smartscreenpuaenabled) |
 | Microsoft Edge\Additional | Enable Application Bound Encryption | Enabled | [Enable Application Bound Encryption](/deployedge/microsoft-edge-browser-policies/applicationboundencryptionenabled) |
 | Microsoft Edge\Additional | Disable synchronization of data using Microsoft sync services | Enabled | [Disable synchronization of data using Microsoft sync services](/deployedge/microsoft-edge-browser-policies/syncdisabled) |
 | Microsoft Edge\Additional | Limit cookies from specific websites to the current session | Enabled | [Limit cookies from specific websites to the current session](/deployedge/microsoft-edge-browser-policies/cookiessessiononlyforurls) |
@@ -248,7 +248,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 | Microsoft Edge\Data Loss Prevention | Allow clipboard use on specific sites | Enabled, *.company.com | [Allow clipboard use on specific sites](/deployedge/microsoft-edge-browser-policies/clipboardallowedforurls) |
 | Microsoft Edge\Data Loss Prevention | Block clipboard use on specific sites | Enabled, * | [Block clipboard use on specific sites](/deployedge/microsoft-edge-browser-policies/clipboardblockedforurls) |
 | Microsoft Edge\Data Loss Prevention | Control printing | Disabled | [Control printing](/deployedge/microsoft-edge-browser-policies/printingenabled) |
-| Microsoft Edge\Data Loss Prevention | Force Microsoft Defender SmartScreen checks on downloads from trusted sources | Enabled | [Force Microsoft Defender SmartScreen checks on downloads from trusted sources](/deployedge/microsoft-edge-browser-policies/smartscreenpromptoverrideenabled) |
+| Microsoft Edge\Data Loss Prevention | Force Microsoft Defender SmartScreen checks on downloads from trusted sources | Enabled | [Force Microsoft Defender SmartScreen checks on downloads from trusted sources](/deployedge/microsoft-edge-browser-policies/smartscreenfortrusteddownloadsenabled) |
 | Microsoft Edge\Content settings | Minimum TLS version enabled | TLS 1.2 | [Minimum TLS version enabled](/deployedge/microsoft-edge-browser-policies/sslversionmin) |
 | Microsoft Edge\Privacy | Allow user feedback | Disabled | [Allow user feedback](/deployedge/microsoft-edge-browser-policies/userfeedbackallowed) |
 | Microsoft Edge\Privacy | URL reporting in Edge diagnostic data enabled | Disabled | [URL reporting in Edge diagnostic data enabled](/deployedge/microsoft-edge-browser-policies/urldiagnosticdataenabled) |
@@ -349,9 +349,9 @@ Level 1 establishes foundational browser protections for enrolled macOS devices 
 | Microsoft Edge | Automatically select client certificates for these sites | ["*.company.com"] | [Automatically select client certificates](/deployedge/microsoft-edge-browser-policies/autoselectcertificateforurls) |
 | Microsoft Edge | Control the mode of DNS-over-HTTPS | secure (secure) = Enable DNS-over-HTTPS without insecure fallback | [Control the mode of DNS-over-HTTPS](/deployedge/microsoft-edge-browser-policies/dnsoverhttpsmode) |
 | Microsoft Edge | Allow QUIC protocol | Disabled for security | [Allow QUIC protocol](/deployedge/microsoft-edge-browser-policies/quicallowed) |
-| Microsoft Edge | Configure the home page URL | https://portal.company.com | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
+| Microsoft Edge | Configure the home page URL | `https://portal.company.com` | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
 | Microsoft Edge | Show Home button on toolbar | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-| Microsoft Edge | Configure the new tab page URL | https://portal.company.com | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) |
+| Microsoft Edge | Configure the new tab page URL | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
 | Microsoft Edge | Hide the First-run experience and splash screen | Enabled | [Hide the First-run experience](/deployedge/microsoft-edge-browser-policies/hidefirstrunexperience) |
 | Microsoft Edge | Enable saving passwords to the password manager | Disabled | [Enable saving passwords to the password manager](/deployedge/microsoft-edge-browser-policies/passwordmanagerenabled) |
 | Microsoft Edge | Enable AutoFill for addresses | Disabled | [Enable AutoFill for addresses](/deployedge/microsoft-edge-browser-policies/autofilladdressenabled) |

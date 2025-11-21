@@ -600,8 +600,8 @@ Level 1 configuration provides foundational browser security controls while main
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
-| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
 | EdgeMyApps | true | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
 | EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
@@ -661,8 +661,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
-| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.PasswordSSO | true | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
 | EdgeMyApps | true | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
 | EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
@@ -723,8 +723,8 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 
 | Name | Value | Documentation |
 |------|-------|---------------|
-| com.microsoft.intune.mam.managedbrowser.PasswordSSO | false | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
-| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/microsoft-365/solutions/apps-config-step-4?view=o365-worldwide#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.PasswordSSO | false | [Password single sign-on](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
+| com.microsoft.intune.mam.managedbrowser.SmartScreenEnabled | true | [SmartScreen enabled](/microsoft-365/solutions/apps-config-step-4#general-app-configuration-settings) |
 | EdgeMyApps | false | [Enable EdgeMyApps](/deployedge/microsoft-edge-mobile-policies#edgemyapps) |
 | EdgeDefaultHTTPS | true | [Default HTTPS enforced](/deployedge/microsoft-edge-mobile-policies#edgedefaulthttps) |
 | EdgeDisableShareUsageData | true | [Disable sharing usage data](/deployedge/microsoft-edge-mobile-policies#edgedisableshareusagedata) |
