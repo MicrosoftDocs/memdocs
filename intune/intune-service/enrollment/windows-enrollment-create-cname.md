@@ -1,7 +1,7 @@
 ---
 title: Enable autodiscovery of Intune enrollment server
 description: Simplify enrollment for users by enabling automatic discovery of the Intune enrollment server.
-ms.date: 02/13/2025
+ms.date: 11/21/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -86,7 +86,7 @@ Although creating CNAME DNS entries is optional, CNAME records make enrollment e
 |CNAME | EnterpriseEnrollment.contoso.com | EnterpriseEnrollment-s.manage.microsoft.us | One hour |
 |CNAME | EnterpriseRegistration.contoso.com | EnterpriseRegistration.windows.net | One hour |
 
-For Intune operated in China and by 21Vianet use the following: 
+For Intune operated in China and by 21Vianet, use the following details.   
 
 | Type | Host name | Points to | TTL |
 | --- | --- | --- | --- |
