@@ -261,7 +261,6 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
     | DeveloperToolsAvailability | Disallowed (2) | [Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) |
     | NetworkPredictionOptions | Don't predict (2) | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) |
     | EdgeCollectionsEnabled | Disabled | [Enable the Collections feature](/deployedge/microsoft-edge-browser-policies/edgecollectionsenabled) |
-    | AllowGamesMenu | Disabled | [Allow users to access the games menu](/deployedge/microsoft-edge-browser-policies/allowgamesmenu) |
 
 8. Select **Next**.  
 9. For **Assignments**, assign to **SEB-Level3-Users** group.  
@@ -495,7 +494,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 | DefaultGeolocationSetting | 2 | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
 | BiometricAuthenticationBeforeFilling | true | [Biometric authentication before filling](/deployedge/microsoft-edge-browser-policies/biometricauthenticationbeforefilling) |
 | PasswordManagerEnabled | false | [Enable password manager](/deployedge/microsoft-edge-mobile-policies#passwordmanagerenabled) |
-| EdgeDisabledFeatures | inprivate&#124;autofill&#124;password&#124;translator&#124;readaloud&#124;drop&#124;coupons&#124;extensions&#124;copilot&#124;collections&#124;myapps | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) |
+| EdgeDisabledFeatures | inprivate&#124;autofill&#124;password&#124;translator&#124;readaloud&#124;drop&#124;<br>coupons&#124;extensions&#124;copilot&#124;collections&#124;myapps | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) |
 | EdgeBrandLogo | true | [Enable Edge brand logo](/deployedge/microsoft-edge-mobile-policies#edgebrandlogo) |
 | EdgeBrandColor | `#0078d4` | [Set Edge brand color](/deployedge/microsoft-edge-mobile-policies#edgebrandcolor) |
 | DefaultSearchProviderEnabled | true | [Enable default search provider](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderenabled) |
@@ -745,7 +744,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 | DefaultSearchProviderSearchURL | `https://search.company.com?q={searchTerms}` | [Default search provider search URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersearchurl) |
 | DefaultSearchProviderSuggestURL | `https://search.company.com/suggest?q={searchTerms}` | [Default search provider suggest URL](/deployedge/microsoft-edge-mobile-policies#defaultsearchprovidersuggesturl) |
 | DefaultSearchProviderKeyword | company | [Default search provider keyword](/deployedge/microsoft-edge-mobile-policies#defaultsearchproviderkeyword) |
-| EdgeDisabledFeatures | inprivate\|autofill\|password\|translator\|readaloud\|drop\|coupons\|extensions\|copilot\|collections\|myapps\|share | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) |
+| EdgeDisabledFeatures | inprivate\|autofill\|password\|translator\|readaloud\|drop\|<br>coupons\|extensions\|copilot\|collections\|myapps\|share | [Disable features](/deployedge/microsoft-edge-mobile-policies#edgedisabledfeatures) |
 | EdgeBlockSignInEnabled | true | [Block sign-in enabled](/deployedge/microsoft-edge-browser-policies/edgeblocksigninenabled) |
 
 8. Expand **Edge configuration settings** and configure:
