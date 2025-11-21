@@ -19,20 +19,20 @@ The end user experience in Microsoft Edge for Business is designed to be product
 
 1. **Visually distinct work browsing experience**: Microsoft Edge for Business provides a visually distinct work browsing experience with refreshed visual treatment. This experience helps users easily distinguish between their work and personal browsing sessions.
 
-2. **Enterprise personal browsing experience**: Microsoft Edge for Business offers a lightly managed personal browsing experience that lets users access their favorite nonwork sites and services without compromising safety for the enterprise. It also automatically switches from work-related navigation into the work browser.
+2. **Enterprise personal browsing experience**: Microsoft Edge for Business offers a lightly managed personal browsing experience that lets users access their favorite nonwork sites and services without compromising safety for the enterprise.
 
-3. **Automatic switching**: This feature helps enforce context separation between work and personal browsing. It ensures that work-related content doesn't get intermingled with personal browsing, preventing users from accidentally sharing sensitive information with unintended audiences.
+3. **Context separation**: Work and personal browsing data are kept separate to reduce the risk of sharing sensitive information with unintended audiences.
 
-4. **Security**: It has powerful, built-in defenses against phishing and malware and natively supports hardware isolation on Windows.
+4. **Security**: It has built-in defenses against phishing and malware and natively supports hardware isolation on Windows.
 
-Microsoft Edge for Business provides dedicated work browsing experience that is visually distinct, secure, and user-friendly. It separates work and personal browsing into dedicated browser windows with their own favorites, separate cache, and storage locations.
+Microsoft Edge for Business provides dedicated work and personal browsing experiences with separate favorites, cache, and storage locations.
 
 ## Onboarding experience
 
-To evaluate the onboarding experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. It's important to consider that the device can't be managed by any MDM solution, otherwise you won't be able to enroll into the MAM Service.
+To evaluate the onboarding experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. The device can't be managed by any MDM solution, otherwise it won't be able to enroll into the MAM service.
 
 1. Locate **Microsoft Edge** on the desktop.
-2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you see a user icon at the top, left of the browser window.
+2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you see a user icon at the top-left of the browser window.
 3. Select the user icon to display your managed account details.
 4. Select **Sign in to sync data**.
 
@@ -44,44 +44,42 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 
 6. Enter your **password** for the account.
 
-	> [!NOTE]
-	> The sign-in process within your organization might vary. Regardless of the method, completing the sign-in process is essential to add your user profile to Microsoft Edge.
-    >
-    > Always keep your password secure.
+    > [!NOTE]
+    > The sign-in experience varies by organization. Completing the sign-in process is required to add your work profile to Microsoft Edge.
 
     > [!NOTE]
-	> A new user experience and a new admin property in public preview is rolling out November and December 2025. You have the option to control if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the work or school account registration flow (referring to [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506)). To control the behavior of the flow, use the Disable MDM enrollment when adding work or school account setting. Configure the new admin property to control the via Windows Autoenrollment policies and learn more about the setting at [Enable MDM automatic enrollment for Windows - Microsoft Intune | Microsoft Learn](../enrollment/windows-enroll.md).
+    > A user experience update and admin property for controlling automatic MDM enrollment is rolling out in late 2025. This setting determines whether users on Entra ID–registered devices are prompted to MDM-enroll during the “Add your work or school account” flow. To control this behavior, configure the **Disable MDM enrollment when adding a work or school account** setting. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).
 
-7. Select **Yes** to sign in and register the device. You should not select the option **No, sign in the app only** as this will not enroll or ensure MAM is operational for the browser. 
+7. Select **Yes** to sign in and register the device. Do not select **No, sign in to the app only**, as this prevents enrollment and MAM from being applied to the browser.
 
 8. Wait until you see the message, **You're all set!** Then, select **Done.**
 
-9. Confirm that you're signed-in by clicking on the user icon again.
+9. Confirm that you're signed in by selecting the user icon again.
 
 > [!NOTE]
-> Now that enrollment is complete your browser is protecting your corporate data.
+> After enrollment is complete, the browser begins protecting your corporate data.
 
 ## App protection notifications
 
-Intune notifies you with various messages if there's a failure. Here are the scenarios:
+Intune displays notifications when a policy requirement isn’t met. The following messages can appear:
 
-- **App access blocked message:** This message appears when your applied app protection policy failed the MDT threat level check.
+- **App access blocked message:** Appears when the app protection policy fails the device threat level check.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png" alt-text="App Access Blocked in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png":::
 
-- **Your organization prevents you from copying content from this website:** This message appears when you attempt to move data in a way that your DLP policy blocked.
+- **Your organization prevents you from copying content from this website:** Appears when a data movement action is blocked by your DLP policy.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png" alt-text="Copying prevention by app protection policy in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png":::
 
-- **Your organization prevents you from printing this website:** This message appears when your applied Level 3 app protection policy failed the printing check.
+- **Your organization prevents you from printing this website:** Appears when printing is blocked by the applied Level 3 policy.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png" alt-text="Printing prevention by app protection policy in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png":::
 
-- **Your organization prevents you from downloading this file:** This message appears when your applied Level 3 app protection policy failed downloading apps check.
+- **Your organization prevents you from downloading this file:** Appears when downloads are blocked by the applied Level 3 policy.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png" alt-text="Download prevention by app protection policy in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png":::
 
-- **Offline Grace Period Expired:** This message appears when Intune determines that you have been logged in for an extended period without use.
+- **Offline Grace Period Expired:** Appears when Intune determines the user has been offline longer than the allowed period.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png" alt-text="Offline Grace Period Expired in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png":::
 
