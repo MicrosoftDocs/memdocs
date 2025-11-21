@@ -90,7 +90,7 @@ Level 2 adds continuous verification with risk-based signals and requires that d
     - **Grant:**  
         - **Require multifactor authentication**  
         - **Require app protection policy**  
-    -     **Require device to be marked as compliant**  
+        - **Require device to be marked as compliant**  
     - **Session:**  
         - **Use Conditional Access App Control** > **Monitor only**  
         - **Sign-in frequency:** Set to **Every 4 hours**  
