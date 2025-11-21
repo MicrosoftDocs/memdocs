@@ -114,7 +114,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 |------|-------|---------------|
 | HomepageLocation | `https://portal.company.com` | [Configure the home page URL](/deployedge/microsoft-edge-browser-policies/homepagelocation) |
 | ShowHomeButton | Enabled | [Show Home button on toolbar](/deployedge/microsoft-edge-browser-policies/showhomebutton) |
-| NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpageurl) |
+| NewTabPageLocation | `https://portal.company.com` | [Configure the new tab page URL](/deployedge/microsoft-edge-browser-policies/newtabpagelocation) |
 | RestoreOnStartup | Open the new tab page (5) | [Action to take on startup](/deployedge/microsoft-edge-browser-policies/restoreonstartup) |
 | HTTPSOnlyMode | Enabled | [Configure Automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
 | DefaultPopupsSetting | Do not allow popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
@@ -167,8 +167,8 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 | VideoCaptureAllowed | Disabled | [Allow or block video capture](/deployedge/microsoft-edge-browser-policies/videocaptureallowed) |
 | DefaultNotificationsSetting | Block (2) | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
 | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
-| UsbAllowDevicesForUrls | `[]` | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usballowdevicesforurls) |
-| UsbBlockDevicesForUrls | `[{"urls": ["*"], "devices": [{"vendor_id": "*", "product_id": "*"}]}]` | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/usbblockdevicesforurls) |
+| WebUsbAllowDevicesForUrls | `[]` | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusballowdevicesforurls) |
+| WebUsbBlockedForUrls | `[{"urls": ["*"], "devices": [{"vendor_id": "*", "product_id": "*"}]}]` | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusbblockedforurls) |
 | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) | [Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) |
 
 8. Select **Next**.  
@@ -242,7 +242,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
     | LocalProvidersEnabled | Disabled | [Allow suggestions from local providers](/deployedge/microsoft-edge-browser-policies/localprovidersenabled) |
     | DefaultNotificationsSetting | Block (2) | [Default notification setting](/deployedge/microsoft-edge-browser-policies/defaultnotificationssetting) |
     | DefaultGeolocationSetting | Don't allow sites to track users' physical location (2) | [Default geolocation setting](/deployedge/microsoft-edge-browser-policies/defaultgeolocationsetting) |
-    | WebUsbAllowDevicesForUrls | [] | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusballowdevicesforurls) |
+    | WebUsbBlockedForUrls | [] | [Allow WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusballowdevicesforurls) |
     | WebUsbBlockDevicesForUrls | [{"urls":["*"],"devices":[{"vendor_id":"*","product_id":"*"}]}] | [Block WebUSB on specific sites](/deployedge/microsoft-edge-browser-policies/webusbblockedforurls) |
     | WebRtcLocalhostIpHandling | Disable non-proxied UDP (default_public_interface_only) | [Restrict exposure of local IP address by WebRTC](/deployedge/microsoft-edge-browser-policies/webrtclocalhostiphandling) |
     | URLAllowlist | ["*.company.com", "*.microsoft.com", "*.office.com"] | [Define a list of allowed URLs](/deployedge/microsoft-edge-browser-policies/urlallowlist) |
@@ -261,7 +261,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
     | DeveloperToolsAvailability | Disallowed (2) | [Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) |
     | NetworkPredictionOptions | Don't predict (2) | [Enable network prediction](/deployedge/microsoft-edge-browser-policies/networkpredictionoptions) |
     | EdgeCollectionsEnabled | Disabled | [Enable the Collections feature](/deployedge/microsoft-edge-browser-policies/edgecollectionsenabled) |
-    | GameMenuEnabled | Disabled | [Allow users to access the games menu](/deployedge/microsoft-edge-browser-policies/gamemenuenabled) |
+    | AllowGamesMenu | Disabled | [Allow users to access the games menu](/deployedge/microsoft-edge-browser-policies/allowgamesmenu) |
 
 8. Select **Next**.  
 9. For **Assignments**, assign to **SEB-Level3-Users** group.  
