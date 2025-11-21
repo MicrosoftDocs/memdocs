@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/14/2025
+ms.date: 11/19/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,58 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of November 17, 2025
+
+### Device management
+
+#### Security Copilot in Intune agents are available for public preview <!-- 32766422 35360466 35100315 35320958 -->
+
+Security Copilot agents in Intune are AI-powered assistants that specialize in specific scenarios. The Intune agents are available in the Intune admin center > **Agents**, and are available for Security Copilot users.
+
+The following Intune agents are available:
+
+- The **[Change Review Agent](../../agents/change-review-agent.md)** evaluates Multi Admin Approval requests for Windows PowerShell scripts on Windows devices. It provides risk-based recommendations and contextual insights to help admins understand script behavior and associated risks.
+
+  These insights can help Intune admins make informed decisions more quickly about whether to approve or deny requests. This agent supports Intune-managed devices running Windows.
+
+- The **[Device Offboarding Agent](../../agents/device-offboarding-agent.md)** identifies stale or misaligned devices across Intune and Microsoft Entra ID. It provides actionable insights and requires admin approval before offboarding any devices. This agent complements existing Intune automation by showing insights and handling ambiguous cases where automated cleanup isn't enough.
+
+  The agent supports Intune-managed devices running Windows, iOS/iPadOS, macOS, Android, and Linux. During public preview, admins can directly disable Microsoft Entra ID objects, with additional remediation steps provided as guidance.
+
+- The **[Policy Configuration Agent](../../agents/policy-configuration-agent.md)** analyzes uploaded documents or industry benchmarks and automatically identifies matching Intune settings. Admins can upload their requirements, like compliance standards or internal policy documents, and the agent intelligently shows relevant settings from the Intune settings catalog.
+
+  The agent also guides you through policy creation and helps you configure each setting that best suits your organization's needs. This agent supports devices running Windows.
+
+To learn more, see:
+
+- [Security Copilot agents in Intune](../../agents/index.md)
+
+#### Intune support for iVerify as a mobile threat defense partner<!-- 35838315 -->
+
+You can now use iVerify Enterprise as a mobile threat defense partner (MTD) for enrolled devices that run the following platforms:  
+
+- Android 9.0 and later
+- iOS/iPadOS 15.0 and later
+
+To learn more about this support, see [Set up iVerify Mobile Threat Defense Connector](../protect/iverify-mobile-threat-defense-connector.md).
+
+### Tenant administration
+
+#### Manage tasks and requests from the centralized Admin tasks node in Microsoft Intune (public preview)<!-- 3542038 -->
+
+The new **Admin tasks** node in the Intune admin center provides a centralized view to discover, organize, and act on security tasks and user elevation requests. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention—without navigating across multiple nodes.
+
+The following task types are supported:
+
+- Endpoint Privilege Management file elevation requests
+- Microsoft Defender security tasks
+- Multi Admin Approval requests
+
+Intune only shows tasks you have permission to manage. When you select a task, Intune opens the same interface and workflow you'd use if managing the task from its original location. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
+
+For more information, see [Admin tasks](../fundamentals/admin-tasks.md).
+
 ## Week of November 10, 2025 (Service release 2511)
 
 ### Microsoft Intune Suite
@@ -65,17 +117,6 @@ You can use RSS to be notified when this page is updated. For more information, 
 When viewing Endpoint Privilege Management [elevation requests](/intune/intune-service/protect/epm-support-approved#about-support-approved-elevations), applicable scope tags are now enforced. This means administrators can view and manage only the requests for devices and users that fall within their assigned scope. This change helps maintain administrative boundaries and strengthen security. Previously, admins with permissions to manage elevation requests could view all elevation requests, regardless of scope.
 
 ### App management
-
-#### PowerShell script installer support for Win32 apps <!-- 34496511 -->
-
-When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
-
-For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
 
 #### More volume options available in Managed Home Screen <!-- 16462284 -->
 
@@ -110,6 +151,20 @@ For more information about Managed Google Play store layout options, see [Approv
 Most app updates complete automated validation within 24 hours. Updates that require manual vendor testing or approval typically complete within seven days.
 
 For more information, see [Enterprise App Management overview](../apps/apps-enterprise-app-management.md).
+
+#### New cut, copy, and paste options for Windows app protection <!-- 25427327 -->
+
+Intune adds two new values to the **Allow cut, copy and paste for** setting in Windows app protection policies (starting with Microsoft Edge) to give admins more control over data movement:
+
+- Org data destinations and any source: Users can paste from any source into the org context, and can cut/copy only to org destinations.  
+- Org data destinations and org data sources: Users can cut/copy/paste only within the org context.
+
+These options extend familiar mobile APP data-transfer controls to Windows, helping prevent data leaks on unmanaged devices while preserving productivity. For more information, see [App protection policies overview](../apps/app-protection-policy.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+>- Windows
 
 ### Device configuration
 
@@ -159,6 +214,8 @@ There are new settings (**Devices** > **Manage devices** > **Configuration** > *
 
 - **Block assist content sharing with privileged apps**: If **True**, this setting blocks assist content, like screenshots and app details, from being sent to a privileged app, like an assistant app. The setting can be used to block the **Circle to Search** AI feature.
 
+For some guidance on managing AI features on Android devices, see [Manage AI on Android with Intune - A Guide for IT Admins](/intune/solutions/ai/manage-ai-android).
+
 Applies to:
 
 - Android Enterprise corporate-owned devices with a work profile (COPE) > Work profile level
@@ -182,37 +239,22 @@ The incomplete user enrollments report has been removed and is no longer functio
 - getEnrollmentAbandonmentSummaryReport
 - getEnrollmentFailureDetailsReport
 
-Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).
-
-#### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
-
-You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant. 
-
-The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
-
- - **App Store** (iOS/iPadOS 14.3+)
- - **Camera button** (iOS/iPadOS 18+)
- - **Web content filtering** (iOS/iPadOS 18.2+)
- - **Safety and handling** (iOS/iPadOS 18.4+)
- - **Multitasking** (iOS/iPadOS 26+)
- - **OS Showcase** (iOS/iPadOS 26+)
-
-The screens you can skip during macOS enrollment include:
-
-   - **App Store** (macOS 11.1+)
-   - **Get Started** (macOS 15+)
-   - **Software update** (macOS 15.4+)
-   - **Additional privacy settings** (macOS 26+)
-   - **OS Showcase** (macOS 26.1+)
-   - **Update completed** (macOS 26.1+)
-   - **Get Started** (macOS 15+)
-
-For more information about available Setup Assistant skipkeys, see:
-
-- [Set up automated device enrollment for iOS/iPadOS]( ../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)
-- [Set up automated device enrollment for]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+Scripts or automation using these Graph APIs will stop working now that the report has been removed. In place of this report, we recommend using the enrollment failures report. For more information, see [View enrollment reports](../enrollment/view-enrollment-reports.md#enrollment-failures-report).  
 
 ### Device management 
+
+#### Query and results improvements to Explorer feature with Security Copilot in Intune <!--33987602-->
+
+With your Security Copilot license, you can query your Intune data using the **[Explorer in Intune](../copilot/copilot-intune-explorer.md)** feature. 
+
+When you create your queries, you have more filter options. For example:
+
+- Queries with a number operator let you choose equal, greater than, and less than values.
+- Queries that forced you to choose one option, like platform, allow you to select multiple options.
+
+In the query results, there are also more columns available to view your data.
+
+To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
 
 #### Device Management Type assignment filter property supports Android enrollment options for Managed Devices<!-- 33016364 -->
 
@@ -265,7 +307,7 @@ Microsoft Tunnel uses the Microsoft Defender client app to provide Android devic
 - Prevents further use of Tunnel until the device is determined to no longer be rooted
 - Sends a notification to the device user about the device status
 
-This capability is a feature of the Defender client on Android and doesn’t replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
+This capability is a feature of the Defender client on Android and doesn't replace the use of Intune compliance policies for Android to manage the settings like *Rooted devices*, *Play Integrity Verdict*, and *Require the device to be at or under the Device Threat Level*.
 
 For more information about features of Microsoft Tunnel, see [Overview of Microsoft Tunnel](/intune/intune-service/protect/microsoft-tunnel-overview#capabiltities).
 
@@ -285,7 +327,7 @@ For more information, see [Include and exclude app assignments in Microsoft Intu
 
 #### Support for user account context in Endpoint Privilege Management Elevation Rules<!-- 25617968 -->
 
-Endpoint Privilege Management (EPM) has a new option for elevation rules that runs the elevated file using the user’s context instead of a virtual account. The option is **Elevate as current user**.
+Endpoint Privilege Management (EPM) has a new option for elevation rules that runs the elevated file using the user's context instead of a virtual account. The option is **Elevate as current user**.
 
 With the *Elevate as current user* elevation type, files or processes that are elevated run under the signed-in user's own account, rather than a virtual account. This preserves the user's profile paths, environment variables, and personalized settings, helping to ensure that installers and tools that rely on the active user profile function correctly. Because the elevated process maintains the same user identity before and after elevation, audit trails remain consistent and accurate. Prior to elevation, the user is required to enter their credentials for Windows Authentication. This process supports multifactor authentication (MFA) for enhanced security.
 
@@ -497,15 +539,15 @@ To keep devices registered and compliant, users must download the latest version
 
 We've updated the Vulnerability Remediation Agent for Security Copilot, adding the following changes to the ongoing limited public preview:
 
-- **Role-based access control (RBAC) for Microsoft Defender** - We've updated the [RBAC guidance](../protect/vulnerability-remediation-agent.md#role-based-access-control-and-permissions) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
+- **Role-based access control (RBAC) for Microsoft Defender** - We've updated the [RBAC guidance](../../agents/vulnerability-remediation-agent.md#prerequisites) to reflect how RBAC is implemented in Microsoft Defender XDR. Guidance is now provided for configurations that use [**Unified RBAC**](/defender-xdr/manage-rbac) (a single set of permissions across services) and for [**granular RBAC**](/defender-endpoint/rbac) (customized permissions per service).
 
   When using granular RBAC configurations, ensure the agent's identity is scoped in Microsoft Defender to include all relevant device groups. The agent can't access or report on devices outside its assigned scope.
 
-- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../protect/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
+- **Agent Identity** – You can now [manually change the account that the agent uses as its identity](../../agents/vulnerability-remediation-agent.md#change-the-agent-identity). From the agents *Settings* tab, select **Choose another identity** to open a sign-in prompt. Enter and authenticate the new account. Ensure the new account has sufficient permission to access the Microsoft Defender Vulnerability Remediation data.
 
   Changes to the agent's identity won't affect the agent's run history, which remains available.
 
-These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
+These updates provide greater flexibility and control for organizations using the Vulnerability Remediation Agent in preview. To learn more about this Agent, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../agents/vulnerability-remediation-agent.md).
 
 ## Week of September 15, 2025 (Service release 2509)
 
@@ -811,7 +853,8 @@ If the Intune settings catalog contains relevant settings for the reported vulne
 
 If there are no recommended device configuration settings to deploy, the Configurations section indicates that no recommended settings catalog policy configurations are available.
 
-To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../protect/vulnerability-remediation-agent.md#agent-suggestions) in Vulnerability Remediation Agent for Security Copilot in Microsoft Intune.
+To learn more about Agent suggestions, remediation guidance, and the new recommended configurations, see [Agent suggestions](../../agents/vulnerability-remediation-agent-use.md#manage-agent-suggestions) in *Use the Vulnerability Remediation Agent*.
+
 
 ## Week of August 25, 2025
 
@@ -1450,7 +1493,7 @@ When run, this agent uses data from Microsoft Defender Vulnerability Management 
 
 This information empowers you with a current assessment of potential risk to your environment and guidance to help you decide which risk to address first.
 
-For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../protect/vulnerability-remediation-agent.md).
+For more information about this agent including prerequisites, see [Vulnerability Remediation Agent for Security Copilot in Microsoft Intune](../../agents/vulnerability-remediation-agent.md).
 
 ## Week of May 26, 2025 (Service release 2505)
 
@@ -1528,6 +1571,8 @@ For more information on Remote Help, see [Remote Help](../fundamentals/remote-he
 #### Detect rooted corporate-owned Android Enterprise devices<!--31672848 -->
 
 Configure compliance policies to detect if a corporate-owned Android Enterprise device is rooted. If Microsoft Intune detects that a device is rooted, you can mark it as noncompliant. This feature is now available for devices enrolled as fully managed, dedicated, or corporate-owned with a work profile. For more information, see [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md).
+
+To learn about root detection support for Microsoft Defender on Android, see Key capabilities in [Microsoft Defender for Endpoint](/defender-endpoint/mtd) in the Defender documentation, and the Defender for Endpoint blog [Native root detection support for Microsoft Defender on Android](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576).
 
 > [!div class="checklist"]
 > Applies to:

@@ -1,7 +1,7 @@
 ---
 title: "Remote Device Action: Wipe"
 description: Learn how to wipe, or factory reset, devices with Microsoft Intune.
-ms.date: 10/27/2025
+ms.date: 11/14/2025
 ms.topic: how-to
 zone_pivot_groups: c5fbc3ee-cfe5-494a-b441-d95cbed3128c
 ---
@@ -105,17 +105,23 @@ To factory reset a Zebra Android device, use one of the following methods:
 4. You can customize the wipe behavior with the following options:
 
     - **Wipe device, but keep enrollment state and associated user account**
-      - When selected, the wipe removes all MDM policies but retains user accounts and data. User settings are reset to default, and the device remains enrolled in Intune.
-      - When not selected, the wipe removes all user accounts, data, MDM policies, and settings. The device is reset to its factory default state.
+      - Resets the device to factory settings, while preserving the user data, user accounts, and important settings.\
+        To learn more about what data is preserved, see [How push-button reset features work](/windows-hardware/manufacture/desktop/how-push-button-reset-features-work#keep-my-files).
+      - MDM policies and settings are removed, but the device remains enrolled in Intune.
+      - Uses the [doWipePersistUserData](/windows/client-management/mdm/remotewipe-csp#dowipepersistuserdata) CSP node.
     - **Wipe device, and continue to wipe even if device loses power**
-      - Ensures the wipe continues even if the device loses power during the process. This prevents users from interrupting the wipe, which is useful in high-security scenarios such as lost or stolen devices.
-
+      - Resets the device to factory settings, deleting all user data, settings, and MDM policies.
+      - Overwrites the free space to prevent data recovery.
+      - Ensures the wipe continues even if the device loses power, preventing interruption—ideal for high-security scenarios such as lost or stolen devices.
+      - Uses the [doWipeProtected](/windows/client-management/mdm/remotewipe-csp#dowipeprotected) CSP node.
         > [!IMPORTANT]
-        > Selecting this option might prevent some devices from starting up again. The wipe process can interfere with boot recovery or     firmware protections, potentially leaving the device in an unrecoverable state. Use this option only on corporate-owned devices     where full data destruction is required and recovery procedures are in place.
+        > This option can prevent some devices from starting up again. The wipe process may interfere with boot recovery or firmware protections, leaving the device unrecoverable. Use only on corporate-owned devices where full data destruction is required and recovery procedures are in place.
+    - **No options selected**
+      - Resets the device to factory settings, deleting all user data, settings, and MDM policies.
+      - If the wipe is interrupted, the device attempts to roll back to its previous state. If rollback fails, the device may become unusable and require a full Windows reinstallation.
+      - Uses the [doWipe](/windows/client-management/mdm/remotewipe-csp#dowipe) CSP node.
 
-      - When not selected, if the wipe is interrupted, the device attempts to roll back to its previous state. If rollback fails, the device may become unusable and require a full reinstallation of Windows.
-
-5. To confirm the wipe, select **Yes**.
+5. To confirm the wipe, select **Wipe**.
 
 ::: zone-end
 ::: zone pivot="ios"
