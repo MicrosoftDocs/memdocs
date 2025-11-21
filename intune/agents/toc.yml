@@ -1,0 +1,36 @@
+items:
+- name: Overview
+  href: index.md
+  displayName: security copilot agent
+- name: Change Review Agent
+  items:
+  - name: Get started
+    href: change-review-agent.md
+    displayName: Change Review Agent
+  - name: Use the agent
+    href: change-review-agent-use.md
+    displayName: Change Review Agent
+- name: Device Offboarding Agent
+  items:
+  - name: Get started
+    href: device-offboarding-agent.md
+    displayName: Device Offboarding Agent
+  - name: Use the agent
+    href: device-offboarding-agent-use.md
+    displayName: Device Offboarding Agent
+- name: Policy Configuration Agent
+  items:
+  - name: Get started
+    href: policy-configuration-agent.md
+    displayName: Policy Configuration Agent
+  - name: Use the agent
+    href: policy-configuration-agent-use.md
+    displayName: Policy Configuration Agent
+- name: Vulnerability Remediation Agent
+  items:
+  - name: Get started
+    href: vulnerability-remediation-agent.md
+    displayName: Vulnerability Remediation Agent
+  - name: Use the agent
+    href: vulnerability-remediation-agent-use.md
+    displayName: Vulnerability Remediation Agent
