@@ -48,7 +48,7 @@ The following list shows the app platform type. It also shows which apps are mon
 | Windows (Modern Apps) | Only managed modern apps | All modern apps installed on the device | Every seven days from device enrollment |
 | Windows 8.1 | Only managed apps | Only managed apps | Every seven days from device enrollment |
 | Windows RT | Only managed apps | Only managed apps | Every seven days from device enrollment |
-| iOS/iPadOS | Only managed apps | All apps installed on the device except system apps | Every seven days from device enrollment |
+| iOS/iPadOS | Only managed apps | All apps installed on the device except system apps (On iOS/iPadOS 26 and later, All apps installed on the device) | Every seven days from device enrollment |
 | macOS | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android device administrator | Only managed apps | All apps installed on the device | Every seven days from device enrollment |
 | Android Enterprise personally owned enrollment | Managed apps in the work profile and system apps | Not applicable | Every seven days from device enrollment |
