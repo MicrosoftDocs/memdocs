@@ -57,7 +57,13 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of November 17, 2025
+## Week of November 17, 2025  
+
+### Devuce enrollment  
+
+#### Configure Windows Backup for Organizations <!--29202026 -->
+-----
+*Windows Backup for Organizations* is generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
 
 ### Device management
 
@@ -223,10 +229,6 @@ Applies to:
 - Android Enterprise corporate owned dedicated devices (COSU)
 
 ### Device enrollment  
-
-#### Configure Windows Backup for Organizations <!--29202026 -->
------
-*Windows Backup for Organizations* is generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).  
 
 #### New opt-in upgrade allows existing customers to move from managed Google Play accounts to Microsoft Entra ID accounts<!-- 30675087 --> 
 
