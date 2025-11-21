@@ -22,8 +22,6 @@ items:
   - name: Work from anywhere
     href: work-from-anywhere.md
     displayName: endpoint analytics
-- name: Advanced Analytics
-  href: ../advanced-analytics/toc.yml
 - name: Endpoint analytics in Microsoft Adoption Score
   href: adoption-score.md
   displayName: endpoint analytics
