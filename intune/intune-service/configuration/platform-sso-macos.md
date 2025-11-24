@@ -3,7 +3,6 @@ title: Configure Platform SSO for macOS devices
 description: Use Microsoft Intune to configure Platform SSO and deploy the configuration to your macOS devices. Platform SSO enables single sign-on (SSO) using Microsoft Entra ID with the Secure Enclave, smart card, or password authentication methods. You create a settings catalog policy to configure the settings. This article is a step-by-step guide to configure Platform SSO for macOS devices using Intune.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 11/24/2025
 ms.topic: how-to
 appliesto:
