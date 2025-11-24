@@ -73,6 +73,11 @@ This remote action supports the following items:
   - Trusted certificate
   - VPN
   - Wi-Fi
+  
+    > [!NOTE]
+    > DDM-based policies are not supported for this device action.
+    
+      - Wi-Fi
 ::: zone-end
 ::: zone pivot="android"
 - **Configuration profiles**: Intune-delivered profiles, including:
