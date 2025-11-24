@@ -95,14 +95,14 @@ For entities that include Android data, the following platforms are supported:
 
 | Property | Type | Description | Platform |
 |----|----|----|----|
-| BiosName | String | Name used to identify the BIOS instance. | Windows multi-device query |
-| Manufacturer | String | Manufacturer of this BIOS/software element. | Windows single device query, Windows multi-device query |
-| ReleaseDateTime | DateTime (UTC) | BIOS release date. | Windows single device query, Windows multi-device query |
-| SerialNumber | String | The assigned serial number of this BIOS element. | Windows single device query, Windows multi-device query |
-| SmBiosVersion | String | BIOS version as reported by SMBIOS. | Windows single device query, Windows multi-device query |
-| SoftwareElementId | String | Identifier for the BIOS instance | Android, iOS, iPadOS, macOS, Windows multi-device query |
-| SoftwareElementState | String | State of the BIOS instance. | Android, iOS, iPadOS, macOS, Windows multi-device query |
-| TargetOperatingSystem | String | Target operating system of the owning software element. | Android, iOS, iPadOS, macOS, Windows multi-device query |
+| `BiosName` | String | Name used to identify the BIOS instance. | Windows multi-device query |
+| `Manufacturer` | String | Manufacturer of this BIOS/software element. | Windows single device query, Windows multi-device query |
+| `ReleaseDateTime` | DateTime (UTC) | BIOS release date. | Windows single device query, Windows multi-device query |
+| `SerialNumber` | String | The assigned serial number of this BIOS element. | Windows single device query, Windows multi-device query |
+| `SmBiosVersion` | String | BIOS version as reported by SMBIOS. | Windows single device query, Windows multi-device query |
+| `SoftwareElementId` | String | Identifier for the BIOS instance | Android, iOS, iPadOS, macOS, Windows multi-device query |
+| `SoftwareElementState` | String | State of the BIOS instance. | Android, iOS, iPadOS, macOS, Windows multi-device query |
+| `TargetOperatingSystem` | String | Target operating system of the owning software element. | Android, iOS, iPadOS, macOS, Windows multi-device query |
 
 
 
@@ -305,7 +305,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `NetworkAdapter`
 
-> **Description**: Provides basic network adapter information.
+> **Description**: Provides basic network adapter information.\
 > **Supported Features**: Inventory, Device query for multiple devices.\
 > **Supported platforms**: Windows
 
@@ -441,9 +441,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `Time`
 
-> **Description**: Provides basic time information.
-
-**Supported Features**: Inventory, device query for multiple devices.\
+> **Description**: Provides basic time information.\
+> **Supported Features**: Inventory, device query for multiple devices.\
 > **Supported platforms**: Windows
 
 | Property | Type | Description | Supported platforms |
@@ -470,9 +469,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `VideoController`
 
-> **Description**: Provides video controller and graphics information.
-
-**Supported Features**: Inventory, Device query for multiple devices.\
+> **Description**: Provides video controller and graphics information.\
+> **Supported Features**: Inventory, Device query for multiple devices.\
 > **Supported platforms**: Windows
 
 | Property | Type | Description | Supported platforms |
