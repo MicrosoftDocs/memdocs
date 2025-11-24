@@ -31,6 +31,9 @@ items:
   - name: Device query for multiple devices
     href: device-query-multiple-devices.md
     displayName: advanced analytics
+- name: Data platform schema
+  href: schema.md
+  displayName: advanced analytics schema
 - name: Advanced Analytics Troubleshooting and Frequently Asked Questions
   href: troubleshoot.md
   displayName: advanced analytics

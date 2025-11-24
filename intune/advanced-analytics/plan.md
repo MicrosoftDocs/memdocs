@@ -13,7 +13,7 @@ ms.topic: concept-article
 
 For a successful deployment of Advanced Analytics, the following activities are recommended:
 
-- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](../data-platform/schema.md) to understand the full list of data captured.
+- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](../data-platform-schema.md) to understand the full list of data captured.
 - Establish escalation and support procedures for analytics findings.
 - Review and train staff on IT processes you aim to optimize with the implementation of Advanced Analytics. Examples include help desk triage, hardware refresh cycles and application updates. Think of this as a continuous improvement cycle, with faster issue resolution and proactive issue resolution.
 

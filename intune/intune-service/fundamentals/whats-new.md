@@ -1609,7 +1609,7 @@ For details about the available Defender settings, see [Configure security setti
 #### Data collection from SimInfo entity on Windows devices<!--30120558 -->
 
 You can now collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-For more information, see [Intune Data Platform](../../data-platform/schema.md).
+For more information, see [Intune Data Platform](../../data-platform-schema.md).
 
 > [!div class="checklist"]
 > Applies to:

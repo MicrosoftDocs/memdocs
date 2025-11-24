@@ -155,7 +155,7 @@ Scalar functions can be used in expressions. Currently the following scalar func
 
 ## Supported Properties
 
-Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](../data-platform/schema.md).
+Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](../data-platform-schema.md).
 
 - BiosInfo
 
