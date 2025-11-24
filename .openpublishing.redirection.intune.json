@@ -1,6 +1,66 @@
 {
   "redirections": [
     {
+      "source_path": "intune/analytics/advanced-analytics.md",
+      "redirect_url": "/intune/advanced-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/data-platform-schema.md",
+      "redirect_url": "/intune/advanced-analytics/data-platform-schema",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/anomaly-detection.md",
+      "redirect_url": "/intune/advanced-analytics/anomaly-detection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/battery-health.md",
+      "redirect_url": "/intune/advanced-analytics/battery-health",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/advanced-analytics-deploy.md",
+      "redirect_url": "/intune/advanced-analytics/deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/device-query-multiple-devices.md",
+      "redirect_url": "/intune/advanced-analytics/device-query-multiple-devices",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/device-query.md",
+      "redirect_url": "/intune/advanced-analytics/device-query",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/device-scopes.md",
+      "redirect_url": "/intune/advanced-analytics/device-scopes",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/enhanced-device-timeline.md",
+      "redirect_url": "/intune/advanced-analytics/enhanced-device-timeline",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/advanced-analytics-plan.md",
+      "redirect_url": "/intune/advanced-analytics/plan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/resource-performance-report.md",
+      "redirect_url": "/intune/advanced-analytics/resource-performance-report",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/advanced-analytics-troubleshooting-faqs.md",
+      "redirect_url": "/intune/advanced-analytics/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/protect/vulnerability-remediation-agent.md",
       "redirect_url": "/intune/agents/vulnerability-remediation-agent",
       "redirect_document_id": false
