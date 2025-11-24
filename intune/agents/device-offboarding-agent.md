@@ -216,6 +216,7 @@ To configure custom instructions:
 
 ### Examples of custom instructions you can use
 
+<!--
 ```agent-prompt
 Exclude devices with IDs […]
 ```
@@ -238,6 +239,22 @@ Include only devices with last activity after […]
 ```agent-prompt
 Include only devices with last activity before […]
 ```
+-->
+
+> *Exclude devices with IDs […]*
+
+> *Exclude devices with last activity after […]*
+
+> *Exclude devices with last activity before […]*
+
+> *Include only devices with IDs […]*
+>
+> >[!IMPORTANT]
+> >If you include one or more deviceIds and none of them have been retired, wiped, or deleted within the last 30 days, the agent will fail to run.
+
+> *Include only devices with last activity after […]*
+
+> *Include only devices with last activity before […]*
 
 [!INCLUDE [renew-alternative](includes/renew-alternative.md)]
 
