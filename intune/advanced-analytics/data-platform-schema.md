@@ -513,7 +513,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | `Class` | string (max 256 characters) | Device/driver class name | Windows |
 | `ProviderName` | string (max 256 characters) | Driver provider | Windows |
 | `Manufacturer` | string (max 256 characters) | Device manufacturer | Windows |
-| `BuildDate[Win32\PnPSignedDriver class` - [Microsoft Learn](/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date | Windows |
+| `BuildDate` [Win32\PnPSignedDriver class](/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date | Windows |
 | `Signed` | bool | Whether the driver is signed or not | Windows |
 
 ## `WindowsEvent`
