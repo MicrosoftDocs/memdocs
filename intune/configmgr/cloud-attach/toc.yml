@@ -94,7 +94,7 @@ items:
     - name: Enroll Intune devices
       href: ../../endpoint-analytics/enroll-intune.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Enroll Configuration Manager devices
-      href: ../../endpoint-analytics/enroll-configmgr.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/configure.md?pivots=cm?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Use Endpoint analytics
     items:
     - name: Startup performance

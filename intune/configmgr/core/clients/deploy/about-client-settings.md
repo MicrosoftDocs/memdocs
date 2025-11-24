@@ -294,7 +294,7 @@ Set a grace period of 0 to 120 hours. Use this setting along with the deployment
 
 ### Enable Endpoint analytics data collection
 
-Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../endpoint-analytics/enroll-configmgr.md).
+Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../endpoint-analytics/configure.md?pivots=cm).
 
 ## Computer restart
 
