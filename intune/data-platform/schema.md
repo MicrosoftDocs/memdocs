@@ -24,8 +24,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `AppleAutoSetupAdminAccounts`
 
-> **Description**: Provides basic account information on Apple devices/
-> **Supported platforms**: iOS, iPadOS, macOS/
+> **Description**: Provides basic account information on Apple devices\
+> **Supported platforms**: iOS, iPadOS, macOS\
 > **Supported for**: Device query for multiple devices.
 
 | Property | Type | Description | Platform |
@@ -35,8 +35,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `AppleDeviceStates`
 
-> **Description**: Apple device state information/
-> **Supported platforms**: iOS, iPadOS, macOS/
+> **Description**: Apple device state information\
+> **Supported platforms**: iOS, iPadOS, macOS\
 > **Supported for**: Device query for multiple devices.
 
 | Property | Type | Description | Platform |
@@ -53,8 +53,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `AppleUpdateSettings`
 
-> **Description**: Determines update settings for Apple devices/
-> **Supported platforms**: iOS, iPadOS, macOS/
+> **Description**: Determines update settings for Apple devices\
+> **Supported platforms**: iOS, iPadOS, macOS\
 > **Supported for**: Device query for multiple devices.
 
 | Property | Type | Description | Platform |
@@ -72,8 +72,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `Battery`
 
-> **Description**: Provides details about battery and battery health./
-> **Supported platforms**: Android, iOS, iPadOS, macOS, Windows./
+> **Description**: Provides details about battery and battery health.\
+> **Supported platforms**: Android, iOS, iPadOS, macOS, Windows.\
 > **Supported for**: Device query for multiple devices, Inventory.
 
 | Property | Type | Description | Platform |
@@ -89,8 +89,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `BiosInfo`
 
-> **Description**: Provides basic BIOS information./
-> **Supported platforms**: Windows/
+> **Description**: Provides basic BIOS information.\
+> **Supported platforms**: Windows\
 > **Supported for**:  Device query for multiple devices, single device query on-demand, inventory.
 
 | Property | Type | Description | Platform |
@@ -108,8 +108,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `Bluetooth`
 
-> **Description**: Provides Bluetooth device information./
-> **Supported platforms**: iOS, iPadOS, macOS/
+> **Description**: Provides Bluetooth device information.\
+> **Supported platforms**: iOS, iPadOS, macOS\
 > **Supported for**: Device Query for Multiple devices.
 
 | Property | Type | Description | Supported platforms |
@@ -118,8 +118,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `Cellular`
 
-> **Description**: Provides cellular information about mobile devices./
-> **Supported platforms**: Android, iOS, iPadOS, macOS/
+> **Description**: Provides cellular information about mobile devices.\
+> **Supported platforms**: Android, iOS, iPadOS, macOS\
 > **Supported for**: Device query for multiple devices.
 
 | Property | Type | Description | Supported platforms |
@@ -132,8 +132,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `Certificate`
 
-> **Description**: Certificate Authorities installed in Keychains/ca-bundles. Only certificates for computers are returned./
-> **Supported platforms**: Windows/
+> **Description**: Certificate Authorities installed in Keychains/ca-bundles. Only certificates for computers are returned.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for single device (on-demand).
 
 | Property | Type | Description | Supported platforms |
@@ -155,8 +155,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `CPU`
 
-> **Description**: Retrieves CPU hardware info on the machine./
-> **Supported platforms**: Windows/
+> **Description**: Retrieves CPU hardware info on the machine.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -177,8 +177,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `DeviceStorage`
 
-> **Description**: Provides basic information about device storage./
-> **Supported platforms**: Android, iOS, iPadOS, macOS/
+> **Description**: Provides basic information about device storage.\
+> **Supported platforms**: Android, iOS, iPadOS, macOS\
 > **Supported for**: Device query for multiple devices.
 
 | Property | Type | Description | Supported platforms |
@@ -189,8 +189,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `DiskDrive`
 
-> **Description**: Retrieves basic information about the physical disks of a system./
-> **Supported platforms**: Windows/
+> **Description**: Retrieves basic information about the physical disks of a system.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -209,8 +209,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `EncryptableVolume`
 
-> **Description**: Retrieves encryptable volume status of the machine./
-> **Supported platforms**: Windows/
+> **Description**: Retrieves encryptable volume status of the machine.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -225,8 +225,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `FileInfo`
 
-> **Description**: Lists all file info of the passed file or files under the passed directory./
-> **Supported platforms**: Windows/
+> **Description**: Lists all file info of the passed file or files under the passed directory.\
+> **Supported platforms**: Windows\
 > **Supported for**: single device query on-demand.
 
 > [!NOTE]
@@ -250,8 +250,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `LocalGroup`
 
-> **Description**: Lists local user groups./
-> **Supported platforms**: Windows/
+> **Description**: Lists local user groups.\
+> **Supported platforms**: Windows\
 > **Supported for**: Single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
@@ -262,8 +262,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `LocalUserAccount`
 
-> **Description**: Lists local user accounts./
-> **Supported platforms**: Windows/
+> **Description**: Lists local user accounts.\
+> **Supported platforms**: Windows\
 > **Supported for**: single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
@@ -276,8 +276,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `LogicalDrive`
 
-> **Description**: Details for logical drives on the system. A logical drive generally represents a single partition./
-> **Supported platforms**: Windows/
+> **Description**: Details for logical drives on the system. A logical drive generally represents a single partition.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -291,8 +291,8 @@ For entities that include Android data, the following platforms are supported:
 
 ## `MemoryInfo`
 
-> **Description**: Memory Information./
-> **Supported platforms**: Windows/
+> **Description**: Memory Information.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported for single device query on-demand.
 
@@ -306,7 +306,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 ## `NetworkAdapter`
 
 > **Description**: Provides basic network adapter information.
-> **Supported Features**: Inventory, Device query for multiple devices./
+> **Supported Features**: Inventory, Device query for multiple devices.\
 > **Supported platforms**: Windows
 
 | Property | Type | Description | Supported platforms |
@@ -321,8 +321,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `OsVersion`
 
-> **Description**: A single record containing the operating system name and version of the device./
-> **Supported platforms**: Android, iOS, iPadOS, Windows/
+> **Description**: A single record containing the operating system name and version of the device.\
+> **Supported platforms**: Android, iOS, iPadOS, Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand (Windows only), Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -340,8 +340,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `Process`
 
-> **Description**: All running processes on the host system./
-> **Supported platforms**: Windows/
+> **Description**: All running processes on the host system.\
+> **Supported platforms**: Windows\
 > **Supported for**: single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
@@ -369,8 +369,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `SharediPad`
 
-> **Description**: Details for Shared iPad devices./
-> **Supported platforms**: iPadOS/
+> **Description**: Details for Shared iPad devices.\
+> **Supported platforms**: iPadOS\
 > **Supported for**: Device query for multiple devices.
 
 | Property | Type | Description | Supported platforms |
@@ -388,8 +388,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `SystemEnclosure`
 
-> **Description**: Displays information pertaining to the chassis and its security status./
-> **Supported platforms**: Windows/
+> **Description**: Displays information pertaining to the chassis and its security status.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 > [!NOTE]
@@ -413,8 +413,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `SystemInfo`
 
-> **Description**: System information of the device./
-> **Supported platforms**: Windows/
+> **Description**: System information of the device.\
+> **Supported platforms**: Windows\
 > **Supported for**: single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
@@ -429,8 +429,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `SimInfo`
 
-> **Description**: Information on the Sim cards found on the device/
-> **Supported platforms**: Windows/
+> **Description**: Information on the Sim cards found on the device\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -443,7 +443,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 > **Description**: Provides basic time information.
 
-**Supported Features**: Inventory, device query for multiple devices./
+**Supported Features**: Inventory, device query for multiple devices.\
 > **Supported platforms**: Windows
 
 | Property | Type | Description | Supported platforms |
@@ -452,8 +452,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `TPM`
 
-> **Description**: Provides TPM related information of the device./
-> **Supported platforms**: Windows/
+> **Description**: Provides TPM related information of the device.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | Property | Type | Description | Supported platforms |
@@ -472,7 +472,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 > **Description**: Provides video controller and graphics information.
 
-**Supported Features**: Inventory, Device query for multiple devices./
+**Supported Features**: Inventory, Device query for multiple devices.\
 > **Supported platforms**: Windows
 
 | Property | Type | Description | Supported platforms |
@@ -486,8 +486,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `WindowsAppCrashEvent`
 
-> **Description**: Provides App Crash info in Windows event log file Application in look back time./
-> **Supported platforms**: Windows/
+> **Description**: Provides App Crash info in Windows event log file Application in look back time.\
+> **Supported platforms**: Windows\
 > **Supported for**: single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
@@ -501,8 +501,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `WindowsDriver`
 
-> **Description**: Details for in-use Windows device drivers. This doesn't display installed but unused drivers./
-> **Supported platforms**: Windows/
+> **Description**: Details for in-use Windows device drivers. This doesn't display installed but unused drivers.\
+> **Supported platforms**: Windows\
 > **Supported for**: single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
@@ -520,8 +520,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `WindowsEvent`
 
-> **Description**: Get Windows Event logs in the specified log name and look back in time./
-> **Supported platforms**: Windows/
+> **Description**: Get Windows Event logs in the specified log name and look back in time.\
+> **Supported platforms**: Windows\
 > **Supported for**: Single device query on-demand.
 
 > [!NOTE]
@@ -539,8 +539,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `WindowsQfe`
 
-> **Description**: Information about security patches on the device./
-> **Supported platforms**: Windows/
+> **Description**: Information about security patches on the device.\
+> **Supported platforms**: Windows\
 > **Supported for**: Device query for multiple devices, Single device query on-demand, Inventory.
 
 | Property | Type | Description |**Supported platforms**|
@@ -555,8 +555,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `WindowsRegistry`
 
-> **Description**: Lists registry under the passed registry key./
-> **Supported platforms**: Windows/
+> **Description**: Lists registry under the passed registry key.\
+> **Supported platforms**: Windows\
 > **Supported for**: single device query on-demand.
 
 > [!NOTE]
@@ -571,8 +571,8 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 
 ## `WindowsService`
 
-> **Description**: Lists all installed Windows services and their key properties./
-> **Supported platforms**: Windows/
+> **Description**: Lists all installed Windows services and their key properties.\
+> **Supported platforms**: Windows\
 > **Supported for**: Single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
