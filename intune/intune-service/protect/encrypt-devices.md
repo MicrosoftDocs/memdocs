@@ -3,7 +3,7 @@ title: Encrypt Windows devices with Intune
 description: Use Microsoft Intune policy to manage encryption of Windows devices with either BitLocker or Personal Data Encryption.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/23/2024
+ms.date: 11/24/2025
 ms.topic: how-to
 ms.reviewer: annovich; aanavath
 ms.collection:
@@ -32,6 +32,8 @@ To configure encryption on your managed devices, use one of the following policy
 
   - *Personal Data Encryption* - [Personal Data Encryption](/windows/security/operating-system-security/data-protection/personal-data-encryption/) (PDE) differs from BitLocker in that it encrypts files instead of whole volumes and disks. PDE occurs in addition to other encryption methods like BitLocker. Unlike BitLocker that releases data encryption keys at boot, PDE doesn't release data encryption keys until a user signs in using Windows Hello for Business. For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
 
+    PDE isn't a replacement for BitLocker; use both for layered security.
+
 - **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-windows)**. BitLocker settings are one of the available settings categories for Windows endpoint protection.
 
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles from device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
@@ -45,7 +47,14 @@ To configure encryption on your managed devices, use one of the following policy
 >
 > Before enabling BitLocker, understand and plan for *recovery options* that meet your organizations needs. For more information, start with [**BitLocker recovery overview**](/windows/security/operating-system-security/data-protection/bitlocker/recovery-overview) in the Windows security documentation.
 
-## Role-based access controls to manage BitLocker
+## Prerequisites
+
+### Licensing
+
+For Windows editions that support BitLocker management, see [Windows edition and licensing requirements](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common#windows-edition-and-licensing-requirements) in the Windows documentation.
+ 
+
+### Role-based access controls to manage BitLocker
 
 To manage BitLocker in Intune, an account must be assigned an Intune [role-based access control](../fundamentals/role-based-access-control.md) (RBAC) role that includes the **Remote tasks** permission with the **Rotate BitLockerKeys (preview)** right set to **Yes**.
 
@@ -144,8 +153,7 @@ A device must meet the following conditions to be eligible for silently enabling
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only.
 - Secure Boot [must be enabled](/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#error-message-the-uefi-variable-secureboot-could-not-be-read).
-
-Also, to support BitLocker recovery, ensure Windows Recovery Environment (WinRE) is configured and available
+- Windows Recovery Environment (WinRE) is [configured and available](/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#event-id-854-winre-is-not-configured).
 
 > [!IMPORTANT]
 > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
@@ -175,6 +183,9 @@ Depending on the type of policy that you use to silently enable BitLocker, confi
 A device **must not be set to require** a startup PIN or startup key.
 
 When a TPM startup PIN or startup key is required on a device, BitLocker can't silently enable on the device, and instead requires interaction from the end user. Settings to configure the TPM startup PIN or key are available in both the endpoint protection template and the BitLocker policy. By default, these policies don't configure these settings.
+
+> [!TIP]
+> Be aware of policies that might enable use of a TPM startup PIN or key. For example, Intune security baselines like the Microsoft Defender for Endpoint baseline can enable a TPM startup PIN and key by default, blocking silent enablement of BitLocker. [Review policies](/intune/intune-service/configuration/device-profile-monitor?tabs=policy%2Cdevices#view-conflicts) for conflicts.
 
 Following are the relevant settings for each profile type:
 
@@ -264,7 +275,7 @@ To be accessible, the device must have its keys escrowed to Microsoft Entra.
    When keys aren't in Microsoft Entra, Intune displays *No BitLocker key found for this device*.
 
 > [!NOTE]
-> Currently, Microsoft Entra ID supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption will fail due to the failing backup of recovery keys before starting encryption on the device.
+> Currently, Microsoft Entra ID supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption fails due to the failing backup of recovery keys before starting encryption on the device.
 
 Information for BitLocker is obtained using the [BitLocker configuration service provider](/windows/client-management/mdm/bitlocker-csp) (CSP).
 
@@ -273,7 +284,7 @@ IT admins need to have a specific permission within Microsoft Entra ID to be abl
 All BitLocker recovery key accesses are audited. For more information on Audit Log entries, see [Azure portal audit logs](/azure/active-directory/devices/device-management-azure-portal#audit-logs).
 
 > [!NOTE]
-> If you delete the Intune object for a Microsoft Entra joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Microsoft Entra joined devices is attached to the Microsoft Entra computer object and deleting it may leave you unable to recover from a BitLocker recovery event.
+> If you delete the Intune object for a Microsoft Entra joined device protected by BitLocker, the deletion triggers an Intune device sync and removes the key protectors for the operating system volume. Removing the key protector leaves BitLocker in a suspended state on that volume. This is necessary because BitLocker recovery information for Microsoft Entra joined devices is attached to the Microsoft Entra computer object and deleting it might leave you unable to recover from a BitLocker recovery event.
 
 ### View recovery keys for tenant-attached devices
 
@@ -322,11 +333,11 @@ To help end users get their recovery keys without calling the company helpdesk, 
 
 While Intune helps configure policy to define the escrow of BitLocker recovery keys, these keys are stored within Entra ID. These are the capabilities within Entra ID that are helpful to use with self-service BitLocker recovery key access for end users.
 
-1. **Tenant-wide toggle to prevent recovery key access for non-admin users**: This setting determines if users can use self-service to recover their BitLocker keys. The default value is 'No' which allows all users to recover their BitLocker keys. 'Yes' restricts non-admin users from being able to see the BitLocker keys for their own devices if there are any. [Learn more about this control in Entra ID](/entra/identity/devices/manage-device-identities#configure-device-settings).
+1. **Tenant-wide toggle to prevent recovery key access for non-admin users**: This setting determines if users can use self-service to recover their BitLocker keys. The default value is 'No' which allows all users to recover their BitLocker keys. 'Yes' restricts nonadmin users from being able to see the BitLocker keys for their own devices if there are any. [Learn more about this control in Entra ID](/entra/identity/devices/manage-device-identities#configure-device-settings).
 
 2. **Auditing for recovery key access**: Audit Logs within the Entra ID portal show the history of activities within the tenant. Any user recovery key accesses made through the Company Portal website will be logged in Audit Logs under the Key Management category as a “Read BitLocker key” activity type. The user’s User Principal Name and other info such as key ID is also logged. [Learn more about audit logs in Entra ID](/entra/identity/monitoring-health/concept-audit-logs).
 
-3. **Entra Conditional Access policy requiring a compliant device to access BitLocker Recovery Key**: With Conditional Access policy (CA), you can restrict the access to certain corporate resources if a device isn't compliant with the “Require compliant device” setting. If this is set up within your organization, and a device fails to meet the Compliance requirements configured in the Intune Compliance policy, that device can't be used to access the BitLocker Recovery Key as it is considered a corporate resource which is access controlled by CA.
+3. **Entra Conditional Access policy requiring a compliant device to access BitLocker Recovery Key**: With Conditional Access policy (CA), you can restrict the access to certain corporate resources if a device isn't compliant with the “Require compliant device” setting. If this is set up within your organization, and a device fails to meet the Compliance requirements configured in the Intune Compliance policy, that device can't be used to access the BitLocker Recovery Key as it is considered a corporate resource, which is access controlled by CA.
 
 ## Next steps
 
