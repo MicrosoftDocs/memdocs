@@ -1,0 +1,41 @@
+### YamlMime:FAQ
+metadata:
+  title: Frequently asked questions about Advanced Analytics in Microsoft Intune
+  description: This article provides answers to some frequently asked questions on Intune Advanced Analytics.
+  ms.date: 11/24/2025
+  ms.topic: faq
+
+title: Frequently asked questions about Advanced Analytics
+summary: This article provides answers to some frequently asked questions on Intune Advanced Analytics.
+
+
+sections:
+  - name: Basics
+    questions:
+      - question: What is the difference between endpoint analytics and Advanced Analytics?
+        answer: |
+          Advanced Analytics builds on endpoint analytics by offering deeper insights, advanced reporting, and enhanced anomaly detection capabilities.
+      - question: Do I need additional licensing for Advanced Analytics?
+        answer: |
+          Yes, Advanced Analytics requires specific licensing. See the Plan section for details.
+      - question: Can Advanced Analytics integrate with other monitoring tools?
+        answer: |
+          Advanced Analytics doesn't provide a connector for data to be leveraged in other monitoring tools. Some features, such as Device Query for multiple devices, do support an export via .csv function, which could then be used in other tooling.
+      - question: Are there limitations with device types or OS versions?
+        answer: |
+          Some advanced features may be limited to specific Windows builds or device types. Review prerequisites before deployment.
+      - question: Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?
+        answer: |
+          This is typically due to the volume and usage patterns of devices and apps. The device must be actively used, enrolled in endpoint analytics, and data collection is enabled. In addition, a high volume of events (such as critical errors or app crashes) is usually required before the event is flagged as anomalous.
+      - question: How often is analytics data refreshed?
+        answer: |
+          Data is typically updated every 24 hours. Real-time troubleshooting might require direct device queries.
+      - question: Can I customize analytics dashboards?
+        answer: |
+          Yes, dashboards can be tailored to highlight key metrics and device scopes relevant to your organization.
+      - question: What should I do if a device is not reporting data?
+        answer: |
+          Check device connectivity, enrollment status, and compliance with system requirements.
+      - question: How should the baselines be used?
+        answer: |
+          Baseline scores are shown on charts as triangle markers. There's a built-in baseline for All organizations (median), which allows you to compare your scores to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
