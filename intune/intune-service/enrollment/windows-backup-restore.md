@@ -1,7 +1,7 @@
 ---
-title: Enable Windows Backup for Organizations in Microsoft Intune
+title: Enable Windows Backup for Organizations 
 description: Enable Windows backup and restore in Intune for employees or students.
-ms.date: 08/18/2025
+ms.date: 11/21/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -9,9 +9,6 @@ ms.collection:
 ---
 
 # Windows Backup for Organizations in Microsoft Intune  
-
- > [!NOTE]
- > This feature is in public preview. For more information on what that means, see [Public preview in Microsoft Intune](../fundamentals/public-preview.md).
 
 Enable users to securely sync their settings to the cloud and restore them on new or reimaged devices. Together, Microsoft Intune and Windows Backup for Organizations lets users back up your organization's Windows settings and restore them on a Microsoft Entra joined device during enrollment.
 
@@ -86,7 +83,7 @@ Complete these steps to configure the restore setting for enrollment.
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune service administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 1. Go to **Devices** > **Enrollment**.
 1. Select the **Windows** tab.
-1. Under **Enrollment options**, select **Windows Backup and Restore (preview)**.
+1. Under **Enrollment options**, select **Windows Backup and Restore**.
 1. For **Show restore page**, select **On**.
 
     > [!TIP]
@@ -97,6 +94,23 @@ Complete these steps to configure the restore setting for enrollment.
 The **Last modified** date updates to account for recent changes. Return to **Windows Backup and Restore** anytime to view and edit the setting again.
 
 ---
+
+## Reporting  
+Per device reporting is available in the Microsoft Intune admin center.  
+
+1. Go to **Devices**.  
+1. Select the **Windows** tab.  
+1. Under the **Device name** column in the table, select a device. 
+1. Go to **Enrollment**.  
+1. In the table, under **Profile type**, look for **Windows Backup and Restore profile**. From here, you can check the state of the backup profile on the device, and see whether or not the device went through a restore. Possible statuses include:  
+   - Not Applicable  
+   - No policy assigned  
+   - Succeeded  
+   - Failed  
+   - No Backup Profiles  
+   - Setup as New PC Selected   
+
+For more information about the reporting available on the enrollment page, see [View enrollment reports](view-enrollment-reports.md).  
 
 ## Known issues
 Known issues with Windows Backup for Organizations include:
@@ -117,7 +131,7 @@ Known issues with Windows Backup for Organizations include:
   - Hybrid Azure AD Join
   - Workplace Join
   - Self-deployment mode
-  - Windows Autopilot for pre-provisioned devices
+  - Technician flow of Windows Autopilot for pre-provisioned devices  
   - Windows Autopilot reset flow
   - Manual enrollment through the Windows Settings app
   - Enrollment via Group Policy
