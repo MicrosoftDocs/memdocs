@@ -768,7 +768,7 @@ You can now choose what you want to collect from your devices, using the catalog
 For more information, see:
 
 - [Properties catalog](../configuration/properties-catalog.md)
-- [Data collection platform](../../data-platform-schema.md)
+- [Data collection platform](../../advanced-analytics/data-platform-schema.md)
 
 ## Week of November 18, 2024 (Service release 2411)
 

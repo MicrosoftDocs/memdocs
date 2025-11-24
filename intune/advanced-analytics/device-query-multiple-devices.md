@@ -11,7 +11,7 @@ ms.topic: how-to
 
 [!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
-Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices. Device query for multiple devices supports all devices specified in the [Intune Data Platform Schema](../data-platform-schema.md), this includes corporate Android Enterprise, Apple iOS/iPadOS, macOS, and Windows devices with a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) deployed.
+Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices. Device query for multiple devices supports all devices specified in the [Intune Data Platform Schema](data-platform-schema.md), this includes corporate Android Enterprise, Apple iOS/iPadOS, macOS, and Windows devices with a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) deployed.
 
 ## Prerequisites
 
@@ -219,7 +219,7 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 ## Supported properties
 
-Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](../data-platform-schema.md).
+Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
 
 - Apple Auto Setup Admin Accounts
 - Apple Device States
@@ -336,4 +336,4 @@ Cpu | where Device.DeviceName == 'Desktop123"
 ## Next Steps
 
 > [!div class="nextstepaction"]
-> [Next: Learn about Data Platform schema >](../data-platform-schema.md)
+> [Next: Learn about Data Platform schema >](data-platform-schema.md)
