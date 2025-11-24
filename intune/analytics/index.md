@@ -1,5 +1,5 @@
 ---
-title: "Endpoint Analytics: Optimize Device Performance and User Experience"
+title: Endpoint analytics overview
 description: Discover how Microsoft Intune endpoint analytics provides actionable insights to optimize device performance, improve user experience, and enable proactive IT troubleshooting.
 ms.date: 10/09/2025
 ms.topic: overview

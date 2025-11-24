@@ -9,8 +9,6 @@ ms.topic: concept-article
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
-
 Custom device scopes use Scope tags to slice endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
 
 Custom device scopes are supported on the following endpoint analytics reports:

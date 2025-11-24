@@ -9,8 +9,6 @@ ms.topic: how-to
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
-
 Device query allows you to quickly gain on-demand information about the state of your devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
 ## Prerequisites

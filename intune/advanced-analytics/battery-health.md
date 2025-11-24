@@ -9,8 +9,6 @@ ms.topic: concept-article
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
-
 The battery health report provides visibility into the health of batteries in your organization's devices and its influence on user experience.
 
 The score helps you identify emerging hardware issues that might be impacting user productivity so you can proactively make improvements before users generate support tickets.

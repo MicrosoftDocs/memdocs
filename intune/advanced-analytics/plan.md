@@ -9,8 +9,6 @@ ms.topic: concept-article
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
-
 For a successful deployment of Advanced Analytics, the following activities are recommended:
 
 - Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand the full list of data captured.
@@ -93,14 +91,3 @@ Currently, the highest functional subscription sets the endpoint analytics exper
 
 > [!div class="nextstepaction"]
 > [Next: Deploy Advanced Analytics >](deploy.md)
-
----
-
-For more information, go to:
-
-- [Anomaly detection](anomaly-detection.md)
-- [Device scopes](device-scopes.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)
-- [Battery health](battery-health.md)
-- [Device query](device-query.md)
-- [Resource Performance report](resource-performance-report.md)

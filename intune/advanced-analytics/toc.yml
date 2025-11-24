@@ -16,6 +16,12 @@ items:
   - name: Battery health
     href: battery-health.md
     displayName: advanced analytics
+  - name: Device query
+    href: device-query.md
+    displayName: advanced analytics
+  - name: Device query for multiple devices
+    href: device-query-multiple-devices.md
+    displayName: advanced analytics
   - name: Device scopes
     href: device-scopes.md
     displayName: advanced analytics
@@ -25,18 +31,12 @@ items:
   - name: Resource Performance
     href: resource-performance-report.md
     displayName: advanced analytics
-  - name: Device query
-    href: device-query.md
-    displayName: advanced analytics
-  - name: Device query for multiple devices
-    href: device-query-multiple-devices.md
-    displayName: advanced analytics
 - name: Data platform schema
   href: data-platform-schema.md
   displayName: advanced analytics schema
 - name: Troubleshooting
   href: troubleshoot.md
   displayName: advanced analytics
-- name: Frequently Asked Questions
+- name: Frequently asked questions
   href: faq.yml
-  displayName: advanced analytics
+  displayName: advanced analytics FAQs

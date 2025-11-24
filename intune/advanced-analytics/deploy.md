@@ -9,8 +9,6 @@ ms.topic: concept-article
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
-
 ## Enabling Advanced Analytics in Microsoft Intune
 
 When license requirements are met, then Advanced Analytics capabilities are automatically enabled in your tenant.
