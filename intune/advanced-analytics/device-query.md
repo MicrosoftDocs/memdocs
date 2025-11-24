@@ -58,34 +58,7 @@ Best practices:
 
 Use the Intune remote device actions in Single device query to help you manage your devices remotely. From the device query interface, you can now run device actions based on query results for faster and more efficient troubleshooting.
 
-### Available remote actions
-
-The available device actions depend on the device configuration. Not all actions are available for all devices.
-
-For a complete list of what can be done on your devices, in the Intune admin center, select Devices > All devices, and select a specific device. The available device actions are shown at the top.
-
-The following list includes supported device actions:
-
-|Action|Description|
-|---|---|
-|[Windows Autopilot reset](/windows/deployment/windows-autopilot/windows-autopilot-reset#reset-devices-with-remote-windows-autopilot-reset)|Restores a device to its original settings and removes personal files, apps, and settings.|
-|[BitLocker key rotation](../intune-service/protect/encrypt-devices.md#rotate-bitlocker-recovery-keys)|Changes the BitLocker recovery key for a device and uploads the new key to Intune.|
-|[Collect diagnostics](../intune-service/remote-actions/collect-diagnostics.md)|Collects diagnostic logs from a device and uploads the logs to Intune.|
-|[Delete](../intune-service/remote-actions/device-wipe.md)|Removes a device from Intune management, any company data is removed, and the device is retired.|
-|[Fresh start](../intune-service/remote-actions/device-fresh-start.md)|Reinstalls the latest version of Windows on a device and removes apps that the manufacturer installed.|
-|[Full scan](../intune-service/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)|Initiates a full scan of the device by Microsoft Defender Antivirus.|
-|[Locate device](../intune-service/remote-actions/device-locate.md)|Shows the approximate location of a device on a map.|
-|[Pause ConfigRefresh](../intune-service/remote-actions/pause-config-refresh.md)|Pause ConfigRefresh to run remediation on a device for troubleshooting or maintenance or to make changes.|
-|[Quick scan](../intune-service/configuration/device-restrictions-windows-10.md#microsoft-defender-antivirus)|Initiates a quick scan of the device by Microsoft Defender Antivirus.|
-|[Remote control with Team Viewer](../intune-service/fundamentals/teamviewer-support.md)|Allows you to remotely control a device using TeamViewer.|
-|[Rename device](../intune-service/remote-actions/device-rename.md)|Changes the device name in Intune.|
-|[Restart](../intune-service/remote-actions/device-rename.md)|Restarts a device.|
-|[Retire](../intune-service/remote-actions/device-retire.md)|Removes company data and settings from a device, and leaves personal data intact.|
-|[Rotate Local admin password](../intune-service/protect/windows-laps-policy.md#manually-rotate-passwords)|Changes the local administrator password for a device and stores the password in Intune.|
-|[Synchronize device](../intune-service/remote-actions/device-sync.md)|Syncs a device with Intune to apply the latest policies and configurations.|
-|[Update Windows Defender Security Intelligence](/windows/security/threat-protection/windows-defender-antivirus/manage-protection-updates-windows-defender-antivirus)|Updates the security intelligence files for Microsoft Defender Antivirus.|
-|[Microsoft PIN reset service](/windows/security/identity-protection/hello-for-business/pin-reset)|Microsoft PIN reset service enables your users to recover a forgotten Windows Hello for Business PIN, and how to configure it.|
-|[Wipe](../intune-service/remote-actions/device-wipe.md)|This action restores a device to its factory settings and removes all data and settings.|
+The available device actions depend on the device platform and configuration. Not all actions are available for all devices. For a complete list of what can be done on your devices, see [Remote device actions in Microsoft Intune ](../intune-service/remote-actions/index.md).
 
 ## Supported Operators 
 
