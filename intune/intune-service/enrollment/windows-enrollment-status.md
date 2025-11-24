@@ -67,7 +67,7 @@ Use the following steps to create an Intune profile that configures the enrollme
       > [!IMPORTANT]
       >
       > - This setting only supports [current supported versions of Windows 11](/windows/release-health/windows11-release-information).
-      > - When set to **Yes**, monthly security update releases are installed during OOBE after the ESP completes.
+      > - When set to **Yes**, monthly security update releases are installed during OOBE after the ESP completes. ESP applies any Update rings policies and then applies the quality updates. So, your organization policy is honored.
       > - For more details on this setting, see [Windows monthly security update release details](#windows-monthly-security-update-release-details) (in this article).
 
     - **Block device use until all apps and profiles are installed**: Your options:
@@ -167,7 +167,6 @@ Devices that meet all of the following conditions honor the **Install Windows qu
 
 - Running a [currently supported version of Windows 11](/windows/release-health/windows11-release-information).
 - Assigned an ESP profile with the **Install Windows quality updates** Intune setting configured to **Yes**.
-- Using a Windows Autopilot deployment profile with ESP enabled.
 - One of the following two assignments:
   - Assigned to devices that are registered for Windows Autopilot.
   - For devices that aren't registered with Windows Autopilot, devices that are assigned using the **All Devices** assignment.    
@@ -180,7 +179,7 @@ The following specific scenarios aren't supported and the **Install Windows qual
 
 ### Update rings and Windows Autopatch
 
-Update rings settings, such as monthly security update release deferrals and pauses, are honored. The ESP page doesn't exit until ring settings are synced. This process ensures sure that the right settings are used when Windows Update scan occurs. If a device isn't registered as a Windows Autopilot device, the **All** Devices assignments must be used for both the Update Rings and ESP profile settings.
+Update rings settings, such as monthly security update release deferrals and pauses, are honored. The ESP page doesn't exit until ring settings are synced. This process ensures sure that the right settings are used when Windows Update scan occurs. If a device isn't registered as a Windows Autopilot device, the **All Devices** assignments must be used for both the Update Rings and ESP profile settings.
 
 If using Windows Autopatch, Update rings policies need to be configured as described. Since Autopatch groups don't support assigning to **All Devices**, use one of the following two methods instead:
 
