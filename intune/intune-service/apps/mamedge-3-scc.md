@@ -118,6 +118,6 @@ Use the following steps to configure the MTD Connector.
 
 ## Next step
 
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-04.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-4-app.md)
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-04.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-4-acp-edge.md)
 
 Continue with [Step 4](mamedge-4-acp-edge.md) to create app configuration policies for Microsoft Edge for Business.

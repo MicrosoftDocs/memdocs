@@ -25,7 +25,7 @@ Identity-driven signals may include:
 - Target application  
 - Real-time and calculated risk detection  
 
-:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png" alt-text="Diagram illustrating Conditional Access controls for Microsoft Edge for Business." lightbox="https://learn.microsoft.com/intune/intune-service/apps/media/securing-data-edge-for-business/securing-data-edge-for-businessca.png#lightbox":::
+:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png" alt-text="Diagram illustrating Conditional Access controls for Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-businessca.png#lightbox":::
 
 Conditional Access is evaluated after authentication is completed. It is not intended to mitigate denial-of-service (DoS) attacks directly, but it can use signals from such events when making access decisions.
 
