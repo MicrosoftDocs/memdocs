@@ -7,7 +7,7 @@ keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
-ms.date: 08/26/2025
+ms.date: 11/24/2025
 ms.topic: how-to
 ms.service: microsoft-intune
 ms.subservice: configuration
@@ -229,7 +229,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
     | **Authentication Method (Deprecated)** </br>(macOS 13 only) | **Password** or **UserSecureEnclaveKey** | Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). <br/><br/>This setting applies to macOS 13 only. For macOS 14.0 and later, use the **Platform SSO** > **Authentication Method** setting.|
     | **Extension Identifier** | `com.microsoft.CompanyPortalMac.ssoextension` | Copy and paste this value in the setting. <br/><br/>This ID is the SSO app extension that the profile needs for SSO to work. <br/><br/> The **Extension Identifier** and **Team Identifier** values work together. |
     | **Platform SSO** > **Authentication Method** </br>(macOS 14+) | **Password**, **UserSecureEnclaveKey**, or **SmartCard** | Select the Platform SSO authentication method that you chose in [Step 1 - Decide the authentication method](#step-1---decide-the-authentication-method) (in this article). <br/><br/>This setting applies to macOS 14 and later. For macOS 13, use the **Authentication Method (Deprecated)** setting. |
-    | **Platform SSO** > **FileVault Policy** </br>(macOS 15+) | **AttemptAuthentication** | This setting allows the device to verify the Microsoft Entra ID password with Microsoft Entra at the FileVault unlock screen when a Mac device is turned on. <br/><br/>This setting applies to macOS 15 and later.<br/><br/>This setting requires that you also configure the **Password** `AuthenticationMethod` setting. |
+    | **Platform SSO** > **FileVault Policy** </br>(macOS 15+) | `AttemptAuthentication` | Applies when you select **Password** for the **Authentication Method** setting. Copy and paste this value in the setting. <br/><br/> This setting allows the device to verify the Microsoft Entra ID password with Microsoft Entra at the FileVault unlock screen when a Mac device is turned on. <br/><br/>This setting applies to macOS 15 and later. |
     | **Platform SSO** > **Use Shared Device Keys** </br>(macOS 14+) | **Enabled** | When enabled, Platform SSO uses the same signing and encryption keys for all users on the same device. </br></br>Users upgrading from macOS 13.x to 14.x are prompted to register again. |
     | **Registration token** | `{{DEVICEREGISTRATION}}` | Copy and paste this value in the setting. You must include the curly braces. <br/><br/>To learn more about this registration token, go to [Configure Microsoft Entra device registration](/entra/identity-platform/apple-sso-plugin#configure-microsoft-entra-device-registration). <br/><br/>This setting requires that you also configure the `AuthenticationMethod` setting.<br/><br/>- If you use only macOS 13 devices, then configure the **Authentication Method (Deprecated)** setting.<br/>- If you use only macOS 14+ devices, then configure the **Platform SSO** > **Authentication Method** setting.<br/>- If you have a mix of macOS 13 and macOS 14+ devices, then configure both authentication settings in the same profile. |
     | **Screen Locked Behavior** | **Do Not Handle** | When set to **Do Not Handle**, the request continues without SSO. |
@@ -246,12 +246,12 @@ To configure the Platform SSO policy, use the steps in this section to create an
 
     :::image type="content" source="./media/platform-sso-macos/intune-psso-device-profile.png" alt-text="Screenshot that shows the recommended Platform SSO settings in an Intune MDM profile.":::
 
-9. Select **Next**.
-10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+10. Select **Next**.
+11. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-11. In **Assignments**, select the user or device groups that receive your profile. For devices with user affinity, assign to users or user groups. For devices with multiple users that are enrolled without user affinity, assign to devices or device groups.
+12. In **Assignments**, select the user or device groups that receive your profile. For devices with user affinity, assign to users or user groups. For devices with multiple users that are enrolled without user affinity, assign to devices or device groups.
 
     > [!IMPORTANT]
     > For Platform SSO settings on devices with user affinity, it's not supported to assign to device groups or filters. When you use device group assignment or user group assignment with filters on devices with user affinity, the user might be unable to access resources protected by Conditional Access. This issue can happen:
@@ -263,7 +263,7 @@ To configure the Platform SSO policy, use the steps in this section to create an
 
     Select **Next**.
 
-12. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+13. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
 The next time the device checks for configuration updates, the settings you configured are applied.
 
