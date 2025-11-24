@@ -143,9 +143,12 @@ A device must meet the following conditions to be eligible for silently enabling
 - The device must be Microsoft Entra joined or Microsoft Entra hybrid joined.
 - Device must contain at least TPM (Trusted Platform Module) 1.2.
 - The BIOS mode must be set to Native UEFI only.
+- Secure Boot [must be enabled](/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#error-message-the-uefi-variable-secureboot-could-not-be-read).
+
+Also, to support BitLocker recovery, ensure Windows Recovery Environment (WinRE) is configured and available
 
 > [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]v
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 #### Required settings to silently enable BitLocker
 
