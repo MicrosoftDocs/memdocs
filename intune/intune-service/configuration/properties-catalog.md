@@ -111,7 +111,7 @@ Use the following steps to view the collected device inventory information:
 
 ## Available and required properties
 
-The following properties are available for you to collect. To learn more about the different properties, see [Intune Data Platform Schema](../../analytics/data-platform-schema.md).
+The following properties are available for you to collect. To learn more about the different properties, see [Intune Data Platform Schema](../../data-platform/schema.md).
 
 # [Available property categories](#tab/available)
 
@@ -173,4 +173,4 @@ When you create the policy, the following **required** properties are automatica
 
 ## Related content
 
-- [Intune Data Platform Schema and property info](../../analytics/data-platform-schema.md)
+- [Intune Data Platform Schema and property info](../../data-platform/schema.md)

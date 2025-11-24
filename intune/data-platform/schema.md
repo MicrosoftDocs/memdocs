@@ -5,7 +5,7 @@ ms.date: 10/09/2025
 ms.topic: reference
 ---
 
-# Intune data platform
+# Intune data platform schema
 
 *Applies to: Microsoft Intune*
 

@@ -13,7 +13,7 @@ ms.topic: concept-article
 
 For a successful deployment of Advanced Analytics, the following activities are recommended:
 
-- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand the full list of data captured.
+- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](../data-platform/schema.md) to understand the full list of data captured.
 - Establish escalation and support procedures for analytics findings.
 - Review and train staff on IT processes you aim to optimize with the implementation of Advanced Analytics. Examples include help desk triage, hardware refresh cycles and application updates. Think of this as a continuous improvement cycle, with faster issue resolution and proactive issue resolution.
 
@@ -39,7 +39,7 @@ Windows capability requirements:
 - Windows 10/11 (minimum build 1903 or later recommended).
 - Microsoft Entra-joined or Hybrid Entra-joined.
 - [Endpoint analytics for Windows license requirements](index.md#prerequisites).
-- [Device enrolled into Intune and onboarded to endpoint analytics](../configure.md).
+- [Device enrolled into Intune and onboarded to endpoint analytics](../analytics/configure.md).
 
 - Multi Device query requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed.
 - Single device query requires the device to be marked as corporate.
@@ -84,7 +84,7 @@ Currently, the highest functional subscription sets the endpoint analytics exper
 
 ## Role based access control
 
-- Anomaly detection uses built-in [role permissions](index.md#built-in-role-permissions)
+- Anomaly detection uses built-in role permissions
 - For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
 
 ---
