@@ -1,7 +1,7 @@
 ---
 title: Set up the Enrollment Status Page in the admin center copy
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
-ms.date: 11/19/2025
+ms.date: 11/24/2025
 ms.topic: how-to
 ms.reviewer: madakeva, davguy
 ms.collection:
@@ -49,7 +49,7 @@ Use the following steps to create an Intune profile that configures the enrollme
     - **Show an error when installation takes longer than specified number of minutes**: A time-out error message is shown after your desired time. The default time-out is 60 minutes. Enter a higher value if you think more time is needed to install apps on your devices.
 
     - **Show custom message when time limit or error occur**: Include a custom message that tells people what happened and who to contact for help. Your options:
-      - **No**: The default message is shown to users when an error occurs. That message is: "Setup could not be completed. Please try again or contact your support person for help."
+      - **No**: The `Setup could not be completed. Please try again or contact your support person for help.` default message is shown to users when an error occurs.
       - **Yes**: Your custom message is shown to users when an error occurs. Enter your message in the provided text box.
 
     - **Turn on log collection and diagnostics page for end users**: We recommended turning on this option since the user's logs and diagnostics could aid with troubleshooting. Your options:
@@ -60,7 +60,7 @@ Use the following steps to create an Intune profile that configures the enrollme
       - **No**: The enrollment status page is shown during the device phase and the out-of-box experience (OOBE). The page is also shown during the [user phase](#account-setup) to every user who signs into the device for the first time.
       - **Yes**: The enrollment status page is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
-    - **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates the available quality updates, also known as monthly security update releases. Your options:
+    - **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates for the available quality updates, also known as monthly security update releases. Your options:
       - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page shows the update progress.
       - **No**: Monthly security update releases aren't installed during OOBE and the device continues to the desktop as usual. Messages regarding installation of monthly security update releases aren't displayed since they aren't installed.
 
@@ -155,7 +155,7 @@ On Windows 11 versions with the `2025-06 D` quality update, the control that ena
 - Monthly security update releases aren't installed during OOBE when the device is on a metered network.
 
 > [!IMPORTANT]
-> To ensure that monthly security update releases are installed, set the **Block device use until all apps and profiles are installed** ESP profile setting to **Yes**. If it's set to **No**, the device might exit ESP before the following items are applied:
+> To ensure that monthly security update releases are installed, set the **Block device use until all apps and profiles are installed** ESP profile setting to **Yes**. When set to **No**, the device might exit ESP before the following items are applied:
 > - Windows Update for Business (WUfB) policies
 > - Monthly security update releases
 >
@@ -185,7 +185,7 @@ Update rings settings, such as monthly security update release deferrals and pau
 If using Windows Autopatch, Update rings policies need to be configured as described. Since Autopatch groups don't support assigning to **All Devices**, use one of the following two methods instead:
 
 - Use Update Rings policies from the **Devices | Windows Updates** screen with **All Devices** assigned.
-- Use groups of devices registered with Windows Autopilot s in Autopatch Groups.
+- Use groups of devices registered with Windows Autopilot in Autopatch Groups.
 
 Expedited updates aren't part of the installation of monthly security update releases during OOBE. Devices assigned to an expedited update policy will initiate the expedited update sometime after OOBE completes if the expedited updates aren't part of monthly security update releases.
 
@@ -217,13 +217,13 @@ Specify the apps that must be installed before the user can exit the ESP. You ca
 1. Choose **Selected** for **Block device use until these required apps are installed if they're assigned to the user/device**.
 1. Choose **Select apps** > choose the apps > **Select** > **Save**.
 
-The apps that are included in this list are used by Intune to filter the list that should be considered blocking. It doesn't specify what apps should be installed.  For example, if you configure this list to include:
+The apps in this list are used by Intune to filter the list that should be considered blocking. It doesn't specify what apps should be installed.  For example, if you configure this list to include:
 
 - App 1
 - App 2
 - App 3
 
-and **App 3** and **App 4** are targeted to the device or user, the ESP tracks only **App 3**. **App 4** is still installed during pre-provisioning flows, but the ESP doesn't wait for it to complete. In other scenarios, such as user-driven and self-deploying mode, and when **App 4** is a Win32, Microsoft Store, or Enterprise app catalog app, it doesn't get installed until after ESP completes.
+And **App 3** and **App 4** are targeted to the device or user, the ESP tracks only **App 3**. **App 4** is still installed during pre-provisioning flows, but the ESP doesn't wait for it to complete. In other scenarios, such as user-driven and self-deploying mode, and when **App 4** is a Win32, Microsoft Store, or Enterprise app catalog app, it doesn't get installed until after ESP completes.
 
 ## ESP tracking
 
