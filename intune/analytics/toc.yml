@@ -29,7 +29,7 @@ items:
   href: data-collection.md
   displayName: endpoint analytics
 - name: Data platform schema
-  href: data-platform-schema.md
+  href: ../data-platform/schema.md
   displayName: advanced analytics schema
 - name: Troubleshooting
   href: troubleshoot.md

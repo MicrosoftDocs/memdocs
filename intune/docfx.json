@@ -130,6 +130,8 @@
         "analytics/**/*.yml": "paolomatarazzo",
         "advanced-analytics/**/*.md": "paolomatarazzo",
         "advanced-analytics/**/*.yml": "paolomatarazzo",
+        "data-platform/**/*.md": "paolomatarazzo",
+        "data-platform/**/*.yml": "paolomatarazzo",
         "solutions/**/*.md": "mandiohlinger",
         "solutions/**/*.yml": "mandiohlinger"
       },
@@ -150,6 +152,8 @@
         "analytics/**/*.yml": "paoloma",
         "advanced-analytics/**/*.md": "paoloma",
         "advanced-analytics/**/*.yml": "paoloma",
+        "data-platform/**/*.md": "paoloma",
+        "data-platform/**/*.yml": "paoloma",
         "solutions/**/*.md": "mandia",
         "solutions/**/*.yml": "mandia"
       },
@@ -170,6 +174,8 @@
         "analytics/**/*.yml": "endpoint-analytics",
         "advanced-analytics/**/*.md": "suite",
         "advanced-analytics/**/*.yml": "suite",
+        "data-platform/**/*.md": "fundamentals",
+        "data-platform/**/*.yml": "fundamentals",
         "intune-service/apps/**/*.md": "apps",
         "intune-service/apps/**/*.yml": "apps",
         "intune-service/configuration/**/*.md": "configuration",
