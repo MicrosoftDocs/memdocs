@@ -13,68 +13,20 @@ Microsoft Intune Advanced Analytics provides comprehensive visibility of the end
 
 Advanced Analytics includes the following features:
 
-:::row:::
-:::column span="1":::
-- **[Anomaly detection](anomaly-detection.md)**
-:::column-end:::
-:::column span="3":::
->Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-- **[Battery health](battery-health.md)**
-:::column-end:::
-:::column span="3":::
->Report helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-- **[Device scopes](device-scopes.md)**
-:::column-end:::
-:::column span="3":::
->Use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region.
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-- **[Enhanced device timeline](enhanced-device-timeline.md)**
-:::column-end:::
-:::column span="3":::
->Includes more events and lower data latency to assist with troubleshooting device issues
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-- **[Resource Performance](resource-performance-report.md)**
-:::column-end:::
-:::column span="3":::
-> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-- **[Device query](device-query.md)**
-:::column-end:::
-:::column span="3":::
-> Get near-real time access to data about the state and configuration of devices.
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-- **[Device query for multiple devices](device-query-multiple-devices.md)**
-:::column-end:::
-:::column span="3":::
-> View collected inventory data across multiple devices and platforms.
-:::column-end:::
-:::row-end:::
+- **[Anomaly detection](anomaly-detection.md)**\
+  Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+- **[Battery health](battery-health.md)**\
+  Report helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
+- **[Device scopes](device-scopes.md)**\
+  Use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region.
+- **[Enhanced device timeline](enhanced-device-timeline.md)**\
+  Includes more events and lower data latency to assist with troubleshooting device issues
+- **[Resource Performance](resource-performance-report.md)**\
+  Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+- **[Device query](device-query.md)**\
+  Get near-real time access to data about the state and configuration of devices.
+- **[Device query for multiple devices](device-query-multiple-devices.md)**\
+  View collected inventory data across multiple devices and platforms.
 
 ## Advanced Analytics Reports
 
