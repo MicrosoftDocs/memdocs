@@ -804,6 +804,6 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 
 ## Next steps
 
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-05.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-5-app.md)
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-05.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-5-settings-catalog.md)
 
 Continue to [Step 5](mamedge-5-settings-catalog.md) to configure Settings Catalog policies for enrolled Windows and macOS devices.
