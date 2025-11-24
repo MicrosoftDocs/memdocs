@@ -55,7 +55,7 @@ Enterprise App Management is an Intune Suite add-on that is available for trial 
 
 Microsoft Intune Advanced Analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
 
-For more information, see [Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md).
+For more information, see [Intune Advanced Analytics](../../advanced-analytics/index.md).
 
 ### Microsoft Intune Remote Help
 
@@ -153,7 +153,7 @@ Learn more about:
 - [Remote Help](remote-help.md)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
-- [Intune Advanced Analytics](../../analytics/index.md)
+- [Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Remote Help](..\fundamentals\remote-help.md)

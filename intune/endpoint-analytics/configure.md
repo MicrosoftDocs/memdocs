@@ -146,8 +146,9 @@ Baselines help you compare your performance to industry norms or track progress 
 To create a custom baseline and adjust the regression threshold:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Analytics** > [**Endpoint analytics**][INT-EA].
+1. Select **Settings** > **Baseline**.
     :::image type="content" source="images/ea-settings-baseline.png" lightbox="images/ea-settings-baseline.png" alt-text="Endpoint analytics baseline settings page." border="false":::
-1. From the **Baseline** pane, select **Create new** and enter a name.
+1. Select **Create new** and enter a name.
     > [!TIP]
     > Include the date in the name for easier selection from the drop-down in reports.
 1.  Metrics are flagged red and marked as *regressed* if they fall below the current baseline. Because daily fluctuations are normal, set a **regression threshold** (default is 10%) so metrics are only flagged when they regress by more than the percentage you specify.

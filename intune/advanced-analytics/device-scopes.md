@@ -13,9 +13,9 @@ Custom device scopes use Scope tags to slice endpoint analytics reports to a sub
 
 Custom device scopes are supported on the following endpoint analytics reports:
 
-- [Startup performance](../analytics/startup-performance.md)
-- [Work from anywhere](../analytics/work-from-anywhere.md)
-- [Application reliability](../analytics/app-reliability.md)
+- [Startup performance](../endpoint-analytics/startup-performance.md)
+- [Work from anywhere](../endpoint-analytics/work-from-anywhere.md)
+- [Application reliability](../endpoint-analytics/app-reliability.md)
 - [Battery health](battery-health.md)
 
 ## Permissions

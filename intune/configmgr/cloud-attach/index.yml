@@ -36,7 +36,7 @@ landingContent:
       - linkListType: concept
         links:
           - text: Endpoint analytics
-            url: ../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
+            url: ../../endpoint-analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Co-management
             url: ../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json
           - text: Tenant attach

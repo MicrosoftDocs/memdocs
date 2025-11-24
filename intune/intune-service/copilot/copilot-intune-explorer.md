@@ -58,7 +58,7 @@ Select the prompt that best matches your request, or continue typing for more su
 
 You can explore several Intune resources and the relationships between them. The areas you can ask about, the queries, and the query capabilities continue to evolve as we add more data coverage and exploration features. The areas you can explore include:
 
-- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [Advanced Analytics](../../endpoint-analytics/advanced-endpoint-analytics.md)
 - App configuration and app protection
 - Apps
 - Audit logs

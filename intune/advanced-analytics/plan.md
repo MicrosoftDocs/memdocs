@@ -37,7 +37,7 @@ Windows capability requirements:
 - Windows 10/11 (minimum build 1903 or later recommended).
 - Microsoft Entra-joined or Hybrid Entra-joined.
 - [Endpoint analytics for Windows license requirements](index.md#prerequisites).
-- [Device enrolled into Intune and onboarded to endpoint analytics](../analytics/configure.md).
+- [Device enrolled into Intune and onboarded to endpoint analytics](../endpoint-analytics/configure.md).
 
 - Multi Device query requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed.
 - Single device query requires the device to be marked as corporate.

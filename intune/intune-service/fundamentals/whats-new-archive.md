@@ -3009,7 +3009,7 @@ To use Device query and battery health report in your tenant, or any of the exis
 For more information, see:
 
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
-- [Microsoft Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [Microsoft Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Battery health](../../advanced-analytics/battery-health.md)
 - [Device query](../../advanced-analytics/device-query.md)
 
@@ -4811,7 +4811,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about [endpoint analytics](../../analytics/index.md).
+Learn more about [endpoint analytics](../../endpoint-analytics/index.md).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature can help effortlessly transition between full control and view-only modes, granting flexibility and convenience.

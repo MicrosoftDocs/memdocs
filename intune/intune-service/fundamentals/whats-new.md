@@ -696,7 +696,7 @@ You can use Microsoft Copilot in Intune to explore new prompts related to your I
 - Android and Apple device updates
 - Windows Autopilot
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [Advanced Analytics](../../advanced-analytics/index.md)
 
 When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
 

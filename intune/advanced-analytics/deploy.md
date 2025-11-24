@@ -20,7 +20,7 @@ For the extra reports and capabilities on Windows devices:
 
 1. Devices need to be enrolled into Intune and onboarded to endpoint analytics and meet the [Prerequisites](plan.md#prerequisites):
 
-    - [Onboard and enroll your devices to endpoint analytics](../analytics/configure.md)
+    - [Onboard and enroll your devices to endpoint analytics](../endpoint-analytics/configure.md)
 
 1. For Multi Device query, a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) needs to be configured and deployed.
 

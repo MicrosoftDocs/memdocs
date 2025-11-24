@@ -1839,7 +1839,7 @@ items:
       href: ./fundamentals/device-cleanup-rules.md
 
     - name: Endpoint analytics
-      href: ../analytics/toc.yml
+      href: ../endpoint-analytics/toc.yml
     - name: Advanced Analytics
       href: ../advanced-analytics/toc.yml
 

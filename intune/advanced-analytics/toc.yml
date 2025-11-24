@@ -8,7 +8,7 @@ items:
 - name: Deploying Advanced Analytics
   href: deploy.md
   displayName: advanced analytics
-- name: Advanced Analytics features
+- name: Features
   items:
   - name: Anomaly detection
     href: anomaly-detection.md
