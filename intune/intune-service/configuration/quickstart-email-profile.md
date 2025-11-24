@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Create an email device profile for iOS/iPadOS devices
 description: Learn how to use Microsoft Intune to create an email device profile so iOS/iPadOS devices can securely connect to company organization email.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 08/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -43,13 +24,12 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 ## Sign in to Intune
 
-- To configure this policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Policy and Profile Manager** built-in Intune role.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Policy and Profile Manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** Intune role.
 
-  If you created an Intune Trial subscription, then the account that created the subscription is the Global Administrator.
+If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-  The Global Administrator has more permissions than needed to create this policy. We recommend you use the least privileged role to complete this task, which is the **Policy and Profile Manager** built-in Intune role.
-
-For more information on the different roles in Intune, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+> [!CAUTION]
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create an iOS/iPadOS email profile
 
@@ -63,7 +43,7 @@ For more information on the different roles in Intune, go to [Role-based access 
 
    - **Platform**: Select **iOS/iPadOS**.
    - **Profile type**: Select **Templates** > **Email**.
-  
+
 4. Select **Create**.
 
 5. In **Basics**, enter the following properties:

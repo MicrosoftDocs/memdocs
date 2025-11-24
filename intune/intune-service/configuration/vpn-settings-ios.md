@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Configure VPN settings to iOS/iPadOS devices in Microsoft Intune
 description: Add or create a VPN configuration profile on iOS/iPadOS devices using virtual private network (VPN) configuration settings in Microsoft Intune. Configure the connection details, authentication methods, split tunneling, custom VPN settings with the identifier, key and value pairs, per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains, proxy settings to include a configuration script, IP or FQDN address, and TCP port.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 04/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -103,10 +86,10 @@ Select the VPN connection type from the following list of vendors:
 - **Connection name**: End users see this name when they browse their device for a list of available VPN connections.
 - **Custom domain name** (Zscaler only): Prepopulate the Zscaler app's sign-in field with the domain your users belong to. For example, if a username is `Joe@contoso.net`, then the `contoso.net` domain statically appears in the field when the app opens. If you don't enter a domain name, then the domain portion of the UPN in Microsoft Entra ID is used.
 - **VPN server address**: The IP address or fully qualified domain name (FQDN) of the VPN server that devices connect with. For example, enter `192.168.1.1` or `vpn.contoso.com`.
-- **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.  
+- **Organization's cloud name** (Zscaler only): Enter the cloud name where your organization is provisioned. The URL you use to sign in to Zscaler has the name.
 - **Authentication method**: Choose how devices authenticate to the VPN server.
   - **Certificates**: Under **Authentication certificate**, select an existing SCEP or PKCS certificate profile to authenticate the connection. [Configure certificates](../protect/certificates-configure.md) provides some guidance about certificate profiles.
-  - **Username and password**: End users must enter a username and password to sign in to the VPN server.  
+  - **Username and password**: End users must enter a username and password to sign in to the VPN server.
 
     > [!NOTE]
     > If username and password are used as the authentication method for Cisco IPsec VPN, they must deliver the SharedSecret through a custom Apple Configurator profile.
@@ -129,7 +112,7 @@ Select the VPN connection type from the following list of vendors:
 
   > [!IMPORTANT]
   > The [network access control (NAC) service is deprecated](../protect/network-access-control-integrate.md) and replaced with Microsoft's latest NAC service, which is the Compliance Retrieval Service (CR Service). To support changes within Cisco ISE, Intune changed the device ID format. So, your existing profiles with the original NAC service will stop working.
-  > 
+  >
   > To use the CR Service and prevent downtime with your VPN connection, redeploy this same VPN device configuration profile. No changes are needed to the profile. You only need to redeploy. When the device syncs with Intune service and receives the VPN configuration profile, then the CR Service changes are automatically deployed to the device. And, your VPN connections should continue to work.
 
   **When using Citrix SSO with Gateway**, be sure to:
@@ -229,7 +212,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 - **Maximum transmission unit**: Enter the maximum transmission unit (MTU) in bytes, from 1-65536. When set to **Not configured** or left blank, Intune doesn't change or update this setting. By default, Apple may set this value to 1280.
 
-  This setting applies to:  
+  This setting applies to:
   - iOS/iPadOS 14 and newer
 
 - **Security association parameters**: Enter the parameters to use when creating security associations with the VPN server:

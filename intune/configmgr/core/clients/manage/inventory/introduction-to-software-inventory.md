@@ -6,8 +6,8 @@ ms.date: 04/29/2019
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

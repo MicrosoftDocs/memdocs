@@ -2,13 +2,6 @@
 metadata:
   title: Windows Autopilot device preparation FAQ
   description: This article provides OEMs, partners, administrators, and users with answers to some frequently asked questions about deploying Windows with Windows Autopilot device preparation.
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: madakeva
-  manager: bpardi
   ms.date: 04/04/2025
   ms.collection:
     - M365-modern-desktop
@@ -116,6 +109,7 @@ sections:
           - [Win32](/mem/intune-service/apps/apps-win32-prepare).
           - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
           - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
+          - [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
 
       - question: |
           Do devices need to be pre-staged with Windows Autopilot device preparation?

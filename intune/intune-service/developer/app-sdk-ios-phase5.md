@@ -1,31 +1,10 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for iOS developer guide - Multi-Identity
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. Multi-Identity
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 10/31/2024
+title: Microsoft Intune App SDK for iOS Developer Guide - Multi-Identity
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. Multi-Identity
+ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: has-adal-ref
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
@@ -109,11 +88,11 @@ By default, apps are considered single identity. The SDK sets the process identi
     An example is when the user attempts to open a document, a mailbox, or a tab in a notebook. The app needs to notify the SDK before the file, mailbox, or tab is actually opened. This is done through the `setUIPolicyAccountId` API in `IntuneMAMPolicyManager`. This API should be called whether or not the user is managed. If the user is managed, the SDK will perform the conditional launch checks, like jailbreak detection, PIN, and authentication.
 
     The result of the identity switch is returned to the app asynchronously through a completion handler. The app should postpone opening the document, mailbox, or tab until a success result code is returned. If the identity switch failed, the app should cancel the task.
-    
+
     Multi-identity apps should avoid using `setProcessAccountId` as a way to set the identity. Apps that use UIScenes should use the `setUIPolicyAccountId:forWindow` API to set the identity.
-    
+
     Apps can also set the identity for the current thread using `setCurrentThreadIdentity:` and `setCurrentThreadIdentity:forScope:`. For example the app may spawn a background thread, set the identity to the managed identity, and then perform file operations on managed files. If the app uses `setCurrentThreadAccountId:`, the app should also use `getCurrentThreadAccountId` so that it may restore the original identity once it's done. However if the app uses `setCurrentThreadAccountId:forScope:` then restoring the old identity occurs automatically. It's preferred to use `setCurrentThreadAccountId:forScope:`.
-    
+
     In swift, due to async/await, `[IntuneMAMPolicyManager setCurrentThreadAccountId:]` and `[IntuneMAMPolicyManager setCurrentThreadAccountId:forScope:]` are not available. Instead in swift to set the current identity use `IntuneMAMSwiftContextManager.setAccountId(_, forScope:)`. There are variants of this API for async, throwing, and async throwing closures to be passed in.
 
 * **SDK-initiated identity switch**:

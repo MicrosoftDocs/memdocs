@@ -1,32 +1,11 @@
 ---
-# required metadata
-
 title: Configure a custom domain name
-titleSuffix: Microsoft Intune
 description: Add a custom domain name for your Microsoft Intune subscription
-keywords:
-author: brenduns
-ms.author: brenduns
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 05/21/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 2382f36f-13d8-4a32-81ad-6cfa604889c3
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -58,3 +37,9 @@ When working with role-based access controls (RBAC), Microsoft recommends follow
 Managing custom domains for your Microsoft Entra organization requires use of an account with [sufficient permissions](#role-based-access-controls) in Entra ID. For guidance to add and then verify that your custom domain name is valid in Microsoft Entra, see [Add your custom domain name to your tenant](/entra/fundamentals/add-custom-domain) in the Entra ID documentation.
 
 Learn more [about the initial onmicrosoft.com domain in Microsoft 365](https://support.office.com/article/About-your-initial-onmicrosoft-com-domain-in-Office-365-B9FC3018-8844-43F3-8DB1-1B3A8E9CFD5A).
+
+## Related content
+
+- [Add users](../fundamentals/users-add.md)
+- [Add groups](../fundamentals/groups-add.md)
+

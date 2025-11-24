@@ -1,35 +1,16 @@
 ---
-# required metadata
-
-title: Configure Wi-Fi settings for Android devices in Microsoft Intune
-titleSuffix:
+title: Configure Wi-Fi settings for Android DA devices in Microsoft Intune
 description: Create or add a WiFi device configuration profile for Android device administrator. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 04/23/2024
+ms.date: 06/09/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for devices running Android device administrator in Microsoft Intune
+# Android device administrator settings that configure Wi-Fi in Intune
 
 You can create a profile with specific WiFi settings, and then deploy this profile to your Android devices. Microsoft Intune offers many features, including authenticating to your network, adding a PKCS or SCEP certificate, and more.
 
@@ -50,7 +31,7 @@ These Wi-Fi settings are separated in to two categories: Basic settings and Ente
 - **Wi-Fi type**: Choose **Basic**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
 
-  You can only deploy one Wi-Fi profile to the same device with the same SSID. If you try to deploy multiple Wi-Fi profiles to the same device with the same SSID, then the profile isn't deployed to the device. 
+  You can only deploy one Wi-Fi profile to the same device with the same SSID. If you try to deploy multiple Wi-Fi profiles to the same device with the same SSID, then the profile isn't deployed to the device.
 
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 
@@ -59,7 +40,7 @@ These Wi-Fi settings are separated in to two categories: Basic settings and Ente
 - **Wi-Fi type**: Choose **Enterprise**.
 - **SSID**: Enter the **service set identifier**, which is the real name of the wireless network that devices connect to. However, users only see the **network name** you configured when they choose the connection.
 
-  You can only deploy one Wi-Fi profile to the same device with the same SSID. If you try to deploy multiple Wi-Fi profiles to the same device with the same SSID, then the profile isn't deployed to the device. 
+  You can only deploy one Wi-Fi profile to the same device with the same SSID. If you try to deploy multiple Wi-Fi profiles to the same device with the same SSID, then the profile isn't deployed to the device.
 
 - **Hidden network**: Choose **Enable** to hide this network from the list of available networks on the device. The SSID isn't broadcasted. Choose **Disable** to show this network in the list of available networks on the device.
 - **EAP type**: Choose the Extensible Authentication Protocol (EAP) type used to authenticate secured wireless connections. Your options:

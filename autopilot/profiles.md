@@ -1,13 +1,6 @@
 ---
 title: Configure Windows Autopilot profiles
 description: Learn how to configure device profiles for Windows Autopilot deployment.
-ms.subservice: autopilot
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 03/27/2025
 ms.collection:
   - M365-modern-desktop
@@ -25,7 +18,7 @@ appliesto:
 
 After the [device group](enrollment-autopilot.md) is created, a Windows Autopilot deployment profile can be applied to each device in the group. Deployment profiles determine the deployment mode, and customize the out-of-box experience (OOBE) for end users.
 
-Windows utopilot profiles can be created via:
+Windows Autopilot profiles can be created via:
 
 1. [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

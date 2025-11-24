@@ -6,8 +6,8 @@ ms.date: 04/13/2021
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: best-practice
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

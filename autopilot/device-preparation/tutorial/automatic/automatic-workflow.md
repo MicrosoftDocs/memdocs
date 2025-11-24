@@ -1,25 +1,26 @@
 ---
 title: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune
 description: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/11/2025
+ms.date: 11/21/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode (preview) in Intune
+# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune  
 
-This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365.
+> [!NOTE]
+> This feature is in public preview.  
+
+This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365. You can use Windows Autopilot device preparation policies in automatic mode to provision these supported SKUs:  
+
+- Windows 365 Frontline in shared mode  
+- Windows 365 Enterprise  
+- Windows 365 Frontline in dedicated mode  
+- Windows 365 Cloud Apps  
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation in automatic mode for Windows 365 deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
@@ -49,7 +50,7 @@ Windows Autopilot device preparation tracks the installation progress of specifi
 
    1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If any script fails, the **Deployment Status** shows up as **Failed** during the phase **Scripts installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-   1. The deployment checks if Win32 and Microsoft Store applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and Microsoft Store applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+   1. The deployment checks if Win32, Microsoft Store, or Enterprise App Catalog applications are selected in the Windows Autopilot device preparation policy. If there are Win32, Microsoft Store, or Enterprise App Catalog applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
     > [!IMPORTANT]
     >

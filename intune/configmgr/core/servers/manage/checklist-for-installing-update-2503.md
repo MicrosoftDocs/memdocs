@@ -91,7 +91,7 @@ The version 2503 update should now be available in the console.
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2503. It's not a permanent change.
 
-<!-- As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
 ## Pre-update checklist
 

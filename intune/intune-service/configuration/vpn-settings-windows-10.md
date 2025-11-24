@@ -1,34 +1,16 @@
 ---
-# required metadata
-
-title: Windows 10/11 VPN settings in Microsoft Intune
+title: Windows VPN settings in Microsoft Intune
 description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, Conditional Access, and DNS and proxy settings for Windows 10/11 and Windows Holographic for Business devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 03/26/2024
+ms.date: 10/14/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
 ms.reviewer: abalwan
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
-# Windows 10/11 and Windows Holographic device settings to add VPN connections using Intune
+# Windows and Windows Holographic device settings to add VPN connections using Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -39,7 +21,7 @@ As part of your mobile device management (MDM) solution, use these settings to a
 
 These settings apply to devices running:
 
-- Windows 10/11
+- Windows
 - Windows Holographic for Business
 
 ## Before you begin
@@ -103,7 +85,7 @@ The following settings are shown depending on the connection type you select. No
 
   - **Certificates**: Select an existing user client certificate profile to authenticate the user. This option provides enhanced features, such as zero-touch experience, on-demand VPN, and per-app VPN.
 
-    To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).  
+    To create certificate profiles in Intune, see [Use certificates for authentication](../protect/certificates-configure.md).
 
   - **Username and password**: Require users to enter their domain username and password to authenticate, such as `user@contoso.com`, or `contoso\user`.
 
@@ -315,7 +297,7 @@ Example:
   When using DNS suffixes, you can search for a network resource using its short name, instead of the fully qualified domain name (FQDN). When you search using the short name, the suffix is automatically determined by the DNS server. For example, `utah.contoso.com` is in the DNS suffix list. You ping `DEV-comp`. In this scenario, it resolves to `DEV-comp.utah.contoso.com`.
 
   DNS suffixes are resolved in the order listed, and the order can be changed. For example, `colorado.contoso.com` and `utah.contoso.com` are in the DNS suffix list, and both have a resource called `DEV-comp`. Since `colorado.contoso.com` is first in the list, it resolves as `DEV-comp.colorado.contoso.com`.
-  
+
   To change the order, select the dots to the left of the DNS suffix, and then drag the suffix to the top:
 
   ![Select the three dots, and click-and-drag to move the dns suffix](./media/vpn-settings-windows-10/vpn-settings-windows10-move-dns-suffix.png)

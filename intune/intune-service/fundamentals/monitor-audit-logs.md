@@ -1,31 +1,13 @@
 ---
-# required metadata
-
 title: Audit changes and events in Microsoft Intune
 description: Learn how to review audit logs that record Microsoft Intune activities.
-keywords: 
 ms.author: mandia
 author: MandiOhlinger
-manager: dougeby
 ms.date: 03/17/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 6ee841cc-5694-4ba1-8f66-1d58edec30a4
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -82,7 +64,7 @@ When looking at the `.csv` file:
 
   For example, if you run the activity in Intune in the Azure portal, then **Application** always lists **Microsoft Intune portal extension**, and the **Application ID** always uses the same GUID.
 
-- The **Target(s)** section lists multiple targets and the properties that were changed.  
+- The **Target(s)** section lists multiple targets and the properties that were changed.
 
 For more information about this feature, including the prerequisites, go to [send log data to storage, event hubs, or log analytics](review-logs-using-azure-monitor.md).
 

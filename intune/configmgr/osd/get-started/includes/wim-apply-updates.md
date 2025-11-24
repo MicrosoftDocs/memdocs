@@ -1,16 +1,24 @@
 ---
-author: banreet
-ms.author: banreetkaur
+author: bhuney
+ms.author: brianhun
 ms.service: configuration-manager
 ms.topic: include
-ms.date: 08/10/2021
+ms.date: 07/31/2025
 ms.localizationpriority: medium
 ---
 
 ## Apply software updates to an image
 
+> [!IMPORTANT]
+>
+> Due to changes in how Windows 11 updates are delivered through UUP patches, Offline Servicing of Windows 11 images and update packages using Configuration Manager is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained:
+>
+> - Import the **install.wim** image from the ISO into the site for **Operating System Images** packages used in bare metal/refresh task sequences.
+> - Import the whole contents of the ISO into the site for **Operating System Upgrade Packages** used in-place upgrade task sequences.
+
 > [!NOTE]
-> This section applies to both **OS images** and **OS upgrade packages**. It uses the general term "image" to refer to the Windows image file (WIM). Both of these objects have a WIM, which contains Windows installation files. Software updates are applicable to these files in both objects. The behavior of this process is the same between both objects.
+>
+> This section applies to both **Operating System Images** and **Operating System Upgrade Packages**. It uses the general term "image" to refer to the Windows image file (WIM). Both of these objects have a WIM, which contains Windows installation files. Software updates are applicable to these files in both objects. The behavior of this process is the same between both objects.
 
 Each month there are new software updates applicable to the image. Before you can apply software updates to it, you need the following prerequisites:
 
@@ -23,6 +31,7 @@ For more information, see [Deploy software updates](../../../sum/deploy-use/depl
 Apply applicable software updates to an image on a specified schedule. This process is sometimes called *offline servicing*. On this schedule, Configuration Manager applies the selected software updates to the image. It can then also redistribute the updated image to distribution points.
 
 > [!IMPORTANT]
+>
 > While you can select any software update that's applicable to the image based on version, DISM can only apply certain types of updates to the image. The **OfflineServicingMgr.log** file shows the following entry: `Not applying this update binary, it is not supported`.<!-- SCCMDocs issue 1324 -->
 
 The site database stores information about the image, including the software updates that were applied at the time of the import. Software updates that you apply to the image since it was initially added are also stored in the site database. When you start the wizard to apply software updates, it retrieves the list of applicable software updates that the site hasn't yet applied to the image. Configuration Manager copies the software updates that you select from the content library on the site server. It then applies the software updates to the image.
@@ -35,7 +44,7 @@ The site database stores information about the image, including the software upd
 
 1. On the ribbon, select **Schedule Updates** to start the wizard.
 
-1. On the **Choose Updates** page, select the software updates to apply to the image. It may take some time for the list of updates to appear in the wizard. Use the **Filter** to search for strings in the metadata. Use the **System architecture** drop-down list to filter on **X86**, **X64**, or **All**. You can select one, many, or all updates in the list. When you're finished selecting updates, select **Next**.
+1. On the **Choose Updates** page, select the software updates to apply to the image. It might take some time for the list of updates to appear in the wizard. Use the **Filter** to search for strings in the metadata. Use the **System architecture** drop-down list to filter on **X86**, **X64**, or **All**. You can select one, many, or all updates in the list. When you're finished selecting updates, select **Next**.
 
 1. On the **Set Schedule** page, specify the following settings, and then select **Next**.
 
@@ -48,13 +57,14 @@ The site database stores information about the image, including the software upd
 1. Complete the Schedule Updates Wizard.
 
 > [!NOTE]
+>
 > To minimize the payload size, the servicing of OS upgrade packages and OS images removes the older version.
 
 ### Servicing operations
 
 In the Configuration Manager console, in either the **OS Images** or **OS Upgrade Packages** node, add the following columns to the view:
 
-- **Scheduled Updates Date**: This property shows the next schedule that you've defined.
+- **Scheduled Updates Date**: This property shows the next defined schedule.
 - **Scheduled Updates Status**: This property shows the status. For example, **Successful** or **In Process**.
 
 Select a specific image object, and then switch to the **Update Status** tab in the details pane. This tab shows the list of updates in the image.

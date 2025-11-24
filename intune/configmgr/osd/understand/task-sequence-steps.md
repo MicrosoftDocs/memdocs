@@ -6,8 +6,8 @@ ms.date: 04/30/2024
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart,frankroj

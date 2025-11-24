@@ -6,8 +6,8 @@ ms.date: 04/11/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -38,7 +38,7 @@ A site server in passive mode:
 
 To make the site server in passive mode become active, you manually *promote* it. This action switches the site server in active mode to be the site server in passive mode. The site system roles that are available on the original active mode server remain available so long as that computer is accessible. Only the site server role is switched between active and passive modes.
 
-Microsoft Core Services Engineering and Operations used this feature to migrate their CAS to Microsoft Azure. For more information, see the [Microsoft IT Showcase article](https://www.microsoft.com/insidetrack/migrating-system-center-configuration-manager-on-premises-infrastructure-to-microsoft-azure).
+Microsoft Core Services Engineering and Operations used this feature to migrate their CAS to Microsoft Azure. For more information, see the [Microsoft IT Showcase article](/intune/configmgr/core/support/azure-migration-tool).
 
 ## Supported configurations
 

@@ -6,8 +6,8 @@ ms.date: 03/07/2017
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: install-set-up-deploy
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

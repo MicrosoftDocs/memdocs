@@ -1,26 +1,11 @@
 ---
-title: Remediations
-description: Learn about how to use Remediations
-ms.date: 06/20/2024
-ms.service: microsoft-intune
-ms.subservice: fundamentals
+title: Use Remediations to Detect and Fix Support Issues
+description: Learn more about Remediations in Microsoft Intune, including what Remediations are and view any prerequisites and licensing requirements. Also, learn how to deploy built-in and custom remediation scripts, and learn how to monitor your scripts.
+ms.date: 09/08/2025
 ms.topic: how-to
-author: smritib17
-ms.author: smbhardwaj
-manager: dougeby
-# Customer intent: As a Microsoft Intune administrator, I want to enable and use remediations so that I can fix common support issues before end-users notice issues.
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: jon callahan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
+author: nicholasswhite
+ms.author: nwhite
+ms.reviewer: jocallah
 ms.collection:
 - highpri
 - M365-identity-device-management
@@ -29,11 +14,11 @@ ms.collection:
 # Remediations
 
 > [!IMPORTANT]
-> **Proactive Remediations** is renamed to **Remediations** and is now available from **Devices** > **Manage devices** > **Scripts and remediations**. All references to Proactive Remediations in this documentation are replaced with **Remediations**. However, the term Proactive Remediations might still appear in some blogs and other articles.
+> **Proactive Remediations** is renamed to **Remediations** and is available in the Microsoft Intune admin center at **Devices** > **Manage devices** > **Scripts and remediations**. All references to Proactive Remediations in this documentation are replaced with **Remediations**. However, the term Proactive Remediations might still appear in some blogs and other articles.
 
-Remediations helps you fix common support issues before end-users notice issues.
+Remediations help you fix common support issues before end-users notice issues.
 
-In this article, you learn how to:  
+In this article, you learn how to:
 
 > [!div class="checklist"]
 >
@@ -44,13 +29,13 @@ In this article, you learn how to:
 > * Client policy retrieval and client reporting
 > * Monitor the script packages
 > * Export script output
-> * Monitor remediation status for a device  
+> * Monitor remediation status for a device
 
 ## About Remediations
 
-Remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. Remediations can help reduce support calls. You can create your own script package, or deploy one of the script packages we've written and used in our environment for reducing support tickets.
+Remediations are script packages that can detect and fix common support issues on a user's device before they even realize there's a problem. Remediations can help reduce support calls and tickets. You can create your own script package or deploy a built-in script package.
 
-Each script package consists of a detection script, a remediation script, and metadata. Through Intune, you can deploy these script packages and see reports on their effectiveness.
+Each script package consists of a detection script, a remediation script, and metadata. When you use Intune, you can deploy these script packages and see reports on their effectiveness.
 
 ## Prerequisites
 
@@ -58,18 +43,21 @@ Whether enrolling devices via Intune or Configuration Manager, Remediation scrip
 
 - Devices must be Microsoft Entra joined or Microsoft Entra hybrid joined and meet one of the following conditions:
 
-  - Is managed by Intune and runs an Enterprise, Professional, or Education edition of Windows 10 or later.
-  - A [co-managed](../../configmgr/comanage/overview.md) device running Windows 10, version 1903 or later. Co-managed devices on preceding versions of Windows 10 will need the [Client apps workload](../../configmgr/comanage/workloads.md#client-apps) pointed to Intune (only applicable up to version 1607).
+  - Device is Mobile Device Management (MDM) enrolled in Intune and runs Windows Enterprise, Professional, or Education edition.
+
+    **OR**
+
+  - Device is [co-managed](../../configmgr/comanage/overview.md) running Windows.
 
 ### Licensing
 
-Remediations requires users of the devices to have one of the following licenses:
+Remediations require users of the devices to have one of the following licenses:
 
-- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
 
-- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
 
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows Virtual Desktop Access (VDA) per user
 
 ### Permissions
 
@@ -80,19 +68,19 @@ Remediations requires users of the devices to have one of the following licenses
 ### Script requirements
 
 - You can have up to 200 script packages.
-- A script package can contain a detection script only or both a detection script and a remediation script. 
+- A script package can contain a detection script only or both a detection script and a remediation script.
   - A remediation script only runs if the detection script uses exit code `exit 1`, meaning the issue was detected.
 - Ensure the scripts are encoded in UTF-8.
-  - If the option **Enforce script signature check** is enabled in the [Settings](#deploy-built-in-script-packages) page of creating a script package, then make sure that the scripts are encoded in UTF-8 not UTF-8 BOM.
-- The maximum allowed output size limit is 2048 characters.
-- If the option **Enforce script signature check** is enabled in the [Settings](#deploy-built-in-script-packages) page of creating a script package, the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
+  - In the [Settings](#deploy-built-in-script-packages) page of creating a script package, if the **Enforce script signature check** option is enabled, then make sure that the scripts are encoded in UTF-8, not UTF-8 BOM (Byte Order Mark).
+- The maximum allowed output size limit is 2,048 characters.
+- In the [Settings](#deploy-built-in-script-packages) page of creating a script package, if the **Enforce script signature check** option is enabled, then the script runs using the device's PowerShell execution policy. The default execution policy for Windows client computers is **Restricted**. The default execution for Windows Server devices is **RemoteSigned**. For more information, see [PowerShell execution policies](/powershell/module/microsoft.powershell.core/about/about_execution_policies#powershell-execution-policies).
   - Scripts built into Remediations are signed and the certificate is added to the **Trusted Publishers** certificate store of the device.
-  - When using third-party scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the certificate authority must be trusted by the device.
+  - When using non-Microsoft scripts that are signed, make sure the certificate is in the **Trusted Publishers** certificate store. As with any certificate, the device must trust the certificate authority.
   - Scripts without **Enforce script signature check** use the **Bypass** execution policy.
 - Don't put reboot commands in detection or remediations scripts. <!--13957089-->
-- Do not include any type of sensitive information in scripts (such as passwords)
-- Do not include Personally Identifiable Information (PII) in scripts
-- Do not use scripts to collect PII from devices
+- Don't include any type of sensitive information in scripts (such as passwords)
+- Don't include personal data in scripts
+- Don't use scripts to collect personal data from devices
 - Always follow privacy best practices
 
 ## Deploy built-in script packages
@@ -104,12 +92,28 @@ There are built-in script packages you can use to get started with Remediations.
 
 To assign the script package:
 
-1. From the **Devices** > **Manage devices** > **Scripts and remediations** node, select one of the built-in script packages.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations** node, select one of the built-in script packages.
 1. Select **Properties**, then next the **Assignments** heading, select **Edit**.
 1. Choose the groups you want to **Assign to** and any **Excluded groups** for the script package.
 1. To change the **Scope tags**, select **Edit** then **Select scope tags**.
-1. If you would like to change the schedule, select the ellipses and choose **Edit** to specify your settings then **Apply** to save them.
-1. When you're done, select **Review + save**.  
+1. To change the schedule, select the ellipses and choose **Edit** to specify your settings. Select **Apply** to save your changes.
+1. When you're done, select **Review + save**.
+
+### Schedule options for assignments
+
+When you configure the assignment of a script package, you can define how often the remediation runs using one of the following **Schedule** options:
+
+- **Once** - Execute the remediation one time only, at a specified date and time.
+
+- **Hourly** - Run the remediation on an hourly basis, with a configurable interval, like every *n* hours. The value must be less than 24 hours.
+
+- **Daily** - Execute the remediation daily at a specified time.
+
+Execution behavior:
+
+- Remediations run based on the device's local time, by default. To schedule by Coordinated Universal Time, select **Use UTC**.
+- If a scheduled run is missed, the remediation runs when the device is online, and as soon as possible.
+- For nonurgent or resource-heavy scripts, use less frequent schedules (such as every seven days) to reduce performance effects on the device.
 
 ## Create and deploy custom script packages
 
@@ -127,19 +131,23 @@ The **Microsoft Intune Management Extension** service gets the scripts from Intu
 
 Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather than editing them directly in your browser helps ensure that the script encoding is correct so your devices can execute them.
 
-1. In the Intune admin center, go to **Devices** > **Manage devices** > **Scripts and remediations**.
-1. Choose **Create script package** button to create a script package.
-     [![Remediations page. Select the create link.](media/remediations/remediations-create.png)](media/remediations/remediations-create.png#lightbox)
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations**.
+1. Choose the **Create script package** button to create a script package.
+
+    :::image type="content" source="./media/remediations/remediations-create.png" alt-text="Screenshot that shows the create script package button in the Remediations page in Microsoft Intune." lightbox="./media/remediations/remediations-create.png":::
+
 1. In the **Basics** step, give the script package a **Name** and optionally, a **Description**. The **Publisher** field can be edited, but defaults to your name. **Version** can't be edited.
 1. On the **Settings** step, upload both the **Detection script file** and the **Remediation script file** by doing the following steps:
    1. Select the folder icon.
    1. Browse to the `.ps1` file.
    1. Choose the file and select **Open** to upload it.
 
-    The detection script must use exit code `exit 1` if the target issue is detected. If there's any other exit code, the remediation script won't run. Including an empty output, since it results in an *issue is not found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
+    The detection script must use exit code `exit 1` if the target issue is detected. If there's any other exit code, the remediation script won't run. Including an empty output, since it results in an *issue isn't found* state. Review the [Sample detection script](powershell-scripts-remediation.md#script-descriptions) for an example of exit code usage.
 
    You need the corresponding detection and remediation script to be in the same package. For example, the `Detect_Expired_User_Certificates.ps1` detection script corresponds with the `Remediate_Expired_User_Certificates.ps1` remediation script.
-       [![Remediations script settings page.](media/remediations/remediations-script-settings.png)](media/remediations/remediations-script-settings.png#lightbox)
+
+    :::image type="content" source="./media/remediations/remediations-script-settings.png" alt-text="Screenshot that shows the custom script settings in the Remediations page in Microsoft Intune." lightbox="./media/remediations/remediations-script-settings.png":::
+
 1. Finish the options on the **Settings** page with the following recommended configurations:
    - **Run this script using the logged-on credentials**: This setting is dependent on the script. For more information, see the [Script descriptions](powershell-scripts-remediation.md#script-descriptions).
    - **Enforce script signature check**: No
@@ -148,7 +156,7 @@ Remediation scripts need to be encoded in UTF-8. Uploading these scripts rather 
    For information about enforcing script signature checks, see [Script requirements](#script-requirements).
 1. Select **Next** then assign any **Scope tags** you need.
 1. In the **Assignments** step, select the device groups to which you want to deploy the script package. When you're ready to deploy the packages to your users or devices, you can also use filters. For more information, see [Create filters in Microsoft Intune](filters.md).
- 
+
    >[!NOTE]
    > Don't mix user and device groups across include and exclude assignments.
 
@@ -162,9 +170,9 @@ You can use the **Run remediation** device action to run a remediation script on
 
 - Remediations must already be configured before a remediation script can be used on-demand.
 
-- The built-in or custom script packages must be available for users to run a remediation on-demand, however they don't need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
+- The built-in or custom script packages must be available for users to run a remediation on-demand. However, they don't need to be assigned to a user or device. You can use **Scope tags** to limit which remediation script packages a user can see.
 
-- Users must be Global Admins, Intune Admins, or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
+- Users must be Intune Admins or have a role with the **Run remediation** permission (available under  **Remote tasks**). During the public preview, the user must also have Organization: Read.
 
 - Devices are online and able to communicate with Intune and [Windows Push Notification Service (WNS)](intune-endpoints.md#windows-push-notification-services-wns-dependencies) during the remote action.
 
@@ -172,16 +180,16 @@ You can use the **Run remediation** device action to run a remediation script on
 
 ### How to run a Remediation script on-demand
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. On the device's  **Overview**  page, select  **…** > **Run remediation (preview).**
 4. In the **Run remediation (preview)** pane, select the **Script package** you want to run from the list. Select **View details** to see properties of the script package like detection and remediation script contents, description, and configured settings.
 5. To run the remediation on-demand, select **Run remediation**.
 
 > [!NOTE]
-> Only a single **Run remediation** device action can be issued at a time for the same device. If you run multiple **Run remediation** device actions in a short period of time to a device, they may overwrite each other.
-> [!NOTE]
-> The device might not receive the **Run remediation** device action if it is not online or able to successfully communicate with Intune or Windows Push Notification Service (WNS) when the device action is sent.
+> - Only a single **Run remediation** device action can be issued at a time for the same device. If you run multiple **Run remediation** device actions in a short period of time to a device, they can overwrite each other.
+>
+> - The device might not receive the **Run remediation** device action if the device is offline or can't successfully communicate with Intune or Windows Push Notification Service (WNS) when the device action is sent.
 
 ## Client policy retrieval and client reporting
 
@@ -193,7 +201,7 @@ The client retrieves policy for Remediation scripts at the following times:
 
 - Once every 8 hours
 
-  - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. User sign ins do not alter the schedule.
+  - The 8 hour script retrieval schedule is fixed based on when the Intune management extension service starts. User sign-ins don't alter the schedule.
 
 The client reports Remediation information at the following times:
 
@@ -207,27 +215,31 @@ The client reports Remediation information at the following times:
 
 ## Monitor your script packages
 
-1. In the Intune admin center, go to **Devices** > **Manage devices** > **Scripts and remediations**, you can see an overview of your detection and remediation status.
-       [![Remediations report, overview page.](media/remediations/remediations-report-overview.png)](media/remediations/remediations-report-overview.png#lightbox)
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Scripts and remediations**, you can see an overview of your detection and remediation status.
+
+    :::image type="content" source="./media/remediations/remediations-report-overview.png" alt-text="Screenshot that shows the Remediations report overview page in Microsoft Intune." lightbox="./media/remediations/remediations-report-overview.png":::
 
 1. Select **Device status** to get status details for each device in your deployment.
-       [![Remediations device status.](media/remediations/remediations-device-status.png)](media/remediations/remediations-device-status.png#lightbox)
+
+    :::image type="content" source="./media/remediations/remediations-device-status.png" alt-text="Screenshot that shows the Remediations device status page in Microsoft Intune." lightbox="./media/remediations/remediations-device-status.png":::
 
 ## Export script output
 <!-- 10198545 -->
-To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when Remediations run on devices with issues. Exporting also allows you to share the results with others for more analysis.  
+To help you easily analyze returned outputs, use the **Export** option to save the output as a `.csv` file. Exporting the output to a `.csv` file allows you to analyze the returned outputs when Remediations run on devices with issues. Exporting also allows you to share the results with others for more analysis.
 
 ## Monitor remediation status for a device
 
 You can view the status of Remediations that are assigned or run on-demand to a device.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Navigate to **Devices** > **By platform** > **Windows** > select a supported device.
 3. Select **Remediations** in the **Monitor** section.
 
 ## Known Issues
 
-When applying filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
+When you apply filters such as "Author" or "Status," or using the **Export** option on the **Remediations** page of **Scripts and remediations**, only the currently loaded script packages are included. To include all scripts, scroll until the full list is loaded.
+
+[!INCLUDE [platform-scripts-export-api](../includes/platform-scripts-export-api.md)]
 
 ## Next steps
 

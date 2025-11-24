@@ -6,8 +6,8 @@ ms.date: 08/24/2018
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium

@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Create macOS system and kernel extensions with Microsoft Intune
-titleSuffix:
 description: Learn more about system extensions and kernel extensions for macOS devices. In Microsoft Intune, add or create a device configuration policy that configures kernel extensions. In the extension, you can allow user override, add a team identifier, and add a bundle and team identifier.
-keywords: macos, kernel extensions, system extensions, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 09/11/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

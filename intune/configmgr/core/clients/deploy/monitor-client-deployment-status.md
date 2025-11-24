@@ -6,8 +6,8 @@ ms.date: 04/23/2017
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

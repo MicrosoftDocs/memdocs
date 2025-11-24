@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Create Wi-Fi profile with preshared key in Microsoft Intune
 description: Use a custom profile to create a Wi-Fi profile with a preshared key (PSK), and get sample XML code for Android, Android Enterprise, Windows, and EAP-based Wi-Fi profiles in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 05/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid: c6fd72a6-7dc8-48fc-9df1-db5627a51597
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -51,7 +31,7 @@ This article shows you how to create the policy in Intune, and includes an XML e
 
 > [!IMPORTANT]
 >
-> - Using a pre-shared key with Windows 10/11 causes a remediation error to show in Intune. When this error happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
+> - Using a pre-shared key with Windows causes a remediation error to show in Intune. When this error happens, the Wi-Fi profile is properly assigned to the device, and the profile does work as expected.
 > - If you export a Wi-Fi profile that includes a pre-shared key, be sure the file is protected. The key is in plain text. It's your responsibility to protect the key.
 
 ## Prerequisites
@@ -96,7 +76,7 @@ This article shows you how to create the policy in Intune, and includes an XML e
         > - If the SSID has a space, then add an escape space `%20`.
 
         SSID (Service Set Identifier) is your Wi-Fi network name that you're creating the policy for. This value is typically the friendly name that users see in their internet connection list. It's possible this friendly name is different than the actual SSID value of your Wi-Fi network. Be sure to enter the friendly name. If you export an existing Intune Wi-Fi profile to XML, the friendly name is listed in `<name>` in `<WLANProfile> <name>`.
-        
+
         For example, if the Wi-Fi is named `Hotspot-1`, enter `./Vendor/MSFT/WiFi/Profile/Hotspot-1/Settings`. If the Wi-Fi is named `Contoso WiFi`, enter `./Vendor/MSFT/WiFi/Profile/Contoso%20WiFi/Settings` (with the `%20` escape space).
 
     4. **Data Type**: Select **String**.
@@ -128,7 +108,7 @@ The following example includes the XML code for an Android or Windows Wi-Fi prof
 
 - `<protected>false</protected>` must be set to **false**. When **true**, it could cause the device to expect an encrypted password, and then try to decrypt it; which can result in a failed connection.
 
-- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows 10/11 devices can return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
+- `<hex>53534944</hex>` should be set to the hexadecimal value of `<name><SSID of wifi profile></name>`. Windows devices can return a false `x87D1FDE8 Remediation failed` error, but the device still contains the profile.
 
 - XML has special characters, like the `&` (ampersand). Using special characters can prevent the XML from working as expected.
 
@@ -270,7 +250,7 @@ You can also create an XML file from an existing Wi-Fi connection. On a Windows 
 4. Run `netsh wlan export profile name="YourProfileName" folder=c:\Wifi`. This command creates a file named `Wi-Fi-YourProfileName.xml` in c:\Wifi.
 
     - If you're exporting a Wi-Fi profile that includes a preshared key, add `key=clear` to the command. The `key=clear` parameter exports the key in plain text, which is required to successfully use the profile:
-  
+
       `netsh wlan export profile name="YourProfileName" key=clear folder=c:\Wifi`
 
     - If the exported Wi-Fi profile `<name></name>` element includes a space, then it might return an `ERROR CODE 0x87d101f4 ERROR DETAILS Syncml(500)` error when assigned. When this issue happens, the profile is listed in `\ProgramData\Microsoft\Wlansvc\Profiles\Interfaces`, and shows as a known network. But, it doesn't successfully display as managed policy in the "Areas managed by..." URI.

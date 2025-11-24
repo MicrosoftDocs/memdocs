@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Custom per-app VPN profile for Android DA in Microsoft Intune
 description: Use a custom profile for per-app VPN profiles on Android device administrator with the Pulse Secure or Citrix VPN connection types in Microsoft Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 02/19/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-ms.assetid: d035ebf5-85f4-4001-a249-75d24325061a
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

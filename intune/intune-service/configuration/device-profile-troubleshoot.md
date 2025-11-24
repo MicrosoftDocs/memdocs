@@ -1,30 +1,13 @@
 ---
-# required metadata
-
 title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 04/28/2025
+ms.date: 10/20/2025
+ms.update-cycle: 180-days
 ms.topic: troubleshooting
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - msec-ai-copilot
 ---
@@ -46,53 +29,56 @@ This article applies to the following policies:
 
 ## Policy refresh intervals
 
-When a device checks-in, it immediately checks for compliance, non-compliance and configuration for the current user/device context, receiving any pending actions, policies and apps assigned to it.
-
-There are 4 main types of check-ins:
-
-**Scheduled check-ins** - These check-ins happen at predetermined intervals and can be initiated by the client or service depending on the platform. The check-ins are estimated as follows:
-
-| Platform | Estimated refresh cycle|
-| --- | --- |
-| Android, AOSP | About every 8 hours |
-| iOS/iPadOS | About every 8 hours |
-| macOS | About every 8 hours |
-| Windows 10/11 PCs enrolled as devices | About every 8 hours |
-
-**End user driven check-ins** – These check-ins are driven by end users when they perform certain actions in the Company Portal app like going into  **Devices** > **Check Status** or **Settings** > **Sync** to check for policy or profile updates or selecting an app for download.
-
-**Admin check-ins** - These check-ins are driven by admins when they perform certain actions on a single device from the Intune portal, like [device sync](../remote-actions/device-sync.md), [remote lock](../remote-actions/device-remote-lock.md) or [reset passcode](../remote-actions/device-passcode-reset.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) do not cause a device check-in.
-
-**Notification-based check-ins** - These check-ins happen through different actions that trigger a notification. For example, when a policy, profile, or app is assigned (or unassigned), updated, deleted, or when certain behind the scenes changes like Microsoft Entra group membership updates are made. Other changes don't cause an immediate notification to devices, like adding an app as available to your users.
-
-> [!IMPORTANT]
-> To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
-> - For Windows, see [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies).
-> - For Apple, see [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies).
-> - For Android, see [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies).
-
-Intune notifies online devices to check-in with the Intune service. The notification times vary from immediately up to a few hours.
-These notification times also vary between platforms.
-
-- On Android devices, [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed).
-
-- On iOS devices, [Specific conditions can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy).
-
-An offline device, such as a powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next scheduled check-in with Intune.
-
-> [!NOTE]
-> It might take additional time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.  
-
-Additionally, when devices first enroll, configuration check-ins run more frequently to perform configuration, compliance and non-compliance checks. The check-ins are estimated as follows:
-
-| Platform | Estimated refresh cycle|
-| --- | --- |
-| Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
-| iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
-| macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
-| Windows 10/11 PCs enrolled as devices | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+When a device syncs with Intune, it checks for configuration for the current user or device context, and receives any pending actions, policies, and apps assigned to it.
 
 For app protection policy refresh intervals, go to [App Protection Policy delivery timing](../apps/app-protection-policy-delivery.md).
+
+There are three main types of device syncs - change-based, client initiated, and single device.
+
+### Change-based
+
+These syncs happen when different actions trigger a notification for the device to sync. For example, a sync triggers when a policy, profile, or app is assigned (or unassigned), updated, or deleted. Or, when changes like Microsoft Entra group membership updates are made. Changes like adding an app as available don't cause an immediate notification to devices.
+
+Intune notifies online devices to sync with the Intune service. The notification times can vary from immediately up to a few hours. They can also vary between platforms. To learn more, see:
+
+- Android - [Google Mobile Services (GMS) can affect policy refresh intervals](../apps/manage-without-gms.md#some-tasks-can-be-delayed)
+- iOS/iPadOS  - [Specific conditions can affect policy refresh intervals](/troubleshoot/mem/intune/device-configuration/2016341112-ios-device-is-currently-busy)
+
+An offline device, like when it's powered off, or a disconnected device, might not receive the notifications. In this case, the device gets the policy or profile on its next sync with Intune.
+
+> [!NOTE]
+>
+> - It can take more time for Intune reports to reflect the latest status of the policy on the device in the Intune portal.
+> - To receive push notifications, devices must connect to specific network endpoints. For a list of network endpoints, see [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md#intune-dependencies).
+>
+>   - [Windows dependencies](../fundamentals/intune-endpoints.md#windows-push-notification-services-wns-dependencies)
+>   - [Apple dependencies](../fundamentals/intune-endpoints.md#apple-dependencies)
+>   - [Android dependencies](../fundamentals/intune-endpoints.md#android-aosp-dependencies)
+
+### Client initiated
+
+The following client syncs happen in response to a device event or state change, like when a user signs into the device or if the malware status changes:
+
+- **Maintenance syncs** - These syncs include a large number of client-initiated syncs and they occur at predetermined intervals. The client or service can initiate the sync, depending on the platform. The estimated check-in schedule for all platforms is about every 8 hours.
+
+  Independent of the client schedule, devices are only allowed one maintenance sync every 6.5 hours.
+
+- **Newly enrolled devices** - When devices first enroll, syncs run more frequently to run configuration, compliance, and noncompliance checks. The check-ins are estimated at:
+
+  | Platform | Estimated refresh cycle|
+  | --- | --- |
+  | Android, AOSP | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+  | iOS/iPadOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+  | macOS | Every 15 minutes for 1 hour, and then around every 8 hours |
+  | Windows | Every 3 minutes for 15 minutes, then every 15 minutes for 2 hours, and then around every 8 hours |
+
+### Single device
+
+Admins or end users initiate these check-ins when they run certain actions on a single device:
+
+- **End-users actions** - Includes actions made by users in the Company Portal website or app, like [checking the compliance status](../user-help/check-status-company-portal-website.md), syncing for policy or profile updates, or [installing apps](../user-help/manage-apps-cpweb.md#available-and-required-apps).
+
+- **Admin actions** - Includes actions made by admins in the Intune admin center, like a [device sync](../remote-actions/device-sync.md), [remote lock](../remote-actions/device-remote-lock.md), or [reset passcode](../remote-actions/device-passcode-reset.md). Other actions like [remotely assist users](../fundamentals/remote-help.md) don't cause a device check-in.
 
 ## Company portal
 
@@ -165,7 +151,7 @@ When you delete a profile, or remove a device from a group that's assigned the p
 
 To apply a less restrictive profile, some devices might need to be retired and re-enrolled in to Intune. For example, you might have to retire and re-enroll Android, iOS/iPadOS, and Windows client devices.
 
-## Some settings in a Windows 10/11 profile return "Not Applicable"
+## Some settings in a Windows profile return "Not Applicable"
 
 Some settings on Windows client devices can show as **Not Applicable**. When this situation happens, that specific setting isn't supported on the Windows version or edition running on the device. This message can occur for the following reasons:
 
@@ -194,7 +180,7 @@ For more information on dynamic groups, go to:
 
 On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
 
-If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenrolled to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity. 
+If the Trusted Platform Module (TPM) was reset to factory settings, then the device must reenroll to resume syncing. The device's Microsoft Entra identity is stored in the TPM. So, if the ID is removed, then reenrollment is the only way to reestablish the Microsoft Entra identity.
 
 ## Related articles
 

@@ -1,42 +1,20 @@
 ---
-# required metadata
-
-title: App configuration policies for Microsoft Intune
-titleSuffix: 
+title: App Configuration Policies for Microsoft Intune
 description: Learn how to use app configuration policies on an iOS/iPadOS or Android device in Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 11/21/2024
+ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 834B4557-80A9-48C0-A72C-C98F6AF79708
-
-# optional metadata 
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Configure
 ---
 
-# App configuration policies for Microsoft Intune
+# App Configuration Policies for Microsoft Intune
 
 App configuration policies can help you eliminate app setup problems by letting you assign configuration settings to a policy that is assigned to end-users before they run the app. The settings are then supplied automatically when the app is configured on the end-users device, and end-users don't need to take action. The configuration settings are unique for each app.
 
-You can create and use app configuration policies to provide configuration settings for both iOS/iPadOS or Android apps. These configuration settings allow an app to be customized by using app configuration and management. The configuration policy settings are used when the app checks for these settings, typically the first time the app is run. 
+You can create and use app configuration policies to provide configuration settings for both iOS/iPadOS or Android apps. These configuration settings allow an app to be customized by using app configuration and management. The configuration policy settings are used when the app checks for these settings, typically the first time the app is run.
 
 An app configuration setting, for example, might require you to specify any of the following details:
 
@@ -47,11 +25,11 @@ An app configuration setting, for example, might require you to specify any of t
 
 If end-users were to enter these settings instead, they could do this incorrectly. App configuration policies can help provide consistency across an enterprise and reduce helpdesk calls from end-users trying to configure settings on their own. By using app configuration policies, the adoption of new apps can be easier and quicker.
 
-The available configuration parameters and the implementation of the configuration parameters are decided by the developers of the application. Documentation from the application vendor should be reviewed to see what configurations are available and how the configurations influence the behavior of the application. For some applications, Intune will populate the available configuration settings. 
+The available configuration parameters and the implementation of the configuration parameters are decided by the developers of the application. Documentation from the application vendor should be reviewed to see what configurations are available and how the configurations influence the behavior of the application. For some applications, Intune will populate the available configuration settings.
 
 > [!NOTE]
 > In the Managed Google Play Store, apps that support configuration will be marked as such:
-> 
+>
 > ![Screenshot of a configured app](./media/app-configuration-policies-overview/configured-app.png)
 >
 > You will only see apps from [Managed Google Play store](https://play.google.com/work), not the [Google Play store](https://play.google.com/store/apps), when using Managed Devices as the Enrollment Type for Android devices.
@@ -69,7 +47,7 @@ App configuration can be delivered either through the mobile device management (
 Intune represents these different app configuration policy channels as:
 
 - **Managed devices** - The device is managed by Intune as the unified endpoint management provider. The app must be pinned to the management profile on iOS/iPadOS or deployed through Managed Google Play on Android devices. In addition, the app supports the desired app configuration.
-- **Managed apps** - An app that has either integrated the Intune App SDK or has been wrapped using the Intune Wrapping Tool and supports App Protection Policies (APP). In this configuration, neither the device's enrollment state or how the app is delivered to the device matter. The app supports the desired app configuration.
+- **Managed apps** - An app that has either integrated the Intune App SDK or has been wrapped using the Intune Wrapping Tool and supports app protection policies. In this configuration, neither the device's enrollment state or how the app is delivered to the device matter. The app supports the desired app configuration.
 
 ![Device enrollment type](./media/app-configuration-policies-overview/device-enrollment-type.png)
 
@@ -98,7 +76,7 @@ Delivery of app configuration through the MAM channel does not require the devic
 
 - General app configuration settings
 - S/MIME configuration settings
-- Advanced APP data protection settings which extend the capabilities offered by App Protection Policies
+- Advanced app protection policies data protection settings which extend the capabilities offered by app protection policies
 
 > [!NOTE]
 > Intune managed apps will check in with an interval of 30 minutes for Intune App Configuration Policy status, when deployed in conjunction with an Intune App Protection Policy. If an Intune App Protection Policy isn't assigned to the user, then the Intune App Configuration Policy check-in interval is set to 720 minutes.
@@ -120,7 +98,7 @@ Enrollment type can be one of the following:
 
 > [!IMPORTANT]
 > Existing policies created prior to the release of this feature (April 2020 release - 2004) that do not have any certificate profiles associated with the policy will default to **All Profile Types** for device enrollment type. Also, existing policies created prior to the release of this feature that have certificate profiles associated with them will default to Work Profile only.
-> 
+>
 > Existing policies will not remediate or issue new certificates.
 
 ## Validate the applied app configuration policy
@@ -132,7 +110,7 @@ You can validate the app configuration policy using the following three methods:
    3. Verify in the Microsoft Intune admin center. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > *select the related app**. Then, under the **Monitor** section, select **Device install status**:
       Device Install Status Report monitors the latest check-in's for all the devices the configuration policy has been targeted to.
       ![First screenshot of device install status](./media/app-configuration-policies-overview/device-install-status-1.png)
-          
+
       Additionally, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All Devices** > *select a device* > **App configuration**. The **app configuration** pane will display all the assigned policies and their state:
 
       ![Screenshot of app configuration](./media/app-configuration-policies-overview/app-configuration.png)
@@ -147,7 +125,7 @@ You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** for
 2. Launch the **Microsoft Edge** and enter **about:intunehelp** in the address box.
 3. Click **Get Started**.
 4. Click **Share Logs**.
-5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 
+5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC.
 6. Review **IntuneMAMDiagnostics.txt** in your text file viewer.
 7. Search for `ApplicationConfiguration`. The results will look like the following:
 
@@ -165,7 +143,7 @@ You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** for
             );
         },
         {
-            ApplicationConfiguration =             
+            ApplicationConfiguration =
             (
                 {
                 Name = IntuneMAMUPN;
@@ -191,7 +169,7 @@ You can validate iOS/iPadOS configuration with the **Intune Diagnostic Log** on 
 2. Launch **Microsoft Edge** and enter **about:intunehelp** in the address box.
 3. Click **Get Started**.
 4. Click **Share Logs**.
-5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC. 
+5. Use the mail app of your choice to send the log to yourself so they can be viewed on your PC.
 6. Review **IntuneMAMDiagnostics.txt** in your text file viewer.
 7. Search for `AppConfig`. Your results should match the application configuration policies configured for your tenant.
 

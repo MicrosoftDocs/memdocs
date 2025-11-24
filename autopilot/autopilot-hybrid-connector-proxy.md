@@ -3,14 +3,7 @@
 
 title: Configure proxy settings for the Intune Connector for Active Directory
 description: Covers how to configure the Intune Connector for Active Directory to work with existing on-premises proxy servers.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
-ms.date: 03/28/2025
+ms.date: 11/24/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -90,7 +83,7 @@ Once the configuration files are modified, the Intune Connector for Active Direc
 
 ## Specifying an alternative proxy server
 
-If a different proxy server needs to be used with the Intune Connector for Active Directory, for example one that bypasses authentication, the different proxy server can be specified in a similar manner. To use a different proxy, edit the ``:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard\ODJConnectorEnrollmentWizard`` file and add the proxy address and proxy port in the section shown in this code sample:
+If a different proxy server needs to be used with the Intune Connector for Active Directory, for example one that bypasses authentication, the different proxy server can be specified in a similar manner. To use a different proxy, edit the `:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard\ODJConnectorEnrollmentWizard.exe.config` file and add the proxy address and proxy port in the section shown in this code sample:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

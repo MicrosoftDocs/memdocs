@@ -6,8 +6,8 @@ ms.date: 08/12/2022
 ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

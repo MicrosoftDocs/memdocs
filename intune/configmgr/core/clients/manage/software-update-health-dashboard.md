@@ -6,8 +6,8 @@ ms.date: 04/04/2024
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: conceptual
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

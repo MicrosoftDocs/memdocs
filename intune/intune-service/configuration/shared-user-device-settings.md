@@ -1,26 +1,11 @@
 ---
-# required metadata
 title: Shared or multi-user Windows device settings in Microsoft Intune
 description: Add and use Windows 10/11 and Windows Holographic for Business devices that are shared, or used by multiple users in Microsoft Intune. See a list of all the settings and what they do on the devices, including Microsoft HoloLens. Control guest accounts, manage accounts and delete inactive accounts, allow or prevent saving to local storage, set power and sleep options, choose when updates are installed, and use devices in education environments in a device configuration profile.
-keywords: intune shared device, shared device intune, sharedpc
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 04/22/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-
-# optional metadata
-#ROBOTS:
-#audience:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -50,8 +35,8 @@ When you create the profile in Intune, you deploy or assign the profile to devic
 
 This feature applies to:
 
-- Windows 10/11 Professional
-- Windows 10/11 Enterprise
+- Windows Professional
+- Windows Enterprise
 - Windows Holographic for Business, such as the HoloLens
 
 > [!TIP]
@@ -79,7 +64,7 @@ This feature applies to:
 6. Select **Next**.
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
-    - [Windows 10/11](shared-user-device-settings-windows.md)
+    - [Windows](shared-user-device-settings-windows.md)
     - [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md)
 
 8. Select **Next**.
@@ -101,5 +86,5 @@ The next time each device checks in, the policy is applied.
 
 ## Related articles
 
-- See all the settings for [Windows 10/11](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
+- See all the settings for [Windows](shared-user-device-settings-windows.md) and [Windows Holographic for Business](shared-user-device-settings-windows-holographic.md).
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).

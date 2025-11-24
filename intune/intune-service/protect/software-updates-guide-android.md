@@ -1,25 +1,12 @@
 ---
 title: Admin checklist for Android software updates in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for Android devices using Microsoft Intune. See tasks and settings that can manage updates on corporate owned Android Enterprise devices.
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 05/29/2024
-audience: ITPro
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: ahamil, talima, mandia
-ms.suite: ems
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-updates
 ---
@@ -85,7 +72,7 @@ For enrolled Android Enterprise devices, you can configure this setting and choo
 
   :::image type="content" source="./media/software-updates-guide-android/system-update-maintenance-window.png" alt-text="Screenshot that shows the system update setting with a maintenance window for Android Enterprise devices in the Microsoft Intune admin center.":::
 
-For more specific information on this setting and the values you can configure, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md#general).
+For more specific information on this setting and the values you can configure, go to [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
 
 ### ✅ Use freeze periods during critical times
 
@@ -95,7 +82,7 @@ During critical periods of the year, like holidays and other events, a freeze pe
 
 :::image type="content" source="./media/software-updates-guide-android/android-enterprise-freeze-period-settings.png" alt-text="Screenshot that shows the freeze period start date and end date for Android Enterprise devices in the Microsoft Intune admin center.":::
 
-For more information on this setting, go to [Android Enterprise device settings list to allow or restrict features on corporate-owned devices using Intune](../configuration/device-restrictions-android-for-work.md#general).
+For more information on this setting, go to [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
 
 ### ✅ Use OEMConfig for firmware updates
 
@@ -121,5 +108,5 @@ For more version information, go to [Supported operating systems and browsers in
 ## Related articles
 
 - [Software updates planning guide and scenarios for BYOD and personal devices](software-updates-guide-personal-byod.md)
-- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-- [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)
+- [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)
+- [Software updates planning guide for managed macOS devices](updates/software-updates-guide-macos.md)

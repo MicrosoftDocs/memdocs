@@ -1,37 +1,20 @@
 ---
-# required metadata
-
-title: Performance recommendations when using filters
-description: When using filters in Microsoft Intune, use Intune virtual groups that don't require Microsoft Entra ID syncing. To improve performance, reuse groups, make incremental group changes, and use filters to include and exclude.
-keywords:
+title: Assignment Filter Performance Tips for Intune
+description: Optimize Microsoft Intune performance with assignment filters. Learn to use virtual groups, reuse groups, and apply filters effectively. Improve policy deployment speed with incremental group changes, and use assignment filters to include and exclude.
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 12/11/2024
+ms.date: 11/19/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: gokarthi
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
+ms.reviewer: mattcall
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
 # Performance recommendations for grouping, targeting, and filtering in large Microsoft Intune environments
 
-When you create a policy, you can use [filters](filters.md) to assign a policy based on rules you create. You can apply filters to Intune-enrolled devices and Intune-managed apps. For an overview of filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
+When you create a policy, you can use [assignment filters](filters.md) to assign a policy based on rules you create. You can apply assignment filters to Intune-enrolled devices and Intune-managed apps. For an overview of assignment filters, go to [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](filters.md).
 
-When you create filters, there are some performance recommendations you should consider.
+When you create assignment filters, there are some performance recommendations you should consider.
 
 This article lists and describes recommendations for Intune grouping, targeting, and filtering for your policies and apps. The goal is to help you make architecture and design decisions for Intune deployments in large environments.
 
@@ -52,12 +35,12 @@ Let's review the grouping, targeting, and filtering features available in Intune
 
 Intune almost exclusively uses Microsoft Entra groups for grouping and targeting. When you select **Groups** in the Microsoft Intune admin center, you're looking at Microsoft Entra groups.
 
-:::image type="content" source="./media/filters-performance-recommendations/admin-center-all-groups.png" alt-text="Screenshot that shows the Intune admin center, groups, and all groups in Microsoft Intune." lightbox="./media/filters-performance-recommendations/admin-center-all-groups.png":::
+:::image type="content" source="./media/filters-performance-recommendations/admin-center-all-groups.png" alt-text="Screenshot of the Intune admin center, groups, and all groups in Microsoft Intune." lightbox="./media/filters-performance-recommendations/admin-center-all-groups.png":::
 
 Microsoft Entra groups are an important part of Intune because these groups are:
 
 - The objects used for assigning apps, policies, and other workloads to users and devices
-- Used to define the devices that admins can view and manage in the Intune admin center, like scope groups in role-based access control (RBAC)
+- Used to define the devices that admins can view and manage in the Intune admin center, like [scope groups](../fundamentals/role-based-access-control.md#about-intune-role-assignments) in role-based access control (RBAC)
 
 ### Virtual groups
 
@@ -65,13 +48,13 @@ The **All users** and **All devices** assignments are Intune "virtual" groups. T
 
 The **All users** and **All devices** groups are also highly scalable and optimized, mainly because they don't need to be synced from Microsoft Entra ID in the same way that other groups do.
 
-### Filters
+### Assignment filters
 
-After the app or policy is assigned to a Microsoft Entra ID or virtual group, you can use [filters](filters.md) to narrow the assignment scope of these apps and policies to specific user or device groups.
+After the app or policy is assigned to a Microsoft Entra ID or virtual group, you can use [assignment filters](filters.md) to narrow the assignment scope of these apps and policies to specific user or device groups.
 
-Your filter filters devices in (or out) of that assignment based on device properties.
+Your assignment filter filters devices in (or out) of that assignment based on device properties.
 
-:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot that shows the Intune admin center, the Microsoft Entra groups, virtual groups, and some filter properties in Microsoft Intune."lightbox="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png":::
+:::image type="content" source="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png" alt-text="Screenshot of the Intune admin center, the Microsoft Entra groups, virtual groups, and some filter properties in Microsoft Intune."lightbox="./media/filters-performance-recommendations/filters-azuread-virtual-groups.png":::
 
 Filtering is high performance, low latency applicability evaluation at device check-in without any need to precompute group membership.
 
@@ -89,9 +72,9 @@ These recommendations focus on improving performance and reducing latency in wor
 
 Larger groups take longer to sync membership updates between Microsoft Entra ID and Intune. The **All users** and **All devices** are usually the largest groups you have. If you assign Intune workloads to large Microsoft Entra groups that have many users or devices, then synchronization backlogs can happen in your Intune environment. This backlog impacts policy and app deployments, which take longer to reach managed devices.
 
-The update from Microsoft Entra to Intune typically happens within 5 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group. 
+The update from Microsoft Entra to Intune typically happens within 5 minutes. It's not instant. This time can affect enrollment assignments. Admins should enroll devices after several minutes, not immediately after adding the enrolling users to a group.
 
-The built-in **All users** and **All devices** groups are Intune-only grouping objects that don't exist in Microsoft Entra ID. There isn't a continuous sync between Microsoft Entra ID and Intune. So, group membership is instant. 
+The built-in **All users** and **All devices** groups are Intune-only grouping objects that don't exist in Microsoft Entra ID. There isn't a continuous sync between Microsoft Entra ID and Intune. So, group membership is instant.
 
 > [!NOTE]
 > For information on Intune check-in policy refresh intervals, go to [Intune Policy refresh intervals](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
@@ -134,26 +117,26 @@ For example, if a Microsoft Entra admin nests new large groups within an existin
 
 This recommendation also applies when groups are "unnested". For more information on nested groups, go to [Manage Microsoft Entra groups and group membership](/azure/active-directory/fundamentals/how-to-manage-groups).
 
-### Use filters to include and exclude
+### Use assignment filters to include and exclude
 
 | DO | DON'T |
 | --- | --- |
-| ✅ Use filters to achieve the correct user+device combination for targeting. | ❌ Don't mix user groups and device groups when using Include and Exclude groups. |
+| ✅ Use assignment filters to achieve the correct user+device combination for targeting. | ❌ Don't mix user groups and device groups when using Include and Exclude groups. |
 
 This recommendation is also a support statement. We don't recommend or support creating assignments to user groups and excluding a device group from that assignment, or vice-versa.
 
 This recommendation exists due to the timing/latency characteristic of dynamic groups. **Excluded groups** membership isn't instant, which can result in cases where devices incorrectly receive app or policy assignments. To understand more, go to [Assign policies and profiles - support matrix](../configuration/device-profile-assign.md#support-matrix).
 
-Instead of mixed exclusions, we recommend assigning to a user group. Then, use filters to dynamically include or exclude the appropriate devices.
+Instead of mixed exclusions, we recommend assigning to a user group. Then, use assignment filters to dynamically include or exclude the appropriate devices.
 
 ## Summary
 
-When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups, and apply filters to help refine the targeting scope. Keep the best practices in mind:
+When creating and managing assignments in Intune, incorporate some of these recommendations. Use groups or virtual groups, and apply assignment filters to help refine the targeting scope. Keep the best practices in mind:
 
 - Don't create your own version of "All users" or "All devices" groups. Use the Intune virtual groups, as they don't require Microsoft Entra ID syncing when a new user or device is added to the environment.
 - To optimize your targeting, reuse groups as much as possible.
-- Take care when making large nesting changes to Intune groups. Intune needs to process all these changes and calculate effective changes for all the members of all the groups impacted by that change. 
-- Intune doesn't support mixed group exclusions. So, use filters to dynamically include and exclude devices in addition to group or virtual group assignments.
+- Take care when making large nesting changes to Intune groups. Intune needs to process all these changes and calculate effective changes for all the members of all the groups impacted by that change.
+- Intune doesn't support mixed group exclusions. So, use assignment filters to dynamically include and exclude devices in addition to group or virtual group assignments.
 
 ## Related articles
 

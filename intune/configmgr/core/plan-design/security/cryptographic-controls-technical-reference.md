@@ -6,8 +6,8 @@ ms.date: 10/15/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

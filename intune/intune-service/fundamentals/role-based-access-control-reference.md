@@ -1,36 +1,18 @@
 ---
-# required metadata
-
 title: Microsoft Intune built-in roles reference
-description: Permissions reference for built-in roles for Microsoft Intune. 
-keywords:
+description: Permissions reference for built-in roles for Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 06/09/2025
+ms.date: 06/14/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # Built-in role permissions for Microsoft Intune
 
-The following tables list the built-in roles for Microsoft Intune. The tables also list the permissions that are associated with each role. 
+The following tables list the built-in roles for Microsoft Intune. The tables also list the permissions that are associated with each role.
 
 > [!TIP]
 > When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles aren't available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
@@ -39,7 +21,7 @@ The following tables list the built-in roles for Microsoft Intune. The tables al
 > This article was partially created with the help of artificial intelligence. Before publishing, an author reviewed and revised the content as needed. See [Our principles for using AI-generated content in Microsoft Learn](https://aka.ms/ai-content-principles).
 
 
-<!-- 
+<!--
 # Save the below .ps1 file, which can be used to generate the markdown when permissions change or new roles are added
 # ISE tends to popup the authentication better for Connect-MSGraph cmdlet
 
@@ -193,8 +175,8 @@ Endpoint Privilege Managers can manage Endpoint Privilege Management (EPM) polic
 
 | Permission | Action |
 | ---------- | ------ |
-| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Elevation Requests | Modify elevation requests |
+| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Policy Authoring | Assign |
 | Endpoint Privilege Management Policy Authoring | Create |
 | Endpoint Privilege Management Policy Authoring | Delete |
@@ -265,8 +247,8 @@ Manages security and compliance features such as security baselines, device comp
 | Endpoint Detection and Response | Read - *(Added with the 2406 service release)*|
 | Endpoint Detection and Response | Update - *(Added with the 2406 service release)*|
 | Endpoint Detection and Response | View reports - *(Added with the 2406 service release)*|
-| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Elevation Requests | Modify elevation requests |
+| Endpoint Privilege Management Elevation Requests | View elevation requests |
 | Endpoint Privilege Management Policy Authoring | Assign |
 | Endpoint Privilege Management Policy Authoring | Create |
 | Endpoint Privilege Management Policy Authoring | Delete |
@@ -277,7 +259,6 @@ Manages security and compliance features such as security baselines, device comp
 | Enrollment programs | Read device |
 | Enrollment programs | Read profile |
 | Enrollment programs | Read token |
-| Endpoint protection reports | Read |
 | Filters | Read |
 | Intune data warehouse | Read |
 | Managed apps | Read |
@@ -373,32 +354,35 @@ Help Desk Operators perform remote tasks on users and devices and can assign app
 | Remote assistance connectors | Read |
 | Remote Help app | Elevation |
 | Remote Help app | Take full control |
+| Remote Help app | Unattended control |
 | Remote Help app | View screen |
-| Remote tasks | Update cellular data plan |
+| Remote tasks | Change \assignments |
 | Remote tasks | Clean PC |
-| Remote tasks | Initiate Configuration Manager action |
-| Remote tasks | Send custom notifications |
 | Remote tasks | Collect diagnostics |
 | Remote tasks | Disable lost mode |
 | Remote tasks | Enable lost mode |
+| Remote tasks | Indicates remote device action to initiate Mobile Device Management (MDM) attestation if device is capable for it. |
 | Remote tasks | Enable Windows IntuneAgent |
 | Remote tasks | Get filevault key. |
-| Remote tasks | Recover MDM Key |
+| Remote tasks | Initiate Configuration Manager action |
 | Remote tasks | Locate device |
 | Remote tasks | Manage shared device users |
-| Remote tasks | Run Remediation |
+| Remote tasks | Offer remote assistance |
 | Remote tasks | Play sound to locate lost devices |
 | Remote tasks | Reboot now |
+| Remote tasks | Recover MDM Key |
 | Remote tasks | Remote lock |
-| Remote tasks | Offer remote assistance |
 | Remote tasks | Reset passcode |
 | Remote tasks | Retire |
 | Remote tasks | Revoke App Licenses |
 | Remote tasks | Rotate BitLockerKeys (preview) |
 | Remote tasks | Rotate filevault key. |
+| Remote tasks | Run Remediation |
+| Remote tasks | Send custom notifications |
 | Remote tasks | Set device name |
 | Remote tasks | Shut down |
 | Remote tasks | Sync devices. |
+| Remote tasks | Update cellular data plan |
 | Remote tasks | Update device account |
 | Remote tasks | Windows defender |
 | Remote tasks | Wipe |
@@ -617,6 +601,7 @@ School Administrators can manage apps and settings for their groups. They can ta
 | Filters | Delete |
 | Filters | Read |
 | Filters | Update |
+| Intune data warehouse | Read |
 | Managed apps | Create |
 | Managed apps | Delete |
 | Managed apps | Read |
@@ -663,12 +648,11 @@ School Administrators can manage apps and settings for their groups. They can ta
 | Remote tasks | Remote lock |
 | Remote tasks | Reset passcode |
 | Remote tasks | Retire |
-| Remote tasks | Run Remediation 
+| Remote tasks | Run Remediation
 | Remote tasks | Set device name |
 | Remote tasks | Sync devices. |
 | Remote tasks | Update cellular data plan |
 | Remote tasks | Wipe |
-| Intune data warehouse | Read |
 | ServiceNow | View Incidents |
 | Terms and conditions | Assign |
 | Terms and conditions | Create |

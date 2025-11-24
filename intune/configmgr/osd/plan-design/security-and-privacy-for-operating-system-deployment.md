@@ -6,8 +6,8 @@ ms.date: 10/06/2016
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: concept-article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

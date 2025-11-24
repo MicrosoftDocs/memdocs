@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot requirements
 description: Software, Networking, Licensing, and Configuration requirements for Windows Autopilot.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
-ms.date: 05/15/2025
+ms.date: 07/08/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -108,7 +101,7 @@ Additional configuration might be required to grant access to required services 
 
 > [!NOTE]
 >
-> Smart card and certificate based authentication isn't supported during the out-of-box experience (OOBE). For more information, see [Smartcards and certificate-based authentication](/azure/active-directory/devices/azureadjoin-plan#smartcards-and-certificate-based-authentication).
+> Smart card and certificate based authentication is supported during the out-of-box experience (OOBE) with [Entra Certificate-based authentication](/entra/identity/authentication/concept-certificate-based-authentication). For more information, see [Entra certificate-based authentication & OOBE](/entra/identity/authentication/concept-certificate-based-authentication-smartcard#windows-out-of-the-box-experience-oobe).
 
 #### Service requirements
 

@@ -1,18 +1,11 @@
 ---
 title: Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group
 description: How to - Windows Autopilot device preparation in automatic mode for Windows 365 (preview) - Step 3 of 6 - Assign applications and PowerShell scripts to device group.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
 ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -62,6 +55,7 @@ The following types of applications are supported for use with Windows Autopilot
 - [Win32](/mem/intune-service/apps/apps-win32-prepare).
 - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
 - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
+- [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
 
 In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
 

@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Linux device enrollment guide for Microsoft Intune
 description: Enroll Linux devices in Intune using the Intune app. Set an overview of the administrator and end user tasks to enroll devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 01/09/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -35,7 +17,7 @@ ms.collection:
 
 Linux devices can be enrolled in Intune. Once they're enrolled, they receive the policies you create. Users can use the Microsoft Edge browser to access organization resources.
 
-This article includes an overview of the administrator and user tasks required to enroll Linux devices.  
+This article includes an overview of the administrator and user tasks required to enroll Linux devices.
 
 ## Before you begin
 
@@ -48,7 +30,7 @@ Use for personal/BYOD and organization-owned devices running Linux.
 ---
 | Feature | Use this enrollment option when |
 | --- | --- |
-| You use Ubuntu Desktop (24.04, 22.04, or 20.04 LTS on x86/64). | ✅ |
+| You use Ubuntu Desktop (24.04 LTS or 22.04 LTS on x86/64). | ✅ |
 | You use Ubuntu Server. | ❌ |
 | You use RedHat Enterprise Linux 8 or 9. |✅ |
 | Devices are owned by the organization or school. | ✅ |

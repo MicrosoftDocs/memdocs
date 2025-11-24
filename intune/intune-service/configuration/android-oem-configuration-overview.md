@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Use OEMConfig on Android Enterprise devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 06/27/2024
+ms.date: 07/29/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: Low
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: akritis
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -165,7 +146,7 @@ After the app is added to Intune, you create an OEMConfig profile to configure t
 
       - Clicking **Clear** deletes a setting from the profile. If a setting isn't in the profile, its value on the device doesn't change when the profile is applied.
 
-      - Use the **Locate** button to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting. 
+      - Use the **Locate** button to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting.
 
       - If you create an empty (unconfigured) bundle in the configuration designer, then the bundle is deleted when you switch to the JSON editor.
 
@@ -250,11 +231,13 @@ Intune supports the following OEMConfig apps:
 | LG | com.lge.android.oemconfig | |
 | Motorola Solutions | com.motorolasolutions.lexoemconfig | |
 | Motorola Mobility | com.motorola.oemconfig.rel | [Moto OEMConfig Guide](https://motorola-global-portal.custhelp.com/app/answers/prod_answer_detail/a_id/160503 ) |
+| Urovo | com.urovo.oemconfigs | |
 | Panasonic | com.panasonic.mobile.oemconfig | |
 | Pepperl+Fuchs SE | com.ecom.econfig.smart0x | |
 | Point Mobile | device.apps.emkitagent | |
+| RugGear | com.ruggear.rgoem | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
-| Seuic | com.seuic.seuicoemconfig | | 
+| Seuic | com.seuic.seuicoemconfig | |
 | Social Mobile | com.rhinomobility.oemconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
 | Spectralink - Buttons | com.spectralink.buttons |  |

@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Android Enterprise security configurations for personally-owned work profiles
-titleSuffix: Microsoft Intune
 description: Review example configurations of basic, enhanced, and high security for devices with Android Enterprise personally-owned work profiles.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/26/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure;
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -40,10 +20,10 @@ When using these examples, work with your security team to evaluate the threat e
 For more information on each policy setting, see:
 
 - [Android Enterprise settings to mark devices as compliant or not compliant using Intune](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile)
-- [Android Enterprise device settings to allow or restrict features on personally owned devices using Intune](../configuration/device-restrictions-android-enterprise-personal.md)
+- [Android Enterprise device settings to allow or restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > Personally owned
 
 > [!NOTE]
-> Because of the settings available for personally-owned work profile devices, there's no basic security (level 1) offering. The available settings don't justify a difference between level 1 and level 2. 
+> Because of the settings available for personally-owned work profile devices, there's no basic security (level 1) offering. The available settings don't justify a difference between level 1 and level 2.
 
 Tables in the following sections list only the settings that are included in these examples. Settings not listed in the tables aren't configured.
 
@@ -102,7 +82,7 @@ Level 2 is the recommended minimum security configuration for personal devices w
 | System Security | Prevent app installations from unknown sources in the personal profile | Block |  |
 
 > [!Note]
-> When a personally-owned work profile is enabled, “One Lock” is configured by default to combine device and work profile passcodes. One Lock can be disabled to separate work profile and device passcodes if necessary, under work profile settings. For more information, review the setting *One lock for device and work profile* in the [Work Profile Password](../configuration/device-restrictions-android-enterprise-personal.md#work-profile-password) section of in *Android Enterprise device settings list to allow or restrict features on personally owned devices*.
+> When a personally-owned work profile is enabled, "One Lock" is configured by default to combine device and work profile passcodes. One Lock can be disabled to separate work profile and device passcodes if necessary, under work profile settings. For more information, review the setting *One lock for device and work profile* in the [Work Profile Password](../configuration/device-restrictions-android-for-work.md) section of in *Android Enterprise personally owned devices*.
 
 ## Personally-owned work profile high security (level 3)
 
@@ -120,7 +100,7 @@ The level 3 settings include all the policy settings recommended for level 2. Ho
 
 | Section | Setting | Value | Notes |
 | ----- | ----- | ----- | ----- |
-| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both. |
+| Microsoft Defender for Endpoint | Require the device to be at or under the machine risk score | Clear | This setting requires Microsoft Defender for Endpoint. For more information, see Enforce compliance for [Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both. |
 | Device Health | Require the device to be at or under the Device Threat Level | Secured | This setting requires a mobile threat defense product. For more information, see [Mobile Threat Defense for enrolled devices](../protect/mtd-device-compliance-policy-create.md).<p>Customers should consider implementing Microsoft Defender for Endpoint or a mobile threat defense solution. It isn't necessary to deploy both.|
 | Device Properties | Minimum OS version | Format: Major.Minor<br>Example: 11.0| Microsoft recommends configuring the minimum Android major version to match the supported Android versions for Microsoft apps. OEMs and devices adhering to Android Enterprise recommended requirements must support the current shipping release + one letter upgrade. Currently, Android recommends Android 9.0 and later for knowledge workers. <br><br> For Android's latest recommendations, see [Android Enterprise Recommended requirements](https://www.android.com/enterprise/recommended/requirements/). |
 | System Security | Number of days until password expires | 365 | Organizations might need to update this setting to match their password policy. |
@@ -145,5 +125,5 @@ The level 3 settings include all the policy settings recommended for level 2. Ho
 ## Related articles
 
 [Configure security settings for fully managed devices](android-fully-managed-security-configurations.md)
- 
+
 

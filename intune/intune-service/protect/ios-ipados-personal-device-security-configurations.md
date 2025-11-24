@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: iOS/iPadOS personal device security configurations
-titleSuffix: Microsoft Intune
 description: Review example personal device security configurations of basic, enhanced, and high security for iOS devices.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/20/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -43,7 +23,7 @@ For more information on each policy setting, see [iOS/iPadOS device settings in 
 
 Level 1 is the recommended minimum security configuration for iOS/iPadOS personal devices where users access work or school data.
 
-The policies in level 1 enforce a reasonable data access level while minimizing the impact to users. This is done by enforcing password policies, device lock characteristics, and disabling certain device functions (for example, untrusted certificates).  
+The policies in level 1 enforce a reasonable data access level while minimizing the impact to users. This is done by enforcing password policies, device lock characteristics, and disabling certain device functions (for example, untrusted certificates).
 
 The following table lists only configured settings. Settings not listed in the table aren't configured in this example.
 
@@ -96,7 +76,7 @@ The level 2 settings include all the policy settings recommended for level 1. Ho
 Level 3 is the recommended configuration for both:
 
 - Organizations with large and sophisticated security organizations.
-- Specific users and groups who are uniquely targeted by adversaries. 
+- Specific users and groups who are uniquely targeted by adversaries.
 
 Such organizations are typically targeted by well-funded and sophisticated adversaries.
 

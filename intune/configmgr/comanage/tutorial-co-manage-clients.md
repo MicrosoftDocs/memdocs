@@ -6,8 +6,8 @@ ms.date: 10/18/2024
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: tutorial
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -39,7 +39,7 @@ Use this tutorial when:
 
 ### Azure services and environment
 
-- Azure subscription ([free trial](https://azure.microsoft.com/free))
+- Azure subscription ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Microsoft Entra ID P1 or P2
 - Microsoft Intune subscription
 

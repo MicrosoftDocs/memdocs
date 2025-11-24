@@ -1,40 +1,22 @@
 ---
-# required metadata
-
-title: Kiosk settings for Windows 10/11 in Microsoft Intune
+title: Kiosk settings for Windows in Microsoft Intune
 description: Configure your Windows 10/11 client devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
-keywords: frontline worker, FLW, kiosk, dedicated device, Windows 10, Windows 11
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 02/20/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
 
-# Windows 10/11 and newer device settings to run as a kiosk in Intune
+# Windows device settings to run as a kiosk in Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 
-On Windows 10/11 devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
+On Windows devices, you can configure these devices to run in single-app kiosk mode. On Windows 10 devices, you can configure these devices to run in multi-app kiosk mode. To configure multi-app kiosk on Windows 11, go to [Set up a multi-app kiosk on Windows 11 devices](/windows/configuration/lock-down-windows-11-to-specific-apps).
 
 This article describes some of the settings you can control on Windows client devices. As part of your mobile device management (MDM) solution, use these settings to configure your Windows client devices to run in kiosk mode.
 
@@ -45,6 +27,9 @@ To learn more about the Windows kiosk feature in Intune, see [configure kiosk se
 ## Before you begin
 
 - Create a [Windows kiosk device configuration profile](kiosk-settings.md#create-the-profile).
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - This kiosk profile is directly related to the device restrictions profile you create using the [Microsoft Edge kiosk settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older). To summarize:
 
@@ -68,13 +53,14 @@ Runs only one app on the device, such as a web browser or Store app.
 
   - **Auto logon (Windows 10 version 1803 and newer)**: Use on kiosks in public-facing environments that don't require the user to sign in, similar to a guest account. This setting uses the [AssignedAccess CSP](/windows/client-management/mdm/assignedaccess-csp).
   - **Local user account**: Enter the local (to the device) user account. The account you enter signs in to the kiosk.
+  - **Microsoft Entra user or group (Windows 10 version 1803 and later)**: Select **Add**, and choose Microsoft Entra users or groups from the list. You can select multiple users and groups. Choose **Select** to save your changes.
 
 - **Application type**: Select the application type. Your options:
 
   - **Add Microsoft Edge browser**: Select this option for Microsoft Edge version 87 and newer.
 
     > [!NOTE]
-    > These settings enable the Microsoft Edge browser on the device. To configure Microsoft Edge settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-configure-edge.md).
+    > These settings enable the Microsoft Edge browser on the device. To configure Microsoft Edge settings, use the [settings catalog](settings-catalog-configure-edge.md).
 
     - **Edge Kiosk URL**: Enter a default webpage that opens when Microsoft Edge browser opens and restarts. For example, enter `https://www.contoso.com` or `http://bing.com`.
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
@@ -90,7 +76,7 @@ Runs only one app on the device, such as a web browser or Store app.
     > [!NOTE]
     > This setting enables the Microsoft Edge browser on the device.
     >
-    > - To configure Microsoft Edge version 77 and newer settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-configure-edge.md).
+    > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](settings-catalog-configure-edge.md).
     > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
@@ -120,14 +106,14 @@ Runs only one app on the device, such as a web browser or Store app.
 
       Your sample file should look similar to the following list:
 
-      `http://bing.com`  
-      `https://bing.com`  
-      `http://contoso.com`  
-      `https://contoso.com`  
+      `http://bing.com`
+      `https://bing.com`
+      `http://contoso.com`
+      `https://contoso.com`
       `office.com`
 
     > [!NOTE]
-    > Windows 10/11 Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
+    > Windows Kiosks with Autologon enabled using Microsoft Kiosk Browser must use an offline license from the Microsoft Store for Business. This requirement is because Autologon uses a local user account with no Microsoft Entra credentials. So, online licenses can't be evaluated. For more information, see [Distribute offline apps](/microsoft-store/distribute-offline-apps).
 
   - **Add Store app**: Select **Add a store app**, and choose an app from the list.
 
@@ -167,7 +153,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
 
 - **Browser and Applications**: Add the apps to run on the kiosk device. Remember, you can add several apps.
 
-  :::image type="content" source="./media/kiosk-settings-windows/multi-app-kiosk-add-applications-browser.png" alt-text="Add browsers or apps to multi-app kiosk profile in Microsoft Intune.":::  
+  :::image type="content" source="./media/kiosk-settings-windows/multi-app-kiosk-add-applications-browser.png" alt-text="Add browsers or apps to multi-app kiosk profile in Microsoft Intune.":::
 
   - **Browsers**
 
@@ -181,7 +167,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
       > [!NOTE]
       > This setting enables the Microsoft Edge browser on the device.
       >
-      > - To configure Microsoft Edge version 77 and newer settings, use the [Settings Catalog](settings-catalog.md), or create an [Administrative template](administrative-templates-configure-edge.md).
+      > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](settings-catalog-configure-edge.md)
       > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
     - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../apps/apps-add.md).
@@ -226,7 +212,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
       :::image type="content" source="./media/kiosk-settings-windows/multi-app-kiosk-autolaunch-tiles.png" alt-text="Automatically launch the app or browser, and select the tile size in a multi-app kiosk profile in Microsoft Intune.":::
 
   > [!TIP]
-  > After you add all the apps, you can change the display order by clicking-and-dragging the apps in the list.  
+  > After you add all the apps, you can change the display order by clicking-and-dragging the apps in the list.
 
 - **Use alternative Start layout**: Select **Yes** to enter an XML file that describes how the apps appear on the start menu, including the order of the apps. Use this option if you require more customization in your start menu. [Customize and export Start layout](/windows/configuration/customize-and-export-start-layout) has some guidance, and sample XML.
 
@@ -250,6 +236,6 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
 
 [Assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-You can also create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md#device-experience), and [Windows Holographic for Business](kiosk-settings-holographic.md) devices.
+You can also create kiosk profiles for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [Windows Holographic for Business](kiosk-settings-holographic.md) devices.
 
 Also see [set up a single-app kiosk](/windows/configuration/kiosk-single-app) or [set up a multi-app kiosk](/windows/configuration/lock-down-windows-10-to-specific-apps) in the Windows guidance.

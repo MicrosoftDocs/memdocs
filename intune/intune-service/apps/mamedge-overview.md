@@ -1,41 +1,22 @@
 ---
-# required metadata
-
-title: Secure your corporate data using Microsoft Edge for Business
-titleSuffix:
+title: Secure Your Corporate Data Using Microsoft Edge for Business
 description: Secure your corporate data in Microsoft Intune with Microsoft Edge for Business.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 03/26/2024
+ms.date: 06/12/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-
-# optional metadata
-
-#audience:
-#ROBOTS: 
 ms.reviewer: samarti
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
 ---
 
-# Secure your corporate data in Intune with Microsoft Edge for Business
+# Secure Your Corporate Data in Intune With Microsoft Edge for Business
 
 This content helps you implement and secure enterprise browser configuration for Mobile Application Management using Microsoft Edge for Business.
 
 **Applies to:**
-- Mobile Application Management (MAM) 
+- Mobile Application Management (MAM)
 - Microsoft Edge for Business
 
 ## Target Audience
@@ -70,7 +51,7 @@ Microsoft Edge for Business aims to address the needs of both end users and IT P
 
 ### Is this a new browser?
 
-No, this isn’t a new browser. This is a new, dedicated Microsoft Edge experience built specifically for work. It allows organizations to configure it to maximize productivity and security. It retains the same functionality that users are already familiar with in Microsoft Edge. Additionally, it offers an optional feature of automatic switching between personal and corporate accounts, designed to meet the evolving needs of users and businesses. Signing in with a Microsoft Entra ID will automatically enable the Microsoft Edge for Business experience.  
+No, this isn’t a new browser. This is a new, dedicated Microsoft Edge experience built specifically for work. It allows organizations to configure it to maximize productivity and security. It retains the same functionality that users are already familiar with in Microsoft Edge. Additionally, it offers an optional feature of automatic switching between personal and corporate accounts, designed to meet the evolving needs of users and businesses. Signing in with a Microsoft Entra ID will automatically enable the Microsoft Edge for Business experience. 
 
 ### Benefits
 
@@ -88,7 +69,7 @@ Microsoft Edge for Business offers a multitude of advantages:
 
 In addition to the above benefits, you can enable protected Mobile Application Management access to corporate data on personal devices. This capability uses the following functionality:
 - Intune application configuration policies (ACP) with Microsoft Edge for Business. Using ACP allows you to leverage Edge’s settings to better enable a secure browsing experience.
-- Intune application protection policies (APP) to secure organization data and ensure the client device is healthy.
+- Intune app protection policies to secure organization data and ensure the client device is healthy.
 - Mobile Threat Protection (MTP) integrated with Intune APP to detect local health threats on personal Windows and all mobile devices.
 - Microsoft Entra Conditional Access to ensure the device is protected and healthy before granting protected services access via Microsoft Entra.
 

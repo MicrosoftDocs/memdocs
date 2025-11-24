@@ -1,33 +1,14 @@
 ---
-# required metadata
-
 title: Step 5 – Enroll devices in Microsoft Intune
 description: Enroll Android, Android Enterprise, iOS, iPadOS, Linux, macOS, and Windows devices in Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 4/3/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
 ms.collection:
 - M365-identity-device-management
 - highpri
 - highseo
-- tier1
 ---
 
 # Step 5 – Enroll devices in Microsoft Intune
@@ -49,7 +30,7 @@ If this is your first time deploying enrollment profiles with Intune, or you're 
 
 Registration in Microsoft Entra ID is a required step for Intune management. Before a device can enroll in Intune, the user of the device must authenticate and establish a device identity in your org's Microsoft Entra ID. This step grants the user single sign-on access to cloud-based work apps and other resources. It's important to know which identity option you're utilizing because it determines the enrollment methods you can use, and also determines the sign-in experience for the device user. Identity options include:
    * *Microsoft Entra registration* is the device identity option available for personal and corporate-owned mobile devices. Users on these devices authenticate by signing in to work resources, like apps and web browsers, using their Microsoft Entra ID work account.
-   * *Microsoft Entra joined* is the device identity option available for corporate-owned Windows 10/11 devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Microsoft Entra ID work account.
+   * *Microsoft Entra joined* is the device identity option available for corporate-owned Windows devices utilizing co-management options. Users on these devices authenticate by signing in to the device using their Microsoft Entra ID work account.
 
 ## Pre-enrollment configurations
 Prepare devices for enrollment by configuring enrollment features, such as enrollment restrictions, device categorization, and device enrollment managers. These configurations help improve and simplify the enrollment experience for you and device users, and help you stay organized in the admin center.  Configure them before you create the enrollment profile.
@@ -189,13 +170,13 @@ Employees and students in BYOD scenarios can [enroll personal Linux devices](../
 As an Intune admin, you don't need to do anything to enable Linux enrollment in the admin center. It's automatically enabled. When users enroll their Linux devices, you'll see them in the admin center. For more information, see [Enroll Linux desktop devices in Microsoft Intune](deployment-guide-enrollment-linux.md).
 
 ## Enrollment for Windows
-This section describes the enrollment solutions available for personal and corporate-owned devices running Windows 10 or Windows 11.
+This section describes the enrollment solutions available for personal and corporate-owned devices running Windows.
 
 >[!NOTE]
 > Microsoft Intune enrollment is supported on devices in cloud environments. Co-management with Configuration Manager is supported in on-premises environments.
 
 ### Windows enrollment methods
-The following table describes the supported enrollment methods for devices running Windows 10 and Windows 11.
+The following table describes the supported enrollment methods for devices running Windows.
 
 # [Automatic enrollment](#tab/automatic-enrollment)
 Make enrollment in Intune easier for employees and students by enabling automatic enrollment for Windows. For more information, see [Enable automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment).

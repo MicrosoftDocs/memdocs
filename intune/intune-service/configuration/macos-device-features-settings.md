@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: macOS device feature settings in Microsoft Intune
 description: See the settings to configure macOS devices for AirPrint and customize the Login window to show or hide power buttons in Microsoft Intune. See the steps to get the IP address, path, and port settings of an AirPrint server in your network. Use these settings in a device configuration profile to configure macOS device features.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 05/01/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid:
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -53,10 +36,10 @@ This article describes these settings. It also lists the steps to get the IP add
 ### Settings apply to: All enrollment types
 
 - **AirPrint destinations**: Enter one or more AirPrint printer information so users can print from their devices:
-  - **IP address**: Enter the IPv4 or IPv6 address of the printer. For example, enter `10.0.0.1`. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.  
+  - **IP address**: Enter the IPv4 or IPv6 address of the printer. For example, enter `10.0.0.1`. If you use host names to identify printers, you can get the IP address by pinging the printer in the Terminal app. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
   - **Resource path**: Enter the resource path of the printer. The path is typically `ipp/print` for printers on your network. [Get the IP address and path](#get-the-ip-address-and-path) (in this article) has more details.
   - **Port** (iOS 11.0+, iPadOS 13.0+): Enter the listening port of the AirPrint destination. If you leave this property blank, AirPrint uses the default port.
-  - **Force TLS** (iOS 11.0+, iPadOS 13.0+): Your options:  
+  - **Force TLS** (iOS 11.0+, iPadOS 13.0+): Your options:
     - **Disable** (default): Transport Layer Security (TLS) isn't enforced when connecting to AirPrint printers.
     - **Enable**: Secures AirPrint connections with Transport Layer Security (TLS).
 
@@ -186,7 +169,7 @@ For more information on these settings, go to [Content Caching payload settings]
   - macOS 10.15 and newer
 
 - **Devices to cache**: Choose the devices that can cache content. Your options:
-  - **Not configured** (default): Intune doesn't change or update this setting. 
+  - **Not configured** (default): Intune doesn't change or update this setting.
   - **Devices using the same local network**: The content cache offers content to devices on the same immediate local network. No content is offered to devices on other networks, including devices reachable by the content cache.
   - **Devices using the same public IP address**: The content cache offers content to devices using the same public IP address. No content is offered to devices on other networks, including devices reachable by the content cache.
   - **Devices using custom local networks**: The content cache provides content to devices in the IP ranges you enter.
@@ -201,7 +184,7 @@ For more information on these settings, go to [Content Caching payload settings]
   When a requested item isn't available on one content cache, it checks its peers for the item. If the item is available, it's downloaded from the content cache on the peer device. If it's still not available, the content cache downloads the item from:
 
   - A parent IP address, if any are configured
-  
+
     OR,
 
   - From Apple using the Internet
@@ -235,13 +218,13 @@ For more information on these settings, go to [Content Caching payload settings]
 
   - **Path of item**: Enter the path to the file, folder, or app. System apps, or apps built or customized for your organization are typically in the `Applications` folder, with a path similar to `/Applications/AppName.app`.
 
-    You can add many files, folders, and apps. For example, enter:  
-  
+    You can add many files, folders, and apps. For example, enter:
+
     - `/Applications/Calculator.app`
     - `/Applications`
     - `/Applications/Microsoft Office/root/Office16/winword.exe`
     - `/Users/UserName/music/itunes.app`
-  
+
     When adding any app, folder, or file, be sure to enter the correct path. Not all items are in the `Applications` folder. If users move an item from one location to another, then the path changes. This moved item isn't opened when the user signs in.
 
   - **Hide**: Choose to show or hide the app. Your options:
@@ -252,7 +235,7 @@ For more information on these settings, go to [Content Caching payload settings]
 
 ### Settings apply to: All enrollment types
 
-#### Windows Layout  
+#### Windows Layout
 
 - **Show additional information in the menu bar**: When the time area on the menu bar is selected, **Yes** shows the host name and macOS version. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show this information on the menu bar.
 - **Banner**: Enter a message that's shows on the sign in screen on devices. For example, enter your organization information, a welcome message, lost and found information, and so on.
@@ -264,22 +247,22 @@ For more information on these settings, go to [Content Caching payload settings]
   - **Hide mobile accounts**: **Yes** hides mobile accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the mobile accounts in the user list. Some mobile accounts can show as network users.
   - **Show network users**: Select **Yes** to list the network users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the network user accounts in the user list.
   - **Hide computer's administrators**: **Yes** hides the administrator user accounts in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the administrator user accounts in the user list.
-  - **Show other users**: Select **Yes** to list **Other...** users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the other user accounts in the user list.  
+  - **Show other users**: Select **Yes** to list **Other...** users in the user list. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show the other user accounts in the user list.
 
-#### Login screen power settings  
+#### Login screen power settings
 
 - **Hide shut down button**: **Yes** hides the shutdown button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the shutdown button.
 - **Hide restart button**: **Yes** hides the restart button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the restart button.
 - **Hide sleep button**: **Yes** hides the sleep button on the sign in screen. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might show the sleep button.
-- **Disable user login from Console**: **Yes** hides the macOS command line used to sign in. For typical users, set this setting to **Yes**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow advanced users to sign in using the macOS command line. To enter console mode, users enter `>console` in the Username field, and must authenticate in the console window.  
+- **Disable user login from Console**: **Yes** hides the macOS command line used to sign in. For typical users, set this setting to **Yes**. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow advanced users to sign in using the macOS command line. To enter console mode, users enter `>console` in the Username field, and must authenticate in the console window.
 
-#### Apple Menu  
+#### Apple Menu
 
 - **Disable Shut Down while logged in**: **Yes** prevents users from selecting the **Shutdown** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Shutdown** menu item on devices.
 - **Disable Restart while logged in**: **Yes** prevents users from selecting the **Restart** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Restart** menu item on devices.
 - **Disable Power Off while logged in**: **Yes** prevents users from selecting the **Power off** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Power off** menu item on devices.
 - **Disable Log Out while logged in** (macOS 10.13 and later): **Yes** prevents users from selecting the **Log out** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Log out** menu item on devices.
-- **Disable Lock Screen while logged in** (macOS 10.13 and later): **Yes** prevents users from selecting the **Lock screen** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Lock screen** menu item on devices.  
+- **Disable Lock Screen while logged in** (macOS 10.13 and later): **Yes** prevents users from selecting the **Lock screen** option after they sign in. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to select the **Lock screen** menu item on devices.
 
 ## Single sign-on app extension
 
@@ -307,7 +290,7 @@ This setting applies to:
     > You can also [download the Company Portal app](https://go.microsoft.com/fwlink/?linkid=853070).
 
   - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension and team ID for your organization's app extension.
-  - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID and team ID for your organization's SSO app extension.  
+  - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID and team ID for your organization's SSO app extension.
   - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on macOS Catalina 10.15 and newer. This option is a Kerberos-specific version of the **Credential** app extension.
 
   > [!TIP]
@@ -354,10 +337,10 @@ This setting applies to:
 - **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow nonmanaged apps to access the credential.
 
   This feature applies to:
-  
+
   - macOS 12 and newer
 
-- **Block password changes** (Kerberos only): **Yes** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.  
+- **Block password changes** (Kerberos only): **Yes** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.
 - **Enable local password sync** (Kerberos only): Choose **Yes** to sync your users' local passwords to Microsoft Entra ID. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Microsoft Entra ID.
 
   Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
@@ -365,25 +348,25 @@ This setting applies to:
 - **Delay Kerberos extension setup** (Kerberos only): When set to **Yes**, the user isn't prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might immediately prompt the user to set up the Kerberos extension.
 
   This feature applies to:
-  
+
   - macOS 11 and newer
 
 - **Allow standard Kerberos utilities** (Kerberos only): When set to **Yes**, the Kerberos extension allows any apps entered with the app bundle ID, managed apps, and standard Kerberos utilities, like TicketViewer and klist, to access and use the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not allow listed apps to access and use the credential.
 
   This feature applies to:
-  
+
   - macOS 12 and newer
 
 - **Request credential** (Kerberos only): When set to **Yes**, the credential is requested on the next matching Kerberos challenge or network state change. When the credential is expired or missing, a new credential is created. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not request a new credential.
 
   This feature applies to:
-  
+
   - macOS 12 and newer
 
 - **Require LDAP connections for TLS** (Kerberos only): When set to **Yes**, LDAP connections are required to use Transport Layer Security (TLS). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require LDAP connections to use TLS.
 
   This feature applies to:
-  
+
   - macOS 11 and newer
 
 - **Require Active Directory password complexity** (Kerberos only): Choose **Yes** to force user passwords to meet Active Directory's password complexity requirements. On devices, this setting shows a pop-up window with check boxes so users see they're completing the password requirements. It helps users know what they need to enter for the password. For more information, go to [Password must meet complexity requirements](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to meet Active Directory's password requirement.
@@ -396,7 +379,7 @@ This setting applies to:
 - **Custom user name** (Kerberos only): Enter the text that replaces the user name shown in the Kerberos extension. You can enter a name that matches the name of your company or organization. For example, you can enter `Contoso`.
 
   This feature applies to:
-  
+
   - macOS 11 and newer
 
 - **Kerberos extension use** (Kerberos only): Select how other processes use the Kerberos Extension credential. Your options:
@@ -405,23 +388,23 @@ This setting applies to:
   - **Kerberos default**: Intune doesn't change or update this setting. By default, the OS uses the default Kerberos processes for selecting credentials. This option is the same as not configuring this setting.
 
   This feature applies to:
-  
+
   - macOS 11 and newer
 
 - **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter `Username: {{username}}`.
   - Be careful with variable substitution because variables aren't validated in the UI and they're case sensitive. Be sure to enter the correct information.
-  
+
 - **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You might not need to change this value, as the Kerberos extension can automatically find the Active Directory site code.
-- **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.  
+- **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
 - **Sign in window text** (Kerberos only): Enter the text shown to users at the Kerberos sign in window.
 
   This feature applies to:
-  
+
   - macOS 11 and newer
 
-- **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.  
+- **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.
 
   When set to **Yes**, all existing user accounts are wiped from the devices. To avoid data loss, or prevent a factory reset, make sure you understand how this setting changes your devices.
 
@@ -436,7 +419,7 @@ This setting applies to:
 - **Preferred KDCs** (Kerberos only): Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers aren't discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don't respond, then the device uses DNS discovery.
 
   This feature applies to:
-  
+
   - macOS 12 and newer
 
 ## Related articles

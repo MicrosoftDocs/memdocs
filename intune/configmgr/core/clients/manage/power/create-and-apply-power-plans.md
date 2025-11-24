@@ -6,9 +6,9 @@ ms.date: 10/12/2020
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
+author: LauraWi
 manager: apoorvseth
-ms.author: sheetg
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
 ms.reviewer: mstewart

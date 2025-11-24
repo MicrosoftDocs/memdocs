@@ -2,8 +2,8 @@
 title: Office 365 Client Management dashboard
 titleSuffix: Configuration Manager
 description: Review Microsoft 365 Apps client information from the Office 365 Client Management dashboard
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/05/2024
 ms.topic: article

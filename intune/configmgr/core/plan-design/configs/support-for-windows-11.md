@@ -2,13 +2,13 @@
 title: Support for Windows 11
 titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
-ms.date: 12/04/2024
+ms.date: 07/31/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: Baladelli
-ms.author: Baladell
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.collection: tier3
 ms.reviewer: mstewart
 ---
@@ -46,11 +46,12 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
+| Windows 11 version                         | ConfigMgr 2403 | ConfigMgr 2409 | ConfigMgr 2503|
 |--------------------------------------------|----------------|----------------|----------------|
-| **24H2**<br>(10.0.26100) <!--2027-10-12--> | ![Supported](media/red-x.png) | ![Supported](media/red-x.png) | ![Supported](media/green-check.png) |
-| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) | ![Supported](media/green-check.png) |
+| **24H2**<br>(10.0.26100) <!--2027-10-12--> |:::image type="icon" source="media/red-x.png":::  | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: |
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: |
+| **22H2**<br>(10.0.22621) <!--2025-10-14--> | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: |
+
 
 <!--
 All currently supported versions of Configuration Manager current branch support the following Windows 11 LTSC editions:
@@ -62,8 +63,9 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 | Key |
 |--|
-| ![Supported](media/green-check.png) = **Supported** |
-| ![Not supported](media/red-x.png) = **Not supported** |
+| :::image type="icon" source="media/green-check.png"::: = **Supported** |
+|:::image type="icon" source="media/red-x.png":::  = **Not supported** |
+
 
 ## Support notes
 
@@ -91,6 +93,13 @@ Starting in version 2403 OS deployment is supported for **All Windows 11 (ARM64)
 You can [update and service Windows Insider](../../../sum/get-started/configure-classifications-and-products.md#bkmk_WIfB) builds. This ability is provided as a convenience to our customers. While this functionality should work, its support is best effort. Configuration Manager might not issue a hotfix for this functionality if it doesn't work.
 
 To provide feedback on Windows Insider, use the Windows [Feedback Hub](/windows-insider/business/feedback).
+
+## Offline servicing
+
+Due to changes in how Windows 11 updates are delivered through UUP patches, Offline Servicing of Windows 11 images and update packages using Configuration Manager is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained:
+
+- Import the **install.wim** image from the ISO into the site for **Operating System Images** packages used in bare metal/refresh task sequences.
+- Import the whole contents of the ISO into the site for **Operating System Upgrade Packages** used in-place upgrade task sequences.
 
 ## Known issues
 
@@ -132,11 +141,6 @@ Use one of the following options to work around this issue:
 - Install the console on a device running another version of Windows.
 
 - Add users to the authentication exclusion list. For more information, see [Configure SMS Provider authentication](../security/configure-security.md#sms-provider-authentication).
-
-### Offline servicing
-
-> [!Note]
-> Starting March 2023 offline servicing (UUP patch) will not work for any version of Windows 11.
 
 ## Next steps
 

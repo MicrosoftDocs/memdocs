@@ -6,8 +6,8 @@ ms.date: 12/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Baladelli
-ms.author: Baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
@@ -100,7 +100,7 @@ You can use this version of SQL Server for the following sites:
 
 ### SQL Server 2017: Standard, Enterprise
 
-You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
+You can use this version with [cumulative update version 2](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate2) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A central administration site
 - A primary site
@@ -136,7 +136,7 @@ You can use this version with the minimum service pack and cumulative update sup
 
 ### SQL Server 2017 Express
 
-You can use this version with [cumulative update version 2](https://support.microsoft.com/help/4052574) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
+You can use this version with [cumulative update version 2](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate2) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
 - A secondary site
 <!--SMS.498506-->

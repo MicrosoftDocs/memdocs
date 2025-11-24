@@ -1,38 +1,17 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide - App configuration
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - App Configuration
 description: Understand app configuration features when incorporating Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 08/08/2024
+ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
-# Intune App SDK for Android - App configuration
+# Intune App SDK for Android - App Configuration
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 > [!NOTE]
 > This guide is divided into several distinct stages. Start by reviewing [Stage 1: Plan the Integration].
@@ -73,7 +52,7 @@ App developers can use [delegated scopes](https://developer.android.com/work/ver
 - Allow app to access Android security logs
 - Allow app to access Android network activity logs
 
-Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings - Applications](../configuration/device-restrictions-android-for-work.md#applications).
+Once these capabilities have been integrated into a Managed Google Play app using Google's API, you can configure these settings in Intune using device configuration profiles. For more information, see [Android Enterprise device settings -> Corporate-owned > Applications](../configuration/device-restrictions-android-for-work.md).
 
 For app implementation details, see [Android developer documentation - Delegation scopes](https://developer.android.com/work/versions/android-10#new_delegation_scopes).
 

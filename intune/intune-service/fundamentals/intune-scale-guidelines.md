@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Distributed IT with multiple admins
 description: Learn about scaling guidelines for Microsoft Intune when you have a large number of local admins who need to manage their own users/devices and policies within the same tenant. Use Microsoft Intune's Role Based Access Control to manage access.
 
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 05/28/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
   - M365-identity-device-management
   - highpri
@@ -44,7 +27,7 @@ Each local admin can set up groups to suit their local organizational needs. The
 
 - **Least privilege**: Securing access to your organization is an essential security step. Intune uses role-based access controls (RBAC) to assign administrative users permissions within Intune to administer different tasks. With the principle of *least privilege* access, your admins can perform their assigned tasks on only those users and devices that they should be empowered to manage.
 
-- **Central team**: The Central team or group includes the global admins or primary admins in your tenant. These admins can oversee all the local admins and can provide guidance to the local admins.
+- **Central team**: The Central team or group includes the primary admins in your tenant. These admins can oversee all the local admins and can provide guidance to the local admins.
 
 - **Local admins**: The local admins are local and focus on policies and profiles for their specific locations; schools, hospitals, and so on.
 
@@ -125,7 +108,7 @@ There are no special recommendations for this model.
 
 Depending on the business requirements for each feature, guidelines provided in this section can recommend that you create policies per local admin and possibly delegate the permissions needed for creating objects to the local administrators.
 
-> [!NOTE]  
+> [!NOTE]
 > The guidance provided in this section doesn't address every feature, but only covers those areas for which we have special instructions.
 
 ### App protection policy
@@ -229,7 +212,7 @@ For more information, see [How many tokens can I upload.](../apps/vpp-apps-ios.m
 
 - Local admins can create Win32 apps as needed within the cross-platform, line-of-business app and web-link limit. For more information, see [Win32 app management](../apps/apps-win32-app-management.md).
 
-  > [!NOTE]  
+  > [!NOTE]
   > Microsoft Store for Business is being retired. Starting with Windows 11, you have a new option for your private volume-licensed apps. For more information, see [Private app repository in Windows 11](/windows/application-management/private-app-repository-mdm-company-portal-windows-11) and [Update to Microsoft Intune integration with the Microsoft Store on Windows](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-to-endpoint-manager-integration-with-the-microsoft-store/ba-p/3585077).
 
 #### Android
@@ -244,7 +227,7 @@ For more information, see [How many tokens can I upload.](../apps/vpp-apps-ios.m
   - The central team can select a single scope tag as the Managed Google Play scope tag. It has a special dropdown in the Managed Google Play connector page. The scope tag will apply to all Managed Google Play apps after the central team adds them to the console, but won't apply retroactively to apps that have already been added. We highly recommend that the central team [set the scope tag](../enrollment/connect-intune-android-enterprise.md) before they add apps and then assign each regional team that scope tag. Otherwise, regional admins might not be able to see their Managed Google Play apps.
 - Only one OEMConfig policy is supported per device, except for Zebra devices. With Zebra devices, we recommended that you have the smallest number of policies possible because the time to enforce the policy is additive. For example, if you assign six policies with the assumption that they'll layer on top of each other, it takes around 6X longer to start working on the device than a single policy.
 
-> [!NOTE]  
+> [!NOTE]
 > Exercise extreme consideration and caution when setting high-priority update mode on many different apps and groups. This is for multiple reasons:
 > - Although many apps can be set to high-priority mode, only one app update can be installed at a time. One large app update could potentially block many smaller updates until the large app is done installing.
 > - Depending on when apps release new updates, there could be a sudden spike in your network usage if app releases coincide. If Wi-Fi isn't available on some devices, there could also be a spike in cellular usage.

@@ -1,36 +1,19 @@
 ---
-# required metadata
-
-title: Microsoft Intune reports
-titleSuffix: Microsoft Intune
-description: Intune provides specific report types with focused views that contain consistent and timely data. 
-keywords:
+title: Microsoft Intune Reports
+description: Intune provides specific report types with focused views that contain consistent and timely data.
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
-ms.date: 08/12/2024
+ms.date: 06/23/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: jlynn
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
-- highpri  
+- highpri
 ---
 
-# Intune reports
+# Intune Reports
 
-Microsoft Intune reports allow you to more effectively and proactively monitor the health and activity of endpoints across your organization, and also provides other reporting data across Intune. For example, you'll be able to see reports about device compliance, device health, and device trends. In addition, you can create custom reports to obtain more specific data. 
+Microsoft Intune reports allow you to more effectively and proactively monitor the health and activity of endpoints across your organization, and also provides other reporting data across Intune. For example, you'll be able to see reports about device compliance, device health, and device trends. In addition, you can create custom reports to obtain more specific data.
 
 > [!NOTE]
 > The Intune reporting changes will roll out gradually over a period of time to help you prepare and adapt to the new structure.
@@ -52,8 +35,8 @@ The reporting framework provides a consistent and more comprehensive reporting e
 
 ## Who can access the data?
 
-Users assigned an Intune role-based access control role with sufficient permissions permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
- 
+Users assigned an Intune role-based access control role with sufficient permissions can review logs. The least privileged built-in Intune role with these permissions is the [Read Only Operator](../fundamentals/role-based-access-control-reference.md#read-only-operator).
+
 For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 
 ## Reporting tiles
@@ -86,20 +69,20 @@ To see a generated report of device state, you can use the following steps:
     ![Device compliance report](./media/intune-reports/intune-reports-02a.png)
 
     > [!NOTE]
-    > This **Device compliance** report provides a time stamp of when the report was last generated. 
+    > This **Device compliance** report provides a time stamp of when the report was last generated.
 
-For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/advanced-threat-protection.md).
+For related information, see [Enforce compliance for Microsoft Defender for Endpoint with Conditional Access in Intune](../protect/microsoft-defender-with-intune.md).
 
 ### Device compliance trends report (Historical)
 
-The device compliance trend report is more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time. It's useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time). 
+The device compliance trend report is more likely to be used by admins and architects to identify long term trends for device compliance. The aggregated data is displayed over a period of time. It's useful for making future investment decisions, driving process improvements, or prompting investigation into any anomalies. Filters can also be applied to see specific trends. The data provided by this report is a snapshot of the current tenant state (near real-time).
 
 A compliance trend report for device compliance can show the trend of device compliance states over a period of time. You can identify where compliance peaks occurred and focus your time and effort accordingly.
 
 You can view the **Device compliance trends** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 60 day trend.
+2. Select **Reports** > **Device compliance** > **Reports** tab > **Device compliance trends** to view device compliance over a 30 day trend.
 
     ![Intune trend report](./media/intune-reports/intune-reports-03.png)
 
@@ -144,7 +127,7 @@ In this report, you can also:
 This report allows admins to:
 
 - Identify devices that haven't been assigned a compliance policy.
-  
+
   We recommend that every device in each tenant is targeted by a compliance policy.
 
 - View the configuration of the tenant-wide *Compliance policy setting* named **Mark devices with no compliance policy assigned as**. By default, this setting marks a device without an assigned policy as *Compliant*.
@@ -168,7 +151,7 @@ The report generates one row per device that hasn't been assigned a compliance p
 
 ### Settings compliance  (Organizational)
 
-This report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you’ll see include:
+This report displays compliance settings that are deployed to devices, with a count of the devices for each status per setting.  After the report has been generated, the top-level details you'll see include:
 
 - Setting name
 - Platform
@@ -192,7 +175,7 @@ To generate a report that uses current data:
 > [!NOTE]
 > This report is also known as the **Per policy device compliance status** report.
 
-This report displays a list of compliance policies with a count of devices that are compliant or not compliant to each policy. After the report has been generated, The top-level details you’ll see include:
+This report displays a list of compliance policies with a count of devices that are compliant or not compliant to each policy. After the report has been generated, The top-level details you'll see include:
 
 - Policy name
 - Policy platform
@@ -216,7 +199,7 @@ To generate a report that uses current data:
 > [!NOTE]
 > This report is also known as the **Policies with noncompliant and error devices** report.
 
-The **Policy noncompliance** report allows you to review policies with one or more noncompliant devices or devices with errors. Data provided is typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the **Policy noncompliance** report accessible without browsing away from active workflows. This report provides exporting, filtering, searching, paging, and sorting capabilities. 
+The **Policy noncompliance** report allows you to review policies with one or more noncompliant devices or devices with errors. Data provided is typically used by Helpdesk or admin roles to identify problems and help remediate issues. The data found in this report is timely, calls out unexpected behavior, and is meant to be actionable. The report is available alongside the workload, making the **Policy noncompliance** report accessible without browsing away from active workflows. This report provides exporting, filtering, searching, paging, and sorting capabilities.
 
 You can view the **Policy noncompliance** report using the following steps:
 
@@ -230,18 +213,23 @@ The **Noncompliant devices** report provides data typically used by Helpdesk or 
 You can view the **Noncompliant devices** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > **Noncompliant devices**.  
+2. Select **Devices** > **Monitor** > **Noncompliant devices**.
 
-### Windows hardware attestation report (Organizational)  
+### Windows hardware attestation report (Organizational)
 
-View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting.    
+View the status of hardware-attested compliance settings assigned to Windows devices. This report shows data for Intune-enrolled devices that are assigned a compliance policy with at least one hardware-attested compliance setting. Microsoft Intune reports a *successful* status when it receives an attestation report from the device. Microsoft Intune reports an *error* status, along with the detected error type and code, when it's unable to generate an attestation report.
 
-You can view the Windows hardware attestation report using the following steps:  
+You can view the Windows hardware attestation report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Reports** > **Device Compliance**.
-1. Go to the **Reports** tab.  
-1. Select **Windows hardware attestation report**.   
+1. Go to the **Reports** tab.
+1. Select **Windows hardware attestation report**.
+
+>[!NOTE]
+> - The **Latest report** column shows the date of the last issued health certificate. The date is both when the device receives a health certificate, and when it generates an attestation report for Microsoft Intune.
+> - Every time the device generates an attestation report, the health certificate renews.
+> - For more information about error types, codes, and troubleshooting, see [Health attestation CSP status and error-codes](/windows/client-management/mdm/healthattestation-csp#healthattestation-csp-status-and-error-codes).
 
 ## Device configuration reports
 
@@ -249,7 +237,7 @@ This set of reports focuses on device configuration settings in your policies. Y
 
 ### Certificates report (Operational)
 
-You can review info about certificates, including thumbprints, issuance info, and status. 
+You can review info about certificates, including thumbprints, issuance info, and status.
 
 You can view the **Certificates** report using the following steps:
 
@@ -299,19 +287,16 @@ You can view details about failed user enrollment attempts.
 You can view the **Enrollment failures** report using the following steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > **Enrollment failures**.
+2. Select **Devices** > **Monitor** > **Enrollment failures**.  
 
-### Incomplete user enrollments report (Operational)  
+### Enrollment time grouping  
 
->[!IMPORTANT]
-> Starting in mid-August 2025, we are removing the incomplete user enrollment report from the Microsoft Intune admin center, along with the corresponding Graph APIs: getEnrollmentAbandonmentDetailsReport, getEnrollmentAbandonmentSummaryReport, and getEnrollmentFailureDetailsReport. If you use the incomplete user enrollment report, you will no longer be able to access the report within the admin center. Additionally, scripts and automation using the listed Graph APIs will stop working soon after the report is removed. We recommend using the *enrollment failures report* for details on enrollment failures, including those caused by abandonment. 
+View the details of failed grouping attempts that happened with [enrollment time grouping](../enrollment/enrollment-time-grouping.md). 
 
-You can identify where enrollments stop in the Company Portal enrollment flow.
-
-You can view the **Incomplete user enrollments** report using the following steps:
+You can view the enrollment time grouping report using the following steps:  
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Devices** > **Monitor** > **Incomplete user enrollments**.
+2. Select **Devices** > **Monitor** > **Enrollment time grouping failures**.  
 
 ### Device attestation status report
 
@@ -386,13 +371,13 @@ To view the **Feature update failures** report, use the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Feature update policies with alerts**.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
 > - **[Windows feature update (Organizational)](#windows-feature-update-organizational)**
-> - **Feature update failures report (Operational)** *(this report)*  
+> - **Feature update failures report (Operational)** *(this report)*
 >
-> Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
+> Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.
 
 ### Installation failures for iOS devices report (Operational)
 
@@ -422,7 +407,7 @@ You can view the **Installation status for macOS devices** report using the foll
 
 A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
-For information about how to use this report to resolve update failures, see [Reports for Windows 10 and later feature updates policy](../protect/windows-10-feature-updates.md).
+For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../protect/windows-10-feature-updates.md).
 
 You can view the **Windows 10 and later feature updates** report using the following steps:
 
@@ -432,13 +417,13 @@ You can view the **Windows 10 and later feature updates** report using the follo
 4. Select the **Update aggregated status** and **Ownership** filters to refine your report.
 5. Select **Generate report** (or **Generate again**) to retrieve current data.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > To get a complete picture of Windows feature updates status, use the following feature updates reports:
 >
 > - Windows feature update (Organizational) *(this report)*
 > - [Feature update failures report (Operational)](#feature-update-failures-report-operational)
 >
-> Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.  
+> Together, these reports provide insight into the update state and compliance of Windows devices in your organization and can help you troubleshoot problems with feature update deployment.
 
 ## Security reports
 
@@ -467,8 +452,8 @@ For information about the actions you can take with this report, see [Bulk actio
 The **Unhealthy endpoints** and **Active malware** reports provide bulk actions that are applicable to the Windows devices selected within each report. To use a bulk action, you select a row corresponding to each device (up to 100 devices at a time) and select the action. The following actions available:
 
 - **Restart** - This action performs a restart of the selected devices.
-- **Quick scan** - This action performs a Windows Defender quick scan of the selected devices. 
-- **Full scan** - This action performs a Windows Defender full scan of the selected devices. 
+- **Quick scan** - This action performs a Windows Defender quick scan of the selected devices.
+- **Full scan** - This action performs a Windows Defender full scan of the selected devices.
 
 For more information about the difference between a *quick scan* and a *full scan*, see [Configure scheduled quick or full Microsoft Defender Antivirus scans](/windows/security/threat-protection/microsoft-defender-antivirus/scheduled-catch-up-scans-microsoft-defender-antivirus).
 
@@ -507,7 +492,7 @@ And the **Dashboard**:
 
 ### Antivirus agent status report (Organizational)
 
-The **Antivirus agent status** report provides the agent status of your organization's devices. 
+The **Antivirus agent status** report provides the agent status of your organization's devices.
 
 The report is available from the primary **Microsoft Defender Antivirus** workload, and provides filtering, searching, paging, and sorting. The data found in this report is timely and shows the following details:
 
@@ -517,7 +502,7 @@ The report is available from the primary **Microsoft Defender Antivirus** worklo
 - If the device is a virtual machine, or a physical device
 - Calls out the unhealthy device, the user name, and severity
 
-This report shows data visualizations as a pie chart for a breakdown of agent status count across devices, and includes remote actions. 
+This report shows data visualizations as a pie chart for a breakdown of agent status count across devices, and includes remote actions.
 
 You can view the **Antivirus agent status** report using the following steps:
 
@@ -556,9 +541,9 @@ Other reports for Microsoft Defender Antivirus include:
 - [Antivirus agent status report](#antivirus-agent-status-report-organizational), an organizational report detailed in this article.
 - [Antivirus policy reports](../protect/endpoint-security-antivirus-policy.md#antivirus-policy-reports), which are available in the Antivirus node under Endpoint security in the Microsoft Intune admin center.
 
-### MDM Firewall status for Windows 10 and later (Organizational)
+### MDM Firewall status for Windows (Organizational)
 
-*This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-10-or-later-with-firewall-off) along with the MDM devices running Windows 10 or later with firewall off report, which is only available from within the Endpoint security node.*
+*This report is also described in [Endpoint security firewall policy](../protect/endpoint-security-firewall-policy.md#mdm-devices-running-windows-with-firewall-off) along with the MDM devices running Windows firewall off report, which is only available from within the Endpoint security node.*
 
 The **MDM Firewall status for Windows 10 and later** report provides a high-level view of the firewall status for your managed devices. To view this report, open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then go to **Reports** > **Firewall** >  **MDM Firewall status for Windows 10 and later**.
 
@@ -571,9 +556,9 @@ Status details include:
 
 - **Enabled** – The firewall on, and successfully reporting.
 - **Disabled** - The firewall is turned off.
-- **Limited** – The firewall isn’t monitoring all networks, or some rules are turned off.
+- **Limited** – The firewall isn't monitoring all networks, or some rules are turned off.
 - **Temporarily Disabled (default)** – The firewall is temporarily not monitoring all networks
-- **Not applicable** – The device doesn’t support firewall reporting.
+- **Not applicable** – The device doesn't support firewall reporting.
 
 > [!div class="mx-imgBorder"]
 > ![View the Firewall Status report](media/intune-reports/firewall-status.png)
@@ -639,9 +624,9 @@ To view the **Device and user check-in status** report:
 
 ### Device assignment status report (Operational)
 
-The **Device assignment status** report surfaces data on the latest status for assigned devices from the device configuration profile. To view this report, select the**Device assignment status** card on the profile overview page. By default, the report will return empty until you generate the report with or without a filter for the assignment status. Once completed, the report will include a timestamp for when it was last generated. The reporting data will be available for up to three days before needing to be generated again. 
+The **Device assignment status** report surfaces data on the latest status for assigned devices from the device configuration profile. To view this report, select the**Device assignment status** card on the profile overview page. By default, the report will return empty until you generate the report with or without a filter for the assignment status. Once completed, the report will include a timestamp for when it was last generated. The reporting data will be available for up to three days before needing to be generated again.
 
-Like the **Device and user check-in status** report, the **Device assignment status** report page includes an aggregate chart that summarizes the list data. The aggregate counts the number of device check-ins based on the last active user across **Success**, **Error**, **Conflict**, **Not Applicable**, and **Pending** states. A denominator shows the total count of assigned devices and primary users targeted by the policy. The list records reflect the same data, surfacing only one entry per device based on its last active user. 
+Like the **Device and user check-in status** report, the **Device assignment status** report page includes an aggregate chart that summarizes the list data. The aggregate counts the number of device check-ins based on the last active user across **Success**, **Error**, **Conflict**, **Not Applicable**, and **Pending** states. A denominator shows the total count of assigned devices and primary users targeted by the policy. The list records reflect the same data, surfacing only one entry per device based on its last active user.
 
 To view the **Device assignment status** report:
 
@@ -650,7 +635,7 @@ To view the **Device assignment status** report:
 
 ### Per setting status report (Operational)
 
-The **Per setting status** report surfaces the summary of device and user check-ins that are in **Success**, **Conflict**, **Error** states at the granular setting level within the device configuration profile. This report uses the same consistency and performance updates and navigation tools we’ve made available to other reports. 
+The **Per setting status** report surfaces the summary of device and user check-ins that are in **Success**, **Conflict**, **Error** states at the granular setting level within the device configuration profile. This report uses the same consistency and performance updates and navigation tools we've made available to other reports.
 
 To view the **Per setting status** report:
 
@@ -666,7 +651,7 @@ The **Managed Apps** report provides a report of apps on a specific device that 
 - Version
 - Resolved intent
 - Installation status
- 
+
 The **Resolved intent** column lists the needed installation result or availability of the app, such as **Required install**, **Required uninstall**, or **Available**. The **Installation status** column provides the last known state of the app on the device, such as **Installed**, **Not installed**, and **Available for install**.
 
 You can switch between displaying managed app details for the primary user and other users on a device, or display app details for the device without any user. The generated app details will be displayed using the primary user of the device when the report is initially loaded, or displayed with no primary user if none exists.
@@ -712,7 +697,7 @@ To view the **Device configuration** details:
 
 ### Co-management eligibility report (Organizational)
 
-The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 10 and enroll in Microsoft Entra ID before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows 10 devices by using both Configuration Manager and Microsoft Intune. 
+The **Co-management eligibility** report provides an eligibility evaluation for devices that can be co-managed. Devices must upgrade to Windows 11 and enroll in Microsoft Entra ID before becoming eligible. Some devices (like devices with Windows Server OS) aren't eligible for co-management. Co-management enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune.
 
 To see a generated report of device state, you can use the following steps:
 
@@ -727,7 +712,7 @@ For related information, see [What is co-management?](../../configmgr/comanage/o
 
 ### Co-managed workloads report (Organizational)
 
-The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. For each device, the report shows the management authority for the Compliance, Resource Access, Device Configuration, Windows Update client policies, Endpoint Protection, Modern Apps, and Office Apps workloads. The report also aggregates all device workloads to show a summary of total workload management. Co-management enables you to concurrently manage Windows 10 and later devices by using both Configuration Manager and Microsoft Intune. 
+The **Co-Manage Workloads** report provides a report of devices that are currently co-managed. For each device, the report shows the management authority for the Compliance, Resource Access, Device Configuration, Windows Update client policies, Endpoint Protection, Modern Apps, and Office Apps workloads. The report also aggregates all device workloads to show a summary of total workload management. Co-management enables you to concurrently manage Windows devices by using both Configuration Manager and Microsoft Intune.
 
 To see a generated report of device state, you can use the following steps:
 
@@ -757,12 +742,12 @@ You can create and view custom reports using the following steps:
 
     ![Intune Reports - Add diagnostic setting](./media/intune-reports/intune-reports-04.png)
 
-3. Select **Add diagnostic setting** to display the **Diagnostic settings** pane. 
-    
-   > [!NOTE]
-   > An Azure subscription is required to use this capability. 
+3. Select **Add diagnostic setting** to display the **Diagnostic settings** pane.
 
-4. Add a **Name** for the diagnostic settings. 
+   > [!NOTE]
+   > An Azure subscription is required to use this capability.
+
+4. Add a **Name** for the diagnostic settings.
 5. Select the **Send to Log Analytics** and **DeviceComplianceOrg** settings.
 
     ![Intune Reports - Diagnostic settings](./media/intune-reports/intune-reports-04a.png)
@@ -776,7 +761,7 @@ You can create and view custom reports using the following steps:
 
    ![Workbooks - Interactive reports](./media/intune-reports/intune-reports-07.png)
 
-### Diagnostic settings 
+### Diagnostic settings
 Each Azure resource requires its own diagnostic setting. The diagnostic setting defines the following for a resource:
 
 - Categories of logs and metric data sent to the destinations defined in the setting. The available categories will vary for different resource types.
@@ -788,7 +773,7 @@ A single diagnostic setting can define one of each of the destinations. If you w
 For more information, about diagnostic settings, see [Create diagnostic setting to collect platform logs and metrics in Azure](/azure/azure-monitor/platform/diagnostic-settings).
 
 ### Log Analytics
-Log Analytics is the primary tool in the Azure portal for writing log queries and interactively analyzing the results of the queries. Even if a log query is used elsewhere in Azure Monitor, you'll typically write and test the query first using Log Analytics. For details about using Log Analytics and creating log queries, see [Overview of log queries in Azure Monitor](/azure/azure-monitor/log-query/log-query-overview). 
+Log Analytics is the primary tool in the Azure portal for writing log queries and interactively analyzing the results of the queries. Even if a log query is used elsewhere in Azure Monitor, you'll typically write and test the query first using Log Analytics. For details about using Log Analytics and creating log queries, see [Overview of log queries in Azure Monitor](/azure/azure-monitor/log-query/log-query-overview).
 
 ### Workbooks
 Workbooks combine text, Analytics queries, Azure Metrics, and parameters into rich interactive reports. Workbooks are editable by any other team members who have access to the same Azure resources. For more information about workbooks, see [Azure Monitor workbooks](/azure/azure-monitor/app/usage-workbooks). Also, you can work with and contribute to workbook templates. For more information, see [Azure Monitor Workbook Templates](https://go.microsoft.com/fwlink/?linkid=867045).

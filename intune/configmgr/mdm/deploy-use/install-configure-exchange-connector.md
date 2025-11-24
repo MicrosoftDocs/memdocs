@@ -7,8 +7,8 @@ ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 ms.collection: tier3
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

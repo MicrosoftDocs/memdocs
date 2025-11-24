@@ -2,13 +2,6 @@
 metadata:
   title: Windows Autopilot troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot issues
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: madakeva
-  manager: bpardi
   ms.date: 04/21/2025
   ms.collection:
     - M365-modern-desktop
@@ -348,6 +341,10 @@ sections:
 
           `Ran into trouble. Please sign in with an administrator account to see why and reset manually.`
 
+      - question: |
+          Why are Windows Autopilot Hybrid deployments failing during ESP with error code "0x80070774"?
+        answer: |
+          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain.
 
   - name: Troubleshooting Windows OOBE issues during Windows Autopilot
     questions:
@@ -515,6 +512,11 @@ sections:
           - Server is sending network request via TLS 1.0 or 1.1 because PKCS Cryptography is disabled. To resolve the issue, on the server hosting the Intune Connector for Active Directory, delete the registry key value specified in the following command by running the command from an elevated command prompt:
 
             `reg.exe delete "HKLM\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS" /v Enabled /f`
+
+      - question: |
+          Why are Windows Autopilot Hybrid deployments failing during ESP with error code "0x80070774"?
+        answer: |
+          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain.
 
 
 additionalContent: |

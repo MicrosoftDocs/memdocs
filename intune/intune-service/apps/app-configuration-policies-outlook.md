@@ -1,34 +1,15 @@
 ---
-# required metadata
-
-title: Manage Outlook for iOS and Android with Intune
+title: Manage Outlook for iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Outlook for iOS and Android to ensure team collaboration experiences are always accessed with safeguards in place.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 11/21/2024
+ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
 ms.reviewer: beflamm
-
-# optional metadata
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
-ms.custom: intune-azure
 ---
 
-# Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune
+# Manage Messaging Collaboration Access by Using Outlook for iOS and Android With Microsoft Intune
 
 The Outlook for iOS and Android app is designed to enable users in your organization to do more from their mobile devices, by bringing together email, calendar, contacts, and other files.
 
@@ -53,13 +34,13 @@ Organizations can use Microsoft Entra Conditional Access policies to ensure that
 
 ## Create Intune app protection policies
 
-App Protection Policies (APP) define which apps are allowed and the actions they can take with your organization's data. The choices available in APP enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its APP data protection framework for iOS and Android mobile app management.
+App protection policies define which apps are allowed and the actions they can take with your organization's data. The choices available in app protection policies enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its app protection policies data protection framework for iOS and Android mobile app management.
 
-The APP data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
+The app protection policies data protection framework is organized into three distinct configuration levels, with each level building off the previous level:
 
 - **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN and encrypted and performs selective wipe operations. For Android devices, this level validates Android device attestation. This is an entry level configuration that provides similar data protection control in Exchange Online mailbox policies and introduces IT and the user population to APP.
-- **Enterprise enhanced data protection** (Level 2) introduces APP data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
-- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and APP Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
+- **Enterprise enhanced data protection** (Level 2) introduces app protection policies data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
+- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and app protection policies Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
 
 To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](app-protection-framework.md).
 
@@ -74,7 +55,7 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
-> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
+> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.
 
 ## Use app configuration
 
@@ -91,5 +72,5 @@ For specific procedural steps and detailed documentation on the app configuratio
 
 ## Next steps
 
-- [What are app protection policies?](app-protection-policy.md) 
+- [What are app protection policies?](app-protection-policy.md)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)

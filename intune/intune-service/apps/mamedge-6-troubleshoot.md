@@ -1,39 +1,20 @@
 ---
-# required metadata
-
-title: Step 6. Troubleshoot Microsoft Edge for Business data security
-titleSuffix:
+title: Step 6. Troubleshoot Microsoft Edge for Business Data Security
 description: Step 6. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 03/26/2024
+ms.date: 06/12/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-
-# optional metadata
-
-#audience:
-#ROBOTS: 
 ms.reviewer: samarti
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
 ms.topicc: troubleshooting-general
 ---
 
-# Step 6. Troubleshoot Microsoft Edge for Business data security
+# Step 6. Troubleshoot Microsoft Edge for Business Data Security
 
-Troubleshooting app protection policies (APP) and app configuration policies (ACP) in Microsoft Intune can involve several steps. 
+Troubleshooting app protection policies and app configuration policies (ACP) in Microsoft Intune can involve several steps.
 
 The following list provides common issues and potential solutions:
 
@@ -60,7 +41,7 @@ If you continue to experience issues, it may be helpful to contact [Microsoft Su
 
 ## FAQ
 
-**Does Microsoft Edge for Business require a separate download?**  
+**Does Microsoft Edge for Business require a separate download?** 
 
 No. Microsoft Edge for Business is automatically triggered by signing in with a Microsoft Entra ID.
 
@@ -76,7 +57,7 @@ Yes, all policies and configurations currently in place will be inherited by Mic
 
 There's no impact on users\' default browser settings.
 
-**What happens to favorites, passwords, and related data?**  
+**What happens to favorites, passwords, and related data?** 
 
 Passwords, favorites, and data currently associated with the user's work profile will be maintained in Microsoft Edge for Business. Passwords, favorites, and data aren't shared between the work browser window and the personal browser window.
 

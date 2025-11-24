@@ -6,8 +6,8 @@ ms.date: 10/01/2021
 ms.subservice: app-mgt
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3

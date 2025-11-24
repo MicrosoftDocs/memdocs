@@ -2,8 +2,8 @@
 title: Tutorial - Enable co-management for internet devices
 titleSuffix: Configuration Manager
 description: Learn how to configure co-management for new internet-based Windows 10 or later devices by using Configuration Manager and Microsoft Intune.
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 08/24/2021
 ms.topic: tutorial
@@ -42,7 +42,7 @@ In this tutorial, you will:
 
 ### Azure services and environment
 
-- Azure subscription ([free trial](https://azure.microsoft.com/free)).
+- Azure subscription ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn)).
 - Microsoft Entra ID P1 or P2.
 - Microsoft Intune subscription, with Intune configured to [auto-enroll devices](tutorial-co-manage-clients.md#configure-auto-enrollment-of-devices-to-intune).
 

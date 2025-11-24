@@ -6,8 +6,8 @@ ms.date: 11/29/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.reviewer: mstewart
 ms.localizationpriority: medium

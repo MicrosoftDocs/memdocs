@@ -6,8 +6,8 @@ ms.date: 05/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart

@@ -1,36 +1,17 @@
 ---
-# required metadata
-
-title: Step 5. Understand Microsoft Edge for Business end user experience for Windows
-titleSuffix:
+title: Step 5. Understand Microsoft Edge for Business End User Experience for Windows
 description: Step 5. Understand Microsoft Edge for Business end user experience Windows.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 03/26/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-
-# optional metadata
-
-#audience:
-#ROBOTS: 
 ms.reviewer: samarti
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 5. Understand Microsoft Edge for Business end user experience for Windows
+# Step 5. Understand Microsoft Edge for Business End User Experience for Windows
 
 Now that you've configured your Microsoft Entra Conditional Access policy and created your first app protection policy for Windows, you can launch **Microsoft Edge for Business** using a managed or unmanaged device.
 
@@ -63,7 +44,7 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 
 6. Enter your **password** for the account.
 
-	> [!NOTE] 
+	> [!NOTE]
 	> The sign-in process within your organization may vary. Regardless of the method, completing the sign-in process is essential to add your user profile to Microsoft Edge.
     >
     > Always keep your password secure.
@@ -72,7 +53,7 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
 
 	:::image type="content" alt-text="Stay signed in to all your apps window  -  Microsoft Edge." source="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png":::
 
-    > [!IMPORTANT] 
+    > [!IMPORTANT]
     > You need to make sure the checkmark is unselected otherwise you will enroll the device into Intune, you should also not select the option **No, sign in the app only** as this will not enroll or ensure MAM is operational for the browser.
 
 8. Wait until you see the message, **You're all set!** Then, select **Done.**
