@@ -470,5 +470,6 @@ After deploying Settings Catalog policies:
 
 ## Next steps
 
-Continue to [Step 6](mamedge-6-security-baseline.md) to deploy the Microsoft Edge security baseline.
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-06.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-6-app.md)
 
+Continue to [Step 6](mamedge-6-security-baseline.md) to deploy the Microsoft Edge security baseline.

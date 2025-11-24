@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Microsoft Entra Conditional Access with Microsoft Edge for Business
+# Step 1: Microsoft Entra Conditional Access with Microsoft Edge for Business
 
 The modern security perimeter extends beyond an organization's network boundary to include user and device identity. Conditional Access brings identity-driven signals together to enforce organizational policies as part of a Zero Trust security model. It evaluates signals such as user risk, device compliance, and application context to determine whether access should be granted.
 
@@ -24,6 +24,8 @@ Identity-driven signals may include:
 - Device compliance state  
 - Target application  
 - Real-time and calculated risk detection  
+
+:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png" alt-text="Diagram illustrating Conditional Access controls for Microsoft Edge for Business." lightbox="https://learn.microsoft.com/intune/intune-service/apps/media/securing-data-edge-for-business/securing-data-edge-for-businessca.png#lightbox":::
 
 Conditional Access is evaluated after authentication is completed. It is not intended to mitigate denial-of-service (DoS) attacks directly, but it can use signals from such events when making access decisions.
 

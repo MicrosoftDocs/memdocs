@@ -85,4 +85,6 @@ Intune displays notifications when a policy requirement isn’t met. The followi
 
 ## Next step
 
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-08.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-8-app.md)
+
 Continue with [Step 8](mamedge-8-troubleshoot.md) to troubleshoot Microsoft Edge for Business.

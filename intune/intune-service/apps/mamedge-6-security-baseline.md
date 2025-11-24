@@ -155,4 +155,6 @@ For more information related to security baselines and framework alignment, see:
 
 ## Next steps
 
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-07.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-7-app.md)
+
 Continue to [Step 7](mamedge-7-end-user-experience.md) to understand the Microsoft Edge for Business end user experience.
