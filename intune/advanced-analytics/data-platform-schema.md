@@ -504,17 +504,17 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 > **Supported for**: single device query on-demand.
 
 | Property | Type | Description | Supported platforms |
-| --- | --- | --- |--- |
-| `DriverDeviceId(Key)` | string (max 256 characters) | Device ID |Windows|
-| `FriendlyName` | string (max 256 characters) | Such as "Microsoft Device Association Root Enumerator" |Windows|
-| `DriverDescription` | string (max 256 characters) | Driver description |Windows|
-| `DriverVersion` | string | Driver version |Windows|
-| `InfName` | string (max 260 characters) | Associated inf file |Windows|
-| `Class` | string (max 256 characters) | Device/driver class name |Windows|
-| `ProviderName` | string (max 256 characters) | Driver provider |Windows|
-| `Manufacturer` | string (max 256 characters) | Device manufacturer |Windows|
-| `BuildDate[Win32\PnPSignedDriver class (Windows)` | [Microsoft Learn](/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date |Windows|
-| `Signed` | bool | Whether the driver is signed or not |Windows|
+|--|--|--|--|
+| `DriverDeviceId(Key)` | string (max 256 characters) | Device ID | Windows |
+| `FriendlyName` | string (max 256 characters) | Such as "Microsoft Device Association Root Enumerator" | Windows |
+| `DriverDescription` | string (max 256 characters) | Driver description | Windows |
+| `DriverVersion` | string | Driver version | Windows |
+| `InfName` | string (max 260 characters) | Associated inf file | Windows |
+| `Class` | string (max 256 characters) | Device/driver class name | Windows |
+| `ProviderName` | string (max 256 characters) | Driver provider | Windows |
+| `Manufacturer` | string (max 256 characters) | Device manufacturer | Windows |
+| `BuildDate[Win32\PnPSignedDriver class` - [Microsoft Learn](/previous-versions/windows/desktop/legacy/aa394354(v=vs.85)) | datetime(UTC) | Driver date | Windows |
+| `Signed` | bool | Whether the driver is signed or not | Windows |
 
 ## `WindowsEvent`
 
