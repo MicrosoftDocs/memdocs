@@ -1,6 +1,85 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/enrollment/enrollment-report-company-portal-abandon.md",
+      "redirect_url": "/intune/intune-service/enrollment/view-enrollment-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/managed-software-updates-ios-macos.md",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-guide-ios-ipados.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-ios-ipados",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-guide-macos.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-guide-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-ios.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-ios",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-macos.md",
+      "redirect_url": "/intune/intune-service/protect/updates/software-updates-macos",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/software-updates-reports-apple-declarative-based.md",
+      "redirect_url": "/intune/intune-service/protect/updates/apple-reports",
+      "redirect_document_id": false
+    },    {
+      "source_path": "intune/intune-service/fundamentals/intune-legacy-pc-client.md",
+      "redirect_url": "/intune/intune-service/fundamentals/tutorial-walkthrough-endpoint-manager",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/copilot/security-copilot-surface-portal.md",
+      "redirect_url": "/surface/security-copilot-surface-management-portal",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-management.md",
+      "redirect_url": "/intune/intune-service/remote-actions/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/device-wipe-macos.md",
+      "redirect_url": "/intune/intune-service/remote-actions/device-wipe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/devices-wipe.md",
+      "redirect_url": "/intune/intune-service/remote-actions/device-wipe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/chrome-enterprise-remote-actions.md",
+      "redirect_url": "/intune/intune-service/remote-actions/index",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/app-protection-policies-configure-windows-10.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/windows-information-protection-policy-create.md",
+      "redirect_url": "/previous-versions/windows/it-pro/windows-10/security/information-protection/windows-information-protection/create-wip-policy-using-intune-azure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/remote-actions/teamviewer-support.md",
+      "redirect_url": "/intune/intune-service/fundamentals/teamviewer-support",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/remote-actions/device-inventory.md",
       "redirect_url": "/intune/intune-service/fundamentals/device-inventory",
       "redirect_document_id": false
@@ -21,6 +100,16 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/configuration/administrative-templates-restrict-usb.md",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-restrict-usb",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/administrative-templates-update-office.md",
+      "redirect_url": "/intune/intune-service/configuration/settings-catalog-update-office",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/configuration/administrative-templates-configure-edge.md",
       "redirect_url": "/intune/intune-service/configuration/settings-catalog-configure-edge",
       "redirect_document_id": false
@@ -37,7 +126,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/software-update-report-apple-per-device.md",
-      "redirect_url": "/intune/intune-service/protect/managed-software-updates-ios-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
       "redirect_document_id": false
     },
     {
@@ -2277,7 +2366,7 @@
     },
     {
       "source_path": "intune/intune/protect/software-updates-declarative-ios-macos.md",
-      "redirect_url": "/intune/intune-service/protect/managed-software-updates-ios-macos",
+      "redirect_url": "/intune/intune-service/protect/updates/apple",
       "redirect_document_id": false
     },
     {
@@ -2557,6 +2646,71 @@
     {
       "source_path": "intune/intune-service/configuration/custom-settings-android-for-work.md",
       "redirect_url": "https://techcommunity.microsoft.com/blog/intunecustomersuccess/intune-ending-support-for-custom-profiles-for-personally-owned-work-profile-devi/4287414",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/advanced-endpoint-analytics.md",
+      "redirect_url": "/intune/analytics/advanced-analytics",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-policies.md",
+      "redirect_url": "/intune/intune-service/protect/epm-deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-guidance-for-creating-rules.md",
+      "redirect_url": "/intune/intune-service/protect/epm-elevation-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/epm-deployment-considerations-ki.md",
+      "redirect_url": "/intune/intune-service/protect/epm-plan",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/remote-help-android-troubleshoot.md",
+      "redirect_url": "/intune/intune-service/fundamentals/remote-help-troubleshooting-monitoring",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/remote-help-android.md",
+      "redirect_url": "/intune/intune-service/fundamentals/remote-help",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/remote-help-windows.md",
+      "redirect_url": "/intune/intune-service/fundamentals/remote-help",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/remote-help-macos.md",
+      "redirect_url": "/intune/intune-service/fundamentals/remote-help",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/remote-help-webapp.md",
+      "redirect_url": "/intune/intune-service/fundamentals/remote-help",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-configure.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-integrate",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-manage-android.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-configure-android",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection-monitor.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-monitor",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/advanced-threat-protection.md",
+      "redirect_url": "/intune/intune-service/protect/microsoft-defender-with-intune",
       "redirect_document_id": false
     }
   ]

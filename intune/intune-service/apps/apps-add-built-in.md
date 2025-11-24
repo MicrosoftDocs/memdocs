@@ -1,42 +1,20 @@
 ---
-# required metadata
-
-title: Add built-in apps to mobile devices using Microsoft Intune
-titleSuffix: 
+title: Add Built-In Apps to Mobile Devices Using Microsoft Intune
 description: Learn how you can use Intune to make it easier to install built-in apps mobile devices.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 11/21/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 0ec8de66-5a0f-4c8d-afbf-c2becc7d6eec
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Add
 ---
 
-# Add built-in apps to Microsoft Intune
+# Add Built-In Apps to Microsoft Intune
 
 The *built-in* app type makes it easy for you to assign curated managed apps, such as Microsoft 365 apps and third-party apps, to iOS/iPadOS and Android devices. You can assign specific apps for this app type, such as Excel, OneDrive, Outlook, Skype, and others. After you add an app, the app type is displayed as either *Built-in iOS app* or *Built-in Android app*. By using the built-in app type, you can choose which of these apps to publish to device users.
 
 > [!NOTE]
-> Built-in apps are not supported on Android Enterprise devices. For more information about Android Enterprise supported apps, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md). 
+> Built-in apps are not supported on Android Enterprise devices. For more information about Android Enterprise supported apps, see [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md) and [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md).
 
 In earlier versions of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), Intune provided several default managed Microsoft 365 apps, such as Outlook and OneDrive. The app types for these managed apps were tagged as *Managed iOS Store App* or *Managed Android App*. Instead of using these app types, we recommend that you use the built-in app type. By using the built-in app type, you have the additional flexibility to edit and delete Microsoft 365 apps.
 
@@ -67,13 +45,13 @@ To add a built-in app to your available apps in Microsoft Intune, do the followi
 
 You can modify information about the built-in app. This information helps you to identify the app in Intune and helps users find the app in the company portal.
 
-1. Select **Apps** > **All Apps** and select the built-in app that you want to modify.  
+1. Select **Apps** > **All Apps** and select the built-in app that you want to modify.
    A pane for the built-in app is displayed.
 2. Select  **Properties**.
 3. Select **Edit** next to **App information**.
 4. In the **App information** pane, you can modify the following information:
     - **Name**: Enter the name of the built-in app as it is displayed in the company portal. Make sure all names that you use are unique. If the same app name exists twice, only one of the apps is displayed to users in the company portal.
-    - **Description**: Enter a description for the app. 
+    - **Description**: Enter a description for the app.
     - **Publisher**: Enter the name of the publisher of the app.
     - **Category**: Optionally, select one or more of the built-in app categories. Setting this option makes it easier for users to find the app when they browse the company portal.
     - **Show this as a featured app in the company portal**: Display the app prominently on the main page of the company portal when users browse for apps.

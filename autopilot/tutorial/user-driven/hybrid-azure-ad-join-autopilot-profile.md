@@ -1,18 +1,11 @@
 ---
 title: Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile
 description: How to - Windows Autopilot user-driven Microsoft Entra hybrid join - Step 7 of 10 - Create and assign user-driven Microsoft Entra hybrid join Windows Autopilot profile.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 09/13/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

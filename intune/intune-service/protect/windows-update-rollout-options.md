@@ -1,29 +1,13 @@
 ---
-# required metadata
-
 title: Configure schedules to gradually roll out Windows Updates in Intune
 description: Configure schedules that manage how and when Windows updates roll out to your managed devices with Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davguy; bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-updates
 ---
@@ -41,9 +25,11 @@ You configure rollout options when creating [Feature Updates policy](../protect/
 
 - **Make update available on a specific date** - With this option you can select a day on which the update in the policy is initially available to install. Windows Update doesn't make the update available to devices with this configuration until that day is reached.
 
-- **Make update available gradually** - This process helps distribute the availability of the update across a range of time that you configure, with Windows Update making an update available to different subsets of the devices targeted by the policy, at different times. This option can reduce the effect to your network when compared to offering the update to all devices at the same time. The following section explains how to use this option in more detail.
 
 ## Make updates available gradually
+
+> [!WARNING]
+> Gradual rollout will no longer be an available option after October 14, 2025.
 
 With the option **Make update available gradually**, you can direct Windows Update to extend an update offer to different subsets of the devices that the policy targets, at different times. We refer to those subsets as *offer groups*. This behavior distributes the availability of the update across the time you've configured, which can reduce the effect to your network as compared to offering the update to all devices at the same time.
 
@@ -61,7 +47,7 @@ To configure this option, you set the following values. Windows Update uses thes
 
 The following behaviors apply to the management of offer groups:
 
-- Windows Update assigns targeted devices to the groups randomly, keeping groups evenly sized.
+- Windows Update assigns targeted devices to groups randomly, keeping groups evenly sized, with a minimum unit of 100 devices per group.
 
 - If you edit a policy to change the date for the first or final group availability, or change the number of days between groups for the policy:
   - Windows Update recalculates the number of groups to use, if necessary.

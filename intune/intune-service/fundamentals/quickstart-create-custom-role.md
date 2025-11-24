@@ -1,36 +1,21 @@
 ---
-# required metadata
-
 title: Create and assign a custom role in Intune
 description: Create and assign a custom role for a remote device manager.
 services: microsoft-intune
-author: BrenDuns
+author: brenduns
 ms.author: brenduns
-manager: laurawi
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
 ms.topic: how-to
-ms.date: 03/26/2019
-ms.assetid: 0b3ac749-4a61-4717-bf08-e0e6a15c3b0a
-# optional metadata
+ms.date: 10/16/2025
 
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # Step 10: Create and assign a custom role
 
-In this Intune topic, you'll create a custom role with specific permissions for a security operations department. Then you'll assign the role to a group of such operators. There are several default roles that you can use right away. But by creating custom roles like this one, you have precise access control to all parts of your mobile device management system.
+This article guides you through creating a custom role for Intune role-based access control (RBAC) that has specific permissions for a security operations department and assign the role to a group of such operators. When you assign Intune RBAC roles and follow the principles of least privilege access, your admins can perform tasks on only those users and devices that they should are empowered to manage. 
+
+Although Intune includes several built-in RBAC roles that you can use right away, we recommend using the least-privileged role that can complete the task an administrator is expected to manage. This approach minimizes security risks and operational errors by avoiding over-privileged accounts like Global Administrator or Intune Administrator for routine work.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -38,54 +23,75 @@ If you don't have an Intune subscription, [sign up for a free trial account](fre
 
 ## Prerequisites
 
-- To complete this evaluation step, you must [create a group](quickstart-create-group.md).
+To complete this evaluation step, you must have a group with at least one user. Creating a group is covered in [Step 3 - Create a group](quickstart-create-group.md) of this evaluation guide.
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) using an account that is assigned the Microsoft Entra role of **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)**.
 
-If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+However, if this is a new trial subscription, sign in with the account that created the subscription, which is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
 > [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create a custom role
 
-When you create a custom role, you can set permissions for a wide range of actions. For the security operations role, we'll set a few Read permissions so that the operator can review a device's configurations and policies.
+When you create a custom role, you can set permissions for a wide range of actions. For the security operations role, you'll enable *Read* permissions for a few categories so that the operator can review a device's configurations and policies.
 
-1. In Intune, choose **Roles** > **All roles** > **Add**.
-![Adding a role in the Intune roles All roles pane.](./media/quickstart-create-custom-role/add-custom-role.png)
-2. Under **Add custom role**, in the **Name** box, enter *Security operations*.
-3. In the **Description** box, enter *This role lets a security operator monitor device configuration and compliance information.*
-4. Choose **Configure** > **Corporate device identifiers** > **Yes** next to **Read** > **OK**.
-![Set Read value for Corporate device identifiers.](./media/quickstart-create-custom-role/corp-device-id-read.png)
-5. Choose **Device compliance policies** > **Yes** next to **Read** > **OK**.
-6. Choose **Device configurations** > **Yes** next to **Read** > **OK**.
-7. Choose **Organization** > **Yes** next to **Read** > **OK**.
-8. Choose **OK** > **Create**.
+1. In the Intune admin center, go to **Tenant administrator** > **Roles**, and select **Create**. From the drop-down box, select **Intune role**. The *Add Custom Role* workflow opens.
+   ![Adding a role in the Intune roles All roles pane.](./media/quickstart-create-custom-role/add-custom-role.png)
+
+2. On the **Basics** page:
+   - For Name, enter *Security operations*.
+   - For **Description**, enter *This role lets a security operator monitor device configuration and compliance information.*
+   Select **Next** to continue.
+
+3. On the **Permissions** page, expand the *Corporate device identifiers* category and set *Read* to **Yes**:
+   ![Set Read value for Corporate device identifiers.](./media/quickstart-create-custom-role/corp-device-id-read.png)
+
+   After configuring Read for Corporate device identifiers, expand the following additional categories, and make the same configuration; setting *Read* to **Yes**.
+
+   - *Device compliance policies*
+   - *Device configurations*
+   - *Organization*.
+
+   After the four categories are configured, select **Next** to continue.
+
+4. On **Scope tags**, select **Next**. You don't need to configure scope tags for this evaluation scenario.
+
+5. On **Review + Create**, select *Create*. Intune creates the custom role, which now appears on the **Intune roles | All roles** page of the admin center, with a **Type** of *Custom Intune role*. 
 
 ## Assign the role to a group
 
-Before your security operator can use the new permissions, you must assign the role to a group that contains the security user.
+1. Sign in to the Microsoft Intune admin center and go to **Tenant administration** > **Roles** > **All roles**.
 
-1. In Intune, choose **Roles** > **All roles** > **Security operations**.
-2. Under **Intune roles**, choose **Assignments** > **Assign**.
-3. In the **Assignment name** box, enter *Sec ops*.
-4. Choose **Member (Groups)** > **Add**.
-5. Choose the **Contoso Testers** group.
-6. Choose **Select** > **OK**.
-7. Choose **Scope (Groups)** > **Select groups to include** > **Contoso Testers**.
-8. Choose **Select** > **OK** > **OK**.
+2. On the **Intune roles - All roles** page, select the custom role you created, **Security operations**  to open the roles *Overview*. Select **Assignments** and then select **Assign**.
+
+   ![Open the roles assignment workflow.](./media/quickstart-create-custom-role/assignment-workflow.png)
+
+3. On the **Basics** page, for Name enter *Sec ops*, and then select **Next** to continue.
+
+4. On the **Admin Groups** page, select **Add groups** and then choose a group that contains the users you want to assign the roles permissions to. If you created the **Contoso Testers** group in [Step 3](quickstart-create-group.md) of this evaluation guide, select that group.
+
+   After adding a group, choose **Select**, and then **Next** to continue to the next page of the workflow.
+
+5. On the **Scope Groups** page, select **Add groups** and then add the same group you added in the previous step. As before, choose **Select**, and then **Next** to continue to the next page of the workflow. 
+
+6.  On **Scope tags**, select **Next**. You don't need to configure scope tags for this evaluation scenario.
+
+7. On the **Review + Create** page, when you're done, select **Create**.
+
+   The new assignment is displayed in the list of assignments.
 
 Now everyone in the group is a member of the *Security operations* role and can review the following information about a device: corporate device identifiers, device compliance policies, device configurations, and organization information.
 
 ## Clean up resources
 
-If you don't want to use the new custom role anymore, you can delete it. Choose **Roles** > **All roles** > choose the ellipses next to the role > **Delete**.
+If you don't want to use the new custom role anymore, you can delete it. In the admin center, got to  **Tenant administration** > **Roles** > **All roles**, locate the role and select the ellipses (...) to the left of the roles description, and then select **Delete**.
 
 ## Next steps
 
-In this quickstart, you created a custom security operations role and assigned it to a group. For more information about roles in Intune, see [Role-based administration control (RBAC) with Microsoft Intune](role-based-access-control.md)
+In this evaluation step, you created a custom security operations role and assigned it to a group. For more information about roles in Intune, see [Role-based administration control (RBAC) with Microsoft Intune](role-based-access-control.md)
 
 To continue to evaluate Microsoft Intune, go to the next step:
 

@@ -1,18 +1,13 @@
 ---
-title: PowerShell scripts for Remediations
-titleSuffix: Microsoft Intune
+title: PowerShell Scripts for Remediations
 description: PowerShell script reference for Remediations.
 ms.date: 04/30/2024
-ms.service: microsoft-intune
-ms.subservice: fundamentals
 ms.topic: reference
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
-ms.localizationpriority: high
 ---
 
-# PowerShell scripts for Remediations
+# PowerShell Scripts for Remediations
 
 This article includes sample scripts that customers can implement or use as templates to learn how to create their own. Use the information provided here to create script packages for [Remediations](remediations.md).
 
@@ -52,7 +47,7 @@ $strMatch = "CN=<your CA here>"
 try
 {
     $results = @(Get-ChildItem -Path Cert:\LocalMachine\My -Recurse -ExpiringInDays $expiringDays | where {$_.Issuer -match $strMatch})
-    $results += @(Get-ChildItem -Path Cert:\CurrentUser\My -Recurse -ExpiringInDays $expiringDays | where {$_.Issuer -match $strMatch}) 
+    $results += @(Get-ChildItem -Path Cert:\CurrentUser\My -Recurse -ExpiringInDays $expiringDays | where {$_.Issuer -match $strMatch})
     if (($results -ne $null)){
         #Below necessary for Intune as of 10/2019 will only remediate Exit Code 1
         Write-Host "Match"
@@ -61,9 +56,9 @@ try
     }
     else{
         #No matching certificates, do not remediate
-        Write-Host "No_Match"        
+        Write-Host "No_Match"
         exit 0
-    }   
+    }
 }
 catch{
     $errMsg = $_.Exception.Message
@@ -137,7 +132,7 @@ $results = 0
 $certCN = "CN=<your CA here>"
 
 try
-{   
+{
     $results = Get-ChildItem -Path Cert:\CurrentUser\My -Recurse -ExpiringInDays 0 | where {$_.Issuer -eq($certCN)}
     if (($results -ne $null)){
         #Below necessary for Intune as of 10/2019 will only remediate Exit Code 1
@@ -148,7 +143,7 @@ try
     else{
         Write-Host "No_Match"
         exit 0
-    }    
+    }
 }
 catch{
     $errMsg = $_.Exception.Message
@@ -206,7 +201,7 @@ try {
     $gpResult = [datetime]::FromFileTime(([Int64] ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeHi) -shl 32) -bor ((Get-ItemProperty -Path "Registry::HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Group Policy\State\Machine\Extension-List\{00000000-0000-0000-0000-000000000000}").startTimeLo))
     $lastGPUpdateDate = Get-Date ($gpResult[0])
     [int]$lastGPUpdateDays = (New-TimeSpan -Start $lastGPUpdateDate -End (Get-Date)).Days
-        
+
     if ($lastGPUpdateDays -gt 7){
         #Exit 1 for Intune. We want it to be within the last 7 days "Match" to remediate in SCCM
         Write-Host "Match"

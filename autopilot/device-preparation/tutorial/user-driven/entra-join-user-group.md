@@ -1,18 +1,11 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 4 of 7 - Create a user group
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 4 of 7 - Create a user group.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 04/04/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---

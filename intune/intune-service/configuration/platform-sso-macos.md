@@ -1,32 +1,15 @@
 ---
-# required metadata
-
 title: Configure Platform SSO for macOS devices
 description: Use Microsoft Intune to configure Platform SSO and deploy the configuration to your macOS devices. Platform SSO enables single sign-on (SSO) using Microsoft Entra ID with the Secure Enclave, smart card, or password authentication methods. You create a settings catalog policy to configure the settings. This article is a step-by-step guide to configure Platform SSO for macOS devices using Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
 manager: laurawi
 ms.date: 11/24/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
 appliesto:
 - ✅ macOS
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab, veenasoman
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -74,7 +57,7 @@ You configure Platform SSO using the Intune [settings catalog](settings-catalog.
 
   - Microsoft Edge
   - Google Chrome with the [Microsoft Single Sign On extension](https://chromewebstore.google.com/detail/windows-accounts/ppnbnpeolgkicgegkbkbjmhlideopiji)
-  
+
     Using an [Intune preference file (.plist) policy](preference-file-settings-macos.md), you can force this extension to install. In your `.plist` file, you need some of the information at [Chrome Enterprise policy - ExtensionInstallForcelist](https://chromeenterprise.google/policies/?policy=ExtensionInstallForcelist) (opens Google's web site).
 
     > [!WARNING]
@@ -351,7 +334,7 @@ When you configure Platform SSO, you might see the following errors:
 - `10001: misconfiguration in the SSOe payload.`
 
   This error can occur if:
-  
+
   - There's a required setting that isn't configured in the settings catalog profile.
   - There's a setting in the settings catalog profile that you configured that's not applicable for the [redirect type payload](use-enterprise-sso-plug-in-ios-ipados-macos.md#sso-app-extension).
 
