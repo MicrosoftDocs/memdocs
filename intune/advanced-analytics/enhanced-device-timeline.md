@@ -38,19 +38,3 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 - When your tenant has Advanced Analytics features in Intune, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill-down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score, use the table on the **Device performance** tab and search for the desired device.
 
 - As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline isn't currently available for Configuration Manager-only devices in tenants that have Advanced Analytics features in Intune.
-
----
-
-## Next Steps
-
-> [!div class="nextstepaction"]
-> [Next: Learn about Resource Performance Report >](resource-performance-report.md)
-
----
-
-For more information, go to:
-
-- [Anomaly detection](anomaly-detection.md)
-- [Device scopes](device-scopes.md)
-- [What is Intune Advanced Analytics](index.md)
-- [Battery health](battery-health.md)

@@ -155,96 +155,45 @@ Scalar functions can be used in expressions. Currently the following scalar func
 
 Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
 
-- BiosInfo
-
-- Certificate
-
-- Cpu
-
-- DiskDrive
-
-- EncryptableVolume
-
-- FileInfo
-
-- LocalGroup
-
-- LocalUserAccount
-
-- LogicalDrive
-
-- MemoryInfo
-
-- OsVersion
-
-- Process
-
-- SystemEnclosure
-
-- SystemInfo
-
-- Tpm
-
-- WindowsAppCrashEvent
-
-- WindowsDriver
-
-- WindowsEvent
-
-- WindowsQfe
-
-- WindowsRegistry
-
-- WindowsService
+- `BiosInfo`
+- `Certificate`
+- `Cpu`
+- `DiskDrive`
+- `EncryptableVolume`
+- `FileInfo`
+- `LocalGroup`
+- `LocalUserAccount`
+- `LogicalDrive`
+- `MemoryInfo`
+- `OsVersion`
+- `Process`
+- `SystemEnclosure`
+- `SystemInfo`
+- `Tpm`
+- `WindowsAppCrashEvent`
+- `WindowsDriver`
+- `WindowsEvent`
+- `WindowsQfe`
+- `WindowsRegistry`
+- `WindowsService`
 
 ## Known limitations
 
 - The result string of any query is limited to 128kb characters. If the result of your query is longer than 128kb characters, the result is truncated. An error message informs you about how many rows are truncated.
-
 - You can only send 15 queries a minute. If you run into a **query limit exceeded** error, wait for a minute and try again.
-
 - Query inputs have a length limit of 2048 characters. If you encounter a *query too long* error, then refine your query to have fewer characters and try again.
-
 - The now() scalar function doesn't support the offset parameter.
-
 - The `!like` operator isn't supported.
-
 - The input window auto-recommends double quotes when only single quotes are supported on the following operators:
   - `contains`
   - `!contains`
   - `startswith`
   - `!startswith`
   - `endswith`
-
 - The WindowsRegistry entity fails to return the RegistryKey for root.
-
 - The WindowsRegistry entity fails to return 64-bit shared registry keys.
-
 - The WindowsRegistry entity fails to return binary ValueData.
-
-- If you're querying devices that are running on Windows 10, they must be on a minimum quality version.
-
-  - If running Windows 10 21H2, ensure that it's running version 10.0.19044.3393.
-
-  - If running Windows 10 22H2, ensure that it's running version 10.0.19045.3393.
-
 - If there are multiple network cards available on the machine, then only the first configured domain is returned.
-
 - If TPM 2.0 is present on the device, then activated and enabled is always returned as TRUE.
-
 - If a file is currently in use on the machine, then FileInfo queries returns an error.
-
 - If the end user has admin access to the device, they might be able to change client-based information returned in query results. For example, OS version and registry.
-
----
-
-## Next Steps
-
-> [!div class="nextstepaction"]
-> [Next: Learn about Device Query for multiple devices >](device-query-multiple-devices.md)
-
----
-
-For more information, go to:
-
-- [What is Intune Advanced Analytics](index.md)

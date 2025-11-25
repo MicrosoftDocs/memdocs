@@ -36,20 +36,3 @@ For the extra reports and capabilities on Windows devices:
     1. [Battery health data](battery-health.md) to identify devices that may need attention to ensure long battery life and good user experience.
     1. [Resource performance reports](resource-performance-report.md) to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
 
----
-
-## Next Steps
-
-> [!div class="nextstepaction"]
-> [Next: Learn about Anomaly Detection >](anomaly-detection.md)
-
----
-
-For more information, go to:
-
-- [Anomaly detection](anomaly-detection.md)
-- [Device scopes](device-scopes.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)
-- [Battery health](battery-health.md)
-- [Device query](device-query.md)
-- [Resource Performance report](resource-performance-report.md)

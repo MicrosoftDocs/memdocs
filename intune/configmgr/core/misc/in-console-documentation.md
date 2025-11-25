@@ -45,7 +45,7 @@ For the latest product changes, see the following articles:<!-- 8625956 -->
 A curated list of important articles.  <!--URLs MUST BE ABSOLUTE LINKS-->
 
 - [Microsoft Intune tenant attach](https://learn.microsoft.com/intune/configmgr/tenant-attach?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
-- [Endpoint analytics](https://learn.microsoft.com/mem/endpoint-analytics/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
+- [Endpoint analytics](https://learn.microsoft.com/intune/endpoint-analytics/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Co-management for Windows devices](https://learn.microsoft.com/intune/configmgr/comanage/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [CMPivot](https://learn.microsoft.com/intune/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Plan for BitLocker management](https://learn.microsoft.com/intune/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->

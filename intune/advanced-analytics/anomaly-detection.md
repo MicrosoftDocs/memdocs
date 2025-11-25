@@ -86,18 +86,3 @@ Standard deviation and mean are used to calculate the Z-score for each data poin
 
 - **Time Series Z-score model**: Time series Z-score models are a variation of the standard Z-score model designed for detecting anomalies in time series data. Time series data is a sequence of data points collected at regular intervals over time, such as aggregate of Stop Error Restarts.
 Standard deviation and mean are calculated for a sliding window of time, using aggregated metrics. This method allows the model to be sensitive to temporal patterns in the data and adapt to changes in its distribution over time.
-
----
-
-## Next Steps
-
-> [!div class="nextstepaction"]
-> [Next: Learn about Battery Health >](battery-health.md)
-
----
-
-For more information, go to:
-
-- [Enhanced device timeline](enhanced-device-timeline.md)
-- [Device scopes](device-scopes.md)
-- [What is advanced endpoint analytics](index.md)

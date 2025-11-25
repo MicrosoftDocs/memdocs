@@ -84,10 +84,3 @@ Currently, the highest functional subscription sets the endpoint analytics exper
 
 - Anomaly detection uses built-in role permissions
 - For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
-
----
-
-## Next Steps
-
-> [!div class="nextstepaction"]
-> [Next: Deploy Advanced Analytics >](deploy.md)

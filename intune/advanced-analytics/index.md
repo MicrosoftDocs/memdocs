@@ -106,12 +106,7 @@ When Advanced Analytics is enabled, single device views in Intune are supplement
 
 When Advanced Analytics is enabled, [**Device query** for multiple devices](device-query-multiple-devices.md) is enabled under the **Devices** node in the *Intune admin center*.
 
-## Next Steps
-
-> [!div class="nextstepaction"]
-> [Next: Plan Advanced Analytics >](plan.md)
-
----
+## Related articles
 
 For more information, go to:
 

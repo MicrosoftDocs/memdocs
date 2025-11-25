@@ -101,19 +101,3 @@ In rare cases, the battery count might exceed 2, indicating that devices are plu
 Some data points in the report might say *Not available*. When you export the report, data points that aren't available appear as "-1" in the generated .csv file.
 
 Batteries that have low design capacity (For example, devices designed to hold limited charge) show up as having low runtime although this feature is by design. Such devices are counted under low runtime insights and the only solution is to replace the battery with one that holds more charge.
-
----
-
-## Next Steps
-
-> [!div class="nextstepaction"]
-> [Next: Learn about Device Scopes >](device-scopes.md)
-
----
-
-For more information, go to:
-
-- [What is Intune Advanced Analytics](index.md)
-- [Use Intune Suite add-on capabilities](../intune-service/fundamentals/intune-add-ons.md)
-- [Device scopes](device-scopes.md)
-- [Device query](device-query.md)
