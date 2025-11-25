@@ -1,6 +1,61 @@
 {
   "redirections": [
     {
+      "source_path": "intune/analytics/adoption-score.md",
+      "redirect_url": "/intune/endpoint-analytics/adoption-score",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/app-reliability.md",
+      "redirect_url": "/intune/endpoint-analytics/app-reliability",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/configure.md",
+      "redirect_url": "/intune/endpoint-analytics/configure",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/data-collection.md",
+      "redirect_url": "/intune/endpoint-analytics/data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/get-support.md",
+      "redirect_url": "/intune/endpoint-analytics/get-support",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/index.md",
+      "redirect_url": "/intune/endpoint-analytics/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/restart-frequency.md",
+      "redirect_url": "/intune/endpoint-analytics/restart-frequency",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/scores.md",
+      "redirect_url": "/intune/endpoint-analytics/scores",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/startup-performance.md",
+      "redirect_url": "/intune/endpoint-analytics/startup-performance",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/troubleshoot.md",
+      "redirect_url": "/intune/endpoint-analytics/troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/analytics/work-from-anywhere.md",
+      "redirect_url": "/intune/endpoint-analytics/work-from-anywhere",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/analytics/advanced-analytics.md",
       "redirect_url": "/intune/advanced-analytics",
       "redirect_document_id": false
