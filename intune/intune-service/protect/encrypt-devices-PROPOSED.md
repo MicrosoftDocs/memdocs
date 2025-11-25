@@ -22,7 +22,7 @@ Use Intune to configure BitLocker encryption on devices that run Windows, and Pe
 
 > [!TIP]
 >
-> Some settings for BitLocker require the device have a supported TPM.
+> Some settings for BitLocker require the device have a supported Trusted Platform Module (TPM).
 
 To configure encryption on your managed devices, use one of the following policy types:
 
@@ -34,14 +34,12 @@ To configure encryption on your managed devices, use one of the following policy
 
     PDE isn't a replacement for BitLocker; use both for layered security.
 
-- **[Device configuration profile for endpoint protection for BitLocker](#create-an-endpoint-security-policy-for-windows)**. BitLocker settings are one of the available settings categories for Windows endpoint protection.
+- **Device configuration profile (Settings Catalog)** – Alternatively, use the [Settings Catalog](../configuration/settings-catalog.md) to configure BitLocker settings with granular control over all BitLocker CSP options.
 
+- **[Device configuration profile for Endpoint protection](#create-an-endpoint-security-policy-for-windows)**. The *Endpoint protection* profile is a legacy profile that remains available. This profile also includes BitLocker settings for Windows devices but is no longer updated with more recent BitLocker settings or changes.
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles from device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
 
-> [!TIP]
-> Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices, across all your managed devices. After Intune encrypts a Windows device with BitLocker, you can view and manage BitLocker recovery keys when you view the encryption report.
->
-> You can also access important information for BitLocker from your devices, as found in Microsoft Entra ID.
+Intune also includes a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status across all your managed devices. The report also supports viewing and managing BitLocker recovery keys for Windows devices encrypted through Intune. The report also includes important information for BitLocker from your devices, as found in Microsoft Entra ID.
 
 > [!IMPORTANT]
 >
@@ -52,7 +50,6 @@ To configure encryption on your managed devices, use one of the following policy
 ### Licensing
 
 For Windows editions that support BitLocker management, see [Windows edition and licensing requirements](/windows/security/operating-system-security/data-protection/bitlocker/configure?tabs=common#windows-edition-and-licensing-requirements) in the Windows documentation.
- 
 
 ### Role-based access controls to manage BitLocker
 
@@ -146,7 +143,7 @@ To view information about devices that receive BitLocker policy, see [Monitor di
 Three settings determine whether an OS drive is encrypted by encrypting the used space only, or by full disk encryption:
 
 - Whether the hardware of the device is [modern standby](/windows-hardware/design/device-experiences/modern-standby) capable
-- Whether silent enablement has been configured for BitLocker
+- Whether silent enablement is configured for BitLocker
   - ('Warning for other disk encryption' = Block or 'Hide prompt about third-party encryption' = Yes)
 - Configuration of the [SystemDrivesEncryptionType](/windows/client-management/mdm/bitlocker-csp)
   - (Enforce drive encryption type on operating system drives)
@@ -158,11 +155,11 @@ To verify whether the hardware is modern standby capable, run the following comm
 ```console
 powercfg /a
 ```
-If the device supports modern standby, it shows that Standby (S0 Low Power Idle) Network Connected is available
+If the device supports modern standby, it shows that Standby (S0 Low Power Idle) Network Connected is available.
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_s0_possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 available.":::
 
-If the device doesn't support modern standby, such as a virtual machine, it shows that Standby (S0 Low Power Idle) Network Connected isn't supported
+If the device doesn't support modern standby, such as a virtual machine, it shows that Standby (S0 Low Power Idle) Network Connected isn't supported.
 
 :::image type="content" source="./media/encrypt-devices/docs_bl_powercfg_surface_nos0possible.png" alt-text="Screenshot of command prompt displaying output of powercfg command with Standby state S0 unavailable.":::
 
