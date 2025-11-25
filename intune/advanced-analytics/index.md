@@ -15,20 +15,58 @@ Advanced Analytics features build on top of the base endpoint analytics experien
 
 Advanced Analytics includes the following features:
 
-- #### [Anomaly detection](anomaly-detection.md)\
+- ##### [Anomaly detection](anomaly-detection.md)
   Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
-- #### [Battery health](battery-health.md)\
-  Report helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
-- #### [Device query](device-query.md)\
+- ##### [Battery health](battery-health.md)
+  Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
+- ##### [Device query](device-query.md)
   Get near-real time access to data about the state and configuration of devices.
-- #### [Device query for multiple devices](device-query-multiple-devices.md)\
+- ##### [Device query for multiple devices](device-query-multiple-devices.md)
   View collected inventory data across multiple devices and platforms.
-- #### [Device scopes](device-scopes.md)\
+- ##### [Device scopes](device-scopes.md)
   Use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region.
-- #### [Enhanced device timeline](enhanced-device-timeline.md)\
+- ##### [Enhanced device timeline](enhanced-device-timeline.md)
   Includes more events and lower data latency to assist with troubleshooting device issues
-- #### [Resource Performance](resource-performance-report.md)\
+- ##### [Resource Performance](resource-performance-report.md)
   Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+
+:::row:::
+:::column:::
+#### Anomaly detection
+
+> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+
+> [!div class="nextstepaction"]
+> [Learn more](anomaly-detection.md)
+:::column-end:::
+:::column:::
+#### Battery health
+
+> Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
+
+> [!div class="nextstepaction"]
+> [Learn more](battery-health.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column:::
+#### Anomaly detection
+
+> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+
+> [!div class="nextstepaction"]
+> [Learn more](anomaly-detection.md)
+:::column-end:::
+:::column:::
+#### Battery health
+
+> Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
+
+> [!div class="nextstepaction"]
+> [Learn more](battery-health.md)
+:::column-end:::
+:::row-end:::
 
 ## Prerequisites
 
@@ -50,8 +88,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 >   > [!NOTE]
 >   >
 >   > Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) or [*Resource performance*](resource-performance-report.md) functionality.
->
-> For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
+>   For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
 
 :::column-end:::
 :::row-end:::
