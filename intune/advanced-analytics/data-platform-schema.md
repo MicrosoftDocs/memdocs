@@ -1,20 +1,20 @@
 ---
 title: Intune Data Platform Schema
-description: Review the Intune data platform schema for device query and inventory, including supported properties and data types in Microsoft Intune.
-ms.date: 10/09/2025
+description: Review the Microsoft Intune data platform schema for device queries and inventory. Discover supported properties and data types to efficiently manage and report on your devices with Intune.
+ms.date: 11/25/2025
 ms.topic: reference
 ---
 
 # Intune data platform schema
 
-This article goes over the properties supported in the Intune Data Platform. The Intune Data Platform can be accessed via Device query for single devices, Inventory, and Device query for Multiple Devices.
+This article details the properties supported by the Intune Data Platform. The Intune Data Platform can be accessed via [device query](device-query.md), [device query for multiple devices](device-query-multiple-devices.md), and [device inventory](../intune-service/configuration/properties-catalog.md).
 
-Each table (entity) in this page lists the types of queries that are supported with the following information:
+Each table (entity) in this article lists the types of queries that are supported with the following information:
 
-- Property: The name of the variable we collect and store.
-- Type: The data type you can expect to see, such as *string* or *boolean*.
-- Description: The purpose of the property.
-- Platform:  The operating systems that support the property.
+- **Property**: The name of the variable we collect and store.
+- **Type**: The data type you can expect to see, such as *string* or *boolean*.
+- **Description**: The purpose of the property.
+- **Platform**:  The operating systems that support the property.
 
 For entities that include Android data, the following platforms are supported:
 

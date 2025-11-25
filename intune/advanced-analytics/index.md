@@ -45,14 +45,14 @@ This section details **additional prerequisites** specific to Advanced Analytics
 :::column-end:::
 :::column span="3":::
 
-- Public cloud
-- Sovereign cloud environments:
-  - U.S. Government Community Cloud (GCC) High
-  - U.S. Department of Defense (DoD)
-
-> [!NOTE]
->
-> Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) or [*Resource performance*](resource-performance-report.md) functionality.
+> - Public cloud
+> - Sovereign cloud environments:
+>   - U.S. Government Community Cloud (GCC) High
+>   - U.S. Department of Defense (DoD)
+> 
+> > [!NOTE]
+> >
+> > Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) or [*Resource performance*](resource-performance-report.md) functionality.
 
 For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
 
@@ -106,7 +106,12 @@ For more information, see [Microsoft Intune for US Government GCC service descri
 :::column span="3":::
 
 > Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
-
+>
+> ### Mixed licensing scenarios
+>
+> A mixed licensing scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the base endpoint analytics product.
+>
+>Currently, the highest functional subscription sets the endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in endpoint analytics for all enrolled devices.
 :::column-end:::
 :::row-end:::
 
@@ -145,12 +150,6 @@ For a successful deployment of Advanced Analytics, the following activities are 
 - Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand the full list of data captured.
 - Establish escalation and support procedures for analytics findings.
 - Review and train staff on IT processes you aim to optimize with the implementation of Advanced Analytics. Examples include help desk triage, hardware refresh cycles and application updates. Think of this as a continuous improvement cycle, with faster issue resolution and proactive issue resolution.
-
-### Mixed licensing scenarios
-
-A mixed licensing scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the base endpoint analytics product.
-
-Currently, the highest functional subscription sets the endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in endpoint analytics for all enrolled devices.
 
 ## Related articles
 
