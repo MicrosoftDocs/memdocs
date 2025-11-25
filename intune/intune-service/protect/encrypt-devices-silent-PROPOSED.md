@@ -19,6 +19,9 @@ You can configure a BitLocker policy to automatically and silently encrypt a dev
 
 Silent enablement of BitLocker provides a seamless encryption experience that doesn't require user interaction or administrative privileges on the device. This approach is ideal for organizations that want to ensure all managed devices are encrypted without depending on end-user action.
 
+> [!NOTE]
+> When BitLocker is enabled silently, the system automatically uses **full disk encryption**. The encryption type cannot be customized for silent encryption scenarios. If you need to specify encryption type (such as "used space only"), you must use non-silent BitLocker policies that allow user interaction.
+
 This article shows you how to configure silent BitLocker enablement, including:
 
 - Device prerequisites for silent encryption
@@ -70,6 +73,15 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 - **Allow Warning For Other Disk Encryption** = *Disabled*
 
 :::image type="content" source="./media/encrypt-devices/silent-encryption-configuration.png" alt-text="Two BitLocker settings required to enable silent encryption.":::
+
+> [!IMPORTANT]
+> After setting **Allow Warning For Other Disk Encryption** to *Disabled*, an additional setting becomes available:  
+> - **Allow Standard User Encryption** = *Enabled*
+> 
+> This setting is required if devices will be used by standard (non-administrator) users. It allows the RequireDeviceEncryption policy to work even when the current logged-on user is a standard user.
+
+
+
 
 In addition to the two required settings, consider use of *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)*.
 
