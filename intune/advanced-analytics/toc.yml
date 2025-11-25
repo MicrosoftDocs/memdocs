@@ -1,42 +1,42 @@
 items:
 - name: Overview
   href: index.md
-  displayName: advanced analytics
+  displayName: Advanced Analytics
 - name: 🔴 Planning Advanced Analytics
   href: plan.md
-  displayName: advanced analytics
+  displayName: Advanced Analytics
 - name: 🔴 Deploying Advanced Analytics
   href: deploy.md
-  displayName: advanced analytics
+  displayName: Advanced Analytics
 - name: Features list
   items:
   - name: Anomaly detection
     href: anomaly-detection.md
-    displayName: advanced analytics
+    displayName: Advanced Analytics
   - name: Battery health
     href: battery-health.md
-    displayName: advanced analytics
+    displayName: Advanced Analytics
   - name: Device query
     href: device-query.md
-    displayName: advanced analytics
+    displayName: Advanced Analytics
   - name: Device query for multiple devices
     href: device-query-multiple-devices.md
-    displayName: advanced analytics
+    displayName: Advanced Analytics
   - name: Device scopes
     href: device-scopes.md
-    displayName: advanced analytics
+    displayName: Advanced Analytics
   - name: Enhanced device timeline
     href: enhanced-device-timeline.md
-    displayName: advanced analytics
+    displayName: Advanced Analytics
   - name: Resource Performance
     href: resource-performance-report.md
-    displayName: advanced analytics
+    displayName: Advanced Analytics
 - name: Data platform schema
   href: data-platform-schema.md
-  displayName: advanced analytics schema
+  displayName: Advanced Analytics schema
 - name: 🔴 Troubleshooting
   href: troubleshoot.md
-  displayName: advanced analytics
+  displayName: Advanced Analytics
 - name: Frequently asked questions
   href: faq.yml
-  displayName: advanced analytics FAQs
+  displayName: Advanced Analytics FAQs
