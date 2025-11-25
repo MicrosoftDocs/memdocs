@@ -286,6 +286,6 @@ For more information, see [Device categories](../enrollment/device-group-mapping
 
 ### Endpoint analytics
 
-- The Central team should create as many common Endpoint Analytics baselines as they need to support the variance of the Local admins.
+- The Central team should create as many common endpoint analytics baselines as they need to support the variance of the Local admins.
 - If possible, local admins shouldn't create their own Endpoint Analytics baselines. When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. The best practice varies per feature area.
-- For more information, see [Configuring settings in Endpoint analytics](../../endpoint-analytics/settings.md).
+- For more information, see [Configure settings in endpoint analytics](../../endpoint-analytics/configure.md).

@@ -92,7 +92,7 @@ items:
   - name: Enable Endpoint analytics
     items:
     - name: Enroll Intune devices
-      href: ../../endpoint-analytics/enroll-intune.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/configure.md?pivots=cm?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Enroll Configuration Manager devices
       href: ../../endpoint-analytics/configure.md?pivots=cm?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Use Endpoint analytics
@@ -108,7 +108,7 @@ items:
     - name: Endpoint analytics in Microsoft Adoption Score
       href: ../../endpoint-analytics/adoption-score.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Endpoint analytics settings
-      href: ../../endpoint-analytics/settings.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/configure.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Reference for Endpoint analytics
     items:
     - name: Data collection
