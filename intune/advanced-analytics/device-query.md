@@ -9,30 +9,45 @@ ms.topic: how-to
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-Device query allows you to quickly gain on-demand information about the state of your devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
+Device query allows you to quickly gain on-demand information about the state of your Windows devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
 ## Prerequisites
 
-- To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
+To use Device Query, ensure you meet the Advanced Analytics prerequisites outlined in the [overview](index.md) article, including the following specific requirements for Device query:
 
-  - The Intune Advanced Analytics Add-on
-  - Microsoft Intune Suite
+- For a user to use Device query, you must assign the **Managed Devices** - **Query** permission and **Organization** > **Read** permissions to them.
+<!--
+Device Query runs in real time: When you query a device, Intune sends a request to the device and expects an immediate response.
+WNS is the transport mechanism: Windows Push Notification Services is used to notify the device and return the query results.
+Mandatory dependency: Because WNS is integral to this communication, you cannot disable or bypass it. If WNS is blocked or unavailable, the device query will fail.
+-->
 
-- To use Device query on a device, the device must be enrolled in endpoint analytics. Learn [how to enroll a device in endpoint analytics](../endpoint-analytics/configure.md).
 
-- You can't opt out of cloud notifications (WNS)
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-- For a user to use Device query, you must assign the **Managed Devices** - **Query** permission to them.
+:::column-end:::
+:::column span="3":::
+> Windows
+:::column-end:::
+:::row-end:::
 
-- To use Device query, devices must be Intune managed and corporate owned.
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 
-- To run remote actions, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the **Help Desk Operator** role. For more information on the different roles, go to [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
+:::column-end:::
+:::column span="3":::
+> Device query supports devices that are:
+>
+> - Managed by Intune and Intune marked as corporate owned.
+> - Microsoft Entra joined
+> - Microsoft Entra hybrid joined
 
-- To receive the remote action, the device must be connected to the internet and powered on.
+:::column-end:::
+:::row-end:::
 
-## Supported platforms
-
-Device query is currently only supported on devices running Windows 10 and later.
 
 ## How to use Device query
 
@@ -62,13 +77,10 @@ The available device actions depend on the device platform and configuration. No
 
 Device query supports only a subset of the operators supported in the Kusto Query Language (KQL). The following operators are currently supported:
 
-[Table operators](#table-operators)
-
-[Scalar operators](#scalar-operators)
-
-[Aggregation functions](#aggregation-functions)
-
-[Scalar functions](#scalar-functions)
+- [Table operators](#table-operators)
+- [Scalar operators](#scalar-operators)
+- [Aggregation functions](#aggregation-functions)
+- [Scalar functions](#scalar-functions)
 
 ### Table operators
 

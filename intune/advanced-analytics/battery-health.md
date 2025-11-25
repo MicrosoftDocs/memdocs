@@ -1,11 +1,11 @@
 ---
-title: Battery Health Report in Microsoft Intune Advanced Analytics
+title: Battery Health Report in Advanced Analytics
 description: Learn how the battery health report in Microsoft Intune Advanced Analytics provides insights into device battery performance, degradation, and proactive replacement strategies.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Battery health
+# Battery health report
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
@@ -15,7 +15,7 @@ The score helps you identify emerging hardware issues that might be impacting us
 
 The insights show how much your score can improve by replacing batteries in affected devices. They also help you identify quickly failing batteries that can be replaced under warranty before they expire.
 
-## Battery health report
+## Review the battery health report
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Report** > **Endpoint analytics** > **Battery health**.

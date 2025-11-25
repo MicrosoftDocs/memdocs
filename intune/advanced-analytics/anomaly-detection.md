@@ -1,11 +1,11 @@
 ---
-title: Anomaly Detection in Endpoint Analytics
+title: Anomaly Detection in Advanced Analytics
 description: Learn how anomaly detection in Microsoft Intune endpoint analytics proactively monitors device health, detects issues, and provides actionable insights for IT admins.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Anomaly Detection in endpoint analytics
+# Anomaly detection
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 

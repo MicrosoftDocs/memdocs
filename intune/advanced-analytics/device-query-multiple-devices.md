@@ -16,6 +16,9 @@ Device query for multiple devices allows you to gain comprehensive insights abou
 > [!NOTE]
 > You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically.
 
+> [!NOTE]
+> For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
+
 - To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
   - The Intune Advanced Analytics add-on
   - Microsoft Intune Suite
