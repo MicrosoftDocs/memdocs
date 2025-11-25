@@ -15,21 +15,6 @@ Advanced Analytics features build on top of the base endpoint analytics experien
 
 Advanced Analytics includes the following features:
 
-- ##### [Anomaly detection](anomaly-detection.md)
-  Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
-- ##### [Battery health](battery-health.md)
-  Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
-- ##### [Device query](device-query.md)
-  Get near-real time access to data about the state and configuration of devices.
-- ##### [Device query for multiple devices](device-query-multiple-devices.md)
-  View collected inventory data across multiple devices and platforms.
-- ##### [Device scopes](device-scopes.md)
-  Use [Scope tags](../intune-service/fundamentals/scope-tags.md) to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices. For example,  you can focus on devices that you manage, devices assigned to a specific business group, or devices located in a particular geographic region.
-- ##### [Enhanced device timeline](enhanced-device-timeline.md)
-  Includes more events and lower data latency to assist with troubleshooting device issues
-- ##### [Resource Performance](resource-performance-report.md)
-  Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
-
 :::row:::
 :::column:::
 #### Anomaly detection
@@ -50,21 +35,54 @@ Advanced Analytics includes the following features:
 :::row-end:::
 
 :::row:::
-:::column:::
-#### Anomaly detection
+:::column:::  
+#### Device query
 
-> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+> Get near-real time access to data about the state and configuration of Windows devices.
 
 > [!div class="nextstepaction"]
-> [Learn more](anomaly-detection.md)
+> [Learn more](device-query.md)
 :::column-end:::
 :::column:::
-#### Battery health
+##### Device query for multiple devices
 
-> Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
+> View collected inventory data across multiple devices and platforms.
 
 > [!div class="nextstepaction"]
-> [Learn more](battery-health.md)
+> [Learn more](device-query-multiple-devices.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column:::  
+#### Device scopes
+
+> Use scope tags to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices.
+
+> [!div class="nextstepaction"]
+> [Learn more](device-scopes.md)
+:::column-end:::
+:::column:::
+##### Enhanced device timeline
+
+> Includes more events and lower data latency to assist with troubleshooting device issues.
+
+> [!div class="nextstepaction"]
+> [Learn more](enhanced-device-timeline.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column:::  
+#### Resource Performance
+
+> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+
+> [!div class="nextstepaction"]
+> [Learn more](resource-performance-report.md)
+:::column-end:::
+:::column:::
+
 :::column-end:::
 :::row-end:::
 
