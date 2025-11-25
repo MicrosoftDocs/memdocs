@@ -2,13 +2,13 @@ items:
 - name: Overview
   href: index.md
   displayName: advanced analytics
-- name: Planning Advanced Analytics
+- name: 🔴 Planning Advanced Analytics
   href: plan.md
   displayName: advanced analytics
-- name: Deploying Advanced Analytics
+- name: 🔴 Deploying Advanced Analytics
   href: deploy.md
   displayName: advanced analytics
-- name: Features
+- name: Features list
   items:
   - name: Anomaly detection
     href: anomaly-detection.md
@@ -34,7 +34,7 @@ items:
 - name: Data platform schema
   href: data-platform-schema.md
   displayName: advanced analytics schema
-- name: Troubleshooting
+- name: 🔴 Troubleshooting
   href: troubleshoot.md
   displayName: advanced analytics
 - name: Frequently asked questions
