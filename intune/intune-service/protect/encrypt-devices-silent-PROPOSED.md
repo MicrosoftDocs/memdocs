@@ -80,9 +80,6 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 > 
 > This setting is required if devices will be used by standard (non-administrator) users. It allows the RequireDeviceEncryption policy to work even when the current logged-on user is a standard user.
 
-
-
-
 In addition to the two required settings, consider use of *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)*.
 
 # [Device configuration policy](#tab/device-configuration)
@@ -218,9 +215,9 @@ The output shows whether the device used "Used Space Only Encrypted" or "Fully E
 
 For silent BitLocker enablement, ensure recovery keys are properly escrowed:
 
-1. Verify that **Save BitLocker recovery information to Microsoft Entra ID** is enabled
-2. Check that **Store recovery information in Microsoft Entra ID before enabling BitLocker** is configured as required
-3. Monitor the [encryption report](encryption-monitor.md) to confirm recovery keys are available
+1. Verify that **Save BitLocker recovery information to Microsoft Entra ID** is enabled.
+2. Check that **Store recovery information in Microsoft Entra ID before enabling BitLocker** is configured as required.
+3. Monitor the [encryption report](encryption-monitor.md) to confirm recovery keys are available.
 
 ## Next steps
 
