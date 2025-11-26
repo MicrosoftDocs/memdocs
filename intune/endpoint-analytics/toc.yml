@@ -10,14 +10,14 @@ items:
   displayName: endpoint analytics
 - name: Reports
   items:
-  - name: Startup performance
-    href: startup-performance.md
+  - name: Application reliability
+    href: app-reliability.md
     displayName: endpoint analytics
   - name: Restart frequency
     href: restart-frequency.md
     displayName: endpoint analytics
-  - name: Application reliability
-    href: app-reliability.md
+  - name: Startup performance
+    href: startup-performance.md
     displayName: endpoint analytics
   - name: Work from anywhere
     href: work-from-anywhere.md

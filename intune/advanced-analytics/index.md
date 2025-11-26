@@ -7,13 +7,11 @@ ms.topic: concept-article
 
 # Advanced Analytics overview
 
-Microsoft Intune Advanced Analytics provides comprehensive visibility of the user experience in your organization and optimizes it with data-driven insights. With Advanced Analytics, your organization can proactively detect and resolve endpoint issues, streamline troubleshooting process, and improve your users' technology experience.
+Microsoft Intune Advanced Analytics delivers deep, actionable insights into the health and performance of your organization's endpoints. Built on the foundation of endpoint analytics, it helps IT teams proactively manage user experience and optimize productivity through data-driven intelligence. By turning raw telemetry into meaningful insights, Advanced Analytics reduces support costs, accelerates problem resolution, and ensures a more reliable technology experience for every user.
 
-Advanced Analytics features build on top of the base endpoint analytics experience, but it's only available for Intune-managed devices (including co-managed devices).
+## Available features
 
-## Advanced Analytics features
-
-Advanced Analytics includes the following features:
+Advanced Analytics builds on the base Endpoint Analytics experience and is available only for Intune-managed devices (including co-managed devices). These capabilities extend visibility and control, enabling IT admins to diagnose issues faster, plan hardware refresh cycles, and improve overall endpoint performance. Each feature is designed to help you proactively identify problems and optimize device health across your organization:
 
 :::row:::
 :::column:::
@@ -44,7 +42,7 @@ Advanced Analytics includes the following features:
 > [Learn more](device-query.md)
 :::column-end:::
 :::column:::
-##### Device query for multiple devices
+#### Device query for multiple devices
 
 > View collected inventory data across multiple devices and platforms.
 
@@ -63,7 +61,7 @@ Advanced Analytics includes the following features:
 > [Learn more](device-scopes.md)
 :::column-end:::
 :::column:::
-##### Enhanced device timeline
+#### Enhanced device timeline
 
 > Includes more events and lower data latency to assist with troubleshooting device issues.
 
@@ -90,7 +88,7 @@ Advanced Analytics includes the following features:
 
 Devices must meet the [endpoint analytics prerequisites](index.md#prerequisites) to use Advanced Analytics features, and must be onboarded to endpoint analytics.
 
-This section details **additional prerequisites** specific to Advanced Analytics features.
+This section details **additional prerequisites** or unique considerations specific to Advanced Analytics features.
 
 :::row:::
 :::column span="1":::
@@ -159,11 +157,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 
 > Advanced Analytics features are included in [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md). The capabilities are also available as an individual add-on to Microsoft subscriptions that include Intune.
 >
-> ### Mixed licensing scenarios
->
-> A mixed licensing scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the base endpoint analytics product.
->
->Currently, the highest functional subscription sets the endpoint analytics experience for your tenant. In the earlier example, your tenant experience would include advanced features in endpoint analytics for all enrolled devices.
+> **Mixed licensing scenarios**: A mixed licensing scenario occurs when some users in your tenant have access to Advanced Analytics through an add-on subscription or trial, while others only have access to the *base* endpoint analytics product. In these cases, the subscription with the highest level of functionality determines the overall endpoint analytics experience for your tenant. For example, if any users have Advanced Analytics, all enrolled devices will benefit from the advanced features.
 :::column-end:::
 :::row-end:::
 

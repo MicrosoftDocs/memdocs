@@ -1,7 +1,7 @@
 ---
 title: Endpoint analytics overview
 description: Discover how Microsoft Intune endpoint analytics provides actionable insights to optimize device performance, improve user experience, and enable proactive IT troubleshooting.
-ms.date: 10/09/2025
+ms.date: 11/26/2025
 ms.topic: overview
 zone_pivot_groups: manage-intune-cm
 ---
@@ -21,6 +21,48 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 - Apply remediations or adjust policies based on insights.
 
 :::image type="content" source="images/ea-overview.png" alt-text="Screenshot of the endpoint analytics overview page" lightbox="images/ea-overview.png" border="false":::
+
+## Available reports
+
+Endpoint analytics organizes insights into reports that highlight performance and reliability issues across managed devices. These reports help IT teams identify trends, diagnose problems, and implement improvements to enhance the overall user experience. Endpoint analytics includes the following reports:
+
+:::row:::
+:::column:::
+#### Application reliability
+
+> Tracks app crashes and stability trends.
+
+> [!div class="nextstepaction"]
+> [Learn more](app-reliability.md)
+:::column-end:::
+:::column:::
+#### Restart frequency
+
+> Highlights devices that restart often, signaling potential hardware or software issues.
+
+> [!div class="nextstepaction"]
+> [Learn more](restart-frequency.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column:::
+#### Startup performance
+
+> Identifies devices with slow boot times and contributing factors.
+
+> [!div class="nextstepaction"]
+> [Learn more](startup-performance.md)
+:::column-end:::
+:::column:::
+#### Work from anywhere
+
+> Analyzes device readiness for remote work scenarios.
+
+> [!div class="nextstepaction"]
+> [Learn more](app-reliability.md)
+:::column-end:::
+:::row-end:::
 
 ## Prerequisites
 
@@ -141,24 +183,11 @@ To use endpoint analytics, your environment must have [tenant attach](../configm
 
 ::: zone-end
 
-## Reports available in endpoint analytics
-
-Endpoint analytics organizes insights into reports that highlight performance and reliability issues across managed devices. Common examples include:
-
-- Startup performance: Identifies devices with slow boot times and contributing factors.
-- Application reliability: Tracks app crashes and stability trends.
-- Restart frequency: Highlights devices that restart often, signaling potential hardware or software issues.
-
 ## Next Steps
 
 Learn more about endpoint analytics:
 
 - [Configure endpoint analytics](configure.md)
 - [Scores, baselines, and insights](scores.md)
-- Understand the reports:
-  - [Startup performance](startup-performance.md)
-  - [Restart frequency](restart-frequency.md)
-  - [Application reliability](app-reliability.md)
-  - [Work from anywhere](work-from-anywhere.md)
 - [Understand data collection](data-collection.md)
 - [Microsoft Intune Advanced Analytics](../advanced-analytics/index.md)
