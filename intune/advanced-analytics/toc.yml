@@ -28,9 +28,6 @@ items:
 - name: Data platform schema
   href: data-platform-schema.md
   displayName: Advanced Analytics schema
-- name: 🔴 Troubleshooting
-  href: troubleshoot.md
-  displayName: Advanced Analytics
 - name: Frequently asked questions
   href: faq.yml
   displayName: Advanced Analytics FAQs
