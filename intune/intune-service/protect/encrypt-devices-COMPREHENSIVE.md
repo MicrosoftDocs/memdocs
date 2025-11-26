@@ -148,6 +148,18 @@ A device must meet the following conditions for silent BitLocker enablement:
 
 > [!NOTE]
 > When BitLocker is enabled silently, the system automatically uses **full disk encryption** on non-modern standby devices and **used space only encryption** on modern standby devices. The encryption type depends on hardware capabilities and can't be customized for silent encryption scenarios.
+> 
+> To learn more about modern standby, see [What is modern standby](/windows-hardware/design/device-experiences/modern-standby) in the Windows hardware documentation.
+
+> [!IMPORTANT]
+> **Environmental Assessment Required**: Before deploying silent BitLocker policies, conduct a thorough assessment of your environment:
+>
+> - **Identify existing encryption software** - Use device inventory or discovery tools to identify devices with third-party encryption (McAfee, Symantec, Check Point, etc.)
+> - **Plan migration strategy** - Develop procedures to safely remove existing encryption before BitLocker deployment
+> - **Test in pilot groups** - Validate silent BitLocker behavior on representative devices before broad deployment
+> - **Prepare rollback procedures** - Have recovery and rollback plans ready in case of encryption conflicts
+>
+> Silent BitLocker policies bypass user warnings about existing encryption, making pre-deployment assessment critical for avoiding data loss.
 
 ### Required settings for silent encryption
 
@@ -159,6 +171,15 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 
 - **Require Device Encryption** = *Enabled*
 - **Allow Warning For Other Disk Encryption** = *Disabled*
+
+> [!WARNING]
+> Setting **Allow Warning For Other Disk Encryption** to *Disabled* means BitLocker will proceed with encryption even when other disk encryption software is detected. This can lead to:
+>
+> - **Data loss** from conflicting encryption methods
+> - **System instability** and boot failures
+> - **Complex recovery scenarios** with multiple encryption layers
+>
+> Before deploying silent BitLocker policies, ensure your environment doesn't have third-party encryption software installed. Consider using [device inventory reports](../remote-actions/device-inventory.md) to identify devices with existing encryption software.
 
 > [!IMPORTANT]
 > After setting **Allow Warning For Other Disk Encryption** to *Disabled*, another setting becomes available:
@@ -177,6 +198,9 @@ For **Device configuration [Endpoint protection](../protect/endpoint-protection-
 - **Allow standard users to enable encryption during Microsoft Entra join** = *Allow*
 - **User creation of recovery key** = *Allow* or *Do not allow 256-bit recovery key*
 - **User creation of recovery password** = *Allow* or *Require 48-digit recovery password*
+
+> [!WARNING]
+> Setting **Warning for other disk encryption** to *Block* suppresses warnings about existing encryption software and allows BitLocker to proceed automatically. This creates the same risks as described above for endpoint security policies. Verify your environment is free of third-party encryption before deployment.
 
 ### TPM startup authentication for silent encryption
 
@@ -264,6 +288,7 @@ Personal Data Encryption (PDE) provides file-level encryption that complements B
 For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
 
 To configure PDE, use either:
+
 - **Endpoint security policy** with the *Personal Data Encryption* profile.
 - **Settings Catalog** with the *PDE* category.
 
