@@ -1,11 +1,11 @@
 ---
-title: Anomaly Detection in Advanced Analytics
+title: Anomaly Detection Report in Advanced Analytics
 description: Learn how anomaly detection in Microsoft Intune endpoint analytics proactively monitors device health, detects issues, and provides actionable insights for IT admins.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Anomaly detection
+# Anomaly detection report
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
@@ -20,7 +20,6 @@ Administrators can rely on anomaly detection to learn about user experience impa
 With anomaly detection, you can detect potential problems in a system before they become a serious issue. Traditionally, support teams had limited visibility into potential problems.
 
 - The support channel is only able to report or escalate a subset of the issues. This report isn't truly representative of everything going on in your organization.
-
 - The support channel spends countless hours reviewing custom dashboards trying to identify the root cause, troubleshoot, create custom alerts, change thresholds, and tweak parameters.
 
 Anomaly detection aims at addressing these problems by enabling IT admins with critical information.

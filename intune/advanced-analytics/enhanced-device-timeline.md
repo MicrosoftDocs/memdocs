@@ -1,5 +1,5 @@
 ---
-title: Enhanced Device Timeline Report in Endpoint Analytics
+title: Enhanced Device Timeline Report in Advanced Analytics
 description: Discover the enhanced device timeline in Microsoft Intune endpoint analytics for detailed device event history and advanced troubleshooting.
 ms.date: 10/09/2025
 ms.topic: concept-article

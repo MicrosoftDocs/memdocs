@@ -1,5 +1,5 @@
 ---
-title: Device Query in Microsoft Intune
+title: Device Query in Advanced Analytics
 description: Learn how to use device query in Microsoft Intune to get on-demand device state, run Kusto Query Language (KQL) queries, and troubleshoot devices.
 ms.date: 10/09/2025
 ms.topic: how-to

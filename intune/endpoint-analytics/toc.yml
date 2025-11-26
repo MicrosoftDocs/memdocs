@@ -8,7 +8,7 @@ items:
 - name: Scores, baselines, and insights
   href: scores.md
   displayName: endpoint analytics
-- name: Reports
+- name: Endpoint analytics reports
   items:
   - name: Application reliability
     href: app-reliability.md

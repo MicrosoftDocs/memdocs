@@ -2,7 +2,7 @@ items:
 - name: Overview
   href: index.md
   displayName: Advanced Analytics
-- name: Features list
+- name: Advanced Analytics Features
   items:
   - name: Anomaly detection
     href: anomaly-detection.md
@@ -22,7 +22,7 @@ items:
   - name: Enhanced device timeline
     href: enhanced-device-timeline.md
     displayName: Advanced Analytics
-  - name: Resource Performance
+  - name: Resource performance
     href: resource-performance-report.md
     displayName: Advanced Analytics
 - name: Data platform schema

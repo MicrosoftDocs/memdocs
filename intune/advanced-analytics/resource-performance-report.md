@@ -5,11 +5,9 @@ ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Resource Performance report in Microsoft Intune Advanced Analytics
+# Resource performance report in Microsoft Intune Advanced Analytics
 
-The resource performance report provides visibility into the performance of processors and RAM in cloud-managed Windows devices and its influence on user experience.
-
-The score helps you identify emerging hardware issues that might be impacting user productivity so you can proactively make improvements before users generate support tickets.
+The resource performance report provides visibility into the performance of processors and RAM in cloud-managed Windows devices and its influence on user experience. The score helps you identify emerging hardware issues that might be impacting user productivity so you can proactively make improvements before users generate support tickets.
 
 The insights show not only how much your score can improve by upgrading the CPU or RAM in affected devices, but also help you identify resources for replacement before warranties expire.
 
@@ -19,15 +17,13 @@ With a Windows 365 license, you get access to this report for the Cloud PCs in y
 
 The resource performance report is available for:
 - Windows 365 Cloud PCs and;
-- Other supported Windows devices with users licensed by Intune Advanced Analytics and is included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+- Other supported Windows devices with users licensed by Intune Advanced Analytics
 
 ## Resource performance report
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Report** > **Endpoint analytics** > **Resource performance**.
-
-3. The Resource performance report page shows a **Resource performance score** tab, **Device performance** tab, and a **Model performance** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
+1. Select **Report** > **Endpoint analytics** > **Resource performance**.
+1. The Resource performance report page shows a **Resource performance score** tab, **Device performance** tab, and a **Model performance** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
 
 :::image type="content" source="images/resource-perf-report/report-home.png" lightbox="images/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
 
@@ -55,7 +51,6 @@ The CPU spike time score (from 0 to 100) is assigned based on the device's usage
 Usage over 50% is considered a spike.
 
 - To improve the performance of CPU in Windows physical devices, you could upgrade the processors by increasing the number of cores or the clock speed, optimize the operating system or adjust power settings.
-
 - To improve the performance of CPU in Cloud PCs, you could upgrade to a higher configuration of Cloud PCs.
 
 ### RAM spike time score
@@ -65,7 +60,6 @@ The RAM spike time score (from 0 to 100) is assigned based on the device's usage
 **RAM spike time %**: The daily metric trends graph plots the ratio of RAM spike times to total usage time. This RAM spike % data is averaged over a 14-day period ending on the date at the bottom of the graph. Usage over 75% is considered a spike.
 
 - To improve the performance of RAM in Windows physical devices, you could add more RAM, upgrade to higher-speed RAM, or modify UEFI/BIOS settings to optimize utilization.
-
 - To improve the performance of RAM in Cloud PCs, you could upgrade to a higher configuration of Cloud PCs.
 
 **Baseline** helps you see if you're meeting goals. You can set the baseline to the organizational median or a custom value.
@@ -82,9 +76,8 @@ These Windows physical devices experience higher CPU spike % than the rest of th
 
 This category has two sub-categories:
 
-1. Physical devices that experience high CPU spike %.
-
-2. Physical device models that experience high CPU spike %.
+- Physical devices that experience high CPU spike %.
+- Physical device models that experience high CPU spike %.
 
 Besides giving visibility into devices that aren't supporting your user's goals, these insights also allow you to identify devices with underperforming CPUs that are within warranty and eligible for replacement.
 
@@ -109,7 +102,6 @@ The Resource performance page has reporting tabs that provide support for insi
 The tabs are:
 
 - Device performance
-
 - Model performance
 
 ### Device performance tab
@@ -132,7 +124,7 @@ The device-level details page includes the CPU and RAM spike-time history over t
 
 ## Limitations
 
-- Some data points in the report might show **--** when not available. When you export the report, data points that aren't available appear as **-1** in the generated .csv file.
+- Some data points in the report might show `--` when not available. When you export the report, data points that aren't available appear as `-1` in the generated .csv file.
 
 - Health status appears differently in the report and the exported .csv
   - **HealthStatus .csv value**:
@@ -141,6 +133,5 @@ The device-level details page includes the CPU and RAM spike-time history over t
     - `2`: Needs attention
     - `3`: Meeting goals
 
-- Some columns such as ResourcePerfScore and TotalRamInMB in the generated .csv file have data type double whereas the corresponding columns Resource performance score and RAM in the report have data type int.
-
-- Column MachineType in the generated .csv file can take values Physical, CPC, and Others whereas the corresponding column Device Type in the report takes values physical, virtual, and unknown respectively.
+- Some columns such as `ResourcePerfScore` and `TotalRamInMB` in the generated .csv file have data type *double* whereas the corresponding columns **Resource performance score** and **RAM** in the report have data type *int*.
+- Column `MachineType` in the generated .csv file can take values `Physical`, `CPC`, and `Others` whereas the corresponding column **Device Type** in the report takes values *physical*, *virtual*, and *unknown* respectively.

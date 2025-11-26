@@ -1,15 +1,15 @@
 ---
-title: Device Scopes in Endpoint Analytics
+title: Device Scopes in Advanced Analytics
 description: Learn how to use device scopes in Microsoft Intune endpoint analytics with scope tags for custom device reporting and targeted insights.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Device scopes in endpoint analytics
+# Device scopes
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-Custom device scopes use Scope tags to slice endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
+Custom device scopes use scope tags to slice endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
 
 Custom device scopes are supported on the following endpoint analytics reports:
 
