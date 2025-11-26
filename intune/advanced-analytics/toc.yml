@@ -2,9 +2,6 @@ items:
 - name: Overview
   href: index.md
   displayName: Advanced Analytics
-- name: 🔴 Deploying Advanced Analytics
-  href: deploy.md
-  displayName: Advanced Analytics
 - name: Features list
   items:
   - name: Anomaly detection

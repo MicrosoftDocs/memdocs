@@ -11,7 +11,7 @@ Microsoft Intune Advanced Analytics delivers deep, actionable insights into the 
 
 ## Available features
 
-Advanced Analytics builds on the base Endpoint Analytics experience and is available only for Intune-managed devices (including co-managed devices). These capabilities extend visibility and control, enabling IT admins to diagnose issues faster, plan hardware refresh cycles, and improve overall endpoint performance. Each feature is designed to help you proactively identify problems and optimize device health across your organization:
+Advanced Analytics features are available only for Intune-managed devices (including co-managed devices). The key features include:
 
 :::row:::
 :::column:::
@@ -30,7 +30,9 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 > > [!div class="nextstepaction"]
 > > [Learn more](battery-health.md)
 :::column-end:::
+:::row-end:::
 
+:::row:::
 :::column:::  
 #### Device query
 
@@ -66,7 +68,9 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 > > [!div class="nextstepaction"]
 > > [Learn more](enhanced-device-timeline.md)
 :::column-end:::
+:::row-end:::
 
+:::row:::
 :::column:::  
 #### Resource Performance
 
@@ -80,16 +84,16 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column-end:::
 :::row-end:::
 
-Intune Advanced Analytics is integrated into the existing Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
+## Integration in the Intune admin center
 
-When Advanced Analytics is enabled, the following enhancements are available:
+Advanced Analytics is built into Microsoft Intune and appears in the **Reports** > **Endpoint analytics** section, as well as other areas of the Intune admin center. When enabled, it adds the following enhancements:
 
-- Endpoint analytics reports:
+- Endpoint analytics reports are extended with:
   - [Anomaly detection](anomaly-detection.md)
   - [Battery health](battery-health.md)
   - [Resource performance](resource-performance-report.md)
   - [Device scopes](device-scopes.md)
-- Single device views are supplemented with:
+- Single device views are extended with:
   - [Device query](device-query.md)
   - [Device timeline](enhanced-device-timeline.md)
     > [!NOTE]
@@ -155,6 +159,7 @@ This section details **additional prerequisites** or unique considerations speci
 > - Microsoft Entra joined
 > - Microsoft Entra hybrid joined
 >
+> ---
 > **Device query for multiple devices** requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed.
 >
 > [!NOTE]
@@ -183,6 +188,18 @@ For a successful deployment of Advanced Analytics, the following activities are 
 - Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand the full list of data captured.
 - Establish escalation and support procedures for analytics findings.
 - Review and train staff on IT processes you aim to optimize with the implementation of Advanced Analytics. Examples include help desk triage, hardware refresh cycles and application updates. Think of this as a continuous improvement cycle, with faster issue resolution and proactive issue resolution.
+
+### Integrate Advanced Analytics into your business
+
+1. Update role based access control for custom roles to include new permissions such as **Managed Devices** > **Query** for [Device Query](device-query.md). For more information, see [Role-based access control](../intune-service/fundamentals/role-based-access-control.md)
+1. Update support processes to:
+    1. Use [device timeline](enhanced-device-timeline.md) to review if there's a specific pattern, such as a device restart or update tied to the anomaly.
+    1. Use [device query](device-query.md) retrieve live information from a device to aid troubleshooting.
+
+1. Implement processes to periodically review:
+    1. [Anomaly Detection Data](anomaly-detection.md). For example, after application or operating system updates are applied to proactively identify issues.
+    1. [Battery health data](battery-health.md) to identify devices that may need attention to ensure long battery life and good user experience.
+    1. [Resource performance reports](resource-performance-report.md) to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
 
 ## Related articles
 
