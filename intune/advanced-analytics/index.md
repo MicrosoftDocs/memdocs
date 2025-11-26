@@ -17,7 +17,7 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column:::
 #### Anomaly detection
 
-> > Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](anomaly-detection.md)
@@ -30,9 +30,7 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 > > [!div class="nextstepaction"]
 > > [Learn more](battery-health.md)
 :::column-end:::
-:::row-end:::
 
-:::row:::
 :::column:::  
 #### Device query
 
@@ -44,7 +42,7 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column:::
 #### Device query for multiple devices
 
-> > View collected inventory data across multiple devices and platforms.
+> View collected inventory data across multiple devices and platforms.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-query-multiple-devices.md)
@@ -55,7 +53,7 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column:::  
 #### Device scopes
 
-> > Use scope tags to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices.
+> Use scope tags to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-scopes.md)
@@ -63,18 +61,16 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column:::
 #### Enhanced device timeline
 
-> > Includes more events and lower data latency to assist with troubleshooting device issues.
+> Includes more events and lower data latency to assist with troubleshooting device issues.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](enhanced-device-timeline.md)
 :::column-end:::
-:::row-end:::
 
-:::row:::
 :::column:::  
 #### Resource Performance
 
-> > Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](resource-performance-report.md)
