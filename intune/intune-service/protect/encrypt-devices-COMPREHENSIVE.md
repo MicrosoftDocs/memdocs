@@ -27,7 +27,7 @@ Use Microsoft Intune to configure BitLocker encryption on devices that run Windo
 
 Intune supports two primary BitLocker encryption approaches:
 
-- **Standard BitLocker encryption** - Users may see prompts and can interact with the encryption process. Provides flexibility for encryption type selection and user-directed recovery key management.
+- **Standard BitLocker encryption** - Users might see prompts and can interact with the encryption process. Provides flexibility for encryption type selection and user-directed recovery key management.
 
 - **Silent BitLocker encryption** - Automatic encryption without user interaction or administrative privileges required on the device. Ideal for organizations that want to ensure all managed devices are encrypted without depending on end-user action.
 
@@ -86,9 +86,9 @@ Standard BitLocker encryption allows user interaction and provides flexibility f
    - **Profile**: Choose *BitLocker* or *Personal Data Encryption*
 
 4. On the **Configuration settings** page, configure settings for BitLocker to meet your business needs:
-   - Configure encryption methods for OS, fixed, and removable drives
-   - Set recovery options (password and key requirements)
-   - Configure TPM startup authentication as needed
+   - Configure encryption methods for OS, fixed, and removable drives.
+   - Set recovery options (password and key requirements).
+   - Configure TPM startup authentication as needed.
 
    Select **Next**.
 
@@ -147,7 +147,7 @@ A device must meet the following conditions for silent BitLocker enablement:
   - [Windows Recovery Environment (WinRE) configured and available](/troubleshoot/windows-client/windows-security/enforcing-bitlocker-policies-by-using-intune-known-issues#event-id-854-winre-is-not-configured)
 
 > [!NOTE]
-> When BitLocker is enabled silently, the system automatically uses **full disk encryption** on non-modern standby devices and **used space only encryption** on modern standby devices. The encryption type depends on hardware capabilities and cannot be customized for silent encryption scenarios.
+> When BitLocker is enabled silently, the system automatically uses **full disk encryption** on non-modern standby devices and **used space only encryption** on modern standby devices. The encryption type depends on hardware capabilities and can't be customized for silent encryption scenarios.
 
 ### Required settings for silent encryption
 
@@ -165,7 +165,7 @@ For **Endpoint security [Disk encryption](../protect/endpoint-security-disk-encr
 >
 > - **Allow Standard User Encryption** = *Enabled*
 >
-> This setting is required if devices will be used by standard (non-administrator) users. It allows the RequireDeviceEncryption policy to work even when the current logged-on user is a standard user.
+> This setting is required if devices are used by standard (non-administrator) users. It allows the RequireDeviceEncryption policy to work even when the current logged-on user is a standard user.
 
 In addition to the required settings, consider configuring *[Configure Recovery Password Rotation](/windows/client-management/mdm/bitlocker-csp?WT.mc_id=Portal-fx#configurerecoverypasswordrotation)* to enable automatic rotation of recovery passwords.
 
@@ -207,17 +207,17 @@ Configure TPM startup authentication settings to prevent user interaction:
 
 The encryption type (full disk vs. used space only) is determined by:
 
-1. **Hardware capabilities** - Whether the device supports [modern standby](/windows-hardware/design/device-experiences/modern-standby)
-2. **Silent encryption configuration** - Whether silent enablement is configured
-3. **SystemDrivesEncryptionType setting** - If explicitly configured
+1. **Hardware capabilities** - Whether the device supports [modern standby](/windows-hardware/design/device-experiences/modern-standby).
+2. **Silent encryption configuration** - Whether silent enablement is configured.
+3. **SystemDrivesEncryptionType setting** - If explicitly configured.
 
 ### Default behavior
 
 When SystemDrivesEncryptionType isn't configured:
 
-- **Modern standby devices with silent encryption** = Used space only encryption
-- **Non-modern standby devices with silent encryption** = Full disk encryption
-- **Standard (non-silent) encryption** = User can choose or policy-defined
+- **Modern standby devices with silent encryption** = Used space only encryption.
+- **Non-modern standby devices with silent encryption** = Full disk encryption.
+- **Standard (non-silent) encryption** = User can choose or policy-defined.
 
 ### Verify device capabilities
 
@@ -227,8 +227,8 @@ To check if a device supports modern standby, run from a command prompt:
 powercfg /a
 ```
 
-**Modern standby capable**: Shows "Standby (S0 Low Power Idle) Network Connected" is available
-**Not modern standby capable**: Shows "Standby (S0 Low Power Idle) Network Connected" is not supported
+**Modern standby capable**: Shows *Standby (S0 Low Power Idle) Network Connected* is available.
+**Not modern standby capable**: Shows *Standby (S0 Low Power Idle) Network Connected* isn't supported.
 
 ### Verify encryption type
 
@@ -238,7 +238,7 @@ To check the current encryption type, run from an elevated command prompt:
 manage-bde -status c:
 ```
 
-The 'Conversion Status' field shows either "Used Space Only Encrypted" or "Fully Encrypted".
+The 'Conversion Status' field shows either *Used Space Only Encrypted* or *Fully Encrypted*.
 
 To view information about devices that receive BitLocker policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
 
@@ -247,11 +247,8 @@ To view information about devices that receive BitLocker policy, see [Monitor di
 To change the disk encryption type between full disk encryption and used space only encryption, use the **Enforce drive encryption type on operating system drives** setting in Settings Catalog:
 
 1. Create a **Settings Catalog** policy
-2. Navigate to **BitLocker** > **System Drives Encryption Type**
-3. Configure **Enforce drive encryption type on operating system drives**:
-   - **0** = Allow user to choose
-   - **1** = Full encryption
-   - **2** = Used space only encryption
+2. Navigate to **Windows Components** > **BitLocker Drive Encryption** > **Operating System Drives**
+3. Select and set **Enforce drive encryption type on operating system drives** to *Enabled* to add *Select the encryption type: (Device)*. Then configure **Select the Encryption tye: (Device)** to either *Full encryption* or *Used Space Only encryption*.
 
 ## Personal Data Encryption (PDE)
 
@@ -259,16 +256,16 @@ Personal Data Encryption (PDE) provides file-level encryption that complements B
 
 [Personal Data Encryption](/windows/security/operating-system-security/data-protection/personal-data-encryption/) differs from BitLocker in that it encrypts files instead of whole volumes and disks. PDE occurs in addition to other encryption methods like BitLocker. Unlike BitLocker that releases data encryption keys at boot, PDE doesn't release data encryption keys until a user signs in using Windows Hello for Business.
 
-- **PDE encrypts files** instead of whole volumes and disks
-- **Works alongside BitLocker** for layered security - PDE isn't a replacement for BitLocker
-- **Requires Windows Hello for Business** sign-in to release encryption keys
-- **Available on Windows 11 22H2 or later**
+- **PDE encrypts files** instead of whole volumes and disks.
+- **Works alongside BitLocker** for layered security - PDE isn't a replacement for BitLocker.
+- **Requires Windows Hello for Business** sign-in to release encryption keys.
+- **Available on Windows 11 22H2 or later**.
 
 For more information, see the [PDE CSP](/windows/client-management/mdm/personaldataencryption-csp).
 
 To configure PDE, use either:
-- **Endpoint security policy** with the *Personal Data Encryption* profile
-- **Settings Catalog** with the *PDE* category
+- **Endpoint security policy** with the *Personal Data Encryption* profile.
+- **Settings Catalog** with the *PDE* category.
 
 ## Monitor and manage BitLocker
 
@@ -294,8 +291,9 @@ To view recovery keys:
 4. Select **Show Recovery Key**. This generates an audit log entry under 'KeyManagement' activity.
 
 When keys are available in Microsoft Entra ID, the following information is displayed:
+
 - BitLocker Key ID
-- BitLocker Recovery Key  
+- BitLocker Recovery Key
 - Drive Type
 
 When keys aren't in Microsoft Entra ID, Intune displays *No BitLocker key found for this device*.
@@ -304,6 +302,7 @@ When keys aren't in Microsoft Entra ID, Intune displays *No BitLocker key found 
 > Microsoft Entra ID supports a maximum of 200 BitLocker recovery keys per device. If you reach this limit, silent encryption fails due to the failing backup of recovery keys before starting encryption on the device.
 
 **Required permissions**: IT admins need the `microsoft.directory/bitlockerKeys/key/read` permission within Microsoft Entra ID to view device BitLocker recovery keys. This permission is included in these Microsoft Entra roles:
+
 - Cloud Device Administrator
 - Helpdesk Administrator
 - Global Administrator
@@ -320,6 +319,7 @@ For more information on Microsoft Entra role permissions, see [Microsoft Entra b
 When using the tenant attach scenario, Microsoft Intune can display recovery key data for tenant-attached devices.
 
 **Requirements**:
+
 - Configuration Manager sites must run version 2107 or later
 - For sites running 2107, install update rollup [KB11121541](../../configmgr/hotfix/2107/11121541.md) for Microsoft Entra joined device support
 - Your Intune account must have Intune RBAC permissions to view BitLocker keys
@@ -335,7 +335,8 @@ You can use an Intune device action to remotely rotate the BitLocker recovery ke
 
 - Devices must run Windows 10 version 1909 or later, or Windows 11
 - Microsoft Entra joined and hybrid joined devices must have key rotation enabled via BitLocker policy:
-  - **Client-driven recovery password rotation** = *Enable rotation on Microsoft Entra joined devices* or *Enable rotation on Microsoft Entra ID and hybrid joined devices*
+
+  - **Client-driven recovery password rotation** = *Enable rotation on Microsoft Entra joined devices* or *Enablerotation on Microsoft Entra ID and hybrid joined devices*
   - **Save BitLocker recovery information to Microsoft Entra ID** = *Enabled*
   - **Store recovery information in Microsoft Entra ID before enabling BitLocker** = *Required*
 
@@ -353,23 +354,24 @@ For more information about BitLocker deployments and requirements, see the [BitL
 To help end users get their recovery keys without calling the helpdesk, Intune enables self-service scenarios through the Company Portal app and other methods.
 
 **Self-service access options**:
+
 - **Company Portal app**: Users can access BitLocker recovery keys through the [Company Portal app](../user-help/get-recovery-key-windows.md)
 - **My Account portal**: Available at account.microsoft.com for Microsoft Entra joined devices
 - **Microsoft Entra ID**: Direct access for Microsoft Entra joined devices
 
 **Administrative controls for self-service access**:
 
-1. **Tenant-wide toggle**: Determines if non-admin users can use self-service to recover BitLocker keys
+1. **Tenant-wide toggle**: Determines if non-admin users can use self-service to recover BitLocker keys:
    - Default: **No** (allows all users to recover their keys)
    - **Yes**: Restricts non-admin users from seeing BitLocker keys for their own devices
    - Configure in [Microsoft Entra device settings](/entra/identity/devices/manage-device-identities#configure-device-settings)
 
-2. **Conditional Access integration**: Use Conditional Access policies to require compliant devices for BitLocker recovery key access
+2. **Conditional Access integration**: Use Conditional Access policies to require compliant devices for BitLocker recovery key access:
    - Set up **Require compliant device** in Conditional Access policy
-   - Non-compliant devices cannot access BitLocker recovery keys
+   - Noncompliant devices can't access BitLocker recovery keys
    - BitLocker recovery keys are treated as corporate resources subject to Conditional Access
 
-3. **Audit logging for self-service**: All user recovery key accesses are logged
+3. **Audit logging for self-service**: All user recovery key accesses are logged:
    - Logged in Microsoft Entra audit logs under **Key Management** category
    - Activity type: **Read BitLocker key**
    - Includes User Principal Name and key ID
