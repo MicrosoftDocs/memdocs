@@ -91,15 +91,13 @@ Advanced Analytics is built into Microsoft Intune and appears in the **Reports**
 - Endpoint analytics reports are extended with:
   - [Anomaly detection](anomaly-detection.md)
   - [Battery health](battery-health.md)
-  - [Resource performance](resource-performance-report.md)
   - [Device scopes](device-scopes.md)
+  - [Resource performance](resource-performance-report.md)
 - Single device views are extended with:
+  - [Battery health](battery-health.md)
   - [Device query](device-query.md)
   - [Device timeline](enhanced-device-timeline.md)
-    > [!NOTE]
-    > The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics features in Intune.
-  - [Resource performance report](resource-performance-report.md)
-  - [Battery health](battery-health.md)
+  - [Resource performance](resource-performance-report.md)
 - Additional capabilities:
   - [Device query for multiple devices](device-query-multiple-devices.md) under the **Devices** node in the Intune admin center
 
