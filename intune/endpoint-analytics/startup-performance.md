@@ -62,7 +62,10 @@ The **Startup performance** page has reporting tabs that provide support for the
   - **Median delay**: The median delay time of the process for the counted devices.
   - **Total delay**: The sum of the delays for all of the counted devices.
 
-## Next steps
+## Related content
 
+- Understand [endpoint analytics scores, baselines, and insights](scores.md)
+- Use the [application reliability report](app-reliability.md) to identify apps that are causing crashes or hangs during startup.
+- Use the [Startup performance score](tartup-performance) to understand how startup performance affects your overall endpoint analytics score.
 - Use the [Work from anywhere report](work-from-anywhere.md).
 - Use [Remediations](../intune-service/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.

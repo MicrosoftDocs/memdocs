@@ -17,18 +17,18 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column:::
 #### Anomaly detection
 
-> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
-
-> [!div class="nextstepaction"]
-> [Learn more](anomaly-detection.md)
+> > Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](anomaly-detection.md)
 :::column-end:::
 :::column:::
 #### Battery health
 
 > Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
-
-> [!div class="nextstepaction"]
-> [Learn more](battery-health.md)
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](battery-health.md)
 :::column-end:::
 :::row-end:::
 
@@ -37,17 +37,17 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 #### Device query
 
 > Get near-real time access to data about the state and configuration of Windows devices.
-
-> [!div class="nextstepaction"]
-> [Learn more](device-query.md)
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](device-query.md)
 :::column-end:::
 :::column:::
 #### Device query for multiple devices
 
-> View collected inventory data across multiple devices and platforms.
-
-> [!div class="nextstepaction"]
-> [Learn more](device-query-multiple-devices.md)
+> > View collected inventory data across multiple devices and platforms.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](device-query-multiple-devices.md)
 :::column-end:::
 :::row-end:::
 
@@ -55,18 +55,18 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column:::  
 #### Device scopes
 
-> Use scope tags to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices.
-
-> [!div class="nextstepaction"]
-> [Learn more](device-scopes.md)
+> > Use scope tags to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](device-scopes.md)
 :::column-end:::
 :::column:::
 #### Enhanced device timeline
 
-> Includes more events and lower data latency to assist with troubleshooting device issues.
-
-> [!div class="nextstepaction"]
-> [Learn more](enhanced-device-timeline.md)
+> > Includes more events and lower data latency to assist with troubleshooting device issues.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](enhanced-device-timeline.md)
 :::column-end:::
 :::row-end:::
 
@@ -74,15 +74,34 @@ Advanced Analytics builds on the base Endpoint Analytics experience and is avail
 :::column:::  
 #### Resource Performance
 
-> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
-
-> [!div class="nextstepaction"]
-> [Learn more](resource-performance-report.md)
+> > Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](resource-performance-report.md)
 :::column-end:::
 :::column:::
 
 :::column-end:::
 :::row-end:::
+
+Intune Advanced Analytics is integrated into the existing Endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
+
+When Advanced Analytics is enabled, the following enhancements are available:
+
+- Endpoint analytics reports:
+  - [Anomaly detection](anomaly-detection.md)
+  - [Battery health](battery-health.md)
+  - [Resource performance](resource-performance-report.md)
+  - [Device scopes](device-scopes.md)
+- Single device views are supplemented with:
+  - [Device query](device-query.md)
+  - [Device timeline](enhanced-device-timeline.md)
+    > [!NOTE]
+    > The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics features in Intune.
+  - [Resource Performance report](resource-performance-report.md)
+  - [Battery health](battery-health.md)
+- Additional capabilities:
+  - [Device query for multiple devices](device-query-multiple-devices.md) under the **Devices** node in the Intune admin center
 
 ## Prerequisites
 
@@ -161,35 +180,7 @@ This section details **additional prerequisites** or unique considerations speci
 :::column-end:::
 :::row-end:::
 
-
-### Reports available in Advanced Analytics
-
-Intune Advanced Analytics is automatically integrated into the existing base endpoint analytics experience in the Intune admin center under **Reports** > **Endpoint analytics**.
-
-When Advanced Analytics is enabled, endpoint analytics reports are supplemented with:
-
-- [Anomaly detection](anomaly-detection.md)
-- [Battery health](battery-health.md)
-- [Resource Performance report](resource-performance-report.md)
-- [Device scopes](device-scopes.md)
-
-### Per-device features
-
-When Advanced Analytics is enabled, single device views in Intune are supplemented with:
-
-- [Device query](device-query.md)
-- [Enhanced device timeline](enhanced-device-timeline.md)
-- [Resource Performance report](resource-performance-report.md)
-- [Battery health](battery-health.md)
-
-> [!NOTE]
-> The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics features in Intune.
-
-### Multi-device query
-
-When Advanced Analytics is enabled, [**Device query** for multiple devices](device-query-multiple-devices.md) is enabled under the **Devices** node in the *Intune admin center*.
-
-## Plan for Advanced Analytics
+## Get started with Advanced Analytics
 
 For a successful deployment of Advanced Analytics, the following activities are recommended:
 

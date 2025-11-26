@@ -132,17 +132,17 @@
     },
     {
       "source_path": "intune/analytics/enroll-configmgr.md",
-      "redirect_url": "/intune/intune-service/analytics/set-up?pivots=cm#enroll-devices",
+      "redirect_url": "/intune/endpoint-analytics/configure?pivots=cm",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/analytics/enroll-intune.md",
-      "redirect_url": "/intune/intune-service/analytics/set-up?pivots=intune#enroll-devices",
+      "redirect_url": "/intune/endpoint-analytics/configure?pivots=intune",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/analytics/settings.md",
-      "redirect_url": "/intune/intune-service/analytics/set-up",
+      "redirect_url": "/intune/endpoint-analytics/configure",
       "redirect_document_id": false
     },
     {
@@ -152,7 +152,7 @@
     },
     {
       "source_path": "intune/analytics/overview.md",
-      "redirect_url": "/intune/analytics",
+      "redirect_url": "/intune/endpoint-analytics",
       "redirect_document_id": false
     },
     {

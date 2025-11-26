@@ -26,11 +26,9 @@ If the issue is more broadly for Intune than just endpoint analytics, follow the
 
 <!-- 5451636 -->
 
-To share your feedback about endpoint analytics, select the **Send a Smile** icon at the top of the portal on the right side. Use the text box to provide your feedback and select **Submit feedback** when done.
+To share your feedback about endpoint analytics, select the **Feedback** icon at the top of the Intune admin center. Use the text box to provide your feedback and select **Submit** when done.
 
-![Send a Smile icon in Microsoft Endpoint Manager](images/endpoint-analytics-feedback.png)
-
-## See also
+### See also
 
 - [Find help for Configuration Manager](../configmgr/core/understand/find-help.md)
 - [Support for Microsoft Intune](../get-support.md)
