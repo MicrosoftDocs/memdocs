@@ -152,12 +152,12 @@ A device must meet the following conditions for silent BitLocker enablement:
 > To learn more about modern standby, see [What is modern standby](/windows-hardware/design/device-experiences/modern-standby) in the Windows hardware documentation.
 
 > [!IMPORTANT]
-> **Environmental Assessment Required**: Before deploying silent BitLocker policies, conduct a thorough assessment of your environment:
+> Before deploying silent BitLocker policies, conduct a thorough assessment of your environment:
 >
-> - **Identify existing encryption software** - Use device inventory or discovery tools to identify devices with third-party encryption (McAfee, Symantec, Check Point, etc.)
-> - **Plan migration strategy** - Develop procedures to safely remove existing encryption before BitLocker deployment
-> - **Test in pilot groups** - Validate silent BitLocker behavior on representative devices before broad deployment
-> - **Prepare rollback procedures** - Have recovery and rollback plans ready in case of encryption conflicts
+> - **Identify existing encryption software** - Use device inventory or discovery tools to identify devices with third-party encryption (McAfee, Symantec, Check Point, etc.).
+> - **Plan migration strategy** - Develop procedures to safely remove existing encryption before BitLocker deployment.
+> - **Test in pilot groups** - Validate silent BitLocker behavior on representative devices before broad deployment.
+> - **Prepare rollback procedures** - Have recovery and rollback plans ready in case of encryption conflicts.
 >
 > Silent BitLocker policies bypass user warnings about existing encryption, making pre-deployment assessment critical for avoiding data loss.
 
@@ -210,10 +210,10 @@ For silent BitLocker to work, devices **must not require** TPM startup PIN or st
 
 Configure TPM startup authentication settings to prevent user interaction:
 
-**Endpoint security policy** - In the BitLocker profile, expand *Administrative Templates* > *Windows Components* > *BitLocker Drive Encryption* > *Operating System Drives* and set *Require additional authentication at startup* to *Enabled*. Then configure:
+**Endpoint security policy** - In the BitLocker profile under *Operating System Drives*, first set *Require additional authentication at startup* to *Enabled*. Once enabled, the following TPM settings become available:
 
 - **Configure TPM startup PIN** = *Do not allow startup PIN with TPM*
-- **Configure TPM startup key** = *Do not allow startup key with TPM*
+- **Configure TPM startup key** = *Do not allow startup key with TPM*  
 - **Configure TPM startup key and PIN** = *Do not allow startup key and PIN with TPM*
 - **Configure TPM startup** = *Allow TPM* or *Require TPM*
 
