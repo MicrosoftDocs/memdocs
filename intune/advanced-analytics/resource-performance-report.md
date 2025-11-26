@@ -5,7 +5,7 @@ ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Resource performance report in Microsoft Intune Advanced Analytics
+# Resource performance report
 
 The resource performance report provides visibility into the performance of processors and RAM in cloud-managed Windows devices and its influence on user experience. The score helps you identify emerging hardware issues that might be impacting user productivity so you can proactively make improvements before users generate support tickets.
 

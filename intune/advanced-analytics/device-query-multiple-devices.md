@@ -17,22 +17,48 @@ Make sure you meet the [requirements](index.md#prerequisites) to confirm your en
 
 Additional prerequisites for device query for multiple devices:
 
-- For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
-- Devices must be Intune managed and corporate owned.
-- Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile.
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 
-### Supported platforms
+:::column-end:::
+:::column span="3":::
+> Device query supports devices that are:
+>
+> - Managed by Intune and marked as corporate owned
+> - Windows devices must have a [properties catalog policy](../intune-service/configuration/properties-catalog.md) deployed to them to collect inventory data.\
+>   For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
+:::column-end:::
+:::row-end:::
 
-Device query for multiple devices is supported on devices running:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-- Windows 10 and later
-- Android
-  - Android Enterprise corporate owned dedicated devices (COSU)
-  - Android Enterprise corporate owned fully managed (COBO)
-  - Android Enterprise corporate owned work profile (COPE)
-- Apple
-  - iOS/iPadOS
-  - macOS
+:::column-end:::
+:::column span="3":::
+> **Device query for multiple devices** is supported on devices running:
+> - Windows
+> - Android
+>   - Android Enterprise corporate owned dedicated devices (COSU)
+>   - Android Enterprise corporate owned fully managed (COBO)
+>   - Android Enterprise corporate owned work profile (COPE)
+> - Apple
+>   - iOS/iPadOS
+>   - macOS
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+> For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
+
+:::column-end:::
+:::row-end:::
 
 ## How to use device query for multiple devices
 

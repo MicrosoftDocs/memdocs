@@ -107,7 +107,7 @@ Advanced Analytics is built into Microsoft Intune and appears in the **Reports**
 
 To use Advanced Analytics features, devices must meet the [endpoint analytics prerequisites](../endpoint-analytics/index.md#prerequisites) and you must [configure endpoint analytics](../endpoint-analytics/configure.md) in your tenant.
 
-This section details **additional prerequisites** or unique considerations specific to Advanced Analytics features.
+This section details **additional prerequisites** specific to Advanced Analytics. Certain features may have their own additional prerequisites; see the individual feature articles for more information.
 
 :::row:::
 :::column span="1":::
@@ -130,24 +130,6 @@ This section details **additional prerequisites** or unique considerations speci
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
-
-:::column-end:::
-:::column span="3":::
-> **Device query for multiple devices** is supported on devices running:
-> - Windows
-> - Android
->   - Android Enterprise corporate owned dedicated devices (COSU)
->   - Android Enterprise corporate owned fully managed (COBO)
->   - Android Enterprise corporate owned work profile (COPE)
-> - Apple
->   - iOS/iPadOS
->   - macOS
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
 [!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 
 :::column-end:::
@@ -158,9 +140,6 @@ This section details **additional prerequisites** or unique considerations speci
 > - Co-managed (Intune + Configuration Manager)
 > - Microsoft Entra joined
 > - Microsoft Entra hybrid joined
->
-> ---
-> [**Device query for multiple devices**](device-query-multiple-devices.md) requires a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) to be configured and deployed to Windows devices. For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
 
 :::column-end:::
 :::row-end:::

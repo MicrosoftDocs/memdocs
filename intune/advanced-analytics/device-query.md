@@ -43,7 +43,7 @@ Mandatory dependency: Because WNS is integral to this communication, you cannot 
 :::column span="3":::
 > Device query supports devices that are:
 >
-> - Managed by Intune and Intune marked as corporate owned.
+> - Managed by Intune and marked as corporate owned.
 > - Microsoft Entra joined
 > - Microsoft Entra hybrid joined
 
