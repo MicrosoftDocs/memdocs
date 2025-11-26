@@ -18,17 +18,18 @@ Custom device scopes are supported on the following endpoint analytics reports:
 - [Application reliability](../endpoint-analytics/app-reliability.md)
 - [Battery health](battery-health.md)
 
-## Permissions
+## Before you begin
+
+Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
+
+Additional prerequisites for custom device scopes:
 
 Custom device scopes use Intune Scope tags, hence other permissions are required for some actions.
 To create custom device scopes, a user must have the **Roles/Read** [role permission](../intune-service/fundamentals/create-custom-role.md#custom-role-permissions) and this permission is in the following built-in roles:
 
 - Endpoint Security Manager
-
 - Read Only Operator
-
 - Help Desk Operator
-
 - Intune Role Administrator
 
 > [!NOTE]

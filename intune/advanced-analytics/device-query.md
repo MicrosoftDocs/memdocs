@@ -11,9 +11,11 @@ ms.topic: how-to
 
 Device query allows you to quickly gain on-demand information about the state of your Windows devices. When you enter a query on a selected device, Device query runs a query in real time. The data returned can then be used to respond to security threats, troubleshoot the device, or make business decisions.
 
-## Prerequisites
+## Before you begin
 
-To use Device Query, ensure you meet the Advanced Analytics prerequisites outlined in the [overview](index.md) article, including the following specific requirements for Device query:
+Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
+
+Additional prerequisites for device query:
 
 - For a user to use Device query, you must assign the **Managed Devices** - **Query** permission and **Organization** > **Read** permissions to them.
 <!--

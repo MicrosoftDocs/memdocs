@@ -15,6 +15,10 @@ The score helps you identify emerging hardware issues that might be impacting us
 
 The insights show how much your score can improve by replacing batteries in affected devices. They also help you identify quickly failing batteries that can be replaced under warranty before they expire.
 
+## Before you begin
+
+Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
+
 ## Review the battery health report
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

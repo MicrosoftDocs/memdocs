@@ -1,11 +1,11 @@
 ---
-title: Enhanced Device Timeline in Endpoint Analytics
+title: Enhanced Device Timeline Report in Endpoint Analytics
 description: Discover the enhanced device timeline in Microsoft Intune endpoint analytics for detailed device event history and advanced troubleshooting.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Enhanced device timeline in endpoint analytics
+# Enhanced device timeline report
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
@@ -16,9 +16,20 @@ The enhanced device timeline allows you to see a history of events that have occ
 > [!NOTE]
 > The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics features in Intune.
 
+## Before you begin
+
+Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
+
+## Use enhanced device timeline
+
+- Access the device timeline by going to **Devices** > **Windows** > Select device > **User Experience** > **Device Timeline**.
+- Filter events by date, device, or user to focus on relevant incidents.
+- Best practices:
+  - Use device timeline to correlate software updates, user actions, and system events during troubleshooting.
+
 You can search by event name or details. Select the **Add filter** button to choose the source and level of events that appear on the device timeline and select a time range of interest.
 
-Currently, the enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. The end-to-end latency is generally under 24 hours.
+The enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. The end-to-end latency is generally under 24 hours.
 
 > [!NOTE]
 > In some cases, end-to-end latency might exceed 24 hours when event details aren't able to upload from the client right away. Events such as restarts and stop errors experience this when the device doesn't immediately reboot after the shut-down or stop error event. In this case, the event details are uploaded at the next available opportunity, and the event appears on the timeline with a timestamp equal to the time the event occurred.
@@ -26,15 +37,7 @@ Currently, the enhanced device timeline contains app crash, app unresponsive, de
 > [!NOTE]
 > Event timestamps are localized according to the time zone of the logged on Intune user.
 
-## Using Enhanced Device Timeline
-
-- Access the device timeline by going to **Devices** > **Windows** > Select device > **User Experience** > **Device Timeline**.
-- Filter events by date, device, or user to focus on relevant incidents.
-- Best practices:
-  - Use device timeline to correlate software updates, user actions, and system events during troubleshooting.
-
 ## Limitations
 
 - When your tenant has Advanced Analytics features in Intune, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill-down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score, use the table on the **Device performance** tab and search for the desired device.
-
-- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline isn't currently available for Configuration Manager-only devices in tenants that have Advanced Analytics features in Intune.
+- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline isn't available for Configuration Manager-only devices in tenants that have Advanced Analytics features in Intune.

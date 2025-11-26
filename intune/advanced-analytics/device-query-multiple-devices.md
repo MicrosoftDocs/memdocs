@@ -11,22 +11,17 @@ ms.topic: how-to
 
 Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices. Device query for multiple devices supports all devices specified in the [Intune Data Platform Schema](data-platform-schema.md), this includes corporate Android Enterprise, Apple iOS/iPadOS, macOS, and Windows devices with a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) deployed.
 
-## Prerequisites
+## Before you begin
 
-> [!NOTE]
-> You don't need to create a properties catalog policy for Android and Apple devices. Device properties are collected automatically.
+Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
 
-> [!NOTE]
-> For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
+Additional prerequisites for device query for multiple devices:
 
-- To use Device query in your tenant, you must have a license that includes Microsoft Intune Advanced Analytics. Advanced Analytics features are available with:
-  - The Intune Advanced Analytics add-on
-  - Microsoft Intune Suite
 - For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
 - Devices must be Intune managed and corporate owned.
 - Device query for multiple devices only works on devices that are already collecting device inventory data from an assigned [Properties catalog](../intune-service/configuration/properties-catalog.md) profile.
 
-## Supported platforms
+### Supported platforms
 
 Device query for multiple devices is supported on devices running:
 
