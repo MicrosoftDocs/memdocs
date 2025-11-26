@@ -31,17 +31,17 @@ Endpoint analytics organizes insights into reports that highlight performance an
 #### Application reliability
 
 > Tracks app crashes and stability trends.
-
-> [!div class="nextstepaction"]
-> [Learn more](app-reliability.md)
+>         
+> > [!div class="nextstepaction"]
+> > [Learn more](app-reliability.md)
 :::column-end:::
 :::column:::
 #### Restart frequency
 
 > Highlights devices that restart often, signaling potential hardware or software issues.
-
-> [!div class="nextstepaction"]
-> [Learn more](restart-frequency.md)
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](restart-frequency.md)
 :::column-end:::
 :::row-end:::
 
@@ -50,17 +50,17 @@ Endpoint analytics organizes insights into reports that highlight performance an
 #### Startup performance
 
 > Identifies devices with slow boot times and contributing factors.
-
-> [!div class="nextstepaction"]
-> [Learn more](startup-performance.md)
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](startup-performance.md)
 :::column-end:::
 :::column:::
 #### Work from anywhere
 
 > Analyzes device readiness for remote work scenarios.
-
-> [!div class="nextstepaction"]
-> [Learn more](app-reliability.md)
+>
+> > [!div class="nextstepaction"]
+> > [Learn more](work-from-anywhere.md)
 :::column-end:::
 :::row-end:::
 
