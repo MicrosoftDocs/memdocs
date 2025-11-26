@@ -1,11 +1,11 @@
 ---
-title: Startup Performance in Endpoint Analytics
+title: Startup Performance Report in Endpoint Analytics
 description: Learn how startup performance in Microsoft Intune endpoint analytics helps analyze boot times, identify issues, and optimize device performance.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Startup performance
+# Startup performance report
 
 The **Startup performance** page in endpoint analytics provides insights into the startup performance of your Windows devices. It helps you identify and remediate issues that can lead to slow boot and sign-in times.
 

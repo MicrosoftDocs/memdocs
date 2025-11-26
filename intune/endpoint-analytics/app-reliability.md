@@ -1,11 +1,11 @@
 ---
-title: Application Reliability in Endpoint Analytics
+title: Application Reliability Report in Endpoint Analytics
 description: Explore application reliability in Microsoft Intune endpoint analytics to analyze app crashes, improve user productivity, and enhance device performance.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Application reliability in endpoint analytics
+# Application reliability report
 <!--IN5653073-->
 The application reliability report provides insight into potential issues for desktop applications on managed devices. You can quickly identify the top applications that are impacting end-user productivity, and see aggregate app usage along with app failure metrics for these applications. From the report, drill into specific device data and view a timeline of app reliability events to troubleshoot end-user impacting issues.
 

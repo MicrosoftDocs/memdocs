@@ -215,3 +215,24 @@ Learn more about endpoint analytics:
 - [Scores, baselines, and insights](scores.md)
 - [Understand data collection](data-collection.md)
 - [Microsoft Intune Advanced Analytics](../advanced-analytics/index.md)
+
+<!-- admin center -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-EA]: https://aka.ms/endpointanalytics
+[PORTAL-0]: https://aka.ms/uea
+[PORTAL]: https://aka.ms/uea_prereq
+[PORTAL_1]: https://aka.ms/uea_baselines
+[PORTAL_2]: https://aka.ms/uea_prereq_configmgr
+
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#read-only-operator
+[INT-R5]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+
+[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
+[ENT-R2]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
+[ENT-R3]: /entra/identity/role-based-access-control/permissions-reference#reports-reader

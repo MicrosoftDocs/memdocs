@@ -1,11 +1,11 @@
 ---
-title: Restart Frequency in Endpoint Analytics
+title: Restart Frequency Report in Endpoint Analytics
 description: Analyze restart frequency in Microsoft Intune endpoint analytics to identify device reboot patterns, troubleshoot issues, and improve reliability.
 ms.date: 10/09/2025
 ms.topic: concept-article
 ---
 
-# Restart frequency in endpoint analytics
+# Restart frequency report
 <!--IN6225459-->
 In endpoint analytics [startup performance](startup-performance.md), we've provided insights into PC boot times, and how to improve the reboot times of poorly performing devices. Reboot frequency can affect a user's experience. A device that reboots daily due to Stop errors results in poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
 
