@@ -34,7 +34,7 @@ To configure encryption on your managed devices, use one of the following policy
 
     PDE isn't a replacement for BitLocker; use both for layered security.
 
-- **[Device configuration profile (Settings Catalog)](../configuration/settings-catalog.md)** to configure BitLocker settings with granular control over all BitLocker settings that are available with Intune.
+- **[Device configuration profile (Settings Catalog)](../configuration/settings-catalog.md)** to configure BitLocker settings with granular control over all BitLocker settings that are available with Intune. options.
 
 - **[Device configuration profile for Endpoint protection](#create-an-endpoint-security-policy-for-windows)**. The *Endpoint protection* profile is a legacy profile that remains available. This profile also includes BitLocker settings for Windows devices but is no longer updated with no longer updated with more recent BitLocker settings or changes.
   View the BitLocker settings that are available for [BitLocker in endpoint protection profiles from device configuration policy](../protect/endpoint-protection-windows-10.md#windows-settings).
