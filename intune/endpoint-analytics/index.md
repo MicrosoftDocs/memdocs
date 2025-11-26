@@ -66,6 +66,8 @@ Endpoint analytics organizes insights into reports that highlight performance an
 
 ## Prerequisites
 
+To use endpoint analytics, ensure your environment meets the following prerequisites:
+
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform](../includes/requirements/platform.md)]
@@ -163,12 +165,34 @@ Endpoint analytics organizes insights into reports that highlight performance an
 
 :::column-end:::
 :::column span="3":::
-> Endpoint analytics includes tasks that require different levels of permissions.
+>Role requirements vary based on whether you're configuring endpoint analytics or reviewing the data.
 >
-> For a detailed breakdown of the required permissions for each task:
+> ---
 >
-> - [RBAC requirements for configuring endpoint analytics](configure.md#prerequisites)
-> - [RBAC requirements for rewieving endpoint analytics data](scores.md#prerequisites)
+> To [configure endpoint analytics](configure.md), you need an account with at least one of the following Intune roles:
+>
+> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
+> - A [custom role][INT-RC] that includes:
+>   - **Endpoint Analytics/Read** — View scores and performance reports.
+>   - **Endpoint Analytics/Create, Update, Delete** — Manage settings and baselines.
+>   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
+>   - **Device configurations/Create, Read, Assign** — Required to create and assign the data collection policy
+>
+> ---
+>
+> To [access endpoint analytics reports](scores.md), you need an account with at least one of the following Intune roles:
+>
+> - [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
+> - [Read Only Operator][INT-R4]: Grants read permissions to endpoint analytics.
+> - [Endpoint Security Manager][INT-R5]: Grants read permissions to endpoint analytics.
+> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
+> - [Custom role][INT-RC] that includes:
+>   - **Endpoint Analytics/Read** — View scores and performance reports.
+>   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
+>
+> You can also use an account that has the following Microsoft Entra built-in  roles:
+>   - [Reports Reader][ENT-R3]: Grants read permissions to endpoint analytics.
+
 :::column-end:::
 :::row-end:::
 

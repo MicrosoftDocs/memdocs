@@ -13,28 +13,9 @@ Endpoint analytics exposes score charts which include information about what aff
 - Baselines
 - Insights and recommendations
 
-## Prerequisites
+## Before you begin
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../includes/requirements/rbac.md)]
-
-:::column-end:::
-:::column span="3":::
-> To access endpoint analytics reports, you need an account with at least one of the following Intune roles:
->
-> - [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
-> - [Read Only Operator][INT-R4]: Grants read permissions to endpoint analytics.
-> - [Endpoint Security Manager][INT-R5]: Grants read permissions to endpoint analytics.
-> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
-> - [Custom role][INT-RC] that includes:
->   - **Endpoint Analytics/Read** — View scores and performance reports.
->   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
->
-> You can also use an account that has the following Microsoft Entra built-in  roles:
->   - [Reports Reader][ENT-R3]: Grants read permissions to endpoint analytics.
-:::column-end:::
-:::row-end:::
+Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
 
 ## Scores
 
