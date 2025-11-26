@@ -9,13 +9,11 @@ ms.topic: concept-article
 
 Microsoft Intune Advanced Analytics delivers deep, actionable insights into the health and performance of your organization's endpoints. Built on the foundation of endpoint analytics, it helps IT teams proactively manage user experience and optimize productivity through data-driven intelligence. By turning raw telemetry into meaningful insights, Advanced Analytics reduces support costs, accelerates problem resolution, and ensures a more reliable technology experience for every user.
 
-## Available features
-
-Advanced Analytics features are available only for Intune-managed devices (including co-managed devices). The key features include:
+## Availble reports and capabilities
 
 :::row:::
 :::column:::
-#### Anomaly detection
+#### Anomaly detection report
 
 > Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
 > 
@@ -23,12 +21,32 @@ Advanced Analytics features are available only for Intune-managed devices (inclu
 > > [Learn more](anomaly-detection.md)
 :::column-end:::
 :::column:::
-#### Battery health
+#### Battery health report
 
 > Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](battery-health.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+
+:::column:::
+#### Enhanced device timeline report
+
+> Includes more events and lower data latency to assist with troubleshooting device issues.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](enhanced-device-timeline.md)
+:::column-end:::
+:::column:::  
+#### Resource performance report
+
+> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](resource-performance.md)
 :::column-end:::
 :::row-end:::
 
@@ -50,7 +68,6 @@ Advanced Analytics features are available only for Intune-managed devices (inclu
 > > [Learn more](device-query-multiple-devices.md)
 :::column-end:::
 :::row-end:::
-
 :::row:::
 :::column:::  
 #### Device scopes
@@ -59,25 +76,6 @@ Advanced Analytics features are available only for Intune-managed devices (inclu
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-scopes.md)
-:::column-end:::
-:::column:::
-#### Enhanced device timeline
-
-> Includes more events and lower data latency to assist with troubleshooting device issues.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](enhanced-device-timeline.md)
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column:::  
-#### Resource performance
-
-> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](resource-performance-report.md)
 :::column-end:::
 :::column:::
 
@@ -89,15 +87,15 @@ Advanced Analytics features are available only for Intune-managed devices (inclu
 Advanced Analytics is built into Microsoft Intune and appears in the **Reports** > **Endpoint analytics** section, as well as other areas of the Intune admin center. When enabled, it adds the following enhancements:
 
 - Endpoint analytics reports are extended with:
-  - [Anomaly detection](anomaly-detection.md)
-  - [Battery health](battery-health.md)
+  - [Anomaly detection report](anomaly-detection.md)
+  - [Battery health report](battery-health.md)
+  - [Resource performance report](resource-performance.md)
   - [Device scopes](device-scopes.md)
-  - [Resource performance](resource-performance-report.md)
 - Single device views are extended with:
-  - [Battery health](battery-health.md)
+  - [Battery health report](battery-health.md)
+  - [Device timeline report](enhanced-device-timeline.md)
+  - [Resource performance report](resource-performance.md)
   - [Device query](device-query.md)
-  - [Device timeline](enhanced-device-timeline.md)
-  - [Resource performance](resource-performance-report.md)
 - Additional capabilities:
   - [Device query for multiple devices](device-query-multiple-devices.md) under the **Devices** node in the Intune admin center
 
@@ -120,7 +118,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 >   - U.S. Department of Defense (DoD)
 >   > [!NOTE]
 >   >
->   > Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) or [*Resource performance*](resource-performance-report.md) functionality.
+>   > Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) functionality or [*Resource performance*](resource-performance.md) report.
 >   For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
 
 :::column-end:::

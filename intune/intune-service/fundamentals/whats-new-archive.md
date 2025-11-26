@@ -1179,7 +1179,7 @@ The resource performance scores and insights for physical devices are aimed to h
 
 For more information, see:
 
-- [Resource Performance Report](../../advanced-analytics/resource-performance-report.md)
+- [Resource performance report](../../advanced-analytics/resource-performance.md)
 - [Microsoft Intune Suite](../fundamentals/intune-add-ons.md)
 
 ### App management

@@ -2,13 +2,19 @@ items:
 - name: Overview
   href: index.md
   displayName: Advanced Analytics
-- name: Advanced Analytics Features
+- name: Advanced Analytics reports and capabilities
   items:
-  - name: Anomaly detection
+  - name: Anomaly detection report
     href: anomaly-detection.md
     displayName: Advanced Analytics
-  - name: Battery health
+  - name: Battery health report
     href: battery-health.md
+    displayName: Advanced Analytics
+  - name: Enhanced device timeline report
+    href: enhanced-device-timeline.md
+    displayName: Advanced Analytics
+  - name: Resource performance report
+    href: resource-performance.md
     displayName: Advanced Analytics
   - name: Device query
     href: device-query.md
@@ -18,12 +24,6 @@ items:
     displayName: Advanced Analytics
   - name: Device scopes
     href: device-scopes.md
-    displayName: Advanced Analytics
-  - name: Enhanced device timeline
-    href: enhanced-device-timeline.md
-    displayName: Advanced Analytics
-  - name: Resource performance
-    href: resource-performance-report.md
     displayName: Advanced Analytics
 - name: Data platform schema
   href: data-platform-schema.md
