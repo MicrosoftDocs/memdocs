@@ -201,7 +201,7 @@ Configure TPM startup authentication settings to prevent user interaction:
 - **Compatible TPM startup key and PIN** = *Do not allow startup key and PIN with TPM*
 
 > [!WARNING]
-> Security baselines, particularly the Microsoft Defender for Endpoint baseline, can enable TPM startup PIN and key by default, which blocks silent enablement. Review your baseline configurations for conflicts and reconfigure or exclude devices as needed.
+> Watch for policies that enable use of a TPM startup PIN or key. For example, the Security baseline for Microsoft Defender can enable TPM startup PIN and key by default, which blocks silent enablement. Review your baseline configurations for conflicts and reconfigure or exclude devices as needed.
 
 ## Encryption type behavior
 
