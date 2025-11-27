@@ -1,82 +1,75 @@
+# ================================
+# Soubor: .openpublishing.publish.config.json
+# ================================
 {
   "docsets_to_publish": [
     {
-      "docset_name": "autopilot",
-      "build_source_folder": "autopilot",
-      "build_output_subfolder": "autopilot",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": false,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
-    },
-    {
-      "docset_name": "memdocs",
-      "build_source_folder": "intune",
-      "build_output_subfolder": "intune",
-      "locale": "en-us",
-      "monikers": [],
-      "moniker_ranges": [],
-      "open_to_public_contributors": true,
-      "type_mapping": {
-        "Conceptual": "Content"
-      },
-      "build_entry_point": "docs",
-      "template_folder": "_themes"
+      "docset_name": "moje-dokumentace",
+      "build_output_subfolder": "moje-dokumentace",
+      "locale": "cs-cz",
+      "moniker_ranges": [
+        ">=current",
+        "preview"
+      ],
+      "need_preview_pull_request": true,
+      "open_to_public_contributors": true
     }
   ],
-  "notification_subscribers": [
-    "dougeby@microsoft.com"
-  ],
-  "sync_notification_subscribers": [],
-  "branches_to_filter": [],
-  "git_repository_url_open_to_public_contributors": "https://github.com/MicrosoftDocs/memdocs",
-  "git_repository_branch_open_to_public_contributors": "main",
-  "need_preview_pull_request": true,
   "dependent_repositories": [
     {
       "path_to_root": "_themes",
-      "url": "https://github.com/Microsoft/templates.docs.msft",
-      "branch": "main",
-      "branch_mapping": {}
+      "url": "https://github.com/MicrosoftDocs/azure-docs-sdk-python",
+      "branch": "main"
     },
     {
-      "path_to_root": "mde",
-      "url": "https://github.com/MicrosoftDocs/microsoft-365-docs-pr/",
-      "branch": "main",
-      "branch_mapping": {}
-    },
-    {
-      "path_to_root": "_themes.pdf",
-      "url": "https://github.com/Microsoft/templates.docs.msft.pdf",
-      "branch": "main",
-      "branch_mapping": {}
+      "path_to_root": "_security",
+      "url": "https://github.com/MicrosoftDocs/security",
+      "branch": "main"
     }
   ],
-  "branch_target_mapping": {
-    "live": [
-      "Publish",
-      "Pdf"
-    ],
-    "collab-win365-mr": [
-      "Pdf"
-    ]
-  },
-  "targets": {
-    "pdf": {
-      "template_folder": "_themes.pdf"
-    }
-  },
-  "docs_build_engine": {},
-  "skip_source_output_uploading": false,
-  "contribution_branch_mappings": {},
-  "need_generate_pdf_url_template": true,
-  "redirection_files": [
-    ".openpublishing.redirection.json",
-    ".openpublishing.redirection.intune.json"
+  "branches_to_filter": [
+    "archiv",
+    "zastaralé"
+  ],
+  "notification_subscribers": [
+    "docs-team@contoso.com"
   ]
 }
+
+# ================================
+# Soubor: .github/workflows/publish.yml
+# ================================
+name: Publish Docs to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repozitář
+        uses: actions/checkout@v3
+
+      - name: Nastavení Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+
+      - name: Instalace závislostí
+        run: npm install
+
+      - name: Build dokumentace
+        run: npm run build
+
+      - name: Deploy na GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./moje-dokumentace
