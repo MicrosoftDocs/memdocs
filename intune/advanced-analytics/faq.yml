@@ -12,29 +12,29 @@ summary: |
 
   **Feature comparison and licensing**
 
-  - What is the difference between endpoint analytics and Advanced Analytics?
-  - Do I need additional licensing for Advanced Analytics?
+  - [What's the difference between endpoint analytics and Advanced Analytics?](#whats-the-difference-between-endpoint-analytics-and-advanced-analytics)
+  - [Do I need additional licensing for Advanced Analytics?](#do-i-need-additional-licensing-for-advanced-analytics)
 
   **Integration and compatibility**
 
-  - Can Advanced Analytics integrate with other monitoring tools?
-  - Are there limitations with device types or OS versions?
+  - [Can Advanced Analytics integrate with other monitoring tools?](#can-advanced-analytics-integrate-with-other-monitoring-tools)
+  - [Are there limitations with device types or OS versions?](#are-there-limitations-with-device-types-or-os-versions)
 
   **Data collection and refresh**
 
-  - How often is analytics data refreshed?
-  - Why is the analytics data not getting updated?
-  - Why are the device reports incomplete?
-  - What should I do if a device is not reporting data?
+  - [How often is analytics data refreshed?](#how-often-is-analytics-data-refreshed)
+  - [Why is the analytics data not getting updated?](#why-is-the-analytics-data-not-getting-updated)
+  - [Why are the device reports incomplete?](#why-are-the-device-reports-incomplete)
+  - [What should I do if a device is not reporting data?](#what-should-i-do-if-a-device-is-not-reporting-data)
 
   **Dashboards and baselines**
 
-  - Can I customize analytics dashboards?
-  - How should the baselines be used?
+  - [Can I customize analytics dashboards?](#can-i-customize-analytics-dashboards)
+  - [How should the baselines be used?](#how-should-the-baselines-be-used)
 
   **Anomaly detection**
 
-  - Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?
+  - [Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?](#why-do-some-crashes-or-anomalies-sometimes-not-appear-in-anomaly-detection--even-when-the-devices-are-correctly-licensed-and-enrolled)
 
 sections:
 
