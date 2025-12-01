@@ -9,7 +9,7 @@ ms.topic: concept-article
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-The enhanced device timeline allows you to see a history of events that have occurred on a specific device. When you're viewing a specific device in endpoint analytics, the enhanced device timeline is viewable on the **Device timeline** tab.
+The enhanced device timeline allows you to see a history of events that have occurred on a specific device.
 
 ## Before you begin
 
@@ -22,6 +22,9 @@ Make sure you meet the [requirements](index.md#prerequisites) before using enhan
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
 1. Select a device, then select **User Experience** > **Device Timeline**.
 1. Filter events by date, device, or user to focus on relevant incidents.
+
+> [!NOTE]
+> The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics.
     :::column-end:::
     :::column span="1":::
 :::image type="content" source="images/enhanced-device-timeline.png" alt-text="Screenshot of the enhanced device timeline in endpoint analytics." lightbox="images/enhanced-device-timeline.png":::
