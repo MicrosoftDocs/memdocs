@@ -29,7 +29,7 @@ Make sure you meet the [requirements](index.md#prerequisites) before using anoma
 1. Use sorting and filtering capabilities to refine the list.
     :::column-end:::
     :::column span="1":::
-:::image type="content" source="images/anomaly-detection/anomalies-tab.png" lightbox="images/anomaly-detection/anomalies-tab.png" alt-text="Screenshot of the Anomaly tab in Overview section of endpoint analytics."::
+:::image type="content" source="images/anomaly-detection/anomalies-tab.png" lightbox="images/anomaly-detection/anomalies-tab.png" alt-text="Screenshot of the Anomaly tab in Overview section of endpoint analytics.":::
     :::column-end:::
 :::row-end:::
 
