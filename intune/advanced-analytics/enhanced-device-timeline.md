@@ -11,33 +11,33 @@ ms.topic: concept-article
 
 The enhanced device timeline allows you to see a history of events that have occurred on a specific device. When you're viewing a specific device in endpoint analytics, the enhanced device timeline is viewable on the **Device timeline** tab.
 
-:::image type="content" source="images/enhanced-device-timeline.png" alt-text="Enhanced device timeline in endpoint analytics" lightbox="images/enhanced-device-timeline.png":::
-
-> [!NOTE]
-> The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics features in Intune.
-
 ## Before you begin
 
-Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
+Make sure you meet the [requirements](index.md#prerequisites) before using enhanced device timeline.
 
-## Use enhanced device timeline
+## Review the enhanced device timeline report
 
-- Access the device timeline by going to **Devices** > **Windows** > Select device > **User Experience** > **Device Timeline**.
-- Filter events by date, device, or user to focus on relevant incidents.
-- Best practices:
-  - Use device timeline to correlate software updates, user actions, and system events during troubleshooting.
+:::row:::
+    :::column span="3":::
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
+1. Select a device, then select **User Experience** > **Device Timeline**.
+1. Filter events by date, device, or user to focus on relevant incidents.
+    :::column-end:::
+    :::column span="1":::
+:::image type="content" source="images/enhanced-device-timeline.png" alt-text="Screenshot of the enhanced device timeline in endpoint analytics." lightbox="images/enhanced-device-timeline.png":::
+    :::column-end:::
+:::row-end:::
 
-You can search by event name or details. Select the **Add filter** button to choose the source and level of events that appear on the device timeline and select a time range of interest.
+You can search by event name or details. To refine results, select **Add filter** to choose the event source, event level, and a time range of interest.
 
-The enhanced device timeline contains app crash, app unresponsive, device boot, device logon, and anomaly detected events. The end-to-end latency is generally under 24 hours.
+The enhanced device timeline shows events such as app crashes, unresponsive apps, device boots, sign ins, and detected anomalies. Use the timeline to correlate software updates, user actions, and system events during troubleshooting. Most events appear within 24 hours.
+
+In some cases, events may take longer to appear if details can't upload immediately. For example, restart or stop error events might be delayed when the device doesn't reboot right away. These events upload at the next available opportunity and display the original timestamp when they occurred.
 
 > [!NOTE]
-> In some cases, end-to-end latency might exceed 24 hours when event details aren't able to upload from the client right away. Events such as restarts and stop errors experience this when the device doesn't immediately reboot after the shut-down or stop error event. In this case, the event details are uploaded at the next available opportunity, and the event appears on the timeline with a timestamp equal to the time the event occurred.
-
-> [!NOTE]
-> Event timestamps are localized according to the time zone of the logged on Intune user.
+> Event timestamps are localized to the time zone of the logged-on Intune user.
 
 ## Limitations
 
-- When your tenant has Advanced Analytics features in Intune, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill-down views. In addition to a timeline, the **Application reliability** tab includes the application reliability score for the selected device. To see the device application reliability score, use the table on the **Device performance** tab and search for the desired device.
-- As the enhanced device timeline is only available for Intune-managed (including co-managed) devices, a device timeline isn't available for Configuration Manager-only devices in tenants that have Advanced Analytics features in Intune.
+- If your tenant uses Advanced Analytics, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill-down views. Unlike the timeline, the **Application reliability** tab includes the *application reliability score* for the selected device. To view this score, go to the **Device performance** tab and search for the device.
+- The enhanced device timeline is available only for Intune-managed devices (including co-managed). It isn't available for Configuration Manager-only devices in tenants with Advanced Analytics enabled.

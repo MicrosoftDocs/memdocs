@@ -28,7 +28,7 @@ Make sure you meet the [requirements](index.md#prerequisites) before using the b
 ## Review the battery health report
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Battery health**.
-1. The Battery health report page is divided in multiple tabs. Select the following tabs to lern more about them:
+1. The Battery health report page is divided in multiple tabs. Select the following tabs to learn more about them:
 
 # [**Overview**](#tab/overview)
 
@@ -75,9 +75,9 @@ The cycle count is the number of times the battery discharges 100% of its capaci
 
 This tab shows battery health metrics and scores by device models, helping you identify if problems are specific to certain models.
 
-# [**Operating systems performance**](#tab/os-perf)
+# [**OS performance**](#tab/os-perf)
 
-This tab lets you see the battery health metrics and scores by OS versions, which can help you identify whether problems are isolated to particular OS versions.
+This tab lets you see the battery health metrics and scores by operating system versions, which can help you identify whether problems are isolated to particular OS versions.
 
 # [**App impact**](#tab/app-impact)
 
@@ -88,23 +88,17 @@ This tab lets you see the organization's cumulative battery usage per app in the
 
 ---
 
-## Outliers
+## Battery information notes
 
-Estimated runtimes are sometimes not available for battery-powered devices where we don't have enough information on battery drains.
-
-If the battery design doesn't report cycle count, then the report won't contain cycle count information for such battery-powered devices.
-
-If battery is new, we might not have enough data on the cycle count in which case a zero with an asterisk appears as the cycle count.
-
-In rare cases, the battery count might exceed 2, indicating that devices are plugged into UPS or other external batteries. Since this is unusual, we add an asterisk (*) if the count exceeds 2.
+- Estimated runtimes may be unavailable for battery-powered devices when there isn't enough data on battery drain.
+- If the battery design doesn't report cycle count, that information won't appear in the report.
+- For new batteries, limited data may result in a cycle count of `0*` (zero with an asterisk).
+- In rare cases, the battery count may exceed 2, which usually means the device is connected to a UPS or external batteries. Because this is unusual, an asterisk (`*`) is added when the count is greater than 2.
 
 ## Limitations
 
-Some data points in the report might say *Not available*. When you export the report, data points that aren't available appear as `-1` in the generated .csv file.
-
-Batteries that have low design capacity (for example, devices designed to hold limited charge) show up as having low runtime although this feature is by design. Such devices are counted under low runtime insights and the only solution is to replace the battery with one that holds more charge.
-
-<!--links-->
+- Some data points in the report may display **Not available**. When you export the report, unavailable data appears as `-1` in the generated .csv file.
+- Devices with batteries designed for low capacity (for example, those intended to hold a limited charge) will show low runtime. This behavior is by design. These devices appear under low-runtime insights, and the only way to improve runtime is to replace the battery with one that supports a higher capacity.
 
 <!-- admin center links -->
 
