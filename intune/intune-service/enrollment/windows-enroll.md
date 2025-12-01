@@ -1,7 +1,7 @@
 ---
 title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 description: Enable Intune automatic enrollment for Windows devices joining or registering with your Microsoft Entra ID.
-ms.date: 10/20/2025
+ms.date: 12/01/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -69,7 +69,7 @@ You must have:
    
    This setting is turned off by default. If you're enforcing Windows MAM for your work or school accounts, enable this setting. This setting applies to:  
     - Users in the **Some** or **All** category in the MDM auto-enrollment configuration.  
-    - Entra registered and workplace joined users.  
+    - Entra registered and workplace joined devices.  
     - Users who add their account for the first time via Microsoft Edge or a native app such as Teams.
    
    This setting doesn't apply to users adding their account through the Settings flow.   
