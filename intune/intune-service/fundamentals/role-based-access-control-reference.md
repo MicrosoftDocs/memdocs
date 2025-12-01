@@ -1,36 +1,18 @@
 ---
-# required metadata
-
 title: Microsoft Intune built-in roles reference
-description: Permissions reference for built-in roles for Microsoft Intune. 
-keywords:
+description: Permissions reference for built-in roles for Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 06/14/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
 
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # Built-in role permissions for Microsoft Intune
 
-The following tables list the built-in roles for Microsoft Intune. The tables also list the permissions that are associated with each role. 
+The following tables list the built-in roles for Microsoft Intune. The tables also list the permissions that are associated with each role.
 
 > [!TIP]
 > When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles aren't available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
@@ -39,7 +21,7 @@ The following tables list the built-in roles for Microsoft Intune. The tables al
 > This article was partially created with the help of artificial intelligence. Before publishing, an author reviewed and revised the content as needed. See [Our principles for using AI-generated content in Microsoft Learn](https://aka.ms/ai-content-principles).
 
 
-<!-- 
+<!--
 # Save the below .ps1 file, which can be used to generate the markdown when permissions change or new roles are added
 # ISE tends to popup the authentication better for Connect-MSGraph cmdlet
 
@@ -666,7 +648,7 @@ School Administrators can manage apps and settings for their groups. They can ta
 | Remote tasks | Remote lock |
 | Remote tasks | Reset passcode |
 | Remote tasks | Retire |
-| Remote tasks | Run Remediation 
+| Remote tasks | Run Remediation
 | Remote tasks | Set device name |
 | Remote tasks | Sync devices. |
 | Remote tasks | Update cellular data plan |

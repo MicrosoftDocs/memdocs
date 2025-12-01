@@ -5,23 +5,19 @@ ms.date: 5/2/2024
 ms.topic: tutorial
 author: yegor-a
 ms.author: egorabr
-ms.manager: dougeby
-no-loc: [Microsoft, Windows, Autopatch, Autopilot]
-ms.collection: 
+ms.collection:
 - graph-interactive
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Windows privacy
 
-Microsoft Intune and Intune for Education can configure privacy settings for Windows 10 and later. This article summarizes the configurations that are most commonly used for student and teacher devices.
+Microsoft Intune and Intune for Education can configure privacy settings for Windows. This article summarizes the configurations that are most commonly used for student and teacher devices.
 
 > [!IMPORTANT]
 > The settings in this article configure user privacy. These settings should only be deployed after careful consideration.
 
 > [!NOTE]
-> This is an optional policy
+> This is an optional policy.
 
 To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/mem/intune-service/configuration/settings-catalog)
 

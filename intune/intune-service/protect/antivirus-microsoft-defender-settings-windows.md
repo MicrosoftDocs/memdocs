@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Windows Antivirus policy settings for Microsoft Defender Antivirus for Intune | Microsoft Docs
 description: See a list of the settings in the Microsoft Defender Antivirus profile for Windows devices. You can configure these settings as part of Endpoint security Antivirus policy in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/27/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: laarrizz
@@ -32,9 +14,12 @@ ms.reviewer: laarrizz
 
 # Settings for Microsoft Defender Antivirus policy in Microsoft Intune for Windows devices
 
-View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows 10 and later in Microsoft Intune.
+View details about the [endpoint security](../protect/endpoint-security-policy.md) antivirus policy settings you can configure for the Microsoft Defender Antivirus profile for Windows in Microsoft Intune.
 
-> [!NOTE]  
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+> [!NOTE]
 > This article details the settings you can find in Microsoft Defender Antivirus and Microsoft Defender Antivirus Exclusions profiles created before April 5, 2022, for the *Windows 10 and later* platform for endpoint security Antivirus policy. On April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform. Profiles created after that date use a new settings format as found in the Settings Catalog. With this change you can no longer create new versions of the old profile and they are no longer being developed. Although you can no longer create new instances of the older profile, you can continue to edit and use instances of it that you previously created.
 >
 > For profiles that use the new settings format, Intune no longer maintains a list of each setting by name. Instead, the name of each setting, its configuration options, and its explanatory text you see in the Microsoft Intune admin center are taken directly from the settings authoritative content. That content can provide more information about the use of the setting in its proper context. When viewing a settings information text, you can use its *Learn more* link to open that content.
@@ -46,7 +31,7 @@ View details about the [endpoint security](../protect/endpoint-security-policy.m
 - **Turn on cloud-delivered protection**  
   CSP: [AllowCloudProtection](/windows/client-management/mdm/policy-csp-defender#allowcloudprotection)
 
-  By default, Defender on Windows 10/11 desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
+  By default, Defender on Windows desktop devices sends information to Microsoft about any problems it finds. Microsoft analyzes that information to learn more about problems affecting you and other customers, to offer improved solutions.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **No** - The setting is disabled. Device users can't change this setting.
@@ -117,13 +102,13 @@ These settings are available in the following profiles:
 - **Turn on real-time protection**  
   CSP: [AllowRealtimeMonitoring](/windows/client-management/mdm/policy-csp-defender#allowrealtimemonitoring)
 
-  Require Defender on Windows 10/11 desktop devices to use the real-time Monitoring functionality.
+  Require Defender on Windows desktop devices to use the real-time Monitoring functionality.
   - **Not configured** (*default*) - The setting is restored to the system default
   - **No** - The setting is disabled. Device users can't change this setting.
   - **Yes** - Enforce use of real-time monitoring. Device users can't change this setting.
 
 - **Enable on access protection**  
-CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defender#allowonaccessprotection)
+  CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defender#allowonaccessprotection)
   Configure virus protection that's continuously active, as opposed to on demand.
 
   - **Not Configured** (*default*) - The setting is restored to the system default.
@@ -141,7 +126,7 @@ CSP: [AllowOnAccessProtection](/windows/client-management/mdm/policy-csp-defende
 - **Turn on behavior monitoring**  
   CSP: [AllowBehaviorMonitoring](/windows/client-management/mdm/policy-csp-defender#allowbehaviormonitoring)
 
-  By default, Defender on Windows 10/11 desktop devices uses the Behavior Monitoring functionality.
+  By default, Defender on Windows desktop devices uses the Behavior Monitoring functionality.
 
   - **Not configured** (*default*) - The setting is restored to the system default.
   - **No** - The setting is disabled. Device users can't change this setting.
@@ -205,7 +190,7 @@ These settings are available in the following profiles:
 
   Specify the number of days from zero to 90 that the system stores quarantined items  before they're automatically removed. A value of zero keeps items in quarantine and doesn't automatically remove them.
 
-- **Submit samples consent**  
+- **Submit samples consent**
 
   - **Not configured** (*default*)
   - **Send safe samples automatically**
@@ -227,7 +212,7 @@ These settings are available in the following profiles:
   CSP: [ThreatSeverityDefaultAction](/windows/client-management/mdm/policy-csp-defender#threatseveritydefaultaction)
 
   Specify the action that Defender takes for detected malware based on the malware's threat level.
-  
+
   Defender classifies malware that it detects as one of the following severity levels:
   - **Low severity**
   - **Moderate severity**
@@ -236,7 +221,7 @@ These settings are available in the following profiles:
 
   For each level, specify the action to take. The default for each severity level is *Not configured*.
 
-  - **Not configured** - When not configured, action based on the security intelligence update definition is applied. 
+  - **Not configured** - When not configured, action based on the security intelligence update definition is applied.
   - **Clean** - The service tries to recover files and try to disinfect.
   - **Quarantine** - Moves files to quarantine.
   - **Remove** - Removes files from the device.
@@ -275,7 +260,7 @@ Learn more
 
   Configure catch-up scans for scheduled full scans. A catch-up scan is a scan that is run because a regularly scheduled scan was missed. Usually these scheduled scans are missed because the computer was turned off at the scheduled time.
 
-  - **Not configured** (*default*) - The setting is returned to client default, which is to disable catch-up scans for full scans. 
+  - **Not configured** (*default*) - The setting is returned to client default, which is to disable catch-up scans for full scans.
   - **No** - The setting is disabled. Device users can't change this setting.
   - **Yes** - Catch-up scans for scheduled full scans are enforced and the user can't disable them. If a computer is offline for two consecutive scheduled scans, a catch-up scan is started the next time someone signs in to the computer. If there's no scheduled scan configured, there will be no catch-up scan run. Device users can't change this setting.
 
@@ -315,20 +300,20 @@ Learn more
 
 - **Scan type**  
   CSP: [ScanParameter](/windows/client-management/mdm/policy-csp-defender#scanparameter)
-  
+
   Select the type of scan that Defender runs. This setting interacts with the settings *Day of week to run a scheduled scan* and *Time of day to run a scheduled scan*.
 
   - **Not Configured** (*default*)
   - **Quick scan**
   - **Full scan**
 
-- **Day of week to run a scheduled scan**  
+- **Day of week to run a scheduled scan**
   - **Not Configured** (*default*)
 
-- **Time of day to run a scheduled scan**  
+- **Time of day to run a scheduled scan**
   - **Not Configured** (*default*)
 
-- **Check for signature updates before running scan**  
+- **Check for signature updates before running scan**
   - **Not Configured** (*default*)
   - **No**
   - **Yes**
@@ -367,7 +352,7 @@ These settings are available in the following profiles:
 **Settings**:
 
 - **Allow user access to Microsoft Defender app**  
-CSP: [AllowUserUIAccess](/windows/client-management/mdm/policy-csp-defender#allowuseruiaccess)  
+  CSP: [AllowUserUIAccess](/windows/client-management/mdm/policy-csp-defender#allowuseruiaccess)
 
 - **Not Configured** (*default*) - The setting returns to client default in which UI and notifications are allowed.
 

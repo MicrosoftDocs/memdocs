@@ -5,11 +5,8 @@ ms.date: 5/2/2024
 ms.topic: tutorial
 author: scottbreenmsft
 ms.author: scbree
-ms.manager: dougeby
 appliesto:
   - ✅ <b>Surface devices</b>
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Management functionalities for Surface devices

@@ -1,33 +1,12 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide - Multi-Identity 
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - Multi-Identity
 description: Understand Multi-Identity when incorporating Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
 # Intune App SDK for Android - Multi-Identity
@@ -357,7 +336,7 @@ The SDK will never change the active identity without providing these implicit i
 - Data ingress from **other Intune-managed apps** can change the active identity on the thread and context level.
   - If an activity is launched from an `Intent` sent by another MAM app, the activity's identity will be set based on the active identity in the other app at the point the `Intent` was sent.
     - For example, an activity to view a Word document is launched from an intent from Microsoft Outlook when a user selects a document attachment. Office's document viewer activity's identity is switched to the identity from Outlook.
-  
+
   - For services, the thread identity will be set similarly for the duration of an `onStart` or `onBind` call. Calls into the `Binder` returned from `onBind` will also temporarily set the thread identity.
 
   - Calls into a `ContentProvider` will similarly set the thread identity for their duration.
@@ -546,7 +525,7 @@ An example flow might look something like the following:
 - The app waits until a result is reported to callback.
 - If the reported result is a failure, the app doesn't display the document.
 - The app opens and renders the file.
-  
+
 If an app uses the Android `DownloadManager` to download files,
 the SDK will attempt to protect these files automatically using
 the [identity priority described previously](#setting-the-active-identity).
@@ -778,7 +757,7 @@ These tests help ensure your multi-identity integration properly removes managed
 
 For these tests, install your app and the Intune Company Portal; log in with both a managed and unmanaged account before starting the test. For both accounts, exercise app scenarios that store account data.
 
-| Scenario | Preconditions | Steps |  
+| Scenario | Preconditions | Steps |
 | - | - | - |
 | Supplemental wipe handler | Your app has implemented a handler for `WIPE_USER_AUXILIARY_DATA` | - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied.
 | Overridden wipe handler | Your app has implemented a handler for `WIPE_USER_DATA` | - [Issue a selective wipe from the Microsoft Intune admin center]. <br> - Confirm (typically via logging) that your wipe handler has executed successfully. <br> - Confirm that the managed account is removed from your app and all that account's data has been removed. <br> - Confirm that the unmanaged account is still logged in, none of the unmanaged account's data has been removed, and policy is still not applied. <br> - Confirm that your app has either exited gracefully or is still in a healthy state after your wipe handler finishes.
@@ -828,7 +807,7 @@ If you're unsure if any of these sections apply to your app, revisit [Key Decisi
 [MAMSetUIIdentityCallback]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMSetUIIdentityCallback.html
 
 <!-- Method links -->
-<!-- MMI TODO: fix links when javadocs are published to github 
+<!-- MMI TODO: fix links when javadocs are published to github
   https://dev.azure.com/msazure/Intune/_workitems/edit/26505930
 -->
 [getIsIdentityOIDManaged]:https://microsoftconnect.github.io/ms-intune-app-sdk-android/reference/com/microsoft/intune/mam/client/identity/MAMPolicyManager.html#getIsIdentityOIDManaged(java.lang.String)

@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Windows 8.1 compliance settings in Microsoft Intune
 description: View the device compliance settings for Windows 8.1 that you can manage with Microsoft Intune compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 05/15/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -60,18 +43,18 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 ### Password
 
-- **Require a password to unlock mobile devices**:  
+- **Require a password to unlock mobile devices**:
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device.
 
-- **Simple passwords**:  
+- **Simple passwords**:
   - **Not configured** (*default*) - Users can create simple passwords like **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
 - **Minimum password length**:  
   Enter the minimum number of digits or characters that the password must have.
 
-  For devices that run Windows and are accessed with a Microsoft account, the compliance policy fails to evaluate correctly if either of the following conditions is true:  
+  For devices that run Windows and are accessed with a Microsoft account, the compliance policy fails to evaluate correctly if either of the following conditions is true:
   - Minimum password length is greater than eight characters
   - Minimum number of character sets is more than two
 
@@ -80,7 +63,7 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
   When set to *Alphanumeric*, the following setting is available.
 
-  - **Number of non-alphanumeric characters in password**:  
+  - **Number of non-alphanumeric characters in password**:
     When the *password type* is set to **Alphanumeric**, specify the minimum number of character sets that the password must contain. Options include **0** to **4** sets, with a default of **1**.
 
     The four character sets are:
@@ -105,7 +88,7 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 ### Encryption
 
-- **Encryption of data storage on device**:  
+- **Encryption of data storage on device**:
   - **Not configured** (*default*)
   - **Require** - Use *Require* to encrypt data storage on your devices.
 
@@ -113,4 +96,4 @@ Windows 8.1 PCs return a version of **3**. If the OS version rule is set to Wind
 
 - [Add actions for noncompliant devices](actions-for-noncompliance.md) and [use scope tags to filter policies](../fundamentals/scope-tags.md).
 - [Monitor your compliance policies](compliance-policy-monitor.md).
-- See the [compliance policy settings for Windows 10/11](compliance-policy-create-windows.md) devices.
+- See the [compliance policy settings for Windows](compliance-policy-create-windows.md) devices.

@@ -1,40 +1,21 @@
 ---
-# required metadata
-
-title: Step 4. Create app configuration policies for Microsoft Edge for Business
-titleSuffix:
+title: Step 4. Create App Configuration Policies for Microsoft Edge for Business
 description: Step 4. Create app configuration policy for Microsoft Edge for Business.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 03/26/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-
-# optional metadata
-
-#audience:
-#ROBOTS: 
 ms.reviewer: samarti
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 4. Create app configuration policies for Microsoft Edge for Business
+# Step 4. Create App Configuration Policies for Microsoft Edge for Business
 
 Microsoft Edge for iOS, Android, and Windows supports app settings that allow Microsoft Intune administrators to customize the behavior of the app and implement browser configuration.
 
-App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android or through the MAM (Mobile Application Management) channel. 
+App configuration can be delivered either through the mobile device management (MDM) OS channel on enrolled devices [Managed App Configuration](https://developer.apple.com/library/content/samplecode/sc2279/Introduction/Intro.html) channel for iOS or the [Android in the Enterprise](https://developer.android.com/work/managed-configurations) channel for Android or through the MAM (Mobile Application Management) channel.
 
 Microsoft Edge for iOS and Android supports the following configuration scenarios:
 
@@ -92,11 +73,11 @@ Use the following steps to configure the app:
 7. Select **Next** to display the **Settings** step.
 
 8. Enter the **name** and **value** for each configuration setting you want to add. For details, see the [Microsoft Edge app configuration values](#microsoft-edge-app-configuration-values) table.
-    
+
     For example, set **com.microsoft.intune.mam.managedbrowser.PasswordSSO** to `TRUE`.
 
     :::image type="content" alt-text="Apps  -  App configuration policies  -  Create app configuration policy- Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business50.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business50.png":::
-    
+
 9. Review each value and select **Next**.
 
 10. Add a **Scope tag** and select **Next**.
@@ -105,7 +86,7 @@ Use the following steps to configure the app:
 
 12. Select **Review + create**.
 
-### Configure the App Configuration policy for Windows 
+### Configure the App Configuration policy for Windows
 
 Use the following steps to configure the app:
 

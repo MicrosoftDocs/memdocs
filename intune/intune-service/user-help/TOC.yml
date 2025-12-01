@@ -176,7 +176,7 @@ items:
     items:
     - name: Device enrollment overview  
       href: device-enrollment-overview-windows.md  
-    - name: Enroll Windows 10/11 device  
+    - name: Enroll Windows device  
       href: enroll-windows-10-device.md
     - name: Unenroll device
       href: unenroll-your-device-from-intune-windows.md

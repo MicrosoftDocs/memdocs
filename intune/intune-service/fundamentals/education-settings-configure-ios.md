@@ -1,39 +1,20 @@
 ---
-# required metadata
-
-title: Intune settings for the iOS/iPadOS Classroom app 
-titleSuffix: Microsoft Intune
+title: Intune settings for the iOS/iPadOS Classroom app
 description: Learn the Intune settings you can use to control settings for the Classroom app on iOS/iPadOS devices.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 11/14/2019
 ms.topic: archived
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid: 1381a5ce-c743-40e9-8a10-4c218085bb5f
-
-# optional metadata
-
-#ROBOTS: NOINDEX
-#audience:
 
 ms.reviewer: derriw
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # How to configure Intune settings for the iOS/iPadOS Classroom app
 
 > [!NOTE]
-> Intune doesn't currently support configuring the Classroom app. This article is only applicable for users with existing iOS/iPadOS education profiles in Intune.  
+> Intune doesn't currently support configuring the Classroom app. This article is only applicable for users with existing iOS/iPadOS education profiles in Intune.
 
 ## Introduction
 [Classroom](https://itunes.apple.com/app/id1085319084) is an app that helps teachers to guide learning, and control student devices in the classroom. For example, the app enables teachers to:
@@ -113,7 +94,7 @@ On the **Education** pane, choose **Teacher certificates**.
 #### Configure teacher root certificate
 
 Under **Teacher root certificate**, choose the browse button. Select the root certificate with either:
-- Extension .cer (DER, or Base64 encoded) 
+- Extension .cer (DER, or Base64 encoded)
 - Extension .P7B (with or without full chain)
 
 #### Configure teacher PKCS#12 certificate
@@ -121,9 +102,9 @@ Under **Teacher root certificate**, choose the browse button. Select the root ce
 Under **Teacher PKCS#12 certificate**, configure the following values:
 
 - **Subject name format** - Intune automatically prefixes common names for teacher certificates with **leader**. Common names for Student certificates are prefixed with **member**.
-- **Certification authority** - An Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 or later. A Standalone CA is not supported. 
+- **Certification authority** - An Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 or later. A Standalone CA is not supported.
 - **Certification authority name** - Enter the name of your certification authority.
-- **Certificate template name** - Enter the name of a certificate template that has been added to an issuing CA. 
+- **Certificate template name** - Enter the name of a certificate template that has been added to an issuing CA.
 - **Renewal threshold (%)** - Specify the percentage of the certificate lifetime that remains before the device requests renewal of the certificate.
 - **Certificate validity period** - Specify the amount of remaining time before the certificate expires.
 You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA certificate.
@@ -138,7 +119,7 @@ When you're finished configuring certificates, choose **OK**.
 #### Configure student root certificate
 
 Under **Student root certificate**, choose the browse button. Select the root certificate with either:
-- Extension .cer (DER, or Base64 encoded) 
+- Extension .cer (DER, or Base64 encoded)
 - Extension .P7B (with or without full chain)
 
 #### Configure student PKCS#12 certificate
@@ -146,9 +127,9 @@ Under **Student root certificate**, choose the browse button. Select the root ce
 Under **Student PKCS#12 certificate**, configure the following values:
 
 - **Subject name format** - Intune automatically prefixes common names for teacher certificates with **leader**. Common names for Student certificates are prefixed with **member**.
-- **Certification authority** - An Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 or later. A Standalone CA is not supported. 
+- **Certification authority** - An Enterprise Certification Authority (CA) that runs on an Enterprise edition of Windows Server 2008 R2 or later. A Standalone CA is not supported.
 - **Certification authority name** - Enter the name of your certification authority.
-- **Certificate template name** - Enter the name of a certificate template that has been added to an issuing CA. 
+- **Certificate template name** - Enter the name of a certificate template that has been added to an issuing CA.
 - **Renewal threshold (%)** - Specify the percentage of the certificate lifetime that remains before the device requests renewal of the certificate.
 - **Certificate validity period** - Specify the amount of remaining time before the certificate expires.
 You can specify a value that is lower than the validity period in the specified certificate template, but not higher. For example, if the certificate validity period in the certificate template is two years, you can specify a value of one year but not a value of five years. The value must also be lower than the remaining validity period of the issuing CA certificate.

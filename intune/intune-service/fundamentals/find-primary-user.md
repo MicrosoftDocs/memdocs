@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Find the primary user of a Microsoft Intune device.
-titleSuffix:
 description: Find the primary user (or User Device Affinity) of an Intune device.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: remote-actions
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -73,7 +53,7 @@ The Company Portal app expects that the user account that signed in to the Compa
 
 If an Intune device has no primary user assigned, then the Company Portal app detects it as a shared device. Shared devices are visually identifiable with a "shared" label in the device tile. In this mode, the Company Portal can still be used to request and install available apps. However, uninstalling apps and self-service actions, like reset, rename, and retire, aren't available.
 
-To appear in the Company Portal on shared devices, available apps might be assigned to the device or user. They're installed in the system context or user context, depending on how the app was configured by the IT administrator. For more information about app context, see [Installing apps on Windows 10 devices](../apps/apps-windows-10-app-deploy.md). Company Portal version 10.3.4651.0 or later is required to use this feature.
+To appear in the Company Portal on shared devices, available apps might be assigned to the device or user. They're installed in the system context or user context, depending on how the app was configured by the IT administrator. For more information about app context, see [Installing apps on Windows devices](../apps/apps-windows-10-app-deploy.md). Company Portal version 10.3.4651.0 or later is required to use this feature.
 
 ## Primary user and Microsoft Entra device owner
 
@@ -91,7 +71,7 @@ Use the following steps to find the primary user of a device:
 
 ## Change a device's primary user
 
-For Windows 10 devices that are Microsoft Entra joined or Microsoft Entra hybrid joined, the primary user of a device can be updated.
+For Windows devices that are Microsoft Entra joined or Microsoft Entra hybrid joined, the primary user of a device can be updated.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Choose **Devices** > **All devices** > choose a Windows device > **Properties** > **Change primary user**.

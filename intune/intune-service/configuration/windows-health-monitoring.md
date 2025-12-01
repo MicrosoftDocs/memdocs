@@ -1,35 +1,18 @@
 ---
-# required metadata
-
 title: Create a Windows Health Monitoring profile in Microsoft Intune
 description: Add a Windows Health Monitoring profile to collect endpoint analytics and software update events on Windows 10/11 devices in Microsoft Intune. Use this data to recommend software, review startup performance, and fix support issues.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/19/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
 # Use Windows Health Monitoring profile on Windows devices in Microsoft Intune
 
-Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint Analytics](../../analytics/overview.md) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
+Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint analytics](../../analytics/index.md) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
 
 In Intune, you can create a Windows Health Monitoring device configuration profile to enable this data collection, and then deploy this profile to your devices.
 
@@ -37,14 +20,13 @@ To help optimize your Windows devices, use this profile as part of your mobile d
 
 This feature applies to:
 
-- Windows 11 devices enrolled in Intune
-- Windows 10 version 1903 and newer devices enrolled in Intune
+- Windows devices enrolled in Intune
 
 This article shows you how to create the profile, and enable the monitoring.
 
 ## Before you begin
 
-- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, go to [What is Endpoint analytics?](../../analytics/overview.md).
+- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, see [Endpoint Analytics Overview](../../analytics/index.md).
 - If you use co-management, then to use this profile, the Device Configuration workload must be in Intune. For more information on these features, go to [What is co-management?](../../configmgr/comanage/overview.md) and [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
@@ -102,4 +84,4 @@ The next time each device checks in, the policy is applied.
 ## Related content
 
 - After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
-- [What is Endpoint analytics](../../analytics/overview.md)
+- [Endpoint Analytics Overview](../../analytics/index.md)

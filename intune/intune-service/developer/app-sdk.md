@@ -1,24 +1,10 @@
 ---
-title: Benefits of Intune App SDK 
-titleSuffix: Microsoft Intune
+title: Benefits of Intune App SDK
 description: The Intune App SDK is available for both the iOS and Android platforms, and enables mobile app management features with Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 10/31/2024
+ms.date: 11/18/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: cd9f05e7-26e6-45e0-8d38-67d8232b1cae
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -43,7 +29,7 @@ IT administrators can enforce a policy that ensures that data saved to the devic
 ### Remotely wipe corporate data
 IT administrators can remotely wipe corporate data from an Intune-managed app. This feature is identity-based and will only delete the files associated with the corporate identity of the end user. To do that, the feature requires the app's participation. The app can specify the identity for which the wipe should occur based on user settings. In the absence of these specified user settings from the app, the default behavior is to wipe the application directory and notify the end user that access has been removed.
 
-### Enforce the use of a managed browser
+### Enforce the use of Microsoft Edge
 IT administrators can force web links in the app to be opened with the [Microsoft Edge app](../apps/manage-microsoft-edge.md). This functionality ensures that links that appear in a corporate environment are kept within the domain of Intune-managed apps.
 
 ### Enforce a PIN policy
@@ -61,7 +47,7 @@ Multi-identity support is a feature of the SDK that enables coexistence of polic
 For example, many users configure both corporate and personal email accounts in the Office mobile apps for iOS and Android. When a user accesses data with their corporate account, the IT administrator must be confident that app protection policy will be applied. However, when a user is accessing a personal email account, that data should be outside of the IT administrator's control. The Intune App SDK achieves this by targeting the app protection policy to **only** the corporate identity in the app.
 
 The multi-identity feature helps solve the data protection problem that organizations face with store apps that support both personal and work accounts.
- 
+
 ### App protection without device enrollment
 
 >[!IMPORTANT]
