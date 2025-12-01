@@ -34,7 +34,7 @@ Make sure you meet the [requirements](index.md#prerequisites) before using anoma
 :::row-end:::
 
 :::row:::
-    :::column span="3"":::
+    :::column span="3":::
 4. To view more information about a specific anomaly, select it from the list. Review details such as the app name, affected devices, when the issue was first detected and last occurred, and any device groups that might be contributing to the problem.
     :::column-end:::
     :::column span="1":::
@@ -43,7 +43,7 @@ Make sure you meet the [requirements](index.md#prerequisites) before using anoma
 :::row-end:::
 
 :::row:::
-    :::column span="3"":::
+    :::column span="3":::
 5. Select a device correlation group from the list to see common factors among devices. Devices are correlated by shared attributes such as app version, driver update, OS version, or device model. You can view the number of devices currently affected and those at risk. The **prevalence rate** shows the percentage of affected devices in a correlation group.
     :::column-end:::
     :::column span="1":::
@@ -52,7 +52,7 @@ Make sure you meet the [requirements](index.md#prerequisites) before using anoma
 :::row-end:::
 
 :::row:::
-    :::column span="3"":::
+    :::column span="3":::
 6. Select **View Affected Devices** to display a list of devices with key attributes. Filter to view devices in specific correlation groups or show all devices affected by the anomaly. The device timeline also shows additional anomalous events.
     :::column-end:::
     :::column span="1":::
