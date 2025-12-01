@@ -17,7 +17,7 @@ The insights show how much your score can improve by replacing batteries in affe
 
 ## Before you begin
 
-Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
+Make sure you meet the [requirements](index.md#prerequisites) before using the battery health report.
 
 ## Review the battery health report
 
@@ -105,3 +105,9 @@ In rare cases, the battery count might exceed 2, indicating that devices are plu
 Some data points in the report might say *Not available*. When you export the report, data points that aren't available appear as "-1" in the generated .csv file.
 
 Batteries that have low design capacity (For example, devices designed to hold limited charge) show up as having low runtime although this feature is by design. Such devices are counted under low runtime insights and the only solution is to replace the battery with one that holds more charge.
+
+<!--links-->
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
