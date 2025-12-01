@@ -1,15 +1,45 @@
 ### YamlMime:FAQ
 metadata:
-  title: Frequently asked questions about Advanced Analytics in Microsoft Intune
-  description: This article provides answers to some frequently asked questions on Intune Advanced Analytics.
+  title: Frequently Asked Questions About Advanced Analytics in Microsoft Intune
+  description: This article provides answers to some frequently asked questions about Advanced Analytics.
   ms.date: 12/01/2025
   ms.topic: faq
 
-title: Frequently asked questions about Advanced Analytics
-summary: This article answers common questions about Advanced Analytics in Intune.
+title: |
+  Advanced Analytics FAQs
+summary: |
+  This article addresses frequently asked questions about Advanced Analytics in Microsoft Intune.
+
+  **Feature comparison and licensing**
+
+  - What is the difference between endpoint analytics and Advanced Analytics?
+  - Do I need additional licensing for Advanced Analytics?
+
+  **Integration and compatibility**
+
+  - Can Advanced Analytics integrate with other monitoring tools?
+  - Are there limitations with device types or OS versions?
+
+  **Data collection and refresh**
+
+  - How often is analytics data refreshed?
+  - Why is the analytics data not getting updated?
+  - Why are the device reports incomplete?
+  - What should I do if a device is not reporting data?
+
+  **Dashboards and baselines**
+
+  - Can I customize analytics dashboards?
+  - How should the baselines be used?
+
+  **Anomaly detection**
+
+  - Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?
 
 sections:
-  - name: Basics
+
+  
+  - name: Feature comparison and licensing
     questions:
       - question: What is the difference between endpoint analytics and Advanced Analytics?
         answer: |
@@ -17,30 +47,41 @@ sections:
       - question: Do I need additional licensing for Advanced Analytics?
         answer: |
           Yes, Advanced Analytics requires specific licensing. See the Plan section for details.
+
+  - name: Integration and compatibility
+    questions:
       - question: Can Advanced Analytics integrate with other monitoring tools?
         answer: |
           Advanced Analytics doesn't provide a connector for data to be leveraged in other monitoring tools. Some features, such as Device Query for multiple devices, do support an export via .csv function, which could then be used in other tooling.
       - question: Are there limitations with device types or OS versions?
         answer: |
           Some features might be limited to specific Windows builds, OS versions, or device types. Review the prerequisites before deployment.
-      - question: Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?
-        answer: |
-          This is typically due to the volume and usage patterns of devices and apps. The device must be actively used, enrolled in endpoint analytics, and data collection is enabled. In addition, a high volume of events (such as critical errors or app crashes) is usually required before the event is flagged as anomalous.
+  - name: Data collection and refresh
+    questions:
       - question: How often is analytics data refreshed?
         answer: |
           Data is typically updated every 24 hours. Real-time troubleshooting might require direct device queries.
-      - question: Can I customize analytics dashboards?
-        answer: |
-          Yes, dashboards can be tailored to highlight key metrics and device scopes relevant to your organization.
-      - question: What should I do if a device is not reporting data?
-        answer: |
-          Check device connectivity, enrollment status, and compliance with system requirements.
-      - question: How should the baselines be used?
-        answer: |
-          Baseline scores are shown on charts as triangle markers. There's a built-in baseline for All organizations (median), which allows you to compare your scores to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
       - question: Why is the analytics data not getting updated?
         answer: |
           Ensure devices are online and have connectivity to required Microsoft endpoints. Verify data collection settings and licensing status. Devices must restart at least once after the policy is applied for data to properly display.
       - question: Why are the device reports incomplete?
         answer: |
           Verify that targeted devices meet the [prerequisites](index.md#prerequisites). In some cases, end-to-end latency can exceed 24 hours if event details aren't uploaded from the client immediately. This delay often occurs with events such as restarts or stop errors when the device doesn't reboot right after the shutdown or error. When this happens, the event details are uploaded at the next available opportunity. The event then appears on the timeline with a timestamp that reflects when the event originally occurred.
+      - question: What should I do if a device is not reporting data?
+        answer: |
+          Check device connectivity, enrollment status, and compliance with system requirements.
+
+  - name: Dashboards and baselines
+    questions:
+      - question: How should the baselines be used?
+        answer: |
+          Baseline scores are shown on charts as triangle markers. There's a built-in baseline for All organizations (median), which allows you to compare your scores to a typical enterprise. You can create new baselines based on your current metrics so you can track progress or view regressions over time.
+      - question: Can I customize analytics dashboards?
+        answer: |
+          Yes, dashboards can be tailored to highlight key metrics and device scopes relevant to your organization.
+
+  - name: Anomaly detection
+    questions:
+      - question: Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?
+        answer: |
+          This is typically due to the volume and usage patterns of devices and apps. The device must be actively used, enrolled in endpoint analytics, and data collection is enabled. In addition, a high volume of events (such as critical errors or app crashes) is usually required before the event is flagged as anomalous.

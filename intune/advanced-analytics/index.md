@@ -7,9 +7,11 @@ ms.topic: concept-article
 
 # Advanced Analytics overview
 
-Microsoft Intune Advanced Analytics delivers deep, actionable insights into the health and performance of your organization's endpoints. Built on the foundation of endpoint analytics, it helps IT teams proactively manage user experience and optimize productivity through data-driven intelligence. By turning raw telemetry into meaningful insights, Advanced Analytics reduces support costs, accelerates problem resolution, and ensures a more reliable technology experience for every user.
+Microsoft Intune Advanced Analytics delivers deep, actionable insights into the health and performance of your organization's endpoints. Built on the foundation of [endpoint analytics](../endpoint-analytics/index.md), it helps IT teams proactively manage user experience and optimize productivity through data-driven intelligence. By turning raw telemetry into meaningful insights, Advanced Analytics reduces support costs, accelerates problem resolution, and ensures a more reliable technology experience for every user.
 
 ## Availble reports and capabilities
+
+Advanced Analytics enhances endpoint analytics with the following reports and capabilities:
 
 :::row:::
 :::column:::
@@ -161,14 +163,14 @@ Before deploying Advanced Analytics, complete these foundational tasks:
 - Define escalation and support procedures for handling analytics findings.
 - Train staff on IT processes you plan to optimize, such as help desk triage, hardware refresh cycles, and app updates. Treat this as a continuous improvement cycle for faster and more proactive issue resolution.
 
-### Next: Integrate Advanced Analytics into your business processes
+### Integrate Advanced Analytics into your business processes
 
 After completing the setup tasks, follow these steps to embed Advanced Analytics into daily operations:
 
 1. **Update support processes** to:
-  - Use [enhanced device timeline](enhanced-device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
-  - Use [device query](device-query.md) to retrieve live device data for troubleshooting.
+   - Use [enhanced device timeline](enhanced-device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
+   - Use [device query](device-query.md) to retrieve live device data for troubleshooting.
 1. **Schedule regular reviews** of:
-  - [Anomaly detection data](anomaly-detection.md) after OS or app updates to catch issues early.
-  - [Battery health data](battery-health.md) to identify devices needing attention for better performance and user experience.
-  - [Resource performance reports](resource-performance.md) to track performance by device, model, and manufacturer—helpful for future purchasing decisions.
+   - [Anomaly detection data](anomaly-detection.md) after OS or app updates to catch issues early.
+   - [Battery health data](battery-health.md) to identify devices needing attention for better performance and user experience.
+   - [Resource performance reports](resource-performance.md) to track performance by device, model, and manufacturer—helpful for future purchasing decisions.
