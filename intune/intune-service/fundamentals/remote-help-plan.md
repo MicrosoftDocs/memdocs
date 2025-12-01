@@ -152,7 +152,7 @@ Remote Help has the following limitations:
 
 Each platform has specific prerequisites and capabilities.
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 - Windows x86, x64, and ARM64
 - Windows 365
@@ -170,14 +170,14 @@ The Intune management extension is required on the sharer's device for the remot
 
 We don't recommend remotely starting a session to users on Azure virtual desktops. For more information, see [How to provide help on an AVD](remote-help-use.md#provide-help-on-an-avd). 
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 - macOS 13 (Ventura)
 - macOS 14 (Sonoma)
 - macOS 15 (Sequoia)
 - macOS 26.0 (from version 1.0.2509231 of Remote Help and later)
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 Remote Help is supported on the following Android Enterprise devices enrolled in dedicated mode:
 
@@ -235,11 +235,11 @@ Remote Help communicates over port 443 (https) and connects to the Remote Assist
 
 If your organization restricts Remote Help to enrolled devices only, there are extra requirements.  
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 The sharer's Windows device must be enrolled into the same tenant where the Remote Help session is starting from.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 1. **Single sign-on (SSO)**. For more information, see [Use Enterprise SSO Plug-in on macOS](../configuration/use-enterprise-sso-plug-in-macos-with-intune.md?tabs=prereq-intune%2Ccreate-profile-intune).
 1. Open and sign in to Company Portal. The user must open and sign into Company Portal for Remote Help to recognize the device is enrolled.
@@ -247,7 +247,7 @@ The sharer's Windows device must be enrolled into the same tenant where the Remo
 > [!NOTE]
 > Company Portal isn't supported on devices enrolled without user affinity. To use Remote Help on these devices, you need to change your tenant settings to set **Remote Help to unenrolled devices** to **Allowed**.
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 Remote Help doesn't support unenrolled devices on Android.
 
@@ -261,7 +261,7 @@ The web app has the same requirements as the platform of the sharer.
 
 Remote Help with chat *on* is supported in the following languages:
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 - Arabic
 - Bulgarian
@@ -298,7 +298,7 @@ Remote Help with chat *on* is supported in the following languages:
 - Turkish
 - Ukrainian
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 - Arabic
 - Bulgarian
@@ -335,7 +335,7 @@ Remote Help with chat *on* is supported in the following languages:
 - Turkish
 - Ukrainian
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 The Remote Help app for Android uses the language set on the device. The Remote Help app for Android supports all languages that are supported by Android.
 

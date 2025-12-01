@@ -1,7 +1,7 @@
 ---
 title: App Protection Policies Overview
 description: Learn how Microsoft Intune app protection policies help protect your company data and prevent data loss.
-ms.date: 09/29/2025
+ms.date: 11/18/2025
 ms.topic: overview
 ms.reviewer: beflamm
 ms.custom: intune-azure, get-started
@@ -281,7 +281,7 @@ Since the PIN is shared among apps with the same publisher, if the wipe goes to 
 If you observe the PIN being wiped on some devices, the following behavior is likely happening: Since the PIN is tied to an identity, if the user signs in with a different account after a wipe, they're prompted to enter a new PIN. However, if they sign in with a previously existing account, a PIN stored in the keychain can be used to sign in.
 
 **Setting a PIN twice on apps from the same publisher?**<br>
-MAM (on iOS/iPadOS) currently allows application level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (that is, WXP, Outlook, Managed Browser, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios-phase1.md). Without this, the passcode settings aren't properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
+MAM (on iOS/iPadOS) currently allows application level PIN with alphanumeric and special characters (called 'passcode') which requires the participation of applications (that is, WXP, Outlook, Viva Engage) to integrate the [Intune SDK for iOS](../developer/app-sdk-ios-phase1.md). Without this, the passcode settings aren't properly enforced for the targeted applications. This was a feature released in the Intune SDK for iOS v. 7.1.12.
 
 To support this feature and ensure backward compatibility with previous versions of the Intune SDK for iOS/iPadOS, all PINs (either numeric or passcode) in 7.1.12+ are handled separately from the numeric PIN in previous versions of the SDK. Another change was introduced in the Intune SDK for iOS v 14.6.0 that causes all PINs in 14.6.0+ to be handled separately from any PINs in previous versions of the SDK.
 
@@ -341,7 +341,7 @@ If the user is using the app when selective wipe is initiated, the [Intune SDK](
 Intune app protection depends on the identity of the user to be consistent between the application and the [Intune SDK](../developer/app-sdk.md). The only way to guarantee that is through modern authentication. There are scenarios in which apps might work with an on-premises configuration, but they're not consistent or guaranteed.
 
 **Secure way to open web links from managed apps**<br>
-The IT administrator can deploy and set app protection policy for [Microsoft Edge](manage-microsoft-edge.md), a web browser that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using a managed browser.
+The IT administrator can deploy and set app protection policy for [Microsoft Edge](manage-microsoft-edge.md), a web browser that can be managed easily with Intune. The IT administrator can require all web links in Intune-managed apps to be opened using Microsoft Edge.
 
 ## App protection experience for iOS devices
 
@@ -349,7 +349,7 @@ The IT administrator can deploy and set app protection policy for [Microsoft Edg
 
 Intune app protection policies allow control over app access to only the Intune licensed user. One of the ways to control access to the app is to require either Apple's Touch ID or Face ID on supported devices. Intune implements a behavior where if there's any change to the device's biometric database, Intune prompts the user for a PIN when the next inactivity timeout value is met. Changes to biometric data include the addition or removal of a fingerprint, or face. If the Intune user doesn't have a PIN set, they're led to set up an Intune PIN.
 
-The intent of this process is to continue keeping your organization's data within the app secure and protected at the app level. This feature is only available for iOS/iPadOS, and requires the participation of applications that integrate the Intune SDK for iOS/iPadOS, version 9.0.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, Managed Browser, and Viva Engage.
+The intent of this process is to continue keeping your organization's data within the app secure and protected at the app level. This feature is only available for iOS/iPadOS, and requires the participation of applications that integrate the Intune SDK for iOS/iPadOS, version 9.0.1 or later. Integration of the SDK is necessary so that the behavior can be enforced on the targeted applications. This integration happens on a rolling basis and is dependent on the specific application teams. Some apps that participate include WXP, Outlook, and Viva Engage.
 
 ### iOS share extension
 

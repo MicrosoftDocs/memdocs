@@ -26,7 +26,7 @@ The use of Remote Help depends on whether you're requesting help or providing he
 
 To get help, you must reach out to your support staff to request assistance. You can reach out by way of call, chat, or email, and you're the sharer during the session.  
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 > [!TIP]
 > The Remote Help app needs to be installed on your device. If Remote Help isn't installed, you can install Remote Help yourself by following the download instructions in the [Install and update Remote Help](remote-help-deploy.md#install-remote-help-apps) section.  
@@ -52,7 +52,7 @@ To get help, you must reach out to your support staff to request assistance. You
 
 - Both the sharer and helper can end the session. To end the session, select **Leave** in the upper-right corner of the Remote Help app. 
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 This section covers the steps for using the macOS native app to request Remote Help.
 
@@ -99,7 +99,7 @@ To request help, you must reach out to your support staff to request assistance,
 > [!NOTE]
 > If Remote Help wasn't installed by your administrator, you can install Remote Help yourself by following the download instructions in the [Install Remote Help apps](remote-help-deploy.md#install-remote-help-apps) section.
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 **Starting the session:**
 On your device, you see a prompt showing a request to grant screen share or control of the device with the helpers information, including their full name and company.
