@@ -163,6 +163,17 @@ Before deploying Advanced Analytics, complete these foundational tasks:
 - Define escalation and support procedures for handling analytics findings.
 - Train staff on IT processes you plan to optimize, such as help desk triage, hardware refresh cycles, and app updates. Treat this as a continuous improvement cycle for faster and more proactive issue resolution.
 
+### Enable Advanced Analytics
+
+When license requirements are met, then Advanced Analytics capabilities are automatically enabled in your tenant.
+
+>[!NOTE]
+> It might take up to 48 hours after you buy licenses or start a trial to see Advanced Analytics features in your tenant.
+
+For the extra reports and capabilities on Windows devices:
+- Devices must to be enrolled into Intune and onboarded to endpoint analytics
+- Device query for multiple devices requires a properties catalog policy to be configured and deployed to Windows devices.
+
 ### Integrate Advanced Analytics into your business processes
 
 After completing the setup tasks, follow these steps to embed Advanced Analytics into daily operations:
