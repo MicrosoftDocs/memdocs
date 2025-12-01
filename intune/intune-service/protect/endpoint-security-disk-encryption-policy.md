@@ -72,4 +72,4 @@ After you deploy policy to encrypt a device disk, see the following articles for
 ## Next steps
 
 - [To create a macOS encryption profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
-- [To create a Windows encryption profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-windows)
+- [To create a Windows encryption profile](../protect/encrypt-devices.md#create-endpoint-security-policy)
