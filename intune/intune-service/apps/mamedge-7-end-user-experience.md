@@ -48,11 +48,15 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
     > The sign-in experience varies by organization. Completing the sign-in process is required to add your work profile to Microsoft Edge.
 
     > [!NOTE]
-    > A user experience update and admin property for controlling automatic MDM enrollment is rolling out in late 2025. This setting determines whether users on Entra ID–registered devices are prompted to MDM-enroll during the “Add your work or school account” flow. To control this behavior, configure the **Disable MDM enrollment when adding a work or school account** setting. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).
+    > A user experience update and admin property for controlling automatic MDM enrollment is rolling out in late 2025. This setting determines whether users on Entra ID–registered devices are prompted to MDM-enroll during the [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506) flow. To control this behavior, configure the **Disable MDM enrollment when adding a work or school account** setting. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).
 
 7. Select **Yes** to sign in and register the device. Do not select **No, sign in to the app only**, as this prevents enrollment and MAM from being applied to the browser.
 
-8. Wait until you see the message, **You're all set!** Then, select **Done.**
+:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png" alt-text="Prompt asking whether to sign in to all apps, websites, and services on the device, with options for Yes or No, this app only." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png":::
+
+8. If your organization does not opt to use the new property in public preview to manage the MDM option display, select **No**. Selecting Yes will enroll your device into Intune and will not enable MAM.
+
+:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business23a.png" alt-text="Prompt asking whether to allow your organization to manage the device, with options for Yes or No." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business23a.png":::
 
 9. Confirm that you're signed in by selecting the user icon again.
 
