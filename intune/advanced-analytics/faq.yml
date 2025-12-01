@@ -41,7 +41,7 @@ sections:
   
   - name: Feature comparison and licensing
     questions:
-      - question: What is the difference between endpoint analytics and Advanced Analytics?
+      - question: What's the difference between endpoint analytics and Advanced Analytics?
         answer: |
           Advanced Analytics builds on endpoint analytics by offering deeper insights, advanced reporting, and enhanced anomaly detection capabilities.
       - question: Do I need additional licensing for Advanced Analytics?
