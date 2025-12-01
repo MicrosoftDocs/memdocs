@@ -1,7 +1,7 @@
 ---
 title: Advanced Analytics overview
 description: Discover what Microsoft Intune Advanced Analytics is, how it extends endpoint analytics with advanced device insights, proactive troubleshooting, and enhanced reporting.
-ms.date: 10/09/2025
+ms.date: 12/01/2025
 ms.topic: concept-article
 ---
 
@@ -155,20 +155,20 @@ This section details **additional prerequisites** specific to Advanced Analytics
 
 ## Get started with Advanced Analytics
 
-For a successful deployment of Advanced Analytics, the following activities are recommended:
+Before deploying Advanced Analytics, complete these foundational tasks:
 
-- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand the full list of data captured.
-- Establish escalation and support procedures for analytics findings.
-- Review and train staff on IT processes you aim to optimize with the implementation of Advanced Analytics. Examples include help desk triage, hardware refresh cycles and application updates. Think of this as a continuous improvement cycle, with faster issue resolution and proactive issue resolution.
+- Assess your organization's privacy and compliance requirements for device data. Review the Intune [data platform schema](data-platform-schema.md) to understand which data is captured.
+- Define escalation and support procedures for handling analytics findings.
+- Train staff on IT processes you plan to optimize, such as help desk triage, hardware refresh cycles, and app updates. Treat this as a continuous improvement cycle for faster and more proactive issue resolution.
 
-### Integrate Advanced Analytics into your business
+### Next: Integrate Advanced Analytics into your business processes
 
-1. Update role based access control for custom roles to include new permissions such as **Managed Devices** > **Query** for [Device Query](device-query.md). For more information, see [Role-based access control](../intune-service/fundamentals/role-based-access-control.md)
-1. Update support processes to:
-    1. Use [device timeline](enhanced-device-timeline.md) to review if there's a specific pattern, such as a device restart or update tied to the anomaly.
-    1. Use [device query](device-query.md) retrieve live information from a device to aid troubleshooting.
+After completing the setup tasks, follow these steps to embed Advanced Analytics into daily operations:
 
-1. Implement processes to periodically review:
-    1. [Anomaly Detection Data](anomaly-detection.md). For example, after application or operating system updates are applied to proactively identify issues.
-    1. [Battery health data](battery-health.md) to identify devices that may need attention to ensure long battery life and good user experience.
-    1. [Resource performance reports](resource-performance-report.md) to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+1. **Update support processes** to:
+  - Use [enhanced device timeline](enhanced-device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
+  - Use [device query](device-query.md) to retrieve live device data for troubleshooting.
+1. **Schedule regular reviews** of:
+  - [Anomaly detection data](anomaly-detection.md) after OS or app updates to catch issues early.
+  - [Battery health data](battery-health.md) to identify devices needing attention for better performance and user experience.
+  - [Resource performance reports](resource-performance.md) to track performance by device, model, and manufacturer—helpful for future purchasing decisions.

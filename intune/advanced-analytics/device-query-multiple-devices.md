@@ -1,7 +1,7 @@
 ---
 title: Device Query for Multiple Devices in Advanced Analytics
 description: Use device query for multiple devices in Microsoft Intune to run Kusto Query Language (KQL) queries, analyze device inventory, and gain cross-platform insights.
-ms.date: 10/09/2025
+ms.date: 12/01/2025
 ms.topic: how-to
 ---
 

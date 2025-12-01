@@ -1,7 +1,7 @@
 ---
 title: Anomaly Detection Report in Advanced Analytics
 description: Learn how anomaly detection in Microsoft Intune endpoint analytics proactively monitors device health, detects issues, and provides actionable insights for IT admins.
-ms.date: 10/09/2025
+ms.date: 12/01/2025
 ms.topic: concept-article
 ---
 
