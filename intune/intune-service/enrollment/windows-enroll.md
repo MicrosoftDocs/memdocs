@@ -69,7 +69,7 @@ You must have:
    
    This setting is turned off by default. If you're enforcing Windows MAM for your work or school accounts, enable this setting. This setting applies to:  
     - Users in the **Some** or **All** category in the MDM auto-enrollment configuration.  
-    - Entra registered and workplace joined devices.  
+    - Users on Entra registered and workplace joined devices.  
     - Users who add their account for the first time via Microsoft Edge or a native app such as Teams.
    
    This setting doesn't apply to users adding their account through the Settings flow.   
