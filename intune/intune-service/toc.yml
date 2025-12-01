@@ -189,7 +189,7 @@ items:
       - name: Troubleshooting Remote Help
         href: ./fundamentals/remote-help-troubleshoot-monitor.md
     - name: Advanced Analytics
-      href: ../advanced-analytics/toc.yml
+      href: /intune/advanced-analytics
 
   - name: Plan and prepare for Intune
     items:
