@@ -3,7 +3,7 @@ title: CMG hierarchy design
 titleSuffix: Configuration Manager
 description: Design how to use a cloud management gateway (CMG) in your Configuration Manager hierarchy.
 ms.date: 03/11/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 author: LauraWi

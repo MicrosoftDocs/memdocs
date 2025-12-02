@@ -3,7 +3,7 @@ title: Supported configurations for CMG
 titleSuffix: Configuration Manager
 description: A list of the features and configurations that the Configuration Manager cloud management gateway supports.
 ms.date: 07/12/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
 author: LauraWi

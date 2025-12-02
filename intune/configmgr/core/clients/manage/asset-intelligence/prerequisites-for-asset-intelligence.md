@@ -7,7 +7,7 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 author: sheetg09
-ms.author: sheetg
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.reviewer: mstewart
