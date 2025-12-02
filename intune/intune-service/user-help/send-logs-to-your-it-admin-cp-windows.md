@@ -30,6 +30,14 @@ Complete the following steps to upload Company Portal app logs.
 
 1. Follow up with your support person as needed.
 
+### Collect logs manually
+
+
+Alternatively, complete the following steps to download Company Portal app logs manually.
+
+1. Navigate to the following path using **File Explorer**: **%localappdata%\Packages\Microsoft.CompanyPortal_8wekyb3d8bbwe\LocalState**. The **%localappdata%** variable resolves to your local application data folder. By default, this corresponds to **C:\Users\<UserName>\AppData\Local Replace <UserName>** where **UserName** is the account name of the signed-in user. 
+2. Application logs are stored in files following the pattern **Log_<n>.log**. Attach these logs to the support ticket.
+
 ## Report problem to Microsoft
 
 Complete the following steps to report a problem directly to Microsoft in the Feedback Hub app. Microsoft doesn't respond to this type of report but uses it to improve upon the products. You can include screenshots and diagnostic details, but the report should remain anonymous, so don't include information like name, email address, or phone number.
