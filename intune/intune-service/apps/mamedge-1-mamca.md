@@ -126,7 +126,6 @@ Level 3 enforces the strictest access posture by allowing only managed, complian
         - **Require app protection policy**  
         - **Require device to be marked as compliant**  
         - **Require password change** (for risky sign-ins)  
-        - **Require approved client app**  
     - **Session:**  
         - **Use Conditional Access App Control** > **Monitor and block downloads**  
         - **Sign-in frequency:** Set to **Every 1 hour**  
