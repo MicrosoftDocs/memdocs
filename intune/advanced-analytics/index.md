@@ -54,7 +54,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 
 :::row:::
 :::column:::  
-#### :::image type="icon" source="../media/icons/32/query.svg" Device query
+#### :::image type="icon" source="../media/icons/24/query.svg" Device query
 
 > Get near-real time access to data about the state and configuration of Windows devices.
 > 
@@ -62,7 +62,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 > > [Learn more](device-query.md)
 :::column-end:::
 :::column:::
-#### :::image type="icon" source="../media/icons/32/query.svg" Device query for multiple devices
+#### :::image type="icon" source="../media/icons/24/query.svg" Device query for multiple devices
 
 > View collected inventory data across multiple devices and platforms.
 > 
