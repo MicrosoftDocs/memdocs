@@ -35,12 +35,12 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::row:::
 
 :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Enhanced device timeline report
+#### :::image type="icon" source="../media/icons/24/report.svg"::: Device timeline report
 
 > Includes more events and lower data latency to assist with troubleshooting device issues.
 > 
 > > [!div class="nextstepaction"]
-> > [Learn more](enhanced-device-timeline.md)
+> > [Learn more](device-timeline.md)
 :::column-end:::
 :::column:::  
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Resource performance report
@@ -168,7 +168,7 @@ Advanced Analytics is built into Microsoft Intune and appears in the **Reports**
   - [Device scopes](device-scopes.md)
 - Single device views are extended with:
   - [Battery health report](battery-health.md)
-  - [Device timeline report](enhanced-device-timeline.md)
+  - [Device timeline report](device-timeline.md)
   - [Resource performance report](resource-performance.md)
   - [Device query](device-query.md)
 - Additional capabilities:
@@ -179,7 +179,7 @@ Advanced Analytics is built into Microsoft Intune and appears in the **Reports**
 After completing the setup tasks, follow these steps to embed Advanced Analytics into daily operations:
 
 1. **Update support processes** to:
-   - Use [enhanced device timeline](enhanced-device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
+   - Use the [device timeline](device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
    - Use [device query](device-query.md) to retrieve live device data for troubleshooting.
 1. **Schedule regular reviews** of:
    - [Anomaly detection data](anomaly-detection.md) after OS or app updates to catch issues early.

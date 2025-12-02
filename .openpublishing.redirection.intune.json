@@ -97,7 +97,7 @@
     },
     {
       "source_path": "intune/analytics/enhanced-device-timeline.md",
-      "redirect_url": "/intune/advanced-analytics/enhanced-device-timeline",
+      "redirect_url": "/intune/advanced-analytics/device-timeline",
       "redirect_document_id": false
     },
     {

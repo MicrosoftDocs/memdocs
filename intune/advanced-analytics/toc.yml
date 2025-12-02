@@ -10,8 +10,8 @@ items:
   - name: Battery health report
     href: battery-health.md
     displayName: Advanced Analytics
-  - name: Enhanced device timeline report
-    href: enhanced-device-timeline.md
+  - name: Device timeline report
+    href: device-timeline.md
     displayName: Advanced Analytics
   - name: Resource performance report
     href: resource-performance.md

@@ -136,7 +136,7 @@ The device-level details page includes the CPU and RAM spike-time history over t
 
 - IT administrators should periodically review the resource performance dashboard, to investigate poor performing devices from CPU or RAM spikes.
 - Identify cohorts of devices, either hardware type, or by groups of users, with poor performance.
-- Investigate performance issues and resolutions before users report persistent problems. Use the Enhanced Device Timeline and Device Query capabilities to find the root cause of issues.
+- Investigate performance issues and resolutions before users report persistent problems. Use the Device Timeline and Device Query capabilities to find the root cause of issues.
 - Leverage performance data to optimize hardware replacement costs, extending the life of devices with no performance problem, or replacing underperforming devices sooner for improved user experience.
 
 <!-- admin center links -->

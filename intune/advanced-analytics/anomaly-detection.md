@@ -68,7 +68,7 @@ Investigate flagged device correlation groups using the device timeline and reso
 - Periodically review the anomaly detection dashboard to understand the current baseline and prioritize investigations and resolutions for new issues.
 - Investigate new reported issues to identify common factors, such as device hardware, as shown in advanced analytics.
 - Prioritize anomalies to investigate based on severity and internal knowledge, such as application criticality.
-- Use the [enhanced device timeline](enhanced-device-timeline.md) to check for patterns, such as device restarts or updates tied to anomalies.
+- Use the [device timeline](device-timeline.md) report to check for patterns, such as device restarts or updates tied to anomalies.
 - Work with IT teams to identify other factors, such as recent application updates, that could impact anomalies.
 - Review possible remediation actions noted in the anomaly report (for example, driver or application updates).
 - Integrate resolutions into L1/L2 support to keep teams aware of current known issues. Consider working with your ITSM team to record known anomalies under investigation.

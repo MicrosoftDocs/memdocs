@@ -4362,7 +4362,7 @@ For more information, see [Anomaly detection in Endpoint analytics](../../advanc
 #### Improved user experience for device timeline in Endpoint Analytics<!-- 24604944 -->
 The user interface (UI) for device timeline in Endpoint analytics is improved and includes more advanced capabilities (support for sorting, searching, filtering, and exports). When viewing a specific device timeline in Endpoint analytics, you can search by event name or details. You can also filter the events and choose the source and level of events that appear on the device timeline and select a time range of interest.
 
-For more information, see [Enhanced device timeline](../../advanced-analytics/enhanced-device-timeline.md).
+For more information, see [Device timeline](../../advanced-analytics/device-timeline.md).
 
 #### Updates for compliance policies and reports<!--15425771  -->
 We've made several improvements to the Intune compliance policies and reports. With these changes, the reports more closely align to the experience in use for device configuration profiles and reports. We've updated our [compliance report documentation](../protect/compliance-policy-monitor.md) to reflect the available compliance report improvements.
