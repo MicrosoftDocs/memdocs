@@ -7,34 +7,37 @@ ms.topic: concept-article
 
 # Resource performance report
 
-The resource performance report provides visibility into the performance of processors and RAM in cloud-managed Windows devices and its influence on user experience. The score helps you identify emerging hardware issues that might be impacting user productivity so you can proactively make improvements before users generate support tickets.
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-The insights show not only how much your score can improve by upgrading the CPU or RAM in affected devices, but also help you identify resources for replacement before warranties expire.
+The resource performance report gives you a clear view of processor and memory performance on Windows devices and how these factors affect user experience. By tracking the performance score, you can spot emerging hardware issues that may reduce productivity and take proactive steps before support tickets occur.
 
-## License requirements
+The report also provides actionable insights—showing how much your score could improve by upgrading CPU or RAM and helping you identify devices for replacement before warranties expire.
 
-With a Windows 365 license, you get access to this report for the Cloud PCs in your organization.
+## Before you begin
 
-The resource performance report is available for:
-- Windows 365 Cloud PCs and;
-- Other supported Windows devices with users licensed by Intune Advanced Analytics
+Make sure you meet the [requirements](index.md#prerequisites) before using the resource performance report.
 
-## Resource performance report
+Additional prerequisites for device query:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Report** > **Endpoint analytics** > **Resource performance**.
-1. The Resource performance report page shows a **Resource performance score** tab, **Device performance** tab, and a **Model performance** tab. For more information on each of the tabs, see [Reporting Tabs](#reporting-tabs).
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+> Windows
+> Windows 365 Cloud PCs - With a Windows 365 license, you get access to the resource performance report for the Cloud PCs in your organization.
+:::column-end:::
+:::row-end:::
+
+## Review the resource performance report
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Resource performance**.
+1. The Resource performance report is divided in multiple tabs. Select the following tabs to learn more about them:
+
+# [**Resource performance score**](#tab/resource-performance)
 
 :::image type="content" source="images/resource-perf-report/report-home.png" lightbox="images/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
-
-Best practices:
-
-- IT administrators should periodically review the resource performance dashboard, to investigate poor performing devices from CPU or RAM spikes.
-- Identify cohorts of devices, either hardware type, or by groups of users, with poor performance.
-- Investigate performance issues and resolutions before users report persistent problems. Use the Enhanced Device Timeline and Device Query capabilities to find the root cause of issues.
-- Leverage performance data to optimize hardware replacement costs, extending the life of devices with no performance problem, or replacing underperforming devices sooner for improved user experience.
-
-## Resource performance score
 
 The Resource performance score provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization's Windows physical devices and Cloud PCs.
 
@@ -95,22 +98,15 @@ These Windows 365 Cloud PCs experience higher CPU or RAM spike % than the rest o
 
 These insights provide visibility into Cloud PCs that aren't supporting your user's goals. Upgrading these devices to a higher configuration of Cloud PCs will improve the user experience.
 
-## Reporting tabs
-
-The Resource performance page has reporting tabs that provide support for insights.
-
-The tabs are:
-
-- Device performance
-- Model performance
-
-### Device performance tab
+# [**Device performance**](#tab/device-performance)
 
 This tab provides CPU and RAM performance metrics and scores for all your Windows physical and Cloud PC devices. You can sort by a particular metric (for example, CPU spike time %) to see which devices have the worst scores for that metric to help with troubleshooting. You can filter the list of devices based on a range of a particular metric (for example, devices with RAM spike time score between 0 and 40). You can also search for a device by name.
 
-### Model performance tab
+# [**Model performance**](#tab/model-performance)
 
 This tab lets you see the CPU and RAM performance metrics and scores by device model, which can help you identify whether problems are isolated to particular models.
+
+---
 
 ## Device-level details
 
@@ -135,3 +131,14 @@ The device-level details page includes the CPU and RAM spike-time history over t
 
 - Some columns such as `ResourcePerfScore` and `TotalRamInMB` in the generated .csv file have data type *double* whereas the corresponding columns **Resource performance score** and **RAM** in the report have data type *int*.
 - Column `MachineType` in the generated .csv file can take values `Physical`, `CPC`, and `Others` whereas the corresponding column **Device Type** in the report takes values *physical*, *virtual*, and *unknown* respectively.
+
+## Best practices
+
+- IT administrators should periodically review the resource performance dashboard, to investigate poor performing devices from CPU or RAM spikes.
+- Identify cohorts of devices, either hardware type, or by groups of users, with poor performance.
+- Investigate performance issues and resolutions before users report persistent problems. Use the Enhanced Device Timeline and Device Query capabilities to find the root cause of issues.
+- Leverage performance data to optimize hardware replacement costs, extending the life of devices with no performance problem, or replacing underperforming devices sooner for improved user experience.
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

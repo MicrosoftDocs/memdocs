@@ -28,7 +28,7 @@ Make sure you meet the [requirements](index.md#prerequisites) before using the b
 ## Review the battery health report
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Battery health**.
-1. The Battery health report page is divided in multiple tabs. Select the following tabs to learn more about them:
+1. The Battery health report is divided in multiple tabs. Select the following tabs to learn more about them:
 
 # [**Overview**](#tab/overview)
 

@@ -88,6 +88,4 @@ The analytical model detects device cohorts facing anomalous sets of Stop Error 
 
 <!--links-->
 
-<!-- admin center links -->
-
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

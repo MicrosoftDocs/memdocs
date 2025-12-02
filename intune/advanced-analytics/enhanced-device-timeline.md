@@ -44,3 +44,7 @@ In some cases, events may take longer to appear if details can't upload immediat
 
 - If your tenant uses Advanced Analytics, the enhanced **Device timeline** tab replaces the **Application reliability** tab in device drill-down views. Unlike the timeline, the **Application reliability** tab includes the *application reliability score* for the selected device. To view this score, go to the **Device performance** tab and search for the device.
 - The enhanced device timeline is available only for Intune-managed devices (including co-managed). It isn't available for Configuration Manager-only devices in tenants with Advanced Analytics enabled.
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
