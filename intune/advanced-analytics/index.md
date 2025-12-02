@@ -14,13 +14,13 @@ Microsoft Intune Advanced Analytics delivers deep, actionable insights into the 
 Advanced Analytics enhances endpoint analytics with the following reports and capabilities:
 
 :::row:::
-:::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Anomaly detection report
+:::column:::  
+#### :::image type="icon" source="../media/icons/24/report.svg"::: Resource performance report
 
-> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
 > 
 > > [!div class="nextstepaction"]
-> > [Learn more](anomaly-detection.md)
+> > [Learn more](resource-performance.md)
 :::column-end:::
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Battery health report
@@ -33,7 +33,14 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::row-end:::
 
 :::row:::
+:::column:::
+#### :::image type="icon" source="../media/icons/24/report.svg"::: Anomaly detection report
 
+> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
+> 
+> > [!div class="nextstepaction"]
+> > [Learn more](anomaly-detection.md)
+:::column-end:::
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Device timeline report
 
@@ -42,14 +49,8 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 > > [!div class="nextstepaction"]
 > > [Learn more](device-timeline.md)
 :::column-end:::
-:::column:::  
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Resource performance report
 
-> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](resource-performance.md)
-:::column-end:::
+
 :::row-end:::
 
 :::row:::

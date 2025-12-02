@@ -32,16 +32,11 @@ Additional prerequisites for device query:
 
 ## Review the resource performance report
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Resource performance**.
-1. The Resource performance report is divided in multiple tabs. Select the following tabs to learn more about them:
-
-# [**Resource performance score**](#tab/resource-performance)
+In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Resource performance**.
 
 :::image type="content" source="images/resource-perf-report/report-home.png" lightbox="images/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
 
-The Resource performance score provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization's Windows physical devices and Cloud PCs.
-
-This score is a weighted average of CPU spike time score and RAM Spike time score.
+The **Resource performance score** provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization's Windows devices and Cloud PCs. This score is a weighted average of CPU spike time score and RAM spike time score.
 
 This score helps identify device resources that need to be replaced to improve user experience and boost productivity.
 
@@ -53,7 +48,7 @@ The CPU spike time score (from 0 to 100) is assigned based on the device's usage
 
 Usage over 50% is considered a spike.
 
-- To improve the performance of CPU in Windows physical devices, you could upgrade the processors by increasing the number of cores or the clock speed, optimize the operating system or adjust power settings.
+- To improve the performance of CPU in Windows devices, you could upgrade the processors by increasing the number of cores or the clock speed, optimize the operating system or adjust power settings.
 - To improve the performance of CPU in Cloud PCs, you could upgrade to a higher configuration of Cloud PCs.
 
 ### RAM spike time score
@@ -69,9 +64,9 @@ The RAM spike time score (from 0 to 100) is assigned based on the device's usage
 
 **Insights and recommendations** suggest actions that you can take to improve your scores.
 
-## Insights and recommendations
+### Insights and recommendations
 
-The Resource performance page provides a prioritized list of insights and recommendations, described in this section:
+The **Resource performance page** provides a prioritized list of insights and recommendations, described in this section:
 
 ### High CPU usage in physical devices
 
@@ -98,15 +93,15 @@ These Windows 365 Cloud PCs experience higher CPU or RAM spike % than the rest o
 
 These insights provide visibility into Cloud PCs that aren't supporting your user's goals. Upgrading these devices to a higher configuration of Cloud PCs will improve the user experience.
 
-# [**Device performance**](#tab/device-performance)
+## Report tabs
 
-This tab provides CPU and RAM performance metrics and scores for all your Windows physical and Cloud PC devices. You can sort by a particular metric (for example, CPU spike time %) to see which devices have the worst scores for that metric to help with troubleshooting. You can filter the list of devices based on a range of a particular metric (for example, devices with RAM spike time score between 0 and 40). You can also search for a device by name.
+The resource performance report includes the following tabs:
 
-# [**Model performance**](#tab/model-performance)
-
-This tab lets you see the CPU and RAM performance metrics and scores by device model, which can help you identify whether problems are isolated to particular models.
-
----
+- **Device performance**: Shows CPU and RAM performance metrics and scores for all Windows physical devices and Cloud PCs.
+  - Sort by a specific metric (for example, CPU spike time %) to identify devices with the lowest scores.
+  - Filter devices by a metric range (for example, RAM spike time score between 0 and 40).
+  Search for a device by name.
+- **Model performance**: Displays CPU and RAM performance metrics and scores by device model. Use this view to determine if issues are isolated to specific models.
 
 ## Device-level details
 
