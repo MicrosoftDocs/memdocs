@@ -25,18 +25,13 @@ The battery health report can be used to:
 
 Make sure you meet the [requirements](index.md#prerequisites) before using the battery health report.
 
-## Review the battery health report
+## Review the report
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Battery health**.
-1. The Battery health report is divided in multiple tabs. Select the following tabs to learn more about them:
-
-# [**Overview**](#tab/overview)
+In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Battery health**.
 
 :::image type="content" source="images/battery-health/battery-health.png" lightbox="images/battery-health/battery-health.png" alt-text="Screenshot of the Battery Health tab in Advanced analytics.":::
 
-### Battery Health Score
-
-The battery health score gives an overview of laptop battery health. It's calculated as a weighted average of your organization's battery capacity score and battery runtime score, helping you identify batteries that need replacement.
+The **Battery health score** provides an overview of laptop battery health. It's calculated as a weighted average of your organization's battery capacity score and battery runtime score, helping you identify batteries that need replacement.
 
 The maximum capacity of a battery is the ratio of its full charge capacity against its design capacity. The full charge capacity shows the Watt-hours the battery can hold on a full charge now, while the design capacity shows the Watt-hours the battery could hold when it was new. For example, a maximum capacity of 50% on a battery with design capacity of 70 Watt-hours means that the battery now holds only 35 watt-hours on a full charge.
 
@@ -48,45 +43,46 @@ The *estimated device runtime* is an estimate of the amount of time a device run
 
 ### Insights and recommendations
 
-The Battery health page provides a prioritized list of Insights and recommendations, described in this section:
+The Battery health page provides a prioritized list of Insights and recommendations, which are described in this section:
 
-**Low battery capacity**: These devices have batteries that hold less charge compared to what they were designed to hold. Devices with battery capacities below 60% are considered most impacted whereas devices with battery capacities between 60-80% are considered moderately impacted. The insights might contain one of these conditions independently or in combination with low runtimes.
+#### Low battery capacity
+
+These devices have batteries that hold less charge compared to what they were designed to hold. Devices with battery capacities below 60% are considered most impacted whereas devices with battery capacities between 60-80% are considered moderately impacted. The insights might contain one of these conditions independently or in combination with low runtimes.
 
 For example, some devices might have batteries with below 60% capacity but still provide reasonable runtimes because their design capacities are high. Whereas other devices might have batteries with below 60% capacity and less than 3 hours of runtime, in which case they're a part of insights that highlight both gaps together.
 
-**Low estimated runtime**: These devices result in poor user experience as they must be plugged in frequently. Devices with battery estimated runtimes below 3 hours are considered most impacted. Low runtimes are typically reported in combination with battery capacities.
+#### Low estimated runtime
+
+These devices result in poor user experience as they must be plugged in frequently. Devices with battery estimated runtimes below 3 hours are considered most impacted. Low runtimes are typically reported in combination with battery capacities.
 
 Devices with less than 3 hours of runtime usually have poor maximum capacities and are included in insights that highlight both issues together. The exception is seen in the following scenario where even with high capacities, the batteries drain quickly because of power hungry apps. Either by design or because of poor energy usage efficiency.
 
-**Good battery capacity but poor runtime**: Estimated runtimes might be low despite batteries having good maximum capacities. Low runtime is possible in two scenarios:
+#### Good battery capacity but poor runtime
+
+Estimated runtimes might be low despite batteries having good maximum capacities. Low runtime is possible in two scenarios:
 
 1. The device is running apps that drain the battery quickly. Users run applications that consume high power or inefficiently use power and need upgrading or replacing. Battery-powered devices can use the [battery saver Windows](/windows-hardware/design/component-guidelines/battery-saver) feature to ensure that both user productivity and experience are protected.
 1. The device has a battery that is designed to hold low charge. Procurement teams drive this decision.
 
 Insights for this scenario highlight the devices for which the **App Impact** tab might provide more visibility into whether the user needs to use power hungry apps or whether the app's battery usage is unusually high due to inefficiency.
 
-# [**Device performance**](#tab/dev-perf)
+## Report tabs
 
-This tab provides battery health metrics and a score for all your battery-powered devices. You can sort by a particular metric (for example, **Max capacity**) to see which battery-powered devices have the worst scores for that metric to help with troubleshooting. You can also search for a battery-powered device by name. If you select a battery-powered device, you can see its runtime trend, its score vis-à-vis the model's average score in the organization, and the top apps that consumed its battery in the last 14 days. These details can help you identify any corrective actions needed to improve the user experience.
+The battery health report includes these tabs:
 
-The cycle count is the number of times the battery discharges 100% of its capacity, but not necessarily at one time. For example, if a battery discharges 50% of its capacity on day 1, 30% on day 2, and 20% on day 3, then its cycle count goes up by 1 after these three days.
-
-# [**Model performance**](#tab/model-perf)
-
-This tab shows battery health metrics and scores by device models, helping you identify if problems are specific to certain models.
-
-# [**OS performance**](#tab/os-perf)
-
-This tab lets you see the battery health metrics and scores by operating system versions, which can help you identify whether problems are isolated to particular OS versions.
-
-# [**App impact**](#tab/app-impact)
-
-This tab lets you see the organization's cumulative battery usage per app in the last 14 days. You can see the number of battery-powered devices for which the associated battery usage of an app and the percentage of the cumulative battery charge that the app consumed is recorded. This information helps to troubleshoot apps that might be consuming an inordinate amount of battery.
+- **Device performance**: Shows battery health metrics and a score for all battery-powered devices.
+  - Sort by a metric (for example, Max capacity) to identify devices with the lowest scores.
+  - Search for a device by name.
+  - Select a device to view its runtime trend, compare its score to the model's average in your organization, and see the top apps that consumed its battery in the last 14 days.
+  - Review the cycle count, which tracks how many times the battery discharges 100% of its capacity (not necessarily in one session). For example, if a battery discharges 50% on day 1, 30% on day 2, and 20% on day 3, the cycle count increases by 1.
+- **Model performance**: Displays battery health metrics and scores by device model to help identify issues specific to certain models.
+- **OS performance**: Shows battery health metrics and scores by operating system version, helping you determine if problems are tied to specific OS versions.
+- **App impact**: Summarizes cumulative battery usage per app over the last 14 days.
+  - View the number of devices affected and the percentage of total battery charge consumed by each app.
+  - Use this information to troubleshoot apps that may be draining battery excessively.
 
 > [!NOTE]
 > The battery power used by an app varies by the activity that a user engages in. For example, using Microsoft Teams for chatting vs in an audio/video call with screen share results in different battery drains. The data in the *App impact* tab accounts for all activity using an app.
-
----
 
 ## Battery information notes
 

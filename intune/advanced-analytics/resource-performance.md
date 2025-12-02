@@ -25,12 +25,12 @@ Additional prerequisites for device query:
 
 :::column-end:::
 :::column span="3":::
-> Windows
-> Windows 365 Cloud PCs - With a Windows 365 license, you get access to the resource performance report for the Cloud PCs in your organization.
+> - Windows
+> - Windows 365 Cloud PCs - With a Windows 365 license, you get access to the resource performance report for the Cloud PCs in your organization.
 :::column-end:::
 :::row-end:::
 
-## Review the resource performance report
+## Review the report
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Resource performance**.
 
@@ -66,9 +66,9 @@ The RAM spike time score (from 0 to 100) is assigned based on the device's usage
 
 ### Insights and recommendations
 
-The **Resource performance page** provides a prioritized list of insights and recommendations, described in this section:
+The **Resource performance page** provides a prioritized list of insights and recommendations, which are described in this section:
 
-### High CPU usage in physical devices
+#### High CPU usage in physical devices
 
 These Windows physical devices experience higher CPU spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
 
@@ -79,7 +79,7 @@ This category has two sub-categories:
 
 Besides giving visibility into devices that aren't supporting your user's goals, these insights also allow you to identify devices with underperforming CPUs that are within warranty and eligible for replacement.
 
-### High RAM usage in physical devices
+#### High RAM usage in physical devices
 
 These Windows physical devices experience higher RAM spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
 
@@ -87,7 +87,7 @@ This category has two sub-categories: (1) physical devices that experience high 
 
 Besides giving visibility into devices that aren't supporting your user's goals, these insights also allow you to identify devices with underperforming RAM that are within warranty and eligible for replacement.
 
-### Cloud PCs
+#### Cloud PCs
 
 These Windows 365 Cloud PCs experience higher CPU or RAM spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
 
