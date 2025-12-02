@@ -32,13 +32,13 @@ Complete the following steps to upload Company Portal app logs.
 
 ### Collect logs manually
 
-Alternatively, complete the following steps to download Company Portal app logs manually.
+Or, you can use the following steps to download the Company Portal app logs manually.
 
 1. Go to the following folder:
 
-    - `%localappdata%\Packages\Microsoft.CompanyPortal_8wekyb3d8bbwe\LocalState`
+    `%localappdata%\Packages\Microsoft.CompanyPortal_8wekyb3d8bbwe\LocalState`
 
-    The `%localappdata%` variable resolves to your local application data folder. By default, this corresponds to `C:\Users\<UserName>\AppData\Local Replace <UserName>`, where `UserName` is the account name of the signed-in user. 
+    The `%localappdata%` variable resolves to your local application data folder. By default, this corresponds to `C:\Users\<UserName>\AppData\Local`, where `UserName` is the signed-in user account name. 
 
 2. The application logs are stored in files following the `Log_<n>.log` pattern. Attach these logs to the support ticket.
 
