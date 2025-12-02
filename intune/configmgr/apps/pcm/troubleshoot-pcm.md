@@ -3,7 +3,7 @@ title: Troubleshoot Package Conversion Manager
 titleSuffix: Configuration Manager
 description: Learn how to troubleshoot problems with the Package Conversion Manager in Configuration Manager.
 ms.date: 08/24/2018
-ms.subservice: app-mgt
+ms.subservice: acore-infra
 ms.service: configuration-manager
 ms.topic: troubleshooting
 author: LauraWi

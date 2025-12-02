@@ -3,7 +3,7 @@ title: Client installation properties in Active Directory
 titleSuffix: Configuration Manager
 description: Publish Configuration Manager client installation properties to Active Directory Domain Services.
 ms.date: 10/06/2016
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: concept-article
 author: LauraWi
