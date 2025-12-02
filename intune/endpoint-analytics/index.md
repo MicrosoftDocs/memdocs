@@ -36,17 +36,6 @@ Endpoint analytics organizes insights into reports that highlight performance an
 > > [Learn more](app-reliability.md)
 :::column-end:::
 :::column:::
-#### Restart frequency
-
-> Highlights devices that restart often, signaling potential hardware or software issues.
-> 
-> > [!div class="nextstepaction"]
-> > [Learn more](restart-frequency.md)
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column:::
 #### Startup performance
 
 > Identifies devices with slow boot times and contributing factors.
@@ -54,6 +43,10 @@ Endpoint analytics organizes insights into reports that highlight performance an
 > > [!div class="nextstepaction"]
 > > [Learn more](startup-performance.md)
 :::column-end:::
+:::row-end:::
+
+:::row:::
+
 :::column:::
 #### Work from anywhere
 
@@ -61,6 +54,9 @@ Endpoint analytics organizes insights into reports that highlight performance an
 >
 > > [!div class="nextstepaction"]
 > > [Learn more](work-from-anywhere.md)
+:::column-end:::
+:::column:::
+
 :::column-end:::
 :::row-end:::
 

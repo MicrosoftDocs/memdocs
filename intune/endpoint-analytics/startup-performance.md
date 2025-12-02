@@ -7,57 +7,119 @@ ms.topic: concept-article
 
 # Startup performance report
 
-The **Startup performance** page in endpoint analytics provides insights into the startup performance of your Windows devices. It helps you identify and remediate issues that can lead to slow boot and sign-in times.
+The startup performance report in endpoint analytics provides insights into the startup performance of your Windows devices. It helps you identify and remediate issues that can lead to slow boot and sign-in times.
 
 > [!IMPORTANT]
 > Clients require a restart to fully enable all analytics. <!--7698085--> The retention period for device boot and sign-in events is 29 days. If a device hasn't uploaded a boot or sign-in event in the past 29 days, it does not appear in the Startup performance report.
 
-## Startup score
+## Review the startup performance report
 
-The **startup score** helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The **Startup score** is a number between 0 and 100. This score is a weighted average of **Boot score** and the **Sign-in** score, which are computed as follows:
+In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Startup performance**.
+
+:::image type="content" source="images/startup-performance.png" lightbox="images/startup-performance.pngg" alt-text="Screenshot of the Startup score tab in endpoint analytics.":::
+
+The startup score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The startup score is a number between 0 and 100. This score is a weighted average of *Boot score* and the *Sign-in* score, which are computed as follows:
 
 - **Boot score**: Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 - **Sign-in score**: Based on the time from when credentials have been entered until the user can access a responsive desktop (meaning the desktop has rendered and the CPU usage has fallen below a moderate level or the device responds to an action initiated by the user). We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
 
-[![Endpoint analytics startup performance page](images/startup-performance.png)](images/startup-performance.png#lightbox)
-
 > [!NOTE]
 > If you aren't seeing startup performance data from all your devices, see [Troubleshooting device enrollment and startup performance](troubleshoot.md#troubleshooting-device-enrollment-and-startup-performance).
 
-## Insights
+## Insights and recommendations
 
-The **Startup performance** page also provides a prioritized list of **Insights and recommendations**, described in the following sections:
+The startup performance page provides a prioritized list of Insights and recommendations:
 
-### Hard disk drives
-
-Startup performance provides an insight on the number of devices on which the boot drive is a hard disk. Hard disk drives typically result in boot times three to four times longer than solid-state drives. We also report the expected improvement to start up performance you would gain by moving to solid-state drives.
-
+- **Hard disk drives**: Startup performance provides an insight on the number of devices on which the boot drive is a hard disk. Hard disk drives typically result in boot times three to four times longer than solid-state drives. We also report the expected improvement to start up performance you would gain by moving to solid-state drives.\
 Scroll through to see the list of devices that have hard disk drives. The recommended action is to upgrade these devices to solid-state drives.
-
-### Group Policy
-
-Startup performance provides an insight on the number of devices that have delays to boot and sign-in times caused by Group Policy. Clicking through takes you to the devices view. The view is sorted by Group Policy time, so you can see affected devices for further troubleshooting.
-
-Select a particular device, to see its boot and sign-in history. The history helps you determine if the issue is a regression and when it might have occurred.
-
+- **Group Policy**: Startup performance provides an insight on the number of devices that have delays to boot and sign-in times caused by Group Policy. Clicking through takes you to the devices view. The view is sorted by Group Policy time, so you can see affected devices for further troubleshooting.\
+Select a particular device, to see its boot and sign-in history. The history helps you determine if the issue is a regression and when it might have occurred.\
 While there are many articles on how to optimize Group Policies performance, you might choose to migrate to cloud-management instead. Migrating to cloud-management allows you to use [Intune security baselines](../intune-service/protect/security-baselines.md) and [Group Policy analytics](../intune-service/configuration/group-policy-analytics.md).
-
-### Slow boot and sign-in times
-
-Startup performance provides an insight on the number of devices with slow boot or sign-in times. A boot score or sign-in score of "0" means it's slow. Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.
-
+- **Slow boot and sign-in times**: Startup performance provides an insight on the number of devices with slow boot or sign-in times. A boot score or sign-in score of "0" means it's slow. Clicking through takes you to the devices view. The devices are sorted by core boot time or core sign-in time respectively, so you can see affected devices for further troubleshooting.\
 Select a particular device, to see its boot and sign-in history. The history helps you determine if the issue was a regression and when it occurred.
 
 ## Reporting tabs
 
-The **Startup performance** page has reporting tabs that provide support for the insights, including:
+The startup performance report is divided in multiple tabs. Select the following tabs to learn more about them:
 
-- **Model performance**. This tab lets you see the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
-- **Device performance**. This tab provides boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. Select a device to see its boot and sign-in history, which can help you identify if there was a recent regression
+# [**Model performance**](#tab/model-performance)
+
+Review the boot and sign-in performance by device model, which can help you identify if performance problems are isolated to particular models.
+
+In the model performance tab, two default columns allow you to review both the average number of restarts and the average number of Stop errors (blue screen errors) per model over the last 30 days. Sort these columns to find problematic device models. Only models with at least 10 devices are shown to ensure the averages are done across enough devices to be meaningful.
+
+# [**Device performance**](#tab/device-performance)
+
+Review boot and sign-in metrics for all your devices. You can sort by a particular metric (for example, GP sign-in time) to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. Select a device to see its boot and sign-in history, which can help you identify if there was a recent regression
   > [!Note]
   > In the **Device performance** tabs of endpoint analytics, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
 
-- **Startup processes**. Startup processes can negatively affect user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab shows you which processes are impacting the sign-in "time to responsive desktop" phase and keeps the CPU above 50% after the desktop is rendered. The table only lists processes that affect a minimum of 10 devices in your tenant. When you review the startup processes, the following data calculations are displayed:
+In the device performance tab, two default columns are available; total number of restarts and the number of Stop errors (blue screen errors) each device has had in the last 30 days. You can sort by these columns to find problematic devices. You can also use this tab to review the total number of devices that have sent restart records. For example, the screenshot shows 31 records, meaning 31 devices have sent restart data.
+
+> [!NOTE]
+> In the **Device performance** tabs of Endpoint analytics, admins only see the devices they have access to based on their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in Endpoint analytics](../advanced-analytics/device-scopes.md).
+
+# [**Startup processes**](#tab/startup-processes)
+
+Startup processes can negatively affect user experience by increasing the length of time that users must wait for the desktop to become responsive. This tab shows you which processes are impacting the sign-in "time to responsive desktop" phase and keeps the CPU above 50% after the desktop is rendered. The table only lists processes that affect a minimum of 10 devices in your tenant. When you review the startup processes, the following data calculations are displayed:
   - **Device count**: The count of devices that experienced a delay to a responsive desktop from the process.
   - **Median delay**: The median delay time of the process for the counted devices.
   - **Total delay**: The sum of the delays for all of the counted devices.
+
+# [**Restart frequency**](#tab/restart-frequency)
+
+:::image type="content" source="images/restart-frequency-tab.png" alt-text="Restart frequency tab under Startup Performance" lightbox="images/restart-frequency-tab.png":::
+
+<!--IN6225459-->
+Reboot frequency can affect a user's experience. A device that reboots daily due to Stop errors results in poor user experience even if the boot times are fast. We've recently added insights into restart frequencies within your organization to help you identify problematic devices.
+
+Review aggregates of restart frequency counts for each of the [restart categories](#restart-categories) over the last 30 days. For each restart category, the following information is displayed:
+
+- Number of devices with at least one restart in that category
+- The average number of restarts per device across all devices, to understand the total effect.
+  - This average is all devices, not just the ones that had at least one restart in the category.
+
+The trend chart indicates how the rolling 30-day average changes over time. If there's a regression, you can see it and identify when it started. Click through the metrics table to go to the [**Device performance** tab](#device-performance-tab), which is sorted by the number of restarts, so you can quickly identify the devices with the most restarts.
+
+### Restart categories
+
+Each restart is categorized into one of six categories. They're described as either abnormal shutdowns or normal shutdowns.
+
+**Abnormal shutdowns**: Where the shutdown or restart didn't go through the normal Windows shutdown process. There are three categories for different types of abnormal shutdowns:
+
+- **Stop errors**: You might also know these as blue screen errors. Stop errors should be infrequent, less than 2 per device per year is typical.
+- **Long power button press**: When an end user holds the power button down to force a restart. These shutdowns should be less frequent than Stop errors (blue screen errors).
+- **Unknown**: Any abnormal shutdown that isn't one of the above shutdowns. Over time we'll be refining this list as we isolate issues in this category.
+
+**Normal shutdowns**: Where the shutdown or restart went through the normal Windows shutdown process. There are three categories for different types of normal shutdowns:
+
+- **Update**: The restart was done to finish installation of a Windows update. Ideally there should be around one of these restarts per device per month. Less than once per month is problematic since it indicates devices aren't getting patched. More than once per month is also problematic as it indicates users are enduring more update restarts than is typically necessary.
+- **Shutdown (no update)**: Typically means someone is trying to save battery or power and isn't indicative of a poor user experience.
+- **Restart (no update)**: Ideally this category should be close to zero since there shouldn't be a reason to restart a device beyond monthly patching.
+
+The difference between **Shutdown (no update)** and **Restart (no update)** is the user's action. A shutdown or restart doesn't have to be initiated through the start menu, it could be initiated other ways too.
+
+### Devices page
+
+Select a particular device in the [**Device performance** tab](#device-performance-tab), to go to the device's **Startup performance** tab. The table called **OS version history** is renamed to **OS restart history**.
+
+The **OS restart history** table has the following information:
+
+- The **Restart category** for each reboot
+- For Stop errors (blue screen errors), the following additional information is available:
+  - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2) also called the bug check code
+  - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
+
+:::image type="content" source="images/device-page-os-restart-history.png" alt-text="OS restart history under the Device page" lightbox="images/device-page-os-restart-history.png":::
+
+The **OS restart history** table is truncated to the 10 most recent restarts that occurred in the last 30 days. The table is low latency, so new restarts typically show up here before they appear in the daily aggregates shown in the **Device performance** tab.
+
+### Known issues
+
+- The count of restarts in a device's restart history in the [**Devices page**](#devices-page) might not match the count shown in the **Device performance** tab. This difference is by design. The differences are:
+
+  - The aggregates in the [**Device performance** tab](#device-performance-tab) are computed daily to show counts for the last 30 days
+  - The restart history in the [**Devices page**](#devices-page) is truncated to the 10 most recent restarts
+
+- Currently, there isn't an aggregation of Stop errors (blue screen errors) by *driver* or *failure bucket ID*.
+---
