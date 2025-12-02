@@ -3,7 +3,7 @@ title: Install applications for a device
 titleSuffix: Configuration Manager
 description: Use Configuration Manager to immediately install an application to a device without a collection.
 ms.date: 12/01/2021
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 author: LauraWi
