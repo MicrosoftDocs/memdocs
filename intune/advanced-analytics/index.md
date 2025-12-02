@@ -34,7 +34,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 
 :::row:::
 :::column:::
-#### :::image type="icon" source="../media/icons/24/report.svg"::: Anomaly detection report
+#### :::image type="icon" source="../media/icons/24/report.svg"::: Anomalies report
 
 > Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
 > 
@@ -163,13 +163,13 @@ For the extra reports and capabilities on Windows devices:
 Advanced Analytics is built into Microsoft Intune and appears in the **Reports** > **Endpoint analytics** section, as well as other areas of the Intune admin center. When enabled, it adds the following enhancements:
 
 - Endpoint analytics reports are extended with:
-  - [Anomaly detection report](anomaly-detection.md)
-  - [Battery health report](battery-health.md)
   - [Resource performance report](resource-performance.md)
+  - [Battery health report](battery-health.md)
+  - [Anomalies report](anomaly-detection.md)
   - [Device scopes](device-scopes.md)
 - Single device views are extended with:
   - [Battery health report](battery-health.md)
-  - [Device timeline report](device-timeline.md)
+  - [Device timeline report](device-timeline.md), which replaces the [application reliability report](../endpoint-analytics/app-reliability.md)
   - [Resource performance report](resource-performance.md)
   - [Device query](device-query.md)
 - Additional capabilities:
@@ -180,9 +180,9 @@ Advanced Analytics is built into Microsoft Intune and appears in the **Reports**
 After completing the setup tasks, follow these steps to embed Advanced Analytics into daily operations:
 
 1. **Update support processes** to:
-   - Use the [device timeline](device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
+   - Use the [device timeline report](device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
    - Use [device query](device-query.md) to retrieve live device data for troubleshooting.
 1. **Schedule regular reviews** of:
-   - [Anomaly detection data](anomaly-detection.md) after OS or app updates to catch issues early.
-   - [Battery health data](battery-health.md) to identify devices needing attention for better performance and user experience.
+   - [Anomalies reports](anomaly-detection.md) after OS or app updates to catch issues early.
+   - [Battery health reports](battery-health.md) to identify devices needing attention for better performance and user experience.
    - [Resource performance reports](resource-performance.md) to track performance by device, model, and manufacturer—helpful for future purchasing decisions.

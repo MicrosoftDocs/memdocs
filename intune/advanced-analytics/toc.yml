@@ -10,7 +10,7 @@ items:
   - name: Battery health report
     href: battery-health.md
     displayName: Advanced Analytics
-  - name: Anomaly detection report
+  - name: Anomalies report
     href: anomaly-detection.md
     displayName: Advanced Analytics
   - name: Device timeline report

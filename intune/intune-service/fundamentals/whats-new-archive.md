@@ -4357,7 +4357,7 @@ Anomaly detection device cohorts in Intune Endpoint analytics is now generally a
 
 Device cohorts are identified in devices associated with a high or medium severity anomaly. Devices are correlated into groups based on one or more factors they have in common like an app version, driver update, OS version, device model. A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You can also view a breakdown of devices currently affected by the anomaly and 'at risk' devices. "At risk" devices haven't yet shown symptoms of the anomaly.
 
-For more information, see [Anomaly detection in Endpoint analytics](../../advanced-analytics/anomaly-detection.md).
+For more information, see [Anomalies report](../../advanced-analytics/anomaly-detection.md).
 
 #### Improved user experience for device timeline in Endpoint Analytics<!-- 24604944 -->
 The user interface (UI) for device timeline in Endpoint analytics is improved and includes more advanced capabilities (support for sorting, searching, filtering, and exports). When viewing a specific device timeline in Endpoint analytics, you can search by event name or details. You can also filter the events and choose the source and level of events that appear on the device timeline and select a time range of interest.

@@ -17,7 +17,7 @@ The report also provides actionable insights—showing how much your score could
 
 Make sure you meet the [requirements](index.md#prerequisites) before using the resource performance report.
 
-Additional prerequisites for device query:
+Additional requirements information:
 
 :::row:::
 :::column span="1":::
@@ -25,8 +25,18 @@ Additional prerequisites for device query:
 
 :::column-end:::
 :::column span="3":::
+> This report supports the following platforms:
 > - Windows
-> - Windows 365 Cloud PCs - With a Windows 365 license, you get access to the resource performance report for the Cloud PCs in your organization.
+> - Windows 365 Cloud PCs
+:::column-end:::
+:::row-end:::
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+> If your organization has Windows 365 licenses, you also get access to the resource performance report for your Cloud PCs.
 :::column-end:::
 :::row-end:::
 

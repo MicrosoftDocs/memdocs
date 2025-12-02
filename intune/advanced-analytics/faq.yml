@@ -34,7 +34,7 @@ summary: |
 
   **Anomaly detection**
 
-  - [Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?](#why-do-some-crashes-or-anomalies-sometimes-not-appear-in-anomaly-detection--even-when-the-devices-are-correctly-licensed-and-enrolled)
+  - [Why do some crashes or anomalies sometimes not appear in the anomalies report, even when the devices are correctly licensed and enrolled?](#why-do-some-crashes-or-anomalies-sometimes-not-appear-in-the-anomalies-report--even-when-the-devices-are-correctly-licensed-and-enrolled)
 
 sections:
 
@@ -82,6 +82,6 @@ sections:
 
   - name: Anomaly detection
     questions:
-      - question: Why do some crashes or anomalies sometimes not appear in Anomaly Detection, even when the devices are correctly licensed and enrolled?
+      - question: Why do some crashes or anomalies sometimes not appear in the anomalies report, even when the devices are correctly licensed and enrolled?
         answer: |
           This is typically due to the volume and usage patterns of devices and apps. The device must be actively used, enrolled in endpoint analytics, and data collection is enabled. In addition, a high volume of events (such as critical errors or app crashes) is usually required before the event is flagged as anomalous.
