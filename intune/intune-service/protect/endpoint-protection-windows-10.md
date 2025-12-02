@@ -460,7 +460,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
   - **Not configured** - Allow the warning for other disk encryption to be shown.
 
   > [!TIP]
-  > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must be set to *Block*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+  > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must be set to *Block*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#configure-silent-bitlocker-encryption).
 
   When set to *Block*, you can then configure the following setting:
 
@@ -473,7 +473,7 @@ Base settings are universal BitLocker settings for all types of data drives. The
     - **Not configured** only Administrators can enable BitLocker encryption on the device.
 
   > [!TIP]
-  > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+  > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must be set to *Allow*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#configure-silent-bitlocker-encryption).
 
 - **Configure encryption methods**  
   **Default**: Not configured  
@@ -549,7 +549,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup PIN with TPM**
 
     > [!TIP]
-    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#configure-silent-bitlocker-encryption).
 
   - **Compatible TPM startup key**  
     **Default**: Allow startup key with TPM
@@ -561,7 +561,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup key with TPM**
 
     > [!TIP]
-    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#configure-silent-bitlocker-encryption).
 
   - **Compatible TPM startup key and PIN**  
     **Default**: Allow startup key and PIN with TPM
@@ -572,7 +572,7 @@ These settings apply specifically to operating system data drives.
     - **Require startup key and PIN with TPM**
 
     > [!TIP]
-    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#silently-enable-bitlocker-on-devices).
+    > To install BitLocker automatically and silently on a device that's Microsoft Entra joined and runs Windows 1809 or later, this setting must not be set to *Require startup key and PIN with TPM*. For more information, see [Silently enable BitLocker on devices](../protect/encrypt-devices.md#configure-silent-bitlocker-encryption).
 
 - **Minimum PIN Length**  
   **Default**: Not configured  

@@ -3,7 +3,7 @@ title: Monitor client deployment status
 titleSuffix: Configuration Manager
 description: Monitor client deployment status in Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 author: LauraWi

@@ -3,7 +3,7 @@ title: Learn more about PowerShell script security
 titleSuffix: Configuration Manager
 description: Resources to help learn about PowerShell script security.
 ms.date: 10/01/2021
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 ms.author: laurawi
