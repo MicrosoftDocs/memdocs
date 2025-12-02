@@ -933,6 +933,9 @@ items:
               href: ./protect/crowdstrike-falcon-mtd-connector-integration.md
           - name: Setup iVerify
             href: ./protect/iverify-mobile-threat-defense-connector.md
+            items:
+            - name: Se up iVerify
+              href: ./protect/iverify-mtd-connector-integration.md
           - name: Set up Jamf
             href: ./protect/jamf-mtd-connector.md
             items:

@@ -3,7 +3,7 @@ title: iVerify Enterprise Mobile Threat Defense with Intune
 description: Set up iVerify Enterprise Mobile Security with Microsoft Intune to control mobile device access to your corporate resources.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/24/2025
+ms.date: 12/02/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
@@ -11,7 +11,7 @@ ms.collection:
 - sub-mtd-apps
 ---
 
-#  Use iVerify Enterprise with Microsoft Intune
+# Use iVerify Enterprise with Microsoft Intune
 
 You can use iVerify Enterprise as a Mobile Threat Defense and Endpoint Detection and Response
 (EDR) solution that integrates seamlessly with Microsoft Intune. Risk is assessed based on comprehensive, real-time telemetry collected from devices running the iVerify app.
