@@ -26,25 +26,25 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 
 Endpoint analytics organizes insights into reports that highlight performance and reliability issues across managed devices. These reports help IT teams identify trends, diagnose problems, and implement improvements to enhance the overall user experience. Endpoint analytics includes the following reports:
 
-<!--:::row:::
-:::column:::-->
-#### Application reliability
-:::image type="icon" source="../media/icons/48/report.svg" border="false":::
+:::row:::
+:::column:::
+#### :::image type="icon" source="../media/icons/32/report.svg" border="false"::: Application reliability
+
 > Tracks app crashes and stability trends.
 >         
 > > [!div class="nextstepaction"]
 > > [Learn more](app-reliability.md)
-<!--
+
 :::column-end:::
-:::column:::-->
-#### Startup performance
-:::image type="icon" source="../media/icons/48/report.svg" border="false":::
+:::column:::
+#### :::image type="icon" source="../media/icons/32/report.svg" border="false"::: Startup performance
+
 > Identifies devices with slow boot times and contributing factors.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](startup-performance.md)
-<!--:::column-end:::
-:::row-end:::-->
+:::column-end:::
+:::column:::
 
 #### Work from anywhere
 :::image type="icon" source="../media/icons/48/report.svg" border="false":::
@@ -53,6 +53,8 @@ Endpoint analytics organizes insights into reports that highlight performance an
 > > [!div class="nextstepaction"]
 > > [Learn more](work-from-anywhere.md)
 
+:::column-end:::
+:::row-end:::
 
 ## Prerequisites
 
