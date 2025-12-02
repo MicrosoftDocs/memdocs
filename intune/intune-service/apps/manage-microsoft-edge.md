@@ -1,7 +1,7 @@
 ---
 title: Manage Microsoft Edge on iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Microsoft Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place.
-ms.date: 11/18/2025
+ms.date: 12/02/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
