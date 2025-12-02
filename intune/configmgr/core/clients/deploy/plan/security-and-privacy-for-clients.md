@@ -3,7 +3,7 @@ title: Client security and privacy
 titleSuffix: Configuration Manager
 description: Learn about security and privacy for Configuration Manager clients.
 ms.date: 05/05/2021
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 author: LauraWi

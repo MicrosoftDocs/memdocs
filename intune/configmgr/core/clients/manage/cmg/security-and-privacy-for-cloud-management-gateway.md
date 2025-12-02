@@ -7,7 +7,7 @@ ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: article
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.reviewer: mstewart

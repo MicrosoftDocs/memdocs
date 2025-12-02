@@ -3,7 +3,7 @@ title: Configure clients to use DNS publishing
 titleSuffix: Configuration Manager
 description: Configure Configuration Manager client computers to find management points by using DNS publishing.
 ms.date: 04/23/2017
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi
