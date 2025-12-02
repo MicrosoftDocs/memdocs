@@ -16,7 +16,7 @@ The startup performance report in endpoint analytics provides insights into the 
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Startup performance**.
 
-:::image type="content" source="images/startup-performance.png" lightbox="images/startup-performance.pngg" alt-text="Screenshot of the Startup score tab in endpoint analytics.":::
+:::image type="content" source="images/startup-performance.png" lightbox="images/startup-performance.png" alt-text="Screenshot of the Startup score tab in endpoint analytics.":::
 
 The startup score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The startup score is a number between 0 and 100. This score is a weighted average of *Boot score* and the *Sign-in* score, which are computed as follows:
 
