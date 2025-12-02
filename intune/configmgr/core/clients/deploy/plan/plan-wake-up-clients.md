@@ -3,7 +3,7 @@ title: Waking up clients
 titleSuffix: Configuration Manager
 description: Plan how to wake up clients in Configuration Manager using Wake On LAN (WOL).
 ms.date: 04/23/2019
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi

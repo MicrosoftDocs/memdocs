@@ -3,7 +3,7 @@ title: Install the client with Microsoft Entra ID
 titleSuffix: Configuration Manager
 description: Install and assign the Configuration Manager client on Windows devices using Microsoft Entra ID for authentication
 ms.date: 02/16/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 author: LauraWi

@@ -1,7 +1,7 @@
 ---
 title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 11/04/2025
+ms.date: 12/02/2025
 ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
@@ -34,9 +34,6 @@ The following table shows the features and scenarios supported with automated de
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ## Certificates
-
->[!NOTE]
-> The [ACME certificate](../fundamentals/whats-new-archive.md#acme-protocol-support-for-iosipados-and-macos-enrollment) phased rollout for new eligible enrollments has been paused. New enrollments are using the SCEP certificate like before with no changes to the end user experience.
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
@@ -406,6 +403,12 @@ The following table describes the Setup Assistant screens shown during automated
 | **Emergency SOS**| Shows the safety setup pane. For iOS/iPadOS 16.0 and later.
 | **Action button**| Shows the configuration pane for the action button. For iOS/iPadOS 17.0 and later.
 | **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For iOS/iPadOS 18.0 and later.  
+| **Camera button**| Shows the camera button pane. For iOS/iPadOS 18.0 and later.  
+| **Web content filtering**| Shows the web content filtering pane. For iOS/iPadOS 18.2 and later.  
+| **App Store**| Shows the Apple App Store pane. For iOS/iPadOS 14.3 and later.  
+| **Safety and handling**| Shows the safety and handling pane. For iOS/iPadOS 18.4 and later.  
+| **Multitasking**| Shows the multitasking pane. For iOS/iPadOS 26.0 and later.  
+| **OS Showcase**| Shows the OS showcase pane. For iOS/iPadOS 26.0 and later.  
 
 ## Sync managed devices
 

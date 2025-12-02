@@ -3,7 +3,7 @@ title: Deploy App-V virtual applications
 titleSuffix: Configuration Manager
 description: See which considerations you must take into account when you create and deploy virtual applications.
 ms.date: 03/12/2018
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 author: baladelli

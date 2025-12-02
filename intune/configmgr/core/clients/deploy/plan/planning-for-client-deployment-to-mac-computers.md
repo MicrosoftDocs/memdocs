@@ -3,7 +3,7 @@ title: Planning client deployment to Mac computers
 titleSuffix: Configuration Manager
 description: Plan for client deployment to Mac computers in Configuration Manager.
 ms.date: 01/05/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 author: LauraWi

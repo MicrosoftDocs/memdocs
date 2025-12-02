@@ -3,7 +3,7 @@ title: Synchronize collection members to Microsoft Entra groups
 titleSuffix: Configuration Manager
 description: Synchronize collection members to Microsoft Entra groups.
 ms.date: 03/28/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi
