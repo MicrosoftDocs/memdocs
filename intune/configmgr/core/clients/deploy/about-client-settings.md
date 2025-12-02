@@ -3,6 +3,7 @@ title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
 ms.date: 03/28/2024
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
 author: LauraWi
