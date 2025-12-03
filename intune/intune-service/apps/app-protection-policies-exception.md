@@ -47,11 +47,12 @@ By adding the **Webex** package as an exception to the MAM data transfer policy,
 
 - Android **SMS** example:
     To exempt the native **SMS** app so that it's allowed to be invoked by Intune managed apps across different messaging apps and Android devices, you must add data transfer exceptions for the following strings:
-    <code>com.google.android.apps.messaging</code>
+  
+    - <code>com.google.android.apps.messaging</code>
 
-    <code>com.android.mms</code>
+    - <code>com.android.mms</code>
 
-    <code>com.samsung.android.messaging</code>
+    - <code>com.samsung.android.messaging</code>
 
 ## Next steps
 
