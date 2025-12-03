@@ -1,7 +1,7 @@
 ---
 title: Discovered Apps
 description: Understand details about the detected apps that Intune found on a device.
-ms.date: 10/31/2025
+ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: arnab
 ms.custom:
