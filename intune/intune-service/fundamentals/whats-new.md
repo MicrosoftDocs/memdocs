@@ -1324,7 +1324,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
 
 #### Export device query results to CSV file <!-- 27967896 -->
 
-Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../advanced-analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).
+Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../advanced-analytics/device-query-multiple-devices.md#use-device-query-for-multiple-devices).
 
 ## Week of June 23, 2025 (Service release 2506)
 

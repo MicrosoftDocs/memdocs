@@ -32,9 +32,9 @@ Additional prerequisites for custom device scopes:
 :::column span="3":::
 > To create custom device scopes, use an account with at least one of the following roles:
 > - [Help Desk Operator][INT-R1]
-> - Endpoint Security Manager
-> - Read Only Operator
-> - Intune Role Administrator
+> - [Endpoint Security Manager][INT-R2]
+> - [Read Only Operator][INT-R3]
+> - [Intune Role Administrator][INT-R4]
 > - [Custom role][INT-RC] that includes:
 >   - The permission **Roles/Read**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
@@ -73,7 +73,7 @@ To delete custom device scopes:
 > [!IMPORTANT]
 > If a custom device scope is associated with a Scope tag that gets deleted from your tenant, the custom device scope will no longer function. You see an error message in the **Manage device scopes** menu. Edit the impacted device scope to use a valid Scope tag or delete it to clear the error.
 
-## Using custom device scopes
+## Use custom device scopes
 
 Custom device scopes can be used in any supported endpoint analytics report. To use a custom device scope:
 
@@ -91,3 +91,12 @@ To return to viewing all devices, navigate to the **Device scope** menu, select 
 
 - You can save up to 100 custom device scopes, and up to 20 can be active at a time.
 - Only one Scope tag can be used to create a custom device scope. To create a custom device scope that includes devices from multiple Scope tags, you must create a new Scope tag and assign it to the full set of devices that you require.
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
+[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
+[INT-R3]: /intune/intune-service/fundamentals/role-based-access-control-reference#read-only-operator
+[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#intune-role-administrator
