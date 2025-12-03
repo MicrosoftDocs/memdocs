@@ -20,7 +20,7 @@ Use Microsoft Intune to configure and manage FileVault disk encryption on macOS 
 FileVault disk encryption is available on devices running **macOS 10.13 or later** and provides full disk encryption to protect data on lost, stolen, or compromised devices.
 
 > [!NOTE]
-> **Encryption Algorithm**: FileVault uses XTS-AES 128-bit encryption as implemented by Apple's macOS. This encryption standard is fixed and cannot be changed to 256-bit through Intune or macOS settings. Apple considers XTS-AES 128-bit encryption sufficient for enterprise security requirements.
+> FileVault uses XTS-AES 128-bit encryption as implemented by Apple's macOS. This encryption standard is fixed and cannot be changed to 256-bit through Intune or macOS settings. Apple considers XTS-AES 128-bit encryption sufficient for enterprise security requirements.
 
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a macOS device with FileVault, you can view and manage FileVault recovery keys through the encryption report.
