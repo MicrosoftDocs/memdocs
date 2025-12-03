@@ -1,7 +1,7 @@
 ---
 title: Manually Add the Windows 10 Company Portal App
 description: Learn how your workforce can manually add the Windows 10 Company Portal app to their PC from the Microsoft Store.
-ms.date: 08/27/2024
+ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -12,9 +12,7 @@ ms.collection:
 
 # Add the Windows Company Portal app by using Microsoft Intune
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store or download it from the [Microsoft Intune Company Portal for Windows](../apps/store-apps-company-portal-app.md#download-the-offline-company-portal-app). If your business needs require that you assign the Company Portal app to them, however, you can assign the Company Portal app for Windows directly from Intune.
+To manage devices and install apps, your users can install the Company Portal app themselves from the Microsoft Store. If your business needs require that you assign the Company Portal app to them, however, you can assign the Company Portal app for Windows directly from Intune.
 
  > [!IMPORTANT]
  > To deploy the Company Portal app for Windows Autopilot provisioned devices, see [Add Company Portal app for Windows Autopilot devices](store-apps-company-portal-autopilot.md).
@@ -22,9 +20,18 @@ To manage devices and install apps, your users can install the Company Portal ap
 > [!NOTE]
 > The Company Portal supports Configuration Manager applications. This feature allows end users to see both Configuration Manager and Intune deployed applications in the Company Portal for co-managed customers. This new version of the Company Portal will display Configuration Manager deployed apps for all co-managed customers. This support will help administrators consolidate their different end user portal experiences. For more information, see [Use the Company Portal app on co-managed devices](../../configmgr/comanage/company-portal.md).
 
-## Download the offline Company Portal app
+## Download the Company Portal app using Windows Package Manager
 
-1. Use the [Windows Package Manager](/windows/package-manager/winget) command-line tool, also known as *Winget.exe*, to download the Company Portal app for Windows with dependencies. Files are downloaded to the Downloads folder on your device by default.
+1. Use the [Windows Package Manager](/windows/package-manager/winget) command-line tool to download the Company Portal app for Windows with dependencies. Open a command prompt or PowerShell window and run:
+
+   ```powershell
+   winget download --id 9WZDNCRFJ3PZ
+   ```
+
+   Files are downloaded to the Downloads folder on your device by default. To specify a different location, add `--download-directory <path>` to the command.
+
+   > [!NOTE]
+   > Downloading Microsoft Store apps requires authentication with an EntraID account that has Global Administrator, User Administrator, or License Administrator role.
 
 1. In the Microsoft Intune admin center, upload the Company Portal app as a new app.
     1. Go to **Apps** > **Platforms** and select **Windows**.
