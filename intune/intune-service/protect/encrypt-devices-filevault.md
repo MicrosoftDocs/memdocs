@@ -5,7 +5,7 @@ author: brenduns
 ms.author: brenduns
 ms.date: 12/03/2025
 ms.topic: how-to
-ms.reviewer: beflamm; aanavath
+ms.reviewer: beflamm 
 ms.collection:
 - M365-identity-device-management
 - highpri
