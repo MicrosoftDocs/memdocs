@@ -31,6 +31,19 @@ Intune supports multiple FileVault deployment approaches depending on your organ
 - **Assumption of existing encryption** - Take management of user-encrypted devices
 - **Recovery key management** - Comprehensive key rotation and recovery scenarios
 
+### FileVault deployment process
+
+After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages:
+
+1. **Key escrow preparation** - The device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow.
+2. **Disk encryption initiation** - After the key is escrowed, the disk encryption can start.
+
+When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the device user.
+
+> [!NOTE]  
+> The FileVault settings available through Intune cover core macOS encryption features but *do not expose every FileVault capability*. Only options provided in Intune's templates or settings catalog can be configured through MDM. Advanced FileVault settings available directly in macOS may not be configurable via Intune policies.
+
+
 ## Prerequisites
 
 ### Licensing and macOS versions
@@ -125,12 +138,17 @@ View the [FileVault settings available in endpoint security profiles](../protect
 
 ### Escrow location guidance
 
-Configure helpful escrow location descriptions to guide users:
+Configure helpful escrow location descriptions to guide users on how to retrieve their recovery key. This information is particularly useful when you use the setting for Personal recovery key rotation, which can automatically generate a new recovery key for a device periodically.
 
 **Recommended message example:**
 ```
-To retrieve your FileVault recovery key, sign in to the Company Portal website at https://portal.manage.microsoft.com from any device. Select your encrypted Mac from the device list and choose "Get recovery key".
+To retrieve a lost or recently rotated recovery key, sign in to the Intune Company Portal website from any device. In the portal, go to Devices and select the device that has FileVault enabled, and then select 'Get recovery key'. The current recovery key is displayed.
 ```
+
+**Additional configuration considerations:**
+- Include your organization's support contact information
+- Reference your internal IT procedures for device recovery
+- Provide clear, simple language that non-technical users can understand
 
 ## Create Settings Catalog policy
 
@@ -185,11 +203,12 @@ For automated FileVault enablement during device setup:
 2. Create device filter for targeted deployment
 3. Assign Settings Catalog policy to filtered devices
 
-This ensures FileVault encryption occurs before users reach the desktop, providing seamless security deployment.
 
 ## FileVault encryption process
 
 Understanding the FileVault encryption process helps with deployment planning and troubleshooting:
+
+After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow. After the key is escrowed, the disk encryption can start.
 
 ### Encryption stages
 
@@ -216,6 +235,8 @@ FileVault deployment occurs in two distinct phases:
 
 ### View encryption status
 
+To view information about devices that receive FileVault policy, see [Monitor disk encryption](../protect/encryption-monitor.md).
+
 Monitor FileVault deployment through multiple Intune interfaces:
 
 1. **Encryption report** - Navigate to **Devices** > **Monitor** > **Encryption report**
@@ -227,6 +248,22 @@ Monitor FileVault deployment through multiple Intune interfaces:
    - FileVault enablement status
    - Recovery key availability
    - Encryption policy assignment details
+
+> [!NOTE]
+> A device that reports error code **-2016341107 / 0x87d1138d** generally means the end user has not accepted the FileVault prompt to begin encryption.
+
+### FileVault key escrow and management
+
+For managed devices, Intune can escrow a copy of the personal recovery key. Escrow of keys enables Intune administrators to rotate keys to help protect devices, and users to recover a lost or rotated personal recovery key.
+
+Intune escrows a recovery key when:
+- Intune policy encrypts a device
+- A user uploads their recovery key for a device that they manually encrypted
+
+After Intune escrows the personal recovery key:
+- Admins can manage and rotate the FileVault recovery keys for any managed macOS device using the Intune encryption report
+- Admins can view the personal recovery key for only managed macOS devices that are marked as *Corporate*. They can't view the recovery key for Personal devices
+- Users can view and retrieve their personal recovery key from supported locations
 
 ### Recovery key management
 
@@ -247,16 +284,32 @@ Intune provides comprehensive recovery key management for FileVault-encrypted de
 #### Recovery key access locations
 
 **End users can retrieve recovery keys from:**
-- Company Portal website (portal.manage.microsoft.com)
-- iOS/iPadOS Company Portal app
-- Android Company Portal app  
-- Intune mobile app
+- **Company Portal website** (portal.manage.microsoft.com) - Primary method for recovery key access
+- **iOS/iPadOS Company Portal app** - Shows FileVault recovery key needed to access Mac devices
+- **Android Company Portal app** - Shows FileVault recovery key needed to access Mac devices  
+- **Intune mobile app** - Shows FileVault recovery key needed to access Mac devices
+
+> [!IMPORTANT]
+> While users can view that FileVault recovery keys are available through mobile Company Portal apps, the **Company Portal website is the primary and most reliable method** for retrieving the actual recovery key. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune.
 
 **Recovery key retrieval process:**
-1. Sign in to Company Portal from any device
-2. Navigate to **Devices** and select the encrypted Mac
-3. Select **Get recovery key**
-4. Current recovery key is displayed
+
+For a macOS device that has its FileVault encryption managed by Intune, end users can retrieve their personal recovery key (FileVault key) using any device:
+
+1. **Using Company Portal website (Recommended):**
+   - Sign in to the **Company Portal website** (https://portal.manage.microsoft.com/) from any device
+   - Navigate to **Devices** and select the macOS device that is encrypted with FileVault
+   - Select **Get recovery key** - The current recovery key is displayed
+   
+2. **Using mobile Company Portal apps:**
+   - Open the iOS/iPadOS Company Portal app, Android Company Portal app, or Intune mobile app
+   - Navigate to **Devices** and select the encrypted and enrolled macOS device
+   - Select **Get recovery key** - The browser shows the Web Company Portal and displays the recovery key
+
+**Administrator access:**
+- Administrators can view personal recovery keys for encrypted macOS devices that are marked as a **Corporate** device
+- They cannot view the recovery key for **Personal** devices
+- Access generates an audit log entry under 'KeyManagement' activity
 
 ### Recovery key rotation
 
