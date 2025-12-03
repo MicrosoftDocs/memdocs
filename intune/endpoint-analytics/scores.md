@@ -13,10 +13,6 @@ Endpoint analytics exposes score charts which include information about what aff
 - Baselines
 - Insights and recommendations
 
-## Before you begin
-
-Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
-
 ## Scores
 
 **Endpoint analytics** scores range from 0 to 100. Lower scores indicate there's room for improvement. Scores help you understand how each metric affects your environment. For instance, when reviewing your [startup score](startup-performance.md), you find that overall your score of 61 is higher than the baseline of 50 for all organizations. When examining the startup score breakdown, you find that your environment excels during the core boot phase with a score of 77. However, based on the average time it takes to get to a responsive desktop, you suspect long running startup processes are lowering the core sign-in score to 46. Reviewing the top [insights and recommendations](#insights-and-recommendations) entry for the startup score confirms that long running processes are responsible for the effect on the score.
@@ -39,7 +35,7 @@ Baseline scores are shown on charts as triangle markers. There's a built-in base
 **Insights and recommendations** is a prioritized list to improve your score. The whole list is displayed on the **Overview** page either beside or below the charts depending on the width of your browser window. **Insights and recommendations** are filtered to the subnode's context when you navigate through reports. The recommendation listed with each insight tells you how to increase the score and how many points the score gains when the recommendation is complete.
 
 - Selecting the insight link from **Insights and recommendations** provides you with more information on devices and attributes related to the insight.
-- The `Learn more` link takes you to information about how the metric is scored and the recommended course of action is for the insight.
+- The **Learn more** link takes you to information about how the metric is scored and the recommended course of action is for the insight.
 
 ## Per device scores
 <!--IN8462182-->
@@ -78,28 +74,3 @@ Use the **Add filter** option on tables to display items that match your criteri
 > There are currently limitations in the following filters:
 > - The **Disk type** filter doesn't support the value **Unknown**<!--12829141-->.
 > - Filtering on **Startup performance score** from **Overview** > **Device Scores** returns devices with a score of "--". <!--12829158-->
-
-## Next steps
-
-- Use [Remediations](../intune-service/fundamentals/remediations.md) to gather more data and take action on devices.
-
-<!-- admin center -->
-
-[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
-[INT-EA]: https://aka.ms/endpointanalytics
-[PORTAL-0]: https://aka.ms/uea
-[PORTAL]: https://aka.ms/uea_prereq
-[PORTAL_1]: https://aka.ms/uea_baselines
-[PORTAL_2]: https://aka.ms/uea_prereq_configmgr
-
-<!-- role links -->
-
-[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
-[INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
-[INT-R4]: /intune/intune-service/fundamentals/role-based-access-control-reference#read-only-operator
-[INT-R5]: /intune/intune-service/fundamentals/role-based-access-control-reference#endpoint-security-manager
-[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
-
-[ENT-R1]: /entra/identity/role-based-access-control/permissions-reference#global-administrator
-[ENT-R2]: /entra/identity/role-based-access-control/permissions-reference#intune-administrator
-[ENT-R3]: /entra/identity/role-based-access-control/permissions-reference#reports-reader

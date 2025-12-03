@@ -15,9 +15,10 @@ The report also provides actionable insights—showing how much your score could
 
 ## Before you begin
 
-Make sure you meet the [requirements](index.md#prerequisites) before using the resource performance report.
+- Review the [Scores, baselines, and insights in endpoint analytics](../endpoint-analytics/scores.md) article to understand how these concepts work.
+- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
 
-Additional requirements information:
+### Additional requirements
 
 :::row:::
 :::column span="1":::

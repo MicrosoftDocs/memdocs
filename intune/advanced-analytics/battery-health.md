@@ -23,7 +23,8 @@ The battery health report can be used to:
 
 ## Before you begin
 
-Make sure you meet the [requirements](index.md#prerequisites) before using the battery health report.
+- Review the [Scores, baselines, and insights in endpoint analytics](../endpoint-analytics/scores.md) article to understand how these concepts work.
+- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
 
 ## Review the report
 
@@ -35,15 +36,19 @@ The **Battery health score** provides an overview of laptop battery health. It's
 
 The maximum capacity of a battery is the ratio of its full charge capacity against its design capacity. The full charge capacity shows the Watt-hours the battery can hold on a full charge now, while the design capacity shows the Watt-hours the battery could hold when it was new. For example, a maximum capacity of 50% on a battery with design capacity of 70 Watt-hours means that the battery now holds only 35 watt-hours on a full charge.
 
-**Battery capacity score**: Based on the maximum capacities of batteries in your organization's devices, we create a score from 0 (poor) to 100 (exceptional). Your battery capacity score is the average for all devices.
+### Battery capacity score
+
+Based on the maximum capacities of batteries in your organization's devices, we create a score from 0 (poor) to 100 (exceptional). Your battery capacity score is the average for all devices.
 
 The *estimated device runtime* is an estimate of the amount of time a device runs using a battery on full charge and assuming the system's usage pattern is comparable to when the device was plugged in. The *Battery capacity score* is calculated from the combined battery capacity and estimated battery drain rate.
 
-**Battery runtime score**: Based on the estimated device runtimes for batteries in your organization's devices, we create a score from 0 (poor) to 100 (exceptional). Your battery runtime score is the average for all devices.
+### Battery runtime score
+
+Based on the estimated device runtimes for batteries in your organization's devices, we create a score from 0 (poor) to 100 (exceptional). Your battery runtime score is the average for all devices.
 
 ### Insights and recommendations
 
-The Battery health page provides a prioritized list of Insights and recommendations, which are described in this section:
+The report provides a prioritized list of insights and recommendations to help improve your score:
 
 #### Low battery capacity
 
