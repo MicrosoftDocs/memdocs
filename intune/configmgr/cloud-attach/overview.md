@@ -64,7 +64,7 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 :::image type="content" source="../../endpoint-analytics/images/adoption-score/application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/application-reliability.png":::
 
-- [Restart Frequency](../../endpoint-analytics/startup-performance.md#restart-frequency?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - provides insights into restart frequencies within your organization to help you identify problematic devices.
+- [Restart Frequency](../../endpoint-analytics/startup-performance.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - provides insights into restart frequencies within your organization to help you identify problematic devices.
 
 :::image type="content" source="../../endpoint-analytics/images/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../endpoint-analytics/images/restart-frequency-tab.png":::
 
