@@ -32,7 +32,7 @@
     },
     {
       "source_path": "intune/analytics/restart-frequency.md",
-      "redirect_url": "/intune/endpoint-analytics/restart-frequency",
+      "redirect_url": "/intune/endpoint-analytics/startup-perfomance#restart-frequency",
       "redirect_document_id": false
     },
     {
