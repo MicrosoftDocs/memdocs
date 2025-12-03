@@ -132,7 +132,7 @@ To add the configuration setting to your app configuration policy, on the **Sett
 - **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
 - **Value**: `Enabled`
 
-To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties).
+To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../fundamentals/filters-device-properties.md#available-properties).
 
 For related information about create app protection policies, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 

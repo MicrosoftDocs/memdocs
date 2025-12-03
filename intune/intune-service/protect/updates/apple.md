@@ -61,10 +61,13 @@ When designing your Apple device update strategy, align with your organization's
 1. [Create a settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name and value |
-    |--|--|--|
-    | **Declarative Device Management** > **Software Update Enforce Latest** | **Delay in Days**<br><br> Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured.|
-    | **Declarative Device Management** > **Software Update Enforce Latest** | **Install Time**<br><br> Specify the local device time for when updates are enforced. The Install Time setting is configured using the 24-hour clock format where midnight is `00:00` and 11:59pm is `23:59`. Ensure that you include the leading 0 on single digit hours. For example, `01:00`, `02:00`, `03:00`.|
-
+   |--|--|--|
+   | **Declarative Device Management** > **Software Update Enforce Latest** | **Delay in Days**<br><br> Specify the number of days that should pass before a deadline is enforced. This delay is based on either the posting date of the new update when released by Apple, or when the policy is configured. The delay only determines the target enforcement date and not the date that the update is offered to users.|
+   | **Declarative Device Management** > **Software Update Enforce Latest** | **Install Time**<br><br> Specify the local device time for when updates are enforced. The Install Time setting is configured using the 24-hour clock format where midnight is `00:00` and 11:59pm is `23:59`. Ensure that you include the leading 0 on single digit hours. For example, `01:00`, `02:00`, `03:00`.|
+   
+   > [!NOTE]
+   > Once an update enforcement is assigned, the update may install before the deadline if the device is idle or automatic update actions are configured to Always On. 
+   
 1. [Assign the policy](/intune/intune-service/configuration/device-profile-assign) to a group to target users or devices.
 
     > [!IMPORTANT]

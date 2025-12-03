@@ -3,7 +3,7 @@ title: Prepare to deploy the client to Macs
 titleSuffix: Configuration Manager
 description: Configuration tasks prior to deploying the Configuration Manager client to Macs.
 ms.date: 01/05/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
 author: LauraWi

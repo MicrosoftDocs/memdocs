@@ -13,8 +13,8 @@ Level 3 is the data protection configuration recommended as a standard for organ
 
 #### Data protection
 
-| Setting | Setting description |             Value  |             Platform        | Notes |
-|---------------|---------------------------------------|----------------------------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------|
+| Setting | Setting description | Value  | Platform | Notes |
+|---|---|---|---|---|
 | Data Transfer |       Transfer telecommunication data to  |          Any policy-managed dialer app |          Android  | Administrators can also configure this setting to use a dialer app that doesn't support App Protection Policies by selecting **A specific dialer app** and providing the **Dialer App Package ID** and **Dialer App Name** values.   |
 | Data Transfer |       Transfer telecommunication data to  |          A specific dialer app |          iOS/iPadOS  |  |
 | Data Transfer |       Dialer App URL Scheme  |          *replace_with_dialer_app_url_scheme* |          iOS/iPadOS  | On iOS/iPadOS, this value must be replaced with the URL scheme for the custom dialer app being used. If the URL scheme isn't known, contact the app developer for more information. For more information on URL schemes, see [Defining a Custom URL Scheme for Your App](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content/defining_a_custom_url_scheme_for_your_app).|
@@ -28,8 +28,8 @@ Level 3 is the data protection configuration recommended as a standard for organ
 
 #### Access requirements
 
-|       Setting  |          Value  |          Platform  |
-|-----------------------------------------------------------|--------------------|---------------------------------|
+| Setting  |  Value  | Platform  |
+|---|---|---|
 |       Simple   PIN  |          Block  |          iOS/iPadOS,   Android  |
 |       Select   Minimum PIN length  |          6  |          iOS/iPadOS,   Android  |
 |       PIN reset   after number of days  |          Yes  |          iOS/iPadOS,   Android  |
@@ -39,8 +39,9 @@ Level 3 is the data protection configuration recommended as a standard for organ
 
 #### Conditional launch
 
-| Setting | Setting description |          Value / Action  |          Platform        | Notes |
-|----------------------------|--------------------------------------|-------------------|---------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Setting | Setting description |  Value / Action  |  Platform  | Notes |
+|---|---|---|---|---|
+| App conditions | Offline grace period | 30 / Block access (days) | iOS/iPadOS, Android, Windows | |
 | Device conditions |       Require device lock  |          High/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 |       Device   conditions  |          Max   allowed device threat level  |          Secured / Block access  |          Windows        |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
@@ -49,5 +50,3 @@ Level 3 is the data protection configuration recommended as a standard for organ
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor.Build <br>Example:   15.0* / Block access |          iOS/iPadOS        | Microsoft recommends configuring   the maximum iOS/iPadOS major version to ensure beta or unsupported versions of the operating system aren't used. See   [Apple security updates](https://support.apple.com/en-us/HT201222) for Apple's latest recommendations |
 | Device conditions  |       Max   OS version  |          *Format: Major.Minor<br>   Example: 22631.* / Block access   |          Windows        | Microsoft recommends configuring   the maximum Windows major version to ensure beta or unsupported versions of the operating system aren't used. |
 | Device conditions  |       Samsung Knox device attestation  | Wipe data |          Android        | Microsoft recommends configuring the **Samsung Knox device attestation** setting to **Wipe data** to ensure the org data is removed if the device doesn't meet Samsung's Knox hardware-based verification of device health.  This setting verifies all Intune MAM client responses to the Intune service were sent from a healthy device.  <p> This setting will apply to all devices targeted.  To apply this setting only to Samsung devices, you can use "Managed apps" assignment filters.  For more information on assignment filters, see [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune-service/fundamentals/filters).|
-| App conditions | Offline grace period | 14 / Wipe data (days) | iOS/iPadOS, Android, Windows | |
-
