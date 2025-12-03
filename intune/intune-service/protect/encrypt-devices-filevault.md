@@ -20,14 +20,14 @@ Use Microsoft Intune to configure and manage FileVault disk encryption on macOS 
 FileVault disk encryption is available on devices running **macOS 10.13 or later** and provides full disk encryption to protect data on lost, stolen, or compromised devices.
 
 > [!NOTE]
-> FileVault uses XTS-AES 128-bit encryption as implemented by Apple's macOS. This encryption standard is fixed and cannot be changed to 256-bit through Intune or macOS settings. Apple considers XTS-AES 128-bit encryption sufficient for enterprise security requirements.
+> FileVault uses XTS-AES 128-bit encryption as implemented by Apple's macOS. This encryption standard is fixed and can't be changed to 256-bit through Intune or macOS settings. Apple considers XTS-AES 128-bit encryption sufficient for enterprise security requirements.
 
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a macOS device with FileVault, you can view and manage FileVault recovery keys through the encryption report.
 
 ## FileVault encryption scenarios
 
-Intune supports multiple FileVault deployment approaches depending on your organizational needs:
+Intune supports multiple approaches to deployment of FileVault that can fit different organizational needs:
 
 - **Standard FileVault encryption** - User-interactive deployment with prompts and deferral options.
 - **Setup Assistant enforcement** - Automatic encryption during initial device setup (macOS 14+).
@@ -44,7 +44,7 @@ After you create a policy to encrypt devices with FileVault, the policy is appli
 When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the device user.
 
 > [!NOTE]
-> The FileVault settings available through Intune cover core macOS encryption features but *do not expose every FileVault capability*. Only options provided in Intune's templates or settings catalog can be configured through MDM. Advanced FileVault settings available directly in macOS may not be configurable via Intune policies.
+> The FileVault settings available through Intune cover core macOS encryption features but *do not expose every FileVault capability*. Only options provided in Intune's templates or settings catalog can be configured through MDM. Advanced FileVault settings available directly in macOS might not be configurable via Intune policies.
 
 ## Prerequisites
 
@@ -129,7 +129,7 @@ The *Device configuration > Endpoint protection* template includes FileVault as 
 
    **Recovery key management:**
    - **Recovery Key Rotation In Months** = Set rotation interval
-   - **Location** = Enter some [descriptive guidance](#escrow-location-guidance) to guide your for key retrieval.
+   - **Location** = Enter some [descriptive guidance](#escrow-location-guidance) to guide your users for key retrieval.
    <!--- **Hide recovery key** = *Yes* (recommended for security) (This option is no longer available in Intune UI) -->
 
    **User experience settings:**
@@ -149,7 +149,7 @@ The *Device configuration > Endpoint protection* template includes FileVault as 
 
 ### Escrow location guidance
 
-Configure helpful escrow location descriptions to guide users on how to retrieve their recovery key. This information is particularly useful when you use the setting for Personal recovery key rotation, which can automatically generate a new recovery key for a device periodically.
+Configure helpful escrow location descriptions to guide users on how to retrieve their recovery key. This information is useful when you use the setting for Personal recovery key rotation, which can automatically generate a new recovery key for a device periodically.
 
 **Message example:**  
 ```
@@ -159,7 +159,7 @@ To retrieve a lost or recently rotated recovery key, sign in to the Intune Compa
 
 - Include your organization's support contact information.
 - Reference your internal IT procedures for device recovery.
-- Provide clear, simple language that non-technical users can understand.
+- Provide clear, simple language that nontechnical users can understand.
 
 ## Create Settings Catalog policy
 
@@ -184,7 +184,7 @@ Settings Catalog provides the most comprehensive FileVault configuration options
    - **Defer** = *Enabled* (required for successful FileVault application)
 
    **FileVault Recovery Key Escrow:**
-   - **Location** = Enter some [descriptive guidance](#escrow-location-guidance) to guide your for key retrieval.
+   - **Location** = Enter some [descriptive guidance](#escrow-location-guidance) to guide your users for key retrieval.
 
    **Advanced options (as needed):** (All are found under FileVault)
    - **Show Recovery Key** = Configure visibility during encryption
@@ -238,7 +238,7 @@ FileVault deployment occurs in two distinct phases:
 ### User experience considerations
 
 **Standard deployment user experience:**  
-- Users may see FileVault enablement prompts (depending on configuration)
+- Users might see FileVault enablement prompts (depending on configuration)
 - Recovery key is displayed once during encryption process
 - Users should be directed to record recovery key information
 - Encryption continues in background after initial setup
@@ -287,7 +287,7 @@ Intune provides comprehensive recovery key management for FileVault-encrypted de
 #### View recovery keys
 
 > [!IMPORTANT]
-> **Administrator Access Restrictions**: Administrators can only view and manage FileVault recovery keys for devices marked as **Corporate**. Recovery keys for **Personal** (BYOD) devices are not accessible to administrators, ensuring user privacy. This distinction is critical for admin expectations and troubleshooting.
+> **Administrator Access Restrictions**: Administrators can only view and manage FileVault recovery keys for devices marked as **Corporate**. Recovery keys for **Personal** (BYOD) devices aren't accessible to administrators, ensuring user privacy. This distinction is critical for admin expectations and troubleshooting.
 
 **For administrators:**  
 - Access recovery keys for devices marked as **Corporate** only
@@ -314,7 +314,7 @@ Intune provides comprehensive recovery key management for FileVault-encrypted de
 
 1. **Using Company Portal website (Recommended):**
    - Sign in to the **Company Portal website** (https://portal.manage.microsoft.com/) from any device.
-   - Navigate to **Devices** and select the macOS device that is encrypted with FileVault.
+   - Navigate to **Devices** and select the macOS device that's encrypted with FileVault.
    - Select **Get recovery key** - The current recovery key is displayed.
    
 2. **Using mobile Company Portal apps:**
@@ -411,12 +411,12 @@ After either method, verify successful management assumption:
 | FileVault enablement fails | Verify user-approved MDM enrollment status | Check System Preferences > Profiles |
 | Recovery key escrow fails | Ensure device network connectivity | Check encryption report for escrow status |
 | Setup Assistant enforcement not working (macOS 14+) | Verify **Defer** setting is *Enabled* in Settings Catalog | Check enrollment profile for **Await final configuration** |
-| Users cannot retrieve recovery keys | Check device ownership type and user permissions | Verify **Corporate** device designation in Intune |
-| Administrator cannot access recovery keys | Device marked as **Personal/BYOD** (expected behavior) | Verify device ownership type - Personal devices protect user privacy |
+| Users can't retrieve recovery keys | Check device ownership type and user permissions | Verify **Corporate** device designation in Intune |
+| Administrator can't access recovery keys | Device marked as **Personal/BYOD** (expected behavior) | Verify device ownership type - Personal devices protect user privacy |
 
 ### Error code reference
 
-**Error -2016341107 / 0x87d1138d:** User has not accepted FileVault enablement prompt.  
+**Error -2016341107 / 0x87d1138d:** User hasn't accepted FileVault enablement prompt.  
 - **Resolution:** User education on accepting FileVault prompts.
 - **Prevention:** Consider Setup Assistant enforcement for automated deployment.
 
@@ -453,7 +453,7 @@ Use Intune's [policy conflict detection](../configuration/device-profile-monitor
 - Audit logging tracks all administrative recovery key access
 
 **Personal devices (BYOD):**  
-- **No administrative access**: Administrators cannot view or directly manage recovery keys
+- **No administrative access**: Administrators can't view or directly manage recovery keys
 - Users maintain complete control through self-service Company Portal access
 - Balances organizational security needs with employee privacy requirements
 - Keys are still escrowed to Microsoft cloud for user self-service recovery
@@ -470,7 +470,6 @@ FileVault encryption integrates with Intune compliance policies:
 
 - [Monitor disk encryption across your environment](../protect/encryption-monitor.md)
 - [Configure BitLocker encryption for Windows devices](../protect/encrypt-devices.md)
-- [Troubleshoot FileVault policies and deployment](/troubleshoot/mem/intune/troubleshoot-filevault-policies)
 - [FileVault settings reference for endpoint security policies](../protect/endpoint-security-disk-encryption-profile-settings.md#filevault)
 - [Apple FileVault deployment guide](https://support.apple.com/guide/deployment/dep32bf53500/web) *(opens Apple's website)*
 - [End-user guidance for FileVault recovery keys](../user-help/store-recovery-key.md)
