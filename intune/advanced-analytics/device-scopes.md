@@ -21,7 +21,7 @@ Device scopes are supported on the following endpoint analytics reports:
 ## Before you begin
 
 > [!div class="checklist"]
-> Make sure you meet the [requirements](index.md#prerequisites) to confirm your environment meets prerequisites.
+> - Verify that your environment meets all [prerequisites](index.md#prerequisites) before proceeding.
 
 Additional prerequisites for custom device scopes:
 

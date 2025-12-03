@@ -17,7 +17,7 @@ The report also provides actionable insights—showing how much your score could
 
 > [!div class="checklist"]
 > - Review the [Scores, baselines, and insights in endpoint analytics](../endpoint-analytics/scores.md) article to understand how these concepts work.
-> - Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+> - Verify that your environment meets all [prerequisites](index.md#prerequisites) before proceeding.
 
 ### Additional requirements
 
