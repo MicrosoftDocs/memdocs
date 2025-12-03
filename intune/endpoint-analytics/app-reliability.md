@@ -141,3 +141,7 @@ For Each wmiPendingPolicy In wmiObjs
     End If
 Next
 ```
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
