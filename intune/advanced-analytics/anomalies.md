@@ -27,11 +27,11 @@ The feature correlates deployment objects and configuration changes to speed tro
 
 - Use sorting and filtering capabilities to refine the list of anomalies.
 - To view more information about a specific anomaly, select it from the list. Review details such as the app name, affected devices, when the issue was first detected and last occurred, and any device groups that might be contributing to the problem.
-   :::image type="content" source="images/anomaly-detection/details-of-anomaly.png" lightbox="images/anomaly-detection/details-of-anomaly.png" alt-text="Screenshot of details displayed when you select an anomaly displayed in the Anomaly tab.":::
+    :::image type="content" source="images/anomaly-detection/details-of-anomaly.png" lightbox="images/anomaly-detection/details-of-anomaly.png" alt-text="Screenshot of details displayed when you select an anomaly displayed in the Anomaly tab.":::
 - Select a device correlation group from the list to see common factors among devices. Devices are correlated by shared attributes such as app version, driver update, OS version, or device model. You can view the number of devices currently affected and those at risk. The **prevalence rate** shows the percentage of affected devices in a correlation group.
-   :::image type="content" source="images/anomaly-detection/select-corelation-group.png" lightbox="images/anomaly-detection/select-corelation-group.png" alt-text="Screenshot showing Device correlation groups.":::
+    :::image type="content" source="images/anomaly-detection/select-corelation-group.png" lightbox="images/anomaly-detection/select-corelation-group.png" alt-text="Screenshot showing Device correlation groups.":::
 - Select **View Affected Devices** to display a list of devices with key attributes. Filter to view devices in specific correlation groups or show all devices affected by the anomaly. The device timeline also shows additional anomalous events.
-   :::image type="content" source="images/anomaly-detection/affected-devices.png" lightbox="images/anomaly-detection/affected-devices.png" alt-text="Screenshot showing a list of affected devices.":::
+    :::image type="content" source="images/anomaly-detection/affected-devices.png" lightbox="images/anomaly-detection/affected-devices.png" alt-text="Screenshot showing a list of affected devices.":::
 
 ## Review anomaly detection data
 
