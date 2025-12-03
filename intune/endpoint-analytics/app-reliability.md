@@ -9,11 +9,20 @@ ms.topic: concept-article
 <!--IN5653073-->
 The application reliability report provides insight into potential issues for desktop applications on managed devices. You can quickly identify the top applications that are impacting end-user productivity, and see aggregate app usage along with app failure metrics for these applications. From the report, drill into specific device data and view a timeline of app reliability events to troubleshoot end-user impacting issues.
 
-:::image type="content" source="images/app-reliability/5659073-application-reliability.png" alt-text="Application reliability report in endpoint analytics" lightbox="images/app-reliability/5659073-application-reliability.png":::
+## Before you begin
+
+- Review the [Scores, baselines, and insights in endpoint analytics](scores.md) article to understand how these concepts work.
+- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+
+## Review the report
+
+In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Application reliability**.
+
+:::image type="content" source="images/app-reliability/score.png" alt-text="Application reliability report in endpoint analytics" lightbox="images/app-reliability/score.png":::
 
 ## App reliability score
 
-The **App reliability score** provides a high-level view of desktop application robustness across your environment. As with other endpoint analytics scores, the **App reliability score** is a number between 0 and 100. The score is calculated from the app reliability scores of each desktop application in your environment that's found in the **App performance** tab.
+The app reliability score provides a high-level view of desktop application robustness across your environment. As with other endpoint analytics scores, the score is a number between 0 and 100. The score is calculated from the app reliability scores of each desktop application in your environment that's found in the **App performance** tab.
 
 Each application on the **App performance** tab is assigned an **App reliability score** based on:
 

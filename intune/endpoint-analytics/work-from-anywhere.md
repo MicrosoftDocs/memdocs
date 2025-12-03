@@ -9,10 +9,12 @@ ms.topic: concept-article
 <!--8668496-->
 The ability for employees to work from anywhere productively is essential in today's world. This report offers insights into how prepared your workforce is to be productive from anywhere. From this report, you can review your scores and how they compare to the selected baseline. Learn how to improve your scores by reviewing the insights and recommendations for each of them.
 
-> [!NOTE]
-> The **Work from anywhere** report replaced the **Recommended software report**. You may notice changes in your scores because the calculations are different in the **Work from anywhere** report.
+## Before you begin
 
-## Work from anywhere score
+- Review the [Scores, baselines, and insights in endpoint analytics](scores.md) article to understand how these concepts work.
+- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+
+## Review the report
 
 The **Work from anywhere score** is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all active Intune and Configuration Manager devices that have opted into [endpoint analytics](index.md).
 
@@ -97,8 +99,3 @@ In the **Windows** tab, a device-by-device view of Windows 11 hardware readiness
 ## No commercial median
 
 The built-in baseline of **All organizations (median)** doesn't currently have metrics for the subscore metrics listed in this article.
-
-## Next steps
-
-- View [Startup performance](startup-performance.md)
-- Use [Remediations](../intune-service/fundamentals/remediations.md) to help fix common support issues before end-users notice issues.

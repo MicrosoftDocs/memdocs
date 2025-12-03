@@ -75,20 +75,25 @@ In the model performance tab, two default columns allow you to review both the a
 Review boot and sign-in metrics for all your devices. You can sort by a particular metric to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. n
 
 > [!Note]
-> In the **Device performance** tabs of endpoint analytics, admins will only see devices they have access to according to their assigned scope tags. To learn more about scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
+> In the **Device performance** tabs of endpoint analytics, admins only see devices they have access to according to their assigned scope tags. To learn more about scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
 
-Select a device to see its boot and sign-in history, which can help you identify if there was a recent regressio
+Select a device to see its boot and sign-in history, which can help you identify if there was a recent regression.
 
-The **OS restart history** table has the following information:
+The **OS restart history** table contains the following information:
 
 - The **Restart category** for each reboot
-- For Stop errors (blue screen errors), the following additional information is available:
+- For Stop errors:
   - The [stop code](/windows-hardware/drivers/debugger/bug-check-code-reference2) also called the bug check code
   - A **Failure bucket ID** that can be used for diagnostics when working with Microsoft support
 
 :::image type="content" source="images/device-page-os-restart-history.png" alt-text="OS restart history under the Device page" lightbox="images/device-page-os-restart-history.png":::
 
-The **OS restart history** table is truncated to the 10 most recent restarts that occurred in the last 30 days. The table is low latency, so new restarts typically show up here before they appear in the daily aggregates shown in the **Device performance** tab.
+The **OS restart history** table shows the 10 most recent restarts that occurred within the last 30 days. Because this table updates with low latency, new restarts typically appear here before they show up in the daily aggregates on the **Device performance** tab.
+
+>[!NOTE]
+> The restart count in the **OS restart history** table may differ from the count shown under the **Device performance** tab. This difference is expected:
+> - The **OS restart history** table is limited to the 10 most recent restarts.
+> - The **Device performance** tab aggregates daily data for the last 30 days.
 
 ### Startup processes
 
@@ -129,13 +134,6 @@ Each restart is categorized into one of six categories. They're described as eit
 - **Restart (no update)**: Ideally this category should be close to zero since there shouldn't be a reason to restart a device beyond monthly patching.
 
 The difference between **Shutdown (no update)** and **Restart (no update)** is the user's action. A shutdown or restart doesn't have to be initiated through the start menu, it could be initiated other ways too.
-
-### Known issues
-
-- The count of restarts in a device's restart history in the [**Devices page**](#devices-page) might not match the count shown in the **Device performance** tab. This difference is by design. The differences are:
-  - The aggregates in the [**Device performance** tab](#device-performance-tab) are computed daily to show counts for the last 30 days
-  - The restart history in the [**Devices page**](#devices-page) is truncated to the 10 most recent restarts
-- There isn't an aggregation of Stop errors by *driver* or *failure bucket ID*.
 
 <!-- admin center links -->
 
