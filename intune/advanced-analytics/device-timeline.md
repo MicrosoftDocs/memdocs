@@ -14,7 +14,8 @@ The device timeline allows you to see a history of events that have occurred on 
 ## Before you begin
 
 > [!div class="checklist"]
-> - Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+> - Review [Scores, baselines, and insights in Endpoint Analytics](../endpoint-analytics/scores.md) to understand these concepts.
+> - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 
 ## Review the device timeline report
 

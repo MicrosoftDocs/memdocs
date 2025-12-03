@@ -14,7 +14,7 @@ Device query for multiple devices allows you to gain comprehensive insights abou
 ## Before you begin
 
 > [!div class="checklist"]
-> - Verify that your environment meets all [prerequisites](index.md#prerequisites) before proceeding.
+> - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 
 Additional prerequisites for device query for multiple devices:
 

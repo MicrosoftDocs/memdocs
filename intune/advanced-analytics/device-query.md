@@ -14,7 +14,7 @@ Device query allows you to quickly gain on-demand information about the state of
 ## Before you begin
 
 > [!div class="checklist"]
-> - Verify that your environment meets all [prerequisites](index.md#prerequisites) before proceeding.
+> - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 
 Additional prerequisites for device query:
 

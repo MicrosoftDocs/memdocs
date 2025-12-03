@@ -12,8 +12,8 @@ The work from anywhere report shows how ready your organization is for productiv
 ## Before you begin
 
 > [!div class="checklist"]
-> - Review the [Scores, baselines, and insights in endpoint analytics](scores.md) article to understand how these concepts work.
-> - Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+> - Review [Scores, baselines, and insights in Endpoint Analytics](scores.md) to understand these concepts.
+> - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 
 ## Review the report
 
