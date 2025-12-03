@@ -32,7 +32,9 @@ In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint 
 
 :::image type="content" source="images/battery-health.png" lightbox="images/battery-health.png" alt-text="Screenshot of the Battery Health tab in Advanced Analytics.":::
 
-The **Battery health score** provides an overview of laptop battery health. It's calculated as a weighted average of your organization's battery capacity score and battery runtime score, helping you identify batteries that need replacement.
+### Battery health score
+
+The battery health score provides an overview of laptop battery health. It's calculated as a weighted average of your organization's battery capacity score and battery runtime score, helping you identify batteries that need replacement.
 
 The maximum capacity of a battery is the ratio of its full charge capacity against its design capacity. The full charge capacity shows the Watt-hours the battery can hold on a full charge now, while the design capacity shows the Watt-hours the battery could hold when it was new. For example, a maximum capacity of 50% on a battery with design capacity of 70 Watt-hours means that the battery now holds only 35 watt-hours on a full charge.
 
@@ -73,18 +75,29 @@ Insights for this scenario highlight the devices for which the **App Impact** ta
 
 ## Report tabs
 
-The battery health report includes these tabs:
+The report is organized into tabs, each providing a different view of related data and insights.
 
-- **Device performance**: Shows battery health metrics and a score for all battery-powered devices.
-  - Sort by a metric (for example, Max capacity) to identify devices with the lowest scores.
-  - Search for a device by name.
-  - Select a device to view its runtime trend, compare its score to the model's average in your organization, and see the top apps that consumed its battery in the last 14 days.
-  - Review the cycle count, which tracks how many times the battery discharges 100% of its capacity (not necessarily in one session). For example, if a battery discharges 50% on day 1, 30% on day 2, and 20% on day 3, the cycle count increases by 1.
-- **Model performance**: Displays battery health metrics and scores by device model to help identify issues specific to certain models.
-- **OS performance**: Shows battery health metrics and scores by operating system version, helping you determine if problems are tied to specific OS versions.
-- **App impact**: Summarizes cumulative battery usage per app over the last 14 days.
-  - View the number of devices affected and the percentage of total battery charge consumed by each app.
-  - Use this information to troubleshoot apps that may be draining battery excessively.
+### Device performance
+
+Shows battery health metrics and a score for all battery-powered devices.
+- Sort by a metric (for example, Max capacity) to identify devices with the lowest scores.
+- Search for a device by name.
+- Select a device to view its runtime trend, compare its score to the model's average in your organization, and see the top apps that consumed its battery in the last 14 days.
+- Review the cycle count, which tracks how many times the battery discharges 100% of its capacity (not necessarily in one session). For example, if a battery discharges 50% on day 1, 30% on day 2, and 20% on day 3, the cycle count increases by 1.
+
+### Model performance
+
+Displays battery health metrics and scores by device model to help identify issues specific to certain models.
+
+### OS performance
+
+Shows battery health metrics and scores by operating system version, helping you determine if problems are tied to specific OS versions.
+
+### App impact
+
+Summarizes cumulative battery usage per app over the last 14 days.
+- View the number of devices affected and the percentage of total battery charge consumed by each app.
+- Use this information to troubleshoot apps that may be draining battery excessively.
 
 > [!NOTE]
 > The battery power used by an app varies by the activity that a user engages in. For example, using Microsoft Teams for chatting vs in an audio/video call with screen share results in different battery drains. The data in the *App impact* tab accounts for all activity using an app.
