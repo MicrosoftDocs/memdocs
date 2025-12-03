@@ -1,7 +1,7 @@
 ---
 title: Data Transfer Policy Exceptions for Apps
 description: Create exceptions to the Intune App Protection Policy (APP) data transfer policy.
-ms.date: 01/06/2025
+ms.date: 12/02/2025
 ms.topic: article
 ms.reviewer: beflamm
 ms.collection:
@@ -37,8 +37,8 @@ For a policy targeting Android, you can configure data transfer exceptions by ap
 By adding the **Webex** package as an exception to the MAM data transfer policy, Webex links inside a managed Outlook email message are allowed to open directly in the Webex application. Data transfer is still restricted in other unmanaged apps.
 
 - iOS/iPadOS **Webex** example:
-    To exempt the **Webex** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>wbx</code>
-
+    To exempt the **Webex** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>wbx</code>. To exempt the **Webex Meetings** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>webexteams</code>
+    
 - iOS/iPadOS **Maps** example:
     To exempt the native **Maps** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>maps</code>
 
