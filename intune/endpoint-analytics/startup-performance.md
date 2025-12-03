@@ -12,7 +12,7 @@ The startup performance report in endpoint analytics provides insights into the 
 ## Before you begin
 
 > [!div class="checklist"]
-> - Review [Scores, baselines, and insights in Endpoint Analytics](scores.md) to understand these concepts.
+> - Review [Scores, baselines, and insights in endpoint analytics](scores.md) to understand these concepts.
 > - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 > - Clients require a restart to fully enable all analytics.
 

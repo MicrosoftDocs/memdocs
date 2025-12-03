@@ -13,7 +13,7 @@ The application reliability report provides insight into potential issues for de
 ## Before you begin
 
 > [!div class="checklist"]
-> - Review [Scores, baselines, and insights in Endpoint Analytics](scores.md) to understand these concepts.
+> - Review [Scores, baselines, and insights in endpoint analytics](scores.md) to understand these concepts.
 > - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 
 ## Review the report

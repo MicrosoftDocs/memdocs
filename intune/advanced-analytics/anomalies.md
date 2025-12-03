@@ -16,7 +16,7 @@ The feature correlates deployment objects and configuration changes to speed tro
 ## Before you begin
 
 > [!div class="checklist"]
-> - Review [Scores, baselines, and insights in Endpoint Analytics](../endpoint-analytics/scores.md) to understand these concepts.
+> - Review [Scores, baselines, and insights in endpoint analytics](../endpoint-analytics/scores.md) to understand these concepts.
 > - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 
 ## Review the report
