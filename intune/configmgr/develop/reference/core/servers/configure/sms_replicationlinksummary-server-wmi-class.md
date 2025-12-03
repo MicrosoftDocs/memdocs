@@ -12,213 +12,213 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ReplicationLinkSummary Server WMI Class
-The `SMS_ReplicationLinkSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the summary of database replication link status.  
+The `SMS_ReplicationLinkSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the summary of database replication link status.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ReplicationLinkSummary : SMS_BaseClass  
-{  
-    String GlobalInitPercentage;  
-    UInt32 LinkStatus;  
-    UInt32 LinkStatusDescription;  
-    String Site1;  
-    UInt32 Site1Status;  
-    UInt32 Site1ToSite2GlobalState;  
-    DateTime Site1ToSite2GlobalSyncTime;  
-    String Site2;  
-    UInt32 Site2Status;  
-    UInt32 Site2ToSite1GlobalState;  
-    DateTime Site2ToSite1GlobalSyncTime;  
-    UInt32 Site2ToSite1SiteState;  
-    DateTime Site2ToSite1SiteSyncTime;  
-    String SiteName1;  
-    String SiteName2;  
-    UInt32 SiteType1;  
-    UInt32 SiteType2;  
-};  
-```  
+```
+Class SMS_ReplicationLinkSummary : SMS_BaseClass
+{
+    String GlobalInitPercentage;
+    UInt32 LinkStatus;
+    UInt32 LinkStatusDescription;
+    String Site1;
+    UInt32 Site1Status;
+    UInt32 Site1ToSite2GlobalState;
+    DateTime Site1ToSite2GlobalSyncTime;
+    String Site2;
+    UInt32 Site2Status;
+    UInt32 Site2ToSite1GlobalState;
+    DateTime Site2ToSite1GlobalSyncTime;
+    UInt32 Site2ToSite1SiteState;
+    DateTime Site2ToSite1SiteSyncTime;
+    String SiteName1;
+    String SiteName2;
+    UInt32 SiteType1;
+    UInt32 SiteType2;
+};
+```
 
-## Methods  
- The `SMS_ReplicationLinkSummary` class does not define any methods.  
+## Methods
+ The `SMS_ReplicationLinkSummary` class does not define any methods.
 
-## Properties  
- `GlobalInitPercentage`  
- Data type: `String`  
+## Properties
+ `GlobalInitPercentage`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Progress of the re-initialization of the global data.  
+ Progress of the re-initialization of the global data.
 
- `LinkStatus`  
- Data type: `UInt32`  
+ `LinkStatus`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Overall link status.  
+ Overall link status.
 
- `LinkStatusDescription`  
- Data type: `UInt32`  
+ `LinkStatusDescription`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Overall link status.  
+ Overall link status.
 
- `Site1`  
- Data type: `String`  
+ `Site1`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Parent site for the link.  
+ Parent site for the link.
 
- `Site1Status`  
- Data type: `UInt32`  
+ `Site1Status`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Site status for the parent site. See [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).  
+ Site status for the parent site. See [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).
 
- `Site1ToSite2GlobalState`  
- Data type: `UInt32`  
+ `Site1ToSite2GlobalState`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Overall link status for global data sent from the parent site to the child site.  
+ Overall link status for global data sent from the parent site to the child site.
 
- `Site1ToSite2GlobalSyncTime`  
- Data type: `DateTime`  
+ `Site1ToSite2GlobalSyncTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Last time that the parent site sent a message to the child site for global data synchronization.  
+ Last time that the parent site sent a message to the child site for global data synchronization.
 
- `Site2`  
- Data type: `String`  
+ `Site2`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Child site.  
+ Child site.
 
- `Site2Status`  
- Data type: `UInt32`  
+ `Site2Status`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Site status for the child site. See [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).  
+ Site status for the child site. See [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md).
 
- `Site2ToSite1GlobalState`  
- Data type: `UInt32`  
+ `Site2ToSite1GlobalState`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Overall link status for global data sent from the child site to the parent site.  
+ Overall link status for global data sent from the child site to the parent site.
 
- `Site2ToSite1GlobalSyncTime`  
- Data type: `DateTime`  
+ `Site2ToSite1GlobalSyncTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Last time that the child site sent a message to the parent site for global data synchronization.  
+ Last time that the child site sent a message to the parent site for global data synchronization.
 
- `Site2ToSite1SiteState`  
- Data type: `UInt32`  
+ `Site2ToSite1SiteState`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Overall link status for site data send from the child site to the parent site.  
+ Overall link status for site data send from the child site to the parent site.
 
- `Site2ToSite1SiteSyncTime`  
- Data type: `DateTime`  
+ `Site2ToSite1SiteSyncTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Last time that the child site sent a message to the parent site for data synchronization.  
+ Last time that the child site sent a message to the parent site for data synchronization.
 
- `SiteName1`  
- Data type: `String`  
+ `SiteName1`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Name of the parent site.  
+ Name of the parent site.
 
- `SiteName2`  
- Data type: `String`  
+ `SiteName2`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Name of the child site.  
+ Name of the child site.
 
- `SiteType1`  
- Data type: `UInt32`  
+ `SiteType1`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Type of the parent site. Possible values are:  
+ Type of the parent site. Possible values are:
 
-|Value|Parent site type|  
-|-|-|  
-|1|SECONDARY|  
-|2|PRIMARY|  
-|4|CAS|  
+|Value|Parent site type|
+|-|-|
+|1|SECONDARY|
+|2|PRIMARY|
+|4|CAS|
 
- `SiteType2`  
- Data type: `UInt32`  
+ `SiteType2`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Type of the child site. Possible values are:  
+ Type of the child site. Possible values are:
 
-|Value|Child site type|  
-|-|-|  
-|1|SECONDARY|  
-|2|PRIMARY|  
-|4|CAS|  
+|Value|Child site type|
+|-|-|
+|1|SECONDARY|
+|2|PRIMARY|
+|4|CAS|
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

@@ -3,16 +3,16 @@ title: How to use the conversion plug-in
 titleSuffix: Configuration Manager
 description: Use the Package Conversion Manager plug-in to customize the analysis and conversion processes.
 ms.date: 08/24/2018
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to use the Package Conversion Manager plug-in
@@ -25,7 +25,7 @@ The Package Conversion Manager plug-in helps you customize the analysis and conv
 
 The Package Conversion Manager plug-in runs once for each package. If you analyze or convert multiple packages at one time, the Package Conversion Manager plug-in runs each time.
 
-> [!NOTE]  
+> [!NOTE]
 > For more information on the Package Conversion Manager elements in the Configuration Manager configuration file, see [Technical reference for the Package Conversion Manager plug-in configuration XML](plugin-config-xml.md).
 
 
@@ -34,40 +34,40 @@ The Package Conversion Manager plug-in runs once for each package. If you analyz
 
 By default, Package Conversion Manager does the following actions:
 
-1.  Read a Configuration Manager package.  
+1.  Read a Configuration Manager package.
 
-2.  Create an application from the package, and add default attributes.  
+2.  Create an application from the package, and add default attributes.
 
-3.  Analyze the application and determine a package readiness state.  
+3.  Analyze the application and determine a package readiness state.
 
-4.  Take one of the following actions, depending on the Package Conversion Manager operation:  
+4.  Take one of the following actions, depending on the Package Conversion Manager operation:
 
-    - **Analyze**: Display the package readiness state in the Configuration Manager console.  
+    - **Analyze**: Display the package readiness state in the Configuration Manager console.
 
-    - **Convert**: Write the application to the Configuration Manager database.  
+    - **Convert**: Write the application to the Configuration Manager database.
 
 
-## Plug-in-based process 
+## Plug-in-based process
 
 When you use the plug-in, Package Conversion Manager does the following actions:
 
-1.  Read a Configuration Manager package.  
+1.  Read a Configuration Manager package.
 
-2.  Create an application from the package, and add default attributes.  
+2.  Create an application from the package, and add default attributes.
 
-3.  Convert the application to XML. Then save the file to disk.  
+3.  Convert the application to XML. Then save the file to disk.
 
-4.  Run the plug-in script to modify the application XML. For more information, see [Technical reference for the Package Conversion Manager plug-in configuration XML](plugin-config-xml.md).  
+4.  Run the plug-in script to modify the application XML. For more information, see [Technical reference for the Package Conversion Manager plug-in configuration XML](plugin-config-xml.md).
 
-5.  Convert the application XML into a Configuration Manager application.  
+5.  Convert the application XML into a Configuration Manager application.
 
-6.  Analyze the application, and determine a package readiness state.  
+6.  Analyze the application, and determine a package readiness state.
 
-7.  Take one of the following actions, depending on the Package Conversion Manager operation:  
+7.  Take one of the following actions, depending on the Package Conversion Manager operation:
 
-    - **Analyze**: Display the package readiness state in the Configuration Manager console.  
+    - **Analyze**: Display the package readiness state in the Configuration Manager console.
 
-    - **Convert**: Write the application to Configuration Manager database.  
+    - **Convert**: Write the application to Configuration Manager database.
 
 
 

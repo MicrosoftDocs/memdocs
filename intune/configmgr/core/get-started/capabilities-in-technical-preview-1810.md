@@ -12,20 +12,20 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
-# Capabilities in Configuration Manager technical preview version 1810 
+# Capabilities in Configuration Manager technical preview version 1810
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the technical preview for Configuration Manager, version 1810. Install this version to update and add new features to your technical preview site. 
+This article introduces the features that are available in the technical preview for Configuration Manager, version 1810. Install this version to update and add new features to your technical preview site.
 
-Review the [technical preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.     
+Review the [technical preview](technical-preview.md) article before installing this update. That article familiarizes you with the general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback.
 
 
 <!--  Known Issues Template
-## Known issues 
+## Known issues
 
 [!INCLUDE [known issue title](includes/known-issue-bugid.md)]
 
@@ -35,7 +35,7 @@ Review the [technical preview](technical-preview.md) article before installing t
 
 <br>
 
-**The following sections describe the new features to try out in this version:**  
+**The following sections describe the new features to try out in this version:**
 
 [!INCLUDE [Improvement to client installation](includes/1810/1358840.md)]
 [!INCLUDE [Required app compliance policy for co-managed devices](includes/1810/1358196.md)]
@@ -55,6 +55,6 @@ Review the [technical preview](technical-preview.md) article before installing t
 
 ## Next steps
 
-For more information about installing or updating the technical preview branch, see [Technical preview](technical-preview.md).    
+For more information about installing or updating the technical preview branch, see [Technical preview](technical-preview.md).
 
 For more information about the different branches of Configuration Manager, see [Which branch of Configuration Manager should I use?](../understand/which-branch-should-i-use.md)

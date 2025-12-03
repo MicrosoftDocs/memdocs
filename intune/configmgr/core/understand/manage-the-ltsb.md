@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Manage the long term servicing branch of Configuration Manager
@@ -28,7 +28,7 @@ The following sections provide information about tasks that aren't similar betwe
 
 ## Updates and servicing
 
-Only critical security updates are made available as in-console updates in the LTSB.  
+Only critical security updates are made available as in-console updates in the LTSB.
 
 Regular updates for the current branch are visible in the console, but aren't made available to the LTSB. They aren't downloaded and can't be installed.
 

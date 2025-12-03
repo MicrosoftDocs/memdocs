@@ -3,15 +3,15 @@ title: Assign clients to a site
 titleSuffix: Configuration Manager
 description: Before you can manage a client, it needs to assign to a primary site.
 ms.date: 04/05/2021
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to assign clients to a site in Configuration Manager
@@ -81,7 +81,7 @@ If you try to assign a client that runs a legacy OS version, site assignment fai
 
 Configuration Manager also checks that you've assigned the current branch client to a site that supports it.
 
-The site compatibility check requires one of the following conditions:  
+The site compatibility check requires one of the following conditions:
 
 - The client can access site information published to Active Directory Domain Services.
 
@@ -97,7 +97,7 @@ The following scenarios might occur during migration from previous versions of C
 
 #### You use automatic site assignment and boundaries overlap between versions of Configuration Manager
 
-In this case, the client automatically tries to find a current branch site.  
+In this case, the client automatically tries to find a current branch site.
 
 The client first checks Active Directory Domain Services. If it finds a current branch site published, site assignment succeeds. If this check fails, the client then checks for site information from its assigned management point.
 

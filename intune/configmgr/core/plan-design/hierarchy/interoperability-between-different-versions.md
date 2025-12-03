@@ -11,14 +11,14 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Interoperability between different versions of Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-You can install and operate multiple, independent hierarchies of Configuration Manager on the same network. However, because different hierarchies of Configuration Manager don't interoperate outside of the migration process, each hierarchy requires configurations to prevent conflicts between them. Additionally, you can create certain configurations to help resources that you manage interact with the site systems from the correct hierarchy.  
+You can install and operate multiple, independent hierarchies of Configuration Manager on the same network. However, because different hierarchies of Configuration Manager don't interoperate outside of the migration process, each hierarchy requires configurations to prevent conflicts between them. Additionally, you can create certain configurations to help resources that you manage interact with the site systems from the correct hierarchy.
 
 ## Current branch and earlier versions
 
@@ -29,19 +29,19 @@ Sites of different versions can't coexist in the same Configuration Manager hier
 
 You can deploy a Configuration Manager current branch site and hierarchy side by side with an existing System Center 2012 Configuration Manager site or hierarchy. Plan to prevent clients from either version from trying to join a site from the other version.
 
-For example, if two or more Configuration Manager hierarchies have [overlapping boundaries](../../servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#overlapping-boundaries) that include the same network locations, assign each new client to a specific site instead of using automatic site assignment. For more information, see [How to assign clients to a site](../../clients/deploy/assign-clients-to-a-site.md).  
+For example, if two or more Configuration Manager hierarchies have [overlapping boundaries](../../servers/deploy/configure/define-site-boundaries-and-boundary-groups.md#overlapping-boundaries) that include the same network locations, assign each new client to a specific site instead of using automatic site assignment. For more information, see [How to assign clients to a site](../../clients/deploy/assign-clients-to-a-site.md).
 
-Additionally, you can't install a client from System Center 2012 Configuration Manager on a computer that hosts a site system role from Configuration Manager current branch. You also can't you install a Configuration Manager current branch client on a computer that hosts a site system role from System Center 2012 Configuration Manager.  
+Additionally, you can't install a client from System Center 2012 Configuration Manager on a computer that hosts a site system role from Configuration Manager current branch. You also can't you install a Configuration Manager current branch client on a computer that hosts a site system role from System Center 2012 Configuration Manager.
 
-The following clients and connections aren't supported:  
+The following clients and connections aren't supported:
 
-- Any System Center 2012 Configuration Manager or earlier computer client version  
+- Any System Center 2012 Configuration Manager or earlier computer client version
 
-- Any System Center 2012 Configuration Manager or earlier device management client  
+- Any System Center 2012 Configuration Manager or earlier device management client
 
-- Windows CE Platform Builder device management client (any version)  
+- Windows CE Platform Builder device management client (any version)
 
-- System Center Mobile Device Manager VPN connection  
+- System Center Mobile Device Manager VPN connection
 
 ### Client site assignment considerations
 
@@ -51,17 +51,17 @@ Configuration Manager clients can be assigned to only a single primary site. You
 - More than one boundary group includes the same boundary
 - The boundary groups have different assigned sites
 
-If boundaries overlap across multiple Configuration Manager sites and hierarchies, clients might not be assigned to the site you expect, or might not get assigned to a site at all.  
+If boundaries overlap across multiple Configuration Manager sites and hierarchies, clients might not be assigned to the site you expect, or might not get assigned to a site at all.
 
-Configuration Manager current branch clients check the version of the site before they complete site assignment. If site boundaries overlap, you can't assign clients to a site with a previous version. However, earlier System Center 2012 Configuration Manager clients might incorrectly be assigned to a later Configuration Manager current branch site.  
+Configuration Manager current branch clients check the version of the site before they complete site assignment. If site boundaries overlap, you can't assign clients to a site with a previous version. However, earlier System Center 2012 Configuration Manager clients might incorrectly be assigned to a later Configuration Manager current branch site.
 
-To prevent clients from unintentionally being assigned to the wrong site when two hierarchies have overlapping boundaries, configure client installation parameters to assign clients to a specific site.  
+To prevent clients from unintentionally being assigned to the wrong site when two hierarchies have overlapping boundaries, configure client installation parameters to assign clients to a specific site.
 
 ## Limitations in a mixed-version hierarchy
 
-When you upgrade a Configuration Manager current branch hierarchy, there are times when different sites will have different versions. For example, first you upgrade the central administration site. Because of site maintenance windows, you don't upgrade the primary sites until a later time and date.  
+When you upgrade a Configuration Manager current branch hierarchy, there are times when different sites will have different versions. For example, first you upgrade the central administration site. Because of site maintenance windows, you don't upgrade the primary sites until a later time and date.
 
-When different sites in a single hierarchy run different versions, some functionality isn't available. This behavior can affect how you manage Configuration Manager objects in the Configuration Manager console, and which functionality is available to clients. Typically, functionality from the newer version of Configuration Manager isn't accessible at sites or to clients that run a lower service pack version.  
+When different sites in a single hierarchy run different versions, some functionality isn't available. This behavior can affect how you manage Configuration Manager objects in the Configuration Manager console, and which functionality is available to clients. Typically, functionality from the newer version of Configuration Manager isn't accessible at sites or to clients that run a lower service pack version.
 
 ### Network access account
 
@@ -110,9 +110,9 @@ If you install the Configuration Manager client on site systems, assign them to 
 
 For example, for a management point in site XYZ, assign the client installed on this site system server to site XYZ.
 
-## Configuration Manager console  
+## Configuration Manager console
 
-This section contains information about the use of the Configuration Manager console in an environment that has a mix of Configuration Manager versions.  
+This section contains information about the use of the Configuration Manager console in an environment that has a mix of Configuration Manager versions.
 
 ### An environment with both System Center 2012 Configuration Manager and Configuration Manager current branch
 

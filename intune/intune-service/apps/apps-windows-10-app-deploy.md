@@ -1,43 +1,23 @@
 ---
-# required metadata
-
-title: Windows app deployment by using Microsoft Intune
-titleSuffix:
+title: Windows App Deployment by Using Microsoft Intune
 description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 04/16/2024
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: abebfb5e-054b-435a-903d-d1c31767bcf2
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: priyar
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri
 - FocusArea_Apps_Deploy
 ---
 
-# Windows app deployment by using Microsoft Intune
+# Windows App Deployment by Using Microsoft Intune
 
-Microsoft Intune supports a variety of app types and deployment scenarios on Windows 10 devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-A Line-of-business (LOB) app is the app type supported on Windows 10 devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.
+Microsoft Intune supports a variety of app types and deployment scenarios on Windows devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
+
+A Line-of-business (LOB) app is the app type supported on Windows devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.
 
 > [!NOTE]
 > To deploy modern apps, you need at least:
@@ -47,11 +27,11 @@ A Line-of-business (LOB) app is the app type supported on Windows 10 devices. Th
 >
 > Only Windows 10 1803 and later support installing apps when there is no primary user associated.
 >
-> LOB app deployment isn't supported on devices running Windows 10 Home editions.
+> LOB app deployment isn't supported on devices running Windows Home editions.
 
 ## Supported Windows app types
 
-Specific app types are supported based on the version of Windows 10 that your users are running. The following table provides the app type and Windows 10 supportability.
+Specific app types are supported based on the version of Windows that your users are running. The following table provides the app type and Windows supportability.
 
 | App type | Home | Pro | Business | Enterprise | Education | S-Mode | HoloLens<sup>1 | Surface Hub |
 |----------------|------|-----|----------|------------|-----------|--------|-----------|------------|

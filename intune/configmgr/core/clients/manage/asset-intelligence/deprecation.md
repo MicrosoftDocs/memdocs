@@ -7,10 +7,10 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 ms.localizationpriority: medium
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

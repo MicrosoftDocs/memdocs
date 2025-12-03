@@ -12,54 +12,54 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Import Method in Class SMS_AIMLSParser
-The `Import` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports the MLS statement as specified by the `MLSFilepath` parameter (in UNC format) into the Configuration Manager database.  
+The `Import` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports the MLS statement as specified by the `MLSFilepath` parameter (in UNC format) into the Configuration Manager database.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 Import(      
-     String MLSFilepath,  
-     UInt32 Flags  
-);  
-```  
+```
+SInt32 Import(
+     String MLSFilepath,
+     UInt32 Flags
+);
+```
 
-#### Parameters  
- `MLSFilepath`  
- Data type: `String`  
+#### Parameters
+ `MLSFilepath`
+ Data type: `String`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The UNC path of the .csv file to be imported.  
+ The UNC path of the .csv file to be imported.
 
- `Flags`  
- Data type: `UInt32`  
+ `Flags`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Specifies the type of data the .csv file contains, specified by the `MLSFilepath` property.  
+ Specifies the type of data the .csv file contains, specified by the `MLSFilepath` property.
 
-|Value|Description|  
-|-----------|-----------------|  
-|0|Microsoft licenses.|  
-|Non 0|Any non-Microsoft licenses.|  
+|Value|Description|
+|-----------|-----------------|
+|0|Microsoft licenses.|
+|Non 0|Any non-Microsoft licenses.|
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_AIMLSParser Server WMI Class](../../../../../develop/reference/core/clients/asset-intelligence/sms_aimlsparser-server-wmi-class.md)

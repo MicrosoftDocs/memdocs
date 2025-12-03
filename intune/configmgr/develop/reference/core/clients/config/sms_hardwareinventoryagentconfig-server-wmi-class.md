@@ -12,124 +12,124 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_HardwareInventoryAgentConfig Server WMI Class
-The `SMS_HardwareInventoryAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies hardware inventory settings for client computers.  
+The `SMS_HardwareInventoryAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies hardware inventory settings for client computers.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_HardwareInventoryAgentConfig : SMS_ClientAgentConfig_BaseClass  
-{  
-    UInt32 AgentID;  
-    Boolean Enabled;  
-    String InventoryReportID;  
-    String LastUpdateTime;  
-    UInt32 Max3rdPartyMIFSize;  
-    UInt32 MIFCollection;  
-    UInt32 ProviderTimeout;  
-    String Schedule;  
-};  
-```  
+```
+Class SMS_HardwareInventoryAgentConfig : SMS_ClientAgentConfig_BaseClass
+{
+    UInt32 AgentID;
+    Boolean Enabled;
+    String InventoryReportID;
+    String LastUpdateTime;
+    UInt32 Max3rdPartyMIFSize;
+    UInt32 MIFCollection;
+    UInt32 ProviderTimeout;
+    String Schedule;
+};
+```
 
-## Methods  
- The `SMS_HardwareInventoryAgentConfig` class does not define any methods.  
+## Methods
+ The `SMS_HardwareInventoryAgentConfig` class does not define any methods.
 
-## Properties  
- `AgentID`  
- Data type: `UInt32`  
+## Properties
+ `AgentID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Identifies the client agent component. The Hardware Inventory Agent ID is 15.  
+ Identifies the client agent component. The Hardware Inventory Agent ID is 15.
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the agent is enabled.  
+ `true` if the agent is enabled.
 
- `InventoryReportID`  
- Data type: `String`  
+ `InventoryReportID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Identifies the type of inventory report.  
+ Identifies the type of inventory report.
 
-|Value|Inventory type|  
-|-|-|  
-|Hardware Inventory|{00000000-0000-0000-0000-000000000001}|  
-|Software Inventory|{00000000-0000-0000-0000-000000000002}|  
-|Data Discovery Record|{00000000-0000-0000-0000-000000000003}|  
+|Value|Inventory type|
+|-|-|
+|Hardware Inventory|{00000000-0000-0000-0000-000000000001}|
+|Software Inventory|{00000000-0000-0000-0000-000000000002}|
+|Data Discovery Record|{00000000-0000-0000-0000-000000000003}|
 
- `LastUpdateTime`  
- Data type: `String`  
+ `LastUpdateTime`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last time the client setting was updated.  
+ Last time the client setting was updated.
 
- `Max3rdPartyMIFSize`  
- Data type: `UInt32`  
+ `Max3rdPartyMIFSize`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Maximum custom MIF file size (KB).  
+ Maximum custom MIF file size (KB).
 
- `MIFCollection`  
- Data type: `UInt32`  
+ `MIFCollection`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- MIF files to collect.  
+ MIF files to collect.
 
-|Value|MIF files to collect|  
-|-|-|  
-|0|None|  
-|0x08|Collect IDMIF files|  
-|0x04|Collect NOIDMIF files|  
-|0x0C|Collect IDMIF and NOIDMIF files|  
+|Value|MIF files to collect|
+|-|-|
+|0|None|
+|0x08|Collect IDMIF files|
+|0x04|Collect NOIDMIF files|
+|0x0C|Collect IDMIF and NOIDMIF files|
 
- `ProviderTimeout`  
- Data type: `UInt32`  
+ `ProviderTimeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- This property is not currently used.  
+ This property is not currently used.
 
- `Schedule`  
- Data type: `String`  
+ `Schedule`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Schedule of hardware inventory.  
+ Schedule of hardware inventory.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

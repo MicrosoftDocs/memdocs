@@ -7,10 +7,10 @@ ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
 author: BalaDelli
-ms.author: baladell
+ms.author: brianhun
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 
@@ -43,7 +43,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
 1. In the ribbon, select **Create BitLocker Management Control Policy**.
 
-1. On the **General** page, specify a name and optional description. Select the components to enable on clients with this policy:  
+1. On the **General** page, specify a name and optional description. Select the components to enable on clients with this policy:
 
     - **Operating System Drive**: Manage whether the OS drive is encrypted
 
@@ -51,7 +51,7 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - **Removable Drive**: Manage encryption for drives that you can remove from a device, like a USB key
 
-    - **Client Management**: Manage the key recovery service backup of BitLocker Drive Encryption recovery information  
+    - **Client Management**: Manage the key recovery service backup of BitLocker Drive Encryption recovery information
 
 1. On the **Setup** page, configure the following global settings for BitLocker Drive Encryption:
 
@@ -66,9 +66,9 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     For more information on these and other settings on this page, see [Settings reference - Setup](../../tech-ref/bitlocker/settings.md#setup).
 
-1. On the **Operating System Drive** page, specify the following settings:  
+1. On the **Operating System Drive** page, specify the following settings:
 
-    - **Operating System Drive Encryption Settings**: If you enable this setting, the user has to protect the OS drive, and BitLocker encrypts the drive. If you disable it, the user can't protect the drive.  
+    - **Operating System Drive Encryption Settings**: If you enable this setting, the user has to protect the OS drive, and BitLocker encrypts the drive. If you disable it, the user can't protect the drive.
 
     On devices with a compatible TPM, two types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require the entry of a personal identification number (PIN). Configure the following settings:
 

@@ -3,15 +3,15 @@ title: Manage clients over the internet
 titleSuffix: Configuration Manager
 description: Learn about managing clients with cloud management gateway and internet-based client management in Configuration Manager.
 ms.date: 08/02/2021
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.topic: article
 ms.service: configuration-manager
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Manage clients over the internet with Configuration Manager
@@ -35,19 +35,19 @@ The cloud management gateway provides management of internet-based clients. It u
 
 ### CMG advantages
 
-- No additional on-premises infrastructure investment required.  
+- No additional on-premises infrastructure investment required.
 
-- Does not expose on-premises infrastructure to the internet.  
+- Does not expose on-premises infrastructure to the internet.
 
-- Cloud virtual machines that run the service are fully managed by Azure and require no maintenance.  
+- Cloud virtual machines that run the service are fully managed by Azure and require no maintenance.
 
-- Easily set up and configured in the Configuration Manager console.  
+- Easily set up and configured in the Configuration Manager console.
 
-### CMG disadvantages  
+### CMG disadvantages
 
-- Cloud subscription cost.  
+- Cloud subscription cost.
 
-- Management data sent through cloud service.  
+- Management data sent through cloud service.
 
 ## Internet-based client management
 
@@ -55,19 +55,19 @@ This method relies on internet-facing site system servers to which clients direc
 
 ### IBCM advantages
 
-- No cloud service dependency.  
+- No cloud service dependency.
 
-- No additional cost associated with a cloud subscription.  
+- No additional cost associated with a cloud subscription.
 
-- Full control of servers and roles providing the service.  
+- Full control of servers and roles providing the service.
 
 ### IBCM disadvantages
 
-- Require additional infrastructure investment.  
+- Require additional infrastructure investment.
 
-- Overhead and operational cost of additional infrastructure.  
+- Overhead and operational cost of additional infrastructure.
 
-- Infrastructure must be exposed to the internet.  
+- Infrastructure must be exposed to the internet.
 
 ## Next steps
 

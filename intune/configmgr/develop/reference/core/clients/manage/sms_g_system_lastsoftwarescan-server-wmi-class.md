@@ -12,79 +12,79 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_G_System_LastSoftwareScan Server WMI Class
-The `SMS_G_System_LastSoftwareScan` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents information about the most recent software inventory scan on the client computer.  
+The `SMS_G_System_LastSoftwareScan` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents information about the most recent software inventory scan on the client computer.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_G_System_LastSoftwareScan : SMS_G_System  
-{  
-     UInt32 ResourceID;  
-     DateTime LastScanDate;  
-     UInt32 LastScanOpcode;  
-     DateTime LastCollectedFileScanDate;  
-};  
-```  
+```
+Class SMS_G_System_LastSoftwareScan : SMS_G_System
+{
+     UInt32 ResourceID;
+     DateTime LastScanDate;
+     UInt32 LastScanOpcode;
+     DateTime LastCollectedFileScanDate;
+};
+```
 
-## Methods  
- The `SMS_G_System_LastSoftwareScan` class does not define any methods.  
+## Methods
+ The `SMS_G_System_LastSoftwareScan` class does not define any methods.
 
-## Properties  
- `ResourceID`  
- Data type: **UInt32**  
+## Properties
+ `ResourceID`
+ Data type: **UInt32**
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).  
+ See [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).
 
- `LastCollectedFileScanDate`  
- Data type: **DateTime**  
+ `LastCollectedFileScanDate`
+ Data type: **DateTime**
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The date and time of the last scan for collected files.  
+ The date and time of the last scan for collected files.
 
- `LastScanDate`  
- Data type: **DateTime**  
+ `LastScanDate`
+ Data type: **DateTime**
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Date and time of the most recent Configuration Manager software inventory scan.  
+ Date and time of the most recent Configuration Manager software inventory scan.
 
- `LastScanOpcode`  
- Data type: **UInt32**  
+ `LastScanOpcode`
+ Data type: **UInt32**
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Not used.  
+ Not used.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md)

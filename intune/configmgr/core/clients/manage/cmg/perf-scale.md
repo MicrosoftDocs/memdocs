@@ -3,14 +3,14 @@ title: CMG performance and scale
 titleSuffix: Configuration Manager
 description: Plan how the design the cloud management gateway (CMG) for the best performance at the appropriate scale.
 ms.date: 04/08/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -66,6 +66,6 @@ Depending upon your design, if clients have the option of more than one CMG for 
 ## Next steps
 
 Next, understand the costs associated with operating an Azure service for the CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Cost of CMG](cost.md)

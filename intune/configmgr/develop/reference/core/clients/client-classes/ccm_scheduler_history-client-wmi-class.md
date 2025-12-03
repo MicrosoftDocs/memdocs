@@ -12,118 +12,118 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CCM_Scheduler_History Client WMI Class
-In Configuration Manager, the `CCM_Scheduler_History` class is a client Windows Management Instrumentation (WMI) class that represents the history for a schedule.  
+In Configuration Manager, the `CCM_Scheduler_History` class is a client Windows Management Instrumentation (WMI) class that represents the history for a schedule.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class CCM_Scheduler_History {  
-      String  ScheduleID;  
-      String  UserSID;  
-      DateTime  FirstEvalTime;  
-      DateTime  ActivationMessageSent;  
-      Boolean  ActivationMessageSentIsGMT;  
-      DateTime  ExpirationMessageSent;  
-      Boolean  ExpirationMessageSentIsGMT;     
-      DateTime  LastTriggerTime;  
-      String  TriggerState;  
-};  
-```  
+```
+Class CCM_Scheduler_History {
+      String  ScheduleID;
+      String  UserSID;
+      DateTime  FirstEvalTime;
+      DateTime  ActivationMessageSent;
+      Boolean  ActivationMessageSentIsGMT;
+      DateTime  ExpirationMessageSent;
+      Boolean  ExpirationMessageSentIsGMT;
+      DateTime  LastTriggerTime;
+      String  TriggerState;
+};
+```
 
-## Properties  
- `ScheduleID`  
- Data type: `String`  
+## Properties
+ `ScheduleID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [Not_Null:ToInstance, Key]  
+ Qualifiers: [Not_Null:ToInstance, Key]
 
- ID of the schedule to which this history item refers.  
+ ID of the schedule to which this history item refers.
 
- `UserSID`  
- Data type: `String`  
+ `UserSID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [Not_Null:ToInstance, Key]  
+ Qualifiers: [Not_Null:ToInstance, Key]
 
- User owning the schedule.  
+ User owning the schedule.
 
- `FirstEvalTime`  
- Data type: `DateTime`  
+ `FirstEvalTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [Not_Null:ToInstance, Key]  
+ Qualifiers: [Not_Null:ToInstance, Key]
 
- Date and time when the schedule was first evaluated by the scheduler.  
+ Date and time when the schedule was first evaluated by the scheduler.
 
- `ActivationMessageSent`  
- Data type: `DateTime`  
+ `ActivationMessageSent`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Last time the activation message was sent for the schedule.  
+ Last time the activation message was sent for the schedule.
 
- `ActivationMessageSentIsGMT`  
- Data type: `Boolean`  
+ `ActivationMessageSentIsGMT`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the time indicated by `ActivationMessageSent` is in Universal Coordinated Time (UTC).  
+ `true` if the time indicated by `ActivationMessageSent` is in Universal Coordinated Time (UTC).
 
- `ExpirationMessageSent`  
- Data type: `DateTime`  
+ `ExpirationMessageSent`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Last date and time when the expiration message was sent for the schedule.  
+ Last date and time when the expiration message was sent for the schedule.
 
- `ExpirationMessageSentIsGMT`  
- Data type: `Boolean`  
+ `ExpirationMessageSentIsGMT`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the time indicated by `ExpirationMessageSent` is in Universal Coordinated Time (UTC).  
+ `true` if the time indicated by `ExpirationMessageSent` is in Universal Coordinated Time (UTC).
 
- `LastTriggerTime`  
- Data type: `DateTime`  
+ `LastTriggerTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Last date and time when a trigger on the schedule fired. A NULL value indicates that a trigger has not yet fired on the schedule.  
+ Last date and time when a trigger on the schedule fired. A NULL value indicates that a trigger has not yet fired on the schedule.
 
- `TriggerState`  
- Data type: `String`  
+ `TriggerState`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- State information that individual triggers can set and query.  
+ State information that individual triggers can set and query.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
+## See Also
  [Scheduling Client WMI Classes](../../../../../develop/reference/core/clients/client-classes/scheduling-client-wmi-classes.md)

@@ -6,11 +6,11 @@ ms.date: 10/01/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -79,9 +79,9 @@ Use the [Download Package Content](task-sequence-steps.md#BKMK_DownloadPackageCo
 
 ## Post-processing
 
-After you create the task sequence, add more steps in the **Post-Processing** group of the task sequence.  
+After you create the task sequence, add more steps in the **Post-Processing** group of the task sequence.
 
-> [!NOTE]  
+> [!NOTE]
 > This task sequence isn't linear. There are conditions on steps that can affect the results of the task sequence. This behavior depends on whether it successfully upgrades the client computer, or if it has to roll back the client computer to the original OS.
 
 The default task sequence template for Windows in-place upgrade includes other groups with recommended actions to add after the upgrade process. These actions in the **Post-Processing** group are common among many customers who are successfully upgrading Windows on devices. If you have an existing task sequence that doesn't already have these actions, manually add them to your task sequence in the **Post-Processing** group.
@@ -116,7 +116,7 @@ For more information, see [Export or import default application associations](/w
 
 Add steps in this group to apply Start menu customizations, such as organizing program groups. For more information, see [Customize the Start layout](/windows-hardware/customize/desktop/customize-start-layout).
 
-## Rollback  
+## Rollback
 
 When something goes wrong with the upgrade process after the computer restarts, Windows Setup rolls back the system to the previous OS. The task sequence then continues with any steps in the **Rollback** group. After you create the task sequence, add optional steps in this group as necessary. For example, reverse any changes made to the system in the Prepare for Upgrade group, such as uninstalling incompatible software.
 

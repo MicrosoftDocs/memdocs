@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # What&#39;s new in version 1610 of Configuration Manager
 
@@ -21,18 +21,18 @@ ms.reviewer: mstewart,aaroncz
 Update 1610 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1511, 1602, or 1606.
 
 
-> [!TIP]  
-> To install a new site, you must use a baseline version of Configuration Manager.  
+> [!TIP]
+> To install a new site, you must use a baseline version of Configuration Manager.
 >
-> Learn more about:    
-> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
-> - [Installing updates at sites](../../servers/manage/updates.md)  
+> Learn more about:
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Installing updates at sites](../../servers/manage/updates.md)
 > - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
-The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.  
+The following sections provide details about changes and new capabilities introduced in version 1610 of Configuration Manager.
 
 
-## In-console monitoring of update installation status  
+## In-console monitoring of update installation status
 Beginning with version 1610, when you install an update pack and monitor the installation in the console, there is a new phase: **Post Installation**. This phase includes status for tasks like restarting key services, and initialization of replication monitoring. (This phase is not available in the console until after your site updates to version 1610.) For more information about update installation status, see [Install in-console updates](../../servers/manage/install-in-console-updates.md).
 
 
@@ -56,7 +56,7 @@ After you deploy client settings that enable Peer Cache to a collection, members
 
 You can also use the new **Client Data Sources** dashboard to understand the use of Peer Cache content sources in your environment.
 
-> [!TIP]  
+> [!TIP]
 > With version 1610, Peer Cache and the Client Data Sources dashboard are pre-release features. To enable them, see [Use pre-release features from updates](../../servers/manage/pre-release-features.md).
 
 For more information, see [Peer Cache for Configuration Manager clients](../hierarchy/client-peer-cache.md), and [Client Data Sources dashboard](../../servers/deploy/configure/monitor-content-you-have-distributed.md#client-data-sources-dashboard).
@@ -123,7 +123,7 @@ Custom branding for the Software Center is applied according to the following ru
 
 
 ## Enforcement grace period for required application and software update deployments
-In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you set up. For example, this might be necessary when a computer has been turned off for an extended period of time and it needs to install a large number of application or update deployments. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection. 
+In some cases, you might want to give users more time to install required application deployments or software updates beyond any deadlines you set up. For example, this might be necessary when a computer has been turned off for an extended period of time and it needs to install a large number of application or update deployments. For example, if an end user has just returned from vacation, they might have to wait for a long while as overdue application deployments are installed. To help solve this problem, you can now define an enforcement grace period by deploying Configuration Manager client settings to a collection.
 
 To configure the grace period, take the following actions:
 1. On the **Computer Agent** page of client settings, configure the new property **Grace period for enforcement after deployment deadline (hours)** with a value between **1** and **120** hours.
@@ -134,7 +134,7 @@ If you configure an enforcement grace period and select the checkbox, once the a
 
 
 ## Improved functionality in dialog boxes about required software
-When a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values: 
+When a user receives required software, from the **Snooze and remind me:** setting, they can select from the following drop-down list of values:
 - **Later**. Specifies that notifications are scheduled based on the notification settings configured in Client Agent settings.
 - **Fixed time**. Specifies that the notification will be scheduled to display again after the selected time (for example, in 30 minutes).
 
@@ -186,7 +186,7 @@ For details, see [Manage Microsoft 365 Apps updates](../../../sum/deploy-use/man
 ## Task sequence steps to manage BIOS to UEFI conversion
 You can now customize an operating system deployment task sequence with a new variable, TSUEFIDrive, so that the **Restart Computer** step will prepare a FAT32 partition on the hard drive for transition to UEFI. The following procedure provides an example of how you can create task sequence steps to prepare the hard drive for the BIOS to UEFI conversion. For details, see  [Task sequence steps to manage BIOS to UEFI conversion](../../../osd/deploy-use/task-sequence-steps-to-manage-bios-to-uefi-conversion.md).
 
-##  Improvements to the task sequence step: Prepare ConfigMgr Client for Capture  
+##  Improvements to the task sequence step: Prepare ConfigMgr Client for Capture
 The Prepare ConfigMgr Client step will now completely remove the Configuration Manager client, instead of only removing key information. When the task sequence deploys the captured operating system image, it will install a new Configuration Manager client each time. For details, see [Task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_PrepareConfigMgrClientforCapture).
 
 

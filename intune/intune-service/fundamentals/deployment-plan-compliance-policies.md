@@ -1,31 +1,15 @@
 ---
-# required metadata
-
 title: Configure compliance policies
-titleSuffix: Microsoft Intune
 description: Description for configuring compliance policies
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 11/22/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
 
-# optional metadata
 
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite:
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
-ms.collection: 
-- M365-identity-device-management 
+ms.collection:
+- M365-identity-device-management
 - highpri
-- tier1
 ---
 <!-- >
 # Configure compliance policies
@@ -76,7 +60,7 @@ When you're planning for and deploying your compliance policies, it can help to 
 Because different device platforms support different compliance capabilities or use different names for similar settings, listing each option is beyond this deployment plan. Instead, we provide categories and examples of settings in those categories for each of the following levels:
 
 - **Level 1** – [**Minimal device compliance**](#level-1---minimal-device-compliance). This category includes configurations that we recommend all tenants have in place.
-- **Level 2** – [**Enhanced device compliance settings**](#level-2---enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.  
+- **Level 2** – [**Enhanced device compliance settings**](#level-2---enhanced-device-compliance-settings). These include common device configurations such as encryption, or system level file protections.
 - **Level 3** – [**Advanced device compliance configurations**](#level-3---advanced-device-compliance-configurations). High level recommendations include configurations that require deeper integration with other products, such as Microsoft Entra Conditional Access.
 
 Generally, our recommendations place settings that are considered key configurations that are common across platforms at the minimal compliance level, providing a strong return for your investment. Settings listed for at higher levels can involve more complexity, such as settings that require integration of third-party products. Be sure to review all the range recommendations and be ready to adjust your own deployment plan to fit your organization’s needs and expectations.
@@ -88,14 +72,14 @@ The following articles can help you understand the settings that Intune policies
 - [Android Open-Source Project (AOSP)](../protect/compliance-policy-create-android-aosp.md)
 - [iOS](../protect/compliance-policy-create-ios.md)
 - [macOS](../protect/compliance-policy-create-mac-os.md)
-- [Windows 10/11](../protect/compliance-policy-create-windows.md)
+- [Windows](../protect/compliance-policy-create-windows.md)
 
 ## Level 1 - Minimal device compliance
 
-✔️ **Configure tenant-wide Compliance policy settings**  
-✔️ **Set up responses for noncompliance devices (Actions for noncompliance)**  
-✔️ **Understand how device compliance and device configuration policies interact**  
-✔️ **Use a core set of minimal compliance settings across platforms you support**  
+✔️ **Configure tenant-wide Compliance policy settings**
+✔️ **Set up responses for noncompliance devices (Actions for noncompliance)**
+✔️ **Understand how device compliance and device configuration policies interact**
+✔️ **Use a core set of minimal compliance settings across platforms you support**
 
 The minimal device compliance settings include the following subjects that all tenants who plan to use compliance policies should understand and be prepared to use:
 
@@ -186,10 +170,10 @@ We recommend using the following settings in your enhanced device compliance pol
 
 ## Level 3 - Advanced device compliance configurations
 
-✔️ **Add data from Mobile Threat Defense partners to your device compliance policies**  
-✔️ **Integrate a third-party compliance partner with Intune**  
-✔️ **Define custom compliance settings for Windows and Linux**  
-✔️ **Use compliance data with Conditional Access to gate access to your organization’s resources**  
+✔️ **Add data from Mobile Threat Defense partners to your device compliance policies**
+✔️ **Integrate a third-party compliance partner with Intune**
+✔️ **Define custom compliance settings for Windows and Linux**
+✔️ **Use compliance data with Conditional Access to gate access to your organization’s resources**
 ✔️ **Use advanced device configuration policies for supported platform types**
 
 With robust device compliance policies in place, you can then implement more advanced compliance options that go beyond only configuring settings in device compliance policies, including:
@@ -210,7 +194,7 @@ When integrated, Intune supports use of MTD solutions with enrolled devices, and
 
 Be sure to use an MTD partner that is  [supported by Intune](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and that supports the capabilities your organization needs on the full range of platforms you use.
 
-For example, [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) is a Mobile Threat Defense solution you might already use that can be used with the Android, iOS/iPadOS, and Windows platforms. Other solutions, typically support Android and iOS/iPadOS. See [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) to view the list of supported MTD partners.
+For example, [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) is a Mobile Threat Defense solution you might already use that can be used with the Android, iOS/iPadOS, and Windows platforms. Other solutions, typically support Android and iOS/iPadOS. See [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) to view the list of supported MTD partners.
 
 To learn more about using Mobile Threat Defense software with Intune, start with [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 

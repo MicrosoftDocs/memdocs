@@ -6,11 +6,11 @@ ms.date: 03/28/2023
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -52,7 +52,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 
    The scripts should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used<!--9893550--> and the maximum script length is 50,000 bytes which is 25,000 characters (as we use Unicode encoding)<!-- MEMDocs#1575 -->. Choose from the following options when adding or modifying a script on the **Script Picker** page:
 
-    - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
+    - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:
         - **Open**: Open a specific `.ps1` file
         - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters will be hidden from the list. <!--9893550-->
         - **Clear**: Clears the current script in the script pane
@@ -64,7 +64,7 @@ Members of an orchestration group can be any Configuration Manager client, not j
 > [!WARNING]
 > - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**. Scripts that don't have approval will not run on clients.
 > - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 bytes which is 25,000 characters (as we use Unicode encoding)<!-- MEMDocs#1575 -->.
-> - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages. 
+> - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** pages.
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
 
 ## Approvals for orchestration group scripts
@@ -91,7 +91,7 @@ The approval state for each of the scripts is displayed in the **Scripts** tab. 
 > Editing a script after it's approved will reset the approval state to **Waiting for approval**. This also means that the previously approved version of the script will not run if you start orchestration on the group while that script is in the **Waiting for approval** state. Scripts that don't have approval will not run on clients.
 
 > [!TIP]
-> One way to update a script without any interruption is to create a new script in the [**Scripts** library](../../apps/deploy-use/create-deploy-scripts.md) and get approval. Then choose the approved script from the library when you [edit an orchestration group's pre or post-script](#edit-or-delete-an-orchestration-group). The already approved new script will replace the existing script immediately.  
+> One way to update a script without any interruption is to create a new script in the [**Scripts** library](../../apps/deploy-use/create-deploy-scripts.md) and get approval. Then choose the approved script from the library when you [edit an orchestration group's pre or post-script](#edit-or-delete-an-orchestration-group). The already approved new script will replace the existing script immediately.
 
 ### Permissions for approving scripts
 Approving scripts for orchestration groups requires one of the following security roles:
@@ -112,7 +112,7 @@ Approving scripts for orchestration groups requires one of the following securit
 
 To delete the orchestration group, select it then select **Delete** in the ribbon or from the right-click menu. To edit an orchestration group, select it then select **Properties** in the ribbon or from the right-click menu. Change the settings from the following tabs:
 
-- **General**: 
+- **General**:
    - **Name**: The name of your orchestration group
    - **Description**: Orchestration group description (optional)
    - **Orchestration Group timeout (in minutes)**: Time limit for all group members to complete update installation.
@@ -130,20 +130,20 @@ To delete the orchestration group, select it then select **Delete** in the ribbo
 - Choose a **Pre-installation script**  and **Post-installation script** for your orchestration group as needed. The script should return a value of `0` for success. Any non-zero value is considered a script failure. Scripts with parameters can't be used<!--9893550--> and the maximum script length is 50,000 bytes which is 25,000 characters (as we use Unicode encoding) <!-- MEMDocs#1575 -->.
 
    - For Configuration Manager version 2103 and later, choose a **Pre-installation script**  and **Post-installation script**  on the **Script Picker** page. Choose from the following options when adding or modifying a script: <!--6991647-->
-      - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:  
+      - **Add**: Allows you to choose a script to add. Type or paste a PowerShell script into the pane or use one fo the following options:
         - **Open**: Open a specific `.ps1` file
         - **Browse**: Choose a script that's already approved from the [**Scripts**](../../apps/deploy-use/create-deploy-scripts.md) list. Scripts with parameters will be hidden from the list. <!--9893550-->
         - **Clear**: Clears the current script in the script pane
       - **Edit**: Edit the currently selected script
       - **Delete**: Removes the current script
       - **Script timeout (in seconds)**: The allowed time in seconds for the script to run before it times out
-      
+
    - For Configuration Manager version 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs.
 
 > [!WARNING]
 > - Starting in version 2111, pre and post-scripts [require approval](#approvals-for-orchestration-group-scripts) to take effect. Editing a script after it's approved will reset the approval state to **Waiting for approval**. Scripts that don't have approval will not run on clients.
 > - In version 2103 and later, scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 50,000 bytes which is 25,000 characters (as we use Unicode encoding) <!-- MEMDocs#1575 -->.
-> - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs. 
+> - For Configuration Manager 2010 and earlier, add scripts to your orchestration groups on the **Pre-Script** and **Post-Script** tabs.
 >   - Ensure pre-scripts and post-scripts are tested before using them for orchestration groups. The pre-scripts and post-scripts don't timeout and will run until the orchestration group member timeout has been reached. Scripts that have parameters aren't supported<!--9893550--> and the maximum script length is 5,000 characters<!-- MEMDocs#1575 -->.
 
 ## Display orchestration groups and members

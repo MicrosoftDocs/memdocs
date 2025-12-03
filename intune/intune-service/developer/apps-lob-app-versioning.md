@@ -1,35 +1,14 @@
 ---
-# required metadata
-
-title: Line-of-business app versioning in Intune
+title: Line-of-Business App Versioning in Intune
 description: Introduces how app versions are used in Intune when an app is added or updated.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 11/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Line-of-business app versioning
+# Line-of-Business App Versioning
 
 When you add or update a line-of-business (LOB) app in Microsoft Intune, the version property of the app is extracted to detect and install the app on devices. The version value is stored in the **identityVersion** property of the LOB app entity. When the LOB app is updated, the Intune service compares the versions of the existing and updated app packages. If the versions are the same, the Intune service rejects the update.
 
@@ -50,7 +29,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 
   :::image type="content" source="media/apps-lob-app-versioning/apps-lob-app-versioning-02.png" alt-text="View an existing app":::
 - You can select to view the version in the list of apps. The version value is the value of the **identityVersion** property.
-  
+
   :::image type="content" source="media/apps-lob-app-versioning/apps-lob-app-versioning-03.png" alt-text="View app versions":::
 
 You can see the version when you install the app from the Company Portal app.

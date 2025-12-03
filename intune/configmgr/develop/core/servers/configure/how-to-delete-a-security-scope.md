@@ -12,76 +12,76 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Delete a Security Scope
-The following example shows how to delete a security scope in Configuration Manager by using the `SMS_SecuredCategory` class.  
+The following example shows how to delete a security scope in Configuration Manager by using the `SMS_SecuredCategory` class.
 
-### To delete a security scope  
+### To delete a security scope
 
-1.  Set up a connection to the SMS Provider.  
+1.  Set up a connection to the SMS Provider.
 
-2.  Load the existing security scope by using the `SMS_SecuredCategory` WMI class  
+2.  Load the existing security scope by using the `SMS_SecuredCategory` WMI class
 
-3.  Delete the security scope by using the delete method.  
+3.  Delete the security scope by using the delete method.
 
-## Example  
- The following example deletes a security scope by identifier:  
+## Example
+ The following example deletes a security scope by identifier:
 
-```vbs  
-Sub DeleteSecurityScope(connection, scopeId)  
-    Dim scope  
-    ' Get the existing scope by identifier.  
-    Set scope = connection.Get("SMS_SecuredCategory.CategoryID='" & scopeId & "'")  
+```vbs
+Sub DeleteSecurityScope(connection, scopeId)
+    Dim scope
+    ' Get the existing scope by identifier.
+    Set scope = connection.Get("SMS_SecuredCategory.CategoryID='" & scopeId & "'")
 
-    ' Make sure we are allowed to delete this scope.  
-    If (scope.IsBuiltIn) Then  
-        Err.Raise 1, "DeleteSecurityScope", "Deleting a built-in security scope is not allowed."  
-    Else  
-        scope.Delete_  
-    End If  
-End Sub  
-```  
+    ' Make sure we are allowed to delete this scope.
+    If (scope.IsBuiltIn) Then
+        Err.Raise 1, "DeleteSecurityScope", "Deleting a built-in security scope is not allowed."
+    Else
+        scope.Delete_
+    End If
+End Sub
+```
 
-```c#  
-public void DeleteSecurityScope(WqlConnectionManager connection, string scopeId)  
-{  
-    // Get the existing scope by identifier.  
-    IResultObject secScope = connection.GetInstance("SMS_SecuredCategory.CategoryID='" + scopeId + "'");  
+```c#
+public void DeleteSecurityScope(WqlConnectionManager connection, string scopeId)
+{
+    // Get the existing scope by identifier.
+    IResultObject secScope = connection.GetInstance("SMS_SecuredCategory.CategoryID='" + scopeId + "'");
 
-    // Make sure we are allowed to delete this scope.  
-    if (secScope.Properties["IsBuiltIn"].BooleanValue == true)  
-        throw new System.Exception("Deleting a built-in security scope is not allowed.");  
-    else  
-        secScope.Delete();  
-}  
-```  
+    // Make sure we are allowed to delete this scope.
+    if (secScope.Properties["IsBuiltIn"].BooleanValue == true)
+        throw new System.Exception("Deleting a built-in security scope is not allowed.");
+    else
+        secScope.Delete();
+}
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
 | Parameter | Type | Description |
 | --------- | ---- | ----------- |
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`scopeId`|`String`|The identifier of the security scope to delete.|  
+|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|
+|`scopeId`|`String`|The identifier of the security scope to delete.|
 
-## Compiling the Code  
- The C# example requires:  
+## Compiling the Code
+ The C# example requires:
 
-### Namespaces  
- Microsoft.ConfigurationManagement.ManagementProvider  
+### Namespaces
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
-### Assembly  
- adminui.wqlqueryengine  
+### Assembly
+ adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider  
+ microsoft.configurationmanagement.managementprovider
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## See Also  
- [How to Create a New Security Scope](../../../../develop/core/servers/configure/how-to-create-a-new-security-scope.md)   
- [How to Associate an Object with a Security Scope](../../../../develop/core/servers/configure/how-to-associate-an-object-with-a-security-scope.md)   
- [How to Remove an Object Association with a Security Scope](../../../../develop/core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md)   
+## See Also
+ [How to Create a New Security Scope](../../../../develop/core/servers/configure/how-to-create-a-new-security-scope.md)
+ [How to Associate an Object with a Security Scope](../../../../develop/core/servers/configure/how-to-associate-an-object-with-a-security-scope.md)
+ [How to Remove an Object Association with a Security Scope](../../../../develop/core/servers/configure/how-to-remove-an-object-association-with-a-security-scope.md)
  [SMS_SecuredCategory Server WMI Class](../../../../develop/reference/core/servers/configure/sms_securedcategory-server-wmi-class.md)

@@ -11,28 +11,28 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Migrate data between hierarchies in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-Use migration to transfer data from a supported source hierarchy to your Configuration Manager (current branch) destination hierarchy. When you migrate data from a source hierarchy:  
+Use migration to transfer data from a supported source hierarchy to your Configuration Manager (current branch) destination hierarchy. When you migrate data from a source hierarchy:
 
-- You access data from the site databases in the source infrastructure, and then transfer that data to your current environment.  
+- You access data from the site databases in the source infrastructure, and then transfer that data to your current environment.
 
-- Migration doesn't change the data in the source hierarchy. Instead it discovers the data and stores a copy in the database of the destination hierarchy.  
+- Migration doesn't change the data in the source hierarchy. Instead it discovers the data and stores a copy in the database of the destination hierarchy.
 
-Consider the following points when you plan your migration strategy:  
+Consider the following points when you plan your migration strategy:
 
-- You can migrate an existing Configuration Manager 2007 SP2 infrastructure to Configuration Manager (current branch).  
+- You can migrate an existing Configuration Manager 2007 SP2 infrastructure to Configuration Manager (current branch).
 
-- You can migrate some or all of the supported data from a source site.  
+- You can migrate some or all of the supported data from a source site.
 
-- You can migrate the data from a single source site to several different sites in the destination hierarchy.  
+- You can migrate the data from a single source site to several different sites in the destination hierarchy.
 
-- You can move data from multiple source sites to a single site in the destination hierarchy.  
+- You can move data from multiple source sites to a single site in the destination hierarchy.
 
 
 The following video discusses and demonstrates two common [migration scenarios](#BKMK_MigrationScenarios). It also includes options for including Microsoft Azure in migration plans.
@@ -40,17 +40,17 @@ The following video discusses and demonstrates two common [migration scenarios](
 
 
 
-##  <a name="BKMK_MigrationConcepts"></a> Concepts  
+##  <a name="BKMK_MigrationConcepts"></a> Concepts
 
- Configuration Manager uses the following concepts and terms during migration.  
+ Configuration Manager uses the following concepts and terms during migration.
 
 #### Source hierarchy
-A hierarchy that runs a supported version of Configuration Manager and has data that you want to migrate. When you set up migration, you identify the source hierarchy when you specify the top-level site of a source hierarchy. After you specify a source hierarchy, the top-level site of the destination hierarchy gathers data from the database of the designated source site to identify the data that you can migrate. 
+A hierarchy that runs a supported version of Configuration Manager and has data that you want to migrate. When you set up migration, you identify the source hierarchy when you specify the top-level site of a source hierarchy. After you specify a source hierarchy, the top-level site of the destination hierarchy gathers data from the database of the designated source site to identify the data that you can migrate.
 
 For more information, see [Source hierarchies](planning-a-source-hierarchy-strategy.md#BKMK_Source_Hierarchies).
 
 #### Source sites
-The sites in the source hierarchy that have data that you can migrate to your destination hierarchy. 
+The sites in the source hierarchy that have data that you can migrate to your destination hierarchy.
 
 For more information, see [Source sites](planning-a-source-hierarchy-strategy.md#BKMK_Source_Sites).
 
@@ -96,39 +96,39 @@ For more information, see [Planning to complete migration](planning-to-complete-
 
 
 
-## Typical workflow  
+## Typical workflow
 
 To set up a workflow for migration:
 
-1.  Specify a supported source hierarchy.  
+1.  Specify a supported source hierarchy.
 
-2.  Set up data gathering. Data gathering enables Configuration Manager to collect information about data that can migrate from the source hierarchy.  
+2.  Set up data gathering. Data gathering enables Configuration Manager to collect information about data that can migrate from the source hierarchy.
 
-     Configuration Manager automatically repeats the process to collect data on a simple schedule until you stop the data gathering process. By default, the data gathering process repeats every four hours so that Configuration Manager can identify changes to data in the source hierarchy. Data gathering is also necessary to share distribution points.  
+     Configuration Manager automatically repeats the process to collect data on a simple schedule until you stop the data gathering process. By default, the data gathering process repeats every four hours so that Configuration Manager can identify changes to data in the source hierarchy. Data gathering is also necessary to share distribution points.
 
-3.  Create migration jobs to migrate data between the source and destination hierarchy.  
+3.  Create migration jobs to migrate data between the source and destination hierarchy.
 
-4.  You can stop the data gathering process at any time by using the **Stop Gathering Data** action. When you stop data gathering, Configuration Manager no longer identifies changes to data in the source hierarchy and can no longer share distribution points. Typically, you use this action when you no longer plan to migrate data or share distribution points from the source hierarchy.  
+4.  You can stop the data gathering process at any time by using the **Stop Gathering Data** action. When you stop data gathering, Configuration Manager no longer identifies changes to data in the source hierarchy and can no longer share distribution points. Typically, you use this action when you no longer plan to migrate data or share distribution points from the source hierarchy.
 
-5.  Optionally, after data gathering has stopped at all sites for the source hierarchy, you can clean up the migration data by using the **Clean Up Migration Data** action. This action deletes the historical data about migration from a source hierarchy from the database of the destination hierarchy.  
+5.  Optionally, after data gathering has stopped at all sites for the source hierarchy, you can clean up the migration data by using the **Clean Up Migration Data** action. This action deletes the historical data about migration from a source hierarchy from the database of the destination hierarchy.
 
-After you migrate data, and you no longer need the source hierarchy to manage devices in your environment, you can decommission that source hierarchy and infrastructure.  
+After you migrate data, and you no longer need the source hierarchy to manage devices in your environment, you can decommission that source hierarchy and infrastructure.
 
 
 
-##  <a name="BKMK_MigrationScenarios"></a> Scenarios  
+##  <a name="BKMK_MigrationScenarios"></a> Scenarios
 
  Configuration Manager supports the following migration scenarios:
-- [Migration from Configuration Manager 2007 hierarchies](#bkmk_2007)  
+- [Migration from Configuration Manager 2007 hierarchies](#bkmk_2007)
 - [Migration from Configuration Manager 2012 or another Configuration Manager hierarchy](#bkmk_2012)
 
-> [!NOTE]  
->  The expansion of a hierarchy that has a standalone site into a hierarchy that has a central administration site isn't categorized as a migration. For information about hierarchy expansion, see [Expand a stand-alone primary site](../servers/deploy/install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site).  
+> [!NOTE]
+>  The expansion of a hierarchy that has a standalone site into a hierarchy that has a central administration site isn't categorized as a migration. For information about hierarchy expansion, see [Expand a stand-alone primary site](../servers/deploy/install/setup-wizard-central-primary.md#expand-a-stand-alone-primary-site).
 
 
-### <a name="bkmk_2007"></a> Migration from Configuration Manager 2007 hierarchies  
+### <a name="bkmk_2007"></a> Migration from Configuration Manager 2007 hierarchies
 
- When you use migration to migrate data from Configuration Manager 2007, you can maintain your investment in your existing site infrastructure and gain the following benefits:  
+ When you use migration to migrate data from Configuration Manager 2007, you can maintain your investment in your existing site infrastructure and gain the following benefits:
 
 #### Site database improvements
 The Configuration Manager (current branch) database supports full Unicode.
@@ -145,23 +145,23 @@ Configuration Manager (current branch) lets you build a simpler site hierarchy. 
 #### Role-based administration
 This central security model in Configuration Manager (current branch) offers hierarchy-wide security and management that corresponds to your administrative and business requirements.
 
-> [!NOTE]  
->  Because of design changes that were first introduced in System Center 2012 Configuration Manager, you can't upgrade Configuration Manager 2007 to Configuration Manager (current branch). In-place upgrade is supported from System Center 2012 Configuration Manager to Configuration Manager (current branch).  
+> [!NOTE]
+>  Because of design changes that were first introduced in System Center 2012 Configuration Manager, you can't upgrade Configuration Manager 2007 to Configuration Manager (current branch). In-place upgrade is supported from System Center 2012 Configuration Manager to Configuration Manager (current branch).
 
 
-### <a name="bkmk_2012"></a> Migration from Configuration Manager 2012 or another Configuration Manager hierarchy  
- The process of migrating data from a System Center 2012 Configuration Manager or Configuration Manager hierarchy is the same. This process includes migrating data from multiple source hierarchies into a single destination hierarchy. You might use this process when your company gets additional resources that are already managed by Configuration Manager. Additionally, you can migrate data from a test environment to your Configuration Manager production environment. This process lets you maintain your investment in the Configuration Manager test environment.  
+### <a name="bkmk_2012"></a> Migration from Configuration Manager 2012 or another Configuration Manager hierarchy
+ The process of migrating data from a System Center 2012 Configuration Manager or Configuration Manager hierarchy is the same. This process includes migrating data from multiple source hierarchies into a single destination hierarchy. You might use this process when your company gets additional resources that are already managed by Configuration Manager. Additionally, you can migrate data from a test environment to your Configuration Manager production environment. This process lets you maintain your investment in the Configuration Manager test environment.
 
 
 
-## See also  
+## See also
 
--   [Planning for migration to Configuration Manager](planning-for-migration.md)  
+-   [Planning for migration to Configuration Manager](planning-for-migration.md)
 
--   [Configuring source hierarchies and source sites for migration](configuring-source-hierarchies-and-source-sites-for-migration.md)  
+-   [Configuring source hierarchies and source sites for migration](configuring-source-hierarchies-and-source-sites-for-migration.md)
 
--   [Operations for migration](operations-for-migration.md)  
+-   [Operations for migration](operations-for-migration.md)
 
--   [Security and privacy for migration](security-and-privacy-for-migration.md)  
+-   [Security and privacy for migration](security-and-privacy-for-migration.md)
 
 -   [Start using Configuration Manager](../servers/deploy/start-using.md)

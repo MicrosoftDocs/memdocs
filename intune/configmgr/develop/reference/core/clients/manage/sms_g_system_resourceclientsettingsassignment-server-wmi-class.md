@@ -12,105 +12,105 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_G_SYSTEM_ResourceClientSettingsAssignment Server WMI Class
-The `SMS_G_System_ResourceClientSettingsAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents resource-specific (device or user) client agent settings assignments.  
+The `SMS_G_System_ResourceClientSettingsAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents resource-specific (device or user) client agent settings assignments.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_G_System_ResourceClientSettingsAssignment : SMS_G_System  
-{  
-     String AssignmentUniqueID;  
-     String CollectionName;  
-     UInt32 ID;  
-     String Name;  
-     UInt32 Priority;  
-     String UniqueID;  
-     UInt32 ResourceID;  
-     UInt32 Type;  
-};  
-```  
+```
+Class SMS_G_System_ResourceClientSettingsAssignment : SMS_G_System
+{
+     String AssignmentUniqueID;
+     String CollectionName;
+     UInt32 ID;
+     String Name;
+     UInt32 Priority;
+     String UniqueID;
+     UInt32 ResourceID;
+     UInt32 Type;
+};
+```
 
-## Methods  
- The `SMS_G_System_ResourceClientSettingsAssignment` class does not define any methods.  
+## Methods
+ The `SMS_G_System_ResourceClientSettingsAssignment` class does not define any methods.
 
-## Properties  
- `AssignmentUniqueID`  
- Data type: `String`  
+## Properties
+ `AssignmentUniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Assignment Unique ID.  
+ Assignment Unique ID.
 
- `CollectionName`  
- Data type: `String`  
+ `CollectionName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Name of the collection.  
+ Name of the collection.
 
- `ID`  
- Data type: `UInt32`  
+ `ID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Identifier.  
+ Identifier.
 
- `Priority`  
- Data type: `UInt32`  
+ `Priority`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Identifier.  
+ Identifier.
 
- `UniqueID`  
- Data type: `String`  
+ `UniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Unique identifier for the settings.  
+ Unique identifier for the settings.
 
- `ResourceID`  
- Data type: `UInt32`  
+ `ResourceID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- See [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).  
+ See [SMS_G_System Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_g_system-server-wmi-class.md).
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: None  
+ Qualifiers: None
 
- Settings type. Possible values are:  
+ Settings type. Possible values are:
 
-|Value|Settings type|  
-|-|-|  
-|1|Device|  
-|2|User|  
+|Value|Settings type|
+|-|-|
+|1|Device|
+|2|User|
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

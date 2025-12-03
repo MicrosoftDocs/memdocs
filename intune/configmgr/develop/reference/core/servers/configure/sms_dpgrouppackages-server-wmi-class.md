@@ -12,49 +12,49 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DPGroupPackages Server WMI Class
-The `SMS_DPGroupPackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents distribution point packages.  
+The `SMS_DPGroupPackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents distribution point packages.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DPGroupPackages : SMS_BaseClass  
-{  
-    String GroupID;  
-    String PkgID;  
-};  
-```  
+```
+Class SMS_DPGroupPackages : SMS_BaseClass
+{
+    String GroupID;
+    String PkgID;
+};
+```
 
-## Methods  
- The `SMS_DPGroupPackages` class does not define any methods.  
+## Methods
+ The `SMS_DPGroupPackages` class does not define any methods.
 
-## Properties  
- `GroupID`  
- Data type: `String`  
+## Properties
+ `GroupID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique identifier for the distribution point group.  
+ Unique identifier for the distribution point group.
 
- `PkgID`  
- Data type: `String`  
+ `PkgID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Package associated with the distribution point group.  
+ Package associated with the distribution point group.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

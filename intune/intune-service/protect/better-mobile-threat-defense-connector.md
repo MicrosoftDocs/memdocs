@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Better Mobile Threat Defense with Intune
 description: How to set up the Better Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 07/31/2024
+ms.date: 06/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: aanavath
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -53,7 +34,6 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 ## Supported platforms
 
 - **Android 4.2.2 and later**
-
 - **iOS 8.0 and later**
 
 ## Prerequisites
@@ -63,11 +43,8 @@ The Better Mobile app is installed and run on mobile devices. This app captures 
 - Microsoft Intune Plan 1 subscription
 
 - Better Mobile Threat Defense subscription
-<!-- THe followiong line is removed, as the link shown is failign, and no valid link can be identified:
 
-  - For more information, see the Better Mobile website.  https://aad.bettermtd.com/
-
--->
+  For more information, see the [Better Mobile website](https://better.mobi/).
 
 ## Sample scenarios
 
@@ -135,4 +112,4 @@ Access is granted on remediation:
 
 - [Enable Better Mobile MTD connector](mtd-connector-enable.md)
 
-- [Create an MTD app protection policy](mtd-app-protection-policy.md) 
+- [Create an MTD app protection policy](mtd-app-protection-policy.md)

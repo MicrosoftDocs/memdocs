@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -52,13 +52,13 @@ The user account needs the following permissions:
 1. Select **Devices** then **All Devices**.
 1. Select a device that is synced from Configuration Manager via [tenant attach](device-sync-actions.md).
 1. Select **Scripts**.
-   
+
    Scripts that were recently run that directly targeted the device will already be listed. The list includes scripts run from the admin center, SDK, or the Configuration Manager console. Scripts initiated from the on-premises console, against collections containing the device won't be shown, unless the scripts were also initiated specifically for the single device.
 
    :::image type="content" source="./media/6234688-run-script.png" alt-text="Running the script from the admin center" lightbox="./media/6234688-run-script.png":::
 
 1. Choose **Run script**.
-   
+
    Scripts that are available to the admin based on the scopes assigned in Configuration Manager will be listed.
 1. Select **Run** to run the script.
 

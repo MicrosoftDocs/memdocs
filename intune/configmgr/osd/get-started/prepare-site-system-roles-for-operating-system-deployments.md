@@ -6,11 +6,11 @@ ms.date: 10/01/2021
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: install-set-up-deploy
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -43,7 +43,7 @@ To estimate how many distribution points you need, consider the following variab
 - The available bandwidth on the network
 - The size of the image package
 
-For example, if you don't consider any other server resource factors, the maximum number of computers that can process a 4-GB image package in one hour on a 100-megabit/sec Ethernet network is 11 computers. 
+For example, if you don't consider any other server resource factors, the maximum number of computers that can process a 4-GB image package in one hour on a 100-megabit/sec Ethernet network is 11 computers.
 
 `100 megabits/sec = 12.5 megabytes/sec = 750 megabytes/min = 45 gigabytes/hour = 11 images @ 4 GB per image`
 

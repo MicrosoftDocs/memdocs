@@ -1,49 +1,28 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide - Plan the integration
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - Plan the Integration
 description: Plan the integration to incorporate Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 10/31/2024
+ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
-# Intune App SDK for Android - Plan the integration
+# Intune App SDK for Android - Plan the Integration
 
-The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as **APP** or MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
+The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
 ## Stage 1: Plan the Integration
 
-This guide is for Android developers who are looking to add support for Microsoft Intune's App Protection Policies inside their existing Android app.
+This guide is for Android developers who are looking to add support for Microsoft Intune's app protection policies inside their existing Android app.
 
 ## Stage Goals
 
-- Learn what App Protection Policy settings are available for Android and how these policies will work inside your application.
+- Learn what app protection policy settings are available for Android and how these policies will work inside your application.
 - Understand the key decision points during the SDK integration process and plan your app's integration.
 - Understand the requirements for applications integrating the SDK.
-- Create a test Intune tenant and configure an Android App Protection Policy.
+- Create a test Intune tenant and configure an Android app protection policy.
 
 ## Understanding MAM
 
@@ -57,7 +36,7 @@ Before you start integrating the Intune App SDK into your Android application, t
   During the SDK integration process, you'll also configure these settings in your own test tenant for validation.
 
 > [!NOTE]
-> Some Android App Protection Policy settings require specific code to support.
+> Some Android app protection policy settings require specific code to support.
 > See [Stage 7: App Participation Features] for more detail.
 
 ## Key Decisions for SDK integration
@@ -84,7 +63,7 @@ Your app can skip integrating MSAL **only if all of the following are true**:
 - Your application doesn't need to support non-Intune accounts.
 - Your application doesn't grant access to any resources protected by Conditional Access.
 
-If your app satisfies **all of the above conditions** and doesn't integrate MSAL, it can still be protected by App Protection Policy, albeit with no option for unmanaged usage. See [Default Enrollment] for details.
+If your app satisfies **all of the above conditions** and doesn't integrate MSAL, it can still be protected by app protection policies, albeit with no option for unmanaged usage. See [Default Enrollment] for details.
 
 See [Stage 2: The MSAL Prerequisite] for instructions on integrating MSAL and additional details on identity scenarios inside your application.
 
@@ -166,8 +145,8 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 > [!NOTE]
 > Ensure that your app is compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk).
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 35 (Android 15).
-In order to target Android API 35 (Android 15), you must use Intune App SDK `v11.0.0` or later.
+The SDK fully supports Android API 28 (Android 9.0) through Android API 36 (Android 16).
+In order to target Android API 36 (Android 16), you must use Intune App SDK `v12.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).

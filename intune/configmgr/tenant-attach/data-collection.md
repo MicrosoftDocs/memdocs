@@ -6,11 +6,11 @@ ms.date: 03/24/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -149,7 +149,7 @@ For more information about related privacy aspects, see the following articles:
 
 - [Microsoft Intune Privacy Statement](/legal/intune/microsoft-intune-privacy-statement)
 - [Windows 10 and privacy compliance](/windows/privacy/windows-10-and-privacy-compliance)
-- [Licensing terms and documentation](https://www.microsoft.com/licensing/terms)  
-- [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)  
-- [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)  
-- [Trust Center](https://www.microsoft.com/trustcenter)  
+- [Licensing terms and documentation](https://www.microsoft.com/licensing/terms)
+- [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)
+- [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)
+- [Trust Center](https://www.microsoft.com/trustcenter)

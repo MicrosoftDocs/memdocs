@@ -2,15 +2,15 @@
 title: CMG security and privacy
 titleSuffix: Configuration Manager
 description: Learn about guidance and recommendations for security and privacy with the cloud management gateway.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: article
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -34,7 +34,7 @@ The CMG accepts and forwards client requests using the following methods:
 
 - The certificate trust list (CTL) checks the root of the client authentication certificate. It also does the same validation as the management point for the client. For more information, see [Review entries in the site's certificate trust list](#review-entries-in-the-sites-certificate-trust-list).
 
-- Validates and filters client requests (URLs) to check if any CMG connection point can service the request.  
+- Validates and filters client requests (URLs) to check if any CMG connection point can service the request.
 
 - Checks content length for each publishing endpoint.
 
@@ -78,10 +78,10 @@ The management point and software update point host endpoints in IIS to service 
 
 #### URL-mapping example
 
-When you enable CMG traffic on a management point, Configuration Manager creates an internal set of URL mappings for each management point server. For example: ccm_system, ccm_incoming, and sms_mp. The external URL for the management point ccm_system endpoint might look like:  
-`https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System`  
-The URL is unique for each management point. The Configuration Manager client then puts the CMG-enabled management point name into its internet management point list. This name looks like:  
-`<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>`  
+When you enable CMG traffic on a management point, Configuration Manager creates an internal set of URL mappings for each management point server. For example: ccm_system, ccm_incoming, and sms_mp. The external URL for the management point ccm_system endpoint might look like:
+`https://<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>/CCM_System`
+The URL is unique for each management point. The Configuration Manager client then puts the CMG-enabled management point name into its internet management point list. This name looks like:
+`<CMG service name>/CCM_Proxy_MutualAuth/<MP Role ID>`
 The site automatically uploads all published external URLs to the CMG. This behavior allows the CMG to do URL filtering. All URL mappings replicate to the CMG connection point. It then forwards the communication to internal servers according to the external URL from the client request.
 
 ## Security guidance

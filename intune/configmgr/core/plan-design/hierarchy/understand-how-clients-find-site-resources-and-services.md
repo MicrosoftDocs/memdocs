@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How clients find site resources and services
@@ -196,7 +196,7 @@ For more information, see [How to configure client computers to find management 
 
 ### Publish management points to DNS
 
-To publish management points to DNS, the following two conditions must be true:  
+To publish management points to DNS, the following two conditions must be true:
 
 - Your DNS servers support service location resource records, by using a version of BIND that's at least 8.1.2.
 

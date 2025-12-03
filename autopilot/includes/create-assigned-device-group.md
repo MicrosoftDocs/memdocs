@@ -1,17 +1,12 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
-ms.date: 11/20/2024
-ms.localizationpriority: medium
+ms.date: 06/11/2025
 ---
 
 <!-- This file is shared by the following articles:
 
 device-preparation/tutorial/user-driven/entra-join-device group.md
+device-preparation/tutorial/automatic/automatic-device group.md
 
 Headings are driven by article context. -->
 
@@ -109,7 +104,7 @@ If the **Intune Provisioning Client** service principal with AppId **f1346770-5b
         > - The following error message is displayed if the **Intune Provisioning Client service principal** already exists in the tenant:
         >
         >   ```powershell
-        >   New-MgServicePrincipal : The service principal cannot be created, updated, or restored because the service principal name 
+        >   New-MgServicePrincipal : The service principal cannot be created, updated, or restored because the service principal name
         >   f1346770-5b25-470b-88bd-d5744ab7952c is already in use.
         >   Status: 409 (Conflict)
         >   ErrorCode: Request_MultipleObjectsWithSameKeyValue

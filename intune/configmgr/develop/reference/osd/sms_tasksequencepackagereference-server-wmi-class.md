@@ -12,101 +12,101 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequencePackageReference Server WMI Class
-The `SMS_TaskSequencePackageReference` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Configuration Manager application or package in the task sequence.  
+The `SMS_TaskSequencePackageReference` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Configuration Manager application or package in the task sequence.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequencePackageReference : SMS_BaseClass  
-{  
-    String Description;  
-    String ObjectID;  
-    String ObjectName;  
-    UInt32 ObjectType;  
-    String PackageID;  
-    String Version;  
-};  
-```  
+```
+Class SMS_TaskSequencePackageReference : SMS_BaseClass
+{
+    String Description;
+    String ObjectID;
+    String ObjectName;
+    UInt32 ObjectType;
+    String PackageID;
+    String Version;
+};
+```
 
-## Methods  
- The `SMS_TaskSequencePackageReference` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequencePackageReference` class does not define any methods.
 
-## Properties  
- `Description`  
- Data type: `String`  
+## Properties
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reference object description.  
+ Reference object description.
 
- `ObjectID`  
- Data type: `String`  
+ `ObjectID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Reference object ID.  
+ Reference object ID.
 
- `ObjectName`  
- Data type: `String`  
+ `ObjectName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reference object name.  
+ Reference object name.
 
- `ObjectType`  
- Data type: `UInt32`  
+ `ObjectType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Reference object type.  
+ Reference object type.
 
 | Value | Object type |
-| ----- | ----------- |  
-|0|PKG_TYPE_REGULAR|  
-|3|PKG_TYPE_DRIVER|  
-|5|PKG_TYPE_SWUPDATES|  
-|257|PKG_TYPE_IMAGE|  
-|258|PKG_TYPE_BOOTIMAGE|  
-|259|PKG_TYPE_OSINSTALLIMAGE|  
-|512|Application|  
+| ----- | ----------- |
+|0|PKG_TYPE_REGULAR|
+|3|PKG_TYPE_DRIVER|
+|5|PKG_TYPE_SWUPDATES|
+|257|PKG_TYPE_IMAGE|
+|258|PKG_TYPE_BOOTIMAGE|
+|259|PKG_TYPE_OSINSTALLIMAGE|
+|512|Application|
 
- `PackageID`  
- Data type: `String`  
+ `PackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Task sequence package ID.  
+ Task sequence package ID.
 
- `Version`  
- Data type: `String`  
+ `Version`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reference object version.  
+ Reference object version.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

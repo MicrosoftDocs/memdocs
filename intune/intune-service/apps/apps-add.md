@@ -1,25 +1,11 @@
 ---
-title: Add apps to Microsoft Intune
-titleSuffix:
+title: Add Apps to Microsoft Intune
 description: Learn how to add apps to Microsoft Intune so you can assign apps to users and devices. Intune supports a wide range of app types.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 08/09/2024
+ms.date: 10/02/2025
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-ms.assetid: a1ded457-0ecf-4f9c-a2d2-857d57f8d30a
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-ms.custom: intune-azure
 ai-usage: ai-assisted
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Add
@@ -31,7 +17,7 @@ ms.collection:
 
 Before you can configure, assign, protect, or monitor apps, you must add them to Microsoft Intune.
 
-Intune apps refer to the applications that are managed by Microsoft Intune. These apps can be deployed, configured, protected, and updated to access your organization’s resources. Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. Intune also supports several platforms, such as iOS/iPadOS and Android. 
+Intune apps refer to the applications that are managed by Microsoft Intune. These apps can be deployed, configured, protected, and updated to access your organization's resources. Intune supports various app types, such as store apps, web apps, and line-of-business (LOB) apps. Intune also supports several platforms, such as iOS/iPadOS and Android.
 
 Managing Microsoft Intune apps offers several benefits for your organization, including the following:
 - Data protection for your managed apps
@@ -161,7 +147,7 @@ In addition to understanding web apps, store apps, and LOB apps, you should also
 - **Android Enterprise fully managed work profile**: How you assign apps to Android Enterprise fully managed work profile devices differs from how you assign them to standard Android devices. All apps you install for Android Enterprise fully managed work profiles come from the Managed Google Play store. You use Intune to browse for the apps you want and approve them. The app then appears in the **Licensed apps** node of the portal, and you can manage assignment of the app as you would any other app.
 
     > [!NOTE]
-    > The file extensions for Windows apps include **.msi**, **.appx**, **.appxbundle**, **.msix** and **.msixbundle**.  
+    > The file extensions for Windows apps include **.msi**, **.appx**, **.appxbundle**, **.msix** and **.msixbundle**.
 
 ## Before you add apps
 
@@ -171,7 +157,7 @@ Before you begin to add and assign apps, consider the following points:
 - Some apps or items that you assign might depend on built-in iOS/iPadOS apps. For example, if you assign a book in the iOS/iPadOS store, the iBooks app must be present on the device. If you have removed the iBooks built-in app, you cannot use Intune to reinstate it.
 - There are limits to the number of apps you can add to Intune.
   - For trial Intune tenants, you can create 500 apps per tenant.
-  - For licensed Intune tenants, you can create 10,000 apps per tenant. Certain apps, including [iOS/iPadOS volume-purchased apps](../apps/vpp-apps-ios.md) and [Managed Google Play apps](../apps/apps-add-android-for-work.md), don't count towards this limit. 
+  - For licensed Intune tenants, you can create 10,000 apps per tenant. Certain apps, including [iOS/iPadOS volume-purchased apps](../apps/vpp-apps-ios.md) and [Managed Google Play apps](../apps/apps-add-android-for-work.md), don't count towards this limit.
 
 > [!IMPORTANT]
 > If you change the name of the app through Intune after you have deployed and installed the app, the app will no longer be able to be targeted using commands.
@@ -194,10 +180,10 @@ App categories can be used to help you sort apps to make them easier for users t
 When you add an app to Intune, you're given the option to select the category you want. Use the platform-specific articles to add an app and assign categories. To create and edit your own categories, use the following procedure:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Apps** > **App categories**.  
+2. Select **Apps** > **App categories**.
     The **App categories** pane displays a list of current categories.
 3. Do either of the following:
-    - To add a category, in the **Create category** pane, select **Add**, and then enter a name for the category.  
+    - To add a category, in the **Create category** pane, select **Add**, and then enter a name for the category.
     Names can be entered in one language only, and they aren't translated by Intune.
     - To edit a category, select the ellipsis (**...**) next to the category, and then select **Pin to dashboard** or **Delete**.
 4. Select **Create**.
@@ -219,7 +205,7 @@ Intune will automatically reinstall, update, or remove a required app within 24 
 Intune will automatically reinstall, update, or remove a required app based on the following conditions:
 
 - If an end user uninstalls an app that you have required to be installed on the end user's device, Intune will automatically reinstall the app when this schedule elapses.
-- If a required app install fails or somehow the app isn't present on the device, Intune evaluates compliance and reinstalls the app when this schedule elapses.  
+- If a required app install fails or somehow the app isn't present on the device, Intune evaluates compliance and reinstalls the app when this schedule elapses.
 - An admin targets an app as available to a user group and an end user installs the app from the company portal on the device. Later, the admin updates the app from v1 to v2. Intune will update the app when this schedule elapses, provided that any previous version of the app is still present on the device.
 - If the admin deploys uninstall intent and the app is present on the device and failed to uninstall, Intune evaluates compliance and uninstalls the app when this schedule elapses.
 
@@ -270,10 +256,10 @@ To learn how to add apps for each platform to Intune, see:
 - [Web apps (for all platforms)](web-app.md)
 - [Microsoft store apps](store-apps-windows.md)
 - [Windows LOB app](lob-apps-windows.md)
-- [Microsoft 365 apps for Windows 10](apps-add-office365.md)
+- [Microsoft 365 apps for Windows](apps-add-office365.md)
 - [Microsoft 365 apps for macOS](apps-add-office365-macos.md)
 - [Managed Google Play apps](apps-add-android-for-work.md)
-- [Microsoft Edge for Windows 10](apps-windows-edge.md)
+- [Microsoft Edge for Windows](apps-windows-edge.md)
 - [Microsoft Edge for macOS](apps-edge-macos.md)
 - [Built-in apps](apps-add-built-in.md)
 - [Android Enterprise system app](apps-ae-system.md)

@@ -2,15 +2,15 @@
 title: Managing Surface driver updates
 titleSuffix: Configuration Manager
 description: Configuration Manager synchronizes Surface driver updates for deployment to Surface devices.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 04/15/2021
 ms.topic: how-to
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -24,7 +24,7 @@ Configuration Manager allows you to synchronize drivers for Surface devices and 
 
 - An internet connected top-level software update point.
 - All software update points must run Windows Server 2016 with cumulative update KB4025339 or later installed.
-- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->  
+- In version 2006 and earlier, Configuration Manager doesn't enable this optional feature by default. Enable this feature before using it. For more information, see [Enable optional features from updates](../../core/servers/manage/optional-features.md).<!--505213-->
 
 ## Enable sync for Surface drivers
 
@@ -114,7 +114,7 @@ To verify the software update point is configured correctly, use the **WsyncMgr.
 1. Open WsyncMgr.log and check for the following log entry:
 
     ```text
-    Surface Drivers can be supported in this hierarchy since all software update points are on Windows Server 2016, WCM SCF property Sync Catalog Drivers is set. 
+    Surface Drivers can be supported in this hierarchy since all software update points are on Windows Server 2016, WCM SCF property Sync Catalog Drivers is set.
     …
     Sync Catalog Drivers SCF value is set to : 1
     ```

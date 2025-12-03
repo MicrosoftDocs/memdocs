@@ -6,19 +6,19 @@ ms.date: 04/29/2017
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Manage software updates in Updates Publisher
 
-*Applies to: System Center Updates Publisher*     
+*Applies to: System Center Updates Publisher*
 
 In System Center Updates Publisher, you use the **Updates Workspace** to manage
-software updates and bundles that you have imported to the repository.  
+software updates and bundles that you have imported to the repository.
 
 Management tasks include duplicating, editing, and expiring or reactivating updates and bundles, and assigning updates and bundles to publications. You can also export custom catalogs for use with other Updates Publisher installations.
 
@@ -78,9 +78,9 @@ Before you have the option to publish, you must configure the [Update Server](up
 
 There are two ways to publish updates and bundles:
 -   Directly from the Updates Workspace. (See the following procedure, *To publish updates and bundles*.)
--   As a [publication](updates-publisher-publications.md#publish-publications) from the Publications Workspace.  
+-   As a [publication](updates-publisher-publications.md#publish-publications) from the Publications Workspace.
 
-> [!NOTE]   
+> [!NOTE]
 > Updates Publisher can only publish updates that are 375 megabytes (MB) or less in size.
 
 ### To publish updates and bundles
@@ -110,7 +110,7 @@ Go to **Updates Workspace** > **All Software Updates** and select one or more in
 
 -   If your selection contains only updates or bundles that have not been published or that are expired, you are asked to confirm deletion before they are removed.
 
--   If your selection includes an update or bundle that has been published and is not yet expired, you are given a warning. You should [expire](updates-publisher-publications.md#expire-or-reactivate-updates-and-bundles) those updates and then publish that change before you delete them from the repository.  
+-   If your selection includes an update or bundle that has been published and is not yet expired, you are given a warning. You should [expire](updates-publisher-publications.md#expire-or-reactivate-updates-and-bundles) those updates and then publish that change before you delete them from the repository.
 
 If you delete an update or bundle from a vendor and then import that catalog again, that update is restored to your repository.
 

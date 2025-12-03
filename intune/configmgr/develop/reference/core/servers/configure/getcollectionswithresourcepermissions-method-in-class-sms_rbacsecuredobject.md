@@ -12,55 +12,55 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetCollectionsWithResourcePermissions Method in Class SMS_RbacSecuredObject
-The `GetCollectionsWithResourcePermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the list of collection identifiers for which the user has the specified permissions. The collection must contain the specified resource.  
+The `GetCollectionsWithResourcePermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the list of collection identifiers for which the user has the specified permissions. The collection must contain the specified resource.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-UInt32 GetCollectionsWithResourcePermissions(  
-     UInt32 ResourceID,  
-     UInt32 Permissions,  
-     String CollectionIDs[]  
-);  
-```  
+```
+UInt32 GetCollectionsWithResourcePermissions(
+     UInt32 ResourceID,
+     UInt32 Permissions,
+     String CollectionIDs[]
+);
+```
 
-#### Parameters  
- `ResourceID`  
- Data type: `UInt32`  
+#### Parameters
+ `ResourceID`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Unique ID, supplied by Configuration Manager, for the resource.  
+ Unique ID, supplied by Configuration Manager, for the resource.
 
- `Permissions`  
- Data type: `UInt32`  
+ `Permissions`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- Set of user permissions for the collections that contain the resource.  
+ Set of user permissions for the collections that contain the resource.
 
- `CollectionIDs`  
- Data type: `String` Array  
+ `CollectionIDs`
+ Data type: `String` Array
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- IDs of collections for which the user has the specified permissions.  
+ IDs of collections for which the user has the specified permissions.
 
-## Return Values  
- A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_RbacSecuredObject Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md)

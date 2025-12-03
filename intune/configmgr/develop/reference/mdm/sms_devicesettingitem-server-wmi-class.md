@@ -12,109 +12,109 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DeviceSettingItem Server WMI Class
-The `SMS_DeviceSettingItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides the functionality to create a device setting configuration item in the database.  
+The `SMS_DeviceSettingItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides the functionality to create a device setting configuration item in the database.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DeviceSettingItem : SMS_BaseClass  
-{  
-    String Description;  
-    String DeviceSettingItemUniqueID;  
-    String Name;  
-    String PropList;  
-    String SourceSite;  
-    String Type;  
-    UInt32 Version;  
-};  
-```  
+```
+Class SMS_DeviceSettingItem : SMS_BaseClass
+{
+    String Description;
+    String DeviceSettingItemUniqueID;
+    String Name;
+    String PropList;
+    String SourceSite;
+    String Type;
+    UInt32 Version;
+};
+```
 
-## Methods  
- The `SMS_DeviceSettingItem` class does not define any methods.  
+## Methods
+ The `SMS_DeviceSettingItem` class does not define any methods.
 
-## Properties  
- `Description`  
- Data type: `String`  
+## Properties
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Description of the device setting to create. The default value is "".  
+ Description of the device setting to create. The default value is "".
 
- `DeviceSettingItemUniqueID`  
- Data type: `String`  
+ `DeviceSettingItemUniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- A GUID or unique ID that identifies the device setting item to create. The default value is "".  
+ A GUID or unique ID that identifies the device setting item to create. The default value is "".
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [unique]  
+ Qualifiers: [unique]
 
- Name of the device setting item to create. The default value is "".  
+ Name of the device setting item to create. The default value is "".
 
- `PropList`  
- Data type: `String`  
+ `PropList`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- A list of properties for the device setting item.  
+ A list of properties for the device setting item.
 
- `SourceSite`  
- Data type: `String`  
+ `SourceSite`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The site code of the site for which to create the device setting item. The default value is "".  
+ The site code of the site for which to create the device setting item. The default value is "".
 
- `Type`  
- Data type: `String`  
+ `Type`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Type of device setting item. The default value is "".  
+ Type of device setting item. The default value is "".
 
- `Version`  
- Data type: `UInt32`  
+ `Version`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The version of the device setting item. The default value is 1.  
+ The version of the device setting item. The default value is 1.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [Device Management Server WMI Classes](../../../develop/reference/mdm/device-management-server-wmi-classes.md)

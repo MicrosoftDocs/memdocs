@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Reference for maintenance tasks in Configuration Manager
@@ -20,13 +20,13 @@ ms.reviewer: mstewart,aaroncz
 
 This article lists the details for each of the Configuration Manager site maintenance tasks. Each entry specifies the site types where the task is available, and whether it's enabled by default.
 
-For more information, see [Set up maintenance tasks](maintenance-tasks.md#set-up-maintenance-tasks).  
+For more information, see [Set up maintenance tasks](maintenance-tasks.md#set-up-maintenance-tasks).
 
 ## Tasks
 
 ### Backup Site Server
 
-Use this task to create a backup of your critical information to restore a site and the Configuration Manager database. For more information, see [Back up a Configuration Manager site](backup-and-recovery.md).  
+Use this task to create a backup of your critical information to restore a site and the Configuration Manager database. For more information, see [Back up a Configuration Manager site](backup-and-recovery.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -36,7 +36,7 @@ Use this task to create a backup of your critical information to restore a site 
 
 ### Check Application Title with Inventory Information
 
-Use this task to maintain consistency of software titles between software inventory and the Asset Intelligence catalog. For more information, see [Introduction to Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).  
+Use this task to maintain consistency of software titles between software inventory and the Asset Intelligence catalog. For more information, see [Introduction to Asset Intelligence](../../clients/manage/asset-intelligence/introduction-to-asset-intelligence.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -62,7 +62,7 @@ Use this task to remove the installed flag for clients that don't submit a Heart
 
 ### Delete Aged Application Request Data
 
-Use this task to delete aged application requests from the database. For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md).  
+Use this task to delete aged application requests from the database. For more information, see [Create and deploy an application](../../../apps/get-started/create-and-deploy-an-application.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -152,7 +152,7 @@ Use this task to delete [collected diagnostic files](../../clients/manage/client
 
 ### Delete Aged Collected Files
 
-Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).  
+Use this task to delete from the database aged information about collected files. This task also deletes the collected files from the site server folder structure at the selected site. By default, the five most-recent copies of collected files are stored on the site server in the **Inboxes\sinv.box\FileCol** directory. For more information, see [Introduction to software inventory](../../clients/manage/inventory/introduction-to-software-inventory.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -162,7 +162,7 @@ Use this task to delete from the database aged information about collected files
 
 ### Delete Aged Computer Association Data
 
-Use this task to delete from the database aged OS deployment computer association data. This information is used when restoring user state during a task sequence. For more information, see [Manage user state](../../../osd/get-started/manage-user-state.md).  
+Use this task to delete from the database aged OS deployment computer association data. This information is used when restoring user state during a task sequence. For more information, see [Manage user state](../../../osd/get-started/manage-user-state.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -192,7 +192,7 @@ Use this task to delete aged data from the database that has been created by ext
 
 ### Delete Aged Device Wipe Record
 
-Use this task to delete from the database aged data about mobile device wipe actions. For more information, see [Protect data with remote wipe, lock, or passcode reset](../../../mdm/deploy-use/wipe-lock-reset-devices.md).  
+Use this task to delete from the database aged data about mobile device wipe actions. For more information, see [Protect data with remote wipe, lock, or passcode reset](../../../mdm/deploy-use/wipe-lock-reset-devices.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -218,7 +218,7 @@ This task also removes aged devices marked as decommissioned. When this task run
 
 ### Delete Aged Distribution Point Usage Stats
 
-Use this task to delete from the database aged data for distribution points that has been stored longer than a specified time.  
+Use this task to delete from the database aged data for distribution points that has been stored longer than a specified time.
 
 | Site type | Status |
 | --------- | ------ |
@@ -273,10 +273,10 @@ Use this task to delete from the database inventory data that has been stored lo
 
 ### Delete Aged Log Data
 
-Use this task to delete from the database aged log data used for troubleshooting. This data isn't related to Configuration Manager component operations.  
+Use this task to delete from the database aged log data used for troubleshooting. This data isn't related to Configuration Manager component operations.
 
-> [!IMPORTANT]  
-> By default, this task runs daily at each site. At a central administration site and primary sites, the task deletes data that's older than 30 days. When you use SQL Server Express at a secondary site, make sure that this task runs daily and deletes data that's inactive for seven days.  
+> [!IMPORTANT]
+> By default, this task runs daily at each site. At a central administration site and primary sites, the task deletes data that's older than 30 days. When you use SQL Server Express at a secondary site, make sure that this task runs daily and deletes data that's inactive for seven days.
 
 | Site type | Status |
 | --------- | ------ |
@@ -306,7 +306,7 @@ Use this task to delete from the site database information about client notifica
 
 ### Delete Aged Passcode Records
 
-Use this task at the top-level site of your hierarchy to delete aged Passcode Reset data for Windows Phone devices. Passcode Reset data is encrypted, but does include the PIN for devices. By default, this task is enabled, and deletes data that is older than one day.  
+Use this task at the top-level site of your hierarchy to delete aged Passcode Reset data for Windows Phone devices. Passcode Reset data is encrypted, but does include the PIN for devices. By default, this task is enabled, and deletes data that is older than one day.
 
 | Site type | Status |
 | --------- | ------ |
@@ -316,7 +316,7 @@ Use this task at the top-level site of your hierarchy to delete aged Passcode Re
 
 ### Delete Aged Replication Data
 
-Use this task to delete from the database aged data about database replication between Configuration Manager sites. When you change the configuration of this maintenance task, the configuration applies to each applicable site in the hierarchy. For more information, see [Monitor database replication](monitor-replication.md).  
+Use this task to delete from the database aged data about database replication between Configuration Manager sites. When you change the configuration of this maintenance task, the configuration applies to each applicable site in the hierarchy. For more information, see [Monitor database replication](monitor-replication.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -326,7 +326,7 @@ Use this task to delete from the database aged data about database replication b
 
 ### Delete Aged Replication Summary Data
 
-Use this task to delete from the site database aged replication summary data when it hasn't been updated for a specified time. For more information, see [Monitor database replication](monitor-replication.md).  
+Use this task to delete from the site database aged replication summary data when it hasn't been updated for a specified time. For more information, see [Monitor database replication](monitor-replication.md).
 
 | Site type | Status |
 | --------- | ------ |
@@ -440,8 +440,8 @@ Use this task to delete from the database discovery data for inactive clients. T
 
 This task operates only on resources that are Configuration Manager clients. It's different than the **Delete Aged Discovery Data** task, which deletes any aged discovery data record. When this task runs at a site, it removes the data from the database at all sites in a hierarchy. For more information, see [How to configure client status](../../clients/deploy/configure-client-status.md).
 
-> [!IMPORTANT]  
-> When it's enabled, configure this task to run at an interval greater than the **Heartbeat Discovery** schedule. This configuration enables active clients to send a Heartbeat Discovery record to mark their client record as active so this task doesn't delete them.  
+> [!IMPORTANT]
+> When it's enabled, configure this task to run at an interval greater than the **Heartbeat Discovery** schedule. This configuration enables active clients to send a Heartbeat Discovery record to mark their client record as active so this task doesn't delete them.
 
 | Site type | Status |
 | --------- | ------ |
@@ -463,8 +463,8 @@ Use this task to delete from the database expired alerts that have been stored l
 
 Use this task to delete obsolete client records from the database. A record that's marked as obsolete has usually been replaced by a newer record for the same client. The newer record becomes the client's current record. For information about discovery, see [Run discovery](../deploy/configure/run-discovery.md).
 
-> [!IMPORTANT]  
-> When it's enabled, configure this task to run at an interval greater than the Heartbeat Discovery schedule. This configuration enables the client to send a Heartbeat Discovery record that correctly sets the obsolete status.  
+> [!IMPORTANT]
+> When it's enabled, configure this task to run at an interval greater than the Heartbeat Discovery schedule. This configuration enables the client to send a Heartbeat Discovery record that correctly sets the obsolete status.
 
 | Site type | Status |
 | --------- | ------ |
@@ -484,7 +484,7 @@ Use this task to delete data about Active Directory sites, subnets, and domains.
 
 ### Delete Orphaned Client Deployment State Records
 
-Use this task to periodically purge the table that contains client deployment state information. This task cleans up records associated with obsolete or decommissioned devices.  
+Use this task to periodically purge the table that contains client deployment state information. This task cleans up records associated with obsolete or decommissioned devices.
 
 | Site type | Status |
 | --------- | ------ |
@@ -566,7 +566,7 @@ To summarize software metering data and to conserve space in the database, use t
 
 Use this task to have Configuration Manager recalculate the mapping of policy and application deployments to resources in collections. When you deploy policy or applications to a collection, Configuration Manager creates an initial mapping between the objects that you deploy and the collection members.
 
-These mappings are stored in a table for quick reference. When a collections membership changes, the site updates these stored mappings to reflect those changes. However, it's possible for these mappings to fall out of sync. For example, if the site fails to properly process a notification file, that change might not be reflected in a change to the mappings. This task refreshes that mapping based on current collection membership.  
+These mappings are stored in a table for quick reference. When a collections membership changes, the site updates these stored mappings to reflect those changes. However, it's possible for these mappings to fall out of sync. For example, if the site fails to properly process a notification file, that change might not be reflected in a change to the mappings. This task refreshes that mapping based on current collection membership.
 
 | Site type | Status |
 | --------- | ------ |

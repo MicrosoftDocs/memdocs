@@ -6,11 +6,11 @@ ms.date: 04/29/2017
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Manage publications in Updates Publisher
@@ -44,7 +44,7 @@ After making a change, you might need to refresh the publication view to see the
 
 For information about the different publication types, see [Assign updates and bundles to a publication](manage-updates-with-updates-publisher.md#assign-updates-and-bundles-to-a-publication).
 
-> [!TIP]    
+> [!TIP]
 > When you set the publication type of a bundle, all the software updates in that bundle are published with the publication type of that bundle.
 
 ## Remove updates from a publication
@@ -57,7 +57,7 @@ When you publish updates and bundles, Updates Publisher adds information about t
 
 Before you have the option to publish, you must configure the [Update Server](updates-publisher-options.md#update-server) option for Updates Publisher. To open this configuration option, go to **Updates Workspace** &gt; **Overview** and select **Configure WSUS and Signing Certificate.** You can also go to the Update Server page in the Updates Publisher options.
 
-> [!NOTE]   
+> [!NOTE]
 > Updates Publisher can only publish updates that are 375 megabytes (MB) or less in size.
 
 ### To publish a publication

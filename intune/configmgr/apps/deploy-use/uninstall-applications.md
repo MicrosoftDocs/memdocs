@@ -3,15 +3,15 @@ title: Uninstall applications
 titleSuffix: Configuration Manager
 description: Uninstall an application by using Configuration Manager
 ms.date: 04/08/2022
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Uninstall applications with Configuration Manager

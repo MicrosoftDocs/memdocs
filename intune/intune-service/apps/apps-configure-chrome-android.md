@@ -1,37 +1,16 @@
 ---
-# required metadata
-
-title: Configure Google Chrome for Android devices using Intune 
-titleSuffix: Microsoft Intune
-description: Use Intune configuration policies with Google Chrome for Android devices. 
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
+title: Configure Google Chrome for Android Devices Using Intune
+description: Use Intune configuration policies with Google Chrome for Android devices.
 ms.date: 11/21/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: esalter
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_Add
 ---
 
-# Configure Google Chrome for Android devices using Intune 
+# Configure Google Chrome for Android Devices Using Intune
 
 You can use an Intune app configuration policy to configure Google Chrome for Android devices. The settings for the app can be automatically applied. For example, you can specifically set the bookmarks and the URLs that you would like to block or allow.
 
@@ -77,7 +56,7 @@ For more information about adding a Managed Google Play app to Intune, see [Mana
     - **Managed Bookmarks**: `[{"toplevel_name": "My managed bookmarks folder"  },  {"url": "baidu.com",   "name": "Baidu"},  {"url": "youtube.com", "name": "Youtube"},  {"name": "Chrome links",  "children": [{"url": "chromium.org", "name": "Chromium"},    {"url": "dev.chromium.org", "name": "Chromium Developers"}]}]`
     - **Incognito mode availability**: `Incognito mode disabled`
 
-    Once the configuration settings are added using the configuration designer, they'll be listed in a table. 
+    Once the configuration settings are added using the configuration designer, they'll be listed in a table.
 
     ![Common settings](./media/apps-configure-chrome-android/common-settings.png)
 

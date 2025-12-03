@@ -12,85 +12,85 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_Client_Reg_MultiString_List Server WMI Class
-The `SMS_Client_Reg_MultiString_List` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a list of client registry multi-string items from the site control file.  
+The `SMS_Client_Reg_MultiString_List` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a list of client registry multi-string items from the site control file.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_Client_Reg_MultiString_List  
-{  
-     String ItemType;  
-     String ValueName;  
-     String KeyPath;  
-     String ValueStrings[];  
-};  
-```  
+```
+Class SMS_Client_Reg_MultiString_List
+{
+     String ItemType;
+     String ValueName;
+     String KeyPath;
+     String ValueStrings[];
+};
+```
 
-## Methods  
- The `SMS_Client_Reg_MultiString_List` class doesn't define any methods.  
+## Methods
+ The `SMS_Client_Reg_MultiString_List` class doesn't define any methods.
 
-## Properties  
- `ItemType`  
- Data type: `String`  
+## Properties
+ `ItemType`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key, read]  
+ Qualifiers: [key, read]
 
- Client registry multstring item type.  
+ Client registry multstring item type.
 
- `ValueName`  
- Data type: `String`  
+ `ValueName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Property name reflected in the system registry key where the multi-string items are stored. The default value is "".  
+ Property name reflected in the system registry key where the multi-string items are stored. The default value is "".
 
- `KeyPath`  
- Data type: `String`  
+ `KeyPath`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Path to the multi-string item. The default value is "".  
+ Path to the multi-string item. The default value is "".
 
 > [!NOTE]
->  Do not set this property when updating the `ValueName` property.  
+>  Do not set this property when updating the `ValueName` property.
 
- `ValueStrings`  
- Data type: `String` Array  
+ `ValueStrings`
+ Data type: `String` Array
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- List of strings that serve as registry data values. The meaning of the strings is determined by the `ValueName` property.  
+ List of strings that serve as registry data values. The meaning of the strings is determined by the `ValueName` property.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Embedded  
+- Embedded
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  This class behaves the same as [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md). It's used to represent data that is stored in the system registry with the `REG_MULTI_SZ` data type.  
+  This class behaves the same as [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md). It's used to represent data that is stored in the system registry with the `REG_MULTI_SZ` data type.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)   
+## See Also
+ [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)
  [SMS_EmbeddedPropertyList Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_embeddedpropertylist-server-wmi-class.md)

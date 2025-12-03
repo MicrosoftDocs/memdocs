@@ -3,15 +3,15 @@ title: Create collections
 titleSuffix: Configuration Manager
 description: Create collections in Configuration Manager to more easily manage groups of users and devices.
 ms.date: 12/01/2021
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # How to create collections in Configuration Manager
@@ -103,9 +103,9 @@ You create a collection that has one include collection rule and one exclude col
             > [!TIP]
             > On built-in collections, only change the **Time** of the custom schedule. Don't change the **Recurrence pattern**. Future versions of Configuration Manager might enforce a specific recurrence pattern.
 
-1. Complete the wizard to create the new collection. The new collection is displayed in the **Device Collections** node of the **Assets and Compliance** workspace.  
+1. Complete the wizard to create the new collection. The new collection is displayed in the **Device Collections** node of the **Assets and Compliance** workspace.
 
-> [!NOTE]  
+> [!NOTE]
 > To see new collection members, refresh or reload the Configuration Manager console. They don't appear in the collection until after the first scheduled update. You can also manually select **Update Membership** for the collection. It might take a few minutes for a collection update to complete.
 
 ## <a name="bkmk-direct"></a> Configure a direct rule for a collection
@@ -172,7 +172,7 @@ Starting in Configuration Manager 2010, you can preview the results when you're 
 
 Starting in Configuration Manager version 2103, you have more options when using the collection query preview. The following improvements have been made to previewing collection queries:
 - Limit the number of rows returned
-   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows. 
+   - Your limit can be between 1 to 10,000 rows. The default is 5000 rows.
 - Omit duplicate rows from the result set
   - If the **Omit duplicate rows** option isn't selected, the original query statement will be executed as is, even if the query contains the word **distinct**.
   - When the **Omit duplicate rows** option is selected, if the query already contains the word **distinct**, then the query runs as it is. When the query doesn't contain the word **distinct**, it's added to the query for the preview (mean override).

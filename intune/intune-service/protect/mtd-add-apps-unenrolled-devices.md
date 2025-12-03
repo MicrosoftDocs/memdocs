@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Add Mobile Threat Defense apps to unenrolled devices
-titleSuffix: Microsoft Intune
 description: Add Mobile Threat Defense apps to unenrolled devices by device users.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -79,8 +59,8 @@ However, should you wish to make the app available to end users via the Intune C
 
 ### Making Check Point Harmony Mobile Protect available to end users
 
-- **Android**  
-  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Harmony Mobile Protect - Play Store URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) when completing the **Configure app information** section. 
+- **Android**
+  - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Harmony Mobile Protect - Play Store URL](https://play.google.com/store/apps/details?id=com.lacoon.security.fox) when completing the **Configure app information** section.
 
 - **iOS**
   - See the instructions for [adding iOS store apps to Microsoft Intune](../apps/store-apps-ios.md). Use this [Harmony Mobile Protect - App Store URL](https://apps.apple.com/us/app/sandblast-mobile-protect/id1006390797) when completing the **Configure app information** section.
@@ -95,7 +75,7 @@ However, should you wish to make the app available to end users via the Intune C
 
 ### Making Lookout for Work available to end users
 
-- **Android**  
+- **Android**
   - See the instructions for [adding Android store apps to Microsoft Intune](../apps/store-apps-android.md). Use this [Lookout for Work - Play Store URL](https://play.google.com/store/apps/details?id=com.lookout.enterprise) when completing the **Configure app information** section.
 
 - **iOS**

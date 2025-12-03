@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for iOS developer guide - MSAL prerequisite and setup 
-description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as APP or MAM policies) into your native iOS app. MSAL prerequisite and setup
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 10/14/2024
+title: Microsoft Intune App SDK for iOS Developer Guide - MSAL Prerequisite and Setup
+description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. MSAL prerequisite and setup
+ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 8e280d23-2a25-4a84-9bcb-210b30c63c0b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: has-adal-ref
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
 
-# Stage 2: MSAL prerequisite and setup
+# Stage 2: MSAL Prerequisite and Setup
 
 The Intune App SDK uses the [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-objc) for its authentication and conditional launch scenarios. It also relies on MSAL to register the user identity with the MAM service for management without device enrollment scenarios.
 
@@ -44,9 +23,9 @@ The Intune App SDK uses the [Microsoft Authentication Library](https://github.co
 - Verify that your application can obtain a token that grants access to protected resources.
 
 ### Set up and configure a Microsoft Entra app registration
-MSAL requires apps to [register](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be a Microsoft Entra app registration/client ID/redirect URI associated with the app. 
+MSAL requires apps to [register](/azure/active-directory/develop/quickstart-register-app) with Microsoft Entra ID and create a unique client ID and redirect URI, to guarantee the security of the tokens granted to the app. If your application already uses MSAL for its own authentication, then there should already be a Microsoft Entra app registration/client ID/redirect URI associated with the app.
 
-If your app doesn't already use MSAL, you'll need to configure an app registration in Microsoft Entra ID and specify the client ID and redirect URI that the Intune SDK should use.  
+If your app doesn't already use MSAL, you'll need to configure an app registration in Microsoft Entra ID and specify the client ID and redirect URI that the Intune SDK should use.
 
 If your app currently uses ADAL to authenticate users, see [Migrate applications to MSAL for iOS and macOS] for more information on migrating your app from ADAL to MSAL.
 
@@ -58,7 +37,7 @@ Follow the [installation](https://github.com/AzureAD/microsoft-authentication-li
 
 ### Configure MSAL
 
-Follow the [configuration](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal) section to configure MSAL. Make sure you follow all the steps in the configuration section. Disregard step one if your app is already registered in Microsoft Entra ID. 
+Follow the [configuration](https://github.com/AzureAD/microsoft-authentication-library-for-objc#configuring-msal) section to configure MSAL. Make sure you follow all the steps in the configuration section. Disregard step one if your app is already registered in Microsoft Entra ID.
 
 The points below contain additional information to configure MSAL and link to it. Follow these if they apply to your application.
 
@@ -69,7 +48,7 @@ The points below contain additional information to configure MSAL and link to it
 
 ### Configure MSAL settings for the Intune App SDK
 
-Once an app registration has been configured for your application in Microsoft Entra ID, you can configure the Intune App SDK to use the settings from your app registration during authentication against Microsoft Entra ID. See [Configure settings for the Intune App SDK](#configure-msal-settings-for-the-intune-app-sdk) for information on populating the following settings:  
+Once an app registration has been configured for your application in Microsoft Entra ID, you can configure the Intune App SDK to use the settings from your app registration during authentication against Microsoft Entra ID. See [Configure settings for the Intune App SDK](#configure-msal-settings-for-the-intune-app-sdk) for information on populating the following settings:
 
 * ADALClientId
 * ADALAuthority
@@ -87,7 +66,7 @@ The following configurations are required:
 
    Alternatively, apps can override these Microsoft Entra settings at runtime. To do this, simply set the `aadAuthorityUriOverride`, `aadClientIdOverride`, and `aadRedirectUriOverride` properties on the `IntuneMAMSettings` class.
 
-4. Ensure the steps to give your iOS app permissions to the Intune Mobile App Management (MAM) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under [Give your app access to the Intune Mobile App Management service](app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service).  
+4. Ensure the steps to give your iOS app permissions to the Intune Mobile App Management (MAM) service are followed. Use the instructions in the [getting started with the Intune SDK guide](app-sdk-get-started.md#next-steps-after-integration) under [Give your app access to the Intune Mobile App Management service](app-sdk-get-started.md#give-your-app-access-to-the-intune-mobile-app-management-service).
 
    > [!NOTE]
    > If the app protection policy is related to managed devices, creating an app configuration profile of the application that has Intune integrated is also necessary.
@@ -96,7 +75,7 @@ The following configurations are required:
 
 ### Special considerations when using MSAL for app-initiated authentication
 
-It's recommended that applications don't use SFSafariViewController, SFAuththenticationSession or ASWebAuthenticationSession as their webview for any app-initiated MSAL interactive auth operations. By default, MSAL uses ASWebAuthenticationSession, so app developers should [explicitly set the webview type](/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request) to WKWebView. If for some reason your app must use a webview type other than WKWebView for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist. 
+It's recommended that applications don't use SFSafariViewController, SFAuththenticationSession or ASWebAuthenticationSession as their webview for any app-initiated MSAL interactive auth operations. By default, MSAL uses ASWebAuthenticationSession, so app developers should [explicitly set the webview type](/azure/active-directory/develop/customize-webviews#change-the-default-browser-for-the-request) to WKWebView. If for some reason your app must use a webview type other than WKWebView for any interactive MSAL auth operations, then it must also set `SafariViewControllerBlockedOverride` to `true` under the `IntuneMAMSettings` dictionary in the application's Info.plist.
 
 > [!WARNING]
 > This will turn off Intune's SafariViewController hooks to enable the auth session. This does risk data leaks elsewhere in the app if the application uses SafariViewController to view corporate data, so the application shouldn't show corporate data in any of those webview types.
@@ -107,7 +86,7 @@ It's recommended that applications don't use SFSafariViewController, SFAuththent
 - Have you integrated MSAL into your application?
 - Have you enabled broker authentication by generating a redirect URI and setting it in the MSAL configuration file?
 - Have you made sure the required configuration information for MSAL in your IntuneMAMSettings dictionary matched the ones in your Microsoft Entra App Registrations?
- 
+
 ## FAQ
 
 ### What about ADAL?

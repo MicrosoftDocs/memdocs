@@ -1,14 +1,7 @@
 ---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.reviewer: madakeva
-ms.date: 04/02/2025
+ms.date: 11/21/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -29,7 +22,41 @@ appliesto:
 >
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
-> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
+> For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.  
+
+## Windows Autopilot device preparation in automatic mode for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps is in public preview  
+
+Date added: *November 21, 2025*  
+
+Use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and applies immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You can monitor deployment status in the [Windows Autopilot device preparation deployment report](reporting-monitoring.md). For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](tutorial/automatic/automatic-workflow.md).  
+
+For related information, see the following articles:  
+- [Create provisioning policies for Windows 365](/windows-365/enterprise/create-provisioning-policy)  
+- [Windows 365 Cloud Apps](/windows-365/enterprise/cloud-apps)  
+- [Use Autopilot device preparation with Cloud PCs](/windows-365/enterprise/autopilot-device-preparation) 
+
+## Installation of monthly security update releases during Windows Autopilot device preparation
+
+Date added: *September 3, 2025*<br>
+Date updated: *September 9, 2025*
+
+> [!IMPORTANT]
+>
+> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. Automatic installation of monthly security update isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+
+[Monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as Windows quality updates, are installed during a Windows Autopilot device preparation deployment as part of the Windows out-of-box experience (OOBE). The monthly security update releases are installed after the device preparation page completes. These updates can't be disabled for Windows Autopilot device preparation deployments. Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process. Installation of monthly security update releases also might require restarts.
+
+More details regarding automatic installation of monthly security update releases can be found in the article [Install Windows monthly security update releases](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases). However, this article is in regards to using the Enrollment Status Page (ESP) with Windows Autopilot. Windows Autopilot device preparation doesn't use the ESP, so the **Install Windows quality updates (might restart the device)** setting mentioned in this article isn't applicable to Windows Autopilot device preparation.
+
+For more information, see [Get ready for Windows quality updates out of the box](https://techcommunity.microsoft.com/blog/windows-itpro-blog/get-ready-for-windows-quality-updates-out-of-the-box/4434498).  
+
+## Deliver Enterprise App Catalog (EAM) apps during Autopilot device preparation
+
+Date added: *June 26, 2025*
+
+Autopilot device preparation now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog in the device preparation policy. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode is in public preview
 
@@ -39,9 +66,12 @@ We've introduced a new flow for Windows Autopilot device preparation which can b
 
 With the new mode, admins can make sure their Cloud PCs are secured with required software and scripts before the end user logs in!
 
-> [!NOTE]
->
-> After release, it might take a few days for new the new Windows 365 Windows Autopilot device preparation feature to appear in the Microsoft Intune console.
+For a tutorial on Windows Autopilot device preparation in automatic mode for Windows 365, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](tutorial/automatic/automatic-workflow.md).
+
+For more information, see the following articles:
+
+- [Windows 365 Frontline Cloud PC in shared mode - Quick Start Guide](https://techcommunity.microsoft.com/discussions/windows365discussions/windows-365-frontline-cloud-pc-in-shared-mode-%E2%80%93-quick-start-guide/4399905).
+- [Use automated Autopilot device preparation with Windows 365 Frontline Cloud PCs in shared mode (preview)](/windows-365/enterprise/autopilot-device-preparation).
 
 ## Diagnostics logs automatically available in Windows Autopilot device preparation deployment status report
 
@@ -92,3 +122,9 @@ We added additional RBAC permissions for **Managed apps** and **Mobile apps** fo
 Date added: *June 3, 2024*
 
 Windows Autopilot device preparation is generally available. For an overview, see [Overview of Windows Autopilot device preparation](overview.md). For a tutorial on how to set up Windows Autopilot device preparation, see [Windows Autopilot device preparation scenarios](tutorial/scenarios.md).
+
+## Related content
+
+- [What's new in Windows Autopilot](../whats-new.md).
+- [What's new in Microsoft Intune](/mem/intune-service/fundamentals/whats-new).
+- [What's new in Windows client](/windows/whats-new/).

@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -51,7 +51,7 @@ You can filter the application list based on the status. The application status 
 - **Installed**: The application is installed on the device.
 - **Installing**: The application is currently installing.
 - **Install requested**: The installation has been requested, but the client hasn't acknowledged the request yet.
-   - If the device is offline, the install request will be acknowledged once it comes back online and receives the policy.  
+   - If the device is offline, the install request will be acknowledged once it comes back online and receives the policy.
 - **Failed**: The application installation failed.
 - **Requirements not met**: The application requirements haven't been met.
 - **Not installed**: The application isn't currently installed. Typically this status is seen if a different deployment or a user removed the application.
@@ -161,7 +161,7 @@ Use the following table to determine installation behavior on the device when yo
 
 ### Superseded applications are displayed
 <!--7836675, 10196669 -->
-Superseded applications will display on the **Applications** page. However, the superseding application will be installed on the device. For instance, `ApplicationA` is superseded by `ApplicationB`. An administrator selects `ApplicationA` for installation on the device. `ApplicationB` is installed on the device.  
+Superseded applications will display on the **Applications** page. However, the superseding application will be installed on the device. For instance, `ApplicationA` is superseded by `ApplicationB`. An administrator selects `ApplicationA` for installation on the device. `ApplicationB` is installed on the device.
 
 ## Next steps
 

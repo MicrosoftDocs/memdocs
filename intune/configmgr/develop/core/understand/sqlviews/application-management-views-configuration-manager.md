@@ -12,7 +12,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Application management views in Configuration Manager
@@ -34,7 +34,7 @@ The view can be joined to other views by using the **AdvertisementID**, **Packag
 
 Lists information about deployed packages and programs, including the deployment ID (**AdvertisementID**), deployment name (**AdvertisementName**), package ID, program name, collection ID, schedule information and more. The **v_AdvertisementInfo** view is similar to the **v_Advertisement** view, but with additional package data.
 The view can be joined to other views by using the **AdvertisementID**, **PackageID**, and **CollectionID** columns.
- 
+
 ### v_CurrentAdvertisementAssignments
 
 Lists the current application deployments, by advertisement ID, and the resource ID that is assigned the advertisement.
@@ -252,4 +252,4 @@ It is unlikely that this view will be joined to other views.
 
 ## See also
 
-[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)  
+[SQL Server views in Configuration Manager](sql-server-views-configuration-manager.md)

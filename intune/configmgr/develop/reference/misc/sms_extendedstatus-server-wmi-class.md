@@ -12,181 +12,181 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_ExtendedStatus Server WMI Class
 
-The `SMS_ExtendedStatus` WMI class in Configuration Manager supports an error object that supplies the cause and nature of the current error.  
+The `SMS_ExtendedStatus` WMI class in Configuration Manager supports an error object that supplies the cause and nature of the current error.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ExtendedStatus : __ExtendedStatus  
-{  
-     String CauseInfo;  
-     String Description;  
-     UInt32 ErrorCode;  
-     String File;  
-     UInt32 Line;  
-     String ObjectInfo;  
-     String Operation;  
-     String ParameterInfo;  
-     String ProviderName;  
-     String SQLMessage;  
-     UInt32 SQLSeverity;  
-     UInt32 SQLStatus;  
-     UInt32 StatusCode;  
-};  
-```  
+```
+Class SMS_ExtendedStatus : __ExtendedStatus
+{
+     String CauseInfo;
+     String Description;
+     UInt32 ErrorCode;
+     String File;
+     UInt32 Line;
+     String ObjectInfo;
+     String Operation;
+     String ParameterInfo;
+     String ProviderName;
+     String SQLMessage;
+     UInt32 SQLSeverity;
+     UInt32 SQLStatus;
+     UInt32 StatusCode;
+};
+```
 
-## Methods  
- The `SMS_ExtendedStatus` class does not define any methods.  
+## Methods
+ The `SMS_ExtendedStatus` class does not define any methods.
 
-## Properties  
- `CauseInfo`  
- Data type: `String`  
+## Properties
+ `CauseInfo`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Optional error information. This property can contain the reason the error occurred, along with other information. For example, Software Product Compliance sets this property to the field number that caused the error.  
+ Optional error information. This property can contain the reason the error occurred, along with other information. For example, Software Product Compliance sets this property to the field number that caused the error.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Optional detailed description of an error or an operational status.  
+ Optional detailed description of an error or an operational status.
 
- `ErrorCode`  
- Data type: `UInt32`  
+ `ErrorCode`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Composite error code that defines the severity, facility, action, object, and reason for the error. The Ssperrcode.h header file contains macros to evaluate the error condition. The following table lists the five-bit field masks that make up this property. The default value is 0.  
+ Composite error code that defines the severity, facility, action, object, and reason for the error. The Ssperrcode.h header file contains macros to evaluate the error condition. The following table lists the five-bit field masks that make up this property. The default value is 0.
 
-|Mask|Description|  
-|----------|-----------------|  
-|Severity (bits 31-30)|Value that identifies whether the application can continue and to what extent it can continue. The three levels of severity are functional, minor, and major.<br /><br /> A functional error allows an application to continue with any aspect of Configuration Manager.<br /><br /> A minor error allows an application to continue with other areas of Configuration Manager that are not related to the area that caused this error.<br /><br /> If the application receives a major error, however, it should stop processing requests and terminate.|  
-|Facility (bits 27-22)|The facility that was being accessed when the error occurred, for example, internal, file, Structured Query Language (SQL), or security.|  
-|Action (bits 21-16)|The action that failed, for example, open, read, or persist.|  
-|Object (bits 15-8)|The type of object against which the action was being performed, for example, a parameter or an instance.|  
-|Reason (bits 7-0)|The reason for the failure. This value might not be set. For example, R_PDFERROR is set if an error occurred while loading a package definition file (.pdf).|  
+|Mask|Description|
+|----------|-----------------|
+|Severity (bits 31-30)|Value that identifies whether the application can continue and to what extent it can continue. The three levels of severity are functional, minor, and major.<br /><br /> A functional error allows an application to continue with any aspect of Configuration Manager.<br /><br /> A minor error allows an application to continue with other areas of Configuration Manager that are not related to the area that caused this error.<br /><br /> If the application receives a major error, however, it should stop processing requests and terminate.|
+|Facility (bits 27-22)|The facility that was being accessed when the error occurred, for example, internal, file, Structured Query Language (SQL), or security.|
+|Action (bits 21-16)|The action that failed, for example, open, read, or persist.|
+|Object (bits 15-8)|The type of object against which the action was being performed, for example, a parameter or an instance.|
+|Reason (bits 7-0)|The reason for the failure. This value might not be set. For example, R_PDFERROR is set if an error occurred while loading a package definition file (.pdf).|
 
- `File`  
- Data type: `String`  
+ `File`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Module that raised the error condition. The default value is "".  
+ Module that raised the error condition. The default value is "".
 
- `Line`  
- Data type: `UInt32`  
+ `Line`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Line number inside the module where the error was raised. The default value is 0.  
+ Line number inside the module where the error was raised. The default value is 0.
 
- `ObjectInfo`  
- Data type: `String`  
+ `ObjectInfo`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Optional error information that contains the object that caused the error, the parameter that caused the error, or the Structured Query Language (SQL) message text, along with other data. For example, Software Product Compliance sets this property to the number of the record that caused the error.  
+ Optional error information that contains the object that caused the error, the parameter that caused the error, or the Structured Query Language (SQL) message text, along with other data. For example, Software Product Compliance sets this property to the number of the record that caused the error.
 
- `Operation`  
- Data type: `String`  
+ `Operation`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Operation taking place at the time of the failure or anomaly.  
+ Operation taking place at the time of the failure or anomaly.
 
- `ParameterInfo`  
- Data type: `String`  
+ `ParameterInfo`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- One or more parameters involved in the error or status change.  
+ One or more parameters involved in the error or status change.
 
- `ProviderName`  
- Data type: `String`  
+ `ProviderName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- The name of the provider that caused or reported the error or status change. If a provider was not involved, this string is set to "Windows Management".  
+ The name of the provider that caused or reported the error or status change. If a provider was not involved, this string is set to "Windows Management".
 
- `SQLMessage`  
- Data type: `String`  
+ `SQLMessage`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Error message text of the last SQL Server error. This property is set to `null` if no SQL Server error is present.  
+ Error message text of the last SQL Server error. This property is set to `null` if no SQL Server error is present.
 
- `SQLSeverity`  
- Data type: `UInt32`  
+ `SQLSeverity`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Severity code of the last SQL Server error. This property is set to `null` if no SQL Server error is present.  
+ Severity code of the last SQL Server error. This property is set to `null` if no SQL Server error is present.
 
- `SQLStatus`  
- Data type: `UInt32`  
+ `SQLStatus`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Error code of the last SQL Server error. This property is set to `null` if no SQL Server error is present.  
+ Error code of the last SQL Server error. This property is set to `null` if no SQL Server error is present.
 
- `StatusCode`  
- Data type: `UInt32`  
+ `StatusCode`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Error or information code for an operation.  
+ Error or information code for an operation.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  For information about how to use this class, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).  
+  For information about how to use this class, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md)

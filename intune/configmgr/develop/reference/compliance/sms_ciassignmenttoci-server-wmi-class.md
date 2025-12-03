@@ -12,60 +12,60 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CIAssignmentToCI Server WMI Class
-The `SMS_CIAssignmentToCI` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a relationship between a configuration baseline and its assignments.  
+The `SMS_CIAssignmentToCI` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a relationship between a configuration baseline and its assignments.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CIAssignmentToCI : SMS_BaseClass  
-{  
-      UInt32 AssignmentID;  
-      UInt32 CI_ID;  
-};  
-```  
+```
+Class SMS_CIAssignmentToCI : SMS_BaseClass
+{
+      UInt32 AssignmentID;
+      UInt32 CI_ID;
+};
+```
 
-## Methods  
- The `SMS_CIAssignmentToCI` class does not define any methods.  
+## Methods
+ The `SMS_CIAssignmentToCI` class does not define any methods.
 
-## Properties  
- `AssignmentID`  
- Data type: `UInt32`  
+## Properties
+ `AssignmentID`
+ Data type: `UInt32`
 
- Access type: Read-only.  
+ Access type: Read-only.
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique ID of the assignment.  
+ Unique ID of the assignment.
 
- `CI_ID`  
- Data type: `UInt32`  
+ `CI_ID`
+ Data type: `UInt32`
 
- Access type: Read-only.  
+ Access type: Read-only.
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The unique ID of the configuration item. This ID is unique only for the site.  
+ The unique ID of the configuration item. This ID is unique only for the site.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Association: ToInstance  
+- Association: ToInstance
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)   
+## See Also
+ [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)
  [SMS_BaselineAssignment Server WMI Class](../../../develop/reference/compliance/sms_baselineassignment-server-wmi-class.md)

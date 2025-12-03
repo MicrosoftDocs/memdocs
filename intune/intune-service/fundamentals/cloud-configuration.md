@@ -1,38 +1,19 @@
 ---
-# required metadata
-
 title: Use Windows cloud configuration in a guided scenario
 description: Use a guided scenario to configure Windows 10/11 client devices in a cloud configuration in Microsoft Intune. Cloud config focuses on a simplified device experience for internet browsing and using Microsoft 365 apps, including Microsoft Teams.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 08/19/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: royork
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---
 
-# Guided scenario - Windows 10/11 in cloud configuration
+# Guided scenario - Windows in cloud configuration
 
-Windows 10/11 in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows 10/11 Professional, Enterprise, and Education device into a cloud-optimized device.
+Windows in cloud configuration is a Microsoft-recommended device configuration. You can turn any Windows Professional, Enterprise, and Education device into a cloud-optimized device.
 
 Cloud configuration is ideal for:
 
@@ -47,7 +28,7 @@ There are two ways to deploy cloud config:
 - **Option 1 - Automatic** (this article): Use the guided scenario described in this article to automatically create all the groups and policies with their configured values.
 - **Option 2 - Manual**: Use a step-by-step setup guide to deploy cloud config yourself, including manually creating all the policies. For information on this option, go to [Windows client cloud config setup guide](cloud-configuration-setup-guide.md).
 
-With Windows 10/11 in cloud configuration:
+With Windows in cloud configuration:
 
 - You can configure new devices, or reuse existing hardware.
 - End users get an easy-to-use, and familiar Windows experience.
@@ -55,7 +36,7 @@ With Windows 10/11 in cloud configuration:
 - You can customize the names of your resources, so they're easy to see and monitor.
 
 > [!TIP]
-> For a more comprehensive guide on Windows 10/11 in cloud configuration, go to [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
+> For a more comprehensive guide on Windows in cloud configuration, go to [Windows in cloud configuration](https://aka.ms/cloud-config).
 
 ## What this guided scenario does
 
@@ -63,10 +44,10 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 - Creates a new Microsoft Entra security group, or uses an existing Microsoft Entra security group.
 - Deploys the Microsoft Edge and Microsoft Teams apps. For information on deploying these apps individually, go to:
-  - [Add Microsoft Edge for Windows 10/11](../apps/apps-windows-edge.md)
-  - [Add Microsoft 365 apps to Windows 10/11 devices](../apps/apps-add-office365.md)
+  - [Add Microsoft Edge for Windows](../apps/apps-windows-edge.md)
+  - [Add Microsoft 365 apps to Windows devices](../apps/apps-add-office365.md)
 
-- Creates a Windows 10/11 security baseline policy with recommended security settings that are already configured.
+- Creates a Windows security baseline policy with recommended security settings that are already configured.
 
   For information about security baselines, and what they do, go to [Use security baselines to configure Windows client devices](../protect/security-baselines.md).
 
@@ -107,8 +88,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
   - Microsoft Intune
   - Microsoft Teams
   - OneDrive
-  - Windows 10 Pro
-  - Windows 11 Pro
+  - Windows
 
   All of these services are included with the Microsoft 365 E3 license. For more security options and features, use the Microsoft 365 E5 license. To help decide which license is right for your organization, go to [Transform your enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
@@ -117,7 +97,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 - Enable automatic enrollment for Windows client devices. For information, go to:
 
   - [Quickstart: Set up automatic enrollment for Windows client devices](../enrollment/quickstart-setup-auto-enrollment.md)
-  - [Enable Windows 10/11 automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
+  - [Enable Windows automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment)
 
 - Sign in as the Intune Service Administrator Microsoft Entra role, also known as the Intune Administrator. For information on the roles that affect Intune, go to:
 
@@ -129,7 +109,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 Open the guided scenario:
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows 10 and later in cloud configuration** > **Start**.
+2. Select **Troubleshooting + support** > **Guided scenarios** > **Deploy Windows in cloud configuration** > **Start**.
 3. In **Introduction**, select **Next**.
 
 ## Step 2 - Basics
@@ -159,7 +139,7 @@ Choose how your devices are named when they enroll, and choose the prefix of all
 
   Your settings look similar to the following image:
 
-  :::image type="content" source="./media/cloud-configuration/guided-scenario-basics.png" alt-text="Screenshot that shows how to configure the device name template and resource name prefix in a Windows 10/11 cloud configuration guided scenario in Microsoft Intune." lightbox="./media/cloud-configuration/guided-scenario-basics.png":::
+  :::image type="content" source="./media/cloud-configuration/guided-scenario-basics.png" alt-text="Screenshot that shows how to configure the device name template and resource name prefix in a Windows cloud configuration guided scenario in Microsoft Intune." lightbox="./media/cloud-configuration/guided-scenario-basics.png":::
 
 - Select **Next**.
 
@@ -200,7 +180,7 @@ Look at the following properties:
 
   As the resources are being created in the Intune admin center, the status is shown, similar to the following image:
 
-  :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Screenshot that shows how to review the Windows 10/11 in cloud configuration guided scenario deployment status in Microsoft Intune.":::
+  :::image type="content" source="./media/cloud-configuration/guided-scenario-deployment-status.png" alt-text="Screenshot that shows how to review the Windows in cloud configuration guided scenario deployment status in Microsoft Intune.":::
 
 If there's an error, then the guided scenario isn't deployed, and all changes are reverted. The [Cloud configuration overview and setup guide](https://aka.ms/CloudConfigGuide) is also a good resource.
 
@@ -222,7 +202,7 @@ When it deploys successfully, you can use the monitoring and reporting features 
   For information on the policy refresh times, go to [Common questions and answers with device policies in Microsoft Intune](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
 - Microsoft recommends only assigning cloud config settings and apps. After this guided scenario deploys, then you can add any other required resources, such as certificates, VPN profiles, line-of-business apps, and more. Be sure to deploy these policies to the same group as this guided scenario. Remember, keep the list small, and only include resources your users need.
-- Because of a OneDrive sync issue with shared devices, Microsoft doesn't recommend using Windows 10/11 in cloud configuration with shared devices. Shared devices typically have multiple users that sign in and sign out.
+- Because of a OneDrive sync issue with shared devices, Microsoft doesn't recommend using Windows in cloud configuration with shared devices. Shared devices typically have multiple users that sign in and sign out.
 - After the guided scenario is deployed, you can go to a policy, and see the settings and their configured values. You can change any of these settings to another value, if you like.
 - To remove the guided scenario settings from devices, go to each policy created by the cloud config guided scenario. Configure the settings to **Not Configured**. Deploy each policy again to the same group as this guided scenario.
 

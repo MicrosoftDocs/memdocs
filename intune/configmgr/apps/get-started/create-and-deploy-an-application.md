@@ -3,15 +3,15 @@ title: Create and deploy an application
 titleSuffix: Configuration Manager
 description: Create and deploy an application containing a line-of-business app and learn how to manage apps effectively.
 ms.date: 10/01/2021
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: baladelli
+author: LauraWi
 manager: apoorvseth
-ms.author: baladell
+ms.author: laurawi
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 # Create and deploy an application with Configuration Manager
 

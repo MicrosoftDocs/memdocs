@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2002 of Configuration Manager current branch
@@ -320,7 +320,7 @@ For more information, see [Synchronize Microsoft 365 updates from a disconnected
 ## <a name="bkmk_protect"></a> Protection
 
 ### Expand Microsoft Defender for Endpoint onboarding
- 
+
 <!-- 5229962 -->
 Configuration Manager has expanded its support for onboarding devices to Microsoft Defender for Endpoint. For more information, see [Microsoft Defender for Endpoint](../../../protect/deploy-use/defender-advanced-threat-protection.md).
 

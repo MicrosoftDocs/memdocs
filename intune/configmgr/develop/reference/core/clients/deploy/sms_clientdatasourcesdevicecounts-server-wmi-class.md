@@ -12,73 +12,73 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientDataSourcesDeviceCounts Server WMI Class
-The `SMS_ClientDataSourcesContentStats` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents device counts for client data sources.  
+The `SMS_ClientDataSourcesContentStats` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents device counts for client data sources.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientDataSourcesDeviceCounts : SMS_BaseClass  
-{  
-    UInt32 ClientCount;  
-    UInt32 DPCount;  
-    UInt32 PeerClientCount;  
-};  
+```
+Class SMS_ClientDataSourcesDeviceCounts : SMS_BaseClass
+{
+    UInt32 ClientCount;
+    UInt32 DPCount;
+    UInt32 PeerClientCount;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_ClientDataSourcesDeviceCounts` class does not define any methods.  
+## Methods
+ The `SMS_ClientDataSourcesDeviceCounts` class does not define any methods.
 
-## Properties  
- `ClientCount`  
- Data type: `UInt32`  
+## Properties
+ `ClientCount`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of clients.  
+ The number of clients.
 
- `DPCount`  
- Data type: `UInt32`  
+ `DPCount`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of distribution points.  
+ The number of distribution points.
 
- `PeerClientCount`  
- Data type: `UInt32`  
+ `PeerClientCount`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The number of peer clients.  
+ The number of peer clients.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-- Singleton  
+- Singleton
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

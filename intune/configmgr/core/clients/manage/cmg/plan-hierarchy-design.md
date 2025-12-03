@@ -3,14 +3,14 @@ title: CMG hierarchy design
 titleSuffix: Configuration Manager
 description: Design how to use a cloud management gateway (CMG) in your Configuration Manager hierarchy.
 ms.date: 03/11/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -48,8 +48,8 @@ Fourth Coffee has a CAS in an on-premises datacenter at their headquarters in Se
 As clients roam onto the internet, they communicate with the CMG in the West US Azure region. The CMG forwards this communication to the CMG connection point in the client's assigned primary site.
 
 > [!TIP]
-> When providing global client support, content downloads from a geographically distant Cloud Management Gateway's storage account can be affected by cloud service communication latency between countries or regions. Although the delay from one network location to another may not be significant, the necessity for communication to traverse different regions can increase latency. For applications with large content (either in terms of the number of files or file size), the download timing can vary between proximate and distant CMGs (storage accounts). For Client operational communication, the impact is lower, as the routing to Storage account is different than the routing to CMG VM Api Service. 
-> 
+> When providing global client support, content downloads from a geographically distant Cloud Management Gateway's storage account can be affected by cloud service communication latency between countries or regions. Although the delay from one network location to another may not be significant, the necessity for communication to traverse different regions can increase latency. For applications with large content (either in terms of the number of files or file size), the download timing can vary between proximate and distant CMGs (storage accounts). For Client operational communication, the impact is lower, as the routing to Storage account is different than the routing to CMG VM Api Service.
+>
 
 ## Multiple environments
 <!-- SCCMDocs#1225 -->
@@ -81,6 +81,6 @@ Even though you install the CMG in a specific region of Azure, clients aren't aw
 ## Next steps
 
 Next, review the features and configurations that the CMG supports:
-  
+
 > [!div class="nextstepaction"]
 > [Supported configurations for CMG](supported-configurations.md)

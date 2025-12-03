@@ -11,14 +11,14 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Recommended hardware for Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
-The following recommendations are guidelines to help you scale your Configuration Manager environment to support more than a very basic deployment of sites, site systems, and clients. They aren't intended to cover all possible site and hierarchy configurations.  
+The following recommendations are guidelines to help you scale your Configuration Manager environment to support more than a very basic deployment of sites, site systems, and clients. They aren't intended to cover all possible site and hierarchy configurations.
 
 Use the information in the following sections as a guide to help you plan for hardware. Make sure your hardware can meet the processing loads for clients and sites that use the available Configuration Manager features.
 

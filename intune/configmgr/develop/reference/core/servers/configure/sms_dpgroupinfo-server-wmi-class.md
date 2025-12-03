@@ -12,129 +12,129 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DPGroupInfo Server WMI Class
-The `SMS_DPGroupInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes a distribution point group.  
+The `SMS_DPGroupInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes a distribution point group.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DPGroupInfo : SMS_BaseClass  
-{  
-    UInt32 AssignedContentCount;  
-    String Description;  
-    UInt32 FeatureType;  
-    String GroupID;  
-    UInt32 MembersCount;  
-    String Name;  
-    UInt32 NumberErrors;  
-    UInt32 NumberInProgress;  
-    UInt32 NumberSuccess;  
-    UInt32 NumberUnknown;  
-};  
-```  
+```
+Class SMS_DPGroupInfo : SMS_BaseClass
+{
+    UInt32 AssignedContentCount;
+    String Description;
+    UInt32 FeatureType;
+    String GroupID;
+    UInt32 MembersCount;
+    String Name;
+    UInt32 NumberErrors;
+    UInt32 NumberInProgress;
+    UInt32 NumberSuccess;
+    UInt32 NumberUnknown;
+};
+```
 
-## Methods  
- The `SMS_DPGroupInfo` class does not define any methods.  
+## Methods
+ The `SMS_DPGroupInfo` class does not define any methods.
 
-## Properties  
- `AssignedContentCount`  
- Data type: `UInt32`  
+## Properties
+ `AssignedContentCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of the packages or applications targeted to this distribution point group.  
+ Count of the packages or applications targeted to this distribution point group.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description for this distribution point group.  
+ Description for this distribution point group.
 
- `FeatureType`  
- Data type: `UInt32`  
+ `FeatureType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Deployment type for monitoring.  
+ Deployment type for monitoring.
 
- `GroupID`  
- Data type: `String`  
+ `GroupID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique identifier for the distribution point group.  
+ Unique identifier for the distribution point group.
 
- `MembersCount`  
- Data type: `UInt32`  
+ `MembersCount`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of the distribution point members.  
+ Count of the distribution point members.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the distribution point group.  
+ Name of the distribution point group.
 
- `NumberErrors`  
- Data type: `UInt32`  
+ `NumberErrors`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of the number of packages or applications with failed to be distributed to this distribution point.  
+ Count of the number of packages or applications with failed to be distributed to this distribution point.
 
- `NumberInProgress`  
- Data type: `UInt32`  
+ `NumberInProgress`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of the number of packages or applications being distributed to this distribution point.  
+ Count of the number of packages or applications being distributed to this distribution point.
 
- `NumberSuccess`  
- Data type: `UInt32`  
+ `NumberSuccess`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of the number of packages or applications successfully distributed to this distribution point group.  
+ Count of the number of packages or applications successfully distributed to this distribution point group.
 
- `NumberUnknown`  
- Data type: `UInt32`  
+ `NumberUnknown`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Count of the number of packages or applications that are in an unknown state.  
+ Count of the number of packages or applications that are in an unknown state.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

@@ -6,12 +6,12 @@ ms.date: 12/03/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: whats-new
-author: PalikaSingh
-ms.author: palsi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2409 of Configuration Manager current branch
@@ -19,7 +19,7 @@ ms.reviewer: mstewart,aaroncz
 *Applies to: Configuration Manager (current branch)*
 
 Update 2409 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 2309 or later. <!--When installing a new site, it will also be available as a [baseline version](../../servers/manage/updates.md#bkmk_note1) soon after global availability.--> This article summarizes the changes and new features in Configuration Manager, version 2409.
-                                                                                                                                                                                                                                                                                                                          
+
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 2409](../../servers/manage/checklist-for-installing-update-2409.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-2409.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
@@ -28,7 +28,7 @@ To take full advantage of new Configuration Manager features, after you update t
 <!--24501008-->
 ### Configuration Manager now supports SQL Extended Protection for Authentication
 
-Configuration Manager now supports SQL extended protection for authentication. It's a security feature that enhances protection against MITM attacks, making SQL server more secure when connections are made using extended protection. These enhancements collectively reduce the risk of unauthorized access and protect sensitive data managed by the SQL Server database engine. 
+Configuration Manager now supports SQL extended protection for authentication. It's a security feature that enhances protection against MITM attacks, making SQL server more secure when connections are made using extended protection. These enhancements collectively reduce the risk of unauthorized access and protect sensitive data managed by the SQL Server database engine.
 
 For more information, see [Connect to the Database Engine Using Extended Protection](/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection).
 
@@ -51,7 +51,7 @@ With this version of Configuration Manager, support is added for Windows 11 24H2
  - Windows 11 24H2 & Windows Server 2025 client support is added.
  - Boot image creation in CM on Windows Server 2025 now supports latest Windows ADK.
  - Windows upgrade readiness dashboard now supports Windows 11 24H2 for upgrading clients.
-   
+
 >[!NOTE]
 >Windows Server and Windows 11 24H2 do not support Firewall Rules. This will result in a non-compliant status in the Configuration Manager applet.
 
@@ -71,9 +71,9 @@ For more information, see [Bitlocker Supported configurations](../../../protect/
 
 ## Cloud-attached management
 
-### CMG Entra Application secret key renewal  
+### CMG Entra Application secret key renewal 
 
-The 'Renew Secret Key' feature now opens a dialog with four options for the validity period. This update also prevents applications older than 800 days (approximately two years) from renewing their secret keys. The same options are available when creating a new app. 
+The 'Renew Secret Key' feature now opens a dialog with four options for the validity period. This update also prevents applications older than 800 days (approximately two years) from renewing their secret keys. The same options are available when creating a new app.
 
 :::image type="content" source="media/27297018-secret-window.png" alt-text="Screenshot of secret window selection in console.":::
 
@@ -82,7 +82,7 @@ The 'Renew Secret Key' feature now opens a dialog with four options for the vali
 
 ### CMG Enhanced security option
 
-CMG Setup now uses managed Identities and third-party **Server App** to interact with CMG's Azure Storage account, instead of storage account keys. 
+CMG Setup now uses managed Identities and third-party **Server App** to interact with CMG's Azure Storage account, instead of storage account keys.
 
  - Hence storage account key access is disabled for new CMG setup.
  - For sessions upgrading from earlier versions to 2409, the 'CMG enhanced security' button is shown as enabled.
@@ -103,7 +103,7 @@ The performance of policy processing and collection evaluation has been enhanced
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
- - MDT Integration with CM and Standalone is no longer supported with Configuration Manager deprecation first announced in December 2024 and planned end of support the first release after Oct 10, 2025. Customers should remove MDT Task sequence steps, followed by removing MDT integration, to avoid TS corruption and modification failures. 
+ - MDT Integration with CM and Standalone is no longer supported with Configuration Manager deprecation first announced in December 2024 and planned end of support the first release after Oct 10, 2025. Customers should remove MDT Task sequence steps, followed by removing MDT integration, to avoid TS corruption and modification failures.
 
 For more information, see [Removed and deprecated features for Configuration Manager.](deprecated/removed-and-deprecated-cmfeatures.md).
 

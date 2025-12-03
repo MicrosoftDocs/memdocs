@@ -12,15 +12,15 @@ ms.author: banreetkaur
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1606 for Configuration Manager
 
 *Applies to: Configuration Manager (technical preview branch)*
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1606. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1606. You can install this version to update and add new capabilities to your Configuration Manager technical preview site.      Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
-**Known Issues in this Technical Preview:**  
+**Known Issues in this Technical Preview:**
 *  When you update from Technical Preview 1604 to 1605, and then to version 1606, the update might fail and an error similar to the following is logged in the **cmupdate.log**:
 
     ``` Log
@@ -30,7 +30,7 @@ This article introduces the features that are available in the Technical Preview
     If this occurs, in the **Updates and Servicing** node click **Check for updates**, and then **Retry** the update installation.
     ***
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ## <a name="dmp_category"></a> Automatically categorize devices into collections
 You can create device categories, which can be used to automatically place devices in device collections when you are using Configuration Manager with Microsoft Intune. Users are then required to choose a device category when they enroll a device in Intune. You can additionally change the category of a device from the Configuration Manager console.
@@ -78,7 +78,7 @@ Device Guard is a Windows 10 feature that uses hardware and software features to
 
 For more information, see [Introduction to Device Guard](/windows-server/security/security-and-assurance).
 
-In this release, Configuration Manager can interoperate with Device Guard and [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) so that executable and DLL files that are deployed with Configuration Manager are automatically trusted as they come from a Managed Installer, meaning that they will be allowed to run on the target device and other software will not be allowed to run unless explicitly allowed to run by other AppLocker rules.  
+In this release, Configuration Manager can interoperate with Device Guard and [Windows AppLocker](/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/dd723678(v=ws.10)) so that executable and DLL files that are deployed with Configuration Manager are automatically trusted as they come from a Managed Installer, meaning that they will be allowed to run on the target device and other software will not be allowed to run unless explicitly allowed to run by other AppLocker rules.
 
 At present, this capability is not configurable from the Configuration Manager console. To configure the policy requires you to configure a registry key on each client, and configure Windows services on the client.
 Once this is done, configure the AppLocker policy file. After you configure the policy file, you can deploy it to any compatible client device.
@@ -95,16 +95,16 @@ For more information, see the following articles:
 
 - [Planning and getting started on the Windows Defender Application Control deployment process](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control-deployment-guide)
 
-  ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management  
-  With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fall back to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.  
+  ##  <a name="dmp_onprem"></a> Multiple device management points for On-premises Mobile Device Management
+  With Technical Preview 1606, On\-premises Mobile Device Management (MDM) supports a new capability in Windows 10 Anniversary Update that automatically configures an enrolled device to have more than one device management point available for use. This capability allows the device to fall back to another device management point when the one it normal uses is not available. This capability only works for PCs with Windows 10 Anniversary Update installed.
 
-### Try it out!  
+### Try it out!
 
-1.  Install more than one device management point in your hierarchy.  
+1.  Install more than one device management point in your hierarchy.
 
-2.  Enroll a  Windows 10 Anniversary Update device for On\-premises Mobile Device Management.  
+2.  Enroll a  Windows 10 Anniversary Update device for On\-premises Mobile Device Management.
 
-For information on how to prepare your site and enroll devices for On\-premises Mobile Device Management, see [Manage mobile devices with on-premises infrastructure](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).  
+For information on how to prepare your site and enroll devices for On\-premises Mobile Device Management, see [Manage mobile devices with on-premises infrastructure](../../mdm/understand/manage-mobile-devices-with-on-premises-infrastructure.md).
 
 ## <a name="cloud_proxy"></a>Cloud Proxy Service for managing clients on the Internet
 
@@ -112,7 +112,7 @@ Cloud Proxy Service provides a simple way to manage Configuration Manager client
 
 You use the Configuration Manager console to deploy the service to Azure, add the cloud proxy connector point role, and configure site system roles to allow cloud proxy traffic. Cloud Proxy Service currently only supports the management point, distribution point, and software update point roles.
 
-Client certificates and Secure Socket Layer (SSL) certificates are required to authenticate computers and encrypt communications between the different layers of the service. Client computers typically receive a client certificate through group policy enforcement. To encrypt the traffic between clients and site system server hosting the roles, you need to create a custom SSL certificate from the CA. In addition to these two types of certificates, you also need set up a management certificate on Azure that allows Configuration Manager to deploy Cloud Proxy Service.  
+Client certificates and Secure Socket Layer (SSL) certificates are required to authenticate computers and encrypt communications between the different layers of the service. Client computers typically receive a client certificate through group policy enforcement. To encrypt the traffic between clients and site system server hosting the roles, you need to create a custom SSL certificate from the CA. In addition to these two types of certificates, you also need set up a management certificate on Azure that allows Configuration Manager to deploy Cloud Proxy Service.
 
 ### Requirements for Cloud Proxy Service in TP 1606
 - Client computers and the site system server running the cloud proxy connector point.
@@ -209,9 +209,9 @@ The final step in setting up Cloud Proxy Service is to configure the site system
 
 After the service and roles are completely configured, internal clients will get the location of Cloud Proxy Service on the next location request. Clients with updated location information can then communicate with Configuration Manager on the Internet. The polling cycle for location requests is every 24 hours. If you don't want to wait for the normally scheduled location request, you can force the request by restarting the SMS Agent Host service (ccmexec.exe) on the computer.
 
-After clients have the new location information for Cloud Proxy Service, try checking the status of clients that are no longer on the internal private network but have Internet access. You can also monitor traffic on Cloud Proxy Service by going to **Administration > Cloud Services > Cloud Proxy Service**, selecting the service in the list pane, and viewing the traffic information in the details pane.   
+After clients have the new location information for Cloud Proxy Service, try checking the status of clients that are no longer on the internal private network but have Internet access. You can also monitor traffic on Cloud Proxy Service by going to **Administration > Cloud Services > Cloud Proxy Service**, selecting the service in the list pane, and viewing the traffic information in the details pane.
 
-## <a name="manage_o365"></a>Manage the Microsoft 365 client agent in Configuration Manager  
+## <a name="manage_o365"></a>Manage the Microsoft 365 client agent in Configuration Manager
 
 Starting Technical Preview 1606, you can use a Configuration Manager client agent setting, instead of group policy, to enable Microsoft 365 clients to receive updates from Configuration Manager. After you configure this setting and deploy Microsoft 365 updates, the Configuration Manager client agent communicates with the Microsoft 365 client agent to download Microsoft 365 updates from a distribution point and install them. Configuration Manager also takes inventory of the client agent setting.
 
@@ -220,14 +220,14 @@ For more information, see [Manage Microsoft 365 Apps for enterprise updates](../
 ### Set the Configuration Manager client setting to manage the Office 365 client agent
 1.  In the Configuration Manager console, click **Administration** > **Overview** > **Client Settings**.
 2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
-3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
+3. Click **Software Updates** and select **Yes** for the **Enable management of the Office 365 Client Agent** setting.
 
 
 ## <a name="osdpreservedriveletter"></a>The OSDPreserveDriveLetter task sequence variable has been deprecated
 The OSDPreserveDriveLetter task sequence variable determines whether or not the task sequence uses the drive letter captured in the operating system image WIM file when applying that image to a destination computer.
 - This task sequence variable has been deprecated in Technical Preview 1606.
 
-During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting, select **Specific logical drive letter**, and choose the drive that you want to use. There must be a drive assigned with the letter you choose on the destination computer. 
+During an operating system deployment, by default, Windows Setup now determines the best drive letter to use (typically C:). If you want to specify a different drive to use, you can change the location in the Apply Operating System task sequence step. Go to the **Select the location where you want to apply this operating system** setting, select **Specific logical drive letter**, and choose the drive that you want to use. There must be a drive assigned with the letter you choose on the destination computer.
 
 ## <a name="updatesandservicing"></a>Changes for the Updates and Servicing Node
 With Technical Preview 1606 several changes have been introduced that apply to Updates and Servicing in the Configuration Manager console:
@@ -242,18 +242,18 @@ With Technical Preview 1606 several changes have been introduced that apply to U
     - **Prerequisites Check**
     - **Installation**
 
-  Additionally, there is now more detailed information for each step, including in which log file you can view for more information.  
+  Additionally, there is now more detailed information for each step, including in which log file you can view for more information.
 -   **New option to retry prerequisite failures:**
 
     In both the **Administration** and **Monitoring** workspaces, the **Updates and Servicing** node includes a new button on the Ribbon named **Ignore prerequisite warnings**.
 
-    When you install updates without using the option to Ignore prerequisite warnings (from within the Updates Wizard), and that update installation halts with a State of **Prereq warning**, you can then select **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update install that ignores the prerequisite warnings.  
+    When you install updates without using the option to Ignore prerequisite warnings (from within the Updates Wizard), and that update installation halts with a State of **Prereq warning**, you can then select **Ignore prerequisite warnings** from the ribbon to trigger an automatic continuation of that update install that ignores the prerequisite warnings.
 
 
 
 - **Cleaner view of updates:**
 
-    When you view the **Updates and Servicing** node, you now see only the most recently installed update, and any new updates that are available for you to install. To view previously installed updates, you click the new **History** button which appears in the Ribbon.  
+    When you view the **Updates and Servicing** node, you now see only the most recently installed update, and any new updates that are available for you to install. To view previously installed updates, you click the new **History** button which appears in the Ribbon.
 
 -   **Renamed option for pre-production:**
 

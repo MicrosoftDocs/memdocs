@@ -1,31 +1,15 @@
 ---
-# required metadata
-
 title: Protection and configuration levels overview in Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Learn about the different levels of protection and configuration in Microsoft Intune, including minimum, enhanced, and high levels.
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 08/19/2024
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: configuration
 
-# optional metadata
 
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite:
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
-ms.collection: 
-- M365-identity-device-management 
+ms.collection:
+- M365-identity-device-management
 - highpri
-- tier1
 ---
 
 # Levels of protection and configuration in Microsoft Intune
@@ -40,7 +24,7 @@ When you're ready to create policies, you can use the different levels of protec
 
 Your environment and business needs can have different levels defined. You can use these levels as a starting point and then customize them to fit your needs. For example, you can use the device configuration policies in level 1 and the app policies in level 3.
 
-Choose the levels that are right for your organization. There isn't a wrong choice.  
+Choose the levels that are right for your organization. There isn't a wrong choice.
 
 ## Level 1 - Minimum protection and configuration
 
@@ -132,7 +116,7 @@ In addition to Level 1 settings, Microsoft recommends you configure the followin
   - Transfer telecommunication data
   - Restrict cut, copy, and paste between apps
   - Block screen capture (Android)
-  
+
 - Enable enhanced conditional application launch
   - Block disabling application accounts
   - Enforce minimum device OS requirements
@@ -204,7 +188,7 @@ In addition to level 1 and 2 settings, Microsoft recommends you configure the fo
   - Block unwanted partner or non-Microsoft keyboards
   - Require/select approved keyboards (Android)
   - Block printing organization data
-  
+
 - Enable high access requirements
   - Block simple PIN and require specific minimum PIN length
   - Require PIN reset after number of days

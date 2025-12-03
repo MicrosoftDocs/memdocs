@@ -12,81 +12,81 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientSettingsAssignment Server WMI Class
-The `SMS_ClientSettingsAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the collection assignments of specified SMS_ClientSettings.   
+The `SMS_ClientSettingsAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the collection assignments of specified SMS_ClientSettings.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientSettingsAssignment : SMS_BaseClass  
-{  
-    UInt32 ClientSettingsID;  
-    String CollectionID;  
-    String CollectionName;  
-    DateTime CreationTime;  
-    String UniqueID;  
-};  
-```  
+```
+Class SMS_ClientSettingsAssignment : SMS_BaseClass
+{
+    UInt32 ClientSettingsID;
+    String CollectionID;
+    String CollectionName;
+    DateTime CreationTime;
+    String UniqueID;
+};
+```
 
-## Methods  
- The `SMS_ClientSettingsAssignment` class does not define any methods.  
+## Methods
+ The `SMS_ClientSettingsAssignment` class does not define any methods.
 
-## Properties  
- `ClientSettingsID`  
- Data type: `UInt32`  
+## Properties
+ `ClientSettingsID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifies the client agent component. The Client Settings Agent ID is 1.  
+ Identifies the client agent component. The Client Settings Agent ID is 1.
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The ID for the collection associated with the client settings assignment.  
+ The ID for the collection associated with the client settings assignment.
 
- `CollectionName`  
- Data type: `String`  
+ `CollectionName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read]  
+ Qualifiers: [notnull, read]
 
- The name of the collection associated with the client settings assignment.  
+ The name of the collection associated with the client settings assignment.
 
- `CreationTime`  
- Data type: `DateTime`  
+ `CreationTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read]  
+ Qualifiers: [notnull, read]
 
- The date and time when the client settings assignment is created.  
+ The date and time when the client settings assignment is created.
 
- `UniqueID`  
- Data type: `String`  
+ `UniqueID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [notnull, read]  
+ Qualifiers: [notnull, read]
 
- The GUID of the client settings assignment.  
+ The GUID of the client settings assignment.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

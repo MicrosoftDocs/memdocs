@@ -1,14 +1,7 @@
 ---
 title: Automatic registration of existing devices
 description: Automatically add devices to Windows Autopilot.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop

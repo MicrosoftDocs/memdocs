@@ -6,11 +6,11 @@ ms.date: 09/18/2023
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -18,14 +18,14 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-In Configuration Manager, you can view the Windows 10 machines, which are ready for upgrade in your environment. Create collections for Windows 11 ready devices and deploy the upgrade. 
+In Configuration Manager, you can view the Windows 10 machines, which are ready for upgrade in your environment. Create collections for Windows 11 ready devices and deploy the upgrade.
 
 ## Prerequisites
 
 - For Configuration Manager version 2203 or later, the [WebView2 console extension](../../core/servers/manage/admin-console-extensions.md#bkmk_notification) must be installed. If needed, select the notification bell in the top right corner of the console to install the extension. <!--10024154-->
 
 - Windows 10 telemetry services should be enabled at basic level
-  
+
 - Hardware inventory to be enabled on all client devices.
 
 ## <a name="bkmk_2309-dashboard"></a> Windows 11 upgrade readiness dashboard in version 2309 or later
@@ -41,13 +41,13 @@ The Windows 11 upgrade readiness dashboard was created to make administrators or
 **Upgrade Experience Indicators** : Shows information for each device, which can be in any of these states:
 
 - Can't Upgrade (Red Color) devices to windows 11.
-    
+
 - App Upgrade/Uninstall required (Yellow Color) devices that need an application update or uninstall before upgrading to Windows 11.
-    
+
 - App/Driver upgrade required (Orange Color) devices that need application upgrade to windows 11.
-    
+
 - Ready for Upgrade (Green Color) devices that are capable of Windows 11 upgrade.
-    
+
 **Windows 11 Minimum Hardware Requirement** : Showcases the minimum hardware and software requirements needed to support Windows 11.
 
 :::image type="content" source="media/17668425-windows11-dashboard.png" alt-text="Screenshot of Windows 11 readiness dashboard.":::
@@ -81,7 +81,7 @@ The following conditions will all result in a device being marked Red:
 
 All except the last item will also hard block setup. The BDD block, however, can be bypassed by hitting the Dismiss button.
 
-Starting with Windows 11, the UpgEx marker evaluates against the Windows 11 minimum hardware requirements. 
+Starting with Windows 11, the UpgEx marker evaluates against the Windows 11 minimum hardware requirements.
 
 The following conditions will result in a device marked as Red for Windows 11:
 
@@ -94,7 +94,7 @@ The following conditions will result in a device marked as Red for Windows 11:
 - If the system is in SMode and not a home (core) sku (RedReason=SModeState)
 - If the system drive size is < 64 Gb (RedReason=SystemDriveSize)
 
-**Orange** 
+**Orange**
 
 Orange is more complicated than Red. The following conditions trigger a machine to be Orange:
 

@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 2211 of Configuration Manager current branch
@@ -27,7 +27,7 @@ To take full advantage of new Configuration Manager features, after you update t
 ## Cloud-attached management
 
 ### Improvements to Cloud Sync (Collections to Azure Active Directory Group Synchronization) feature
-Starting Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details. 
+Starting Configuration Manager version 2211, the scalability of this feature has been improved with better throttling and error handling. Additionally, dedicated dashboards for user collections and device collections are added in Monitoring workspace to show Cloud Sync status. The dashboard displays the Cloud Sync status per collection with the mapped Azure AD group, total member count, synced member count, status (success, failed, in progress) and last sync details.
 
 For more information, see [Synchronize collections to Azure Active Directory Group](../../clients/manage/collections/synchronize-collections-aad-group.md).
 
@@ -56,7 +56,7 @@ For more information, see the description of this [content migration](../../serv
 
 ### <a name="bkmk_featured-apps-software-center"></a> Featured Apps in Software Center
 <!--3601183-->
-We're now adding the **Featured** tab in Software Center where we are displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings. 
+We're now adding the **Featured** tab in Software Center where we are displaying the featured apps. Using this, IT admins can mark apps as "featured" and encourage end users to use the app. Currently, this feature is available only for "User Available" apps. Also, admins can make the **Featured** tab of Software Center as the default tab from Client Settings.
 
 For more information, see the [Software Center in Configuration Manager](../../understand/software-center.md).
 
@@ -88,7 +88,7 @@ We've extended the dark theme to other components such as buttons, context menus
 In this release we've extended the dark theme to more dashboards, which previously didn't display the dark theme correctly. For example, the O365 Updates Dashboard, PCM Dashboard, and Health Attestation dashboard will now display according to the dark theme, when it's enabled. Pop-ups in the Health attestation dashboard will now adhere to the dark theme.
 
 For more information, see [Dark theme for the console](../../servers/manage/admin-console.md#bkmk_dark).
-  
+
 <!--## Tools-->
 
 <!--## Deprecated features
@@ -102,7 +102,7 @@ As previously announced, version 2207 drops support for the following features:
 
 ## Other updates
 
-### Resolved duplicate entries for co-managed device in Intune portal 
+### Resolved duplicate entries for co-managed device in Intune portal
 
 Previously, device entities of the co-managed devices appeared as two separate entries on Intune portal. One entry corresponding to Intune and another corresponding to ConfigMgr appeared after enrollment. The entries were permanent in some cases. Various scenarios like device entity counts and policy targeting were impacted. The entries were duplicated because Intune isn't aware of the AAD ID of devices coming from ConfigMgr. Intune becomes aware only after the daily discovery cycle runs and reports to Intune via CMGS.
 
@@ -112,7 +112,7 @@ The issue is fixed by propagating correct AAD device ID from ConfigMgr during In
 
  -	Windows Server 2008 R2 SP1 Extended Security Updates (ESU Azure Only)
  -	Windows Server 2008 SP2 Extended Security Updates (ESU Azure Only)
-      
+
 If you're running this operating system on machines in your environment, they shouldn't be upgraded to the 2211 version of the Configuration Manager client. For more information on supported clients and devices, see [supported-operating-systems-for-clients-and-devices](../../plan-design/configs/supported-operating-systems-for-clients-and-devices.md).
 
 <!--Starting with this version, the following features are no longer [pre-release](../../servers/manage/pre-release-features.md):

@@ -1,36 +1,14 @@
 ---
-# required metadata
-
-title: How to use Intune in environments without Google Mobile Services
-titleSuffix: Microsoft Intune
+title: How to Use Intune in Environments Without Google Mobile Services
 description: Learn how to use Intune in environments without Google Mobile Services.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/28/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: priyar
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# How to use Intune in environments without Google Mobile Services
+# How to Use Intune in Environments Without Google Mobile Services
 
 Microsoft Intune uses Google Mobile Services (GMS) to communicate with the Microsoft Intune company portal when managing Android devices. In some cases, devices can temporarily or permanently not have access to GMS. For example, a device might ship without GMS, or the device might be connecting to a closed network where GMS isn't available. This document summarizes the differences and limitations you can observe when installing and using Intune to manage Android devices without GMS.
 
@@ -53,7 +31,7 @@ Because the Google Play Store is currently not available in People's Republic of
 
 ### Unavailable Intune features
 
-Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) might be unavailable.  
+Some Intune features rely on components of GMS such as the Google Play store or Google Play services. Because these components are not available in environments without GMS, the following features in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) might be unavailable.
 
 | Scenario  | Features  |
 |---|---|

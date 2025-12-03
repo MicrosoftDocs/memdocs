@@ -2,14 +2,7 @@
 metadata:
   title: Windows Autopilot device preparation troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot device preparation issues
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: madakeva
-  manager: aaroncz
-  ms.date: 04/04/2025
+  ms.date: 06/11/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -39,13 +32,18 @@ sections:
           - Verify that the admin creating the Windows Autopilot device preparation policy has the **Enrollment time device membership assignment** RBAC permission. For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
       - question: |
+          Priority column in the list of device preparation policies is grayed out.
+        answer: |
+          Device preparation policies in automatic mode don't honor priority as they're assigned directly within the Cloud PC provisioning policy.
+
+      - question: |
           Windows Autopilot device preparation experience never launches during the out-of-box experience (OOBE).
         answer: |
           - Verify that the minimum version of Windows is being used as documented in [Software requirements](requirements.md?tabs=software#software-requirements). This requirement includes that the minimum required update is installed before starting the device for the first time:
 
             - Verify with OEMs that devices shipped from the OEM have the minimum required update installed.
 
-            - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available in the [Microsoft M365 admin center](https://admin.microsoft.com/adminportal/home#/subscriptions/vlnew).
+            - If installing Windows from installation media, verify that the media has the minimum required update installed. Updated Windows installation media with the latest cumulative update already installed is available in the [Microsoft Microsoft 365 admin center](https://admin.microsoft.com/adminportal/home#/subscriptions/vlnew).
 
           - Windows Autopilot device preparation doesn't use the Enrollment Status Page (ESP). Since Windows Autopilot device preparation doesn't use the ESP, the ESP shouldn't display during a Windows Autopilot device preparation deployment. If the ESP displays during the deployment, then the device isn't running a Windows Autopilot device preparation deployment. Instead, the device might be:
 

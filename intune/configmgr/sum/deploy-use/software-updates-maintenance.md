@@ -2,22 +2,22 @@
 title: Software updates maintenance
 titleSuffix: Configuration Manager
 description: To maintain updates in Configuration Manager, you can schedule the WSUS cleanup task, or you can run it manually.
-author: BalaDelli
+author: LauraWi
 ms.date: 04/27/2021
 ms.topic: article
 ms.service: configuration-manager
 ms.subservice: software-updates
 manager: apoorvseth
-ms.author: baladell
+ms.author: laurawi
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Software updates maintenance
 
 *Applies to: Configuration Manager (current branch)*
 
-You can schedule and run WSUS cleanup tasks from the Configuration Manager console from the Software Update Point Component properties. When you first select to run the WSUS cleanup task, it will run after the next software updates synchronization.  
+You can schedule and run WSUS cleanup tasks from the Configuration Manager console from the Software Update Point Component properties. When you first select to run the WSUS cleanup task, it will run after the next software updates synchronization.
 
 ## To schedule and run the WSUS cleanup job
 
@@ -26,7 +26,7 @@ Schedule the WSUS cleanup job by running the following steps:
 1. In the Configuration Manager console, navigate to **Administration** > **Overview** > **Site Configuration** > **Sites**.
 2. Select the site at the top of your Configuration Manager hierarchy.
 
-3. Click **Configure Site Components** in the **Settings** group, and then click **Software Update Point** to open Software Update Point Component Properties.  
+3. Click **Configure Site Components** in the **Settings** group, and then click **Software Update Point** to open Software Update Point Component Properties.
 
 4. Review the **Supersedence behavior**. Modify the behavior if needed.
 
@@ -129,7 +129,7 @@ When the WSUS database is on a remote SQL Server, you might need to add permissi
 - Creating an index requires `ALTER` permission on the table or view. The account must be a member of the `sysadmin` fixed server role or the `db_ddladmin` and `db_owner` fixed database roles. For more information about creating and index and permissions, see [CREATE INDEX (Transact-SQL)](/sql/t-sql/statements/create-index-transact-sql#permissions).
 - The `CONNECT SQL` server permission must be granted to the account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
-> [!NOTE]  
+> [!NOTE]
 > - If the WSUS database is on a remote SQL Server using a non-default port, then indexes might not be added. You can create a [server alias using SQL Server Configuration Manager](/sql/database-engine/configure-windows/create-or-delete-a-server-alias-for-use-by-a-client) for this scenario. Once the alias is added and Configuration Manager can make a connection to the WSUS database, indexes will be added.
 > - If the Software Update Point is remote to the site server and is using a Windows Internal Database, then the indexes will not be added.
 
@@ -141,7 +141,7 @@ Obsolete updates are unused updates and update revisions in the WSUS database. G
 2. Select the site at the top of your Configuration Manager hierarchy.
 3. Click **Configure Site Components** in the Settings group, and then click **Software Update Point** to open Software Update Point Component Properties.
 4. In the **WSUS Maintenance** tab, select **Remove obsolete updates from the WSUS database**.
-   - The obsolete update removal will be allowed to run for a maximum of 30 minutes before being stopped. It will start up again after the next synchronization occurs.  
+   - The obsolete update removal will be allowed to run for a maximum of 30 minutes before being stopped. It will start up again after the next synchronization occurs.
 
 #### SQL Server permissions for removing obsolete updates
 
@@ -150,7 +150,7 @@ When the WSUS database is on a remote SQL Server, the site server's computer acc
 - The `db_datareader` and `db_datawriter` fixed database roles. For more information, see [Database-Level Roles](/sql/relational-databases/security/authentication-access/database-level-roles#fixed-database-roles).
 - The `CONNECT SQL` server permission must be granted to the site server's computer account. For more information, see [GRANT Server Permissions (Transact-SQL)](/sql/t-sql/statements/grant-server-permissions-transact-sql).
 
-> [!NOTE]  
+> [!NOTE]
 > If the Software Update Point is remote to the site server and is using a Windows Internal Database, then obsolete updates will not be removed.
 
 #### WSUS cleanup wizard

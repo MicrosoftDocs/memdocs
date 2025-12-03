@@ -1,38 +1,16 @@
 ---
-# required metadata
-
-title: Tutorial - Configure Slack to use Intune for EMM and app configuration
-titleSuffix: Microsoft Intune
+title: Tutorial - Configure Slack to Use Intune for EMM and App Configuration
 description: In this tutorial you will configure Slack to use Intune for EMM and app configuration.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 06/07/2024
 ms.topic: tutorial
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 55db37c5-0da7-4d9c-8027-525afb1c6349
-Customer intent: As an Intune admin, I want to learn how to configure Slack to use Intune for EMM and app configuration..
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
-# Tutorial: Configure Slack to use Intune for EMM and app configuration
+# Tutorial: Configure Slack to Use Intune for EMM and App Configuration
 
-Slack is a collaboration app that you can use with Microsoft Intune.   
+Slack is a collaboration app that you can use with Microsoft Intune.
 
 In this tutorial, you will:
 
@@ -47,7 +25,7 @@ If you don't have an Intune subscription, [sign up for a free trial account](../
 
 You'll need a test tenant with the following subscriptions for this tutorial:
 
-- Microsoft Entra ID P1 or P2 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft Entra ID P1 or P2 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Intune subscription ([free trial](../fundamentals/free-trial-sign-up.md))
 
 You will also need a [Slack Enterprise Grid](https://get.slack.help/hc/articles/360004150931-What-is-Slack-Enterprise-Grid-) plan.
@@ -58,7 +36,12 @@ Turn on EMM for your Slack Enterprise Grid plan by following [Slack's instructio
 
 ## Sign in to Intune
 
-Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as an [Intune administrator](../fundamentals/users-add.md#types-of-administrators). If you have created an Intune Trial subscription, the account you created the subscription with is the Global administrator.
+Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role.
+
+If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+
+> [!CAUTION]
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Set up Slack for EMM on iOS devices
 
@@ -76,9 +59,9 @@ Add Slack for EMM as a managed iOS/iPadOS app in Intune and assign your Slack us
 
 4. In the **App information** step, configure any changes as you see fit. Select **Next** to set your app information.
 
-5. In the **Assignments** step, click **Add group** under the **Required** section. Select one or more groups to assign the app to. When complete, click **Next** to continue. 
+5. In the **Assignments** step, click **Add group** under the **Required** section. Select one or more groups to assign the app to. When complete, click **Next** to continue.
 
-6. In the **Review + create** step, click **Create** once you have verified the app details. 
+6. In the **Review + create** step, click **Create** once you have verified the app details.
 
 ### Add an iOS/iPadOS app configuration policy for the Slack for EMM app
 
@@ -99,12 +82,12 @@ Add an app configuration policy for the iOS/iPadOS Slack for EMM app.
 
 6. In the search bar, enter "Slack for EMM" and select the app. Click **OK** > **Next**.
 
-7. In the **Settings** step, set the **Configuration settings format** to **Use configuration designer**. 
+7. In the **Settings** step, set the **Configuration settings format** to **Use configuration designer**.
 
-8. Add `OrgDomain` as the **Configuration key**. Set the **Value type** to **String** and set the **Configuration value** to `Y`. 
+8. Add `OrgDomain` as the **Configuration key**. Set the **Value type** to **String** and set the **Configuration value** to `Y`.
 
    > [!NOTE]
-   > The `OrgDomain` configuration key provides the ability to enter your organization’s URL domain to help users sign in. 
+   > The `OrgDomain` configuration key provides the ability to enter your organization's URL domain to help users sign in.
 
 9. Click **Next**.
 
@@ -160,9 +143,9 @@ Add Slack as a Managed Google Play app in Intune and assign your Slack users. Ap
 
 6. configure any changes as you see fit. Select **Next** to set your app information.
 
-7. Click **Add group** under the **Required** section. Select one or more groups to assign the app to. When complete, click **Review + save**. 
+7. Click **Add group** under the **Required** section. Select one or more groups to assign the app to. When complete, click **Review + save**.
 
-8. In the **Review + save** step, click **Save** once you have verified the app details. 
+8. In the **Review + save** step, click **Save** once you have verified the app details.
 
 ### Add an Android app configuration policy for Slack
 
@@ -182,12 +165,12 @@ Add an app configuration policy for Slack. App configuration policies for manage
 
 7. In the search bar, enter "Slack" and select the Manged Google Play store app. Click **OK** > **Next**.
 
-8. In the **Settings** step, set the **Configuration settings format** to **Use configuration designer**. 
+8. In the **Settings** step, set the **Configuration settings format** to **Use configuration designer**.
 
 9. Add `Slack Enterprise Grid Domain URL` as the **Configuration key**.  Click **OK**.
 
    > [!NOTE]
-   > The `Slack Enterprise Grid Domain URL` configuration key provides the ability to enter your organization’s URL domain to help users sign in. 
+   > The `Slack Enterprise Grid Domain URL` configuration key provides the ability to enter your organization's URL domain to help users sign in.
 
 10. Click **Next**.
 
@@ -211,7 +194,7 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
     - For **Require a password to unlock mobile devices**, select **Require**.
     - For **Required password type**, choose **At least alphanumeric**.
-    - For **Minimum password length**, enter `4`. 
+    - For **Minimum password length**, enter `4`.
     - For **Number of days until password expires**, enter `41`.
     - For **Number of previous passwords to prevent reuse**, enter `5`.
     - For **Maximum minutes of inactivity before password is required**, choose **15 Minutes**.
@@ -224,13 +207,13 @@ Set up an Intune device compliance policy to set the conditions that a device mu
 
 ## Launch Slack
 
-With the policies you've just created, any iOS/iPadOS or Android personally-owned work profile devices that attempt to sign in to one of your workspaces will need to be Intune enrolled. To test this scenario, try launching Slack for EMM on an Intune enrolled iOS/iPadOS device or launching Slack on an Intune enrolled Android personally-owned work profile device. 
+With the policies you've just created, any iOS/iPadOS or Android personally-owned work profile devices that attempt to sign in to one of your workspaces will need to be Intune enrolled. To test this scenario, try launching Slack for EMM on an Intune enrolled iOS/iPadOS device or launching Slack on an Intune enrolled Android personally-owned work profile device.
 
 ## Next steps
 
 In this tutorial:
 
-- You set Intune as the Enterprise Mobility Management (EMM) provider on your Slack Enterprise Grid. 
+- You set Intune as the Enterprise Mobility Management (EMM) provider on your Slack Enterprise Grid.
 - You created app configuration policies to manage the Slack for EMM app on iOS/iPadOS and the Slack app for Android personally-owned work profile devices.
 - You created Intune device compliance policies to set the conditions Android and iOS/iPadOS devices must meet to be considered compliant.
 

@@ -7,11 +7,11 @@ ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: overview
 manager: apoorvseth
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Introduction to reporting in Configuration Manager
@@ -24,17 +24,17 @@ Reporting in Configuration Manager provides a set of tools and resources that he
 
 SQL Server Reporting Services provides a full range of ready-to-use tools and services to help you create, deploy, and manage reports for your organization. It also has programming features that enable you to extend and customize your reporting functionality. Reporting Services is a server-based reporting platform that provides comprehensive reporting functionality for different kinds of data sources.
 
-Configuration Manager uses SQL Server Reporting Services as its primary reporting solution. Integration with Reporting Services provides the following advantages:  
+Configuration Manager uses SQL Server Reporting Services as its primary reporting solution. Integration with Reporting Services provides the following advantages:
 
-- Uses an industry standard reporting system to query the Configuration Manager database.  
+- Uses an industry standard reporting system to query the Configuration Manager database.
 
-- Displays reports by using the Configuration Manager Report Viewer or by using Report Manager, which is a web-based connection to the report.  
+- Displays reports by using the Configuration Manager Report Viewer or by using Report Manager, which is a web-based connection to the report.
 
-- Provides high performance, availability, and scalability.  
+- Provides high performance, availability, and scalability.
 
 - Provides subscriptions to reports to which users can subscribe. For example, a manager subscribes to an emailed report each day that details the status of a software update rollout.
 
-- Exports reports in different kinds of popular formats.  
+- Exports reports in different kinds of popular formats.
 
 For more information, see [What is SQL Server Reporting Services (SSRS)?](/sql/reporting-services/create-deploy-and-manage-mobile-and-paginated-reports)
 
@@ -108,7 +108,7 @@ The link needs to specify the column number with the value for the prompt. For e
 
 You can only configure one link for a report, and that link can only connect to a single destination report.
 
-> [!WARNING]  
+> [!WARNING]
 > If you move a destination report to a different report folder, the location for the destination report changes. Configuration Manager doesn't automatically update the report link in the source report with the new location, and the link won't work in the source report.
 
 ## Report folders
@@ -125,19 +125,19 @@ For more information, see [Manage report subscriptions](operations-and-maintenan
 
 ## Report Builder
 
-For Reporting Services-based reports, Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for both model-based and SQL-based reports. If you create or edit a report in the Configuration Manager console, Report Builder opens. When you create or modify a report for the first time, Report Builder installs automatically. The version of Report Builder associated with the installed version of SQL Server opens when you run or edit reports.  
+For Reporting Services-based reports, Configuration Manager uses Microsoft SQL Server Report Builder as the exclusive authoring and editing tool for both model-based and SQL-based reports. If you create or edit a report in the Configuration Manager console, Report Builder opens. When you create or modify a report for the first time, Report Builder installs automatically. The version of Report Builder associated with the installed version of SQL Server opens when you run or edit reports.
 
  The Report Builder installation adds support for over 20 languages. When you run Report Builder, it displays data in the language of the local computer's OS. If Report Builder doesn't support the language, it displays the data in English. Report Builder supports the full capabilities of SQL Server Reporting Services, which includes the following capabilities:
 
-- Delivers an intuitive report authoring environment with an appearance similar to Microsoft 365 Apps.  
+- Delivers an intuitive report authoring environment with an appearance similar to Microsoft 365 Apps.
 
-- Offers the flexible report layout of SQL Server report definition language (RDL).  
+- Offers the flexible report layout of SQL Server report definition language (RDL).
 
-- Provides various forms of data visualization including charts and gauges.  
+- Provides various forms of data visualization including charts and gauges.
 
-- Provides richly formatted text boxes.  
+- Provides richly formatted text boxes.
 
-- Exports to Microsoft Word format.  
+- Exports to Microsoft Word format.
 
 You can also open Report Builder directly from SQL Server Reporting Services.
 
@@ -149,9 +149,9 @@ Report models have the following features:
 
 - Give logical business names to database fields and views. To produce reports, you don't require knowledge of the Configuration Manager database structure.
 
-- Group items logically.  
+- Group items logically.
 
-- Define relationships between items.  
+- Define relationships between items.
 
 - Secure model elements so that administrative users can see only the data that they have permission to see.
 

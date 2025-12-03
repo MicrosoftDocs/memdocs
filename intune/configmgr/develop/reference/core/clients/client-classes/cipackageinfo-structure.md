@@ -12,36 +12,36 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CIPackageInfo Structure
-In Configuration Manager, the `CIPackageInfo` structure contains package information for a configuration item.  
+In Configuration Manager, the `CIPackageInfo` structure contains package information for a configuration item.
 
-## Syntax  
+## Syntax
 
-```  
-struct CIPackageInfo  
-{  
-      LPWSTR szTypeName;  
-      LPWSTR szPackageName;  
-      LPWSTR szPackageVersion;  
-      LPWSTR szNamespace;  
-};  
-```  
+```
+struct CIPackageInfo
+{
+      LPWSTR szTypeName;
+      LPWSTR szPackageName;
+      LPWSTR szPackageVersion;
+      LPWSTR szNamespace;
+};
+```
 
-## Members  
- szTypeName  
- Name of the configuration item.  
+## Members
+ szTypeName
+ Name of the configuration item.
 
- szPackageName  
- Name of the package.  
+ szPackageName
+ Name of the package.
 
- szPackageVersion  
- Version of the package.  
+ szPackageVersion
+ Version of the package.
 
- szNamespace  
- Namespace used by the package software.  
+ szNamespace
+ Namespace used by the package software.
 
-## See Also  
- [Compliance Settings (DCM) Client Interfaces](../../../../../develop/reference/core/clients/client-classes/compliance-settings--dcm--client-interfaces.md)   
+## See Also
+ [Compliance Settings (DCM) Client Interfaces](../../../../../develop/reference/core/clients/client-classes/compliance-settings--dcm--client-interfaces.md)
  [ICIINFO::GetDependantPackages Method](../../../../../develop/reference/core/clients/client-classes/iciinfo--getdependantpackages-method.md)

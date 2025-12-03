@@ -1,41 +1,19 @@
 ---
-# required metadata
-
-title: Add Microsoft Store apps to Microsoft Intune
-titleSuffix:
+title: Add Microsoft Store Apps to Microsoft Intune
 description: Learn about adding Microsoft Store apps to Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 06/07/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 07241b6d-86d8-4abb-83a2-3fc5feae5788
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
 
-# Add Microsoft Store apps to Microsoft Intune
+# Add Microsoft Store Apps to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
-Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports Universal Windows Platform (UWP) apps, desktop apps packaged in `.msix`, and now Win32 apps packaged in `.exe` or `.msi` installers.  
+Admins can browse, deploy, and monitor Microsoft Store applications inside Intune. Upon deployment, Intune automatically keeps the apps up to date when a new version becomes available. The Microsoft Store supports Universal Windows Platform (UWP) apps, desktop apps packaged in `.msix`, and now Win32 apps packaged in `.exe` or `.msi` installers.
 
 > [!IMPORTANT]
 > There are key improvements to the most recent Microsoft Store apps functionality over legacy functionality.
@@ -44,7 +22,7 @@ Admins can browse, deploy, and monitor Microsoft Store applications inside Intun
 > - You can browse and search for store apps within Intune
 > - You can install and uninstall with required app deployments
 > - You can monitor the installation progress and results for store apps
-> - Win32 store apps are supported (in preview)  
+> - Win32 store apps are supported (in preview)
 > - System context and user context are supported for UWP apps
 >   - When a device is enrolled by being Microsoft Entra registered, system context must be used.
 
@@ -58,7 +36,7 @@ To use Microsoft Store apps, be sure the following criteria are met:
 
 ## Add and deploy a Microsoft Store app
 
-An [Intune administrator](../fundamentals/users-add.md#types-of-administrators) can use the following steps to add and deploy a Microsoft Store app. 
+An [Intune administrator](../fundamentals/role-based-access-control-reference.md) with sufficient permissions can use the following steps to add and deploy a Microsoft Store app.
 
 ### Step 1: Add an app from the Microsoft Store
 
@@ -98,7 +76,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
    The app information is presented with the selected app's metadata. Specific fields are prepopulated.
 
     The following table shows the fields that are supported:
-  
+
     |     Name   of the field    |     Description    |     Required    |
     |---|---|---|
     |     Name    | The name of the app is prepopulated from the store's metadata and you have the choice to edit the field. Enter the name of the app as it appears in the Company Portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.   |     Required    |
@@ -123,7 +101,7 @@ The Microsoft Store provides a large variety of apps designed to work on your Mi
 You can choose how you want to assign Microsoft Store apps to users and devices.
 
 > [!NOTE]
-> If you assign an app to a device that is located in a region where that app is not supported, the app will not install on the device. However, if the device is moved to a region that supports the app, the app will install on the device. 
+> If you assign an app to a device that is located in a region where that app is not supported, the app will not install on the device. However, if the device is moved to a region that supports the app, the app will install on the device.
 
 The following table provides assignment type details:
 
@@ -173,8 +151,8 @@ In addition to user context, you can deploy Universal Windows Platform (UWP) app
 > [!NOTE]
 > Assigning a UWP app using the "Microsoft Store app (new)" type with the installation behavior set as "System" to a device which already has that app installed will result in this error: "The application was not detected after installation completed successfully (0x87D1041C)". However, the app will still install correctly on the device.
 >
-> When a device is enrolled as Microsoft Entra registered, the installation behavior should be set to "System". If an app with the installation behavior set to "User" is assigned as **Available**, the end user will receive the following error when selecting install in the Company Portal: "Requirements Not Met". Make sure the device is _joined_ to Azure, or use System context to rectify this situation. 
-> 
+> When a device is enrolled as Microsoft Entra registered, the installation behavior should be set to "System". If an app with the installation behavior set to "User" is assigned as **Available**, the end user will receive the following error when selecting install in the Company Portal: "Requirements Not Met". Make sure the device is _joined_ to Azure, or use System context to rectify this situation.
+>
 > UWP apps are kept up to date by the Store. The UWP app will stay up to date with or without Intune assignment once it is installed, unless the Store policy is set to block auto-update.
 
 ## Common Store policy settings and their impact on Microsoft Store apps
@@ -234,7 +212,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>[ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | [Settings Catalog](../configuration/settings-catalog.md) </br>[Administrative templates](../configuration/administrative-templates-windows.md) | **Windows Components** > **Store** > **Turn off the Store Application** <br/> **Administrative Templates** > **Windows Components** > **Store**|
+  | [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>[ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | [Settings Catalog](../configuration/settings-catalog.md) | **Windows Components** > **Store** > **Turn off the Store Application** <br/> **Administrative Templates** > **Windows Components** > **Store**|
 
 ### What you need to know
 

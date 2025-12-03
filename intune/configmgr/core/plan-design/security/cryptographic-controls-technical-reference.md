@@ -6,12 +6,12 @@ ms.date: 10/15/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: Baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Cryptographic controls technical reference
@@ -30,7 +30,7 @@ Starting in version 2107, the primary encryption algorithm that Configuration Ma
 
 
 > [!NOTE]
-> If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with AES, then the HTTPS transport is encrypted with AES-256. 
+> If you configure HTTPS communication, these messages are encrypted twice. The message is encrypted with AES, then the HTTPS transport is encrypted with AES-256.
 
 When you use client communication over HTTPS, configure your public key infrastructure (PKI) to use certificates with the maximum hashing algorithms and key lengths. When using CNG v3 certificates, Configuration Manager clients only support certificates that use the RSA cryptographic algorithm. For more information, see [PKI certificate requirements](../network/pki-certificate-requirements.md) and [CNG v3 certificates overview](../network/cng-certificates-overview.md).
 
@@ -58,7 +58,7 @@ When a client requests policy, it first gets a policy assignment. Then it knows 
 
 The hashing algorithm for policy is **SHA-256**.
 
-### Content hashing  
+### Content hashing
 
 The distribution manager service on the site server hashes the content files for all packages. The policy provider includes the hash in the software distribution policy. When the Configuration Manager client downloads the content, the client regenerates the hash locally and compares it to the one supplied in the policy. If the hashes match, the content isn't altered, and the client installs it. If a single byte of the content is altered, the hashes won't match, and the client doesn't install the software. This check helps to make sure that the correct software is installed because the actual content is compared with the policy.
 
@@ -184,7 +184,7 @@ A PKI certificate revocation list (CRL) increases overall security, but does req
 
 IIS enables CRL checking by default. If you use a CRL with your PKI deployment, you don't need to configure most site systems that run IIS. The exception is for software updates, which requires a manual step to enable CRL checking to verify the signatures on software update files.
 
-When a client uses HTTPS, it enables CRL checking by default. 
+When a client uses HTTPS, it enables CRL checking by default.
 
 The following connections don't support CRL checking in Configuration Manager:
 

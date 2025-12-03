@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2101
@@ -29,7 +29,7 @@ The following sections describe the new features to try out in this version:
 
 [!INCLUDE [Console extension installation](includes/2101/3555909.md)]
 [!INCLUDE [Deploy a feature update with a task sequence](includes/2101/3555906.md)]
-[!INCLUDE [Tenant Attach: Required application deployments display in Microsoft Intune admin center](includes/2101/8795301.md)]      
+[!INCLUDE [Tenant Attach: Required application deployments display in Microsoft Intune admin center](includes/2101/8795301.md)]
 [!INCLUDE [Client setting for displaying Software Center custom tabs](includes/2101/9142301.md)]
 [!INCLUDE [Simplified CMPivot permissions requirements](includes/2101/7898885.md)]
 [!INCLUDE [Allow exclusion of organizational units (OU) from Active Directory User Discovery](includes/2101/5193509.md)]
@@ -43,13 +43,13 @@ The following sections describe the new features to try out in this version:
 ## Known issues
 ### Unable to upload files when sending a frown through the console
 <!--9238008-->
-When filing a frown from the Configuration Manager console, files won't be uploaded.  
+When filing a frown from the Configuration Manager console, files won't be uploaded.
 
 **Mitigation:** To work around this issue, you'll need to edit the `microsoft.configurationmanagement.exe.config` file located in the admin console installation directory. Use the instruction below to work around the issue:
 
 1. Open **Notepad** as administrator.
 1. From Notepad, choose **File** then **Open**.
-1. Browse to the Configuration Manager console installation directory and open the file named `Microsoft.ConfigurationManagement.exe.config`. 
+1. Browse to the Configuration Manager console installation directory and open the file named `Microsoft.ConfigurationManagement.exe.config`.
    - The default location is `C:\Program Files (x86)\Microsoft Endpoint Manager\AdminConsole\bin\Microsoft.ConfigurationManagement.exe.config`
 
 1. In the `<runtime>` section, add the following text:
@@ -64,8 +64,8 @@ When filing a frown from the Configuration Manager console, files won't be uploa
    ```
       :::image type="content" source="media/9238008-config-file.png" alt-text="Notepad with line added to the runtime section highlighted. The next non-highlighted line starts with &lt;AppContextSwitchOverrides" lightbox="media/9238008-config-file.png":::
 
-1. Save the config file then reopen the Configuration Manager console and file your feedback. 
- 
+1. Save the config file then reopen the Configuration Manager console and file your feedback.
+
 
 
 

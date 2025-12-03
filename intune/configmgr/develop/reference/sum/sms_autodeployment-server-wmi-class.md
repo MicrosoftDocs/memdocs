@@ -12,194 +12,194 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_AutoDeployment Server WMI Class
-The  `SMS_AutoDeployment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an automatic deployment.  
+The  `SMS_AutoDeployment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an automatic deployment.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_AutoDeployment :  SMS_BaseClass  
-{  
-    Boolean AutoDeploymentEnabled;  
-    SInt32 AutoDeploymentID;  
-    String AutoDeploymentProperties;  
-    String CollectionID;  
-    String ContentTemplate;  
-    String Description;  
-    String DeploymentTemplate;  
-    Boolean IsServicingPlan;  
-    SInt32 LastErrorCode;  
-    DateTime LastErrorTime;  
-    DateTime LastRunTime;  
-    UInt32 LocaleID;  
-    String Name;  
-    String Schedule;  
-    String UpdateRuleXML;  
-};  
+```
+Class SMS_AutoDeployment :  SMS_BaseClass
+{
+    Boolean AutoDeploymentEnabled;
+    SInt32 AutoDeploymentID;
+    String AutoDeploymentProperties;
+    String CollectionID;
+    String ContentTemplate;
+    String Description;
+    String DeploymentTemplate;
+    Boolean IsServicingPlan;
+    SInt32 LastErrorCode;
+    DateTime LastErrorTime;
+    DateTime LastRunTime;
+    UInt32 LocaleID;
+    String Name;
+    String Schedule;
+    String UpdateRuleXML;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_AutoDeployment` class.  
+## Methods
+ The following table lists the methods in the `SMS_AutoDeployment` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[EvaluateAllAutoDeployment Method in Class SMS_AutoDeployment](../../../develop/reference/sum/evaluateallautodeployment-method-in-class-sms_autodeployment.md)|Evaluates all automatic deployments.|  
-|[EvaluateAutoDeployment Method in Class SMS_AutoDeployment](../../../develop/reference/sum/evaluateautodeployment-method-in-class-sms_autodeployment.md)|Evaluates an automatic deployment.|  
+|Method|Description|
+|------------|-----------------|
+|[EvaluateAllAutoDeployment Method in Class SMS_AutoDeployment](../../../develop/reference/sum/evaluateallautodeployment-method-in-class-sms_autodeployment.md)|Evaluates all automatic deployments.|
+|[EvaluateAutoDeployment Method in Class SMS_AutoDeployment](../../../develop/reference/sum/evaluateautodeployment-method-in-class-sms_autodeployment.md)|Evaluates an automatic deployment.|
 
-## Properties  
- `AutoDeploymentEnabled`  
- Data type: `Boolean`  
+## Properties
+ `AutoDeploymentEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Specifies whether the automatic deployment is enabled. The default value is `true`.  
+ Specifies whether the automatic deployment is enabled. The default value is `true`.
 
- `AutoDeploymentID`  
- Data type: `SInt32`  
+ `AutoDeploymentID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The automatic deployment ID.  
+ The automatic deployment ID.
 
- `AutoDeploymentProperties`  
- Data type: `String`  
+ `AutoDeploymentProperties`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, lazy]  
+ Qualifiers: [not_null, lazy]
 
- Automatic deployment properties in XML format.  
+ Automatic deployment properties in XML format.
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The ID of the target collection. This value is needed as a security key.  
+ The ID of the target collection. This value is needed as a security key.
 
- `ContentTemplate`  
- Data type: `String`  
+ `ContentTemplate`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, lazy]  
+ Qualifiers: [not_null, lazy]
 
- The content template XML for the automatic deployment.  
+ The content template XML for the automatic deployment.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- A description for the automatic deployment.  
+ A description for the automatic deployment.
 
- `DeploymentTemplate`  
- Data type: `String`  
+ `DeploymentTemplate`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, lazy]  
+ Qualifiers: [not_null, lazy]
 
- The deployment template XML for the automatic deployment.  
+ The deployment template XML for the automatic deployment.
 
- `IsServicingPlan`  
- Data type: `Boolean`  
+ `IsServicingPlan`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Specifies whether the automatic deployment rule  is a servicing plan. The  default value is `true`.  
+ Specifies whether the automatic deployment rule  is a servicing plan. The  default value is `true`.
 
- `LastErrorCode`  
- Data type: `SInt32`  
+ `LastErrorCode`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The last error encountered when processing the automatic deployment rule failed. The default value is 0.  
+ The last error encountered when processing the automatic deployment rule failed. The default value is 0.
 
- `LastErrorTime`  
- Data type: `DateTime`  
+ `LastErrorTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The last time that an error was encountered.  
+ The last time that an error was encountered.
 
- `LastRunTime`  
- Data type: `DateTime`  
+ `LastRunTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The last time that  the automatic deployment was processed.  
+ The last time that  the automatic deployment was processed.
 
- `LocaleID`  
- Data type: `UInt32`  
+ `LocaleID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The locale of the automatic deployment name or description fields.  
+ The locale of the automatic deployment name or description fields.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- Name for the automatic deployment.  
+ Name for the automatic deployment.
 
- `Schedule`  
- Data type: `String`  
+ `Schedule`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Schedule for the automatic deployment.  
+ Schedule for the automatic deployment.
 
- `UpdateRuleXML`  
- Data type: `String`  
+ `UpdateRuleXML`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, lazy]  
+ Qualifiers: [not_null, lazy]
 
- Update rule XML for the automatic deployment.  
+ Update rule XML for the automatic deployment.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

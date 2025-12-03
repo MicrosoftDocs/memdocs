@@ -12,24 +12,24 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # PxeAuthClass Client COM Automation Class
-`PxeAuthClass` is a COM automation class, in Configuration Manager, that supports PXE service point authorization in operating system deployment. The class implements the `IPxeAuthClass` interface.  
+`PxeAuthClass` is a COM automation class, in Configuration Manager, that supports PXE service point authorization in operating system deployment. The class implements the `IPxeAuthClass` interface.
 
-## In This Section  
+## In This Section
 
-|Term|Definition|  
-|----------|----------------|  
-|[IPxeAuthClass Interface](../../../../../develop/reference/core/clients/client-classes/ipxeauthclass-interface.md)|Enables configuration of a PXE service point by serializing certificate information in the form that is required for the [SubmitRegistrationRecord Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md).|  
+|Term|Definition|
+|----------|----------------|
+|[IPxeAuthClass Interface](../../../../../develop/reference/core/clients/client-classes/ipxeauthclass-interface.md)|Enables configuration of a PXE service point by serializing certificate information in the form that is required for the [SubmitRegistrationRecord Method in Class SMS_Site](../../../../../develop/reference/core/servers/configure/submitregistrationrecord-method-in-class-sms_site.md).|
 
-## Remarks  
- `PxeAuthClass` is implemented in TsMediaSDK.exe.  
+## Remarks
+ `PxeAuthClass` is implemented in TsMediaSDK.exe.
 
- The class UUID is 4F0DA652-0A60-4101-BD68-F4ABDB2D64DC.  
+ The class UUID is 4F0DA652-0A60-4101-BD68-F4ABDB2D64DC.
 
- The programmatic identifier (ProgID) is Microsoft.SMS.PxeAuthClass.  
+ The programmatic identifier (ProgID) is Microsoft.SMS.PxeAuthClass.
 
-## See Also  
- [Operating System Deployment Client COM Automation Classes](../../../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)   
+## See Also
+ [Operating System Deployment Client COM Automation Classes](../../../../../develop/reference/core/clients/client-classes/operating-system-deployment-client-com-automation-classes.md)
  [About Operating System Deployment Site Role Configuration](../../../../../develop/osd/about-operating-system-deployment-site-role-configuration.md)

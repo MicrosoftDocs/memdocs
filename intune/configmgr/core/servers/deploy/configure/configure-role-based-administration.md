@@ -2,16 +2,16 @@
 title: Configure role-based administration
 titleSuffix: Configuration Manager
 description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user.
-ms.date: 12/21/2021
+ms.date: 07/17/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
-manager: apoorvseth
+author: bhuney
+ms.author: brianhun
+manager: averyspa
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart,frankroj
 ---
 
 # Configure role-based administration for Configuration Manager
@@ -149,6 +149,14 @@ An administrative user can't use the **Delete** or **Modify** permissions on a c
 
 To grant individuals or members of a security group access to manage Configuration Manager, create an administrative user. Specify a Windows account of the user or user group. Assign each administrative user to at least one security role and one security scope. You can also assign collections to limit the administrative scope of the user or group.
 
+> [!NOTE]
+>
+> If the administrative user is a member of the **Protected Users** global security group, they can only run the console for 4 hours at a time. After 4 hours, their kerberos authorization expires and can't  be renewed. The console automatically closes and any unsaved work in progress is lost.
+>
+> Members of the **Protected Users** security group should monitor their time in the console and save or close any work in progress before 4 hours. After closing the console, re-launch it to continue working.
+>
+> For more information regarding the **Protected Users** security group, see [Protected Users security group](/windows-server/security/credentials-protection-and-management/protected-users-security-group) and [Guidance about how to configure protected accounts](/windows-server/identity/ad-ds/manage/how-to-configure-protected-accounts).
+
 ### How to create a new administrative user
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Security**, and then select the **Administrative Users** node.
@@ -182,107 +190,107 @@ To grant individuals or members of a security group access to manage Configurati
 1. Select **OK** to close the window and create the administrative user.
 
 ## Modify the administrative scope of an administrative user
-You can modify the administrative scope of an administrative user by adding or removing security roles, security scopes, and collections that are associated with the user. Each administrative user must be associated with at least one security role and one security scope. You might have to assign one or more collections to the administrative scope of the user. Most security roles interact with collections and don't function correctly without an assigned collection.  
+You can modify the administrative scope of an administrative user by adding or removing security roles, security scopes, and collections that are associated with the user. Each administrative user must be associated with at least one security role and one security scope. You might have to assign one or more collections to the administrative scope of the user. Most security roles interact with collections and don't function correctly without an assigned collection.
 
- When you modify an administrative user, you can change the behavior for how securable objects are associated with the assigned security roles. The three behaviors that you can select are as follows:  
+ When you modify an administrative user, you can change the behavior for how securable objects are associated with the assigned security roles. The three behaviors that you can select are as follows:
 
-- **All instances of the objects that are related to the assigned security roles**: This option associates the administrative user with the **All** scope, and the **All Systems** and **All Users and User Groups** collections. The security roles that are assigned to the user define access to objects.  
+- **All instances of the objects that are related to the assigned security roles**: This option associates the administrative user with the **All** scope, and the **All Systems** and **All Users and User Groups** collections. The security roles that are assigned to the user define access to objects.
 
-- **Only the instances of objects that are assigned to the specified security scopes and collections**: This option associates the administrative user to the same security scopes and collections that are associated to the account you use to configure the administrative user. This option supports the addition or removal of security roles and collections to customize the administrative scope of the administrative user.  
+- **Only the instances of objects that are assigned to the specified security scopes and collections**: This option associates the administrative user to the same security scopes and collections that are associated to the account you use to configure the administrative user. This option supports the addition or removal of security roles and collections to customize the administrative scope of the administrative user.
 
-- **Associate assigned security roles with specific security scopes and collections**: This option lets you create specific associations between individual security roles and specific security scopes and collections for the user.  
+- **Associate assigned security roles with specific security scopes and collections**: This option lets you create specific associations between individual security roles and specific security scopes and collections for the user.
 
-    > [!NOTE]  
-    > This option is available only when you modify the properties of an administrative user.  
+    > [!NOTE]
+    > This option is available only when you modify the properties of an administrative user.
 
-The current configuration for the securable object behavior changes the process that you use to assign additional security roles. Use the following procedures that are based on the different options for securable objects to help you manage an administrative user.  
+The current configuration for the securable object behavior changes the process that you use to assign additional security roles. Use the following procedures that are based on the different options for securable objects to help you manage an administrative user.
 
-Use the following procedure to view and manage the configuration for securable objects for an administrative user.  
+Use the following procedure to view and manage the configuration for securable objects for an administrative user.
 
-### To view and manage the securable object behavior for an administrative user  
+### To view and manage the securable object behavior for an administrative user
 
-1. In the Configuration Manager console, choose **Administration**.  
-2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.  
-3. Select the administrative user that you want to modify.  
-4. On the **Home** tab, in the **Properties** group, choose **Properties**.  
-5. Choose the **Security Scopes** tab to view the current configuration for securable objects for this administrative user.  
-6. To modify the securable object behavior, select a new option for securable object behavior. After you change this configuration, see the appropriate procedure for further guidance to configure security scopes and collections, and security roles for this administrative user.  
-7. Choose **OK** to complete the procedure.  
+1. In the Configuration Manager console, choose **Administration**.
+2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.
+3. Select the administrative user that you want to modify.
+4. On the **Home** tab, in the **Properties** group, choose **Properties**.
+5. Choose the **Security Scopes** tab to view the current configuration for securable objects for this administrative user.
+6. To modify the securable object behavior, select a new option for securable object behavior. After you change this configuration, see the appropriate procedure for further guidance to configure security scopes and collections, and security roles for this administrative user.
+7. Choose **OK** to complete the procedure.
 
-Use the following procedure to modify an administrative user that has the securable object behavior set to **All instances of the objects that are related to the assigned security roles**.  
+Use the following procedure to modify an administrative user that has the securable object behavior set to **All instances of the objects that are related to the assigned security roles**.
 
-### For option: All instances of the objects that are related to the assigned security roles  
+### For option: All instances of the objects that are related to the assigned security roles
 
-1. In the Configuration Manager console, choose **Administration**.  
-2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.  
-3. Select the administrative user that you want to modify.  
-4. On the **Home** tab, in the **Properties** group, choose **Properties**.  
-5. Choose the **Security Scopes** tab to confirm that the administrative user is configured for **All instances of the objects that are related to the assigned security roles**.  
-6. To modify the assigned security roles, choose the **Security Roles** tab.  
+1. In the Configuration Manager console, choose **Administration**.
+2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.
+3. Select the administrative user that you want to modify.
+4. On the **Home** tab, in the **Properties** group, choose **Properties**.
+5. Choose the **Security Scopes** tab to confirm that the administrative user is configured for **All instances of the objects that are related to the assigned security roles**.
+6. To modify the assigned security roles, choose the **Security Roles** tab.
 
-    - To assign additional security roles to this administrative user, choose **Add**, check the box for each additional security role that you want to assign, and then choose **OK**.  
+    - To assign additional security roles to this administrative user, choose **Add**, check the box for each additional security role that you want to assign, and then choose **OK**.
     - To remove security roles, select one or more security roles from the list, and then choose **Remove**.
 
-7. To modify the securable object behavior, choose the **Security Scopes** tab and choose a new option for the securable object behavior. After you change this configuration, see the appropriate procedure for further guidance to configure security scopes and collections, and security roles for this administrative user.  
+7. To modify the securable object behavior, choose the **Security Scopes** tab and choose a new option for the securable object behavior. After you change this configuration, see the appropriate procedure for further guidance to configure security scopes and collections, and security roles for this administrative user.
 
-    > [!NOTE]  
-    > When the securable object behavior is set to **All instances of the objects that are related to the assigned security roles**, you can't add or remove specific security scopes and collections.  
+    > [!NOTE]
+    > When the securable object behavior is set to **All instances of the objects that are related to the assigned security roles**, you can't add or remove specific security scopes and collections.
 
-8. Choose **OK** to complete this procedure.  
+8. Choose **OK** to complete this procedure.
 
-Use the following procedure to modify an administrative user that has the securable object behavior set to **Only the instances of objects that are assigned to the specified security scopes and collections**.  
+Use the following procedure to modify an administrative user that has the securable object behavior set to **Only the instances of objects that are assigned to the specified security scopes and collections**.
 
-### For option: Only the instances of objects that are assigned to the specified security scopes and collections  
+### For option: Only the instances of objects that are assigned to the specified security scopes and collections
 
-1. In the Configuration Manager console, choose **Administration**.  
-2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.  
-3. Select the administrative user that you want to modify.  
-4. On the **Home** tab, in the **Properties** group, choose **Properties**.  
-5. Choose the **Security Scopes** tab to confirm that the user is configured for **Only the instances of objects that are assigned to the specified security scopes and collections**.  
-6. To modify the assigned security roles, choose the **Security Roles** tab.  
+1. In the Configuration Manager console, choose **Administration**.
+2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.
+3. Select the administrative user that you want to modify.
+4. On the **Home** tab, in the **Properties** group, choose **Properties**.
+5. Choose the **Security Scopes** tab to confirm that the user is configured for **Only the instances of objects that are assigned to the specified security scopes and collections**.
+6. To modify the assigned security roles, choose the **Security Roles** tab.
 
-    - To assign additional security roles to this user, choose **Add**, check the box for each additional security role that you want to assign, and then choose **OK**.  
-    - To remove security roles, select one or more security roles from the list, and then choose **Remove**.  
-7. To modify the security scopes and collections that are associated with security roles, choose the **Security Scopes** tab.  
+    - To assign additional security roles to this user, choose **Add**, check the box for each additional security role that you want to assign, and then choose **OK**.
+    - To remove security roles, select one or more security roles from the list, and then choose **Remove**.
+7. To modify the security scopes and collections that are associated with security roles, choose the **Security Scopes** tab.
 
-    - To associate new security scopes or collections with all security roles that are assigned to this administrative user, choose **Add** and select one of the four options. If you select **Security Scope** or **Collection**, check the box for one or more objects to complete that selection, and then choose **OK**.  
+    - To associate new security scopes or collections with all security roles that are assigned to this administrative user, choose **Add** and select one of the four options. If you select **Security Scope** or **Collection**, check the box for one or more objects to complete that selection, and then choose **OK**.
     - To remove a security scope or collection, choose the object, and then choose **Remove**.
 
-8. Choose **OK** to complete this procedure.  
+8. Choose **OK** to complete this procedure.
 
-Use the following procedure to modify an administrative user that has the securable object behavior set to **Associate assigned security roles with specific security scopes and collections**.  
+Use the following procedure to modify an administrative user that has the securable object behavior set to **Associate assigned security roles with specific security scopes and collections**.
 
-### For option: Associate assigned security roles with specific security scopes and collections  
+### For option: Associate assigned security roles with specific security scopes and collections
 
-1. In the Configuration Manager console, choose **Administration**.  
-2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.  
-3. Select the administrative user that you want to modify.  
-4. On the **Home** tab, in the **Properties** group, choose **Properties**.  
-5. Choose the **Security Scopes** tab to confirm that the administrative user is configured for **Associate assigned security roles with specific security scopes and collections**.  
-6. To modify the assigned security roles, choose the **Security Roles** tab.  
+1. In the Configuration Manager console, choose **Administration**.
+2. In the **Administration** workspace, expand **Security**, and then choose **Administrative Users**.
+3. Select the administrative user that you want to modify.
+4. On the **Home** tab, in the **Properties** group, choose **Properties**.
+5. Choose the **Security Scopes** tab to confirm that the administrative user is configured for **Associate assigned security roles with specific security scopes and collections**.
+6. To modify the assigned security roles, choose the **Security Roles** tab.
 
-    - To assign additional security roles to this administrative user, choose **Add**. On the **Add Security Role** dialog box, select one or more available security roles, choose **Add**, and select an object type to associate with the selected security roles. If you select **Security Scope** or **Collection**, check the box for one or more objects to complete that selection, and then choose **OK**.  
+    - To assign additional security roles to this administrative user, choose **Add**. On the **Add Security Role** dialog box, select one or more available security roles, choose **Add**, and select an object type to associate with the selected security roles. If you select **Security Scope** or **Collection**, check the box for one or more objects to complete that selection, and then choose **OK**.
 
-        > [!NOTE]  
-        > You must configure at least one security scope before the selected security roles can be assigned to the administrative user. When you select multiple security roles, each security scope and collection that you configure is associated with each of the selected security roles.  
+        > [!NOTE]
+        > You must configure at least one security scope before the selected security roles can be assigned to the administrative user. When you select multiple security roles, each security scope and collection that you configure is associated with each of the selected security roles.
 
-    - To remove security roles, select one or more security roles from the list, and then choose **Remove**.  
+    - To remove security roles, select one or more security roles from the list, and then choose **Remove**.
 
-7. To modify the security scopes and collections that are associated with a specific security role, choose the **Security Scopes** tab, select the security role, and then choose **Edit**.  
+7. To modify the security scopes and collections that are associated with a specific security role, choose the **Security Scopes** tab, select the security role, and then choose **Edit**.
 
-    - To associate new objects with this security role, choose **Add**, and select an object type to associate with the selected security roles. If you select **Security Scope** or **Collection**, check the box for one or more objects to complete that selection, and then choose **OK**.  
+    - To associate new objects with this security role, choose **Add**, and select an object type to associate with the selected security roles. If you select **Security Scope** or **Collection**, check the box for one or more objects to complete that selection, and then choose **OK**.
 
-        > [!NOTE]  
-        > You must configure at least one security scope.  
+        > [!NOTE]
+        > You must configure at least one security scope.
 
-    - To remove a security scope or collection that is associated with this security role, select the object, and then choose **Remove**.  
+    - To remove a security scope or collection that is associated with this security role, select the object, and then choose **Remove**.
 
-    - When you have finished modifying the associated objects, choose **OK**.  
+    - When you have finished modifying the associated objects, choose **OK**.
 
-8. Choose **OK** to complete this procedure.  
+8. Choose **OK** to complete this procedure.
 
-    > [!CAUTION]  
-    > When a security role grants administrative users the collection deployment permission, those administrative users can distribute objects from any security scope for which they have object **read** permissions, even if that security scope is associated with a different security role.  
+    > [!CAUTION]
+    > When a security role grants administrative users the collection deployment permission, those administrative users can distribute objects from any security scope for which they have object **read** permissions, even if that security scope is associated with a different security role.
 
 ## Automate with Windows PowerShell
 

@@ -6,11 +6,11 @@ ms.date: 01/09/2020
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -30,7 +30,7 @@ For bulk-enrolled devices, you can include the certificate in the enrollment pac
 
 If you use a public and globally trusted certificate provider to issue the server certificates, you can avoid having to manually install the trusted root certificate on each device. Most devices natively trust these public authorities. This method is a useful alternative for user-enrolled devices, instead of installing the certificate through other means.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > There are many ways to set up the certificates for trusted communications between devices and the site system servers for on-premises MDM. The information in this article is an example of one way to do it. This method requires Active Directory Certificate Services, with a certification authority and the certification authority web enrollment role. For more information, see [Active Directory Certificate Services](/previous-versions/windows/it-pro/windows-server-2012-r2-and-2012/hh831740\(v=ws.11\)).
 
 ## <a name="bkmk_configCa"></a> Publish the CRL

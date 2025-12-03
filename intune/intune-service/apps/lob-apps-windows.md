@@ -1,32 +1,10 @@
 ---
-# required metadata
-
-title: Add a Windows line-of-business app to Microsoft Intune
-titleSuffix:
+title: Add a Windows Line-of-Business App to Microsoft Intune
 description: Learn how to add a Windows line-of-business (LOB) app using Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 04/25/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: f81c5f82-5cfa-4b97-9f73-d6cf77c06896
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri
@@ -34,7 +12,7 @@ ms.collection:
 - FocusArea_Apps_LOB
 ---
 
-# Add a Windows line-of-business app to Microsoft Intune
+# Add a Windows Line-of-Business App to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

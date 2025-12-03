@@ -6,11 +6,11 @@ ms.date: 12/31/2019
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -20,9 +20,9 @@ ms.collection: tier3
 
 If you have mobile devices that you connect to Exchange Server via the ActiveSync protocol, you can use the Exchange Server connector in Configuration Manager to manage these devices. The connector works with both on-premises Exchange Server or Exchange Online. Use the Configuration Manager console to configure Exchange mobile device management features. For example, remote device wipe and settings control for multiple Exchange servers.
 
-![Logical diagram of Exchange Server connector with Configuration Manager](media/configmgr-with-exchange.png)  
+![Logical diagram of Exchange Server connector with Configuration Manager](media/configmgr-with-exchange.png)
 
-When you manage mobile devices with this connector, it doesn't install the Configuration Manager client or enroll the devices via MDM. The management functions of Exchange Server are limited in comparison to these other options. For example, you can't install software or use configuration items to configure these devices. For more information, see [Choose a device management solution for Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md).  
+When you manage mobile devices with this connector, it doesn't install the Configuration Manager client or enroll the devices via MDM. The management functions of Exchange Server are limited in comparison to these other options. For example, you can't install software or use configuration items to configure these devices. For more information, see [Choose a device management solution for Configuration Manager](../../core/plan-design/choose-a-device-management-solution.md).
 
 ## Policies
 
@@ -47,33 +47,33 @@ When you configure at least one setting in the group, Configuration Manager mana
 
 You can also configure the Exchange Server connector to manage the Exchange access rules. These access rules include allow, block, or quarantine mobile devices. You can remotely wipe mobile devices by using the Configuration Manager console.
 
-> [!TIP]  
+> [!TIP]
 > When a mobile device is transferred to another user, before the new owner configures their Exchange account on the device, delete the mobile device from the Configuration Manager console.
 
 ## Prerequisites
 
-> [!IMPORTANT]  
-> Before you install this connector, confirm that Configuration Manager supports your version of Exchange. For more information, see [Supported configurations - Exchange Server connector](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_ExSrvConOS).  
+> [!IMPORTANT]
+> Before you install this connector, confirm that Configuration Manager supports your version of Exchange. For more information, see [Supported configurations - Exchange Server connector](../../core/plan-design/configs/supported-operating-systems-for-clients-and-devices.md#bkmk_ExSrvConOS).
 
 ### Permissions to configure the connector
 
 You need the following security permissions to configure the Exchange Server connector in Configuration Manager:
 
-- To add, modify, and delete the Exchange Server connector: **Modify** permission for the **Site** object.  
+- To add, modify, and delete the Exchange Server connector: **Modify** permission for the **Site** object.
 
-- To configure the mobile device settings: **ModifyConnectorPolicy** permission for the **Site** object.  
+- To configure the mobile device settings: **ModifyConnectorPolicy** permission for the **Site** object.
 
-For example, the **Full Administrator** built-in role includes these required permissions.  
+For example, the **Full Administrator** built-in role includes these required permissions.
 
 ### Permissions to manage mobile devices
 
-You need the following security permissions to manage mobile devices:  
+You need the following security permissions to manage mobile devices:
 
-- To wipe a mobile device: **Delete resource** for the **Collection** object.  
+- To wipe a mobile device: **Delete resource** for the **Collection** object.
 
-- To cancel a wipe command: **Modify resource** for the **Collection** object.  
+- To cancel a wipe command: **Modify resource** for the **Collection** object.
 
-- To allow and block mobile devices: **Modify resource** for the **Collection** object.  
+- To allow and block mobile devices: **Modify resource** for the **Collection** object.
 
 For example, the **Operations Administrator** built-in role includes these required permissions.
 

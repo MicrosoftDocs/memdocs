@@ -12,58 +12,58 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # IAppManagementHandler::CheckReconnectData Method
-The `IAppManagementHandler::CheckReconnectData` method, in Configuration Manager, checks whether the reconnection data is valid.  
+The `IAppManagementHandler::CheckReconnectData` method, in Configuration Manager, checks whether the reconnection data is valid.
 
-## Syntax  
+## Syntax
 
-```  
-[IDL]  
-HRESULT CheckReconnectData(  
-     IWbemClassObject* pReconnectData,  
-     BOOL* pfIsValid,  
-     BOOL* pfEnforcementFinished  
-);  
-```  
+```
+[IDL]
+HRESULT CheckReconnectData(
+     IWbemClassObject* pReconnectData,
+     BOOL* pfIsValid,
+     BOOL* pfEnforcementFinished
+);
+```
 
-#### Parameters  
- `pReconnectData`  
- Data type: `IWbemClassObject`  
+#### Parameters
+ `pReconnectData`
+ Data type: `IWbemClassObject`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- .   
+ .
 
- `pfIsValid`  
- Data type: `BOOL`  
+ `pfIsValid`
+ Data type: `BOOL`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- .   
+ .
 
- `pfEnforcementFinished`  
- Data type: `BOOL`  
+ `pfEnforcementFinished`
+ Data type: `BOOL`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- .   
+ .
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+## Return Values
+ An `HRESULT` code. Possible values include, but are not limited to, the following:
 
- S_OK  
- The method succeeded. All other return values indicate failure.  
+ S_OK
+ The method succeeded. All other return values indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
- [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+## See Also
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

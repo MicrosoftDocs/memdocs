@@ -12,18 +12,18 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Operating System Deployment Client COM Automation Classes
-This section provides reference content for the operating system deployment task client COM automation classes in Configuration Manager.  
+This section provides reference content for the operating system deployment task client COM automation classes in Configuration Manager.
 
-## In This Section  
+## In This Section
 
-|Term|Definition|  
-|----------|----------------|  
-|[ProgressUI Client COM Automation Class](../../../../../develop/reference/core/clients/client-classes/progressui-client-com-automation-class.md)|Represents a user interface that custom actions use to report progress to the Configuration Manager operating system deployment task sequencing environment.|  
-|[PXEAuthClass Client COM Automation Class](../../../../../develop/reference/core/clients/client-classes/pxeauthclass-client-com-automation-class.md)|Supports PXE service point authorization in operating system deployment.|  
-|[ITSEnvClass Interface](../../../../../develop/reference/core/clients/client-classes/itsenvclass-interface.md)|Represents the operating system deployment task sequencing environment in Configuration Manager.|  
+|Term|Definition|
+|----------|----------------|
+|[ProgressUI Client COM Automation Class](../../../../../develop/reference/core/clients/client-classes/progressui-client-com-automation-class.md)|Represents a user interface that custom actions use to report progress to the Configuration Manager operating system deployment task sequencing environment.|
+|[PXEAuthClass Client COM Automation Class](../../../../../develop/reference/core/clients/client-classes/pxeauthclass-client-com-automation-class.md)|Supports PXE service point authorization in operating system deployment.|
+|[ITSEnvClass Interface](../../../../../develop/reference/core/clients/client-classes/itsenvclass-interface.md)|Represents the operating system deployment task sequencing environment in Configuration Manager.|
 
 ## See also
 

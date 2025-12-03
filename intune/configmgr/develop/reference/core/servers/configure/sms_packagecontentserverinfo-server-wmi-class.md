@@ -12,162 +12,162 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_PackageContentServerInfo Server WMI Class
-The `SMS_PackageContentServerInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents information about a given distribution point where an application or package has been distributed.  
+The `SMS_PackageContentServerInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents information about a given distribution point where an application or package has been distributed.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_PackageContentServerInfo : SMS_BaseClass  
-{  
-    String ContentServerID;  
-    String ContentServerSecurityID;  
-    UInt32 ContentServerType;  
-    String Description;  
-    UInt32 IsBitsEnabled;  
-    UInt32 IsPeerDP;  
-    String Name;  
-    String ObjectID;  
-    UInt32 ObjectTypeID;  
-    String PackageID;  
-    UInt32 PackageType;  
-};  
-```  
+```
+Class SMS_PackageContentServerInfo : SMS_BaseClass
+{
+    String ContentServerID;
+    String ContentServerSecurityID;
+    UInt32 ContentServerType;
+    String Description;
+    UInt32 IsBitsEnabled;
+    UInt32 IsPeerDP;
+    String Name;
+    String ObjectID;
+    UInt32 ObjectTypeID;
+    String PackageID;
+    UInt32 PackageType;
+};
+```
 
-## Methods  
- The `SMS_PackageContentServerInfo` class doesn't define any methods.  
+## Methods
+ The `SMS_PackageContentServerInfo` class doesn't define any methods.
 
-## Properties  
- `ContentServerID`  
- Data type: `String`  
+## Properties
+ `ContentServerID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Distribution point group unique identifier.  
+ Distribution point group unique identifier.
 
- `ContentServerSecurityID`  
- Data type: `String`  
+ `ContentServerSecurityID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Distribution point identifier or distribution point group identifier for security.  
+ Distribution point identifier or distribution point group identifier for security.
 
- `ContentServerType`  
- Data type: `UInt32`  
+ `ContentServerType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- Type of content server.  
+ Type of content server.
 
-|Value|Content server type|  
-|-|-|  
-|1|Distribution Point|  
-|2|Distribution Point Group|  
+|Value|Content server type|
+|-|-|
+|1|Distribution Point|
+|2|Distribution Point Group|
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description of distribution point or distribution point group.  
+ Description of distribution point or distribution point group.
 
- `IsBitsEnabled`  
- Data type: `UInt32`  
+ `IsBitsEnabled`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if BITS is enabled.  
+ `true` if BITS is enabled.
 
- `IsPeerDP`  
- Data type: `UInt32`  
+ `IsPeerDP`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the distribution point is a branch distribution point.  
+ `true` if the distribution point is a branch distribution point.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of distribution point or distribution point group.  
+ Name of distribution point or distribution point group.
 
- `ObjectID`  
- Data type: `String`  
+ `ObjectID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Package identifier or CI_UniqueID.  
+ Package identifier or CI_UniqueID.
 
- `ObjectTypeID`  
- Data type: `UInt32`  
+ `ObjectTypeID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration, read]  
+ Qualifiers: [enumeration, read]
 
- Secured object class identifier. Possible values are:  
+ Secured object class identifier. Possible values are:
 
-|Value|Object type|  
-|-|-|  
-|42|SMS_DistributionPointInfo|  
-|43|SMS_DistributionPointGroup|  
+|Value|Object type|
+|-|-|
+|42|SMS_DistributionPointInfo|
+|43|SMS_DistributionPointGroup|
 
- `PackageID`  
- Data type: `String`  
+ `PackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- A unique, autogenerated key that is used to relate programs, advertisements, and distribution points to the package.  
+ A unique, autogenerated key that is used to relate programs, advertisements, and distribution points to the package.
 
- `PackageType`  
- Data type: `UInt32`  
+ `PackageType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- The type of the package. Possible values are:  
+ The type of the package. Possible values are:
 
-|Value|Description|  
-|-----------|-----------------|  
-|0|Regular software distribution package.|  
-|3|Driver package.|  
-|4|Task sequence package.|  
-|5|Software update package.|  
-|6|Content package.|  
-|8|Device setting package.|  
-|257|Image package.|  
-|258|Boot image package.|  
-|259|Operating system install package.|  
-|512|Application package.|  
+|Value|Description|
+|-----------|-----------------|
+|0|Regular software distribution package.|
+|3|Driver package.|
+|4|Task sequence package.|
+|5|Software update package.|
+|6|Content package.|
+|8|Device setting package.|
+|257|Image package.|
+|258|Boot image package.|
+|259|Operating system install package.|
+|512|Application package.|
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

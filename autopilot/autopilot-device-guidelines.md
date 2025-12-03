@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot device guidelines
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
   - tier2

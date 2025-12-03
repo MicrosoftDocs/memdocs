@@ -1,36 +1,18 @@
 ---
-# required metadata
-
-title: Device restriction settings for Android in Microsoft Intune
+title: Device restriction settings for Android DA in Microsoft Intune
 description: See a list of all the Android device administrator settings you can control and restrict in Microsoft Intune. Use these settings to control the password, access Google Play, allow or prohibit apps, control the browser settings, block apps, backup to the Google cloud, and control the message, voice, data roaming, Wi-Fi, and Bluetooth connection options.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 09/23/2024
+ms.date: 06/09/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: anuragjain
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
-# Android and Samsung Knox Standard device restriction settings lists in Intune
+# Android device administrator and Samsung Knox Standard device restriction settings in Intune
 
-This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android. As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password requirements, control security, and more.
+This article shows you all the Microsoft Intune device restrictions settings that you can configure for devices running Android device administrator (DA). As part of your mobile device management (MDM) solution, use these settings to allow or disable features, set password requirements, control security, and more.
 
 This feature applies to:
 
@@ -39,7 +21,7 @@ This feature applies to:
   [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 >[!TIP]
->If the settings you want are not available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
+>If the settings you want aren't available, you might be able to configure your devices using a [custom profile](custom-settings-android.md).
 
 ## Before you begin
 
@@ -90,7 +72,7 @@ These settings apply to all Android OS versions and manufacturers, except where 
 - **Password**: **Require** users to enter a password to access devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to access devices without entering a password.
 
     > [!NOTE]
-    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices may automatically require a PIN to become compliant with Conditional Access.
+    > Samsung Knox devices automatically require a 4-digit PIN during MDM enrollment. Native Android devices might automatically require a PIN to become compliant with Conditional Access.
 
 ### Android 10 and later
 
@@ -109,13 +91,13 @@ These settings apply to all Android OS versions and manufacturers, except where 
     - Alphabetic, with a minimum length of 6.
     - Alphanumeric, with a minimum length of 6.
 
-  This setting applies to:  
+  This setting applies to:
   - Android 10 and newer, but not on Samsung Knox.
 
   > [!IMPORTANT]
-  > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** will take effect on devices.
+  > The **Password complexity** setting is a work in progress. In late October 2020, **Password complexity** takes effect on devices.
   >
-  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don't set the **Password** setting to **Require**, users with weak passwords won't receive the warning.
+  > If you set **Password complexity** to something other than **None**, then also set the **Password** setting to **Require**, which is found under the *All Android devices* section. Users with passwords that don't meet your complexity requirements receive a warning to update their password. If you don't set the **Password** setting to **Require**, users with weak passwords don't receive the warning.
 
 ### Android 9 and earlier, or Samsung Knox Android 15 and earlier
 
@@ -129,7 +111,7 @@ These settings apply to devices running Android 9 or earlier, and all Samsung Kn
   - **Device default**
   - **Low security biometric**: [Strong vs. weak biometrics](https://android-developers.googleblog.com/2018/06/better-biometrics-in-android-p.html) (opens Android's web site)
   - **At least numeric**: Includes numeric characters, like `123456789`.
-  - **Numeric complex**: Repeated or consecutive numbers, like "1111" or "1234", aren't allowed. Before you assign this setting to devices, be sure to update the Company Portal app to the latest version on those devices.
+  - **Numeric complex**: Repeated or consecutive numbers, like `1111` or `1234`, aren't allowed. Before you assign this setting to devices, be sure to update the Company Portal app to the latest version on those devices.
 
     When set to **Numeric complex**, and you assign the setting to devices running an Android version earlier than 5.0, then the following behavior applies:
 
@@ -148,7 +130,7 @@ These settings apply to devices running Android 9 or earlier, and all Samsung Kn
 
   When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-  This setting applies to:  
+  This setting applies to:
   - Samsung KNOX Standard 5.0 and newer
 
 ## Google Play Store
@@ -203,7 +185,7 @@ Your options:
 
 For each setting, add your apps:
 
-- **Add apps by package name**: Enter the app name, and the name of the app package. Primarily used for line-of-business apps. 
+- **Add apps by package name**: Enter the app name, and the name of the app package. Primarily used for line-of-business apps.
 - **Add apps by URL**: Enter the app name, and its URL in the Google Play store.
 - **Add store app**: Select an app from the existing list of apps you manage in Intune.
 
@@ -227,7 +209,7 @@ For each setting, add your apps:
 
 ## Kiosk
 
-Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or earlier, and only to apps you manage using Intune.
+Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or earlier, and only to Intune-managed apps.
 
 - Add apps you want to run when the device is in kiosk mode. In kiosk mode, only the apps you add run; apps not added don't run. Preinstalled browsers don't run as an app when the device is in kiosk mode. If a browser is required, consider using the [Managed Browser](../apps/manage-microsoft-edge.md).
 
@@ -244,4 +226,4 @@ Kiosk settings apply only to Samsung Knox Standard devices running Android 10 or
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md#device-experience) and [Windows](kiosk-settings.md) devices.
+You can also create kiosk profiles for [Android Enterprise](device-restrictions-android-for-work.md) (Device experience) and [Windows](kiosk-settings.md) devices.

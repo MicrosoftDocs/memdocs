@@ -12,55 +12,55 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # RemoveMemberships Method in Class SMS_SecuredCategoryMembership
-The `RemoveMemberships` Windows Management Instrumentation (WMI) class method, in Configuration Manager, is a batch operation to remove objects from categories.  
+The `RemoveMemberships` Windows Management Instrumentation (WMI) class method, in Configuration Manager, is a batch operation to remove objects from categories.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 RemoveMemberships(  
-    String   ObjectIDs[],  
-    Uint32   ObjectTypeIDs[],  
-    String   CategoryIDs[]  
-);  
-```  
+```
+SInt32 RemoveMemberships(
+    String   ObjectIDs[],
+    Uint32   ObjectTypeIDs[],
+    String   CategoryIDs[]
+);
+```
 
-#### Parameters  
- `ObjectIDs`  
- Data type: `String` Array  
+#### Parameters
+ `ObjectIDs`
+ Data type: `String` Array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The array of object IDs.  
+ The array of object IDs.
 
- `ObjectTypeIDs`  
- Data type: `UInt32` Array  
+ `ObjectTypeIDs`
+ Data type: `UInt32` Array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The array of corresponding object type ID.  
+ The array of corresponding object type ID.
 
- `CategoryIDs`  
- Data type: `String` Array  
+ `CategoryIDs`
+ Data type: `String` Array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The array of corresponding security category IDs which those objects will be removed from.  
+ The array of corresponding security category IDs which those objects will be removed from.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_SecuredCategoryMembership Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_securedcategorymembership-server-wmi-class.md)

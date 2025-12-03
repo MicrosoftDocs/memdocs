@@ -6,11 +6,11 @@ ms.date: 07/11/2022
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -18,7 +18,7 @@ ms.collection: tier3
 <!--3098816-->
 *Applies to: Configuration Manager (current branch)*
 
-After you create, edit, or start an orchestration group, you may need to monitor the group or its members. Using monitoring information along with the log files, can help you troubleshoot orchestration groups and group members.  
+After you create, edit, or start an orchestration group, you may need to monitor the group or its members. Using monitoring information along with the log files, can help you troubleshoot orchestration groups and group members.
 
 ## Monitor orchestration groups
 
@@ -31,10 +31,10 @@ From the **Assets and Compliance** workspace, select the **Orchestration Group**
    - Percentage
    - Sequence
 
-- **Orchestration Value**: How many members or the percentage of members that can get a lock simultaneously. **Orchestration Value** is only populated when **Orchestration Type** is either *Number* or *Percentage*.  
+- **Orchestration Value**: How many members or the percentage of members that can get a lock simultaneously. **Orchestration Value** is only populated when **Orchestration Type** is either *Number* or *Percentage*.
 - **Orchestration State**: In progress during orchestration. Idle when not in progress.
 - **Orchestration Start Time**: Date and time that the orchestration started.
-- **Current Sequence Number**: Indicates for which member of the group orchestration is active. This number corresponds with the **Sequence Number** for the member.  
+- **Current Sequence Number**: Indicates for which member of the group orchestration is active. This number corresponds with the **Sequence Number** for the member.
 - **Orchestration Timeout (in minutes)**: Value of **The Orchestration Group timeout (in minutes)** set on the **General** page when creating the group, or the **General** tab when editing the group.
 - **Orchestration Group Member Timeout (in minutes)**: Value of **Orchestration Group member timeout (in minutes)** set on the **General** page when creating the group, or the **General** tab when editing the group.
 - **Orchestration Group ID**: ID of the group, The ID is used in logs and the database.
@@ -60,13 +60,13 @@ In the **Orchestration Group** node, select an orchestration group. In the ribbo
    - **In progress** during orchestration.
    - **Waiting**: Indicates the client is waiting on the lock for its turn to install updates.
    - **Idle** when orchestration is complete or not running.
-- **State Code**: You can right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. This reset allows you to rerun orchestration. States include: 
+- **State Code**: You can right-click on the Orchestration Group member and select **Reset Orchestration Group Member**. This reset allows you to rerun orchestration. States include:
    - Idle
    - Waiting, the device is waiting its turn
    - In progress, installing an update
    - Failed
    - Reboot pending
-- **Lock Acquired Time**: Locks are requested by the client based on its policy. Once the client acquires a lock, orchestration is triggered on it.  
+- **Lock Acquired Time**: Locks are requested by the client based on its policy. Once the client acquires a lock, orchestration is triggered on it.
 -**Last State Reported Time**: Time the member last reported a state.
 - **Sequence Number**: The client's location in the queue for installing updates.
 - **Site Code**: The site code for the member.

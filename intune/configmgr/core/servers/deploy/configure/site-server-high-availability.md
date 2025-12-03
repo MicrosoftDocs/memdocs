@@ -6,12 +6,12 @@ ms.date: 04/11/2022
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Site server high availability in Configuration Manager
@@ -24,11 +24,11 @@ Historically, you could add redundancy to most of the roles in Configuration Man
 
 This feature brings the following benefits
 
-- Redundancy and high availability to the site server role  
-- More easily change the hardware or OS of the site server  
-- More easily move your site server to Azure IaaS  
+- Redundancy and high availability to the site server role
+- More easily change the hardware or OS of the site server
+- More easily move your site server to Azure IaaS
 
-The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this other site server as part of your overall design for making the Configuration Manager service [highly available](high-availability-options.md).  
+The site server in passive mode is in addition to your existing site server that is in *active* mode. A site server in passive mode is available for immediate use, when needed. Include this other site server as part of your overall design for making the Configuration Manager service [highly available](high-availability-options.md).
 
 A site server in passive mode:
 
@@ -38,11 +38,11 @@ A site server in passive mode:
 
 To make the site server in passive mode become active, you manually *promote* it. This action switches the site server in active mode to be the site server in passive mode. The site system roles that are available on the original active mode server remain available so long as that computer is accessible. Only the site server role is switched between active and passive modes.
 
-Microsoft Core Services Engineering and Operations used this feature to migrate their CAS to Microsoft Azure. For more information, see the [Microsoft IT Showcase article](https://www.microsoft.com/insidetrack/migrating-system-center-configuration-manager-on-premises-infrastructure-to-microsoft-azure).
+Microsoft Core Services Engineering and Operations used this feature to migrate their CAS to Microsoft Azure. For more information, see the [Microsoft IT Showcase article](/intune/configmgr/core/support/azure-migration-tool).
 
 ## Supported configurations
 
-- Configuration Manager supports site servers in passive mode in a hierarchy. The CAS and child primary sites can have another site server in passive mode.<!-- 3607755 -->  
+- Configuration Manager supports site servers in passive mode in a hierarchy. The CAS and child primary sites can have another site server in passive mode.<!-- 3607755 -->
 
 - The site server in passive mode can be on-premises or cloud-based in Azure.
 
@@ -50,7 +50,7 @@ Microsoft Core Services Engineering and Operations used this feature to migrate 
     > A cloud-based site server in passive mode uses Azure infrastructure as a service (IaaS). For more information, see the following articles:
     >
     > - [Azure virtual machines (for cloud-based infrastructure)](../../../understand/use-cloud-services.md#azure-virtual-machines-for-cloud-based-infrastructure)
-    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.yml)  
+    > - [FAQ for Configuration Manager on Azure](../../../understand/configuration-manager-on-azure.yml)
 
 ## Prerequisites
 
@@ -118,7 +118,7 @@ Both site servers must use the same site database.
     GO
     ```
 
-- Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds a login to the **CM_ABC** database for the new site server **VM2** in the Contoso domain:  
+- Both site servers need access to the site database on the instance of SQL Server. The original site server should already have this access, so add it for the new site server. For example, the following SQL script adds a login to the **CM_ABC** database for the new site server **VM2** in the Contoso domain:
 
     ```SQL
     USE [CM_ABC]
@@ -133,7 +133,7 @@ Both site servers must use the same site database.
 
 - Only a single site server in passive mode is supported at each site.
 
-- Passive site servers cannot be installed to nodes in the Always On availability group hosting the Configuration Manager database and must be installed on standalone servers. Moving a passive site server into the Always On availability group after installation is not currently supported. 
+- Passive site servers cannot be installed to nodes in the Always On availability group hosting the Configuration Manager database and must be installed on standalone servers. Moving a passive site server into the Always On availability group after installation is not currently supported.
 
 - A site server in passive mode isn't supported at a secondary site.<!--SCCMDocs issue 680-->
 
@@ -157,30 +157,30 @@ For more information on the general process of adding roles, see [Install site s
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, select the **Sites** node, and select **Create Site System Server** in the ribbon.
 
-2. On the **General** page of the Create Site System Server Wizard, specify the server to host the site server in passive mode. The server you specify can't host any site system roles before installing a site server in passive mode.  
+2. On the **General** page of the Create Site System Server Wizard, specify the server to host the site server in passive mode. The server you specify can't host any site system roles before installing a site server in passive mode.
 
-3. On the **System Role Selection** page, select only **Site server in passive mode**.  
+3. On the **System Role Selection** page, select only **Site server in passive mode**.
 
-    > [!NOTE]  
+    > [!NOTE]
     > The wizard performs the following initial prerequisite checks on this page:
     >
     > - The selected server isn't a secondary site server
     > - The selected server isn't already a site server in passive mode
-    > - The site's content library is in a remote location  
-    >  
-    > If these initial prerequisite checks fails, you can't continue past this page of the wizard.  
+    > - The site's content library is in a remote location
+    >
+    > If these initial prerequisite checks fails, you can't continue past this page of the wizard.
 
 4. On the **Site Server In Passive Mode** page, provide the following information that's used to run setup and install the site server role on the specified server:
 
-     - Choose one of the following options:  
+     - Choose one of the following options:
 
-         - **Copy installation source files over the network from the site server in active mode**: This option creates a compressed package and sends it to the new site server.  
+         - **Copy installation source files over the network from the site server in active mode**: This option creates a compressed package and sends it to the new site server.
 
-         - **Use the source files at the following location on the site server in passive mode**: For example, a local path to which you already copied the source files. Make sure this content is the same version as the site server in active mode.  
+         - **Use the source files at the following location on the site server in passive mode**: For example, a local path to which you already copied the source files. Make sure this content is the same version as the site server in active mode.
 
          - (*Recommended*) **Use the source files at the following network location**: Specify the path directly to the contents of the `CD.Latest` folder from the site server in active mode. For example, `\\Server\SMS_ABC\CD.Latest` where "*Server*" is the name of the site server in active mode, and "*ABC*" is the site code.
 
-     - Specify the local path at which to install Configuration Manager on the new site server. For example: `C:\Program Files\Configuration Manager`  
+     - Specify the local path at which to install Configuration Manager on the new site server. For example: `C:\Program Files\Configuration Manager`
 
 5. Complete the wizard. Configuration Manager then installs the site server in passive mode on the specified server.
 
@@ -192,19 +192,19 @@ After you add a site server in passive mode, see both site servers on the **Node
 
 All Configuration Manager site server components are in standby on the site server in passive mode. The Windows services are still running.
 
-## Site server promotion  
+## Site server promotion
 
-Similarly as with backup and recovery, plan and practice your process to change site servers. Consider the following points in your promotion plan:  
+Similarly as with backup and recovery, plan and practice your process to change site servers. Consider the following points in your promotion plan:
 
-- Practice a planned promotion, where both site servers are online. Also practice an unplanned failover, by forcibly disconnecting or shutting down the site server in active mode.  
+- Practice a planned promotion, where both site servers are online. Also practice an unplanned failover, by forcibly disconnecting or shutting down the site server in active mode.
 
-- Determine your operational processes during failover, and what to communicate with other Configuration Manager administrators.  
+- Determine your operational processes during failover, and what to communicate with other Configuration Manager administrators.
 
-- Before a planned promotion:  
+- Before a planned promotion:
 
-  - Check the overall status of the site and site components. Make sure everything is healthy as normal for your environment.  
+  - Check the overall status of the site and site components. Make sure everything is healthy as normal for your environment.
 
-  - Check content status for any packages actively replicating between sites.  
+  - Check content status for any packages actively replicating between sites.
 
   - Check secondary site status and site replication.
 
@@ -229,14 +229,14 @@ Similarly as with backup and recovery, plan and practice your process to change 
 
 This section describes how to change the site server in passive mode to active mode. To access the site and make this change, you need to be able to access an instance of the SMS Provider. For more information, see [Use multiple SMS Providers](../../../plan-design/hierarchy/plan-for-the-sms-provider.md#use-multiple-sms-providers).
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > If all instances of the SMS Provider are offline, you can't connect to the site as no provider is available. When you add the site server in passive mode, setup installs an instance of the SMS Provider on this server.<!-- SCCMDocs#1613 -->
 >
-> The Configuration Manager console requests the list of available SMS Providers from WMI on the site server. When you install multiple SMS Providers at a site, the site randomly assigns each new connection request to use an installed SMS Provider. You can't specify the SMS Provider location to use with a specific connection session. If your console is unable to connect to the site because the current site server is offline, specify the other site server in the Site Connection window.  
+> The Configuration Manager console requests the list of available SMS Providers from WMI on the site server. When you install multiple SMS Providers at a site, the site randomly assigns each new connection request to use an installed SMS Provider. You can't specify the SMS Provider location to use with a specific connection session. If your console is unable to connect to the site because the current site server is offline, specify the other site server in the Site Connection window.
 
 1. In the Configuration Manager console, go to the **Administration** workspace, expand **Site Configuration**, and select the **Sites** node. Select the site, and then switch to the **Nodes** tab. Select the site server in passive mode, and then select **Promote to active** in the ribbon. Select **Yes** to confirm and continue.
-  
-2. Refresh the console node. The **Status** column for the server you're promoting displays in the **Nodes** tab as **Promoting**.  
+
+2. Refresh the console node. The **Status** column for the server you're promoting displays in the **Nodes** tab as **Promoting**.
 
 3. After the promotion is complete, the **Status** column shows **OK** for both the new site server in active mode, and for the new site server in passive mode. The **Server Name** column for the site now displays the name of the new site server in active mode.
 
@@ -250,23 +250,23 @@ For more information on the *planned* promotion process, see [Flowchart - Promot
 
 If the current site server in active mode is offline, the site server for promotion tries to contact the current site server in active mode for 30 minutes. If the offline server comes back before this time, it's successfully notified, and the change proceeds gracefully. Otherwise the site server for promotion forcibly updates the site configuration for it to be active. If the offline server comes back after this time, it first checks the current state in the site database. It then proceeds with demoting itself to the site server in passive mode.
 
-During this 30-minute waiting period, the site has no site server in active mode. Clients still communicate with client-facing roles such as management points, software update points, and distribution points. Users can install software that's already deployed. No site administration is possible in this time period. For more information, see [Site failure impacts](../../manage/site-failure-impacts.md).  
+During this 30-minute waiting period, the site has no site server in active mode. Clients still communicate with client-facing roles such as management points, software update points, and distribution points. Users can install software that's already deployed. No site administration is possible in this time period. For more information, see [Site failure impacts](../../manage/site-failure-impacts.md).
 
 If the offline server is damaged such that it can't return, delete this site server from the console. Then create a new site server in passive mode to restore a highly available service.
 
 For more information on the *unplanned* failover process, see [Flowchart - Promote site server (unplanned)](promote-site-server-unplanned-flowchart.md).
 
-### Other tasks after site server promotion  
+### Other tasks after site server promotion
 
 After switching site servers, you don't have to do most of the other tasks as are necessary when [recovering a site](../../manage/recover-sites.md#post-recovery-tasks). For example, you don't need to reset passwords or reconnect your Microsoft Intune subscription.
 
-The following steps may be required if necessary in your environment:  
+The following steps may be required if necessary in your environment:
 
-- If you import PKI certificates for distribution points, reimport the certificate for affected servers. For more information, see [Regenerate the certificates for distribution points](../../manage/recover-sites.md#regenerate-the-certificates-for-distribution-points).  
+- If you import PKI certificates for distribution points, reimport the certificate for affected servers. For more information, see [Regenerate the certificates for distribution points](../../manage/recover-sites.md#regenerate-the-certificates-for-distribution-points).
 
-- If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).  
+- If you integrate Configuration Manager with the Microsoft Store for Business, reconfigure that connection. For more information, see [Manage apps from the Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md).
 
-- Recreate OSD bootable media and prestaged media in non-PKI environments.  
+- Recreate OSD bootable media and prestaged media in non-PKI environments.
 
 - In non-PKI environments, you may need to update the self-signed certificate on PXE-enabled distribution points. Do this action in the properties of the distribution point on the Communication tab. Make changes to the self-signed certificate date or time.
 

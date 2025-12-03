@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_EndpointProtectionDashboardBucket Server WMI Class
 
 The `SMS_EndpointProtectionDashboardBucket` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_EndpointProtectionDashboardBucket : SMS_BaseClass  
-{  
-    String Bucket;  
-    String CollectionID;  
-    String CollectionName;  
-};  
-```  
+```
+Class SMS_EndpointProtectionDashboardBucket : SMS_BaseClass
+{
+    String Bucket;
+    String CollectionID;
+    String CollectionName;
+};
+```
 
-## Methods  
- The `SMS_EndpointProtectionDashboardBucket` class does not define any methods.  
+## Methods
+ The `SMS_EndpointProtectionDashboardBucket` class does not define any methods.
 
-## Properties  
- `Bucket`  
- Data type: `String`  
+## Properties
+ `Bucket`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Dashboard bucket summarized.    
+ Dashboard bucket summarized.
 
- `CollectionID`  
- Data type: `String`  
+ `CollectionID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Identifier of the collection summarized.  
+ Identifier of the collection summarized.
 
- `CollectionName`  
- Data type: `String`  
+ `CollectionName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the collection summarized.  
+ Name of the collection summarized.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

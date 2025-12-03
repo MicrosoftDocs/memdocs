@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Intune endpoint detection and response policy.
 description: Configure and deploy policies for devices you manage with endpoint security endpoint detection and response policy in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 08/19/2024
+ms.date: 05/19/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -40,9 +23,11 @@ Applies to:
 
 - Linux
 - macOS
-- Windows 10
-- Windows 11
+- Windows
 - Windows Server 2012 R2 and later *(when managed by Configuration Manager through the [tenant attach](../protect/tenant-attach-intune.md) scenario, or through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## About Intune policy for endpoint detection and response
 
@@ -59,7 +44,7 @@ When you create EDR policy to onboard devices, you can use the preconfigured pol
 Based on the platform a policy targets, EDR policies for devices you manage with Intune deploy to groups of devices from Microsoft Entra ID, or to collections of on-premises devices that you synchronize from Configuration Manager through the [tenant attach scenario](../protect/tenant-attach-intune.md).
 
 > [!TIP]
-> In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
+> In addition to EDR policy, you can use [device configuration](../protect/microsoft-defender-integrate.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
 >
 > When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
 
@@ -69,8 +54,8 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 
 - **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Intune subscription) before you can create EDR policies. For more information, see:
 
-  - [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) for guidance on integrating Microsoft Defender for Endpoint with Microsoft Intune.
-  - [Connect Microsoft Defender for Endpoint to Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) to set up the service-to-service connection between Intune and Microsoft Defender for Endpoint.
+  - [Use Microsoft Defender for Endpoint](microsoft-defender-with-intune.md) for guidance on integrating Microsoft Defender for Endpoint with Microsoft Intune.
+  - [Connect Microsoft Defender for Endpoint to Intune](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune) to set up the service-to-service connection between Intune and Microsoft Defender for Endpoint.
 
 **Support for Configuration Manager clients**:
 
@@ -88,7 +73,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 In the Microsoft Intune admin center, the *Endpoint detection and response* node is divided into two tabs:
 
-**Summary tab**:  
+**Summary tab**:
 The Summary tab provides a high-level view of all your EDR policies, both manually configured policies and the policies you create using the Deploy preconfigured policy option.
 
 The Summary tab includes the following areas:
@@ -101,7 +86,7 @@ The Summary tab includes the following areas:
 
   Selecting a policy from the list opens a deeper view of that policy where you can review its configuration and choose to edit its details and configuration. If the policy was preconfigured, the settings you can edit are limited.
 
-**EDR Onboarding Status tab**:  
+**EDR Onboarding Status tab**:
 This tab displays a high-level summary of devices that have or haven’t onboarded to Microsoft Defender for Endpoint, and supports drilling into individual devices. This summary includes devices managed by Intune and devices that are managed through the tenant attach scenario and Configuration Manager.
 
 This tab also includes the option to create and deploy a preconfigured onboarding policy for Windows devices.
@@ -112,7 +97,7 @@ The EDR onboarding status tab includes:
 
 - **The EDR onboarding status summary chart** – This chart displays the counts of devices that have or haven’t onboarded to Microsoft Defender for Endpoint.
 
-- **Device list** – Below the summary chart is a list of devices with details, including:  
+- **Device list** – Below the summary chart is a list of devices with details, including:
   - Device name
   - How the device is managed
   - The devices EDR onboarding status
@@ -123,7 +108,9 @@ The EDR onboarding status tab includes:
 
 ### Devices managed by Microsoft Intune
 
-**Linux** - To manage EDR for Linux devices, select the **Linux** platform. The following profile is available:
+#### Linux
+
+To manage EDR for Linux devices, select the **Linux** platform. The following profiles are available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
   - Devices enrolled with Intune.
@@ -136,7 +123,22 @@ The EDR onboarding status tab includes:
 
   To learn more about Defender for Endpoint settings that are available for Linux, see [Set preferences for Microsoft Defender for Endpoint on Linux](/microsoft-365/security/defender-endpoint/linux-preferences#device-tags) in the Defender documentation.
 
-**macOS** - To manage EDR for macOS devices, select the **macOS** platform. The following profile is available:
+- **Microsoft Defender Global Exclusions (AV+EDR)** - Use this profile to manage both endpoint detection and response exclusion and Antivirus exclusions on Linux devices that are managed through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario. Exclusions you can deploy through this profile are added to exclusions that devices might receive from other sources, including EDR and Antivirus exclusions managed by Intune or Microsoft Defender Antivirus policies. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
+
+  This profile supports use with:
+  - Devices managed through [Security Management for Microsoft Defender for Endpoint](../protect/mde-security-integration.md?pivots=mdssc-preview).
+
+  The EDR global exclusion template for Linux includes a simple template where you can **Add** and then edit one or more instances of exclusion configurations. This is the same configuration process as when configuring Intune policy for [Microsoft Defender Antivirus Exclusions](../protect/endpoint-security-antivirus-policy.md#linux) for Linux devices. The EDR global exclusion profile for Linux doesn't replace Microsoft Defender Antivirus Exclusions profiles you might already use for Linux.
+
+  To configure exclusions, each entry you add supports the following options:
+  - **Path** - Define a path to exclude from endpoint detection and response. This can be a file or directory. Wild cards aren't supported.
+  - **Process name** - Define a process name to exclude from endpoint detection and response. This can be a file name or full path. Wild cards aren't supported.
+
+For more information about Linux exclusions, see [Configure and validate exclusions for Microsoft Defender for Endpoint on Linux](/defender-endpoint/linux-exclusions) in the Microsoft Defender documentation.
+
+#### macOS
+
+To manage EDR for macOS devices, select the **macOS** platform. The following profile is available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
   - Devices enrolled with Intune.
@@ -149,7 +151,12 @@ The EDR onboarding status tab includes:
 
   To learn more about Defender for Endpoint settings that are available for macOS, see [Set preferences for Microsoft Defender for Endpoint on macOS](/microsoft-365/security/defender-endpoint/mac-preferences#device-tags) in the Defender documentation.
 
-**Windows** - To manage EDR for Windows devices, select the **Windows** platform. The following profile is available:
+#### Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+To manage EDR for Windows devices, select the **Windows** platform. The following profile is available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
 
@@ -160,15 +167,15 @@ The EDR onboarding status tab includes:
   >
   > Beginning on April 5, 2022, the *Windows 10 and later* platform was replaced by the *Windows* platform.
   >
-  > The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which is not supported through Microsoft Intune natively.
+  > The *Windows* platform supports devices communicating through Microsoft Intune or Microsoft Defender for Endpoint. These profiles also add support for the Windows Server platform which isn't supported through Microsoft Intune natively.
   >
   > Profiles for this new platform use the settings format as found in the Settings Catalog. Each new profile template for this new platform includes the same settings as the older profile template it replaces. With this change you can no longer create new versions of the old profiles. Your existing instances of the old profile remain available to use and edit.
 
   **Options for** ***Microsoft Defender for Endpoint client configuration package type***:
-  
+
   - *Applies to Windows devices only*
 
-  After you configure the [service-to-service connection](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint, the **Auto from connector** option becomes available for the setting **Microsoft Defender for Endpoint client configuration package type**. This option isn't available until you configure the connection.
+  After you configure the [service-to-service connection](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint, the **Auto from connector** option becomes available for the setting **Microsoft Defender for Endpoint client configuration package type**. This option isn't available until you configure the connection.
 
   When you select **Auto from connector**, Intune automatically gets the onboarding package (blob) from your Defender for Endpoint deployment. This choice replaces the need to manually configure an **Onboard** package for this profile. There isn't an option to automatically configure an offboard package.
 
@@ -243,7 +250,7 @@ This option is found near the top of the page, above the Windows Devices onboard
 
 :::image type="content" source="./media/endpoint-security-edr-policy/edr-preconfigured-policy-option.png" alt-text="Screen shot of the admin center that shows where to find the Deploy preconfigured policy option.":::
 
-Before you can select this option, you must successfully configure the **Defender for Endpoint Connector**, which establishes a service-to-service connection between Intune and Microsoft Defender for Endpoint. The policy uses the connector to get a Microsoft Defender for Endpoint onboarding blob for use to onboard devices. For information about configuring this connector, see [Connect Microsoft Defender for Endpoint to Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) in the *Configure Defender for Endpoint* article.
+Before you can select this option, you must successfully configure the **Defender for Endpoint Connector**, which establishes a service-to-service connection between Intune and Microsoft Defender for Endpoint. The policy uses the connector to get a Microsoft Defender for Endpoint onboarding blob for use to onboard devices. For information about configuring this connector, see [Connect Microsoft Defender for Endpoint to Intune](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune) in the *Configure Defender for Endpoint* article.
 
 If you use the tenant attach scenario to support devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Intune admin center. See [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
@@ -349,7 +356,7 @@ This update can be necessary due to a change in the onboarding payload for Micro
 Updating the onboarding information directs the device to start utilizing the new onboarding payload at the next *Restart*.
 
 > [!NOTE]
-> This information will not necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
+> This information won't necessarily move a device between tenants without fully offboarding the device from the original tenant. For options migrating devices between Microsoft Defender for Endpoint organizations, engage Microsoft Support.
 
 ### Process to update the payload
 
@@ -372,7 +379,7 @@ Updating the onboarding information directs the device to start utilizing the ne
 > [!NOTE]
 > If previously using the *Auto from connector* option to retrieve the onboarding information, engage Microsoft support to confirm the use of the new onboarding information.
 >
-> For organizations updating onboarding information at the direction of Microsoft support, Microsoft will direct you when the connector has been updated to leverage the new onboarding payload.
+> For organizations updating onboarding information at the direction of Microsoft support, Microsoft will direct you when the connector has been updated to use the new onboarding payload.
 
 ## EDR policy reports and monitoring
 

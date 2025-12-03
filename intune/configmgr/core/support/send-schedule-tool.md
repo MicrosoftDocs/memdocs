@@ -11,14 +11,14 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Send Schedule Tool
 
 *Applies to: Configuration Manager (current branch)*
 
-The Send Schedule Tool is one of the [Configuration Manager tools](tools.md). Use it to trigger a schedule on a client or trigger the evaluation of a specified configuration baseline. It works for the local computer or targeting a remote client.  
+The Send Schedule Tool is one of the [Configuration Manager tools](tools.md). Use it to trigger a schedule on a client or trigger the evaluation of a specified configuration baseline. It works for the local computer or targeting a remote client.
 
 For example, use the tool to trigger an inventory schedule or compliance evaluation. If a number of Configuration Manager clients haven't recently reported inventory or compliance status, run the tool to initiate the necessary schedule on each client.
 
@@ -26,10 +26,10 @@ For example, use the tool to trigger an inventory schedule or compliance evaluat
 
 ## Usage
 
-Run **SendSchedule.exe** as an administrator. 
+Run **SendSchedule.exe** as an administrator.
 
 `SendSchedule /L [Computer Name]`
-`SendSchedule "<Message GUID | DCM UID>" [Computer Name]` 
+`SendSchedule "<Message GUID | DCM UID>" [Computer Name]`
 
 After you trigger a message (GUID), see **SMSClientMethodProvider.log**. For more information about available message GUIDs, see [Message IDs](#bkmk_sendschedule-guids).
 
@@ -40,27 +40,27 @@ After you trigger the evaluation of a configuration baseline (DCM UID), see **DC
 ## Command-line options
 
 
-### Option: `/L` 
-List all Message GUID or DCM UID available for sending. Display the meaningful name of messages in the data table for each one. If the computer name is absent, it uses the local computer. If you specify a message without a machine name, then it sends the message to the local machine. 
+### Option: `/L`
+List all Message GUID or DCM UID available for sending. Display the meaningful name of messages in the data table for each one. If the computer name is absent, it uses the local computer. If you specify a message without a machine name, then it sends the message to the local machine.
 
 
 
 ## Examples
 
-#### List the available messages on the local machine 
-`SendSchedule /L` 
+#### List the available messages on the local machine
+`SendSchedule /L`
 
-#### List the available messages on the client MyPC: 
+#### List the available messages on the client MyPC:
 `SendSchedule /L MyPC`
 
 #### Trigger hardware inventory on the local machine
 `SendSchedule {00000000-0000-0000-0000-000000000001}`
 
-#### Trigger hardware inventory on MyPC: 
-`SendSchedule {00000000-0000-0000-0000-000000000001} MyPC` 
+#### Trigger hardware inventory on MyPC:
+`SendSchedule {00000000-0000-0000-0000-000000000001} MyPC`
 
-#### Trigger the evaluation of a specific configuration baseline on MyPC: 
-`SendSchedule ScopeId_611E8382-C064-4B62-B0DE-EFFB52AE8994/Baseline_36722778-69dd-4423-9632-b61148b2b67e MyPC` 
+#### Trigger the evaluation of a specific configuration baseline on MyPC:
+`SendSchedule ScopeId_611E8382-C064-4B62-B0DE-EFFB52AE8994/Baseline_36722778-69dd-4423-9632-b61148b2b67e MyPC`
 
 
 

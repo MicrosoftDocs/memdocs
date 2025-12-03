@@ -12,68 +12,68 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CI_LocalizedEulas Server WMI Class
-The `SMS_CI_LocalizedEulas` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the localized Microsoft Software License Terms information for a configuration item.  
+The `SMS_CI_LocalizedEulas` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the localized Microsoft Software License Terms information for a configuration item.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CI_LocalizedEulas  
-{  
-      String EULAContentUniqueID;  
-      UInt32 LocaleID;  
-};  
-```  
+```
+Class SMS_CI_LocalizedEulas
+{
+      String EULAContentUniqueID;
+      UInt32 LocaleID;
+};
+```
 
-## Methods  
- The `SMS_CI_LocalizedEulas` class does not define any methods.  
+## Methods
+ The `SMS_CI_LocalizedEulas` class does not define any methods.
 
-## Properties  
- `EULAContentUniqueID`  
- Data type: `String`  
+## Properties
+ `EULAContentUniqueID`
+ Data type: `String`
 
- Access type: `Read/Write`  
+ Access type: `Read/Write`
 
- Qualifiers: `None`  
+ Qualifiers: `None`
 
- Unique ID of the Microsoft Software License Terms content.  
+ Unique ID of the Microsoft Software License Terms content.
 
- `LocaleID`  
- Data type: `UInt32`  
+ `LocaleID`
+ Data type: `UInt32`
 
- Access type: `Read/Write`  
+ Access type: `Read/Write`
 
- Qualifiers: `None`  
+ Qualifiers: `None`
 
- The ID of the locale associated with the localized information.  
+ The ID of the locale associated with the localized information.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Embedded  
+- Embedded
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  This class is embedded by the following classes, through the `LocalizedEulas` property:  
+  This class is embedded by the following classes, through the `LocalizedEulas` property:
 
-- [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md)  
+- [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md)
 
-- [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md)  
+- [SMS_Driver Server WMI Class](../../../develop/reference/osd/sms_driver-server-wmi-class.md)
 
-- [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)  
+- [SMS_SoftwareUpdate Server WMI Class](../../../develop/reference/sum/sms_softwareupdate-server-wmi-class.md)
 
-  Your application uses this class only if the `EULAExists` property of the configuration item is set to `true`.  
+  Your application uses this class only if the `EULAExists` property of the configuration item is set to `true`.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)   
+## See Also
+ [Configuration Manager Compliance Settings (DCM) Server WMI Classes](../../../develop/reference/compliance/compliance-settings-dcm-server-wmi-classes.md)
  [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md)

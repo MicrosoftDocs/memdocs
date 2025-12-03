@@ -12,142 +12,142 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_PackageToContent Server WMI Class
-The `SMS_PackageToContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates a Configuration Manager package to its content.  
+The `SMS_PackageToContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that relates a Configuration Manager package to its content.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_PackageToContent : SMS_BaseClass  
-{  
-      SInt32 ContentID;  
-      String ContentSubFolder;  
-      String ContentUniqueID;  
-      SInt32 ContentVersionInPkg;  
-      SInt32 MinPackageVersion;  
-      String PackageID;  
-      UInt32 PackageType;  
-      UInt32 SecuredTypeID;  
-      String SecureObjectID;  
-};  
-```  
+```
+Class SMS_PackageToContent : SMS_BaseClass
+{
+      SInt32 ContentID;
+      String ContentSubFolder;
+      String ContentUniqueID;
+      SInt32 ContentVersionInPkg;
+      SInt32 MinPackageVersion;
+      String PackageID;
+      UInt32 PackageType;
+      UInt32 SecuredTypeID;
+      String SecureObjectID;
+};
+```
 
-## Methods  
- The following table lists the methods in `SMS_PackageToContent`.  
+## Methods
+ The following table lists the methods in `SMS_PackageToContent`.
 
-|Method|Description|  
-|------------|-----------------|  
-|[IsContentValid Method in Class SMS_PackageToContent](../../../../../develop/reference/core/servers/configure/iscontentvalid-method-in-class-sms_packagetocontent.md)|Determines if the package content is valid.|  
+|Method|Description|
+|------------|-----------------|
+|[IsContentValid Method in Class SMS_PackageToContent](../../../../../develop/reference/core/servers/configure/iscontentvalid-method-in-class-sms_packagetocontent.md)|Determines if the package content is valid.|
 
-## Properties  
- `ContentID`  
- Data type: `SInt32`  
+## Properties
+ `ContentID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, Not_null]  
+ Qualifiers: [key, Not_null]
 
- The value of the `ContentID` property of the package.  
+ The value of the `ContentID` property of the package.
 
- `ContentSubFolder`  
- Data type: `String`  
+ `ContentSubFolder`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_null]  
+ Qualifiers: [Not_null]
 
- The name of the subfolder in the package source folder that contains the files for the content.  
+ The name of the subfolder in the package source folder that contains the files for the content.
 
- `ContentUniqueID`  
- Data type: `String`  
+ `ContentUniqueID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read, Not_null]  
+ Qualifiers: [read, Not_null]
 
- The unique ID for the content.  
+ The unique ID for the content.
 
- `ContentVersionInPkg`  
- Data type: `SInt32`  
+ `ContentVersionInPkg`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_null]  
+ Qualifiers: [Not_null]
 
- The version of the content in the package.  
+ The version of the content in the package.
 
- `MinPackageVersion`  
- Data type: `SInt32`  
+ `MinPackageVersion`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_null]  
+ Qualifiers: [Not_null]
 
- The minimum package version in which the content appears.  
+ The minimum package version in which the content appears.
 
- `PackageID`  
- Data type: `String`  
+ `PackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, Not_null]  
+ Qualifiers: [key, Not_null]
 
- Configuration Manager-specific ID of the package.  
+ Configuration Manager-specific ID of the package.
 
- `PackageType`  
- Data type: `UInt32`  
+ `PackageType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- The type of the package. Possible values are:  
+ The type of the package. Possible values are:
 
-|Value|Description|  
-|-----------|-----------------|  
-|0|PKG_TYPE_REGULAR|  
-|3|PKG_TYPE_DRIVER|  
-|4|PKG_TYPE_TASK_SEQUENCE|  
-|5|PKG_TYPE_SWUPDATES|  
-|257|PKG_TYPE_IMAGE|  
-|258|PKG_TYPE_BOOTIMAGE|  
-|259|PKG_TYPE_OSINSTALLIMAGE|  
+|Value|Description|
+|-----------|-----------------|
+|0|PKG_TYPE_REGULAR|
+|3|PKG_TYPE_DRIVER|
+|4|PKG_TYPE_TASK_SEQUENCE|
+|5|PKG_TYPE_SWUPDATES|
+|257|PKG_TYPE_IMAGE|
+|258|PKG_TYPE_BOOTIMAGE|
+|259|PKG_TYPE_OSINSTALLIMAGE|
 
- `SecuredTypeID`  
- Data type: `UInt32`  
+ `SecuredTypeID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Secured type of related package.  
+ Secured type of related package.
 
- `SecureObjectID`  
- Data type: `String`  
+ `SecureObjectID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- Secure object ID. For app, it is model name. For others, it is package ID.  
+ Secure object ID. For app, it is model name. For others, it is package ID.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Secured  
+- Secured
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  Your application can query this class to get the list of contents contained by a package or the list of packages that contain specified content.  
+  Your application can query this class to get the list of contents contained by a package or the list of packages that contain specified content.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -20,13 +20,13 @@ Applications can be installed on clients by creating deployments from the Config
 
 ## <a name="bkmk_general"></a> General troubleshooting tips
 
-Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Intune admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec). 
+Generally, if an application installs successfully on a device with the given command line in the system context, it will install successfully through Configuration Manager and from the Microsoft Intune admin center. You can simulate this by using [PSExec](/sysinternals/downloads/psexec).
 
 1. Open an administrative command prompt.
 1. Change directory to where you saved [PSExec](/sysinternals/downloads/psexec).
 1. Type in `psexec -accepteula -s -i cmd`.
 1. This opens a new command prompt window running interactively in the system context. Check that you're in the system context by running a `whoami` command.
-1. Run the install from the new windows with the installation command line. For example, `msiexec /i "My App.msi" /q` would be a quiet install of the "My App" msi file.  
+1. Run the install from the new windows with the installation command line. For example, `msiexec /i "My App.msi" /q` would be a quiet install of the "My App" msi file.
 
 You may also find that searching through multiple files for a specific string is useful. For instance, you might want to search all the client `.mof` files for a specific class, or you might want to search logs for a specific ID. Using a specific ID when searching can give you an understanding of how components are related to each other. Use the [select-string cmdlet](/powershell/module/Microsoft.PowerShell.Utility/Select-String) in those instances.
 
@@ -66,13 +66,13 @@ select-string -Path "c:\windows\ccm\logs\*.log" -Pattern 'CacheInfoEx.CacheId="c
 
 ### <a name="bkmk_general-configmgr"></a> General Configuration Manager troubleshooting tips
 
-When an application fails to install and the error source is **Configuration Manager**, typically, following the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) and using the [general troubleshooting tips](#bkmk_general) helps you resolve the error. You may also want to use [Support Center for Configuration Manager](../core/support/support-center.md) to help troubleshoot and review information about your clients. 
+When an application fails to install and the error source is **Configuration Manager**, typically, following the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) and using the [general troubleshooting tips](#bkmk_general) helps you resolve the error. You may also want to use [Support Center for Configuration Manager](../core/support/support-center.md) to help troubleshoot and review information about your clients.
 
 <!-- template
 
 ### code
 
-**Message**: 
+**Message**:
 
 **Additional information for error resolution**:
 
@@ -102,7 +102,7 @@ Verify that the Configuration Manager client is running on the target device. Ve
 
 **Message**: Item not found
 
-**Additional information for error resolution**:  
+**Additional information for error resolution**:
 Verify that the following exist and are accessible to the client:
 - The [application deployment](../apps/understand/device-deployment-technical-reference.md) exists and the client sees the policy.
 - The [application content exists and is available](../apps/understand/deployment-download-technical-reference.md) to the client
@@ -148,19 +148,19 @@ For more information, see the [application troubleshooting guide](../apps/unders
 
 **Message**: The application was not detected after installation completed
 
-**Additional information for error resolution**: Review the **AppDiscovery.log** and the **CIAgent.log**. Once an installation is completed, the [application detection](../apps/understand/deployment-evaluation-technical-reference.md) is used again to [verify the installation](../apps/understand/deployment-install-technical-reference.md#installation-verification).  
+**Additional information for error resolution**: Review the **AppDiscovery.log** and the **CIAgent.log**. Once an installation is completed, the [application detection](../apps/understand/deployment-evaluation-technical-reference.md) is used again to [verify the installation](../apps/understand/deployment-install-technical-reference.md#installation-verification).
 
 ### 0x87D00325
 
 **Message**: Application was still detected after uninstall completed
 
-**Additional information for error resolution**: Verify the correct uninstall command was used in the **AppEnforce.log**. Review the **AppDiscovery.log** and the **CIAgent.log**. Once an uninstall is completed, the [application detection](../apps/understand/deployment-evaluation-technical-reference.md) is used again to [verify the uninstall](../apps/understand/deployment-install-technical-reference.md#installation-verification).  
+**Additional information for error resolution**: Verify the correct uninstall command was used in the **AppEnforce.log**. Review the **AppDiscovery.log** and the **CIAgent.log**. Once an uninstall is completed, the [application detection](../apps/understand/deployment-evaluation-technical-reference.md) is used again to [verify the uninstall](../apps/understand/deployment-install-technical-reference.md#installation-verification).
 
 ### 0x87D00327
 
 **Message**: Script is not signed
 
-**Additional information for error resolution**: Verify the [PowerShell execution policy client setting](../core/clients/deploy/about-client-settings.md#powershell-execution-policy) for the device. The default for this client setting is **AllSigned** so an unsigned script will cause a failure.  
+**Additional information for error resolution**: Verify the [PowerShell execution policy client setting](../core/clients/deploy/about-client-settings.md#powershell-execution-policy) for the device. The default for this client setting is **AllSigned** so an unsigned script will cause a failure.
 
 ### 0x87D00329
 
@@ -184,7 +184,7 @@ For more information, see the [application troubleshooting guide](../apps/unders
 
 **Message**: Failed to verify the executable file is valid or to construct the associated command line
 
-**Additional information for error resolution**: Verify that the executable file is installable on its own then verify it's installable with the given command line.  
+**Additional information for error resolution**: Verify that the executable file is installable on its own then verify it's installable with the given command line.
 
 ### 0x87D01107
 
@@ -324,10 +324,10 @@ Use the [Windows system error codes](/windows/win32/debug/system-error-codes--0-
 
 **Message**: The system cannot find the file specified
 
-**Additional information for error resolution**: 
-- If the missing file is a system file, run the [System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/help/929833/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system). You can also use `/scanfile=file` or `/verifyfile` with the [sfc command](/windows-server/administration/windows-commands/sfc) to scan the binary and check if there is any issue with that file. 
-- If the missing file is an application file, you can repair or uninstall and reinstall the application to replace the missing file. 
-- If you're unsure which file is missing and the logs aren't listing it, you may want to use [Process Monitor](/sysinternals/downloads/procmon) to help identify the problematic file. 
+**Additional information for error resolution**:
+- If the missing file is a system file, run the [System File Checker tool to repair missing or corrupted system files](https://support.microsoft.com/help/929833/use-the-system-file-checker-tool-to-repair-missing-or-corrupted-system). You can also use `/scanfile=file` or `/verifyfile` with the [sfc command](/windows-server/administration/windows-commands/sfc) to scan the binary and check if there is any issue with that file.
+- If the missing file is an application file, you can repair or uninstall and reinstall the application to replace the missing file.
+- If you're unsure which file is missing and the logs aren't listing it, you may want to use [Process Monitor](/sysinternals/downloads/procmon) to help identify the problematic file.
    - You can launch Process Monitor without capturing events and filters by using `ProcMon.exe /NoConnect /NoFilter /AcceptEULA`
 
 ### 692
@@ -367,7 +367,7 @@ Additional tips for file permissions in Windows operating systems:
 **Additional information for error resolution**: Use the installation logs and Configuration Manager application logs to determine why installation stopped. Merge the logs so you can easily review what happened before the 0x80004005 error. Use `eventvwr.msc` to review the Windows event logs for additional events that occurred around the time of the installation failure. Follow the [application troubleshooting guide](../apps/understand/app-deployment-technical-reference.md) to help resolve the error.
 [Process Monitor](/sysinternals/downloads/procmon) can also help identify the failure.
 
-<!--note--> 
+<!--note-->
 ### 0x8000FFFF
 
 **Message**: Catastrophic failure
@@ -378,13 +378,13 @@ Additional tips for file permissions in Windows operating systems:
 
 **Message**: Class not registered
 
-**Additional information for error resolution**: This is typically a configuration-related DCOM error. Review DCOM configuration settings using [dcomconfig](/windows/win32/com/enabling-com-security-using-dcomcnfg). If there's a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try the install again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application. 
+**Additional information for error resolution**: This is typically a configuration-related DCOM error. Review DCOM configuration settings using [dcomconfig](/windows/win32/com/enabling-com-security-using-dcomcnfg). If there's a problematic .dll file, you can use [regsvr32](/windows-server/administration/windows-commands/regsvr32) to register the dll file and try the install again. A large number of problematic files could be a sign of an underlying issue that needs to be resolved before you can install the application.
 
-### 0x80091007 
+### 0x80091007
 
 **Message**: The hash value is not correct
 
-**Additional information for error resolution**: The hash of a file isn't correct and the installation can't complete. Typically you will see this error in the **CAS.log**. Check to see if file contents for the application were recently updated. There may be an issue with the package, in some cases you may need to rebuild and redistribute it. This issue can also happen if there is a sharing violation on a file, such as a security application scanning the file. Configuration Manager expects exclusive access to the file during a hash check. You can identify the problematic process by running a [Process Monitor](/sysinternals/downloads/procmon) and adding a filter. The condition to be met is if the **Result** *contains* **Sharing Violation** then **Include** the event.  
+**Additional information for error resolution**: The hash of a file isn't correct and the installation can't complete. Typically you will see this error in the **CAS.log**. Check to see if file contents for the application were recently updated. There may be an issue with the package, in some cases you may need to rebuild and redistribute it. This issue can also happen if there is a sharing violation on a file, such as a security application scanning the file. Configuration Manager expects exclusive access to the file during a hash check. You can identify the problematic process by running a [Process Monitor](/sysinternals/downloads/procmon) and adding a filter. The condition to be met is if the **Result** *contains* **Sharing Violation** then **Include** the event.
 
 ### 0xC0000142
 
@@ -420,18 +420,18 @@ To connect  WMI Control to another computer:
 1. You may also wish to try to connect with the IP address too to verify that you can connect.
 
 Verify the namespace exists on the target and that you can query it properly. Run the Windows Management Instrument Tester from an elevated command prompt by typing in `wbemtest`. When the Windows Management Instrument Tester launches:
-1. Select **Connect...** 
+1. Select **Connect...**
 2. Type in the problematic namespace such as `root\cimv2` or  `root\ccm` and user credentials if needed. To connect to another machine, supply the name or the IP address such as `\\Machine1\root\ccm` and credentials if needed.
-1. Select **Enum Classes...** to verify you get classes listed for the problematic namespace.  
+1. Select **Enum Classes...** to verify you get classes listed for the problematic namespace.
 1. Set the superclass info to **Recursive** and select **OK** to verify classes list for the problematic namespace.
-1. Launch the object editor for one of the classes by double-clicking on it. 
-   - If you're using the `root\ccm` namespace, select a class that starts with "CCM_" such as CCM_ClientIdentificationInformation. 
+1. Launch the object editor for one of the classes by double-clicking on it.
+   - If you're using the `root\ccm` namespace, select a class that starts with "CCM_" such as CCM_ClientIdentificationInformation.
    - If you're using `root\cimv2`, choose one that starts with "Win32_" such as Win32_BIOS.
 1. Select **Instances** to verify the instances of the selected class load. For some classes, it's ok if there aren't any instances, just make sure that the **Query Result** window states **Done**. Long running queries to list of instances or queries that never finish may indicate a problem.
 
 
 Verify the repository:
-1. From an elevated command prompt, run `winmgmt /verifyrepository`. Verifying is typically useful for invalid class errors especially if you had to recently recompile a .mof file using [mofcomp](/windows/win32/wmisdk/mofcomp). 
+1. From an elevated command prompt, run `winmgmt /verifyrepository`. Verifying is typically useful for invalid class errors especially if you had to recently recompile a .mof file using [mofcomp](/windows/win32/wmisdk/mofcomp).
 1. If problems are found during verification, you can try to salvage using `winmgmt /salvagerepository`
 1. Typically, you won't use /resetrepository unless it's truly needed an no other alternative exists. Some namespaces won't automatically rebuild and you'll need to either reinstall the software associated with the missing namespace or mofcomp the application's .mof files to rebuild them.
 
@@ -490,7 +490,7 @@ The errors for the installation originated from the Windows Update Agent. In man
 
 ### code
 
-**Message**: 
+**Message**:
 
 **Additional information for error resolution**:
 

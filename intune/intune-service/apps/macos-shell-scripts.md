@@ -1,35 +1,15 @@
 ---
-# required metadata
-
-title: Use shell scripts on macOS devices in Microsoft Intune | Microsoft Docs
+title: Use Shell Scripts on macOS Devices in Microsoft Intune | Microsoft Docs
 description: Create, assign, monitor, and troubleshoot shell scripts for macOS devices in Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 08/08/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - macOS
 ---
 
-# Use shell scripts on macOS devices in Intune
+# Use Shell Scripts on macOS Devices in Intune
 
 Use shell scripts to extend device management capabilities in Intune, beyond what is supported by the macOS operating system.
 
@@ -42,7 +22,7 @@ Ensure that the following prerequisites are met when composing shell scripts and
 
 - Devices are running macOS 12.0 or later.
 - Devices are managed by Intune.
-- Devices are connected directly to the Internet. Connection through a proxy is not supported. 
+- Devices are connected directly to the Internet. Connection through a proxy is not supported.
 - Shell scripts begin with `#!` and must be in a valid location such as `#!/bin/sh` or `#!/usr/bin/env zsh`.
 - Command-line interpreters for the applicable shells are installed.
 

@@ -3,15 +3,15 @@ title: Configure clients for CMG
 titleSuffix: Configuration Manager
 description: Understand how to configure clients to use the cloud management gateway (CMG).
 ms.date: 02/16/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Configure clients for cloud management gateway
@@ -90,6 +90,6 @@ If the Configuration Manager client doesn't have a current CMG or internet-facin
 ## Next steps
 
 Your CMG is now set up and functional with clients communicating to the site. Next, understand how to monitor the CMG service and clients:
-  
+
 > [!div class="nextstepaction"]
 > [Monitor CMG](monitor-clients-cloud-management-gateway.md)

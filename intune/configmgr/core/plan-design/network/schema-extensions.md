@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # About schema extensions for Configuration Manager
@@ -90,7 +90,7 @@ For example, you plan to create content at a primary site and then deploy that c
 
 ## Active Directory attributes and classes
 
-When you extend the schema for Configuration Manager, the following classes and attributes are added to the schema and available to all Configuration Manager sites in that Active Directory forest.  
+When you extend the schema for Configuration Manager, the following classes and attributes are added to the schema and available to all Configuration Manager sites in that Active Directory forest.
 
 | Attributes | Classes |
 |---------|---------|

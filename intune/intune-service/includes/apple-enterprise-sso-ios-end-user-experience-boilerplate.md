@@ -1,13 +1,8 @@
 ---
-title: include file
-description: include file
 author: MandiOhlinger
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 04/16/2024
 ms.author: mandia
-ms.custom: include file
-ms.reviewer: miepping
 ---
 
 <!-- This include file is used in the Apple Enterprise SSO deployment guide docs. -->
@@ -18,7 +13,7 @@ ms.reviewer: miepping
 
 - If you're not deploying the Microsoft Authenticator app using an app policy, then users must install it manually. Users don't need to use the Authenticator app, it just needs to be installed on the device.
 
-- Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.  
+- Users sign in to any supported app or website to bootstrap the extension. Bootstrap is the process of signing in for the first time, which sets up the extension.
 
 - After users sign in successfully, the extension is automatically used to sign in to any other supported app or website.
 

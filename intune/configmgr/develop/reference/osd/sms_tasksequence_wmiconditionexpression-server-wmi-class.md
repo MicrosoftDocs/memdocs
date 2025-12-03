@@ -12,58 +12,58 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_WMIConditionExpression Server WMI Class
-The `SMS_TaskSequence_WMIConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to check for the existence of results of a WMI query.  
+The `SMS_TaskSequence_WMIConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to check for the existence of results of a WMI query.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_WMIConditionExpression : SMS_TaskSequence_ConditionExpression  
-{  
-      String Namespace;  
-      String Query;  
-};  
-```  
+```
+Class SMS_TaskSequence_WMIConditionExpression : SMS_TaskSequence_ConditionExpression
+{
+      String Namespace;
+      String Query;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_WMIConditionExpression` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_WMIConditionExpression` class does not define any methods.
 
-## Properties  
- `Namespace`  
- Data type: `String`  
+## Properties
+ `Namespace`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null]  
+ Qualifiers: [Not_Null]
 
- Namespace for the query.  
+ Namespace for the query.
 
- `Query`  
- Data type: `String`  
+ `Query`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null, AllowedLen("1-16384")]  
+ Qualifiers: [Not_Null, AllowedLen("1-16384")]
 
- The WQL query for the condition expression. The length is between 1 and 16,384 characters.  
+ The WQL query for the condition expression. The length is between 1 and 16,384 characters.
 
-## Remarks  
- The query result set is the results that satisfy the condition. For example, if you need to identify if a computer has at least one NTFS partition, you would use the following query:  
+## Remarks
+ The query result set is the results that satisfy the condition. For example, if you need to identify if a computer has at least one NTFS partition, you would use the following query:
 
-```  
-Select * from win32_logicaldisk where FileSystem='NTFS'  
-```  
+```
+Select * from win32_logicaldisk where FileSystem='NTFS'
+```
 
- There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+ There are no class qualifiers for this class. For more information about both the class qualifiers and the property qualifiers that are included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

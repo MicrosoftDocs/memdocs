@@ -3,15 +3,15 @@ title: Prerequisites to deploy user-available apps
 titleSuffix: Configuration Manager
 description: When you deploy apps as Available to user collections, there are other requirements for some types of clients.
 ms.date: 04/08/2022
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Prerequisites to deploy user-available apps

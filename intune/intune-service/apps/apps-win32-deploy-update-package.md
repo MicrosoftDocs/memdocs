@@ -1,31 +1,20 @@
 ---
-title: Deploy Windows update packages in Intune
-titleSuffix: Microsoft Intune
+title: Deploy Windows Update Packages in Intune
 description: Learn how to deploy a Windows update package (.msu file) in Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 11/21/2024
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---
 
-# Deploy Windows update packages in Intune
+# Deploy Windows Update Packages in Intune
 
-If you want to deploy a specific Windows update package (*.msu* file) to Windows 10/11 devices managed by Intune, you can use the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities to deploy an *.msu* file as a Win32 app.
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+If you want to deploy a specific Windows update package (*.msu* file) to Windows devices managed by Intune, you can use the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities to deploy an *.msu* file as a Win32 app.
 
 The following steps help you deploy a Windows update package to Intune.
 
@@ -44,7 +33,7 @@ The following steps help you deploy a Windows update package to Intune.
 6. On the **App information** page, add the details for your app.
 7. On the **Program** page, specify the following installation and removal commands for the app:
 
-    **Install command:**  
+    **Install command:**
 
     `wusa.exe <full path of the .msu file> /quiet /norestart -Wait`
 
@@ -52,7 +41,7 @@ The following steps help you deploy a Windows update package to Intune.
 
     `wusa.exe .\windows10.0-kb5031356-x64_65d5bbc39ccb461472d9854f1a370fe018b79fcc.msu /quiet /norestart -Wait`
 
-    **Uninstall command:**  
+    **Uninstall command:**
 
     `dism /online /remove-package /PackageName:<package name> /Quiet /NoRestart`
 

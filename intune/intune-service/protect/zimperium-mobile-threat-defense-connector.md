@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Zimperium MTD connector with Microsoft Intune
-titleSuffix: Intune on Azure
 description: How to set up Zimperium Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/30/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 975d8d84-792a-41ad-925a-4a7f1ae4dcaf
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt-pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -48,7 +28,7 @@ You can configure Conditional Access policies based on Zimperium risk assessment
 - Microsoft Entra ID P1
 - Microsoft Intune Plan 1 subscription
 - Zimperium Mobile Threat Defense subscription
-  - For more information, see [Zimperium website](https://www.zimperium.com/zips-mobile-ips)
+  - For more information, see [Zimperium website](https://zimperium.com/)
 
 ## How do Intune and Zimperium help protect your company resources?
 
@@ -63,7 +43,7 @@ The Zimperium app for Android and iOS/iPadOS captures file system, network stack
   - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
   - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
   - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
-  
+
 ## Sample scenarios
 
 See below a few scenarios when integrating Zimperium with Intune:

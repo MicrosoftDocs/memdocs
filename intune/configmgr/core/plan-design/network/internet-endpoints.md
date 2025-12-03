@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Internet access requirements
@@ -241,7 +241,7 @@ For more information, see [Enable tenant attach](../../../tenant-attach/device-s
 
 ## Endpoint analytics
 
-For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#proxy-server-authentication).
 
 [!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 

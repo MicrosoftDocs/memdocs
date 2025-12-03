@@ -3,13 +3,13 @@ title: Microsoft Entra authentication workflow
 titleSuffix: Configuration Manager
 description: Details of the Configuration Manager client installation process on a Windows device with Microsoft Entra authentication.
 ms.date: 02/16/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.localizationpriority: medium
 ms.collection: tier3
 ---
@@ -115,7 +115,7 @@ The following entries are logged in **CCM_STS.log** of the site system that host
 ``` Log
 ProcessRequest - Start
 Incoming request URL: https://MP.MYCORP.COM/CCM_STS
-Validated AAD token. TokenType: UDA TenantId: 2ca9a796-a1a6-43ec-88f1-5935b32155c5 UserId: e8838041-db7a-42d5-b9ae-78813910e4cc DeviceId: 8d2b4ff9-0172-4998-9851-b5324303385f OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:  
+Validated AAD token. TokenType: UDA TenantId: 2ca9a796-a1a6-43ec-88f1-5935b32155c5 UserId: e8838041-db7a-42d5-b9ae-78813910e4cc DeviceId: 8d2b4ff9-0172-4998-9851-b5324303385f OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:
 TokenType is UDA
 Created SCCM token, token type: UDA, hierarchyId: 8ed3174b-e814-41b5-b51c-fb368f0d4003, userId: 23bbbba2-702e-4db4-8fd9-3b4fe3a5175d, deviceId: GUID:13E80CEF-5698-4C63-9ED6-E58FBFF78C38
 Issued token
@@ -188,12 +188,12 @@ The registration component on the management point handles the client registrati
 
 The following entries are logged in the **MP_RegistrationManager.log** of the site system that hosts the management point that handles the client request:
 
-``` Log  
+``` Log
 Registering device using AAD auth: DeviceId='8d2b4ff9-0172-4998-9851-b5324303385f ', TenantId='c8c82542-203c-4df9-9d86-cdd4dae67e0a'
 Processing Registration request from Client 'GUID:C66EE0FD-08E7-4B38-B282-7E6954B71139'
 ```
 
-#### 3.2 Configuration Manager client is registered  
+#### 3.2 Configuration Manager client is registered
 
 If registration succeeds, the client gets a confirmation message of registration with **Approval 3** for Microsoft Entra ID-based registration. The following entries are logged in **ClientIDManagerStartup.log** of the client:
 
@@ -235,7 +235,7 @@ The following entries are logged in **CCM_STS.log** of the site system that host
 ``` Log
 ProcessRequest - Start
 Incoming request URL: https://MP.MYCORP.COM/CCM_STS
-Validated AAD token. TokenType: UDA TenantId: 2ca9a796-a1a6-43ec-88f1-5935b32155c5 UserId: e8838041-db7a-42d5-b9ae-78813910e4cc DeviceId: 8d2b4ff9-0172-4998-9851-b5324303385f OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:  
+Validated AAD token. TokenType: UDA TenantId: 2ca9a796-a1a6-43ec-88f1-5935b32155c5 UserId: e8838041-db7a-42d5-b9ae-78813910e4cc DeviceId: 8d2b4ff9-0172-4998-9851-b5324303385f OnPrem_UserSid: S-1-5-21-1527250992-855612568-2252598708-1604 OnPrem_DeviceSid:
 TokenType is UDA
 Created SCCM token, token type: UDA, hierarchyId: 8ed3174b-e814-41b5-b51c-fb368f0d4003, userId: 23bbbba2-702e-4db4-8fd9-3b4fe3a5175d, deviceId: GUID:13E80CEF-5698-4C63-9ED6-E58FBFF78C38
 Issued token

@@ -12,92 +12,92 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MigrationExpandingScope Server WMI Class
-The `SMS_MigrationExpandingScope` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the collections that have the problem of expanding scope when migrated to System Center 2012 Configuration Manager.  
+The `SMS_MigrationExpandingScope` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the collections that have the problem of expanding scope when migrated to System Center 2012 Configuration Manager.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MigrationExpandingScope : SMS_BaseClass  
-{  
-    UInt32 CollectionEntityID;  
-    String CollectionEntityName;  
-    String CollectionWMIObjectPath;  
-    UInt32 TargetingEntityID;  
-    String TargetingEntityName;  
-    String TargetingWMIObjectPath;  
-};  
-```  
+```
+Class SMS_MigrationExpandingScope : SMS_BaseClass
+{
+    UInt32 CollectionEntityID;
+    String CollectionEntityName;
+    String CollectionWMIObjectPath;
+    UInt32 TargetingEntityID;
+    String TargetingEntityName;
+    String TargetingWMIObjectPath;
+};
+```
 
-## Methods  
- The `SMS_MigrationExpandingScope` class does not define any methods.  
+## Methods
+ The `SMS_MigrationExpandingScope` class does not define any methods.
 
-## Properties  
- `CollectionEntityID`  
- Data type: `UInt32`  
+## Properties
+ `CollectionEntityID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique identifier for the collection.  
+ Unique identifier for the collection.
 
- `CollectionEntityName`  
- Data type: `String`  
+ `CollectionEntityName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The collection entity display name.  
+ The collection entity display name.
 
- `CollectionWMIObjectPath`  
- Data type: `String`  
+ `CollectionWMIObjectPath`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The collection entity WMI path.  
+ The collection entity WMI path.
 
- `TargetingEntityID`  
- Data type: `UInt32`  
+ `TargetingEntityID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique identifier for the targeting entity.  
+ Unique identifier for the targeting entity.
 
- `TargetingEntityName`  
- Data type: `String`  
+ `TargetingEntityName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The targeting entity display name.  
+ The targeting entity display name.
 
- `TargetingWMIObjectPath`  
- Data type: `String`  
+ `TargetingWMIObjectPath`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The targeting entity WMI path.  
+ The targeting entity WMI path.
 
-## Remarks  
- When you create a migration job, consider whether to specify a new limit to the collection to restrict the scope for each of such collections.  
+## Remarks
+ When you create a migration job, consider whether to specify a new limit to the collection to restrict the scope for each of such collections.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).

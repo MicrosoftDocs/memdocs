@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Collection Evaluation Viewer
@@ -23,31 +23,31 @@ Collection Evaluation Viewer is one of the [Configuration Manager tools](tools.m
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, this standalone tool isn't supported.<!-- 8509484 --> The tool is no longer included with the Configuration Manager installation source. Starting in version 2010, its functionality is built-in to the console. For more information, see, [How to view collection evaluation](../clients/manage/collections/collection-evaluation-view.md).
 
-The tool displays the following information:  
+The tool displays the following information:
 
-- Both historic and live information for full and incremental collection evaluations  
+- Both historic and live information for full and incremental collection evaluations
 
-- The evaluation queue status  
+- The evaluation queue status
 
-- The time for collection evaluations to complete  
+- The time for collection evaluations to complete
 
-- Which collections are currently being evaluated  
+- Which collections are currently being evaluated
 
-- The estimated time that a collection evaluation will start and complete  
+- The estimated time that a collection evaluation will start and complete
 
 
 
 ## About collection evaluation
 
-The collection evaluation process runs by evaluating the membership rules of a collection to update its members. The site places a collection that it's evaluating in one of four different queues:  
+The collection evaluation process runs by evaluating the membership rules of a collection to update its members. The site places a collection that it's evaluating in one of four different queues:
 
-- **Manual Queue**: For collections that an administrator has manually selected for evaluation from the console  
+- **Manual Queue**: For collections that an administrator has manually selected for evaluation from the console
 
-- **New Queue**: For newly created collections  
+- **New Queue**: For newly created collections
 
-- **Full Queue**: For collections due for full evaluation  
+- **Full Queue**: For collections due for full evaluation
 
-- **Incremental Queue**: For collections with incremental evaluation  
+- **Incremental Queue**: For collections with incremental evaluation
 
 There are four threads that run to evaluate the collections in the above queues. Each queue includes a series of arrays, and each array includes the collections to be evaluated. The thread that's running for the queue selects a collection from the array and runs the evaluation. The queue length indicates the number of arrays in the queue.
 
@@ -55,9 +55,9 @@ There are four threads that run to evaluate the collections in the above queues.
 
 ## Requirements
 
-- Run the tool on the site server  
+- Run the tool on the site server
 
-- Run the tool by an administrative user with at least the **Read-Only Analyst** role  
+- Run the tool by an administrative user with at least the **Read-Only Analyst** role
 
 - The user also requires **Read** permission to the site database in SQL
 
@@ -65,23 +65,23 @@ There are four threads that run to evaluate the collections in the above queues.
 
 ## Usage
 
-Run **CEViewer.exe**. The main menu of the tool contains the following tabs: 
+Run **CEViewer.exe**. The main menu of the tool contains the following tabs:
 
-- [Connect](#bkmk_connect): Establish the initial connection to the primary site server and SQL Server  
+- [Connect](#bkmk_connect): Establish the initial connection to the primary site server and SQL Server
 
-- [Full Evaluation](#bkmk_full-eval): Lists the detailed information about all past full evaluations   
+- [Full Evaluation](#bkmk_full-eval): Lists the detailed information about all past full evaluations
 
-- [Incremental evaluation](#bkmk_incremental-eval): Lists the detailed information about all past incremental evaluations  
+- [Incremental evaluation](#bkmk_incremental-eval): Lists the detailed information about all past incremental evaluations
 
-- [All Queues](#bkmk_all-q): Summarizes the current collection evaluations for all four queues  
+- [All Queues](#bkmk_all-q): Summarizes the current collection evaluations for all four queues
 
-- [Manual Queue](#bkmk_manual-q): Lists the detailed information about the current collection evaluation in the manual queue  
+- [Manual Queue](#bkmk_manual-q): Lists the detailed information about the current collection evaluation in the manual queue
 
-- [New Queue](#bkmk_new-q): Lists the detailed information about the current collection evaluation in the new queue  
+- [New Queue](#bkmk_new-q): Lists the detailed information about the current collection evaluation in the new queue
 
-- [Full Queue](#bkmk_full-q): Lists the detailed information about the current collection evaluation in the full queue  
+- [Full Queue](#bkmk_full-q): Lists the detailed information about the current collection evaluation in the full queue
 
-- [Incremental Queue](#bkmk_incremental-q): Lists the detailed information about the current collection evaluation in the incremental queue  
+- [Incremental Queue](#bkmk_incremental-q): Lists the detailed information about the current collection evaluation in the incremental queue
 
 
 ### <a name="bkmk_connect"></a> Connect tab
@@ -95,111 +95,111 @@ Once the tool successfully establishes a connection, see a notification at the b
 
 ### <a name="bkmk_full-eval"></a> Full Evaluation tab
 
-Shows detailed information about past full collection evaluations. There are eight columns:  
+Shows detailed information about past full collection evaluations. There are eight columns:
 
-- **Collection Name**: Name of the collection  
+- **Collection Name**: Name of the collection
 
-- **Site ID**: Site ID of the collection   
+- **Site ID**: Site ID of the collection
 
-- **Run Time**: How long the last collection evaluation ran, in seconds  
+- **Run Time**: How long the last collection evaluation ran, in seconds
 
-- **Last Evaluation Completion Time**: When the last collection evaluation completed  
+- **Last Evaluation Completion Time**: When the last collection evaluation completed
 
-- **Next Evaluation Time**: When the next full evaluation starts  
+- **Next Evaluation Time**: When the next full evaluation starts
 
-- **Member Changes**: The member changes in the last collection evaluation. These changes are either plus (members added) or minus (members removed).  
+- **Member Changes**: The member changes in the last collection evaluation. These changes are either plus (members added) or minus (members removed).
 
-- **Last Member Change Time**: The most recent time that there was a membership change in the collection evaluation  
+- **Last Member Change Time**: The most recent time that there was a membership change in the collection evaluation
 
-- **Percent**: The percentage of evaluation time for this collection over the total (all collections) evaluation time  
+- **Percent**: The percentage of evaluation time for this collection over the total (all collections) evaluation time
 
 
 ### <a name="bkmk_incremental-eval"></a> Incremental evaluation tab
 
-Shows detailed information about past incremental collection evaluations. There are seven columns:  
+Shows detailed information about past incremental collection evaluations. There are seven columns:
 
-- **Collection Name**: Name of the collection  
+- **Collection Name**: Name of the collection
 
-- **Site ID**: Site ID of the collection   
+- **Site ID**: Site ID of the collection
 
-- **Run Time**: How long the last collection evaluation ran, in seconds  
+- **Run Time**: How long the last collection evaluation ran, in seconds
 
-- **Last Evaluation Completion Time**: When the last collection evaluation completed  
+- **Last Evaluation Completion Time**: When the last collection evaluation completed
 
-- **Member Changes**: The member changes in the last collection evaluation. These changes are either plus (members added) or minus (members removed).  
+- **Member Changes**: The member changes in the last collection evaluation. These changes are either plus (members added) or minus (members removed).
 
-- **Last Member Change Time**: The most recent time that there was a membership change in the collection evaluation  
+- **Last Member Change Time**: The most recent time that there was a membership change in the collection evaluation
 
-- **Percent**: The percentage of evaluation time for this collection over the total (all collections) evaluation time  
+- **Percent**: The percentage of evaluation time for this collection over the total (all collections) evaluation time
 
 
 ### <a name="bkmk_all-q"></a> All Queues tab
 
-Summarizes the live collection evaluations for all four queues. There are six sections:  
+Summarizes the live collection evaluations for all four queues. There are six sections:
 
-- **Summary**: Lists the total collection number and the queue length for all collections in all four queues  
+- **Summary**: Lists the total collection number and the queue length for all collections in all four queues
 
-- **Running Evaluation**: Lists which collection is currently being evaluated in each queue, and how long it has been running  
+- **Running Evaluation**: Lists which collection is currently being evaluated in each queue, and how long it has been running
 
-- **Manual Update**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the manual queue  
+- **Manual Update**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the manual queue
 
-- **New Collection**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the new collection queue  
+- **New Collection**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the new collection queue
 
-- **Full Evaluation**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the full evaluation queue  
+- **Full Evaluation**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the full evaluation queue
 
-- **Incremental Evaluation**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the incremental evaluation queue  
+- **Incremental Evaluation**: Shows a brief summary of the collections being evaluated, the estimated completion time, and the order of the evaluation in the incremental evaluation queue
 
 
 ### <a name="bkmk_manual-q"></a> Manual Queue tab
 
-Shows information about the manual collection evaluation currently being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:  
+Shows information about the manual collection evaluation currently being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:
 
-- **Collection Name**: Name of the collection  
+- **Collection Name**: Name of the collection
 
-- **Site ID**: Site ID of the collection   
+- **Site ID**: Site ID of the collection
 
-- **Estimated Completion Time**: When the evaluation is estimated to complete  
+- **Estimated Completion Time**: When the evaluation is estimated to complete
 
-- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format  
+- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format
 
 
 ### <a name="bkmk_new-q"></a> New Queue tab
 
-Shows the live information about the new collection evaluation being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:  
+Shows the live information about the new collection evaluation being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:
 
-- **Collection Name**: Name of the collection  
+- **Collection Name**: Name of the collection
 
-- **Site ID**: Site ID of the collection   
+- **Site ID**: Site ID of the collection
 
-- **Estimated Completion Time**: When the evaluation is estimated to complete  
+- **Estimated Completion Time**: When the evaluation is estimated to complete
 
-- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format  
+- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format
 
 
 ### <a name="bkmk_full-q"></a> Full Queue tab
 
-Shows information about the full collection evaluation currently being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:  
+Shows information about the full collection evaluation currently being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:
 
-- **Collection Name**: Name of the collection  
+- **Collection Name**: Name of the collection
 
-- **Site ID**: Site ID of the collection   
+- **Site ID**: Site ID of the collection
 
-- **Estimated Completion Time**: When the evaluation is estimated to complete  
+- **Estimated Completion Time**: When the evaluation is estimated to complete
 
-- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format  
+- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format
 
 
 ### <a name="bkmk_incremental-q"></a> Incremental Queue tab
 
-Shows information about the incremental collection evaluation currently being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:  
+Shows information about the incremental collection evaluation currently being evaluated. The order in the list is the order in which the collection will be evaluated. There are four columns:
 
-- **Collection Name**: Name of the collection  
+- **Collection Name**: Name of the collection
 
-- **Site ID**: Site ID of the collection   
+- **Site ID**: Site ID of the collection
 
-- **Estimated Completion Time**: When the evaluation is estimated to complete  
+- **Estimated Completion Time**: When the evaluation is estimated to complete
 
-- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format  
+- **Estimated Run Time**: How long the evaluation is estimated to run, in day:hour:minute:second format
 
 
 

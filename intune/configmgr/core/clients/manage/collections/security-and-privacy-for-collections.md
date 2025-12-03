@@ -3,15 +3,15 @@ title: Collections security and privacy
 titleSuffix: Configuration Manager
 description: Recommendations for security and privacy with collections in Configuration Manager.
 ms.date: 05/05/2021
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Security and privacy for collections in Configuration Manager

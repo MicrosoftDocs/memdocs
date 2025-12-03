@@ -12,133 +12,133 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MDMBulkEnrollmentPackages Server WMI Class
-The  `SMS_MDMBulkEnrollmentPackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management  (MDM) bulk enrollment packages.  
+The  `SMS_MDMBulkEnrollmentPackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management  (MDM) bulk enrollment packages.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MDMBulkEnrollmentPackages : SMS_BaseClass  
-{  
-    String CertificateId;  
-    DateTime CreationTime;  
-    DateTime ExpiryTime;  
-    UInt32 Package_ID;  
-    String PackageName;  
-    UInt32 Profile_ID;  
-    String  Profile_UniqueID;  
-    String ProfileName;  
-    UInt32 State;  
-};  
+```
+Class SMS_MDMBulkEnrollmentPackages : SMS_BaseClass
+{
+    String CertificateId;
+    DateTime CreationTime;
+    DateTime ExpiryTime;
+    UInt32 Package_ID;
+    String PackageName;
+    UInt32 Profile_ID;
+    String  Profile_UniqueID;
+    String ProfileName;
+    UInt32 State;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_MDMBulkEnrollmentPackages` class.  
+## Methods
+ The following table lists the methods in the `SMS_MDMBulkEnrollmentPackages` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[ImportForProfile Method in Class SMS_MDMBulkEnrollmentPackages](../../../develop/reference/mdm/importforprofile-method-in-class-sms_mdmbulkenrollmentpackages.md)|Imports an MDM bulk enrollment package for a profile.|  
+|Method|Description|
+|------------|-----------------|
+|[ImportForProfile Method in Class SMS_MDMBulkEnrollmentPackages](../../../develop/reference/mdm/importforprofile-method-in-class-sms_mdmbulkenrollmentpackages.md)|Imports an MDM bulk enrollment package for a profile.|
 
-## Properties  
- `CertificateId`  
- Data type: `String`  
+## Properties
+ `CertificateId`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Unique certificate ID, as a GUID.  
+ Unique certificate ID, as a GUID.
 
- `CreationTime`  
- Data type: `DateTime`  
+ `CreationTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The time the package was created.  
+ The time the package was created.
 
- `ExpiryTime`  
- Data type: `DateTime`  
+ `ExpiryTime`
+ Data type: `DateTime`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- The time the package expires.  
+ The time the package expires.
 
- `Package_ID`  
- Data type: `UInt32`  
+ `Package_ID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Package ID.  
+ Package ID.
 
- `PackageName`  
- Data type: `String`  
+ `PackageName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Package name.  
+ Package name.
 
- `Profile_ID`  
- Data type: `uint32`  
+ `Profile_ID`
+ Data type: `uint32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Profile ID.  
+ Profile ID.
 
- `Profile_UniqueID`  
- Data type: `String`  
+ `Profile_UniqueID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [unique, not_null]  
+ Qualifiers: [unique, not_null]
 
- Unique ID of the Profile.  
+ Unique ID of the Profile.
 
- `ProfileName`  
- Data type: `String`  
+ `ProfileName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Profile name.  
+ Profile name.
 
- `State`  
- Data type: `uint32`  
+ `State`
+ Data type: `uint32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- State of the package.  
+ State of the package.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

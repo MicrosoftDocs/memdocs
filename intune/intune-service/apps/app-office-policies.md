@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Policies for Microsoft 365 apps
-titleSuffix: Microsoft Intune
+title: Policies for Microsoft 365 Apps
 description: Understand the policies available for Microsoft 365 apps.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 05/16/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Policies for Microsoft 365 apps
+# Policies for Microsoft 365 Apps
 
 Intune provides policies specifically for Microsoft 365 (Office) apps. You can select specific options to create mobile app management policies for Office mobile apps that connect to Microsoft 365 services. There are many policies for Microsoft 365 apps that you can add to Microsoft Intune and apply to groups of end users.
 

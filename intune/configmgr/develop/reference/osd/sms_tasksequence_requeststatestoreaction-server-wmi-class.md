@@ -12,154 +12,154 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_RequestStateStoreAction Server WMI Class
-The `SMS_TaskSequence_RequestStateStoreAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that requests access to a state migration point when capturing a state from a computer or restoring a state to a computer.  
+The `SMS_TaskSequence_RequestStateStoreAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that requests access to a state migration point when capturing a state from a computer or restoring a state to a computer.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_RequestStateStoreAction : SMS_TaskSequence_Action  
-{  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      Boolean Enabled;  
-      Boolean FallbackToNAA;  
-      String Name;  
-      String RequestType;  
-      UInt32 SMPRetryCount;  
-      UInt32 SMPRetryTime;  
-      String SupportedEnvironment;  
-      UInt32 Timeout;  
-};  
-```  
+```
+Class SMS_TaskSequence_RequestStateStoreAction : SMS_TaskSequence_Action
+{
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      Boolean Enabled;
+      Boolean FallbackToNAA;
+      String Name;
+      String RequestType;
+      UInt32 SMPRetryCount;
+      UInt32 SMPRetryTime;
+      String SupportedEnvironment;
+      UInt32 Timeout;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_RequestStateStoreAction` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_RequestStateStoreAction` class does not define any methods.
 
-## Properties  
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+## Properties
+ `Condition`
+ Data type: `SMS_TaskSequence_Condition`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ContinueOnError`  
- Data type: `Boolean`  
+ `ContinueOnError`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `FallbackToNAA`  
- Data type: `Boolean`  
+ `FallbackToNAA`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- `true` if the action should use the network access account (NAA) as a fallback when the computer account fails to connect to the state migration point. The default value is `false`.  
+ `true` if the action should use the network access account (NAA) as a fallback when the computer account fails to connect to the state migration point. The default value is `false`.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+ Qualifiers: [AllowedLen("1-100")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `RequestType`  
- Data type: `String`  
+ `RequestType`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [CommandLineArg(1), Not_Null]  
+ Qualifiers: [CommandLineArg(1), Not_Null]
 
- Type of state migration point (SMP) request. Possible values are:  
+ Type of state migration point (SMP) request. Possible values are:
 
-- capture  
+- capture
 
-- restore  
+- restore
 
-  `SMPRetryCount`  
-  Data type: `UInt32`  
+  `SMPRetryCount`
+  Data type: `UInt32`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: [Global, ValueRange("0-30")]  
+  Qualifiers: [Global, ValueRange("0-30")]
 
-  The number of times that the action should try to find a state migration point before failing (global setting). The value must be between 0 and 30.  
+  The number of times that the action should try to find a state migration point before failing (global setting). The value must be between 0 and 30.
 
-  `SMPRetryTime`  
-  Data type: `UInt32`  
+  `SMPRetryTime`
+  Data type: `UInt32`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: [Global, ValueRange("0-600")]  
+  Qualifiers: [Global, ValueRange("0-600")]
 
-  The time, in seconds, that the action should wait between retry attempts (global setting).The value must be between 0 and 600.  
+  The time, in seconds, that the action should wait between retry attempts (global setting).The value must be between 0 and 600.
 
-  `SupportedEnvironment`  
-  Data type: `String`  
+  `SupportedEnvironment`
+  Data type: `String`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: [Not_Null:ToInstance]  
+  Qualifiers: [Not_Null:ToInstance]
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-  The default value of this property for this task sequence action is FullOS.  
+  The default value of this property for this task sequence action is FullOS.
 
-  `Timeout`  
-  Data type: `UInt32`  
+  `Timeout`
+  Data type: `UInt32`
 
-  Access type: Read/Write  
+  Access type: Read/Write
 
-  Qualifiers: None  
+  Qualifiers: None
 
-  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+  See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
- [CommandLine("osdsmpclient.exe /%1"),VariablePrefix("OSDState"),  
+ [CommandLine("osdsmpclient.exe /%1"),VariablePrefix("OSDState"),
 
- ActionCategory("UserState,1,4"),ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "RequestStateStoreControl", "TaskSequenceOptionControl"}]  
+ ActionCategory("UserState,1,4"),ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "RequestStateStoreControl", "TaskSequenceOptionControl"}]
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

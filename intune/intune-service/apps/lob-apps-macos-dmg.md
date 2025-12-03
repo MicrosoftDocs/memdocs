@@ -1,32 +1,10 @@
 ---
-# required metadata
-
-title: Add a macOS DMG app to Microsoft Intune 
-titleSuffix:
+title: Add a macOS DMG App to Microsoft Intune
 description: Add a macOS DMG app to Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 07/12/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - macOS
 - highpri
@@ -34,7 +12,7 @@ ms.collection:
 - FocusArea_Apps_MacOS
 ---
 
-# Add a macOS DMG app to Microsoft Intune
+# Add a macOS DMG App to Microsoft Intune
 
 Use the information in this article to help you add a macOS DMG app to Microsoft Intune. A DMG app is a disk image file that contains one or more applications within it. Many common applications for macOS are available in DMG format. For more information about how to create a disk image file, see [Apple's website](https://support.apple.com/guide/disk-utility/create-a-disk-image-dskutl11888/mac).
 
@@ -54,7 +32,7 @@ The following prerequisites must be met before a macOS DMG app is installed on m
 
 ## Important considerations for deploying DMG apps
 
-A single DMG should only contain a single application file or multiple application files that are dependent on one another. The containing application files can be listed under the **Included apps** section in the **Detection rules** tab in order starting with the parent app to be used in reports. 
+A single DMG should only contain a single application file or multiple application files that are dependent on one another. The containing application files can be listed under the **Included apps** section in the **Detection rules** tab in order starting with the parent app to be used in reports.
 
 It is not recommended that multiple apps that are not dependent on each other are installed using the same DMG file. If multiple independent apps are deployed using the same DMG app, failure to install one app will cause other apps to be re-installed. In this case, monitoring reports consider the DMG installation a failure as well.
 
@@ -112,7 +90,7 @@ You can use detection rules to choose how an app installation is detected on a m
 
 > [!NOTE]
 >
-> - The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file. 
+> - The first app on the Included apps list is used for identifying the app when multiple apps are present in the DMG file.
 > - Mac Terminal can be used to lookup and confirm the included app details of an installed app. For example, to look up the bundle ID and build number of Company Portal, run the following:
 >
 >   `defaults read /Applications/Company\ Portal.app/Contents/Info CFBundleIdentifier`
@@ -148,7 +126,7 @@ You can select the **Required**, **Available**, or **Uninstall** group assignmen
 ## Step 6 – Review + create
 
 1. Review the values and settings you entered for the app.
-2. When you are done, click **Create** to add the app to Intune. 
+2. When you are done, click **Create** to add the app to Intune.
    The **Overview** pane for the macOS DMG app is displayed.
 
 The app you have created appears in the apps list where you can assign it to the groups you choose. For help, see [How to assign apps to groups](../apps/apps-deploy.md).
@@ -164,7 +142,7 @@ The app you have created appears in the apps list where you can assign it to the
 
 ## Known issues
 
-- **"Collect logs" action is unavailable during preview**: Log collection feature on macOS apps (DMG) is unavailable during preview. 
+- **"Collect logs" action is unavailable during preview**: Log collection feature on macOS apps (DMG) is unavailable during preview.
 - **Some DMG apps may display a warning to end-users on launch**: Apps downloaded from the internet and deployed using Intune may show a warning to end-users when launched. End-users can click "Open" on the dialog to continue opening the app.
 
   ![DMG apps may display a warning to end-users on launch](./media/lob-apps-macos-dmg/lob-apps-macos-dmg-01.png)

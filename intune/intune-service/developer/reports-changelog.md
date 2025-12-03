@@ -1,34 +1,14 @@
 ---
-# required metadata
-title: Intune Data Warehouse Change log 
-titleSuffix: Microsoft Intune
+title: Intune Data Warehouse Change Log
 description: This topic provides a list of changes for the Microsoft Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 11/18/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: E85DBB2D-67BB-4E10-82D6-E43046B9C43C
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Change log for the Intune Data Warehouse API
+# Change Log for the Intune Data Warehouse API
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
@@ -49,7 +29,7 @@ _Released March 2021_
 
 The  `applicationInventory`  entity will be removed from the Intune Data Warehouse with the 2107 update of Intune. We are introducing a more complete and accurate dataset that will be available in the UI and via our export API. For related information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
-## 2007 
+## 2007
 _Released July 2020_
 
 ### v1.0 changes
@@ -68,7 +48,7 @@ The following table lists the added property to the [devicePropertyHistories](..
 |    physicalMemoryInBytes    |    Added    |    The physical memory in bytes.                                                                                                                                                                                                                                                                     |
 |    totalStorageSpaceInBytes    |    Added    |    Total storage capacity in bytes.                                                                                                                                                                                                                                                                     |
 
-## 2004 
+## 2004
 _Released April 2020_
 
 ### v1.0 changes
@@ -87,7 +67,7 @@ The following table lists the added property to the **device** entity in the Int
 |----------------------------------------|---------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 |    windowsOsEdition     |    Added    |    Windows Operating System edition.                                                                                                                                                                                                                                                                     |
 
-## 2003 
+## 2003
 _Released March 2020_
 
 ### Beta changes
@@ -155,7 +135,7 @@ The following table lists the old properties formerly found in the **mdmDeviceIn
 |    subscriberCarrierNetwork    |    subscriberCarrier property in the devices collection                         |
 |    wifimac                     |    wiFiMacAddress in devices collection                                         |
 
-The following table lists changes to properties found in the [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) collection: 
+The following table lists changes to properties found in the [devicePropertyHistories](intune-data-warehouse-collections.md#devicepropertyhistories) collection:
 
 |    Old property                  |    Change/replacement                                               |
 |----------------------------------|---------------------------------------------------------------------|
@@ -186,7 +166,7 @@ The following table lists changes to properties found in the [devicePropertyHist
 |    serialNumber                  |    serialNumber in devices collection                               |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
-The following table lists changes to properties found in the [devices](intune-data-warehouse-collections.md#devices) collection: 
+The following table lists changes to properties found in the [devices](intune-data-warehouse-collections.md#devices) collection:
 
 |    Old property                  |    Change/replacement                                               |
 |----------------------------------|---------------------------------------------------------------------|
@@ -210,13 +190,13 @@ The following table lists changes to properties found in the [devices](intune-da
 |    referenceId                   |    azureAdDeviceId                                                  |
 |    workplaceJoinStateKey         |    azureAdRegistered                                                |
 
-The following table lists changes to properties found in the [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities) collection: 
+The following table lists changes to properties found in the [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities) collection:
 
 |    Old property         |    Change/replacement         |
 |-------------------------|-------------------------------|
 |    enrollmentTypeKey    |    deviceEnrollmentTypeKey    |
 
-The following table lists changes to properties found in the [mamApplications](intune-data-warehouse-collections.md#mamapplications) collection: 
+The following table lists changes to properties found in the [mamApplications](intune-data-warehouse-collections.md#mamapplications) collection:
 
 |    Old property       |    Change/replacement    |
 |-----------------------|--------------------------|
@@ -224,7 +204,7 @@ The following table lists changes to properties found in the [mamApplications](i
 |    applicationName    |    mamApplicationName    |
 |    applicationId      |    mamApplicationId      |
 
-The following table lists changes to properties found in the [mamApplicationInstances](intune-data-warehouse-collections.md#mamapplicationinstances) collection: 
+The following table lists changes to properties found in the [mamApplicationInstances](intune-data-warehouse-collections.md#mamapplicationinstances) collection:
 
 |    Old property     |    Change/replacement    |
 |---------------------|--------------------------|
@@ -233,13 +213,13 @@ The following table lists changes to properties found in the [mamApplicationInst
 |    deviceType       |    mamDeviceType         |
 |    deviceName       |    mamDeviceName         |
 
-The following table lists changes to properties found in the [mamCheckins](intune-data-warehouse-collections.md#mamcheckins) collection: 
+The following table lists changes to properties found in the [mamCheckins](intune-data-warehouse-collections.md#mamcheckins) collection:
 
 |    Old property      |    Change/replacement    |
 |----------------------|--------------------------|
 |    applicationKey    |    mamApplicationKey     |
 
-The following table lists changes to properties found in the [users](intune-data-warehouse-collections.md#users) collection: 
+The following table lists changes to properties found in the [users](intune-data-warehouse-collections.md#users) collection:
 
 |    Old property             |    Change/replacement    |
 |-----------------------------|--------------------------|
@@ -253,7 +233,7 @@ _Released March 2019_
 ### V1.0 changes reflecting back to beta
 When V1.0 was first introduced in 1808, it differed in some significant ways from the beta API. In 1903 those changes will be reflected back into the beta API version. If you have important reports that use the beta API version, we strongly recommend switching those reports to V1.0 to avoid breaking changes. Please refer to [API version information](reports-api-url.md) for more information on Data Warehouse API versions and backwards compatibility.
 
-## 1902 
+## 1902
 _Released February 2019_
 
 ### Power BI Compliance app
@@ -268,31 +248,31 @@ Access your Intune Data Warehouse in Power BI Online using the [Intune Complianc
 2. Click **Non-Compliant Devices** and select **Non-Compliant** in the **complianceStatus** filter.
 3. Click on **Unknown Devices** and select **Not Yet Available** in the **complianceStatus** filter.
 
-## 1812 
+## 1812
 _Released December 2018_
 
-### Enrollment Activities Collection Released to v1.0 
+### Enrollment Activities Collection Released to v1.0
 
 The Enrollment Activities collection is now available in v1.0. You can use this collection to understand enrollment failure volume and trends in your environment. For more information, see [enrollmentActivities](intune-data-warehouse-collections.md#enrollmentactivities), [enrollmentEventStatuses](intune-data-warehouse-collections.md#enrollmenteventstatuses), [enrollmentFailureCategories](intune-data-warehouse-collections.md#enrollmentfailurecategories), and [enrollmentFailureReasons](intune-data-warehouse-collections.md#enrollmentfailurereasons).
 
 ## 1808
 _Released August 2018_
 
-### v1.0 Collections  
+### v1.0 Collections
 
 You can now use the v1.0 version of the Intune Data Warehouse by setting the query parameter `api-version=v1.0`. Updates to collections in the Data Warehouse are additive in nature and do not break existing scenarios.
 
 ### Enrollment Activities Collection Released to Beta
 
-The new `Enrollment Activities` collection is released to beta. You can use this collection to understand how your enrollment is proceeding by viewing the most common failures. 
+The new `Enrollment Activities` collection is released to beta. You can use this collection to understand how your enrollment is proceeding by viewing the most common failures.
 
 
 ## 1805
 _Released May 2018_
 
-### Correction to device count in **Devices** collection 
+### Correction to device count in **Devices** collection
 
-A fix has been made to the **Devices** collection which may lower total device counts that filter by the attribute `isDeleted`. This drop is a result of the correction and is not an error. For more information regarding the **Devices** collection, see [Reference for device entities](reports-ref-devices.md). 
+A fix has been made to the **Devices** collection which may lower total device counts that filter by the attribute `isDeleted`. This drop is a result of the correction and is not an error. For more information regarding the **Devices** collection, see [Reference for device entities](reports-ref-devices.md).
 
 
 ## 1801
@@ -307,9 +287,9 @@ You can set up an application using Microsoft Entra ID and authenticate to the I
 ### Microsoft Entra ID and Intune credential requirements <!-- 2077525 -->
 
 - An Intune license is no longer required to be assigned to the user when accessing the Intune Data Warehouse (including the API).
-- The Intune role name has been changed from **Reports** to **Intune data warehouse**. 
+- The Intune role name has been changed from **Reports** to **Intune data warehouse**.
 
-    For more information, see [Microsoft Entra ID and Intune credential requirements](reports-api-url.md#azure-ad-and-intune-credential-requirements).
+    For more information, see [Microsoft Entra ID and Intune credential requirements](reports-api-url.md#microsoft-entra-id-and-intune-credential-requirements).
 
 ### OData query options <!-- 2077711 -->
 
@@ -318,7 +298,7 @@ You can use <code>$select</code> as an OData query parameter. The current versio
 ### New entities in the in Data Warehouse data model <!-- 2077804 -->
 
 - The entity, [**MobileAppDeviceuserInstallStatus**](reports-ref-application.md), has been added. The **MobileAppDeviceUserInstallStatus** represents a mobile app install status for a given device and user.
-- The entity, [**MobileAppInstallStates**](reports-ref-application.md#mobileappinstallstates), has been added. The **MobileAppInstallState** entity represents the install state for a mobile application after it has been assigned to a group containing devices, users, or both. 
+- The entity, [**MobileAppInstallStates**](reports-ref-application.md#mobileappinstallstates), has been added. The **MobileAppInstallState** entity represents the install state for a mobile application after it has been assigned to a group containing devices, users, or both.
 
 ## 1710
 _Released November  2017_
@@ -338,7 +318,7 @@ You can now build reports and data visualizations using the user device associat
 
 ### New entities in the in Data Warehouse data model <!-- 1479526 -->
 
-- The entity, [**UserDeviceAssociation**](reports-ref-user-device.md), added. **UserDeviceAssociation** contains user device associations in your organization. You can now build reports and data visualizations using the user device association information that associates user and device entity collections.  
+- The entity, [**UserDeviceAssociation**](reports-ref-user-device.md), added. **UserDeviceAssociation** contains user device associations in your organization. You can now build reports and data visualizations using the user device association information that associates user and device entity collections.
 - The entity, [**IntuneManagementExtension**](reports-ref-intunemanagementextension.md), added. **IntuneManagementExtension** contains entities for mobile devices that track information such as version and installation status.
 
 ## Next steps

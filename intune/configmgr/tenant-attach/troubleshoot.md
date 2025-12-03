@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -27,7 +27,7 @@ The available actions are:
 
 
 [![Device overview in Microsoft Intune admin center](./media/3555758-device-overview-actions.png)](./media/3555758-device-overview-actions.png#lightbox)
-  
+
 When an admin runs an action from Microsoft Intune admin center, the notification request is forwarded to Configuration Manager site, and from the site to the client.
 
 ## Log files
@@ -61,15 +61,15 @@ Use the following logs located on the client:
 
 ### SMS_SERVICE_CONNECTOR
 
-When an action is initiated from the Microsoft Intune admin center, **CMGatewayNotificationWorker.log** processes the request.  
+When an action is initiated from the Microsoft Intune admin center, **CMGatewayNotificationWorker.log** processes the request.
 
 ```text
 Received new notification. Validating basic notification details...
 Validating device action message content...
 Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID:     a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2
-Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1  
+Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1
 ```
- 
+
 1. A notification is received from Microsoft Intune admin center.
 
    ```text
@@ -79,14 +79,14 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
 1. User and device actions are validated.
 
    ```text
-   Validating device action message content... 
+   Validating device action message content...
    Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID:     a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2
    ```
 
 1. The remote task is forwarded to the SMS_NOTIFICATION_SERVER.
 
     ```text
-   Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1  
+   Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1
     ```
 
 
@@ -119,7 +119,7 @@ If the admin doesn't have the required permissions in Configuration Manager, you
 Received new notification. Validating basic notification details..
 Validating device action message content...
 Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID: 3a1e89e6-e190-4615-9d38-a208b0eb1c78
-```  
+```
 
 Ensure the user running the action from the Microsoft Intune admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Intune tenant attach prerequisites](prerequisites.md).
 

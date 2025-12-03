@@ -1,30 +1,10 @@
 ---
-# required metadata
 title: Date - Intune Data Warehouse
-titleSuffix: Microsoft Intune 
 description: Reference topic for the Date category of entity collections in the Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 6B4BC650-62F7-4049-9DE4-CDECB579B58F
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

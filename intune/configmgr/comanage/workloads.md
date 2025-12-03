@@ -2,16 +2,16 @@
 title: Co-management workloads
 titleSuffix: Configuration Manager
 description: Learn about the workloads that you can switch from Configuration Manager to Microsoft Intune.
-author: Baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
-ms.date: 12/04/2024
+ms.date: 05/12/2025
 ms.topic: article
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Co-management workloads
@@ -44,10 +44,12 @@ For more information on the Intune feature, see [Use compliance policies to set 
 
 ## Windows Update policies
 
-Windows Update client policies let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices managed directly by Windows Update client policies.
+Windows Update client policies (formerly known as Windows Update for Business policies) let you configure deferral policies for Windows 10 or later feature updates or quality updates for Windows 10 or later devices.
+
+After moving the Windows Update workload to Intune, the client settings in Configuration Manager need to be adjusted manually. Either modify existing client settings, or create a new custom client setting to disable the software update workflow. Deploy the setting to the collection of computers that are connected directly to Windows Update (which was also called Windows Update for Business).
 
 > [!NOTE]
-> To use Windows Autopatch with these devices, this workload needs to be managed by Intune. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
+> To use Windows Autopatch with these devices, this workload must be moved to Intune, and client settings for Software Updates set to 'No' in Configuration Manager. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
 For more information on the Intune feature, see [Manage Windows software updates in Intune](../../intune-service/protect/windows-update-for-business-configure.md).
 
@@ -62,7 +64,7 @@ For more information on the Intune feature, see [Deploy resource access profiles
 
 > [!NOTE]
 > The resource access workload is also part of device configuration. These policies are managed by Intune when you switch the [Device Configuration](#device-configuration) workload.
-> Starting in version 2403, The resource access policies node is removed from console. Slider is mandated to Intune and upgrade is blocked if old policieis are still available.
+> Starting in version 2403, The resource access policies node is removed from console. Slider is mandated to Intune and upgrade is blocked if old policies are still available.
 
 ## Endpoint Protection
 
@@ -129,7 +131,7 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 Updates can be managed using either of the following features:
 
-- [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune Administrative Templates](../../intune-service/configuration/administrative-templates-update-office.md)
+- [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune settings catalog](../../intune-service/configuration/settings-catalog-update-office.md)
 - [Manage Microsoft 365 Apps with Configuration Manager](../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 > [!NOTE]
@@ -153,7 +155,7 @@ For more information on the Intune feature, see [What is Microsoft Intune app ma
 
 When you enable Microsoft Connected Cache on your Configuration Manager distribution points, they can serve Microsoft Intune Win32 apps to co-managed clients. For more information, see [Microsoft Connected Cache with Configuration Manager](../core/plan-design/hierarchy/microsoft-connected-cache.md#support-for-intune-win32-apps).
 
-For example, if you wish to deploy the new Store applications (winget) via Microsoft Intune, you need to switch this workload. 
+For example, if you wish to deploy the new Store applications (winget) via Microsoft Intune, you need to switch this workload.
 
 ## Diagram for app workloads
 

@@ -12,14 +12,14 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 1906 of Configuration Manager current branch
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 1906 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802 or later. <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1906.  
+Update 1906 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802 or later. <!-- baseline only statement:When installing a new site, it's also available as a baseline version.--> This article summarizes the changes and new features in Configuration Manager, version 1906.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1906](../../servers/manage/checklist-for-installing-update-1906.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1906.md#post-update-checklist).
 
@@ -91,7 +91,7 @@ For more information, see [Management insights](../../servers/manage/management-
 
 - Site Recovery can recreate the database on an availability group. This process works with both manual and automatic seeding.<!-- SCCMDocs-pr#3846 -->
 
-- New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->  
+- New setup prerequisite checks:<!-- SCCMDocs-pr#3899 -->
 
   - Availability group replicas must all have the same seeding mode
 
@@ -221,8 +221,8 @@ For more information, see [Support Center OneTrace](../../support/support-center
 <!--4485509-->
 You can now specify the minimum time for the Configuration Manager client to keep cached content. This client setting defines the minimum amount of time Configuration Manager agent should wait before it can remove content from the cache in case more space is needed. In the **Client cache settings** group of client settings, configure the following setting: **Minimum duration before cached content can be removed (minutes)**.
 
-> [!Note]  
-> In the same client setting group, the existing setting to **Enable Configuration Manager client in full OS to share content** is now renamed to **Enable as peer cache source**. The behavior of the setting doesn't change.  
+> [!Note]
+> In the same client setting group, the existing setting to **Enable Configuration Manager client in full OS to share content** is now renamed to **Enable as peer cache source**. The behavior of the setting doesn't change.
 
 For more information, see [Client cache settings](../../clients/deploy/about-client-settings.md#client-cache-settings).
 
@@ -296,7 +296,7 @@ For more information, see [Install applications for a device](../../../apps/depl
 <!--4224910-->
 This release includes the following improvements to app approvals:
 
-- If you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.  
+- If you approve an app request in the console, and then deny it, you can now approve it again. The app is reinstalled on the client after you approve it.
 
 - In the Configuration Manager console, **Software Library** workspace, under **Application Management**, the **Approval Requests** node is renamed **Application Requests**.<!-- SCCMDocs-pr#4028 -->
 
@@ -327,7 +327,7 @@ In the **Install Application** task sequence step, you can now delete the app co
 
 For more information, see [About task sequence steps](../../../osd/understand/task-sequence-steps.md#BKMK_InstallApplication).
 
-> [!Important]  
+> [!Important]
 > Update the target client to the latest version to support this new feature.
 
 ### Reclaim SEDO lock for task sequences
@@ -392,12 +392,12 @@ This release includes the following infrastructure improvements to Software Cent
 
 - Previously, Software Center picked the first management point from the list of available servers. Starting in this release, it uses the same management point that the client uses. This change allows Software Center to use the same management point from the assigned primary site as the client.
 
-> [!Important]  
+> [!Important]
 > These iterative improvements to Software Center and the management point are to retire the application catalog roles.
 >
 > - The Silverlight user experience isn't supported as of current branch version 1806.
 > - Starting in version 1906, updated clients automatically use the management point for user-available application deployments. You also can't install new application catalog roles.
-> - Support ends for the application catalog roles with version 1910.  
+> - Support ends for the application catalog roles with version 1910.
 
 For more information, see [Remove the application catalog](../../../apps/plan-design/plan-for-and-configure-application-management.md#remove-the-application-catalog) and [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md).
 
@@ -549,14 +549,14 @@ You can now enable some nodes of the Configuration Manager console to use the ad
 For more information, see [Administration service](../hierarchy/plan-for-the-sms-provider.md#administration-service).
 
 > [!Note]
-> Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->  
+> Starting in version 1906, the **Client Computer Communication** tab on the site properties is now called **Communication Security**.<!-- SCCMDocs#1645 -->
 
 ### Collections tab in devices node
 
 <!--4616810-->
 In the **Assets and Compliance** workspace, go to the **Devices** node, and select a device. In the details pane, switch to the new **Collections** tab. This tab lists the collections that include this device.
 
-> [!Note]  
+> [!Note]
 > - This tab currently isn't available from a devices subnode under the **Device Collections** node. For example, when you select the option to **Show Members** on a collection.
 > - This tab may not populate as expected for some users. To see the complete list of collections a device belongs to, you must have the **Full Administrator** security role. This is a known issue. <!--5107309-->
 
@@ -575,13 +575,13 @@ In the **Monitoring** workspace, select the **Script Status** node. It now lists
 <!--4616810-->
 There are various ways to display a list of devices under the **Devices** node in the **Assets and Compliance** workspace.
 
-- In the **Assets and Compliance** workspace, select the **Device Collections** node. Select a device collection, and choose the action to **Show members**. This action opens a subnode of the **Devices** node with a device list for that collection.  
+- In the **Assets and Compliance** workspace, select the **Device Collections** node. Select a device collection, and choose the action to **Show members**. This action opens a subnode of the **Devices** node with a device list for that collection.
 
-  - When you select the collection subnode, you can now start **CMPivot** from the Collection group of the ribbon.  
+  - When you select the collection subnode, you can now start **CMPivot** from the Collection group of the ribbon.
 
-- In the **Monitoring** workspace, select the **Deployments** node. Select a deployment, and choose the **View Status** action in the ribbon. In the deployment status pane, double-click the total assets to drill-through to a device list.  
+- In the **Monitoring** workspace, select the **Deployments** node. Select a deployment, and choose the **View Status** action in the ribbon. In the deployment status pane, double-click the total assets to drill-through to a device list.
 
-  - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.  
+  - When you select a device in this list, you can now start **CMPivot** and **Run Scripts** from the Device group of the ribbon.
 
 ### Order by program name in task sequence
 
@@ -598,11 +598,11 @@ In the **Monitoring** workspace, select **Client Operations**. The operation to 
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
-Version 1906 drops support for the following features:  
+Version 1906 drops support for the following features:
 
 - You can't install new application catalog roles. Updated clients automatically use the management point for user-available application deployments. For more information, see [Plan for Software Center](../../../apps/plan-design/plan-for-software-center.md#configure-software-center).
 
-Version 1906 deprecates support for the following products:  
+Version 1906 deprecates support for the following products:
 
 - Windows CE 7.0
 - Windows 10 Mobile
@@ -631,7 +631,7 @@ The following additional hotfixes are available to address specific issues:
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
 
-> [!Note]  
+> [!Note]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
@@ -643,13 +643,13 @@ As of August 16, 2019, version 1906 is globally available for all customers to i
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 1906](../../servers/manage/checklist-for-installing-update-1906.md).
 
-> [!TIP]  
-> To install a new site, use a baseline version of Configuration Manager.  
+> [!TIP]
+> To install a new site, use a baseline version of Configuration Manager.
 >
 > Learn more about:
 >
-> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
-> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)  
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 For known, significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 

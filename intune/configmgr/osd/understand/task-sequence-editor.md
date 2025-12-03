@@ -6,11 +6,11 @@ ms.date: 11/29/2019
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -18,21 +18,21 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Edit task sequences in the Configuration Manager console by using the **Task Sequence Editor**. Use the editor to:  
+Edit task sequences in the Configuration Manager console by using the **Task Sequence Editor**. Use the editor to:
 
 - Open a read-only view of the task sequence
 
-- Add or remove steps from the task sequence  
+- Add or remove steps from the task sequence
 
-- Change the order of the steps of the task sequence  
+- Change the order of the steps of the task sequence
 
-- Add or remove groups of steps  
+- Add or remove groups of steps
 
 - Copy and paste steps between task sequences
 
-- Set step options like whether the task sequence continues when an error occurs  
+- Set step options like whether the task sequence continues when an error occurs
 
-- Add conditions to the steps and groups of a task sequence  
+- Add conditions to the steps and groups of a task sequence
 
 - Copy and paste conditions between steps in a task sequence
 
@@ -80,9 +80,9 @@ You can resize the task sequence editor using standard Windows controls. To resi
 
 ## <a name="bkmk_view"></a> View a task sequence
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.
 
-2. In the **Task Sequence** list, select the task sequence that you want to view.  
+2. In the **Task Sequence** list, select the task sequence that you want to view.
 
 3. On the **Home** tab of the ribbon, in the **Task Sequence** group, select **View**.
 
@@ -100,22 +100,22 @@ In this read-only mode, you can't make any changes, including copying a step or 
 
 To make changes to a task sequence, close the task sequence editor that you have open in read-only mode. Then [Edit](#bkmk_edit) the task sequence.
 
-> [!NOTE]  
-> When you view or edit a task sequence that was created by the Create Task Sequence Wizard, the name of the step can be the action or type of the step. For example, you might see a step that has the name "Partition disk 0", which is the action for a step of type [Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their *type*, not necessarily by the name of the step that the editor displays.  
+> [!NOTE]
+> When you view or edit a task sequence that was created by the Create Task Sequence Wizard, the name of the step can be the action or type of the step. For example, you might see a step that has the name "Partition disk 0", which is the action for a step of type [Format and Partition Disk](task-sequence-steps.md#BKMK_FormatandPartitionDisk). All task sequence steps are documented by their *type*, not necessarily by the name of the step that the editor displays.
 
 ## <a name="bkmk_edit"></a> Edit a task sequence
 
-Use the following procedure to modify an existing task sequence:  
+Use the following procedure to modify an existing task sequence:
 
-1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.  
+1. In the Configuration Manager console, go to the **Software Library** workspace, expand **Operating Systems**, and then select the **Task Sequences** node.
 
-2. In the **Task Sequence** list, select the task sequence that you want to edit.  
+2. In the **Task Sequence** list, select the task sequence that you want to edit.
 
-3. On the **Home** tab of the ribbon, in the **Task Sequence** group, select **Edit**. Then do any of the following actions:  
+3. On the **Home** tab of the ribbon, in the **Task Sequence** group, select **Edit**. Then do any of the following actions:
 
     - **Add a step**: Select **Add**, select a category, and then select the step to add. For example, to add the [Run Command Line](task-sequence-steps.md#BKMK_RunCommandLine) step: select **Add**, choose the **General** category, and then select **Run Command Line**. This action adds the step after the currently selected step.
 
-    - **Add a group**: Select **Add**, and then choose **New Group**. After you add a group, then add steps to it.  
+    - **Add a group**: Select **Add**, and then choose **New Group**. After you add a group, then add steps to it.
 
     - **Change the order**: Select the step or group that you want to reorder. Then use the **Move Up** or **Move Down** icons. You can move only one step or group at a time. These actions are also available when you right-click a group or step.
 
@@ -125,18 +125,18 @@ Use the following procedure to modify an existing task sequence:
         - Copy: **CTRL** + **C**
         - Paste: **CTRL** + **V**
 
-    - **Remove a step or group**: Select the step or group, and choose **Remove**.  
+    - **Remove a step or group**: Select the step or group, and choose **Remove**.
 
-4. Select **OK** to save your changes and close the window. Select **Cancel** to discard your changes and close the window. Select **Apply** to save your changes and keep the task sequence editor open.  
+4. Select **OK** to save your changes and close the window. Select **Cancel** to discard your changes and close the window. Select **Apply** to save your changes and keep the task sequence editor open.
 
-For a list of the available task sequence steps, see [Task sequence steps](task-sequence-steps.md).  
+For a list of the available task sequence steps, see [Task sequence steps](task-sequence-steps.md).
 
-> [!IMPORTANT]  
-> If the task sequence has any unassociated references to an object as a result of the edit, the editor requires you fix the reference before it can close. Possible actions include:  
+> [!IMPORTANT]
+> If the task sequence has any unassociated references to an object as a result of the edit, the editor requires you fix the reference before it can close. Possible actions include:
 >
 > - Correct the reference
-> - Delete the unreferenced object from the task sequence  
-> - Temporarily disable the failed task sequence step until the broken reference is corrected or removed  
+> - Delete the unreferenced object from the task sequence
+> - Temporarily disable the failed task sequence step until the broken reference is corrected or removed
 
 You can open more than one instance of the task sequence editor at the same time. This behavior lets you compare multiple task sequences, or copy and paste steps between them. You can **Edit** one task sequence, and **View** another, but you can't do both actions on the same task sequence.
 
@@ -198,7 +198,7 @@ Use standard keyboard shortcuts to copy (**CTRL** + **C**) and cut (**CTRL** + *
 
 There are also new options to move conditions up or down the list.
 
-> [!Note]  
+> [!Note]
 > You can copy and paste conditions between steps in a task sequence. It doesn't support this action between different task sequences.
 
 ## <a name="bkmk_sedo"></a> Reclaim lock for editing

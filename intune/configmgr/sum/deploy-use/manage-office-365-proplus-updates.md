@@ -2,15 +2,15 @@
 title: Manage Microsoft 365 Apps updates
 titleSuffix: Configuration Manager
 description: Configuration Manager synchronizes Microsoft 365 Apps client updates from the WSUS catalog to the site server to make updates available to deploy to clients.
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.date: 05/09/2022
 ms.topic: how-to
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -45,28 +45,28 @@ For previous Configuration Manager versions, you must take the following steps t
 - Create and deploy either a legacy package or a script application for clients to install Microsoft 365 Apps.
 
 ### Requirements
-- The computer that runs the installer must have Internet access.  
+- The computer that runs the installer must have Internet access.
 - The user that runs the installer must have **Read** and **Write** access to the content location share provided in the wizard.
 - If you receive a 404 download error, copy the following files to the user %temp% folder:
   - [releasehistory.xml](https://officecdn.microsoft.com/pr/wsus/releasehistory.cab)
-  - [o365client_32bit.xml](https://officecdn.microsoft.com/pr/wsus/ofl.cab)  
+  - [o365client_32bit.xml](https://officecdn.microsoft.com/pr/wsus/ofl.cab)
 
 ### Limitations
 
 - Content-enabled cloud management gateways don't support content for Microsoft 365 Apps updates. <!--7366753-->
 - In certain circumstances when using Office Customization Tool for Click-to-Run, you may encounter the following exception:  `Could not load type 'System.Runtime.InteropServices.Architecture' from assembly 'mscorlib Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089'`. To work around the issue, update .NET Framework to version 4.7.1 or later for the machine running the Configuration Manager console. <!--12109686-->
 
-### Deploy Microsoft 365 Apps using Configuration Manager 
+### Deploy Microsoft 365 Apps using Configuration Manager
 The Office Customization Tool is integrated with the installer in the Configuration Manager console. When creating a deployment for Microsoft 365 Apps, you can dynamically configure the latest manageability settings. <!--1358149, these instructions are for 1806 and later-->
 
 1. In the Configuration Manager console, navigate to **Software Library** > **Overview** > **Office 365 Client Management**.
 2. Select **Office 365 Installer** in the upper-right pane. The installation wizard opens.
 3. On the **Application Settings** page, provide a name and description for the app, enter the download location for the files, and then choose **Next**. The location must be specified as &#92;&#92;*server*&#92;*share*.
 4. On the **Office Settings** page, select  **Go to the Office Customization Tool**. This will open the [Office Customization Tool for Click-to-Run](https://config.office.com).
-5. Configure the desired settings for your Microsoft 365 Apps installation. Select **Submit** in the upper right of the page when you complete the configuration. 
-6. On the **Deployment** page, determine if you would like to deploy now or at a later time. If you choose to deploy later, you can find the application in **Software Library** > **Application Management** > **Applications**.  
-7. Confirm the settings on the **Summary** page. 
-8. Select **Next** then **Close** once the wizard completes. 
+5. Configure the desired settings for your Microsoft 365 Apps installation. Select **Submit** in the upper right of the page when you complete the configuration.
+6. On the **Deployment** page, determine if you would like to deploy now or at a later time. If you choose to deploy later, you can find the application in **Software Library** > **Application Management** > **Applications**.
+7. Confirm the settings on the **Summary** page.
+8. Select **Next** then **Close** once the wizard completes.
 
 After you create and deploy Microsoft 365 Apps using the installer, Configuration Manager may not manage the Microsoft 365 Apps updates by default. To enable Microsoft 365 Apps clients to receive updates from Configuration Manager, see [Deploy Microsoft 365 Apps updates with Configuration Manager](#bkmk_update).
 
@@ -90,25 +90,25 @@ You can drill through compliance statistics to see which devices require a speci
 
 Use the following steps to deploy Microsoft 365 Apps updates with Configuration Manager:
 
-1. [Verify the requirements](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates) for using Configuration Manager to manage Microsoft 365 Apps client updates in the **Requirements for using Configuration Manager to manage Microsoft 365 Apps client updates** section of the article.  
+1. [Verify the requirements](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#requirements-for-using-configuration-manager-to-manage-office-365-client-updates) for using Configuration Manager to manage Microsoft 365 Apps client updates in the **Requirements for using Configuration Manager to manage Microsoft 365 Apps client updates** section of the article.
 
 2. [Configure software update points](../get-started/configure-classifications-and-products.md) to synchronize the Microsoft 365 Apps client updates. Set **Updates** for the classification and select **Microsoft 365 Apps/Office 2019/Office LTSC** for the product. Synchronize software updates after you configure the software update points to use the **Updates** classification.
 3. Enable Microsoft 365 Apps clients to receive updates from Configuration Manager. Use Configuration Manager client settings or group policy to enable the client.
 
-    **Method 1**: You can use the Configuration Manager client setting to manage the Microsoft 365 Apps client agent. After you configure this setting and deploy Microsoft 365 Apps updates, the Configuration Manager client agent communicates with the Microsoft 365 Apps client agent to download the updates from a distribution point and install them. Configuration Manager takes inventory of Microsoft 365 Apps client settings.    
+    **Method 1**: You can use the Configuration Manager client setting to manage the Microsoft 365 Apps client agent. After you configure this setting and deploy Microsoft 365 Apps updates, the Configuration Manager client agent communicates with the Microsoft 365 Apps client agent to download the updates from a distribution point and install them. Configuration Manager takes inventory of Microsoft 365 Apps client settings.
 
-      1. In the Configuration Manager console, select **Administration** > **Overview** > **Client Settings**.  
+      1. In the Configuration Manager console, select **Administration** > **Overview** > **Client Settings**.
 
-      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).  
+      2. Open the appropriate device settings to enable the client agent. For more information about default and custom client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
-      3. Select **Software Updates** and choose **Yes** for the **Enable management of the Office 365 Client Agent** setting.  
+      3. Select **Software Updates** and choose **Yes** for the **Enable management of the Office 365 Client Agent** setting.
 
     **Method 2**:
-    [Enable Microsoft 365 Apps clients to receive updates](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.  
+    [Enable Microsoft 365 Apps clients to receive updates](/DeployOffice/manage-updates-to-office-365-proplus-with-system-center-configuration-manager#BKMK_EnableClient) from Configuration Manager by using the Office Deployment Tool or Group Policy.
 
 4. [Deploy the Microsoft 365 Apps updates](deploy-software-updates.md) to clients.
 
-If Microsoft 365 Apps was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Microsoft 365 Apps installs. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable. 
+If Microsoft 365 Apps was installed recently, and depending on how it was installed, it is possible that the update channel has not been set yet. In that case, deployed updates will be detected as not applicable. There is a [scheduled Automatic Updates task](/deployoffice/overview-of-the-update-process-for-office-365-proplus) created when Microsoft 365 Apps installs. In this situation, this task needs to run at least once in order for the update channel to be set and updates detected as applicable.
 
 If Microsoft 365 Apps was installed recently and deployed updates are not detected, for testing purposes, you can start the Office Automatic Updates task manually and then start the [Software Updates Deployment Evaluation Cycle](../understand/software-updates-introduction.md#scan-for-software-updates-compliance-process) on the client. For instructions on how to do this in a task sequence, see [Updating Microsoft 365 Apps in a task sequence](manage-office-365-proplus-updates.md#bkmk_ts).
 
@@ -144,21 +144,21 @@ When new languages are added to Microsoft 365 Apps they don't appear in the cont
 1. From a command prompt, type *wbemtest* as an administrative user to open the Windows Management Instrumentation Tester.
 2. Select **Connect**, and then type *root\sms\site_&lt;siteCode&gt;*.
 3. Choose **Query**, and then run the following query:
-   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*  
+   *select &#42; from SMS_SCI_Component where componentname ="SMS_WSUS_CONFIGURATION_MANAGER"*
    ![Screenshot of WMI query](./media/9391197-wmi-query.png)
 4. In the results pane, double-click the object with the site code for the central administration site or stand-alone primary site.
 5. Select the **Props** property, select **Edit Property**, and then **View Embedded**.
    ![Screenshot of the property editor](./media/9391197-editor.png)
 6. Starting at the first query result, open each object until you find the one with **AvailableUpdateLanguagesForO365** for the **PropertyName** property.
-7. Select **Value2** and choose **Edit Property**.  
+7. Select **Value2** and choose **Edit Property**.
    ![Screenshot of editing the Value2 property](./media/9391197-sms-embededproperty.png)
-8. Add additional languages to the **Value2** property and select **Save Property**. <br/> 
+8. Add additional languages to the **Value2** property and select **Save Property**. <br/>
    For example, 2057 (for en-gb), 2058 (for es-mx), and 3084 (for fr-ca), you would type `2057, 2058, 3084` for the example languages.
- 
-   ![Screenshot of adding the language code in Property Editor](./media/9391197-property-editor.png)  
+
+   ![Screenshot of adding the language code in Property Editor](./media/9391197-property-editor.png)
 9. Select **Close**, select **Close**, select **Save Property**, and choose **Save Object** (if you select **Close** here the values are discarded). Select**Close**, and then **Exit** to exit the Windows Management Instrumentation Tester.
 10. In the Configuration Manager console, go to **Software Library** > **Overview** > **Office 365 Client Management** > **Office 365 Updates**.
-11. When you download Microsoft 365 Apps updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and find files with the new language code in the filename.  
+11. When you download Microsoft 365 Apps updates, the updates are downloaded in the languages that you select in the wizard and configured in this procedure. To verify that the updates download in the correct languages, go to the package source for the update and find files with the new language code in the filename.
 
 ## <a name="bkmk_ts"></a> Updating Microsoft 365 Apps in a task sequence
 When using [Install Software Updates](../../osd/understand/task-sequence-steps.md#BKMK_InstallSoftwareUpdates) task sequence step to Install Microsoft 365 Apps updates, it is possible that deployed updates will be detected as not applicable.  This might happen if the scheduled Office Automatic Updates task hasn't run at least once (see the note in [Deploy Microsoft 365 Apps updates](manage-office-365-proplus-updates.md#bkmk_update)). For example, this might happen if Microsoft 365 Apps was installed immediately before running this step.
@@ -168,20 +168,20 @@ To ensure that the update channel is set so that deployed updates will be proper
 **Method 1:**
 1. On a machine with the same version of Microsoft 365 Apps, open Task Scheduler (taskschd.msc) and identify the Microsoft 365 Apps automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
 2. Right-click on the automatic updates task and select **Properties**.
-3. Go to the **Actions** tab and choose **Edit**. Copy the command and any arguments. 
+3. Go to the **Actions** tab and choose **Edit**. Copy the command and any arguments.
 4. In the Configuration Manager console, edit your task sequence.
 5. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. If Microsoft 365 Apps is installed as part of the same task sequence, make sure this step runs after Office is installed.
-6. Copy in the command and arguments that you gathered from the Office automatic updates scheduled task. 
-7. Select **OK**. 
+6. Copy in the command and arguments that you gathered from the Office automatic updates scheduled task.
+7. Select **OK**.
 
 **Method 2:**
 1. On a machine with the same version of Microsoft 365 Apps, open Task Scheduler (taskschd.msc) and identify the Microsoft 365 Apps automatic updates task. Typically, it is located under **Task Scheduler Library** >**Microsoft**>**Office**.
 2. In the Configuration Manager console, edit your task sequence.
 3. Add a new **Run Command Line** step before the **Install Software Updates** step in the task sequence. If Microsoft 365 Apps is installed as part of the same task sequence, make sure this step runs after Office is installed.
-4. In the command line field, enter the command line that will run the scheduled task. See example below making sure the string in quotes matches the path and name of the task identified in step 1.  
+4. In the command line field, enter the command line that will run the scheduled task. See example below making sure the string in quotes matches the path and name of the task identified in step 1.
 
     Example: `schtasks /run /tn "\Microsoft\Office\Office Automatic Updates 2.0"`
-5. Select **OK**. 
+5. Select **OK**.
 
 ## <a name="bkmk_channel"></a> Update channels for Microsoft 365 Apps
 <!--6298093-->

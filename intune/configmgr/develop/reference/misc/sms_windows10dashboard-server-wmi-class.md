@@ -12,91 +12,91 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_Windows10Dashboard Server WMI Class
-For internal use only.  
+For internal use only.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_Windows10Dashboard : SMS_BaseClass  
-{  
-    String Branch;  
-    String Build;  
-    String Name;  
-    UInt32 NumClients;  
-    UInt32 State;  
-};  
+```
+Class SMS_Windows10Dashboard : SMS_BaseClass
+{
+    String Branch;
+    String Build;
+    String Name;
+    UInt32 NumClients;
+    UInt32 State;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_Windows10Dashboard` class does not define any methods.  
+## Methods
+ The `SMS_Windows10Dashboard` class does not define any methods.
 
-## Properties  
- `Branch`  
- Data type: `String`  
+## Properties
+ `Branch`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- Reserved for internal use.  
+ Reserved for internal use.
 
- `Build`  
- Data type: `String`  
+ `Build`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- Reserved for internal use.  
+ Reserved for internal use.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for internal use.  
+ Reserved for internal use.
 
- `NumClients`  
- Data type: `UInt32`  
+ `NumClients`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for internal use.  
+ Reserved for internal use.
 
- `State`  
- Data type: `UInt32`  
+ `State`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Reserved for internal use.  
+ Reserved for internal use.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

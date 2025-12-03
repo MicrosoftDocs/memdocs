@@ -3,7 +3,7 @@ title: Configure remote control
 titleSuffix: Configuration Manager
 description: Set up remote control in Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: Banreet
@@ -11,29 +11,29 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Configuring remote control in Configuration Manager
 
 *Applies to: Configuration Manager (current branch)*
 
- This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings](../../../../core/clients/deploy/configure-client-settings.md). 
+ This procedure describes configuring the default client settings for remote control. These settings apply to all computers in your hierarchy. If you want these settings to apply to only some computers, assign a custom device client setting to a collection that contains those computers. For more information a see [How to configure client settings](../../../../core/clients/deploy/configure-client-settings.md).
 
-To use Remote Assistance or Remote Desktop, it must be installed and configured on the computer that runs the Configuration Manager console. For more information about how to install and configure Remote Assistance or Remote Desktop, see your Windows documentation.  
+To use Remote Assistance or Remote Desktop, it must be installed and configured on the computer that runs the Configuration Manager console. For more information about how to install and configure Remote Assistance or Remote Desktop, see your Windows documentation.
 
-#### To enable remote control and configure client settings  
+#### To enable remote control and configure client settings
 
-1. In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.  
+1. In the Configuration Manager console, choose **Administration** > **Client Settings** > **Default Client Settings**.
 
-2. On the **Home** tab, in the **Properties** group, choose **Properties**.  
+2. On the **Home** tab, in the **Properties** group, choose **Properties**.
 
-3. In the **Default**  dialog box, choose **Remote Tools**.  
+3. In the **Default**  dialog box, choose **Remote Tools**.
 
-4. Configure the remote control, Remote Assistance and Remote Desktop client settings. For a list of remote tools client settings that you can configure, see [Remote Tools](../../../../core/clients/deploy/about-client-settings.md#remote-tools).  
+4. Configure the remote control, Remote Assistance and Remote Desktop client settings. For a list of remote tools client settings that you can configure, see [Remote Tools](../../../../core/clients/deploy/about-client-settings.md#remote-tools).
 
-   You can change the company name that appears in the **ConfigMgr Remote Control** dialog box by configuring a value for **Organization name displayed in Software Center** in the **Computer Agent** client settings.  
+   You can change the company name that appears in the **ConfigMgr Remote Control** dialog box by configuring a value for **Organization name displayed in Software Center** in the **Computer Agent** client settings.
 
-   Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../../../../core/clients/manage/manage-clients.md).  
+   Client computers are configured with these settings the next time they download client policy. To initiate policy retrieval for a single client, see [How to manage clients](../../../../core/clients/manage/manage-clients.md).
 
 #### Enable keyboard translation
 
@@ -48,13 +48,13 @@ To turn on keyboard translation, in **Configuration Manager Remote Control**, ch
 
 ## Keyboard shortcuts for the remote control viewer
 
-|Keyboard shortcut|Description|  
-|-----------------------|-----------------|  
-|Alt+Page Up|Switches between running programs from left to right.|  
-|Alt+Page Down|Switches between running programs from right to left.|  
-|Alt+Insert|Cycles through running programs in the order that they were opened.|  
-|Alt+Home|Displays the **Start** menu.|  
-|Ctrl+Alt+End|Displays the Windows Security dialog box (Ctrl+Alt+Del).|  
-|Alt+Delete|Displays the Windows menu.|  
-|Ctrl+Alt+Minus Sign (on the numeric keypad)|Copies the active window of the local computer to the remote computer Clipboard.|  
-|Ctrl+Alt+Plus Sign (on the numeric keypad)|Copies the entire local computer's window area to the remote computer Clipboard.|  
+|Keyboard shortcut|Description|
+|-----------------------|-----------------|
+|Alt+Page Up|Switches between running programs from left to right.|
+|Alt+Page Down|Switches between running programs from right to left.|
+|Alt+Insert|Cycles through running programs in the order that they were opened.|
+|Alt+Home|Displays the **Start** menu.|
+|Ctrl+Alt+End|Displays the Windows Security dialog box (Ctrl+Alt+Del).|
+|Alt+Delete|Displays the Windows menu.|
+|Ctrl+Alt+Minus Sign (on the numeric keypad)|Copies the active window of the local computer to the remote computer Clipboard.|
+|Ctrl+Alt+Plus Sign (on the numeric keypad)|Copies the entire local computer's window area to the remote computer Clipboard.|

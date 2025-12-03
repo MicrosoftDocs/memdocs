@@ -10,10 +10,10 @@ author: banreet
 ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.collection: 
+ms.collection:
 - essentials-security
 - tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Fundamentals of security for Configuration Manager

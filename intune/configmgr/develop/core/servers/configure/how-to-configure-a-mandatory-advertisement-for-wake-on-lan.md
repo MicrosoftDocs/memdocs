@@ -12,132 +12,132 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # How to Configure a Software Distribution Mandatory Advertisement for Wake On LAN
-You can configure an existing mandatory advertisement for Wake On LAN by using the `SMS_Advertisement` class and properties.  
+You can configure an existing mandatory advertisement for Wake On LAN by using the `SMS_Advertisement` class and properties.
 
-### To configure a mandatory advertisement for Wake On LAN  
+### To configure a mandatory advertisement for Wake On LAN
 
-1.  Set up a connection to the SMS Provider.  
+1.  Set up a connection to the SMS Provider.
 
-2.  Get the specific advertisement using the provided advertisement ID.  
+2.  Get the specific advertisement using the provided advertisement ID.
 
-3.  Replace the `AdvertFlags` property value with the value indicating Wake On LAN.  
+3.  Replace the `AdvertFlags` property value with the value indicating Wake On LAN.
 
-4.  Save the advertisement with the new property  
+4.  Save the advertisement with the new property
 
-## Example  
- The following example method configures a software distribution mandatory advertisement for Wake On LAN.  
+## Example
+ The following example method configures a software distribution mandatory advertisement for Wake On LAN.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).  
+ For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../../../develop/core/understand/calling-code-snippets.md).
 
-```vbs  
+```vbs
 
-Sub SetWOLOnAdvertisment(connection, existingAdvertisementID)  
+Sub SetWOLOnAdvertisment(connection, existingAdvertisementID)
 
-    ' Define a constant with the hexadecimal value for WAKE_ON_LAN_ENABLED.   
-    Const WAKE_ON_LAN_ENABLED = &H00400000  
-    Dim advertisementToModify  
-    ' Get the specific advertisement instance to modify.   
-    Set advertisementToModify = connection.Get("SMS_Advertisement.AdvertisementID='" & existingadvertisementID & "'")  
+    ' Define a constant with the hexadecimal value for WAKE_ON_LAN_ENABLED.
+    Const WAKE_ON_LAN_ENABLED = &H00400000
+    Dim advertisementToModify
+    ' Get the specific advertisement instance to modify.
+    Set advertisementToModify = connection.Get("SMS_Advertisement.AdvertisementID='" & existingadvertisementID & "'")
 
-    ' List the existing property values.  
-    Wscript.Echo " "  
-    Wscript.Echo "Values before change: "  
-    Wscript.Echo "--------------------- "  
-    Wscript.Echo "Advertisement Name:            " & advertisementToModify.AdvertisementName  
-    Wscript.Echo "Advertisement Flags (integer): " & advertisementToModify.AdvertFlags  
+    ' List the existing property values.
+    Wscript.Echo " "
+    Wscript.Echo "Values before change: "
+    Wscript.Echo "--------------------- "
+    Wscript.Echo "Advertisement Name:            " & advertisementToModify.AdvertisementName
+    Wscript.Echo "Advertisement Flags (integer): " & advertisementToModify.AdvertFlags
 
-    ' Set the new property value.  
-    advertisementToModify.AdvertFlags = advertisementToModify.AdvertFlags OR WAKE_ON_LAN_ENABLED  
+    ' Set the new property value.
+    advertisementToModify.AdvertFlags = advertisementToModify.AdvertFlags OR WAKE_ON_LAN_ENABLED
 
-    ' Save the advertisement.  
-    advertisementToModify.Put_   
+    ' Save the advertisement.
+    advertisementToModify.Put_
 
-    ' Output the new property values.  
-    Wscript.Echo " "  
-    Wscript.Echo "Values after change:  "  
-    Wscript.Echo "--------------------- "  
-    Wscript.Echo "Advertisement Name:             " & advertisementToModify.AdvertisementName  
-    Wscript.Echo "Advertisement Flags (integer):  " & advertisementToModify.AdvertFlags  
+    ' Output the new property values.
+    Wscript.Echo " "
+    Wscript.Echo "Values after change:  "
+    Wscript.Echo "--------------------- "
+    Wscript.Echo "Advertisement Name:             " & advertisementToModify.AdvertisementName
+    Wscript.Echo "Advertisement Flags (integer):  " & advertisementToModify.AdvertFlags
 
-End Sub  
+End Sub
 
-```  
+```
 
-```c#  
+```c#
 
-public void SetWOLOnAdvertisment(WqlConnectionManager connection,  
-                                 string existingAdvertisementID)  
-{  
-    // Define a constant with the hexadecimal value for WAKE_ON_LAN_ENABLED.   
-    const Int32 WAKE_ON_LAN_ENABLED = 0x00400000;  
+public void SetWOLOnAdvertisment(WqlConnectionManager connection,
+                                 string existingAdvertisementID)
+{
+    // Define a constant with the hexadecimal value for WAKE_ON_LAN_ENABLED.
+    const Int32 WAKE_ON_LAN_ENABLED = 0x00400000;
 
-    try  
-    {  
-        // Get the specific advertisement instance to modify.   
-        IResultObject advertisementToModify = connection.GetInstance(@"SMS_Advertisement.AdvertisementID='" + existingAdvertisementID + "'");  
+    try
+    {
+        // Get the specific advertisement instance to modify.
+        IResultObject advertisementToModify = connection.GetInstance(@"SMS_Advertisement.AdvertisementID='" + existingAdvertisementID + "'");
 
-        // List the existing property values.  
-        Console.WriteLine();  
-        Console.WriteLine("Values before change:");  
-        Console.WriteLine("_____________________");  
-        Console.WriteLine("Advertisement Name:            " + advertisementToModify["AdvertisementName"].StringValue);  
-        Console.WriteLine("Advertisement Flags (integer): " + advertisementToModify["AdvertFlags"].IntegerValue);  
+        // List the existing property values.
+        Console.WriteLine();
+        Console.WriteLine("Values before change:");
+        Console.WriteLine("_____________________");
+        Console.WriteLine("Advertisement Name:            " + advertisementToModify["AdvertisementName"].StringValue);
+        Console.WriteLine("Advertisement Flags (integer): " + advertisementToModify["AdvertFlags"].IntegerValue);
 
-        // Modify the AdvertFlags value to include the WAKE_ON_LAN_ENABLED value.  
-        advertisementToModify["AdvertFlags"].IntegerValue = advertisementToModify["AdvertFlags"].IntegerValue | WAKE_ON_LAN_ENABLED;  
+        // Modify the AdvertFlags value to include the WAKE_ON_LAN_ENABLED value.
+        advertisementToModify["AdvertFlags"].IntegerValue = advertisementToModify["AdvertFlags"].IntegerValue | WAKE_ON_LAN_ENABLED;
 
-        // Save the advertisement with the new value.  
-        advertisementToModify.Put();  
+        // Save the advertisement with the new value.
+        advertisementToModify.Put();
 
-        // Reload the advertisement to verify the change.  
-        advertisementToModify.Get();  
+        // Reload the advertisement to verify the change.
+        advertisementToModify.Get();
 
-        // List the existing (modified) property values.  
-        Console.WriteLine();  
-        Console.WriteLine("Values after change:");  
-        Console.WriteLine("_____________________");  
-        Console.WriteLine("Advertisement Name:            " + advertisementToModify["AdvertisementName"].StringValue);  
-        Console.WriteLine("Advertisement Flags (integer): " + advertisementToModify["AdvertFlags"].IntegerValue);  
-    }  
-    catch (SmsException ex)  
-    {  
-        Console.WriteLine("Failed to modify advertisement. Error: " + ex.Message);  
-        throw;  
-    }  
-}  
+        // List the existing (modified) property values.
+        Console.WriteLine();
+        Console.WriteLine("Values after change:");
+        Console.WriteLine("_____________________");
+        Console.WriteLine("Advertisement Name:            " + advertisementToModify["AdvertisementName"].StringValue);
+        Console.WriteLine("Advertisement Flags (integer): " + advertisementToModify["AdvertFlags"].IntegerValue);
+    }
+    catch (SmsException ex)
+    {
+        Console.WriteLine("Failed to modify advertisement. Error: " + ex.Message);
+        throw;
+    }
+}
 
-```  
+```
 
- The example method has the following parameters:  
+ The example method has the following parameters:
 
-|Parameter|Type|Description|  
-|---------------|----------|-----------------|  
-|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|  
-|`existingAdvertisementID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the advertisment.|  
+|Parameter|Type|Description|
+|---------------|----------|-----------------|
+|`connection`<br /><br /> `swebemServices`|-   Managed: `WqlConnectionManager`<br />-   VBScript: [SWbemServices](/windows/win32/wmisdk/swbemservices)|A valid connection to the SMS Provider.|
+|`existingAdvertisementID`|-   Managed: `String`<br />-   VBScript: `String`|The ID of the advertisment.|
 
-## Compiling the Code  
- The C# example requires:  
+## Compiling the Code
+ The C# example requires:
 
-### Namespaces  
- System  
+### Namespaces
+ System
 
- Microsoft.ConfigurationManagement.ManagementProvider  
+ Microsoft.ConfigurationManagement.ManagementProvider
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine  
+ Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
-### Assembly  
- adminui.wqlqueryengine  
+### Assembly
+ adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider  
+ microsoft.configurationmanagement.managementprovider
 
- mscorlib  
+ mscorlib
 
-## Robust Programming  
- For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).  
+## Robust Programming
+ For more information about error handling, see [About Configuration Manager Errors](../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## See Also  
+## See Also
  [About deployments](about-software-distribution-deployments.md)
  [Software distribution overview](software-distribution-overview.md)

@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables easily deploying the latest version of Windows to existing devices.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -48,11 +41,13 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 - Microsoft Entra ID P1 or P2.
 
-- A supported version of Windows imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
-
-- The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
+- A [supported version of Windows](/windows/release-health/supported-versions-windows-client) imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
 
 - Enrollment restrictions aren't configured to block personal devices. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
+
+    > [!IMPORTANT]
+    >
+    > Any devices registered using a .json file during a hybrid join scenario are normally enrolled as a Corporate device.
 
 ## Configure the Enrollment Status Page (optional)
 

@@ -1,33 +1,16 @@
 ---
-# required metadata
-
-title: Wi-Fi settings for Windows 10/11 devices in Microsoft Intune
-description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10/11 client devices in Microsoft Intune. You can configure basic settings, or enterprise level settings. 
-keywords:
+title: Wi-Fi settings for Windows devices in Microsoft Intune
+description: Add or create Wi-Fi configuration profile using Wi-Fi settings for Windows 10/11 client devices in Microsoft Intune. You can configure basic settings, or enterprise level settings.
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
-ms.date: 06/25/2024
+ms.date: 05/15/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abalwan
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
-# Add Wi-Fi settings for Windows 10/11 devices in Intune
+# Add Wi-Fi settings for Windows devices in Intune
 
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
@@ -38,7 +21,7 @@ This article describes some of these settings.
 
 ## Before you begin
 
-- Create a [Windows 10/11 Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+- Create a [Windows Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 - These settings use the [Wi-Fi CSP](/windows/client-management/mdm/wifi-csp).
 
 ## Basic profile
@@ -147,7 +130,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **EAP-TLS**: Also enter:
 
     - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.
-    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
+    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate that's already installed on your device, then you don't need to include a root certificate.
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **SCEP certificate**: Select the SCEP client certificate profile that is also deployed to the device. This certificate is the identity presented by the device to the server to authenticate the connection.
@@ -157,7 +140,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
   - **EAP-TTLS**: Also enter:
 
     - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.
-    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.
+    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate that's already installed on your device, then you don't need to include a root certificate.
     - **Authentication method**: Select the authentication method used by your device clients. Your options:
 
       - **Username and Password**: Prompt the user for a user name and password to authenticate the connection. Also enter:
@@ -179,9 +162,9 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
   - **Protected EAP (PEAP)**: Also enter:
 
-    - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.  
+    - **Certificate server names**: Enter one or more common names used in the certificates issued by your trusted certificate authority (CA). If you enter this information, you can bypass the dynamic trust dialog shown on user devices when they connect to this Wi-Fi network.
 
-    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate, then you don't need to include a root certificate.  
+    - **Root certificates for server validation**: Select one or more existing trusted root certificate profiles. When the client connects to the network, these certificates are used to establish a chain of trust with the server. If your authentication server uses a public certificate that's already installed on your device, then you don't need to include a root certificate.
 
     - **Perform server validation**: When set to **Yes**, in PEAP negotiation phase 1, devices validate the certificate, and verify the server. Select **No** to block or prevent this validation. When set to **Not configured**, Intune doesn't change or update this setting.
 

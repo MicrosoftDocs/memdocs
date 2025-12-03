@@ -1,27 +1,12 @@
 ---
-# required metadata
-
 title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
-keywords:
-author: dougeby
-ms.author: dougeby
-manager: dougeby
-ms.date: 04/29/2025
+author: brenduns
+ms.author: brenduns
+ms.date: 12/02/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
- 
-# optional metadata
-
-#audience:
-
-ms.reviewer: lebacon
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
+ms.reviewer: intuner
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -31,7 +16,7 @@ ms.collection:
 
 To help in your readiness and planning, this article lists Intune UI updates and features that are in development but not yet released. Also:
 
-- If we anticipate that you'll need to take action before a change, we'll publish a complementary post in the Office message center.
+- If we anticipate that you need to take action before a change, we'll publish a complementary post in the Office message center.
 - When a feature enters production, whether it's in preview or generally available, the feature description moves from this article to [What's new](whats-new.md).
 - Refer to the [Microsoft 365 roadmap](https://www.microsoft.com/microsoft-365/roadmap?rtc=2&filters=EMS) for strategic deliverables and timelines.
 
@@ -59,104 +44,70 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 <!-- ***********************************************-->
 
-<!-- ## Microsoft Intune Suite -->
+## Microsoft Intune Suite
+
+### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
+
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 <!-- ***********************************************-->
 
 ## App management
 
-### Add Enterprise App Catalog apps to ESP blocking apps list<!-- 29846319 -->
-
-Enterprise App Catalog apps will be supported with Windows Autopilot. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. Using Windows Autopilot, you'll be able to select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This change allows you to update apps more easily without needing to update those profiles with the latest versions. 
-
-For related information, see [Set up the Enrollment Status Page](../enrollment/windows-enrollment-status.md), [Overview of Windows Autopilot device preparation](/autopilot/device-preparation/overview), and [Add an Enterprise App Catalog app to Microsoft Intune](../apps/apps-add-enterprise-app.md).
-
-Applies to:
-
-- Windows
-
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
 
-Applies to:
-
-- iOS/iPadOS
-
-<!-- *********************************************** -->
-
- <!-- Device configuration -->
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
 
 <!-- *********************************************** -->
 
-## Device enrollment
+## Device configuration
 
-### Change to role-based access control for device enrollment limits<!-- 27115176 -->
+### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
 
-We're updating role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you'll soon have read-only access to device enrollment limit policies. To create and edit these policies, you'll need to be an Intune Service Administrator.
+On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
 
-### Custom naming template for AOSP devices<!-- 31707864 -->
+In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
 
-You'll soon be able to use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template will be available to configure in the enrollment profile. It can contain a combination of free text and predefined variables, such as device serial number, device type, and for user-affiliated devices, the owner's username.
+  - Set a recovery lock password
+  - Configure a password rotation schedule
+  - Clear a recovery lock password
 
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
 
 <!-- *********************************************** -->
 
-## Device management
+<!-- ## Device enrollment -->
 
-### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
+<!-- *********************************************** -->
 
-During an unattended Remote Help sessions on Android devices, we're enhancing security and user awareness during remote assistance by blocking the screen of the device, and users will be notified if they interact with it.
-
-This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices. 
-
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
-
-
-### Cross Platform Device Inventory<!-- 25964936 -->
-
-Android, iOS, and Mac devices will be added to device inventory. Intune will collect a default set of inventory data including 74 Apple properties and 32 Android properties.
-
-For more information, see [View device details with Microsoft Intune](../remote-actions/device-inventory.md).
-
-### Remote actions with multiple administrative approval (MAA)<!-- 27043113 -->
-
-Intune *access policies* help protect against a compromised administrative account by requiring that a second administrative account is used to approve a change before the change is applied. This capability is known as multiple administrative approvals (MAA). The remote actions **Retire**, **Wipe**, and **Delete** will support MAA. Onboarding Remote device actions to MAA helps to mitigate the risk of unauthorized or compromised remote actions being taken on devices by a single administrative account, thereby enhancing the overall security posture of the environment.
-
-For more information on multiple administrative approvals, see [Use multiple administrative approvals in Intune](../fundamentals/multi-admin-approval.md).
-
-### Introducing platform level targeting of Device Cleanup rule<!-- 13835920 -->
-
-We're adding a feature that will allow a customer to:
-
-- Configure one device cleanup rule per platform (Windows, iOS/macOS, iPadOS, Android, Linux)
-- Configure a different RBAC permission and assign the permission to different RBAC roles
-
-Platform level targeting of the Device Cleanup rule helps administrators to remove stale and inactive devices from their tenant based on the active days rule specified by the admin. Scoped and targeted Device cleanup rules add an intermediate stage where an admin will be able to target removing stale devices by having a rule configured at the platform or OS level.
-
-For more information, see [device cleanup rules](../remote-actions/devices-wipe.md#automatically-remove-devices-with-cleanup-rules).
+<!-- ## Device management -->
 
 <!-- *********************************************** -->
 
 ## Device security
 
-### Detect rooted corporate-owned Android Enterprise devices<!--31672848  -->
+### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
-Configure compliance policies to detect if a corporate-owned Android Enterprise device is rooted. If Microsoft Intune detects that a device is rooted, you can have it marked as noncompliant. This feature is becoming available for devices enrolled as fully managed, dedicated, or corporate-owned with a work profile. 
+As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
 
-Applies to:
+### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-- Android
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
-### Linux support for Endpoint detection and response exclusion settings<!-- 26549863 -->
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
-We're adding a new Endpoint Security template under Endpoint detection and response (EDR) for the Linux platform that will be supported through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
-
-The template will support settings related to global exclusion settings. Applicable to antivirus and EDR engines on the client, the settings can configure exclusions to stop associated real time protection EDR alerts for the excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
-
-Applies to:
-
-- Linux
+For information about the currently available Intune security baselines, see [Security baselines overview](../protect/security-baselines.md).
 
 ### Support for Intune Device control policy for devices managed by Microsoft Defender for Endpoint<!-- 15466620 -->
 
@@ -164,10 +115,11 @@ You'll be able to use the endpoint security policy for *Device control* (Attack 
 
 - **Device control** policies are part of endpoint security [Attack surface reduction policy](../protect/endpoint-security-asr-policy.md).
 
-Applies to the following when you use the *Windows* platform:
-
-- Windows 10
-- Windows 11
+> [!div class="checklist"]
+> Applies to the following when you use the *Windows* platform:
+>
+> - Windows 10
+> - Windows 11
 
 When this change takes effect, devices that are assigned this policy while managed by Defender for Endpoint but not enrolled with Intune, will now apply the settings from the policy. Check your policy to make sure only the devices you intend to receive this policy will get it.
 
@@ -177,19 +129,21 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
+
+<!-- ## Monitor and troubleshoot -->
+
+
+<!-- *********************************************** -->
+
 <!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 
-## Tenant administration
+<!-- ## Role-based access control -->
 
-### Data collection from SimInfo entity on Windows devices<!--30120558 iddraft idready -->
+<!-- *********************************************** -->
 
-You'll be able to collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-
-Applies to:
-
-- Windows
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 

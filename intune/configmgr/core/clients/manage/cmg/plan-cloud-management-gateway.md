@@ -3,15 +3,15 @@ title: Plan for CMG
 titleSuffix: Configuration Manager
 description: Plan and design the cloud management gateway (CMG) to simplify management of internet-based clients.
 ms.date: 04/08/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Plan for the CMG in Configuration Manager
@@ -175,6 +175,6 @@ With a few exceptions, the configuration, operation, and functionality of the CM
 ## Next steps
 
 Next, determine how clients will authenticate with the CMG:
-  
+
 > [!div class="nextstepaction"]
 > [Plan for CMG client authentication](plan-client-authentication.md)

@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Manage Configuration Manager console extensions
@@ -21,7 +21,7 @@ ms.reviewer: mstewart,aaroncz
 Starting in Configuration Manager 2103, the **Console extensions** node allows you to start managing the approval and installation of console extensions used in your environment. Having extensions in the console doesn't make them immediately available. From a high level, the steps are:
 
 1. An administrator has to approve an extension for the site
-1. The administrator has to enable notifications for the extension. 
+1. The administrator has to enable notifications for the extension.
 1. The console users can then install the extension to their local console.
 
 After you approve an extension, when you open the console, you'll see a [console notification](#bkmk_notification). From the notification, you can start the extension installer, or use the **Install** option from the **Console extensions** node. After the installer completes, the console restarts automatically, and you can use the extension.
@@ -67,7 +67,7 @@ Starting in Configuration Manager version 2111, you can require a console extens
 1. In the Configuration Manager console, go to the **Administration** workspace.
 1. Expand **Updates and Servicing** and select the **Console Extensions** node.
 1. Select the extension, then select **Require Extension** from either the right-click menu or the ribbon.
-   - Selecting **Make Optional** for an extension removes the extension requirement. Console users can still install it locally from the **Console Extensions** node.  
+   - Selecting **Make Optional** for an extension removes the extension requirement. Console users can still install it locally from the **Console Extensions** node.
 1. The next time the console is launched by a user within the extension's security scope, installation starts automatically.
    - The user launching the console needs local administrator privileges for the extension installation.
 
@@ -84,7 +84,7 @@ Starting in version 2111, the site creates status messages for events related to
 - The user that made the change
 - The ID of the extension
 - The version of the extension
- 
+
 There are four categories of message events:
 
 - Required or optional

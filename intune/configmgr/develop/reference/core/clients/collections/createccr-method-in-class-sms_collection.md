@@ -12,102 +12,102 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CreateCCR Method in Class SMS_Collection
-The `CreateCCR` Windows Management Instrumentation (WMI) class method creates a client configuration request (CCR) for a particular resource.  
+The `CreateCCR` Windows Management Instrumentation (WMI) class method creates a client configuration request (CCR) for a particular resource.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 CreateCCR(  
-     UInt32 ResourceID,  
-     Boolean PushOnlyAssignedClients,  
-     SInt32 ClientType,  
-     Boolean Forced,  
-     Boolean ForceReinstall,  
-     Boolean PushEvenIfDC,  
-     Boolean InformationOnly,  
-     Boolean SpecifySiteCode,   
-     String PushSiteCode)  
+```
+SInt32 CreateCCR(
+     UInt32 ResourceID,
+     Boolean PushOnlyAssignedClients,
+     SInt32 ClientType,
+     Boolean Forced,
+     Boolean ForceReinstall,
+     Boolean PushEvenIfDC,
+     Boolean InformationOnly,
+     Boolean SpecifySiteCode,
+     String PushSiteCode)
 
-```  
+```
 
-#### Parameters  
- `ResourceID`  
- Data type: `UInt32`  
+#### Parameters
+ `ResourceID`
+ Data type: `UInt32`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- ID of a member resource.  
+ ID of a member resource.
 
- `PushOnlyAssignedClients`  
- Data type: `Boolean`  
+ `PushOnlyAssignedClients`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- This property is deprecated.  
+ This property is deprecated.
 
- `ClientType`  
- This property is deprecated.  
+ `ClientType`
+ This property is deprecated.
 
- `Forced`  
- Data type: `Boolean`  
+ `Forced`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- `true` to force installation. This defaults to `false`, if not specified. This is used for force reinstallation, even if the client is already installed. If set to `true`, the operating system is ignored.  
+ `true` to force installation. This defaults to `false`, if not specified. This is used for force reinstallation, even if the client is already installed. If set to `true`, the operating system is ignored.
 
- `ForceReinstall`  
- Data type: `Boolean`  
+ `ForceReinstall`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- `true` to force reinstallation. The value defaults to false, if not specified.  
+ `true` to force reinstallation. The value defaults to false, if not specified.
 
- `PushEvenIfDC`  
- Data type: `Boolean`  
+ `PushEvenIfDC`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- `true` to push installation on a domain component. The value defaults to false, if not specified.  
+ `true` to push installation on a domain component. The value defaults to false, if not specified.
 
- `InformationOnly`  
- Data type: `Boolean`  
+ `InformationOnly`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- `true` if the CCR is for information only. This parameter is only used to gather information from the client. The value defaults to false, if not specified.  
+ `true` if the CCR is for information only. This parameter is only used to gather information from the client. The value defaults to false, if not specified.
 
- `SpecifySiteCode`  
- Data type: `Boolean`  
+ `SpecifySiteCode`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- `SpecifySiteCode` is used to control whether the `PushSiteCode` parameter is used. If `SpecificySiteCode` is set to `true`, `PushSiteCode` is used. If `SpecificySiteCode` isn't set to `true`, `PushSiteCode` won't be used.  
+ `SpecifySiteCode` is used to control whether the `PushSiteCode` parameter is used. If `SpecificySiteCode` is set to `true`, `PushSiteCode` is used. If `SpecificySiteCode` isn't set to `true`, `PushSiteCode` won't be used.
 
- `PushSiteCode`  
- Data type: `Boolean`  
+ `PushSiteCode`
+ Data type: `Boolean`
 
- Qualifiers: [in, optional]  
+ Qualifiers: [in, optional]
 
- `PushSiteCode` defines which site initiates the actual push. The specified site pushes its client files to the client and do the actual installation.  
+ `PushSiteCode` defines which site initiates the actual push. The specified site pushes its client files to the client and do the actual installation.
 
-## Return Values  
- An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An  `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For more information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)   
+## See Also
+ [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)
  [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md)

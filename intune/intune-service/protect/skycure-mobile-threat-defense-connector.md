@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Symantec Endpoint Protection Mobile connector with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: How to set up Symantec Endpoint Protection Mobile with Microsoft Intune to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/27/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: df4ce3f6-a093-432c-ab86-7a83865e389e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -61,7 +41,7 @@ You can enable SEP Mobile risk assessment through Intune device compliance polic
 - Microsoft Intune Plan 1 subscription
 - Symantec Endpoint Protection Mobile subscription
 
-For more information, check [Symantec website](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection-mobile/1-0/Integrations/integrating-microsoft-intune-with-v131237277-d4221e13845.html).
+For more information, check [Symantec website](https://techdocs.broadcom.com/us/en/symantec-security-software/endpoint-security-and-management/endpoint-protection-mobile/1-0/integrations/integrating-microsoft-intune-with-v131237277-d4221e13845.html).
 
 ## How do Intune and SEP Mobile help protect your company resources?
 

@@ -12,280 +12,280 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CM_UpdatePackages Server WMI Class
-The  `SMS_CM_UpdatePackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update packages.  
+The  `SMS_CM_UpdatePackages` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update packages.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CM_UpdatePackages : SMS_BaseClass  
-{  
-    String ClientVersion;  
-    DateTime DateCreated;  
-    DateTime DateReleased;  
-    String Description;  
-    String EULA;  
-    String FullVersion;  
-    SInt32 Impact;  
-    DateTime LastUpdateTime;  
-    SInt32 LocaleID;  
-    String MaxCMVersion;  
-    String MinCMVersion;  
-    String MoreInfoLink;  
-    String Name;  
-    String PackageGuid;  
-    Sint32 PrereqFlag;  
-    String PrereqPackageName;   
-    SInt32 PrereqPackageState;  
-    SInt32 PublisherFlags;  
-    SInt32 State;  
-    SInt32 UpdateType;  
-    SInt32 WarningFlag;  
-};  
+```
+Class SMS_CM_UpdatePackages : SMS_BaseClass
+{
+    String ClientVersion;
+    DateTime DateCreated;
+    DateTime DateReleased;
+    String Description;
+    String EULA;
+    String FullVersion;
+    SInt32 Impact;
+    DateTime LastUpdateTime;
+    SInt32 LocaleID;
+    String MaxCMVersion;
+    String MinCMVersion;
+    String MoreInfoLink;
+    String Name;
+    String PackageGuid;
+    Sint32 PrereqFlag;
+    String PrereqPackageName;
+    SInt32 PrereqPackageState;
+    SInt32 PublisherFlags;
+    SInt32 State;
+    SInt32 UpdateType;
+    SInt32 WarningFlag;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_CM_UpdatePackages` class.  
+## Methods
+ The following table lists the methods in the `SMS_CM_UpdatePackages` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[IsCurrentWorkingUpdatePackage Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/iscurrentworkingupdatepackage-method-in-class-sms_cm_updatepackages.md)|Checks whether the update package is the package that setup is currently working on|  
-|[RetryContentReplication Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md)|Triggers DistMgr to copy content from the source to the content library.|  
-|[SetIgnorePrereqWarning Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/setignoreprereqwarning-method-in-class-sms_cm_updatepackages.md)|Updates the ignore pre-requisites warning flag of the update packages.|  
-|[UpdatePrereqAndStateFlags Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages.md)|Updates the installation state of update packages.|  
+|Method|Description|
+|------------|-----------------|
+|[IsCurrentWorkingUpdatePackage Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/iscurrentworkingupdatepackage-method-in-class-sms_cm_updatepackages.md)|Checks whether the update package is the package that setup is currently working on|
+|[RetryContentReplication Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/retrycontentreplication-method-in-class-sms_cm_updatepackages.md)|Triggers DistMgr to copy content from the source to the content library.|
+|[SetIgnorePrereqWarning Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/setignoreprereqwarning-method-in-class-sms_cm_updatepackages.md)|Updates the ignore pre-requisites warning flag of the update packages.|
+|[UpdatePrereqAndStateFlags Method in Class SMS_CM_UpdatePackages](../../../develop/reference/sum/updateprereqandstateflags-method-in-class-sms_cm_updatepackages.md)|Updates the installation state of update packages.|
 
-## Properties  
- `ClientVersion`  
- Data type: `String`  
+## Properties
+ `ClientVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The client version, if there is a client update in the package.  
+ The client version, if there is a client update in the package.
 
- `DateCreated`  
- Data type: `DateTime`  
+ `DateCreated`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date  the update package was added to the site.  
+ The date  the update package was added to the site.
 
- `DateReleased`  
- Data type: `DateTime`  
+ `DateReleased`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date the update package was released.  
+ The date the update package was released.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- A description of the update package.  
+ A description of the update package.
 
- `EULA`  
- Data type: `String`  
+ `EULA`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- The Microsoft Software License Terms for the overall update package.  
+ The Microsoft Software License Terms for the overall update package.
 
- `FullVersion`  
- Data type: `String`  
+ `FullVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The full version.  
+ The full version.
 
- `Impact`  
- Data type: `SInt32`  
+ `Impact`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Bit to indicate impact. Possible values are:  
+ Bit to indicate impact. Possible values are:
 
-| Value | Description |  
-| ----- | ----------- |  
-|0x01|Site server|  
-|0x02|Console|  
-|0x04|Client|  
-|0x08|New features|  
-|0x10|Bug fixes|  
+| Value | Description |
+| ----- | ----------- |
+|0x01|Site server|
+|0x02|Console|
+|0x04|Client|
+|0x08|New features|
+|0x10|Bug fixes|
 
- `LastUpdateTime`  
- Data type: `DateTime`  
+ `LastUpdateTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The date and time that the state was last updated.  
+ The date and time that the state was last updated.
 
- `LocaleID`  
- Data type: `SInt32`  
+ `LocaleID`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The locale ID for the localized data.  
+ The locale ID for the localized data.
 
- `MaxCMVersion`  
- Data type: `String`  
+ `MaxCMVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The maximum applicable version of Configuration Manager.  
+ The maximum applicable version of Configuration Manager.
 
- `MinCMVersion`  
- Data type: `String`  
+ `MinCMVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The minimum applicable version of Configuration Manager.  
+ The minimum applicable version of Configuration Manager.
 
- `MoreInfoLink`  
- Data type: `String`  
+ `MoreInfoLink`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Link to additional information about the update package.  
+ Link to additional information about the update package.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the update package.  
+ The name of the update package.
 
- `PackageGuid`  
- Data type: `String`  
+ `PackageGuid`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- A unique identifier for the feature.  
+ A unique identifier for the feature.
 
- `PrereqFlag`  
- Data type: `SInt32`  
+ `PrereqFlag`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Flag for pre-requisites. Valid values are:  
+ Flag for pre-requisites. Valid values are:
 
-| Value | Description |  
-| ----- | ----------- |  
-|0x1|Prereq only|  
-|0x2|CONTINUE_ON_PREREQ_WARNING|  
+| Value | Description |
+| ----- | ----------- |
+|0x1|Prereq only|
+|0x2|CONTINUE_ON_PREREQ_WARNING|
 
- `PrereqPackageName`  
- Data type: `String`  
+ `PrereqPackageName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the package that the current package depends on.  
+ The name of the package that the current package depends on.
 
- `PrereqPackageState`  
- Data type: `SInt32`  
+ `PrereqPackageState`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The state of the package that the current package depends on.  
+ The state of the package that the current package depends on.
 
- `PublisherFlags`  
- Data type: `SInt32`  
+ `PublisherFlags`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- 0x2: update boot image package.  
+ 0x2: update boot image package.
 
- `State`  
- Data type: `SInt32`  
+ `State`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The overall state of the update package.  
+ The overall state of the update package.
 
- `UpdateType`  
- Data type: `SInt32`  
+ `UpdateType`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Package type. Possible values are:  
+ Package type. Possible values are:
 
-| Value | Description |  
-| ----- | ----------- |  
-|0|Regular Update|  
-|1|Weave|  
-|2|QFE|  
+| Value | Description |
+| ----- | ----------- |
+|0|Regular Update|
+|1|Weave|
+|2|QFE|
 
- `WarningFlag`  
- Data type: `SInt32`  
+ `WarningFlag`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Warning flag. Possible values are:  
+ Warning flag. Possible values are:
 
-| Value | Description |  
-| ----- | ----------- |  
-|0|Bypass warning|  
-|1|Do not bypass warning|  
+| Value | Description |
+| ----- | ----------- |
+|0|Bypass warning|
+|1|Do not bypass warning|
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

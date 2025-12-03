@@ -12,597 +12,597 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_CombinedDeviceResources Server WMI Class
-The `SMS_CombinedDeviceResources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all the device and user resources in the system.  
+The `SMS_CombinedDeviceResources` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all the device and user resources in the system.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_CombinedDeviceResources : SMS_CombinedResources  
-{  
-    DateTime ADLastLogonTime;  
-    String ADSiteName;  
-    SInt32 ClientActiveStatus;  
-    UInt32 ClientCertType;  
-    SInt32 ClientCheckPass;  
-    UInt32 ClientEdition;  
-    SInt32 ClientRemediationSuccess;  
-    UInt32 ClientType;  
-    String ClientVersion;  
-    String DeviceAccessState;  
-    String DeviceCategory;  
-    String DeviceOS;  
-    UInt32 DeviceOwner;  
-    String DeviceType;  
-    String Domain;  
-    String EASDeviceID;  
-    UInt32 EnrollmentStatus;  
-    Boolean EPAntispywareEnabled;  
-    DateTime EPAntispywareSignatureLastUpdateDateTime;  
-    String EPAntispywareSignatureLastVersion;  
-    Boolean EPAntivirusEnabled;  
-    DateTime EPAntivirusSignatureLastUpdateDateTime;  
-    String EPAntivirusSignatureLastVersion;  
-    String EPClientVersion;  
-    String EPDeploymentDescription;  
-    UInt32 EPDeploymentErrorCode;  
-    UInt32 EPDeploymentState;  
-    Boolean EPEnabled;  
-    String EPEngineVersion;  
-    DateTime EPLastFullScanDateTimeEnd;  
-    DateTime EPLastFullScanDateTimeStart;  
-    UInt32 EPInfectionStatus;  
-    DateTime EPLastInfectionTime;  
-    DateTime EPLastQuickScanDateTimeEnd;  
-    DateTime EPLastQuickScanDateTimeStart;  
-    String EPLastThreatName;  
-    Boolean EPPendingFullScan;  
-    Boolean EPPendingManualSteps;  
-    Boolean EPPendingOfflineScan;  
-    Boolean EPPendingReboot;  
-    String EPPolicyApplicationDescription;  
-    UInt32 EPPolicyApplicationErrorCode;  
-    UInt32 EPPolicyApplicationState;  
-    String EPPolicyName; (removed in SP1)  
-    UInt32 EPProductStatus;  
-    String ExchangeOrganization;  
-    String ExchangeServer;  
-    String IMEI;  
-    Boolean IsActive;  
-    Boolean IsAlwaysInternet;  
-    UInt32 IsApproved;  
-    Boolean IsBlocked;  
-    Boolean IsClient;  
-    Boolean IsInternetEnabled;  
-    Boolean IsObsolete;  
-    Boolean IsVirtualMachine;  
-    DateTime LastActiveTime;  
-    DateTime LastClientCheckTime;  
-    DateTime LastDDR;  
-    DateTime LastHardwareScan;  
-    UInt32 LastInstallationError;  
-    String LastMPServerName;  
-    DateTime LastPolicyRequest;  
-    DateTime LastSoftwareScan;  
-    DateTime LastStatusMessage;  
-    DateTime LastSuccessSyncTimeUTC;  
-    DateTime LatestProcessingAttempt;  
-    String Name;  
-    String PhoneNumber;  
-    String PolicyApplicationStatus;  
-    UInt32 ResourceID;  
-    UInt32 ResourceType;  
-    String SerialNumber;  
-    String SiteCode;  
-    String SMSID;  
-    String Status;  
-    Boolean Unknown;  
-    String UserDomainName;  
-    String UserName;  
-    UInt32 WipeStatus;  
-};  
-```  
+```
+Class SMS_CombinedDeviceResources : SMS_CombinedResources
+{
+    DateTime ADLastLogonTime;
+    String ADSiteName;
+    SInt32 ClientActiveStatus;
+    UInt32 ClientCertType;
+    SInt32 ClientCheckPass;
+    UInt32 ClientEdition;
+    SInt32 ClientRemediationSuccess;
+    UInt32 ClientType;
+    String ClientVersion;
+    String DeviceAccessState;
+    String DeviceCategory;
+    String DeviceOS;
+    UInt32 DeviceOwner;
+    String DeviceType;
+    String Domain;
+    String EASDeviceID;
+    UInt32 EnrollmentStatus;
+    Boolean EPAntispywareEnabled;
+    DateTime EPAntispywareSignatureLastUpdateDateTime;
+    String EPAntispywareSignatureLastVersion;
+    Boolean EPAntivirusEnabled;
+    DateTime EPAntivirusSignatureLastUpdateDateTime;
+    String EPAntivirusSignatureLastVersion;
+    String EPClientVersion;
+    String EPDeploymentDescription;
+    UInt32 EPDeploymentErrorCode;
+    UInt32 EPDeploymentState;
+    Boolean EPEnabled;
+    String EPEngineVersion;
+    DateTime EPLastFullScanDateTimeEnd;
+    DateTime EPLastFullScanDateTimeStart;
+    UInt32 EPInfectionStatus;
+    DateTime EPLastInfectionTime;
+    DateTime EPLastQuickScanDateTimeEnd;
+    DateTime EPLastQuickScanDateTimeStart;
+    String EPLastThreatName;
+    Boolean EPPendingFullScan;
+    Boolean EPPendingManualSteps;
+    Boolean EPPendingOfflineScan;
+    Boolean EPPendingReboot;
+    String EPPolicyApplicationDescription;
+    UInt32 EPPolicyApplicationErrorCode;
+    UInt32 EPPolicyApplicationState;
+    String EPPolicyName; (removed in SP1)
+    UInt32 EPProductStatus;
+    String ExchangeOrganization;
+    String ExchangeServer;
+    String IMEI;
+    Boolean IsActive;
+    Boolean IsAlwaysInternet;
+    UInt32 IsApproved;
+    Boolean IsBlocked;
+    Boolean IsClient;
+    Boolean IsInternetEnabled;
+    Boolean IsObsolete;
+    Boolean IsVirtualMachine;
+    DateTime LastActiveTime;
+    DateTime LastClientCheckTime;
+    DateTime LastDDR;
+    DateTime LastHardwareScan;
+    UInt32 LastInstallationError;
+    String LastMPServerName;
+    DateTime LastPolicyRequest;
+    DateTime LastSoftwareScan;
+    DateTime LastStatusMessage;
+    DateTime LastSuccessSyncTimeUTC;
+    DateTime LatestProcessingAttempt;
+    String Name;
+    String PhoneNumber;
+    String PolicyApplicationStatus;
+    UInt32 ResourceID;
+    UInt32 ResourceType;
+    String SerialNumber;
+    String SiteCode;
+    String SMSID;
+    String Status;
+    Boolean Unknown;
+    String UserDomainName;
+    String UserName;
+    UInt32 WipeStatus;
+};
+```
 
-## Methods  
- The SMS_CombinedDeviceResources class does not define any methods.  
+## Methods
+ The SMS_CombinedDeviceResources class does not define any methods.
 
-## Properties  
- `ADLastLogonTime`  
- Data type: `DateTime`  
+## Properties
+ `ADLastLogonTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last logon timestamp of the computer (discovered from Active Directory).  
+ Last logon timestamp of the computer (discovered from Active Directory).
 
- `ADSiteName`  
- Data type: `String`  
+ `ADSiteName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Active Directory site to which the resource belongs.  
+ Active Directory site to which the resource belongs.
 
- `ClientActiveStatus`  
- Data type: `SInt32`  
+ `ClientActiveStatus`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Comes from Client Health.  
+ Comes from Client Health.
 
 | Value | Client activity status |
 | ----- | ---------------------- |
-|0|Client is inactive|  
-|1|Client is healthy|  
+|0|Client is inactive|
+|1|Client is healthy|
 
- `ClientCertType`  
- Data type: `UInt32`  
+ `ClientCertType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Client certificate type. Possible values are:  
+ Client certificate type. Possible values are:
 
 | Value | Client certificate type |
 | ----- | ----------------------- |
-|1|Self-signed Certificate|  
-|2|PKI Certificate|  
+|1|Self-signed Certificate|
+|2|PKI Certificate|
 
- `ClientCheckPass`  
- Data type: `SInt32`  
+ `ClientCheckPass`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Comes from Client Health.  
+ Comes from Client Health.
 
 | Value | Client health check status |
 | ----- | -------------------------- |
-|1|Client is healthy|  
-|2|Client is unhealthy|  
+|1|Client is healthy|
+|2|Client is unhealthy|
 
- `ClientRemediationSuccess`  
- Data type: `SInt32`  
+ `ClientRemediationSuccess`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Comes from Client Health.  
+ Comes from Client Health.
 
 | Value | Client recommendation status |
 | ----- | ---------------------------- |
-|1|Client remediation succeeded|  
-|2|Client remediation failed|  
+|1|Client remediation succeeded|
+|2|Client remediation failed|
 
- `ClientEdition`  
- Data type: `UInt32`  
+ `ClientEdition`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Edition of the client. Possible values are:  
+ Edition of the client. Possible values are:
 
 | Value | Client edition |
 | ----- | -------------- |
-|0|Not Installed|  
-|1|Windows RT|  
-|2|Windows Mobile 6|  
-|3|Nokia Symbian|  
-|4|Windows Phone|  
-|5|Mac|  
-|6|Windows CE|  
-|7|Windows Embedded|  
-|8|iOS|  
-|9|Android|  
-|10|Unix/Linux|  
+|0|Not Installed|
+|1|Windows RT|
+|2|Windows Mobile 6|
+|3|Nokia Symbian|
+|4|Windows Phone|
+|5|Mac|
+|6|Windows CE|
+|7|Windows Embedded|
+|8|iOS|
+|9|Android|
+|10|Unix/Linux|
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `ClientType`  
- Data type: `UInt32`  
+ `ClientType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Type of client. Possible value are:  
+ Type of client. Possible value are:
 
 | Value | Client type |
 | ----- | ----------- |
-|1|Client|  
-|3|Device|  
+|1|Client|
+|3|Device|
 
- `ClientVersion`  
- Data type: `String`  
+ `ClientVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Version of the installed client software.  
+ Version of the installed client software.
 
- `DeviceAccessState`  
- Data type: `String`  
+ `DeviceAccessState`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Used by the Exchange connector. Possible values are:  
+ Used by the Exchange connector. Possible values are:
 
 |Value|
-|-|  
-|Allowed|  
-|Blocked|  
-|Quarantined|  
+|-|
+|Allowed|
+|Blocked|
+|Quarantined|
 
- `DeviceCategory`  
- Data type: `String`  
+ `DeviceCategory`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Category of the device.  
+ Category of the device.
 
- `DeviceOS`  
- Data type: `String`  
+ `DeviceOS`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Device operating system.  
+ Device operating system.
 
- `DeviceOwner`  
- Data type: `UInt32`  
+ `DeviceOwner`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Owner of the device.  
+ Owner of the device.
 
 | Value | Device owner |
 | ----- | ------------ |
-|1|Company|  
-|2|Personal|  
+|1|Company|
+|2|Personal|
 
- `DeviceType`  
- Data type: `String`  
+ `DeviceType`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Type of device, such as Nokia, Microsoft Pocket PC and Smartphone.  
+ Type of device, such as Nokia, Microsoft Pocket PC and Smartphone.
 
- `Domain`  
- Data type: `String`  
+ `Domain`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Domain to which the resource belongs.  
+ Domain to which the resource belongs.
 
- `EASDeviceID`  
- Data type: `String`  
+ `EASDeviceID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Identifier of the device - used by Exchange Active Sync (EAS). This is specific to device management.  
+ Identifier of the device - used by Exchange Active Sync (EAS). This is specific to device management.
 
- `EnrollmentStatus`  
- Data type: `UInt32`  
+ `EnrollmentStatus`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates if the mobile device is newly enrolled or if the UDA has been created.  Possible values are:  
+ Indicates if the mobile device is newly enrolled or if the UDA has been created.  Possible values are:
 
 | Value | Enrollment status |
 | ----- | ----------------- |
-|1|Newly enrolled.|  
-|2|UDA has been created.|  
+|1|Newly enrolled.|
+|2|UDA has been created.|
 
- `EPAntispywareEnabled`  
- Data type: `Boolean`  
+ `EPAntispywareEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if Endpoint Protection antimalware is enabled.  
+ `true` if Endpoint Protection antimalware is enabled.
 
- `EPAntispywareSignatureLastUpdateDateTime`  
- Data type: `DateTime`  
+ `EPAntispywareSignatureLastUpdateDateTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last update time of the Endpoint Protection antimalware signature file.  
+ The last update time of the Endpoint Protection antimalware signature file.
 
- `EPAntispywareSignatureLastVersion`  
- Data type: `String`  
+ `EPAntispywareSignatureLastVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last version of the Endpoint Protection antimalware signature file.  
+ The last version of the Endpoint Protection antimalware signature file.
 
- `EPAntivirusEnabled`  
- Data type: `Boolean`  
+ `EPAntivirusEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if Endpoint Protection antivirus is enabled.  
+ `true` if Endpoint Protection antivirus is enabled.
 
- `EPAntivirusSignatureLastUpdateDateTime`  
- Data type: `DateTime`  
+ `EPAntivirusSignatureLastUpdateDateTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last update time of the Endpoint Protection antivirus signature file.  
+ The last update time of the Endpoint Protection antivirus signature file.
 
- `EPAntivirusSignatureLastVersion`  
- Data type: `String`  
+ `EPAntivirusSignatureLastVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last version of the Endpoint Protection antivirus signature file.  
+ The last version of the Endpoint Protection antivirus signature file.
 
- `EPClientVersion`  
- Data type: `String`  
+ `EPClientVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- EndPoint Protection client agent version, such as '4.1.522.0'.  
+ EndPoint Protection client agent version, such as '4.1.522.0'.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `EPDeploymentDescription`  
- Data type: `String`  
+ `EPDeploymentDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Deployment description.  
+ Deployment description.
 
- `EPDeploymentErrorCode`  
- Data type: `UInt32`  
+ `EPDeploymentErrorCode`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Deployment error code.  
+ Deployment error code.
 
- `EPDeploymentState`  
- Data type: `UInt32`  
+ `EPDeploymentState`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Deployment state. Possible values are:  
+ Deployment state. Possible values are:
 
 | Value | EP Deployment state |
 | ----- | ------------------- |
-|1|Unmanaged|  
-|2|To Be Installed|  
-|3|Managed|  
-|4|Install With Error|  
-|5|Reboot Pending|  
+|1|Unmanaged|
+|2|To Be Installed|
+|3|Managed|
+|4|Install With Error|
+|5|Reboot Pending|
 
- `EPEnabled`  
- Data type: `Boolean`  
+ `EPEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if Endpoint Protection is enabled.  
+ `true` if Endpoint Protection is enabled.
 
- `EPEngineVersion`  
- Data type: `String`  
+ `EPEngineVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- EndPoint Protection engine version, such as '1.1.8904.0'.  
+ EndPoint Protection engine version, such as '1.1.8904.0'.
 
- `EPInfectionStatus`  
- Data type: `UInt32`  
+ `EPInfectionStatus`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Endpoint Protection infection status. Possible values are:  
+ Endpoint Protection infection status. Possible values are:
 
 | Value | EP Infection status |
 | ----- | ------------------- |
-|0|Unknown|  
-|1|None|  
-|2|Cleaned|  
-|3|Pending|  
-|4|Failed|  
+|0|Unknown|
+|1|None|
+|2|Cleaned|
+|3|Pending|
+|4|Failed|
 
- `EPLastFullScanDateTimeEnd`  
- Data type: `DateTime`  
+ `EPLastFullScanDateTimeEnd`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- End time of the last full EndPoint Protection scan.  
+ End time of the last full EndPoint Protection scan.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `EPLastFullScanDateTimeStart`  
- Data type: `DateTime`  
+ `EPLastFullScanDateTimeStart`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Start time of last full EndPoint Protection scan.  
+ Start time of last full EndPoint Protection scan.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `EPLastInfectionTime`  
- Data type: `DateTime`  
+ `EPLastInfectionTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last infection time.  
+ Last infection time.
 
- `EPLastQuickScanDateTimeEnd`  
- Data type: `DateTime`  
+ `EPLastQuickScanDateTimeEnd`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- End time of last quick EndPoint Protection scan.  
+ End time of last quick EndPoint Protection scan.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `EPLastQuickScanDateTimeStart`  
- Data type: `DateTime`  
+ `EPLastQuickScanDateTimeStart`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Start time of last quick EndPoint Protection scan.  
+ Start time of last quick EndPoint Protection scan.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `EPLastThreatName`  
- Data type: `String`  
+ `EPLastThreatName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last threat name.  
+ Last threat name.
 
- `EPPendingFullScan`  
- Data type: `Boolean`  
+ `EPPendingFullScan`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if Endpoint Protection is pending a full scan.  
+ `true` if Endpoint Protection is pending a full scan.
 
- `EPPendingManualSteps`  
- Data type: `Boolean`  
+ `EPPendingManualSteps`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if Endpoint Protection is pending manual steps.  
+ `true` if Endpoint Protection is pending manual steps.
 
- `EPPendingOfflineScan`  
- Data type: `Boolean`  
+ `EPPendingOfflineScan`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if Endpoint Protection is pending an offline scan.  
+ `true` if Endpoint Protection is pending an offline scan.
 
- `EPPendingReboot`  
- Data type: `Boolean`  
+ `EPPendingReboot`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if Endpoint Protection is pending a reboot.  
+ `true` if Endpoint Protection is pending a reboot.
 
- `EPPolicyApplicationDescription`  
- Data type: `String`  
+ `EPPolicyApplicationDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Antimalware Policy application description.  
+ Antimalware Policy application description.
 
- `EPPolicyApplicationErrorCode`  
- Data type: `UInt32`  
+ `EPPolicyApplicationErrorCode`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Policy application error code.  
+ Policy application error code.
 
- `EPPolicyApplicationState`  
- Data type: `UInt32`  
+ `EPPolicyApplicationState`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Policy application state.  
+ Policy application state.
 
 | Value | EP Policy application state |
 | ----- | --------------------------- |
-|1|Success|  
-|2|Failed|  
+|1|Success|
+|2|Failed|
 
- `EPPolicyName`  
- Data type: `String`  
+ `EPPolicyName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the policy that gets applied, such as 'Antimalware Policy'.  
+ Name of the policy that gets applied, such as 'Antimalware Policy'.
 
- This method/property has been removed or deprecated in Configuration Manager SP1.  
+ This method/property has been removed or deprecated in Configuration Manager SP1.
 
- `EPProductStatus`  
- Data type: `UInt32`  
+ `EPProductStatus`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
  Endpoint protection product status. You can combine these values. For example, a device has the status `524384`. The hexadecimal equivalent is `80060`, which is easier to separate to the specific states `80000` + `40` + `20`.
 
@@ -610,23 +610,23 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 
 | Decimal value | Hexadecimal value | Status |
 | ----- | ----- | ----------------- |
-|0|0|No status flags are set.|  
-|1|1|Service not running.|  
-|2|2|Service started without any malware protection engine.|  
-|4|4|Pending a full scan due to threat action.|  
-|8|8|Pending a reboot due to threat action.|  
-|16|10|Pending manual steps due to threat action.|  
-|32|20|AV signatures out of date.|  
-|64|40|AS signatures out of date.|  
-|128|80|No quick scan has happened for a specified period.|  
-|256|100|No full scan has happened for a specified period.|  
-|512|200|System initiated scan in progress.|  
-|1024|400|System initiated clean in progress.|  
-|2048|800|There are samples pending submission.|  
-|4096|1000|Product running in evaluation mode.|  
-|8192|2000|Product running in non-genuine Windows mode.|  
-|16384|4000|Product expired.|  
-|32768|8000|Off-line scan required.|  
+|0|0|No status flags are set.|
+|1|1|Service not running.|
+|2|2|Service started without any malware protection engine.|
+|4|4|Pending a full scan due to threat action.|
+|8|8|Pending a reboot due to threat action.|
+|16|10|Pending manual steps due to threat action.|
+|32|20|AV signatures out of date.|
+|64|40|AS signatures out of date.|
+|128|80|No quick scan has happened for a specified period.|
+|256|100|No full scan has happened for a specified period.|
+|512|200|System initiated scan in progress.|
+|1024|400|System initiated clean in progress.|
+|2048|800|There are samples pending submission.|
+|4096|1000|Product running in evaluation mode.|
+|8192|2000|Product running in non-genuine Windows mode.|
+|16384|4000|Product expired.|
+|32768|8000|Off-line scan required.|
 |65536|10000|Service is shutting down as part of system shutdown.|
 |131072|20000|Threat remediation failed critically.|
 |262144|40000|Threat remediation failed non-critically.|
@@ -636,336 +636,336 @@ Class SMS_CombinedDeviceResources : SMS_CombinedResources
 |4194304|400000|The platform is about to be outdated.|
 |8388608|800000|The signature or platform end of life is past or is impending.|
 
- `ExchangeOrganization`  
- Data type: `String`  
+ `ExchangeOrganization`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the organization for Exchange Active Sync (EAS) .  
+ Name of the organization for Exchange Active Sync (EAS) .
 
- `ExchangeServer`  
- Data type: `String`  
+ `ExchangeServer`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the Exchange server for Exchange Active Sync (EAS).  
+ Name of the Exchange server for Exchange Active Sync (EAS).
 
- `IMEI`  
- Data type: `String`  
+ `IMEI`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- IMEI number of the device.  
+ IMEI number of the device.
 
- `IsActive`  
- Data type: `Boolean`  
+ `IsActive`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if there has been a recent heartbeat from the client.  
+ `true` if there has been a recent heartbeat from the client.
 
- `IsAlwaysInternet`  
- Data type: `Boolean`  
+ `IsAlwaysInternet`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if a client that is installed has a sustained connection to the Internet.  
+ `true` if a client that is installed has a sustained connection to the Internet.
 
- `IsApproved`  
- Data type: `UInt32`  
+ `IsApproved`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if system is able to accept secure policy. Unapproved (anonymous) clients will not get policy. Clients that registered via windows authentication, or using PKI certificate chain trust, will be automatically approved.  
+ `true` if system is able to accept secure policy. Unapproved (anonymous) clients will not get policy. Clients that registered via windows authentication, or using PKI certificate chain trust, will be automatically approved.
 
- `IsBlocked`  
- Data type: `Boolean`  
+ `IsBlocked`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if a system is blocked. Block/unblock is a manual action in the Admin Console UI that the administrator can invoke. By blocking a client, client communication with the server will be cut off.  
+ `true` if a system is blocked. Block/unblock is a manual action in the Admin Console UI that the administrator can invoke. By blocking a client, client communication with the server will be cut off.
 
- `IsClient`  
- Data type: `Boolean`  
+ `IsClient`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true`, if the client is a Configuration Manager client.  
+ `true`, if the client is a Configuration Manager client.
 
- `IsInternetEnabled`  
- Data type: `Boolean`  
+ `IsInternetEnabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if a client is enabled for communication with an internet facing management point.  
+ `true` if a client is enabled for communication with an internet facing management point.
 
- `IsObsolete`  
- Data type: `Boolean`  
+ `IsObsolete`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client has been marked obsolete.  
+ `true` if the client has been marked obsolete.
 
- `IsVirtualMachine`  
- Data type: `Boolean`  
+ `IsVirtualMachine`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the client is a virtual machine.  
+ `true` if the client is a virtual machine.
 
- `LastActiveTime`  
- Data type: `DateTime`  
+ `LastActiveTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Comes from Client Health. Represents the last reported time the client was active.  
+ Comes from Client Health. Represents the last reported time the client was active.
 
- `LastClientCheckTime`  
- Data type: `DateTime`  
+ `LastClientCheckTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Comes from Client Health. Represents the last reported health evaluation time.  
+ Comes from Client Health. Represents the last reported health evaluation time.
 
- `LastDDR`  
- Data type: `DateTime`  
+ `LastDDR`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last heartbeat timestamp from client DDR discovery.  
+ Last heartbeat timestamp from client DDR discovery.
 
- `LastHardwareScan`  
- Data type: `DateTime`  
+ `LastHardwareScan`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Timestamp from the last hardware inventory scan.  
+ Timestamp from the last hardware inventory scan.
 
- `LastInstallationError`  
- Data type: `UInt32`  
+ `LastInstallationError`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Last reported error code from the installation on this client.  
+ Last reported error code from the installation on this client.
 
- `LastMPServerName`  
- Data type: `String`  
+ `LastMPServerName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Management Point server name where the client performed its last policy request.  
+ Management Point server name where the client performed its last policy request.
 
- `LastPolicyRequest`  
- Data type: `DateTime`  
+ `LastPolicyRequest`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Timestamp of the last policy request for this client.  
+ Timestamp of the last policy request for this client.
 
- `LastSoftwareScan`  
- Data type: `DateTime`  
+ `LastSoftwareScan`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Timestamp of the last software inventory scan for this client.  
+ Timestamp of the last software inventory scan for this client.
 
- `LastStatusMessage`  
- Data type: `DateTime`  
+ `LastStatusMessage`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Timestamp of the last status message received from this client.  
+ Timestamp of the last status message received from this client.
 
- `LastSuccessSyncTimeUTC`  
- Data type: `DateTime`  
+ `LastSuccessSyncTimeUTC`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Timestamp of the last successfully synchronization time for this client.  
+ Timestamp of the last successfully synchronization time for this client.
 
- `LatestProcessingAttempt`  
- Data type: `DateTime`  
+ `LatestProcessingAttempt`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Timestamp of the last processing attempt for this client.  
+ Timestamp of the last processing attempt for this client.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- NetBIOS name for this system. Comes from Discovery.  
+ NetBIOS name for this system. Comes from Discovery.
 
- `PhoneNumber`  
- Data type: `String`  
+ `PhoneNumber`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Phone number of the device, as reported by Exchange Active Sync (EAS).  
+ Phone number of the device, as reported by Exchange Active Sync (EAS).
 
- `PolicyApplicationStatus`  
- Data type: `String`  
+ `PolicyApplicationStatus`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Application policy status, as reported by Exchange Active Sync (EAS).  
+ Application policy status, as reported by Exchange Active Sync (EAS).
 
- `ResourceID`  
- Data type: `UInt32`  
+ `ResourceID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, key]  
+ Qualifiers: [key, key]
 
- Unique Configuration Manager-supplied ID for the resource.  
+ Unique Configuration Manager-supplied ID for the resource.
 
- `ResourceType`  
- Data type: `UInt32`  
+ `ResourceType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Type of resource, for example, system or user. For more information, see [SMS_ResourceMap Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resourcemap-server-wmi-class.md).  
+ Type of resource, for example, system or user. For more information, see [SMS_ResourceMap Server WMI Class](../../../../../develop/reference/core/clients/manage/sms_resourcemap-server-wmi-class.md).
 
- `SerialNumber`  
- Data type: `String`  
+ `SerialNumber`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Serial number of the device.  
+ Serial number of the device.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Site code of the site that created the collection.  
+ Site code of the site that created the collection.
 
- `SMSID`  
- Data type: `String`  
+ `SMSID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Unique Configuration Manager ID of the client.  
+ Unique Configuration Manager ID of the client.
 
- `Status`  
- Data type: `String`  
+ `Status`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Current status.   
+ Current status.
 
- `UserDomainName`  
- Data type: `String`  
+ `UserDomainName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The domain of the user to last log in to this client.  
+ The domain of the user to last log in to this client.
 
- `Unknown`  
- Data type: `Boolean`  
+ `Unknown`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the device is unknown.  
+ `true` if the device is unknown.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
- `UserName`  
- Data type: `String`  
+ `UserName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the user to last log in to this client.  
+ The name of the user to last log in to this client.
 
- `WipeStatus`  
- Data type: `UInt32`  
+ `WipeStatus`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Wipe status of the device, as reported through Exchange Active Sync (EAS).  
+ Wipe status of the device, as reported through Exchange Active Sync (EAS).
 
 | Value | Wipe status |
 | ----- | ----------- |
-|1|Wipe Pending|  
-|2|Wipe Cancelling|  
-|3|Wipe Confirmed/Registered|  
+|1|Wipe Pending|
+|2|Wipe Cancelling|
+|3|Wipe Confirmed/Registered|
 
-## Remarks  
- Similar to the members class that is generated for querying "All Systems," this class is designed for summarizing the major properties across different feature areas and is not bound by the same RBAC rules as the "All Systems" resource class.  
+## Remarks
+ Similar to the members class that is generated for querying "All Systems," this class is designed for summarizing the major properties across different feature areas and is not bound by the same RBAC rules as the "All Systems" resource class.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

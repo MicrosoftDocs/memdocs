@@ -1,25 +1,10 @@
 ---
 title: Get started with Windows frontline worker devices
 description: Learn how to manage frontline worker devices using Windows devices in Microsoft Intune. Select the best enrollment option, configure the home screen, and more.
-ms.author: mandia
-author: MandiOhlinger
-manager: dougeby
-ms.date: 08/19/2024
-audience: ITPro
+ms.date: 05/29/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-
 ms.reviewer: cbernier
-ms.suite: ems
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
@@ -46,19 +31,6 @@ Use this article to get started with Windows FLW devices in Intune. Specifically
 - [Step 1 - Select your enrollment option](#step-1---select-your-enrollment-option)
 - [Step 2 - Shared device or user associated device](#step-2---shared-device-or-user-associated-device)
 - [Step 3 - Device experience and kiosk](#step-3---device-experience-and-kiosk)
-
-## Windows 365 Cloud PCs
-
-**Windows 365 Cloud PCs** are virtual machines that are hosted in the Windows 365 service. They're accessible from anywhere and from any device. They include a Windows desktop experience and are associated with a user. Basically, end users have their own PC in the cloud.
-
-✅ Windows 365 Cloud PCs are ideal for frontline workers that need a Windows desktop experience, but don't need a physical device. For example, a call center worker that needs access to a Windows desktop app.
-
-These devices enroll in Intune, and are managed like any other device, including apps, configuration settings, and updates.
-
-For information on Windows 365 Cloud PCs, and to learn more, go to:
-
-- [Windows 365 Cloud PCs overview - Enterprise](/windows-365/enterprise/overview)
-- [Windows 365 Cloud PCs overview - Small & medium business](/windows-365/business/get-started-windows-365-business)
 
 ## Step 1 - Select your enrollment option
 
@@ -176,6 +148,19 @@ To get started, use the following links:
 2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../intune-service/configuration/settings-catalog.md).
 
     :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
+
+## Windows 365 Cloud PCs
+
+**Windows 365 Cloud PCs** are virtual machines that are hosted in the Windows 365 service. They're accessible from anywhere and from any device. They include a Windows desktop experience and are associated with a user. Basically, end users have their own PC in the cloud.
+
+✅ Windows 365 Cloud PCs are ideal for frontline workers that need a Windows desktop experience, but don't need a physical device. For example, a call center worker that needs access to a Windows desktop app.
+
+These devices enroll in Intune, and are managed like any other device, including apps, configuration settings, and updates.
+
+For information on Windows 365 Cloud PCs, and to learn more, go to:
+
+- [Windows 365 Cloud PCs overview - Enterprise](/windows-365/enterprise/overview)
+- [Windows 365 Cloud PCs overview - Small & medium business](/windows-365/business/get-started-windows-365-business)
 
 ## Related articles
 

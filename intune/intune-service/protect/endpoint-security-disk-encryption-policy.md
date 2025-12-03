@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Microsoft Intune endpoint security disk encryption policy
 description: Configure and deploy Microsoft Intune endpoint security policy disk encryption policies for BitLocker and FileVault.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 09/23/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -41,8 +24,7 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 ## Prerequisites for disk encryption policy
 
 - **macOS** - macOS 10.13 or later
-- **Windows** - Windows 10
-- **Windows** - Windows 11
+- **Windows** - Windows
 
 ## Role-based access controls (RBAC)
 
@@ -90,4 +72,4 @@ After you deploy policy to encrypt a device disk, see the following articles for
 ## Next steps
 
 - [To create a macOS encryption profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
-- [To create a Windows encryption profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-windows)
+- [To create a Windows encryption profile](../protect/encrypt-devices.md#create-endpoint-security-policy)

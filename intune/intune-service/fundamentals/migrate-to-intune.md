@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Migrate from Microsoft 365 Basic Mobility and Security to Intune
-titleSuffix: Microsoft Intune
 description: Learn how to migrate your mobile device management from Microsoft 365 Basic Mobility and Security to Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 06/25/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -63,7 +45,7 @@ This article helps you migrate your mobile device management (MDM) from Microsof
   Users with Intune licenses already assigned can start receiving policies immediately, possibly sooner than you expect. The policies can happen even if Basic Mobility and Security didn't previously manage the users or devices.
 
   If you want to prevent this behavior, you can unassign the Intune licenses before the migration. You can also create separate groups to help manage when the policies are deployed:
-  
+
   - Group 1: Users with Intune licenses already assigned
   - Group 2: Users without Intune licenses assigned
 
@@ -155,7 +137,7 @@ To evaluate and migrate policies from Basic Mobility and Security to Intune:
     - If there are already Intune-licensed users in the recommended groups, then verify that the recommended policies are appropriate for these users. After you assign the policies to these groups, all Intune licensed users in the groups receive the policies, even users not previously managed by Basic Mobility and Security.
 
         > [!NOTE]
-        > For the Windows operating system, only Windows 10/11 desktop devices will have policy migrated for them. Other versions of Windows won't have policy migrated. For more information, see the [Policy mapping for Access Requirements](policy-map-access-requirements.md) and [Policy mapping for Configuration](policy-map-configurations.md).
+        > For the Windows operating system, only Windows desktop devices will have policy migrated for them. Other versions of Windows won't have policy migrated. For more information, see the [Policy mapping for Access Requirements](policy-map-access-requirements.md) and [Policy mapping for Configuration](policy-map-configurations.md).
 
 6. If you want to implement the recommended policy, then select **Open policy**. The policy page opens and the Intune policy is created. You can change or update the migrated policies.
 
@@ -228,10 +210,9 @@ The **Number of sign-in failures before device is wiped** setting isn't migrated
 
 **Workaround**: If this setting was enabled in the Basic Mobility and Security policy, then this setting must be manually added to Intune device configuration profiles. For more information on the similar settings you can configure in Intune, go to:
 
-- [Android Enterprise corporate-owned devices: Settings list to allow or restrict features](../configuration/device-restrictions-android-for-work.md)
-- [Android Enterprise personally owned devices: Settings list to allow or restrict features](../configuration/device-restrictions-android-enterprise-personal.md)
-- [iOS/iPadOS devices: Settings list to allow or restrict features](../configuration/device-restrictions-ios.md)
-- [Windows 10/11 device: Settings list to allow or restrict features](../configuration/device-restrictions-windows-10.md)
+- [Android Enterprise: Settings list to allow or restrict features](../configuration/device-restrictions-android-for-work.md)
+- [iOS/iPadOS: Settings list to allow or restrict features](../configuration/device-restrictions-ios.md)
+- [Windows: Settings list to allow or restrict features](../configuration/device-restrictions-windows-10.md)
 
 ## Next steps
 

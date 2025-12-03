@@ -6,12 +6,12 @@ ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Language packs in Configuration Manager
@@ -34,59 +34,59 @@ When you install support for a language that matches the following components:
 
 When you run Configuration Manager setup, it downloads language pack files as part of the prerequisites and redistributable files. You can also use the [setup downloader](setup-downloader.md) to download these files before you run setup.
 
-## Server languages  
+## Server languages
 
-Use the following table to map a locale ID to a language that you want to support on servers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).  
+Use the following table to map a locale ID to a language that you want to support on servers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
-|Server language|Locale ID (LCID)|Three-letter code|  
-|---------------------|------------------------|-----------------------|  
-|English (default)|0409|ENU|  
-|Chinese (Simplified)|0804|CHS|  
-|Chinese (Traditional, Taiwan)|0404|CHT|  
-|Czech|0405|CSY|  
-|Dutch - Netherlands|0413|NLD|  
-|French|040c|FRA|  
-|German|0407|DEU|  
-|Hungarian|040e|HUN|  
-|Italian - Italy|0410|ITA|  
-|Japanese|0411|JPN|  
-|Korean|0412|KOR|  
-|Polish|0415|PLK|  
-|Portuguese - Brazil|0416|PTB|  
-|Portuguese - Portugal|0816|PTG|  
-|Russian|0419|RUS|  
-|Spanish - Spain|0c0a|ESN|  
-|Swedish|041d|SVE|  
-|Turkish|041f|TRK|  
+|Server language|Locale ID (LCID)|Three-letter code|
+|---------------------|------------------------|-----------------------|
+|English (default)|0409|ENU|
+|Chinese (Simplified)|0804|CHS|
+|Chinese (Traditional, Taiwan)|0404|CHT|
+|Czech|0405|CSY|
+|Dutch - Netherlands|0413|NLD|
+|French|040c|FRA|
+|German|0407|DEU|
+|Hungarian|040e|HUN|
+|Italian - Italy|0410|ITA|
+|Japanese|0411|JPN|
+|Korean|0412|KOR|
+|Polish|0415|PLK|
+|Portuguese - Brazil|0416|PTB|
+|Portuguese - Portugal|0816|PTG|
+|Russian|0419|RUS|
+|Spanish - Spain|0c0a|ESN|
+|Swedish|041d|SVE|
+|Turkish|041f|TRK|
 
 ## Client languages
 
 Use the following table to map a locale ID to a language that you want to support on client computers. For more information about locale IDs, see [Locale IDs assigned by Microsoft](/openspecs/windows_protocols/ms-lcid/a9eac961-e77d-41a6-90a5-ce1a8b0cdb9c).
 
-|Client language|Locale ID (LCID)|Three-letter code|  
-|---------------------|------------------------|-----------------------|  
-|English (default)|0409|ENG|  
-|Chinese -Simplified|0804|CHS|  
-|Chinese (Traditional, Taiwan)|0404|CHT|  
-|Czech|0405|CSY|  
-|Danish|0406|DAN|  
-|Dutch - Netherlands|0413|NLD|  
-|Finnish|040b|FIN|  
-|French|040c|FRA|  
-|German|0407|DEU|  
-|Greek|0408|ELL|  
-|Hungarian|040e|HUN|  
-|Italian - Italy|0410|ITA|  
-|Japanese|0411|JPN|  
-|Korean|0412|KOR|  
-|Norwegian|0414|NOR|  
-|Polish|0415|PLK|  
-|Portuguese (Brazil)|0416|PTB|  
-|Portuguese (Portugal)|0816|PTG|  
-|Russian|0419|RUS|  
-|Spanish - Spain|0c0a|ESN|  
-|Swedish|041d|SVE|  
-|Turkish|041f|TRK|  
+|Client language|Locale ID (LCID)|Three-letter code|
+|---------------------|------------------------|-----------------------|
+|English (default)|0409|ENG|
+|Chinese -Simplified|0804|CHS|
+|Chinese (Traditional, Taiwan)|0404|CHT|
+|Czech|0405|CSY|
+|Danish|0406|DAN|
+|Dutch - Netherlands|0413|NLD|
+|Finnish|040b|FIN|
+|French|040c|FRA|
+|German|0407|DEU|
+|Greek|0408|ELL|
+|Hungarian|040e|HUN|
+|Italian - Italy|0410|ITA|
+|Japanese|0411|JPN|
+|Korean|0412|KOR|
+|Norwegian|0414|NOR|
+|Polish|0415|PLK|
+|Portuguese (Brazil)|0416|PTB|
+|Portuguese (Portugal)|0816|PTG|
+|Russian|0419|RUS|
+|Spanish - Spain|0c0a|ESN|
+|Swedish|041d|SVE|
+|Turkish|041f|TRK|
 
 ### Mobile device client languages
 
@@ -94,8 +94,8 @@ When you add support for mobile device languages, all supported mobile device cl
 
 ## Identify installed language packs
 
-To identify the language packs that are installed on a computer that runs the Configuration Manager client, look for the locale ID (LCID) of the installed language packs in the computer's registry. This information is available at the following registry path:  
+To identify the language packs that are installed on a computer that runs the Configuration Manager client, look for the locale ID (LCID) of the installed language packs in the computer's registry. This information is available at the following registry path:
 
-`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs`  
+`HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\CCMSetup\InstalledLangs`
 
 Customize hardware inventory to collect this information. Then build a custom report to view the language details. For more information about collecting custom hardware inventory, see [How to configure hardware inventory](../../../clients/manage/inventory/configure-hardware-inventory.md). For more information, see [Create reports](../../manage/operations-and-maintenance-for-reporting.md#create-reports).

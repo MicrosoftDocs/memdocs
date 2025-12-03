@@ -12,7 +12,7 @@ ms.author: banreetkaur
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1701 for Configuration Manager
 
@@ -20,30 +20,30 @@ ms.reviewer: mstewart,aaroncz
 
 
 
-This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1701. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.    
+This article introduces the features that are available in the Technical Preview for Configuration Manager, version 1701. You can install this version to update and add new capabilities to your Configuration Manager technical preview site. Before installing this version of the technical preview, review the introductory topic, [Technical Preview for Configuration Manager](../../core/get-started/technical-preview.md), to become familiar with general requirements and limitations for using a technical preview, how to update between versions, and how to provide feedback about the features in a technical preview.
 
 
-**The following are new features you can try out with this version.**  
+**The following are new features you can try out with this version.**
 
 ## Boundary groups improvements for software update points
-Beginning with this preview, you now use boundary groups to associate clients with software update points. This is part of continuing work to expand the changes for boundary groups to manage additional site system roles.  Changes for boundary groups was first introduced in Technical Preview 1609 and the Current Branch in version 1610.  
+Beginning with this preview, you now use boundary groups to associate clients with software update points. This is part of continuing work to expand the changes for boundary groups to manage additional site system roles.  Changes for boundary groups was first introduced in Technical Preview 1609 and the Current Branch in version 1610.
 
-With this preview, you use the new boundary group behavior to manage which software update points a client can use, similar to how you manage which distribution point a client can use:  
+With this preview, you use the new boundary group behavior to manage which software update points a client can use, similar to how you manage which distribution point a client can use:
 
 - You configure boundary groups to associate one or more servers that host a software update point.
 - Clients that are seeking a new software update point will try to use one that is associated with their current boundary group.
-- When the client fails to reach their current software update point and cannot find one from their current boundary group, the client uses Fallback behavior to expand the available pool of software update points it can use.    
+- When the client fails to reach their current software update point and cannot find one from their current boundary group, the client uses Fallback behavior to expand the available pool of software update points it can use.
 
 For more information on boundary groups, see [Boundary groups](../servers/deploy/configure/boundary-groups.md) in the content for the Current Branch.
 
 However, with this preview, boundary groups for software update points are only partially implemented. You can add software update points and configure neighbor boundary groups that contain software update points, but the fallback time for software update points is not yet supported, and clients will wait two hours before starting fallback.
 
-The following describes the behavior for software update points with this technical preview:  
+The following describes the behavior for software update points with this technical preview:
 
 - **New clients use boundary groups to select software update points,**
   A client that you install after you install version 1701 selects a software update point from those associated with the client's boundary group.
 
-  This replaces the previous behavior where clients select a software update point randomly from a list of those that share the clients forest.   
+  This replaces the previous behavior where clients select a software update point randomly from a list of those that share the clients forest.
 
 - **Previously installed clients continue to use their current software update point until they fallback to find a new one.**
   Clients that were previously installed and that already have a software update point will continue to use that software update point until they fallback. This includes software update points that are not associated with the client's current boundary group. They do not immediately attempt to find and use a software update point from their current boundary group.
@@ -58,7 +58,7 @@ The following describes the behavior for software update points with this techni
 
   When a client does use fallback, it will use the boundary group configurations for fallback to create a pool of available software update points. This pool includes all software update points from the clients *current boundary group*, *neighbor boundary groups*, and the clients *site default boundary group*.
 
-- **Configure the default site boundary group:**  
+- **Configure the default site boundary group:**
   Consider adding a software update point to the *Default-Site-Boundary-Group&lt;sitecode>*. This ensures that clients that are not members of another boundary group can fallback to find a software update point.
 
 
@@ -102,7 +102,7 @@ Beginning with this preview version, you can configure management points to vali
 - **Enable on-premises management point health attestation reporting for the client agent**<br>In the Configuration Manager console, choose **Administration** > **Client Settings** and double-click or create a new **Custom Device Settings**. Select **Computer Agent** and set **Use on-premises Health Attestation Service** to **Yes**. If **Enable communication with Device Health Attestation Service** is set to **Yes** and **Use on-premises Health Attestation** is set to **No**, the management point will use the cloud-based device health attestation service.
 
 ## Use the OMS connector for Microsoft Azure Government cloud
-With this technical preview, you can now use the Microsoft Operations Management Suite (OMS) connector to connect to an OMS workspace that is on Microsoft Azure Government cloud.  
+With this technical preview, you can now use the Microsoft Operations Management Suite (OMS) connector to connect to an OMS workspace that is on Microsoft Azure Government cloud.
 
 To do so, you modify a configuration file to point to the Government cloud, and then install the OMS connector.
 
@@ -114,23 +114,23 @@ To do so, you modify a configuration file to point to the Government cloud, and 
    Change the value for the setting name *FairFaxArmResourceID* to be equal to ```<https://management.usgovcloudapi.net/>```
 
    - **Original:**
-     &lt;setting name="FairFaxArmResourceId" serializeAs="String">   
-     &lt;value>&lt;/value>   
+     &lt;setting name="FairFaxArmResourceId" serializeAs="String">
+     &lt;value>&lt;/value>
      &lt;/setting>
 
-   - **Edited:**     
+   - **Edited:**
      &lt;setting name="FairFaxArmResourceId" serializeAs="String">
-     &lt;value&gt;https://management.usgovcloudapi.net/&lt;/value&gt;  
+     &lt;value&gt;https://management.usgovcloudapi.net/&lt;/value&gt;
      &lt;/setting>
 
    Change the value for the setting name *FairFaxAuthorityResource* to be equal to "<https://login.microsoftonline.com/>"
 
    - **Original:**
-     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">
      &lt;value>&lt;/value>
 
    - **Edited:**
-     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">   
+     &lt;setting name="FairFaxAuthorityResource" serializeAs="String">
      &lt;value&gt;[https://login.microsoftonline.com](https://login.microsoftonline.com)&lt;/value&gt;
 
 2. After you save the file with the two changes, restart the Configuration Manager console on the same computer, and then use that console to install the OMS connector. To install the connector, use the information in [Sync data from Configuration Manager to the Microsoft Operations Management Suite](/azure/azure-monitor/platform/collect-sccm), and select the **Operations Management Suite Workspace** that is on the Microsoft Azure Government cloud.

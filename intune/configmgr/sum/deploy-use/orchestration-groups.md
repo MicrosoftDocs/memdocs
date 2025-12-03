@@ -6,11 +6,11 @@ ms.date: 12/01/2021
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: concept-article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -27,7 +27,7 @@ An orchestration group gives you the flexibility to update devices based on a pe
 Members of an orchestration group can be any Configuration Manager client, not just servers. The orchestration group rules apply to the devices for all software update deployments to any collection that contains an orchestration group member. Other deployment behaviors still apply. For example, maintenance windows and deployment schedules.
 
 > [!NOTE]
-> Starting in Configuration Manager version 2111, Orchestration groups is no longer a pre-release feature. For more information, see [Pre-release features](../../core/servers/manage/pre-release-features.md).  
+> Starting in Configuration Manager version 2111, Orchestration groups is no longer a pre-release feature. For more information, see [Pre-release features](../../core/servers/manage/pre-release-features.md).
 >
 > The **Orchestration Groups** feature is the evolution of the [Server Groups](service-a-server-group.md) feature. An orchestration group is an object in Configuration Manager.
 

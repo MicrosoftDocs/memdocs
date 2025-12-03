@@ -12,63 +12,63 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetTallyIntervals Method in Class SMS_SummarizerRootStatus
-The `GetTallyIntervals` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets an array of tally intervals and the default interval.  
+The `GetTallyIntervals` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets an array of tally intervals and the default interval.
 
- The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 GetTallyIntervals(  
-   String SiteCode,  
-    String ComponentName,  
-    String TallyIntervals[],  
-    String DefaultInterval  
-);  
-```  
+```
+SInt32 GetTallyIntervals(
+   String SiteCode,
+    String ComponentName,
+    String TallyIntervals[],
+    String DefaultInterval
+);
+```
 
-#### Parameters  
- `SiteCode`  
- Data type: `String`  
+#### Parameters
+ `SiteCode`
+ Data type: `String`
 
- Qualifiers: [in, SizeLimit("3")]  
+ Qualifiers: [in, SizeLimit("3")]
 
- The site code of the site for which the status is reported.  
+ The site code of the site for which the status is reported.
 
- `ComponentName`  
- Data type: `String`  
+ `ComponentName`
+ Data type: `String`
 
- Qualifiers: [in, SizeLimit("3")]  
+ Qualifiers: [in, SizeLimit("3")]
 
- The name of the component.  
+ The name of the component.
 
- `TallyIntervals`  
- Data type: `String` Array  
+ `TallyIntervals`
+ Data type: `String` Array
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- The tally intervals.  
+ The tally intervals.
 
- `DefaultInterval`  
- Data type: `String`  
+ `DefaultInterval`
+ Data type: `String`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- The default interval.  
+ The default interval.
 
-## Return Values  
- An `SInt32` data type.  
+## Return Values
+ An `SInt32` data type.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_SummarizerRootStatus Server WMI Class](../../../../../develop/reference/core/servers/manage/sms_summarizerrootstatus-server-wmi-class.md)

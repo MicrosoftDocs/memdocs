@@ -3,15 +3,15 @@ title: Collections best practices
 titleSuffix: Configuration Manager
 description: Get recommendations for configuring collections and collection evaluation in Configuration Manager.
 ms.date: 04/13/2021
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: best-practice
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Best practices for collections in Configuration Manager
@@ -20,7 +20,7 @@ ms.reviewer: mstewart,aaroncz
 
 Some collection management guidance can be contradictory. For example, for performance reasons, you should limit the number of collections that update frequently. But updating collections frequently is convenient, since most Configuration Manager functionality is dependent on collections. Carefully consider both performance impacts and business requirements when you design and configure collections and collection evaluation.
 
-Use the following best practices for collections in Configuration Manager.  
+Use the following best practices for collections in Configuration Manager.
 
 ## Configure maintenance window for updates
 

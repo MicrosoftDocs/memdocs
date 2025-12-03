@@ -12,78 +12,78 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # VerifyNoLoops Method in Class SMS_Site
-The `VerifyNoLoops` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines if the insertion of a site in the Configuration Manager hierarchy at a specific point will result in a recursive loop of the sites.  
+The `VerifyNoLoops` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines if the insertion of a site in the Configuration Manager hierarchy at a specific point will result in a recursive loop of the sites.
 
- The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and is intended to show the definition of the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 VerifyNoLoops(  
-     String CentralSiteCode,  
-     String TargetSiteCode,  
-     String ParentSiteCode,  
-     Boolean Result  
-);  
-```  
+```
+SInt32 VerifyNoLoops(
+     String CentralSiteCode,
+     String TargetSiteCode,
+     String ParentSiteCode,
+     Boolean Result
+);
+```
 
-#### Parameters  
- `CentralSiteCode`  
- Data type: `String`  
+#### Parameters
+ `CentralSiteCode`
+ Data type: `String`
 
- Qualifiers: [in, SizeLimit("3")]  
+ Qualifiers: [in, SizeLimit("3")]
 
- Not used.  
+ Not used.
 
- `TargetSiteCode`  
- Data type: `String`  
+ `TargetSiteCode`
+ Data type: `String`
 
- Qualifiers: [in, SizeLimit("3")]  
+ Qualifiers: [in, SizeLimit("3")]
 
- Site code of the child site to insert.  
+ Site code of the child site to insert.
 
- `ParentSiteCode`  
- Data type: `String`  
+ `ParentSiteCode`
+ Data type: `String`
 
- Qualifiers: [in, SizeLimit("3")]  
+ Qualifiers: [in, SizeLimit("3")]
 
- Site code of the site that will be the parent of the target site.  
+ Site code of the site that will be the parent of the target site.
 
- `Result`  
- Data type: `Boolean`  
+ `Result`
+ Data type: `Boolean`
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- `true` if no loop is formed by inserting the new site in the Configuration Manager hierarchy  
+ `true` if no loop is formed by inserting the new site in the Configuration Manager hierarchy
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Example Code  
- The following example shows how to call the `VerifyNoLoops` method.  
+## Example Code
+ The following example shows how to call the `VerifyNoLoops` method.
 
-```  
-Dim Site As SWbemObject  
-Dim NoLoop As Boolean  
+```
+Dim Site As SWbemObject
+Dim NoLoop As Boolean
 
-Set Site = GetObject("winmgmts:root\sms\site_<sitecode>:SMS_Site")  
-Site.VerifyNoLoops "", "<child sitecode>", "<parent sitecode>", NoLoop  
+Set Site = GetObject("winmgmts:root\sms\site_<sitecode>:SMS_Site")
+Site.VerifyNoLoops "", "<child sitecode>", "<parent sitecode>", NoLoop
 
-MsgBox "NoLoop = " & NoLoop  
-```  
+MsgBox "NoLoop = " & NoLoop
+```
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_Site Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_site-server-wmi-class.md)

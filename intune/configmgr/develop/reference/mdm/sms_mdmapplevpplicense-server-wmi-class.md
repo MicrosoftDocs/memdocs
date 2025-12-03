@@ -12,161 +12,161 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MDMAppleVppLicense Server WMI Class
-The `SMS_MDMAppleVppLicense` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) licensed application.  
+The `SMS_MDMAppleVppLicense` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) licensed application.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MDMAppleVppLicense : SMS_BaseClass  
-{  
-    String ApplicationID;  
-    UInt32 AvailableLicenses;  
-    String BundleID;  
-    String DeepLinkUrl;  
-    String InfoLink;  
-    DateTime LastUpdateTime;  
-    String Publisher;  
-    DateTime ReleaseDate;  
-    String SupportedDevices;  
-    String Title;  
-    UInt32 TotalLicenses;  
-    String Version;  
-};  
+```
+Class SMS_MDMAppleVppLicense : SMS_BaseClass
+{
+    String ApplicationID;
+    UInt32 AvailableLicenses;
+    String BundleID;
+    String DeepLinkUrl;
+    String InfoLink;
+    DateTime LastUpdateTime;
+    String Publisher;
+    DateTime ReleaseDate;
+    String SupportedDevices;
+    String Title;
+    UInt32 TotalLicenses;
+    String Version;
+};
 
-```  
+```
 
-## Methods  
- The `SMS_MDMAppleVppLicense`  class does not define any methods.  
+## Methods
+ The `SMS_MDMAppleVppLicense`  class does not define any methods.
 
-## Properties  
- `ApplicationID`  
- Data type: `String`  
+## Properties
+ `ApplicationID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The AppleID of the application.  
+ The AppleID of the application.
 
- `AvailableLicenses`  
- Data type: `UInt32`  
+ `AvailableLicenses`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Current number of available licenses for the application.  
+ Current number of available licenses for the application.
 
- `BundleID`  
- Data type: `String`  
+ `BundleID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Apple App Store bundle ID.  
+ Apple App Store bundle ID.
 
- `DeepLinkUrl`  
- Data type: `String`  
+ `DeepLinkUrl`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The application VPP link in the Apple App Store.  
+ The application VPP link in the Apple App Store.
 
- `InfoLink`  
- Data type: `String`  
+ `InfoLink`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The link to the application in the Apple App Store.  
+ The link to the application in the Apple App Store.
 
- `LastUpdateTime`  
- Data type: `DateTime`  
+ `LastUpdateTime`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last time the VPP license data for the application was updated.  
+ The last time the VPP license data for the application was updated.
 
- `Publisher`  
- Data type: `String`  
+ `Publisher`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Publisher of the application in the Apple App Store.  
+ Publisher of the application in the Apple App Store.
 
- `ReleaseDate`  
- Data type: `DateTime`  
+ `ReleaseDate`
+ Data type: `DateTime`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The application's release date to the Apple App Store.  
+ The application's release date to the Apple App Store.
 
- `SupportedDevices`  
- Data type: `String`  
+ `SupportedDevices`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The devices supported by the application.  
+ The devices supported by the application.
 
- `Title`  
- Data type: `String`  
+ `Title`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Title of the application in Apple App Store.  
+ Title of the application in Apple App Store.
 
- `TotalLicenses`  
- Data type: `UInt32`  
+ `TotalLicenses`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Total number of licenses for the application.  
+ Total number of licenses for the application.
 
- `Version`  
- Data type: `String`  
+ `Version`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Application version in the Apple App Store.  
+ Application version in the Apple App Store.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

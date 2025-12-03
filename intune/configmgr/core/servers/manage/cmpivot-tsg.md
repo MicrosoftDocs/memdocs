@@ -6,12 +6,12 @@ ms.date: 08/02/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: conceptual
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.topicc: troubleshooting-general
 ---
 
@@ -37,7 +37,7 @@ By default, the site server log files are located in `C:\Program Files\Microsoft
 Look in `smsprov.log` for these lines:
 
 - Configuration Manager version 1906:
-  
+
   ```
   Auditing: User <username> initiated client operation 145 to collection <CollectionId>.
   ```
@@ -72,7 +72,7 @@ Finished sending push task (PushID: 9 TaskID: 12) to 2 clients
 
 After you have the information from the site server, check the client logs. By default, the client logs are located in `C:\Windows\CCM\Logs`.
 
-In `CcmNotificationAgent.log`, look for log entries that look like the following lines:  
+In `CcmNotificationAgent.log`, look for log entries that look like the following lines:
 
 ```
 Receive task from server with pushid=9, taskid=12, taskguid=9A4E59D2-2F5B-4067-A9FA-B99602A3A4A0, tasktype=15 and taskParam=PFNjcmlwdEhhc2ggU2NyaXB0SGF (truncated log entry)
@@ -168,7 +168,7 @@ Finished sending push task (PushID: 260 TaskID: 258) to 5 clients
 
 After you have the information from the site server, check the client logs. By default, the client logs are located in `C:\Windows\CCM\Logs`.
 
-In `CcmNotificationAgent.log`, look for logs that are similar to the following entry:  
+In `CcmNotificationAgent.log`, look for logs that are similar to the following entry:
 
 ```
 Error! Bookmark not defined.+PFNjcmlwdEhhc2ggU2NyaXB0SGFzaEFsZz0nU0hBMjU2Jz42YzZmNDY0OGYzZjU3M2MyNTQyNWZiNT

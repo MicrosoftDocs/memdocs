@@ -1,45 +1,21 @@
 ---
-# required metadata
-
-title: Add Microsoft Edge to macOS devices using Microsoft Intune
-titleSuffix:
+title: Add Microsoft Edge to macOS Devices Using Microsoft Intune
 description: Learn about adding Microsoft Edge to macOS devices using Microsoft Intune.
-keywords:
-author: Erikre
-ms.author: erikre
-manager: dougeby
-ms.date: 04/17/2024
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier3
 - M365-identity-device-management
 - macOS
 - FocusArea_Apps_Add
 ---
 
-# Add Microsoft Edge to macOS devices using Microsoft Intune
+# Add Microsoft Edge to macOS Devices Using Microsoft Intune
 
 Before you can deploy, configure, monitor, or protect apps, you must add them to Intune. One of the available [app types](apps-add.md#app-types-in-microsoft-intune) is Microsoft Edge *version 77 and later*. By selecting this app type in Intune, you can assign and install Microsoft Edge *version 77 and later* to devices you manage that run macOS. This app type makes it easy for you to assign Microsoft Edge to macOS devices without requiring you to use the macOS app wrapping tool. To help keep the apps more secure and up to date, the app comes with Microsoft AutoUpdate (MAU).
 
 > [!IMPORTANT]
-> This app type offers developer and beta channels for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**. 
-
-> [!NOTE]
-> Microsoft Edge *version 77 and later* is available for Windows 10 as well.
+> This app type offers developer and beta channels for macOS. The deployment is in English (EN) only, however end users can change the display language in the browser under **Settings** > **Languages**.
 
 ## Prerequisites
 
@@ -93,7 +69,7 @@ You can use scope tags to determine who can see client app information in Intune
 4.    Click **Select** > **OK**.
 
 ## Add the app
-When you've completed configuring, select **Add** from the **App app** pane. 
+When you've completed configuring, select **Add** from the **App app** pane.
 
 The app you've created is displayed in the apps list, where you can assign it to the groups that you select.
 

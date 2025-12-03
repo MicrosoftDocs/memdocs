@@ -2,13 +2,6 @@
 metadata:
   title: Windows Autopilot troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot issues
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: madakeva
-  manager: aaroncz
   ms.date: 04/21/2025
   ms.collection:
     - M365-modern-desktop
@@ -348,6 +341,10 @@ sections:
 
           `Ran into trouble. Please sign in with an administrator account to see why and reset manually.`
 
+      - question: |
+          Why are Windows Autopilot Hybrid deployments failing during ESP with error code "0x80070774"?
+        answer: |
+          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain.
 
   - name: Troubleshooting Windows OOBE issues during Windows Autopilot
     questions:
@@ -473,11 +470,11 @@ sections:
           - The organization unit (OU) specified in the Intune Connector for Active Directory `ODJConnectorEnrollmentWiazard.exe.config` XML configuration file doesn't exist.
 
           For detailed information on the error and what caused it, see the `ODJConnectorUI.log` normally located in the following folder:
-          
+
           `C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard`
-          
+
           Follow the steps to [Increase the computer account limit in the Organizational Unit](tutorial/user-driven/hybrid-azure-ad-join-computer-account-limit.md?tabs=updated-connector) if the following error appears in the `ODJConnectorUI.log`:
-          
+
           **`System.AggregateException: One or more errors occurred. ---> System.DirectoryServices.DirectoryServicesCOMException: A constraint violation occurred.`**
 
           For more information, see [Install the Intune Connector for Active Directory on the server](windows-autopilot-hybrid.md?tabs=updated-connector#install-the-intune-connector-for-active-directory-on-the-server).
@@ -488,7 +485,7 @@ sections:
           This error might occur for several reasons including:
 
           - The domain has more than one domain controller with a replication latency policy. The MSA was created in one of the domain controllers but the search happened against another domain controller. Wait until replication has completed in accordance with your policy or manually sync. Once the replication is complete, then open the connector and choose **Configure MSA**.
-          
+
           - A group policy is configured that doesn't allow services to be started as a non-privileged account. Make sure the MSA account has **Log on as a service** privileges granted. For example, see this instance with Operations Manager to [Enable service logon](/system-center/scom/enable-service-logon#enable-service-log-on-permission-for-run-as-accounts).
 
       - question: |
@@ -515,6 +512,11 @@ sections:
           - Server is sending network request via TLS 1.0 or 1.1 because PKCS Cryptography is disabled. To resolve the issue, on the server hosting the Intune Connector for Active Directory, delete the registry key value specified in the following command by running the command from an elevated command prompt:
 
             `reg.exe delete "HKLM\System\CurrentControlSet\Control\SecurityProviders\SCHANNEL\KeyExchangeAlgorithms\PKCS" /v Enabled /f`
+
+      - question: |
+          Why are Windows Autopilot Hybrid deployments failing during ESP with error code "0x80070774"?
+        answer: |
+          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain.
 
 
 additionalContent: |

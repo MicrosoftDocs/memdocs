@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Support Center for Configuration Manager
@@ -27,11 +27,11 @@ Support Center aims to reduce the challenges and frustration when troubleshootin
 
 Use Support Center to streamline the support experience. It lets you:
 
-- Create a troubleshooting bundle (.zip file) that contains the Configuration Manager client log files. You then have a single file to send to support personnel.  
+- Create a troubleshooting bundle (.zip file) that contains the Configuration Manager client log files. You then have a single file to send to support personnel.
 
-- View Configuration Manager client log files, certificates, registry settings, debug dumps, client policies.  
+- View Configuration Manager client log files, certificates, registry settings, debug dumps, client policies.
 
-- Real-time diagnostic of inventory (replaces ContentSpy), policy (replaces PolicySpy), and client cache.  
+- Real-time diagnostic of inventory (replaces ContentSpy), policy (replaces PolicySpy), and client cache.
 
 Starting in version 2103, Support Center is split into the following tools:<!--8693068-->
 
@@ -78,7 +78,7 @@ Install the following components on the server or client computer on which you i
 
 Find the Support Center installer on the site server at the following path: `cd.latest\SMSSETUP\Tools\SupportCenter\SupportCenterInstaller.msi`.
 
-After you install it, find the following items on the Start menu in the **Microsoft Endpoint Manager** group:  
+After you install it, find the following items on the Start menu in the **Microsoft Endpoint Manager** group:
 
 - Support Center Client Data Collector (starting in version 2103)
 - Support Center Client Tools (starting in version 2103)
@@ -116,8 +116,8 @@ If you connect to a remote client from Support Center, you must provide the mach
 
 To avoid this issue, use the following user name formats to connect to a remote client:
 
-- `ComputerName\UserName`  
-- `DomainName\UserName`  
+- `ComputerName\UserName`
+- `DomainName\UserName`
 
 ### Scripted server message block connections to remote clients might require removal
 

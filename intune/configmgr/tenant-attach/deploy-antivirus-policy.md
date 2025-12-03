@@ -7,10 +7,10 @@ ms.topic: install-set-up-deploy
 ms.subservice: core-infra
 ms.service: configuration-manager
 manager: apoorvseth
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

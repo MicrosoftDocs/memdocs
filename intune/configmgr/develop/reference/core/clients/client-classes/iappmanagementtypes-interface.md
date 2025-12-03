@@ -12,22 +12,22 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # IAppManagementTypes Interface
-The `IAppManagementTypes` interface, in Configuration Manager, is a container for Application Management related type definitions.  
+The `IAppManagementTypes` interface, in Configuration Manager, is a container for Application Management related type definitions.
 
-## In This Section  
- The following table lists the methods in the `IAppManagementTypes` interface.  
+## In This Section
+ The following table lists the methods in the `IAppManagementTypes` interface.
 
-|Term|Definition|  
-|----------|----------------|  
-|[AppAction Enumeration](../../../../../develop/reference/core/clients/client-classes/appaction-enumeration.md)|The `AppAction` enumeration defines action types. This enumeration is used by the `IAppManagementTypes`.|  
+|Term|Definition|
+|----------|----------------|
+|[AppAction Enumeration](../../../../../develop/reference/core/clients/client-classes/appaction-enumeration.md)|The `AppAction` enumeration defines action types. This enumeration is used by the `IAppManagementTypes`.|
 
-## Remarks  
- To obtain this interface, the application calls the `IAppManagementTypes`.  
+## Remarks
+ To obtain this interface, the application calls the `IAppManagementTypes`.
 
-## See Also  
- [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)   
- [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)   
+## See Also
+ [Application Management Client Interfaces](../../../../../develop/reference/core/clients/client-classes/application-management-client-interfaces.md)
+ [Configuration Manager Software Development Kit](../../../../../develop/core/misc/system-center-configuration-manager-sdk.md)
  [Configuration Manager Reference](../../../../../develop/reference/configuration-manager-reference.md)

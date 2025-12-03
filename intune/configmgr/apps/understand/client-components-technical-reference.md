@@ -3,15 +3,15 @@ title: Application deployment client components technical reference
 titleSuffix: Configuration Manager
 description: Client components used for troubleshooting application deployment in Configuration Manager.
 ms.date: 11/04/2019
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: troubleshooting
-author: baladelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Understanding Application Deployment Client Components

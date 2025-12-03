@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz
+ms.reviewer: mstewart
 ---
 
 # Microsoft Connected Cache with Configuration Manager
@@ -264,7 +264,7 @@ For Delivery Optimization peer-to-peer:
 
 When you install a Microsoft Connected Cache on a Configuration Manager distribution point, cloud-managed devices can use the on-premises cache. For example, a device that's managed by Intune, but connects to the on-premises network. As long as the device can communicate with the server, the cache is available to deliver content to these devices.
 
-To configure the device to use the Microsoft Connected Cache, configure the **DOCacheHost** policy. Set it to the FQDN or IP address of the Configuration Manager distribution point. For more information on this policy, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost). 
+To configure the device to use the Microsoft Connected Cache, configure the **DOCacheHost** policy. Set it to the FQDN or IP address of the Configuration Manager distribution point. For more information on this policy, see [Policy CSP - DeliveryOptimization](/windows/client-management/mdm/policy-csp-deliveryoptimization#deliveryoptimization-docachehost).
 
 To use Intune to configure this policy, use the **DO Cache Host** setting in Intune Delivery Optimization profiles created *after* April 24, 2025. If your Intune profile was created *before* April 24, 2025, use the setting named **Cache server host names**. For more information, see [Delivery Optimization Windows devices in Intune](../../../../intune-service/configuration/delivery-optimization-windows.md).
 

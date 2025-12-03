@@ -12,83 +12,83 @@ manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the simplified syntax, methods, properties, and requirements of the SMS_DeploymentTypeLicenseAssociation server class.
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_DeploymentTypeLicenseAssociation Server WMI Class
-The `SMS_DeploymentTypeLicenseAssociation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a license association for a deployment type.  
+The `SMS_DeploymentTypeLicenseAssociation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a license association for a deployment type.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_DeploymentTypeLicenseAssociation : SMS_BaseClass  
-{  
-    UInt32 ID;  
-    String LicenseID;  
-    String DTModelName;  
-    Boolean IsEnabled;  
-};  
+```
+Class SMS_DeploymentTypeLicenseAssociation : SMS_BaseClass
+{
+    UInt32 ID;
+    String LicenseID;
+    String DTModelName;
+    Boolean IsEnabled;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_DeploymentTypeLicenseAssociation` class.  
+## Methods
+ The following table lists the methods in the `SMS_DeploymentTypeLicenseAssociation` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[AddLicense Method in Class SMS_DeploymentTypeLicenseAssociation](../../../develop/reference/apps/addlicense-method-in-class-sms_deploymenttypelicenseassociation.md)|Adds license information to an application deployment type.|  
+|Method|Description|
+|------------|-----------------|
+|[AddLicense Method in Class SMS_DeploymentTypeLicenseAssociation](../../../develop/reference/apps/addlicense-method-in-class-sms_deploymenttypelicenseassociation.md)|Adds license information to an application deployment type.|
 
-## Properties  
- `ID`  
- Data type: `UInt32`  
+## Properties
+ `ID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The ID of the deployment type.  
+ The ID of the deployment type.
 
- `LicenseID`  
- Data type: `String`  
+ `LicenseID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The ID of the license.  
+ The ID of the license.
 
- `DTModelName`  
- Data type: `String`  
+ `DTModelName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The deployment type model name.  
+ The deployment type model name.
 
- `IsEnabled`  
- Data type: `Boolean`  
+ `IsEnabled`
+ Data type: `Boolean`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- Indicates whether the association is enabled.  
+ Indicates whether the association is enabled.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

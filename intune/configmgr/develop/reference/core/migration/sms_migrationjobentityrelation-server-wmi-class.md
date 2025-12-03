@@ -12,183 +12,183 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MigrationJobEntityRelation Server WMI Class
-The `SMS_MigrationJobEntityRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the relationship of between each migration job and the objects that it contains.  
+The `SMS_MigrationJobEntityRelation` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the relationship of between each migration job and the objects that it contains.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MigrationJobEntityRelation : SMS_BaseClass  
-{  
-    UInt32 EntityID;  
-    String EntityName;  
-    SInt32 EntityRichStatus;  
-    SInt32 EntityStatus;  
-    SInt32 JobEntityStatus;  
-    UInt32 JobID;  
-    SInt32 MessageCode;  
-    String MessageDetail1;  
-    String MessageDetail2;  
-    String MessageDetail3;  
-    SInt32 Type;  
-    String UniqueID;  
-};  
-```  
+```
+Class SMS_MigrationJobEntityRelation : SMS_BaseClass
+{
+    UInt32 EntityID;
+    String EntityName;
+    SInt32 EntityRichStatus;
+    SInt32 EntityStatus;
+    SInt32 JobEntityStatus;
+    UInt32 JobID;
+    SInt32 MessageCode;
+    String MessageDetail1;
+    String MessageDetail2;
+    String MessageDetail3;
+    SInt32 Type;
+    String UniqueID;
+};
+```
 
-## Methods  
- The `SMS_MigrationJobEntityRelation` class does not define any methods.  
+## Methods
+ The `SMS_MigrationJobEntityRelation` class does not define any methods.
 
-## Properties  
- `EntityID`  
- Data type: `UInt32`  
+## Properties
+ `EntityID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Migration entity ID.  
+ Migration entity ID.
 
- `EntityName`  
- Data type: `String`  
+ `EntityName`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The name of the entity.  
+ The name of the entity.
 
- `EntityRichStatus`  
- Data type: `SInt32`  
+ `EntityRichStatus`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Enums for rich entity status.  
+ Enums for rich entity status.
 
-|Value|Enums status|  
-|-|-|  
-|0|Available to migrate|  
-|1|Migrated|  
-|2|Running|  
-|3|Failed|  
-|4|Excluded|  
-|5|PendingContent|  
-|6|Modified|  
-|7|Removed|  
-|8|PendingSchedule|  
-|9|Scheduled|  
+|Value|Enums status|
+|-|-|
+|0|Available to migrate|
+|1|Migrated|
+|2|Running|
+|3|Failed|
+|4|Excluded|
+|5|PendingContent|
+|6|Modified|
+|7|Removed|
+|8|PendingSchedule|
+|9|Scheduled|
 
- `EntityStatus`  
- Data type: `SInt32`  
+ `EntityStatus`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Enums for entity status, not job related.  
+ Enums for entity status, not job related.
 
-|Value|Enums status|  
-|-|-|  
-|0|Not started|  
-|1|completed|  
-|2|running|  
-|3|failed|  
-|4|excluded|  
-|5|skipped (never happened)|  
+|Value|Enums status|
+|-|-|
+|0|Not started|
+|1|completed|
+|2|running|
+|3|failed|
+|4|excluded|
+|5|skipped (never happened)|
 
- `JobEntityStatus`  
- Data type: `SInt32`  
+ `JobEntityStatus`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- Enums for job entity status.  
+ Enums for job entity status.
 
-|Value|Enums status|  
-|-|-|  
-|0|Not started|  
-|1|completed|  
-|2|running|  
-|3|failed|  
-|4|excluded (never happens)|  
-|5|skipped|  
+|Value|Enums status|
+|-|-|
+|0|Not started|
+|1|completed|
+|2|running|
+|3|failed|
+|4|excluded (never happens)|
+|5|skipped|
 
- `JobID`  
- Data type: `UInt32`  
+ `JobID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Migration job ID.  
+ Migration job ID.
 
- `MessageCode`  
- Data type: `SInt32`  
+ `MessageCode`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Code for first message for this object in this job.  
+ Code for first message for this object in this job.
 
- `MessageDetail1`  
- Data type: `String`  
+ `MessageDetail1`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Additional detail 1 for message.  
+ Additional detail 1 for message.
 
- `MessageDetail2`  
- Data type: `String`  
+ `MessageDetail2`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Additional detail 2 for message.  
+ Additional detail 2 for message.
 
- `MessageDetail3`  
- Data type: `String`  
+ `MessageDetail3`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [read]  
+ Qualifiers: [read]
 
- Additional detail 3 for message.  
+ Additional detail 3 for message.
 
- `Type`  
- Data type: `SInt32`  
+ `Type`
+ Data type: `SInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The object type.  
+ The object type.
 
- `UniqueID`  
- Data type: `String`  
+ `UniqueID`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The unique ID of the object.  
+ The unique ID of the object.
 
-## Remarks  
- For each instance, this class carries the detailed information for the containing object, such as the name, status, detailed error message, or error code.  
+## Remarks
+ For each instance, this class carries the detailed information for the containing object, such as the name, status, detailed error message, or error code.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).

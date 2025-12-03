@@ -10,7 +10,7 @@ manager: apoorvseth
 author: Banreet
 ms.author: banreetkaur
 ms.localizationpriority: high
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -22,7 +22,7 @@ Use the following to troubleshoot the device timeline in the Microsoft Intune ad
 
 ## <a name="bkmk_common"></a> Common errors from the Microsoft Intune admin center
 
-When viewing or synching the timeline from the Microsoft Intune admin center, you may run across one of these errors.  
+When viewing or synching the timeline from the Microsoft Intune admin center, you may run across one of these errors.
 
 ### <a name="bkmk_401"></a> The necessary configuration is missing in Microsoft Entra ID
 

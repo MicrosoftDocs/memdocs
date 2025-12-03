@@ -12,154 +12,154 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MigrationSourceSite Server WMI Class
-The `SMS_MigrationSourceSite` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a site in the source hierarchy.  
+The `SMS_MigrationSourceSite` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a site in the source hierarchy.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MigrationSourceSite : SMS_BaseClass  
-{  
-    String FQDN;  
-    Boolean IsCentral;  
-    Boolean IsConfigured;  
-    Boolean IsDecommissioned;  
-    Boolean IsDeleted;  
-    String ParentSiteCode;  
-    String ParentSiteServer;  
-    String SiteCode;  
-    UInt32 SiteID;  
-    UInt32 SiteType;  
-    String SourceSiteFQDN;  
-    String Version;  
-};  
-```  
+```
+Class SMS_MigrationSourceSite : SMS_BaseClass
+{
+    String FQDN;
+    Boolean IsCentral;
+    Boolean IsConfigured;
+    Boolean IsDecommissioned;
+    Boolean IsDeleted;
+    String ParentSiteCode;
+    String ParentSiteServer;
+    String SiteCode;
+    UInt32 SiteID;
+    UInt32 SiteType;
+    String SourceSiteFQDN;
+    String Version;
+};
+```
 
-## Methods  
- The `SMS_MigrationSourceSite` class does not define any methods.  
+## Methods
+ The `SMS_MigrationSourceSite` class does not define any methods.
 
-## Properties  
- `FQDN`  
- Data type: `String`  
+## Properties
+ `FQDN`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- FQDN of the source Site Server (deprecated).  
+ FQDN of the source Site Server (deprecated).
 
- `IsCentral`  
- Data type: `Boolean`  
+ `IsCentral`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the source site is a central site.  
+ `true` if the source site is a central site.
 
- `IsConfigured`  
- Data type: `Boolean`  
+ `IsConfigured`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the source site is configured.  
+ `true` if the source site is configured.
 
- `IsDecommissioned`  
- Data type: `Boolean`  
+ `IsDecommissioned`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the site has stopped gathering data.  
+ `true` if the site has stopped gathering data.
 
- `IsDeleted`  
- Data type: `Boolean`  
+ `IsDeleted`
+ Data type: `Boolean`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- `true` if the source site is deleted.  
+ `true` if the source site is deleted.
 
- `ParentSiteCode`  
- Data type: `String`  
+ `ParentSiteCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The site code of the parent site of the source site.  
+ The site code of the parent site of the source site.
 
- `ParentSiteServer`  
- Data type: `String`  
+ `ParentSiteServer`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The site server name of the parent site of the source site.  
+ The site server name of the parent site of the source site.
 
- `SiteCode`  
- Data type: `String`  
+ `SiteCode`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The source site code.  
+ The source site code.
 
- `SiteID`  
- Data type: `UInt32`  
+ `SiteID`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The source site ID.  
+ The source site ID.
 
- `SiteType`  
- Data type: `UInt32`  
+ `SiteType`
+ Data type: `UInt32`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [enumeration]  
+ Qualifiers: [enumeration]
 
- See [SMS_SCI_SiteDefinition Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_sitedefinition-server-wmi-class.md).  
+ See [SMS_SCI_SiteDefinition Server WMI Class](../../../../develop/reference/core/servers/configure/sms_sci_sitedefinition-server-wmi-class.md).
 
- `SourceSiteFQDN`  
- Data type: `String`  
+ `SourceSiteFQDN`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The FQDN of the source site server.  
+ The FQDN of the source site server.
 
- `Version`  
- Data type: `String`  
+ `Version`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: none  
+ Qualifiers: none
 
- The version of the source site.  
+ The version of the source site.
 
- This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.  
+ This information applies to System Center 2012 Configuration Manager SP1 or later, and System Center 2012 R2 Configuration Manager or later.
 
-## Remarks  
- All of the instances are gathered from the Configuration Manager database, except for the first one which is created when you specify the source hierarchy. Each instance carries basic information for the source site, such as the parent site code, the site type and the FQDN of the site.  
+## Remarks
+ All of the instances are gathered from the Configuration Manager database, except for the first one which is created when you specify the source hierarchy. Each instance carries basic information for the source site, such as the parent site code, the site type and the FQDN of the site.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../develop/core/reqs/server-development-requirements.md).

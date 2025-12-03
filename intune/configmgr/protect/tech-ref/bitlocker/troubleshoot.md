@@ -6,11 +6,11 @@ ms.date: 11/29/2019
 ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: troubleshooting
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

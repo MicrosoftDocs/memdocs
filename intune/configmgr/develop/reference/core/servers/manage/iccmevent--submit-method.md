@@ -12,35 +12,35 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # ICCMEvent::Submit Method
-In Configuration Manager, the `ICcmEvent::Submit` method submits an event to Windows Management Instrumentation (WMI).  
+In Configuration Manager, the `ICcmEvent::Submit` method submits an event to Windows Management Instrumentation (WMI).
 
-## Syntax  
+## Syntax
 
-```  
-[C++]  
-HRESULT ICcmEvent::Submit();  
-```  
+```
+[C++]
+HRESULT ICcmEvent::Submit();
+```
 
-#### Parameters  
- None.  
+#### Parameters
+ None.
 
-## Return Values  
- An `HRESULT` code. Possible values include, but are not limited to, the following:  
+## Return Values
+ An `HRESULT` code. Possible values include, but are not limited to, the following:
 
- S_OK  
- The method succeeded.  
+ S_OK
+ The method succeeded.
 
-## Requirements  
- Smscore.dll.  
+## Requirements
+ Smscore.dll.
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Client Runtime Requirements](../../../../../develop/core/reqs/client-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Client Development Requirements](../../../../../develop/core/reqs/client-development-requirements.md).
 
-## See Also  
+## See Also
  [SMSEvent Class (client)](../../../../../develop/reference/core/servers/manage/smsevent-class.md)

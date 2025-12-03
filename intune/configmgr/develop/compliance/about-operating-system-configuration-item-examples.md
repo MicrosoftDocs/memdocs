@@ -12,10 +12,10 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # About Operating System Configuration Item Examples
-In Configuration Manager, operating system configuration items include all of the functionality of general configuration items, but they're tightly coupled with a specific version of the Windows operating system.  
+In Configuration Manager, operating system configuration items include all of the functionality of general configuration items, but they're tightly coupled with a specific version of the Windows operating system.
 
-## See Also  
+## See Also
 [About authoring configuration baselines and items](about-authoring-configuration-baselines-and-configuration-items.md)

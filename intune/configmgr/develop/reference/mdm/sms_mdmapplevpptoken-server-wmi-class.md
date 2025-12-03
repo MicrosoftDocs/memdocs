@@ -12,164 +12,164 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_MDMAppleVppToken Server WMI Class
-The `SMS_MDMAppleVppToken` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) token.  
+The `SMS_MDMAppleVppToken` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an Apple Volume Purchase Program (VPP) token.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_MDMAppleVppToken : SMS_BaseClass  
-{  
-    DateTime Created;  
-    String Description;  
-    DateTime ExpirationDate;  
-    String Id;  
-    DateTime LastSuccessfulSync;  
-    DateTime LastSync;  
-    DateTime LastUpdated;  
-    String Name;  
-    String OrganizationName;  
-    String SyncErrorCode;  
-    DateTime SyncStartTime;  
-    SInt32 SyncStatus;  
-};  
+```
+Class SMS_MDMAppleVppToken : SMS_BaseClass
+{
+    DateTime Created;
+    String Description;
+    DateTime ExpirationDate;
+    String Id;
+    DateTime LastSuccessfulSync;
+    DateTime LastSync;
+    DateTime LastUpdated;
+    String Name;
+    String OrganizationName;
+    String SyncErrorCode;
+    DateTime SyncStartTime;
+    SInt32 SyncStatus;
+};
 
-```  
+```
 
-## Methods  
- The following table lists the methods in the `SMS_MDMAppleVppToken` class.  
+## Methods
+ The following table lists the methods in the `SMS_MDMAppleVppToken` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[SyncToken Method in Class SMS_MDMAppleVppToken](../../../develop/reference/mdm/synctoken-method-in-class-sms_mdmapplevpptoken.md)|Initiates a synchronization of an Apple VPP token.|  
-|[UploadToken Method in Class SMS_MDMAppleVppToken](../../../develop/reference/mdm/uploadtoken-method-in-class-sms_mdmapplevpptoken.md)|Uploads an Apple VPP token to Intune.|  
+|Method|Description|
+|------------|-----------------|
+|[SyncToken Method in Class SMS_MDMAppleVppToken](../../../develop/reference/mdm/synctoken-method-in-class-sms_mdmapplevpptoken.md)|Initiates a synchronization of an Apple VPP token.|
+|[UploadToken Method in Class SMS_MDMAppleVppToken](../../../develop/reference/mdm/uploadtoken-method-in-class-sms_mdmapplevpptoken.md)|Uploads an Apple VPP token to Intune.|
 
-## Properties  
- `Created`  
- Data type: `DateTime`  
+## Properties
+ `Created`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Date the token was created.  
+ Date the token was created.
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description of the token.  
+ Description of the token.
 
- `ExpirationDate`  
- Data type: `DateTime`  
+ `ExpirationDate`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Expiration date of the token.  
+ Expiration date of the token.
 
- `Id`  
- Data type: `String`  
+ `Id`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The token ID.  
+ The token ID.
 
- `LastSuccessfulSync`  
- Data type: `DateTime`  
+ `LastSuccessfulSync`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last time a synchronization with Apple was successful.  
+ The last time a synchronization with Apple was successful.
 
- `LastSync`  
- Data type: `DateTime`  
+ `LastSync`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last time a synchronization with Apple occurred.  
+ The last time a synchronization with Apple occurred.
 
- `LastUpdated`  
- Data type: `DateTime`  
+ `LastUpdated`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The last time the token was updated.  
+ The last time the token was updated.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name of the token.  
+ Name of the token.
 
- `OrganizationName`  
- Data type: `String`  
+ `OrganizationName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Organization name for the token.  
+ Organization name for the token.
 
- `SyncErrorCode`  
- Data type: `String`  
+ `SyncErrorCode`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Error code for a synchronization error.  
+ Error code for a synchronization error.
 
- `SyncStartTime`  
- Data type: `DateTime`  
+ `SyncStartTime`
+ Data type: `DateTime`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- The time when a synchronization was initiated.  
+ The time when a synchronization was initiated.
 
- `SyncStatus`  
- Data type: `SInt32`  
+ `SyncStatus`
+ Data type: `SInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Status of the current or last synchronization.  
+ Status of the current or last synchronization.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Secured  
+- Secured
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

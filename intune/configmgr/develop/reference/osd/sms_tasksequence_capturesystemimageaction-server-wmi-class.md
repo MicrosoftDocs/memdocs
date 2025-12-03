@@ -12,179 +12,179 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_CaptureSystemImageAction Server WMI Class
-The `SMS_TaskSequence_CaptureSystemImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies an existing network share and WIM file to use when saving the image.  
+The `SMS_TaskSequence_CaptureSystemImageAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies an existing network share and WIM file to use when saving the image.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_CaptureSystemImageAction : SMS_TaskSequence_Action  
-{  
-      String CaptureDestination;  
-      String CapturePassword;  
-      String CaptureUsername;  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      Boolean Enabled;  
-      String ImageCreator;  
-      String ImageDescription;  
-      String ImageVersion;  
-      String Name;  
-      String SupportedEnvironment;  
-      UInt32 Timeout;  
-};  
-```  
+```
+Class SMS_TaskSequence_CaptureSystemImageAction : SMS_TaskSequence_Action
+{
+      String CaptureDestination;
+      String CapturePassword;
+      String CaptureUsername;
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      Boolean Enabled;
+      String ImageCreator;
+      String ImageDescription;
+      String ImageVersion;
+      String Name;
+      String SupportedEnvironment;
+      UInt32 Timeout;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_CaptureSystemImageAction` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_CaptureSystemImageAction` class does not define any methods.
 
-## Properties  
- `CaptureDestination`  
- Data type: `String`  
+## Properties
+ `CaptureDestination`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, AllowedLen("1-255")]  
+ Qualifiers: [not_null, AllowedLen("1-255")]
 
- The path where the captured image is saved. This path is overwritten if the file exists already. The path length can be between 1 and 255 characters. This property is required.  
+ The path where the captured image is saved. This path is overwritten if the file exists already. The path length can be between 1 and 255 characters. This property is required.
 
- `CapturePassword`  
- Data type: `String`  
+ `CapturePassword`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers:  
+ Qualifiers:
 
- [VariableName("OSDCaptureAccountPassword"), Secret]  
+ [VariableName("OSDCaptureAccountPassword"), Secret]
 
- Password of the account specified by the `CaptureUsername` property.  
+ Password of the account specified by the `CaptureUsername` property.
 
- The task sequence variable associated with this property is OSDCaptureAccountPassword. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDCaptureAccountPassword).  
+ The task sequence variable associated with this property is OSDCaptureAccountPassword. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDCaptureAccountPassword).
 
- `CaptureUsername`  
- Data type: `String`  
+ `CaptureUsername`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [VariableName("OSDCaptureAccount")]  
+ Qualifiers: [VariableName("OSDCaptureAccount")]
 
- A Windows account name that has permissions to the network share where the captured image will be stored, specified by `CaptureDestination`. This name is specified in "domain\username" format. To set this property, you must have write access to the destination folder.  
+ A Windows account name that has permissions to the network share where the captured image will be stored, specified by `CaptureDestination`. This name is specified in "domain\username" format. To set this property, you must have write access to the destination folder.
 
- The task sequence variable associated with this property is OSDCaptureAccount. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDCaptureAccount).  
+ The task sequence variable associated with this property is OSDCaptureAccount. For more information, see [OS deployment task sequence variables](../../../osd/understand/task-sequence-variables.md#OSDCaptureAccount).
 
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+ `Condition`
+ Data type: `SMS_TaskSequence_Condition`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ContinueOnError`  
- Data type: `Boolean`  
+ `ContinueOnError`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ImageCreator`  
- Data type: `String`  
+ `ImageCreator`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- Name of the creator of the image. The creation information is stored in the image header. The name length can be between 0 and 255 characters.  
+ Name of the creator of the image. The creation information is stored in the image header. The name length can be between 0 and 255 characters.
 
- `ImageDescription`  
- Data type: `String`  
+ `ImageDescription`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- Description of the image as supplied by the creator and stored in the image header. The description length can be between 0 and 255 characters.  
+ Description of the image as supplied by the creator and stored in the image header. The description length can be between 0 and 255 characters.
 
- `ImageVersion`  
- Data type: `String`  
+ `ImageVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null, AllowedLen("0-32")]  
+ Qualifiers: [not_null, AllowedLen("0-32")]
 
- Version of the image as supplied by the creator and stored in the image header. The version length can be between 0 and 32 characters. This property is required.  
+ Version of the image as supplied by the creator and stored in the image header. The version length can be between 0 and 32 characters. This property is required.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+ Qualifiers: [AllowedLen("1-100")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `SupportedEnvironment`  
- Data type: `String`  
+ `SupportedEnvironment`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null:ToInstance]  
+ Qualifiers: [Not_Null:ToInstance]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- The default value of this property for this task sequence action is WinPE.  
+ The default value of this property for this task sequence action is WinPE.
 
- `Timeout`  
- Data type: `UInt32`  
+ `Timeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
- [CommandLine("osdcapturesystemimage.exe"),VariablePrefix("OSD"),  
+ [CommandLine("osdcapturesystemimage.exe"),VariablePrefix("OSD"),
 
- ActionCategory{"Images,8,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "CaptureSystemImageControl", "TaskSequenceOptionControl"}, SequenceCategory("OSD")]  
+ ActionCategory{"Images,8,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "CaptureSystemImageControl", "TaskSequenceOptionControl"}, SequenceCategory("OSD")]
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
 ## See also
 

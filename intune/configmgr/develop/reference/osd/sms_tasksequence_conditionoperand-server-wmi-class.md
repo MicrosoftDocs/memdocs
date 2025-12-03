@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_ConditionOperand Server WMI Class
-The `SMS_TaskSequence_ConditionOperand` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager. This class is the abstract base class for operators and expressions that are used by task sequence steps.  
+The `SMS_TaskSequence_ConditionOperand` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager. This class is the abstract base class for operators and expressions that are used by task sequence steps.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_ConditionOperand  
-{  
-};  
-```  
+```
+Class SMS_TaskSequence_ConditionOperand
+{
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_ConditionOperand` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_ConditionOperand` class does not define any methods.
 
-## Properties  
- The `SMS_TaskSequence_ConditionOperand` class does not define any properties.  
+## Properties
+ The `SMS_TaskSequence_ConditionOperand` class does not define any properties.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Abstract  
+- Abstract
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  `SMS_TaskSequence_ConditionOperand` derived classes are used to define condition expressions and operators that determine whether a task sequence step should be run. There are two derived classes.  
+  `SMS_TaskSequence_ConditionOperand` derived classes are used to define condition expressions and operators that determine whether a task sequence step should be run. There are two derived classes.
 
-## SMS_TaskSequence_ConditionExpression  
- [SMS_TaskSequence_ConditionExpression Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionexpression-server-wmi-class.md) is the base class for an expression that must evaluate to `true` before the step can be processed. For example, the derived class [SMS_TaskSequence_RegistryConditionExpression Server WMI Class](../../../develop/reference/osd/sms_tasksequence_registryconditionexpression-server-wmi-class.md) defines an expression for the existence of a registry key.  
+## SMS_TaskSequence_ConditionExpression
+ [SMS_TaskSequence_ConditionExpression Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionexpression-server-wmi-class.md) is the base class for an expression that must evaluate to `true` before the step can be processed. For example, the derived class [SMS_TaskSequence_RegistryConditionExpression Server WMI Class](../../../develop/reference/osd/sms_tasksequence_registryconditionexpression-server-wmi-class.md) defines an expression for the existence of a registry key.
 
-## SMS_TaskSequence_ConditionOperator  
- [SMS_TaskSequence_ConditionOperator Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md) defines a Boolean operator and the expressions that are used to evaluate nested expressions.  
+## SMS_TaskSequence_ConditionOperator
+ [SMS_TaskSequence_ConditionOperator Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md) defines a Boolean operator and the expressions that are used to evaluate nested expressions.
 
- These classes can be used to define complex conditions such as `Expression1 and (Expression2 or Expression3)`. For more information, see Operating System Deployment Task Sequence Object Model.  
+ These classes can be used to define complex conditions such as `Expression1 and (Expression2 or Expression3)`. For more information, see Operating System Deployment Task Sequence Object Model.
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [SMS_TaskSequence_ConditionOperator Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md)   
+## See Also
+ [SMS_TaskSequence_ConditionOperator Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionoperator-server-wmi-class.md)
  [SMS_TaskSequence_ConditionExpression Server WMI Class](../../../develop/reference/osd/sms_tasksequence_conditionexpression-server-wmi-class.md)

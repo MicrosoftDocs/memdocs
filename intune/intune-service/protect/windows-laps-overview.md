@@ -1,28 +1,13 @@
 ---
-title: Manage Windows LAPS with Microsoft Intune policies
-description: Use Microsoft Intune application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, back up accounts and passwords to Microsoft Entra ID, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
+title: Overview of Windows LAPS with Microsoft Intune
+description: Learn how you can use Microsoft Microsoft Intune and application protection policy to manage the local administrator accounts on Windows devices. Through the Windows LAPS CSP, back up accounts and passwords to Microsoft Entra ID, define password requirements, and protect account passwords through scheduled password rotations and manual rotations at need.
 
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 04/17/2025
+ms.date: 05/29/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: laarrizz
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
@@ -48,7 +33,7 @@ Intune support for Windows LAPS includes the following capabilities:
 - **Set password requirements** – Define password requirements including complexity and length for the local administrator account on a device.
 - **Rotate passwords** – With policy you can have devices automatically rotate the local admin account passwords on a schedule. You can also use the Intune admin center to manually rotate the password for a device as a device action.
 - **Backup accounts and passwords** – You can choose to have devices back up their account and password in either Microsoft Entra ID in the cloud, or your on-premises Active Directory. Passwords are stored using strong encryption.
-- **Automatic Account Management** – (Supported on Windows 11 24H2 and later) – Simplify management of the built-in administrator account or a custom account that you specify. [Automatic account management](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode) options support disabling or enabling the specified account as well as randomization of the account name or prefix. Use of automatic account management also expands LAPS  [account tampering protection](/windows-server/identity/laps/laps-concepts-account-management-modes#account-tampering-protection).
+- **Automatic Account Management** – (Supported on Windows 11 24H2 and later) – Simplify management of the built-in administrator account or a custom account that you specify. [Automatic account management](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode) options support disabling or enabling the specified account and randomization of the account name or prefix. Use of automatic account management also expands LAPS  [account tampering protection](/windows-server/identity/laps/laps-concepts-account-management-modes#account-tampering-protection).
 - **Configure post authenticating actions** – Define actions that a device takes when its local admin account password expires. Actions range from resetting the managed account to use a new secure password, logging off the account, or doing both and then powering down the device. You can also manage how long the device waits after the password expires before taking these actions.
 - **View account details** – Intune administrators with sufficient role-based administrative control (RBAC) permissions can view information about a devices local admin account and its current password. You can also see when that password was last rotated (reset) and when it's next scheduled to rotate.
 - **View reports** – Intune provides reports on password rotation including details about past manual and scheduled password rotation.
@@ -60,8 +45,7 @@ To learn about Windows LAPS in more detail, start with the following articles in
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Prerequisites
 
@@ -77,37 +61,42 @@ The following are requirements for Intune to support Windows LAPS in your tenant
 
 Intune policy for Windows LAPS can configure a device to back up a local administrator account and password to one of the following Directory types:
 
-  > [!NOTE]  
-  > Devices that are workplace-joined (WPJ) are not supported by Intune for LAPS.
+  > [!NOTE]
+  > Devices that are workplace-joined (WPJ) aren't supported by Intune for LAPS.
 
 - **Cloud** – Cloud supports backup to your Microsoft Entra ID for the following scenarios:
 
   - Microsoft Entra hybrid join
   - Microsoft Entra join
 
-    Support for *Microsoft Entra join* requires you to enable LAPS in your Microsoft Entra ID. The following steps can help you complete this configuration. For the larger context, view these steps in the Microsoft Entra documentation at [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Microsoft Entra hybrid join* does not require LAPS to be enabled in Microsoft Entra.
+    Support for *Microsoft Entra join* requires you to enable LAPS in your Microsoft Entra ID. The following steps can help you complete this configuration. For the larger context, view these steps in the Microsoft Entra documentation at [Enabling Windows LAPS with Microsoft Entra ID](/azure/active-directory/devices/howto-manage-local-admin-passwords#enabling-windows-laps-with-azure-ad). *Microsoft Entra hybrid join* doesn't require LAPS to be enabled in Microsoft Entra.
 
-    **Enable LAPS in Microsoft Entra**:  
+    **Enable LAPS in Microsoft Entra**:
     1. Sign in to the [**Microsoft Entra admin center**](https://entra.microsoft.com/) as a [Cloud Device Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-device-administrator).
     2. Browse to **Identity** > **Devices** > **Overview** > **Device settings**.
-    3. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You may also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
+    3. Select **Yes** for the *Enable Local Administrator Password Solution (LAPS)* setting and select **Save**. You can also use the Microsoft Graph API [Update deviceRegistrationPolicy](/graph/api/deviceregistrationpolicy-update?view=graph-rest-beta&preserve-view=true).
 
     For more information, see [Windows Local Administrator Password Solution in Microsoft Entra ID](/entra/identity/devices/howto-manage-local-admin-passwords) in the Microsoft Entra documentation.
 
 - **On-premises** – On-premises supports back up to Windows Server Active Directory (on-premises Active Directory).
 
-  > [!IMPORTANT]  
-  > LAPS on Windows devices can be configured to use one directory type or the other, but not both. Also consider, the backup directory must be supported by the devices join type – if you set the directory to an on-premises Active Directory and the device is not domain joined, it will accept the policy settings from Intune, but LAPS cannot successfully use that configuration.
+  > [!IMPORTANT]
+  > LAPS on Windows devices can be configured to use one directory type or the other, but not both. Also consider, the backup directory must be supported by the devices join type – if you set the directory to an on-premises Active Directory and the device isn't domain joined, it accepts the policy settings from Intune, but LAPS can't successfully use that configuration.
 
 ### Device Edition and Platform
 
 Devices can have any [Windows edition that Intune supports](../fundamentals/supported-devices-browsers.md#microsoft), but must run of one of the following versions to support the Windows LAPS CSP:
 
+- Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
+- Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
 - Windows 10, version 22H2 (19045.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10, version 21H2 (19044.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
 - Windows 10, version 20H2 (19042.2846 or later) with [KB5025221 ](https://support.microsoft.com/topic/april-11-2023-kb5025221-os-builds-19042-2846-19044-2846-and-19045-2846-b00c3356-baac-4a41-8342-7f97ec83445a)
-- Windows 11, version 22H2 (22621.1555 or later) with [KB5025239](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025239-os-build-22621-1555-5eaaaf42-bc4d-4881-8d38-97e0082a6982)
-- Windows 11, version 21H2 (22000.1817 or later) with [KB5025224](https://support.microsoft.com/en-us/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc)
+- Windows 10 Enterprise LTSC 2019 and [later LTSC versions](/windows-server/identity/laps/laps-overview#windows-laps-supported-platforms)
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 ### GCC High support
 
@@ -126,7 +115,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   - Remote tasks: **Rotate Local Admin Password**
 
     > [!IMPORTANT]
-    > The *Remote tasks* action of **Rotate Local Admin Password** is not included by any Intune built-in role or the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../fundamentals/create-custom-role.md) to assign this permission to users who should have this capability.
+    > The *Remote tasks* action of **Rotate Local Admin Password** isn't included by any Intune built-in role or the Microsoft Entra built-in role of Intune Administrator. Instead, use a [custom Intune role](../fundamentals/create-custom-role.md) to assign this permission to users who should have this capability.
 
 - **Retrieve local Administrator password** – To view password details, your account must have one of the following Microsoft Entra permissions:
 
@@ -134,7 +123,7 @@ To manage LAPS, an account must have sufficient role-based access control (RBAC)
   - `microsoft.directory/deviceLocalCredentials/standard/read` to read LAPS metadata excluding passwords.
 
   To create custom roles that can grant these permissions, see [Create and assign a custom role in Microsoft Entra ID](/azure/active-directory/roles/custom-create) in the Microsoft Entra documentation.
-  
+
 - **View Microsoft Entra audit logs and events** – To view details about LAPS policies and recent device actions such as password rotation events, your account must permissions equivalent to the built-in Intune role **Read Only Operator**.
 
 For more information about Intune's built-in roles and custom roles, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
@@ -159,7 +148,10 @@ The CSP-based policy from Intune overrides all other sources of LAPS policy, suc
 
 ### Can Windows LAPS create local admin accounts based on the administrator account name that’s configured using LAPS policy?
 
-No. Windows LAPS can only manage accounts that already exist on the device. If a policy specifies an account by name that doesn't exist on the device, the policy applies and doesn’t report an error. However, no account is backed up.
+Starting with Windows 11 24H2, you can configure Windows LAPS using the new [automatic account management mode](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode) to manage the built-in local Administrator account or create a new, custom account that it then manages. On down-level Windows versions, Windows LAPS can only manage accounts that already exist on the device.
+
+> [!NOTE]
+> When you use manual account management mode or Windows LAPS on devices running Windows 11 version 23H2 or earlier, specifying an account name that doesn't exist on the device has no effect and doesn't generate an error.
 
 ### Does Windows LAPS rotate and backup the password for a device that is disabled in Microsoft Entra?
 

@@ -12,81 +12,81 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_InventoryClassProperty Server WMI Class
-The `SMS_InventoryClassProperty` Windows Management Instrumentation (WMI) class is an SMS Provider server class, embedded in the `SMS_InventoryClass` that represents the properties associated with an inventory class in Configuration Manager.  
+The `SMS_InventoryClassProperty` Windows Management Instrumentation (WMI) class is an SMS Provider server class, embedded in the `SMS_InventoryClass` that represents the properties associated with an inventory class in Configuration Manager.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_InventoryClassProperty :    
-{  
-    UInt32 IsKey;  
-    String PropertyName;  
-    String SMSDeviceUri;  
-    UInt32 Type;  
-    String Units;  
-};  
-```  
+```
+Class SMS_InventoryClassProperty :
+{
+    UInt32 IsKey;
+    String PropertyName;
+    String SMSDeviceUri;
+    UInt32 Type;
+    String Units;
+};
+```
 
-## Methods  
- The `SMS_InventoryClassProperty` class does not define any methods.  
+## Methods
+ The `SMS_InventoryClassProperty` class does not define any methods.
 
-## Properties  
- `IsKey`  
- Data type: `UInt32`  
+## Properties
+ `IsKey`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- `true`, if this property is the key of the class. The default value is `false`.  
+ `true`, if this property is the key of the class. The default value is `false`.
 
- `PropertyName`  
- Data type: `String`  
+ `PropertyName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The name of the property. The default value is an empty string.  
+ The name of the property. The default value is an empty string.
 
- `SMSDeviceUri`  
- Data type: `String`  
+ `SMSDeviceUri`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- SMS device URI in XML format. This can support multiple device URIs.  
+ SMS device URI in XML format. This can support multiple device URIs.
 
- `Type`  
- Data type: `UInt32`  
+ `Type`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- CIMv2 type of property.  
+ CIMv2 type of property.
 
- `Units`  
- Data type: `String`  
+ `Units`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- The units of the property.  
+ The units of the property.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

@@ -1,30 +1,10 @@
 ---
-# required metadata
 title: Mobile App Management (MAM)
-titleSuffix: Microsoft Intune
 description: Reference topic for the Mobile App Management category of entity collections in the Intune Data Warehouse API.
-keywords: Intune Data Warehouse
-author: Erikre
-ms.author: erikre
-manager: dougeby
 ms.date: 10/30/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 084F11AD-F7BA-45A4-8424-45E6E4564930
-
-# optional metadata
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -82,9 +62,9 @@ The **mamApplicationInstance** entity lists managed Mobile Application Managemen
 
 ## mamCheckins
 
-The **mamCheckin** entity represents data gathered when a Mobile Application Management (MAM) app instance has checked in with the Intune Service. 
+The **mamCheckin** entity represents data gathered when a Mobile Application Management (MAM) app instance has checked in with the Intune Service.
 
-> [!Note]  
+> [!Note]
 > When an app instance checks in multiple times a day, the data warehouse stores it as single check-in.
 
 | Property | Description | Example |

@@ -6,12 +6,12 @@ ms.date: 09/04/2024
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Accounts used in Configuration Manager
@@ -299,7 +299,7 @@ To discover and publish to untrusted forests, the Active Directory forest accoun
 
 This account must have **Read** permissions for each Active Directory forest where you want to discover network infrastructure.
 
-This account must have **Full Control** permissions to the **System Management** container and all its child objects in each Active Directory forest where you want to publish site data. 
+This account must have **Full Control** permissions to the **System Management** container and all its child objects in each Active Directory forest where you want to publish site data.
 
 For more information, see [Prepare Active Directory for site publishing](../network/extend-the-active-directory-schema.md).
 
@@ -405,7 +405,7 @@ A Configuration Manager client first tries to use its computer account to downlo
 If you configure the site for HTTPS or [Enhanced HTTP](enhanced-http.md), a workgroup or Microsoft Entra joined client can securely access content from distribution points without the need for a network access account. This behavior includes OS deployment scenarios with a task sequence running from boot media, PXE, or the Software Center. For more information, see [Client to management point communication](communications-between-endpoints.md#bkmk_client2mp).
 
 > [!NOTE]
-> If you enable **Enhanced HTTP** to not require the network access account, distribution points need to be running currently supported versions of Windows Server or Windows 10/11. 
+> If you enable **Enhanced HTTP** to not require the network access account, distribution points need to be running currently supported versions of Windows Server or Windows 10/11.
 
 #### Permissions for the network access account
 

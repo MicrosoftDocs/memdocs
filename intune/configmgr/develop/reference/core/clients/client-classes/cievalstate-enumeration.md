@@ -12,27 +12,27 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # CIEvalState Enumeration
-In Configuration Manager, the `CIEvalState` enumeration defines configuration item evaluation states. This enumeration is used by the [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md).  
+In Configuration Manager, the `CIEvalState` enumeration defines configuration item evaluation states. This enumeration is used by the [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md).
 
-## Syntax  
+## Syntax
 
-```  
-typedef enum tagCIEvalState  
-{  
-  ciIdle = 0,  
-  ciEvaluating   
-} CIEvalState;  
-```  
+```
+typedef enum tagCIEvalState
+{
+  ciIdle = 0,
+  ciEvaluating
+} CIEvalState;
+```
 
-## Elements  
- ciIdle  
- Configuration item is idle.  
+## Elements
+ ciIdle
+ Configuration item is idle.
 
- ciEvaluating  
- Configuration item is being evaluated.  
+ ciEvaluating
+ Configuration item is being evaluated.
 
-## See Also  
+## See Also
  [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md)

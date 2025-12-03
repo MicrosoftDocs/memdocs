@@ -12,55 +12,55 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetUserList Method in Class SMS_RbacSecuredObject
-The `GetUserList` Windows Management Instrumentation (WMI) class method, in Configuration Manager, returns the list of users who have been granted permission to this object.  
+The `GetUserList` Windows Management Instrumentation (WMI) class method, in Configuration Manager, returns the list of users who have been granted permission to this object.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-UInt32 GetUserList(  
-     SMS_BaseClass ref ObjectPath,  
-     String UserNames[],  
-     Uint32 PermittedOperations[]  
-);  
-```  
+```
+UInt32 GetUserList(
+     SMS_BaseClass ref ObjectPath,
+     String UserNames[],
+     Uint32 PermittedOperations[]
+);
+```
 
-#### Parameters  
- `ObjectPath`  
- Data type: `SMS_BaseClass`  
+#### Parameters
+ `ObjectPath`
+ Data type: `SMS_BaseClass`
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- The path of the object.  
+ The path of the object.
 
- `UserNames`  
- Data type: `String` Array  
+ `UserNames`
+ Data type: `String` Array
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Logon names of the users.  
+ Logon names of the users.
 
- `PermittedOperations`  
- Data type: `UInt32` Array  
+ `PermittedOperations`
+ Data type: `UInt32` Array
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- Granted permissions.  
+ Granted permissions.
 
-## Return Values  
- A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ A `UInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
+## See Also
  [SMS_RbacSecuredObject Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_rbacsecuredobject-server-wmi-class.md)

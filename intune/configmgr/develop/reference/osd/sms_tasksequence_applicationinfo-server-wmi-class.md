@@ -12,61 +12,61 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_ApplicationInfo Server WMI Class
-The `SMS_TaskSequence_ApplicationInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application information for the application that is installed by using a task sequence.  
+The `SMS_TaskSequence_ApplicationInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application information for the application that is installed by using a task sequence.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_ApplicationInfo :    
-{  
-    String Description;  
-    String DisplayName;  
-    String Name;  
-};  
-```  
+```
+Class SMS_TaskSequence_ApplicationInfo :
+{
+    String Description;
+    String DisplayName;
+    String Name;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_ApplicationInfo` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_ApplicationInfo` class does not define any methods.
 
-## Properties  
- `Description`  
- Data type: `String`  
+## Properties
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Description for Configuration Manager application.  
+ Description for Configuration Manager application.
 
- `DisplayName`  
- Data type: `String`  
+ `DisplayName`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Display name for Configuration Manager application.  
+ Display name for Configuration Manager application.
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Name for Configuration Manager application.  
+ Name for Configuration Manager application.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

@@ -1,55 +1,33 @@
 ---
-# required metadata
-
-title: Set up Apple device management in Intune for corporate-owned userless devices 
-titleSuffix: Microsoft Intune
-description: Set up Intune for corporate-owned userless iOS/iPadOS devices. 
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
+title: Set up Apple device management in Intune for corporate-owned userless devices
+description: Set up Intune for corporate-owned userless iOS/iPadOS devices.
 ms.date: 02/17/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: enrollment
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tranamst
-ms.suite: ems
-search.appverid:
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 ---
 
-# Set up Intune enrollment for Apple corporate-owned userless devices    
+# Set up Intune enrollment for Apple corporate-owned userless devices
 
-Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. This procedure differs from what's shown in [the Apple Configurator enrollment process](apple-configurator-enroll-ios.md) because it only enrolls devices without user affinity. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment. 
+Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](https://itunes.apple.com/app/apple-configurator-2/id1037126344) running on a Mac computer. This procedure differs from what's shown in [the Apple Configurator enrollment process](apple-configurator-enroll-ios.md) because it only enrolls devices without user affinity. Enrolling with Apple Configurator requires that you USB-connect each iOS/iPadOS device to a Mac computer to set up corporate enrollment.
 
 You can enroll devices into Intune as a userless device with Apple Configurator by *direct enrollment*. This method doesn't wipe the device, and enrolls the device through iOS/iPadOS settings. This method only supports devices with **no user affinity**.
 
-This article describes how to set up iOS/iPadOS device management and enroll userless devices for use at work. 
+This article describes how to set up iOS/iPadOS device management and enroll userless devices for use at work.
 
 
-## Certificates  
+## Certificates
 >[!IMPORTANT]
-> Downloading the ACME profile is not supported at this time and will result in an error. Download the SCEP profile for all devices only until we fix this problem and restore support.  
+> Downloading the ACME profile is not supported at this time and will result in an error. Download the SCEP profile for all devices only until we fix this problem and restore support.
 
 Apple Configurator enrollment supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile on the device receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
-Devices that are already enrolled do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running: 
+Devices that are already enrolled do not get an ACME certificate unless they re-enroll into Microsoft Intune. ACME is supported on devices running:
 
-- iOS 16.0 or later  
+- iOS 16.0 or later
 
-- iPadOS 16.1 or later  
+- iPadOS 16.1 or later
 
 ## Prerequisites
 
@@ -58,21 +36,21 @@ Devices that are already enrolled do not get an ACME certificate unless they re-
 - [An Apple MDM push certificate](apple-mdm-push-certificate-get.md)
 - Device serial numbers (Setup Assistant enrollment only)
 - USB connection cables
-- macOS computer running [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344) 
+- macOS computer running [Apple Configurator 2.0](https://itunes.apple.com/app/apple-configurator-2/id1037126344)
 
 
 ## Create an Apple Configurator profile for devices
 
-A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.  
+A device enrollment profile defines the settings applied during enrollment. These settings are applied only once. Follow these steps to create an enrollment profile to enroll iOS/iPadOS devices with Apple Configurator.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Go to **Devices**.
-1. Expand **Device onboarding**, and then select **Enrollment**.  
-1. Select the **Apple** tab.  
-1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
-1. Go to **Profiles** > **Create**.  
-1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).  
-    
+1. Expand **Device onboarding**, and then select **Enrollment**.
+1. Select the **Apple** tab.
+1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
+1. Go to **Profiles** > **Create**.
+1. Under **Create Enrollment Profile**, on the **Basics** tab, type a **Name** and **Description** for the profile. Users don't see these details. You can use the name to create a dynamic group in Microsoft Entra ID. Use the profile name to define the enrollmentProfileName parameter to assign devices with this enrollment profile. For more information about how to create a dynamic group with rules, see [Create a group membership rule](/azure/active-directory/enterprise-users/groups-create-rule#to-create-a-group-membership-rule).
+
     :::image type="content" source="./media/apple-configurator-enroll-ios/apple-configurator-profile-create.png" alt-text="Screenshot of the create enrollment profile pane with the Basics tab selected.":::
 
 1. Select **Next** to go to the **Settings** page.
@@ -82,39 +60,39 @@ A device enrollment profile defines the settings applied during enrollment. Thes
     - **Enroll without User Affinity** - Choose this option for devices unaffiliated with a single user and enroll as a userless device. Use this for devices that perform tasks without accessing local user data. Apps requiring user affiliation (including the Company Portal app used for installing line-of-business apps) won't work. Required for direct enrollment.
 
 1. Choose **Create** to save the profile.
- 
-## Create a device group  
+
+## Create a device group
 You can create *assigned device groups* or *dynamic device groups* in Intune. For more information about both groups, see [Add groups to organize users and devices](../fundamentals/groups-add.md).
 
-Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name. 
+Dynamic device groups are configured to automatically add and remove devices based on a set of rules and parameters. For example, you can group devices by enrollment profile name.
 
-Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Apple corporate-owned, userless enrollment profile.  
+Complete the following steps to create a dynamic Microsoft Entra device group for devices enrolled with an Apple corporate-owned, userless enrollment profile.
 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **All groups** > **New group**.  
-2. Enter the required fields as follows:  
-    - **Group type**: Security  
-    - **Group name**: Type an intuitive name (like Factory 1 devices)  
-    - **Membership type**: Dynamic device  
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Groups** > **All groups** > **New group**.
+2. Enter the required fields as follows:
+    - **Group type**: Security
+    - **Group name**: Type an intuitive name (like Factory 1 devices)
+    - **Membership type**: Dynamic device
 3. Choose **Add dynamic query**.
 4. In the **Dynamic membership rules** blade, fill out the fields as follows:
     - **Add dynamic membership rule**: Simple rule
     - **Add devices where**: enrollmentProfileName
     - In the middle box, choose **Equals**.
-    - In the last field, enter the enrollment profile name that you created in [Create an Apple Configurator profile for devices](#create-an-apple-configurator-profile-for-devices).  
+    - In the last field, enter the enrollment profile name that you created in [Create an Apple Configurator profile for devices](#create-an-apple-configurator-profile-for-devices).
 
-    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership). 
-5. Choose **Add query** > **Create**.  
+    For more information about dynamic membership rules, see [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/users-groups-roles/groups-dynamic-membership).
+5. Choose **Add query** > **Create**.
 
-## Export the profile as .mobileconfig to iOS/iPadOS devices  
+## Export the profile as .mobileconfig to iOS/iPadOS devices
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices**.
-1. Expand **Device onboarding**, and then select **Enrollment**.  
-1. Select the **Apple** tab.  
-1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.  
-1. Go to **Profiles**. Choose a profile to export. 
-    - Choose either the SCEP or the ACME profile based on your operating system. 
-1. Select **Export Profile**.  
-1. Copy the **Profile URL**. You can then add it in Apple Configurator to define the Intune profile used by iOS/iPadOS devices.   
+1. Expand **Device onboarding**, and then select **Enrollment**.
+1. Select the **Apple** tab.
+1. Under **Bulk Enrollment Methods**, select **Apple Configurator**.
+1. Go to **Profiles**. Choose a profile to export.
+    - Choose either the SCEP or the ACME profile based on your operating system.
+1. Select **Export Profile**.
+1. Copy the **Profile URL**. You can then add it in Apple Configurator to define the Intune profile used by iOS/iPadOS devices.
 1. Under **Direct enrollment**, choose **Download profile**, and save the file. An enrollment profile file is only valid for two weeks at which time you must re-create it.
 1. Transfer the file to a Mac computer running [Apple Configurator](https://itunes.apple.com/us/app/apple-configurator-2/id1037126344?mt=12) to push directly as a management profile to iOS/iPadOS devices.
 1. Prepare the device with Apple Configurator by using the following steps:
@@ -137,39 +115,39 @@ Complete the following steps to create a dynamic Microsoft Entra device group fo
 
 1. Distribute devices. The iOS/iPadOS device is now enrolled in Intune and managed.
 
-## After enrollment 
+## After enrollment
 
-### App updates    
-The Microsoft Intune app automatically installs available app updates for itself, Authenticator, and Company Portal. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.   
+### App updates
+The Microsoft Intune app automatically installs available app updates for itself, Authenticator, and Company Portal. When an update becomes available, the Intune app closes and installs the update. The app must be closed completely to install the update.
 
-### Manage devices remotely    
+### Manage devices remotely
 
-The following remote actions are available for Apple devices:     
+The following remote actions are available for Apple devices:
 
 * Retire
-* Wipe  
+* Wipe
 * Delete
 * Remote lock
 * Sync
 * Remove passcode
 * Revoke licenses
 
-You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/devices-wipe.md).
+You can take action on one device at a time. For more information about where to find remote actions in Intune, see [Remove devices by using wipe, retire, or manually unenrolling the device](../remote-actions/device-wipe.md).
 
 
-### Troubleshooting + Support     
+### Troubleshooting + Support
 
 Go to **Troubleshooting + Support** in the Microsoft Intune admin center to:
 
 * See a list of iOS/iPadOS devices enrolled by a user.
-* Enable troubleshooting of Apple devices the same way you can troubleshoot other user devices. 
+* Enable troubleshooting of Apple devices the same way you can troubleshoot other user devices.
 
-## Known limitations  
+## Known limitations
 
-The ACME profile can sometimes fail to install on iOS/iPadOS 16 or later even though this is correct operating system. If this happens, use the SCEP profile instead. 
-Follow steps from [Export the profile as .mobileconfig to iOS/iPadOS devices](#export-the-profile-as-mobileconfig-to-iosipados-devices) to install the SCEP profile onto your device. If it fails to install once, retry until installation is successful.  
+The ACME profile can sometimes fail to install on iOS/iPadOS 16 or later even though this is correct operating system. If this happens, use the SCEP profile instead.
+Follow steps from [Export the profile as .mobileconfig to iOS/iPadOS devices](#export-the-profile-as-mobileconfig-to-iosipados-devices) to install the SCEP profile onto your device. If it fails to install once, retry until installation is successful.
 
-## Next steps  
+## Next steps
 
-* [Create an iOS/iPadOS MDM app configuration policy](../apps/app-configuration-policies-use-ios.md) to restrict settings on devices with specific users. 
+* [Create an iOS/iPadOS MDM app configuration policy](../apps/app-configuration-policies-use-ios.md) to restrict settings on devices with specific users.
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).

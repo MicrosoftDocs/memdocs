@@ -6,11 +6,11 @@ ms.date: 04/29/2017
 ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Manage software update catalogs in Updates Publisher
@@ -24,7 +24,7 @@ Software update catalogs contain information about related updates that are crea
 ## Add software update catalogs
 You must add an update catalog to Updates Publisher before you can manage the updates that it contains. When you add a catalog, Updates Publisher:
 -   Creates a subscription to that catalog, so it can check for updates to that catalog.
--   Adds the catalog to a list in the **My Software Update Catalogs** window of the **Catalogs Workspace**.  
+-   Adds the catalog to a list in the **My Software Update Catalogs** window of the **Catalogs Workspace**.
 
 Information about each subscribed catalog is available in the console. Information includes the download URL or location, the name of the company or organization who created the catalog, and when it was last imported or modified.
 
@@ -37,7 +37,7 @@ In addition to adding catalogs, and viewing information about subscribed catalog
 -  **Delete** (remove) a catalog from Updates Publisher.
 -  **Import** updates from a catalog into the Updates Publisher repository. When you import updates, you import all updates contained in that catalog. You can then view the updates in the Updates workspace where you can then select and publish updates to your update server.
 
-> [!NOTE]   
+> [!NOTE]
 > Deleting a catalog from Updates Publisher results in the updates in that catalog being removed from your repository. This does not affect the updates you have published to your update server. To remove updates from your update server that are no longer in your repository, see [Expire unreferenced software updates](updates-publisher-options.md#expire-unreferenced-software-updates).
 
 ## Manage update catalogs
@@ -76,7 +76,7 @@ When you import a catalog, Updates Manager adds the updates from that catalog to
 
    > [!CAUTION]
    > Accept updates only from publishers that you trust. Software updates from publishers who are not trusted can potentially harm client computers when scanning for updates.
-   > 
+   >
    >  If you no longer trust a publisher, remove that publisher from the trusted publishers list. To find more information about accepting catalogs, click **Tell Me More** in the **Security Warning – Catalog Validation** dialog box.
 
    If you choose to always accept catalogs from a publisher, that publisher is added to the [trusted publishers list](updates-publisher-options.md#trusted-publishers). You can review and edit this list as an Updates Publisher option.

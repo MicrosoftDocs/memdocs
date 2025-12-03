@@ -12,86 +12,86 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_SiteInstallMap Server WMI Class
-The `SMS_SiteInstallMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the site install map, which describes the layout of all installed features.  
+The `SMS_SiteInstallMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the site install map, which describes the layout of all installed features.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_SiteInstallMap : SMS_BaseClass   
-{  
-     String BuildNumber;  
-     UInt32 FileType;  
-     String FormatVersion;  
-     String IMapData;  
-};  
-```  
+```
+Class SMS_SiteInstallMap : SMS_BaseClass
+{
+     String BuildNumber;
+     UInt32 FileType;
+     String FormatVersion;
+     String IMapData;
+};
+```
 
-## Methods  
- The following table lists the method in `SMS_SiteInstallMap`.  
+## Methods
+ The following table lists the method in `SMS_SiteInstallMap`.
 
-|Method|Description|  
-|------------|-----------------|  
-|[Refresh Method in Class SMS_SiteInstallMap](../../../../../develop/reference/core/servers/configure/refresh-method-in-class-sms_siteinstallmap.md)|Reloads the install map from the database, which repopulates the classes.|  
+|Method|Description|
+|------------|-----------------|
+|[Refresh Method in Class SMS_SiteInstallMap](../../../../../develop/reference/core/servers/configure/refresh-method-in-class-sms_siteinstallmap.md)|Reloads the install map from the database, which repopulates the classes.|
 
-## Properties  
- `BuildNumber`  
- Data type: `String`  
+## Properties
+ `BuildNumber`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- Configuration Manager build number.  
+ Configuration Manager build number.
 
- `FileType`  
- Data type: `UInt32`  
+ `FileType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- Reserved. Initialized with a value of 1.  
+ Reserved. Initialized with a value of 1.
 
- `FormatVersion`  
- Data type: `String`  
+ `FormatVersion`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [lazy]  
+ Qualifiers: [lazy]
 
- Format version of the install map.  
+ Format version of the install map.
 
- `IMapData`  
- Data type: `String`  
+ `IMapData`
+ Data type: `String`
 
- Access type: Read-only  
+ Access type: Read-only
 
- Qualifiers: [large, lazy]  
+ Qualifiers: [large, lazy]
 
- Install map data in text format.  
+ Install map data in text format.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-  Use classes derived from [SMS_SiteInstallItemBase Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_siteinstallitembase-server-wmi-class.md) to view the install map.  
+  Use classes derived from [SMS_SiteInstallItemBase Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_siteinstallitembase-server-wmi-class.md) to view the install map.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
 
-## See Also  
- [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)   
+## See Also
+ [Configuration Manager Site Configuration Server WMI Classes](../../../../../develop/reference/core/servers/configure/site-configuration-server-wmi-classes.md)
  [SMS_SiteInstallItemBase Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_siteinstallitembase-server-wmi-class.md)

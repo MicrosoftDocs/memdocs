@@ -6,12 +6,12 @@ ms.date: 09/18/2019
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: sheetg09
-ms.author: sheetg
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # Prepare to install Configuration Manager sites
 
@@ -23,7 +23,7 @@ To prepare for a successful deployment of one or more Configuration Manager site
 > When managing Configuration Manager site and hierarchy infrastructure, the terms *upgrade*, *update*, and *install* are used to describe three separate concepts. To learn how each term is used, see [About upgrade, update, and install](../../../understand/upgrade-update-install.md).
 
 ## <a name="bkmk_options"></a> Options for installing different types of sites
-When you install a new Configuration Manager site, the version of the source files that you can use depends on the version of sites that are already in the hierarchy (if any). The installation methods that you can use depend on the type of site you want to install.  
+When you install a new Configuration Manager site, the version of the source files that you can use depends on the version of sites that are already in the hierarchy (if any). The installation methods that you can use depend on the type of site you want to install.
 
 Before installing a site, make sure you have planned your hierarchy, and that you understand the type of site you want to install. For more information, see [Design a hierarchy of sites](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).
 
@@ -59,19 +59,19 @@ A secondary site must be installed from the Configuration Manager console. This 
 - **Add a secondary site**:  Use the Configuration Manager console to install a secondary site as a child site below a primary site. Other methods are not supported for adding secondary sites.
 
 ## <a name="bkmk_tasks"></a>  Common tasks to complete before starting an installation
-- **Understand the hierarchy topology you will use for your deployment**    
-For more information, see [Design a hierarchy of sites for Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).  
+- **Understand the hierarchy topology you will use for your deployment**
+For more information, see [Design a hierarchy of sites for Configuration Manager](../../../../core/plan-design/hierarchy/design-a-hierarchy-of-sites.md).
 
-- **Prepare and configure individual servers to meet prerequisites and supported configurations for use with Configuration Manager**         
-For more information, see [Site and site system prerequisites](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md).  
+- **Prepare and configure individual servers to meet prerequisites and supported configurations for use with Configuration Manager**
+For more information, see [Site and site system prerequisites](../../../../core/plan-design/configs/site-and-site-system-prerequisites.md).
 
-- **Install and configure SQL Server to host the site database**     
-For more information, see [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).  
+- **Install and configure SQL Server to host the site database**
+For more information, see [Support for SQL Server versions for Configuration Manager](../../../../core/plan-design/configs/support-for-sql-server-versions.md).
 
-- **Prepare your network environment to support Configuration Manager**      
-For more information, see [Configure firewalls, ports, and domains to prepare for Configuration Manager](../../../../core/plan-design/network/configure-firewalls-ports-domains.md).  
+- **Prepare your network environment to support Configuration Manager**
+For more information, see [Configure firewalls, ports, and domains to prepare for Configuration Manager](../../../../core/plan-design/network/configure-firewalls-ports-domains.md).
 
-- **If you will use a public key infrastructure (PKI), prepare your infrastructure and certificates**      
+- **If you will use a public key infrastructure (PKI), prepare your infrastructure and certificates**
 For more information, see [PKI certificate requirements for Configuration Manager](../../../../core/plan-design/network/pki-certificate-requirements.md).
 
 - **Install the latest security updates on computers you will use as site servers or site system servers, and when necessary, restart them**
@@ -103,12 +103,12 @@ Site codes cannot be used more than one time in a Configuration Manager hierarch
 
 ## Limits and restrictions for installed sites
 Before you install a site, it's important to understand the following limitations that apply to sites and site hierarchies:
-- After running Setup, you cannot change the following site properties without uninstalling the site and then reinstalling it by using the new values:  
-  - Program Files installation directory  
-  - Site code  
-  - Site description  
-- When your hierarchy includes a central administration site:  
-  - Configuration Manager does not support moving a child primary site out of a hierarchy to create a stand-alone primary site or to attach it to a different hierarchy. Instead, uninstall the child primary site, and then reinstall it as a new stand-alone primary site or as a child site of the central administration site of a different hierarchy.  
+- After running Setup, you cannot change the following site properties without uninstalling the site and then reinstalling it by using the new values:
+  - Program Files installation directory
+  - Site code
+  - Site description
+- When your hierarchy includes a central administration site:
+  - Configuration Manager does not support moving a child primary site out of a hierarchy to create a stand-alone primary site or to attach it to a different hierarchy. Instead, uninstall the child primary site, and then reinstall it as a new stand-alone primary site or as a child site of the central administration site of a different hierarchy.
 
 
 ## <a name="bkmk_optionalsteps"></a>  Optional steps before running Setup

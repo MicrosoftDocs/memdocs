@@ -12,104 +12,104 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_ClientDeploymentStateDetailsView Server WMI Class
-The `SMS_ClientDeploymentStateDetailsView` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment state details view.  
+The `SMS_ClientDeploymentStateDetailsView` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a client deployment state details view.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_ClientDeploymentStateDetailsView: SMS_BaseClass  
-{  
-    UInt32 BaselineItemID;  
-    String BaselineItemName;  
-    UInt32 BaselineItemType;  
-    String NetBiosName;      
-    UInt32 RecordID;  
-    String SMSID;  
-};  
+```
+Class SMS_ClientDeploymentStateDetailsView: SMS_BaseClass
+{
+    UInt32 BaselineItemID;
+    String BaselineItemName;
+    UInt32 BaselineItemType;
+    String NetBiosName;
+    UInt32 RecordID;
+    String SMSID;
+};
 
-```  
+```
 
-## Methods  
- The  `SMS_ClientDeploymentStateDetailsView` class does not define any methods.  
+## Methods
+ The  `SMS_ClientDeploymentStateDetailsView` class does not define any methods.
 
-## Properties  
- `BaselineItemID`  
- Data type: `UInt32`  
+## Properties
+ `BaselineItemID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The client baseline item ID.  
+ The client baseline item ID.
 
- `BaselineItemName`  
- Data type: `String`  
+ `BaselineItemName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The client baseline item name.  
+ The client baseline item name.
 
- `BaselineItemType`  
- Data type: `UInt32`  
+ `BaselineItemType`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The client baseline item type. Possible values are:  
+ The client baseline item type. Possible values are:
 
-|Value|Baseline item type|  
-|-|-|  
-|1|Patch or CU|  
-|2|Language Pack|  
+|Value|Baseline item type|
+|-|-|
+|1|Patch or CU|
+|2|Language Pack|
 
- `NetBiosName`  
- Data type: `String`  
+ `NetBiosName`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The NetBIOS name of the client.  
+ The NetBIOS name of the client.
 
- `RecordID`  
- Data type: `UInt32`  
+ `RecordID`
+ Data type: `UInt32`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: [key]  
+ Qualifiers: [key]
 
- The record ID of the client deployment state.  
+ The record ID of the client deployment state.
 
- `SMSID`  
- Data type: `String`  
+ `SMSID`
+ Data type: `String`
 
- Access type: Read  
+ Access type: Read
 
- Qualifiers: none  
+ Qualifiers: none
 
- The SMSID of the client.  
+ The SMSID of the client.
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
-- Dynamic  
+- Dynamic
 
-- Read (read-only)  
+- Read (read-only)
 
-  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).  
+  For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).  
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

@@ -6,11 +6,11 @@ ms.date: 01/14/2020
 ms.subservice: mdm
 ms.service: configuration-manager
 ms.topic: how-to
-author: gowdhamankarthikeyan
-ms.author: gokarthi
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -72,7 +72,7 @@ For more general information on compliance settings in Configuration Manager, se
 
 You can view the new configuration item in the **Configuration Items** node of the **Assets and Compliance** workspace.
 
-## <a name="bkmk_setref"></a> Settings reference  
+## <a name="bkmk_setref"></a> Settings reference
 
 The following sections detail the specific settings available in each group. Configure these settings on the **Device Settings** page of the **Create Configuration Item Wizard** for **Windows 8.1 and Windows 10** devices managed *without* the Configuration Manager client.
 
@@ -112,7 +112,7 @@ These settings are only for devices running Windows 10 and later.
 
 ### Email management
 
-These settings are for devices running Windows 8.1 and Windows 10.  
+These settings are for devices running Windows 8.1 and Windows 10.
 
 - **POP and IMAP email**: Allow or prohibit connections to email accounts that use the POP and IMAP standards.
 - **Maximum time to keep email**: How long to keep email before the server deletes it.
@@ -310,7 +310,7 @@ These settings are only for devices running Windows 10 Team.
 - **Maintenance Window**: Enable this setting to configure the window when updates can install and restart the device.
   - **Start time**: Set the start time for the maintenance window.
   - **Duration (Hours)**: Set the length in hours of the maintenance window.
-- **Azure Operational Insights**: Allow [Azure Operational Insights](https://azure.microsoft.com/resources/videos/azure-operational-insights-overview/) to collect, store, and analyze log file data from Windows 10 Team devices.
+- **Azure Operational Insights**: Allow [Azure Operational Insights](https://www.youtube.com/watch?v=bRftuwXXkbg) to collect, store, and analyze log file data from Windows 10 Team devices.
   - **Workspace ID**: Enter a valid workspace ID
   - **Workspace Key**: Enter the key for the associated workspace
 - **Miracast wireless projection**: Allow Miracast-enabled devices to project to this Windows 10 Team device.
@@ -320,13 +320,13 @@ These settings are only for devices running Windows 10 Team.
   - **Show organizer, time and subject (subject hidden for private meetings)**
 - **Lockscreen background image URL**: Specify a URL to display a custom background on the **Welcome** screen of a Windows 10 Team device. Start the URL with `https://` and use the PNG format.
 
-### Windows Information Protection  
+### Windows Information Protection
 
 For more information about how to configure enterprise data protection with Configuration Manager, see [Protect your enterprise data using Windows Information Protection (WIP)](/windows/security/information-protection/windows-information-protection/protect-enterprise-data-using-wip).
 
 ### Microsoft Edge Legacy
 
-These settings are only for devices running Windows 10 and later.  
+These settings are only for devices running Windows 10 and later.
 
 - **Allow search suggestions in address bar**: Let the search engine suggest sites as you type search phrases.
 - **Allow do not track**: Inform websites that you don't want them to track your visit.

@@ -2,13 +2,6 @@
 metadata:
   title: Windows Autopilot FAQ
   description: This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Windows Autopilot.
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: madakeva
-  manager: aaroncz
   ms.date: 03/28/2025
   ms.collection:
     - M365-modern-desktop

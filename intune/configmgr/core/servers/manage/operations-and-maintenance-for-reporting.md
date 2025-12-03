@@ -6,12 +6,12 @@ ms.date: 04/05/2021
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
-ms.author: gokarthi
-author: gowdhamankarthikeyan
+ms.author: laurawi
+author: LauraWi
 manager: apoorvseth
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Operations and maintenance for reporting in Configuration Manager
@@ -21,7 +21,7 @@ ms.reviewer: mstewart,aaroncz
 After the infrastructure is in place for reporting in Configuration Manager, there are many operations that you typically do to manage reports and subscriptions.
 
 > [!NOTE]
-> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).  
+> This article focuses on reports in SQL Server Reporting Services. Starting in version 2002, you can integrate reporting with Power BI Report Server. For more information, see [Integrate with Power BI Report Server](powerbi-report-server.md).
 
 ## Run a report from Reporting Services
 
@@ -29,7 +29,7 @@ Configuration Manager stores its reports in SQL Server Reporting Services. The r
 
 When you run a report, it displays the report title, description, and category in the language of the local OS. For more information, see [Languages for reports](configuring-reporting.md#bkmk_languages).
 
-> [!NOTE]  
+> [!NOTE]
 > Report Manager is a web-based report access and management tool. You can use it to administer a single report server instance over an HTTPS connection. Use Report Manager for operational tasks: view reports, modify report properties, and manage associated report subscriptions. This article provides the steps to view a report and modify report properties in Report Manager. For more information about other options in Report Manager, see [What is Report Manager?](/sql/reporting-services/report-server/manage-a-reporting-services-native-mode-report-server)
 
 Use the following procedures to run a Configuration Manager report.
@@ -201,13 +201,13 @@ If you want to keep interactive features in a delivered report, use email delive
 
 ### Process to create a report subscription for a file share
 
-Use the following procedure to create a report subscription to deliver a report to a file share.  
+Use the following procedure to create a report subscription to deliver a report to a file share.
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and select the **Reports** node.
 
 1. Select a report folder, then select the report to which you want to subscribe. On the **Home** tab of the ribbon, in the **Report Group** section, select **Create Subscription**. This action opens the **Create Subscription Wizard**.
 
-1. On the **Subscription Delivery** page, configure the following settings:  
+1. On the **Subscription Delivery** page, configure the following settings:
 
     - **Report delivered by**: Select **Windows File Share**.
 
@@ -270,13 +270,13 @@ You can select one or both of the following email delivery options:
   - All other formats deliver reports as attachments.
   - Reporting Services doesn't check the size of the attachment or message before it sends the report. If the attachment or message exceeds the maximum limit allowed by your mail server, the report isn't delivered.
 
-Use the following procedure to create a report subscription to deliver a report by using email.  
+Use the following procedure to create a report subscription to deliver a report by using email.
 
 1. In the Configuration Manager console, go to the **Monitoring** workspace, expand **Reporting**, and select the **Reports** node.
 
 1. Select a report folder, then select the report to which you want to subscribe. On the **Home** tab of the ribbon, in the **Report Group** section, select **Create Subscription**. This action opens the **Create Subscription Wizard**.
 
-1. On the **Subscription Delivery** page, configure the following settings:  
+1. On the **Subscription Delivery** page, configure the following settings:
 
     - **Report delivered by**: Select **E-mail**.
 

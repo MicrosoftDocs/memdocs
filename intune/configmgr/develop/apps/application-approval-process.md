@@ -11,7 +11,7 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # Application approval process
@@ -219,7 +219,7 @@ To approve application requests outside of the internal network, additional sett
 1. Configure the following settings for this native app (client app) in Microsoft Entra ID. These settings should be configured manually in the [Azure portal](https://portal.azure.com/).
    - **Redirect URI**: `https://<CMG FQDN>/CCM_Proxy_ServerAuth/ImplicitAuth`. Use the fully qualified domain name of the cloud management gateway (CMG) service, for example, GraniteFalls.Contoso.com.
     [![Azure portal showing redirect URI for the registered app](media/client-app-redirect-uri.png)](media/client-app-redirect-uri.png#lightbox)
-  
+
    - **Manifest**: Set **oauth2AllowImplicitFlow** to **true**. For example: `"oauth2AllowImplicitFlow": true,`
     [![Azure portal showing the manifest for the registered app](media/client-app-manifest.png)](media/client-app-manifest.png#lightbox)
 

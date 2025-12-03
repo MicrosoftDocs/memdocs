@@ -1,13 +1,6 @@
 ---
 title: Manual registration of devices for Windows Autopilot
 description: Manual registration overview.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: aaroncz
 ms.date: 03/27/2025
 ms.topic: how-to
 ms.collection:

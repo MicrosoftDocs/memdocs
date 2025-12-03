@@ -12,54 +12,54 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # AddMembershipRules Method in Class SMS_Collection
-The `AddMembershipRules` (WMI) class method, in Configuration Manager, adds multiple new rules to the `CollectionRules` property of the [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.  
+The `AddMembershipRules` (WMI) class method, in Configuration Manager, adds multiple new rules to the `CollectionRules` property of the [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-SInt32 AddMembershipRules(  
-     SMS_CollectionRule collectionRules[],  
-     UInt32 QueryIDs[]  
-);  
-```  
+```
+SInt32 AddMembershipRules(
+     SMS_CollectionRule collectionRules[],
+     UInt32 QueryIDs[]
+);
+```
 
-#### Parameters  
- `collectionRules`  
- Data type: `SMS_CollectionRule` Array  
+#### Parameters
+ `collectionRules`
+ Data type: `SMS_CollectionRule` Array
 
- Qualifiers: [in]  
+ Qualifiers: [in]
 
- [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md) objects to add.  
+ [SMS_CollectionRule Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collectionrule-server-wmi-class.md) objects to add.
 
- `QueryIDs`  
- Data type: `UInt32` Array  
+ `QueryIDs`
+ Data type: `UInt32` Array
 
- Qualifiers: [out]  
+ Qualifiers: [out]
 
- IDs corresponding to the rules. These are Configuration Manager-generated query IDs for query rules. The IDs for direct rules are set to 0. Use `QueryID` to modify or delete a query membership rule.  
+ IDs corresponding to the rules. These are Configuration Manager-generated query IDs for query rules. The IDs for direct rules are set to 0. Use `QueryID` to modify or delete a query membership rule.
 
-## Return Values  
- An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.  
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
 
- For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).  
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../../../develop/core/understand/about-configuration-manager-errors.md).
 
-## Remarks  
- The `AddMembershipRules` method does not validate a query rule, but simply adds it to the rules list. This can create debugging issues when the collection does not contain the intended membership. Your application should always validate the query rule before adding it to the collection rules by using the [ValidateQuery Method in Class SMS_CollectionRuleQuery](../../../../../develop/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md).  
+## Remarks
+ The `AddMembershipRules` method does not validate a query rule, but simply adds it to the rules list. This can create debugging issues when the collection does not contain the intended membership. Your application should always validate the query rule before adding it to the collection rules by using the [ValidateQuery Method in Class SMS_CollectionRuleQuery](../../../../../develop/reference/core/clients/collections/validatequery-method-in-class-sms_collectionrulequery.md).
 
- The `AddMembershipRules` method can also be used to modify membership rules. Only query rules can be modified.  
+ The `AddMembershipRules` method can also be used to modify membership rules. Only query rules can be modified.
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
- For more information, see Configuration Manager Server Development Requirements.  
+## Development Requirements
+ For more information, see Configuration Manager Server Development Requirements.
 
-## See Also  
+## See Also
  [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md)

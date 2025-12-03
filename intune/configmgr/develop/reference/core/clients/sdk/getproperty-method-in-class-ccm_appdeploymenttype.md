@@ -12,52 +12,52 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # GetProperty Method in Class CCM_AppDeploymentType
-The `GetProperty` Windows Management Instrumentation (WMI) class method in Configuration Manager that retrieves an application deployment type property.   
+The `GetProperty` Windows Management Instrumentation (WMI) class method in Configuration Manager that retrieves an application deployment type property.
 
- The following syntax is simplified from Managed Object Format (MOF) code and defines the method.  
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
 
-## Syntax  
+## Syntax
 
-```  
-uint32 GetProperty   
-{  
-    [IN]    UInt32 LanguageId  
-    [IN]    String PropertyName  
-    [OUT]   String PropertyValue  
-};  
-```  
+```
+uint32 GetProperty
+{
+    [IN]    UInt32 LanguageId
+    [IN]    String PropertyName
+    [OUT]   String PropertyValue
+};
+```
 
-## Parameters  
- `LanguageId`  
- Data type: `UInt32`  
+## Parameters
+ `LanguageId`
+ Data type: `UInt32`
 
- Qualifiers: [id("0"), in]  
+ Qualifiers: [id("0"), in]
 
- Language identifier.    
+ Language identifier.
 
- `PropertyName`  
- Data type: `String`  
+ `PropertyName`
+ Data type: `String`
 
- Qualifiers: [id("1"), in]  
+ Qualifiers: [id("1"), in]
 
- Property name.    
+ Property name.
 
- `PropertyValue`  
- Data type: `String`  
+ `PropertyValue`
+ Data type: `String`
 
- Qualifiers: [id("2"), out]  
+ Qualifiers: [id("2"), out]
 
- Property value.    
+ Property value.
 
-## Remarks  
+## Remarks
 
-## Requirements  
+## Requirements
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
 
-## Development Requirements  
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).

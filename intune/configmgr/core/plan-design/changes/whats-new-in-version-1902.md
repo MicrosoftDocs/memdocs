@@ -12,21 +12,21 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # What's new in version 1902 of Configuration Manager current branch
 
 *Applies to: Configuration Manager (current branch)*
 
-Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.  
+Update 1902 for Configuration Manager current branch is available as an in-console update. Apply this update on sites that run version 1802, 1806, or 1810. <!-- baseline only statement:-->When installing a new site, it's also available as a baseline version. This article summarizes the changes and new features in Configuration Manager, version 1902.
 
 Always review the latest checklist for installing this update. For more information, see [Checklist for installing update 1902](../../servers/manage/checklist-for-installing-update-1902.md). After you update a site, also review the [Post-update checklist](../../servers/manage/checklist-for-installing-update-1902.md#post-update-checklist).
 
 To take full advantage of new Configuration Manager features, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
-<!-- > [!Note]  
-> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.  
+<!-- > [!Note]
+> This article currently lists all significant features in this version. However, not all sections yet link to updated content with further information on the new features. Keep checking this page regularly for updates. Changes are noted with the ***[Updated]*** tag. This note will be removed when the content is finalized.
  -->
 
 
@@ -36,7 +36,7 @@ Learn about support changes before they're implemented in [removed and deprecate
 
 - The implementation for sharing content from Azure has changed. Use a content-enabled cloud management gateway by enabling the option to **Allow CMG to function as a cloud distribution point and serve content from Azure storage**. You won't be able to create a traditional cloud distribution point in the future.
 
-Version 1902 drops support for the following products:  
+Version 1902 drops support for the following products:
 
 - Linux and UNIX as a client. Deprecation was announced with [version 1802](whats-new-in-version-1802.md#deprecation-announcement-for-linux-and-unix-client-support). Consider Microsoft Azure Management for managing Linux servers. Azure solutions have extensive Linux support that in most cases exceed Configuration Manager functionality, including end-to-end patch management for Linux.
 
@@ -60,9 +60,9 @@ For more information, see [Client health dashboard](../../clients/manage/client-
 
 The management insights feature has the following new rules:
 
-- Multiple rules with recommendations on managing collections. Use these insights to simplify management and improve performance. Review these new rules in the **Collections** group.<!--3555752-->  
+- Multiple rules with recommendations on managing collections. Use these insights to simplify management and improve performance. Review these new rules in the **Collections** group.<!--3555752-->
 
-- **Update clients to a supported Windows 10 version** rule in the **Simplified Management** group. This rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->  
+- **Update clients to a supported Windows 10 version** rule in the **Simplified Management** group. This rule reports on clients that are running a version of Windows 10 that's no longer supported. It also includes clients with a Windows 10 version that's near end of service (three months).<!--3897268-->
 
 For more information, see [Management insights](../../servers/manage/management-insights.md).
 
@@ -80,7 +80,7 @@ For more information, see [enhanced HTTP](../hierarchy/enhanced-http.md).
 
 When you install or update to version 1902, Configuration Manager setup now includes the following prerequisite check:
 
-- **Pending system restart on the remote SQL Server**: This prerequisite check is similar to the **Pending system restart** rule, but it checks a remote SQL Server. For more information, see [List of prerequisite checks](../../servers/deploy/install/list-of-prerequisite-checks.md#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->  
+- **Pending system restart on the remote SQL Server**: This prerequisite check is similar to the **Pending system restart** rule, but it checks a remote SQL Server. For more information, see [List of prerequisite checks](../../servers/deploy/install/list-of-prerequisite-checks.md#pending-system-restart-on-the-remote-sql-server). <!--SCCMDocs-pr issue 3377-->
 
 
 ## <a name="bkmk_cloud"></a> Cloud-attached management
@@ -136,13 +136,13 @@ You can now set a distribution point in maintenance mode. Enable maintenance mod
 
 While the distribution point is in maintenance mode, it has the following behaviors:
 
-- The site doesn't distribute any content to it.  
+- The site doesn't distribute any content to it.
 
 - Management points don't return the location of this distribution point to clients.
 
 - When you update the site, a distribution point in maintenance mode still updates.
 
-- The distribution point properties are read-only. For example, you can't change the certificate or add boundary groups.  
+- The distribution point properties are read-only. For example, you can't change the certificate or add boundary groups.
 
 - Any scheduled task, like content validation, still runs on the same schedule.
 
@@ -170,7 +170,7 @@ For more information, see [How to remotely administer a Windows client computer]
 ### Specify a custom port for peer wakeup
 
 <!--3605925-->
-You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.  
+You can now specify a custom port number for wake-up proxy. In client settings, in the **Power Management** group, configure the setting for **Wake On LAN port number (UDP)**.
 
 For more information, see [How to configure Wake on LAN](../../clients/deploy/configure-wake-on-lan.md).
 
@@ -199,7 +199,7 @@ This version includes the following improvements to [Package Conversion Manager]
 ### Progress status during in-place upgrade task sequence
 
 <!--3747129-->
-You now see a more detailed progress bar during a Windows 10 in-place upgrade task sequence. This bar shows the progress of Windows setup, which is otherwise silent during the task sequence. Users now have some visibility into the underlying progress. It helps with concerns that the upgrade process is suspended because of a lack of progress indication.  
+You now see a more detailed progress bar during a Windows 10 in-place upgrade task sequence. This bar shows the progress of Windows setup, which is otherwise silent during the task sequence. Users now have some visibility into the underlying progress. It helps with concerns that the upgrade process is suspended because of a lack of progress indication.
 
 ![Example task sequence progress with Windows upgrade progress](media/3747129-installation-progress.png)
 
@@ -230,11 +230,11 @@ You can now add a label to task sequence media. This label helps you better iden
 <!--3719699-->
 When importing a Windows image (WIM) file to Configuration Manager, you can now specify to automatically import a single index rather than all image indexes in the file. This option provides the following benefits:
 
-- Smaller image file  
-- Faster offline servicing  
+- Smaller image file
+- Faster offline servicing
 - Optimize image servicing, for a smaller image file after offline servicing
 
-When you import an OS image, select the option to **Extract a specific image index from the specified WIM file**. Then select the image index from the list.  
+When you import an OS image, select the option to **Extract a specific image index from the specified WIM file**. Then select the image index from the list.
 
 For more information, see [Add an OS image](../../../osd/get-started/manage-operating-system-images.md#BKMK_AddOSImages).
 
@@ -250,25 +250,25 @@ For more information, see [Apply software updates to an image](../../../osd/get-
 ### Improvements to Run PowerShell Script task sequence step
 
 <!--3556028, fka 1359389-->
-The **Run PowerShell Script** task sequence step now includes the following improvements:  
+The **Run PowerShell Script** task sequence step now includes the following improvements:
 
 - You can now directly enter Windows PowerShell code in this step. This change lets you run PowerShell commands during a task sequence without first creating and distributing a package with the script.
 
-- When you choose the **Enter a PowerShell script** option, select **Edit Script**. The new PowerShell script window provides the following actions:  
+- When you choose the **Enter a PowerShell script** option, select **Edit Script**. The new PowerShell script window provides the following actions:
 
-    - Edit the script directly  
+    - Edit the script directly
 
-    - Open an existing script from file  
+    - Open an existing script from file
 
     - Browse to an existing approved script in Configuration Manager
 
-- Save the script output to a custom task sequence variable  
+- Save the script output to a custom task sequence variable
 
-- To include the script parameters in the task sequence log, set the task sequence variable **OSDLogPowerShellParameters** to **TRUE**. By default, the parameters aren't in the log.  
+- To include the script parameters in the task sequence log, set the task sequence variable **OSDLogPowerShellParameters** to **TRUE**. By default, the parameters aren't in the log.
 
 - Other improvements that provide similar functionality as the [Run Command Line](../../../osd/understand/task-sequence-steps.md#BKMK_RunCommandLine) step. For example, specify alternate user credentials or specify a time-out.
 
-> [!Important]  
+> [!Important]
 > To take advantage of this new Configuration Manager feature, after you update the site, also update clients to the latest version. While new functionality appears in the Configuration Manager console when you update the site and console, the complete scenario isn't functional until the client version is also the latest.
 
 For more information, see [Run PowerShell Script](../../../osd/understand/task-sequence-steps.md#BKMK_RunPowerShellScript).
@@ -278,11 +278,11 @@ For more information, see [Run PowerShell Script](../../../osd/understand/task-s
 <!--3633146,3641475,3654172,3734270-->
 This version includes the following improvements to OS deployment:
 
-- There's a new **View** default action on task sequences. <!--3633146-->  
+- There's a new **View** default action on task sequences. <!--3633146-->
 
-- The task sequence error dialog window now displays more information. It shows the name of the task sequence step that failed. <!--3641475-->  
+- The task sequence error dialog window now displays more information. It shows the name of the task sequence step that failed. <!--3641475-->
 
-- When you set the **OSDDoNotLogCommand** task sequence variable to true, now it also hides the command line from the Run Command Line step in the log file. It previously only masked the program name from the Install Package step in smsts.log.<!--3654172-->  
+- When you set the **OSDDoNotLogCommand** task sequence variable to true, now it also hides the command line from the Run Command Line step in the log file. It previously only masked the program name from the Install Package step in smsts.log.<!--3654172-->
 
 - When you enable a PXE responder on a distribution point without Windows Deployment Service, it can now be on the same server as the DHCP service. <!--3734270--> For more information, see [Configure at least one distribution point to accept PXE requests](../../../osd/deploy-use/use-pxe-to-deploy-windows-over-the-network.md#BKMK_Configure).
 
@@ -312,11 +312,11 @@ For more information, see [Link users and devices with user device affinity](../
 <!--3612112-->
 This version of Configuration Manager further iterates on how you can customize Software Center:
 
-- Set the default layout of applications, either as tiles or a list  
+- Set the default layout of applications, either as tiles or a list
 
-    - If a user changes this configuration, Software Center persists the user's preference in the future  
+    - If a user changes this configuration, Software Center persists the user's preference in the future
 
-- Configure the default application filter, either all or only required apps  
+- Configure the default application filter, either all or only required apps
 
     - Software Center always uses your default setting. Users can change this filter, but Software Center doesn't persist their preference.
 
@@ -346,9 +346,9 @@ Use Configuration Manager to move Windows known folders to OneDrive for Business
 
 For more information on this feature of OneDrive for Business, see [Redirect and move Windows known folders to OneDrive](/onedrive/redirect-known-folders).
 
-First, [find your Microsoft 365 tenant ID](/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](/onedrive/deploy-on-windows).  
+First, [find your Microsoft 365 tenant ID](/onedrive/find-your-office-365-tenant-id). Then deploy the OneDrive sync client version 18.111.0603.0004 or later. For more information, see [Deploy OneDrive apps by using Configuration Manager](/onedrive/deploy-on-windows).
 
-To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.  
+To create and deploy a OneDrive for Business profile, in the Configuration Manager console, go to the **Assets and Compliance** workspace. Expand **Compliance Settings**, and select the **OneDrive for Business Profiles** node.
 
 For more information, see the Redirect Windows known folders to OneDrive section in the [OneDrive for Business Profiles](../../../compliance/deploy-use/onedrive-profile.md) article.
 
@@ -487,7 +487,7 @@ The following additional hotfixes are available to address specific issues:
 |---------|---------|---------|---------|
 | [4487960](https://support.microsoft.com/help/4487960) | Microsoft Intune connector certificate does not renew in Configuration Manager | 18 January 2019 | Yes |
 
-> [!Note]  
+> [!Note]
 > Starting in version 1902, in-console hotfixes now have supersedence relationships. For more information, see [Supersedence for in-console hotfixes](../../servers/manage/updates.md#bkmk_supersede).
 -->
 
@@ -496,12 +496,12 @@ The following additional hotfixes are available to address specific issues:
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 1902](../../servers/manage/checklist-for-installing-update-1902.md).
 
-> [!TIP]  
-> To install a new site, use a baseline version of Configuration Manager.  
+> [!TIP]
+> To install a new site, use a baseline version of Configuration Manager.
 >
-> Learn more about:    
-> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
-> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)  
+> Learn more about:
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
 For known, significant issues, see the [Release notes](../../servers/deploy/install/release-notes.md).
 

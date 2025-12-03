@@ -12,144 +12,144 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_SetupWindowsAndSMSAction Server WMI Class
-The `SMS_TaskSequence_SetupWindowsAndSMSAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies the additional installation properties that should be used when installing the Configuration Manager client.  
+The `SMS_TaskSequence_SetupWindowsAndSMSAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that specifies the additional installation properties that should be used when installing the Configuration Manager client.
 
- The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+ The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_TaskSequence_SetupWindowsAndSMSAction : SMS_TaskSequence_Action  
-{  
-      String ClientInstallProperties;  
-      String ClientPackageID;  
-      String ClientPreProductionPackageID;  
-      SMS_TaskSequence_Condition Condition;  
-      Boolean ContinueOnError;  
-      String Description;  
-      Boolean Enabled;  
-      String Name;  
-      String SupportedEnvironment;  
-      UInt32 Timeout;  
-};  
-```  
+```
+Class SMS_TaskSequence_SetupWindowsAndSMSAction : SMS_TaskSequence_Action
+{
+      String ClientInstallProperties;
+      String ClientPackageID;
+      String ClientPreProductionPackageID;
+      SMS_TaskSequence_Condition Condition;
+      Boolean ContinueOnError;
+      String Description;
+      Boolean Enabled;
+      String Name;
+      String SupportedEnvironment;
+      UInt32 Timeout;
+};
+```
 
-## Methods  
- The `SMS_TaskSequence_SetupWindowsAndSMSAction` class does not define any methods.  
+## Methods
+ The `SMS_TaskSequence_SetupWindowsAndSMSAction` class does not define any methods.
 
-## Properties  
- `ClientInstallProperties`  
- Data type: `String`  
+## Properties
+ `ClientInstallProperties`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [VariableName("SMSClientInstallProperties")]  
+ Qualifiers: [VariableName("SMSClientInstallProperties")]
 
- List of Windows Installer properties to use when installing the Configuration Manager client.  
+ List of Windows Installer properties to use when installing the Configuration Manager client.
 
- The task sequence variable associated with this property is SMSClientInstallProperties. For more information, see [How to Set an Operating System Deployment Task Sequence Variable](../../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md).  
+ The task sequence variable associated with this property is SMSClientInstallProperties. For more information, see [How to Set an Operating System Deployment Task Sequence Variable](../../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md).
 
- `ClientPackageID`  
- Data type: `String`  
+ `ClientPackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null, TaskSequencePackage, VariableName("_SMSClientPackageID")]  
+ Qualifiers: [Not_Null, TaskSequencePackage, VariableName("_SMSClientPackageID")]
 
- ID of the package containing the Configuration Manager client.  
+ ID of the package containing the Configuration Manager client.
 
- The task sequence variable associated with this property is _SMSClientPackageID. For more information, see [How to Set an Operating System Deployment Task Sequence Variable](../../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md).  
+ The task sequence variable associated with this property is _SMSClientPackageID. For more information, see [How to Set an Operating System Deployment Task Sequence Variable](../../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md).
 
- `ClientPreProductionPackageID`  
- Data type: `String`  
+ `ClientPreProductionPackageID`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [TaskSequencePackage, VariableName("_SMSClientPreProductionPackageID")]  
+ Qualifiers: [TaskSequencePackage, VariableName("_SMSClientPreProductionPackageID")]
 
- ID of the pre-production package containing the Configuration Manager client. The default value is `null`.  
+ ID of the pre-production package containing the Configuration Manager client. The default value is `null`.
 
- The task sequence variable associated with this property is _SMSClientPreProductionPackageID. For more information, see [How to Set an Operating System Deployment Task Sequence Variable](../../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md).  
+ The task sequence variable associated with this property is _SMSClientPreProductionPackageID. For more information, see [How to Set an Operating System Deployment Task Sequence Variable](../../../develop/osd/how-to-set-an-operating-system-deployment-task-sequence-variable.md).
 
- `Condition`  
- Data type: `SMS_TaskSequence_Condition`  
+ `Condition`
+ Data type: `SMS_TaskSequence_Condition`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `ContinueOnError`  
- Data type: `Boolean`  
+ `ContinueOnError`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Description`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("0-255")]  
+ Qualifiers: [AllowedLen("0-255")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Enabled`  
- Data type: `Boolean`  
+ `Enabled`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Name`  
- Data type: `String`  
+ `Name`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [AllowedLen("1-100")]  
+ Qualifiers: [AllowedLen("1-100")]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `SupportedEnvironment`  
- Data type: `String`  
+ `SupportedEnvironment`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [Not_Null:ToInstance]  
+ Qualifiers: [Not_Null:ToInstance]
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
- `Timeout`  
- Data type: `UInt32`  
+ `Timeout`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: None  
+ Qualifiers: None
 
- See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).  
+ See [SMS_TaskSequence_Action Server WMI Class](../../../develop/reference/osd/sms_tasksequence_action-server-wmi-class.md).
 
-## Remarks  
- Class qualifiers for this class include:  
+## Remarks
+ Class qualifiers for this class include:
 
- [CommandLine("OSDSetupWindows.exe"),  
+ [CommandLine("OSDSetupWindows.exe"),
 
- ActionCategory{"Images,3,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "SetupWindowsAndSmsControl", "TaskSequenceOptionControl"}]  
+ ActionCategory{"Images,3,5"},ActionUI{"AdminUI.TaskSequenceEditor.dll", "Microsoft.ConfigurationManagement.AdminConsole.TaskSequenceEditor", "SetupWindowsAndSmsControl", "TaskSequenceOptionControl"}]
 
- For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).  
+ For more information about both the class qualifiers and the property qualifiers included in the Properties section, see [Configuration Manager Class and Property Qualifiers](../../../develop/reference/misc/class-and-property-qualifiers.md).
 
-## Requirements  
+## Requirements
 
-### Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).  
+### Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
 
-### Development Requirements  
- For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).  
+### Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).

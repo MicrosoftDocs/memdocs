@@ -6,11 +6,11 @@ ms.date: 12/19/2024
 ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: upgrade-and-migration-article
-author: BalaDelli
-ms.author: baladell
+author: LauraWi
+ms.author: laurawi
 manager: apoorvseth
 ms.localizationpriority: medium
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -76,7 +76,7 @@ For more information about Windows Server supported upgrade paths, see [Windows 
 
 ### Task sequence requirements and limitations
 
-Review the following requirements and limitations for the task sequence to upgrade an OS to make sure it meets your needs:  
+Review the following requirements and limitations for the task sequence to upgrade an OS to make sure it meets your needs:
 
 - Only add task sequence steps that are related to the core task of upgrading the OS. These steps primarily include installing packages, applications, or updates. Also use steps that run command lines, PowerShell, or set dynamic variables.
 

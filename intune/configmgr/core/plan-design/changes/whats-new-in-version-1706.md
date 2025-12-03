@@ -12,7 +12,7 @@ manager: apoorvseth
 ROBOTS: NOINDEX
 ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 # What&#39;s new in version 1706 of Configuration Manager
 
@@ -20,15 +20,15 @@ ms.reviewer: mstewart,aaroncz
 
 Update 1706 for Configuration Manager current branch is available as an in-console update for previously installed sites that run version 1606, 1610, or 1702.
 
-> [!TIP]  
-> To install a new site, you must use a baseline version of Configuration Manager.  
+> [!TIP]
+> To install a new site, you must use a baseline version of Configuration Manager.
 >
-> Learn more about:    
-> - [Installing new sites](../../servers/deploy/install/installing-sites.md)  
-> - [Installing updates at sites](../../servers/manage/updates.md)  
-> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)  
+> Learn more about:
+> - [Installing new sites](../../servers/deploy/install/installing-sites.md)
+> - [Installing updates at sites](../../servers/manage/updates.md)
+> - [Baseline and update versions](../../servers/manage/updates.md#bkmk_Baselines)
 
-The following sections provide details about changes and new capabilities introduced in version 1706 of Configuration Manager.  
+The following sections provide details about changes and new capabilities introduced in version 1706 of Configuration Manager.
 
 <!--
 ## Deprecated features and operating systems
@@ -40,7 +40,7 @@ Version 1706 drops support for the following products:
 
 ## Site infrastructure
 
-### Client Peer Cache support for express installation files for Windows 10 and Microsoft 365  
+### Client Peer Cache support for express installation files for Windows 10 and Microsoft 365
 <!-- 1352486 -->
 Beginning with this release, Peer Cache supports distribution of content express installation files for Windows 10, and of update files for Microsoft 365. No other configurations are required to support this change.
 
@@ -54,7 +54,7 @@ We have added more improvements to accessibility for the Configuration Manager c
 
 ### Improvements  for SQL Server Always On availability groups
 <!-- 1352094 -->
-With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add more replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.  
+With this release, you can now use asynchronous commit replicas in the SQL Server Always On availability groups you use with Configuration Manager. This means you can add more replicas to your availability groups to use as off-site (remote) backups, and then use them in a disaster recovery scenario.
 - Configuration Manager supports using the asynchronous commit replica to recover your synchronous replica. See [site database recovery options](../../servers/manage/recover-sites.md#site-database-recovery-options) in the Backup and Recovery topic for information on how to accomplish this.
 - This release doesn't support failover to use the asynchronous commit replica as your site database.
 For more information, see [Prepare to use an availability group](../../servers/deploy/configure/sql-server-alwayson-for-a-highly-available-site-database.md).
@@ -63,7 +63,7 @@ For more information, see [Prepare to use an availability group](../../servers/d
 <!-- 1324589 -->
 Beginning with version 1706, Configuration Manager primary sites, and central administration sites include the Configuration Manager Update Reset Tool, **CMUpdateReset.exe**. Use this tool with any version of the current branch that remains in support, to fix issues when in-console updates have problems downloading or replicating. For more information, see [Update reset tool](../../servers/manage/update-reset-tool.md).
 
-### High DPI console support  
+### High DPI console support
 <!-- 1353476 -->
 With this release, issues with how the Configuration Manager console scales and displays different parts of the UI when viewed on high DPI devices (like a Surface book) should be fixed.
 
@@ -80,7 +80,7 @@ For more information, see [software update points](../../servers/deploy/configur
 <!-- 1248187, 1290765, 1258052, 1298097, 1319334, 1319883, 1352135, 1353331 -->
 With this release, we have improved the integration of Configuration Manager and Azure Active Directory (Azure AD).  These improvements streamline how you configure the Azure services you use with Configuration Manager, and help you to manage clients and users who authenticate through Azure AD.
 
-The improved integration makes the following possible:  
+The improved integration makes the following possible:
 - Azure Services Wizard – This Wizard provides a common configuration experience that replaces the individual workflows to set up the following Azure services you use with Configuration Manager.
   - **Cloud Management**
     Enable clients to authenticate by using Azure Active Directory (Azure AD). You can also configure Azure AD User Discovery.
@@ -183,7 +183,7 @@ In Configuration Manager, you can deploy scripts to client devices using package
 
 For more information, see [Create and run PowerShell scripts from the Configuration Manager console](../../../apps/deploy-use/create-deploy-scripts.md).
 
-### New mobile application management policy settings    
+### New mobile application management policy settings
 <!--1324760-->
 Beginning with this release, you can use three new mobile application management (MAM) policy settings:
 
@@ -208,11 +208,11 @@ In this release, we have improved the download time for Express Updates. For mor
 
 ### Manage Microsoft Surface driver updates
 <!-- 1098490 -->
-You can now use Configuration Manager to manage Microsoft Surface driver updates.    
+You can now use Configuration Manager to manage Microsoft Surface driver updates.
 
 
 #### Prerequisites
-- All software update points must run Windows Server 2016.    
+- All software update points must run Windows Server 2016.
 - This is a pre-release feature that you must turn on for it to be available. For more information, see [Use pre-release features from updates](/sccm/core/servers/manage/install-in-console-updates#bkmk_prerelease).
 
 #### To manage Surface driver updates

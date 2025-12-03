@@ -12,384 +12,384 @@ ms.author: banreetkaur
 manager: apoorvseth
 ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart,aaroncz 
+ms.reviewer: mstewart
 ---
 
 # SMS_AzureService server WMI class
 
-The `SMS_AzureService` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service that is a cloud distribution point for Configuration Manager.  
+The `SMS_AzureService` WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service that is a cloud distribution point for Configuration Manager.
 
-The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.  
+The following syntax is simplified from Managed Object Format (MOF) code and includes all inherited properties.
 
-## Syntax  
+## Syntax
 
-```  
-Class SMS_AzureService : SMS_BaseClass  
-{  
-    UInt32 AzureServiceID;  
-    String DeploymentSlot;  
-    String Description;  
-    UInt32 Flags;  
-    String Fqdn;  
-    String ManagementCertificate;  
-    UInt32 ManagementCertificateType;  
-    String ManagementThumbprint;  
-    String NALPath;  
-    String Name;  
-    UInt32 NumberOfInstances;  
-    String Region;  
-    String ServiceCertificate;  
-    String ServiceCName;  
-    String ServiceThumbprint;  
-    String ServiceThumbprintAlgorithm;  
-    String ServiceType;  
-    String SiteCode;  
-    UInt32 State;  
-    UInt32 StatusDetails;  
-    UInt32 StorageCriticalThreshold;  
-    Boolean StorageQuotaGrow;  
-    UInt32 StorageQuotaInGB;  
-    String StorageServiceName;  
-    UInt32 StorageUsage;  
-    UInt32 StorageWarningThreshold;  
-    String SubscriptionID;  
-    UInt32 TrafficCriticalThreshold;  
-    UInt32 TrafficOutInGB;  
-    Boolean TrafficOutStopService;  
-    UInt32 TrafficOutUsage;  
-    UInt32 TrafficWarningThreshold;  
-};  
-```  
+```
+Class SMS_AzureService : SMS_BaseClass
+{
+    UInt32 AzureServiceID;
+    String DeploymentSlot;
+    String Description;
+    UInt32 Flags;
+    String Fqdn;
+    String ManagementCertificate;
+    UInt32 ManagementCertificateType;
+    String ManagementThumbprint;
+    String NALPath;
+    String Name;
+    UInt32 NumberOfInstances;
+    String Region;
+    String ServiceCertificate;
+    String ServiceCName;
+    String ServiceThumbprint;
+    String ServiceThumbprintAlgorithm;
+    String ServiceType;
+    String SiteCode;
+    UInt32 State;
+    UInt32 StatusDetails;
+    UInt32 StorageCriticalThreshold;
+    Boolean StorageQuotaGrow;
+    UInt32 StorageQuotaInGB;
+    String StorageServiceName;
+    UInt32 StorageUsage;
+    UInt32 StorageWarningThreshold;
+    String SubscriptionID;
+    UInt32 TrafficCriticalThreshold;
+    UInt32 TrafficOutInGB;
+    Boolean TrafficOutStopService;
+    UInt32 TrafficOutUsage;
+    UInt32 TrafficWarningThreshold;
+};
+```
 
-## Methods  
- The following table lists the methods in the `SMS_AzureService` class.  
+## Methods
+ The following table lists the methods in the `SMS_AzureService` class.
 
-|Method|Description|  
-|------------|-----------------|  
-|[Start Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/start-method-in-class-sms_azureservice.md)|Method used to start a Microsoft Azure service (in this case the cloud distribution point).|  
-|[Stop Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/stop-method-in-class-sms_azureservice.md)|Method used to stop a Microsoft Azure service (in this case the cloud distribution point).|  
+|Method|Description|
+|------------|-----------------|
+|[Start Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/start-method-in-class-sms_azureservice.md)|Method used to start a Microsoft Azure service (in this case the cloud distribution point).|
+|[Stop Method in Class SMS_AzureService](../../../../../develop/reference/core/servers/configure/stop-method-in-class-sms_azureservice.md)|Method used to stop a Microsoft Azure service (in this case the cloud distribution point).|
 
-## Properties  
- `AzureServiceID`  
- Data type: `UInt32`  
+## Properties
+ `AzureServiceID`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [key, not_null]  
+ Qualifiers: [key, not_null]
 
- Identifier of the Microsoft Azure service.  
+ Identifier of the Microsoft Azure service.
 
- `DeploymentSlot`  
- Data type: `String`  
+ `DeploymentSlot`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- Deployment slot. Possible values are:  
-
-|Value|
-|-|  
-|Production|  
-|Staging|  
-
- `Description`  
- Data type: `String`  
-
- Access type: Read/Write  
-
- Qualifiers: [not_null]  
-
- Description of the Microsoft Azure service.  
-
- `Flags`  
- Data type: `UInt32`  
-
- Access type: Read/Write  
-
- Qualifiers: [bits]  
-
- Flags for configuring the Microsoft Azure service. Possible values are:  
+ Deployment slot. Possible values are:
 
 |Value|
-|-|  
-|WAD_LOGS_DONT_DELETE(0)|  
+|-|
+|Production|
+|Staging|
 
- `Fqdn`  
- Data type: `String`  
+ `Description`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: [not_null]
 
- The concatenation of the property "Name" with ".cloudapp.net".  
+ Description of the Microsoft Azure service.
 
- `ManagementCertificate`  
- Data type: `String`  
+ `Flags`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: [bits]
 
- Management certificate.  
+ Flags for configuring the Microsoft Azure service. Possible values are:
 
- `ManagementCertificateType`  
- Data type: `UInt32`  
+|Value|
+|-|
+|WAD_LOGS_DONT_DELETE(0)|
 
- Access type: Read/Write  
+ `Fqdn`
+ Data type: `String`
 
- Qualifiers: [enumeration]  
+ Access type: Read/Write
 
- Management certificate type. Possible values are:  
+ Qualifiers: none
 
-|Value|Management certificate type|  
-|-|-|  
-|0|PAIR|  
-|1|PUBLICONLY|  
+ The concatenation of the property "Name" with ".cloudapp.net".
 
- `ManagementThumbprint`  
- Data type: `String`  
+ `ManagementCertificate`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: none
 
- Management thumbprint.  
+ Management certificate.
 
- `NALPath`  
- Data type: `String`  
+ `ManagementCertificateType`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: [enumeration]
 
- NAL path for the corresponding Distribution Point.  
+ Management certificate type. Possible values are:
 
- `Name`  
- Data type: `String`  
+|Value|Management certificate type|
+|-|-|
+|0|PAIR|
+|1|PUBLICONLY|
 
- Access type: Read/Write  
+ `ManagementThumbprint`
+ Data type: `String`
 
- Qualifiers: [not_null]  
+ Access type: Read/Write
 
- Name of the Microsoft Azure service based on restrictions imposed by Microsoft Azure.  
+ Qualifiers: none
 
- `NumberOfInstances`  
- Data type: `UInt32`  
+ Management thumbprint.
 
- Access type: Read/Write  
+ `NALPath`
+ Data type: `String`
 
- Qualifiers: [not_null]  
+ Access type: Read/Write
 
- Number of instances to deploy.  
+ Qualifiers: none
 
- `Region`  
- Data type: `String`  
+ NAL path for the corresponding Distribution Point.
 
- Access type: Read/Write  
+ `Name`
+ Data type: `String`
 
- Qualifiers: [not_null]  
+ Access type: Read/Write
 
- This is the value selected from the list of regions eligible for your Microsoft Azure subscription ID, obtained either by using the Configuration Manager Administrator console or the Microsoft Azure management console.  
+ Qualifiers: [not_null]
 
- `ServiceCertificate`  
- Data type: `String`  
+ Name of the Microsoft Azure service based on restrictions imposed by Microsoft Azure.
 
- Access type: Read/Write  
+ `NumberOfInstances`
+ Data type: `UInt32`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Service certificate.  
+ Qualifiers: [not_null]
 
- `ServiceCName`  
- Data type: `String`  
+ Number of instances to deploy.
 
- Access type: Read/Write  
+ `Region`
+ Data type: `String`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Should be the same as the CName on the `ServiceCertificate` property.  
+ Qualifiers: [not_null]
 
- `ServiceThumbprint`  
- Data type: `String`  
+ This is the value selected from the list of regions eligible for your Microsoft Azure subscription ID, obtained either by using the Configuration Manager Administrator console or the Microsoft Azure management console.
 
- Access type: Read/Write  
+ `ServiceCertificate`
+ Data type: `String`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Service certificate thumbprint algorithm supported by Microsoft Azure. The only thumbprint algorithm supported is SHA1.  
+ Qualifiers: none
 
- `ServiceThumbprintAlgorithm`  
- Data type: `String`  
+ Service certificate.
 
- Access type: Read/Write  
+ `ServiceCName`
+ Data type: `String`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Service certificate thumbprint algorithm supported by Microsoft Azure. Possible values below:  
+ Qualifiers: none
 
-|Thumbprint Algorithm|  
-|--------------------------|  
-|SHA1|  
+ Should be the same as the CName on the `ServiceCertificate` property.
 
- `ServiceType`  
- Data type: `String`  
+ `ServiceThumbprint`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: none
 
- Type of Microsoft Azure service. Possible values below:  
+ Service certificate thumbprint algorithm supported by Microsoft Azure. The only thumbprint algorithm supported is SHA1.
 
-|Windows Azure Service|  
-|---------------------------|  
-|CloudDistributionPoint|  
+ `ServiceThumbprintAlgorithm`
+ Data type: `String`
 
- `SiteCode`  
- Data type: `String`  
+ Access type: Read/Write
 
- Access type: Read/Write  
+ Qualifiers: none
 
- Qualifiers: [not_null]  
+ Service certificate thumbprint algorithm supported by Microsoft Azure. Possible values below:
 
- Site code of the primary site.  
+|Thumbprint Algorithm|
+|--------------------------|
+|SHA1|
 
- `State`  
- Data type: `UInt32`  
+ `ServiceType`
+ Data type: `String`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: [not_null]
 
- Current state.  
+ Type of Microsoft Azure service. Possible values below:
 
- `StatusDetails`  
- Data type: `UInt32`  
+|Windows Azure Service|
+|---------------------------|
+|CloudDistributionPoint|
 
- Access type: Read/Write  
+ `SiteCode`
+ Data type: `String`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Current status details.  
+ Qualifiers: [not_null]
 
- `StorageCriticalThreshold`  
- Data type: `UInt32`  
+ Site code of the primary site.
 
- Access type: Read/Write  
+ `State`
+ Data type: `UInt32`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Indicates the threshold percent at which critical alerts will be generated for storage.  
+ Qualifiers: none
 
- `StorageQuotaGrow`  
- Data type: `Boolean`  
+ Current state.
 
- Access type: Read/Write  
+ `StatusDetails`
+ Data type: `UInt32`
 
- Qualifiers: [not_null]  
+ Access type: Read/Write
 
- `true` if Indicates whether storage quota should automatically grow dynamically.  
+ Qualifiers: none
 
- This property isn't currently used.  
+ Current status details.
 
- `StorageQuotaInGB`  
- Data type: `UInt32`  
+ `StorageCriticalThreshold`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: none
 
- Storage quota in gigabytes.  
+ Indicates the threshold percent at which critical alerts will be generated for storage.
 
- `StorageServiceName`  
- Data type: `String`  
+ `StorageQuotaGrow`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: [not_null]  
+ Qualifiers: [not_null]
 
- Name of Microsoft Azure storage service, based on restrictions imposed on by Microsoft Azure.  
+ `true` if Indicates whether storage quota should automatically grow dynamically.
 
- `StorageUsage`  
- Data type: `UInt32`  
+ This property isn't currently used.
 
- Access type: Read/Write  
+ `StorageQuotaInGB`
+ Data type: `UInt32`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Indicates the storage usage of the Microsoft Azure storage service in gigabytes.  
+ Qualifiers: [not_null]
 
- `StorageWarningThreshold`  
- Data type: `UInt32`  
+ Storage quota in gigabytes.
 
- Access type: Read/Write  
+ `StorageServiceName`
+ Data type: `String`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Indicates the threshold percent at which warning alerts will be generated for storage.  
+ Qualifiers: [not_null]
 
- `SubscriptionID`  
- Data type: `String`  
+ Name of Microsoft Azure storage service, based on restrictions imposed on by Microsoft Azure.
 
- Access type: Read/Write  
+ `StorageUsage`
+ Data type: `UInt32`
 
- Qualifiers: [not_null]  
+ Access type: Read/Write
 
- Subscription identifier of the Microsoft Azure service.  
+ Qualifiers: none
 
- `TrafficCriticalThreshold`  
- Data type: `UInt32`  
+ Indicates the storage usage of the Microsoft Azure storage service in gigabytes.
 
- Access type: Read/Write  
+ `StorageWarningThreshold`
+ Data type: `UInt32`
 
- Qualifiers: none  
+ Access type: Read/Write
 
- Indicates the threshold percent at which critical alerts will be generated for traffic out.  
+ Qualifiers: none
 
- `TrafficOutInGB`  
- Data type: `UInt32`  
+ Indicates the threshold percent at which warning alerts will be generated for storage.
 
- Access type: Read/Write  
+ `SubscriptionID`
+ Data type: `String`
 
- Qualifiers: [not_null]  
+ Access type: Read/Write
 
- Traffic out in gigabytes.  
+ Qualifiers: [not_null]
 
- `TrafficOutStopService`  
- Data type: `Boolean`  
+ Subscription identifier of the Microsoft Azure service.
 
- Access type: Read/Write  
+ `TrafficCriticalThreshold`
+ Data type: `UInt32`
 
- Qualifiers: [not_null]  
+ Access type: Read/Write
 
- Indicates whether the service should be stopped when the traffic out threshold is met.  
+ Qualifiers: none
 
- This property isn't currently used.  
+ Indicates the threshold percent at which critical alerts will be generated for traffic out.
 
- `TrafficOutUsage`  
- Data type: `UInt32`  
+ `TrafficOutInGB`
+ Data type: `UInt32`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: [not_null]
 
- Indicates the traffic out usage.  
+ Traffic out in gigabytes.
 
- `TrafficWarningThreshold`  
- Data type: `UInt32`  
+ `TrafficOutStopService`
+ Data type: `Boolean`
 
- Access type: Read/Write  
+ Access type: Read/Write
 
- Qualifiers: none  
+ Qualifiers: [not_null]
 
- Indicates the threshold percent at which warning alerts will be generated for traffic out.  
+ Indicates whether the service should be stopped when the traffic out threshold is met.
 
-## Remarks  
+ This property isn't currently used.
 
-## Requirements  
+ `TrafficOutUsage`
+ Data type: `UInt32`
 
-## Runtime Requirements  
- For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).  
+ Access type: Read/Write
 
-## Development Requirements  
+ Qualifiers: none
+
+ Indicates the traffic out usage.
+
+ `TrafficWarningThreshold`
+ Data type: `UInt32`
+
+ Access type: Read/Write
+
+ Qualifiers: none
+
+ Indicates the threshold percent at which warning alerts will be generated for traffic out.
+
+## Remarks
+
+## Requirements
+
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../../../develop/core/reqs/server-runtime-requirements.md).
+
+## Development Requirements
  For more information, see [Configuration Manager Server Development Requirements](../../../../../develop/core/reqs/server-development-requirements.md).
