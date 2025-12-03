@@ -45,7 +45,7 @@ The report also provides actionable insights—showing how much your score could
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Resource performance**.
 
-:::image type="content" source="images/resource-perf-report/report-home.png" lightbox="images/resource-perf-report/report-home.png" alt-text="This is a screenshot of the Resource performance report page":::
+:::image type="content" source="images/resource-performance.png" lightbox="images/resource-performance.png" alt-text="This is a screenshot of the Resource performance report page":::
 
 The **Resource performance score** provides an overall performance rating (from 0 to 100) of CPU and RAM for your organization's Windows devices and Cloud PCs. This score is a weighted average of CPU spike time score and RAM spike time score.
 
@@ -73,8 +73,6 @@ The RAM spike time score (from 0 to 100) is assigned based on the device's usage
 
 **Baseline** helps you see if you're meeting goals. You can set the baseline to the organizational median or a custom value.
 
-**Insights and recommendations** suggest actions that you can take to improve your scores.
-
 ### Insights and recommendations
 
 The report provides a prioritized list of insights and recommendations to help improve your score:
@@ -100,17 +98,8 @@ The resource performance report includes the following tabs:
   - Sort by a specific metric (for example, CPU spike time %) to identify devices with the lowest scores.
   - Filter devices by a metric range (for example, RAM spike time score between 0 and 40).
   Search for a device by name.
+  - Select a device to get device-level details, including CPU and RAM spike time history over the last 14 days. The page also includes device details such as model, manufacturer, processor name, number of processor cores, the processor base speed, RAM, and disk type.
 - **Model performance**: Displays CPU and RAM performance metrics and scores by device model. Use this view to determine if issues are isolated to specific models.
-
-## Device-level details
-
-To get details on a specific Windows device in your organization, you can select a device's name in the **Device performance** tab. You can also use the filters or search for a device to view the row corresponding to the device you're interested in learning more about.
-
-:::image type="content" source="images/resource-perf-report/select-device.png" lightbox="images/resource-perf-report/select-device.png" alt-text="In the Device Performance tab, use filters or search for a device to view the device details":::
-
-The device-level details page includes the CPU and RAM spike-time history over the last 14 days for which this data is available. The page also includes device details such as model, manufacturer, processor name, number of processor cores, the processor base speed, RAM, and disk type.
-
-:::image type="content" source="images/resource-perf-report/rp-report.png" lightbox="images/resource-perf-report/rp-report.png" alt-text="This is a screenshot of device levels details":::
 
 ## Limitations
 

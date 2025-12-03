@@ -17,7 +17,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::  
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Resource performance report
 
-> Report to identify challenges with resource performance by device, model, and manufacturer to aid in future purchasing decisions.
+> Identify CPU and RAM performance issues by device, model, and manufacturer to guide future purchasing decisions.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](resource-performance.md)
@@ -25,7 +25,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Battery health report
 
-> Report that helps you understand the battery health of your Windows devices to ensure long battery life and good user experience.
+> Monitor battery health for Windows devices to ensure long battery life and a better user experience.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](battery-health.md)
@@ -36,15 +36,15 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Anomalies report
 
-> Monitors the health of devices in your organization for user experience and productivity regressions following configuration changes.
-> 
+> Track device health for regressions in user experience and productivity after configuration changes.
+>
 > > [!div class="nextstepaction"]
 > > [Learn more](anomaly-detection.md)
 :::column-end:::
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Device timeline report
 
-> Includes more events and lower data latency to assist with troubleshooting device issues.
+> Provides more event details and lower data latency to help troubleshoot device issues.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-timeline.md)
@@ -75,7 +75,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::  
 #### :::image type="icon" source="../media/icons/24/devices.svg"::: Device scopes
 
-> Use scope tags to slice endpoint analytics reports to a subset of devices. See scores, insights, and recommendations specific to subsets of your enrolled devices.
+> Use scope tags to filter endpoint analytics reports for a subset of devices. See scores, insights, and recommendations specific to those devices.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-scopes.md)

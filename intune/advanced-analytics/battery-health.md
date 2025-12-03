@@ -30,7 +30,7 @@ The battery health report can be used to:
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Battery health**.
 
-:::image type="content" source="images/battery-health/battery-health.png" lightbox="images/battery-health/battery-health.png" alt-text="Screenshot of the Battery Health tab in Advanced analytics.":::
+:::image type="content" source="images/battery-health.png" lightbox="images/battery-health.png" alt-text="Screenshot of the Battery Health tab in Advanced Analytics.":::
 
 The **Battery health score** provides an overview of laptop battery health. It's calculated as a weighted average of your organization's battery capacity score and battery runtime score, helping you identify batteries that need replacement.
 
