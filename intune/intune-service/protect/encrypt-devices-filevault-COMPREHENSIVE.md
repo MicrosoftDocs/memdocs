@@ -211,8 +211,6 @@ For automated FileVault enablement during device setup:
 
 Understanding the FileVault encryption process helps with deployment planning and troubleshooting:
 
-After you create a policy to encrypt devices with FileVault, the policy is applied to devices in two stages. First, the device is prepared to enable Intune to retrieve and back up the recovery key. This action is referred to as escrow. After the key is escrowed, the disk encryption can start.
-
 ### Encryption stages
 
 FileVault deployment occurs in two distinct phases:
@@ -251,9 +249,6 @@ Monitor FileVault deployment through multiple Intune interfaces:
    - FileVault enablement status
    - Recovery key availability
    - Encryption policy assignment details
-
-> [!NOTE]
-> A device that reports error code **-2016341107 / 0x87d1138d** generally means the end user has not accepted the FileVault prompt to begin encryption.
 
 ### FileVault key escrow and management
 
