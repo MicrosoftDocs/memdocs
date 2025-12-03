@@ -67,7 +67,7 @@
     },
     {
       "source_path": "intune/analytics/anomaly-detection.md",
-      "redirect_url": "/intune/advanced-analytics/anomaly-detection",
+      "redirect_url": "/intune/advanced-analytics/anomalies",
       "redirect_document_id": false
     },
     {

@@ -13,12 +13,10 @@ The anomalies report in Advanced Analytics helps IT admins proactively identify 
 
 The feature correlates deployment objects and configuration changes to speed troubleshooting and suggest root causes. Device correlation groups reveal patterns among affected devices and flag others that are at risk.
 
-> [!NOTE]
-> Device cohorts are only identified for medium and high-severity anomalies.
-
 ## Before you begin
 
-Make sure you meet the [requirements](index.md#prerequisites) before using the anomalies report.
+- Review the [Scores, baselines, and insights in endpoint analytics](../endpoint-analytics/scores.md) article to understand how these concepts work.
+- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
 
 ## Review the report
 
@@ -27,18 +25,13 @@ Make sure you meet the [requirements](index.md#prerequisites) before using the a
 
 :::image type="content" source="images/anomaly-detection/anomalies-tab.png" lightbox="images/anomaly-detection/anomalies-tab.png" alt-text="Screenshot of the Anomaly tab in Overview section of endpoint analytics.":::
 
-- Use sorting and filtering capabilities to refine the list.
+- Use sorting and filtering capabilities to refine the list of anomalies.
 - To view more information about a specific anomaly, select it from the list. Review details such as the app name, affected devices, when the issue was first detected and last occurred, and any device groups that might be contributing to the problem.
-
-:::image type="content" source="images/anomaly-detection/details-of-anomaly.png" lightbox="images/anomaly-detection/details-of-anomaly.png" alt-text="Screenshot of details displayed when you select an anomaly displayed in the Anomaly tab.":::
-
+   :::image type="content" source="images/anomaly-detection/details-of-anomaly.png" lightbox="images/anomaly-detection/details-of-anomaly.png" alt-text="Screenshot of details displayed when you select an anomaly displayed in the Anomaly tab.":::
 - Select a device correlation group from the list to see common factors among devices. Devices are correlated by shared attributes such as app version, driver update, OS version, or device model. You can view the number of devices currently affected and those at risk. The **prevalence rate** shows the percentage of affected devices in a correlation group.
-
-:::image type="content" source="images/anomaly-detection/select-corelation-group.png" lightbox="images/anomaly-detection/select-corelation-group.png" alt-text="Screenshot showing Device correlation groups.":::
-
+   :::image type="content" source="images/anomaly-detection/select-corelation-group.png" lightbox="images/anomaly-detection/select-corelation-group.png" alt-text="Screenshot showing Device correlation groups.":::
 - Select **View Affected Devices** to display a list of devices with key attributes. Filter to view devices in specific correlation groups or show all devices affected by the anomaly. The device timeline also shows additional anomalous events.
-
-:::image type="content" source="images/anomaly-detection/affected-devices.png" lightbox="images/anomaly-detection/affected-devices.png" alt-text="Screenshot showing a list of affected devices.":::
+   :::image type="content" source="images/anomaly-detection/affected-devices.png" lightbox="images/anomaly-detection/affected-devices.png" alt-text="Screenshot showing a list of affected devices.":::
 
 ## Review anomaly detection data
 
@@ -65,6 +58,9 @@ The analytical model detects device cohorts facing anomalous sets of Stop Error 
 - **Paired t-tests model**: Paired t-tests compare pairs of observations in a dataset, looking for statistically significant differences between their means. For example, comparing Stop Error Restarts on the same device before and after a policy change, or app crashes after an OS update.
 - **Population Z-score model**: This model calculates the standard deviation and mean of a dataset, then uses those values to determine which data points are anomalous. The Z-score for each data point represents the number of standard deviations from the mean. Data points outside a certain range are considered anomalous. This model is well suited for highlighting outlier devices or apps but requires large datasets to be accurate.
 - **Time series Z-score model**: This variation of the Z-score model is designed for detecting anomalies in time series data—sequences of data points collected at regular intervals, such as Stop Error Restarts over time. Standard deviation and mean are calculated for a sliding window, allowing the model to adapt to temporal patterns and changes in data distribution.
+
+> [!NOTE]
+> Device cohorts are only identified for medium and high-severity anomalies.
 
 <!--links-->
 
