@@ -38,7 +38,7 @@ The Microsoft Edge security baseline provides a preconfigured set of security se
 
 The security baseline provides a foundation for Level 2 enhanced security with Microsoft-validated settings.
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to the [Microsoft Intune admin center](https://intune.microsoft.com/).
 2. Select **Endpoint security** > **Security baselines** > **Security Baseline for Microsoft Edge** > **Create policy** > **Create**.
 3. On the **Basics** tab:
     - **Name**: Microsoft Edge Security Baseline - Level 2
@@ -47,14 +47,34 @@ The security baseline provides a foundation for Level 2 enhanced security with M
 5. In **Configuration settings**, expand **Microsoft Edge** and review the preconfigured settings:
 
 | Category | Setting | Value |
-|-----------|----------|--------|
-| SmartScreen | Configure Microsoft Defender SmartScreen | Enabled |
+|----------|---------|--------|
+| Microsoft Edge | Allow unconfigured sites to be reloaded in Internet Explorer mode | Disabled |
+|  | Allow users to proceed from the HTTPS warning page | Disabled |
+|  | Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode | Disabled |
+|  | Dynamic Code Settings | Enabled |
+|  | Dynamic Code Settings (Device) | Default dynamic code settings |
+|  | Enable Application Bound Encryption | Enabled |
+|  | Enable browser legacy extension point blocking | Enabled |
+|  | Enable site isolation for every site | Enabled |
+|  | Show the Reload in Internet Explorer mode button in the toolbar | Disabled |
+|  | Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context | Disabled |
+| Extensions | Control which extensions cannot be installed | Enabled |
+|  | Extension IDs the user should be prevented from installing | * |
+| HTTP authentication | Allow Basic authentication for HTTP | Disabled |
+|  | Supported authentication schemes | Enabled |
+|  | Supported authentication schemes (Device) | ntlm,negotiate |
+| Native Messaging | Allow user-level native messaging hosts (installed without admin permissions) | Disabled |
+| Private Network Request Settings | Specifies whether to allow insecure websites to make requests to more-private network endpoints | Disabled |
+| SmartScreen settings | Configure Microsoft Defender SmartScreen | Enabled |
 |  | Configure Microsoft Defender SmartScreen to block potentially unwanted apps | Enabled |
+|  | Prevent bypassing Microsoft Defender SmartScreen prompts for sites | Enabled |
+|  | Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads | Enabled |
+| Typosquatting Checker settings | Configure Edge Website Typo Protection | Enabled |
 | Privacy & Data | Allow personalization of ads, search, and news | Disabled |
 |  | Block tracking of users' web-browsing activity | Balanced |
 |  | Send required and optional diagnostic data | Required diagnostic data |
-|  | Enable saving passwords to the password manager | Disabled |
-|  | Enable AutoFill for addresses | Disabled |
+| Password manager and protection | Enable saving passwords to the password manager | Disabled |
+| Autofill | Enable AutoFill for addresses | Disabled |
 |  | Enable AutoFill for payment instruments | Disabled |
 | Content & Cookies | Block third party cookies | Enabled |
 |  | Configure cookies | Ask |
@@ -63,17 +83,8 @@ The security baseline provides a foundation for Level 2 enhanced security with M
 | Browser Features | Show Home button on toolbar | Enabled |
 |  | Configure the home page URL | about:blank |
 |  | Configure the new tab page URL | about:blank |
-|  | Configure InPrivate mode availability | Available |
-|  | Force synchronization of browser data | Disabled |
-| Extensions | Control which extensions can't be installed | Configured |
-| Authentication | Supported authentication schemes | ntlm,negotiate |
-|  | Allow Basic authentication for HTTP | Disabled |
-|  | Allow user-level native messaging hosts | Disabled |
-| Encryption | Enable Application Bound Encryption | Enabled |
-| Browser Security | Enable browser legacy extension point blocking | Enabled |
-| Site Isolation | Enable site isolation for every site | Enabled |
-| Internet Explorer Mode | Allow unconfigured sites to be reloaded in Internet Explorer mode | Disabled |
-| HTTPS | Allow users to proceed from the HTTPS warning page | Disabled |
+<!--| InPrivate mode | Configure InPrivate mode availability | Available |
+| Sync | Force synchronization of browser data | Disabled |-->
 
 > [!NOTE]
 > All settings are preconfigured to Microsoft-recommended values. You can accept the defaults or customize specific settings based on organizational requirements.
@@ -87,7 +98,7 @@ The security baseline provides a foundation for Level 2 enhanced security with M
 
 For Level 3 high security, supplement the baseline with extra Settings Catalog policies.
 
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Navigate to the [Microsoft Intune admin center](https://intune.microsoft.com/).
 2. Select **Endpoint security** > **Security baselines** > **Security Baseline for Microsoft Edge** > **Create policy** > **Create**.
 3. On the **Basics** tab:
     - **Name**: Microsoft Edge Security Baseline - Level 3 Enhancements
@@ -96,14 +107,34 @@ For Level 3 high security, supplement the baseline with extra Settings Catalog p
 5. In **Configuration settings**, expand **Microsoft Edge** and modify the following settings:
 
 | Category | Setting | Value |
-|-----------|----------|--------|
-| SmartScreen | Configure Microsoft Defender SmartScreen | Enabled |
+|----------|---------|--------|
+| Microsoft Edge | Allow unconfigured sites to be reloaded in Internet Explorer mode | Disabled |
+|  | Allow users to proceed from the HTTPS warning page | Disabled |
+|  | Automatically open downloaded MHT or MHTML files from the web in Internet Explorer mode | Disabled |
+|  | Dynamic Code Settings | Disabled |
+|  | Dynamic Code Settings (Device) | Default dynamic code settings |
+|  | Enable Application Bound Encryption | Enabled |
+|  | Enable browser legacy extension point blocking | Enabled |
+|  | Enable site isolation for every site | Enabled |
+|  | Show the Reload in Internet Explorer mode button in the toolbar | Disabled |
+|  | Specifies whether SharedArrayBuffers can be used in a non cross-origin-isolated context | Disabled |
+| Extensions | Control which extensions cannot be installed | Enabled |
+|  | Extension IDs the user should be prevented from installing | * |
+| HTTP authentication | Allow Basic authentication for HTTP | Disabled |
+|  | Supported authentication schemes | Enabled |
+|  | Supported authentication schemes (Device) | negotiate |
+| Native Messaging | Allow user-level native messaging hosts (installed without admin permissions) | Disabled |
+| Private Network Request Settings | Specifies whether to allow insecure websites to make requests to more-private network endpoints | Disabled |
+| SmartScreen settings | Configure Microsoft Defender SmartScreen | Enabled |
 |  | Configure Microsoft Defender SmartScreen to block potentially unwanted apps | Enabled |
+|  | Prevent bypassing Microsoft Defender SmartScreen prompts for sites | Enabled |
+|  | Prevent bypassing of Microsoft Defender SmartScreen warnings about downloads | Enabled |
+| Typosquatting Checker settings | Configure Edge Website Typo Protection | Enabled |
 | Privacy & Data | Allow personalization of ads, search, and news | Disabled |
 |  | Block tracking of users' web-browsing activity | Balanced |
 |  | Send required and optional diagnostic data | Required diagnostic data |
-|  | Enable saving passwords to the password manager | Disabled |
-|  | Enable AutoFill for addresses | Disabled |
+| Password manager and protection | Enable saving passwords to the password manager | Disabled |
+| Autofill | Enable AutoFill for addresses | Disabled |
 |  | Enable AutoFill for payment instruments | Disabled |
 | Content & Cookies | Block third party cookies | Enabled |
 |  | Configure cookies | Ask |
@@ -112,17 +143,8 @@ For Level 3 high security, supplement the baseline with extra Settings Catalog p
 | Browser Features | Show Home button on toolbar | Enabled |
 |  | Configure the home page URL | about:blank |
 |  | Configure the new tab page URL | about:blank |
-|  | Configure InPrivate mode availability | Disabled |
-|  | Force synchronization of browser data | Disabled |
-| Extensions | Control which extensions can't be installed | Configured |
-| Authentication | Supported authentication schemes | negotiate |
-|  | Allow Basic authentication for HTTP | Disabled |
-|  | Allow user-level native messaging hosts | Disabled |
-| Encryption | Enable Application Bound Encryption | Enabled |
-| Browser Security | Enable browser legacy extension point blocking | Enabled |
-| Site Isolation | Enable site isolation for every site | Enabled |
-| Internet Explorer Mode | Allow unconfigured sites to be reloaded in Internet Explorer mode | Disabled |
-| HTTPS | Allow users to proceed from the HTTPS warning page | Disabled |
+<!--| InPrivate mode | Configure InPrivate mode availability | Available |
+| Sync | Force synchronization of browser data | Disabled |-->
 
 6. Select **Next**.
 7. For **Scope tags**, select the appropriate scope tag.

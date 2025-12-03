@@ -293,8 +293,10 @@ Level 3 configuration provides the highest level of data protection and is recom
    - Save copies of org data: **Block**
    - Allow users to save copies to selected services: **OneDrive for Business, SharePoint, Camera, Photo Library**
    - Allow users to open data from selected services: **OneDrive for Business, SharePoint, Camera, Photo Library**
-   - Transfer telecommunication data to: **Any policy-managed dialer app**
-   - Transfer messaging data to: **Any policy-managed messaging app**
+   - Transfer telecommunication data to: **A specific dialer app**
+   - Dialer App URL Scheme: **replace_with_dialer_app_url_scheme**
+   - Transfer messaging data to: **A specific messaging app**
+   - Messaging App URL Scheme: **replace_with_messaging_app_url_scheme**
    - Restrict cut, copy, and paste between apps: **Policy managed apps with paste in**
    - Open data into org documents: **Block**
    - Third-party keyboards: **Block**
