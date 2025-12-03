@@ -41,7 +41,6 @@ Level 3 is the data protection configuration recommended as a standard for organ
 
 | Setting | Setting description |  Value / Action  |  Platform  | Notes |
 |---|---|---|---|---|
-| App conditions | Offline grace period | 30 / Block access (days) | iOS/iPadOS, Android, Windows | |
 | Device conditions |       Require device lock  |          High/Block Access  |          Android        | This setting ensures that Android devices have a device password that meets the minimum password requirements.  |
 |       Device   conditions  |          Max   allowed device threat level  |          Secured / Block access  |          Windows        |
 |       Device   conditions  |          Jailbroken/rooted devices  |        N/A / Wipe data  |          iOS/iPadOS,   Android        |  |
