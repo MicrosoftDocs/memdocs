@@ -15,9 +15,12 @@ ms.collection:
 
 # Encrypt macOS devices with FileVault using Intune
 
-Use Microsoft Intune to configure and manage FileVault disk encryption on macOS devices. FileVault is a whole-disk encryption program included with macOS that provides XTS-AES 128 encryption. This article covers comprehensive FileVault deployment, management, and recovery scenarios for enterprise environments.
+Use Microsoft Intune to configure and manage FileVault disk encryption on macOS devices. FileVault is a whole-disk encryption program included with macOS that uses **XTS-AES 128-bit encryption**. This article covers comprehensive FileVault deployment, management, and recovery scenarios for enterprise environments.
 
 FileVault disk encryption is available on devices running **macOS 10.13 or later** and provides full disk encryption to protect data on lost, stolen, or compromised devices.
+
+> [!NOTE]
+> **Encryption Algorithm**: FileVault uses XTS-AES 128-bit encryption as implemented by Apple's macOS. This encryption standard is fixed and cannot be changed to 256-bit through Intune or macOS settings. Apple considers XTS-AES 128-bit encryption sufficient for enterprise security requirements.
 
 > [!TIP]
 > Intune provides a built-in [encryption report](encryption-monitor.md) that presents details about the encryption status of devices across all your managed devices. After Intune encrypts a macOS device with FileVault, you can view and manage FileVault recovery keys through the encryption report.
@@ -72,26 +75,32 @@ For Setup Assistant enforcement scenarios, ensure:
 
 ## Policy types for FileVault encryption
 
-Choose from the following Intune policy types to configure FileVault encryption:
+Choose from the following Intune policy types to configure FileVault encryption based on your deployment needs:
 
-### Endpoint security policy (recommended)
+### Endpoint security policy
+
+**Best for:** Standard FileVault deployments with streamlined configuration
 
 **Endpoint security > Disk encryption policy** provides focused, security-specific FileVault configuration:
 
-- **FileVault profile** - Dedicated settings for configuring FileVault encryption with comprehensive recovery options.
-- Streamlined configuration focused on security requirements.
-- Integration with Intune's encryption monitoring and reporting.
+- **FileVault profile** - Dedicated settings for configuring FileVault encryption with comprehensive recovery options
+- Streamlined configuration focused on security requirements
+- Integration with Intune's encryption monitoring and reporting
+- Simplified setup for most FileVault scenarios
 
 View the [FileVault settings available in endpoint security profiles](../protect/endpoint-security-disk-encryption-profile-settings.md).
 
 ### Settings catalog policy
 
+**Best for:** Advanced deployments requiring Setup Assistant enforcement or comprehensive configuration options.
+
 **Settings catalog** provides the most comprehensive FileVault configuration options:
 
 - Access to all the settings that are available through Intune for FileVault
-- **Setup Assistant enforcement** capabilities (macOS 14+)
+- **Setup Assistant enforcement** capabilities (macOS 14+) - *unique to Settings Catalog*
 - Advanced configuration options that aren't available in templates
 - Granular control over user experience and security settings
+- Maximum flexibility for complex deployment scenarios
 
 ### Device configuration policy (deprecated)
 
@@ -269,9 +278,12 @@ Intune provides comprehensive recovery key management for FileVault-encrypted de
 
 #### View recovery keys
 
+> [!IMPORTANT]
+> **Administrator Access Restrictions**: Administrators can only view and manage FileVault recovery keys for devices marked as **Corporate**. Recovery keys for **Personal** (BYOD) devices are not accessible to administrators, ensuring user privacy. This distinction is critical for admin expectations and troubleshooting.
+
 **For administrators:**  
-- Access recovery keys for devices marked as **Corporate**
-- Cannot view recovery keys for **Personal** devices
+- Access recovery keys for devices marked as **Corporate** only
+- **Cannot** view recovery keys for **Personal/BYOD** devices
 - Navigate to device details > **Monitor** > **Recovery keys**
 - Select **Show Recovery Key** (generates audit log entry)
 
@@ -282,17 +294,15 @@ Intune provides comprehensive recovery key management for FileVault-encrypted de
 #### Recovery key access locations
 
 **End users can retrieve recovery keys from:**  
-- **Company Portal website** (portal.manage.microsoft.com) - Primary method for recovery key access.
-- **iOS/iPadOS Company Portal app** - Shows FileVault recovery key needed to access Mac devices.
-- **Android Company Portal app** - Shows FileVault recovery key needed to access Mac devices.
-- **Intune mobile app** - Shows FileVault recovery key needed to access Mac devices.
+- **Company Portal website** (portal.manage.microsoft.com) - Primary and most reliable method
+- **iOS/iPadOS Company Portal app** - Shows FileVault recovery key for Mac devices
+- **Android Company Portal app** - Shows FileVault recovery key for Mac devices
+- **Intune mobile app** - Shows FileVault recovery key for Mac devices
 
 > [!IMPORTANT]
-> While users can view that FileVault recovery keys are available through mobile Company Portal apps, the **Company Portal website is the primary and most reliable method** for retrieving the actual recovery key. The device that has the personal recovery key must be enrolled with Intune and encrypted with FileVault through Intune.
+> The device must be enrolled with Intune and encrypted with FileVault through Intune. While recovery keys are available through mobile Company Portal apps, the **Company Portal website is the primary method** for reliable recovery key retrieval.
 
 **Recovery key retrieval process:**
-
-For a macOS device that has its FileVault encryption managed by Intune, end users can retrieve their personal recovery key (FileVault key) using any device:
 
 1. **Using Company Portal website (Recommended):**
    - Sign in to the **Company Portal website** (https://portal.manage.microsoft.com/) from any device.
@@ -304,10 +314,7 @@ For a macOS device that has its FileVault encryption managed by Intune, end user
    - Navigate to **Devices** and select the encrypted and enrolled macOS device.
    - Select **Get recovery key** - The browser shows the Web Company Portal and displays the recovery key.
 
-**Administrator access:**
-- Administrators can view personal recovery keys for encrypted macOS devices that are marked as a **Corporate** device.
-- They cannot view the recovery key for **Personal** devices.
-- Access generates an audit log entry under 'KeyManagement' activity.
+
 
 ### Recovery key rotation
 
@@ -340,9 +347,10 @@ Intune can assume management of devices that users encrypted before receiving In
 
 ### Prerequisites for assumption of management
 
-- Device must receive active FileVault policy from Intune.
-- Use [endpoint security disk encryption profile](#create-endpoint-security-policy) for policy delivery.
-- User must have access to current recovery key or ability to generate new key.
+- Device must receive active FileVault policy from Intune
+- User must have access to current recovery key or ability to generate new key
+
+Both methods require an active FileVault policy deployed through Intune. Use an [endpoint security disk encryption profile](#create-endpoint-security-policy) for policy delivery.
 
 ### Method 1: Upload existing recovery key
 
@@ -390,21 +398,13 @@ After either method, verify successful management assumption:
 
 ### Common deployment issues
 
-**Issue:** FileVault enablement fails during policy application.  
-- **Solution:** Verify user-approved MDM enrollment status.
-- **Verification:** Check enrollment status in System Preferences > Profiles.
-
-**Issue:** Recovery key escrow fails.  
-- **Solution:** Ensure device has network connectivity during encryption.
-- **Verification:** Check encryption report for escrow status.
-
-**Issue:** Setup Assistant enforcement not working (macOS 14+).  
-- **Solution:** Verify **Defer** setting is *Enabled* in Settings Catalog.
-- **Verification:** Check enrollment profile configuration for **Await final configuration**.
-
-**Issue:** Users cannot retrieve recovery keys.  
-- **Solution:** Verify device is marked as **Corporate** for admin access.
-- **Check:** User permissions and Company Portal app access.
+| **Issue** | **Solution** | **Verification** |
+|-----------|--------------|------------------|
+| FileVault enablement fails | Verify user-approved MDM enrollment status | Check System Preferences > Profiles |
+| Recovery key escrow fails | Ensure device network connectivity | Check encryption report for escrow status |
+| Setup Assistant enforcement not working (macOS 14+) | Verify **Defer** setting is *Enabled* in Settings Catalog | Check enrollment profile for **Await final configuration** |
+| Users cannot retrieve recovery keys | Check device ownership type and user permissions | Verify **Corporate** device designation in Intune |
+| Administrator cannot access recovery keys | Device marked as **Personal/BYOD** (expected behavior) | Verify device ownership type - Personal devices protect user privacy |
 
 ### Error code reference
 
@@ -435,15 +435,21 @@ Use Intune's [policy conflict detection](../configuration/device-profile-monitor
 
 ### Corporate vs Personal devices
 
+> [!NOTE]
+> The device ownership type (Corporate vs Personal) determines administrator access to FileVault recovery keys. This is a fundamental security and privacy design.
+
 **Corporate devices:**  
-- Administrators can view and rotate recovery keys
-- Full recovery key management capabilities
-- Suitable for company-owned equipment
+- **Full administrative access**: Administrators can view, rotate, and manage recovery keys
+- Complete recovery key management capabilities through Intune admin center
+- Suitable for company-owned equipment where full IT control is expected
+- Audit logging tracks all administrative recovery key access
 
 **Personal devices (BYOD):**  
-- Administrators cannot view recovery keys
-- Users maintain control through self-service
-- Balances security with privacy requirements
+- **No administrative access**: Administrators cannot view or directly manage recovery keys
+- Users maintain complete control through self-service Company Portal access
+- Balances organizational security needs with employee privacy requirements
+- Keys are still escrowed to Microsoft cloud for user self-service recovery
+- Automatic rotation still functions based on policy configuration
 
 ### Compliance integration
 
