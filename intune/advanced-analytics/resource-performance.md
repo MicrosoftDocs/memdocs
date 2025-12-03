@@ -76,32 +76,20 @@ The RAM spike time score (from 0 to 100) is assigned based on the device's usage
 
 ### Insights and recommendations
 
-The **Resource performance page** provides a prioritized list of insights and recommendations, which are described in this section:
+The report provides a prioritized list of insights and recommendations to help improve your score:
 
-#### High CPU usage in physical devices
+- **Cloud PCs**\
+  Windows 365 Cloud PCs with higher CPU or RAM spike percentages than the organizational average can degrade user experience. Upgrading these Cloud PCs to a higher configuration can improve performance and productivity.
+- **High CPU usage on physical devices**\
+  Windows physical devices with higher CPU spike percentages than the organizational average can lead to poor user experience and reduced productivity.
+  - Individual devices with high CPU spike %.
+  - Device models with high CPU spike %.
+- **High RAM usage on physical devices**\
+  Windows physical devices with higher RAM spike percentages than the organizational average can also impact performance and productivity.
+  - Individual devices with high RAM spike %.
+  - Device models with high RAM spike %.
 
-These Windows physical devices experience higher CPU spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
-
-This category has two sub-categories:
-
-- Physical devices that experience high CPU spike %.
-- Physical device models that experience high CPU spike %.
-
-Besides giving visibility into devices that aren't supporting your user's goals, these insights also allow you to identify devices with underperforming CPUs that are within warranty and eligible for replacement.
-
-#### High RAM usage in physical devices
-
-These Windows physical devices experience higher RAM spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
-
-This category has two sub-categories: (1) physical devices that experience high RAM spike % and (2) physical device models that experience high RAM spike %.
-
-Besides giving visibility into devices that aren't supporting your user's goals, these insights also allow you to identify devices with underperforming RAM that are within warranty and eligible for replacement.
-
-#### Cloud PCs
-
-These Windows 365 Cloud PCs experience higher CPU or RAM spike % than the rest of the devices in your organization, resulting in poor user experience and lower productivity.
-
-These insights provide visibility into Cloud PCs that aren't supporting your user's goals. Upgrading these devices to a higher configuration of Cloud PCs will improve the user experience.
+These insights not only highlight devices that aren't meeting user needs but also help you identify underperforming CPUs and RAM that are still under warranty and eligible for replacement.
 
 ## Report tabs
 
