@@ -13,23 +13,17 @@ The device timeline allows you to see a history of events that have occurred on 
 
 ## Before you begin
 
-Make sure you meet the [requirements](index.md#prerequisites) before using device timeline.
+- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
 
 ## Review the device timeline report
 
-:::row:::
-    :::column span="3":::
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
 1. Select a device, then select **User Experience** > **Device Timeline**.
+   :::image type="content" source="images/device-timeline.png" alt-text="Screenshot of the device timeline in endpoint analytics." lightbox="images/device-timeline.png":::
 1. Filter events by date, device, or user to focus on relevant incidents.
 
 > [!NOTE]
 > The **Device timeline** tab replaces the **Application reliability** tab in tenants that have Advanced Analytics.
-    :::column-end:::
-    :::column span="1":::
-:::image type="content" source="images/device-timeline.png" alt-text="Screenshot of the device timeline in endpoint analytics." lightbox="images/device-timeline.png":::
-    :::column-end:::
-:::row-end:::
 
 You can search by event name or details. To refine results, select **Add filter** to choose the event source, event level, and a time range of interest.
 

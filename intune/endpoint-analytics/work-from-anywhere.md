@@ -20,7 +20,7 @@ In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint 
 
 :::image type="content" source="images/work-from-anywhere/work-from-anywhere-score.png" alt-text="Screenshot of the Work from anywhere report showing the scores and metrics" lightbox="images/work-from-anywhere/work-from-anywhere-score.png":::
 
-## Work from anywhere score
+### Work from anywhere score
 
 The work from anywhere score is a number between 0 and 100. The score represents a weighted average of the percent of devices that have deployed the various insights for helping your end users be productive from anywhere. The score is computed for all active Intune and Configuration Manager devices that have opted into endpoint analytics.
 
@@ -37,15 +37,13 @@ The following metrics are weighted and used to compute the **Work from anywhere�
 > [!NOTE]
 > In the device-level views of Work from anywhere, admins will only see devices they have access to according to their assigned Scope tags. To learn more about Scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as the Work from anywhere score, are calculated using all enrolled devices in the tenant. To apply Scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
 
-### Windows
+#### Windows
 
 Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../intune-service/protect/windows-10-feature-updates.md). Your score is based on if these remediation actions have been completed or not.
 
-For information about the cost savings and benefits enabled by Windows, download the [TEI whitepaper](https://query.prod.cms.rt.microsoft.com/cms/api/am/binary/RWCpaP).
-
 :::image type="content" source="images/work-from-anywhere/windows.png" alt-text="Screenshot of the Windows fly out showing graph and insights" lightbox="images/work-from-anywhere/windows.png":::
 
-### Cloud management
+#### Cloud management
 
 Configuration Manager and Intune provide integrated cloud-powered management tools and unique co-management options to provision, deploy, manage, and secure endpoints and applications across an organization. With the power of cloud management, you can achieve several productivity benefits. Your end-users benefit when they can access corporate resources away from the corporate network. Eliminating the need for and performance overhead of Group Policy also results in a better end-user experience.
 
@@ -66,13 +64,13 @@ Benefits of each cloud management type:<!--IN7207657-->
 | Consistent end-user experience for managing enrolled devices and installed apps |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |  :::image type="icon" source="../media/icons/16/check.svg"::: |
 | Reduce complexity with always up-to-date cloud only infrastructure |  :::image type="icon" source="../media/icons/16/check.svg"::: |  |  |   :::image type="icon" source="../media/icons/16/check.svg"::: |
 
-### Cloud identity
+#### Cloud identity
 
 Cloud identity provides users with many productivity benefits including device-wide single sign-on to apps and services, Windows Hello sign-in, self-service BitLocker recovery, and corporate data roaming. The **Cloud identity** metric measures the percent of devices enrolled in Microsoft Entra ID or hybrid Microsoft Entra ID. Your Intune and co-managed devices are already enrolled in Microsoft Entra ID. The recommended remediation action for devices managed by Configuration Manager is to [enroll them in hybrid Microsoft Entra ID](/azure/active-directory/devices/hybrid-azuread-join-managed-domains).
 
 :::image type="content" source="images/work-from-anywhere/cloud-identity.png" alt-text="Screenshot of the Cloud identity fly out showing insights for the metric" lightbox="images/work-from-anywhere/cloud-identity.png":::
 
-### Cloud provisioning
+#### Cloud provisioning
 
 Cloud provisioning provides a simpler initial provisioning experience for Windows PCs than the native experience. It reduces the number of screens in the Out Of Box Experience (OOBE) and provides defaults, to ensure the device is correctly provisioning from the factory or on reset. The **Cloud provisioning** metric measures the percentage of machines that are either Windows 365 Cloud PCs or Windows Intune devices that are both registered and have a deployment profile created for Windows Autopilot.
 

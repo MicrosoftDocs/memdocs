@@ -39,7 +39,7 @@ To enable data upload for endpoint analytics in Configuration Manager:
 > [!IMPORTANT]
 > When you enable endpoint analytics data upload, your default client settings are automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you might need to update and re-deploy them for data collection to occur.
 
-   :::image type="content" source="images/6051638-configure-upload-configmgr.png" alt-text="Enable endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="images/6051638-configure-upload-configmgr.png":::
+   :::image type="content" source="images/configure-upload-configmgr.png" alt-text="Enable endpoint analytics for devices uploaded to Microsoft Endpoint Manager" lightbox="images/configure-upload-configmgr.png":::
 
 ## Configure data collection client settings
 
@@ -162,10 +162,10 @@ Learn more about endpoint analytics:
 - [Scores, baselines, and insights](scores.md)
 - Understand the reports:
   - [Startup performance](startup-performance.md)
-  - [Restart frequency](restart-frequency.md)
   - [Application reliability](app-reliability.md)
+  - [Work from anywhere](work-from-anywhere.md)
 - [Understand data collection](data-collection.md)
-- [Microsoft Intune Advanced Analytics](../advanced-analytics/index.md)
+- [Advanced Analytics](../advanced-analytics/index.md)
 
 <!-- admin center -->
 

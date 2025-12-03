@@ -99,8 +99,6 @@ items:
     items:
     - name: Startup performance
       href: ../../endpoint-analytics/startup-performance.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
-    - name: Restart frequency
-      href: ../../endpoint-analytics/restart-frequency.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Application reliability
       href: ../../endpoint-analytics/app-reliability.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Work from anywhere

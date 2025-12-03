@@ -54,7 +54,7 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 - [Work from anywhere](../../endpoint-analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The ability for employees to work from anywhere productively is essential in today's world. This report offers insights into how prepared your workforce is to be productive from anywhere.
 
-:::image type="content" source="../../endpoint-analytics/images/work-from-anywhere/8668496-work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../../endpoint-analytics/images/work-from-anywhere/8668496-work-from-anywhere-score.png":::
+:::image type="content" source="../../endpoint-analytics/images/work-from-anywhere/work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../../endpoint-analytics/images/work-from-anywhere/work-from-anywhere-score.png":::
 
 - [Startup performance](../../endpoint-analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 
@@ -64,7 +64,7 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 :::image type="content" source="../../endpoint-analytics/images/adoption-score/8529842-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/8529842-application-reliability.png":::
 
-- [Restart Frequency](../../endpoint-analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - provides insights into restart frequencies within your organization to help you identify problematic devices.
+- [Restart Frequency](../../endpoint-analytics/startup-performance.md#restart-frequency?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - provides insights into restart frequencies within your organization to help you identify problematic devices.
 
 :::image type="content" source="../../endpoint-analytics/images/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../endpoint-analytics/images/restart-frequency-tab.png":::
 

@@ -13,7 +13,7 @@ Understanding how devices in your organization contribute to the user's experien
 
 Endpoint analytics contains great insights, but it requires access to the Microsoft Intune admin center. If you're an Intune Administrator, you can display the analytics. However, other users of Microsoft Adoption Score might be unaware this information exists. Displaying these insights to Microsoft Adoption Score users allows them to use the data to help drive transformation efforts across your organization.
 
-:::image type="content" source="images/adoption-score/8529842-endpoint-analytics-microsoft-365-admin-center.png" alt-text="Endpoint analytics in the Microsoft 365 admin center" lightbox="images/adoption-score/8529842-endpoint-analytics-microsoft-365-admin-center.png":::
+:::image type="content" source="images/adoption-score/endpoint-analytics-microsoft-365-admin-center.png" alt-text="Endpoint analytics in the Microsoft 365 admin center" lightbox="images/adoption-score/endpoint-analytics-microsoft-365-admin-center.png":::
 
 The **Endpoint analytics** page looks similar to the other pages in Adoption Score, making it easy to dive right in. The following information is displayed on the **Endpoint analytics** page:
 
@@ -40,7 +40,7 @@ Select the **Learn more** link under the startup performance information to get 
   - **Time to desktop**: The time it takes to reach the desktop but where background processes are still running, and users experience slower performance
   - **Time to responsive desktop**: Time where background processes are complete and CPU utilization is less than 50%
 
-:::image type="content" source="images/adoption-score/8529842-startup-performance-metrics.png" alt-text="Endpoint analytics startup performance metrics" lightbox="images/adoption-score/8529842-startup-performance-metrics.png":::
+:::image type="content" source="images/adoption-score/startup-performance-metrics.png" alt-text="Endpoint analytics startup performance metrics" lightbox="images/adoption-score/startup-performance-metrics.png":::
 
 ## Application reliability metrics
 
@@ -52,4 +52,4 @@ The chart shows the overall **Application reliability score** for your tenant wi
   - **Mean time to failure in hours**: The average amount of engagement time that an end user is able to use the application before a crash occurs over the past 14 days. This value is calculated by dividing Total usage duration (14 days) by Total crashes (14 days). By relating usage duration and crash counts, the frequency of crashes across different applications is normalized. Applications without crash events in your tenant over the past 14 days are given a mean time to failure value of `No crash events`.
   - **Active devices**: The total number of your tenant's enrolled devices that launched this app at least once in the past 14 days.
 
-:::image type="content" source="images/adoption-score/8529842-application-reliability.png" alt-text="Endpoint analytics application reliability metrics" lightbox="images/adoption-score/8529842-application-reliability.png":::
+:::image type="content" source="images/adoption-score/application-reliability.png" alt-text="Endpoint analytics application reliability metrics" lightbox="images/adoption-score/application-reliability.png":::
