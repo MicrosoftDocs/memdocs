@@ -13,7 +13,8 @@ The device timeline allows you to see a history of events that have occurred on 
 
 ## Before you begin
 
-- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+> [!div class="checklist"]
+> - Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
 
 ## Review the device timeline report
 

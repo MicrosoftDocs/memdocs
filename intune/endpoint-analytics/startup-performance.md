@@ -11,16 +11,18 @@ The startup performance report in endpoint analytics provides insights into the 
 
 ## Before you begin
 
-- Review the [Scores, baselines, and insights in endpoint analytics](scores.md) article to understand how these concepts work.
-- Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
-- Clients require a restart to fully enable all analytics.
-- The retention period for device boot and sign-in events is 29 days. If a device hasn't uploaded a boot or sign-in event in the past 29 days, it doesn't appear in the startup performance report.
+> [!div class="checklist"]
+> - Review the [Scores, baselines, and insights in endpoint analytics](scores.md) article to understand how these concepts work.
+> - Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+> - Clients require a restart to fully enable all analytics.
 
 ## Review the report
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Startup performance**.
 
 :::image type="content" source="images/startup-performance.png" lightbox="images/startup-performance.png" alt-text="Screenshot of the Startup score tab in endpoint analytics.":::
+
+The retention period for device boot and sign-in events is 29 days. If a device hasn't uploaded a boot or sign-in event in the past 29 days, it doesn't appear in the startup performance report.
 
 ### Startup score
 
