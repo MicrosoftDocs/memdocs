@@ -79,22 +79,20 @@ Choose from the following Intune policy types to configure FileVault encryption 
 
 ### Endpoint security policy
 
-**Best for:** Standard FileVault deployments with streamlined configuration
+**Best for:** Standard FileVault deployments with streamlined configuration.
 
-**Endpoint security > Disk encryption policy** provides focused, security-specific FileVault configuration:
+The Endpoint security *Disk encryption* policy provides focused, security-specific FileVault configuration:
 
-- **FileVault profile** - Dedicated settings for configuring FileVault encryption with comprehensive recovery options
-- Streamlined configuration focused on security requirements
-- Integration with Intune's encryption monitoring and reporting
-- Simplified setup for most FileVault scenarios
-
-View the [FileVault settings available in endpoint security profiles](../protect/endpoint-security-disk-encryption-profile-settings.md).
+- **FileVault profile** - Dedicated settings for configuring FileVault encryption with comprehensive recovery options.
+- Streamlined configuration focused on security requirements.
+- Integration with Intune's encryption monitoring and reporting.
+- Simplified setup for most FileVault scenarios.
 
 ### Settings catalog policy
 
 **Best for:** Advanced deployments requiring Setup Assistant enforcement or comprehensive configuration options.
 
-**Settings catalog** provides the most comprehensive FileVault configuration options:
+The *settings catalog* provides the most comprehensive FileVault configuration options:
 
 - Access to all the settings that are available through Intune for FileVault
 - **Setup Assistant enforcement** capabilities (macOS 14+) - *unique to Settings Catalog*
@@ -104,7 +102,7 @@ View the [FileVault settings available in endpoint security profiles](../protect
 
 ### Device configuration policy (deprecated)
 
-**Device configuration > Endpoint protection** includes FileVault as part of broader endpoint protection:
+The *Device configuration > Endpoint protection* template includes FileVault as part of broader endpoint protection. 
 
 > [!NOTE]
 > The macOS template for Endpoint Protection is deprecated and no longer supports creating new profiles. Use [Endpoint security](#create-endpoint-security-policy) or [Settings Catalog](#create-settings-catalog-policy) for new FileVault deployments.
@@ -120,23 +118,24 @@ View the [FileVault settings available in endpoint security profiles](../protect
 3. Set the following options:
 
    - **Platform**: macOS
-   - **Profile**: FileVault
+   - **Profile**: MacOS FileVault
 
 4. On the **Configuration settings** page, configure core FileVault settings:
 
    **Required settings:**
-   - **Enable FileVault** = *Yes*
-   - **Recovery key type** = *Personal Recovery Key* (only supported option)
+   - for FileVault:
+     **Enable** = *On* (to enable FileVault)
+   - **Use Recovery Key** = *Enabled*
 
    **Recovery key management:**
-   - **Personal recovery key rotation** = Set rotation interval (1-12 months recommended)
-   - **Escrow location description** = Provide user guidance for key retrieval
-   - **Hide recovery key** = *Yes* (recommended for security)
+   - **Recovery Key Rotation In Months** = Set rotation interval
+   - **Location** = Enter some [descriptive guidance](#escrow-location-guidance) to guide your for key retrieval.
+   <!--- **Hide recovery key** = *Yes* (recommended for security) (This option is no longer available in Intune UI) -->
 
    **User experience settings:**
    - **Allow deferral until sign out** = Configure based on organizational needs
-   - **Disable prompt at sign out** = Configure user interaction preferences
-   - **Number of times allowed to bypass** = Set enforcement strictness
+   - **Defer Dont Ask At User Logout** = Configure user interaction preferences
+   - **Defer Force At User Login Max Bypass Attempts** = Set enforcement strictness
 
 5. On the **Scope (Tags)** page, assign appropriate scope tags for your organization's management structure.
 
@@ -170,7 +169,7 @@ Settings Catalog provides the most comprehensive FileVault configuration options
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **By platform** > **macOS** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+2. Select **Devices** > *By platform* > **macOS** > **Manage devices** > **Configuration** > **Create** > **New policy**.
 
 3. Select **Settings catalog** for the **Profile type**.
 
@@ -178,14 +177,14 @@ Settings Catalog provides the most comprehensive FileVault configuration options
 
 5. Configure the following core FileVault settings:
 
-   **FileVault configuration:**
+   **FileVault:**
    - **Enable** = *On*
    - **Defer** = *Enabled* (required for successful FileVault application)
 
-   **Recovery key escrow:**
-   - **Location** = Specify user guidance for recovery key access
+   **FileVault Recovery Key Escrow:**
+   - **Location** = Enter some [descriptive guidance](#escrow-location-guidance) to guide your for key retrieval.
 
-   **Advanced options (as needed):**
+   **Advanced options (as needed):** (All are found under FileVault)
    - **Show Recovery Key** = Configure visibility during encryption
    - **Defer Don't Ask At User Logout** = Control prompt timing
    - **Defer Force At User Login Max Bypass Attempts** = Set enforcement limits
@@ -198,6 +197,9 @@ Settings Catalog provides the most comprehensive FileVault configuration options
 > [!IMPORTANT]
 > Setup Assistant enforcement requires specific enrollment and configuration prerequisites. Verify your environment meets these requirements before deployment.
 
+> [!TIP]
+> [macOS 14.4 adds refinements](https://support.apple.com/guide/deployment/manage-filevault-with-device-management-dep0a2cb7686/web) that apply to Setup Assistant. Prior to macOS 14.4, Setup Assistant requires the user account created interactively during Setup Assistant to have the role of Administrator.
+
 For automated FileVault enablement during device setup:
 
 **Prerequisites for Setup Assistant:**  
@@ -206,9 +208,9 @@ For automated FileVault enablement during device setup:
 - **Await final configuration** = *Yes* in enrollment profile
 - Device filter using *EnrollmentProfileName* attribute
 
-**Additional Settings Catalog configuration:**  
+**Additional Settings Catalog configuration:** (Found under FileVault)  
 - **FileVault** > **Force Enable in Setup Assistant** = *Enabled*
-- **FileVault** > **Defer** = *Enabled* (critical for macOS 14.4+)
+- **FileVault** > **Defer** = *Enabled* (Important for macOS 14.4+)
 
 **Enrollment profile configuration:**  
 1. Configure enrollment profile with **Await final configuration** = *Yes*.
@@ -248,7 +250,7 @@ To view information about devices that receive FileVault policy, see [Monitor di
 
 Monitor FileVault deployment through multiple Intune interfaces:
 
-1. **Encryption report** - Navigate to **Devices** > **Monitor** > **Encryption report**:
+1. **Encryption report** - Navigate to **Devices** > **Monitor** > **Device Encryption status**:
    - View encryption status across all managed devices
    - Access recovery key information for encrypted devices
    - Monitor policy deployment and compliance
