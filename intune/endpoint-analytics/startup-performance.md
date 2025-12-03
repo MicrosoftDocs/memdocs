@@ -9,13 +9,12 @@ ms.topic: concept-article
 
 The startup performance report in endpoint analytics provides insights into the startup performance of your Windows devices. It helps you identify and remediate issues that can lead to slow boot and sign-in times.
 
-> [!IMPORTANT]
-> Clients require a restart to fully enable all analytics. <!--7698085--> The retention period for device boot and sign-in events is 29 days. If a device hasn't uploaded a boot or sign-in event in the past 29 days, it doesn't appear in the startup performance report.
-
 ## Before you begin
 
 - Review the [Scores, baselines, and insights in endpoint analytics](scores.md) article to understand how these concepts work.
 - Confirm that you meet the [prerequisites](index.md#prerequisites) before using the report.
+- Clients require a restart to fully enable all analytics.
+- The retention period for device boot and sign-in events is 29 days. If a device hasn't uploaded a boot or sign-in event in the past 29 days, it doesn't appear in the startup performance report.
 
 ## Review the report
 
