@@ -23,7 +23,7 @@ Additional prerequisites for device query:
 
 :::column-end:::
 :::column span="3":::
-> Device query supports devices that are:
+> Device query supports Windows devices that are:
 >
 > - Managed by Intune and marked as corporate owned.
 > - Microsoft Entra joined

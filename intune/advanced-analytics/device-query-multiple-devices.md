@@ -9,7 +9,7 @@ ms.topic: how-to
 
 [!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices. Device query for multiple devices supports all devices specified in the [Intune Data Platform Schema](data-platform-schema.md), this includes corporate Android Enterprise, Apple iOS/iPadOS, macOS, and Windows devices with a [properties catalog policy](/intune/intune-service/configuration/properties-catalog) deployed.
+Device query for multiple devices allows you to gain comprehensive insights about your entire fleet of devices using Kusto Query Language (KQL) to query across collected inventory data for your devices.
 
 ## Before you begin
 
@@ -21,15 +21,6 @@ Additional prerequisites for device query for multiple devices:
 :::column span="1":::
 [!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 
-:::column-end:::
-:::column span="3":::
-> Device query supports devices that are:
->
-> - Managed by Intune and marked as corporate owned
-> - Windows devices must have a [properties catalog policy](../intune-service/configuration/properties-catalog.md) deployed to them to collect inventory data.\
->   For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
-:::column-end:::
-:::row-end:::
 
 :::row:::
 :::column span="1":::
@@ -49,29 +40,47 @@ Additional prerequisites for device query for multiple devices:
 :::column-end:::
 :::row-end:::
 
+:::column-end:::
+:::column span="3":::
+> Device query supports devices that are:
+>
+> - Managed by Intune and marked as corporate owned
+> - Windows devices must have a [properties catalog policy](../intune-service/configuration/properties-catalog.md) deployed to them to collect inventory data.\
+>   For iOS/iPadOS, Android, and macOS, data is automatically collected and a separate properties catalog policy doesn't need to be deployed.
+:::column-end:::
+:::row-end:::
+
 :::row:::
 :::column span="1":::
 [!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
-> For a user to use Device query, you must assign the Managed Devices > Query and Organization > Read permissions to them.
+> To use device query for multiple devices, use an account with at least one of the following roles:
+> - [Help Desk Operator][INT-R1]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Managed Devices/Query**
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 
 :::column-end:::
 :::row-end:::
 
-## How to use device query for multiple devices
+## Use device query for multiple devices
 
-To use device query for multiple devices, go to the **Devices** pane and select **Device query**. Then input a query in the query box using the supported properties and supported operators and select **Run** to execute the query. Results are displayed in the **Results** tab area. If you only want to run part of the query, or if you have multiple queries in the query window and only want to run one, you can highlight the query you want to run and select **Run**. Only that query is run.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
+1. Input a query in the query box using the supported properties and supported operators.
+1. Select **Run** to execute the query.
+1. Results are displayed in the **Results** tab area.
+   - If you only want to run part of the query, or if you have multiple queries in the query window and only want to run one, you can highlight the query you want to run and select **Run**. Only that query is run.
 
 You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.
 
 After running a query, select **Export** to save results to a .CSV file. You have the option to export all columns in the query result or just the columns you select. You can export up to 50,000 results to a file.
 
-> [!TIP]
-> You can use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, go to [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#query-many-devices).
-
 For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
+
+> [!TIP]
+> Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 ## Sample queries
 
@@ -342,3 +351,9 @@ Cpu | where Device.DeviceName == 'Desktop123"
 - A maximum of 1,000 queries can be submitted per month.
 - Negative values for the amounts parameter of the datetime_add() function aren't supported.
 - Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example, the query Device | summarize dcount(DeviceId) | order by dcount_DeviceId will fail. Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename succeeds.
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
