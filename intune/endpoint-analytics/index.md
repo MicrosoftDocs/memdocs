@@ -30,7 +30,7 @@ Endpoint analytics organizes insights into reports that highlight performance an
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Startup performance
 
-> Identifies devices with slow boot times and contributing factors.
+> Identifies devices with slow boot times and factors that delay startup.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](startup-performance.md)
@@ -38,7 +38,7 @@ Endpoint analytics organizes insights into reports that highlight performance an
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Application reliability
 
-> Tracks app crashes and stability trends.
+> Monitors app crashes and stability trends to improve user experience.
 >         
 > > [!div class="nextstepaction"]
 > > [Learn more](app-reliability.md)
@@ -48,7 +48,7 @@ Endpoint analytics organizes insights into reports that highlight performance an
 
 #### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Work from anywhere
 
-> Analyzes device readiness for remote work scenarios.
+> Evaluates device readiness for secure and efficient remote work.
 >
 > > [!div class="nextstepaction"]
 > > [Learn more](work-from-anywhere.md)

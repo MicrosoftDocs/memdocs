@@ -17,7 +17,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::  
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Resource performance report
 
-> Identify CPU and RAM performance issues by device, model, and manufacturer to guide future purchasing decisions.
+> Identifies CPU and RAM performance issues by device, model, and manufacturer to guide purchasing decisions.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](resource-performance.md)
@@ -25,7 +25,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Battery health report
 
-> Monitor battery health for Windows devices to ensure long battery life and a better user experience.
+> Monitors battery health for Windows devices to ensure long battery life and a better user experience.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](battery-health.md)
@@ -36,7 +36,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Anomalies report
 
-> Track device health for regressions in user experience and productivity after configuration changes.
+> Tracks device health for regressions in user experience and productivity after configuration changes.
 >
 > > [!div class="nextstepaction"]
 > > [Learn more](anomalies.md)
@@ -44,7 +44,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg"::: Device timeline report
 
-> Provides more event details and lower data latency to help troubleshoot device issues.
+> Shows detailed events with low latency to help troubleshoot device issues quickly.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-timeline.md)
@@ -57,7 +57,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::  
 #### :::image type="icon" source="../media/icons/24/query.svg"::: Device query
 
-> Get near-real time access to data about the state and configuration of Windows devices.
+> Provides near real-time data about the state and configuration of Windows devices.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-query.md)
@@ -65,7 +65,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::
 #### :::image type="icon" source="../media/icons/24/query.svg"::: Device query for multiple devices
 
-> View collected inventory data across multiple devices and platforms.
+> Allows you to run queries directly in Intune to retrieve inventory data across multiple devices and platforms.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-query-multiple-devices.md)
@@ -75,7 +75,7 @@ Advanced Analytics enhances endpoint analytics with the following reports and ca
 :::column:::  
 #### :::image type="icon" source="../media/icons/24/devices.svg"::: Device scopes
 
-> Use scope tags to filter endpoint analytics reports for a subset of devices. See scores, insights, and recommendations specific to those devices.
+> Allows you to use scope tags to filter reports for a subset of devices. See scores, insights, and recommendations specific to those devices.
 > 
 > > [!div class="nextstepaction"]
 > > [Learn more](device-scopes.md)
