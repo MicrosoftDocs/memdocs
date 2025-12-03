@@ -116,7 +116,7 @@ Review aggregates of restart frequency counts for each of the [restart categorie
 - The average number of restarts per device across all devices, to understand the total effect.
   - This average is all devices, not just the ones that had at least one restart in the category.
 
-The trend chart indicates how the rolling 30-day average changes over time. If there's a regression, you can see it and identify when it started. Click through the metrics table to go to the [**Device performance** tab](#device-performance-tab), which is sorted by the number of restarts, so you can quickly identify the devices with the most restarts.
+The trend chart indicates how the rolling 30-day average changes over time. If there's a regression, you can see it and identify when it started. Click through the metrics table to go to the **Device performance** tab, which is sorted by the number of restarts, so you can quickly identify the devices with the most restarts.
 
 #### Restart categories
 

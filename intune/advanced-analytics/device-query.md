@@ -17,24 +17,6 @@ Make sure you meet the [requirements](index.md#prerequisites) to confirm your en
 
 Additional prerequisites for device query:
 
-- For a user to use Device query, you must assign the **Managed Devices** - **Query** permission and **Organization** > **Read** permissions to them.
-<!--
-Device Query runs in real time: When you query a device, Intune sends a request to the device and expects an immediate response.
-WNS is the transport mechanism: Windows Push Notification Services is used to notify the device and return the query results.
-Mandatory dependency: Because WNS is integral to this communication, you cannot disable or bypass it. If WNS is blocked or unavailable, the device query will fail.
--->
-
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
-
-:::column-end:::
-:::column span="3":::
-> Windows
-:::column-end:::
-:::row-end:::
-
 :::row:::
 :::column span="1":::
 [!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
@@ -46,26 +28,44 @@ Mandatory dependency: Because WNS is integral to this communication, you cannot 
 > - Managed by Intune and marked as corporate owned.
 > - Microsoft Entra joined
 > - Microsoft Entra hybrid joined
+>
+> Device query runs in real time: when you query a device, Intune sends a request to the device and expects an immediate response.
+> WNS is the transport mechanism: Windows Push Notification Services is used to notify the device and return the query results.
+>Mandatory dependency: Because WNS is integral to this communication, you cannot disable or bypass it. If WNS is blocked or unavailable, the device query will fail.
 
 :::column-end:::
 :::row-end:::
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 
-## How to use Device query
+:::column-end:::
+:::column span="3":::
+> To use device query, use an account with at least one of the following roles:
+> - [Help Desk Operator][INT-R1]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **Managed Devices/Query**
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
+:::column-end:::
+:::row-end:::
 
-To use Device query, navigate to **Devices** and select the device on which you want to use Device query. Select **Device Query** under the **Monitor** section.
+## Use device query
 
-The supported properties you can query are listed in the **Properties** section. To run a query, enter a Kusto Query Language (KQL) query, and select **Run**. Results are displayed in the **Results** tab area.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
+1. Select a device, then select **Device Query** under the **Monitor** section.
 
-For more information on Kusto Query Language, see [Learn more about Kusto Query Language](/azure/data-explorer/kusto/query/).
+The supported properties you can query are listed in the [Supported properties](#supported-properties) section. To run a query, enter a Kusto Query Language (KQL) query, and select **Run**. Results are displayed in the **Results** tab area.
+
+For more information on Kusto Query Language, see [Kusto Query Language Overview](/azure/data-explorer/kusto/query/).
 
 > [!TIP]
-> You can now use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
+> Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
 Best practices:
 
 - Consider how device queries can be used to help your L1/L2 engineers quicker resolve support tickets, while minimizing disruption to users.
-- Review support processes and tasks that normally require a remote control session to the end user's device. Check if these can be completed using single device query – for example – checking a running service, checking a registry key value for an application configuration, checking an application version, or reporting on top processes by CPU consumption.
+- Review support processes and tasks that normally require a remote control session to the end user's device. Check if these can be completed using single device query - for example - checking a running service, checking a registry key value for an application configuration, checking an application version, or reporting on top processes by CPU consumption.
 - Create saved queries for recurring investigations in your ITSM knowledge base, for L1/L2 engineers to quickly access.
 - Update processes to use remote actions for quick issue resolution. Either reboot a device, or run a remediation script to resolve a known issue.
 
@@ -211,3 +211,9 @@ Device query supports the following entities. To learn more about what propertie
 - If TPM 2.0 is present on the device, then activated and enabled is always returned as TRUE.
 - If a file is currently in use on the machine, then FileInfo queries returns an error.
 - If the end user has admin access to the device, they might be able to change client-based information returned in query results. For example, OS version and registry.
+
+<!--links-->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator

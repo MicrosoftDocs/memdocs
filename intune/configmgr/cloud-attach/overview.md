@@ -58,11 +58,11 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 - [Startup performance](../../endpoint-analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 
-:::image type="content" source="../../endpoint-analytics/images/adoption-score/8529842-startup-performance-metrics.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/8529842-startup-performance-metrics.png":::
+:::image type="content" source="../../endpoint-analytics/images/adoption-score/startup-performance-metrics.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/startup-performance-metrics.png":::
 
 - [Application reliability](../../endpoint-analytics/app-reliability.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The application reliability report provides insight into potential issues for desktop applications on managed devices.
 
-:::image type="content" source="../../endpoint-analytics/images/adoption-score/8529842-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/8529842-application-reliability.png":::
+:::image type="content" source="../../endpoint-analytics/images/adoption-score/application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/application-reliability.png":::
 
 - [Restart Frequency](../../endpoint-analytics/startup-performance.md#restart-frequency?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - provides insights into restart frequencies within your organization to help you identify problematic devices.
 
