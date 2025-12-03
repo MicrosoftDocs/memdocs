@@ -1,7 +1,7 @@
 ---
 title: Startup Performance Report in Endpoint Analytics
 description: Learn how startup performance in Microsoft Intune endpoint analytics helps analyze boot times, identify issues, and optimize device performance.
-ms.date: 10/09/2025
+ms.date: 12/03/2025
 ms.topic: concept-article
 ---
 
@@ -24,15 +24,15 @@ In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint 
 
 ### Startup score
 
-The startup score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays. The startup score is a number between 0 and 100. This score is a weighted average of *Boot score* and the *Sign-in* score.
+The startup score measures how quickly users can go from power-on to productivity, minimizing boot and sign-in delays. It's a weighted average of the boot score and sign-in score, expressed as a number from 0 (poor) to 100 (excellent).
 
 ### Boot score
 
-Based on the time from power-on to sign in. We look at the last boot time from each device, excluding the update phase, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
+Represents the time from power-on to sign-in. We use the last boot time for each device (excluding update phases) and score it from 0 (poor) to 100 (excellent). These scores are averaged to provide the overall tenant boot score.
 
 ### Sign-in score
 
-Based on the time from when credentials have been entered until the user can access a responsive desktop (meaning the desktop has rendered and the CPU usage has fallen below a moderate level or the device responds to an action initiated by the user). We look at the last sign-in time to each device, excluding first sign-ins or sign-ins immediately after a feature update, then score it from 0 (poor) to 100 (exceptional). These scores are averaged to provide an overall tenant boot score.
+Represents the time from credential entry until the user can access a responsive desktop. A desktop is considered responsive when it has rendered and CPU usage falls below a moderate level, or the device responds to user actions. We use the last sign-in time for each device (excluding first sign-ins or those immediately after a feature update) and score it from 0 (poor) to 100 (excellent). These scores are averaged to provide the overall tenant sign-in score.
 
 ### Insights and recommendations
 
@@ -71,10 +71,12 @@ In the model performance tab, two default columns allow you to review both the a
 
 ### Device performance
 
-Review boot and sign-in metrics for all your devices. You can sort by a particular metric to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name. n
+Review boot and sign-in metrics for all your devices. You can sort by a particular metric to see which devices have the worst scores for that metric to help with troubleshooting. You can also search for a device by name.
 
 > [!Note]
-> In the **Device performance** tabs of endpoint analytics, admins only see devices they have access to according to their assigned scope tags. To learn more about scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
+> In the device performance tab, admins only see devices they have access to according to their assigned scope tags. To learn more about scope tags, see [Scope tags for distributed IT](../intune-service/fundamentals/scope-tags.md). Aggregated insights, such as scores and summary views are calculated using all enrolled devices in the tenant. To apply scope tags to aggregated insights, see [Device scopes in endpoint analytics](../advanced-analytics/device-scopes.md).
+
+#### Device level drill-in view
 
 Select a device to see its boot and sign-in history, which can help you identify if there was a recent regression.
 
