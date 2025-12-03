@@ -1,7 +1,7 @@
 ---
 title: Assign Apps to Groups in Microsoft Intune
 description: Learn how to assign an Intune app to groups of users or devices using Microsoft Intune.
-ms.date: 11/18/2025
+ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
