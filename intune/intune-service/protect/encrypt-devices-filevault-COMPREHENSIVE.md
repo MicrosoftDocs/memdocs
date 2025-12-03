@@ -3,7 +3,7 @@ title: Encrypt macOS devices with FileVault using Intune
 description: Use Microsoft Intune policy to configure and manage FileVault disk encryption on macOS devices, including Setup Assistant enforcement and comprehensive recovery key management.
 author: brenduns
 ms.author: brenduns
-ms.date: 12/02/2025
+ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: beflamm; aanavath
 ms.collection:
@@ -43,7 +43,7 @@ After you create a policy to encrypt devices with FileVault, the policy is appli
 
 When Intune first encrypts a macOS device with FileVault, a personal recovery key is created. Upon encryption, the device displays the personal key a single time to the device user.
 
-> [!NOTE]  
+> [!NOTE]
 > The FileVault settings available through Intune cover core macOS encryption features but *do not expose every FileVault capability*. Only options provided in Intune's templates or settings catalog can be configured through MDM. Advanced FileVault settings available directly in macOS may not be configurable via Intune policies.
 
 ## Prerequisites
@@ -156,7 +156,6 @@ Configure helpful escrow location descriptions to guide users on how to retrieve
 ```
 To retrieve a lost or recently rotated recovery key, sign in to the Intune Company Portal website from any device. In the portal, go to Devices and select the device that has FileVault enabled, and then select 'Get recovery key'. The current recovery key is displayed.
 ```
-
 **Additional configuration considerations:**
 
 - Include your organization's support contact information.
