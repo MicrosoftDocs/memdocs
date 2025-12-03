@@ -19,16 +19,11 @@ Additional prerequisites for device query for multiple devices:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
-
-
-:::row:::
-:::column span="1":::
 [!INCLUDE [platform](../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
-> **Device query for multiple devices** is supported on devices running:
+> Device query for multiple devices supports:
 > - Windows
 > - Android
 >   - Android Enterprise corporate owned dedicated devices (COSU)
@@ -40,9 +35,12 @@ Additional prerequisites for device query for multiple devices:
 :::column-end:::
 :::row-end:::
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> Device query supports devices that are:
+> Device query for multiple devices supports devices that are:
 >
 > - Managed by Intune and marked as corporate owned
 > - Windows devices must have a [properties catalog policy](../intune-service/configuration/properties-catalog.md) deployed to them to collect inventory data.\
