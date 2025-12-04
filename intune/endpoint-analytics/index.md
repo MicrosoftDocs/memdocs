@@ -27,7 +27,7 @@ The service integrates with Microsoft Intune, enabling IT pros to:
 Endpoint analytics organizes insights into reports that highlight performance and reliability issues across managed devices. These reports help IT teams identify trends, diagnose problems, and implement improvements to enhance the overall user experience. Endpoint analytics includes the following reports:
 
 :::row:::
-:::column span="2":::
+:::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Startup performance
 
 > Identifies devices with slow boot times and factors that delay startup.
@@ -35,7 +35,7 @@ Endpoint analytics organizes insights into reports that highlight performance an
 > > [!div class="nextstepaction"]
 > > [Learn more](startup-performance.md)
 :::column-end:::
-:::column span="2":::
+:::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Application reliability
 
 > Monitors app crashes and stability trends to improve user experience.
@@ -47,7 +47,7 @@ Endpoint analytics organizes insights into reports that highlight performance an
 :::row-end:::
 
 :::row:::
-:::column span="2":::
+:::column:::
 #### :::image type="icon" source="../media/icons/24/report.svg" border="false"::: Work from anywhere
 
 > Evaluates device readiness for secure and efficient remote work.
@@ -57,11 +57,12 @@ Endpoint analytics organizes insights into reports that highlight performance an
 
 :::column-end:::
 :::row:::
-:::column span="2":::
+:::column:::
 #### :::image type="icon" source="../media/icons/24/query.svg" border="false"::: Advanced Analytics
-> Provides deeper insights and extended reporting capabilities (requires **additional licensing**).
-> [!div class="nextstepaction"]
-> [Learn more](../advanced-analytics/index.md)
+
+> Provides deeper insights and extended reporting capabilities (**requires additional licensing**).
+> > [!div class="nextstepaction"]
+> > [Learn more](../advanced-analytics/index.md)
 
 :::column-end:::
 :::row-end:::
