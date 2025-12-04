@@ -17,7 +17,7 @@ The device timeline allows you to see a history of events that have occurred on 
 > - Review [Scores, baselines, and insights in endpoint analytics](../endpoint-analytics/scores.md) to understand these concepts.
 > - Confirm that your environment meets all [prerequisites](index.md#prerequisites).
 
-## Review the device timeline report
+## Review the report
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
 1. Select a device, then select **User Experience** > **Device Timeline**.
