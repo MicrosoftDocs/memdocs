@@ -93,6 +93,7 @@ While this article focuses on Intune agents, similar agents are available across
 
 - [Microsoft Security Copilot agents overview](/copilot/security/agents-overview)
 
+[!INCLUDE [feedback](includes/feedback.md)]
 
 <!-- admin center links -->
 

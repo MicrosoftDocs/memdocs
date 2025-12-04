@@ -3,7 +3,7 @@
 
 title: Configure proxy settings for the Intune Connector for Active Directory
 description: Covers how to configure the Intune Connector for Active Directory to work with existing on-premises proxy servers.
-ms.date: 03/28/2025
+ms.date: 11/24/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -26,7 +26,7 @@ For more information about how connectors work, see [Understand Microsoft Entra 
 
 You can configure the connector to bypass your on-premises proxy to ensure it uses direct connectivity to the Azure services. We recommend this approach, as long as your network policy allows for it, because it means that you have one less configuration to maintain.
 
-To disable outbound proxy usage for the connector, edit the C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard\ODJConnectorEnrollmentWizard.exe file and set the default proxy to `"False"` as shown in the following code example:
+To disable outbound proxy usage for the connector, edit the `:ProgramFiles%\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard\ODJConnectorEnrollmentWizard.exe.config` file and set the default proxy to ` "False" ` as shown in the following code example:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -83,7 +83,7 @@ Once the configuration files are modified, the Intune Connector for Active Direc
 
 ## Specifying an alternative proxy server
 
-If a different proxy server needs to be used with the Intune Connector for Active Directory, for example one that bypasses authentication, the different proxy server can be specified in a similar manner. To use a different proxy, edit the C:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard\ODJConnectorEnrollmentWizard.exe file and add the proxy address and proxy port in the section shown in this code sample:
+If a different proxy server needs to be used with the Intune Connector for Active Directory, for example one that bypasses authentication, the different proxy server can be specified in a similar manner. To use a different proxy, edit the `:\Program Files\Microsoft Intune\ODJConnector\ODJConnectorEnrollmentWizard\ODJConnectorEnrollmentWizard.exe.config` file and add the proxy address and proxy port in the section shown in this code sample:
 
 ```xml
 <?xml version="1.0" encoding="utf-8" ?>

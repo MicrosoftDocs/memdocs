@@ -3,7 +3,7 @@ title: Test client upgrades
 titleSuffix: Configuration Manager
 description: Test client upgrades in a pre-production collection in Configuration Manager.
 ms.date: 04/12/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi

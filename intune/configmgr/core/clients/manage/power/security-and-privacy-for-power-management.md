@@ -3,7 +3,7 @@ title: Security and privacy for power management
 titleSuffix: Configuration Manager
 description: Get security and privacy information for power management in Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 author: LauraWi

@@ -3,7 +3,7 @@ title: CMG server authentication certificate
 titleSuffix: Configuration Manager
 description: The CMG uses HTTPS for secure client communication over the public internet. You can get a certificate from a public provider, or issue one from your public key infrastructure (PKI).
 ms.date: 04/08/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi
