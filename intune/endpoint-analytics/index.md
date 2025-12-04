@@ -56,7 +56,7 @@ Endpoint analytics organizes insights into reports that highlight performance an
 > > [Learn more](work-from-anywhere.md)
 
 :::column-end:::
-
+:::row:::
 :::column:::
 #### :::image type="icon" source="../media/icons/24/query.svg" border="false"::: Advanced Analytics
 > Provides deeper insights and extended reporting capabilities.
@@ -65,7 +65,7 @@ Endpoint analytics organizes insights into reports that highlight performance an
 > [!div class="nextstepaction"]
 > [Learn more](../advanced-analytics/index.md)
 :::column-end:::
-
+:::row-end:::
 
 ## Prerequisites
 
