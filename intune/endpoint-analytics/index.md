@@ -59,12 +59,10 @@ Endpoint analytics organizes insights into reports that highlight performance an
 :::row:::
 :::column span="2":::
 #### :::image type="icon" source="../media/icons/24/query.svg" border="false"::: Advanced Analytics
-> Provides deeper insights and extended reporting capabilities.
+> Provides deeper insights and extended reporting capabilities (requires **additional licensing**).
 > [!div class="nextstepaction"]
 > [Learn more](../advanced-analytics/index.md)
 
->[!NOTE]
->Advanced Analytics is an add-on feature and requires additional licensing.
 :::column-end:::
 :::row-end:::
 
