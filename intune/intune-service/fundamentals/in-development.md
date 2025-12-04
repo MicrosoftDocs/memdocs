@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/21/2025
+ms.date: 12/02/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -84,28 +84,7 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 <!-- *********************************************** -->
 
-## Device enrollment
-
-### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
-
-As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
-
-The screens you can skip during iOS/iPadOS enrollment, and the applicable versions include:
-- **App Store** (iOS/iPadOS 14.3+)
-- **Camera button** (iOS/iPadOS 18+)
-   - **Web content filtering** (iOS/iPadOS 18.2+)
-   - **Safety and handling** (iOS/iPadOS 18.4+)
-   - **Multitasking** (iOS/iPadOS 26+)
-   - **OS Showcase** (iOS/iPadOS 26+)
-
-The screens you can skip during macOS enrollment include:
-- **App Store** (macOS 11.1+)
-- **Get Started** (macOS 15+)
-- **Software update** (macOS 15.4+)
-- **Additional privacy settings** (macOS 26+)
-- **OS Showcase** (macOS 26.1+)
-- **Update completed** (macOS 26.1+)
-- **Get Started** (macOS 15+)
+<!-- ## Device enrollment -->
 
 <!-- *********************************************** -->
 
