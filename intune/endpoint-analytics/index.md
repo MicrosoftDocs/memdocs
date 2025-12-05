@@ -165,7 +165,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 
 :::column-end:::
 :::column span="3":::
->Role requirements vary based on whether you're configuring endpoint analytics or reviewing the data.
+> Role requirements vary based on whether you're configuring endpoint analytics or reviewing the data.
 > ---
 > > [!div class="checklist"]
 > > To [configure endpoint analytics](configure.md), you need an account with at least one of the following Intune roles:
