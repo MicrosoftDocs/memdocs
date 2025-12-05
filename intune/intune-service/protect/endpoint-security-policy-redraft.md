@@ -10,6 +10,7 @@ ms.collection:
 - highpri
 - sub-secure-endpoints
 ms.reviewer: laarrizz
+
 ---
 
 # Manage device security with endpoint security policies in Microsoft Intune
@@ -46,6 +47,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Purpose**: Protect user identities and accounts through modern authentication methods
 - **Key capabilities**: Windows Hello for Business configuration, Credential Guard settings
 - **Platform support**: Windows
+- **Available profiles**: Windows Hello for Business, Credential Guard
 - **Use case**: Implement passwordless authentication and credential protection
 
 **[Antivirus](../protect/endpoint-security-antivirus-policy.md)**  
@@ -58,6 +60,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
   >
   > For macOS devices, Defender for Endpoint settings are managed through device configuration profiles or the Microsoft Defender portal—not through the Endpoint security > Antivirus policy type. For guidance on managing Defender for Endpoint on macOS, see [Deploy Microsoft Defender for Endpoint on macOS manually](/microsoft-365/security/defender-endpoint/mac-install-manually).
   
+- **Available profiles**: Microsoft Defender Antivirus, Antivirus exclusions, Windows Security experience
 - **Use case**: Centrally manage Microsoft Defender Antivirus policies on Windows devices
 
 **[Application Control (Preview)](../protect/endpoint-security-app-control-policy.md)**  
@@ -65,6 +68,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Purpose**: Control which applications can run on Windows devices using Windows Defender Application Control (WDAC)
 - **Key capabilities**: Approved application management, managed installer configuration
 - **Platform support**: Windows
+- **Available profiles**: Windows Defender Application Control (WDAC)
 - **Use case**: Implement application allowlisting and control software execution
 
 **[Attack surface reduction](../protect/endpoint-security-asr-policy.md)**  
@@ -72,6 +76,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Purpose**: Reduce potential attack vectors and system vulnerabilities
 - **Key capabilities**: Attack surface reduction rules, exploit protection, device control, application isolation
 - **Platform support**: Windows
+- **Available profiles**: Attack surface reduction rules, App and browser isolation, Web protection, Exploit protection, Device control, Controlled folder access
 - **Use case**: Harden devices against common attack methods and techniques
 - **Requirements**: Microsoft Defender Antivirus must be the primary antivirus solution
 
@@ -80,6 +85,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Purpose**: Manage built-in encryption methods for data protection
 - **Key capabilities**: BitLocker (Windows), FileVault (macOS), Personal Data Encryption (Windows 11)
 - **Platform support**: Windows, macOS
+- **Available profiles**: BitLocker, FileVault, Personal Data Encryption (PDE)
 - **Use case**: Ensure data-at-rest protection with native encryption technologies
 
 **[Endpoint detection and response](../protect/endpoint-security-edr-policy.md)**  
@@ -87,6 +93,7 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Purpose**: Configure Microsoft Defender for Endpoint integration and onboarding
 - **Key capabilities**: EDR onboarding, sensor configuration, automated deployment options
 - **Platform support**: Windows, macOS, Linux
+- **Available profiles**: Endpoint detection and response *(For onboarding and configuration)*
 - **Use case**: Enable advanced threat detection and response capabilities
 - **Requirements**: Microsoft Defender for Endpoint licensing and tenant connection
 
@@ -95,70 +102,36 @@ Access endpoint security policies from **Endpoint security** > **Manage** in the
 - **Purpose**: Configure built-in firewall protection
 - **Key capabilities**: Windows Defender Firewall, macOS firewall, rule management, reusable settings groups
 - **Platform support**: Windows, macOS
+- **Available profiles**: Windows Defender Firewall, Windows Firewall rules, macOS firewall
 - **Use case**: Control network access and implement network segmentation
-
-### Policy and profile boundaries
-
-Each endpoint security policy type contains specific profiles that define the available configuration templates:
-
-- **Account protection**: Windows Hello for Business, Credential Guard
-- **Antivirus**: Microsoft Defender Antivirus, Antivirus exclusions, Windows Security experience  
-- **Application Control**: Windows Defender Application Control (WDAC)
-- **Attack surface reduction**: Attack surface reduction rules, App and browser isolation, Web protection, Exploit protection, Device control, Controlled folder access
-- **Disk encryption**: BitLocker, FileVault, Personal Data Encryption (PDE)
-- **Endpoint detection and response**: Endpoint detection and response (onboarding and configuration)
-- **Firewall**: Windows Defender Firewall, Windows Firewall rules, macOS firewall
-
-## Enhanced management features
-
-### Reusable settings groups
-
-Simplify policy management with reusable settings groups that allow you to define common configurations once and apply them across multiple policies. Currently supported for:
-
-- Windows Firewall rules (remote IP address ranges, FQDN definitions)
-- Attack surface reduction Device control rules
-- Endpoint Privilege Management elevation rules (certificates only)
-
-### Policy duplication
-
-Create copies of existing policies to accelerate deployment of similar configurations across different groups or environments. All endpoint security policy types support duplication.
-
-### Comprehensive reporting and monitoring
-
-Access detailed reports and monitoring capabilities including:
-
-- Device assignment status and compliance
-- Policy conflicts and resolution guidance
-- Integration with Microsoft Defender for Endpoint reporting
 
 ## Role-based access control for endpoint security
 
 Managing endpoint security policies requires appropriate Intune Role-based access control (RBAC) permissions. Understanding the current RBAC permission model is essential for proper role assignment and policy management access.
 
-### RBAC Permission model evolution
+> [!NOTE]
+> Intune is transitioning from using the unified *Security baselines* permission for all endpoint security workloads to granular permissions for individual policy types. This transition provides more precise access control but results in different permission requirements across policy types.
 
-Intune is transitioning from a unified *Security baselines* permission that managed all endpoint security workloads to granular permissions for individual policy types. This transition provides more precise access control but creates a mixed permission model during the rollout period.
+### Required RBAC permissions
 
-- **Current RBAC permission model** (June 2024+): Granular permissions for specific workloads, with *Security baselines* managing the remaining policies. The following policies use the current permission model:
- 
-  - **Application control for Business** - Manage Application control policies and reports
-  - **Attack surface reduction** - Manage most ASR policies (some profiles still require Security baselines permission)
-  - **Endpoint detection and response** - Manage EDR policies and reports (added June 2024)
-  - **Security baselines** - Manage workloads without dedicated permissions and legacy functionality
+Endpoint security policies use either granular permissions for specific workloads or the *Security baselines* permission. The required permission varies by policy type:
 
-  > [!NOTE]
-  > The *Antivirus* granular permission appears in some tenants but is not yet released or supported. Antivirus policies currently require Security baselines permission.
+**Granular permissions** (policy-specific access):
+- **Application control for Business** - Application control policies and reports
+- **Attack surface reduction** - Most ASR policies (exceptions noted below)
+- **Endpoint detection and response** - EDR policies and reports
 
-  **Permission structure**: Each granular permission follows the same structure with rights for *Assign*, *Create*, *Delete*, *Read*, *Update*, and *View Reports*.
+**Security baselines permission** (unified access):
+- **Antivirus** policies (all profiles)
+- **Account protection** policies
+- **Disk encryption** policies
+- **Firewall** policies
+- Some **Attack surface reduction** profiles: *App and browser isolation*, *Web protection*, *Exploit protection*, *Controlled folder access*
 
-- **Mixed RBAC permissions**: During transition, some individual profiles within a policy type might require different RBAC permissions. For example, for Attack surface reduction policy: 
+> [!IMPORTANT]
+> For Attack surface reduction policies, check the specific profile requirements. Some profiles use the granular *Attack surface reduction* permission while others require *Security baselines* permission.
 
-  - Profiles for *Attack surface reduction rules* and *Device control* use the granular *Attack surface reduction* permission.
-  - Profiles for *App and browser isolation*, *Web protection*, *Exploit protection*, and *Controlled folder access* continue to use the *Security baselines* permission.
-
-  For current profile-specific requirements, see [Use custom RBAC roles](../protect/endpoint-security-policy.md#use-custom-rbac-roles).
-
-- **Legacy RBAC permission model** (pre-June 2024): All endpoint security policies that are not yet using the current RBAC permission model continue to use the *Security baselines* permission.
+For detailed profile-specific requirements, see [Use custom RBAC roles](../protect/endpoint-security-policy.md#use-custom-rbac-roles).
 
 ### Built-in RBAC roles
 
@@ -170,13 +143,11 @@ The following Intune built-in roles provide access to endpoint security workload
 
 ### Custom role considerations
 
-**Automatic permission inheritance**: When new granular permissions are released, existing custom roles automatically receive equivalent rights to what was previously granted through Security baselines permission.
+**Reporting access**: The *View Reports* right for Device configurations also provides access to endpoint security policy reports.
 
-**Cross-policy reporting rights**: The *View Reports* right for Device configurations also grants rights to view, generate, and export reports for endpoint security policies.
+**Defender portal integration**: Security settings management through the Defender portal uses the same Intune RBAC permissions.
 
-**Microsoft Defender for Endpoint integration**: Security settings management scenarios through the Defender portal use the same Intune RBAC permissions as endpoint security policies.
-
-**Multi Admin Approval**: Role changes, including modifications to permissions, admin groups, or member assignments, can require dual administrator approval for enhanced security governance.
+**Multi Admin Approval**: Role modifications may require dual administrator approval depending on your organization's governance settings.
 
 ## Create endpoint security policies
 
@@ -198,14 +169,6 @@ Follow this general workflow for creating endpoint security policies:
    - **Assignments**: Select target groups for policy deployment (see [Assign user and device profiles](../configuration/device-profile-assign.md))
    - **Review + create**: Verify configuration and create the policy
 
-### Best practices for policy creation
-
-- Use descriptive names that indicate the policy purpose and target audience
-- Start with Microsoft recommended settings and customize based on organizational needs
-- Test policies with pilot groups before broad deployment
-- Document policy purposes and configurations for future reference
-- Consider using reusable settings groups for common configurations
-
 ## Advanced policy management
 
 ### Duplicate policies
@@ -221,11 +184,11 @@ Policy duplication streamlines deployment by allowing you to copy existing confi
 
 **Duplication workflow**:
 
-1. Locate the source policy in the policy list
-2. Select the ellipsis (**…**) > **Duplicate**
-3. Provide a new descriptive name and save
-4. Edit the duplicated policy to customize settings for your specific use case
-5. Configure new group assignments for the target scenario
+1. Locate the source policy in the policy list.
+2. Select the ellipsis (**…**) > **Duplicate**.
+3. Provide a new descriptive name and save.
+4. Edit the duplicated policy to customize settings for your specific use case.
+5. Configure new group assignments for the target scenario.
 
 > [!NOTE]
 > Duplicated policies retain all configuration settings and scope tags from the original policy but do not inherit assignments. You must configure new assignments and typically modify some settings to match your target scenario.
@@ -234,10 +197,10 @@ Policy duplication streamlines deployment by allowing you to copy existing confi
 
 Update policies through the Properties view:
 
-1. Select the policy to modify
-2. Choose **Properties** to view current configuration
-3. Select **Edit** for each section requiring changes (Basics, Assignments, Scope tags, Configuration settings)
-4. Save changes after each section before proceeding to the next
+1. Select the policy to modify.
+2. Choose **Properties** to view current configuration.
+3. Select **Edit** for each section requiring changes (Basics, Assignments, Scope tags, Configuration settings).
+4. Save changes after each section before proceeding to the next.
 
 ## Manage policy conflicts
 
@@ -249,11 +212,11 @@ Prevent and resolve policy conflicts through strategic planning and monitoring:
 - Leverage security baselines as primary configuration sources where appropriate
 
 **Conflict troubleshooting workflow**:
-1. **Identify conflicts**: Monitor policy deployment reports for error or conflict status flags
-2. **Verify settings**: Check which policy types target the same setting across multiple policies
-3. **Review per-setting status**: Use device-level reporting to see which policies are applying
-4. **Check baselines**: Determine if security baselines are setting non-default values that conflict with other policies
-5. **Apply resolution**: Use policy-specific guidance to resolve conflicts systematically
+1. **Identify conflicts**: Monitor policy deployment reports for error or conflict status flags.
+2. **Verify settings**: Check which policy types target the same setting across multiple policies.
+3. **Review per-setting status**: Use device-level reporting to see which policies are applying.
+4. **Check baselines**: Determine if security baselines are setting non-default values that conflict with other policies.
+5. **Apply resolution**: Use policy-specific guidance to resolve conflicts systematically.
 
 **Resolution resources**: [Troubleshoot policies and profiles in Intune](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune) and [Monitor security baselines](../protect/security-baselines-monitor.md#troubleshoot-using-per-setting-status)
 
