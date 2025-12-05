@@ -57,3 +57,6 @@ Headings are driven by article context. -->
       - **In progress** - The PowerShell script is currently running.
       - **Skipped** - Usually indicates that the PowerShell script was selected in the Windows Autopilot device preparation policy, but wasn't assigned to the device group specified in the Windows Autopilot device preparation policy.
       - **Failed** - The PowerShell script failed to run. Check logs for further details.
+
+> [!Important]
+> Windows 365 devices that are reprovisioned after a failed deployment will not be deleted from Intune and will remain in the Autopilot device preparation report to allow for you to download the diagnostic logs when an error occurs. To clean up the stale records, use [Intune cleanup rules](/intune/intune-service/fundamentals/device-cleanup-rules) or delete manually.
