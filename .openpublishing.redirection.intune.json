@@ -27,7 +27,7 @@
     },
     {
       "source_path": "intune/analytics/index.md",
-      "redirect_url": "/intune/endpoint-analytics/",
+      "redirect_url": "/intune/endpoint-analytics",
       "redirect_document_id": false
     },
     {
