@@ -89,13 +89,13 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 
 :::column-end:::
 :::column span="3":::
-> Endpoint analytics supports devices that are:
->
-> - Managed by Intune
-> - Co-managed (Intune + Configuration Manager)
-> - Managed by Configuration Manager (via tenant attach)
-> - Microsoft Entra joined
-> - Microsoft Entra hybrid joined
+> > [!div class="checklist"]
+> > Endpoint analytics supports devices that are:
+> > - Managed by Intune
+> > - Co-managed (Intune + Configuration Manager)
+> > - Managed by Configuration Manager (via tenant attach)
+> > - Microsoft Entra joined
+> > - Microsoft Entra hybrid joined
 >
 > Devices must also meet the following requirements:
 > - The **Connected User Experiences and Telemetry** service (DiagTrack) must be enabled and running.
