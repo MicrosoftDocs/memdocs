@@ -65,7 +65,7 @@ Use the table in this section to troubleshoot common issues with Remote Help.
   | The helper and sharer are signing in with organizational accounts from the same tenant | Both the helper and sharer must sign in with a Microsoft Entra account from your organization. You can't use Remote Help to assist users who aren't members of your organization. |
   | The helper and sharer have network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-considerations) for details. |
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 Use the table in this section to troubleshoot common issues with Remote Help on Windows devices.
 
@@ -101,7 +101,7 @@ Use these steps to resolve these issues:
   > [!NOTE]
   > WebView2 should already be installed if your device is running Windows 11 or has Microsoft Edge.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 Use the table in this section to troubleshoot common issues with Remote Help on macOS devices.
 
@@ -111,7 +111,7 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
   | The required operating system permissions for *Accessibility* and *Screen sharing* are allowed | See [Plan Remote Help](remote-help-deploy.md?tabs=macos#configure-remote-help-apps) for details. |
   | Whether the sharer is using the native Remote Help app or the web app | The web app only allows view access, which might confuse helpers expecting control. |
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 Use the table in this section to troubleshoot common issues with Remote Help on Android devices.
 
@@ -132,21 +132,21 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
 
 ## Known Issues
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 For Windows devices, the following are known issues with Remote Help when using the remote launch feature:
 - Notifications for remotely triggering a Remote Help session fail if the *Microsoft Intune Management Service* isn't running.
 - After the user's device is restarted, there's a short delay for the *Microsoft Intune Management Service* to start. Either wait for the *Microsoft Intune Management Service* to start or ask the sharer to open the app and share the code.
 - For newly enrolled devices, there's a 1 hour delay before the user's device begins receiving notifications when a helper initiates a session.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 - If the sharer exits from a Remote Help session early, the helper might not be notified for 60+ seconds.
 - If using Microsoft Edge, the sharer might have to sign in to Microsoft Edge before starting a session or the device reports as Unenrolled.
 - Verify that your browser is up to date.
 - If you're screen sharing using another application like Teams or recording during the session, it might take longer for the session to connect.
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 - On newly enrolled devices, push notifications, needed for Remote Help to receive session initiation requests, can take a while to start working. Wait for 15 minutes and try again later.
 

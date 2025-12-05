@@ -1,7 +1,7 @@
 ---
 title: Overview of enrollment restrictions
 description: Learn about the enrollment restrictions available in Microsoft Intune.
-ms.date: 12/12/2024
+ms.date: 12/04/2025
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -27,17 +27,25 @@ Each restriction type comes with one default policy that you can edit and custom
 
 This article provides an overview of the available enrollment restrictions, and feature limitations. To start creating restrictions, skip to [Next steps](enrollment-restrictions-set.md#next-steps) (in this article).
 
-## Supported platforms  
-Enrollment restrictions are available for these platforms: 
-* Android
-* iOS
-* macOS
-* Windows
+## Prerequisites
 
-Availability varies by restriction type. 
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]  
+:::column-end:::
+:::column span="3":::
+> Enrollment restrictions are available for the following platforms:
+>
+> - Android device administrator
+> - Android Enterprise personally-owned devices with a work profile (BYOD)
+> - iOS
+> - macOS
+> - Windows
+:::column-end:::
+:::row-end:::
+
+Availability varies by restriction type.
 
 ## Available restrictions
 You can configure the following restrictions in the admin center:
@@ -58,13 +66,12 @@ This configuration is in the admin center under **Enrollment device limit restri
 Block devices running on a specific device platform. You can apply this restriction to devices running:
 
    * Android device administrator
-   * Android Enterprise work profile
+   * Android Enterprise personally-owned devices with a work profile (BYOD)
    * iOS/iPadOS
    * macOS
    * Windows 
 
 In groups where both Android platforms are allowed, devices that support work profile will enroll with a work profile. Devices that don't support work profile will enroll on the Android device administrator platform. Neither work profile nor device administrator enrollment will work until you complete all prerequisites for Android enrollment.
-
 
 This restriction is in the admin center under **Devices** > **Device onboarding** > **Enrollment** > **Device platform restriction**.
 
@@ -76,7 +83,7 @@ This restriction is in the admin center under **Devices** > **Device onboarding*
 This restriction enforces your maximum and minimum OS version requirements. This type of restriction works with the following operating systems:
 
    * Android device administrator\*
-   * Android Enterprise work profile\*
+   * Android Enterprise personally-owned devices with a work profile (BYOD)\*
    * iOS/iPadOS\*
    * Windows  
 
@@ -141,7 +148,7 @@ Intune also blocks personal devices using these enrollment methods:
 
 ## Limitations
 
-* Enrollment restrictions are applied to enrollments that are user-driven. Intune enforces the default policy in enrollment scenarios that aren't user-driven, such as:
+* Enrollment restrictions are applied to enrollments that are user-driven. For enrollment scenarios that **aren't** user-driven, Intune enforces the default policy. For example, the following enrollment scenarios use the default policy because they **aren't** user-driven:
 
   *  Windows Autopilot self-deploying mode and Windows Autopilot for pre-provisioned deployment
   *  Bulk enrollment via Windows Configuration Designer
@@ -149,6 +156,7 @@ Intune also blocks personal devices using these enrollment methods:
   *  Userless Apple automated device enrollment (without user-device affinity)
   *  Azure Virtual Desktop
   *  Windows 365
+  *  Android Enterprise corporate-owned dedicated devices
 
 * Device limit restrictions can't be applied to devices in the following Windows enrollment scenarios, because these scenarios utilize shared device mode:
 

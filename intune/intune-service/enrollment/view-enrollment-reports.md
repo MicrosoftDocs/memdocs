@@ -47,16 +47,16 @@ The device enrollment page shows the enrollment policies (both enrollment restri
 
   * Profile name
   * User principal name
-  * Profile type (either enrollment status page or device type enrollment restriction)
+  * Profile type (includes enrollment status page, device type enrollment restriction, or Windows Backup and Restore profile)
   * Priority
   * Target (either user or device)
-  * Filters, with a link to the filter evaluation results (only available if the enrollment policy was assigned using an assignment filter)
+  * Filters, with a link to the filter evaluation results (only available if the enrollment policy was assigned using an assignment filter)  
 
 To access report data:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All devices**.
 2. Select an enrolled iOS/iPadOS, macOS, or Windows device.
-3. From the **Monitor** options, select **Enrollment**.
+3. From the **Monitor** options, select **Enrollment**.  
 4. Review the report data.
 
     > [!div class="mx-imgBorder"]

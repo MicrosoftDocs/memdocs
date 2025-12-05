@@ -3,7 +3,7 @@ title: Configure client status
 titleSuffix: Configuration Manager
 description: Select client status settings in Configuration Manager.
 ms.date: 07/13/2020
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi

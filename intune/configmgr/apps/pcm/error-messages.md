@@ -3,7 +3,7 @@ title: Error messages
 titleSuffix: Configuration Manager
 description: Learn about the error messages from Package Conversion Manager.
 ms.date: 08/24/2018
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
 author: LauraWi

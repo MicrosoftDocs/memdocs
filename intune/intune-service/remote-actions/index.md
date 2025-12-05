@@ -34,7 +34,7 @@ Microsoft Intune supports remote device actions across multiple platforms. The a
 
 Select one of the following tabs to learn more about the available remote actions for each platform:
 
-# [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+# [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 | Icon | Action | Description |
 |--|--|--|
@@ -60,7 +60,7 @@ Select one of the following tabs to learn more about the available remote action
 > [!TIP]
 > For Intel vPro devices, Intune also integrates with Intel vPro Fleet Services to provide hardware-level remote management capabilities, including out-of-band management that works even when the operating system is unresponsive or the device is powered off.
 
-# [:::image type="icon" source="../../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
+# [:::image type="icon" source="../../media/icons/16/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
 
 | Icon | Action | Description |
 |--|--|--|
@@ -83,7 +83,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="icons/update-cellular-data-plan.svg" border="false"::: | [Update cellular data plan][RA-CELLULAR] | Updates the cellular data plan settings for a device that uses an eSIM profile. |
 | :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
 
-# [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+# [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 | Icon | Action | Description |
 |--|--|--|
@@ -98,7 +98,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
 | :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
 
-# [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+# [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 | Icon | Action | Description |
 |--|--|--|
@@ -116,7 +116,7 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
 | :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
 
-# [:::image type="icon" source="../../media/icons/platforms/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
+# [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 > [!NOTE]
 > To manage ChromeOS devices with Intune, you must first [set up the Chrome Enterprise connector](../enrollment/chrome-enterprise-connector-configure.md) and enroll devices by using the Google Admin console. This integration allows you to manage ChromeOS devices alongside other platforms in Intune.
@@ -155,7 +155,7 @@ For example, at the end of a school year, IT admins can use bulk wipe to securel
 
 Select one of the following tabs to learn more about the available bulk remote actions for each platform:
 
-# [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+# [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 | Bulk action                    | Description                                                                                |
 |--------------------------------|--------------------------------------------------------------------------------------------|
@@ -168,7 +168,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Sync][RA-SYNC]                | Syncs a device with Intune to apply the latest policies and configurations.                |
 | [Wipe][RA-WIPE]                | Restores a device to the factory settings and removes all data and settings.               |
 
-# [:::image type="icon" source="../../media/icons/platforms/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
+# [:::image type="icon" source="../../media/icons/16/ios-ipados.svg"::: **iOS/iPadOS**](#tab/ios-ipados)
 
 | Bulk action                              | Description                                                                                   |
 |------------------------------------------|-----------------------------------------------------------------------------------------------|
@@ -181,7 +181,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Update cellular data plan][RA-CELLULAR] | Updates the cellular data plan settings for a device that uses an eSIM profile.               |
 | [Wipe][RA-WIPE]                          | Restores a device to its factory settings and removes all data and settings.                  |
 
-# [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+# [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 | Bulk action             | Description                                                                                |
 |-------------------------|--------------------------------------------------------------------------------------------|
@@ -192,7 +192,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Sync][RA-SYNC]         | Syncs a device with Intune to apply the latest policies and configurations.                |
 | [Wipe][RA-WIPE]         | Restores a device to its factory settings and removes all data and settings.               |
 
-# [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+# [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 | Bulk action           | Description                                                                                |
 |-----------------------|--------------------------------------------------------------------------------------------|
@@ -201,7 +201,7 @@ Select one of the following tabs to learn more about the available bulk remote a
 | [Restart][RA-RESTART] | Restarts a device.                                                                         |
 | [Wipe][RA-WIPE]       | Restores a device to its factory settings and removes all data and settings.               |
 
-# [:::image type="icon" source="../../media/icons/platforms/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
+# [:::image type="icon" source="../../media/icons/16/chromeos.svg"::: **ChromeOS**](#tab/chromeos)
 
 | Bulk action              | Description                                                                                                                                                                                     |
 |--------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

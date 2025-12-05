@@ -195,7 +195,7 @@ If you install [KB5011543](https://support.microsoft.com/topic/march-22-2022-kb5
 
 This following list is the same order as the diagnostic zip. Each collection contains the following data:
 
-# [:::image type="icon" source="../../media/icons/windows/registry.svg"::: **Registry keys**](#tab/reg)
+# [:::image type="icon" source="../../media/icons/16/registry.svg"::: **Registry keys**](#tab/reg)
 
 |Registry key|
 |-|
@@ -217,7 +217,7 @@ This following list is the same order as the diagnostic zip. Each collection con
 |`HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm`|
 |`HKLM\SYSTEM\Setup\SetupDiag\Results`|
 
-# [:::image type="icon" source="../../media/icons/windows/cmd.svg"::: **Commands**](#tab/cmds)
+# [:::image type="icon" source="../../media/icons/16/cmd.svg"::: **Commands**](#tab/cmds)
 
 |Command|
 |-|
@@ -239,7 +239,7 @@ This following list is the same order as the diagnostic zip. Each collection con
 |`%windir%\system32\powercfg.exe /batteryreport /output %temp%\MDMDiagnostics\battery-report.html`|
 |`%windir%\system32\powercfg.exe /energy /output %temp%\MDMDiagnostics\energy-report.html`|
 
-# [:::image type="icon" source="../../media/icons/windows/eventvwr.svg"::: **Event Viewer**](#tab/events)
+# [:::image type="icon" source="../../media/icons/16/eventvwr.svg"::: **Event Viewer**](#tab/events)
 
 |Event|
 |-|
@@ -261,7 +261,7 @@ This following list is the same order as the diagnostic zip. Each collection con
 |`Setup`|
 |`System`|
 
-# [:::image type="icon" source="../../media/icons/windows/explorer.svg"::: **Files**](#tab/files)
+# [:::image type="icon" source="../../media/icons/16/explorer.svg"::: **Files**](#tab/files)
 
 |Path|
 |-|
