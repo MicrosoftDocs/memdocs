@@ -108,7 +108,7 @@ items:
     - name: Copilot in Windows 365 Cloud PCs
       href: /windows-365/enterprise/copilot-in-intune-for-windows365?toc=%2Fmem%2Fintune-service%2Ftoc.json&bc=%2Fmem%2Fintune-service%2Fbreadcrumb%2Ftoc.json
     - name: Security Copilot agents in Microsoft Intune
-      href: ./copilot/security-copilot-agents-intune.md
+      href: ../agents/toc.yml
 
   - name: Intune Suite
     items:
@@ -858,8 +858,6 @@ items:
               href: ./protect/mde-security-integration.md
             - name: Manage endpoint security policies in Microsoft Defender
               href: /defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json
-        - name: Vulnerability Remediation Agent
-          href: ./protect/vulnerability-remediation-agent.md
         - name: Endpoint Privilege Management overview
           href: ./protect/epm-overview.md
         - name: Tenant attach
@@ -1839,6 +1837,8 @@ items:
     items:
     - name: Tenant status and health
       href: ./fundamentals/tenant-status.md
+    - name: Manage admin tasks
+      href: ./fundamentals/admin-tasks.md
     - name: Device cleanup rules
       href: ./fundamentals/device-cleanup-rules.md
 

@@ -70,19 +70,19 @@ The built-in **Help Desk Operator** role includes all of the required permission
 
 ## Download Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelp](https://aka.ms/downloadremotehelp).  
 
 The most recent version of Remote Help is **5.1.1998.0**.    
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 Directly download the latest version of Remote Help from Microsoft at [aka.ms/downloadremotehelpmacos](https://aka.ms/downloadremotehelpmacos).    
 
 The most recent version of Remote Help is **1.0.2509231**.
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 The Remote Help app for Android is available on the Google Play store. For more information, see [Remote Help - Google Play Apps](https://play.google.com/store/apps/details?id=com.microsoft.intune.remotehelp).  
 
@@ -90,7 +90,7 @@ The Remote Help app for Android is available on the Google Play store. For more 
 
 ## Install Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 Remote Help is available as a download from Microsoft and must be installed on each device before that device can be used to participate in a Remote Help session. Remote Help's default behavior opts users into automatic updates and updates itself when an update is available.  
 
@@ -156,7 +156,7 @@ After you repackage Remote Help as a *.intunewin* file, use the procedures in [A
 
 1. Complete creation of the Windows app to have Intune deploy and install Remote Help on applicable devices.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 #### Install and update Remote Help native app
 
@@ -173,7 +173,7 @@ For more information on installing Remote Help through Intune as a required inst
 
 For more information on making Remote Help available in Company Portal for the user to install, see [How to add macOS line-of-business apps to Microsoft Intune](../apps/lob-apps-macos.md).
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 To set up Remote Help for Android, complete the following steps:
 
@@ -197,7 +197,7 @@ To set up Remote Help for Android, complete the following steps:
 
 ## Configure Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 #### Windows Firewall details
 
@@ -207,7 +207,7 @@ Depending on which environment Remote Help is utilized in, it might be necessary
 - C:\Program Files\Remote help\RHService.exe  
 - C:\Program Files\Remote help\RemoteHelpRDP.exe  
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 On macOS, apps that access and control the screen require permission. The default behavior is to require users to accept these permissions. macOS allows some control capabilities for each type of privacy setting using *Privacy Preferences Policy Control*. 
 
@@ -274,7 +274,7 @@ Content-Type: application/json
 ```
 [!INCLUDE [graph-explorer-steps](../includes/graph-explorer-steps.md)]
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 #### Grant permissions
 
@@ -417,15 +417,15 @@ On some devices, the user also needs to agree to Samsung's KLMS Agent terms and 
 
 ## Update Remote Help apps
 
-### [:::image type="icon" source="../../media/icons/platforms/windows.svg"::: **Windows**](#tab/windows)
+### [:::image type="icon" source="../../media/icons/16/windows.svg"::: **Windows**](#tab/windows)
 
 Remote Help receives updates via Microsoft Update if configured. Otherwise, you need to update the application by using the Enterprise App Catalog (available as part of Intune Suite) or by packaging and deploying the update as a Win32 app.
 
-### [:::image type="icon" source="../../media/icons/platforms/macos.svg"::: **macOS**](#tab/macos)
+### [:::image type="icon" source="../../media/icons/16/macos.svg"::: **macOS**](#tab/macos)
 
 Remote Help receives the latest versions through the [Microsoft AutoUpdate (MAU) application](/DeployOffice/mac/update-office-for-mac-using-msupdate#application-identifiers). Users can opt in for automatic updates to ensure Remote Help is up to date.
 
-### [:::image type="icon" source="../../media/icons/platforms/android.svg"::: **Android**](#tab/android)
+### [:::image type="icon" source="../../media/icons/16/android.svg"::: **Android**](#tab/android)
 
 The Google Play store updates the Remote Help app for Android after deployment.
 
