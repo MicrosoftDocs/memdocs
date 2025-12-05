@@ -17,6 +17,8 @@ items:
     href: 2503/34503790.md
   - name: KB 32851084 Update rollup for version 2503
     href: 2503/32851084.md
+  - name: KB 35958849 Cloud management gateway deployment maintenance update
+    href: 2503/35958849.md
 
 - name: Version 2409
   items:
@@ -34,6 +36,8 @@ items:
     href: 2503/34503790.md
   - name: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
     href: 2409/35360093.md
+  - name: KB 35958849 Cloud management gateway deployment maintenance update
+    href: 2503/35958849.md
 - name: Version 2403
   items:
   - name: KB 26186448 Summary of changes in 2403
