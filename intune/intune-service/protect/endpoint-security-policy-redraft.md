@@ -253,7 +253,7 @@ Many endpoint security policies have deep integration with Microsoft Defender fo
 
 ### Prerequisites for Defender integration
 
-- **Licensing**: Microsoft Defender for Endpoint P1 or P2 licenses (requirements vary by policy type)
+- **Licensing**: Microsoft Defender for Endpoint P1 or greater license
 - **Tenant connection**: Service-to-service connection between Intune and Defender for Endpoint tenants
 - **Agent deployment**: Defender for Endpoint agent installed on target devices (required for some policy types)
 - **Network connectivity**: Device access to `*.dm.microsoft.com` endpoints for Defender security settings management and policy communication
