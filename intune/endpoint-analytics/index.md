@@ -74,12 +74,12 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 
 :::column-end:::
 :::column span="3":::
-> Endpoint analytics supports the following Windows editions:
->
-> - Pro
-> - Pro Education
-> - Enterprise
-> - Education
+> > [!div class="checklist"]
+> > Endpoint analytics supports the following Windows editions:
+> > - Pro
+> > - Pro Education
+> > - Enterprise
+> > - Education
 :::column-end:::
 :::row-end:::
 
@@ -96,9 +96,9 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 > > - Managed by Configuration Manager (via tenant attach)
 > > - Microsoft Entra joined
 > > - Microsoft Entra hybrid joined
->
-> Devices must also meet the following requirements:
-> - The **Connected User Experiences and Telemetry** service (DiagTrack) must be enabled and running.
+> >
+> > Devices must also meet the following requirements:
+> > - The **Connected User Experiences and Telemetry** service (DiagTrack) must be enabled and running.
 :::column-end:::
 :::row-end:::
 
