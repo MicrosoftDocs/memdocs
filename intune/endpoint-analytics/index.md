@@ -74,12 +74,11 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 
 :::column-end:::
 :::column span="3":::
-> > [!div class="checklist"]
-> > Endpoint analytics supports the following Windows editions:
-> > - Pro
-> > - Pro Education
-> > - Enterprise
-> > - Education
+> Endpoint analytics supports the following Windows editions:
+> - Pro
+> - Pro Education
+> - Enterprise
+> - Education
 :::column-end:::
 :::row-end:::
 
@@ -89,16 +88,15 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 
 :::column-end:::
 :::column span="3":::
-> > [!div class="checklist"]
-> > Endpoint analytics supports devices that are:
-> > - Managed by Intune
-> > - Co-managed (Intune + Configuration Manager)
-> > - Managed by Configuration Manager (via tenant attach)
-> > - Microsoft Entra joined
-> > - Microsoft Entra hybrid joined
-> >
-> > Devices must also meet the following requirements:
-> > - The **Connected User Experiences and Telemetry** service (DiagTrack) must be enabled and running.
+> Endpoint analytics supports devices that are:
+> - Managed by Intune
+> - Co-managed (Intune + Configuration Manager)
+> - Managed by Configuration Manager (via tenant attach)
+> - Microsoft Entra joined
+> - Microsoft Entra hybrid joined
+>
+> Devices must also meet the following requirements:
+> - The **Connected User Experiences and Telemetry** service (DiagTrack) must be enabled and running.
 :::column-end:::
 :::row-end:::
 
@@ -109,31 +107,31 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 :::column-end:::
 :::column span="3":::
 ::: zone pivot="intune"
->To enroll Intune-managed devices to endpoint analytics, they need to send required functional data to Microsoft public cloud. Ensure the following endpoints are accessible from Intune-managed devices:
+> To enroll Intune-managed devices to endpoint analytics, they need to send required functional data to Microsoft public cloud. Ensure the following endpoints are accessible from Intune-managed devices:
 >
 > | Endpoint  | Function  |
 > |-----------|-----------|
 > | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
->For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
+> For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
 ::: zone-end
 
 ::: zone pivot="cm"
 
->Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure the proxy server to allow the following endpoints:
+> Configuration Manager-managed devices send data to Intune via the connector on the Configuration Manager role and they don't need directly access to the Microsoft public cloud. If your environment uses a proxy server, configure the proxy server to allow the following endpoints:
 >
 > | Endpoint  | Function  |
 > |-----------|-----------|
 > | `https://graph.windows.net` | Used to automatically retrieve settings  when attaching your hierarchy to endpoint analytics on Configuration Manager Server role. For more information, see [Configure the proxy for a site system server](../configmgr/> core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 > | `https://*.manage.microsoft.com` | Used to synch device collection and devices with endpoint analytics on Configuration Manager Server role only. For more information, see [Configure the proxy for a site system server](../configmgr/core/plan-design/network/proxy-server-support.md#configure-the-proxy-for-a-site-system-server). |
 >
->If you have co-management enabled, enrolled devices send required functional data directly to Microsoft public cloud. In this case, ensure the following endpoints are accessible from co-managed devices:
+> If you have co-management enabled, enrolled devices send required functional data directly to Microsoft public cloud. In this case, ensure the following endpoints are accessible from co-managed devices:
 >
 > | Endpoint  | Function  |
 > |-----------|-----------|
 > | `https://*.events.data.microsoft.com` | Used by managed devices to send [required functional data](data-collection.md#data-collection) to the Intune data collection endpoint. |
 >
->For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
+> For more information and troubleshooting proxy configurations, see [Troubleshoot endpoint analytics](troubleshoot.md#proxy-server-authentication).
 ::: zone-end
 
 :::column-end:::
@@ -169,31 +167,29 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 >
 > ---
 >
-> > [!div class="checklist"]
-> > To [configure endpoint analytics](configure.md), you need an account with at least one of the following Intune roles:
-> > 
-> > - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
-> > - A [custom role][INT-RC] that includes:
-> >   - **Endpoint Analytics/Read** — View scores and performance reports.
-> >   - **Endpoint Analytics/Create, Update, Delete** — Manage settings and baselines.
-> >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
-> >   - **Device configurations/Create, Read, Assign** — Required to create and assign the data collection policy
+> To [configure endpoint analytics](configure.md), you need an account with at least one of the following Intune roles:
+> 
+> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
+> - A [custom role][INT-RC] that includes:
+>   - **Endpoint Analytics/Read** — View scores and performance reports.
+>   - **Endpoint Analytics/Create, Update, Delete** — Manage settings and baselines.
+>   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
+>   - **Device configurations/Create, Read, Assign** — Required to create and assign the data collection policy
 >
 > ---
 >
-> > [!div class="checklist"]
-> > To [access endpoint analytics reports](scores.md), you need an account with at least one of the following Intune roles:
-> > 
-> > - [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
-> > - [Read Only Operator][INT-R4]: Grants read permissions to endpoint analytics.
-> > - [Endpoint Security Manager][INT-R5]: Grants read permissions to endpoint analytics.
-> > - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
-> > - [Custom role][INT-RC] that includes:
-> >   - **Endpoint Analytics/Read** — View scores and performance reports.
-> >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
-> >
-> > You can also use an account that has the following Microsoft Entra built-in  roles:
-> > - [Reports Reader][ENT-R3]: Grants read permissions to endpoint analytics.
+> To [access endpoint analytics reports](scores.md), you need an account with at least one of the following Intune roles:
+> 
+> - [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
+> - [Read Only Operator][INT-R4]: Grants read permissions to endpoint analytics.
+> - [Endpoint Security Manager][INT-R5]: Grants read permissions to endpoint analytics.
+> - [School Administrator][INT-R2]: Grants read/write permissions to endpoint analytics.
+> - [Custom role][INT-RC] that includes:
+>   - **Endpoint Analytics/Read** — View scores and performance reports.
+>   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
+>
+> You can also use an account that has the following Microsoft Entra built-in  roles:
+> - [Reports Reader][ENT-R3]: Grants read permissions to endpoint analytics.
 
 :::column-end:::
 :::row-end:::
