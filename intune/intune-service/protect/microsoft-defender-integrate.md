@@ -175,7 +175,7 @@ With this path, you can define all aspects of the initial onboarding policy befo
 8. On the **Review + create** page, when you're done, choose **Create**. The new profile is displayed in the list when you select the policy type for the profile you created.
 
    > [!TIP]
-   > When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings, you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
+   > When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings, you can create policy conflicts for devices. To learn more about conflicts, see [Manage policy conflicts](../protect/endpoint-security-policy.md#manage-policy-conflicts) in the *Manage security policies* article.
 
 ### Onboard macOS devices
 
