@@ -134,7 +134,7 @@ Endpoint security policies use either granular permissions for specific workload
 > [!IMPORTANT]
 > For Attack surface reduction policies, check the specific profile requirements. Some profiles use the granular *Attack surface reduction* permission while others require *Security baselines* permission.
 
-For detailed profile-specific requirements, see [Use custom RBAC roles](../protect/endpoint-security-policy.md#use-custom-rbac-roles).
+For detailed profile-specific requirements, see [Custom role considerations](#custom-role-considerations).
 
 > [!IMPORTANT]
 >
