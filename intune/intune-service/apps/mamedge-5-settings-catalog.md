@@ -61,7 +61,7 @@ Level 1 configuration provides foundational browser security controls while main
 | Category | Setting | Value | Documentation |
 |-----------|---------|-------|----------------|
 | Microsoft Edge\SmartScreen settings | Configure Microsoft Defender SmartScreen | Enabled | [Configure Microsoft Defender SmartScreen](/deployedge/microsoft-edge-browser-policies/smartscreenenabled) |
-| Microsoft Edge\Automatic HTTPS | Enable automatic HTTPS | Enabled | [Enable automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
+| Microsoft Edge\Automatic HTTPS | Configure automatic HTTPS | Enabled | [Enable automatic HTTPS](/deployedge/microsoft-edge-browser-policies/httpsonlymode) |
 | Microsoft Edge\Content settings | Block third party cookies | Enabled | [Block third party cookies](/deployedge/microsoft-edge-browser-policies/blockthirdpartycookies) |
 | Microsoft Edge\Content settings | Configure cookies | Disabled | [Configure cookies](/deployedge/microsoft-edge-browser-policies/defaultcookiessetting) |
 | Microsoft Edge\Content settings | Default pop-up window setting | Do not allow any site to show popups (2) | [Default pop-up window setting](/deployedge/microsoft-edge-browser-policies/defaultpopupssetting) |
@@ -117,8 +117,8 @@ Level 1 configuration provides foundational browser security controls while main
 | Microsoft Edge\Feature controls | Enable Workspaces | Enabled | [Enable Workspaces](/deployedge/microsoft-edge-browser-policies/edgeworkspacesenabled) |
 | Microsoft Edge\Feature controls | Allow or deny screen capture | Disabled | [Allow or deny screen capture](/deployedge/microsoft-edge-browser-policies/screencaptureallowed) |
 | Microsoft Edge\Feature controls | Default sensors setting | Block (2) | [Default sensors setting](/deployedge/microsoft-edge-browser-policies/defaultsensorssetting) |
-| Microsoft Edge Update\Update policy override | Update policy override default | Always allow updates (1) | [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault) |
-| Microsoft Edge Update\Update policy override | Auto-update check period override | 1440 | [Auto-update check period override](/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) |
+| Microsoft Edge Update\Applications | Update policy override default | Always allow updates (1) | [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault) |
+| Microsoft Edge Update\Preferences | Auto-update check period override | 1440 | [Auto-update check period override](/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) |
 | Microsoft Edge Update\Preferences | Target Channel override | stable | [Target Channel override](/deployedge/microsoft-edge-update-policies#targetchannel) |
 | Microsoft Edge Update\Preferences | Let users update all apps on metered connections | Updates disabled (1) | [Let users update all apps on metered connections](/deployedge/microsoft-edge-update-policies#meteredupdatesdefault) |
 | Microsoft Edge Update\Experimentation and Configuration Service | Control updater's communication with the Experimentation and Configuration Service | Disabled (0) | [Control updater's communication with the Experimentation and Configuration Service](/deployedge/microsoft-edge-update-policies#updaterexperimentationandconfigurationservicecontrol) |
@@ -175,9 +175,9 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 | Microsoft Edge | Allow specific extensions to be installed | ["*.company.com"] | [Allow specific extensions to be installed](/deployedge/microsoft-edge-browser-policies/extensioninstallallowlist) |
 | Microsoft Edge | Allow user-level native messaging hosts (installed without admin permissions) | Enabled | [Allow user-level native messaging hosts (installed without admin permissions)](/deployedge/microsoft-edge-browser-policies/nativemessaginguserlevelhosts) |
 | Microsoft Edge | Configure native messaging block list | Enabled, ["*"] | [Configure native messaging block list](/deployedge/microsoft-edge-browser-policies/nativemessagingblocklist) |
-| Microsoft Edge | Control which extensions are installed silently | [] | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) |
-| Microsoft Edge | Configure extension and user script install sources | [] | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) |
-| Microsoft Edge | Configure allowed extension types | [] | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
+| Microsoft Edge | Control which extensions are installed silently | ["*"] | [Control which extensions are installed silently](/deployedge/microsoft-edge-browser-policies/extensioninstallforcelist) |
+| Microsoft Edge | Configure extension and user script install sources | ["*"] | [Configure extension and user script install sources](/deployedge/microsoft-edge-browser-policies/extensioninstallsources) |
+| Microsoft Edge | Configure allowed extension types | ["*"] | [Configure allowed extension types](/deployedge/microsoft-edge-browser-policies/extensionallowedtypes) |
 | Microsoft Edge | Control Manifest v2 extension availability | Disabled | [Control Manifest v2 extension availability](/deployedge/microsoft-edge-browser-policies/extensionmanifestv2availability) |
 | Microsoft Edge | Blocks external extensions from being installed | Enabled | [Blocks external extensions from being installed](/deployedge/microsoft-edge-browser-policies/blockexternalextensions) |
 | Microsoft Edge | Set download directory | ${user_home}/Downloads/EdgeControlled | [Set download directory](/deployedge/microsoft-edge-browser-policies/downloaddirectory) |
@@ -199,8 +199,8 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 | Microsoft Edge | Control where developer tools can be used | Enabled | [Control where developer tools can be used](/deployedge/microsoft-edge-browser-policies/developertoolsavailability) |
 | Microsoft Edge | Allow remote debugging | Disabled | [Allow remote debugging](/deployedge/microsoft-edge-browser-policies/remotedebuggingallowed) |
 | Microsoft Edge Update\Update scheduling | Time period in each day to suppress auto-update check | Hour: 8, Minute: 0, Duration: 600 (suppress 8 AM – 6 PM) | [Time period in each day to suppress auto-update check](/deployedge/microsoft-edge-update-policies#updatessuppressed) |
-| Microsoft Edge Update\Update policy override | Auto-update check period override | 720 (12 hours) | [Auto-update check period override](/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) |
-| Microsoft Edge Update\Update policy override | Update policy override default | Automatic silent updates only (3) | [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault) |
+| Microsoft Edge Update\Preferences | Auto-update check period override | 720 (12 hours) | [Auto-update check period override](/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) |
+| Microsoft Edge Update\Applications | Update policy override default | Automatic silent updates only (3) | [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault) |
 
 12. Select **Next**.  
 13. For **Assignments**, assign to **SEB-Level2-Devices** group.  
@@ -253,10 +253,10 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 | Microsoft Edge\Privacy | Allow user feedback | Disabled | [Allow user feedback](/deployedge/microsoft-edge-browser-policies/userfeedbackallowed) |
 | Microsoft Edge\Privacy | URL reporting in Edge diagnostic data enabled | Disabled | [URL reporting in Edge diagnostic data enabled](/deployedge/microsoft-edge-browser-policies/urldiagnosticdataenabled) |
 | Microsoft Edge\Session isolation | Enable site isolation for specific origins | Disabled | [Enable site isolation for specific origins](/deployedge/microsoft-edge-browser-policies/isolateorigins) |
-| Microsoft Edge Update\Update policy override | Target version override | 131.0.2903.112 | [Target version override](/deployedge/microsoft-edge-update-policies#targetversionprefix) |
-| Microsoft Edge Update\Update policy override | Update policy override default | Manual updates only (2) | [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault) |
-| Microsoft Edge Update\Update policy override | Rollback to Target version | Enabled (1) | [Rollback to Target version](/deployedge/microsoft-edge-update-policies#rollbacktotargetversion) |
-| Microsoft Edge Update\Update policy override | Auto-update check period override | 10080 (7 days) | [Auto-update check period override](/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) |
+| Microsoft Edge Update\Applicatons | Target version override | 131.0.2903.112 | [Target version override](/deployedge/microsoft-edge-update-policies#targetversionprefix) |
+| Microsoft Edge Update\Applications | Update policy override default | Manual updates only (2) | [Update policy override default](/deployedge/microsoft-edge-update-policies#updatedefault) |
+| Microsoft Edge Update\Applications | Rollback to Target version | Enabled (1) | [Rollback to Target version](/deployedge/microsoft-edge-update-policies#rollbacktotargetversion) |
+| Microsoft Edge Update\Preferences | Auto-update check period override | 10080 (7 days) | [Auto-update check period override](/deployedge/microsoft-edge-update-policies#autoupdatecheckperiodminutes) |
 | Microsoft Edge Update\Update scheduling | Time period in each day to suppress auto-update check | Hour: 6, Minute: 0, Duration: 840 (suppress 6 AM – 8 PM) | [Time period in each day to suppress auto-update check](/deployedge/microsoft-edge-update-policies#updatessuppressed) |
 | Microsoft Edge Update\Installation behavior | Allow installation default | Always allow Machine-Wide Installs but not Per-User Installs (4) | [Allow installation default](/deployedge/microsoft-edge-update-policies#installdefault) |
 | Microsoft Edge Update\Preview enrollment | Allow users in the Windows Insider Program to be enrolled in Edge Preview | Disabled (0) | [Allow users in the Windows Insider Program to be enrolled in Edge Preview](/deployedge/microsoft-edge-update-policies#edgepreview) |

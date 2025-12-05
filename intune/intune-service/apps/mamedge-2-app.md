@@ -95,7 +95,7 @@ Level 2 configuration includes enhanced data protection controls and stricter en
    - Disabled account: **Block access**
    - Min OS version: **10.0.22621.2506 / Block access**
    - Max allowed device threat level: **Medium / Block access**
-   - Offline grace period: **10080 minutes / Block access**
+   - Offline grace period: **1440 minutes / Block access**
    - Offline grace period: **30 days / Wipe data**
 10. Select **Next**.
 11. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.
@@ -263,7 +263,7 @@ Level 2 configuration includes all Level 1 settings plus additional controls for
    - Min patch version: **2024-10-01 / Block access**
    - Min app version: **Latest / Warn**
    - Max PIN attempts: **5 / Reset PIN**
-   - Offline grace period: **10080 minutes / Block access**
+   - Offline grace period: **1440 minutes / Block access**
    - Offline grace period: **30 days / Wipe data**
    - Jailbroken/rooted devices: **Block access**
 11. Select **Next**.
@@ -328,7 +328,7 @@ Level 3 configuration provides the highest level of data protection and is recom
    - Jailbroken/rooted devices: **Wipe data**
    - Max allowed threat level: **Secured / Block access**
    - Max OS version: **26.0.1 / Block access**
-   - Offline grace period: **10080 minutes / Block access**
+   - Offline grace period: **1440 minutes / Block access**
    - Offline grace period: **30 days / Block access**
    - Disabled account: **Block access**
    - Min OS version: **14.8 / Block access**
@@ -589,7 +589,7 @@ Level 3 configuration provides the highest level of data protection and is recom
    - Max allowed threat level: **Secured / Block access**
    - Max OS version: **16.0 / Block access**
    - Samsung Knox device attestation: **Wipe data**
-   - Offline grace period: **10080 minutes / Block access**
+   - Offline grace period: **1440 minutes / Block access**
    - Offline grace period: **30 days / Block access**
    - Disabled account: **Block access**
    - Min OS version: **9.0 / Block access**

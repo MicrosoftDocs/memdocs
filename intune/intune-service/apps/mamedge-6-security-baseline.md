@@ -143,8 +143,6 @@ For Level 3 high security, supplement the baseline with extra Settings Catalog p
 | Browser Features | Show Home button on toolbar | Enabled |
 |  | Configure the home page URL | about:blank |
 |  | Configure the new tab page URL | about:blank |
-<!--| InPrivate mode | Configure InPrivate mode availability | Available |
-| Sync | Force synchronization of browser data | Disabled |-->
 
 6. Select **Next**.
 7. For **Scope tags**, select the appropriate scope tag.
