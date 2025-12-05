@@ -44,7 +44,7 @@ Settings Catalog for Windows provides comprehensive browser configuration with p
 
 Level 1 configuration provides foundational browser security controls while maintaining user productivity.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration** > **Create** > **New policy**.  
 3. For **Platform**, choose **Windows 10 and later**. For **Profile type**, choose **Settings catalog**.  
 4. Select **Create**.  
@@ -132,7 +132,7 @@ Level 1 configuration provides foundational browser security controls while main
 
 Level 2 builds on the Level 1 by duplicating its configuration and adding enhanced controls and advanced privacy protection.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 1 – Enterprise basic security – Windows Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
@@ -210,7 +210,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 
 Level 3 builds on the Level 2 configuration by duplicating its policy and applying more high-security controls such as URL allowlisting, stricter data protection, and site isolation.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 2 – Enterprise enhanced security – Windows Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
@@ -326,7 +326,7 @@ Settings Catalog for macOS provides foundational browser security for enrolled M
 
 Level 1 establishes foundational browser protections for enrolled macOS devices using Microsoft Edge. This level focuses on essential data-boundary, privacy, and network-security controls.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Devices** > **macOS** > **Managed devices** > **Configuration** > **Create** > **New policy**.  
 3. In the **Create a profile** window, verify that **Platform** is set to **macOS** (this option is pre-selected and cannot be changed).  
 4. For **Profile type**, choose **Settings catalog**, and then select **Create**.  
@@ -375,7 +375,7 @@ Level 1 establishes foundational browser protections for enrolled macOS devices 
 
 Level 2 builds on the Level 1 by duplicating its configuration and adding enhanced controls and advanced privacy protection.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 1 – Enterprise basic security – macOS Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
@@ -413,7 +413,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 
 Level 3 builds on the Level 2 configuration by duplicating its policy and applying extra high-security controls such as URL allowlisting, stricter data protection, and site isolation.
 
-1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration**.  
 3. Locate the *Level 2 – Enterprise enhanced security – macOS Settings Catalog* policy.  
 4. Select the context menu (**⋯**) next to that policy, and then select **Duplicate**.  
