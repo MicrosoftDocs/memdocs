@@ -201,10 +201,10 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
    - Work or school account credentials for access: **Not required**
    - Recheck access requirements after: **30 minutes**
 10. On the **Conditional launch** tab, configure:
-   - Max PIN attempts: **5 / Reset PIN**
-   - Offline grace period: **10080 minutes / Block access**
-   - Offline grace period: **90 days / Wipe data**
-   - Jailbroken/rooted devices: **Block access**
+       - Max PIN attempts: **5 / Reset PIN**
+       - Offline grace period: **10080 minutes / Block access**
+       - Offline grace period: **90 days / Wipe data**
+       - Jailbroken/rooted devices: **Block access**
 11. Select **Next**.
 12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.
 13. Select **Next**, review the configuration, and then choose **Create**.
@@ -258,14 +258,14 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
    - Work or school account credentials for access: **Not required**
    - Recheck access requirements after: **30 minutes**
 10. On the **Conditional launch** tab, configure:
-   - Disabled account: **Block access**
-   - Min OS version: **14.8 / Block access**
-   - Min patch version: **2024-10-01 / Block access**
-   - Min app version: **Latest / Warn**
-   - Max PIN attempts: **5 / Reset PIN**
-   - Offline grace period: **1440 minutes / Block access**
-   - Offline grace period: **30 days / Wipe data**
-   - Jailbroken/rooted devices: **Block access**
+       - Disabled account: **Block access**
+       - Min OS version: **14.8 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Min app version: **Latest / Warn**
+       - Max PIN attempts: **5 / Reset PIN**
+       - Offline grace period: **1440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Jailbroken/rooted devices: **Block access**
 11. Select **Next**.
 12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.
 13. Select **Next**, review the configuration, and then choose **Create**.
@@ -324,22 +324,20 @@ Level 3 configuration provides the highest level of data protection and is recom
    - Work or school account credentials for access: **Require**
    - Recheck access requirements after: **30 minutes**
 10. On the **Conditional launch** tab, configure:
-
-   - Jailbroken/rooted devices: **Wipe data**
-   - Max allowed threat level: **Secured / Block access**
-   - Max OS version: **26.0.1 / Block access**
-   - Offline grace period: **1440 minutes / Block access**
-   - Offline grace period: **30 days / Wipe data**
-   - Disabled account: **Block access**
-   - Min OS version: **14.8 / Block access**
-   - Min patch version: **2024-10-01 / Block access**
-   - Min app version: **Latest / Warn**
-   - Min SDK version: **21.1.0 / Block access**
-   - Max PIN attempts: **5 / Reset PIN**
-
-1. Select **Next**.
-1. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.
-1. Select **Next**, review the configuration, and then choose **Create**.
+       - Jailbroken/rooted devices: **Wipe data**
+       - Max allowed threat level: **Secured / Block access**
+       - Max OS version: **26.0.1 / Block access**
+       - Offline grace period: **1440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Disabled account: **Block access**
+       - Min OS version: **14.8 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Min app version: **Latest / Warn**
+       - Min SDK version: **21.1.0 / Block access**
+       - Max PIN attempts: **5 / Reset PIN**
+11. Select **Next**.
+12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.
+13. Select **Next**, review the configuration, and then choose **Create**.
 
 #### Framework Compliance Summary for iOS/iPadOS  
 
@@ -431,13 +429,13 @@ Level 1 configuration provides the minimum data protection for an Android device
    - Work or school account credentials for access: **Not required**
    - Recheck access requirements after: **30 minutes**
 10. On the **Conditional launch** tab, configure:
-   - Max PIN attempts: **5 / Reset PIN**
-   - Offline grace period: **10080 minutes / Block access**
-   - Offline grace period: **90 days / Wipe data**
-   - Jailbroken/rooted devices: **Block access**
-   - Play integrity verdict: **Basic integrity / Block access**
-   - Require threat scan on apps: **Block access**
-   - Require device lock: **Low Complexity / Block access**
+       - Max PIN attempts: **5 / Reset PIN**
+       - Offline grace period: **10080 minutes / Block access**
+       - Offline grace period: **90 days / Wipe data**
+       - Jailbroken/rooted devices: **Block access**
+       - Play integrity verdict: **Basic integrity / Block access**
+       - Require threat scan on apps: **Block access**
+       - Require device lock: **Low Complexity / Block access**
 11. Select **Next**.
 12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.
 13. Select **Next**, review the configuration, and then choose **Create**.
@@ -491,17 +489,17 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
    - Work or school account credentials for access: **Not required**
    - Recheck access requirements after: **30 minutes**
 10. On the **Conditional launch** tab, configure:
-   - Disabled account: **Block access**
-   - Offline grace period: **10080 minutes / Block access**
-   - Offline grace period: **30 days / Wipe data**
-   - Min OS version: **9.0 / Block access**
-   - Min patch version: **2024-10-01 / Block access**
-   - Play integrity verdict: **Basic integrity and device integrity / Block access**
-   - Jailbroken/rooted devices: **Block access**
-   - Require threat scan on apps: **Block access**
-   - Require device lock: **Medium / Block access**
-   - Samsung Knox device attestation: **Block access on supported devices**
-   - Max PIN attempts: **5 / Reset PIN**
+       - Disabled account: **Block access**
+       - Offline grace period: **1,440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Min OS version: **9.0 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Play integrity verdict: **Basic integrity and device integrity / Block access**
+       - Jailbroken/rooted devices: **Block access**
+       - Require threat scan on apps: **Block access**
+       - Require device lock: **Medium / Block access**
+       - Samsung Knox device attestation: **Block access on supported devices**
+       - Max PIN attempts: **5 / Reset PIN**
 11. Select **Next**.
 12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.
 13. Select **Next**, review the configuration, and then choose **Create**.
@@ -556,21 +554,21 @@ Level 3 configuration provides the highest level of data protection and is recom
    - Work or school account credentials for access: **Require**
    - Recheck access requirements after: **30 minutes**
 10. On the **Conditional launch** tab, configure:
-   - Require device lock: **High Complexity / Block access**
-   - Jailbroken/rooted devices: **Wipe data**
-   - Max allowed threat level: **Secured / Block access**
-   - Max OS version: **16.0 / Block access**
-   - Samsung Knox device attestation: **Wipe data**
-   - Offline grace period: **1440 minutes / Block access**
-   - Offline grace period: **30 days / Wipe data**
-   - Disabled account: **Block access**
-   - Min OS version: **9.0 / Block access**
-   - Min patch version: **2024-10-01 / Block access**
-   - Play integrity verdict: **Basic integrity and device integrity / Block access**
-   - Play integrity verdict evaluation type: **Check strong integrity**
-   - Require threat scan on apps: **Block access**
-   - Max Company Portal version age (days): **180 / Block access**
-   - Max PIN attempts: **5 / Reset PIN**
+       - Require device lock: **High Complexity / Block access**
+       - Jailbroken/rooted devices: **Wipe data**
+       - Max allowed threat level: **Secured / Block access**
+       - Max OS version: **16.0 / Block access**
+       - Samsung Knox device attestation: **Wipe data**
+       - Offline grace period: **1440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Disabled account: **Block access**
+       - Min OS version: **9.0 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Play integrity verdict: **Basic integrity and device integrity / Block access**
+       - Play integrity verdict evaluation type: **Check strong integrity**
+       - Require threat scan on apps: **Block access**
+       - Max Company Portal version age (days): **180 / Block access**
+       - Max PIN attempts: **5 / Reset PIN**
 11. Select **Next**.
 12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.
 13. Select **Next**, review the configuration, and then choose **Create**.
