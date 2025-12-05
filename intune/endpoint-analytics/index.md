@@ -166,7 +166,6 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 :::column-end:::
 :::column span="3":::
 >Role requirements vary based on whether you're configuring endpoint analytics or reviewing the data.
->
 > ---
 > > [!div class="checklist"]
 > > To [configure endpoint analytics](configure.md), you need an account with at least one of the following Intune roles:
@@ -177,8 +176,8 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 > >   - **Endpoint Analytics/Create, Update, Delete** — Manage settings and baselines.
 > >   - **Organization/Read** and **Managed Devices/Read** — Required for device visibility.
 > >   - **Device configurations/Create, Read, Assign** — Required to create and assign the data collection policy
->
-> [!div class="checklist"]
+>---
+> >[!div class="checklist"]
 > >To [access endpoint analytics reports](scores.md), you need an account with at least one of the following Intune roles:
 > >
 > >- [Help Desk Operator][INT-R1]: Grants read permissions to endpoint analytics.
