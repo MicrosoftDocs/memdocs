@@ -41,4 +41,4 @@ This option isn't available for Macs that you have personally encrypted. The per
 
 If a key isn't found but your device is properly encrypted, contact your organization's support person. For contact information, check for helpdesk details on the Company Portal website.
 
-If you're an IT support person and want to configure and manage FileVault encryption, see [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md#manage-filevault).
+If you're an IT support person and want to configure and manage FileVault encryption, see [Use FileVault disk encryption for macOS with Intune](../protect/encrypt-devices-filevault.md#monitor-and-manage-filevault).
