@@ -1,7 +1,7 @@
 ---
 title: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business
 description: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business.
-ms.date: 11/07/2025
+ms.date: 12/05/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -15,9 +15,9 @@ ms.collection:
 
 The modern security perimeter extends beyond an organization's network boundary to include user and device identity. Conditional Access brings identity-driven signals together to enforce organizational policies as part of a Zero Trust security model. It evaluates signals such as user risk, device compliance, and application context to determine whether access should be granted.
 
-Conditional Access policies at their simplest follow *if-then* logic. If a user attempts to access a Microsoft 365 resource, then they may be required to complete an action such as multifactor authentication (MFA).
+Conditional Access policies at their simplest follow *if-then* logic. If a user attempts to access a Microsoft 365 resource, then they might be required to complete an action such as multifactor authentication (MFA).
 
-Identity-driven signals may include:
+Identity-driven signals might include:
 
 - User or group membership  
 - IP location information  
@@ -27,11 +27,11 @@ Identity-driven signals may include:
 
 :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-businessCA.png" alt-text="Diagram illustrating Conditional Access controls for Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-businessca.png#lightbox":::
 
-Conditional Access is evaluated after authentication is completed. It is not intended to mitigate denial-of-service (DoS) attacks directly, but it can use signals from such events when making access decisions.
+Conditional Access is evaluated after authentication is completed. It isn't intended to mitigate denial-of-service (DoS) attacks directly, but it can use signals from such events when making access decisions.
 
 ## Conditional Access compliance
 
-Protecting organizational data requires preventing access from unprotected devices. Data Loss Prevention (DLP) is only effective when data cannot be accessed from systems that do not meet your organization’s minimum security requirements.
+Protecting organizational data requires preventing access from unprotected devices. Data Loss Prevention (DLP) is only effective when data can't be accessed from systems that don't meet your organization’s minimum security requirements.
 
 App protection policies (APP) work with Conditional Access to ensure that protected resources can only be accessed from managed or APP-protected applications, such as Microsoft Edge for Business. This enables end users on personal Windows, Android, and iOS devices to access Microsoft Entra resources without full device management.
 
@@ -47,7 +47,7 @@ This solution uses three Conditional Access policies to secure Microsoft Edge fo
 - Confirm that your tenant has the necessary Microsoft Entra ID Premium and Microsoft Intune licenses for Conditional Access and app protection policies.  
 - Ensure the Microsoft Entra security groups `SEB-Level1-Users`, `SEB-Level2-Users`, and `SEB-Level3-Users` exist; these groups are used for assignments throughout the secure enterprise browser deployment. For step-by-step guidance, see [Use groups to organize users and devices for Microsoft Intune](../fundamentals/groups-add.md).  
 - Define trusted locations, device filters, and risk integrations (for example, Microsoft Defender for Endpoint or another Mobile Threat Defense provider) before assigning the policies.  
-- Plan to run each policy in **Report-only** mode first so you can validate the impact before enforcing it.
+- Plan to run each policy in **Report-only** mode first so you can validate it before enforcing it.
 
 ## Level 1 – Basic Conditional Access policy
 
@@ -99,13 +99,13 @@ Level 2 adds continuous verification with risk-based signals and requires that d
         - **Persistent browser session:** Select **Never persistent**
 
     > [!NOTE]
-    > Run the policy in **Report-only** mode and review the Monitoring workbooks to confirm the impact before switching it to **On**.
+    > Run the policy in **Report-only** mode and review the Monitoring workbooks to confirm it before switching it to **On**.
 
 4. Select **Create** to save the policy.
 
 ## Level 3 – High Zero Trust Conditional Access policy
 
-Level 3 enforces the strictest access posture by allowing only managed, compliant devices to reach Microsoft 365 resources while applying additional safeguards for risky sign-ins.
+Level 3 enforces the strictest access posture by allowing only managed, compliant devices to reach Microsoft 365 resources while applying more safeguards for risky sign-ins.
 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
 2. Select **Endpoint security** > **Manage** > **Conditional Access** > **Create new policy**.
@@ -152,10 +152,10 @@ Use this companion policy to ensure that desktop applications on Windows devices
         - **Client apps:** Select **Mobile apps and desktop clients**  
     - **Grant:**  
         - **Require device to be marked as compliant**  
-        - (Optional) **Require multifactor authentication** for additional assurance
+        - (Optional) **Require multifactor authentication** for extra assurance
 
     > [!NOTE]
-    > If you allow legacy authentication clients, create a separate policy to block or restrict them so they cannot bypass the browser protections.
+    > If you allow legacy authentication clients, create a separate policy to block or restrict them so they can't bypass the browser protections.
 
 4. Leave the policy in **Report-only** mode until you confirm that desktop apps remain accessible only from enrolled and compliant devices, then switch it to **On**.
 

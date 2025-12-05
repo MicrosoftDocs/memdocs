@@ -1,7 +1,7 @@
 ---
 title: Secure Your Corporate Data in Intune with Microsoft Edge for Business
 description: Secure your corporate data in Microsoft Intune with Microsoft Edge for Business across all platforms.
-ms.date: 10/28/2025
+ms.date: 12/05/2025
 ms.topic: overview
 ms.reviewer: samarti
 ms.custom:

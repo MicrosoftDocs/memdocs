@@ -1,7 +1,7 @@
 ---
 title: Step 2. Create App Protection Policies for Microsoft Edge for Business
 description: Step 2. Create app protection policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
-ms.date: 11/05/2025
+ms.date: 12/05/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -32,7 +32,7 @@ Each platform section includes instructions for creating Level 1, Level 2, and L
 > Framework alignment:  
 > These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Your Corporate Data in Intune with Microsoft Edge for Business](mamedge-overview.md) guide.
 
-This guide references industry frameworks (NIST, DISA STIG, and CISA) as inputs. Applying these settings alone does not make your organization compliant with any specific standard. Perform your own compliance assessments against the official requirements.
+This guide references industry frameworks (NIST, DISA STIG, and CISA) as inputs. Applying these settings alone doesn't make your organization compliant with any specific standard. Perform your own compliance assessments against the official requirements.
 
 ::: zone pivot="windows"
 
@@ -211,7 +211,7 @@ Level 1 configuration provides the minimum data protection for an iOS/iPadOS dev
 
 ### Level 2 – Enterprise enhanced data protection for iOS/iPadOS
 
-Level 2 configuration includes all Level 1 settings plus additional controls for enhanced data protection.
+Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
 
 1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
 2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.
@@ -329,7 +329,7 @@ Level 3 configuration provides the highest level of data protection and is recom
    - Max allowed threat level: **Secured / Block access**
    - Max OS version: **26.0.1 / Block access**
    - Offline grace period: **1440 minutes / Block access**
-   - Offline grace period: **30 days / Block access**
+   - Offline grace period: **30 days / Wipe data**
    - Disabled account: **Block access**
    - Min OS version: **14.8 / Block access**
    - Min patch version: **2024-10-01 / Block access**
@@ -353,7 +353,7 @@ Level 3 configuration provides the highest level of data protection and is recom
 | Screen capture | Allow | Block | Block |
 | Third-party keyboards | Allow | Block | Block |
 | Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
-| Offline grace period | 10,080 minutes / Block access<br>90 days / Wipe data | 10,080 minutes / Block access<br>30 days / Wipe data | 10,080 minutes / Block access<br>30 days / Block access |
+| Offline grace period | 10,080 minutes / Block access<br>90 days / Wipe data | 1,440 minutes / Block access<br>30 days / Wipe data | 1,440 minutes / Block access<br>30 days / Wipe data |
 | Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
 | PIN length requirement | 4-digit | 4-digit | 6-digit |
 | Simple PIN allowed | Yes | Yes | No |
@@ -377,7 +377,7 @@ App protection policies for Android provide data protection for Microsoft Edge f
 > Framework alignment:  
 > These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Your Corporate Data in Intune with Microsoft Edge for Business](mamedge-overview.md) guide.
 >
-> This guide references industry frameworks (NIST, DISA STIG, CISA) as inputs. Applying these settings does not by itself make your organization compliant with any specific standard; perform your own compliance assessments against official requirements.
+> This guide references industry frameworks (NIST, DISA STIG, CISA) as inputs. Applying these settings doesn't by itself make your organization compliant with any specific standard; perform your own compliance assessments against official requirements.
 
 Prerequisites:
 
@@ -506,34 +506,6 @@ Level 2 configuration includes all Level 1 settings plus more controls for enhan
 12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.
 13. Select **Next**, review the configuration, and then choose **Create**.
 
-#### Framework Compliance Summary for Android  
-
-| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
-|---------------------------------|---------|---------|---------|
-| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
-| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
-| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in |
-| Encryption of org data | Required | Required | Required |
-| Print org data | Allow | Allow | Block |
-| Screen capture | Allow | Block | Block |
-| Approved keyboards | Not required | Not required | Required (Microsoft SwiftKey, Samsung Keyboard, Gboard) |
-| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
-| Offline grace period | 10,080 minutes / Block access <br>90 days / Wipe data | 10,080 minutes / Block access <br>30 days / Wipe data | 10,080 minutes / Block access <br>30 days / Block access |
-| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
-| PIN length requirement | 4-digit | 4-digit | 6-digit |
-| Simple PIN allowed | Yes | Yes | No |
-| Biometric instead of PIN | Allow | Allow | Block |
-| Override biometrics with PIN after timeout | Required | Required | Required |
-| Work or school credentials required | Not required | Not required | Required |
-| Device lock complexity | Low | Low | High |
-| Device threat level / Play Integrity verdict | Basic integrity | Basic + Device integrity | Secured |
-| Jailbroken / rooted devices | Block access | Block access | Wipe data |
-| Minimum OS version | 8.0 | 9.0 | 9.0 |
-| Maximum OS version | N/A | N/A | 16.0 |
-| Minimum patch version | N/A | 2024-10-01 | 2024-10-01 |
-| Samsung Knox device attestation | N/A | Block access on supported devices | Wipe data (on supported devices) |
-| Class 3 biometrics (Android 9.0 +) | Not required | Not required | Required |
-
 ### Level 3 – Enterprise high data protection for Android
 
 Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
@@ -590,7 +562,7 @@ Level 3 configuration provides the highest level of data protection and is recom
    - Max OS version: **16.0 / Block access**
    - Samsung Knox device attestation: **Wipe data**
    - Offline grace period: **1440 minutes / Block access**
-   - Offline grace period: **30 days / Block access**
+   - Offline grace period: **30 days / Wipe data**
    - Disabled account: **Block access**
    - Min OS version: **9.0 / Block access**
    - Min patch version: **2024-10-01 / Block access**
@@ -603,6 +575,34 @@ Level 3 configuration provides the highest level of data protection and is recom
 12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.
 13. Select **Next**, review the configuration, and then choose **Create**.
 
+#### Framework Compliance Summary for Android  
+
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+|---------------------------------|---------|---------|---------|
+| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
+| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
+| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in |
+| Encryption of org data | Required | Required | Required |
+| Print org data | Allow | Allow | Block |
+| Screen capture | Allow | Block | Block |
+| Approved keyboards | Not required | Not required | Required (Microsoft SwiftKey, Samsung Keyboard, Gboard) |
+| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
+| Offline grace period | 10,080 minutes / Block access <br>90 days / Wipe data | 1,440 minutes / Block access <br>30 days / Wipe data | 1,440 minutes / Block access <br>30 days / Wipe data |
+| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
+| PIN length requirement | 4-digit | 4-digit | 6-digit |
+| Simple PIN allowed | Yes | Yes | No |
+| Biometric instead of PIN | Allow | Allow | Block |
+| Override biometrics with PIN after timeout | Required | Required | Required |
+| Work or school credentials required | Not required | Not required | Required |
+| Device lock complexity | Low | Low | High |
+| Device threat level / Play Integrity verdict | Basic integrity | Basic + Device integrity | Secured |
+| Jailbroken / rooted devices | Block access | Block access | Wipe data |
+| Minimum OS version | 8.0 | 9.0 | 9.0 |
+| Maximum OS version | N/A | N/A | 16.0 |
+| Minimum patch version | N/A | 2024-10-01 | 2024-10-01 |
+| Samsung Knox device attestation | N/A | Block access on supported devices | Wipe data (on supported devices) |
+| Class 3 biometrics (Android 9.0 +) | Not required | Not required | Required |
+
 ::: zone-end
 
 #### Validation
@@ -611,7 +611,8 @@ Level 3 configuration provides the highest level of data protection and is recom
 
 ## Related resources
 
-For specific recommendations per level, see [Data protection framework using app protection policies](../apps/app-protection-framework.md).
+- [Data protection framework using app protection policies](../apps/app-protection-framework.md)
+- [Require an app protection policy on Windows devices](/entra/identity/conditional-access/policy-all-users-windows-app-protection)
 
 ## Next step
 

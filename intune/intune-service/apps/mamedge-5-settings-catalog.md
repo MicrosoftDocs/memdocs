@@ -1,7 +1,7 @@
 ---
 title: Step 5. Create Settings Catalog policies for Microsoft Edge for Business
 description: Step 5. Create Settings Catalog policies for Microsoft Edge for Business on Windows and macOS.
-ms.date: 11/12/2025
+ms.date: 12/05/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -187,7 +187,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 | Microsoft Edge | Default JavaScript setting | Enabled, Allow sites to run JavaScript (1) | [Default JavaScript setting](/deployedge/microsoft-edge-browser-policies/defaultjavascriptsetting) |
 | Microsoft Edge | Configure plugins policy | Click to play (3) | [Configure plugins policy](/deployedge/microsoft-edge-browser-policies/defaultpluginssetting) |
 | Microsoft Edge | Allow media autoplay for websites | Disabled | [Allow media autoplay for websites](/deployedge/microsoft-edge-browser-policies/autoplayallowed) |
-| Microsoft Edge | Set the background tab inactivity timeout for sleeping tabs | 6Hours (21600) = 6 hours of inactivity | [Set the background tab inactivity timeout for sleeping tabs](/deployedge/microsoft-edge-browser-policies/sleepingtabstimeout) |
+| Microsoft Edge | Set the background tab inactivity timeout for sleeping tabs | 6 Hours (21600) = 6 hours of inactivity | [Set the background tab inactivity timeout for sleeping tabs](/deployedge/microsoft-edge-browser-policies/sleepingtabstimeout) |
 | Microsoft Edge | Delay before running idle actions | 30 | [Delay before running idle actions](/deployedge/microsoft-edge-browser-policies/idletimeout) |
 | Microsoft Edge | Clear browsing data when Microsoft Edge closes | Enabled | [Clear browsing data when Microsoft Edge closes](/deployedge/microsoft-edge-browser-policies/clearbrowsingdataonexit) |
 | Microsoft Edge | Notify a user that a browser restart is recommended or required for pending updates | Recommended - Show a recurring prompt to the user indicating that a restart is recommended | [Notify a user that a browser restart is recommended or required for pending updates](/deployedge/microsoft-edge-browser-policies/relaunchnotification) |
@@ -208,7 +208,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 
 ### Level 3 – Enterprise high security for Windows
 
-Level 3 builds on the Level 2 configuration by duplicating its policy and applying additional high-security controls such as URL allowlisting, stricter data protection, and site isolation.
+Level 3 builds on the Level 2 configuration by duplicating its policy and applying more high-security controls such as URL allowlisting, stricter data protection, and site isolation.
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **Windows** > **Manage devices** > **Configuration**.  
@@ -221,7 +221,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 7. Find your new Level 3 policy in the policy list. If it doesn’t appear, select **Refresh**.  
 8. When the policy appears, select the context menu (**⋯**) next to the policy name, and then select **Edit**.  
 9. On the **Basics** tab, verify that the name and description are correct, and then select **Next**.  
-10. On the **Settings** tab, all Level 2 settings are already included. You can locate additional or modified settings using one of the following options:  
+10. On the **Settings** tab, all Level 2 settings are already included. You can locate more or modified settings using one of the following options:  
     - **Search for a setting:** Use the **search box** to find the setting name listed in the table. When multiple results appear, choose the entry that matches the **Category**.  
     - **Browse by category:** Expand **Microsoft Edge** and select the **Category** listed for that setting.  
 11. Configure each setting using the **Value** specified in the table.
@@ -294,7 +294,7 @@ After deploying all Windows security levels, validate that the policies have app
   Confirm that InPrivate mode is forced, Application Guard isolation is active, and all optional features (Collections, Games, Sidebar, Drop, Wallet, Copilot) are disabled.
 
 If any settings do not apply, sync the device from the **Company Portal** app or verify group assignments (`SEB-Level1-Devices`, `SEB-Level2-Devices`, or `SEB-Level3-Devices`).  
-For additional confirmation, monitor **edge://policy** and the **Device configuration report** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to ensure the expected number of policies are active per level.
+For extra confirmation, monitor **edge://policy** and the **Device configuration report** in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to ensure the expected number of policies are active per level.
 
 ::: zone-end
 
@@ -386,7 +386,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 7. Find your new Level 2 policy in the policy list. If it doesn't appear, select **Refresh**.  
 8. When the policy appears, select the context menu (**⋯**) next to the policy name, and then select **Edit**.  
 9. On the **Basics** tab, verify that the name and description are correct, and then select **Next**.  
-10. On the **Settings** tab, all Level 1 settings are already included. You can locate additional or modified settings using one of the following options:  
+10. On the **Settings** tab, all Level 1 settings are already included. You can locate more or modified settings using one of the following options:  
     - **Search for a setting:** Use the **search box** to find the setting name listed in the table. When multiple results appear, choose the entry that matches the **Category**.  
     - **Browse by category:** Expand **Microsoft Edge** and select the **Category** listed for that setting.  
 11. Configure each setting using the **Value** specified in the table.
@@ -411,7 +411,7 @@ Level 2 builds on the Level 1 by duplicating its configuration and adding enhanc
 
 ### Level 3 - Enterprise high security for macOS
 
-Level 3 builds on the Level 2 configuration by duplicating its policy and applying additional high-security controls such as URL allowlisting, stricter data protection, and site isolation.
+Level 3 builds on the Level 2 configuration by duplicating its policy and applying extra high-security controls such as URL allowlisting, stricter data protection, and site isolation.
 
 1. Go to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).  
 2. Select **Devices** > **macOS** > **Manage devices** > **Configuration**.  
@@ -424,7 +424,7 @@ Level 3 builds on the Level 2 configuration by duplicating its policy and applyi
 7. Find your new Level 3 policy in the policy list. If it doesn't appear, select **Refresh**.  
 8. When the policy appears, select the context menu (**⋯**) next to the policy name, and then select **Edit**.  
 9. On the **Basics** tab, verify that the name and description are correct, and then select **Next**.  
-10. On the **Settings** tab, all Level 2 settings are already included. You can locate additional or modified settings using one of the following options:  
+10. On the **Settings** tab, all Level 2 settings are already included. You can locate more or modified settings using one of the following options:  
     - **Search for a setting:** Use the **search box** to find the setting name listed in the table. When multiple results appear, choose the entry that matches the **Category**.  
     - **Browse by category:** Expand **Microsoft Edge** and select the **Category** listed for that setting.  
 11. Configure each setting using the **Value** specified in the table.

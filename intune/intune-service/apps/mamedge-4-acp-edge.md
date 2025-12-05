@@ -1,7 +1,7 @@
 ---
 title: Step 4. Create App Configuration Policies for Microsoft Edge for Business
 description: Step 4. Create app configuration policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
-ms.date: 01/15/2025
+ms.date: 12/05/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -275,13 +275,13 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 #### Endpoint Verification
 
 - On the client device, open Microsoft Edge and navigate to `edge://policy`.
-- Confirm that all configured policy keys appear with expected values and do not show an **Error** state.
+- Confirm that all configured policy keys appear with expected values and don't show an **Error** state.
 
 #### URL and Feature Enforcement
 
 - **Level 1:** Confirm core security controls are active, including SmartScreen, tracking prevention, and basic restriction settings.
 - **Level 2:** Validate enhanced restrictions such as extension blocking, data sync restrictions, and clear-on-exit behaviors.
-- **Level 3:** Attempt to browse to non-allowlisted URLs and verify they are blocked or isolated (for example, Application Guard).
+- **Level 3:** Attempt to browse to nonallowlisted URLs and verify they're blocked or isolated (for example, Application Guard).
 
 #### Update Policies
 
@@ -399,7 +399,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge Android ACP Level 2 Enhanced  
-   - **Description:** Enhanced browser configuration for Microsoft Edge Android with additional security controls and data protection features  
+   - **Description:** Enhanced browser configuration for Microsoft Edge Android with more security controls and data protection features  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge (Android)**, then select **Select**.  
@@ -650,7 +650,7 @@ Level 2 configuration adds enhanced security controls and restrictions for sensi
 2. Select **Apps** > **Manage apps** > **Configuration** > **Create** > **Managed apps**.  
 3. On the **Basics** tab, enter:  
    - **Name:** Edge iOS ACP Level 2 Enhanced  
-   - **Description:** Enhanced browser configuration for Microsoft Edge iOS with additional security controls and data protection features  
+   - **Description:** Enhanced browser configuration for Microsoft Edge iOS with more security controls and data protection features  
 4. In **Target policy to**, select **Selected apps**.  
    - Choose **+ Select public apps**.  
    - In the **Select apps to target** panel, search for and select **Microsoft Edge**.  
@@ -762,7 +762,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 | Allowed URLs | *.company.com, *.microsoft.com, login.microsoftonline.com |
 | Blocked URLs | Leave empty (Level 3 uses allowed URLs – when allowed URLs are configured, blocked URLs field becomes unavailable) |
 
-9. Per-App VPN (optional): Integrate with Microsoft Tunnel if required for isolated secure traffic routing
+9. Per-App VPN (optional): Integrate with Microsoft Tunnel if necessary for isolated secure traffic routing
 10. Select **Next**.  
 11. In **Assignments**, assign to **SEB-Level3-Users** group.  
 12. Select **Next** to review the settings. Then choose **Create** when you're done.  
@@ -781,7 +781,7 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 #### URL Filtering
 
 - **Level 1:** Confirm that allowed URLs operate as expected.
-- **Level 2:** Verify that blocked URL categories (for example, social media domains) cannot be accessed.
+- **Level 2:** Verify that blocked URL categories (for example, social media domains) can't be accessed.
 - **Level 3:** Confirm that only the configured corporate allowlisted URLs are accessible.
 
 #### Feature Restrictions

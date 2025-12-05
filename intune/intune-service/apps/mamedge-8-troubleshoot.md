@@ -1,7 +1,7 @@
 ---
 title: Step 8. Troubleshoot Microsoft Edge for Business Data Security
 description: Step 8. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
-ms.date: 11/21/2025
+ms.date: 12/05/2025
 ms.topic: troubleshooting
 ms.reviewer: samarti
 ms.custom:
@@ -28,23 +28,23 @@ Use this list when users report issues with Microsoft Edge for Business:
   Confirm that the required settings for the selected security level are properly defined. Misconfigured data-transfer, clipboard, or sign-in settings often cause issues.
 
 - **Check Microsoft Edge version and OS support**  
-  When Microsoft Edge crashes at launch or policies do not appear to apply, verify that both the OS version and Microsoft Edge version meet the minimum supported requirements.
+  When Microsoft Edge crashes at launch or policies don't appear to apply, verify that both the OS version and Microsoft Edge version meet the minimum supported requirements.
 
 - **Validate user sign-in**  
-  App protection policies only apply when a user signs into Microsoft Edge for Business using their Microsoft Entra ID work account. Personal or local accounts will not receive policy enforcement.
+  App protection policies only apply when a user signs into Microsoft Edge for Business using their Microsoft Entra ID work account. Personal or local accounts won't receive policy enforcement.
 
 - **Understand unmanaged share behavior**  
   On mobile devices, the system share extension can bypass some restrictions unless the device is managed. In these situations, Intune encrypts corporate data before it leaves the app.
 
 - **Check app requirements**
   - **Microsoft Authenticator** is required when App-based Conditional Access is enabled.
-  - **Company Portal (Android)** is required for APP enforcement even if the device is not enrolled.
+  - **Company Portal (Android)** is required for APP enforcement even if the device isn't enrolled.
 
 - **Confirm the configuration channel**  
-  If ACP settings are not applying, verify that you're using the correct configuration channel (managed apps vs. managed devices) and that identifiers, configuration keys, and JSON syntax match publisher documentation.
+  If ACP settings aren't applying, verify that you're using the correct configuration channel (managed apps vs. managed devices) and that identifiers, configuration keys, and JSON syntax match publisher documentation.
 
 - **“Sign in with your work account” message**  
-  This usually appears when the user signed in using an account that is not targeted by the app protection policy or when the enrollment method doesn’t match what the policy requires.
+  This usually appears when the user signed in using an account that isn't targeted by the app protection policy or when the enrollment method doesn’t match what the policy requires.
 
 ## Policy deployment issues
 
@@ -58,7 +58,7 @@ Use this list when users report issues with Microsoft Edge for Business:
 
 - **Likely cause:** User is signed into Edge with a personal profile  
 - **How to fix:**
-  - Confirm user has signed into Edge with Entra ID account
+  - Confirm user signed into Edge with Entra ID account
 
 ### App configuration policies showing as failed
 
@@ -70,7 +70,7 @@ Use this list when users report issues with Microsoft Edge for Business:
 
 - **Likely cause:** Device compliance evaluation failure  
 - **How to fix:**
-  - Check device compliance status and re-evaluate policies
+  - Check device compliance status and reevaluate policies
 
 ### Policy conflicts between security levels
 
@@ -125,7 +125,7 @@ Use this list when users report issues with Microsoft Edge for Business:
 ### Authentication prompts too frequent
 
 - **Likely cause:** Aggressive Conditional Access settings  
-- **Recommended action:** Review session timeout and re-authentication policies
+- **Recommended action:** Review session timeout and reauthentication policies
 
 ### Features missing or disabled
 
@@ -173,14 +173,14 @@ Yes. MAM for Windows supports Windows Home edition.
 Yes. Existing policies targeting Microsoft Edge are inherited when users sign in with their work profile.
 
 **What effect does this have on users’ default browser settings?**  
-There is no change to a user’s default browser settings.
+There's no change to a user’s default browser settings.
 
 **What happens to passwords, favorites, and related data?**  
 Passwords, favorites, and browsing data in the work profile are preserved. Personal and work windows remain separated.
 
 **How do MAM for Windows and Microsoft Edge management service differ?**  
 If you use Intune, create app protection and app configuration policies to configure Microsoft Edge for Business.  
-If you do not use Intune, use the Microsoft Edge management service.  
+If you don't use Intune, use the Microsoft Edge management service.  
 For more information, see: <https://aka.ms/EdgeSecurityWhitepaper>.
 
 ## Solution results

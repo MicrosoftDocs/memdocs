@@ -1,7 +1,7 @@
 ---
 title: Step 6. Deploy Microsoft Edge security baseline
 description: Step 6. Deploy the Microsoft Edge security baseline for rapid Windows security configuration.
-ms.date: 11/11/2025
+ms.date: 12/05/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:

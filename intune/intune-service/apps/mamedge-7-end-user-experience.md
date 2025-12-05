@@ -1,7 +1,7 @@
 ---
 title: Step 7. Understand Microsoft Edge for Business End User Experience for Windows
 description: Step 7. Understand Microsoft Edge for Business end user experience Windows.
-ms.date: 10/28/2025
+ms.date: 12/05/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -29,7 +29,7 @@ Microsoft Edge for Business provides dedicated work and personal browsing experi
 
 ## Onboarding experience
 
-To evaluate the onboarding experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. The device can't be managed by any MDM solution, otherwise it won't be able to enroll into the MAM service.
+To evaluate the onboarding experience, launch **Microsoft Edge** from the desktop and perform the sign-in process in your browser. The device can't be managed by any MDM solution, otherwise it can't enroll into the MAM service.
 
 1. Locate **Microsoft Edge** on the desktop.
 2. Select the **Microsoft Edge** icon and wait for it to load. Once loaded, you see a user icon at the top-left of the browser window.
@@ -50,11 +50,11 @@ To evaluate the onboarding experience, launch **Microsoft Edge** from the deskto
     > [!NOTE]
     > A user experience update and admin property for controlling automatic MDM enrollment is rolling out in late 2025. This setting determines whether users on Entra ID–registered devices are prompted to MDM-enroll during the [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506) flow. To control this behavior, configure the **Disable MDM enrollment when adding a work or school account** setting. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).
 
-7. Select **Yes** to sign in and register the device. Do not select **No, sign in to the app only**, as this prevents enrollment and MAM from being applied to the browser.
+7. Select **Yes** to sign in and register the device. Don't select **No, sign in to the app only**, as it prevents enrollment and MAM from being applied to the browser.
 
 :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png" alt-text="Prompt asking whether to sign in to all apps, websites, and services on the device, with options for Yes or No, this app only." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business22.png":::
 
-8. If your organization does not opt to use the new property in public preview to manage the MDM option display, select **No**. Selecting Yes will enroll your device into Intune and will not enable MAM.
+8. If your organization doesn't opt to use the new property in public preview to manage the MDM option display, select **No**. Selecting Yes enrolls your device into Intune and won't enable MAM.
 
 :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business23a.png" alt-text="Prompt asking whether to allow your organization to manage the device, with options for Yes or No." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business23a.png":::
 
@@ -71,19 +71,19 @@ Intune displays notifications when a policy requirement isn’t met. The followi
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png" alt-text="App Access Blocked in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business25.png":::
 
-- **Your organization prevents you from copying content from this website:** Appears when a data movement action is blocked by your DLP policy.
+- **Your organization prevents you from copying content from this website:** Appears when your DLP policy blocks a data movement action.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png" alt-text="Copying prevention by app protection policy in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business26.png":::
 
-- **Your organization prevents you from printing this website:** Appears when printing is blocked by the applied Level 3 policy.
+- **Your organization prevents you from printing this website:** Appears when the applied Level 3 policy blocks printing.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png" alt-text="Printing prevention by app protection policy in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business27.png":::
 
-- **Your organization prevents you from downloading this file:** Appears when downloads are blocked by the applied Level 3 policy.
+- **Your organization prevents you from downloading this file:** Appears when the applied Level 3 policy blocks downloads.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png" alt-text="Download prevention by app protection policy in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business28.png":::
 
-- **Offline Grace Period Expired:** Appears when Intune determines the user has been offline longer than the allowed period.
+- **Offline Grace Period Expired:** Appears when Intune determines the user is offline longer than the allowed period.
 
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png" alt-text="Offline Grace Period Expired in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png":::
 
