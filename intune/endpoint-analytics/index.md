@@ -179,6 +179,7 @@ To use endpoint analytics, ensure your environment meets the following prerequis
 > >   - **Device configurations/Create, Read, Assign** — Required to create and assign the data collection policy
 >
 > ---
+>
 > [!div class="checklist"]
 > >To [access endpoint analytics reports](scores.md), you need an account with at least one of the following Intune roles:
 > >
