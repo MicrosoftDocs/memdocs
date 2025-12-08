@@ -2,7 +2,7 @@
 title: Client settings
 titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/28/2024
+ms.date: 12/08/2025
 ms.subservice: client-mgt
 ms.service: configuration-manager
 ms.topic: reference
@@ -976,7 +976,7 @@ When you set this option to **Yes**, it sets the policy for **Allow signed updat
 <!--4062619-->
 Use this setting to configure [Dynamic Update for Windows](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
 
-For UUP-based feature updates, this setting does not control Dynamic Update excluding drivers, because the only applicable Dynamic Update parameter is /DynamicUpdate NoDrivers in setupconfig.
+For UUP-based feature updates, this setting doesn't control Dynamic Update excluding drivers. The only applicable Dynamic Update parameter is `/DynamicUpdate NoDrivers` in setupconfig.
 
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
   - Dynamic Update is enabled by default on all supported versions of Windows 10 or later.
