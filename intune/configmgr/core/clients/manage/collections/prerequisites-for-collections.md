@@ -3,7 +3,7 @@ title: Collections prerequisites
 titleSuffix: Configuration Manager
 description: Get prerequisites for using collections in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 author: LauraWi

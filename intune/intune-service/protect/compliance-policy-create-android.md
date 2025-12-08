@@ -1,30 +1,12 @@
 ---
-# required metadata
-
-title: View the Android device administrator compliance settings for Microsoft Intune compliance policies 
+title: View the Android device administrator compliance settings for Microsoft Intune compliance policies
 description: View the device compliance settings that are available for Android device administrator devices in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 09/04/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -52,7 +34,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 ## Microsoft Defender for Endpoint
 
-- **Require the device to be at or under the machine risk score**  
+- **Require the device to be at or under the machine risk score**
 
   Select the maximum allowed machine risk score for devices evaluated by Microsoft Defender for Endpoint. Devices that exceed this score get marked as noncompliant.
   - **Not configured** (*default*)
@@ -92,8 +74,8 @@ As an Intune administrator, use these compliance settings to help protect your o
 - **Google Play Services is configured**  
   Google Play services allows security updates, and is a base-level dependency for many security features on certified-Google devices.
 
-  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.  
-  - **Require** - Require that the Google Play services app is installed and enabled.  
+  - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
+  - **Require** - Require that the Google Play services app is installed and enabled.
 
 - **Up-to-date security provider**
 
@@ -200,7 +182,7 @@ As an Intune administrator, use these compliance settings to help protect your o
 
 *The following settings are supported on Android 10 or later, but not on Knox.*
 
-- **Password complexity**  
+- **Password complexity**
  *This setting is supported on Android 10 or later, but not on Samsung Knox. On devices that run Android 9 and earlier or Samsung Knox, settings for the password length and type override this setting for complexity*.
 
   Specify the required password complexity.
@@ -235,16 +217,16 @@ As an Intune administrator, use these compliance settings to help protect your o
 
   Based on the configuration of this setting, one or more of the following options are available:
 
-  - **Minimum password length**  
+  - **Minimum password length**
     Enter the minimum number of digits or characters that the user's password must have.
 
-  - **Maximum minutes of inactivity before password is required**  
+  - **Maximum minutes of inactivity before password is required**
     Enter the idle time before the user must reenter their password. When you choose **Not configured** (default), this setting isn't evaluated for compliance or noncompliance.
 
-  - **Number of days until password expires**  
+  - **Number of days until password expires**
     Select the number of days before the password expires and the user must create a new password.
 
-  - **Number of previous passwords to prevent reuse**  
+  - **Number of previous passwords to prevent reuse**
     Enter the number of recent passwords that can't be reused. Use this setting to restrict the user from creating previously used passwords.
 
 ## Next steps

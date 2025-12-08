@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Windows Antivirus policy settings from Windows security settings for tenant attached devices in Microsoft Intune | Microsoft Docs
 description: Review the settings in the *Windows Security experience* profile for tenant attached devices. To use this Endpoint security Antivirus policy, you must first configure tenant attach for Configuration Manager for Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 03/28/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-secure-endpoints
 ms.reviewer: mattcall
@@ -31,6 +13,9 @@ ms.reviewer: mattcall
 ---
 
 # Settings for Windows Security experience Antivirus policy for tenant attached devices in Microsoft Intune
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 View the Windows Security experience settings you can manage with the **Windows Security experience (preview)** profile from Intune.
 
@@ -100,7 +85,7 @@ The profile is available when you configure [Intune Endpoint security Antivirus 
   - **Not configured** (*default*)
   - **Enabled**
 
-- **Hide the Ransomware data recovery option in the Windows Security app**  
+- **Hide the Ransomware data recovery option in the Windows Security app**
     CSP: [HideRansomwareDataRecovery](/windows/client-management/mdm/policy-csp-windowsdefendersecuritycenter#windowsdefendersecuritycenter-hideransomwaredatarecovery)
 
   - **Not configured** (*default*)

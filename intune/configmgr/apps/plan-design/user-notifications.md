@@ -3,7 +3,7 @@ title: User notifications
 titleSuffix: Configuration Manager
 description: Learn about the configurations to manage notifications to users about application deployments.
 ms.date: 10/05/2021
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 author: LauraWi

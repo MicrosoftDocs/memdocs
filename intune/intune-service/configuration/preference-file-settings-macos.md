@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Add preference file settings to macOS devices in Microsoft Intune
-titleSuffix:
 description: Add an xml or plist file that includes key information about your app. Use a preference file device configuration profile to change key information in the property list file, and assign it to your macOS devices in Microsoft Intune.
-keywords: preference file, property list file, plist, macOS, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: beflamm
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

@@ -1,30 +1,13 @@
 ---
-# required metadata
-
-title: Use Windows compatibility reports for Windows 10 and Windows 11 updates in Intune
-description: Use the app and driver compatibility reports for Windows 10 and Windows 11 devices before you deploy Intune policies for feature updates or update rings.
-keywords:
+title: Use Windows compatibility reports for Windows updates in Intune
+description: Use the app and driver compatibility reports for Windows devices before you deploy Intune policies for feature updates or update rings.
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 11/27/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: zadvor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -33,7 +16,7 @@ ms.collection:
 
 # App and driver compatibility reports for Windows updates
 
-With Intune, you can deploy updates to Windows 10/11 devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
+With Intune, you can deploy updates to Windows devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 
@@ -47,9 +30,9 @@ To use these reports, you must first ensure that prerequisites are met and that 
 
 The Windows feature update device readiness and Windows feature update compatibility risks reports require users of enrolled devices to have one of the following licenses:
 
-- Windows 10/11 Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows 10/11 Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows 10/11 Virtual Desktop Access (VDA) per user
+- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
+- Windows Virtual Desktop Access (VDA) per user
 
 Before using these reports, you must attest to having the required licenses on the [Windows data page](../protect/data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
 
@@ -57,7 +40,7 @@ Before using these reports, you must attest to having the required licenses on t
 
 To be eligible for the Windows feature update device readiness and Windows feature update compatibility risks reports, devices must:
 
-- Run a supported version of Windows 10 or later with the latest cumulative update
+- Run a supported version of Windows with the latest cumulative update
 - Be Microsoft Entra joined or Microsoft Entra hybrid joined
 - Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
@@ -84,13 +67,13 @@ In addition, to use the **Windows feature update device readiness report**, user
 
 The **Windows feature update device readiness report**  provides a device-level view of compatibility risks associated with an upgrade or update to a chosen version of Windows.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The insights in this report are specific to the target version of Windows you select when generating the report. To ensure accuracy of insights, confirm that your selected OS version matches the version of Windows you intend to deploy.
 
 To use this report:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
+2. In the admin center, go to **Reports** > **Device management** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
 3. Configure settings:
    - Select **Select Target OS** and choose the version of Windows you plan to deploy.
    - Select **Select Scope (Tags)** and choose which devices should be in scope for this report.
@@ -102,7 +85,7 @@ To use this report:
 
 [![Screen shot of the Windows feature update device readiness report.](./media/windows-update-compatibility-reports/device-readiness-report.png)](./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
 
->[!NOTE]  
+>[!NOTE]
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps provided and select **Generate again**.
 
 The following columns are available in this report:
@@ -110,7 +93,7 @@ The following columns are available in this report:
 - **Device name** - The name of the device.
 - **Manufacturer** - The manufacturer of the device.
 - **Model** - The model of the device.
-- **OS Version** - The current version of Windows installed on the device. For more information on how to interpret OS version data, see [Windows 11 release information](/windows/release-health/windows11-release-information) or [Windows 10 release information](/windows/release-health/release-information)
+- **OS Version** - The current version of Windows installed on the device. For more information on how to interpret OS version data, see [Windows 11 release information](/windows/release-health/windows11-release-information)
 - **Readiness status** - A summary of the readiness state of the device.
 - **Sys req issues** - A summary of any system requirements associated with the target OS version that this device doesn't meet.
 - **App issues** - The number of applications installed on this device with a known compatibility risk associated with the target OS version.
@@ -136,13 +119,13 @@ For more information about the compatibility risks that affect a specific device
 
 The **Windows feature update compatibility risks report**  provides a summary view of the compatibility risks across your organization associated with an upgrade or update to a chosen version of Windows.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > The insights in this report are specific to the target version of Windows you select when generating the report. To ensure accuracy of insights, confirm that your selected OS version matches the version of Windows you intend to deploy.
 
 To use this report:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
+2. In the admin center, go to **Reports** > **Device management** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
 3. Configure settings:
 
    - Select **Select Target OS** and choose the version of Windows you plan to deploy.
@@ -219,7 +202,7 @@ Windows detected issues that may interfere with the upgrade, but needs further i
 
 #### Multiple
 
-Multiple issues affect the application. 
+Multiple issues affect the application.
 
 #### Reinstall application after upgrading
 
@@ -227,7 +210,7 @@ The application is compatible with the new OS version, but you need to reinstall
 
 #### Driver won't migrate to new OS
 
-The currently installed version of a driver won't migrate to the new OS version. 
+The currently installed version of a driver won't migrate to the new OS version.
 
 - The driver won't migrate to the new OS version and Windows doesn't have a compatible version. In this case, we recommend checking with the independent hardware vendor (IHV) who manufactures the driver, or the original equipment manufacturer (OEM) who provided the device.
 - A new driver is installed during upgrade, and a newer version is available from a Windows Update. If the computer automatically receives updates from the Windows Update, no action is required. Otherwise, import a new driver from Windows Update after you upgrade Windows.
@@ -288,7 +271,7 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | 14                        | S mode              |
 | 15                        | Storage             |
 
-> [!NOTE]  
+> [!NOTE]
 > When exported, the **sys req issues** column is represented as a comma-separated list of all values that apply to the device. For example, a value of "1, 2" means the device does not meet the processor family or the RAM requirement for the target OS version selected.
 
 #### Windows feature update compatibility risks report
@@ -327,14 +310,14 @@ When report data is exported to a .csv file, the exported data doesn't use the f
 | Driver | 2 | Driver won't migrate to new OS. | Driver is replaced with a new version (either inbox or via Windows Update). No action is required for upgrade to proceed.   |
 | Driver | 3 | Blocking upgrade. | Can't upgrade.   |
 
-> [!NOTE]  
+> [!NOTE]
 > **Guidance** information is not included in the .csv export file. The mapping table  includes **Guidance** data for each **Issue** type.
 
 ## See also
 
-The FastTrack Center Benefit for Windows provides access to **Desktop App Assure**. This benefit is a service designed to address issues with Windows 10/11 and Microsoft 365 Apps for enterprise compatibility. For more information, see [Desktop App Assure](/fasttrack/win-10-app-assure).
+The FastTrack Center Benefit for Windows provides access to **Desktop App Assure**. This benefit is a service designed to address issues with Windows and Microsoft 365 Apps for enterprise compatibility. For more information, see [Desktop App Assure](/fasttrack/win-10-app-assure).
 
 ## Next step
 
-- Configure [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md)
-- Configure [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md)
+- Configure [Update rings for Windows](../protect/windows-10-update-rings.md)
+- Configure [Feature updates for Windows](../protect/windows-10-feature-updates.md)

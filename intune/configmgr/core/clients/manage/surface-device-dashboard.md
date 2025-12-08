@@ -7,7 +7,7 @@ ms.author: laurawi
 manager: apoorvseth
 ms.date: 11/15/2021
 ms.topic: how-to
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3

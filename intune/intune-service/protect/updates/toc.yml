@@ -1,0 +1,46 @@
+items:
+- name: Android Enterprise updates
+  items:
+  - name: Android FOTA update
+    href: ../fota-updates-android.md
+  - name: Zebra LG OTA Integration
+    href: ../zebra-lifeguard-ota-integration.md
+- name: Apple updates
+  items:
+  - name: Configure software updates
+    href: apple.md
+  - name: Software update reports
+    href: apple-reports.md
+  - name: Update policies (deprecated)
+    items:
+    - name: iOS/iPadOS update policies (deprecated)
+      href: software-updates-ios.md
+    - name: macOS update policies (deprecated)
+      href: software-updates-macos.md
+- name: Windows updates
+  items:
+  - name: Use Windows Update client policies
+    href: ../windows-update-for-business-configure.md
+  - name: Update rings policy
+    href: ../windows-10-update-rings.md
+  - name: Feature updates policy
+    href: ../windows-10-feature-updates.md
+  - name: Windows quality updates policy
+    href: ../windows-quality-update-policy.md
+  - name: Expedite updates policy
+    href: ../windows-10-expedite-updates.md
+  - name: Windows driver updates
+    items:
+    - name: Driver updates overview
+      href: ../windows-driver-updates-overview.md
+    - name: Driver updates policy
+      href: ../windows-driver-updates-policy.md
+  - name: Windows rollout options
+    href: ../windows-update-rollout-options.md
+  - name: Windows Update compatibility reports
+    href: ../windows-update-compatibility-reports.md
+  - name: Windows Update reports
+    href: ../windows-update-reports.md
+  - name: Delivery Optimization
+    href: ../../configuration/delivery-optimization-windows.md
+    displayName: delivery optimization, windows updates

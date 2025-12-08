@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Create discovery scripts for custom compliance policy in Microsoft Intune
 description: Create scripts for Linux or Windows devices to discover the settings you define as custom compliance settings for Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 09/04/2025
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ilwu
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -67,7 +50,7 @@ The following example is a sample PowerShell script that you could use for Windo
 
 ```powershell
 $WMI_ComputerSystem = Get-WMIObject -class Win32_ComputerSystem
-$WMI_BIOS = Get-WMIObject -class Win32_BIOS 
+$WMI_BIOS = Get-WMIObject -class Win32_BIOS
 $TPM = Get-Tpm
 
 $hash = @{ Manufacturer = $WMI_ComputerSystem.Manufacturer; BiosVersion = $WMI_BIOS.SMBIOSBIOSVersion; TPMChipPresent = $TPM.TPMPresent}

@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Create a custom role in Intune
 description: Learn how to create a custom role in Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 07/28/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-  - tier2
   - M365-identity-device-management
 ---
 
@@ -241,7 +221,7 @@ The following permissions are available when creating custom roles.
 | Remote Help app/View screen   | View screen allows the helper to view the sharer's device when Remote Help is enabled.    |
 | Remote tasks/Bypass activation lock | Remove the Activation Lock from supervised devices without requiring the user's Apple ID and password. This may be required if a user leaves the company and returns the device; without the user's Apple ID and password, there's no way to reactivate the device. Or, you need to reassign some devices to a different department during a device refresh in your organization. You can only reassign devices that don't have Activation Lock enabled. You must also have the Managed Device Read permission to view devices in the Azure portal before initiating this remote task. |
 | Remote tasks/Change organizational unit   | Move a Chrome Enterprise device to an existing organizational unit in your Google Workspace domain.  |
-| Remote tasks/Clean PC| Initiate a Fresh start device action. This action removes any apps that are installed on a Windows 10 PC that is running the Creators Update. Then, it automatically updates the PC to the latest version of Windows.|
+| Remote tasks/Clean PC| Initiate a Fresh start device action. This action removes any apps that are installed on a Windows device. |
 | Remote tasks/Collect diagnostics    | Collect device diagnostics    |
 | Remote tasks/Disable lost mode| Turn off the lost mode for an iOS device. |
 | Remote tasks/Enable lost mode | Initiate lost mode on lost or stolen iOS devices. This mode lets you enter a message and a phone number that appears on the lock screen of the device. To use lost mode, the device must be a corporate-owned iOS device that is in supervised mode.  |

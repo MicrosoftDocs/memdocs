@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Network endpoints for Microsoft Intune
-titleSuffix:
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 08/21/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: angrobe
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -33,7 +14,11 @@ ms.collection:
 
 # Network endpoints for Microsoft Intune
 
-This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments.
+This article lists IP addresses and port settings needed for proxy settings in your Microsoft Intune deployments. A consolidated list is at the end of this page.  [Consolidated endpoint list](#consolidated-endpoint-list)
+
+ > [!CAUTION]
+ >
+ > The previously available PowerShell scripts for retrieving Microsoft Intune endpoint IP addresses and FQDNs no longer return accurate data from the Office 365 Endpoint service. Instead, use the consolidated list provided in this article. Using the original scripts or endpoint lists from the Office 365 Endpoint service is insufficient and may lead to incorrect configurations.
 
 As a cloud-only service, Intune doesn't require an on-premises infrastructure such as servers or gateways.
 
@@ -41,36 +26,18 @@ As a cloud-only service, Intune doesn't require an on-premises infrastructure su
 
 To manage devices behind firewalls and proxy servers, you must enable communication for Intune.
 
-> [!NOTE]  
+> [!NOTE]
 > The information in this section also applies to the [Microsoft Intune Certificate Connector](../protect/certificate-connector-prerequisites.md). The connector has the same network requirements as managed devices.
 
 - The endpoints in this article allow access to the ports identified in the following tables.
 - For some tasks, Intune requires unauthenticated proxy server access to manage.microsoft.com, *.azureedge.net, and graph.microsoft.com.
 
-  > [!NOTE]  
+  > [!NOTE]
   > SSL traffic inspection isn't supported for '\*.manage.microsoft.com', '\*.dm.microsoft.com', or the [Device Health Attestation (DHA) endpoints listed in the compliance section](#migrating-device-health-attestation-compliance-policies-to-microsoft-azure-attestation).
 
 You can modify proxy server settings on individual client computers. You can also use Group Policy settings to change settings for all client computers located behind a specified proxy server.
 
 Managed devices require configurations that let **All Users** access services through firewalls.
-
-## PowerShell script
-
-To make it easier to configure services through firewalls, we onboarded with the Office 365 Endpoint service. At this time, the Intune endpoint information is accessed through a PowerShell script. There are other dependent services for Intune that are already covered as part of the Microsoft 365 Service and are marked as 'required'. Services already covered by Microsoft 365 aren't included in the script to avoid duplication.
-
-By using the following PowerShell script, you can retrieve the list of IP addresses for the Intune service.
-
-```PowerShell
-   (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.ips} | select -unique -ExpandProperty ips
-```
-
-By using the following PowerShell script, you can retrieve the list of FQDNs used by Intune and dependent services. When you run the script, the URLs in the script output might be different than the URLs in the following tables. At a minimum, make sure you include the URLs in the tables.
-
-```PowerShell
-   (invoke-restmethod -Uri ("https://endpoints.office.com/endpoints/WorldWide?ServiceAreas=MEM`&`clientrequestid=" + ([GUID]::NewGuid()).Guid)) | ?{$_.ServiceArea -eq "MEM" -and $_.urls} | select -unique -ExpandProperty urls
-```
-
-The script provides a convenient method to list and review all services required by Intune and Windows Autopilot in one location. Additional properties can be returned from the endpoint service such as the category property, which indicates whether the FQDN or IP should be configured as **Allow**, **Optimize** or **Default**.
 
 ## Endpoints
 
@@ -92,10 +59,10 @@ The data columns shown in the tables are:
 
 ### Intune core service
 
-> [!NOTE]  
+> [!NOTE]
 > If the firewall that you're using allows you to create firewall rules using a domain name, then use the `*.manage.microsoft.com` and `manage.microsoft.com` domain. However, if the firewall provider that you're using, doesn't allow you to create a firewall rule using a domain name, we recommend that you use the approved list of all subnets in this section.
 
-> [!NOTE]  
+> [!NOTE]
 > Intune endpoints also use *Azure Front Door* for communicating with the Intune service. The IP ranges for Intune (part of Microsoft Security) are added to the following table.  Intune specific endpoints are referenced in the JSON file by the name `AzureFrontDoor.MicrosoftSecurity`. Refer to the Azure Front Door and Service Tags documentation for the complete list of all services that utilize Azure Front Door and instructions for using the JSON file. [Azure Front Door IP Ranges and Service Tags](https://www.microsoft.com/download/details.aspx?id=56519)
 
 | ID | Desc | Category | ER | Addresses | Ports |
@@ -129,9 +96,9 @@ In this section, the following tables list the Intune dependencies and the ports
 
 #### Android Enterprise dependencies
 
-**Google Android Enterprise** - Google provides documentation of required network ports and destination host names in their [Android Enterprise Bluebook](https://static.googleusercontent.com/media/www.android.com/en//static/2016/pdfs/enterprise/Android-Enterprise-Migration-Bluebook_2019.pdf), under the **Firewall** section of that document.
+**Google Android Enterprise** - Google provides documentation of required network ports and destination host names in the [Android Enterprise Help Center](https://support.google.com/work/android/answer/10513641?hl=en).
 
-**Android push notification** - Intune uses Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. Both Android Device Administrator and Android Enterprise require this. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/concept-options#messaging-ports-and-your-firewall).
+**Android push notification** - Intune uses Google Firebase Cloud Messaging (FCM) for push notification to trigger device actions and check-ins. Both Android Device Administrator and Android Enterprise require this. For information on FCM network requirements, see Google's [FCM ports and your firewall](https://firebase.google.com/docs/cloud-messaging/).
 
 #### Android AOSP dependencies
 
@@ -139,18 +106,14 @@ In this section, the following tables list the Intune dependencies and the ports
 |-----|------|----------|-------|-----------|-------|
 | 179 | MEM - Android AOSP Dependency | Default<BR>Required | False | `intunecdnpeasd.azureedge.net`<BR>`intunecdnpeasd.manage.microsoft.com`<BR>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com)<br> | **TCP:** 443 |
 
-> [!NOTE]  
+> [!NOTE]
 > Because Google Mobile Services isn't available in China, devices in China managed by Intune can't use features that require Google Mobile Services. These features include: Google Play Protect capabilities such as Play Integrity Verdict, Managing apps from the Google Play Store, Android Enterprise capabilities (see this [Google documentation](https://support.google.com/work/android/answer/6270910)). Additionally, the Intune Company Portal app for Android uses Google Mobile Services to communicate with the Microsoft Intune service. Because Google Play services isn't available in China, some tasks can require up to 8 hours to finish. For more information, see [Limitations of Intune management when GMS is unavailable](../apps/manage-without-gms.md#limitations-of-intune-management-when-gms-is-unavailable).
 
 **Android port information** - Depending on how you choose to manage Android devices, you might need to open the Google Android Enterprise ports and/or the Android push notification. For more information on Android management methods supported, see the [Android enrollment documentation](deployment-guide-enrollment-android.md).
 
 #### Apple dependencies
 
-| ID  | Desc | Category | ER    | Addresses | Ports |
-|-----|------|----------|-------|-----------|-------|
-| 178 | MEM - Apple Dependencies | Default<BR>Required | False | `itunes.apple.com`<BR>`*.itunes.apple.com`<BR>`*.mzstatic.com`<BR>`*.phobos.apple.com`<BR>`phobos.itunes-apple.com.akadns.net`<BR>`*.push.apple.com`<BR>`phobos.apple.com`<BR>`ocsp.apple.com`<BR>`ax.itunes.apple.com`<BR>`ax.itunes.apple.com.edgesuite.net`<BR>`s.mzstatic.com`<BR>`a1165.phobos.apple.com`<BR> | **TCP:** 80, 443, 5223 |
-
-For more information, see the following resources:
+For information about Apple specific endpoints, see the following resources:
 
 - [Use Apple products on enterprise networks](https://support.apple.com/HT210060)
 - [TCP and UDP ports used by Apple software products](https://support.apple.com/HT202944)
@@ -177,7 +140,7 @@ For Delivery Optimization metadata:
 - `*.dl.delivery.mp.microsoft.com`
 
 > [!TIP]
-> Review dependencies for client-service peer-to-peer solutions that you use to help ensure support for cloud-based management. For example, Windows BranchCache relies on locally available groups that might not be available through Microsoft Entra ID, which is Intune’s identity solution.
+> Review dependencies for client-service peer-to-peer solutions that you use to help ensure support for cloud-based management. For example, Windows BranchCache relies on locally available groups that might not be available through Microsoft Entra ID, which is Intune's identity solution.
 
 #### Windows Push Notification Services (WNS) dependencies
 
@@ -209,7 +172,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 ## Endpoint analytics
 
-For more information on the required endpoints for Endpoint analytics, see [Endpoint analytics proxy configuration](../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../analytics/index.md#prerequisites).
 
 ## Microsoft Defender for Endpoint
 
@@ -220,7 +183,7 @@ For communication between clients and the cloud service:
 
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Microsoft Defender for Endpoint.
 
 ## Microsoft Intune Endpoint Privilege Management
@@ -232,7 +195,7 @@ For communication between clients and the cloud service:
 - `*.dm.microsoft.com` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 - `*.events.data.microsoft.com` - Used by Intune-managed devices to send [optional reporting data](../protect/epm-data-collection.md) to the Intune data collection endpoint.
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).
@@ -253,12 +216,18 @@ Managed Windows devices that use the Microsoft Store either to acquire, install,
 - `licensing.mp.microsoft.com`
 - `storeedgefd.dsx.mp.microsoft.com`
 
+ > [!IMPORTANT]
+ > SSL Inspection isn't supported on endpoints required for Microsoft Store API.
+
 **Windows Update Agent:**
 
 For details, see the following resources:
 
 - [Manage connection endpoints for Windows 11 Enterprise](/windows/privacy/manage-windows-11-endpoints)
 - [Manage connection endpoints for Windows 10 Enterprise, version 21H2](/windows/privacy/manage-windows-21h2-endpoints)
+
+  > [!NOTE]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 **Win32 content download:**
 
@@ -280,7 +249,7 @@ For details, see the following resource:
 
 ## Migrating device health attestation compliance policies to Microsoft Azure attestation
 
-If a customer enables any of the Windows 10/11 Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
+If a customer enables any of the Windows Compliance policy - Device Health settings, then Windows 11 devices begin to use a Microsoft Azure Attestation (MAA) service based on their Intune tenant location.
 However, Windows 10 and GCCH/DOD environments continue to use the existing Device Health Attestation DHA endpoint 'has.spserv.microsoft.com' for device health attestation reporting and isn't impacted by this change.
 
 If a customer has firewall policies that prevent access to the new Intune MAA service for Windows 11, then Windows 11 devices with assigned compliance policies using any of the device health settings (BitLocker, Secure Boot, Code Integrity) will fall out of compliance as they're unable to reach the MAA attestation endpoints for their location.
@@ -343,11 +312,11 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [Remediations](../fundamentals/remediations.md), [Endpoint analytics](../../analytics/overview.md), [Custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 
-> [!NOTE]  
+> [!NOTE]
 > **Allow HTTP Partial response** is required for Scripts & Win32 Apps endpoints.
 
 |Region | CDN | Port |
@@ -362,6 +331,187 @@ Different endpoints are used depending on your tenant location. To find your ten
 <a name="windows-update-for-business-deployment-service"></a>
 
 For more information on the required endpoints for Windows Autopatch, see [Windows Autopatch prerequisites](/windows/deployment/windows-autopatch/prepare/windows-autopatch-configure-network#required-microsoft-product-endpoints).
+
+## Consolidated Endpoint List
+
+To make it easier to configure services through firewalls, the following is a consolidated list of the FQDNs and IP Subnets used by Intune managed devices. 
+
+These lists include only those endpoints that that are used by Intune managed devices. These lists do not include additional endpoints that were provided by the Office 365 Endpoint service but not used by Intune.
+
+FQDNs
+```
+*.manage.microsoft.com
+manage.microsoft.com
+*.dl.delivery.mp.microsoft.com
+*.do.dsp.mp.microsoft.com
+*.update.microsoft.com
+*.windowsupdate.com
+adl.windows.com
+dl.delivery.mp.microsoft.com
+tsfe.trafficshaping.dsp.mp.microsoft.com
+time.windows.com
+*.s-microsoft.com
+clientconfig.passport.net
+windowsphone.com
+approdimedatahotfix.azureedge.net
+approdimedatapri.azureedge.net
+approdimedatasec.azureedge.net
+euprodimedatahotfix.azureedge.net
+euprodimedatapri.azureedge.net
+euprodimedatasec.azureedge.net
+naprodimedatahotfix.azureedge.net
+naprodimedatapri.azureedge.net
+naprodimedatasec.azureedge.net
+swda01-mscdn.azureedge.net
+swda02-mscdn.azureedge.net
+swdb01-mscdn.azureedge.net
+swdb02-mscdn.azureedge.net
+swdc01-mscdn.azureedge.net
+swdc02-mscdn.azureedge.net
+swdd01-mscdn.azureedge.net
+swdd02-mscdn.azureedge.net
+swdin01-mscdn.azureedge.net
+swdin02-mscdn.azureedge.net
+*.notify.windows.com
+*.wns.windows.com
+ekcert.spserv.microsoft.com
+ekop.intel.com
+ftpm.amd.com
+intunecdnpeasd.azureedge.net
+*.monitor.azure.com
+*.support.services.microsoft.com
+*.trouter.communication.microsoft.com
+*.trouter.skype.com
+*.trouter.teams.microsoft.com
+api.flightproxy.skype.com
+ecs.communication.microsoft.com
+edge.microsoft.com
+edge.skype.com
+remoteassistanceprodacs.communication.azure.com
+remoteassistanceprodacseu.communication.azure.com
+remotehelp.microsoft.com
+wcpstatic.microsoft.com
+lgmsapeweu.blob.core.windows.net
+intunemaape1.eus.attest.azure.net
+intunemaape10.weu.attest.azure.net
+intunemaape11.weu.attest.azure.net
+intunemaape12.weu.attest.azure.net
+intunemaape13.jpe.attest.azure.net
+intunemaape17.jpe.attest.azure.net
+intunemaape18.jpe.attest.azure.net
+intunemaape19.jpe.attest.azure.net
+intunemaape2.eus2.attest.azure.net
+intunemaape3.cus.attest.azure.net
+intunemaape4.wus.attest.azure.net
+intunemaape5.scus.attest.azure.net
+intunemaape7.neu.attest.azure.net
+intunemaape8.neu.attest.azure.net
+intunemaape9.neu.attest.azure.net
+*.webpubsub.azure.com
+*.gov.teams.microsoft.us
+remoteassistanceweb.usgov.communication.azure.us
+config.edge.skype.com
+contentauthassetscdn-prod.azureedge.net
+contentauthassetscdn-prodeur.azureedge.net
+contentauthrafcontentcdn-prod.azureedge.net
+contentauthrafcontentcdn-prodeur.azureedge.net
+fd.api.orgmsg.microsoft.com
+ris.prod.api.personalization.ideas.microsoft.com
+
+```
+
+IP Subnets
+```
+4.145.74.224/27
+4.150.254.64/27
+4.154.145.224/27
+4.200.254.32/27
+4.207.244.0/27
+4.213.25.64/27
+4.213.86.128/25
+4.216.205.32/27
+4.237.143.128/25
+13.67.13.176/28
+13.67.15.128/27
+13.69.67.224/28
+13.69.231.128/28
+13.70.78.128/28
+13.70.79.128/27
+13.74.111.192/27
+13.77.53.176/28
+13.86.221.176/28
+13.89.174.240/28
+13.89.175.192/28
+20.37.153.0/24
+20.37.192.128/25
+20.38.81.0/24
+20.41.1.0/24
+20.42.1.0/24
+20.42.130.0/24
+20.42.224.128/25
+20.43.129.0/24
+20.44.19.224/27
+20.91.147.72/29
+20.168.189.128/27
+20.189.172.160/27
+20.189.229.0/25
+20.191.167.0/25
+20.192.159.40/29
+20.192.174.216/29
+20.199.207.192/28
+20.204.193.10/31
+20.204.193.12/30
+20.204.194.128/31
+20.208.149.192/27
+20.208.157.128/27
+20.214.131.176/29
+40.67.121.224/27
+40.70.151.32/28
+40.71.14.96/28
+40.74.25.0/24
+40.78.245.240/28
+40.78.247.128/27
+40.79.197.64/27
+40.79.197.96/28
+40.80.180.208/28
+40.80.180.224/27
+40.80.184.128/25
+40.82.248.224/28
+40.82.249.128/25
+40.84.70.128/25
+40.119.8.128/25
+48.218.252.128/25
+52.150.137.0/25
+52.162.111.96/28
+52.168.116.128/27
+52.182.141.192/27
+52.236.189.96/27
+52.240.244.160/27
+57.151.0.192/27
+57.153.235.0/25
+57.154.140.128/25
+57.154.195.0/25
+57.155.45.128/25
+68.218.134.96/27
+74.224.214.64/27
+74.242.35.0/25
+104.46.162.96/27
+104.208.197.64/27
+172.160.217.160/27
+172.201.237.160/27
+172.202.86.192/27
+172.205.63.0/25
+172.212.214.0/25
+172.215.131.0/27
+13.107.219.0/24
+13.107.227.0/24
+13.107.228.0/23
+150.171.97.0/24
+2620:1ec:40::/48
+2620:1ec:49::/48
+2620:1ec:4a::/47
+```
+
 
 ## Related content
 

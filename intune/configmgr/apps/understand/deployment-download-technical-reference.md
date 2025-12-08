@@ -3,7 +3,7 @@ title: Application download technical reference
 titleSuffix: Configuration Manager
 description: Troubleshooting application download technical reference for Configuration Manager.
 ms.date: 08/23/2021
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: troubleshooting
 author: LauraWi

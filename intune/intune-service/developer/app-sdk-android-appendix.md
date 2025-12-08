@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide
 description: The Microsoft Intune App SDK for Android lets you incorporate Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
-# Microsoft Intune App SDK for Android developer guide
+# Microsoft Intune App SDK for Android Developer Guide
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 

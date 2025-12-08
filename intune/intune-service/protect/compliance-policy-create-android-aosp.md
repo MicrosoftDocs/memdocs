@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Android (AOSP) compliance settings in Microsoft Intune
 description: View the device compliance settings for Android (AOSP) that you can manage with Microsoft Intune compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 09/04/2025
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-ms.assetid: e1258fe4-0b5c-4485-8bd1-152090df6345
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: tycast
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -95,7 +76,7 @@ If you don't configure password requirements, the use of a device password is op
 
     * **Numeric** - Password must only be numbers, such as `123456789`.
 
-      Also enter:  
+      Also enter:
       * **Minimum password length**: The minimum number of digits required, from 4 to 16.
 
     * **Numeric complex** - Repeated or consecutive numerals, such as `1111` or `1234`, aren't allowed.

@@ -1,54 +1,34 @@
 ---
-# required metadata
-
-title: Prepare apps for mobile application management with Microsoft Intune
-description: The information in this topic helps you decide when you should use the App wrapping tool and the App SDK to enable your custom line-of-business apps to use the mobile app management policies.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 11/18/2024
+title: Prepare Apps for Mobile Application Management With Microsoft Intune
+description: The information in this article helps you decide when you should use the App wrapping tool and the App SDK to enable your custom line-of-business apps to use the mobile app management policies.
+ms.date: 12/03/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 29e22121-8268-48b5-a671-f940a6be1d24
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Prepare line-of-business apps for app protection policies
+# Prepare Line-of-Business Apps for App Protection Policies
 
 You can enable your apps to use app protection policies by using either the Intune App Wrapping Tool or the Intune App SDK. Use this information to learn about these two methods and when to use them.
 
 ## Intune App Wrapping Tool
 
-The App Wrapping Tool is used primarily for **internal** line-of-business (LOB) apps. The tool is a command-line application that creates a wrapper around the app, which then allows the app to be managed by an Intune app protection policy. When protecting an app provided by an independent software vendor (ISV) it's important to clarify if the ISV will still support the wrapped app.
+The App Wrapping Tool is used primarily for **internal** line-of-business (LOB) apps. The tool is a command-line application that creates a wrapper around the app, which then allows Intune app protection policy to manage the app. When protecting an app provided by an independent software vendor (ISV), it's important to clarify if the ISV supports the wrapped app.
 
-You don't need the source code to use the tool, but you do need signing credentials. For more about signing credentials, see the [Intune blog](https://blogs.technet.microsoft.com/enterprisemobility/2015/02/25/how-to-obtain-the-prerequisites-for-the-intune-app-wrapping-tool-for-ios/). For the App Wrapping Tool documentation, see [Android App Wrapping Tool](app-wrapper-prepare-android.md) and [iOS App Wrapping Tool](app-wrapper-prepare-ios.md).
+You don't need the source code to use the tool, but you do need valid signing credentials. For more information about the signing requirements, see [Certificate, provisioning profile, and authentication requirements](app-wrapper-prepare-ios.md#certificate-provisioning-profile-and-authentication-requirements). For the App Wrapping Tool documentation, see [Android App Wrapping Tool](app-wrapper-prepare-android.md) and [iOS App Wrapping Tool](app-wrapper-prepare-ios.md).
 
 The App Wrapping Tool does **not** support apps in or available in the Apple App Store or Google Play Store. It also doesn't support certain features that require developer integration (see the following feature comparison table).
 
-For more information about the App Wrapping Tool for app protection policies on devices that are not enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../apps/apps-add.md).
+For more information about the App Wrapping Tool for app protection policies on devices that aren't enrolled in Intune, see [Protect line-of-business apps and data on devices not enrolled in Microsoft Intune](../apps/apps-add.md).
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the Intune App Wrapping Tool. Regularly check the [Intune App Wrapping Tool](https://github.com/msintuneappsdk) repositories for updates and incorporate into your software development release cycle to ensure your apps support the latest App Protection Policy settings.
 
 ### Reasons to use the App Wrapping Tool
 
-* Your app does not have built-in data protection features
-* Your app is deployed internally and the app is not available in the Apple App Store or Google Play Store
+* Your app doesn't have built-in data protection features
+* Your app is deployed internally and the app isn't available in the Apple App Store or Google Play Store
 * You don't have access to the app's source code
 * You didn't develop the app
 * Your app has minimal user authentication experiences
@@ -61,19 +41,19 @@ To learn more about the SDK, see the [Overview](app-sdk.md). To get started with
 
 ### Reasons to use the SDK
 
-* Your app does not have built-in data protection features
+* Your app doesn't have built-in data protection features
 * Your app is deployed on a public app store such as Google Play or Apple's App Store
-* You are an app developer and have the technical background to use the SDK
+* You're an app developer and have the technical background to use the SDK
 * Your app has other SDK integrations
 * Your app is frequently updated
 
-## Not using an app development platform listed above?
+## Not using a previously listed app development platform?
 
-The Intune SDK development team actively tests and maintains support for apps built with the native Android and iOS (Obj-C, Swift) platforms. Guidance is not provided for other platforms, but it is possible to use the native SDK to create your own plug-ins.
+The Intune SDK development team actively tests and maintains support for apps built with the native Android and iOS (Obj-C, Swift) platforms. Guidance isn't provided for other platforms, but it's possible to use the native SDK to create your own plug-ins.
 
 ## Feature comparison
 
-This table lists the settings that are enabled if an app uses the App SDK or the App Wrapping Tool. Some features require app developers to apply some logic outside of basic integration with the Intune SDK, and as such, are not enabled if the app uses the App Wrapping Tool. 
+This table lists the settings that are enabled if an app uses the App SDK or the App Wrapping Tool. Some features require app developers to apply some logic outside of basic integration with the Intune SDK, and as such, aren't enabled if the app uses the App Wrapping Tool.
 
 |Feature|App SDK|App Wrapping Tool|
 |-----------|---------------------|-----------|
@@ -101,7 +81,7 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 |Targeted Application Configuration (or app config through the "MAM channel")|X||
 |Support for Multi-Identity|X||
 |Customizable Style |X||
-|On-demand application VPN connections with Citrix mVPN|X|X| 
+|On-demand application VPN connections with Citrix mVPN|X|X|
 |Disable contact sync|X|X|
 |Disable printing|X|X|
 |Require minimum app version|X|X|
@@ -117,8 +97,8 @@ This table lists the settings that are enabled if an app uses the App SDK or the
 
 ## Next steps
 
-To learn more about app protection policies and Intune, see the following topics:
+For more information about app protection policies and Intune, see:
 
-- [Android app wrapping tool](app-wrapper-prepare-android.md)<br>
-- [iOS app wrapping tool](app-wrapper-prepare-ios.md)<br>
+- [Android app wrapping tool](app-wrapper-prepare-android.md)
+- [iOS app wrapping tool](app-wrapper-prepare-ios.md)
 - [Use the SDK to enable apps for mobile application management](app-sdk.md)

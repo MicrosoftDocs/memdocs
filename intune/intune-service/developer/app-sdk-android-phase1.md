@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide - Plan the integration
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - Plan the Integration
 description: Plan the integration to incorporate Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
-# Intune App SDK for Android - Plan the integration
+# Intune App SDK for Android - Plan the Integration
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
@@ -166,8 +145,8 @@ The user is ***not*** required to sign into or even launch the Company Portal ap
 > [!NOTE]
 > Ensure that your app is compatible with the [Google Play requirements](https://developer.android.com/google/play/requirements/target-sdk).
 
-The SDK fully supports Android API 28 (Android 9.0) through Android API 35 (Android 15).
-In order to target Android API 35 (Android 15), you must use Intune App SDK `v11.0.0` or later.
+The SDK fully supports Android API 28 (Android 9.0) through Android API 36 (Android 16).
+In order to target Android API 36 (Android 16), you must use Intune App SDK `v12.0.0` or later.
 
 APIs 26 through 27 (Android 8.0 - 8.1) are in limited support.
 The Company Portal app isn't supported below Android API 26 (Android 8.0).

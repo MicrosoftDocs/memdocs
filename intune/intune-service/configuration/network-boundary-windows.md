@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Create a Windows Network Boundary profile in Microsoft Intune
 description: Add a Windows Network Boundary policy to Windows devices using Microsoft Intune. Add trusted sites, trusted domains, IPv4 and IPv6 ranges, and proxy servers to a device configuration policy. Microsoft Defender Application Guard in Microsoft Edge trusts sites in this boundary.
-keywords: network boundary, ipv4, ipv6, windows, proxy server, ip range, microsoft intune, endpoint management
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 02/19/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -39,8 +22,7 @@ For more information on using Microsoft Defender Application Guard in Intune, go
 
 This feature applies to:
 
-- Windows 11 devices enrolled in Intune
-- Windows 10 devices enrolled in Intune
+- Windows devices enrolled in Intune
 
 This article shows you how to create the profile, and add trusted sites.
 
