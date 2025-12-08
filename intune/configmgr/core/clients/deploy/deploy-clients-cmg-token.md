@@ -2,7 +2,7 @@
 title: Token-based authentication for CMG
 titleSuffix: Configuration Manager
 description: Register a client on the internal network for a unique token or create a bulk registration token for internet-based devices.
-ms.date: 02/16/2022
+ms.date: 12/08/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
@@ -57,7 +57,7 @@ If you can't install and register clients on the internal network, create a bulk
 
 To create a bulk registration token for use during client installation on internet-based devices, complete the following actions:
 
-1. Sign in to the top-level site server in the hierarchy with local administrator privileges.
+1. Sign in to the top-level site server in the hierarchy with an account that is a **Full Administrator** in Configuration Manager and a member of the local Administrators group on the server.
 
 1. Open a command prompt as an administrator.
 
