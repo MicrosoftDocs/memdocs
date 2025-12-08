@@ -26,12 +26,7 @@ Different update versions are identified by year and month. For example, version
 
 ## Supported versions
 
-Use the following links to discover what's new with each supported version:
-
-- [What's new in version 2509](whats-new-in-version-2509.md)
-- [What's new in version 2503](whats-new-in-version-2503.md)
-- [What's new in version 2409](whats-new-in-version-2409.md)
-
+Refer to the *Supported versions* section of the [Updates and Servicing](../../../core/servers/manage/updates.md) page for the latest version information.
 
 Each update version remains in support for 18 months from its initial availability date. Stay current with the most recent update version. For more information, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).
 
