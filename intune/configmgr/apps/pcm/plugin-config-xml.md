@@ -3,7 +3,7 @@ title: Plug-in configuration XML
 titleSuffix: Configuration Manager
 description: Technical reference for the XML elements of the Package Conversion Manager plug-in.
 ms.date: 08/24/2018
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: reference
 author: LauraWi

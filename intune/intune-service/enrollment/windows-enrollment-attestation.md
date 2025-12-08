@@ -112,7 +112,7 @@ The following table lists status details and their descriptions.
 | TPM isn't trusted              | Device contains a TPM that isn't trusted and therefore can't be attested.                                                           |
 | TPM isn't available            | Device doesn't have TPM 2.0 or TPM can't be attested due to firmware needing update. For more information on how to update firmware, see [Resources](#resources)                                          |
 | TPM isn't ready                | TPM isn't ready to be used by this device. User needs to reset TPM ownership. For more information on how to reset TPM ownership, see [Resources](#resources)                                                    |
-| Client request is rejected      | Client's attestation request didn't reach MDM server or server rejected the request.                                             |
+| Client request is rejected      | Client's attestation request didn't reach MDM server or server rejected the request. Device owner should check to see if device can still authenticate with Entra. For more information, see [Resources](#resources).                                             |
 | AIK certificate wasn't provided| AIK certificate is missing on the device. Could be due to network issue. If temporary, attestation would retry successfully once device receives AIK cert.  |
 | Client didn't provide all required parameters | Both AIK certificate and AIK public key are missing.                                                                                     |
 | MDM key is already in TPM       | Device indicates that the MDM key is already stored in TPM. But Intune is unable to attest it because AIK certificate or AIK public key is missing, or ENTRA key can't be attested. |
@@ -120,7 +120,7 @@ The following table lists status details and their descriptions.
 | Entra token doesn't match device identity | ENTRA token for enrollment doesn't match the ENTRA key presented in the enrollment request. You can fix this issue by upgrading to the latest Windows build and by retrying attestation.                                          |
 | Entra token is missing device identity | ENTRA token for enrollment is missing ENTRA device identity.
 
-For more information, see the [Resources](#resources) section.                                                     |
+For more information, see the [Resources](#resources) section.                                                     
 
 > [!NOTE]
 > AP ODJ devices always fail attestation at enrollment. To attest devices enrolled through an AP ODJ method, attestation must be done from the report after enrollment. For more information, see [Attest device action](#attest-device-action).
@@ -179,6 +179,8 @@ To use the **Attest device** action, you require a role based permission known a
 
 - [Troubleshoot the TPM - Windows Security | How to reset TPM ownership](/windows/security/hardware-security/tpm/initialize-and-configure-ownership-of-the-tpm)
 
+- [How to check authentication with Entra](/entra/identity/devices/troubleshoot-hybrid-join-windows-current#troubleshoot-post-join-authentication-issues)
+  
 Additional links:
 
 - [TrustedPlatformModule](/powershell/module/trustedplatformmodule/?view=windowsserver2022-ps&viewFallbackFrom=win10-ps&preserve-view=true)

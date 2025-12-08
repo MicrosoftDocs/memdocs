@@ -437,7 +437,7 @@ You can now use Intune to manage the configuration of the Microsoft Defender CSP
 
 You can use the following two Microsoft Intune options to configure DeviceControlEnabled. With both options, the setting appears as **Device Control Enabled**, and is found in the *Defender* category:
 
-- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.
+- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-endpoint-security-policies), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.
 - Configure a [**Settings Catalog** profile](../configuration/settings-catalog.md#create-the-policy) for Windows.
 
 Both the Device Control template and Settings Catalog support the following options for *Device Control Enabled*:
@@ -460,7 +460,7 @@ DefaultEnforcement manages the configuration of Device Control:
 
 You can use the following two Microsoft Intune options to configure DefaultEnforcement. With both options, the setting appears as **Default Enforcement**, and is found in the *Defender* category:
 
-- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.
+- Configure a [**Device Control** template](../protect/endpoint-security-policy.md#create-endpoint-security-policies), which is a profile for [Attack Surface Reduction](../protect/endpoint-security-asr-policy.md) policy.
 - Configure a [**Settings Catalog** profile](../configuration/settings-catalog.md#create-the-policy) for Windows.
 
 Both the Device Control template and Settings Catalog support the following options for *Default Enforcement*:
@@ -800,7 +800,7 @@ Applies to:
 
 Microsoft Intune app protection policies (APP) are now supported on the Microsoft Teams app on VisionOS devices.
 
-To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties) for more information about filters for managed app properties.
+To learn more about how to target policies to VisionOS devices, see [Managed app properties](../fundamentals/filters-device-properties.md#available-properties) for more information about filters for managed app properties.
 
 Applies to:
 
@@ -1964,7 +1964,7 @@ For more information about current RBAC permissions and built-in roles, see:
 
 - [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
 - [Built-in role permissions for Microsoft Intune](../fundamentals/role-based-access-control-reference.md)
-- [Assign role-based access controls for endpoint security policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy) in *Manage device security with endpoint security policies in Microsoft Intune*.
+- [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security) in *Manage device security with endpoint security policies in Microsoft Intune*.
 
 > [!IMPORTANT]
 >

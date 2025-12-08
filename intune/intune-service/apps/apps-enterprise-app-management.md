@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune Enterprise Application Management
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
-ms.date: 11/17/2025
+ms.date: 11/19/2025
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -104,8 +104,8 @@ The SLO measurement window starts at ingestion, the point when the app update is
 #### App Update Process Flow
 
 1. **Ingestion** – App update is received by Microsoft
-2. **Automated Validation** – Compatibility, security, and compliance checks
-3. **Manual Validation** (if needed) – Vendor engagement for additional testing or bypass approval
+2. **Automated Validation** – Compatibility and compliance checks
+3. **Manual Validation** - Additional testing if needed
 4. **Catalog Availability** – App update published to Enterprise App Catalog
 
 #### Automated Validation
@@ -114,7 +114,7 @@ Most apps undergo automated validation checks.
 
 - Target: 80–90% of app updates are processed and available in the Intune portal within 24 hours of ingestion.
 
-#### Manual Validation Apps (Bypass Required)
+#### Manual Validation Apps
 
 If an app fails automated checks, it moves to manual validation and requires additional testing. Updates requiring manual testing and approval are completed within 7 days.
 

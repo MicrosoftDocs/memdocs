@@ -102,11 +102,11 @@ To create a Cloud PC provisioning policy for use with Windows Autopilot device p
       > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
    1. In the **Assignments** page:
-
+   
       1. Select **Add groups**. The **Select groups to include** pane opens. In the **Select groups to include** pane:
-
-         1. In the **Search** text box, enter the name of the assigned device group created in [Step 2: Create an assigned device group](automatic-device-group.md).
-
+      
+         1. In the **Search** text box, enter the name of the user group the policy will be assigned to.
+                  
          1. Once the device group is found, select it under **Name**.
 
          1. Select the **Select** button.

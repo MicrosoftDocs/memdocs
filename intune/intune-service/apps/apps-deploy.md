@@ -1,7 +1,7 @@
 ---
 title: Assign Apps to Groups in Microsoft Intune
 description: Learn how to assign an Intune app to groups of users or devices using Microsoft Intune.
-ms.date: 11/18/2025
+ms.date: 12/03/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -116,6 +116,9 @@ Available apps require the user to redownload the available app from the Company
 
 A single group is prevented from being targeted for multiple app assignment intents. However, if a user or device is a member of multiple groups that are each assigned with different intents, a conflict results. Creating assignment conflicts for applications isn't recommended.
 The information in the following table can help you understand the resulting intent when a conflict occurs:
+
+> [!NOTE]
+> If there are assignment conflicts for applications, the assignment filter might not work as expected because the assignment intent is evaluated before the assignment filter.
 
 | Group 1 intent | Group 2 intent | Resulting intent |
 |-----------------------------------|-----------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|

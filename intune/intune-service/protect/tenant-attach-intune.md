@@ -315,5 +315,5 @@ For more information about viewing device events for tenant attached devices, se
 
 ## Next steps
 
-- [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
+- [Configure Endpoint security policies](endpoint-security-policy.md#create-endpoint-security-policies) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
 - Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).
