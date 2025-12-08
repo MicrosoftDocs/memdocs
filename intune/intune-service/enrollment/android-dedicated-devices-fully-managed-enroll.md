@@ -77,13 +77,13 @@ admin.
 #### Step 2: Link zero-touch account to Intune
 Link a zero-touch account with your Microsoft Intune account. 
 
-Before you begin, choose an enrollment token to use as the default token for enrolling devices. 
-1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.
-2. Go to a dedicated, fully managed, or coporate-owned work profile enrollment profile.
-3. View the enrollment token for that profile.
-4. Copy the text under **Token**.
+Before you link accounts, choose an enrollment token to use as the default token for enrolling devices. 
+1. In the [admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **By platform** > **Android**.  
+1. Go to a dedicated, fully managed, or coporate-owned work profile enrollment profile.  
+1. View the enrollment token for that profile.  
+1. Copy the text under **Token**.  
 
-Save the token string. Then Complete the following steps to link your zero-touch account.   
+Save the token string. Then complete the following steps to link your zero-touch account.   
 1. In the admin center, go to **Devices** > **By platform** > **Android**.  
 1. Select **Device onboarding** > **Enrollment**.
 1. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.
