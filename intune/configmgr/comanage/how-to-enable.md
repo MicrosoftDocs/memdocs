@@ -2,7 +2,7 @@
 title: Enable co-management
 titleSuffix: Configuration Manager
 description: Quickly enable co-management in Configuration Manager to gain immediate value.
-ms.date: 08/02/2021
+ms.date: 08/29/2025
 ms.subservice: co-management
 ms.service: configuration-manager
 ms.topic: how-to
@@ -24,21 +24,21 @@ Make sure the co-management prerequisites are set up before you start this proce
 
 > [!TIP]
 > As a companion to this article, we recommend using the [co-management setup guide](https://go.microsoft.com/fwlink/?linkid=2224782) when signed in to the Microsoft 365 admin center. This guide will customize your experience based on your environment.
+
 ## Enable co-management
 
-
-Starting in Configuration Manager version 2111, the co-management onboarding experience changed. The Cloud Attach Configuration Wizard makes it easier to enable co-management and other cloud features. You can choose a streamlined set of recommended defaults, or customize your cloud attach features. There's also a new built-in device collection for **Co-management Eligible Devices** to help you identify clients. For more information on enabling co-management, see [Enable cloud attach](https://learn.microsoft.com/intune/configmgr/cloud-attach/enable).
+Starting in Configuration Manager version 2111, the co-management onboarding experience changed. The Cloud Attach Configuration Wizard makes it easier to enable co-management and other cloud features. You can choose a streamlined set of recommended defaults, or customize your cloud attach features. There's also a new built-in device collection for **Co-management Eligible Devices** to help you identify clients. For more information on enabling co-management, see [Enable cloud attach](../cloud-attach/enable.md).
 
 > [!NOTE]
 > With the new wizard, you don't move workloads at the same time that you enable co-management. To move workloads, you'll edit the co-management properties after enabling cloud attach.
 
-# Clean up duplicate device objects in Microsoft Entra ID
+## Clean up duplicate device objects in Microsoft Entra ID
 
 It's recommended to detect and clean up all duplicate devices in Microsoft Entra ID before attempting co-management auto enrollment.
 
 Duplicate objects in Entra ID can happen for several reasons, but mainly this occurs when a device is initially connected to Microsoft Entra ID as an Entra *registered* device. When you enable Microsoft Entra hybrid join, the same device is connected twice to Microsoft Entra ID but as a Hybrid Microsoft Entra device. In the dual state, you end up having two Microsoft Entra device records with different join types for the same device.
 
-> [!WARN]
+> [!WARNING]
 > If you don't clean up stale devices in Microsoft Entra ID before attempting co-management, you might end up with devices failing to enroll with Intune.
 
 To enable co-management, follow these instructions:
@@ -50,7 +50,7 @@ To enable co-management, follow these instructions:
    - Azure public cloud
    - Azure US Government cloud
       
-   When you select Azure Government cloud, the **Upload to Microsoft Endpoint Manager admin center** option for [tenant attach](https://learn.microsoft.com/intune/configmgr/tenant-attach/device-sync-actions) is disabled.
+   When you select Azure Government cloud, the **Upload to Microsoft Endpoint Manager admin center** option for [tenant attach](../tenant-attach/device-sync-actions.md) is disabled.
    
 1. Select **Sign In**. Sign in as a Microsoft Entra Global Administrator, and then select **Next**. You sign in this one time for the purposes of this wizard. The credentials aren't stored or reused elsewhere.
 
@@ -66,9 +66,9 @@ To enable co-management, follow these instructions:
       
    Automatic enrollment isn't immediate for all clients. This behavior helps enrollment scale better for large environments. Configuration Manager randomizes enrollment based on the number of clients. For example, if your environment has 100,000 clients, when you enable this setting, enrollment occurs over several days.
    
-1. A new co-managed device is now automatically enrolled in the Microsoft Intune service based on its Microsoft Entra device token. It doesn't need to wait for a user to sign in to the device for automatic enrollment to start. This change helps to reduce the number of devices with the enrollment status. For more information, see [Co-management enrollment status](https://learn.microsoft.com/intune/configmgr/comanage/how-to-monitor#co-management-enrollment-status).
+1. A new co-managed device is now automatically enrolled in the Microsoft Intune service based on its Microsoft Entra device token. It doesn't need to wait for a user to sign in to the device for automatic enrollment to start. This change helps to reduce the number of devices with the enrollment status. For more information, see [Co-management enrollment status](how-to-monitor.md#co-management-enrollment-status).
 
-   If you already have devices enrolled in co-management, new devices are now enrolled immediately after they meet the [prerequisites](https://learn.microsoft.com/intune/configmgr/comanage/overview#prerequisites).
+   If you already have devices enrolled in co-management, new devices are now enrolled immediately after they meet the [prerequisites](overview.md#prerequisites).
    
 1. For internet-based devices that are already enrolled in Intune, copy and save the command on the **Enablement** page. You'll use this command to install the Configuration Manager client as an app in Intune for internet-based devices. If you don't save this command now, you can review the co-management configuration at any time to get this command.
 
@@ -76,8 +76,8 @@ To enable co-management, follow these instructions:
    > The command appears only if you've met all of the prerequisites, such as setting up a cloud management gateway.
    
    
-1. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](https://learn.microsoft.com/intune/configmgr/comanage/workloads). 
-   If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](https://learn.microsoft.com/intune/configmgr/comanage/how-to-switch-workloads).  
+1. On the **Workloads** page, for each workload, choose which device group to move over for management with Intune. For more information, see [Workloads](workloads.md). 
+   If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](how-to-switch-workloads.md).  
    
    - **Pilot Intune**: Switches the associated workload only for the devices in the pilot collections that you'll specify on the **Staging** page. Each workload can have a different pilot collection.
    - **Intune**: Switches the associated workload for all co-managed Windows 10 or later devices.  
