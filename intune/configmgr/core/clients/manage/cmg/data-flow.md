@@ -65,6 +65,16 @@ When a client uses a CMG as a content location:
 
 1. If the client trusts the CMG's server authentication certificate, it connects to Azure storage to download the content.
 
+When distributing content to CMG:
+
+1. SMS_DISTRIBUTION_MANAGER (Distmgr) Creates request to distribute content to CMG.
+
+1. SMS_PACKAGE_TRANSFER_MANAGER (PkgXfermgr) gets send request and starts upload process by copying the package to Temp share location.
+
+1. SMS_PACKAGE_TRANSFER_MANAGER (PkgXfermgr) acquires access token for CMG storage.
+
+1. SMS_PACKAGE_TRANSFER_MANAGER (PkgXfermgr) uploads content to CMG storage.
+
 ## Required ports
 
 This table lists the required network ports and protocols. The *Client* is the device that starts the connection, requiring an outbound port. The *Server* is the device that accepts the connection, requiring an inbound port.
@@ -81,6 +91,7 @@ This table lists the required network ports and protocols. The *Client* is the d
 | Client | HTTPS | 443 | Blob storage | Download cloud-based content |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Management point | On-premises traffic, port depends upon management point configuration |
 | CMG connection point | HTTPS or HTTP | 443 or 80 / 8530 or 8531 | Software update point | On-premises traffic, port depends upon software update point configuration |
+|Site Server|HTTPS|443|Azure|CMG deployment |
 
 ### Notes on ports
 
