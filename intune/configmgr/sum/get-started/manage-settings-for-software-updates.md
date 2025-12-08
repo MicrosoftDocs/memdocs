@@ -21,13 +21,12 @@ ms.collection: tier3
 After you synchronize software updates in Configuration Manager, configure and verify the settings in the following sections.
 
 ##  <a name="BKMK_ClientSettings"></a> Client settings for software updates
-After you install the software update point, software updates is enabled on clients by default, and the settings on the **Software Updates** page in client settings have default values. The client settings are used site-wide and affect when software updates are scanned for compliance, and how and when software updates are installed on client computers. Before you deploy software updates, verify that the client settings are appropriate for software updates at your site.
+After you install the software update point, software updates is enabled on clients by default. The settings on the **Software Updates** page in client settings have default values. The client settings are used site-wide. They affect when software updates are scanned for compliance, and how & when software updates are installed on client computers. Before you deploy software updates, verify that the client settings are appropriate for software updates at your site.
 
 > [!IMPORTANT]
 > - The **Enable software updates on clients** setting is enabled by default. If you clear this setting, Configuration Manager removes the existing deployment policies from the client under certain conditions.
 > 
-- Beginning with the September 2020 cumulative update, HTTP-based WSUS servers will be secure by default. A client scanning for updates against an HTTP-based WSUS will no longer be allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). To ensure that the best security protocols are in place, we highly recommend that you use the TLS/SSL protocol to help [secure your software update infrastructure](../get-started/software-update-point-ssl.md).
-
+- Starting with the September 2020 cumulative update, HTTP-based Windows Server Update Services (WSUS) servers are secure by default. A client scanning for updates against an HTTP-based WSUS isn't allowed to leverage a user proxy by default. If you still require a user proxy despite the security trade-offs, a new [software updates client setting](../../core/clients/deploy/about-client-settings.md#software-updates) is available to allow these connections. For more information about the changes for scanning WSUS, see [September 2020 changes to improve security for Windows devices scanning WSUS](https://go.microsoft.com/fwlink/?linkid=2144403). So the best security protocols are in place, Microsoft recommends that you use the TLS/SSL protocol to help [secure your software update infrastructure](../get-started/software-update-point-ssl.md).
 
 For information about how to configure client settings, see [How to configure client settings](../../core/clients/deploy/configure-client-settings.md).
 
@@ -36,24 +35,34 @@ For more information about the client settings, see [About client settings](../.
 
 ## <a name="BKMK_GroupPolicy"></a>Software Updates Best Practices
 
-### Conflicting Configurations
+### Conflicting donfigurations
 
-The Configuration Manager client sets local group policies to control the software update workflow and scan for update compliance. When domain GPO's are used for Windows Updates, it will override the equivalent setting used by our client. The client expects specific registry values to remain in place without any other platform changing the settings. Domain GPO's can cause the component to go into an error state, even if the setting is perceived to be the same. For example, if a domain group policy sets the WSUS Server, Configuration Manager can't configure or access the setting and may not operate properly. This behavior causes clients to have scan failures and issues reporting compliance back to the site.
+The Configuration Manager client sets local group policies to control the software update workflow and scan for update compliance. When domain group policy objects (GPO) are used for Windows Updates, it overrides the equivalent setting used by our client. The client expects specific registry values to remain in place without any other platform changing the settings. Domain GPO's can cause the component to go into an error state, even if the setting is perceived to be the same.
 
-### Remove older deployments and software update groups to optimize site performance and improve compliance accuracy
+For example, if a domain group policy sets the WSUS Server, Configuration Manager can't configure or access the setting and might not operate properly. This behavior causes clients to have scan failures and issues reporting compliance back to the site.
 
-Since updates are cumulative, there is no need to keep older updates deployed. Not removing old deployments will actually have a negative impact on the environment.
+### Remove older deployments and software update groups
+
+To optimize site performance and improve compliance accuracy, remove older deployments and software update groups. Since updates are cumulative, there's no need to keep older updates deployed. Keeping old deployments negatively affects your environment.
 
 ### Remove any unnecessary Products & Categories in the Software Update Properties
 
-Selecting too many products & categories for sync will cause negative performance impacts. Remember that devices have to scan every update in the SUSDB, whether it is deployed or not, so only select products that are relevant and necessary. Many products and categories displayed in the list are only for WSUS and cannot be deployed by Configuration Manager (examples: Dynamic Updates, Servicing Drivers, Silverlight, legacy operating systems that are no longer supported (Windows 7, Windows 8, etc.) - 'Rollups' category, 'Feature Packs' category,  'Service Packs' category, etc.) Do Not Select these items
+Selecting too many products & categories for sync can cause negative performance. Remember, devices have to scan every update in the SUSDB, whether it's deployed or not. So, only select products that are relevant and necessary.
+
+Many products and categories shown in the list are only for WSUS. Configuration Manager can't deploy them. So, don't select these items. Some examples include:
+
+- Dynamic Updates
+- Servicing Drivers
+- Silverlight
+- Legacy operating systems that are no longer supported, like Windows 7, Windows 8, etc.
+- 'Rollups' category, 'Feature Packs' category,  'Service Packs' category, etc.
 
 ### Software Updates Scan Cycle and Deployment Cycle
 
-When the scan cycle or deployment cycle client settings are reduced below the default of once per 7 days, be aware that it may have negative impact on performance due to excessive scanning. In general, it is not necessary to scan more than once a week because devices already have a built-in mechanism to scan for updates when they receive a deployment.
+When the scan cycle or deployment cycle client settings are less than the default of once per 7 days, it can have have negative performance effect because of excessive scanning. In general, it's not necessary to scan more than once a week. Devices already have a built-in mechanism to scan for updates when they receive a deployment.
 
 ### Self Update
-When Automatic Updates is enabled on client computers, the WUA automatically performs a self-update when a newer version becomes available or when there are problems with a WUA component. When Automatic Updates is not configured or is disabled, and client computers have an earlier version of the WUA, the client computers must run the WUA installation file.
+When Automatic Updates is enabled on client computers, the Windows Update Agent (WUA) automatically performs a self-update when a newer version becomes available or when there are problems with a WUA component. When Automatic Updates isn't configured or is disabled, and client computers have an earlier version of the WUA, the client computers must run the WUA installation file.
 
 ## Software updates properties
 The software update properties provide information about software updates and associated content. You can also use these properties to configure settings for software updates. When you open the properties for multiple software updates, only the **Maximum Run Time** and **Custom Severity** tabs are displayed.
@@ -67,10 +76,10 @@ Use the following procedure to open software update properties.
 3. Select one or more software updates, and then, on the **Home** tab, click **Properties** in the **Properties** group.
 
    > [!NOTE]
-   >  On the **All Software Updates** node, Configuration Manager displays only the software updates that have a **Critical** and **Security** classification and that have been released in the last 30 days.
+   >  On the **All Software Updates** node, Configuration Manager displays only the software updates that have a **Critical** and **Security** classification, and that have been released in the last 30 days.
 
 ###  <a name="BKMK_SoftwareUpdatesInformation"></a> Review software updates information
-In software update properties, you can review detailed information about a software update. The detailed information is not displayed when you select more than one software update. The following sections describe the information that is available for a selected software update.
+In software update properties, you can review detailed information about a software update. The detailed information isn't shown when you select more than one software update. The following sections describe the information that is available for a selected software update.
 
 ####  <a name="BKMK_SoftwareUpdateDetails"></a> Software update details
 In the **Update Details** tab, you can view the following summary information about the selected software update:
@@ -107,43 +116,47 @@ In the **Content Information** tab, review the following information about the c
 -   **Size (MB)**: Specifies the size of the software update source files.
 
 ####  <a name="BKMK_CustomBundleInformation"></a> Custom bundle information
-In the **Custom Bundle Information** tab, review the custom bundle information for the software update. When the selected software update contains bundled software updates that are contained in the software update file, they are displayed in the **Bundle information** section. This tab does not display bundled software updates that are displayed in the **Content Information** tab, such as update files for different languages.
+In the **Custom Bundle Information** tab, review the custom bundle information for the software update. When the selected software update contains bundled software updates that are contained in the software update file, they are displayed in the **Bundle information** section. This tab doesn't show bundled software updates that are displayed in the **Content Information** tab, such as update files for different languages.
 
 ####  <a name="BKMK_SupersedenceInformation"></a> Supersedence information
 On the **Supersedence Information** tab, you can view the following information about the supersedence of the software update:
 
-- **This update has been superseded by the following updates**: Specifies the software updates that supersede this update, which means that the updates listed are newer. In most cases, you will deploy one of the software updates that supersedes the software update. The software updates that are displayed in the list contain hyperlinks to webpages that provide more information about the software updates. When this update is not superseded, **None** is displayed.
+- **This update has been superseded by the following updates**: Specifies the software updates that supersede this update, which means that the updates listed are newer. In most cases, you deploy one of the software updates that supersedes the software update. The software updates that are displayed in the list contain hyperlinks to webpages that provide more information about the software updates. When this update isn't superseded, **None** is displayed.
 
-- **This update supersedes the following updates**: Specifies the software updates that are superseded by this software update, which means this software update is newer. In most cases, you will deploy this software update to replace the superseded software updates. The software updates that are displayed in the list contain hyperlinks to web pages that provide more information about the software updates. When this update does not supersede any other update, **None** is displayed.
+- **This update supersedes the following updates**: Specifies the software updates that are superseded by this software update, which means this software update is newer. In most cases, you deploy this software update to replace the superseded software updates. The software updates that are displayed in the list contain hyperlinks to web pages that provide more information about the software updates. When this update doesn't supersede any other update, **None** is displayed.
 
 ###  <a name="BKMK_SoftwareUpdatesSettings"></a> Configure software updates settings
-In the properties, you can configure software update settings for one or more software updates. You can configure most software update settings only at the central administration site or stand-alone primary site. The following sections will help you to configure settings for software updates.
+In the properties, you can configure software update settings for one or more software updates. You can configure most software update settings only at the central administration site or stand-alone primary site. The following sections help you to configure settings for software updates.
 
 ####  <a name="BKMK_SetMaxRunTime"></a> Set maximum run time
 In the **Maximum Run Time** tab, set the maximum amount of time a software update is allotted to complete on client computers. If the update takes longer than the maximum run-time value, Configuration Manager creates a status message and stops the software updates installation. You can configure this setting only on the central administration site or a stand-alone primary site.
 
-Configuration Manager also uses this setting to determine whether to initiate the software update installation within a configured maintenance window. If the maximum run-time value is greater than the available remaining time in the maintenance window, the software updates installation is postponed until the start of the next maintenance window. When there are multiple software updates to be installed on a client computer with a configured maintenance window (timeframe), the software update with the lowest maximum run time installs first, then the software update with the next lowest maximum run time installs next, and so on. Before it installs each software update, the client verifies that the available maintenance window will provide enough time to install the software update. After a software update starts installing, it will continue to install even if the installation goes beyond the end of the maintenance window. For more information about maintenance windows, see the [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).
+Configuration Manager also uses this setting to determine whether to initiate the software update installation within a configured maintenance window. If the maximum run-time value is greater than the available remaining time in the maintenance window, the software updates installation is postponed until the start of the next maintenance window. When there are multiple software updates to be installed on a client computer with a configured maintenance window (timeframe), the software update with the lowest maximum run time installs first. Then, the software update with the next lowest maximum run time installs next, and so on. Before it installs each software update, the client verifies that the available maintenance window provides enough time to install the software update. After a software update starts installing, it continues to install, even if the installation goes beyond the end of the maintenance window. For more information about maintenance windows, see the [How to use maintenance windows](../../core/clients/manage/collections/use-maintenance-windows.md).
 
 On the **Maximum Run Time** tab, you can view and configure the following settings:
 
-- **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before the installation is stopped by Configuration Manager. This setting is also used to determine whether there is enough available time remaining to install the update before the end of a maintenance window. The default setting is 60 minutes for service packs. For other software update types, the default is 10 minutes if you did a fresh install of Configuration Manager version 1511 or higher and 5 minutes when you upgraded from a previous version. Values can range from 5 to 9999 minutes.
+- **Maximum run time**: Specifies the maximum number of minutes allotted for a software update installation to complete before Configuration Manager stops the installation. This setting also determines if there's enough available time remaining to install the update before the end of a maintenance window. For service packs, the default setting is 60 minutes. For other software update types, if you did a fresh install of Configuration Manager version 1511 or higher, the default is 10 minutes. It's 5 minutes when you upgraded from a previous version. Values can range from 5 to 9999 minutes.
 
 > [!IMPORTANT]
->  Be sure to set the maximum run time value smaller than the configured maintenance window time or increase the maintenance window time to a value greater than the maximum run time. Otherwise, the software update installation will never initiate.
+>  Be sure to set the maximum run time value smaller than the configured maintenance window time. Or, increase the maintenance window time to a value greater than the maximum run time. Otherwise, the software update installation won't initiate.
 
 ####  <a name="BKMK_SetCustomSeverity"></a> Set custom severity
-In the properties for a software update, you can use the **Custom Severity** tab to configure custom severity values for the software updates. This may be necessary if the predefined severity values do not meet your needs. The custom values are listed in the **Custom Severity** column in the Configuration Manager console. You can sort the software updates by the defined custom severity values and can also create queries and reports that can filter on these values. You can configure this setting only on the central administration site or stand-alone primary site.
+In the properties for a software update, you can use the **Custom Severity** tab to configure custom severity values for the software updates. This feature can be necessary if the predefined severity values don't meet your needs. The custom values are listed in the **Custom Severity** column in the Configuration Manager console. You can sort the software updates by the defined custom severity values and can also create queries & reports that can filter on these values. You can configure this setting only on the central administration site or stand-alone primary site.
 
 You can configure the following settings on the **Custom Severity** tab.
 
 - **Custom severity**: Sets a custom severity value for the software updates. Select **Critical**, **Important**, **Moderate**, or **Low** from the list. By default, the custom severity value is empty.
 
 ## CRL checking for software updates
-By default, the certificate revocation list (CRL) is not checked when verifying the signature on Configuration Manager software updates. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked, but it introduces a connection delay and incurs additional processing on the computer performing the CRL check.
+By default, the certificate revocation list (CRL) isn't checked when verifying the signature on Configuration Manager software updates. Checking the CRL each time a certificate is used offers more security against using a certificate that has been revoked. But, it introduces a connection delay and incurs additional processing on the computer performing the CRL check.
 
 If used, CRL checking must be enabled on the Configuration Manager consoles that process software updates.
 
 #### To enable CRL checking
-On the computer performing the CRL check, from the product DVD, run the following from a command prompt: **\SMSSETUP\BIN\X64\\**<*language*>**\UpdDwnldCfg.exe /checkrevocation**.
+On the computer performing the CRL check, from the product DVD, run the following command from a command prompt:
 
-For example, for English (US) run **\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation**
+```cmd
+\SMSSETUP\BIN\X64\\**<*language*>**\UpdDwnldCfg.exe /checkrevocation
+```
+
+For example, for English (US) run `\SMSSETUP\BIN\X64\00000409\UpdDwnldCfg.exe /checkrevocation`.
