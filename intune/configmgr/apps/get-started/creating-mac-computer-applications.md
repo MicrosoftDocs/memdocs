@@ -3,7 +3,7 @@ title: Create Mac computer applications
 titleSuffix: Configuration Manager
 description: See which considerations you must take into account when you create and deploy applications for Mac computers.
 ms.date: 01/05/2022
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi

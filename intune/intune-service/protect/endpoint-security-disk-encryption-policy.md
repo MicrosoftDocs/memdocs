@@ -28,7 +28,7 @@ Find the endpoint security policies for disk encryption under *Manage* in the **
 
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune Disk encryption policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune Disk encryption policy, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ## Disk encryption profiles
 
@@ -66,10 +66,10 @@ To create a BitLocker or Personal Data Encryption profile, see [Use disk encrypt
 After you deploy policy to encrypt a device disk, see the following articles for information on managing encryption:
 
 - [Manage encryption on Windows](../protect/encrypt-devices.md)
-- [Manage encryption on macOS](../protect/encrypt-devices-filevault.md#manage-filevault)
+- [Manage encryption on macOS](../protect/encrypt-devices-filevault.md#monitor-and-manage-filevault)
 - [Monitor device encryption](../protect/encryption-monitor.md)
 
 ## Next steps
 
-- [To create a macOS encryption profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy-for-filevault)
-- [To create a Windows encryption profile](../protect/encrypt-devices.md#create-an-endpoint-security-policy-for-windows)
+- [To create a macOS encryption profile](../protect/encrypt-devices-filevault.md#create-endpoint-security-policy)
+- [To create a Windows encryption profile](../protect/encrypt-devices.md#create-endpoint-security-policy)

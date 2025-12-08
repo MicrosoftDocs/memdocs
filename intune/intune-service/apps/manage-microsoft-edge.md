@@ -1,7 +1,7 @@
 ---
 title: Manage Microsoft Edge on iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Microsoft Edge for iOS and Android to ensure corporate websites are always accessed with safeguards in place.
-ms.date: 11/18/2025
+ms.date: 12/02/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ms.collection:
@@ -337,7 +337,10 @@ Organizations can modify their network stack preference by configuring the follo
 |com.microsoft.intune.mam.managedbrowser.NetworkStackPref|**0** (default) use the Chromium network stack <br> **1** use the iOS network stack |
 
 > [!NOTE]
-> Using the Chromium network stack is suggested. If you experience sync issues or failure when sending feedback with the Chromium network stack, for example with certain per-app VPN solutions, using the iOS network stack might solve the issues.
+> Using the Chromium network stack is recommended in most scenarios. Switching to the iOS network stack may be required in certain conditions, especially when using per-app VPN solutions (with or without a proxy server), as it may fix issues with the following features (list is not exhaustive):
+> - Using Edge cloud sync.
+> - Sending in-app feedback.
+> - Uploading files to OneDrive.
 
 ### Set a proxy .pac file URL
 

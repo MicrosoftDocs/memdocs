@@ -51,7 +51,7 @@ When you use [Security Management for Microsoft Defender for Endpoint](../protec
 
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune attack surface reduction policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune attack surface reduction policy, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ## Attack surface reduction profiles
 
@@ -241,6 +241,6 @@ Policy merge doesn't compare or merge the configurations from different settings
 
 ## Next steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy).
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-endpoint-security-policies).
 
 View details for the settings in profiles for [Attack surface reduction profiles](../protect/endpoint-security-asr-profile-settings.md).

@@ -92,3 +92,9 @@ EPM can elevate Executables (.exe), Windows Installer (.msi), and PowerShell scr
 ### Certificate based rules only work for valid certificates
 
 EPM checks the certificate expiry date to ensure it hasn't passed before allowing elevation. Rules based on certificates that are expired will fail to elevate.
+
+### Run with elevated access right-click menu of the file might be unavailable
+ 
+On devcies that run a Windows version earlier than 24H2 with the April 2025 update, the **Run with elevated access** option is not always successfully added to the file context menu after a successful installation of the EPM Agent. This issue is resolved for devices that run a later version of Windows.
+
+**Workaround:** To resolve this issue on a device that can't update to Windows version 24H2 with the Aril 2025 update or later, run the package *EpmShellExtension.msix* located in *C:\Program Files\Microsoft EPM Agent\EPMShellExtension* to manually install the EPM shell extension to the file context menu.

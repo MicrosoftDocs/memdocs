@@ -65,7 +65,7 @@ You must have:
 1. You have the option to control if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the work or school account registration flow (referring to [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506)). To control the behavior of the flow, use the **Disable MDM enrollment when adding work or school account** setting.
 
    > [!NOTE]
-   > This feature is in public preview.  
+   > This feature is in public preview and undergoing rollout. During rollout, some users will not see the new setting.   
    
    This setting is turned off by default. If you're enforcing Windows MAM for your work or school accounts, enable this setting. This setting applies to:  
     - Users in the **Some** or **All** category in the MDM auto-enrollment configuration.  

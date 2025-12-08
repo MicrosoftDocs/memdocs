@@ -3,7 +3,7 @@ title: Monitor applications from the console
 titleSuffix: Configuration Manager
 description: Monitor deployment applications with the Monitoring workspace in Configuration Manager.
 ms.date: 04/08/2022
-ms.subservice: app-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi
