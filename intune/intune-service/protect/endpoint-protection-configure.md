@@ -1,11 +1,10 @@
 ---
 title: Configure Endpoint protection settings in Microsoft Intune
-description: Create Endpoint protection settings when you create a macOS or Windows 10 device profile in Microsoft Intune.
+description: Create Endpoint protection settings when you create a macOS or Windows device profile in Microsoft Intune.
 author: lenewsad
 ms.author: lanewsad
 ms.date: 09/19/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.collection:
 - M365-identity-device-management
 - endpoint-protection
@@ -22,7 +21,7 @@ With Intune, you can use device configuration profiles to manage common Endpoint
 - Allowing and blocking apps
 - Microsoft Defender and encryption
 
-For example, you can create an Endpoint protection profile that only allows macOS users to install apps from the Mac App Store. Or, enable Windows SmartScreen when running apps on Windows 10/11 devices.
+For example, you can create an Endpoint protection profile that only allows macOS users to install apps from the Mac App Store. Or, enable Windows SmartScreen when running apps on Windows devices.
 
 Before you create a profile, review the following articles that detail the Endpoint protection settings Intune can manage for each supported platform:
 
@@ -73,9 +72,9 @@ Before you create a profile, review the following articles that detail the Endpo
 
 10. In **Review + create**, review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
 
-## Add custom Firewall rules for Windows 10/11 devices
+## Add custom Firewall rules for Windows devices
 
-When you configure the Windows Firewall as part of a profile that includes endpoint protection rules for Windows 10/11, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows devices.
+When you configure the Windows Firewall as part of a profile that includes endpoint protection rules for Windows, you can configure custom rules for Firewalls. Custom rules let you expand on the pre-defined set of Firewall rules supported for Windows devices.
 
 When you plan for profiles with custom Firewall rules, consider the following information, which could affect how you choose to group firewall rules in your profiles:
 

@@ -1,5 +1,5 @@
 ---
-title: How to wipe only corporate data from apps
+title: How to Wipe Only Corporate Data From Apps
 description: Learn how to selectively wipe only corporate data from Intune-managed apps with Microsoft Intune.
 ms.date: 06/12/2024
 ms.topic: how-to
@@ -9,7 +9,7 @@ ms.collection:
 - highpri
 ---
 
-# How to wipe only corporate data from Intune-managed apps
+# How to Wipe Only Corporate Data From Intune-Managed Apps
 
 When a device is lost or stolen, or if the employee leaves your company, you want to make sure company app data is removed from the device. But you might not want to remove personal data on the device, especially if the device is an employee-owned device.
 

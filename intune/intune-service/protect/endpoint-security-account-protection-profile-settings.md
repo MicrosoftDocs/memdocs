@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 07/23/2024
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -13,6 +12,9 @@ ms.reviewer: juidaewo
 
 ---
 # Account protection policy settings for endpoint security in Intune
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!IMPORTANT]
 >
@@ -27,8 +29,10 @@ This article describes settings that are available in profiles for *Account prot
 
 The settings in this article apply to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 Supported platforms and profiles:
 
@@ -62,7 +66,7 @@ Supported platforms and profiles:
   - **Not configured** (*default*)
   - **Yes**
 
-- **Turn on Credential Guard**
+- **Turn on Credential Guard**  
   [CSP: DeviceGuard](https://go.microsoft.com/fwlink/?linkid=872424)
 
   Credential Guard uses Windows Hypervisor to provide protections. Credential Guard requires hardware support for Secure Boot and DMA protections. This setting is only successful on devices that meet the hardware requirements.

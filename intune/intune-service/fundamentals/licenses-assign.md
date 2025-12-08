@@ -6,7 +6,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 01/24/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: amsaeedi
 ms.collection:
 - M365-identity-device-management
@@ -105,7 +104,7 @@ To view the number of free and used licenses on a Microsoft Intune subscription,
    Get-MgSubscribedSku
    ```
 
-A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
+   A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
 
 > [!NOTE]
 > To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).

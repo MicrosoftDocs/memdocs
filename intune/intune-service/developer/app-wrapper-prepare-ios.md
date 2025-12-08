@@ -1,7 +1,7 @@
 ---
-title: Wrap iOS apps with the Intune App Wrapping Tool
+title: Wrap iOS Apps With the Intune App Wrapping Tool
 description: Learn how to wrap your iOS apps without changing the code of the app itself. Prepare the apps so you can apply mobile app management policies.
-ms.date: 07/30/2025
+ms.date: 11/17/2025
 ms.topic: reference
 ms.reviewer: jamiesil
 ms.collection:
@@ -9,7 +9,7 @@ ms.collection:
 - iOS/iPadOS
 ---
 
-# Prepare iOS apps for app protection policies with the Intune App Wrapping Tool
+# Prepare iOS Apps for App Protection Policies With the Intune App Wrapping Tool
 
 Use the Microsoft Intune App Wrapping Tool for iOS to enable Intune app protection policies for in-house iOS apps without changing the code of the app itself.
 
@@ -26,13 +26,13 @@ Before you run the App Wrapping Tool, you need to fulfill some general prerequis
 
 * Download the [Microsoft Intune App Wrapping Tool for iOS](https://github.com/microsoftconnect/intune-app-wrapping-tool-ios) from GitHub.
 
-* A macOS computer that has the Xcode toolset version 14.0 or later installed.
+* A macOS computer that has the Xcode toolset version 16.0 or later installed.
 
 * Your company or an independent software vendor (ISV) must develop and sign the input iOS app.
 
   * The file must have the extension **.ipa** or **.app**.
 
-  * It must be compiled for iOS 14.0 or later.
+  * It must be compiled for iOS 16.0 or later.
 
   * it can't be encrypted.
 
@@ -185,7 +185,7 @@ You need the following to distribute apps wrapped by Intune:
 Open the macOS Terminal and run the following command:
 
 ```bash
-/Volumes/IntuneMAMAppPackager/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>]
+/Volumes/IntuneMAMAppPackager/IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> -p /<path to provisioning profile> -c <SHA1 hash of the certificate> -ac <client ID of input app> -ar <redirect URI of input app> [-aa <authority URI of input app>] [-b [<output app build string>]] [-v] [-e] [-x /<array of extension provisioning profile paths>] [-dt] [-dl] [-ds]
 ```
 
 > [!NOTE]
@@ -194,7 +194,7 @@ Open the macOS Terminal and run the following command:
 **Example:** The following example command runs the App Wrapping Tool on the app named MyApp.ipa. A provisioning profile and SHA-1 hash of the signing certificate are specified and used to sign the wrapped app. The output app (MyApp_Wrapped.ipa) is created and stored in your Desktop folder.
 
 ```bash
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB"  -v true
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -ac "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx" -ar "msauth.myAppsBundleID://auth" -v
 ```
 
 ### Command-line parameters
@@ -204,7 +204,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 > **Example:** The following example command runs the App Wrapping Tool, incorporating the required commands when wrapping an application for use within a single tenant.
 >
 >```bash
->./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/<tenantID> -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v true
+>./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager -i ~/Desktop/MyApp.ipa -o ~/Desktop/MyApp_Wrapped.ipa -p ~/Desktop/My_Provisioning_Profile_.mobileprovision -c "12 A3 BC 45 D6 7E F8 90 1A 2B 3C DE F4 AB C5 D6 E7 89 0F AB" -aa https://login.microsoftonline.com/<tenantID> -ac "Client ID of the input app if the app uses the Microsoft Authentication Library" -ar "Redirect/Reply URI of the input app if the app uses the Microsoft Authentication Library"  -v
 >```
 
 
@@ -417,7 +417,7 @@ To review the existing entitlements of a signed app and provisioning profile:
 This command removes any enabled capabilities in the app that aren't in the entitlements file. If you remove capabilities that are being used by the app, it can break your app. An example of where you might remove missing capabilities is in a vendor-produced app that has all capabilities by default.
 
 ```bash
-./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> `–p` /<path to provisioning profile> –c <SHA1 hash of the certificate> -e
+./IntuneMAMPackager/Contents/MacOS/IntuneMAMPackager –i /<path of input app>/<app filename> -o /<path to output folder>/<app filename> `–p` /<path to provisioning profile> –c <SHA1 hash of the certificate> -ac <client ID of input app> -ar <redirect URI of input app> -e
 ```
 
 ## Security and privacy for the App Wrapping Tool

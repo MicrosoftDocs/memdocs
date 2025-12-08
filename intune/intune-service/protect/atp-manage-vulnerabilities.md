@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: aanavath
 ms.collection:
 - M365-identity-device-management
@@ -14,7 +13,7 @@ ms.collection:
 
 # Use Microsoft Intune security tasks to remediate device vulnerabilities identified by Microsoft Defender for endpoint
 
-When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](/mem/intune-service/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune), you can leverage Defender's threat and vulnerability management through Intune security tasks. These tasks help Intune admins understand and address current vulnerabilities based on guidance from Defender for Endpoint. This integration enhances the discovery and prioritization of vulnerabilities, improving remediation response times across your environment.
+When you [integrate Microsoft Defender for Endpoint with Microsoft Intune](/intune/intune-service/protect/microsoft-defender-integrate#connect-microsoft-defender-for-endpoint-to-intune), you can leverage Defender's threat and vulnerability management through Intune security tasks. These tasks help Intune admins understand and address current vulnerabilities based on guidance from Defender for Endpoint. This integration enhances the discovery and prioritization of vulnerabilities, improving remediation response times across your environment.
 
 [Threat & Vulnerability Management](/windows/security/threat-protection/windows-defender-atp/next-gen-threat-and-vuln-mgt) is part of [Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint).
 
@@ -73,13 +72,15 @@ Following is an example of the workflow for discovering and remediating an appli
 - Microsoft Defender for Endpoint ([Sign up for a free trial](https://www.microsoft.com/security/business/endpoint-security/microsoft-defender-endpoint).)
 
 Intune configurations for Defender for Endpoint:
-- Configure a [service-to-service connection](/mem/intune-service/protect/advanced-threat-protection-configure#connect-microsoft-defender-for-endpoint-to-intune) with Microsoft Defender for Endpoint.
+- Configure a [service-to-service connection](/intune/intune-service/protect/microsoft-defender-integrate#connect-microsoft-defender-for-endpoint-to-intune) with Microsoft Defender for Endpoint.
 - Deploy an Intune policy that configures settings for **Microsoft Defender for Endpoint** to devices to assess risk.
 
 
 ## Work with security tasks
 
 Before you manage security tasks, they must be created within the Defender Security Center. For detailed instructions, see the Defender for Endpoint documentation on [remediating vulnerabilities](/microsoft-365/security/defender-endpoint/tvm-remediation?view=o365-worldwide&preserve-view=true#request-remediation).
+
+[!INCLUDE [manage-admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
 
 To manage security tasks:
 
@@ -102,6 +103,6 @@ Successful remediation can reduce the risk exposure score in Defender for Endpoi
 
 ## Related content
 
-- Learn more about Intune and [Microsoft Defender for Endpoint](advanced-threat-protection.md).
+- Learn more about Intune and [Microsoft Defender for Endpoint](microsoft-defender-with-intune.md).
 - Review Intune [Mobile Threat Defense](mobile-threat-defense.md).
 - Review the [Threat & Vulnerability Management dashboard](/windows/security/threat-protection/windows-defender-atp/tvm-dashboard-insights) in Microsoft Defender for Endpoint.

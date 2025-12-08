@@ -3,7 +3,7 @@ title: Configure client communication ports
 titleSuffix: Configuration Manager
 description: Set client communication ports in Configuration Manager.
 ms.date: 04/05/2021
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi

@@ -21,9 +21,12 @@ To manage Endpoint detection and response policy settings for Configuration Mana
 **Supported Configuration Manager device platforms**:
 
 - Windows 8.1 (x86, x64), starting in Configuration Manager version 2010
-- Windows 10 and later (x86, x64, ARM64)
-- Windows 11 and later (x86, x64, ARM64)
+- Windows (x86, x64, ARM64)
 - Windows Server 2012 R2 (x64), starting in Configuration Manager version 2010
 - Windows Server 2016 and later(x64)
+- Windows (x86, x64, ARM64)
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 [!INCLUDE [windows-phone-81-windows-10-mobile-support](../includes/windows-phone-81-windows-10-mobile-support.md)]

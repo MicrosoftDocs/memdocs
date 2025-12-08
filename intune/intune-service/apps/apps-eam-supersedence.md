@@ -1,7 +1,7 @@
 ---
-title: Guided update supersedence for Enterprise App Management
+title: Guided Update Supersedence for Enterprise App Management
 description: Learn how to update an Enterprise App Catalog app using supersedence with Microsoft Intune.
-ms.date: 09/17/2024
+ms.date: 11/06/2025
 ms.topic: how-to
 ms.reviewer: nicolezhao
 ms.custom:
@@ -10,13 +10,16 @@ ms.collection:
 - FocusArea_Apps_EAM
 ---
 
-# Guided update supersedence for Enterprise App Management
+# Guided Update Supersedence for Enterprise App Management
 
 Guided update supersedence for Enterprise App Management allows you to check for updates of Windows (Win32) Enterprise App Catalog apps. You can view an available update for the app and select the option to create a new app with a supersedence relationship for the app it’s updating. Prepopulated attributes are provided when creating the new app.
 
 ## View available updates
 
 In the **Overview** pane for a selected Enterprise App Catalog app, you can view the available updates by selecting the tile **Enterprise App Catalog apps with available updates**.
+
+> [!NOTE]
+> Microsoft has established Service Level Objectives (SLOs) for app update availability. Most app updates are available within 24 hours of vendor release, while those requiring manual validation typically become available within seven days. For details, see [Enterprise App Management overview](apps-enterprise-app-management.md).
 
 The **Enterprise App Catalog apps with updates** pane provides a list of Enterprise App Catalog apps that can be updated. This list provides the following app details:
 - **App name**: - The name of the app.

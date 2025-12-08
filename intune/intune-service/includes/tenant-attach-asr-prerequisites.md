@@ -28,5 +28,7 @@ Manage [attack surface reduction settings for Configuration Manager devices](../
 
 **Supported Configuration Manager device platforms**:
 
-- Windows 10 and later (x86, x64, ARM64)
-- Windows 11 and later (x86, x64, ARM64)
+- Windows (x86, x64, ARM64)
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]

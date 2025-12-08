@@ -1,5 +1,5 @@
 ---
-title: Microsoft Tunnel for MAM iOS SDK developer guide
+title: Microsoft Tunnel for MAM iOS SDK Developer Guide
 description: The Microsoft Tunnel for MAM iOS SDK lets you incorporate support for Mobile Application Management (MAM) Tunnel into your native iOS app. iOS/iPadOS app developers should use this article to integrate per-app VPN when they're creating and developing line of business (LOB) apps.
 ms.date: 03/27/2025
 ms.topic: reference
@@ -10,7 +10,7 @@ ms.collection:
 
 ---
 
-# Microsoft Tunnel for MAM iOS SDK developer guide
+# Microsoft Tunnel for MAM iOS SDK Developer Guide
 
 [!INCLUDE [intune-add-on-note](../includes/intune-plan2-suite-note.md)]
 

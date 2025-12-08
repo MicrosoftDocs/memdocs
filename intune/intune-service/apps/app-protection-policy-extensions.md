@@ -1,5 +1,5 @@
 ---
-title: App protection policies for extensions
+title: App Protection Policies for Extensions
 description: This topic describes the app protection policy (APP) for extensions.
 ms.date: 01/06/2025
 ms.topic: article
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Protecting application extensions
+# Protecting Application Extensions
 
 This article describes app protection policies for extensions in Microsoft Intune.
 

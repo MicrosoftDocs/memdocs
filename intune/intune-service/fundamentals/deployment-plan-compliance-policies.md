@@ -72,7 +72,7 @@ The following articles can help you understand the settings that Intune policies
 - [Android Open-Source Project (AOSP)](../protect/compliance-policy-create-android-aosp.md)
 - [iOS](../protect/compliance-policy-create-ios.md)
 - [macOS](../protect/compliance-policy-create-mac-os.md)
-- [Windows 10/11](../protect/compliance-policy-create-windows.md)
+- [Windows](../protect/compliance-policy-create-windows.md)
 
 ## Level 1 - Minimal device compliance
 
@@ -194,7 +194,7 @@ When integrated, Intune supports use of MTD solutions with enrolled devices, and
 
 Be sure to use an MTD partner that is  [supported by Intune](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) and that supports the capabilities your organization needs on the full range of platforms you use.
 
-For example, [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) is a Mobile Threat Defense solution you might already use that can be used with the Android, iOS/iPadOS, and Windows platforms. Other solutions, typically support Android and iOS/iPadOS. See [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) to view the list of supported MTD partners.
+For example, [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) is a Mobile Threat Defense solution you might already use that can be used with the Android, iOS/iPadOS, and Windows platforms. Other solutions, typically support Android and iOS/iPadOS. See [Mobile Threat Defense partners](../protect/mobile-threat-defense.md) to view the list of supported MTD partners.
 
 To learn more about using Mobile Threat Defense software with Intune, start with [Mobile Threat Defense integration with Intune](../protect/mobile-threat-defense.md).
 

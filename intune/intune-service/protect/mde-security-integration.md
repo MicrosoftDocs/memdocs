@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/27/2025
 ms.topic: how-to
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -32,7 +31,7 @@ This scenario extends the Microsoft Intune Endpoint Security surface to devices 
 
 Applies to:
 
-- Windows 10 and Windows 11
+- Windows
 - Windows Server 2012 R2 and later
 - Linux
 - macOS
@@ -108,11 +107,7 @@ For guidance on updating the agent version, see [Deploy updates for Microsoft De
 
 **macOS**:
 
-With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#system-requirements) agent version **101.23052.0004** or later, security settings management supports the following macOS versions:
-
-- macOS 15 (Sequoia)
-- macOS 14 (Sonoma)
-- macOS 13 (Ventura)
+With [Microsoft Defender for Endpoint for macOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-mac#system-requirements) agent version **101.23052.0004** or later, security settings management is supported on the macOS versions listed in the [System requirements](/defender-endpoint/microsoft-defender-endpoint-mac-prerequisites#system-requirements)
 
 You can find the versions of your Defender agents using these methods from within the [Microsoft Defender portal](https://security.microsoft.com):
 
@@ -136,6 +131,10 @@ For guidance on updating the agent version, see [Deploy updates for Microsoft De
 **Windows**:
 
 - Windows 10 Professional/Enterprise (with [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23))
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 - Windows 11 Professional/Enterprise (with [KB5023778](https://support.microsoft.com/topic/march-28-2023-kb5023778-os-build-22621-1485-preview-d490bb51-492e-410c-871f-50ad01b0f765))
 - Windows Server 2012 R2 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
 - Windows Server 2016 with [Microsoft Defender for Down-Level Devices](/defender-endpoint/configure-server-endpoints#new-functionality-in-the-modern-unified-solution-for-windows-server-2012-r2-and-2016-preview)
@@ -169,7 +168,7 @@ To use security settings management, you need:
 
 ### Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to administrators who manage Intune endpoint security policies from within the Intune admin center, see [Assign role-based access controls for endpoint security policy](endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to administrators who manage Intune endpoint security policies from within the Intune admin center, see [Role-based access control for endpoint security](endpoint-security-policy.md#role-based-access-control-for-endpoint-security) later in this article. .
 
 ## Architecture
 
@@ -298,6 +297,9 @@ To support use with Microsoft Defender security settings management, your polici
 
 - **[Attack surface reduction (ASR)](endpoint-security-asr-policy.md)** policies focus on minimizing the places where your organization is vulnerable to cyberthreats and attacks. With security settings management, ASR rules apply to devices that run *Windows 10*, *Windows 11*, and *Windows Server*.
 
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
   For current guidance about which settings apply to the different platforms and versions, see [ASR rules supported operating systems](/microsoft-365/security/defender-endpoint/attack-surface-reduction-rules-reference#asr-rules-supported-operating-systems) in the Windows Threat protection documentation.
 
   > [!TIP]
@@ -394,7 +396,7 @@ After devices onboard to Defender for Endpoint, you'll need to create device gro
 
 You can create groups for these devices [in Microsoft Entra](/azure/active-directory/fundamentals/active-directory-groups-create-azure-portal) or [from within the Microsoft Intune admin center](../fundamentals/groups-add.md). When creating groups, you can use the **OS** value for a device if you're deploying policies to devices running Windows Server vs devices that run a client version of Windows:
 
-- **Windows 10 and Windows 11** - The deviceOSType or OS displays as *Windows*
+- **Windows 10** and **Windows 11** - The deviceOSType or OS displays as *Windows*
 - **Windows Server** - The deviceOSType or OS displays as *Windows Server*
 - **Linux Device** - The deviceOSType or OS displays as *Linux*
 
@@ -545,6 +547,8 @@ The following security settings are pending deprecation. The Defender for Endpoi
 - Expedite telemetry reporting frequency (under **Endpoint Detection and Response**)
 - AllowIntrusionPreventionSystem (under **Antivirus**)
 
+- AllowLocalPolicyMerge
+
 ### Use of security settings management on domain controllers
 
 Security settings management is supported on domain controllers. To manage security settings on domain controllers, you must enable it in the enforcement scope page (go to **Settings** > **Endpoints** **Enforcement scope**). Windows Server devices must be enabled before you can enable configuration of domain controllers. Additionally, if the *on tagged devices* option is selected for Windows Servers, configuration of domain controllers is limited to tagged devices, too.
@@ -568,6 +572,6 @@ If you previously had a third-party security tool on the machine and are now man
 
 ## Related content
 
-- [Monitor Defender for Endpoint in Intune](advanced-threat-protection-monitor.md)
+- [Monitor Defender for Endpoint in Intune](microsoft-defender-monitor.md)
 
 - [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender documentation.

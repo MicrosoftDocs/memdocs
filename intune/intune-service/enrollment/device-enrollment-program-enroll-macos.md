@@ -1,9 +1,8 @@
 ---
 title: Set up automated device enrollment (ADE) for macOS
 description: Learn how to enroll corporate-owned Macs into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 07/22/2025
+ms.date: 12/02/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
@@ -27,9 +26,6 @@ This article describes how to set up an automated device enrollment profile for 
 5. [Distribute devices to users](#end-user-experience-with-managed-devices)
 -->
 ## Certificates
-
->[!NOTE]
-> The [ACME certificate](../fundamentals/whats-new-archive.md#acme-protocol-support-for-iosipados-and-macos-enrollment) phased rollout for new eligible enrollments has been paused. New enrollments are using the SCEP certificate like before with no changes to the end user experience.
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
@@ -127,8 +123,8 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
 
 1. On the **Management Settings** page, configure **User Affinity**. *User affinity* determines whether devices enroll with or without an assigned user. Your options:
 
-    * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices.
-    * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option.
+    * **Enroll without User Affinity**:  Enroll devices that aren't associated with a single user. Choose this option for shared devices and devices that don't need to access local user data. The Company Portal app doesn't work on these types of devices. Enrolling without user affinity is also referred to as enrolling *userless*.
+    * **Enroll with User Affinity**: Enroll devices that are associated with an assigned user. Choose this option for work devices that belong to users, and if you want to require users to have the Company Portal app to install apps. Multifactor authentication (MFA) is available with this option. Enrolling with user affinity is also referred to as enrolling with a *user*.
 
       Option 2 requires more configurations. Users must authenticate themselves before enrollment to confirm their identity. Select one of the following authentication methods:
 
@@ -175,7 +171,7 @@ At the end of this procedure, you can assign this profile to Microsoft Entra dev
    > [!div class="mx-imgBorder"]
    > ![Image of admin center showing new Account settings section in the macOS automated device enrollment profile.](./media/device-enrollment-program-enroll-macos/macos-account-settings-intune.png)
 
-   The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
+   The following settings for the local user account are supported on devices running macOS 12 or later. Keep in mind while you configure the primary account that this account is going to be an *admin* account. Having at least one admin account is a Mac setup requirement. If you're also configuring the local administrator password through this profile, see [local administrator account](../enrollment/macos-laps.md) in the *Setup macOS account configuration with LAPS* article, and then return here.
 
    Your options:
 
@@ -225,7 +221,7 @@ The following table describes the Setup Assistant screens shown during automated
 | Setup Assistant screen | What happens when visible  |
 |------------------------------------------|------------------------------------------|
 | **Location Services** | Shows the location services setup pane, where users can enable location services on their device. For macOS 10.11 and later. |
-| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For macOS 10.9-15.3. For macOS 15.4 and later, this screen cannot be hidden and the user receives an alert after enrollment that they’re unable to transfer data from another device because MDM controls the setting. |
+| **Restore** | Shows the apps and data setup pane. On this screen, users setting up devices can restore or transfer data from iCloud Backup. For macOS 10.9-15.3. For macOS 15.4 and later, this screen cannot be hidden and the user receives an alert after enrollment that they're unable to transfer data from another device because MDM controls the setting. |
 | **Apple ID** | Shows the Apple ID setup pane, which gives users to the option to sign in with their Apple ID and use iCloud. For macOS 10.9 and later.   |
 | **Terms and conditions** |Shows the Apple terms and conditions pane, and requires users to accept them. For macOS 10.9 and later. |
 | **Touch ID and Face ID** | Shows the biometric setup pane, which gives users the option to set up fingerprint or facial identification on their devices. For macOS 10.12.4 and later. |
@@ -242,11 +238,10 @@ The following table describes the Setup Assistant screens shown during automated
 | **Privacy** | Shows the privacy setup pane to the user. For macOS 10.13.4 and later. |
 | **Accessibility** | Shows the accessibility setup screen to the user. If this screen is hidden, the user can't use the macOS Voice Over feature. Voice Over is supported on devices that:<br>- Run macOS 11.<br>- Are connected to the internet using Ethernet.<br>- Have a serial number in Apple School Manager or Apple Business Manager. |
 | **Auto unlock with Apple Watch**| Shows the macOS Unlock with Apple Watch pane, where users can configure their Apple Watch to unlock their Mac. For macOS 12.0 and later.
-| **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.
-| **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane after devices complete a software upgrade. If you hide this screen, devices get the default macOS Sonoma wallpaper. For macOS 14.1 and later.
-| **Lockdown mode**| Shows the lockdown mode setup pane to users who set up an Apple ID. For macOS 14.0 and later.
-| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For macOS 15.0 and later.
-
+| **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Change Language & Region settings on Mac](https://support.apple.com/guide/mac-help/intl163/mac)(opens Apple website). For macOS 13.0 and later.|
+| **Wallpaper**| Shows the macOS Sonoma wallpaper setup pane after devices complete a software upgrade. If you hide this screen, devices get the default macOS Sonoma wallpaper. For macOS 14.1 and later.|
+| **Lockdown mode**| Shows the lockdown mode setup pane to users who set up an Apple ID. For macOS 14.0 and later.|
+| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For macOS 15.0 and later.|  
 
 ## Sync managed devices
 Syncing refreshes existing device status and imports new devices assigned to the Apple MDM server. To see all associated Apple devices and device info, sync your enrollment program token in the admin center.
@@ -321,4 +316,4 @@ Complete these steps to renew a server token that's about to expire. This proced
 
 ## Next steps
 
-Use [Microsoft Intune remote actions](../remote-actions/device-management.md) to remotely manage enrolled Macs.
+Use [Remote Device Actions In Microsoft Intune](../remote-actions/index.md) to remotely manage enrolled Macs.

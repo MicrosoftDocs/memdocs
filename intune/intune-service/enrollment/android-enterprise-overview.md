@@ -3,7 +3,6 @@ title: Overview of Android work profile management in Microsoft Intune
 description: Learn more about Android Enterprise work profile management, a device management option for personal and corporate-owned devices enrolling in Microsoft Intune.
 ms.date: 04/05/2024
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: grwilson
 ms.collection:
 - M365-identity-device-management

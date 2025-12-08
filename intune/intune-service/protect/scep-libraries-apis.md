@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 07/03/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - certificates

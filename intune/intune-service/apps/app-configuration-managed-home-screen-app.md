@@ -1,7 +1,7 @@
 ---
-title: Configure the Microsoft Managed Home Screen app
+title: Configure the Microsoft Managed Home Screen App
 description: Learn how to configure the Microsoft Managed Home Screen app.
-ms.date: 09/05/2025
+ms.date: 11/06/2025
 ms.topic: how-to
 ms.reviewer: abigailstein
 ms.collection:
@@ -9,7 +9,7 @@ ms.collection:
 - Android
 ---
 
-# Configure the Microsoft Managed Home Screen app for Android Enterprise
+# Configure the Microsoft Managed Home Screen App for Android Enterprise
 
 The Managed Home Screen app is for corporate-owned Android Enterprise dedicated devices and fully managed, user-affiliated devices that are enrolled in Intune and run in multi-app kiosk mode. For these devices, the Managed Home Screen acts as the launcher for other approved apps to run on top of it. The Managed Home Screen provides IT admins the ability to customize their devices and to restrict the capabilities that the end user can access. For even more details, see [How to setup Microsoft Managed Home Screen on Dedicated devices in multi-app kiosk mode](https://techcommunity.microsoft.com/t5/intune-customer-success/how-to-setup-microsoft-managed-home-screen-on-dedicated-devices/ba-p/1388060).
 
@@ -74,6 +74,10 @@ The following table lists the Managed Home Screen available configuration keys, 
 | Wi-Fi allowlist | bundleArray | See **Enter JSON Data** section of this document. | Lets you list all the SSIDs of the Wi-Fi networks you want the device to show in Managed Home Screen. This list is   only relevant if show Wi-Fi setting and Enable Wi-Fi   allowlist is set to True. If either setting is set to False, then   you don't need to modify this configuration. | ✔️ |
 | Show Bluetooth setting | bool | FALSE | Turning this setting to True allows the   end user to turn on or off Bluetooth and to connect to different   Bluetooth-capable devices. | ✔️ |
 | Show volume setting | bool | FALSE | Turning this setting to True allows the   end user to access a volume slider to adjust media volume. | ✔️ |
+| Show call volume control | bool | FALSE | Turning this setting to True allows end users to adjust call volume directly from the Managed Settings page in MHS. This control gives task workers greater flexibility to manage sound levels for different hearing needs or work environments without exiting kiosk mode. | ❌ |
+| Show ring volume control | bool | FALSE | Turning this setting to True allows end users to adjust ring volume directly from the Managed Settings page in MHS. This control helps users adapt ring volume levels for different environments without exiting kiosk mode. | ❌ |
+| Show notification volume control | bool | FALSE | Turning this setting to True allows end users to adjust notification volume directly from the Managed Settings page in MHS. This control helps users adapt notification volume levels for different environments, such as keeping notifications quiet during patient care or louder in busy operational settings. | ❌ |
+| Show alarm volume control | bool | FALSE | Turning this setting to True allows end users to adjust alarm volume directly from the Managed Settings page in MHS. This control enables task workers to set appropriate alarm levels based on their work scenario and hearing needs without leaving kiosk mode. | ❌ |
 | Show flashlight setting | bool | FALSE | Turning this setting to True allows the   end user to on or off the device's flashlight. If the device doesn't support  a flashlight, then this setting doesn't appear, even if configured   to True. | ✔️ |
 | Show brightness slider | bool | FALSE | Turn this setting to TRUE to allow end users to access a brightness slider to adjust the device screen brightness. | ❌ |
 | Show adaptive brightness toggle | bool | FALSE | Turn this setting to TRUE to allow end users to turn adaptive brightness on and off on the device. Adaptive brightness allows the device to select an optimal brightness based on ambient lighting. | ❌ |
@@ -362,6 +366,22 @@ The following syntax is an example JSON script with all the available configurat
         },
         {
             "key": "show_volume_setting",
+            "valueBool": false
+        },
+        {
+            "key": "show_call_volume_control",
+            "valueBool": false
+        },
+        {
+            "key": "show_ring_volume_control",
+            "valueBool": false
+        },
+        {
+            "key": "show_notification_volume_control",
+            "valueBool": false
+        },
+        {
+            "key": "show_alarm_volume_control",
             "valueBool": false
         },
         {

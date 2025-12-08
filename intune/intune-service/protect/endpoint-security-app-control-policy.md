@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/17/2025
 ms.topic: how-to
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -21,7 +20,7 @@ Intune's App Control for Business policies are part of endpoint security and use
 
 Also available through App Control for Business policy, you can use a managed installer policy to add the [*Intune management extension*](../apps/apps-win32-app-management.md) to your Tenant as a [managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer#how-does-a-managed-installer-work). With this extension as a managed installer, the apps you deploy through Intune are automatically tagged by the installer. Tagged apps are identified by your App Control for Business policies as safe apps that are allowed to run on your devices.
 
-- The *Intune management extension* is an Intune service that supplements Windows 10 MDM features for Windows 10 and Windows 11 devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../apps/apps-win32-app-management.md).
+- The *Intune management extension* is an Intune service that supplements Windows MDM features for Windows devices. It facilitates the [installation of Win32 apps and PowerShell scripts on managed devices](../apps/apps-win32-app-management.md).
 
 - A *managed installer* uses an AppLocker rule to tag applications you install as trusted by your organization For more information, see [Allow apps installed by a managed installer](/windows/security/threat-protection/windows-defender-application-control/configure-authorized-apps-deployed-with-a-managed-installer) in the Windows Security documentation.
 
@@ -41,12 +40,18 @@ For related information, see [Windows Defender Application Control](/windows/sec
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 ## Prerequisites
 
 ### Devices
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 The following devices are supported for App Control for Business policies when they're enrolled with Intune:
 
@@ -93,7 +98,7 @@ The following are the available tasks with their required permissions and rights
   - The **App Control for Business** permission with *View Reports*.
   - The **Organization** permission with *Read*.
 
-For guidance on assigning the right level of permissions and rights to manage Intune App Control for Business policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune App Control for Business policy, see [Role-based access control for endpoint security](endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ### Government cloud support
 
@@ -255,7 +260,7 @@ After you create an [App Control for Business policy](#create-an-app-control-for
 
 Use the following procedure to help you create a successful App Control for Business policy. This policy is considered a *base* policy if you go on to create [supplemental policies](#use-supplemental-policy) to expand the scope of trust you define with this policy.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned to a platform type of *Windows 10 and later*.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **App Control for Business** > select the **App Control for Business** tab > and then select **Create Policy**. App Control for Business policies are automatically assigned a platform type.
 
    :::image type="content" source="./media/endpoint-security-app-control-policy/create-app-control-policy.png" alt-text="Screen capture that shows the path in the admin center to create a new App Control for Business policy." lightbox="./media/endpoint-security-app-control-policy/create-app-control-policy.png":::
 
@@ -362,7 +367,7 @@ To aid this optimization, WDAC policy and the Intune management Extension are co
 
 ## Delete App Control for Business policy
 
-As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) (Windows 10) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune#remove-wdac-policies-on-windows-10-1903) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
+As detailed in [Deploy WDAC policies using Mobile Device Management (MDM) - Windows security](/windows/security/threat-protection/windows-defender-application-control/deploy-windows-defender-application-control-policies-using-intune) in the Windows Security documentation, policies deleted from the Intune UI are removed from the system, and from devices, but stay in effect until the next reboot of the machine.
 
 **To disable or delete WDAC enforcement**:
 
@@ -470,4 +475,4 @@ Microsoft Entra hybrid-join devices require connectivity to an on-premises Domai
 
 ## Next Steps
 
-[Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](endpoint-security-policy.md#create-endpoint-security-policies)

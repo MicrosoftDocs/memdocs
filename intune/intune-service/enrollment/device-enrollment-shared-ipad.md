@@ -3,7 +3,6 @@ title: Shared iPad devices
 description: Learn about Shared iPad devices.
 ms.date: 01/23/2024
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

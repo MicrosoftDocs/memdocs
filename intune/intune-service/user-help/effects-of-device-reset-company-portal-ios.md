@@ -2,9 +2,11 @@
 title: Reset device in Intune Company Portal
 description: Describes what happens after you reset a device in the Intune Company Portal app for iOS and includes the steps for how to do it.
 ms.date: 02/18/2025
+ms.topic: end-user-help
+searchScope:
+ - User help
 ms.reviewer: esmich
 ---
-
 
 # Reset device in Company Portal app for iOS
 

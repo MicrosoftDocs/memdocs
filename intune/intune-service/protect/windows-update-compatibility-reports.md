@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 11/27/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: zadvor
 #ms.custom:
 ms.collection:
@@ -74,7 +73,7 @@ The **Windows feature update device readiness report**  provides a device-level 
 To use this report:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
+2. In the admin center, go to **Reports** > **Device management** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Device Readiness Report**.
 3. Configure settings:
    - Select **Select Target OS** and choose the version of Windows you plan to deploy.
    - Select **Select Scope (Tags)** and choose which devices should be in scope for this report.
@@ -126,7 +125,7 @@ The **Windows feature update compatibility risks report**  provides a summary vi
 To use this report:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
+2. In the admin center, go to **Reports** > **Device management** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Compatibility Risks Report**.
 3. Configure settings:
 
    - Select **Select Target OS** and choose the version of Windows you plan to deploy.

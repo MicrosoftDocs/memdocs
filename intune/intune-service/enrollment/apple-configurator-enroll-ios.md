@@ -3,7 +3,6 @@ title: iOS/iPadOS direct enrollment - Apple Configurator-Setup Assistant
 description: Use Apple Configurator to enroll corporate-owned iOS/iPadOS devices with Setup Assistant.
 ms.date: 02/27/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
@@ -20,8 +19,6 @@ Intune supports the enrollment of iOS/iPadOS devices using [Apple Configurator](
 Apple Configurator enrollment methods can't be used with the [device enrollment manager](device-enrollment-manager-enroll.md).
 
 ## Certificates
->[!IMPORTANT]
-> Downloading the ACME profile is not supported at this time and will result in an error. Download the SCEP profile for all devices only until we fix this problem and restore support.
 
 Apple Configurator enrollment supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile on the device receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
@@ -199,6 +196,6 @@ Apps requiring user affiliation, including the Company Portal app used for insta
 
 ## Next steps
 
-* Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Intune admin center. For more information, see [What is Microsoft Intune device management?](../remote-actions/device-management.md)
+* Manage Intune-enrolled devices by using the device management actions and features available in the Microsoft Intune admin center. For more information, see [Remote Device Actions In Microsoft Intune](../remote-actions/index.md)
 
 * For information about enrolling macOS devices via direct enrollment with Apple Configurator, see [Use Direct Enrollment for macOS devices](device-enrollment-direct-enroll-macos.md).

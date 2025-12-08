@@ -5,7 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 02/28/2024
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
@@ -59,7 +58,7 @@ You can use this enrollment option to:
 | --- | --- |
 | You use Windows client. | ✅ <br/><br/> Configuration Manager supports Windows Server. |
 | You have Microsoft Entra ID P1 or P2 | ✅ |
-| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✅ On Windows 11 and Windows 10 1803+, CA is available for Windows devices enrolled using bulk enrollment. <br/><br/> ❌ On Windows 10 1709 and older, CA isn't available for Windows devices enrolled using bulk enrollment. |
+| You'll use Conditional Access (CA) on devices enrolled using [bulk enrollment](../enrollment/windows-bulk-enroll.md) with a provisioning package. | ✅ On Windows, CA is available for Windows devices enrolled using bulk enrollment. |
 | You have remote workers. | ✅ |
 | Devices are personal or BYOD. | ✅ <br/><br/> ❌ If you use Group Policy, then bulk enrollment and automatic enrollment are for corporate-owned devices, not personal or BYOD. |
 | Devices are owned by the organization or school. | ✅  |
@@ -177,7 +176,7 @@ For more information about Windows Autopilot, go to [Windows Autopilot overview]
 | Devices are Microsoft Entra hybrid joined. | ✅ <br/><br/> Microsoft Entra hybrid joined devices are joined to your on-premises Active Directory, and registered with your Microsoft Entra ID. Devices in Microsoft Entra ID are available to Intune. Devices that aren't registered in Microsoft Entra ID aren't available to Intune. <br/><br/>A full Microsoft Entra joined solution might be better for your organization. For more information, go to the [Success with remote Windows Autopilot and Microsoft Entra hybrid join](https://techcommunity.microsoft.com/t5/intune-customer-success/success-with-remote-windows-autopilot-and-hybrid-azure-active/ba-p/2749353) blog.|
 | You have remote workers. | ✅ <br/><br/> The OEM or partner can send devices directly to your users.|
 | Devices are owned by the organization or school. | ✅ |
-| You have new or existing devices. | ✅ <br/><br/> You can update existing desktops running older Windows versions, like Windows 7, to Windows 10. This option also uses Microsoft Configuration Manager. |
+| You have new or existing devices. | ✅ <br/><br/> You can update existing desktops running older Windows versions. This option also uses Microsoft Configuration Manager. |
 | Need to enroll a few devices, or a large number of devices (bulk enrollment). | ✅ |
 | You have Microsoft Entra ID P1 or P2. | ✅ <br/><br/> Windows Autopilot uses Automatic enrollment. Automatic enrollment requires Microsoft Entra ID P1 or P2. |
 | Devices are associated with a single user. | ✅ |

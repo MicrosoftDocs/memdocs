@@ -3,7 +3,6 @@ title: Windows enrollment attestation | Microsoft Intune
 description: Find out how the Device attestation status report can help you and learn to use the Attest device action to ensure your devices are secure and reliable.
 ms.date: 02/14/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
@@ -12,7 +11,7 @@ ms.collection:
 
 # Windows enrollment attestation
 
-The goal of Windows enrollment attestation is to make devices more secure and trustworthy within the network they join. With this feature, you can check that Windows 10 and 11 devices meet strict security standards during enrollment, using Trusted Platform Module (TPM) technology to enhance their defense against threats. The Windows enrollment attestation feature also confirms and reports on the devices that enroll securely, ensuring the process is reliable.
+The goal of Windows enrollment attestation is to make devices more secure and trustworthy within the network they join. With this feature, you can check that devices running Windows meet strict security standards during enrollment, using Trusted Platform Module (TPM) technology to enhance their defense against threats. The Windows enrollment attestation feature also confirms and reports on the devices that enroll securely, ensuring the process is reliable.
 
 Here’s how it benefits organizations:
 
@@ -29,6 +28,9 @@ We recommend using the latest updates for a more successful attestation rate.
 - Windows 10
 
   - 10.0.19045.3996+
+
+    > [!IMPORTANT]
+    > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 - Windows 11
 
@@ -110,7 +112,7 @@ The following table lists status details and their descriptions.
 | TPM isn't trusted              | Device contains a TPM that isn't trusted and therefore can't be attested.                                                           |
 | TPM isn't available            | Device doesn't have TPM 2.0 or TPM can't be attested due to firmware needing update. For more information on how to update firmware, see [Resources](#resources)                                          |
 | TPM isn't ready                | TPM isn't ready to be used by this device. User needs to reset TPM ownership. For more information on how to reset TPM ownership, see [Resources](#resources)                                                    |
-| Client request is rejected      | Client's attestation request didn't reach MDM server or server rejected the request.                                             |
+| Client request is rejected      | Client's attestation request didn't reach MDM server or server rejected the request. Device owner should check to see if device can still authenticate with Entra. For more information, see [Resources](#resources).                                             |
 | AIK certificate wasn't provided| AIK certificate is missing on the device. Could be due to network issue. If temporary, attestation would retry successfully once device receives AIK cert.  |
 | Client didn't provide all required parameters | Both AIK certificate and AIK public key are missing.                                                                                     |
 | MDM key is already in TPM       | Device indicates that the MDM key is already stored in TPM. But Intune is unable to attest it because AIK certificate or AIK public key is missing, or ENTRA key can't be attested. |
@@ -118,7 +120,7 @@ The following table lists status details and their descriptions.
 | Entra token doesn't match device identity | ENTRA token for enrollment doesn't match the ENTRA key presented in the enrollment request. You can fix this issue by upgrading to the latest Windows build and by retrying attestation.                                          |
 | Entra token is missing device identity | ENTRA token for enrollment is missing ENTRA device identity.
 
-For more information, see the [Resources](#resources) section.                                                     |
+For more information, see the [Resources](#resources) section.                                                     
 
 > [!NOTE]
 > AP ODJ devices always fail attestation at enrollment. To attest devices enrolled through an AP ODJ method, attestation must be done from the report after enrollment. For more information, see [Attest device action](#attest-device-action).
@@ -162,7 +164,7 @@ If any of the following **Status details** appear, we recommend re-attempting th
 
 ### Permissions for device action
 
-To use the **Attest device** device action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
+To use the **Attest device** action, you require a role based permission known as Remote tasks: **Indicates mobile device management (MDM) attestation if device is capable for it**. Set the Permission to **yes** to enable the action. With the permission set to **Yes**, IT admins can initiate **Attest device** action.
 
 ## Resources
 
@@ -177,6 +179,8 @@ To use the **Attest device** device action, you require a role based permission 
 
 - [Troubleshoot the TPM - Windows Security | How to reset TPM ownership](/windows/security/hardware-security/tpm/initialize-and-configure-ownership-of-the-tpm)
 
+- [How to check authentication with Entra](/entra/identity/devices/troubleshoot-hybrid-join-windows-current#troubleshoot-post-join-authentication-issues)
+  
 Additional links:
 
 - [TrustedPlatformModule](/powershell/module/trustedplatformmodule/?view=windowsserver2022-ps&viewFallbackFrom=win10-ps&preserve-view=true)

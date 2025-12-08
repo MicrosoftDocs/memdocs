@@ -1,18 +1,17 @@
 ---
-title: Send notifications to noncompliant devices
+title: Send Notifications to Noncompliant Devices
 description: In this topic, you use Microsoft Intune to send email notifications to noncompliant devices.
 author: nicholasswhite
 ms.author: nwhite
 ms.date: 06/07/2024
 ms.topic: how-to
-ms.localizationpriority: medium
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
 - sub-device-compliance
 ---
 
-# Step 7: Send notifications to noncompliant devices
+# Step 7: Send Notifications to Noncompliant Devices
 
 In this topic, you'll use Microsoft Intune to send an email notification to the members of your workforce that have noncompliant devices.
 

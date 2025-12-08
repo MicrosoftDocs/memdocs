@@ -1,5 +1,5 @@
 ---
-title: Manage Microsoft 365 (Office) for iOS and Android with Intune
+title: Manage Microsoft 365 (Office) for iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Microsoft 365 (Office) for iOS and Android to ensure collaboration experiences are always accessed with safeguards in place.
 ms.date: 06/12/2025
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_SpecificApp
 ---
 
-# Manage collaboration experiences in Microsoft 365 (Office) for iOS and Android with Microsoft Intune
+# Manage Collaboration Experiences in Microsoft 365 (Office) for iOS and Android With Microsoft Intune
 
 Microsoft 365 (Office) for iOS and Android delivers several key benefits including:
 

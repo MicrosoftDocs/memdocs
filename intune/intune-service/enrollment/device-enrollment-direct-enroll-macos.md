@@ -3,7 +3,6 @@ title: Use direct enrollment for macOS devices
 description: Deploy and enroll macOS devices in Microsoft Intune using direct enrollment with Apple Configurator.
 ms.date: 04/03/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: scottbreenmsft
 ms.collection:
 - M365-identity-device-management
@@ -33,8 +32,6 @@ See the following visual guide for a summary of all enrollment options and featu
 Apps requiring user affinity, such as the Intune Company Portal app, aren't supported on Macs enrolled via direct enrollment. The Company Portal app isn't used, needed, or supported for enrollments without user affinity. Be sure device users don't install the Company Portal app from the Apple App Store on enrolled devices.
 
 ## Certificates
->[!IMPORTANT]
-> Downloading the ACME profile is not supported at this time and will result in an error. Download the SCEP profile for all devices only until we fix this problem and restore support.
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
@@ -97,6 +94,6 @@ The Mac is now enrolled in Microsoft Intune and ready-to-manage. Other profiles 
 Start managing enrolled devices in the Microsoft Intune admin center.
 
 - [Tutorial - Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Run remote actions on devices with Microsoft Intune](../remote-actions/device-management.md)
+- [Remote Device Actions In Microsoft Intune](../remote-actions/index.md)
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
 

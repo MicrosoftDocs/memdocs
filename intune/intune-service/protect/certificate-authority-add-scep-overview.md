@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 10/15/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
@@ -124,7 +123,7 @@ After you unenroll or wipe the device, the certificates are removed from the dev
 The following third-party certification authorities support Intune:
 
 - [AWS Private Certificate Authority](https://docs.aws.amazon.com/privateca/latest/userguide/connector-for-scep-getting-started.html)
-- [Cogito Group](https://cogitogroup.net/scep)
+- [Cogito Group](https://training.cogitogroup.net/documentation/simple-certificate-enrolment-protocol-scep)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EasyScep](https://docs.just-software.com/EasyScep/)
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)
@@ -136,7 +135,7 @@ The following third-party certification authorities support Intune:
 - [Keyfactor Command](https://software.keyfactor.com/Guides/SCEPGuide/Content/SCEPGuide/Introduction.htm)
 - [KeyTalk](https://keytalk.com/)
 - [Keytos](https://docs.keytos.io/azure-pki/intune-certificate-authority/how-intune-scep-works/)
-- [Nexus Certificate Manager](https://doc.nexusgroup.com/pub/scep-support-in-certificate-manager)
+- [Nexus Certificate Manager](https://doc.nexusgroup.com/nexus-certificate-manager/8.13/scep-support-in-certificate-manager)
 - [SCEPman](https://azuremarketplace.microsoft.com/marketplace/apps/glueckkanja-gabag.scepman)
 - [Sectigo](https://sectigo.com/products)
 - [SecureW2](https://www.securew2.com/solutions/managed-devices/scep-ca-integration-with-microsoft-intune)

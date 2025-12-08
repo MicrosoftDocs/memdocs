@@ -3,7 +3,6 @@ title: Apple School Manager - sync and distribute devices
 description: Sync and distribute Apple School Manager devices enrolled in Microsoft Intune.
 ms.date: 01/06/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

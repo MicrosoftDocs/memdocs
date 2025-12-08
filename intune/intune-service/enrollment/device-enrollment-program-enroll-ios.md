@@ -1,9 +1,8 @@
 ---
 title: Set up automated device enrollment (ADE) for iOS/iPadOS
 description: Learn how to enroll corporate-owned iOS/iPadOS devices into Microsoft Intune with Apple Automated Device Enrollment (ADE).
-ms.date: 06/09/2025
+ms.date: 12/02/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
@@ -35,9 +34,6 @@ The following table shows the features and scenarios supported with automated de
 | You use the device enrollment manager (DEM) account. | ❌ <br/><br/> The DEM account isn't supported. |
 
 ## Certificates
-
->[!NOTE]
-> The [ACME certificate](../fundamentals/whats-new-archive.md#acme-protocol-support-for-iosipados-and-macos-enrollment) phased rollout for new eligible enrollments has been paused. New enrollments are using the SCEP certificate like before with no changes to the end user experience.
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
@@ -223,8 +219,8 @@ Now that you've installed your token, you can create an enrollment profile for a
 
 1. In the **User Affinity** list, select an option that determines whether devices with this profile must enroll with or without an assigned user.
 
-    - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use the Company Portal for services like installing apps.
-    - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices.
+    - **Enroll with User Affinity**: Select this option for devices that belong to users who want to use the Company Portal for services like installing apps. Enrolling with user affinity is also referred to as enrolling with a *user*.
+    - **Enroll without User Affinity**: Select this option for devices that aren't affiliated with a single user. Use this option for devices that don't access local user data. This option is typically used for kiosk, point of sale (POS), or shared-utility devices. Enrolling without user affinity is also referred to as enrolling *userless*.
 
       In some situations, you might want to associate a primary user with devices enrolled without user affinity. To do this task, you can send the `IntuneUDAUserlessDevice` key to the Company Portal app in an app configuration policy for managed devices. The first user that signs in to the Company Portal app is established as the primary user. If the first user signs out and a second user signs in, the first user remains the primary user of the device. For more information, see [Configure the Company Portal app to support iOS and iPadOS ADE devices](../apps/app-configuration-policies-use-ios.md#configure-the-company-portal-app-to-support-ios-and-ipados-devices-enrolled-with-automated-device-enrollment).
     - **Enroll with Microsoft Entra ID shared mode**: Select this option to enroll devices that will be in shared mode.
@@ -375,7 +371,7 @@ If you assign dynamic groups to enrollment profiles, there might be a delay in d
 The following table describes the Setup Assistant screens shown during automated device enrollment for iOS/iPadOS. You can show or hide these screens on supported devices during enrollment. For more information about how each Setup Assistant screen affects the user experience, see these Apple resources:
 
 - [Apple Platform Deployment guide: Manage Setup Assistant for Apple devices](https://support.apple.com/en-mide/guide/deployment/depdeff4a547/web)
-- [Apple Developer documentation: ShipKeys](https://developer.apple.com/documentation/devicemanagement/skipkeys)
+- [Apple Developer documentation: SkipKeys](https://developer.apple.com/documentation/devicemanagement/skipkeys)
 
 | Setup Assistant screen | What happens when visible |
 |------------------------------------------|------------------------------------------|
@@ -402,11 +398,11 @@ The following table describes the Setup Assistant screens shown during automated
 | **Device to Device Migration** | Shows the device-to-device migration pane. On this screen, users can transfer data from an old device to their current device. The option to transfer data directly from a device isn't available for devices running iOS 13 or later.
 | **Restore Completed** | Shows users the Restore Completed screen after a backup and restore is performed during Setup Assistant. |
 | **Software Update Completed** | Shows users all software updates that happen during Setup Assistant.|
-| **Get Started**| Shows users the Get Started welcome screen.
+| **Get Started**| Shows users the Get Started pane.
 | **Terms of Address**| Shows the terms of address pane, which gives users the option to choose how they want to be addressed throughout the system: feminine, masculine, or neutral. This Apple feature is available for select languages. For more information, see [Key Features and Enhancements](https://www.apple.com/ios/ios-16/features/)(opens Apple website). For iOS/iPadOS 16.0 and later.
 | **Emergency SOS**| Shows the safety setup pane. For iOS/iPadOS 16.0 and later.
 | **Action button**| Shows the configuration pane for the action button. For iOS/iPadOS 17.0 and later.
-| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For iOS/iPadOS 18.0 and later.
+| **Intelligence**| Shows the Apple Intelligence setup pane, where users can configure Apple Intelligence features. For iOS/iPadOS 18.0 and later.  
 
 ## Sync managed devices
 

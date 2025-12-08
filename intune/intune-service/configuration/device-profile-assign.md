@@ -6,7 +6,6 @@ ms.author: mandia
 ms.date: 02/18/2025
 ms.update-cycle: 180-days
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: gokarthi
 ms.collection:
 - M365-identity-device-management

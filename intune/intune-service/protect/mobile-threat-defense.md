@@ -3,9 +3,8 @@ title: Mobile Threat Defense with Microsoft Intune
 description: Use Intune Mobile Threat Defense (MTD) with your Mobile Threat Defense partner to protect access to company resources based on device risk.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/21/2024
+ms.date: 11/10/2025
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: demerson
 ms.collection:
 - M365-identity-device-management
@@ -16,7 +15,7 @@ ms.collection:
 
 > [!NOTE]
 >
-> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
+> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md).
 
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
@@ -115,9 +114,10 @@ Learn how to protect access to company resource based on device, network, and ap
 - [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [iVerify Enterprise](iverify-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Jamf Mobile Threat Defense](jamf-mtd-connector.md) - *(Android, iOS/iPadOS)*
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) - *(Android, iOS/iPadOS, Windows)*
+- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) - *(Android, iOS/iPadOS, Windows)*
 - [Pradeo](pradeo-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [SentinelOne](Sentinelone-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Sophos Mobile](sophos-mtd-connector.md) - *(Android, iOS/iPadOS)*

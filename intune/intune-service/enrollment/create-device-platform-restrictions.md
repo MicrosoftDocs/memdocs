@@ -11,10 +11,6 @@ ms.collection:
 
 # Create device platform restrictions
 
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
-
-*Applies to: Android, iOS/iPadOS, macOS, Windows 10, Windows 11*
-
 Create a device platform enrollment restriction policy to restrict devices from enrolling in Intune. Available restrictions include:
 
 * Device platform
@@ -26,9 +22,15 @@ You can create a new device platform restriction policy in the Microsoft Intune 
 
 This article describes the device platform restrictions supported in Microsoft Intune and how to configure them in the admin center.
 
-## Role-based access control
+## Requirements    
+You can use corporate identifiers with these platforms:
 
-To create device platform restrictions in Microsoft Intune, you must be assigned as [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). This role is built-in to Microsoft Entra ID and can:
+- Android
+- iOS/iPadOS
+- macOS  
+- Windows 
+
+To create device platform restrictions in Microsoft Intune, you must be signed in as [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). This role is built-in to Microsoft Entra ID and can:
 
 - Create device platform restrictions
 
@@ -76,7 +78,7 @@ Since Intune supports two Android platforms, it's important to understand how OS
    - **Device manufacturer** (Android): Enter a comma-separated list of the manufacturers that you want to block.
    - **Allow min/max range** (Android, Windows, iOS/iPadOS): Enter the minimum and maximum OS versions allowed to enroll. Supported version formats include:
 
-     - Windows supports major.minor.build.rev for Windows 10 and Windows 11. Intune doesn't receive the revision number during enrollment so enter **0** for revision number.
+     - Windows supports major.minor.build.rev for Windows. Intune doesn't receive the revision number during enrollment so enter **0** for revision number.
      - Android device administrator and Android Enterprise work profile support major.minor.rev.build.
      - iOS/iPadOS supports major.minor.rev.
 
@@ -140,7 +142,7 @@ The following filter properties are always available to use with enrollment poli
 * Ownership
 * Enrollment profile name
 
-For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#managed-device-properties). Filters can't be used with Android enrollment restrictions.
+For more information about these properties, see [device properties](../fundamentals/filters-device-properties.md#available-properties). Filters can't be used with Android enrollment restrictions.
 
 ## Edit enrollment restrictions
 

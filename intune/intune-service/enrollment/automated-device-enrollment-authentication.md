@@ -3,7 +3,6 @@ title: Authentication methods for Apple automated device enrollment | Microsoft 
 description: Describes the Intune-supported authentication methods you can use with automated device enrollment.
 ms.date: 06/09/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

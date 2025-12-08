@@ -5,8 +5,8 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 08/01/2024
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: priyar
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - highpri

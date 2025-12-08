@@ -1,7 +1,7 @@
 ---
-title: Add and assign an app
+title: Add and Assign an App
 description: In this article, you'll use Microsoft Intune to add and assign an app.
-ms.date: 02/28/2025
+ms.date: 10/02/2025
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -9,7 +9,7 @@ ms.collection:
 - FocusArea_Apps_Add
 ---
 
-# Step 8: Add and assign an app
+# Step 8: Add and Assign an App
 
 In this article, you'll use Intune to add and assign an app to your company's workforce. One of an admin's priorities is to ensure that end users have access to the apps they need to do their work.
 
@@ -67,7 +67,7 @@ You now have assigned the app to an additional group.
 
 End users must install and use the Company Portal app to install an app made available by Intune. You, acting as an end user, can use the following steps to verify that the app is available to the user of the enrolled device.
 
-1. Sign in to your enrolled Windows 10 Desktop device.
+1. Sign in to your enrolled Windows Desktop device.
 
     > [!IMPORTANT]
     > The device must be [enrolled with Intune](../enrollment/quickstart-enroll-windows-device.md). Also, you must sign in to the device using an account contained in the group you assigned to the app.
@@ -86,7 +86,7 @@ If your business needs require that you assign the Company Portal app to your wo
 
 ## Next steps
 
-In this article, you added apps to Intune, assigned the apps to a group, and installed the apps on the enrolled Windows 10 Desktop device. For more information about managing apps in Intune, see [What is Microsoft Intune app management?](app-management.md)
+In this article, you added apps to Intune, assigned the apps to a group, and installed the apps on the enrolled Windows Desktop device. For more information about managing apps in Intune, see [What is Microsoft Intune app management?](app-management.md)
 
 To continue to evaluate Microsoft Intune, go to the next step:
 

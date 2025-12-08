@@ -3,7 +3,6 @@ title: Set up Intune enrollment for Android Enterprise dedicated devices
 description: Configure enrollment in Microsoft Intune for Android Enterprise dedicated devices.
 ms.date: 05/08/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management
@@ -149,7 +148,7 @@ You can now [enroll your dedicated devices](android-dedicated-devices-fully-mana
 
 > [!NOTE]
 > The Microsoft Intune app will be automatically installed during enrollment of a dedicated device.  This app is required for enrollment and cannot be uninstalled.
-> The Microsoft Authenticator app will be automatically installed during enrollment of a dedicated device when using the token type **Corporate-owned dedicated device with Microsoft Entra ID shared mode**. This app is required for this enrollment method and cannot be uninstalled.
+> Microsoft Authenticator and Company Portal will be automatically installed during enrollment of a dedicated device when using the token type **Corporate-owned dedicated device with Microsoft Entra ID shared mode**. These apps are required for this enrollment method and cannot be uninstalled.
 
 ## Managing apps on Android Enterprise dedicated devices
 

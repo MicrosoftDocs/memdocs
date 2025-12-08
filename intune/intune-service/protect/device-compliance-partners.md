@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 04/10/2025
 ms.topic: overview
-ms.localizationpriority: high
 ms.reviewer: ilwu-microsoft
 ms.collection:
 - M365-identity-device-management

@@ -5,8 +5,8 @@ author: brenduns
 ms.author: brenduns
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -51,7 +51,7 @@ Regardless of whether you're migrating from another endpoint privilege managemen
 
 **To confirm that the rule is functioning as expected:**
 
-- Sign in to the Windows 10 / 11 device with the standard user credentials.
+- Sign in to the Windows device with the standard user credentials.
 - **Start** > **Run** > **Services.msc** > Ok
 - Check that the *'Microsoft EPM Agent Service'* is present, Running, and set to Automatic startup type.
 - Close the Services snap-in.
@@ -127,7 +127,7 @@ For more details on creating a rule, see [Create elevation rules](epm-elevation-
 
 ### Confirm the rule is functioning
 
-- Sign in to the Windows 10 / 11 device with standard user credentials.
+- Sign in to the Windows device with standard user credentials.
 - Right-click the application (for example `Notepad++`) and select **'Run with elevated access'**
 - On the Endpoint Privilege Management pop-up, select **Continue**
 - Verify the application launches with elevated permissions

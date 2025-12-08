@@ -1,9 +1,8 @@
 ---
-title: Add PowerShell scripts to Windows 10/11 devices in Microsoft Intune
-description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows 10/11 devices in Microsoft Intune. Read common issues and resolutions.
-ms.date: 09/08/2025
+title: Add PowerShell Scripts to Windows Devices in Microsoft Intune
+description: Create and run PowerShell scripts, assign the script policy to Microsoft Entra groups, and use reports to monitor the scripts. See the steps to delete scripts you add on Windows devices in Microsoft Intune. Read common issues and resolutions.
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: bryanke
 ms.collection:
 - M365-identity-device-management
@@ -12,9 +11,11 @@ ms.collection:
 - FocusArea_Apps_Win32
 ---
 
-# Use PowerShell scripts on Windows 10/11 devices in Intune
+# Use PowerShell Scripts on Windows Devices in Intune
 
-Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows 10 devices. The management extension enhances MDM, and makes it easier to move to modern management.
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows devices. The management extension enhances MDM, and makes it easier to move to modern management.
 
 > [!NOTE]
 > For information about the Intune management extension for Windows, see [Intune management extension for Windows](../apps/intune-management-extension.md).
@@ -54,7 +55,7 @@ Use the Microsoft Intune management extension to upload PowerShell scripts in In
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Scripts and remediations** > **Platform scripts** > **Add** > **Windows 10 and later**.
 
-    ![Screenshot that shows creating a new script for a Windows 10 device.](./media/intune-management-extension/create-script-windows.png)
+    ![Screenshot that shows creating a new script for a Windows device.](./media/intune-management-extension/create-script-windows.png)
 
 3. In **Basics**, enter the following properties, and select **Next**:
     - **Name**: Enter a name for the PowerShell script.
@@ -157,7 +158,7 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
 
 - Be sure devices are [joined to Microsoft Entra ID](/azure/active-directory/user-help/user-help-join-device-on-network). Devices that are only [registered](/azure/active-directory/user-help/user-help-register-device-on-network) with your workplace or organization in Microsoft Entra ID don’t receive the scripts.
 - Confirm the Intune management extension is downloaded to `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
-- Scripts don't run on Surface Hubs or Windows 10 in S mode.
+- Scripts don't run on Surface Hubs or Windows in S mode.
 - Review the logs for any errors. See [Intune management extension logs](../apps/intune-management-extension.md#intune-management-extension-logs) (in this article).
 - For possible permission issues, be sure the properties of the PowerShell script are set to `Run this script using the logged on credentials`. Also check that the signed in user has the appropriate permissions to run the script.
 

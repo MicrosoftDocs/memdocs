@@ -3,7 +3,6 @@ title: Overview of Apple User Enrollment in Microsoft Intune
 description: Utilize Apple User Enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune.
 ms.date: 08/19/2024
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: rishitasarin
 ms.collection:
 - M365-identity-device-management
@@ -48,7 +47,7 @@ Supported device configuration policies and management capabilities include:
 - VPN: User enrollment is limited to per-app VPN. For more information, see [Set up per-app Virtual Private Network (VPN) for iOS/iPadOS devices in Intune](../configuration/vpn-setting-configure-per-app.md). Safari domains are not supported.
 - Wi-Fi: For more information, see [Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune](../configuration/wi-fi-settings-ios.md).
 - Device restrictions: For a list of supported device restrictions, see [iOS and iPadOS device settings to allow or restrict features using Intune](../configuration/device-restrictions-ios.md).
-- Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information about these actions and how they work, see [Manage devices with Microsoft Intune](../remote-actions/device-management.md).
+- Remote actions for admins: You can retire, delete, remote lock, and sync devices. For more information, see [Remote Device Actions In Microsoft Intune](../remote-actions/index.md).
 
 ### App deployment and management
 Supported app types include:
@@ -76,12 +75,12 @@ For more information about how employees and students can access these actions, 
 ### Limitations and capabilities not supported
 
 When using Apple User Enrollment to enroll devices, Intune doesn't collect:
-  - App inventory for apps outside of the managed Apple File System volume.
+- App inventory for apps outside of the managed Apple File System volume.
   - Certificate and provisioning profile inventory outside of the managed APFS volume.
   - UDID and other persistent device identifiers, such as phone number, serial number, and IMEI.
 
 Intune doesn't support:
-  - SCEP user profiles with Subject Name Format of Serial Number.
+- SCEP user profiles with Subject Name Format of Serial Number.
   - Installation of Apple App Store apps as managed apps.
   - MDM control of apps outside of the managed APFS volume. App protection policies still apply to these apps. However, you can't take over management or deploy a managed version of these apps unless the user deletes them from their device.
   - Custom privacy text in the Company Portal that's exclusively for user enrollment workflows. If you customize the text explaining what your organization can and can't see, users see the same text in the Company Portal during both Apple Device Enrollment and Apple User Enrollment.
@@ -89,7 +88,8 @@ Intune doesn't support:
 
 Limitations include:
 - User enrollment supports a unique enrollment ID for each device enrolled, but this ID doesn't persist after the user unenrolls the device.
-- Devices running iOS version 15.5 can't enroll with Apple User Enrollment if a mutli-factor authentication text or call is needed on the same device during enrollment.
+- Devices running iOS version 15.5 can't enroll with Apple User Enrollment if a multi-factor authentication text or call is needed on the same device during enrollment.
+
 - Devices running iOS versions 15.7 through iOS 16.3 can't enroll with Apple User Enrollment while utilizing multi-factor authentication (MFA) via text. The phone call option must be used to enroll if MFA is needed on the same device during enrollment.
 
 If these capabilities are important to you, we recommend using Apple Device Enrollment for BYOD scenarios or Apple Automated Device Enrollment for corporate-owned devices.

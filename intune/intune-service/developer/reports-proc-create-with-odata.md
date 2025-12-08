@@ -1,5 +1,5 @@
 ---
-title: Create an Intune report from the OData feed with Power BI
+title: Create an Intune Report From the OData Feed With Power BI
 description: Create a treemap visualization using Power BI Desktop with an interactive filter from the Intune Data Warehouse API.
 ms.date: 10/30/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Create an Intune report from the OData feed with Power BI
+# Create an Intune Report From the OData Feed With Power BI
 
 This article explains how to create a treemap visualization of your Intune data using Power BI Desktop that users an interactive filter. For example, your CFO might like to know how the overall distribution of devices compares between company-owned devices and personal devices. The treemap provides insight into the total number of device types. You can review the number of iOS/iPadOS, Android, and Windows devices that are either company owned or personally owned.
 

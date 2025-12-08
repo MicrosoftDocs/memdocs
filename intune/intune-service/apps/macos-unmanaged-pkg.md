@@ -1,5 +1,5 @@
 ---
-title: Add an unmanaged macOS PKG app to Microsoft Intune
+title: Add an Unmanaged macOS PKG App to Microsoft Intune
 description: Learn about how to add an unmanaged macOS PKG app to Microsoft Intune.
 ms.date: 07/12/2024
 ms.topic: how-to
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_MacOS
 ---
 
-# Add an unmanaged macOS PKG app to Microsoft Intune
+# Add an Unmanaged macOS PKG App to Microsoft Intune
 
 Use the information in this article to help you add an unmanaged macOS PKG app to Microsoft Intune. To deploy a managed PKG app, see [How to add macOS line-of-business (LOB) apps to Microsoft Intune.](../apps/lob-apps-macos.md)
 

@@ -1,5 +1,5 @@
 ---
-title: Reference for Application entities
+title: Reference for Application Entities
 description: Reference topic for the Application category of entity collections in the Intune Data Warehouse API.
 ms.date: 10/30/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Reference for application entities
+# Reference for Application Entities
 
 The **Application** category contains entities for devices that track information such as:
 

@@ -1,5 +1,5 @@
 ---
-title: Move your Intune Data Warehouse account data
+title: Move Your Intune Data Warehouse Account Data
 description: Understand how to back up your Intune Data Warehouse data when moving your account.
 ms.date: 06/09/2025
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Move your Intune Data Warehouse account data
+# Move Your Intune Data Warehouse Account Data
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

@@ -9,8 +9,7 @@ ms.reviewer:
 
 Rename a device to make it easier to recognize and manage in the Intune Company Portal app. The Company Portal app for Windows lets you rename the following types of connected devices:
 
-* Windows 10
-* Windows 11
+* Windows 
 * iOS
 * Android
 

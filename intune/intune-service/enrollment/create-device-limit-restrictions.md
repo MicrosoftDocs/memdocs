@@ -9,17 +9,7 @@ ms.collection:
 - highpri
 ---
 
-# Create device limit restrictions in Intune
-
-**Applies to**
-* Android
-* iOS
-* macOS
-* Windows 10
-* Windows 11
-
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+# Create device limit restrictions in Intune  
 
 Create a device limit enrollment restriction policy to limit the number of devices a user can enroll in Microsoft Intune. Device limit restrictions work on devices that meet the following criteria:
 
@@ -37,7 +27,13 @@ This article describes how to create and configure a device limit-enrollment res
 ## Default policy
 Microsoft Intune provides one default policy for device limit restrictions that you can edit and customize as needed. Intune applies the default policy to all user and userless enrollments until you assign a higher-priority policy.
 
-## Role based access control
+## Requirements    
+You can use device limit restrictions with these platforms:
+
+- Android
+- iOS/iPadOS
+- macOS  
+- Windows 
 
 To create device limit restrictions in Microsoft Intune, you must be assigned as Intune Service Administrator. This role is built-in to Microsoft Entra ID and can:
 

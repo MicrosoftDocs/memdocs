@@ -5,8 +5,8 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: wicale
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - certificates
@@ -167,8 +167,8 @@ Run the sample PowerShell script from an administrative workstation. To run it, 
 
 ```powershell
  param (
-	[string]$caId = $(Read-Host "Input CaId")
-	)
+    [string]$caId = $(Read-Host "Input CaId")
+    )
 
 Install-Module Microsoft.Graph
 
@@ -184,33 +184,33 @@ $confirmAllDelete = $(Write-Host "Are you 100% sure you want to revoke all $($le
 Read-Host " ")
 
 if ($confirmAllDelete.ToLower() -ne "y" -and $confirmAllDelete.ToLower() -ne "yes") {
-	Write-Host "Aborted"
-	Stop-Transcript
-	exit
+    Write-Host "Aborted"
+    Stop-Transcript
+    exit
 }
 
 # Iterate on retrieved leaf certs and revoke
 foreach ($leafCert in $leafCerts.value)
 {
-	Write-Host ""
-	if ($leafCert.certificateStatus.ToLower() -eq "revoked") {
-	 	Write-Host "LeafCert id: $($leafCert.id), thumbprint: $($leafCert.thumbprint) is already revoked. Skipping"
-	 	continue
-	}
+    Write-Host ""
+    if ($leafCert.certificateStatus.ToLower() -eq "revoked") {
+         Write-Host "LeafCert id: $($leafCert.id), thumbprint: $($leafCert.thumbprint) is already revoked. Skipping"
+         continue
+    }
 
     Write-Host "Revoking leafCert id: $($leafCert.id), thumbprint: $($leafCert.thumbprint)"
 
-	# Uncomment next five lines to prompt for each cert
-	# $confirmCertDelete = $(Write-Host "Are you sure you want to revoke leafCert id: $($leafCert.id), thumbprint: $($leafCert.thumbprint), $($leafCert.certificateStatus)?" -ForegroundColor Yellow; Write-Host '[Y] Yes' -NoNewline; Write-Host ' [N] No' -ForegroundColor Yellow -NoNewline; Read-Host " ")
-	# if ($confirmCertDelete.ToLower() -ne "y" -and $confirmCertDelete.ToLower() -ne "yes") {
-	# 	Write-Host "Skipping"
-	# 	continue
-	# }
+    # Uncomment next five lines to prompt for each cert
+    # $confirmCertDelete = $(Write-Host "Are you sure you want to revoke leafCert id: $($leafCert.id), thumbprint: $($leafCert.thumbprint), $($leafCert.certificateStatus)?" -ForegroundColor Yellow; Write-Host '[Y] Yes' -NoNewline; Write-Host ' [N] No' -ForegroundColor Yellow -NoNewline; Read-Host " ")
+    # if ($confirmCertDelete.ToLower() -ne "y" -and $confirmCertDelete.ToLower() -ne "yes") {
+    #     Write-Host "Skipping"
+    #     continue
+    # }
 
-	$currentCertId = $($leafCert.id)
-	$revokeParams = @{ "leafCertificateId" = $($leafCert.id) }
+    $currentCertId = $($leafCert.id)
+    $revokeParams = @{ "leafCertificateId" = $($leafCert.id) }
 
-	Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/beta/devicemanagement/cloudCertificationAuthority/$caId/revokeLeafCertificate" -Body ($revokeParams|ConvertTo-Json) -ContentType "application/json"
+    Invoke-MgGraphRequest -Method POST -Uri "https://graph.microsoft.com/beta/devicemanagement/cloudCertificationAuthority/$caId/revokeLeafCertificate" -Body ($revokeParams|ConvertTo-Json) -ContentType "application/json"
 }
 
 ```

@@ -1,5 +1,5 @@
 ---
-title: Intune Data Warehouse application-only authentication
+title: Intune Data Warehouse Application-Only Authentication
 description: This topic describes Data Warehouse application-only authentication for Microsoft Intune.
 ms.date: 11/18/2024
 ms.topic: reference
@@ -8,7 +8,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Intune Data Warehouse application-only authentication
+# Intune Data Warehouse Application-Only Authentication
 
 You can set up an application using Microsoft Entra ID and authenticate to the Intune Data Warehouse. This process is useful for websites, apps, and background processes where the application should not have access to user credentials. Using the following steps, you authorize your application with Microsoft Entra ID using OAuth 2.0.
 

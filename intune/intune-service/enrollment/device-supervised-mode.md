@@ -3,7 +3,6 @@ title: Turn on iOS/iPadOS supervised mode with Microsoft Intune
 description: Learn how to turn on iOS/iPadOS supervised mode with Intune.
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management
@@ -26,7 +25,7 @@ In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2
 After enrollment, the only way to turn on supervised mode is to connect an iOS/iPadOS device to a Mac and [use the Apple Configurator](../enrollment/apple-configurator-enroll-ios.md) (which will reset the device). You can't configure a device for Supervised mode in Intune after enrollment.
 
 Apple Configurator for iPhone can also be used to supervise devices.
-For more information, see the [Apple support doc](https://support.apple.com/guide/apple-configurator/intro-apd4015ec300/1.1/ios/17.0).
+For more information, see the [Apple support doc](https://support.apple.com/apple-configurator).
 
 ## Identify a supervised device
 

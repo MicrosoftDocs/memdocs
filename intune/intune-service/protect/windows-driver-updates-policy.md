@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: davguy; davidmeb; bryanke
 #ms.custom:
 ms.collection:

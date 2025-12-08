@@ -3,7 +3,6 @@ title: Apple School Manager - create enrollment profile
 description: Learn how to create the enrollment profile in Intune for Apple School Manager enrollment.
 ms.date: 01/07/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: annovich
 ms.collection:
 - M365-identity-device-management

@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 03/28/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - sub-secure-endpoints
@@ -13,6 +12,9 @@ ms.reviewer: mattcall
 
 ---
 # Endpoint detection and response policy settings for endpoint security in Intune
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 > [!NOTE]
 >
@@ -24,12 +26,15 @@ View the settings you can configure in profiles for [Endpoint detection and resp
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 
 Supported platforms and profiles:
 
-- **Windows**: Use this platform for policy you deploy to Windows 10 and Windows 11 devices managed with Intune.
+- **Windows**: Use this platform for policy you deploy to Windows devices managed with Intune.
   - Profile: **Endpoint detection and response (MDM)**
 
 - **Windows (ConfigMgr)**: Use this platform for policy you deploy to devices managed by Configuration Manager.

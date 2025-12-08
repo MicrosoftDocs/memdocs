@@ -1,25 +1,24 @@
 ---
-title: Device scopes in Endpoint analytics
-description: Learn about Device scopes as an Advanced Analytics feature in Microsoft Intune
-ms.date: 04/10/2025
-ms.topic: article
+title: Device Scopes in Endpoint Analytics
+description: Learn how to use device scopes in Microsoft Intune endpoint analytics with scope tags for custom device reporting and targeted insights.
+ms.date: 10/09/2025
+ms.topic: concept-article
+ms.subservice: suite
 ---
 
-# Device scopes in Endpoint analytics
+# Device scopes in endpoint analytics
 
-> [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-Custom device scopes use Scope tags to slice Endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
+[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
 
-Custom device scopes are supported on the following Endpoint analytics reports:
+Custom device scopes use Scope tags to slice endpoint analytics reports to a subset of devices, allowing you to see scores, insights, and recommendations for a specific subset of your enrolled devices.
+
+Custom device scopes are supported on the following endpoint analytics reports:
 
 - [Startup performance](startup-performance.md)
-
 - [Work from anywhere](work-from-anywhere.md)
-
 - [Application reliability](app-reliability.md)
-
 - [Battery health](battery-health.md)
 
 ## Permissions
@@ -36,13 +35,13 @@ To create custom device scopes, a user must have the **Roles/Read** [role permis
 - Intune Role Administrator
 
 > [!NOTE]
-> After custom device scopes are created, other users with access to Endpoint analytics can use them.
+> After custom device scopes are created, other users with access to endpoint analytics can use them.
 
 ## Create and manage custom device scopes
 
-You can create and manage custom device scopes by using the **Manage device scopes** menu in Endpoint analytics.
+You can create and manage custom device scopes by using the **Manage device scopes** menu in endpoint analytics.
 
-1. Navigate to a supported report within Endpoint analytics, such as Startup performance, in the Intune admin center under **Reports** > **Endpoint analytics** > **Startup performance**.
+1. Navigate to a supported report within endpoint analytics, such as Startup performance, in the Intune admin center under **Reports** > **Endpoint analytics** > **Startup performance**.
 2. Select **Device scope** menu.
 3. Select **Manage device scopes** to open the flyout where you can create and modify your custom device scopes.
 
@@ -71,15 +70,15 @@ To delete custom device scopes:
 
 ## Using custom device scopes
 
-Custom device scopes can be used in any supported Endpoint analytics report. To use a custom device scope:
+Custom device scopes can be used in any supported endpoint analytics report. To use a custom device scope:
 
 1. Ensure that the device scope you would like to use is active.
-2. Navigate to a supported report in Endpoint analytics, such as **Startup performance**.
+2. Navigate to a supported report in endpoint analytics, such as **Startup performance**.
 3. Select **Device scope** menu in the page.
 4. From the dropdown menu, select your desired custom device scope.
 5. Select **Apply**.
 
-The page is automatically updated to show scores, data, and insights specific to the subset of devices defined by your chosen custom device scope. As you navigate through Endpoint analytics, your chosen device scope remains selected on all supported reports and pages.
+The page is automatically updated to show scores, data, and insights specific to the subset of devices defined by your chosen custom device scope. As you navigate through endpoint analytics, your chosen device scope remains selected on all supported reports and pages.
 
 To return to viewing all devices, navigate to the **Device scope** menu, select **All Devices** from the dropdown menu, and select **Apply**.
 
@@ -89,7 +88,14 @@ To return to viewing all devices, navigate to the **Device scope** menu, select 
 
 - Only one Scope tag can be used to create a custom device scope. To create a custom device scope that includes devices from multiple Scope tags, you must create a new Scope tag and assign it to the full set of devices that you require.
 
+---
+
 ## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Enhanced Device Timeline >](enhanced-device-timeline.md)
+
+---
 
 For more information, go to:
 

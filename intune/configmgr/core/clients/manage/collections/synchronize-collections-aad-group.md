@@ -3,7 +3,7 @@ title: Synchronize collection members to Microsoft Entra groups
 titleSuffix: Configuration Manager
 description: Synchronize collection members to Microsoft Entra groups.
 ms.date: 03/28/2022
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: how-to
 author: LauraWi
@@ -14,7 +14,7 @@ ms.collection: tier3
 ms.reviewer: mstewart
 ---
 
-# How to synchronize collection members to Microsoft Entra groups
+# How to synchronize device collection members to Microsoft Entra groups
 
 <!--3607475-->
 
@@ -39,11 +39,13 @@ Example synchronization scenario:
 1. From Configuration Manager, select `Collection1`, and choose **Synchronize Membership** from the ribbon to force a full synchronization.
 1. `Group1` now contains only `DeviceB`
 
-<a name='prerequisites-for-azure-ad-synchronization'></a>
+## Prerequisites
 
-## Prerequisites for Microsoft Entra synchronization
+- Supported version of Windows 10 (x64) or Windows 11 (x64)
 
-- Integration with Microsoft Entra ID for [cloud management](../../../servers/deploy/configure/azure-services-wizard.md).Option to ** Disable Microsoft Entra authentication for this tenant** under Azure Service for Cloud Management in the console must not be checked as this prevents client registration using Entra ID Authentication.
+- Windows Server OS 2019 and later (Standard or Datacenter)
+
+- Integration with Microsoft Entra ID for [cloud management](../../../servers/deploy/configure/azure-services-wizard.md).
 
 - [Microsoft Entra user discovery](../../../servers/deploy/configure/about-discovery-methods.md#azureaddisc)
 
@@ -51,7 +53,9 @@ Example synchronization scenario:
 
 - Access to the **All Systems** collection
 
-<a name='create-a-group-and-set-the-owner-in-azure-ad'></a>
+   > [!NOTE]
+   > The option to **Disable Microsoft Entra authentication for this tenant**, under Azure Services for Cloud Management in the console, must **not** be     checked as this prevents client registration using Entra ID Authentication.<!--8537319-->
+
 
 ## Create a group and set the owner in Microsoft Entra ID
 

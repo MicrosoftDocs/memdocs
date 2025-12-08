@@ -5,8 +5,8 @@ author: brenduns
 ms.author: brenduns
 ms.date: 10/10/2024
 ms.topic: article
-ms.localizationpriority: high
 ms.reviewer: ochukwunyere
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - sub-intune-suite

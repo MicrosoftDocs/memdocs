@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 01/14/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: dougeby
 ms.collection:
 - M365-identity-device-management
@@ -23,7 +22,7 @@ This article shows you how to view all your devices, and their properties in the
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **All devices** > select one of your listed devices to open its details:
 
-   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. Depending on the device platform, you can perform different actions. For more information, see [Use remote actions to manage devices using Intune](../remote-actions/device-management.md).
+   - **Overview** shows the device name, and lists some key properties of the device, like whether it's a personal or corporate device, serial number, primary user, and more. Depending on the device platform, you can perform different actions. For more information, see [Use remote actions to manage devices using Intune](../remote-actions/index.md).
    - Use **Properties** to assign a [device category you create](../enrollment/device-group-mapping.md), and change ownership of the device to a personal device, or a corporate device.
    - **Hardware** includes many details about the device, like the device ID, operating system and version, storage space, and more details.
    - **Discovered apps** lists all the apps that Intune found installed on the device, and the app versions. For more information, see [Intune discovered apps](../apps/app-discovered-apps.md).

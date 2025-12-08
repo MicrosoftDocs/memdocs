@@ -3,7 +3,6 @@ title: Overview of Apple device enrollment in Microsoft Intune
 description: Utilize Apple device enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune.
 ms.date: 01/14/2025
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: rishitasarin
 ms.collection:
 - M365-identity-device-management
@@ -62,9 +61,6 @@ Employees and students can access management options for their personal devices 
 For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md).
 
 ## Certificates
-
->[!NOTE]
-> The [ACME certificate](../fundamentals/whats-new-archive.md#acme-protocol-support-for-iosipados-and-macos-enrollment) phased rollout for new eligible enrollments has been paused. New enrollments are using the SCEP certificate like before with no changes to the end user experience.
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 

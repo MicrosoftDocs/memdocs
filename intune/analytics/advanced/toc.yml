@@ -1,19 +1,41 @@
 items:
-- name: Advanced analytics overview
-  href: ../advanced-endpoint-analytics.md
-- name: Anomaly detection
-  href: ../anomaly-detection.md
-- name: Enhanced device timeline
-  href: ../enhanced-device-timeline.md
-- name: Device scopes
-  href: ../device-scopes.md
-- name: Device query
-  href: ../device-query.md
-- name: Device query for multiple devices
-  href: ../device-query-multiple-devices.md
-- name: Data platform schema
-  href: ../data-platform-schema.md
-- name: Battery health
-  href: ../battery-health.md
-- name: Resource Performance
-  href: ../resource-performance-report.md
+- name: Advanced Analytics Overview
+  href: ../advanced-analytics.md
+  displayName: advanced analytics
+- name: Planning Advanced Analytics
+  href: ../advanced-analytics-plan.md
+  displayName: advanced analytics
+- name: Deploying Advanced Analytics
+  href: ../advanced-analytics-deploy.md
+  displayName: advanced analytics
+- name: Advanced Analytics Features
+  items:
+  - name: Anomaly detection
+    href: ../anomaly-detection.md
+    displayName: advanced analytics
+  - name: Battery health
+    href: ../battery-health.md
+    displayName: advanced analytics
+  - name: Device scopes
+    href: ../device-scopes.md
+    displayName: advanced analytics
+  - name: Enhanced device timeline
+    href: ../enhanced-device-timeline.md
+    displayName: advanced analytics
+  - name: Resource Performance
+    href: ../resource-performance-report.md
+    displayName: advanced analytics
+  - name: Device query
+    href: ../device-query.md
+    displayName: advanced analytics
+  - name: Device query for multiple devices
+    href: ../device-query-multiple-devices.md
+    displayName: advanced analytics
+  - name: Data platform schema
+    href: ../data-platform-schema.md
+    displayName: advanced analytics
+- name: Troubleshoot and Monitor
+  items:
+  - name: Advanced Analytics Troubleshooting and Frequently Asked Questions
+    href: ../advanced-analytics-troubleshooting-faqs.md
+    displayName: advanced analytics

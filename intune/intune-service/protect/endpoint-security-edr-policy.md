@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 05/19/2025
 ms.topic: how-to
-ms.localizationpriority: medium
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -24,9 +23,11 @@ Applies to:
 
 - Linux
 - macOS
-- Windows 10
-- Windows 11
+- Windows
 - Windows Server 2012 R2 and later *(when managed by Configuration Manager through the [tenant attach](../protect/tenant-attach-intune.md) scenario, or through the [Microsoft Defender for Endpoint Security settings management](../protect/mde-security-integration.md) scenario)*
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## About Intune policy for endpoint detection and response
 
@@ -43,9 +44,9 @@ When you create EDR policy to onboard devices, you can use the preconfigured pol
 Based on the platform a policy targets, EDR policies for devices you manage with Intune deploy to groups of devices from Microsoft Entra ID, or to collections of on-premises devices that you synchronize from Configuration Manager through the [tenant attach scenario](../protect/tenant-attach-intune.md).
 
 > [!TIP]
-> In addition to EDR policy, you can use [device configuration](../protect/advanced-threat-protection-configure.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
+> In addition to EDR policy, you can use [device configuration](../protect/microsoft-defender-integrate.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
 >
-> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
+> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage policy conflicts](../protect/endpoint-security-policy.md#manage-policy-conflicts) in the *Manage security policies* article.
 
 ## Prerequisites for EDR policies
 
@@ -53,8 +54,8 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 
 - **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Intune subscription) before you can create EDR policies. For more information, see:
 
-  - [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) for guidance on integrating Microsoft Defender for Endpoint with Microsoft Intune.
-  - [Connect Microsoft Defender for Endpoint to Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) to set up the service-to-service connection between Intune and Microsoft Defender for Endpoint.
+  - [Use Microsoft Defender for Endpoint](microsoft-defender-with-intune.md) for guidance on integrating Microsoft Defender for Endpoint with Microsoft Intune.
+  - [Connect Microsoft Defender for Endpoint to Intune](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune) to set up the service-to-service connection between Intune and Microsoft Defender for Endpoint.
 
 **Support for Configuration Manager clients**:
 
@@ -66,7 +67,7 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune endpoint detection and response policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune endpoint detection and response policy, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ## About the endpoint detection and response node
 
@@ -152,6 +153,9 @@ To manage EDR for macOS devices, select the **macOS** platform. The following pr
 
 #### Windows
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 To manage EDR for Windows devices, select the **Windows** platform. The following profile is available:
 
 - **Endpoint detection and response** - Intune deploys the policy to devices in your assigned groups. This profile supports use with:
@@ -171,7 +175,7 @@ To manage EDR for Windows devices, select the **Windows** platform. The followin
 
   - *Applies to Windows devices only*
 
-  After you configure the [service-to-service connection](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint, the **Auto from connector** option becomes available for the setting **Microsoft Defender for Endpoint client configuration package type**. This option isn't available until you configure the connection.
+  After you configure the [service-to-service connection](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune) between Intune and Microsoft Defender for Endpoint, the **Auto from connector** option becomes available for the setting **Microsoft Defender for Endpoint client configuration package type**. This option isn't available until you configure the connection.
 
   When you select **Auto from connector**, Intune automatically gets the onboarding package (blob) from your Defender for Endpoint deployment. This choice replaces the need to manually configure an **Onboard** package for this profile. There isn't an option to automatically configure an offboard package.
 
@@ -246,7 +250,7 @@ This option is found near the top of the page, above the Windows Devices onboard
 
 :::image type="content" source="./media/endpoint-security-edr-policy/edr-preconfigured-policy-option.png" alt-text="Screen shot of the admin center that shows where to find the Deploy preconfigured policy option.":::
 
-Before you can select this option, you must successfully configure the **Defender for Endpoint Connector**, which establishes a service-to-service connection between Intune and Microsoft Defender for Endpoint. The policy uses the connector to get a Microsoft Defender for Endpoint onboarding blob for use to onboard devices. For information about configuring this connector, see [Connect Microsoft Defender for Endpoint to Intune](../protect/advanced-threat-protection-configure.md#connect-microsoft-defender-for-endpoint-to-intune) in the *Configure Defender for Endpoint* article.
+Before you can select this option, you must successfully configure the **Defender for Endpoint Connector**, which establishes a service-to-service connection between Intune and Microsoft Defender for Endpoint. The policy uses the connector to get a Microsoft Defender for Endpoint onboarding blob for use to onboard devices. For information about configuring this connector, see [Connect Microsoft Defender for Endpoint to Intune](../protect/microsoft-defender-integrate.md#connect-microsoft-defender-for-endpoint-to-intune) in the *Configure Defender for Endpoint* article.
 
 If you use the tenant attach scenario to support devices managed by Configuration Manager, set up Configuration Manager to support EDR policy from the Microsoft Intune admin center. See [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
@@ -394,5 +398,5 @@ To view details for individual devices, go to **Endpoint security** > **Endpoint
 
 ## Next steps
 
-- [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy).
+- [Configure Endpoint security policies](endpoint-security-policy.md#create-endpoint-security-policies).
 - Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender for Endpoint documentation.

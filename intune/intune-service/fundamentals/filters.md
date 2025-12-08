@@ -1,35 +1,34 @@
 ---
-title: Create filters in Microsoft Intune
-description: Learn more about policy assignment filters, and see the steps to create, update, or delete a filter in Microsoft Intune. Create an assignment filter for managed devices or managed apps scenarios.
+title: Create assignment filters in Microsoft Intune
+description: Create assignment filters in Microsoft Intune to target policies based on device properties like OS version or manufacturer. Learn to create, update, and delete filters for managed devices and apps.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/19/2024
+ms.date: 11/19/2025
 ms.topic: how-to
-ms.localizationpriority: high
-ms.reviewer: gokarthi
+ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Use filters when assigning your apps, policies, and profiles in Microsoft Intune
+# Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune
 
-When you create a policy, you can use filters to assign a policy based on rules you create. A filter allows you to narrow the assignment scope of a policy. For example, use filters to target devices with a specific OS version or a specific manufacturer, target only personal devices or only organization-owned devices, and more.
+Assignment filters in Microsoft Intune let you assign policies based on rules you create. Use filters to narrow policy scope by targeting devices with specific OS versions, manufacturers, or ownership types (personal vs. organization-owned). This targeting capability helps you apply the right policies to the right devices automatically.
 
-Filters are available for:
+Assignment filters are available for:
 
 - Devices enrolled in Intune, which are **managed devices**.
 - Apps that are managed by Intune, which are **managed apps**.
 
   Managed apps are used in mobile application management (MAM) scenarios. MAM involves managing apps on devices that aren't enrolled in Intune, which is common with personally owned devices. For more information on MAM in Intune, go to [What is Microsoft Intune app management?](../apps/app-management.md).
 
-You can use filters in the following scenarios:
+Use assignment filters in the following scenarios:
 
 - Deploy a Windows device restriction policy to only the corporate devices in the Marketing department, while excluding personal devices.
 - Deploy an iOS/iPadOS app to only the iPad devices in the Finance users group.
 - Deploy an Android mobile phone compliance policy to all users in the company, and exclude Android meeting room devices that don't support the mobile phone compliance policy settings.
 - On personally owned devices, deploy an app configuration policy for a specific app manufacturer or an app protection policy that runs a specific OS version.
 
-Filters include the following features and benefits:
+Assignment filters include the following features and benefits:
 
 - Improve flexibility and granularity when assigning Intune policies and apps.
 - Are used when assigning apps, policies, and profiles. They dynamically target managed devices based on device properties and target managed apps based on app properties you enter.
@@ -56,14 +55,13 @@ This feature applies to:
 
 This article describes the filter architecture, and shows you how to create, update, and delete a filter.
 
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
- [!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
+## How assignment filters work
 
-## How filters work
+:::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Screenshot that shows how an admin creates a filter, and uses the filter in a policy in Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::
 
-:::image type="content" source="./media/filters/admin-creates-filter.png" alt-text="Screenshot that shows how the admin creates a filter, and uses the filter in a policy in Microsoft Intune." lightbox="./media/filters/admin-creates-filter.png":::
-
-Before a policy is applied to an app or device, filters dynamically evaluate applicability. Here's an overview of the image:
+Before you apply a policy to an app or device, assignment filters dynamically evaluate applicability. Here's an overview of the image:
 
 1. You create a reusable filter based on an app or device property. In the example, the device filter is for iPhone XR devices.
 
@@ -75,12 +73,12 @@ Before a policy is applied to an app or device, filters dynamically evaluate app
 
 ### Restrictions
 
-There are some general restrictions when creating filters:
+There are some general restrictions when creating assignment filters:
 
-- For each tenant, there can be up to 200 filters.
+- You can have up to 200 assignment filters for each tenant.
 - Each filter is limited to 3,072 characters.
 - For managed devices, the devices must be enrolled in Intune.
-- For managed apps, filters apply to app protection policies and app configuration policies. They don't apply to other policies, like compliance or device configuration profiles.
+- For managed apps, assignment filters apply to app protection policies and app configuration policies. They don't apply to other policies, like compliance or device configuration profiles.
 
 ## Prerequisites
 
@@ -89,12 +87,12 @@ There are some general restrictions when creating filters:
 ## Create a filter
 
 1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-2. Select **Tenant administration** > **Filters** > **Create**.
+2. Select **Tenant administration** > **Assignment filters** > **Create**.
 
-    You can also create filters in:
+    You can also create assignment filters in:
 
-    - **Devices** > **Organize devices** > **Filters**
-    - **Apps** > **Filters**
+    - **Devices** > **Organize devices** > **Assignment filters**
+    - **Apps** > **Organize devices** > **Assignment filters**
 
 3. Select **Managed devices** or **Managed apps**:
 
@@ -104,7 +102,7 @@ There are some general restrictions when creating filters:
 
 4. In **Basics**, enter the following properties:
 
-    - **Filter name**: Enter a descriptive name for the filter. Name your filters so you can easily identify them later. For example, a good filter name is **Windows OS version filter**.
+    - **Filter name**: Enter a descriptive name for the filter. Name your assignment filters so you can easily identify them later. For example, a good filter name is **Windows OS version filter**.
     - **Description**: Enter a description for the filter. This setting is optional, but recommended.
     - **Platform**: Select your platform. Your options:
 
@@ -146,13 +144,13 @@ There are some general restrictions when creating filters:
 
     :::image type="content" source="./media/filters/rule-syntax-example.png" alt-text="Screenshot that shows how to use the expression builder to enter your rule syntax in Microsoft Intune.":::
 
-    For more information on writing your own expressions, go to [Device and app properties, operators, and rule editing when creating filters](filters-device-properties.md).
+    For more information on writing your own expressions, see [Device and app properties, operators, and rule editing when creating filters](filters-device-properties.md).
 
     Select **OK** to save your expression.
 
     > [!TIP]
     >
-    > - When you create a rule, it's validated for the correct syntax, and any errors are shown.
+    > - When you create a rule, the system validates it for the correct syntax and shows any errors.
     > - If you enter syntax that's not supported by the basic rule builder, then the rule builder is disabled. For example, using nested parenthesis disables the basic rule builder.
 
 7. Select **Preview devices**. A list of enrolled devices that match your filter criteria is shown.
@@ -163,22 +161,22 @@ There are some general restrictions when creating filters:
 
     > [!NOTE]
     >
-    > When you select **Preview devices** for a property that is in preview, you get a `You cannot use Filter preview with experimental properties` message. Even though you can't preview the property, you can continue to use the property in your filters.
+    > When you select **Preview devices** for a property that's in preview, you get a `You cannot use Filter preview with experimental properties` message. Even though you can't preview the property, you can continue to use the property in your assignment filters.
     >
     > :::image type="content" source="./media/filters/filter-preview.png" alt-text="Screenshot that shows cannot use filter preview message when clicking Preview devices with a preview property in filter rule syntax in Microsoft Intune.":::
 
 8. Select **Next**.
-9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, go to [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+9. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
 
     Select **Next**.
 
-10. In **Review + create**, review your settings. When you select **Create**, your changes are saved. The filter is created, and ready to be used. The filter is also shown in the filters list.
+10. In **Review + create**, review your settings. When you select **Create**, your changes are saved. The assignment filter is created and ready to be used. The filter is also shown in the assignment filters list.
 
 ## Use a filter
 
 After the filter is created, it's ready to use when assigning your apps or policies.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to your apps, compliance policies, or configuration profiles. For a list of what's supported, go to [Supported workloads when creating filters](filters-supported-workloads.md). Select an existing policy, or create a new policy.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to your apps, compliance policies, or configuration profiles. For a list of supported workloads, see [Supported workloads when creating assignment filters](filters-supported-workloads.md). Select an existing policy, or create a new policy.
 
     For example, select **Devices** > **Compliance**, and select an existing policy. Select **Properties** > **Assignments** > **Edit**:
 
@@ -190,11 +188,11 @@ After the filter is created, it's ready to use when assigning your apps or polic
     - **Do not apply a filter**: All targeted users or devices receive the app or policy without filtering.
     - **Include filtered devices in assignment**: Devices that match the filter conditions receive the app or policy. Devices that don't match the filter conditions don't receive the app or policy.
 
-      A list of filters that match the policy platform is shown.
+      A list of assignment filters that match the policy platform is shown.
 
     - **Exclude filtered devices in assignment**: Devices that match the filter conditions don't receive the app or policy. Devices that don't match the filter conditions receive the app or policy.
 
-      A list of filters that match the policy platform is shown.
+      A list of assignment filters that match the policy platform is shown.
 
 4. Select your existing filter > **Select**.
 
@@ -206,13 +204,13 @@ After the filter is created, it's ready to use when assigning your apps or polic
 
 When the device checks in with the Intune service, the properties defined in the filter are evaluated, and determine if the app or policy should be applied.
 
-## Filter your existing filters
+## Filter your existing assignment filters
 
-After you create a filter, you can filter the existing list of filters by platform and by profile type (**Managed devices** or **Managed apps**).
+After you create an assignment filter, you can filter the existing list of assignment filters by platform and by profile type (**Managed devices** or **Managed apps**).
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
-    You can also go to **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also go to **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. Select **Add filters**:
 
@@ -222,23 +220,23 @@ After you create a filter, you can filter the existing list of filters by platfo
 
     :::image type="content" source="./media/filters/add-filter-profile-type-platform.png" alt-text="Screenshot that shows to filter the existing filter list by platform and profile type in Microsoft Intune.":::
 
-4. Select **Filter type** > **Apply**. Then select **Managed devices** or **Managed apps** > **Apply**. The list of filters is filtered based on your selection.
+4. Select **Filter type** > **Apply**. Then select **Managed devices** or **Managed apps** > **Apply**. The list of assignment filters is filtered based on your selection.
 
-    :::image type="content" source="./media/filters/filter-type-managed-devices.png" alt-text="Screenshot that shows the filtered list of filters by managed devices in Microsoft Intune.":::
+    :::image type="content" source="./media/filters/filter-type-managed-devices.png" alt-text="Screenshot that shows the filtered list of assignment filters by managed devices in Microsoft Intune.":::
 
-5. Add another filter, select **Platform** > **Apply**. Select your platform from the list, like **Windows 10 and later** > **Apply**. The list of filters is filtered based on your selection.
+5. Add another filter, select **Platform** > **Apply**. Select your platform from the list, like **Windows 10 and later** > **Apply**. The list of assignment filters is filtered based on your selection.
 
-    :::image type="content" source="./media/filters/filter-platform.png" alt-text="Screenshot that shows the filtered list of filters by platform in Microsoft Intune.":::
+    :::image type="content" source="./media/filters/filter-platform.png" alt-text="Screenshot that shows the filtered list of assignment filters by platform in Microsoft Intune.":::
 
-    :::image type="content" source="./media/filters/filter-platform-list.png" alt-text="Screenshot that shows the filtered list of filters and all the available platform options in Microsoft Intune.":::
+    :::image type="content" source="./media/filters/filter-platform-list.png" alt-text="Screenshot that shows the filtered list of assignment filters and all the available platform options in Microsoft Intune.":::
 
 ## Review the assignments
 
-After the filter is assigned to your policies, you can see all the policies that use the filter.
+After you assign the filter to your policies, you can see all the policies that use the filter.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
-    You can also go to **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also go to **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. Select the filter you want to review > **Associated Assignments** tab.
 
@@ -248,11 +246,11 @@ After the filter is assigned to your policies, you can see all the policies that
 
 ## Change an existing filter
 
-After a filter is created, it can also be changed or updated.
+After you create a filter, you can change or update it.
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
-    You can also update filters in **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also update filters in **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. To update an existing filter, select the filter you want to change. Select **Rules** > **Edit**, and make your changes:
 
@@ -262,21 +260,21 @@ After a filter is created, it can also be changed or updated.
 
 ## Delete a filter
 
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Filters**. A list of all the filters is shown.
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Tenant administration** > **Assignment filters**. You see a list of all the assignment filters.
 
-    You can also delete filters in **Devices** > **Organize devices** > **Filters**, or **Apps** > **Filters**.
+    You can also delete filters in **Devices** > **Organize devices** > **Assignment filters**, or **Apps** > **Assignment filters**.
 
 2. Next to the filter, select the ellipses (**...**), and select **Delete**:
 
     :::image type="content" source="./media/filters/delete-filter.png" alt-text="Screenshot that shows how to delete a filter in Microsoft Intune.":::
 
-To delete a filter, you must remove the filter from any policy assignments. Otherwise, when trying to delete the filter, the following error is shown:
+    To delete a filter, you must remove the filter from any policy assignments. Otherwise, when you try to delete the filter, the following error is shown:
+    
+    `Unable to delete assignment filter – An assignment filter is associated with existing assignments. Delete all the assignments for the filter and try again.`
 
-`Unable to delete assignment filter – An assignment filter is associated with existing assignments. Delete all the assignments for the filter and try again.`
+## Related content
 
-## Next steps
-
-- [Device properties, operators, and rule editing when creating filters](filters-device-properties.md)
-- [Supported workloads when creating filters](filters-supported-workloads.md)
+- [Device properties, operators, and rule editing when creating assignment filters](filters-device-properties.md)
+- [Supported workloads when creating assignment filters](filters-supported-workloads.md)
 - [Filter performance recommendations](filters-performance-recommendations.md)
 - [Filter reports and troubleshooting](filters-reports-troubleshoot.md)

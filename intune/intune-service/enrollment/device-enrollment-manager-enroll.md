@@ -3,7 +3,6 @@ title: Enroll devices using a device enrollment manager account
 description: Use the device enrollment manager account to enroll devices in Intune.
 ms.date: 06/18/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer:
 ms.collection:
 - M365-identity-device-management
@@ -36,14 +35,17 @@ A device enrollment manager can use the following methods to enroll devices in I
 > To compare DEM best practices and capabilities alongside other Windows enrollment methods, see [Intune enrollment method capabilities for Windows devices](../fundamentals/deployment-guide-enrollment-windows.md).
 
 
-## Role based access control
+## Requirements  
 
 To manage device enrollment manager accounts in Microsoft Intune, you must be an [Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator). The Intune Administrator role can *update* and *read* device enrollment manager accounts.
 
 |Permission| Description |
 |---------------|------------|
 |Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. |
-|Read | View the list of device enrollment manager accounts. |
+|Read | View the list of device enrollment manager accounts. |  
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]   
 
 ## Add a device enrollment manager
 
@@ -75,7 +77,7 @@ The following types of Android Enterprise devices can't be set up via DEM:
   * Fully managed devices
 
 ### Android open source project (AOSP)
-AOSP doesn't support DEM accounts.  
+AOSP doesn't support DEM accounts.
 
 ### App assignments
 There are no users associated with a DEM-enrolled device, so apps can't be deployed as **Available**.
@@ -93,21 +95,21 @@ You must use device-level certificates to manage Wi-Fi and email connections.
 Conditional Access is only supported with DEM on devices running:
 
 * Windows 10, version 1803 and later
-* Windows 11
+* Windows 11  
 
 > [!NOTE]
 >  DEM accounts on iOS/iPadOS and macOS do not support Microsoft Entra Join, Microsoft Entra registration, and Workplace Join.
 
 ### Device limit restrictions
-DEM enrolls Windows 10/11 devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Microsoft Entra admin center. For more information, see [Manage device identities](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
+DEM enrolls Windows devices in shared device mode, so device limit restrictions won't work on them. Instead, you can configure a hard limit for these devices in the Microsoft Entra admin center. For more information, see [Manage device identities](/azure/active-directory/devices/device-management-azure-portal#configure-device-settings).
 
 ### Intune Company Portal
-Only the local device appears in the Company Portal app or Company Portal website. Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.  
+Only the local device appears in the Company Portal app or Company Portal website. Device users can't wipe DEM-enrolled devices from Company Portal. You have to sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) to wipe these devices.
 
 <a name='azure-ad'></a>
 
 ### Microsoft Entra ID
-Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account prevents you from reaching the 1,000 device limit that the DEM account can enroll.  
+Applying a Microsoft Entra maximum device limit of less than 1,000 to a DEM account prevents you from reaching the 1,000 device limit that the DEM account can enroll.
 
 ### Number of accounts
 There's a limit of 150 DEM accounts in Microsoft Intune.

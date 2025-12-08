@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 06/02/2025
 ms.topic: concept-article
-ms.localizationpriority: high
 ms.reviewer: juidaewo
   - intune-azure
 ms.collection:
@@ -22,8 +21,11 @@ For a list of available security baselines, see [Security baselines overview](..
 
 This feature applies to:
 
-- Windows 10 version 1809 and later
 - Windows 11
+- Windows 10 version 1809 and later
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Overview of security baselines
 
@@ -374,7 +376,7 @@ If you have a baseline profile associated with an older baseline version in use,
 
 ## Co-managed devices
 
-Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows 10/11 devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager and also want the benefits of the cloud.
+Security baselines on Intune-managed devices are similar to co-managed devices with Configuration Manager. Co-managed devices use Configuration Manager and Microsoft Intune to manage the Windows devices simultaneously. It lets you cloud-attach your existing Configuration Manager investment to the benefits of Intune. [Co-management overview](/configmgr/comanage/overview) is a great resource if you use Configuration Manager and also want the benefits of the cloud.
 
 When using co-managed devices, you must switch the **Device configuration** workload (its settings) to Intune. [Device configuration workloads](/configmgr/comanage/workloads#device-configuration) provides more information.
 

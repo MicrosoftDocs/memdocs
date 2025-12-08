@@ -1,8 +1,7 @@
 ---
 title: Set up automatic enrollment in Intune
-description: Enable Intune automatic enrollment of Windows 10/11 devices that join or register with your Microsoft Entra ID.
+description: Enable Intune automatic enrollment of Windows devices that join or register with your Microsoft Entra ID.
 services: microsoft-intune
-ms.localizationpriority: high
 ms.topic: quickstart
 ms.date: 10/03/2024
 ms.reviewer: maholdaa
@@ -11,14 +10,9 @@ ms.collection:
 - highpri
 ---
 
-# Step 4: Set up automatic enrollment for Windows 10/11 devices
+# Step 4: Set up automatic enrollment for Windows devices  
 
-**Applies to**:
-
-- Windows 10
-- Windows 11
-
-In this task, you'll set up Microsoft Intune to automatically enroll corporate-owned devices, and user-owned devices for bring-your-own-device (BYOD) deployments. You can scope automatic enrollment to some Microsoft Entra users, all users, or none.
+In this task, you'll set up Microsoft Intune to automatically enroll Windows corporate-owned devices, and user-owned devices for bring-your-own-device (BYOD) deployments. You can scope automatic enrollment to some Microsoft Entra users, all users, or none.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -63,9 +57,9 @@ To reconfigure Intune automatic enrollment, see [Set up enrollment for Windows d
 
 ## Next steps
 
-In this task, you learned how to set up automatic enrollment for devices running Windows 10/11. For more information about device enrollment, see [Device enrollment overview](../fundamentals/deployment-guide-enrollment.md).
+In this task, you learned how to set up automatic enrollment for devices running Windows. For more information about device enrollment, see [Device enrollment overview](../fundamentals/deployment-guide-enrollment.md).
 
 To continue to evaluate Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
-> [Step 5 - Enroll your Windows 10/11 device](quickstart-enroll-windows-device.md)
+> [Step 5 - Enroll your Windows device](quickstart-enroll-windows-device.md)

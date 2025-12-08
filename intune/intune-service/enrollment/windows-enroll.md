@@ -1,23 +1,15 @@
 ---
 title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 description: Enable Intune automatic enrollment for Windows devices joining or registering with your Microsoft Entra ID.
-ms.date: 07/25/2024
+ms.date: 12/01/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
 - highpri
 ---
 
-# Set up automatic enrollment for Windows devices
-
-**Applies to**
-
-- Windows 10
-- Windows 11
-
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+# Set up automatic enrollment for Windows devices  
 
 Simplify device enrollment by enabling *automatic enrollment* in Microsoft Intune. This enrollment method enables devices to enroll automatically when they join or register in Microsoft Entra ID. Enrollment in Intune occurs when:
 
@@ -34,7 +26,7 @@ Automatic enrollment can be used in the following device management and provisio
 
 This article describes how to enable automatic mobile device management (MDM) enrollment for personal and corporate-owned devices.
 
-## Prerequisites
+## Requirements
 
 You must have:
 
@@ -70,6 +62,21 @@ You must have:
    - **MDM Discovery URL**
    - **MDM Compliance URL**
 
+1. You have the option to control if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the work or school account registration flow (referring to [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506)). To control the behavior of the flow, use the **Disable MDM enrollment when adding work or school account** setting.
+
+   > [!NOTE]
+   > This feature is in public preview and undergoing rollout. During rollout, some users will not see the new setting.   
+   
+   This setting is turned off by default. If you're enforcing Windows MAM for your work or school accounts, enable this setting. This setting applies to:  
+    - Users in the **Some** or **All** category in the MDM auto-enrollment configuration.  
+    - Users on Entra registered and workplace joined devices.  
+    - Users who add their account for the first time via Microsoft Edge or a native app such as Teams.
+   
+   This setting doesn't apply to users adding their account through the Settings flow.   
+
+   > [!NOTE]  
+   > This setting only blocks the MDM enrollment option from users during the work or school account registration flow. Users can still MDM enroll their device through Windows Settings if they are in scope for MDM automatic enrollment, and through prompts they receive when they try to access a resource that requires MDM enrollment.   
+
 1. For **WIP user scope**, select **None**. If the WIP user scope is set to any other value, make sure the selected users aren't a part of the MDM user scope.
 
    > [!IMPORTANT]
@@ -87,7 +94,7 @@ Two-factor authentication is not enabled for automatic enrollment by default. We
 
 The Microsoft Intune user help docs provide conceptual information, tutorials, and how-to guides for employees and students setting up their devices for work. You can point people directly to the Intune docs, or use these articles as guidance when developing and updating your own device management docs.
 
-Users on personal devices running Windows 11 or Windows 10 can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows 10/11 devices](../user-help/enroll-windows-10-device.md).
+Users on personal devices running Windows can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows devices](../user-help/enroll-windows-10-device.md).
 
 You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
 

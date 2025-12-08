@@ -1,14 +1,14 @@
 ---
-title: Data transfer policy exceptions for apps
+title: Data Transfer Policy Exceptions for Apps
 description: Create exceptions to the Intune App Protection Policy (APP) data transfer policy.
-ms.date: 01/06/2025
+ms.date: 12/02/2025
 ms.topic: article
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
 ---
 
-# How to create exceptions to the Intune App Protection Policy (APP) data transfer policy
+# How to Create Exceptions to the Intune App Protection Policy (APP) Data Transfer Policy
 
 As an administrator, you can create exceptions to the Intune App Protection Policy (APP) data transfer policy. An exception allows you to specifically choose which unmanaged apps can transfer data to and from managed apps. Your IT must trust the unmanaged apps that you include in the exception list.
 
@@ -37,8 +37,8 @@ For a policy targeting Android, you can configure data transfer exceptions by ap
 By adding the **Webex** package as an exception to the MAM data transfer policy, Webex links inside a managed Outlook email message are allowed to open directly in the Webex application. Data transfer is still restricted in other unmanaged apps.
 
 - iOS/iPadOS **Webex** example:
-    To exempt the **Webex** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>wbx</code>
-
+    To exempt the **Webex** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>wbx</code>. To exempt the **Webex Meetings** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>webexteams</code>
+    
 - iOS/iPadOS **Maps** example:
     To exempt the native **Maps** app so that it's allowed to be invoked by Intune managed apps, you must add a data transfer exception for the following string: <code>maps</code>
 
@@ -47,11 +47,12 @@ By adding the **Webex** package as an exception to the MAM data transfer policy,
 
 - Android **SMS** example:
     To exempt the native **SMS** app so that it's allowed to be invoked by Intune managed apps across different messaging apps and Android devices, you must add data transfer exceptions for the following strings:
-    <code>com.google.android.apps.messaging</code>
+  
+    - <code>com.google.android.apps.messaging</code>
 
-    <code>com.android.mms</code>
+    - <code>com.android.mms</code>
 
-    <code>com.samsung.android.messaging</code>
+    - <code>com.samsung.android.messaging</code>
 
 ## Next steps
 

@@ -9,5 +9,4 @@ With Microsoft Intune **Endpoint Privilege Management (EPM)** your organization'
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows

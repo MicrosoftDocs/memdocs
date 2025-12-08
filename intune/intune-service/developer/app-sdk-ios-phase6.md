@@ -1,5 +1,5 @@
 ---
-title: Microsoft Intune App SDK for iOS developer guide - App Protection CA support (optional)
+title: Microsoft Intune App SDK for iOS Developer Guide - App Protection CA Support (Optional)
 description: The Microsoft Intune App SDK for iOS lets you incorporate Intune app protection policies (also known as MAM policies) into your native iOS app. App Protection CA support (optional)
 ms.date: 06/12/2025
 ms.topic: reference
@@ -9,7 +9,7 @@ ms.collection:
 - iOS/iPadOS
 ---
 
-# Intune App SDK for iOS - App Protection CA support (optional)
+# Intune App SDK for iOS - App Protection CA Support (Optional)
 
 App Protection Conditional Access blocks access to server tokens until Intune has confirmed app protection policy has been applied. This feature requires changes to your add user flows. Once a customer enables App Protection CA, applications in that customer's tenant that access protected resources won't be able to acquire an access token unless they support this feature.
 

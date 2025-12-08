@@ -3,7 +3,6 @@ title: Set up Android Enterprise work profile for corporate owned devices
 description: Set up Android Enterprise work profile for corporate-owned devices enrolling in Microsoft Intune.
 ms.date: 05/08/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: grwilso
 ms.collection:
 - M365-identity-device-management

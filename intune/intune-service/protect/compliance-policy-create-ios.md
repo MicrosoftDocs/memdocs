@@ -5,7 +5,6 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 09/04/2025
 ms.topic: reference
-ms.localizationpriority: medium
 ms.reviewer: tycast
 ms.collection:
 - M365-identity-device-management
@@ -55,13 +54,13 @@ For details about email profiles, see [configure access to organization email us
 
 ## Device Health
 
-- **Jailbroken devices**
+- **Jailbroken devices**  
   *Supported for iOS 8.0 and later*
 
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Block** - Mark rooted (jailbroken) devices as not compliant.
 
-- **Require the device to be at or under the Device Threat Level**
+- **Require the device to be at or under the Device Threat Level**  
   *Supported for iOS 8.0 and later*
 
    Select the maximum allowed device threat level evaluated by your mobile threat defense service.
@@ -76,22 +75,22 @@ For details about email profiles, see [configure access to organization email us
 
 ### Operating System Version
 
-- **Minimum OS version**
+- **Minimum OS version**  
   *Supported for iOS 8.0 and later*
 
   A device that doesn't meet the minimum OS version requirement is considered to be noncompliant. The user can view a link with information on how to upgrade and can choose to upgrade their device. After that, they can access organization resources.
 
-- **Maximum OS version**
+- **Maximum OS version**  
   *Supported for iOS 8.0 and later*
 
   When a device uses an OS version later than the version in the rule, access to organization resources is blocked. The end user is asked to contact their IT administrator. The device can't access organization resources until a rule changes to allow the OS version.
 
-- **Minimum OS build version**
+- **Minimum OS build version**  
   *Supported for iOS 8.0 and later*
 
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to specify a minimum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `20E772520a`.
 
-- **Maximum OS build version**
+- **Maximum OS build version**  
   *Supported for iOS 8.0 and later*
 
   When Apple publishes security updates, the build number is typically updated, not the OS version. Use this feature to enter a maximum allowed build number on the device. For Apple Rapid Security Response updates, enter the supplemental build version, such as `20E772520a`.
@@ -119,18 +118,18 @@ For details about email profiles, see [configure access to organization email us
   - **Not configured** (*default*) - This setting isn't evaluated for compliance or noncompliance.
   - **Require** - Users must enter a password before they can access their device. iOS/iPadOS devices that use a password are encrypted.
 
-- **Simple passwords**
+- **Simple passwords**  
   *Supported for iOS 8.0 and later*
 
   - **Not configured** (*default*) - Users can create simple passwords like **1234** or **1111**.
   - **Block** - Users can't create simple passwords, such as **1234** or **1111**.
 
-- **Minimum password length**
+- **Minimum password length**  
   *Supported for iOS 8.0 and later*
 
   Enter the minimum number of digits or characters that the password must have.
 
-- **Required password type**
+- **Required password type**  
   *Supported for iOS 8.0 and later*
 
   Choose the password type required on the device. When set to **Not configured**, which is the default choice, Intune doesn't change or update this setting. Your options:
@@ -139,32 +138,32 @@ For details about email profiles, see [configure access to organization email us
   - **Alphanumeric**: The password must contain a mix of uppercase letters, lowercase letters, and numeric characters.
   - **Numeric**: The password at minimum must be a set of numeric characters, such as *123456789*. Alphabetic passwords and alphanumeric passwords are also supported.
 
-- **Number of non-alphanumeric characters in password**
+- **Number of non-alphanumeric characters in password**  
   Enter the minimum number of special characters, such as `&`, `#`, `%`, `!`, and so on, that must be in the password.
 
   Setting a higher number requires the user to create a password that is more complex.
 
-- **Maximum minutes after screen lock before password is required**
+- **Maximum minutes after screen lock before password is required**  
   *Supported for iOS 8.0 and later*
 
   Select how much time is allowed to pass after the screen locks before users have to enter a password to access their device. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **4 hours**.
 
-- **Maximum minutes of inactivity until screen locks**
+- **Maximum minutes of inactivity until screen locks**  
   Select the amount of idle time allowed before the device locks its screen. Options include the default of **Not configured**, **Immediately**, and from **1 minute** to **15 minutes**.
 
-- **Password expiration (days)**
+- **Password expiration (days)**  
   *Supported for iOS 8.0 and later*
 
   Enter how long, in days, a password is valid before the user must create a new one.
 
-- **Number of previous passwords to prevent reuse**
+- **Number of previous passwords to prevent reuse**  
   *Supported for iOS 8.0 and later*
 
   Enter the number of previously used passwords that can't be used. For example, if you enter 5, users can't reuse their 5 most recent passwords.
 
 ### Device Security
 
-- **Restricted apps**
+- **Restricted apps**  
   You can restrict apps by adding their bundle IDs to the policy. If a device has the app installed, the device is marked as noncompliant.
 
   - **App name** - Enter a user-friendly name to help you identify the bundle ID.

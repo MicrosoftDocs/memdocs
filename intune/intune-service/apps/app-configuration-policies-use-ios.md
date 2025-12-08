@@ -1,5 +1,5 @@
 ---
-title: Add app configuration policies for managed iOS/iPadOS devices
+title: Add App Configuration Policies for Managed iOS/iPadOS Devices
 description: Learn how to use app configuration policies to provide configuration data to an iOS/iPadOS app when it's run.
 ms.date: 11/20/2024
 ms.topic: how-to
@@ -10,7 +10,7 @@ ms.collection:
 - highpri
 ---
 
-# Add app configuration policies for managed iOS/iPadOS devices
+# Add App Configuration Policies for Managed iOS/iPadOS Devices
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 

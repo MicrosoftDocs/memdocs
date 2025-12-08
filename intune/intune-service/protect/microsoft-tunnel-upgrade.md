@@ -5,7 +5,6 @@ author: brenduns
 ms.author: brenduns
 ms.date: 04/11/2025
 ms.topic: how-to
-ms.localizationpriority: high
 ms.reviewer: ochukwunyere
 ms.collection:
 - M365-identity-device-management
@@ -109,13 +108,66 @@ Updates for the Microsoft Tunnel release periodically. When a new version is ava
 
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
-The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of *agentImageDigest* and *serverImageDiegest*: `cat /etc/mstunnel/images_configured`
+The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of *agentImageDigest* and *serverImageDigest*: `cat /etc/mstunnel/images_configured`
 
 > [!IMPORTANT]
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
 
+### November 26, 2025 
+
+Version Number: 20251126.1
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:b556382d7aefb94d2be9ae860ed95021abc8d900f11b71db9232a0fcda615c40
+- **serverImageDigest**: sha256:3c8bb39920694f6be510801f49ea61faa297d7df8b8618c1c49374f69fcf9cb2
+
+Changes in this release:
+- Minor bug fixes   
+
+### November 12, 2025
+
+Version Number: 20251030.2
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:2ab9316bc7a5a5e4ddcb387c0fb3eb599dbcfeae44da56652c540c00fccf81fd
+- **serverImageDigest**: sha256:8a59825275e41555a9ee3bf8e6e38f5db07dac953a8bd067673330ed536e1432
+
+Changes in this release:
+- Package updates to resolve CVEs
+- Bug fixes to address server health banner on UX issue 
+
+
+### October 29, 2025
+
+Version Number: 20251028.1
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:adc8259f8946e23612f9156223be6462690da82d113f919b9503fe227ca811e3
+- **serverImageDigest**: sha256:a8f1d5c7d734516e40ee3c2ead88d785ad25c5886ded095ce6dc74cf62b9916f
+
+Changes in this release:
+- Contains various package updates and a major bugfix for the UI
+
+  
+### October 7, 2025
+
+Version Number: 20250815.1
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:c658a64a3a849f3bec94aa18acd48a56a652023cef163e5f683c580cd8407ea4
+- **serverImageDigest**: sha256:6772cfe5f32a741864732254b26b40b13d8544294d739cc9dc79b964e433f069
+
+Changes in this release:
+- Minor bug fixes
+
 ### Sept 15, 2025
+
+Version Number: 20250716.1
 
 Image hash values:
 

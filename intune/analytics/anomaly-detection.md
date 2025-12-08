@@ -1,16 +1,18 @@
 ---
-title: Anomaly detection in Endpoint analytics
-description: Learn about Anomaly detection as an advanced feature in Endpoint analytics
-ms.date: 04/07/2025
-ms.topic: article
+title: Anomaly Detection in Endpoint Analytics
+description: Learn how anomaly detection in Microsoft Intune endpoint analytics proactively monitors device health, detects issues, and provides actionable insights for IT admins.
+ms.date: 10/09/2025
+ms.topic: concept-article
+ms.subservice: suite
 ---
 
-# Anomaly Detection in Endpoint analytics
+# Anomaly Detection in endpoint analytics
 
-> [!NOTE]
-> This capability is available as an Intune add-on. For more information, see [Intune add-ons](../intune-service/fundamentals/intune-add-ons.md).
+[!INCLUDE [intune-add-on-note](../intune-service/includes/intune-add-on-note.md)]
 
-This article explains how anomaly detection in Endpoint analytics works as an early warning system.
+[!INCLUDE [advanced-analytics-overview](includes/advanced-analytics-overview.md)]
+
+This article explains how anomaly detection in endpoint analytics works as an early warning system.
 
 Anomaly detection monitors the health of devices in your organization for user experience and productivity regressions following configuration changes. When a failure occurs, Anomalies correlates relevant deployment objects to enable rapid troubleshooting, suggest root causes and remediation.
 
@@ -33,7 +35,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 
 ## Prerequisites
 
-- Licensing/Subscriptions: The advanced features in Endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
+- Licensing/Subscriptions: The advanced features in endpoint analytics are included as an Intune-add on under [Microsoft Intune Suite](../intune-service/fundamentals/intune-add-ons.md) and requires an extra cost to the licensing options that include Microsoft Intune.
 
 - Permissions: Anomaly detection uses built-in [role permissions](overview.md#built-in-role-permissions)
 
@@ -44,7 +46,7 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 3. Select **Anomalies** tab. The **Anomalies** tab provides a quick overview of the anomalies detected in your organization.
 4. In this example, the **Anomalies** tab shows an *anomaly* with *medium severity* impact. You can add filters to refine the list.
 
-   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of Endpoint analytics":::
+   :::image type="content" source="media/anomaly-detection/anomalies-tab.png" lightbox="media/anomaly-detection/anomalies-tab.png" alt-text="This is a screenshot of the Anomaly tab in Overview section of endpoint analytics":::
 
 5. To see more information about a specific item, choose it from the list. You can see details like the name of the app, which devices are affected, when the issue was first detected and last occurred, and any device groups that might be contributing to the problem.
 
@@ -57,6 +59,22 @@ In addition to detecting anomalies, you can view device correlation groups to ex
 7. Select **View Affected Devices** to display a list of devices with key attributes relevant to each device. You can filter to view devices in specific correlation groups or show all devices affected by that anomaly in your organization. Additionally, the device timeline shows more anomalous events.
 
    :::image type="content" source="media/anomaly-detection/affected-devices.png" lightbox="media/anomaly-detection/affected-devices.png" alt-text="This is a screenshot showing a list of affected devices":::
+
+## Reviewing Anomaly Detection Data
+
+Investigate flagged Device correlation groups using device timeline and resource reports to determine root cause. Device correlation groups identify root causes for high & medium severity anomalies, along with at risk devices which may be impacted in the future.
+
+- Best practices:
+  - IT administrators should periodically review the anomaly detection dashboard, to understand the current baseline and prioritize investigations and resolutions of new issues.
+  - Investigate any new reported issues, to identify common factors, as displayed in advanced analytics such as common device hardware.
+  - Prioritize the anomalies to investigate based on severity, and internal knowledge like application criticality.
+  - Leverage [device timeline](enhanced-device-timeline.md) to review if there is a specific pattern, such as a device restart or update tied to the anomaly.
+  - Work with IT teams to understand any other factors that could be impacting this, such as recent application updates.
+  - Review possible remediation actions as noted in the Anomaly report (Driver Updates, Application Updates).
+  - Integrate the resolution into L1/L2 support, to keep teams aware of current known issues. Consider working with your ITSM team to record known anomalies currently under investigation.
+  - Test remediation actions on a subset of devices and monitor before rolling out to wider impacted devices. After remediation has been performed on impacted devices, proactively roll out to at risk devices that may be impacted in the future.
+  - Review anomaly detection after any major update or incident to check for possible new issues that need investigation and resolution.
+  - To better understand the detection methods, consider reviewing the [Statistical Models](#statistical-models-for-determining-anomalies) used by Anomaly Detection.
 
 ## Statistical Models for determining anomalies
 
@@ -72,10 +90,17 @@ Standard deviation and mean are used to calculate the Z-score for each data poin
 - **Time Series Z-score model**: Time series Z-score models are a variation of the standard Z-score model designed for detecting anomalies in time series data. Time series data is a sequence of data points collected at regular intervals over time, such as aggregate of Stop Error Restarts.
 Standard deviation and mean are calculated for a sliding window of time, using aggregated metrics. This method allows the model to be sensitive to temporal patterns in the data and adapt to changes in its distribution over time.
 
-## Next steps
+---
+
+## Next Steps
+
+> [!div class="nextstepaction"]
+> [Next: Learn about Battery Health >](battery-health.md)
+
+---
 
 For more information, go to:
 
 - [Enhanced device timeline](enhanced-device-timeline.md)
 - [Device scopes](device-scopes.md)
-- [What is advanced Endpoint analytics](advanced-endpoint-analytics.md)
+- [What is advanced endpoint analytics](advanced-endpoint-analytics.md)
