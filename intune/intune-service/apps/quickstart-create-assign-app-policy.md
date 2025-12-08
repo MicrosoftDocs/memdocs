@@ -1,37 +1,15 @@
 ---
-# required metadata
-
-title: Create and assign an app protection policy
-titleSuffix: Microsoft Intune
+title: Create and Assign an App Protection Policy
 description: In this article, you use Microsoft Intune to create and assign and app protection policy.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.topic: how-to
 ms.date: 02/28/2025
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 2586fce0-5dca-4686-b9c4-791778838401
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: dagerrit
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - FocusArea_Apps_Protect
 ---
 
-# Step 9: Create and assign an app protection policy
+# Step 9: Create and Assign an App Protection Policy
 
 In this article, you use Intune to create and assign an app protection policy to a client app on an end user's device. Intune uses app protection policies to confirm that your apps are meeting your organization's data protection requirements.
 
@@ -49,7 +27,7 @@ Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?
 
 If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-> [!CAUTION]  
+> [!CAUTION]
 > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Create an app protection policy

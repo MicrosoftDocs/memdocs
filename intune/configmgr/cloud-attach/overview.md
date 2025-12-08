@@ -52,7 +52,7 @@ View [Bitlocker recovery keys](../tenant-attach/bitlocker-recovery-keys.md?toc=/
 
 Endpoint analytics gives you insights for measuring the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end users generate a help desk ticket. Each of the reports provides scores for your organization's user experience. There are built-in baseline scores for the median of all other organizations, which allows you to compare your scores to a typical enterprise. You'll be given **Insights and recommendations** for improving your organization's user experience and your score. Endpoint analytics includes the following reports:
 
-- [Work from anywhere](../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere.
+- [Work from anywhere](../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The ability for employees to work from anywhere productively is essential in today's world. This report offers insights into how prepared your workforce is to be productive from anywhere.
 
 :::image type="content" source="../../analytics/media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../../analytics/media/8668496-work-from-anywhere-score.png":::
 
@@ -64,13 +64,13 @@ Endpoint analytics gives you insights for measuring the quality of the experienc
 
 :::image type="content" source="../../analytics/media/8529842-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../analytics/media/8529842-application-reliability.png":::
 
-- [Restart Frequency](../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) – provides insights into restart frequencies within your organization to help you identify problematic devices.
+- [Restart Frequency](../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - provides insights into restart frequencies within your organization to help you identify problematic devices.
 
 :::image type="content" source="../../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../analytics/media/restart-frequency-tab.png":::
 
 ## Remediations
 
-[Remediations](../../intune-service/fundamentals/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
+[Remediations](../../intune-service/fundamentals/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../analytics/scores.md)
 
 :::image type="content" source="../../intune-service/fundamentals/media/remediations/remediations-create.png" alt-text="Screenshot of Remediations in Intune admin center." lightbox="../../intune-service/fundamentals/media/remediations/remediations-create.png":::
 

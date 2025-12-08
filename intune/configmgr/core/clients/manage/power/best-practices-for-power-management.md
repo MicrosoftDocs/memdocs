@@ -3,7 +3,7 @@ title: Recommendations for power management
 titleSuffix: Configuration Manager
 description: Learn Microsoft recommendations for power management in Configuration Manager.
 ms.date: 09/10/2019
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: article
 author: LauraWi

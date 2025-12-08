@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: View ChromeOS device information | Microsoft Intune
 description: View ChromeOS devices and details synced with the Chrome Enterprise connector in the Microsoft Intune admin center.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 11/06/2023
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: shsivak
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 

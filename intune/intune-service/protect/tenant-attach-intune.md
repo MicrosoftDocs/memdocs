@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Use Microsoft Intune policies with tenant attached Configuration Manager devices
 description: Use tenant attach to add Configuration Manager devices to Microsoft Intune and then deploy Intune policies to those devices.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 10/10/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-infrastructure
 ms.reviewer: mattsha
@@ -52,7 +35,7 @@ To support using Intune endpoint security policies with Configuration Manager de
   > [!IMPORTANT]
   > Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when you can't use an existing role.
 
-- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription). See [Use Microsoft Defender for Endpoint](advanced-threat-protection.md) in the Intune documentation.
+- **Tenant for Microsoft Defender for Endpoint** – Your Microsoft Defender for Endpoint tenant must be integrated with your Microsoft Intune tenant (Microsoft Intune Plan 1 subscription). See [Use Microsoft Defender for Endpoint](microsoft-defender-with-intune.md) in the Intune documentation.
 
 ### Configuration Manager version requirements for Intune endpoint security policies
 
@@ -332,5 +315,5 @@ For more information about viewing device events for tenant attached devices, se
 
 ## Next steps
 
-- [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
+- [Configure Endpoint security policies](endpoint-security-policy.md#create-endpoint-security-policies) for *Antivirus*, *Firewall*, and *Endpoint detection and response*.
 - Learn more about [Microsoft Defender for Endpoint](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response).

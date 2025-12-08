@@ -1,31 +1,12 @@
 ---
-# required metadata
-
-title: Tutorial - Use Microsoft Intune to protect Exchange Online email from unmanaged iOS devices 
-titleSuffix: Microsoft Intune
+title: Tutorial - Use Microsoft Intune to protect Exchange Online email from unmanaged iOS devices
 description: Learn how to use Microsoft Intune app protection policies and Conditional Access to prevent unmanaged iOS devices from accessing Exchange Online.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 06/30/2025
 ms.topic: tutorial
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high 
-ms.assetid:
-
-# optional metadata
- 
-#ROBOTS:
-#audience:
-
 ms.reviewer: demerson
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-device-compliance
 ---
@@ -50,7 +31,7 @@ Trial subscriptions help you avoid affecting a production environment with wrong
 This tutorial requires a test tenant with the following subscriptions:
 
 - Microsoft Intune Plan 1 subscription ([sign up for a free trial account](../fundamentals/free-trial-sign-up.md))
-- Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/free/?WT.mc_id=A261C142F))
+- Microsoft Entra ID P1 ([free trial](https://azure.microsoft.com/pricing/purchase-options/azure-account?cid=msft_learn))
 - Microsoft 365 Apps for business subscription that includes Exchange ([free trial](https://go.microsoft.com/fwlink/p/?LinkID=510938))
 
 ## Sign in to Intune
@@ -199,7 +180,7 @@ The process to configure this policy is similar to the previous Conditional Acce
    1. On the *Include* tab, choose **Select apps**.
    2. For *Select*, choose *None*.
    3. From the Cloud apps list, select the checkbox for **Office 365 Exchange Online**, and then choose **Select**.
-  
+
 6. Under **Assignments** open *Conditions* > *Device platforms*, and then:
 
    1. Set the *Configure* toggle to **Yes**.

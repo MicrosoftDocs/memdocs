@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Add groups to organize users and devices for Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Create Microsoft Entra groups to organize users and devices for use with Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 06/23/2025
 ms.topic: how-to
-#customer intent: As an IT admin, I want to add groups, so that users and devices are organized.
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: scottduf
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -77,8 +57,8 @@ These virtual groups provide an easy way to target all applicable users or devic
 
 For example, you might deploy an Intune compliance policy to the *all devices* group to establish a minimum level of compliance requirements that all devices in your organization must meet. Later, you can deploy more requirements to specific Entra groups to apply extra requirements you might have for specific groups of devices or users.
 
-> [!TIP]  
-> Consider the use of **Filters** for groups within Intune. You can use Filters within Intune when assigning apps, policies, and profiles in Microsoft Intune to large groups like *All users* and *All devices*. Filters can help you dynamically control which devices or users receive the deployment. For information about using Filters, see:  
+> [!TIP]
+> Consider the use of **Filters** for groups within Intune. You can use Filters within Intune when assigning apps, policies, and profiles in Microsoft Intune to large groups like *All users* and *All devices*. Filters can help you dynamically control which devices or users receive the deployment. For information about using Filters, see:
 > - [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/intune/intune-service/fundamentals/filters)
 > - [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/intune/intune-service/fundamentals/filters-performance-recommendations)
 
@@ -92,7 +72,7 @@ When you create a group within the Microsoft Intune admin center, you're actuall
 
 To create groups in the Microsoft Intune admin center:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **New group**:  
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), and then select **Groups** > **New group**:
 
    :::image type="content" source="./media/groups-add/groups-add-new.png" alt-text="Screenshot that shows Groups pane of the Intune admin center." lightbox="./media/groups-add/groups-add-new.png":::
 
@@ -100,12 +80,12 @@ To create groups in the Microsoft Intune admin center:
 
    :::image type="content" source="./media/groups-add/groups-add-properties.png" alt-text="Screenshot that shows the New group pane from Entra within the Intune admin center.":::
 
-   Configure the following options for the New Group:  
+   Configure the following options for the New Group:
    1. Set *Group type* to **Security**.
    2. For *Group name*, specify a meaningful name that clearly identifies the group. This name is visible to users who work with groups in the admin center.
    3. For *Group description*, which is optional, specify other details about the group like its intended use.
    4. For *Membership type*, select from the following options:
-        
+
       - **Assigned** – With this membership type you'll need to manually add users to the group, which can be done now or later after the group is created.
 
         To add users at this time, locate and select **No members selected** to open the *Add members* pane.
@@ -114,23 +94,23 @@ To create groups in the Microsoft Intune admin center:
 
         You can also select the *Groups* tab if you want to nest a group within this group. A group that includes a group as a member is known as a parent group. Be careful when nesting groups as the membership relationships might not be clear to admins who later use the parent group for an assignment. Any membership changes made to a nested group are automatically applied to the effective membership of the parent group.
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         > Avoid creating groups that include both users and devices, as this can lead to policy conflicts and unpredictable behavior during Intune deployments.
 
-        > [!TIP]  
+        > [!TIP]
         > To create groups of devices, you can use [device categories](/intune/intune-service/enrollment/device-group-mapping) to automatically join devices to a group at the time they enroll with Intune.
 
       - **Dynamic User** - With this membership type, select **Add dynamic query** and then configure the dynamic membership rules. For guidance, see [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
 
-        > [!IMPORTANT]  
+        > [!IMPORTANT]
         > To use Dynamic User groups, you must have a [Microsoft Entra ID P1 license for each user](/entra/identity/users/groups-dynamic-membership#license-requirements) that is a member of the dynamic group.
 
       - **Dynamic Device** - With this membership type, select **Add dynamic query** and then configure the dynamic membership rules. For guidance, see [Manage rules for dynamic membership groups in Microsoft Entra ID](/entra/identity/users/groups-dynamic-membership).
 
-        > [!TIP]  
+        > [!TIP]
         > No specific Entra ID license is required for members of dynamic device groups.
 
-   5. The *Owners* configuration is optional. By default, the user that creates a group is an owner. To add other owners, select **No owners selected** and then the **Users** tab, where you can then select one or more users to add as owners of this group. 
+   5. The *Owners* configuration is optional. By default, the user that creates a group is an owner. To add other owners, select **No owners selected** and then the **Users** tab, where you can then select one or more users to add as owners of this group.
 
 3. Select **Create** to add the new group. Your group is shown in the list.
 
@@ -155,7 +135,7 @@ Use the following steps to delete an existing group:
 2. Select **Groups** > **All groups**.
 3. Select the checkbox for each group you want to delete, and then select **Delete** from options at the top of the *All Groups* view. Alternately, you can select the name of a group to open a single group's *Overview* page, and then select *Delete** from the top of that view.
 
-> [!TIP]  
+> [!TIP]
 > After a group is deleted, it might take some time before it appears in the *Deleted groups* list.
 
 ## Related content

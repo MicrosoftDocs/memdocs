@@ -1,28 +1,9 @@
 ---
-# required metadata
-
 title: Get started with macOS endpoints
-titleSuffix: Microsoft Intune
 description: Microsoft Intune guide to set up and configure macOS devices from setup to creating policies and enrolling devices. You secure your corporate and organization-owned endpoints that are enrolled in Intune, and then deploy at scale with Apple Business Manager or Apple School Manager.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: dougeby
 ms.date: 07/31/2025
 ms.topic: get-started
-ms.service: microsoft-intune
-ms.subservice: 
-ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
- 
-#audience:
-#ms.devlang:
 ms.reviewer: scbree;rogerso
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - highpri
@@ -47,7 +28,7 @@ This article guides you through the end-to-end steps to create and manage your m
 
 ## How to use this guide
 
-This guide has seven phases. Each phase has a set of steps that help build your macOS endpoint configuration and deployment. Each phase builds on the previous phase. 
+This guide has seven phases. Each phase has a set of steps that help build your macOS endpoint configuration and deployment. Each phase builds on the previous phase.
 
 :::image type="content" source="./media/macos-endpoints-get-started/all-steps-overview.png" border="false" alt-text="A diagram that summarizes all the phases to onboard macOS devices, including testing, enrolling, securing, deploying policies, and supporting the devices using Microsoft Intune":::
 
@@ -109,7 +90,7 @@ Specifically:
   For information on configuring Enrollment Restrictions, go to [Set enrollment restrictions in Microsoft Intune](../../intune-service/enrollment/enrollment-restrictions-set.md).
 
 - **Licensing**
-  
+
   Users enrolling macOS devices require a Microsoft Intune or Microsoft Intune for Education license. To assign licenses, go to [Assign Microsoft Intune licenses](../../intune-service/fundamentals/licenses-assign.md). Assign the licenses to the test accounts you created.
 
   > [!NOTE]
@@ -159,7 +140,7 @@ When you use macOS ADE enrollment profiles, we recommend configuring [macOS acco
 macOS devices with user affinity can be targeted for profiles and apps using user or device groups. There are two common options for how organizations dynamically target devices:
 
 - **Option 1 - All devices groups with an assignment filter on enrollmentProfileName**
-  
+
   For critical apps and policies that must apply immediately after enrollment (security settings, restrictions, the Company Portal app), you can assign the policies to the built-in Intune **All Devices** group. Create an assignment filter using the enrollment profile you created in [Step 4 - Add the Apple automated device enrollment token](#step-4---add-the-apple-automated-device-enrollment-token).
 
   Policies and apps targeted to the **All Devices** group apply faster after enrollment than dynamic groups. Not all configuration profiles (like macOS scripts) support filters.
@@ -211,8 +192,18 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   There are two options for configuring SSO for Mac - [Enterprise SSO plug-in](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md) and [Platform SSO](../../intune-service/configuration/platform-sso-macos.md).
 
+  # [Platform SSO](#tab/psso)
+
+  Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+
+  For more information, go to:
+
+  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune-service/configuration/platform-sso-macos.md)
+
+  - [Platform SSO on Apple's web site](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website)
+
   # [Enterprise SSO plug-in](#tab/esso)
-  
+
   The Microsoft Enterprise SSO plug-in for Apple devices provides single sign-on (SSO) for Microsoft Entra accounts on macOS across all applications that support Apple's enterprise single sign-on feature.
 
   To create these policies, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to:
@@ -235,16 +226,6 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
     | disable_explicit_app_prompt | Integer | 1 |
 
   For more information on the Enterprise SSO plug-in, including how to create the policy, go to [Configure macOS Enterprise SSO plug-in with Intune](../../intune-service/configuration/use-enterprise-sso-plug-in-macos-with-intune.md).
-
-  # [Platform SSO](#tab/psso)
-
-  Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
-
-  For more information, go to:
-
-  - [Configure Platform SSO for macOS devices in Microsoft Intune](../../intune-service/configuration/platform-sso-macos.md)
-
-  - [Platform SSO on Apple's web site](https://support.apple.com/guide/deployment/dep7bbb05313/web) (opens Apple's website)
 
   ---
 
@@ -362,13 +343,13 @@ For more information, go to:
 
 ✅ **Use Microsoft Defender for Endpoint for threat defense**
 
-Microsoft Defender for Endpoint is a mobile threat defense solution that helps protect your devices from security threats. 
+Microsoft Defender for Endpoint is a mobile threat defense solution that helps protect your devices from security threats.
 
 In Intune, you can connect to your Microsoft Defender for Endpoint service, create Intune policies using Microsoft Defender for Endpoint settings, and then deploy the policies to your devices.
 
 For more information, go to:
 
-- [Configure Microsoft Defender for Endpoint in Intune](../../intune-service/protect/advanced-threat-protection-configure.md)
+- [Configure Microsoft Defender for Endpoint in Intune](../../intune-service/protect/microsoft-defender-integrate.md)
 - [Deploy Microsoft Defender for Endpoint on macOS with Microsoft Intune](/microsoft-365/security/defender-endpoint/mac-install-with-intune)
 
 ### Built-in endpoint security
@@ -438,7 +419,7 @@ On devices, software updates are critical and you must determine how the updates
 
 When you configure these settings, you enforce and restrict the behavior in the **Settings** app > **Software Update** node on the device.
 
-- **Option 1 - macOS 14.0 and newer devices (recommended)** - On macOS 14.0 and newer devices, use the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) to create a [managed software updates policy](../../intune-service/protect/managed-software-updates-ios-macos.md). This feature uses Apple's declarative device management (DDM), and is the recommended approach to update macOS devices.
+- **Option 1 - macOS 14.0 and newer devices (recommended)** - On macOS 14.0 and newer devices, use the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) to create a [managed software updates policy](../../intune-service/protect/updates/apple.md). This feature uses Apple's declarative device management (DDM), and is the recommended approach to update macOS devices.
 
   Specifically, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you configure the following settings:
 
@@ -450,9 +431,9 @@ When you configure these settings, you enforce and restrict the behavior in the 
     - Enforced Software Update Major OS Deferred Install Delay: 0-30
     - Enforced Software Update Non OS Deferred Install Delay: 0-30
 
-    The **Settings Catalog > Declarative Device Management > Software Update** settings take precedence over the **Settings Catalog > Restrictions** settings. For more information, go to [Precedence of settings in macOS updates policy](../../intune-service/protect/managed-software-updates-ios-macos.md#precedence).
+    The **Settings Catalog > Declarative Device Management > Software Update** settings take precedence over the **Settings Catalog > Restrictions** settings.
 
-- **Option 2 - macOS 13.0 and older (recommended)** - On macOS 13.0 and older devices, you can use a combination of the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) and an Intune [software updates policy](../../intune-service/protect/managed-software-updates-ios-macos.md). These features use Apple's MDM settings.
+- **Option 2 - macOS 13.0 and older (recommended)** - On macOS 13.0 and older devices, you can use a combination of the [Intune settings catalog](../../intune-service/configuration/settings-catalog.md) and an Intune [software updates policy](../../intune-service/protect/updates/apple.md). These features use Apple's MDM settings.
 
   Specifically, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can configure the following settings:
 
@@ -460,11 +441,11 @@ When you configure these settings, you enforce and restrict the behavior in the 
 
   - **Devices > Manage devices > Configuration > Create > New policy > Settings catalog > Software Update**
 
-  Some of the settings in both policy types (Software updates vs. Settings catalog) can overlap. So, pay attention to what you configure in each policy. The settings in the macOS updates policy take precedence over the Settings Catalog > Software Update settings. For more information, go to [Precedence of settings in macOS updates policy](../../intune-service/protect/managed-software-updates-ios-macos.md#precedence).
+  Some of the settings in both policy types (Software updates vs. Settings catalog) can overlap. So, pay attention to what you configure in each policy. The settings in the macOS updates policy take precedence over the Settings Catalog > Software Update settings.
 
 - **Option 3 (not recommended)** - End users manually install the updates. This approach relies on end users to decide when to install the updates. And, they can install an update that your organization doesn't approve.
 
-For more information on planning your macOS update strategy, go to [Software updates planning guide for managed macOS devices in Microsoft Intune](../../intune-service/protect/software-updates-guide-macos.md).
+For more information on planning your macOS update strategy, go to [Software updates planning guide for managed macOS devices in Microsoft Intune](../../intune-service/protect/updates/software-updates-guide-macos.md).
 
 ### Guest account
 

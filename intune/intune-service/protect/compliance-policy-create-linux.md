@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Linux device compliance settings in Microsoft Intune
 description: View the device compliance settings for Linux that you can manage with Microsoft Intune compliance policies.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: dougeby
 ms.date: 08/15/2025
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
-ms.collection: 
+ms.collection:
   - M365-identity-device-management
   - highpri
   - highseo
@@ -43,9 +26,9 @@ To learn more about compliance policies, and what they do, see [get started with
 
 This feature applies to:
 
-* Ubuntu Desktop 22.04 LTS or 24.04 LTS (physical or Hyper-V machine with x86/64 CPUs)  
-* RedHat Enterprise Linux 8  
-* RedHat Enterprise Linux 9    
+* Ubuntu Desktop 22.04 LTS or 24.04 LTS (physical or Hyper-V machine with x86/64 CPUs)
+* RedHat Enterprise Linux 8
+* RedHat Enterprise Linux 9
 
 ## Linux settings categories
 

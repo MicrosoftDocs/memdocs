@@ -1,15 +1,10 @@
 ---
 title: How to use Microsoft Intune documentation
-titleSuffix:
 description: Learn how to search, provide feedback about, and contribute to Microsoft Intune product family documentation. This documentation also covers Configuration Manager, Intune, Endpoint analytics, and Windows Autopilot.
 ms.date: 04/10/2025
-ms.service: microsoft-intune
-ms.subservice:
 ms.topic: how-to
-ms.localizationpriority: high
 author: Smritib17
 ms.author: smbhardwaj
-manager: dougeby
 ms.collection: highpri
 ---
 
@@ -124,7 +119,7 @@ Use GitHub Issues to submit the following types of feedback:
 - Localization: Feedback about content translation.
 - Search engine optimization (SEO): Feedback about problems searching for content. Include the search engine, keywords, and target article in the comments.
 
-If you create an issue for something not related to an article, Microsoft will close the issue and redirect you to a better feedback channel. For example: 
+If you create an issue for something not related to an article, Microsoft will close the issue and redirect you to a better feedback channel. For example:
 
 To share feedback on the Microsoft Learn platform itself, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors. -->
 

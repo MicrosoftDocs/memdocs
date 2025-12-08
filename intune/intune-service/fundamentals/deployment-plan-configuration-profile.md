@@ -1,30 +1,15 @@
 ---
-# required metadata
-
 title: Configure security, email, VPN, and Wi-Fi device configuration profiles
-titleSuffix: Microsoft Intune
 description: Step 4 to deploy device configuration profiles as part of the minimum set of policies for your devices using Microsoft Intune. The starting point is to enable the firewall, install AV, scan for malware, install software updates, create a strong PIN policy, and create email, VPN, and Wi-Fi device configuration profiles.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
 
-# optional metadata
 
-#ROBOTS:
-#audience:
-
-ms.reviewer: 
-ms.suite:
-search.appverid: MET150
-ms.custom: 
-ms.collection: 
-- M365-identity-device-management 
+ms.collection:
+- M365-identity-device-management
 - highpri
-- tier1
 ---
 
 # Step 4 - Configure device features and settings to secure devices and access resources
@@ -82,7 +67,7 @@ In your baseline, at a minimum, Microsoft recommends the following security poli
 
 This section lists the Intune and Microsoft services you can use to create these security policies.
 
-For a more granular list of Windows settings and their recommended values, go to [Windows security baselines](../protect/security-baselines.md).  
+For a more granular list of Windows settings and their recommended values, go to [Windows security baselines](../protect/security-baselines.md).
 
 ### Antivirus and scanning
 
@@ -212,8 +197,8 @@ Your policy options:
 For more information on these features and/or the settings you can configure, go to:
 
 - **Android Enterprise** [Device restrictions profile > Corporate owned > System update](../configuration/device-restrictions-android-for-work.md)
-- **iOS/iPadOS** [Software update policies](../protect/software-updates-ios.md)
-- **macOS** [Software update policies](../protect/software-updates-macos.md)
+- **iOS/iPadOS** [Managed software updates](../protect/updates/apple.md)
+- **macOS** [Managed software updates](../protect/updates/apple.md)
 - **Windows**:
   - [Feature updates policy](../protect/windows-10-feature-updates.md)
   - [Expedited updates policy](../protect/windows-10-expedite-updates.md)
@@ -434,7 +419,7 @@ Microsoft recommends the following level 2 security policies:
   - **[Device restrictions templates](../configuration/device-restrictions-configure.md)** have many built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
 
     You can use these templates on the following platforms:
-  
+
     - Android
     - iOS/iPadOS
     - macOS
@@ -444,10 +429,6 @@ Microsoft recommends the following level 2 security policies:
 
     - iOS/iPadOS
     - macOS
-    - Windows
-
-  - **[Use the built-in administrative templates](../configuration/administrative-templates-windows.md)**, similar to configuring ADMX templates on-premises. You can use the ADMX templates on the following platform:
-
     - Windows
 
 - If you use **on-premises GPOs** and want to know if these same settings are available in Intune, then use [Group Policy analytics](../configuration/group-policy-analytics.md). This feature analyzes your GPOs and depending on the analysis, can import them into an Intune settings catalog policy.
