@@ -123,7 +123,7 @@ After you unenroll or wipe the device, the certificates are removed from the dev
 The following third-party certification authorities support Intune:
 
 - [AWS Private Certificate Authority](https://docs.aws.amazon.com/privateca/latest/userguide/connector-for-scep-getting-started.html)
-- [Cogito Group](https://cogitogroup.net/scep)
+- [Cogito Group](https://training.cogitogroup.net/documentation/simple-certificate-enrolment-protocol-scep)
 - [DigiCert](https://knowledge.digicert.com/tutorials/microsoft-intune.html)
 - [EasyScep](https://docs.just-software.com/EasyScep/)
 - [EJBCA](https://doc.primekey.com/ejbca/ejbca-integration/integrating-with-third-party-applications/microsoft-intune-device-certificate-enrollment)

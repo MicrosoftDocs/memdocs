@@ -168,7 +168,7 @@ To use security settings management, you need:
 
 ### Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to administrators who manage Intune endpoint security policies from within the Intune admin center, see [Assign role-based access controls for endpoint security policy](endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to administrators who manage Intune endpoint security policies from within the Intune admin center, see [Role-based access control for endpoint security](endpoint-security-policy.md#role-based-access-control-for-endpoint-security) later in this article. .
 
 ## Architecture
 

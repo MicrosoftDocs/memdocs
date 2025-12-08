@@ -1,7 +1,7 @@
 ---
 title: Step 2. Create App Protection Policies for Microsoft Edge for Business
-description: Step 2. Create app protection policies for Microsoft Edge for Business.
-ms.date: 06/12/2025
+description: Step 2. Create app protection policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
+ms.date: 12/05/2025
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -9,244 +9,611 @@ ms.collection:
 - highpri
 - highseo
 - FocusArea_Apps_AppManagement
+zone_pivot_groups: app-protection-platforms
 ---
 
-# Step 2. Create App Protection Policies for Microsoft Edge for Business
-
-App protection policies are rules that ensure an organization's data remains safe or contained in a managed app. A policy can be a rule that is enforced when the user attempts to access or move corporate data, or a set of actions that are prohibited or monitored when the device user is using the app. A managed app is an app that has app protection policies applied to it and is managed by an enterprise management solution, such as Intune.
-
-## App protection policy framework
-
-When configuring app protection policies, there are various settings and options that enable organizations to tailor their data protection to their specific needs. Due to this flexibility, it may not be obvious which combination of policy settings are required to implement a complete scenario. To help organizations prioritize client endpoint hardening efforts, Microsoft has introduced a taxonomy for security configurations in Windows, and Intune is using a similar taxonomy for its app protection policies data protection framework for mobile app management.
-
-The APP data protection configuration framework is organized into three distinct configuration scenarios:
-
-1. **Level 1 enterprise basic data protection:** Microsoft recommends this configuration as the minimum data protection configuration for an enterprise device.
-
-2. **Level 2 enterprise enhanced data protection:** Microsoft recommends this configuration for devices where users access sensitive or confidential information. This configuration is applicable to most mobile users accessing work or school data. Some of the controls may impact user experience.
-
-3. **Level 3 enterprise high data protection:** Microsoft recommends this configuration for devices run by an organization with a larger or more sophisticated security team, or for specific users or groups who are at uniquely elevated risk (users who oversee sensitive data where unauthorized disclosure causes considerable material loss to the organization). An organization likely to be targeted by well-funded and sophisticated adversaries should aspire to this configuration.
-
-### Data Protection Framework deployment methodology
-With any deployment of new software, features or settings, Microsoft recommends investing in a ring methodology for testing validation prior to deploying the app protection policies data protection framework. Defining deployment rings is a one-time event (or at least infrequent), but IT should revisit these groups to ensure that the sequencing is still correct.
-
-For more information about Framework Settings, see [App protection framework](..\apps\app-protection-framework.md).
-
-## App protection policy for Microsoft Edge for Business (Windows)
-
-The app protection policies for Windows provide secure and compliant access to work resources on personal computers by using Data Loss Prevention (DLP) controls.
-
-Having gained a comprehensive understanding of the app protection policy framework, you're now prepared to establish your initial app protection policy for Windows. In this instance, you are formulating a app protection policy. As highlighted in this document, the framework allows for the creation of various levels to cater to your specific requirements. The following example may only be applicable to the **Level 3** policy that Microsoft recommends. It's crucial to replicate these steps for each level, ensuring that the values are adjusted in accordance with the recommendations provided. This approach guarantees that each policy level is accurately configured to meet your organization's distinct needs.
-
-### Apply the data protection framework
-
-Use the following steps to apply the data protection framework.
-
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Apps** > **Protection** > **Create** > **Windows**.
-
-3. On the **Create policy** step, set the following details:
-
-    - **Name**: Levels 3 secure enterprise browser policy
-    - **Description**: This policy is a Level 3 App Protection Framework policy for secure enterprise browser.
-    - **Platform**: Windows
-
-4. Select **Next** to display the next step.
-
-5. For the **Apps** step, click **Select apps** to display the **Select apps to target** pane.
-
-6. Find and select **Microsoft Edge**.
-
-7. Click **Select** to select the app.
-
-8. Select **Next** to display the next step.
-
-9. Following the recommendation from Level 3, configure this step with the following values:
-
-    - **Receive data from**: No sources
-    - **Send org data to**: No destinations
-    - **Allow cut, copy, and paste for**: No destination or source
-    - **Print org data**: Block
-
-    :::image type="content" alt-text="Apps - App protection policies - Create policy - Data Protection - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business11.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business11.png":::
-
-10. Select **Next** to continue to the next step.
-
-11. Following the recommendation from Level 3, configure this step with the following values:
-
-    - **Offline grace period**: 720, Block access (minutes)
-    - **Offline grace period**: 90, Wipe data (days)
-    - **Max OS version**: 10.0.22631.2715, Block access
-    - **Max allowed device threat level**: Secured, Block access
-
-    :::image type="content" alt-text="Apps - App protection policies - Create policy - Health Checks - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business12.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business12.png":::
-
-12. Click **Next** to display the next step.
-
-13. For the **Scope Tags** step, you must select the proper scope tag for your environment and the roles that have access to this policy.
-
-14. For the **Assignments** step, select **Add Group** and select the desired group.
-For this example, select all VPN Users. However, when you assign this policy in a production environment, you should create a new group of users that will best fit users that must adhere to **Level 3** app protection.
-
-15. Click **Next** to continue to the next step.
-
-16. On the **Review + create** step, review each item and ensure the **level 3** configuration is correct. After
-
-17. Click **Next** to create the policy.
-
-You have now created your first MAM for Windows Policy and it should be available within your Intune tenant.
-
-## App protection policy for Microsoft Edge for Business (Mobile)
-
-Incorporate Microsoft Edge for Business into your existing data security and management strategy. By securing the enterprise browser configuration for mobile devices, you can ensure safer and more efficient web browsing experiences.
-
-Microsoft Edge for Business provide benefits for both management and security:
-
-- **Management**: Microsoft Edge for Business is the only mobile browser natively supported by Microsoft Intune with seamless integration. To secure productivity for your organization, App level management allows IT to configure the right balance between data protection and access.
-- **Security**: Data protection and leakage prevention are based on Conditional Access and user identities. Microsoft 365 security features extend to Microsoft Edge for Business mobile including Microsoft Entra Conditional Access, and Data Loss Prevention. For organizations utilizing VPN solutions, Microsoft Edge mobile offers support for identity-enlightened per-app VPN. This includes the integration of Microsoft Tunnel with Intune for a seamless and secure connection. Additionally, solutions that don't require a VPN are also available.
-
-### App protection policies for mobile
-
-App protection policies define which apps are allowed and the actions they can take with your organization's data. The choices available in app protection policies enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario. To help organizations prioritize mobile client endpoint hardening, Microsoft has introduced taxonomy for its app protection policies data protection framework for iOS and Android mobile app management.
-
-The app protection policies data protection framework is organized into three distinct configuration levels, as mentioned earlier in **Step 2**. Each level builds off the previous level:
-
-- **Enterprise basic data protection** (Level 1) ensures that apps are protected with a PIN, encrypted, and allows selective wipe operations. For Android devices, this level validates Android device attestation.
-- **Enterprise enhanced data protection** (Level 2) introduces app protection policies data leakage prevention mechanisms and minimum OS requirements. This is the configuration that is applicable to most mobile users accessing work or school data.
-- **Enterprise high data protection** (Level 3) introduces advanced data protection mechanisms, enhanced PIN configuration, and app protection policies Mobile Threat Defense. This configuration is desirable for users that are accessing high risk data.
-
-To see the specific recommendations for each configuration level and the minimum apps that must be protected, review [Data protection framework using app protection policies](../apps/app-protection-framework.md).
-
-Next, you create a **Level 3** app protection policy for Microsoft Edge from Microsoft Intune admin center.
-
-To create the app protection policy, follow these steps:
-
-1. Navigate to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Protection** > **Create**.
-
-2. Select **Create policy** > **Android** or **iOS/iPadOS**. Next, enter the following information:
-
-    - **Name**: Level 3 secure enterprise browser.
-    - **Description**: The following is a Level 3 app protection policy framework.
-
-3. Click **Selected apps** > **public apps**. Find **Microsoft Edge**.
-
-4. Select **Data Protection** and configure the **settings** based on the following table:
-
-    |     Setting    |     Setting description    |     Value    |     Platform    |     Level    |
-    |---|---|---|---|---|
-    |     Data Transfer    |     Transfer   telecommunication data to    |     Any policy-managed   dialer app    |     Android    |     3    |
-    |     Data Transfer    |     Transfer   telecommunication data to    |     A specific dialer app    |     iOS/iPadOS    |     3    |
-    |     Data Transfer    |     Dialer App URL Scheme    |     replace_with_dialer_app_url_scheme    |     iOS/iPadOS    |     3    |
-    |     Data transfer    |     Receive data from   other apps    |     Policy managed apps    |     iOS/iPadOS, Android    |     3    |
-    |     Data transfer    |     Open data into Org   documents    |     Block    |     iOS/iPadOS, Android    |     3    |
-    |     Data transfer    |     Allow users to open   data from selected services    |     OneDrive for Business,   SharePoint, Camera, Photo Library    |     iOS/iPadOS, Android    |     3    |
-    |     Data transfer    |     Third-party keyboards    |     Block    |     iOS/iPadOS    |     3    |
-    |     Data transfer    |     Approved keyboards    |     Require    |     Android    |     3    |
-    |     Data transfer    |     Select keyboards to   approve    |     add/remove keyboards    |     Android    |     3    |
-    |     Data Transfer    |     Back up org data to…    |     Block    |     iOS/iPadOS, Android    |     3    |
-    |     Data Transfer    |     Send org data to other   apps    |     Policy managed apps    |     iOS/iPadOS, Android    |     3    |
-    |     Data Transfer    |     Select apps to exempt    |     Default /   skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;    |     iOS/iPadOS    |     3    |
-    |     Data Transfer    |     Save copies of org   data    |     Block    |     iOS/iPadOS, Android    |     3    |
-    |     Data Transfer    |     Allow users to save   copies to selected services    |     OneDrive for Business,   SharePoint Online, Photo Library    |     iOS/iPadOS, Android    |     3    |
-    |     Data Transfer    |     Transfer   telecommunication data to    |     Any dialer app    |     iOS/iPadOS, Android    |     3    |
-    |     Data Transfer    |     Restrict cut, copy,   and paste between apps    |     Policy managed apps   with paste in    |     iOS/iPadOS, Android    |     3    |
-
-5. Review the **Encryption** section **settings** based on the following table:
-
-    |     Setting    |     Setting description    |     Value    |     Platform    |     Level    |
-    |---|---|---|---|---|
-    |     Encryption    |     Encrypt org data    |     Require    |     iOS/iPadOS, Android    |     3    |
-
-6. Review the **Functionality** section **settings** based on the following table:
-
-    |     Setting    |     Setting description    |     Value    |     Platform    |     Level    |
-    |---|---|---|---|---|
-    |     Functionality    |     Printing org data    |     Block    |     iOS/iPadOS, Android,   Windows    |     3    |
-    |     Functionality    |     Sync app with native   contacts app    |     Allow    |     iOS/iPadOS, Android    |     3    |
-    |     Functionality    |     Org data notifications    |     Block Org Data    |     iOS/iPadOS, Android    |     3    |
-    |     Functionality    |     Restrict web content   transfer with other apps    |     Microsoft Edge    |     iOS/iPadOS, Android    |     3    |
-    |     Functionality    |     Sync policy managed   app data with native apps or add ins    |     Allow    |     iOS/iPadOS, Android    |     3    |
-
-7. Once you've completed all three sections, select **Next**.
-
-8. Review the **Access Requirements** section **settings** based on the following table:
-
-    |     Setting    |     Setting description    |     Value    |     Platform    |     Level    |
-    |---|---|---|---|---|
-    |     Access requirements    |     Simple PIN    |     Block    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Select Minimum PIN   length    |     6    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     PIN reset after number   of days    |     Yes    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Require device lock    |     High/Block Access    |     Android    |     3    |
-    |     Access requirements    |     Jailbroken/rooted   devices    |     N/A / Wipe data    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Max OS version    |     Format: Major.Minor    |     Android    |     3    |
-    |     Access requirements    |     Samsung Knox device   attestation    |     Wipe data    |     Android    |     3    |
-    |     Access requirements    |     Back up org data to…    |     Block    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Allow users to save   copies to selected services    |     OneDrive for Business,   SharePoint Online, Photo Library    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Restrict cut, copy,   and paste between apps    |     Policy managed apps   with paste in    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Save copies of org   data    |     Block    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Screen capture and   Google Assistant    |     Block    |     Android    |     3    |
-    |     Access requirements    |     Select apps to exempt    |     Default /   skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services;    |     iOS/iPadOS    |     3    |
-    |     Access requirements    |     Send org data to other   apps    |     Policy managed apps    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     App PIN when device   PIN is set    |     Require    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Biometric instead of   PIN for access    |     Allow    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     SafetyNet device   attestation    |     Basic integrity and   certified devices / Block access    |     Android    |     3    |
-    |     Access requirements    |     Require threat scan on   apps    |     N/A / Block access    |     Android    |     3    |
-    |     Access requirements    |     Require device lock    |     Low/Warn    |     Android    |     3    |
-    |     Access requirements    |     Min OS version    |     Format:   Major.MinorExample: 9.0 / Block access    |     Android    |     3    |
-    |     Access requirements    |     Min patch version    |     Format: YYYY-MM-DD    |     Android    |     3    |
-    |     Access requirements    |     Required SafetyNet   evaluation type    |     Hardware-backed key    |     Android    |     3    |
-    |     Access requirements    |     Encrypt org data    |     Require    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Encrypt org data on   enrolled devices    |     Require    |     Android    |     3    |
-    |     Access requirements    |     Sync app with native   contacts app    |     Allow    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Restrict web content   transfer with other apps    |     Microsoft Edge    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Org data notifications    |     Block Org Data    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Override biometrics   with PIN after timeout    |     Require    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     PIN for access    |     Require    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     PIN type    |     Numeric    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Recheck the access   requirements after (minutes of inactivity)    |     30    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Select number of   previous PIN values to maintain    |     0    |     Android    |     3    |
-    |     Access requirements    |     Timeout (minutes of   activity)    |     720    |     iOS/iPadOS, Android    |     3    |
-    |     Access requirements    |     Offline grace period    |     Allow    |     iOS/iPadOS    |     3    |
-    |     Access requirements    |     Work or school account   credentials for access    |     Not required    |     iOS/iPadOS, Android    |     3    |
-
-9. Select **Next**.
-
-10. Review the **Conditional Launch** section **settings** based on the following table:
-
-|     Setting    |     Setting description    |     Value    |     Platform    |     Level    |
-|---|---|---|---|---|
-|     App conditions    |     Max allowed threat   level    |     Secured / Block access    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Max OS version    |     Format:   Major.Minor.Build    |     iOS/iPadOS    |     3    |
-|     App conditions    |     Max PIN attempts    |     5 / Reset PIN    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Offline grace period    |     720 / Block access   (minutes)    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Offline grace period    |     90 / Wipe data (days)    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Disabled account    |     N/A / Block access    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Min OS version    |     Format:   Major.Minor.Build    |     iOS/iPadOS    |     3    |
-|     App conditions    |     Max PIN attempts    |     5 / Reset PIN    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Offline grace period    |     90 / Wipe data (days)    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Disabled account    |     N/A / Block access    |     iOS/iPadOS, Android    |     3    |
-|     App conditions    |     Offline grace period    |     720 / Block access   (minutes)    |     iOS/iPadOS, Android    |     3    |
-
-11. Select **Next** after you've completed the **Conditional launch** step.
-
-12. Review the **Scope Tags** step.
-    For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
-
-13. Select **Next**.
-
-14. Review the **Assignments**.
-
-15. Review the policy details in the **Review and Create** step.
-
-    :::image type="content" alt-text="Apps  -  App protection policies  -  Review + Create - Microsoft Intune admin center" source="./media/securing-data-edge-for-business/securing-data-edge-for-business46.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business46.png":::
-
-16. Select **Create** and wait until the policy is created.
-
-    :::image type="content" alt-text="Apps - App protection policies - Policy successfully created - Microsoft Intune admin center." source="./media/securing-data-edge-for-business/securing-data-edge-for-business47.png" lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business47.png":::
+# Step 2: App Protection Policies for Microsoft Edge for Business
+
+This guide organizes app protection policy creation by platform to help you implement the appropriate security level for each device type. The following sections provide detailed configuration steps for Windows, Android, and iOS/iPadOS platforms.
+
+Each platform section includes instructions for creating Level 1, Level 2, and Level 3 app protection policies aligned with the Microsoft Data Protection Framework.
+
+> [!NOTE]
+> App protection policies provide data protection without requiring device enrollment, making them ideal for BYOD (Bring Your Own Device) scenarios and unmanaged devices.
+
+## Microsoft Data Protection Framework compliance
+
+- **Level 1** – Fully compliant with Microsoft's *Enterprise Basic Data Protection* requirements  
+- **Level 2** – Fully compliant with Microsoft's *Enterprise Enhanced Data Protection* requirements  
+- **Level 3** – Fully compliant with Microsoft's *Enterprise High Data Protection* requirements  
+- **Web content transfer** – All policies include *Restrict web content transfer with other apps* set to Microsoft Edge
+
+> [!IMPORTANT]
+> Framework alignment:  
+> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Your Corporate Data in Intune with Microsoft Edge for Business](mamedge-overview.md) guide.
+
+This guide references industry frameworks (NIST, DISA STIG, and CISA) as inputs. Applying these settings alone doesn't make your organization compliant with any specific standard. Perform your own compliance assessments against the official requirements.
+
+::: zone pivot="windows"
+
+## App protection policies for Windows
+
+App protection policies for Windows provide secure and compliant access to work resources on personal computers by using Data Loss Prevention (DLP) controls.
+
+Prerequisites:
+
+- Windows
+- Company Portal installed
+- Appropriate Intune license (APP support)
+- Microsoft Edge sign-in with Microsoft Entra ID account
+
+### Level 1 – Enterprise basic data protection for Windows
+
+Level 1 configuration provides the minimum data protection for a Windows device while minimizing effects to users.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge Windows APP Level 1 Basic
+   - **Description:** Basic data protection for Microsoft Edge with fundamental controls
+4. Select **Next**.
+5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Receive data from: **All sources**
+   - Send org data to: **All destinations**
+   - Allow cut, copy, and paste for: **Any destination and any source**
+   - Printing org data: **Allow**
+8. Select **Next**.
+9. On the **Health checks** tab, configure:
+   - Offline grace period: **10080 minutes / Block access**
+   - Offline grace period: **90 days / Wipe data**
+   - Max allowed device threat level: **Low / Block access**
+10. Select **Next**.
+11. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.
+12. Select **Next**, review the configuration, and then choose **Create**.
+
+### Level 2 – Enterprise enhanced data protection for Windows
+
+Level 2 configuration includes enhanced data protection controls and stricter enforcement for Windows devices.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge Windows APP Level 2 Enhanced
+   - **Description:** Enhanced data protection for Microsoft Edge with stricter data transfer controls
+4. Select **Next**.
+5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Send org data to: **No destinations**
+   - Receive data from: **No sources**
+   - Allow cut, copy, and paste for: **No destination or source**
+   - Printing org data: **Allow**
+8. Select **Next**.
+9. On the **Health checks** tab, configure:
+   - Disabled account: **Block access**
+   - Min OS version: **10.0.22621.2506 / Block access**
+   - Max allowed device threat level: **Medium / Block access**
+   - Offline grace period: **1440 minutes / Block access**
+   - Offline grace period: **30 days / Wipe data**
+10. Select **Next**.
+11. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.
+12. Select **Next**, review the configuration, and then choose **Create**.
+
+### Level 3 – Enterprise high data protection for Windows
+
+Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com/).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Windows**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge Windows APP Level 3 High
+   - **Description:** High data protection for Microsoft Edge with maximum security controls and strict compliance requirements
+4. Select **Next**.
+5. On the **Apps** tab, choose **+ Select apps** > **Microsoft Edge** > **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Receive data from: **No sources**
+   - Send org data to: **No destinations**
+   - Allow cut, copy, and paste for: **No destination or source**
+   - Printing org data: **Block**
+8. Select **Next**.
+9. On the **Health checks** tab, configure:
+   - Disabled account: **Block access**
+   - Min OS version: **10.0.22621.2506 / Block access**
+   - Max allowed device threat level: **Medium / Block access**
+   - Offline grace period: **1440 minutes / Block access**
+   - Offline grace period: **30 days / Wipe data**
+10. Select **Next**.
+11. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.
+12. Select **Next**, review the configuration, and then choose **Create**.
+
+#### Framework Compliance Summary for Windows
+
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+|--------------------------------|----------|----------|----------|
+| Data transfer restrictions | All destinations/sources | No destinations/sources | No destinations/sources |
+| Copy/paste controls | Any destination/source | No destination/source | No destination/source |
+| Screen capture | Allow | Block | Block |
+| Encryption | Not required | Required | Required |
+| Offline grace period | 10,080 minutes / 90 days | 1,440 minutes / 30 days | 1,440 minutes / 30 days |
+| OS version requirements | Not required | Min required | Min + Max required |
+| Device threat level | Low | Medium | Secured |
+| Print restrictions | Allow | Block | Block |
+
+::: zone-end
+
+::: zone pivot="ios-ipados"
+
+## App protection policies for iOS/iPadOS
+
+App protection policies for iOS and iPadOS provide data protection for Microsoft Edge for Business on mobile devices without requiring device enrollment.
+
+Prerequisites:
+
+- iOS/iPadOS 15 or later  
+- Microsoft Edge for iOS installed  
+- Company Portal installed (or Mobile Application Management [MAM] managed)  
+- User signed in with a corporate Entra ID account  
+
+### Level 1 – Enterprise basic data protection for iOS/iPadOS
+
+Level 1 configuration provides the minimum data protection for an iOS/iPadOS device while minimizing effects to users.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge iOS APP Level 1 Basic
+   - **Description:** Basic data protection for Microsoft Edge with fundamental mobile controls and essential data boundaries
+4. Select **Next**.
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.
+   - Choose **+ Select public apps**.
+   - In **Select apps to target**, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Back up org data to: **Allow**
+   - Send org data to other apps: **All apps**
+   - Receive data from other apps: **All apps**
+   - Restrict cut, copy, and paste between apps: **Any app**
+   - Third-party keyboards: **Allow**
+   - Encrypt org data: **Require**
+   - Sync policy managed app data with native contacts app: **Allow**
+   - Print org data: **Allow**
+   - Restrict web content transfer with other apps: **Microsoft Edge**
+   - Org data notifications: **Allow**
+   - Genmoji: **Allow**
+   - Screen capture: **Allow**
+   - Writing tools: **Allow**
+8. Select **Next**.
+9. On the **Access requirements** tab, configure:
+   - PIN for access: **Require**
+   - PIN type: **Numeric**
+   - Simple PIN: **Allow**
+   - Select minimum PIN length: **4**
+   - Touch ID instead of PIN for access: **Allow**
+   - Override biometrics with PIN after timeout: **Require (1440 minutes)**
+   - Face ID instead of PIN for access: **Allow**
+   - Biometric instead of PIN for access: **Allow**
+   - PIN reset after number of days: **No**
+   - App PIN when device PIN is set: **Require**
+   - Work or school account credentials for access: **Not required**
+   - Recheck access requirements after: **30 minutes**
+10. On the **Conditional launch** tab, configure:
+       - Max PIN attempts: **5 / Reset PIN**
+       - Offline grace period: **10080 minutes / Block access**
+       - Offline grace period: **90 days / Wipe data**
+       - Jailbroken/rooted devices: **Block access**
+11. Select **Next**.
+12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.
+13. Select **Next**, review the configuration, and then choose **Create**.
+
+### Level 2 – Enterprise enhanced data protection for iOS/iPadOS
+
+Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge iOS APP Level 2 Enhanced
+   - **Description:** Enhanced data protection for Microsoft Edge with stricter mobile controls and advanced data loss prevention
+4. Select **Next**.
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.
+   - Choose **+ Select public apps**.
+   - In **Select apps to target**, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Back up org data to: **Block**
+   - Send org data to other apps: **Policy managed apps**
+   - Select apps to exempt: **skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services**
+   - Receive data from other apps: **All apps**
+   - Save copies of org data: **Block**
+   - Allow users to save copies to selected services: **OneDrive for Business, SharePoint Online, Photo Library**
+   - Transfer telecommunication data to: **Any dialer app**
+   - Transfer messaging data to: **Any messaging app**
+   - Restrict cut, copy, and paste between apps: **Policy managed apps with paste in**
+   - Third-party keyboards: **Allow**
+   - Encrypt org data: **Require**
+   - Sync policy managed app data with native contacts app: **Allow**
+   - Print org data: **Allow**
+   - Restrict web content transfer with other apps: **Microsoft Edge**
+   - Org data notifications: **Block org data**
+   - Genmoji: **Block**
+   - Screen capture: **Block**
+   - Writing tools: **Block**
+8. Select **Next**.
+9. On the **Access requirements** tab, configure:
+   - PIN for access: **Require**
+   - PIN type: **Numeric**
+   - Simple PIN: **Allow**
+   - Select minimum PIN length: **4**
+   - Touch ID instead of PIN for access: **Allow**
+   - Override biometrics with PIN after timeout: **Require (1440 minutes)**
+   - Face ID instead of PIN for access: **Allow**
+   - Biometric instead of PIN for access: **Allow**
+   - PIN reset after number of days: **No**
+   - App PIN when device PIN is set: **Require**
+   - Work or school account credentials for access: **Not required**
+   - Recheck access requirements after: **30 minutes**
+10. On the **Conditional launch** tab, configure:
+       - Disabled account: **Block access**
+       - Min OS version: **14.8 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Min app version: **Latest / Warn**
+       - Max PIN attempts: **5 / Reset PIN**
+       - Offline grace period: **1440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Jailbroken/rooted devices: **Block access**
+11. Select **Next**.
+12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.
+13. Select **Next**, review the configuration, and then choose **Create**.
+
+### Level 3 – Enterprise high data protection for iOS/iPadOS
+
+Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **iOS/iPadOS**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge iOS APP Level 3 High
+   - **Description:** High data protection for Microsoft Edge with maximum security controls, strict isolation, and comprehensive threat protection
+4. Select **Next**.
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.
+   - Choose **+ Select public apps**.
+   - In **Select apps to target**, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Back up org data to: **Block**
+   - Send org data to other apps: **Policy managed apps**
+   - Select apps to exempt: **skype;app-settings;calshow;itms;itmss;itms-apps;itms-appss;itms-services**
+   - Receive data from other apps: **Policy managed apps**
+   - Save copies of org data: **Block**
+   - Allow users to save copies to selected services: **OneDrive for Business, SharePoint, Camera, Photo Library**
+   - Allow users to open data from selected services: **OneDrive for Business, SharePoint, Camera, Photo Library**
+   - Transfer telecommunication data to: **A specific dialer app**
+   - Dialer App URL Scheme: **replace_with_dialer_app_url_scheme**
+   - Transfer messaging data to: **A specific messaging app**
+   - Messaging App URL Scheme: **replace_with_messaging_app_url_scheme**
+   - Restrict cut, copy, and paste between apps: **Policy managed apps with paste in**
+   - Open data into org documents: **Block**
+   - Third-party keyboards: **Block**
+   - Encrypt org data: **Require**
+   - Sync policy managed app data with native contacts app: **Block**
+   - Print org data: **Block**
+   - Restrict web content transfer with other apps: **Microsoft Edge**
+   - Org data notifications: **Block org data**
+   - Genmoji: **Block**
+   - Screen capture: **Block**
+   - Writing tools: **Block**
+8. Select **Next**.
+9. On the **Access requirements** tab, configure:
+   - PIN for access: **Require**
+   - PIN type: **Numeric**
+   - Simple PIN: **Block**
+   - Select minimum PIN length: **6**
+   - Touch ID instead of PIN for access: **Allow**
+   - Face ID instead of PIN for access: **Allow**
+   - Biometric instead of PIN for access: **Allow**
+   - Override biometrics with PIN after timeout: **Require**
+   - Override Touch ID with PIN after timeout: **Require**
+   - PIN reset after number of days: **Yes (90 days)**
+   - App PIN when device PIN is set: **Require**
+   - Work or school account credentials for access: **Require**
+   - Recheck access requirements after: **30 minutes**
+10. On the **Conditional launch** tab, configure:
+       - Jailbroken/rooted devices: **Wipe data**
+       - Max allowed threat level: **Secured / Block access**
+       - Max OS version: **26.0.1 / Block access**
+       - Offline grace period: **1440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Disabled account: **Block access**
+       - Min OS version: **14.8 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Min app version: **Latest / Warn**
+       - Min SDK version: **21.1.0 / Block access**
+       - Max PIN attempts: **5 / Reset PIN**
+11. Select **Next**.
+12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.
+13. Select **Next**, review the configuration, and then choose **Create**.
+
+#### Framework Compliance Summary for iOS/iPadOS  
+
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+|-------------------------------------|-------------|-------------|-------------|
+| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
+| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
+| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in |
+| Encryption of org data | Required | Required | Required |
+| Print org data | Allow | Allow | Block |
+| Screen capture | Allow | Block | Block |
+| Third-party keyboards | Allow | Block | Block |
+| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
+| Offline grace period | 10,080 minutes / Block access<br>90 days / Wipe data | 1,440 minutes / Block access<br>30 days / Wipe data | 1,440 minutes / Block access<br>30 days / Wipe data |
+| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
+| PIN length requirement | 4-digit | 4-digit | 6-digit |
+| Simple PIN allowed | Yes | Yes | No |
+| Override biometrics with PIN | Required | Required | Required |
+| Work/school credentials required | Not required | Not required | Required |
+| Device threat level enforcement | Low | Medium | Secured |
+| Jailbroken/rooted devices | Block access | Block access | Wipe data |
+| Minimum OS version | N/A | 14.8 | 14.8 |
+| Maximum OS version | N/A | N/A | 26.0.1 |
+| App version requirement | N/A | Latest / Warn | Latest / Warn |
+
+::: zone-end
+
+::: zone pivot="android"
+
+## App protection policies for Android
+
+App protection policies for Android provide data protection for Microsoft Edge for Business on mobile devices without requiring device enrollment.
+
+> [!IMPORTANT]
+> Framework alignment:  
+> These configurations align with Microsoft's Data Protection Framework and are mapped to NIST, DISA STIG, and CISA controls as defined in the [Secure Your Corporate Data in Intune with Microsoft Edge for Business](mamedge-overview.md) guide.
+>
+> This guide references industry frameworks (NIST, DISA STIG, CISA) as inputs. Applying these settings doesn't by itself make your organization compliant with any specific standard; perform your own compliance assessments against official requirements.
+
+Prerequisites:
+
+- Android 8.0 or later  
+- Microsoft Edge for Android installed  
+- Company Portal or Mobile Application Management (MAM) managed  
+- User Microsoft Entra ID account
+
+### Level 1 – Enterprise basic data protection for Android
+
+Level 1 configuration provides the minimum data protection for an Android device while minimizing effects to users.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge Android APP Level 1 Basic
+   - **Description:** Basic data protection for Microsoft Edge Android with fundamental mobile controls and essential data boundaries
+4. Select **Next**.
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.
+   - Choose **+ Select public apps**.
+   - In **Select apps to target**, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Back up org data to Android backup services: **Allow**
+   - Send org data to other apps: **All apps**
+   - Receive data from other apps: **All apps**
+   - Restrict cut, copy, and paste between other apps: **Any app**
+   - Screen capture and Google Assistant: **Allow**
+   - Approved keyboards: **Not required**
+   - Encrypt org data: **Require**
+   - Encrypt org data on enrolled devices: **Require**
+   - Sync policy managed app data with native apps or add-ins: **Allow**
+   - Printing org data: **Allow**
+   - Restrict web content transfer with other apps: **Microsoft Edge**
+   - Org data notifications: **Allow**
+8. Select **Next**.
+9. On the **Access requirements** tab, configure:
+   - PIN required: **Require**
+   - PIN type: **Numeric**
+   - Simple PIN: **Allow**
+   - Select minimum PIN length: **4**
+   - Biometric instead of PIN for access: **Allow**
+   - Override biometrics with PIN after timeout: **Require**
+   - Timeout (minutes of inactivity): **1440**
+   - Class 3 Biometrics (Android 9.0+): **Not required**
+   - Override biometrics with PIN after biometric updates: **Not required**
+   - PIN reset after number of days: **No**
+   - Select number of previous PIN values to maintain: **0**
+   - App PIN when device PIN is set: **Require**
+   - Work or school account credentials for access: **Not required**
+   - Recheck access requirements after: **30 minutes**
+10. On the **Conditional launch** tab, configure:
+       - Max PIN attempts: **5 / Reset PIN**
+       - Offline grace period: **10080 minutes / Block access**
+       - Offline grace period: **90 days / Wipe data**
+       - Jailbroken/rooted devices: **Block access**
+       - Play integrity verdict: **Basic integrity / Block access**
+       - Require threat scan on apps: **Block access**
+       - Require device lock: **Low Complexity / Block access**
+11. Select **Next**.
+12. On the **Assignments** tab, assign the policy to **SEB-Level1-Users**.
+13. Select **Next**, review the configuration, and then choose **Create**.
+
+### Level 2 – Enterprise enhanced data protection for Android
+
+Level 2 configuration includes all Level 1 settings plus more controls for enhanced data protection.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge Android APP Level 2 Enhanced
+   - **Description:** Enhanced data protection for Microsoft Edge Android with stricter mobile controls and advanced data loss prevention
+4. Select **Next**.
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.
+   - Choose **+ Select public apps**.
+   - In **Select apps to target**, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Back up org data to Android backup services: **Block**
+   - Send org data to other apps: **Policy managed apps**
+   - Receive data from other apps: **All apps**
+   - Save copies of org data: **Block**
+   - Allow users to save copies to selected services: **OneDrive for Business, SharePoint, Photo Library**
+   - Transfer telecommunication data to: **Any dialer app**
+   - Transfer messaging data to: **Any messaging app**
+   - Restrict cut, copy, and paste between apps: **Policy managed apps with paste in**
+   - Screen capture and Google Assistant: **Block**
+   - Approved keyboards: **Not required**
+   - Encrypt org data: **Require**
+   - Encrypt org data on enrolled devices: **Require**
+   - Sync policy managed app data with native apps or add-ins: **Allow**
+   - Printing org data: **Allow**
+   - Restrict web content transfer with other apps: **Microsoft Edge**
+   - Org data notifications: **Block org data**
+8. Select **Next**.
+9. On the **Access requirements** tab, configure:
+   - PIN required: **Require**
+   - PIN type: **Numeric**
+   - Simple PIN: **Allow**
+   - Select minimum PIN length: **4**
+   - Biometric instead of PIN for access: **Allow**
+   - Override biometrics with PIN after timeout: **Require**
+   - Timeout (minutes of inactivity): **1440**
+   - Class 3 Biometrics (Android 9.0+): **Not required**
+   - Override biometrics with PIN after biometric updates: **Not required**
+   - PIN reset after number of days: **No**
+   - Select number of previous PIN values to maintain: **0**
+   - App PIN when device PIN is set: **Require**
+   - Work or school account credentials for access: **Not required**
+   - Recheck access requirements after: **30 minutes**
+10. On the **Conditional launch** tab, configure:
+       - Disabled account: **Block access**
+       - Offline grace period: **1,440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Min OS version: **9.0 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Play integrity verdict: **Basic integrity and device integrity / Block access**
+       - Jailbroken/rooted devices: **Block access**
+       - Require threat scan on apps: **Block access**
+       - Require device lock: **Medium / Block access**
+       - Samsung Knox device attestation: **Block access on supported devices**
+       - Max PIN attempts: **5 / Reset PIN**
+11. Select **Next**.
+12. On the **Assignments** tab, assign the policy to **SEB-Level2-Users**.
+13. Select **Next**, review the configuration, and then choose **Create**.
+
+### Level 3 – Enterprise high data protection for Android
+
+Level 3 configuration provides the highest level of data protection and is recommended for users accessing highly sensitive data.
+
+1. Go to the [Microsoft Intune admin center](https://intune.microsoft.com).
+2. Select **Apps** > **Managed apps** > **Protection** > **Create** > **Android**.
+3. On the **Basics** tab, enter:
+   - **Name:** Edge Android APP Level 3 High
+   - **Description:** High data protection for Microsoft Edge Android with comprehensive security controls, strict isolation, and advanced threat protection
+4. Select **Next**.
+5. On the **Apps** tab, in **Target policy to**, select **Selected apps**.
+   - Choose **+ Select public apps**.
+   - In **Select apps to target**, search for and select **Microsoft Edge**.
+   - Choose **Microsoft Edge**, then **Select**.
+6. Select **Next**.
+7. On the **Data protection** tab, configure:
+   - Back up org data to Android backup services: **Block**
+   - Send org data to other apps: **Policy managed apps**
+   - Receive data from other apps: **Policy managed apps**
+   - Save copies of org data: **Block**
+   - Allow users to save copies to selected services: **OneDrive for Business, SharePoint, Camera, Photo Library**
+   - Allow users to open data from selected services: **OneDrive for Business, SharePoint, Camera, Photo Library**
+   - Transfer telecommunication data to: **Any policy-managed dialer app**
+   - Transfer messaging data to: **Any policy-managed messaging app**
+   - Restrict cut, copy, and paste between apps: **Policy managed apps with paste in**
+   - Open data into org documents: **Block**
+   - Third-party keyboards: **Block**
+   - Encrypt org data: **Require**
+   - Encrypt org data on enrolled devices: **Require**
+   - Sync policy managed app data with native apps or add-ins: **Block**
+   - Printing org data: **Block**
+   - Restrict web content transfer with other apps: **Microsoft Edge**
+   - Org data notifications: **Block org data**
+8. Select **Next**.
+9. On the **Access requirements** tab, configure:
+   - PIN required: **Require**
+   - PIN type: **Numeric**
+   - Simple PIN: **Block**
+   - Select minimum PIN length: **6**
+   - Biometric instead of PIN for access: **Allow**
+   - Override biometrics with PIN after timeout: **Require**
+   - Timeout (minutes of inactivity): **30**
+   - Class 3 Biometrics (Android 9.0+): **Require**
+   - Override biometrics with PIN after biometric updates: **Require**
+   - PIN reset after number of days: **Yes (90 days)**
+   - Select number of previous PIN values to maintain: **0**
+   - App PIN when device PIN is set: **Require**
+   - Work or school account credentials for access: **Require**
+   - Recheck access requirements after: **30 minutes**
+10. On the **Conditional launch** tab, configure:
+       - Require device lock: **High Complexity / Block access**
+       - Jailbroken/rooted devices: **Wipe data**
+       - Max allowed threat level: **Secured / Block access**
+       - Max OS version: **16.0 / Block access**
+       - Samsung Knox device attestation: **Wipe data**
+       - Offline grace period: **1440 minutes / Block access**
+       - Offline grace period: **30 days / Wipe data**
+       - Disabled account: **Block access**
+       - Min OS version: **9.0 / Block access**
+       - Min patch version: **2024-10-01 / Block access**
+       - Play integrity verdict: **Basic integrity and device integrity / Block access**
+       - Play integrity verdict evaluation type: **Check strong integrity**
+       - Require threat scan on apps: **Block access**
+       - Max Company Portal version age (days): **180 / Block access**
+       - Max PIN attempts: **5 / Reset PIN**
+11. Select **Next**.
+12. On the **Assignments** tab, assign the policy to **SEB-Level3-Users**.
+13. Select **Next**, review the configuration, and then choose **Create**.
+
+#### Framework Compliance Summary for Android  
+
+| Microsoft Framework Requirement | Level 1 | Level 2 | Level 3 |
+|---------------------------------|---------|---------|---------|
+| Data transfer restrictions | All apps | Policy-managed apps | Policy-managed apps |
+| Receive data from other apps | All apps | Policy-managed apps | Policy-managed apps |
+| Copy/paste controls | Any app | Policy-managed apps with paste in | Policy-managed apps with paste in |
+| Encryption of org data | Required | Required | Required |
+| Print org data | Allow | Allow | Block |
+| Screen capture | Allow | Block | Block |
+| Approved keyboards | Not required | Not required | Required (Microsoft SwiftKey, Samsung Keyboard, Gboard) |
+| Web content transfer | Microsoft Edge | Microsoft Edge | Microsoft Edge |
+| Offline grace period | 10,080 minutes / Block access <br>90 days / Wipe data | 1,440 minutes / Block access <br>30 days / Wipe data | 1,440 minutes / Block access <br>30 days / Wipe data |
+| Max PIN attempts | 5 / Reset PIN | 5 / Reset PIN | 5 / Reset PIN |
+| PIN length requirement | 4-digit | 4-digit | 6-digit |
+| Simple PIN allowed | Yes | Yes | No |
+| Biometric instead of PIN | Allow | Allow | Block |
+| Override biometrics with PIN after timeout | Required | Required | Required |
+| Work or school credentials required | Not required | Not required | Required |
+| Device lock complexity | Low | Low | High |
+| Device threat level / Play Integrity verdict | Basic integrity | Basic + Device integrity | Secured |
+| Jailbroken / rooted devices | Block access | Block access | Wipe data |
+| Minimum OS version | 8.0 | 9.0 | 9.0 |
+| Maximum OS version | N/A | N/A | 16.0 |
+| Minimum patch version | N/A | 2024-10-01 | 2024-10-01 |
+| Samsung Knox device attestation | N/A | Block access on supported devices | Wipe data (on supported devices) |
+| Class 3 biometrics (Android 9.0 +) | Not required | Not required | Required |
+
+::: zone-end
+
+#### Validation
+
+[!INCLUDE [App protection policy validation](includes/app-protection-policy-validation.md)]
+
+## Related resources
+
+- [Data protection framework using app protection policies](../apps/app-protection-framework.md)
+- [Require an app protection policy on Windows devices](/entra/identity/conditional-access/policy-all-users-windows-app-protection)
 
 ## Next step
 
-[![Step 3 to integrate Mobile Threat Defense with Microsoft Edge for Business.](./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-03.png)](mamedge-3-scc.md)
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-03.png" alt-text="Step 3 to integrate Mobile Threat Defense with Microsoft Edge for Business.":::](mamedge-3-scc.md)
 
 Continue with [Step 3](mamedge-3-scc.md) to integrate Mobile Threat Defense with Microsoft Edge for Business.
