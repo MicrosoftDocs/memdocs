@@ -96,12 +96,12 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 :::column span="3":::
 > To **enable and configure** the agent, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot owner](/copilot/security/authentication#security-copilot-roles)
 >
 >   To learn about the Security Copilot roles, see [Security Copilot roles and permissions](/copilot/security/authentication).
 >
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles:
 > - [Read only operator](../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
@@ -109,10 +109,10 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 >
 > To **use the agent**, **generate suggestions**, and **get policy recommendations**, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
 >
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles:
 > - [Read only operator](../intune-service/fundamentals/role-based-access-control-reference.md#read-only-operator) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Read
 >
@@ -120,10 +120,10 @@ To learn how to use the agent, see [Use the Policy Configuration Agent](policy-c
 >
 > To **use the agent**, **generate suggestions**, **get policy recommendations**, and **create policies**, use an account with the following roles:
 >
-> :::image type="icon" source="../media/icons/admin-center/copilot.svg" border="false"::: Security Copilot roles:
+> :::image type="icon" source="../media/icons/16/copilot.svg" border="false"::: Security Copilot roles:
 > - [Copilot Contributor](/copilot/security/authentication#security-copilot-roles)
 >
-> :::image type="icon" source="../media/icons/admin-center/intune.svg" border="false"::: Intune roles:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: Intune roles:
 > - [Policy and Profile manager](../intune-service/fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) or a [Custom role](../intune-service/fundamentals/role-based-access-control.md#custom-roles) with the following permissions:
 >   - Device configurations/Create
 >   - Device configurations/Update
@@ -196,6 +196,8 @@ When it completes, the agent is ready to use. To learn more about using the agen
 :::image type="content" source="./media/policy-configuration-agent-change-identity.png" alt-text="Screenshot of the Policy Configuration Agent change identity screen in Microsoft Intune." lightbox="./media/policy-configuration-agent-change-identity.png":::
 
 [!INCLUDE [remove](includes/remove.md)]
+
+[!INCLUDE [feedback](includes/feedback.md)]
 
 ## Related content
 

@@ -59,7 +59,7 @@ Applies to:
 
 ### Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune antivirus policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune antivirus policy, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ### Prerequisites for tamper protection
 
@@ -224,7 +224,7 @@ In addition to reports detailed in the following sections, additional reports fo
 
 ### Summary
 
-On the **Summary** page, you can [create new policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy) and view a list of the policies that were previously created. The list includes high-level details about the profile that policy includes (Policy Type), and if the policy is assigned.
+On the **Summary** page, you can [create new policies](../protect/endpoint-security-policy.md#create-endpoint-security-policies) and view a list of the policies that were previously created. The list includes high-level details about the profile that policy includes (Policy Type), and if the policy is assigned.
 
 ![Summary page of antivirus policy](./media/endpoint-security-antivirus-policy/antivirus-summary.png)
 
@@ -247,7 +247,7 @@ The information for this report is based on details available from the following
 
 ## Next steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-endpoint-security-policies)
 
 View details for the Windows settings in the deprecated profiles for the deprecated *Windows 10 and later* platform:
 

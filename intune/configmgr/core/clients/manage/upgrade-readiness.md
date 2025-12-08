@@ -7,7 +7,7 @@ ms.author: laurawi
 manager: apoorvseth
 ms.date: 01/31/2020
 ms.topic: integration
-ms.subservice: client-mgt
+ms.subservice: core-infra
 ms.service: configuration-manager
 ms.localizationpriority: medium
 ms.collection: tier3

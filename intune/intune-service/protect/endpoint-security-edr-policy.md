@@ -46,7 +46,7 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 > [!TIP]
 > In addition to EDR policy, you can use [device configuration](../protect/microsoft-defender-integrate.md) policy to onboard devices to Microsoft Defender for Endpoint. However, device configuration policies don't support tenant attached devices.
 >
-> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage conflicts](../protect/endpoint-security-policy.md#manage-conflicts) in the *Manage security policies* article.
+> When using multiple policies or policy types like *device configuration* policy and *endpoint detection and response* policy to manage the same device settings (such as onboarding to Defender for Endpoint), you can create policy conflicts for devices. To learn more about conflicts, see [Manage policy conflicts](../protect/endpoint-security-policy.md#manage-policy-conflicts) in the *Manage security policies* article.
 
 ## Prerequisites for EDR policies
 
@@ -67,7 +67,7 @@ Based on the platform a policy targets, EDR policies for devices you manage with
 
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune endpoint detection and response policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune endpoint detection and response policy, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ## About the endpoint detection and response node
 
@@ -398,5 +398,5 @@ To view details for individual devices, go to **Endpoint security** > **Endpoint
 
 ## Next steps
 
-- [Configure Endpoint security policies](endpoint-security-policy.md#create-an-endpoint-security-policy).
+- [Configure Endpoint security policies](endpoint-security-policy.md#create-endpoint-security-policies).
 - Learn more about [endpoint detection and response](/windows/security/threat-protection/microsoft-defender-atp/overview-endpoint-detection-response) in the Microsoft Defender for Endpoint documentation.

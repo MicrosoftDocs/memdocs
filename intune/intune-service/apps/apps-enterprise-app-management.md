@@ -114,7 +114,7 @@ Most apps undergo automated validation checks.
 
 - Target: 80–90% of app updates are processed and available in the Intune portal within 24 hours of ingestion.
 
-#### Manual Validation Apps (Bypass Required)
+#### Manual Validation Apps
 
 If an app fails automated checks, it moves to manual validation and requires additional testing. Updates requiring manual testing and approval are completed within 7 days.
 

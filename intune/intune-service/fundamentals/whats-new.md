@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/19/2025
+ms.date: 12/05/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,7 +57,25 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of November 17, 2025
+## Week of December 1, 2025
+
+### App management
+
+#### Secure enterprise browser managed by Intune (public preview) <!-- 31609121 -->
+
+[!INCLUDE [public-preview-notification](../includes/public-preview-notification.md)]
+
+Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
+
+For more information, see [Secure Your Corporate Data in Intune with Microsoft Edge for Business](../apps/mamedge-overview.md).
+
+## Week of November 17, 2025  
+
+### Device enrollment  
+
+#### Configure Windows Backup for Organizations <!--29202026 -->  
+
+*Windows Backup for Organizations* is generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings are configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device is available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md). 
 
 ### Device management
 
@@ -222,7 +240,7 @@ Applies to:
 - Android Enterprise corporate owned fully managed (COBO)
 - Android Enterprise corporate owned dedicated devices (COSU)
 
-### Device enrollment
+### Device enrollment  
 
 #### New opt-in upgrade allows existing customers to move from managed Google Play accounts to Microsoft Entra ID accounts<!-- 30675087 --> 
 

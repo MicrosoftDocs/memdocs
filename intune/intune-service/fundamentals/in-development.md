@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/13/2025
+ms.date: 12/02/2025
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -84,13 +84,9 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 <!-- *********************************************** -->
 
-## Device enrollment
+ ## Device enrollment 
 
-### Configure Windows Backup for Organizations<!--29202026 -->
-      
-A new feature called *Windows Backup for Organizations* will soon be generally available in Microsoft Intune. With this feature, you can back up your organization's Windows settings and restore them on a Microsoft Entra joined device. Backup settings will be configurable in the Microsoft Intune admin center settings catalog, while a tenant-wide setting that lets you restore a device will be available in the admin center under **Enrollment**. For more information about this feature, see [Windows Backup for Organizations in Microsoft Intune](../enrollment/windows-backup-restore.md).  
-
-### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
+ ### New Setup Assistant screens to be generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29611787 -->
 
 As an IT admin, you'll be able to hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens during Setup Assistant.
 
@@ -113,19 +109,7 @@ The screens you can skip during macOS enrollment include:
 
 <!-- *********************************************** -->
 
-## Device management
-
-### Windows Autopilot device preparation in automatic mode to be available for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps (public preview)<!-- 35518695 -->
-
-You will be able to use Windows Autopilot device preparation policies in automatic flow to provision Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps. The policy can be included in the Cloud PC provisioning policy and will apply immediately after the Cloud PCs are created to deliver apps and scripts to the device before a user logs in. You'll be able to monitor deployment status in the [Windows Autopilot device preparation deployment report](/autopilot/device-preparation/reporting-monitoring).
-
-For a tutorial, see [Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 in Intune](/autopilot/device-preparation/tutorial/automatic/automatic-workflow).
-
-For more information, see the following articles:
-
-- [Create provisioning policies for Windows 365 | Microsoft Learn](/windows-365/enterprise/create-provisioning-policy)
-- [Windows 365 Cloud Apps | Microsoft Learn](/windows-365/enterprise/cloud-apps)
-- [Use Autopilot device preparation with Cloud PCs | Microsoft Learn](/windows-365/enterprise/autopilot-device-preparation)
+<!-- ## Device management -->
 
 <!-- *********************************************** -->
 
