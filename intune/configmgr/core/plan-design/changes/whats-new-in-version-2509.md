@@ -66,9 +66,9 @@ Learn about support changes before they're implemented in [removed and deprecate
 For more information, see [Removed and deprecated features for Configuration Manager.](deprecated/removed-and-deprecated-cmfeatures.md). -->
 
 ## Next steps
-At this time, version 2509 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2509.md#early-update-ring).
+<!-- At this time, version 2509 is released for the early update ring. To install this update, you need to opt in. For more information, see [Early update ring](../../servers/manage/checklist-for-installing-update-2509.md#early-update-ring). -->
 
-<!-- As of December 11, 2025, version 2509 is globally available for all customers to install. -->
+As of December 8, 2025, version 2509 is globally available for all customers to install.
 
 When you're ready to install this version, see [Installing updates for Configuration Manager](../../servers/manage/updates.md) and [Checklist for installing update 2509](../../servers/manage/checklist-for-installing-update-2509.md).
 
