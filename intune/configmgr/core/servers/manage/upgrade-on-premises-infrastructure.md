@@ -2,7 +2,7 @@
 title: Upgrade on-premises infrastructure
 titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 12/19/2024
+ms.date: 12/08/2025
 ms.subservice: core-infra
 ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
@@ -84,13 +84,11 @@ Use the steps in this section for any of the following upgrade scenarios:
 - Make sure the following Configuration Manager services are running:
 
   - SMS_EXECUTIVE
-
   - SMS_SITE_COMPONENT_MANAGER
 
 - Make sure the **Windows Process Activation** and **WWW/W3svc** services are enabled and set for automatic start. The upgrade process disables these services, so make sure they're running for the following site system roles:
 
   - Site server
-
   - Management point
 
 - Make sure each server that hosts a site system role continues to meet all [prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
@@ -98,6 +96,20 @@ Use the steps in this section for any of the following upgrade scenarios:
 - After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.
 
 - If you're upgrading the primary site server, then [run a site reset](modify-your-infrastructure.md#bkmk_reset).
+
+- If the WSUS server is remote from the Site Server, the **Windows Server Update Services Tools** must be removed and reinstalled.
+
+  - Remove the Windows Server Update Services Tools
+
+    ```cmd
+    Uninstall-WindowsFeature -Name  UpdateServices-RSAT
+    ```
+
+  - Install the Windows Server Update Services Tools
+
+    ```cmd
+    Install-WindowsFeature -Name  UpdateServices-RSAT
+    ```
 
 #### Known issue for remote Configuration Manager consoles
 

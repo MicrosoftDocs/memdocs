@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 12/05/2025
+ms.date: 12/08/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,38 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of December 8, 2025  
+
+### Device enrollment  
+
+#### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
+
+You can hide or show 12 new Setup Assistant screens during automated device enrollment (ADE). The default is to show these screens in Setup Assistant. 
+
+The screens you can skip during iOS/iPadOS enrollment, and the applicable versions, include:
+
+ - **App Store** (iOS/iPadOS 14.3+)
+ - **Camera button** (iOS/iPadOS 18+)
+ - **Web content filtering** (iOS/iPadOS 18.2+)
+ - **Safety and handling** (iOS/iPadOS 18.4+)
+ - **Multitasking** (iOS/iPadOS 26+)
+ - **OS Showcase** (iOS/iPadOS 26+)
+
+The screens you can skip during macOS enrollment include:
+
+   - **App Store** (macOS 11.1+)
+   - **Get Started** (macOS 15+)
+   - **Software update** (macOS 15.4+)
+   - **Additional privacy settings** (macOS 26+)
+   - **OS Showcase** (macOS 26.1+)
+   - **Update completed** (macOS 26.1+)
+   - **Get Started** (macOS 15+)
+
+For more information about available Setup Assistant skipkeys, see:
+
+- [Set up automated device enrollment for iOS/iPadOS]( ../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)  
+- [Set up automated device enrollment for macOS]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
 
 ## Week of December 1, 2025
 

@@ -63,13 +63,13 @@ The first time you use a Configuration Manager console after finishing the insta
 
 ### Early update ring
 
-<!-- SCCMDocs#1397 -->
+<!-- SCCMDocs#1397
 
 At this time, version 2503 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2503:
 
 [Version 2503 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+<!-- Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
 > The version 2503 update is only applicable to sites running version 2403 or later.
@@ -90,7 +90,7 @@ The version 2503 update should now be available in the console.
 
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2503. It's not a permanent change.
-
+-->
 As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
 ## Pre-update checklist
