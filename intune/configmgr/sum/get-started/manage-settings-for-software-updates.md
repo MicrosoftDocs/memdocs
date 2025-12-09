@@ -35,7 +35,7 @@ For more information about the client settings, see [About client settings](../.
 
 ## <a name="BKMK_GroupPolicy"></a>Software Updates Best Practices
 
-### Conflicting donfigurations
+### Conflicting configurations
 
 The Configuration Manager client sets local group policies to control the software update workflow and scan for update compliance. When domain group policy objects (GPO) are used for Windows Updates, it overrides the equivalent setting used by our client. The client expects specific registry values to remain in place without any other platform changing the settings. Domain GPO's can cause the component to go into an error state, even if the setting is perceived to be the same.
 
