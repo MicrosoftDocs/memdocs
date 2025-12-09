@@ -33,7 +33,7 @@ When you deploy operating systems with Configuration Manager, the Windows Assess
 
 The following table lists the versions of the Windows ADK that you can use with different versions of Configuration Manager.
 
-| Windows ADK version            | ConfigMgr 2403 | ConfigMgr 2409 | ConfigMgr 2503 |
+| Windows ADK version            | ConfigMgr 2409 | ConfigMgr 2503 | ConfigMgr 2509 |
 |--------------------------------|----------------|----------------|----------------|
 | **ADK 10.1.28000.1 (Updated Nov 2025)** <br>(10.1.28000.1)| ❌ | ❌ | ❌ |
 | **ADK 10.1.26100.2454 (Updated Dec 2024)** <br>(10.1.26100.X)| ✅ | ✅ | ✅ |
