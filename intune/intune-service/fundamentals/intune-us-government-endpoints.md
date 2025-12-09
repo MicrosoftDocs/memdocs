@@ -3,7 +3,7 @@ title: Network endpoints for US government deployments
 description: See the list of US government endpoint URLs that Intune needs and requires. Allow the ports, IP addresses, and endpoint URLs in your proxy server configuration.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/11/2025
+ms.date: 12/09/2025
 ms.topic: reference
 ms.reviewer: srink, davidra
 ms.collection:
