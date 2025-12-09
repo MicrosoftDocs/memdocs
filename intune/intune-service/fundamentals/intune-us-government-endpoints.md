@@ -55,6 +55,10 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need
 | --- | --- |--- |
 | FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
 
+For diagnostic data used to monitor the health of the client side components:
+
+- `*.events.data.microsoft.com`
+
 ## Microsoft Defender for Endpoint
 
 For more information about configuring Defender for Endpoint connectivity, see [Connectivity Requirements](../protect/mde-security-integration.md#connectivity-requirements).
