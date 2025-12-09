@@ -117,7 +117,8 @@ Invoke-CimMethod -Namespace 'root\CCM' -ClassName SMS_Client -MethodName Trigger
 %windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm\invagt path inventoryActionStatus where InventoryActionID="{00000000-0000-0000-0000-000000000113}" DELETE /NOINTERACTIVE
 %windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000113}" /NOINTERACTIVE
 ```
-[!IMPORTANT] Windows Deprecated Features - [Update - January 2024]: Currently, WMIC is a Feature on Demand (FoD) that's preinstalled by default in Windows 11 22H2 and 23H2. In the future releases of Windows 11, 24H2+, the WMIC FoD will be disabled by default.
+>[!IMPORTANT]
+>Windows Deprecated Features - [Update - January 2024]: Currently, WMIC is a Feature on Demand (FoD) that's preinstalled by default in Windows 11 22H2 and 23H2. In the future releases of Windows 11, 24H2+, the WMIC FoD will be disabled by default.
 ## See also
 
  [SMS_Client Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md)
