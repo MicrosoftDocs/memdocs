@@ -42,7 +42,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 | **ADK for Windows 11, version 22H2**<br>(10.1.22621.1)|  ✅ | ✅ | ✅ |
 | **ADK for Windows 11, version 21H1**<br>(10.1.22000) |  ✅ | ✅ | ✅ |
 | **ADK for Windows Server 2022**<br>(10.1.20348)  |  ✅ | ✅ | ✅ |
-| **ADK for Windows 10, version 2004**<br>(10.1.19041)|  ✅ | ✅ | ✅ |
+| **ADK for Windows 10, version 2004**<br>(10.1.19041) **EOS**|  ❌  | ❌  | ❌  |
 
 |Key|
 |--|
