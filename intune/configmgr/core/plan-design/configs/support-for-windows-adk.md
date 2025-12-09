@@ -35,6 +35,7 @@ The following table lists the versions of the Windows ADK that you can use with 
 
 | Windows ADK version            | ConfigMgr 2403 | ConfigMgr 2409 | ConfigMgr 2503 |
 |--------------------------------|----------------|----------------|----------------|
+| **ADK 10.1.28000.1 (Updated Nov 2025)** <br>(10.1.28000.1)| X | X | X |
 | **ADK 10.1.26100.2454 (Updated Dec 2024)** <br>(10.1.26100.X)| ✅ | ✅ | ✅ |
 | **ADK 10.1.26100.1 (May 2024)** <br>(10.1.26100.1)| ✅ | ✅ | ✅ |
 | **ADK 10.1.25398.1 (updated September 2023)** <br>(10.1.25398.1)|❌ | ❌ | ❌ |
