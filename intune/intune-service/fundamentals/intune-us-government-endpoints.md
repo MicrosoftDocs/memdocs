@@ -3,7 +3,7 @@ title: Network endpoints for US government deployments
 description: See the list of US government endpoint URLs that Intune needs and requires. Allow the ports, IP addresses, and endpoint URLs in your proxy server configuration.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/11/2025
+ms.date: 12/09/2025
 ms.topic: reference
 ms.reviewer: srink, davidra
 ms.collection:
@@ -54,6 +54,10 @@ If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
 | FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
+
+For diagnostic data used to monitor the health of the client side components:
+
+- `*.events.data.microsoft.com`
 
 ## Microsoft Defender for Endpoint
 
