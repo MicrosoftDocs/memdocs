@@ -153,7 +153,7 @@ For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to
 **About the Endpoint detection and response node:**
 
 In the Intune admin center, the Endpoint detection and response node include:
-- **Summary** -  VLists all EDR policies and the connector status.
+- **Summary** -  Lists all EDR policies and the connector status.
 - **EDR Onboarding Status** - Shows onboarding progress and allows deployment of the preconfigured Windows policy.
 
 Every device that reports security telemetry to Microsoft Defender for Endpoint must be onboarded using a configuration package (called an onboarding "blob"). This package contains:
@@ -167,7 +167,19 @@ Whether you use automatic or manual deployment, Intune applies the same onboardi
 - **Automatic** (recommended) - Intune retrieves the onboarding package from Defender for Endpoint through the configured service connection.
 - **Manual** - Use an onboarding package downloaded from the Defender portal when automatic retrieval isn't available.
 
-Configure and deploy policy using one of the following paths:
+> [!NOTE]
+> The onboarding package is stable and only requires updating in rare scenarios, like when wporking with Microsoft to move your tenant to a new [datacenter geography](/microsoft-365/enterprise/m365-dr-overview#migrationsmoves).
+
+**Choosing your deployment method:**
+
+| Scenario | Recommended Method | Configuration Package Type |
+|----------|-------------------|---------------------------|
+| No service connection configured between Intune and Defender for Endpoint | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
+| Quick deployment to all Windows devices with service connection active | [Preconfigured Windows EDR policy](#deploy-the-preconfigured-windows-edr-policy) | Auto from connector |
+| Targeted deployment with custom settings and active service connection | [Custom automatic EDR policy](#create-custom-edr-policy-all-platforms) | Auto from connector |
+| Multiple Defender tenants or air-gapped environments | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
+| Strict change control requiring manual package management | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
+
 
 ### Create an automatic EDR policy
 
@@ -193,7 +205,7 @@ Best for environments with standard Intune + Defender integration and a single D
    - **Profile**: Endpoint detection and response
 3. Configure policy basics with a descriptive name.
 4. On **Configuration settings**:
-   - **Microsoft Defender for Endpoint client configuration package type**: Select **Auto from connector**.
+   - **Microsoft Defender for Endpoint client configuration package type**: Select **Auto from connector** (this option only appears when the service-to-service connection is configured).
    - **Sample Sharing**: Choose based on your data sensitivity requirements:
      - **All samples**: Maximum threat detection capability
      - **Send safe samples**: Balanced approach (recommended)
@@ -319,11 +331,44 @@ Review the following to ensure continued onboarding success:
 
 For more information, see [Troubleshoot Microsoft Defender for Endpoint onboarding issues](/microsoft-365/security/defender-endpoint/troubleshoot-onboarding).
 
+## Offboarding devices
+
+Intune EDR policy supports the option to use an offboarding blob to offboard devices. Offboarding devices from Defender for Endpoint is typically an uncommon but planned process. Some situations that require offboarding include but aren't limited to moving a device out of a test lab, part of device lifecycle management, or required during tenant consolidation.
+
+**To create an offboarding policy:**
+
+1. Download a new offboarding package from the [Microsoft Defender portal](https://security.microsoft.com/) by going to **Settings** > **Endpoints** > **Device management** > **Offboarding**.
+2. Select the operating system and choose **Mobile Device Management / Microsoft Intune**.
+3. Select **Download package**.
+4. Either create a new EDR policy with **Package type** set to **Offboard** and paste the offboarding blob contents, or update an existing offboarding policy by replacing the blob content.
+
+When deploying an offboarding EDR policy in Intune:
+
+- For security reasons, the offboarding blob, or package from Defender will expire seven days after being downloaded. Expired offboarding packages sent to devices are rejected.
+- When deployed to a device, the offboarding blob disables the Defender for Endpoint sensor but doesn't remove the Defender for Endpoint client. Offboarding disables but doesn't remove Defender for Endpoint from a device.
+- Devices stop sending telemetry to the Defender for Endpoint portal.
+- Devices show as "inactive" in Defender after seven days.
+- The Intune EDR policy compliance status should show successful deployment.
+- Historical data remains in Defender until retention policies remove it.
+
+When you offboard a device from Defender for Endpoint:
+
+- **Telemetry stops**: No new detections, vulnerability, or security data are sent to the Microsoft Defender portal.
+- **Device status changes**: Seven days after offboarding, the device's status changes to "inactive".
+- **Data retention**: Past data (alerts, vulnerabilities, device timeline) remains in the Defender portal until the configured retention period expires.
+- **Device visibility**: The device profile (without data) remains visible in the device inventory for up to 180 days.
+- **Exposure score**: Devices inactive for 30+ days don't factor into your organization's exposure score.
+
+For more information, see the following subjects in the Microsoft Defender for Endpoint documentation:
+
+- [Offboard devices using Mobile Device Management tools](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
+- [Offboard devices](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/offboard-machines)
+
 ## Related content
 
 After onboarding devices with EDR policies, consider deploying additional endpoint security controls:
 
 - [Attack surface reduction rules](/intune/intune-service/protect/endpoint-security-asr-policy)
-- [Antimalware policies](/intune/intune-service/protect/endpoint-security-antivirus-policy)
+- [Anti-malware policies](/intune/intune-service/protect/endpoint-security-antivirus-policy)
 - [Firewall policies](/intune/intune-service/protect/endpoint-security-firewall-policy)
 - [Device compliance policies](/intune/intune-service/protect/device-compliance-get-started)
