@@ -386,6 +386,18 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | `TemporarySessionTimeoutSeconds` | long | The timeout interval for the temporary session. A value of 0 indicates that there's no timeout. |iPadOS|
 | `UserSessionTimeoutSeconds` | long | The timeout interval for the user session. A value of 0 indicates that there's no timeout. |iPadOS|
 
+## `SimInfo`
+
+> **Description**: Information on the Sim cards found on the device\
+> **Supported platforms**: Windows\
+> **Supported for**: Device query for multiple devices, Inventory.
+
+| Property | Type | Description | Supported platforms |
+| --- | --- | --- |--- |
+| `WindowsESimId` | String | The ID of an eSIM found on the device |Windows|
+| `Eid` | String | The electronic identification number of the device |Windows|
+| `isActive` | Boolean | Whether the eSIM is active or not |Windows|
+
 ## `SystemEnclosure`
 
 > **Description**: Displays information pertaining to the chassis and its security status.\
@@ -427,17 +439,7 @@ PhysicalMemoryFreeBytes and VirtualMemoryFreeBytes properties are only supported
 | `HardwareManufacturer` | string (max 256 characters) | Hardware vendor |Windows single device query |
 | `HardwareModel` | string (max 256 characters) | Hardware model |Windows single device query |
 
-## `SimInfo`
 
-> **Description**: Information on the Sim cards found on the device\
-> **Supported platforms**: Windows\
-> **Supported for**: Device query for multiple devices, Inventory.
-
-| Property | Type | Description | Supported platforms |
-| --- | --- | --- |--- |
-| `WindowsESimId` | String | The ID of an eSIM found on the device |Windows|
-| `Eid` | String | The electronic identification number of the device |Windows|
-| `isActive` | Boolean | Whether the eSIM is active or not |Windows|
 
 ## `Time`
 

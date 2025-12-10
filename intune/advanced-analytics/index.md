@@ -104,7 +104,7 @@ This section details **additional prerequisites** specific to Advanced Analytics
 >   - U.S. Department of Defense (DoD)
 >   > [!NOTE]
 >   >
->   > Support for Advanced Analytics in GCC High and DoD environments doesn't include the [*Device query*](device-query.md) functionality or [*Resource performance*](resource-performance.md) report.
+>   > Support for Advanced Analytics in DoD environments doesn't include the [*Device query*](device-query.md) functionality or the [*Resource performance*](resource-performance.md) report.
 >   For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
 
 :::column-end:::
@@ -182,7 +182,7 @@ After completing the setup tasks, follow these steps to embed Advanced Analytics
 1. **Update support processes** to:
    - Use the [device timeline report](device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
    - Use [device query](device-query.md) to retrieve live device data for troubleshooting.
-1. **Schedule regular reviews** of:
+   - Use [device query for multiple devices](device-query-multiple-devices.md) to gain insights across your entire device fleet.
    - [Anomalies reports](anomalies.md) after OS or app updates to catch issues early.
    - [Battery health reports](battery-health.md) to identify devices needing attention for better performance and user experience.
    - [Resource performance reports](resource-performance.md) to track performance by device, model, and manufacturer—helpful for future purchasing decisions.

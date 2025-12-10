@@ -247,7 +247,7 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
 
-- `Apple Auto Setup Admi`n Accounts
+- `Apple Auto Setup Admin Accounts`
 - `Apple Device States`
 - `Apple Update Settings`
 - `Battery`
@@ -265,6 +265,7 @@ Device query supports the following entities. To learn more about what propertie
 - `Shared iPad`
 - `Sim Info`
 - `System Enclosure`
+- `SystemInfo`
 - `Time`
 - `Tpm`
 - `Video Controller`
