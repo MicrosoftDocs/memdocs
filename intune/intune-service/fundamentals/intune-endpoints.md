@@ -348,9 +348,9 @@ This diagnostics tool includes checks for:
 
 Before running the script, ensure you have:
 
-· PowerShell 5.1 or later
+- PowerShell 5.1 or later
 
-· Connectivity to [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)
+- Connectivity to [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)
 
 ### Usage
 
