@@ -52,7 +52,7 @@ EPM can be configured using two types of policies, which both can be targeted at
 - **Elevation settings policy** - controls the EPM client, reporting level and default elevation capability.
 - **Elevation rules policy** - defines elevation behavior for binaries or scripts based on criteria.
 
- To perform the elevation on the device, the EPM service uses a virtual account for most elevation types, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group. An exception to use of the virtual account is the the *Elevate as current user* elevation type, which is explained in more detail in the following section. 
+ To perform the elevation on the device, the EPM service uses a virtual account for most elevation types, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group. An exception to use of the virtual account is the *Elevate as current user* elevation type, which is explained in more detail in the following section. 
 
 The EPM client is installed automatically when an *Elevation settings policy* is assigned to devices or users. The EPM client uses the 'Microsoft EPM Agent Service' service and stores its binaries in the `"C:\Program Files\Microsoft EPM Agent"` directory.
 

@@ -112,7 +112,7 @@ For detailed permission guidance, see [Role-based access control for endpoint se
     - **Management methods**:
       - Intune-enrolled
       - [Defender for Endpoint security settings management](../protect/mde-security-integration.md)
-  - *Microsoft Defender Global Exclusions (AV+EDR)* - See [Linus global exclusions profile](#create-a-linux-global-exclusions-policy) later in this article.
+  - *Microsoft Defender Global Exclusions (AV+EDR)* - See [Linux global exclusions profile](#create-a-linux-global-exclusions-policy) later in this article.
   
 **Windows Server 2012 R2+:**
 
@@ -168,7 +168,7 @@ Whether you use automatic or manual deployment, Intune applies the same onboardi
 - **Manual** - Use an onboarding package downloaded from the Defender portal when automatic retrieval isn't available.
 
 > [!NOTE]
-> The onboarding package is stable and only requires updating in rare scenarios, like when wporking with Microsoft to move your tenant to a new [datacenter geography](/microsoft-365/enterprise/m365-dr-overview#migrationsmoves).
+> The onboarding package is stable and only requires updating in rare scenarios, like when working with Microsoft to move your tenant to a new [datacenter geography](/microsoft-365/enterprise/m365-dr-overview#migrationsmoves).
 
 **Choosing your deployment method:**
 
@@ -294,7 +294,7 @@ For detailed tenant attach configuration, see [Configure tenant attach to suppor
 You can review deployment and onboarding results in the Intune admin center:
 
 1. **Policy compliance**: Go to **Endpoint security** > **Endpoint detection and response** and select your policy to view deployment status.
-2. **EDR Onboarding Status tab**: Check for tenant-wide device onboarding summary and drill down to individual device status.
+2. **EDR Onboarding Status**: Check for tenant-wide device onboarding summary and drill down to individual device status.
 3. **Device details**: Select devices for detailed onboarding status and sensor health.
 
 **Microsoft Defender portal validation:**
