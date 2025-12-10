@@ -183,6 +183,7 @@ After completing the setup tasks, follow these steps to embed Advanced Analytics
    - Use the [device timeline report](device-timeline.md) to identify patterns, such as restarts or updates linked to anomalies.
    - Use [device query](device-query.md) to retrieve live device data for troubleshooting.
    - Use [device query for multiple devices](device-query-multiple-devices.md) to gain insights across your entire device fleet.
+1. **Schedule regular reviews** of:
    - [Anomalies reports](anomalies.md) after OS or app updates to catch issues early.
    - [Battery health reports](battery-health.md) to identify devices needing attention for better performance and user experience.
    - [Resource performance reports](resource-performance.md) to track performance by device, model, and manufacturer—helpful for future purchasing decisions.
