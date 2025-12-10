@@ -345,7 +345,7 @@ Intune EDR policy supports the option to use an offboarding blob to offboard dev
 When deploying an offboarding EDR policy in Intune:
 
 - For security reasons, the offboarding blob, or package from Defender will expire seven days after being downloaded. Expired offboarding packages sent to devices are rejected.
-- When deployed to a device, the offboarding blob disables the Defender for Endpoint sensor but doesn't remove the Defender for Endpoint client. Offboarding disables but doesn't remove Defender for Endpoint from a device.
+- When deployed to a device, the offboarding blob disables the Defender for Endpoint sensor but doesn't remove the Defender for Endpoint client.
 - Devices stop sending telemetry to the Defender for Endpoint portal.
 - Devices show as "inactive" in Defender after seven days.
 - The Intune EDR policy compliance status should show successful deployment.
