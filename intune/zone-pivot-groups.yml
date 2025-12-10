@@ -108,3 +108,22 @@ groups:
   - id: cm
     title: Configuration Manager
 
+- id: app-protection-platforms
+  title: Device platform
+  prompt: "Choose the platform for app protection policies:"
+  pivots:
+  - id: windows
+    title: Windows
+  - id: ios-ipados
+    title: iOS/iPadOS
+  - id: android
+    title: Android
+
+- id: platforms-windows-macos
+  title: Device platform
+  prompt: Choose your platform
+  pivots:
+  - id: windows
+    title: Windows
+  - id: macos
+    title: macOS

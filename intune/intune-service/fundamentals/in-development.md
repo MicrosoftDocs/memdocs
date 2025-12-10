@@ -84,7 +84,7 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 <!-- *********************************************** -->
 
-<!-- ## Device enrollment -->
+ <!--## Device enrollment -->  
 
 <!-- *********************************************** -->
 

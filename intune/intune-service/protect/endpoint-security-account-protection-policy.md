@@ -39,7 +39,7 @@ Find the endpoint security policies for Account protection under *Manage* in the
 
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ## Account protection profiles
 
@@ -127,4 +127,4 @@ Because the policy can contain multiple rules, consider the following points:
 
 ## Next steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-endpoint-security-policies)

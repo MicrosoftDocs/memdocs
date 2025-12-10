@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 12/02/2025
+ms.date: 12/08/2025
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,9 +57,23 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of December 1, 2025  
+## Week of December 8, 2025  
 
 ### Device enrollment  
+
+#### ACME protocol support for iOS/iPadOS and macOS enrollment <!-- 25140355 -->
+
+As we prepare to support managed device attestation in Intune, we are starting a phased rollout of an infrastructure change for new enrollments that includes support for the *Automated Certificate Management Environment (ACME) protocol*. Now when new Apple devices enroll, the management profile from Intune receives an ACME certificate instead of a SCEP certificate. ACME provides better protection than SCEP against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management. 
+
+Existing OS and hardware eligible devices do not get the ACME certificate unless they re-enroll. There is no change to the end user's enrollment experience, and no changes to the Microsoft Intune admin center. This change only impacts enrollment certificates and has no impact on any device configuration policies. 
+
+ACME is supported for Apple Device Enrollment (BYOD), Apple Configurator enrollment, and automated device enrollment (ADE) methods. Eligible OS versions include:  
+
+* iOS 16.0 or later  
+
+* iPadOS 16.1 or later  
+
+* macOS 13.1 or later    
 
 #### New Setup Assistant screens now generally available for iOS/iPadOS and macOS automated device enrollment profiles <!-- 29832295, 29832295 -->
 
@@ -87,7 +101,19 @@ The screens you can skip during macOS enrollment include:
 For more information about available Setup Assistant skipkeys, see:
 
 - [Set up automated device enrollment for iOS/iPadOS]( ../enrollment/device-enrollment-program-enroll-ios.md#setup-assistant-screen-reference)  
-- [Set up automated device enrollment for macOS]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)  
+- [Set up automated device enrollment for macOS]( ../enrollment/device-enrollment-program-enroll-macos.md#setup-assistant-screen-reference)
+
+## Week of December 1, 2025
+
+### App management
+
+#### Secure enterprise browser managed by Intune (public preview) <!-- 31609121 -->
+
+[!INCLUDE [public-preview-notification](../includes/public-preview-notification.md)]
+
+Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
+
+For more information, see [Secure Your Corporate Data in Intune with Microsoft Edge for Business](../apps/mamedge-overview.md).
 
 ## Week of November 17, 2025  
 
