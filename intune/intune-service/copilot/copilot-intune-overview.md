@@ -243,7 +243,7 @@ The following examples are some queries you can try:
 - Show me drivers on this device grouped by provider name.
 
 > [!NOTE]
-> Copilot can only generate queries for requests related to the properties that device query supports. You can't use this feature to ask Copilot for details about the device beyond what is available in device query. For a full list of supported properties in device query, go to [Device query](../../analytics/device-query.md).
+> Copilot can only generate queries for requests related to the properties that device query supports. You can't use this feature to ask Copilot for details about the device beyond what is available in device query. For a full list of supported properties in device query, go to [Device query](../../advanced-analytics/device-query.md).
 
 #### Query many devices
 

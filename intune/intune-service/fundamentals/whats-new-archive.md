@@ -768,7 +768,7 @@ You can now choose what you want to collect from your devices, using the catalog
 For more information, see:
 
 - [Properties catalog](../configuration/properties-catalog.md)
-- [Data collection platform](../../analytics/data-platform-schema.md)
+- [Data collection platform](../../advanced-analytics/data-platform-schema.md)
 
 ## Week of November 18, 2024 (Service release 2411)
 
@@ -1179,7 +1179,7 @@ The resource performance scores and insights for physical devices are aimed to h
 
 For more information, see:
 
-- [Resource Performance Report](../../analytics/resource-performance-report.md)
+- [Resource performance report](../../advanced-analytics/resource-performance.md)
 - [Microsoft Intune Suite](../fundamentals/intune-add-ons.md)
 
 ### App management
@@ -1459,7 +1459,7 @@ We are excited to announce that the following capabilities from the Microsoft In
 Add-on capabilities:
 
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md) - With this release, GCC High and DoD support for Advanced Endpoint Analytics doesn't include the [*Device query*](../../analytics/device-query.md) functionality.
+- [Advanced Analytics](../../advanced-analytics/index.md) - With this release, GCC High and DoD support for Advanced Endpoint Analytics doesn't include the [*Device query*](../../advanced-analytics/device-query.md) functionality.
 
 Plan 2 capabilities:
 
@@ -3009,9 +3009,9 @@ To use Device query and battery health report in your tenant, or any of the exis
 For more information, see:
 
 - [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md)
-- [Microsoft Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
-- [Battery health](../../analytics/battery-health.md)
-- [Device query](../../analytics/device-query.md)
+- [Microsoft Intune Advanced Analytics](../../advanced-analytics/index.md)
+- [Battery health](../../advanced-analytics/battery-health.md)
+- [Device query](../../advanced-analytics/device-query.md)
 
 ## Week of January 22, 2024 (Service release 2401)
 
@@ -4357,12 +4357,12 @@ Anomaly detection device cohorts in Intune Endpoint analytics is now generally a
 
 Device cohorts are identified in devices associated with a high or medium severity anomaly. Devices are correlated into groups based on one or more factors they have in common like an app version, driver update, OS version, device model. A correlation group will contain a detailed view with key information about the common factors between all affected devices in that group. You can also view a breakdown of devices currently affected by the anomaly and 'at risk' devices. "At risk" devices haven't yet shown symptoms of the anomaly.
 
-For more information, see [Anomaly detection in Endpoint analytics](../../analytics/anomaly-detection.md#anomalies-tab).
+For more information, see [Anomalies report](../../advanced-analytics/anomalies.md).
 
 #### Improved user experience for device timeline in Endpoint Analytics<!-- 24604944 -->
 The user interface (UI) for device timeline in Endpoint analytics is improved and includes more advanced capabilities (support for sorting, searching, filtering, and exports). When viewing a specific device timeline in Endpoint analytics, you can search by event name or details. You can also filter the events and choose the source and level of events that appear on the device timeline and select a time range of interest.
 
-For more information, see [Enhanced device timeline](../../analytics/enhanced-device-timeline.md).
+For more information, see [Device timeline](../../advanced-analytics/device-timeline.md).
 
 #### Updates for compliance policies and reports<!--15425771  -->
 We've made several improvements to the Intune compliance policies and reports. With these changes, the reports more closely align to the experience in use for device configuration profiles and reports. We've updated our [compliance report documentation](../protect/compliance-policy-monitor.md) to reflect the available compliance report improvements.
@@ -4811,7 +4811,7 @@ Applies to:
 #### Endpoint analytics is available to tenants in Government cloud<!-- 8527244  -->
 With this release, Endpoint analytics is available to tenants in Government cloud.
 
-Learn more about [endpoint analytics](../../analytics/index.md).
+Learn more about [endpoint analytics](../../endpoint-analytics/index.md).
 
 #### Introducing in-session connection mode switch in Remote Help<!-- 10602971  -->
 In Remote Help, you can now take advantage of the in-session connection mode switch feature. This feature can help effortlessly transition between full control and view-only modes, granting flexibility and convenience.
