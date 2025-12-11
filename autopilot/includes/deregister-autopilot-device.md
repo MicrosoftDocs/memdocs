@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: autopilot
-ms.service: windows-client
 ms.topic: include
-ms.date: 06/28/2024
-ms.localizationpriority: medium
+ms.date: 06/13/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -16,13 +10,13 @@ autopilot-motherboard-replacement.md
 
 Headings are driven by article context. -->
 
-Whenever a device permanently leaves an organization, the device should always be deregistered from Autopilot. For example, the device leaves the organization for repair or because the device is at the end of its life cycle.
+Whenever a device permanently leaves an organization, the device should always be deregistered from Windows Autopilot. For example, the device leaves the organization for repair or because the device is at the end of its life cycle.
 
-Below we describe the steps an admin would go through to deregister a device from Intune and Autopilot.
+Below we describe the steps an admin would go through to deregister a device from Intune and Windows Autopilot.
 
 ### Delete from Intune
 
-Before a device is deregistered from Autopilot, it first has to be deleted from Intune. To delete an Autopilot device from Intune:
+Before a device is deregistered from Windows Autopilot, it first has to be deleted from Intune. To delete an Windows Autopilot device from Intune:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -38,9 +32,9 @@ Before a device is deregistered from Autopilot, it first has to be deleted from 
 
 1. A warning dialog box appears to confirm the deletion of the device from Intune. Select **Yes** to confirm deleting the device.
 
-### Deregister from Autopilot using Intune
+### Deregister from Windows Autopilot using Intune
 
-Once the device is deleted from Intune, it can then be deregistered from Autopilot. To deregister a device from Autopilot:
+Once the device is deleted from Intune, it can then be deregistered from Windows Autopilot. To deregister a device from Windows Autopilot:
 
 1. Make sure the device is deleted from Intune as described in the [Delete from Intune](#delete-from-intune) section.
 
@@ -65,7 +59,7 @@ Once the device is deleted from Intune, it can then be deregistered from Autopil
 
 1. With the device still selected, select **Delete** in the toolbar at the top of the page.
 
-1. A warning dialog box appears to confirm the deletion of the device from Autopilot. Select **Yes** to confirm deleting the device.
+1. A warning dialog box appears to confirm the deletion of the device from Windows Autopilot. Select **Yes** to confirm deleting the device.
 
 1. The deregistration process might take some time. The process can be accelerated by selecting the **Sync** button in the toolbar at the top of the page.
 
@@ -73,23 +67,23 @@ Once the device is deleted from Intune, it can then be deregistered from Autopil
 
 > [!IMPORTANT]
 >
-> - For Microsoft Entra join devices, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Microsoft Entra ID. Manually deleting the device from Microsoft Entra ID might cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Microsoft Entra ID after these steps are followed.
+> - For Microsoft Entra join devices, no additional steps are necessary to remove the device from Intune and Windows Autopilot. Unneeded steps include manually deleting the device from Microsoft Entra ID. Manually deleting the device from Microsoft Entra ID might cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Microsoft Entra ID after these steps are followed.
 >
-> - For Microsoft Entra hybrid join devices, delete the computer object from the on-premises Active Directory Domain Services (AD DS) environment. Deleting the computer object from the on-premises AD DS ensures that the computer object isn't resynced back to Microsoft Entra ID. After the computer object is deleted from the on-premises AD DS environment, no additional steps are necessary to remove the device from Intune and Autopilot. Unneeded steps include manually deleting the device from Microsoft Entra ID. Manually deleting the device from Microsoft Entra ID might cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Microsoft Entra ID after these steps are followed.
+> - For Microsoft Entra hybrid join devices, delete the computer object from the on-premises Active Directory Domain Services (AD DS) environment. Deleting the computer object from the on-premises AD DS ensures that the computer object isn't resynced back to Microsoft Entra ID. After the computer object is deleted from the on-premises AD DS environment, no additional steps are necessary to remove the device from Intune and Windows Autopilot. Unneeded steps include manually deleting the device from Microsoft Entra ID. Manually deleting the device from Microsoft Entra ID might cause unexpected problems, issues, and behavior. If needed, the device will be automatically removed from Microsoft Entra ID after these steps are followed.
 
-The above steps deregister the device from Autopilot, unenroll the device from Intune, and disjoin the device from Microsoft Entra ID. It might appear that only deregistering the device from Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Autopilot database, Intune, or Microsoft Entra ID, it's best to complete all the steps. If a device gets into an unrecoverable state, contact the appropriate [Microsoft support alias](../autopilot-support.md) for assistance.
+The above steps deregister the device from Windows Autopilot, unenroll the device from Intune, and disjoin the device from Microsoft Entra ID. It might appear that only deregistering the device from Windows Autopilot is needed. However, there are barriers in Intune that require all the above steps to avoid problems with lost or unrecoverable devices. To prevent the possibility of orphaned devices in the Windows Autopilot database, Intune, or Microsoft Entra ID, it's best to complete all the steps. If a device gets into an unrecoverable state, contact the appropriate [Microsoft support alias](../autopilot-support.md) for assistance.
 
-### Deregister from Autopilot using Microsoft 365 admin center
+### Deregister from Windows Autopilot using Microsoft 365 admin center
 
-The device can be deregistered from Autopilot in [Microsoft 365 admin center](https://admin.microsoft.com/) if using the Microsoft 365 admin center instead of Intune. To deregister an Autopilot device from the Microsoft 365 admin center:
+The device can be deregistered from Windows Autopilot in [Microsoft 365 admin center](https://admin.microsoft.com/) if using the Microsoft 365 admin center instead of Intune. To deregister a Windows Autopilot device from the Microsoft 365 admin center:
 
 1. Sign into to the [Microsoft 365 admin center](https://admin.microsoft.com/).
 1. Navigate to **Devices** > **Autopilot**.
 1. Select the device to be deregistered and then select **Delete device**.
 
-### Deregister from Autopilot in Microsoft Partner Center (MPC)
+### Deregister from Windows Autopilot in Microsoft Partner Center (MPC)
 
-To deregister an Autopilot device from the Microsoft Partner Center (MPC), a Cloud Solution Partner (CSP) would:
+To deregister a Windows Autopilot device from the Microsoft Partner Center (MPC), a Cloud Solution Partner (CSP) would:
 
 1. Sign into the Microsoft Partner Center (MPC).
 1. Navigate to **Customer** > **Devices**.
@@ -97,7 +91,7 @@ To deregister an Autopilot device from the Microsoft Partner Center (MPC), a Clo
 
    ![Screenshot of delete device](../images/devices.png)
 
-Partners deregistering a device from Autopilot in Microsoft Partner Center (MPC) only deregisters the device from Autopilot. It doesn't perform any of the following actions:
+Partners deregistering a device from Windows Autopilot in Microsoft Partner Center (MPC) only deregisters the device from Windows Autopilot. It doesn't perform any of the following actions:
 
 - Unenroll the device from the mobile device management (MDM) solution, such as Intune.
 - Disjoin the device from Microsoft Entra ID.

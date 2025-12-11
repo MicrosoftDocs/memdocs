@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot device preparation known issues
 description: Information regarding known issues that might occur during a Windows Autopilot device preparation deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 08/07/2024
+ms.date: 11/10/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -40,12 +33,74 @@ This article describes known issues that can often be resolved with:
 
 ## Known issues
 
-## Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
+### Device preparation deployments on Windows 365 devices time out after 60 minutes 
+
+Date added: *November 10, 2025*
+
+There is a known issue for Windows 365 devices where the value set for **Minutes allowed before device preparation fails** in the Cloud PC provisioning policy does not get configured correctly during Autopilot device preparation provisioning. As a result, deployments time out if they require more than 60 minutes to install all configurations selected in the Device preparation policy. To avoid unexpected failures, we recommend that admins limit the number of blocking apps configured for the Device preparation policy in automatic mode until the issue is resolved. This issue will be fixed in the future.  
+
+### Exporting logs during the out-of-box experience (OOBE) doesn't show result
+
+Date added: *January 6, 2025*
+
+When a failure occurs during the provisioning process, an **Export logs** option is displayed to the user. When selected, it saves the file to the first USB drive on the device without displaying the browse dialog. The browse dialog isn't displayed for security reasons. Currently, users don't see failure or success messages to indicate the logs were saved. This issue will be fixed in the future.
+
+### Apps and scripts tabs don't display properly when editing the Windows Autopilot device preparation profile
+
+Date added: *December 18, 2024*
+
+During the editing flow of the Windows Autopilot device preparation policy, there's a known issue when displaying the **Applications** and **Scripts** tabs where the tabs might display incorrect information. For example, under the **Scripts** tab, a list of applications might be shown instead of a list of scripts. The issue is impacting only the view in Microsoft Intune and not the configuration being applied to the device. The issue is being investigated.
+
+As a workaround, select the table header **Allowed Applications** or **Allowed Scripts** to reload the table's contents.
+
+### Win32, WinGet, and Enterprise App Catalog applications are skipped when Managed installer policy is enabled for the tenant
+
+Date added: *October 10, 2024*<br>
+Date updated: *June 20, 2025*
+
+When the [Managed installer policy](/mem/intune-service/protect/endpoint-security-app-control-policy#managed-installer) is **Active** for a tenant, Win32 apps, Microsoft Store, and Enterprise App Catalog apps aren't delivered during OOBE. The apps are instead installed after the device gets to the Desktop and the Managed installer policy is delivered. The [Windows Autopilot device preparation deployment status report](whats-new.md#windows-autopilot-device-preparation-deployment-status-report-available-in-the-monitor-tab-under-enrollment) reports the apps as **Skipped.**
+
+> [!NOTE]
+>
+> Managed installer policy is always enabled automatically for Education customers due to the requirements for [Windows 11 SE](/education/windows/tutorial-deploy-apps-winse/).
+
+For more information, see [Known issue: Windows Autopilot device preparation with Win32 apps and managed installer policy](https://techcommunity.microsoft.com/t5/intune-customer-success/known-issue-windows-autopilot-device-preparation-with-win32-apps/ba-p/4273286).
+
+### Security group membership update failures might lead to non-compliant devices
+
+Date added: *September 27, 2024*
+
+If security groups aren't properly configured in Microsoft Intune, devices might lose compliance and be left in an unsecured state. The following are potential reasons for security group membership failures:
+
+- **Retry failures**: Security group membership updates might not succeed during retry windows, leading to delays in group updates.
+
+- **Static to dynamic group changes**: After the Windows Autopilot device preparation profiles are configured, changing a security group from static to dynamic could cause failures.
+
+- **Owner removal**: If the **Intune Provisioning Client** service principal is removed as an owner of a configured security group, updates might fail.
+
+- **Group deletion**: If a configured security group is deleted and devices are deployed before Microsoft Intune detects the deletion, security configurations might fail to apply.
+
+To mitigate the issue, follow these steps:
+
+1. **Validate security group configuration before provisioning**:
+
+   - Ensure the correct security group is selected within the Microsoft Intune admin center or the Microsoft Entra admin center.
+   - The security group should be configured within the Windows Autopilot device preparation profile.
+   - The group shouldn't be assignable to other groups.
+   - The **Intune Provisioning Client** service principal should be an owner of the group.
+
+1. **Manually fix the provisioned devices**:
+
+   - If devices are already deployed or the security group isn't applicable, manually add the affected devices to the correct security group.
+
+Security group membership failures can be prevented by following these steps, ensuring devices remain compliant and secure.
+
+### Deployment fails for devices not in the Coordinated Universal Time (UTC) time zone
 
 Date added: *July 8, 2024* <br>
 Date updated: *July 23, 2024*
 
-Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
+Windows Autopilot device preparation deployments fail when devices aren't in the UTC time zone. The issue is being investigated.
 
 As a workaround, customers can manually set the time zone in OOBE via Windows PowerShell until the issue is resolved:
 
@@ -55,13 +110,13 @@ Set-TimeZone -Id "UTC"
 
 **This issue was resolved in July 2024.**
 
-## BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
+### BitLocker encryption defaults to 128-bit when 256-bit encryption is configured
 
 Date added: *July 8, 2024*
 
 In some Windows Autopilot device preparation deployments, BitLocker encryption may default to 128-bit even though the admin configured 256-bit encryption due to a known race condition. The issue is being investigated. Microsoft recommends that customers who need 256-bit BitLocker encryption wait for the issue to be resolved before trying to use Windows Autopilot device preparation.
 
-## Windows Autopilot device preparation policy shows 0 groups assigned
+### Windows Autopilot device preparation policy shows 0 groups assigned
 
 Date added: *June 18, 2024* <br>
 Date updated: *July 23, 2024*
@@ -71,11 +126,11 @@ There's a known issue that the Windows Autopilot device preparation policy shows
 - An assigned device security group was properly added to the policy.
 - The **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** is the owner of the device security group specified in the policy.
 
-The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create a device group](tutorial/user-driven/entra-join-device-group.md#create-a-device-group).
+The issue is being investigated. As a workaround, create a new assigned device security group with the **Intune Provisioning Client** service principal with AppID of **f1346770-5b25-470b-88bd-d5744ab7952c** as the owner, and then assign the new device group to the Windows Autopilot device preparation policy. For more information on creating the assigned device group, see [Create an assigned device group](tutorial/user-driven/entra-join-device-group.md#create-an-assigned-device-group).
 
 **This issue was resolved in July 2024.**
 
-## Unable to assign Windows Autopilot device preparation policy to user group
+### Unable to assign Windows Autopilot device preparation policy to user group
 
 Date added: *June 18, 2024* <br>
 Date updated: *July 23, 2024*
@@ -92,9 +147,7 @@ The issue is being investigated. As a workaround, add the following additional r
 For more information, see [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions).
 
 > [!NOTE]
->
 > The [Required RBAC permissions](requirements.md?tabs=rbac#required-rbac-permissions) article doesn't list the **Device configurations** - **Assign** permission. This permission requirement is only temporary until the issue is resolved. However, the article can be used as a guide on how to properly add this permission.
-
 **This issue was resolved in July 2024.**
 
 ### Device is stuck at 100% during the out-of-box experience (OOBE)

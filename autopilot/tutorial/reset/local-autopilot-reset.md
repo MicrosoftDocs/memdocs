@@ -1,18 +1,11 @@
 ---
 title: Local Windows Autopilot Reset in Intune
 description: Local Windows Autopilot Reset in Intune.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 04/01/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,7 +13,7 @@ appliesto:
 
 # Enable local Windows Autopilot Reset
 
-To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials). By default, local Windows Autopilot Reset is disabled. This default ensures that a local Autopilot Reset isn't accidentally triggered.
+To enable a local Windows Autopilot Reset, the **DisableAutomaticReDeploymentCredentials** policy must be configured. This policy is documented in the [Policy CSP](/windows/client-management/mdm/policy-csp-credentialproviders#disableautomaticredeploymentcredentials). By default, local Windows Autopilot Reset is disabled. This default ensures that a local Windows Autopilot Reset isn't accidentally triggered.
 
 ## Workflow
 
@@ -38,7 +31,7 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
 1. In the **Home** screen, select **Devices** in the left pane.
 
-1. In the **Devices | Overview** screen, under **Manage devices**, select **Configuration**.
+1. In the **Devices | Overview** screen, expand **Manage devices**, and then select **Configuration**.
 
 1. In the **Devices | Configuration** screen:
 
@@ -84,13 +77,13 @@ To create a configuration profile that sets the **DisableAutomaticReDeploymentCr
 
       > [!NOTE]
       >
-      > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** results in those devices being excluded and they don't receive the Autopilot profile.
+      > Make sure to add the correct device groups under **Included groups** and not under **Excluded groups**. Accidentally adding the desired device groups under **Excluded groups** results in those devices being excluded and they don't receive the Windows Autopilot profile.
 
-   1. In the **Select groups to include** window that opens, select the groups that the configuration profile should be assigned to and then select **Select**. The device groups selected here are normally the same device groups created when implementing the different [Autopilot scenarios](../autopilot-scenarios.md).
+   1. In the **Select groups to include** window that opens, select the groups that the configuration profile should be assigned to and then select **Select**. The device groups selected here are normally the same device groups created when implementing the different [Windows Autopilot scenarios](../autopilot-scenarios.md).
 
    1. Under **Included groups** > **Groups**, ensure the correct groups are selected, and then select **Next**.
 
-1. In the **Applicability Rules** page, select **Next**. For this tutorial, applicability rules are being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune/configuration/device-profile-create#applicability-rules).
+1. In the **Applicability Rules** page, select **Next**. For this tutorial, applicability rules are being skipped. However if applicability rules are needed, do so at this screen. For more information about scope tags, see [Applicability rules](/mem/intune-service/configuration/device-profile-create#applicability-rules).
 
 1. In the **Review + Create** page, review and verify that all of the settings are set as desired, and then select **Create** to create the domain join profile.
 
@@ -110,9 +103,9 @@ To trigger a local Windows Autopilot Reset on a device, follow these steps:
 
 1. From the Windows device lock screen, enter the keystroke <kbd>CTRL</kbd> + <kbd>WIN</kbd> + <kbd>R</kbd>.
 
-1. To trigger the local Autopilot Reset, sign into the device with an account that has local administrator credentials.
+1. To trigger the local Windows Autopilot Reset, sign into the device with an account that has local administrator credentials.
 
-Once the local Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
+Once the local Windows Autopilot Reset is triggered, the reset process starts. Once provisioning is complete, the device is again ready for use.
 
 ## Related content
 

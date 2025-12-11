@@ -1,18 +1,11 @@
 ---
 title: Windows Autopilot self-deploying mode - Step 6 of 6 - Deploy the device
 description: How to - Windows Autopilot self-deploying mode - Step 5 of 5 - Step 6 of 6 - Deploy the device.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/19/2024
+ms.date: 06/13/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -20,13 +13,13 @@ appliesto:
 
 # Self-deploying mode: Deploy the device
 
-Autopilot self-deploying mode steps:
+Windows Autopilot self-deploying mode steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](self-deploying-automatic-enrollment.md)
-- Step 2: [Register devices as Autopilot devices](self-deploying-register-device.md)
+- Step 2: [Register devices as Windows Autopilot devices](self-deploying-register-device.md)
 - Step 3: [Create a device group](self-deploying-device-group.md)
-- Step 4: [Configure and assign Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
-- Step 5: [Create and assign Autopilot profile](self-deploying-autopilot-profile.md)
+- Step 4: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](self-deploying-esp.md)
+- Step 5: [Create and assign Windows Autopilot profile](self-deploying-autopilot-profile.md)
 
 > [!div class="checklist"]
 >
@@ -36,7 +29,7 @@ For an overview of the Windows Autopilot self-deploying mode workflow, see [Wind
 
 ## Deploy the device
 
-Once all of the configurations for the Windows Autopilot self-deploying deployment are on the Intune and Microsoft Entra ID side, the next step is to start the Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Autopilot deployment to a device group that the device is a member of.
+Once all of the configurations for the Windows Autopilot self-deploying deployment are on the Intune and Microsoft Entra ID side, the next step is to start the Windows Autopilot deployment process on the device. If desired, deploy any additional applications and policies that should run during the Windows Autopilot deployment to a device group that the device is a member of.
 
 To start the Windows Autopilot deployment process on the device, acquire a device that is part of the device group created in the previous [Create a device group](self-deploying-device-group.md) step. Once the device is acquired, follow these steps:
 
@@ -56,7 +49,7 @@ To start the Windows Autopilot deployment process on the device, acquire a devic
 
 ## Deployment tips
 
-- Before the Autopilot deployment is started, Microsoft recommends having:<br>
+- Before the Windows Autopilot deployment is started, Microsoft recommends having:<br>
 <br>
   - At least one type of policy and at least one application assigned to the devices.
   - At least one type of policy and at least one application assigned to the users.
@@ -70,6 +63,6 @@ To start the Windows Autopilot deployment process on the device, acquire a devic
 
   However, for testing purposes, assigning at least one policy and at least one application to users is still recommended.
 
-- Depending on how the Autopilot profile was configured at the [Create and assign Autopilot profile](self-deploying-autopilot-profile.md) step, the **Keyboard** screen might appear at the start of the deployment.
+- Depending on how the Windows Autopilot profile was configured at the [Create and assign Windows Autopilot profile](self-deploying-autopilot-profile.md) step, the **Keyboard** screen might appear at the start of the deployment.
 
 [!INCLUDE [Tips ESP progress](../includes/tips-esp-progress.md)]

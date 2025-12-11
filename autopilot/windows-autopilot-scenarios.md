@@ -1,18 +1,11 @@
 ---
 title: Windows Autopilot scenarios and capabilities
 description: Follow along with several typical Windows Autopilot deployment scenarios, such as redeploying a device in a business-ready state.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
-ms.topic: conceptual
+ms.topic: article
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -41,7 +34,7 @@ The following Windows Autopilot scenarios are described in this guide:
 
 These scenarios are summarized in the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4Ci1b?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=7e47e04e-7f51-4eba-9a23-d65f3411b425]
 
 ## Windows Autopilot capabilities
 
@@ -71,11 +64,11 @@ To change this key value, use the Windows Configuration Designer (WCD) tool to c
 
 For more information, see [Cortana voice support](/windows-hardware/customize/desktop/cortana-voice-support).
 
-[!INCLUDE [cortana-app-deprecation](../memdocs/intune/includes/cortana-app-deprecation.md)]
+[!INCLUDE [cortana-app-deprecation](../intune/intune-service/includes/cortana-app-deprecation.md)]
 
 ### BitLocker encryption
 
-With Windows Autopilot, BitLocker encryption settings can be configured to apply before automatic encryption is started. For more information, see [Setting the BitLocker encryption algorithm for Autopilot devices](bitlocker.md).
+With Windows Autopilot, BitLocker encryption settings can be configured to apply before automatic encryption is started. For more information, see [Setting the BitLocker encryption algorithm for Windows Autopilot devices](bitlocker.md).
 
 ## Related content
 

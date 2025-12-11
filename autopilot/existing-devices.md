@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot for existing devices
 description: Modern desktop deployment with Windows Autopilot enables easily deploying the latest version of Windows to existing devices.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -23,22 +16,22 @@ appliesto:
 
 Modern desktop deployment with Windows Autopilot helps easily deploy the latest version of Windows to existing devices. Apps used by the organization can be automatically installed. If Windows user data is managed with OneDrive for work or school, data is synchronized, so users can resume working right away.
 
-**Windows Autopilot for existing devices** allows reimaging and provisioning a Windows device for Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows device joined to either Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).
+**Windows Autopilot for existing devices** allows reimaging and provisioning a Windows device for Windows Autopilot user-driven mode using a single, native Configuration Manager task sequence. The existing device can be on-premises domain-joined. The end result is a Windows device joined to either Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).
 
 > [!NOTE]
 >
-> The JSON file for Windows Autopilot for existing devices only supports user-driven Microsoft Entra ID and user-driven hybrid Microsoft Entra Autopilot profiles. Self-deploying and pre-provisioning Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation.
+> The JSON file for Windows Autopilot for existing devices only supports user-driven Microsoft Entra ID and user-driven hybrid Microsoft Entra Windows Autopilot profiles. Self-deploying and pre-provisioning Windows Autopilot profiles aren't supported with JSON files due to these scenarios requiring TPM attestation.
 >
 > However, during the Windows Autopilot for existing devices deployment, if the following conditions are true:
 >
 > - Device is already a Windows Autopilot device before the deployment begins
-> - Device has an Autopilot profile assigned to it
+> - Device has a Windows Autopilot profile assigned to it
 >
-> then the assigned Autopilot profile takes precedence over the JSON file installed by the task sequence. In this scenario, if the assigned Autopilot profile is either a self-deploying or pre-provisioning Autopilot profile, then the self-deploying and pre-provisioning scenarios are supported.
+> then the assigned Windows Autopilot profile takes precedence over the JSON file installed by the task sequence. In this scenario, if the assigned Windows Autopilot profile is either a self-deploying or pre-provisioning Windows Autopilot profile, then the self-deploying and pre-provisioning scenarios are supported.
 
 > [!TIP]
 >
-> Using Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Autopilot service.
+> Using Windows Autopilot for existing devices could be used as a method to convert existing hybrid Microsoft Entra devices into Microsoft Entra devices. Using the setting **Convert all targeted devices to Autopilot** in the Windows Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Windows Autopilot service.
 
 ## Requirements
 
@@ -48,21 +41,23 @@ Modern desktop deployment with Windows Autopilot helps easily deploy the latest 
 
 - Microsoft Entra ID P1 or P2.
 
-- A supported version of Windows imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
+- A [supported version of Windows](/windows/release-health/supported-versions-windows-client) imported into Configuration Manager as an [OS image](/mem/configmgr/osd/get-started/manage-operating-system-images).
 
-- The [Windows Management Framework](https://www.microsoft.com/download/details.aspx?id=54616) is required for Windows Server 2012/2012 R2 when running the PowerShell commands and scripts that [installs the required modules](#install-required-modules).
+- Enrollment restrictions aren't configured to block personal devices. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune-service/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
 
-- Enrollment restrictions aren't configured to block personal devices. For more information, see [What are enrollment restrictions?: Blocking personal Windows devices](/mem/intune/enrollment/enrollment-restrictions-set#blocking-personal-windows-devices). <!-- INADO-27343099 -->
+    > [!IMPORTANT]
+    >
+    > Any devices registered using a .json file during a hybrid join scenario are normally enrolled as a Corporate device.
 
 ## Configure the Enrollment Status Page (optional)
 
-If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilot can be set up using Intune.
+If desired, an [enrollment status page](enrollment-status.md) (ESP) for Windows Autopilot can be set up using Intune.
 
 1. Open the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+1. Go to **Devices** > **Device onboarding** | **Enrollment**. Make sure **Windows** is selected at the top and then under **Windows Autopilot**, select **Enrollment Status Page** and [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
 
-1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
+1. Go to **Microsoft Entra ID** > **Manage** | **Mobility (MDM and WIP)** > **Microsoft Intune** and [enable Windows automatic enrollment](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment). Configure the MDM user scope for some or all users.
 
 ## Install required modules
 
@@ -101,9 +96,9 @@ If desired, an [enrollment status page](enrollment-status.md) (ESP) for Autopilo
 
     The first time Intune Graph APIs are used on a device, it prompts to enable Microsoft Intune PowerShell read and write permissions. To enable these permissions, select **Consent on behalf or your organization** and then **Accept**.
 
-## Get Autopilot profiles for existing devices
+## Get Windows Autopilot profiles for existing devices
 
-Get all the Autopilot profiles available in the Intune tenant, and display them in JSON format:
+Get all the Windows Autopilot profiles available in the Intune tenant, and display them in JSON format:
 
 ```powershell
 Get-AutopilotProfile | ConvertTo-AutopilotConfigurationJSON
@@ -135,16 +130,16 @@ Each profile is encapsulated within braces (`{ }`). The previous example display
 | **Version** | Number | Optional | The version number that identifies the format of the JSON file. |
 | **CloudAssignedTenantId** | GUID | Required | The Microsoft Entra tenant ID that should be used. This property is the GUID for the tenant, and can be found in properties of the tenant. The value shouldn't include braces. |
 | **CloudAssignedTenantDomain** | String | Required | The Microsoft Entra tenant name that should be used. For example: `tenant.onmicrosoft.com`. |
-| **CloudAssignedOobeConfig** | Number | Required | This property is a bitmap that shows which Autopilot settings were configured.<br><br><ul><li>1: SkipCortanaOptIn</li><li>2: OobeUserNotLocalAdmin</li><li>4: SkipExpressSettings</li><li>8: SkipOemRegistration</li><li>16: SkipEula</li></ul> |
+| **CloudAssignedOobeConfig** | Number | Required | This property is a bitmap that shows which Windows Autopilot settings were configured.<br><br><ul><li>1: SkipCortanaOptIn</li><li>2: OobeUserNotLocalAdmin</li><li>4: SkipExpressSettings</li><li>8: SkipOemRegistration</li><li>16: SkipEula</li></ul> |
 | **CloudAssignedDomainJoinMethod** | Number | Required | This property specifies whether the device should join Microsoft Entra ID or Active Directory (Microsoft Entra hybrid join).<br><br><ul><li>0: Microsoft Entra joined</li><li>1: Microsoft Entra hybrid joined</li></ul> |
 | **CloudAssignedForcedEnrollment** | Number | Required | Specifies that the device should require Microsoft Entra join and MDM enrollment.<br><br><ul><li>0: Not required</li><li>1: required</li></ul>|
 | **ZtdCorrelationId** | GUID | Required | A unique GUID (without braces) provided to Intune as part of the registration process. This ID is included in the enrollment message as the `OfflineAutopilotEnrollmentCorrelator`. This attribute is present only if enrollment happens on a device registered with Zero Touch Provisioning via offline registration. |
 | **CloudAssignedAadServerData** | Encoded JSON string | Required |An embedded JSON string used for branding. It requires enabling Microsoft Entra organization branding. For example:<br><br>`"CloudAssignedAadServerData": "{\"ZeroTouchConfig\":{\"CloudAssignedTenantUpn\":\"\",\"CloudAssignedTenantDomain\":\"tenant.onmicrosoft.com\"}}` |
-| **CloudAssignedDeviceName** | String | Optional | The name automatically assigned to the computer. This name follows the naming pattern convention configured in the Intune Autopilot profile. An explicit name can also be specified. |
+| **CloudAssignedDeviceName** | String | Optional | The name automatically assigned to the computer. This name follows the naming pattern convention configured in the Intune Windows Autopilot profile. An explicit name can also be specified. |
 
 ## Create the JSON file
 
-Save the Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. If redirecting output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format. The Autopilot profiles appear in a subfolder under the folder specified by the `$targetDirectory` variable. By default, the `$targetDirectory` variable is `C:\AutoPilot`, but it can be changed to another location if desired. The subfolder has the name of the Autopilot profile from Intune. If there are multiple Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**
+Save the Windows Autopilot profile as a JSON file in ASCII or ANSI format. Windows PowerShell defaults to Unicode format. If redirecting output of the commands to a file, also specify the file format. The following PowerShell example saves the file in ASCII format. The Windows Autopilot profiles appear in a subfolder under the folder specified by the `$targetDirectory` variable. By default, the `$targetDirectory` variable is `C:\AutoPilot`, but it can be changed to another location if desired. The subfolder has the name of the Windows Autopilot profile from Intune. If there are multiple Windows Autopilot profiles, each profile has its own subfolder. In each folder, there's a JSON file named **`AutopilotConfigurationFile.json`**
 
 ```powershell
 Connect-MgGraph -Scopes "Device.ReadWrite.All", "DeviceManagementManagedDevices.ReadWrite.All", "DeviceManagementServiceConfig.ReadWrite.All", "Domain.ReadWrite.All", "Group.ReadWrite.All", "GroupMember.ReadWrite.All", "User.Read"
@@ -172,9 +167,9 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 > [!IMPORTANT]
 >
-> The configuration file can only contain one profile. Multiple JSON profile files can be used, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Autopilot experience. To use more than one Autopilot profile, create separate Configuration Manager packages.
+> The configuration file can only contain one profile. Multiple JSON profile files can be used, but each one must be named `AutopilotConfigurationFile.json`. This requirement is for OOBE to follow the Windows Autopilot experience. To use more than one Windows Autopilot profile, create separate Configuration Manager packages.
 >
-> Windows OOBE doesn't follow the Autopilot experience if the file is saved with one of the following criteria:
+> Windows OOBE doesn't follow the Windows Autopilot experience if the file is saved with one of the following criteria:
 >
 > - Unicode encoding.
 > - UTF-8 encoding.
@@ -188,7 +183,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Create Package and Program Wizard, enter the following details for the package:
 
-    - *Name*: **Autopilot for existing devices config**
+    - *Name*: **Windows Autopilot for existing devices config**
     - Select **This package contains source files**
     - *Source folder*: Specify the UNC network path that contains the `AutopilotConfigurationFile.json` file
 
@@ -200,7 +195,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 > [!NOTE]
 >
-> If the user-driven Autopilot profile settings in Intune are changed at a later date, make sure to recreate and update the JSON file. After updating the JSON file, redistribute the associated Configuration Manager package.
+> If the user-driven Windows Autopilot profile settings in Intune are changed at a later date, make sure to recreate and update the JSON file. After updating the JSON file, redistribute the associated Configuration Manager package.
 
 ## Create a target collection
 
@@ -210,7 +205,7 @@ After saving the file, move it to a location for a Microsoft Configuration Manag
 
 1. In the Create Device Collection Wizard, enter the following **General** details:
 
-    - *Name*: **Autopilot for existing devices collection**
+    - *Name*: **Windows Autopilot for existing devices collection**
     - *Comment*: Add an optional comment to further describe the collection
     - *Limiting collection*: **All Systems** or if desired, an alternate collection.
 
@@ -238,7 +233,7 @@ For more information, see [How to create collections in Configuration Manager](/
 
 1. In the **Task sequence information** page, specify the following information:
 
-    - A name for the task sequence. For example, **Autopilot for existing devices**.
+    - A name for the task sequence. For example, **Windows Autopilot for existing devices**.
     - Optionally add a description to better describe the task sequence.
     - Select a boot image. For more information on supported boot image versions, see [Support for the Windows ADK in Configuration Manager](/mem/configmgr/core/plan-design/configs/support-for-windows-adk).
 
@@ -260,9 +255,9 @@ For more information, see [How to create collections in Configuration Manager](/
 
 1. The **Include updates** page selects by default the option to **Do not install any software updates**.
 
-1. In the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
+1. In the **Install applications** page, applications to install during the task sequence can be selected. However, Microsoft recommends that to mirror the signature image approach with this scenario. After the device provisions with Windows Autopilot, apply all applications and configurations from Microsoft Intune or Configuration Manager co-management. This process provides a consistent experience between users receiving new devices and those using Windows Autopilot for existing devices.
 
-1. In the **System Preparation** page, select the package that includes the Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. The option to **Shutdown computer after this task sequence completes** can also be selected. This option allows preparation of a device and then delivery to a user for a consistent Autopilot experience.
+1. In the **System Preparation** page, select the package that includes the Windows Autopilot configuration file. By default, the task sequence restarts the computer after it runs Windows Sysprep. The option to **Shutdown computer after this task sequence completes** can also be selected. This option allows preparation of a device and then delivery to a user for a consistent Windows Autopilot experience.
 
 1. Complete the wizard.
 
@@ -278,7 +273,7 @@ For more information on creating the task sequence, including information on oth
 
 If the task sequence is viewed, it's similar to the default task sequence to apply an existing OS image. This task sequence includes the following extra steps:
 
-- **Apply Windows Autopilot configuration**: This step applies the Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
+- **Apply Windows Autopilot configuration**: This step applies the Windows Autopilot configuration file from the specified package. It's not a new type of step, it's a **Run Command Line** step to copy the file.
 
 - **Prepare Windows for Capture**: This step runs Windows Sysprep, and has the setting to **Shutdown the computer after running this action**. For more information, see [Prepare Windows for Capture](/mem/configmgr/osd/understand/task-sequence-steps#prepare-windows-for-capture).
 
@@ -294,7 +289,7 @@ To make sure the user's data is backed up before the Windows upgrade, use OneDri
 
 Next distribute all content required for the task sequence to distribution points.
 
-1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Distribute Content**.
+1. Select the **Windows Autopilot for existing devices** task sequence, and in the ribbon select **Distribute Content**.
 
 1. On the **Specify the content destination** page, select **Add** to specify either a **Distribution Point** or **Distribution Point Group**.
 
@@ -304,17 +299,17 @@ Next distribute all content required for the task sequence to distribution point
 
 For more information, see [Manage task sequences to automate tasks](/mem/configmgr/osd/deploy-use/manage-task-sequences-to-automate-tasks).
 
-## Deploy the Autopilot task sequence
+## Deploy the Windows Autopilot task sequence
 
-1. Select the **Autopilot for existing devices** task sequence, and in the ribbon select **Deploy**.
+1. Select the **Windows Autopilot for existing devices** task sequence, and in the ribbon select **Deploy**.
 
 1. In the Deploy Software Wizard, specify the following details:
 
     - **General**
 
-      - *Task Sequence*: **Autopilot for existing devices**
+      - *Task Sequence*: **Windows Autopilot for existing devices**
 
-      - *Collection*: **Autopilot for existing devices collection**
+      - *Collection*: **Windows Autopilot for existing devices collection**
 
     - **Deployment Settings**
 
@@ -346,7 +341,7 @@ For more information, see [Manage task sequences to automate tasks](/mem/configm
 
 1. On the target Windows device, go to the **Start** menu, enter `Software Center`, and open it.
 
-1. In the Software Library, under **Operating Systems**, select **Autopilot for existing devices**, and then select **Install**.
+1. In the Software Library, under **Operating Systems**, select **Windows Autopilot for existing devices**, and then select **Install**.
 
 The task sequence runs and does the following actions:
 
@@ -358,9 +353,9 @@ The task sequence runs and does the following actions:
 
 1. Installs Windows from the specified OS image.
 
-1. Prepares for Autopilot.
+1. Prepares for Windows Autopilot.
 
-1. After the task sequence completes, the device boots into OOBE for the Autopilot experience:
+1. After the task sequence completes, the device boots into OOBE for the Windows Autopilot experience:
 
 > [!NOTE]
 >
@@ -368,15 +363,15 @@ The task sequence runs and does the following actions:
 
 ## Register the device for Windows Autopilot
 
-Devices provisioned with Autopilot only receive the guided OOBE Autopilot experience on first boot.
+Devices provisioned with Windows Autopilot only receive the guided OOBE Windows Autopilot experience on first boot.
 
-After Windows is updated on an existing device, make sure to register the device so it has the Autopilot experience when the PC resets. Automatic registration can be enabled for a device by using the **Convert all targeted devices to Autopilot** setting in the Autopilot profile that is assigned to a group that the device is a member of. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
+After Windows is updated on an existing device, make sure to register the device so it has the Windows Autopilot experience when the PC resets. Automatic registration can be enabled for a device by using the **Convert all targeted devices to Autopilot** setting in the Windows Autopilot profile that is assigned to a group that the device is a member of. For more information, see [Create a Windows Autopilot deployment profile](profiles.md#create-a-windows-autopilot-deployment-profile).
 
 Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 > [!NOTE]
 >
-> - Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Autopilot for existing devices profile only applies if the online profile times out.
+> - Typically, the target device isn't registered with the Windows Autopilot service. If the device is already registered, the assigned profile takes precedence. The Windows Autopilot for existing devices profile only applies if the online profile times out.
 > <!--9105086-->
 > - When the assigned profile is applied, the **enrollmentProfileName** property of the device object in Microsoft Intune and Microsoft Entra ID match the Windows Autopilot profile name.
 >
@@ -384,7 +379,7 @@ Also see [Adding devices to Windows Autopilot](add-devices.md).
 
 ## How to speed up the deployment process
 
-To speed up the deployment process, see [Windows Autopilot deployment for existing devices: Speed up the deployment process](tutorial/existing-devices/speed-up-deployment.md) section of the [Autopilot Tutorial](tutorial/autopilot-scenarios.md).
+To speed up the deployment process, see [Windows Autopilot deployment for existing devices: Speed up the deployment process](tutorial/existing-devices/speed-up-deployment.md) section of the [Windows Autopilot Tutorial](tutorial/autopilot-scenarios.md).
 
 ## Tutorial
 

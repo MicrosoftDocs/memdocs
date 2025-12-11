@@ -1,18 +1,11 @@
 ---
 title: What's new in Windows Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.reviewer: jubaptis
-ms.date: 06/28/2024
+ms.date: 09/09/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
-ms.topic: conceptual
+ms.topic: whats-new
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -32,6 +25,54 @@ appliesto:
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.
 
+## Enrollment Status Page support for installing Windows security updates during Windows OOBE
+
+Date added: *September 3, 2025*<br>
+Date updated: *September 9, 2025*
+
+> [!IMPORTANT]
+>
+> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+
+The Windows out-of-box experience (OOBE) by default installs the latest available monthly security update releases to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these monthly security update releases as quality updates.
+
+To help manage this behavior, the Intune enrollment status page (ESP) is updated with a new setting that can be used to allow or block the automatic installation of monthly security update releases. The new setting is **Install Windows quality updates (might restart the device)**. Monthly security update releases are installed by default during the Windows out-of-box experience OOBE that's used by Intune and by Windows Autopilot
+
+By default, this setting is set to **Yes** in all new ESP profiles that are created. Configuring this setting to **Yes** results in the most recent monthly security update releases to be installed. In all previously created ESP profiles, this setting is set to **No** until those profiles are edited and changed. When set to **No**, OOBE doesn't install the monthly security update releases. Delaying the install of monthly security update releases can give internal teams time to test the monthly security update releases before allowing them to install on new devices during provisioning.
+
+- For more information, see [Get ready for Windows quality updates out of the box](https://techcommunity.microsoft.com/blog/windows-itpro-blog/get-ready-for-windows-quality-updates-out-of-the-box/4434498).
+- For more information about configuring the setting in the Intune enrollment status page (ESP), see [Set up Enrollment Status Page](/intune/intune-service/enrollment/windows-enrollment-status).
+- For information about Windows quality updates, see [Windows quality update policy](/windows/deployment/update/release-cycle#monthly-security-update-release).
+
+## Deliver Enterprise App Catalog (EAM) apps during the Enrollment status page
+
+Date added: *June 26, 2025*
+
+Windows Autopilot now supports Enterprise App Catalog apps. Microsoft Intune Enterprise App Management enables IT admins to easily manage applications from the Enterprise App Catalog. With Intune's 2506 release, you can now select apps from the Enterprise App Catalog as blocking apps in the Enrollment status page (ESP) profile. This allows you to ensure those apps are delivered before the user can access the desktop.
+
+For related information, see [Add an Enterprise App Catalog app to Microsoft Intune](/intune/intune-service/apps/apps-add-enterprise-app).
+
+## Updated build for the low privileged account for Intune Connector for Active Directory
+
+Date added: *April 18, 2025*
+
+We've updated the low-privileged Intune Connector for Active Directory build. New in build **6.2504.2001.8**:
+
+- Updated the sign in page to use WebView2, built on Microsoft Edge, instead of WebBrowser.
+- **Error `MSA account <accountName> is not valid`** when signing in has been fixed.
+- **Error `Cannot start service ODJConnectorSvc on computer '.'`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--cannot-start-service-odjconnectorsvc-on-computer------occurring-when-setting-up-the-intune-connector-for-active-directory-).
+- **Error `System.DirectoryServices.DirectoryServicesCOMException (0x8007202F): A constraint violation occurred.`** can now be mitigated. For more information, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#why-is-the-error--the-msa-account-couldn-t-be-granted-permission-to-create-computer-objects-in-the-following-ous--occurring-when-installing-the-intune-connector-for-active-directory-).
+
+Download and install the latest version to get these changes.
+
+## Low privileged account for Intune Connector for Active Directory for Hybrid join Windows Autopilot flows
+<!--9544276-->
+Date added: *February 27, 2025*
+
+We've updated the Intune Connector for Active Directory to use a low privileged account to increase the security of your environment. The old connector will continue to work until deprecation in late June 2025.
+
+For more information, see [Deploy Microsoft Entra hybrid joined devices by using Intune and Windows Autopilot](windows-autopilot-hybrid.md).
+
 ## Update to enrollmentProfileName property for devices deployed via Windows Autopilot for existing devices
 <!--9105086-->
 Date added: *June 24, 2024*
@@ -44,13 +85,13 @@ Date added: *June 4, 2024*
 
 Windows Autopilot streamlines provisioning for laptops. Now Windows Autopilot adds the same support for **Microsoft Teams Rooms**! With this combination, Teams Rooms devices can now be deployed and provisioned without needing physical access to the device. Policies and apps are configured and the Teams Rooms console automatically signed in without needing to enter credentials.
 
-For more information on supported scenarios and setup, see [Autopilot and Autologin for Teams Rooms on Windows](/microsoftteams/rooms/autopilot-autologin).
+For more information on supported scenarios and setup, see [Windows Autopilot and Autologin for Teams Rooms on Windows](/microsoftteams/rooms/autopilot-autologin).
 
 ## Devices are no longer re-enrolled after a motherboard change
 
 Date added: *June 4, 2024*
 
-When a device previously changed its motherboard and the OS remained intact, Autopilot attempted to re-enroll the device to Intune. This re-enrollment no longer occurs if a motherboard swap occurs on a device due to a change in Windows Autopilot. If a motherboard is changed on a device, the new motherboard needs to be re-registered so that Windows Autopilot continues to work upon a reset.
+When a device previously changed its motherboard and the OS remained intact, Windows Autopilot attempted to re-enroll the device to Intune. This re-enrollment no longer occurs if a motherboard swap occurs on a device due to a change in Windows Autopilot. If a motherboard is changed on a device, the new motherboard needs to be re-registered so that Windows Autopilot continues to work upon a reset.
 
 ## Windows Autopilot self-deploying mode is now generally available <!-- INADO-26780755  -->
 
@@ -85,7 +126,7 @@ The 2310 release of Intune adds more clarity to the manual hardware hash upload 
 
 Date added: *October 10, 2023*
 
-Starting in 2310, we're making an update to the self-deployment and pre-provisioning modes for manufacturers that have not opted-in to attesting to removal of Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time device-based enrollment block in the self-deployment and pre-provisioning modes. This block means that the device could go through self-deployment or pre-provisioning mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Autopilot devices section in Intune to manually unblock those devices. This update only works for OEMs that aren't within the [OEM list](https://techcommunity.microsoft.com/t5/intune-customer-success/return-of-key-functionality-for-windows-autopilot-sign-in-and/ba-p/3583130) and doesn't work on the **Fix pending** status.
+Starting in 2310, we're making an update to the self-deployment and pre-provisioning modes for manufacturers that have not opted-in to attesting to removal of Windows Autopilot refurbished devices. Customers using these manufacturers were still subjected to the one-time device-based enrollment block in the self-deployment and pre-provisioning modes. This block means that the device could go through self-deployment or pre-provisioning mode once and then get blocked from doing it again. This behavior could cause problems if the device needed to be reset or redeployed. This change in 2310 enables a button in the Windows Autopilot devices section in Intune to manually unblock those devices. This update only works for certain OEMs and doesn't work on the **Fix pending** status. Reach out to your respective OEM to confirm whether this functionality is enabled for your device.
 
 ### How to unblock devices
 
@@ -109,12 +150,12 @@ Microsoft Intune is changing how BitLocker resets occur for reused Windows Autop
 
 ### User impact
 
-This change affects new primary users of the Autopilot device who are allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
+This change affects new primary users of the Windows Autopilot device who are allowed self-service recovery of BitLocker keys to that device. There's no impact if the devices' primary user doesn't change across the device restore or reset.
 
 Self-service BitLocker access can continue to work the same if the IT admin performs either:
 
-- A remote Autopilot Reset. For more information, see [Step by step tutorial for Windows Autopilot Reset in Intune](tutorial/reset/autopilot-reset-overview.md), [Reset devices with remote Windows Autopilot Reset](tutorial/reset/remote-autopilot-reset.md), and [Windows Autopilot Reset](windows-autopilot-reset.md).
-- Remove the current primary user or reassign to the new intended primary user before the device is reset or reimaged. For more information, see [Change a device's primary user](/mem/intune/remote-actions/find-primary-user#change-a-devices-primary-user).
+- A remote Windows Autopilot Reset. For more information, see [Step by step tutorial for Windows Autopilot Reset in Intune](tutorial/reset/autopilot-reset-overview.md), [Reset devices with remote Windows Autopilot Reset](tutorial/reset/remote-autopilot-reset.md), and [Windows Autopilot Reset](windows-autopilot-reset.md).
+- Remove the current primary user or reassign to the new intended primary user before the device is reset or reimaged. For more information, see [Change a device's primary user](/mem/intune-service/remote-actions/find-primary-user#change-a-devices-primary-user).
 
 If the new primary user is unable to access BitLocker self-service after changing from a previous primary user, then the IT admin should update the primary user in the device properties. The primary user on the device then updates to the new user upon the next check-in.
 
@@ -134,9 +175,9 @@ When devices that utilize Windows Autopilot are reused, and there's a new device
 
 ## Win32 app configurable installation time impacts the Enrollment Status Page
 
-Staring in Intune 2308, Win32 apps allow configuration of an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes made to timeouts for Win32 apps also needs an increase in the ESP timeout to reflect those changes.
+Starting in Intune 2308, Win32 apps allow configuration of an installation time on a per app basis. This time is expressed in minutes. If the app takes longer to install than the set installation time, the deployment fails the app install. To avoid Enrollment Status Page (ESP) timeout failures, any changes made to timeouts for Win32 apps also needs an increase in the ESP timeout to reflect those changes.
 
-## Autopilot profile resiliency
+## Windows Autopilot profile resiliency
 
 Date added: *July 26, 2023*
 
@@ -149,7 +190,7 @@ Downloading the Windows Autopilot policy just got more resilient! A new update i
 
 Date added: *July 3, 2023*
 
-Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Autopilot devices in Intune. One step removal of a device means that the Autopilot registration of a device can now be removed without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
+Starting in 2307, Windows Autopilot is making it easier to manage devices by adding one step removal of a device in Windows Autopilot devices in Intune. One step removal of a device means that the Windows Autopilot registration of a device can now be removed without needing to delete the record in Intune. If the device is still active in Intune, the deletion just removes the registration, but it continues to be managed. To use this feature in Intune:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -180,52 +221,52 @@ A new toggle is available in the Enrollment Status Page (ESP) profile that allow
 
 Date added: *March 17, 2023*
 
-The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](/mem/intune/enrollment/windows-enrollment-status).
+The Enrollment Status Page (ESP) now supports the new Microsoft store applications during Windows Autopilot. This update enables better support for the new Microsoft Store experience and should be rolling out to all tenants starting with Intune 2303. For related information, see [Set up the Enrollment Status Page](/mem/intune-service/enrollment/windows-enrollment-status).
 
 ## Win32 App Supersedence ESP improvements
 
 Date added: *February 10, 2023*
 
-Starting in January 2023, we're currently in the process of rolling out Win32 app supersedence GA, which introduces enhancements to ESP behavior around app tracking and app processing. Specifically, admins might notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune/apps/apps-win32-supersedence).
+Starting in January 2023, we're currently in the process of rolling out Win32 app supersedence GA, which introduces enhancements to ESP behavior around app tracking and app processing. Specifically, admins might notice a change in app counts. For more information, see [Win32 app supersedence improvements](https://techcommunity.microsoft.com/t5/intune-customer-success/upcoming-improvements-to-win32-app-supersedence/ba-p/3713026) and [Add Win32 app supersedence](/mem/intune-service/apps/apps-win32-supersedence).
 
 ## Support for Temporary Access Pass
 
 Date added: *January 3, 2023*
 Date updated: *February 15, 2023*
 
-Starting with 2301 Windows Autopilot, Autopilot supports the use of [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) for Microsoft Entra joined user driven, pre-provisioning and self-deploying mode for shared devices. A Temporary Access Pass is a time-limited passcode that can be configured for multi or single use to allow users to onboard other authentication methods. These authentication methods include passwordless methods such as Microsoft Authenticator, FIDO2, or Windows Hello for Business.
+Starting with 2301 Windows Autopilot, Windows Autopilot supports the use of [Temporary Access Pass](/azure/active-directory/authentication/howto-authentication-temporary-access-pass) for Microsoft Entra joined user driven, pre-provisioning and self-deploying mode for shared devices. A Temporary Access Pass is a time-limited passcode that can be configured for multi or single use to allow users to onboard other authentication methods. These authentication methods include passwordless methods such as Microsoft Authenticator, FIDO2, or Windows Hello for Business.
 
 For more information on supported scenarios, see [Temporary Access Pass](windows-autopilot-scenarios.md#temporary-access-pass).
 
-## Autopilot automatic device diagnostics collection <!--1895390-->
+## Windows Autopilot automatic device diagnostics collection <!--1895390-->
 
 Date added: *September 23, 2022*
 
-Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Autopilot process on currently supported versions of Windows. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics might include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
+Starting with Intune 2209, Intune automatically captures diagnostics when devices experience a failure during the Windows Autopilot process on currently supported versions of Windows. When logs are finished processing on a failed device, they're automatically captured and uploaded to Intune. Diagnostics might include user identifiable information such as user or device name. If the logs aren't available in Intune, check if the device is powered-on and has access to the internet. Diagnostics are available for 28 days before they're removed.
 
-For more information, see [Collect diagnostics from a Windows device](/mem/intune/remote-actions/collect-diagnostics).
+For more information, see [Collect diagnostics from a Windows device](/mem/intune-service/remote-actions/collect-diagnostics).
 
-## Updates to Autopilot device targeting infrastructure
+## Updates to Windows Autopilot device targeting infrastructure
 
 Date added: *August 16, 2022*
 
-With Intune 2208, we're updating the Autopilot infrastructure to ensure that the profiles and applications assigned are consistently ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Autopilot device. Additionally, it uses device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Microsoft Entra joined and Microsoft Entra hybrid joined devices. No action is needed to enable this change. It's rolling out to all clients starting August 2022.
+With Intune 2208, we're updating the Windows Autopilot infrastructure to ensure that the profiles and applications assigned are consistently ready when the devices are deployed. This change reduces the amount of data that needs to be synchronized per-Windows Autopilot device. Additionally, it uses device lifecycle change events to reduce the amount of time that it takes to recover from device resets for Microsoft Entra joined and Microsoft Entra hybrid joined devices. No action is needed to enable this change. It's rolling out to all clients starting August 2022.
 
 ## Update Intune Connector for Active Directory for Microsoft Entra hybrid joined devices <!-- 2209 -->
 
 Date added: *August 3, 2022*
 
-Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If .NET 4.7.2 or later isn't used, the Intune Connector might not work for Autopilot hybrid Microsoft Entra deployments resulting in failures. When a new Intune Connector is installed, don't use the connector installation package that was previously downloaded. Before installing a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). If the latest version isn't used, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector doesn't work.
+Starting in September 2022, the Intune Connector for Active Directory (ODJ connector) requires .NET Framework version 4.7.2 or later. If .NET 4.7.2 or later isn't used, the Intune Connector for Active Directory might not work for Windows Autopilot hybrid Microsoft Entra deployments resulting in failures. When a new Intune Connector for Active Directory is installed, don't use the connector installation package that was previously downloaded. Before installing a new connector, update the .NET Framework to version 4.7.2 or later. Download a new version from the **Intune Connector for Active Directory** section of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). If the latest version isn't used, it might continue to work, but the auto-upgrade feature to provide updates to the Intune Connector for Active Directory doesn't work.
 
 ## Enroll to co-management from Windows Autopilot <!-- 11300628 -->
 
 Date added: *May 20, 2022*
 
-With the Intune 2205 release, device enrollment in Intune can be configured to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
+With the Intune 2205 release, device enrollment in Intune can be configured to enable [co-management](/mem/configmgr/comanage/overview), which happens during the Windows Autopilot process. This behavior directs the workload authority in an orchestrated manner between Configuration Manager and Intune.
 
-If the device is targeted with an [Autopilot enrollment status page (ESP) policy](/mem/intune/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Autopilot ESP then continues.
+If the device is targeted with an [Windows Autopilot enrollment status page (ESP) policy](/mem/intune-service/enrollment/windows-enrollment-status), the device waits for Configuration Manager. The Configuration Manager client is installed, registers with the site, and then applies the production co-management policy. The Windows Autopilot ESP then continues.
 
-For more information, see [How to enroll to co-management with Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
+For more information, see [How to enroll to co-management with Windows Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Improvements to the enrollment status page <!-- 2202 -->
 
@@ -243,7 +284,7 @@ With the Intune 2202 release, the functionality of the [enrollment status page](
 
 Date added: *May 20, 2022*
 
-We made a change to the Windows Autopilot self-deployment mode and pre-provisioning mode experience, adding in a step to delete the device record as part of the device reuse process. This change impacts all Windows Autopilot deployments where the Autopilot profile is set to self-deployment or pre-provisioning mode. This change only affects a device when reused or reset, and it attempts to redeploy.
+We made a change to the Windows Autopilot self-deployment mode and pre-provisioning mode experience, adding in a step to delete the device record as part of the device reuse process. This change impacts all Windows Autopilot deployments where the Windows Autopilot profile is set to self-deployment or pre-provisioning mode. This change only affects a device when reused or reset, and it attempts to redeploy.
 
 For more information, see [Updates to the Windows Autopilot sign-in and deployment experience](https://techcommunity.microsoft.com/t5/intune-customer-success/updates-to-the-windows-autopilot-sign-in-and-deployment/ba-p/2848452).
 
@@ -269,17 +310,18 @@ For more information, see [Windows Autopilot MFA changes to enrollment flow](htt
 
 Date added: *May 20, 2022*
 
-When Windows 11 is deployed with Autopilot, users can be enabled to view detailed troubleshooting information about the Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available, which provides a user-friendly view to troubleshoot Windows Autopilot failures.
+When Windows 11 is deployed with Windows Autopilot, users can be enabled to view detailed troubleshooting information about the Windows Autopilot provisioning process. A new **Windows Autopilot diagnostics** page is available, which provides a user-friendly view to troubleshoot Windows Autopilot failures.
 
 The following example shows details for **Deployment info**, which includes **Network Connectivity**, **Autopilot Settings**, and **Enrollment Status**. The **Export logs** button can also be used for detailed [troubleshooting](troubleshooting-faq.yml#troubleshooting-windows-oobe-issues-during-windows-autopilot) analysis.
 
 :::image type="content" source="images/oobe-03.png" alt-text="Windows Autopilot diagnostics page expanded to show details.":::
 
-To enable the diagnostics page, go to the [ESP profile](/mem/intune/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
+To enable the diagnostics page, go to the [ESP profile](/mem/intune-service/enrollment/windows-enrollment-status). Make sure **Show app and profile configuration progress** is selected to **Yes**, and then select **Yes** next to **Turn on log collection and diagnostics page for end users**.
 
 The diagnostics page is currently supported when signing in with a Work or School account during a Windows Autopilot user-driven deployment. It's currently available on Windows 11. Windows 10 users can still collect and export diagnostic logs when this setting is enabled in Intune.
 
 ## Related content
 
-- [What's new in Microsoft Intune](/mem/intune/fundamentals/whats-new).
+- [What's new in Windows Autopilot device preparation](device-preparation/whats-new.md).
+- [What's new in Microsoft Intune](/mem/intune-service/fundamentals/whats-new).
 - [What's new in Windows client](/windows/whats-new/).

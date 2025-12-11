@@ -1,15 +1,8 @@
 ### YamlMime:FAQ
 metadata:
   title: Windows Autopilot FAQ
-  description: This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: jubaptis
-  manager: aaroncz
-  ms.date: 08/02/2024
+  description: This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Windows Autopilot.
+  ms.date: 03/28/2025
   ms.collection:
     - M365-modern-desktop
     - highpri
@@ -22,7 +15,7 @@ summary: |
   - [Windows 11](/windows/release-health/supported-versions-windows-client#windows-11-supported-versions).
   - [Windows 10](/windows/release-health/supported-versions-windows-client#windows-10-supported-versions).
 
-  This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Autopilot.
+  This article provides OEMs, partners, administrators, and end users with answers to some frequently asked questions about deploying Windows with Windows Autopilot.
 
 sections:
   - name: Microsoft Partner Center
@@ -38,9 +31,9 @@ sections:
           After the device file upload is completed in the Partner Center, the tenant can see the devices available for Windows Autopilot setup in MSfB. The OEM needs to advise the tenant to access MSfB. Autonotification from MSfB to the tenant is being developed.
 
       - question: |
-          How does a customer authorize an OEM or Channel Partner to register Autopilot devices on the customer's behalf?
+          How does a customer authorize an OEM or Channel Partner to register Windows Autopilot devices on the customer's behalf?
         answer: |
-          Before an OEM or Channel Partner can register a device for Autopilot for a customer, the customer must first give them consent. The consent process begins with the OEM or Channel Partner sending a link to the customer that directs the customer to a consent page in MSfB. For more information, see [Registration](registration-auth.md).
+          Before an OEM or Channel Partner can register a device for Windows Autopilot for a customer, the customer must first give them consent. The consent process begins with the OEM or Channel Partner sending a link to the customer that directs the customer to a consent page in MSfB. For more information, see [Registration](registration-auth.md).
 
       - question: |
           Do any restrictions apply if a business customer who registers devices in MSfB wants to later manage those devices through a Cloud Solution Provider (CSP) using the Partner Center?
@@ -78,7 +71,7 @@ sections:
         answer: |
           No. The CSP sales regions depend on the location of the Microsoft Entra tenant. A CSP partner can only sell or manage customers with a tenant located in the same CSP region. A partner's CSP region is based on the location of the tenant the CSP partner is using to transact. If the customer tenant was created in the US, only a partner that has a CSP enrollment in the US can establish a reseller relationship with this customer.
 
-          For Autopilot & Intune, the location of the end user or device doesn't matter. An employee located in Germany can enroll a device using the Autopilot profile created in the US tenant and manage it through the Intune service instance in the US. The user in Germany also authenticates in the US-based Microsoft Entra instance.
+          For Windows Autopilot & Intune, the location of the end user or device doesn't matter. An employee located in Germany can enroll a device using the Windows Autopilot profile created in the US tenant and manage it through the Intune service instance in the US. The user in Germany also authenticates in the US-based Microsoft Entra instance.
 
           If a partner wants to manage customers globally, they need to have a global presence. They need multiple CSP enrollments in each of the CSP sales regions where they conduct business.
 
@@ -89,7 +82,7 @@ sections:
       - question: |
           Does the Partner Center have access to the profiles created in Intune or Microsoft Store for Business?
         answer: |
-          No. The Partner Center doesn't have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Autopilot profiles created through the Partner Center.
+          No. The Partner Center doesn't have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Windows Autopilot profiles created through the Partner Center.
 
 
   - name: Manufacturing
@@ -130,7 +123,7 @@ sections:
           Nothing, unless the OEM opts to register the device on the customer's behalf. In this case, they must upload the device ID CSV file to the Microsoft Partner Center or use the OEM direct API.
 
       - question: |
-          Is there a contract or amendment for an OEM to participate in an Autopilot deployment?
+          Is there a contract or amendment for an OEM to participate in a Windows Autopilot deployment?
         answer: |
           No.
 
@@ -190,13 +183,13 @@ sections:
   - name: Motherboard replacement
     questions:
       - question: |
-          How does Autopilot handle motherboard replacement scenarios?
+          How does Windows Autopilot handle motherboard replacement scenarios?
         answer: |
-          Motherboard replacement is out for scope for Autopilot. Any repaired or serviced device that alters the ability to identify the device for Windows Autopilot must go through the normal OOBE process. It must manually select the right settings or apply a custom image.
+          Motherboard replacement is out for scope for Windows Autopilot. Any repaired or serviced device that alters the ability to identify the device for Windows Autopilot must go through the normal OOBE process. It must manually select the right settings or apply a custom image.
 
           To reuse the same device for Windows Autopilot after a motherboard replacement, use the following process:
 
-          1. Unregister the device from Autopilot.
+          1. Unregister the device from Windows Autopilot.
           1. Replace the motherboard.
           1. Generate a new 4K hardware hash.
           1. Register the device with the new 4K hardware hash or device ID.
@@ -253,12 +246,12 @@ sections:
   - name: End-user experience
     questions:
       - question: |
-          How do I know that I received Autopilot?
+          How do I know that I received Windows Autopilot?
         answer: |
-          A device has received an Autopilot configuration but hasn't yet applied it when the selection page is skipped and are immediately taken to a sign-in page.
+          A device has received a Windows Autopilot configuration but hasn't yet applied it when the selection page is skipped and are immediately taken to a sign-in page.
 
       - question: |
-          Why did a user end up as an administrator when the Autopilot profile was configured otherwise?
+          Why did a user end up as an administrator when the Windows Autopilot profile was configured otherwise?
         answer: |
           Microsoft Entra administrators are always local administrators even if Windows Autopilot is configured to disable this configuration.
 
@@ -269,7 +262,7 @@ sections:
           For a complete list of support options, see [Windows Autopilot support](autopilot-support.md).
 
       - question: |
-          If I make changes to an existing Autopilot profile, do the changes take effect on devices that have that profile assigned to them and are already deployed?
+          If I make changes to an existing Windows Autopilot profile, do the changes take effect on devices that have that profile assigned to them and are already deployed?
         answer: |
           No. Windows Autopilot profiles aren't resident on the device. They're downloaded during OOBE and settings are defined at the time are applied. The profile is then discarded on the device. If the device is reimaged or reset, the new profile settings will take effect the next time the device goes through OOBE.
 
@@ -279,7 +272,7 @@ sections:
           If the device isn't registered, it doesn't receive the Windows Autopilot experience, and the end user goes through normal OOBE. The Windows Autopilot configurations won't be applied until the user runs through OOBE again, after registration. If a device is started before a mobile device management (MDM) profile is created, the device goes through standard OOBE experience. You then have to manually enroll that device into the MDM. The next time the device is reset, it will go through the Windows Autopilot OOBE experience.
 
       - question: |
-          Why didn't I receive a customized sign-in screen during Autopilot?
+          Why didn't I receive a customized sign-in screen during Windows Autopilot?
         answer: |
           To receive a customized sign-in experience, configure tenant branding in the [Azure portal](https://portal.azure.com).
 
@@ -289,16 +282,16 @@ sections:
           Since no Windows Autopilot profile is assigned to the device, the user sees the default OOBE.
 
       - question: |
-          How can I collect logs on Autopilot?
+          How can I collect logs for Windows Autopilot?
         answer: |
-          The best way to collect logs on Windows Autopilot performance is to collect a WPR trace during OOBE. The XML file (WPRP extension) for this trace can be provided upon request.
+          The best way to collect logs for Windows Autopilot performance is to collect a WPR trace during OOBE. The XML file (WPRP extension) for this trace can be provided upon request.
 
   - name: MDM
     questions:
       - question: |
-          Does Autopilot require the use of Microsoft Intune?
+          Does Windows Autopilot require the use of Microsoft Intune?
         answer: |
-          No. Any MDM works with Autopilot, but others might not have the same full suite of Windows Autopilot features as Intune. The best experience is with Intune.
+          No. Any MDM works with Windows Autopilot, but others might not have the same full suite of Windows Autopilot features as Intune. The best experience is with Intune.
 
       - question: |
           Does Intune support preinstalling Win32 apps?
@@ -318,12 +311,12 @@ sections:
           - [How to enroll with co-management when provision with Windows Autopilot](/mem/configmgr/comanage/autopilot-enrollment).
 
       - question: |
-          Does Autopilot require Configuration Manager?
+          Does Windows Autopilot require Configuration Manager?
         answer: |
-          No. It isn't required, but you can use it together with Autopilot in the following scenarios:
+          No. It isn't required, but you can use Configuration Manager together with Windows Autopilot in the following scenarios:
 
           - [Co-management](/mem/configmgr/comanage/overview).
-          - [Autopilot for existing devices](existing-devices.md).
+          - [Windows Autopilot for existing devices](existing-devices.md).
 
   - name: Features
     questions:
@@ -339,7 +332,7 @@ sections:
         answer: |
           > [!IMPORTANT]
           >
-          > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
+          > Microsoft recommends deploying new devices as cloud-native using Microsoft Entra join. Deploying new devices as Microsoft Entra hybrid join devices isn't recommended, including through Windows Autopilot. For more information, see [Microsoft Entra joined vs. Microsoft Entra hybrid joined in cloud-native endpoints: Which option is right for your organization](/mem/solutions/cloud-native-endpoints/azure-ad-joined-hybrid-azure-ad-joined#which-option-is-right-for-your-organization).
 
           Microsoft Entra hybrid joined devices connect to an on-premises Active Directory domain and Microsoft Entra ID.
 
@@ -353,7 +346,7 @@ sections:
           For more information, see [Windows Autopilot reset](windows-autopilot-reset.md).
 
       - question: |
-          What's Autopilot personalization?
+          What's Windows Autopilot personalization?
         answer: |
           You can add the following customizations to the OOBE experience:
 
@@ -362,11 +355,11 @@ sections:
           - Your organization's logo.
 
       - question: |
-          What's Autopilot for existing devices?
+          What's Windows Autopilot for existing devices?
         answer: |
-          Autopilot for existing devices offers an upgrade path to currently supported versions of Windows for an existing Windows device.
+          Windows Autopilot for existing devices offers an upgrade path to currently supported versions of Windows for an existing Windows device.
 
-          For more information, see [Autopilot for existing devices](existing-devices.md).
+          For more information, see [Windows Autopilot for existing devices](existing-devices.md).
 
   - name: General
     questions:
@@ -378,7 +371,7 @@ sections:
       - question: |
           If I wipe the machine and restart, do I still receive the Windows Autopilot experience?
         answer: |
-          Yes. If the device is still registered for Autopilot and is running a supported version of Windows, it receives the Autopilot experience.
+          Yes. If the device is still registered for Windows Autopilot and is running a supported version of Windows, it receives the Windows Autopilot experience.
 
       - question: |
           Can I harvest the device fingerprint on existing devices?
@@ -412,12 +405,12 @@ sections:
       - question: |
           Where is Windows Autopilot data stored?
         answer: |
-          Windows Autopilot data is stored within the European Union (EU). It isn't stored in a sovereign cloud, even when the Microsoft Entra tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Autopilot.
+          Windows Autopilot data is stored within the European Union (EU). It isn't stored in a sovereign cloud, even when the Microsoft Entra tenant is registered in a sovereign cloud. This storage applies to all Windows Autopilot data, whatever portal is used to deploy Windows Autopilot.
 
       - question: |
           Why is Windows Autopilot data stored in the US and not in a sovereign cloud?
         answer: |
-          Customer data isn't stored, only business data that enables Microsoft to provide a service. For that reason, it's appropriate for the data to be stored in the US. Customers can stop subscribing to the service at any time. In that event, Microsoft removes the business data. Autopilot isn't currently supported in any sovereign cloud.
+          Customer data isn't stored, only business data that enables Microsoft to provide a service. For that reason, it's appropriate for the data to be stored in the US. Customers can stop subscribing to the service at any time. In that event, Microsoft removes the business data. Windows Autopilot isn't currently supported in any sovereign cloud.
 
       - question: |
           How many ways are there to register a device for Windows Autopilot?
@@ -450,17 +443,19 @@ sections:
           1. Hidden special characters in CSV files. To avoid this issue, after creating your CSV file, open it in Notepad to look for hidden characters, trailing spaces, or other corruptions.
 
       - question: |
-          Is Autopilot supported in all countries/regions?
+          Is Windows Autopilot supported in all countries/regions?
         answer: |
-          Autopilot only supports customers using global Azure. Global Azure doesn't include the following three entities:
+          Windows Autopilot only supports customers using global Azure. Global Azure doesn't include the following three entities:
 
           - Azure Germany.
           - Azure China 21Vianet.
           - Azure Government.
 
-          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Autopilot.
+          If you use global Azure, there are no region restrictions. For example, Contoso uses global Azure but has employees working in China. The Contoso employees working in China can still use Windows Autopilot to deploy devices. If Contoso uses Azure China 21Vianet, the Contoso employees can't use Windows Autopilot.
 
-          While Autopilot is available in global tenants, users in China can experience poor connectivity and high latency when deploying due to ISP-related issues. If you're experiencing these issues when deploying in the region, contact your local ISP for support.
+          While Windows Autopilot is available in global tenants, users in China can experience poor connectivity and high latency when deploying due to ISP-related issues. If you're experiencing these issues when deploying in the region, contact your local ISP for support.
+
+          For Government Community Cloud High (GCCH) and Department of Defense (DoD) environments, consider using [Windows Autopilot device preparation](device-preparation/overview.md).
 
       - question: |
           Why does TPM provisioning/attestation take longer during the first boot on a device?
@@ -478,3 +473,15 @@ sections:
           When Windows Autopilot for pre-provisioned deployment is used, the device shows as compliant in Microsoft Entra ID after completing the Technician flow. However, after starting the User flow, the device changes to noncompliant in Microsoft Entra ID. Why did it change from compliant to noncompliant in Microsoft Entra ID?
         answer: |
           Device compliance in Microsoft Entra ID is reset during the User flow. Once the User flow completes, compliance is reevaluated and updated. This behavior is expected.
+
+  - name: Intune Connector for Active Directory
+    questions:
+      - question: |
+          What is the difference between the updated and legacy Intune Connector for Active Directory?
+        answer: |
+          The updated Intune Connector for Active Directory strengths security and follows least privilege principles by using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts) instead of using the computer account (**SYSTEM**) of the server that runs the Intune Connector for Active Directory.
+
+      - question: |
+          If the administrator installing and configuring the Intune Connector for Active Directory has the permissions outlined in the requirements, do they also have to follow the steps to increase the computer account limit in the OUs?
+        answer: |
+          No. the Intune Connector for Active Directory installer takes care of setting up all of the proper permissions needed by the MSA in the OUs. The steps to increase the computer account limit in the OUs only need to be followed if the administrator installing and configuring the Intune Connector for Active Directory doesn't have the permissions outlined in [Intune Connector for Active Directory Requirements](windows-autopilot-hybrid.md?tabs=intune-connector-requirements#requirements).

@@ -1,14 +1,7 @@
 ---
 title: Manually register devices with Windows Autopilot
 description: Learn how to manually add devices to Windows Autopilot.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 04/11/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -44,13 +37,13 @@ This article provides step-by-step guidance for manual registration. For more in
 
 ## Requirements
 
-- [Intune subscription](/mem/intune/fundamentals/licenses).
-- [Windows automatic enrollment enabled](/mem/intune/enrollment/windows-enroll#enable-windows-automatic-enrollment).
+- [Intune subscription](/mem/intune-service/fundamentals/licenses).
+- [Windows automatic enrollment enabled](/mem/intune-service/enrollment/windows-enroll#enable-windows-automatic-enrollment).
 - [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium).
 
 ## Required permissions
 
-Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune/fundamentals/role-based-access-control). Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
+Device enrollment requires *Intune Administrator* or *Policy and Profile Manager* permissions. A custom Windows Autopilot device manager role can also be created by using [role-based access control (RBAC)](/mem/intune-service/fundamentals/role-based-access-control). Windows Autopilot device management requires only that all permissions under **Enrollment programs** are enabled, except for the four token management options.
 
 > [!NOTE]
 >
@@ -72,7 +65,7 @@ For a description of each method, select the link for the method.
 
 > [!NOTE]
 >
-> If OOBE is restarted too many times, it can enter a recovery mode and fail to run the Autopilot configuration. This scenario can be identified if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE process displays each of these configuration options on a separate page. The following registry key value tracks the count of OOBE retries:
+> If OOBE is restarted too many times, it can enter a recovery mode and fail to run the Windows Autopilot configuration. This scenario can be identified if OOBE displays multiple configuration options on the same page, including language, region, and keyboard layout. The normal OOBE process displays each of these configuration options on a separate page. The following registry key value tracks the count of OOBE retries:
 >
 > `HKCU\SOFTWARE\Microsoft\Windows\CurrentVersion\UserOOBE`
 >
@@ -171,6 +164,10 @@ Directly uploading the hardware hash to an MDM service such as Microsoft Intune 
 1. Verify that the hardware hash uploaded successfully and the device is showing as a registered Windows Autopilot device using the instructions in the section [Verify the hardware hash uploaded](#verify-the-hardware-hash-uploaded).
 
 1. For devices undergoing Windows Setup and OOBE, restart the device. The device should pick up the Windows Autopilot profile and OOBE should run through the Windows Autopilot provisioning process.
+
+   > [!NOTE]
+   >
+   > If the device isn't picking up the Windows Autopilot profile after restarting the device, a reset might be necessary. For more information, see [Reset your PC](https://support.microsoft.com/windows/0ef73740-b927-549b-b7c9-e6f2b48d275e#bkmk_reset_steps).
 
 #### Verify the hardware hash uploaded
 
@@ -320,9 +317,9 @@ Once the hardware hashes are captured in a CSV file, Windows Autopilot devices c
 
 1. Select **Refresh** in the toolbar until the new devices appear.
 
-## Edit Autopilot device attributes
+## Edit Windows Autopilot device attributes
 
-After an Autopilot device is uploaded, certain attributes of the device can be edited:
+After a Windows Autopilot device is uploaded, certain attributes of the device can be edited:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -348,7 +345,7 @@ After an Autopilot device is uploaded, certain attributes of the device can be e
 >
 > Device names can be configured for all devices but are ignored in Hybrid Microsoft Entra deployments. The device name still comes from the domain join profile for Hybrid Microsoft Entra devices.
 
-## Delete Autopilot devices
+## Delete Windows Autopilot devices
 
 Windows Autopilot devices that aren't enrolled in Intune can be deleted:
 
@@ -376,6 +373,12 @@ Completely removing a device from a tenant requires the device records in Intune
 
 1. **ZtdDeviceDuplicated**: This error occurs when there are duplicate hardware hashes in the CSV file. Only one of the duplicates is processed, and the others result in this error. If this error occurs, look for the other duplicates of the same device to see what the actual result was. If a duplicate that was successfully processed is found, the duplicate row from the CSV file can be removed.
 
+1. **InvalidZtdHardwareHash**: This error occurs when one or more fields in the hardware hash are invalid or empty. Both the manufacturer and serial number information need to be included. If they're not, the device can't be registered for Windows Autopilot. To check the serial number and manufacturer information, open a PowerShell prompt and run the following command:
+
+      ```powershell
+   Get-CimInstance Win32_BaseBoard | Select-Object Manufacturer, SerialNumber
+   ```
+
 ## Related content
 
-- [Create device groups](enrollment-autopilot.md) to apply Autopilot deployment profiles.
+- [Create device groups](enrollment-autopilot.md) to apply Windows Autopilot deployment profiles.
