@@ -104,6 +104,9 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 * After enrollment, you'll see two records in the Microsoft Intune admin center if automatic MDM enrollment is disabled and devices are joined to Microsoft Entra ID. To stop the duplicate records, instruct users on joined devices to **Settings** > **Accounts** > **Access work or school**. Then they can **Connect** using the same account.
 
+## Known Issues:
+In the **Disable MDM enrollment when adding work or school account** setting in public preview, a known issue has been identified where MDM auto-enrollment may occur with the new setting enabled.  The team is working on a fix, which will be included in an upcoming update. During this time and during the rollout, some users will not be able to see the new setting.
+
 ## Next steps
 
 For information about how to integrate and use automatic enrollment when provisioning devices, see:
