@@ -106,7 +106,7 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 ## Known issues  
 
-MDM auto-enrollment might occur when the **Disable MDM enrollment when adding work or school account** setting is enabled. This is a known issue that we are working to fix. During the public preview rollout, some users will not be able to see this setting.  
+MDM auto-enrollment might occur when the **Disable MDM enrollment when adding work or school account** setting is enabled. This is a known issue that we are working to fix. During the public preview rollout while we work on this issue, some users will not be able to see this setting.   
 
 ## Next steps
 
