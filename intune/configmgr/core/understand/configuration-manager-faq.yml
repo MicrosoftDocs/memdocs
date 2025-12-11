@@ -31,7 +31,7 @@ sections:
 
           - [Configuration Manager](../../index.yml)
           - [Intune](../../../intune-service/index.yml)
-          - [Endpoint analytics](../../../analytics/index.md)
+          - [Endpoint analytics](../../../endpoint-analytics/index.md)
           - [Windows Autopilot](/autopilot/enrollment-autopilot/)
 
       - question: |

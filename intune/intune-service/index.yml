@@ -260,18 +260,6 @@ conceptualContent:
           itemType: how-to-guide
           text: Microsoft Tunnel for Mobile Application Management
 
-    - title: Endpoint analytics
-      links:
-        - url: ../analytics/index.md
-          itemType: how-to-guide
-          text: Overview of endpoint analytics
-        - url: ../analytics/scores.md
-          itemType: how-to-guide
-          text: Scores, baselines and insight
-        - url: ../analytics/startup-performance.md
-          itemType: how-to-guide
-          text: Reports in endpoint analytics
-
     - title: Developer guidance
       links:
         - url: ./developer/intune-graph-apis.md

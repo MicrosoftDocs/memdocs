@@ -754,7 +754,7 @@ You can use Microsoft Copilot in Intune to explore new prompts related to your I
 - Android and Apple device updates
 - Windows Autopilot
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [Advanced Analytics](../../advanced-analytics/index.md)
 
 When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
 
@@ -1382,7 +1382,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
 
 #### Export device query results to CSV file <!-- 27967896 -->
 
-Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).
+Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../advanced-analytics/device-query-multiple-devices.md#use-device-query-for-multiple-devices).
 
 ## Week of June 23, 2025 (Service release 2506)
 
@@ -1667,7 +1667,7 @@ For details about the available Defender settings, see [Configure security setti
 #### Data collection from SimInfo entity on Windows devices<!--30120558 -->
 
 You can now collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-For more information, see [Intune Data Platform](../../analytics/data-platform-schema.md).
+For more information, see [Intune Data Platform](../../advanced-analytics/data-platform-schema.md).
 
 > [!div class="checklist"]
 > Applies to:

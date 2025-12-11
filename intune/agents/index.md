@@ -25,9 +25,9 @@ Microsoft Intune includes specialized Security Copilot agents, each designed for
 :::image type="icon" source="icons/change-review-agent.svg" border="false":::
 
 > The *Change Review Agent* evaluates the effect of approval requests in Intune and makes recommendations for the actions you can take.
-
-> [!div class="nextstepaction"]
-> [Learn more](change-review-agent.md)
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](change-review-agent.md)
 :::column-end:::
 :::column:::
 #### Device Offboarding Agent
@@ -35,9 +35,9 @@ Microsoft Intune includes specialized Security Copilot agents, each designed for
 :::image type="icon" source="icons/device-offboarding-agent.svg" border="false":::
 
 > The *Device Offboarding Agent* identifies stale or misaligned devices across Intune and Microsoft Entra ID, providing actionable insights and requiring admin approval before offboarding any devices.
-
-> [!div class="nextstepaction"]
-> [Learn more](device-offboarding-agent.md)
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](device-offboarding-agent.md)
 :::column-end:::
 :::row-end:::
 
@@ -48,9 +48,9 @@ Microsoft Intune includes specialized Security Copilot agents, each designed for
 :::image type="icon" source="icons/policy-configuration-agent.svg" border="false":::
 
 > With the *Policy Configuration Agent*, you import documents or write instructions in plain language. The agent uses this information to find matching settings in the Intune settings catalog and recommends values for these settings. You can then use the agent to create a policy with those settings and their values.
-
-> [!div class="nextstepaction"]
-> [Learn more](policy-configuration-agent.md)
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](policy-configuration-agent.md)
 :::column-end:::
 :::column:::
 #### Vulnerability Remediation Agent
@@ -58,9 +58,9 @@ Microsoft Intune includes specialized Security Copilot agents, each designed for
 :::image type="icon" source="icons/vulnerability-remediation-agent.svg" border="false":::
 
 > The *Vulnerability Remediation Agent* uses Defender data to monitor vulnerabilities and prioritize remediation with AI-driven risk assessments. 
-
-> [!div class="nextstepaction"]
-> [Learn more](vulnerability-remediation-agent.md)
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](vulnerability-remediation-agent.md)
 :::column-end:::
 :::row-end:::
 

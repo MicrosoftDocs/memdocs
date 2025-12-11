@@ -29,7 +29,7 @@ The following Microsoft management solutions are all now part of the **Microsoft
 
 - [Configuration Manager](../../index.yml)
 - [Intune](../../../intune-service/index.yml)
-- [Endpoint analytics](../../../analytics/index.md)
+- [Endpoint analytics](../../../endpoint-analytics/index.md)
 - [Windows Autopilot](/autopilot/index)
 
 For more information, see [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).

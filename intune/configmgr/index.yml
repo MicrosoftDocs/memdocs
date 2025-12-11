@@ -46,7 +46,7 @@ conceptualContent:
           url: ./tenant-attach/index.yml
           itemType: overview
         - text: Endpoint analytics
-          url: ../analytics/index.md
+          url: ../endpoint-analytics/index.md
           itemType: overview
         - text: Overview of cloud management gateway (CMG)
           url: ./core/clients/manage/cmg/overview.md
