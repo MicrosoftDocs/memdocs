@@ -2807,7 +2807,12 @@
     },
     {
       "source_path": "intune/intune/protect/data-leak-prevention.md",
-      "redirect_url": "/intune/intune-service/protect/data-leak-prevention",
+      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-leak-prevention.md",
+      "redirect_url": "/intune/intune-service/fundamentals/deployment-guide-enrollment-mamwe",
       "redirect_document_id": false
     },
     {

@@ -2100,8 +2100,6 @@ items:
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
     - name: Protect Exchange Online
       href: ./protect/exchange-online-protect.md
-    - name: Prevent data leaks on non-managed devices
-      href: ./protect/data-leak-prevention.md
     - name: App solutions
       items:
       - name: Purchase and add apps for Microsoft Intune
