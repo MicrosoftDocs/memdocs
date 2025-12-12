@@ -106,7 +106,7 @@ Save the token string. Then complete the following steps to link your zero-touch
 1. Under **Bulk enrollment methods**, choose **Zero-touch enrollment**.
 1. The iframe opens.  Select **Next** to begin setup.
 1. Sign in with the Google account you provided to your reseller.
-1. Select the URL and append the string `.EXTRA_ENROLLMENT_TOKEN%22:%22**{INSERT_TOKEN_HERE}**%22%7D%7D` to the end. Replace the text, **INSERT_TOKEN_HERE**, with the copied token string.  
+1. Select the URL and append the string `.EXTRA_ENROLLMENT_TOKEN%22:%22**{INSERT_TOKEN_HERE}**%22%7D%7D` to the end. Replace `INSERT_TOKEN_HERE` with the copied token string.  
     
 1. After you finish editing the URL, refresh the page. 
 1. Select the zero-touch account you want to link, and then select **Link**.
