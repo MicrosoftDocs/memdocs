@@ -16,7 +16,7 @@ ms.collection:
 
 # App and driver compatibility reports for Windows updates
 
-With Intune, you can deploy updates to Windows devices by using policies for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) and [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
+With Intune, you can deploy updates to Windows devices by using policies for [Update rings for Windows 10 and later](../protect/update-rings.md) and [Feature updates for Windows 10 and later](../protect/feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 
@@ -83,7 +83,7 @@ To use this report:
 > [!IMPORTANT]
 > The data in this report is made available on-demand only. You must configure the Target OS and Scope (Tags) settings, and then click **Generate report** for data to appear in the report.
 
-[![Screen shot of the Windows feature update device readiness report.](./media/windows-update-compatibility-reports/device-readiness-report.png)](./media/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
+[![Screen shot of the Windows feature update device readiness report.](./images/windows-update-compatibility-reports/device-readiness-report.png)](./images/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
 
 >[!NOTE]
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps provided and select **Generate again**.
@@ -132,7 +132,7 @@ To use this report:
    - Optionally select **Asset type** and **Risk status** to refine the report.
    - Select **Generate report**. This process can take several minutes. You're notified when report generation is complete.
 
-[![Screen shot of the Windows feature update compatibility risks report.](./media/windows-update-compatibility-reports/compatibility-risks-report.png)](./media/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox)
+[![Screen shot of the Windows feature update compatibility risks report.](./images/windows-update-compatibility-reports/compatibility-risks-report.png)](./images/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox)
 
 > [!NOTE]
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps provided and select **Generate again**.
@@ -319,5 +319,5 @@ The FastTrack Center Benefit for Windows provides access to **Desktop App Assure
 
 ## Next step
 
-- Configure [Update rings for Windows](../protect/windows-10-update-rings.md)
-- Configure [Feature updates for Windows](../protect/windows-10-feature-updates.md)
+- Configure [Update rings for Windows](../protect/update-rings.md)
+- Configure [Feature updates for Windows](../protect/feature-updates.md)

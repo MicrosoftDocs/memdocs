@@ -1,0 +1,5 @@
+items:
+- name: Android FOTA update
+  href: ../fota-updates-android.md
+- name: Zebra LG OTA Integration
+  href: ../zebra-lifeguard-ota-integration.md

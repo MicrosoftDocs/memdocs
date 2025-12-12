@@ -141,7 +141,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 ## Architecture
 
-:::image type="content" source="./media/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./media/windows-driver-updates-overview/wdum-architecture.png":::
+:::image type="content" source="./images/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./images/windows-driver-updates-overview/wdum-architecture.png":::
 
 **Windows Driver Update Management architecture**:
 
@@ -292,7 +292,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
       > [!NOTE]
       > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../../configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
 
-   You can move Feature update management to the cloud in Intune by configuring a [Feature update](windows-10-feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
+   You can move Feature update management to the cloud in Intune by configuring a [Feature update](feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
 
    Using Update Ring policies in Intune for Quality or Feature Updates requires you to move the **Windows Update** workload to Intune.
 

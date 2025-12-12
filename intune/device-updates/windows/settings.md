@@ -17,7 +17,7 @@ ms.collection:
 
 When you use Intune policies for *Update rings*, you're configuring the Windows settings that manage how and when devices will install Windows updates. If a Windows update setting has a Windows version dependency, the version dependency is noted in the settings details.
 
-Following are the Windows Update settings for Windows Updates that you can [manage with update rings](windows-10-update-rings.md) with Microsoft Intune.
+Following are the Windows Update settings for Windows Updates that you can [manage with update rings](update-rings.md) with Microsoft Intune.
 
 ## Update settings
 

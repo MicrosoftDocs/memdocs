@@ -286,7 +286,7 @@ items:
       items:
       - name: BYOD and personal devices
         displayName: software updates, android, ios, ipados
-        href: ./protect/software-updates-guide-personal-byod.md
+        href: ../device-updates/software-updates-guide-personal-byod.md
       - name: Android
         displayName: software updates
         href: ./protect/software-updates-guide-android.md
@@ -804,7 +804,7 @@ items:
             href: /troubleshoot/mem/intune/troubleshoot-jamf
 
       - name: Software updates
-        href: protect/updates/toc.yml
+        href: ../device-updates/toc.yml
 
       - name: Endpoint security
         items:
