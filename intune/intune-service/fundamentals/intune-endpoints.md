@@ -370,7 +370,7 @@ If the script reports a failure (Exit Code 1):
 
 - **If the Service Endpoint test shows “HTTPS endpoint unreachable”:** The required Intune service FQDNs or Azure Front Door IPs may not be reachable, or a DNS, proxy, or HTTPS inspection issue is preventing connection to the Intune service FQDN.
 
-- **Review [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)** and ensure your firewall, VPN, or proxy allows all required Intune service FQDNs, Azure Front Door IP ranges, and ports.
+- **Review the network endpoints for Microsoft Intune** (as detailed in this article) and ensure your firewall, VPN, or proxy allows all required Intune service FQDNs, Azure Front Door IP ranges, and ports.
 
 - **Check detailed results** in the saved output file, or run the script with detailed logging (-LogLevel Detailed and -Verbose) to capture more diagnostic information.
 
