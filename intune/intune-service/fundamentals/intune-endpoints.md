@@ -339,9 +339,7 @@ To help with validating connectivity to the Azure Front Door (AFD) IP addresses 
 This diagnostics tool includes checks for:
 
 - DNS Resolution of Intune service endpoints
-
 - Outbound TCP Connectivity on ports 80 and 443 to AFD IP addresses
-
 - HTTPS validation to the Intune cloud service
 
 ### Prerequisites
@@ -349,9 +347,8 @@ This diagnostics tool includes checks for:
 Before running the script, ensure you have:
 
 - PowerShell 5.1 or later
-
-- Connectivity to [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)
-
+- Connectivity to Network endpoints for Microsoft Intune, as defined in this article.
+  
 ### Usage
 
 Run the script from an Intune-managed device to test connectivity to the Intune network endpoints using Azure Front Door.
@@ -369,13 +366,13 @@ Open **PowerShell** and use the following syntax:
 
 If the script reports a failure (Exit Code 1):
 
-- **If the Azure Front Door IP Address tests show failed IPs or IP ranges:** Your firewall, proxy, or VPN may be blocking outbound connections on ports **443** or **80** to those Azure Front Door IPs
+- **If the Azure Front Door IP Address tests show failed IPs or IP ranges:** Your firewall, proxy, or VPN may be blocking outbound connections on ports **443** or **80** to those Azure Front Door IPs.
 
-- **If the Service Endpoint test shows “HTTPS endpoint unreachable”:** The required Intune service FQDNs or Azure Front Door IPs may not be reachable, or a DNS, proxy, or HTTPS inspection issue is preventing connection to the Intune service FQDN
+- **If the Service Endpoint test shows “HTTPS endpoint unreachable”:** The required Intune service FQDNs or Azure Front Door IPs may not be reachable, or a DNS, proxy, or HTTPS inspection issue is preventing connection to the Intune service FQDN.
 
-- **Review [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)** and ensure your firewall, VPN, or proxy allows all required Intune service FQDNs, Azure Front Door IP ranges, and ports
+- **Review [Network endpoints for Microsoft Intune](/intune/intune-service/fundamentals/intune-endpoints)** and ensure your firewall, VPN, or proxy allows all required Intune service FQDNs, Azure Front Door IP ranges, and ports.
 
-- **Check detailed results** in the saved output file, or run the script with detailed logging (-LogLevel Detailed and -Verbose) to capture more diagnostic information
+- **Check detailed results** in the saved output file, or run the script with detailed logging (-LogLevel Detailed and -Verbose) to capture more diagnostic information.
 
 ## Consolidated Endpoint List
 
