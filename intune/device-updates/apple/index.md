@@ -27,7 +27,7 @@ This article shows how to configure update policies in Intune using Apple's Decl
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/plzatform.md)]
 :::column-end:::
 :::column span="3":::
 > The configuration of Software Update for Apple devices requires the following platforms:
