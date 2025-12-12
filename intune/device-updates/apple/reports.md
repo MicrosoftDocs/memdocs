@@ -1,8 +1,6 @@
 ---
 title: View Software Update Reports for Apple Devices
 description: Track Apple device update status in real time with Intune's declarative software update reporting. Learn how Microsoft Intune surfaces update changes directly from managed Apple devices.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: beflamm

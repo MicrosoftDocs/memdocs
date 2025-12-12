@@ -1,8 +1,6 @@
 ---
 title: Windows Update settings you can manage with Intune Update Ring policies for Windows devices.
 description: View the settings for Windows Update that you can manage through Intune policy for Update rings.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 07/15/2024
 ms.topic: reference
 ms.reviewer: davguy; bryanke

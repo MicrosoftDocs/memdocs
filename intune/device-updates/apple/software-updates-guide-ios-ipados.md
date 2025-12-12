@@ -1,8 +1,6 @@
 ---
 title: Admin checklist for iOS/iPadOS software updates in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for iOS/iPadOS devices using Microsoft Intune. See sample policy for different industry scenarios, including shared devices, kiosk, manufacturing, and information worker.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 07/24/2025
 ms.topic: how-to
 ms.reviewer: beflamm, ahamil, rogerso

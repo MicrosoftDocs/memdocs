@@ -1,15 +1,12 @@
 ---
 title: Configure Windows Update rings policy in Intune
 description: Create and manage Intune policy for Windows update rings. You can configure, deploy, and pause update installation with Windows Update client policies using Microsoft Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/18/2024
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-updates
 ---
 

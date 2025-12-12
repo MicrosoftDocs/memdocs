@@ -1,15 +1,12 @@
 ---
 title: Android FOTA Updates
 description: Use Microsoft Intune to manage firmware updates on Android devices. A FOTA update can include software and security patches, feature updates, and other changes to the device's firmware.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/09/2025
 ms.topic: how-to
 ms.reviewer: jieyan
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-updates
 ---
 # Android FOTA Updates

@@ -1,8 +1,6 @@
 ---
 title: Use Intune to expedite Windows quality updates
 description: Use Microsoft Intune policy to expedite the installation of Windows updates on managed devices as soon as possible.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: davguy;bryanke

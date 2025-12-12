@@ -1,15 +1,12 @@
 ---
 title: Configure feature updates policy for Windows devices in Intune
 description: Create and manage Intune policy for Windows feature updates. Configure and deploy policy to maintain the Windows feature version of Windows devices you manage with Microsoft Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-updates
 ---
 

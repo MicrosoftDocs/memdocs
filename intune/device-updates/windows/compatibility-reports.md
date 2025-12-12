@@ -1,15 +1,12 @@
 ---
 title: Use Windows compatibility reports for Windows updates in Intune
 description: Use the app and driver compatibility reports for Windows devices before you deploy Intune policies for feature updates or update rings.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 11/27/2024
 ms.topic: how-to
 ms.reviewer: zadvor
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - highseo
 - sub-updates
 ---

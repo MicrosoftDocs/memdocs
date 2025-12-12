@@ -1,15 +1,12 @@
 ---
 title: Create Windows Driver updates policy in Intune
 description: Use Microsoft Intune to manage policies that install Windows driver updates on your Intune managed Windows devices.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - ContentEnagagementFY24
 - sub-updates
 ---

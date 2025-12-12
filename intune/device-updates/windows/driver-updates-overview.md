@@ -1,15 +1,12 @@
 ---
 title: Learn about Windows Driver updates policy for Windows devices in Intune
 description: Learn about using Microsoft Intune policy to manage Windows driver updates.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - ContentEnagagementFY24
 - sub-updates
 ---

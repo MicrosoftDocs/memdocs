@@ -1,8 +1,6 @@
 ---
 title: Use Microsoft Intune to manage software updates for supervised iOS/iPadOS devices
 description: Use Microsoft Intune to manage system updates for supervised iOS/iPadOS devices.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 10/15/2025
 ms.topic: how-to
 ms.reviewer: annovich, beflamm
