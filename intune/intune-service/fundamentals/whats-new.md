@@ -754,7 +754,7 @@ You can use Microsoft Copilot in Intune to explore new prompts related to your I
 - Android and Apple device updates
 - Windows Autopilot
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [Advanced Analytics](../../advanced-analytics/index.md)
 
 When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
 
@@ -1210,7 +1210,7 @@ To configure Platform SSO in Intune, see:
 
 #### Update required for Microsoft Tunnel endpoints<!-- 32817331 -->
 
-As part of our ongoing improvements to the Microsoft Tunnel infrastructure, we introduced new endpoints with the [March 19, 2025 release](../protect/microsoft-tunnel-upgrade.md#march-19-2025). You must upgrade your Microsoft Tunnel to the March 19, 2025 release version or later to ensure you're using the new endpoints. Once you upgrade to this version or later, you can't downgrade to an earlier version. Earlier releases that rely on legacy endpoints aren't supported and might cause service disruptions. To continue with uninterrupted service, we recommend upgrading to the latest supported build and avoiding rollback to unsupported versions.
+As part of our ongoing improvements to the Microsoft Tunnel infrastructure, we introduced new endpoints with the [March 19, 2025 release](../protect/microsoft-tunnel-upgrade.md). You must upgrade your Microsoft Tunnel to the March 19, 2025 release version or later to ensure you're using the new endpoints. Once you upgrade to this version or later, you can't downgrade to an earlier version. Earlier releases that rely on legacy endpoints aren't supported and might cause service disruptions. To continue with uninterrupted service, we recommend upgrading to the latest supported build and avoiding rollback to unsupported versions.
 
 ## Week of July 28, 2025
 
@@ -1382,7 +1382,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
 
 #### Export device query results to CSV file <!-- 27967896 -->
 
-Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).
+Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../advanced-analytics/device-query-multiple-devices.md#use-device-query-for-multiple-devices).
 
 ## Week of June 23, 2025 (Service release 2506)
 
@@ -1667,7 +1667,7 @@ For details about the available Defender settings, see [Configure security setti
 #### Data collection from SimInfo entity on Windows devices<!--30120558 -->
 
 You can now collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-For more information, see [Intune Data Platform](../../analytics/data-platform-schema.md).
+For more information, see [Intune Data Platform](../../advanced-analytics/data-platform-schema.md).
 
 > [!div class="checklist"]
 > Applies to:
