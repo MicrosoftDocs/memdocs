@@ -109,8 +109,6 @@ For more information about available Setup Assistant skipkeys, see:
 
 #### Secure enterprise browser managed by Intune (public preview) <!-- 31609121 -->
 
-[!INCLUDE [public-preview-notification](../includes/public-preview-notification.md)]
-
 Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
 
 For more information, see [Secure Your Corporate Data in Intune with Microsoft Edge for Business](../apps/mamedge-overview.md).
