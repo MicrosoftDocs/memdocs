@@ -37,11 +37,11 @@ The following tables include:
 
 - **Details**: A brief description of how Intune implements the setting, including the Intune default. When available, there are links to [Delivery Optimization Policy configuration service provider](/windows/client-management/mdm/policy-csp-deliveryoptimization) (CSP) entries.
 
-To configure Intune to use these settings, see [Deliver updates](delivery-optimization-windows.md).
+To configure Intune to use these settings, see [Deliver updates](delivery-optimization.md).
 
 ## Before you begin
 
-- [Create a Windows Delivery Optimization profile](delivery-optimization-windows.md).
+- [Create a Windows Delivery Optimization profile](delivery-optimization.md).
 
 ## Delivery Optimization
 
@@ -90,4 +90,4 @@ To configure Intune to use these settings, see [Deliver updates](delivery-optimi
 
 ## Next steps
 
-[Learn more about Delivery Optimization in Intune](delivery-optimization-windows.md).
+[Learn more about Delivery Optimization in Intune](delivery-optimization.md).

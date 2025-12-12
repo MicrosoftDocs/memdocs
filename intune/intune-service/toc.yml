@@ -289,13 +289,13 @@ items:
         href: ../device-updates/byod-software-updates-guide.md
       - name: Android
         displayName: software updates
-        href: ./protect/software-updates-guide-android.md
+        href: ../device-updates/android/software-updates-guide.md
       - name: iOS/iPadOS
         displayName: software updates
-        href: ./protect/updates/software-updates-guide-ios-ipados.md
+        href: ../device-updates/apple/software-updates-guide-ios-ipados.md
       - name: macOS
         displayName: software updates
-        href: ./protect/updates/software-updates-guide-macos.md
+        href: ../device-updates/apple/software-updates-guide-macos.md
 
   - name: Set up Microsoft Intune
     items:

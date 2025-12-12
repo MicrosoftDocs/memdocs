@@ -88,7 +88,7 @@ Each template is a logical group of settings grouped together, like Email, VPN, 
 
 - [BIOS configuration and other settings](bios-configuration.md)
 - [Custom](custom-settings-configure.md)
-- [Delivery Optimization (Windows)](delivery-optimization-windows.md)
+- [Delivery Optimization (Windows)](delivery-optimization.md)
 - [Derived credential (Android Enterprise, iOS, iPadOS)](../protect/derived-credentials.md)
 - [Device features (macOS, iOS, iPadOS)](device-features-configure.md)
 - [Device firmware configuration interface (DFCI) (Windows)](device-firmware-configuration-interface-windows.md)

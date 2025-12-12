@@ -95,7 +95,7 @@ Some considerations:
   The following software updates planning guides can help you determine your update strategy:
 
   - [Personal/BYOD](../protect/byod-software-updates-guide.md)
-  - [Android](../protect/software-updates-guide-android.md)
+  - [Android](../protect/software-updates-guide.md)
   - [iOS/iPadOS](../protect/updates/software-updates-guide-ios-ipados.md)
   - [macOS](../protect/updates/software-updates-guide-macos.md)
 

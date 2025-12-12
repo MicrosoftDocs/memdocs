@@ -1,12 +1,12 @@
 items:
 - name: Use Windows Update client policies
-  href: windows-update-for-business-configure.md
+  href: configure.md
 - name: Update rings policy
   href: update-rings.md
 - name: Feature updates policy
   href: feature-updates.md
 - name: Windows quality updates policy
-  href: windows-quality-update-policy.md
+  href: quality-update-policy.md
 - name: Expedite updates policy
   href: expedite-updates.md
 - name: Windows driver updates

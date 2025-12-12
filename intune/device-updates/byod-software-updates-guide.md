@@ -27,7 +27,7 @@ This article applies to:
 > [!TIP]
 > If your devices are organization owned, then go to the software updates planning guides for:
 >
-> - [Managed Android devices](software-updates-guide-android.md)
+> - [Managed Android devices](software-updates-guide.md)
 > - [Supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)
 > - [Managed macOS devices](updates/software-updates-guide-macos.md)
 
@@ -97,5 +97,5 @@ For more information on these features, go to:
 
 ## Related articles
 
-- [Software updates planning guide for managed Android devices](software-updates-guide-android.md)
+- [Software updates planning guide for managed Android devices](software-updates-guide.md)
 - [Software updates planning guide and scenarios for supervised iOS/iPadOS devices](updates/software-updates-guide-ios-ipados.md)

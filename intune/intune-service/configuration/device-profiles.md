@@ -77,7 +77,7 @@ This feature supports:
 
 ## Delivery optimization
 
-[Delivery optimization](delivery-optimization-windows.md) provides a better experience to delivery software updates.
+[Delivery optimization](delivery-optimization.md) provides a better experience to delivery software updates.
 
 Use these settings to control how software updates are downloaded to devices in your organization. For example, you can let users get their own updates, or get updates using the delivery optimization cloud services in a device profile.
 
@@ -306,9 +306,9 @@ This feature supports:
 
 ## Update policies
 
-[iOS/iPadOS and macOS managed software updates](../protect/updates/apple.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
+[iOS/iPadOS and macOS managed software updates](../../device-updates/apple/index.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
 
-For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md).
+For update policies on Windows devices, see [Delivery optimization](delivery-optimization.md).
 
 This feature supports:
 

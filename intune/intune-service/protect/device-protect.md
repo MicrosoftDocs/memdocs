@@ -53,7 +53,7 @@ Following are a few of the security settings and tasks you can manage through av
 - **Software updates** – Manage how and when devices get software updates. The following are supported:
 
   - Android *firmware* updates:
-    - [Firmware Over-the-Air (FOTA)](../protect/fota-updates-android.md) - Supported by some OEMs, you can use FOTA to remotely update firmware of devices.
+    - [Firmware Over-the-Air (FOTA)](../protect/fota-updates.md) - Supported by some OEMs, you can use FOTA to remotely update firmware of devices.
     - [Zebra LifeGuard Over-the-Air (LG OTA)](../protect/zebra-lifeguard-ota-integration.md) - Manage firmware updates for supported Zebra devices through the Intune admin center.
   - [iOS](/mem/intune-service/protect/managed-software-updates-ios-macos) - Manage device operating system versions, and when devices check for and install updates.
   - [macOS](/mem/intune-service/protect/managed-software-updates-ios-macos) - Manage software updates for macOS devices that enrolled as supervised devices.
