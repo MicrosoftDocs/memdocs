@@ -2632,11 +2632,11 @@ For more information about this Microsoft Tunnel install option, see [Use a root
 
 We improved and simplified the experience, workflow, and report details for onboarding devices to Microsoft Defender when using Intune's endpoint detection and response (EDR) policy. These changes apply for Windows devices managed by Intune and by the tenant-attach scenario. These improvements include:
 
-- Changes to the EDR node, dashboards, and reports to improve the visibility of your Defender EDR deployment numbers. See [About the endpoint detection and response node](../protect/endpoint-security-edr-policy.md#about-the-endpoint-detection-and-response-node).
+- Changes to the EDR node, dashboards, and reports to improve the visibility of your Defender EDR deployment numbers. See [About the endpoint detection and response node](../protect/endpoint-security-edr-policy.md#deploy-edr-policy).
 
-- A new tenant-wide option to deploy a preconfigured EDR policy that streamlines the deployment of Defender for Endpoint to applicable Windows devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+- A new tenant-wide option to deploy a preconfigured EDR policy that streamlines the deployment of Defender for Endpoint to applicable Windows devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#deploy-the-preconfigured-windows-edr-policy).
 
-- Changes to Intune's the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#use-a-preconfigured-edr-policy).
+- Changes to Intune's the Overview page of the endpoint security node. These changes provide a consolidated view of reports for the device signals from Defender for Endpoint on your managed devices. See [Use a preconfigured EDR policy](../protect/endpoint-security-edr-policy.md#deploy-the-preconfigured-windows-edr-policy).
 
 These changes apply to the Endpoint security and endpoint detection and response nodes of the admin center, and the following device platforms:
 
@@ -4022,7 +4022,7 @@ You'll find the report in the Report node for EPM in the [Intune admin center](h
 
 #### macOS support with Intune Endpoint security policies for Endpoint detection and response<!--  17757981 -->
 
-Intune Endpoint security policies for *Endpoint detection and response* (EDR) now support macOS. To enable this support, we've added a new [EDR template profile for macOS](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune). Use this profile with macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection and response* (EDR) now support macOS. To enable this support, we've added a new [EDR template profile for macOS](../protect/endpoint-security-edr-policy.md#supported-platforms-and-profiles). Use this profile with macOS devices enrolled with Intune and macOS devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for macOS includes the following settings for the *Device tags* category from Defender for Endpoint:
 
@@ -4033,7 +4033,7 @@ To learn more about Defender for Endpoint settings that are available for macOS,
 
 #### Linux support with Intune Endpoint security policies for Endpoint detection and response<!--  17757972  -->
 
-Intune Endpoint security policies for *Endpoint detection and response* (EDR) now support Linux. To enable this support, we've added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#devices-managed-by-microsoft-intune). Use this profile with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
+Intune Endpoint security policies for *Endpoint detection and response* (EDR) now support Linux. To enable this support, we've added a new [EDR template profile for Linux](../protect/endpoint-security-edr-policy.md#supported-platforms-and-profiles). Use this profile with Linux devices enrolled with Intune and Linux devices managed through the opt-in public preview of the [Defender for Endpoint security settings management](../protect/mde-security-integration.md?pivots=mdssc-preview) scenario.
 
 The EDR template for Linux includes the following settings for the *Device tags* category from Defender for Endpoint:
 

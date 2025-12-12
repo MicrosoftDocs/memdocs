@@ -290,9 +290,9 @@ The **EDR Onboarding Status** report provides administrators with a comprehensiv
 
 The **EDR Onboarding Status tab** includes the following:
 
-- **Onboarding summary chart**: **Windows devices onboarded to Defender for Endpoint** - This chart displays counts of devices that have onboarded and devices that have not onboarded.
+- **Onboarding summary chart**: - This is an onboarding summary chart for Windows devices. It includes counts of devices that onboarded, and have not onboarded.
 
-- **Device list with detailed information**: This device list includes the following columns of details:  
+- **Device list with detailed information** - This device list includes the following columns of details:  
   - **Device name**: The name of each device in your organization
   - **Managed by**: How the device is managed (Intune, Configuration Manager via tenant attach, or MDE Security Settings Management)
   - **Defender sensor state**: Current health status of the Defender for Endpoint sensor.
@@ -303,8 +303,8 @@ The **EDR Onboarding Status tab** includes the following:
     - **Onboarded**: Device is successfully sending telemetry to Defender for Endpoint
     - **Not onboarded**: Device hasn't completed the onboarding process
     - **Pending**: Device is in the process of onboarding
-    - **Last check-in**: The time and date of the most recent communication from the device to Intune
-    - **Primary UPN**: The primary user principal name associated with the device
+    - **Last check-in**: The time and date of the most recent communication from the device to Intune.
+  - **Primary UPN**
 
 ### Using the report for EDR deployment
 
@@ -458,8 +458,8 @@ When you offboard a device from Defender for Endpoint:
 
 For more information, see the following subjects in the Microsoft Defender for Endpoint documentation:
 
-- [Offboard devices using Mobile Device Management tools](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
-- [Offboard devices](https://learn.microsoft.com/en-us/microsoft-365/security/defender-endpoint/offboard-machines)
+- [Offboard devices using Mobile Device Management tools](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
+- [Offboard devices](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/offboard-machines)
 
 ## Related content
 
