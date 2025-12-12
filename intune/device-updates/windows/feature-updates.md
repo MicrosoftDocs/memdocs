@@ -114,7 +114,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 - Feature updates for Windows 10 and later policies can't be applied during the Windows Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
-- If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
+- If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
   To prevent this initial delay from impacting your co-managed devices:
 
@@ -195,9 +195,9 @@ However, if a Windows 10 device that can't run Windows 11 is targeted with a Win
 
 The first step in preparing for a Windows 11 upgrade is to ensure your devices meet the [minimum system requirements for Windows 11](/windows/whats-new/windows-11-requirements#hardware-requirements).
 
-You can use [endpoint analytics](../../endpoint-analytics/index.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client with tenant attach enabled.
+You can use [endpoint analytics](../endpoint-analytics/index.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client with tenant attach enabled.
 
-If you're already using Endpoint analytics, navigate to the [Work from anywhere report](../../endpoint-analytics/work-from-anywhere.md), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you'll see device-by-device readiness information.
+If you're already using Endpoint analytics, navigate to the [Work from anywhere report](../endpoint-analytics/work-from-anywhere.md), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you'll see device-by-device readiness information.
 
 ### Licensing for Windows 11 versions
 

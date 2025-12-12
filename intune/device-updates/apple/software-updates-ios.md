@@ -14,11 +14,11 @@ ms.collection:
 # Manage iOS/iPadOS software updates using MDM-based policies in Microsoft Intune
 
 > [!IMPORTANT]
-> [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
+> [!INCLUDE [Apple MDM software updates deprecation](../../intune-service/includes/apple-mdm-updates-deprecation.md)]
 
 You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPadOS devices that are enrolled as *supervised devices*.
 
-A [supervised device](../../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
+A [supervised device](../enrollment/device-enrollment-program-enroll-ios.md#what-is-supervised-mode) is a device that enrolls through one of Apple's [Automated Device Enrollment (ADE)](https://deploy.apple.com/) options. Devices enrolled through ADE support management control through a mobile device management solution like Intune. ADE options include Apple Business Manager or Apple School Manager.
 
 This feature applies to:
 
@@ -37,14 +37,14 @@ With these MDM-based policies, you can:
 
 ## Before you begin
 
-- iOS/iPadOS software updates that you send to a [Shared iPad](../../enrollment/device-enrollment-shared-ipad.md) install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
+- iOS/iPadOS software updates that you send to a [Shared iPad](../enrollment/device-enrollment-shared-ipad.md) install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
 
-- If using [Autonomous Single App Mode (ASAM)](../../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../../configuration/device-restrictions-ios.md#general) to configure ASAM.
+- If using [Autonomous Single App Mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../configuration/device-restrictions-ios.md#general) to configure ASAM.
 
 - If you're new to configuring software updates or want some guidance based on common scenarios, go to:
 
   - [Software updates planning guide for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-  - [Software updates planning guide for BYOD and personal devices](../software-updates-guide-personal-byod.md)
+  - [Software updates planning guide for BYOD and personal devices](../byod-software-updates-guide.md)
 
 ## Configure the update policy
 
@@ -88,7 +88,7 @@ With these MDM-based policies, you can:
 
    After configuring *Update policy settings*, select **Next**.
 
-5. If [available](../../fundamentals/scope-tags.md#default-scope-tag), on the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
+5. If [available](../fundamentals/scope-tags.md#default-scope-tag), on the **Scope tags** tab, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update policy.
 
    - On the **Select tags** pane, choose one or more tags, and then **Select** to add them to the policy and return to the *Scope tags* pane.
 
@@ -133,7 +133,7 @@ To delay visibility, deploy a device restriction template that configures the fo
 - **Delay default visibility of software updates** = **1** to **90**
   90 days is the maximum delay that Apple supports.
 
-[Device restriction](../../configuration/device-restrictions-configure.md) templates are part of device configuration policies.
+[Device restriction](../configuration/device-restrictions-configure.md) templates are part of device configuration policies.
 
 For guidance from the Intune support team, see the Intune Customer Success blog [Delaying visibility of software updates in Intune for supervised iOS devices](https://techcommunity.microsoft.com/t5/Intune-Customer-Success/Delaying-visibility-of-software-updates-in-Intune-for-supervised/ba-p/345753).
 
@@ -147,5 +147,5 @@ For each device on the list, the *Installation Status* displays the error that t
 
 ## Next steps
 
-- [Monitor device profiles](../../configuration/device-profile-monitor.md)
+- [Monitor device profiles](../configuration/device-profile-monitor.md)
 - [Software updates admin guide for supervised iOS/iPadOS devices in Intune](software-updates-guide-ios-ipados.md)

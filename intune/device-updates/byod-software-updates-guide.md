@@ -43,7 +43,7 @@ Users can enroll their personal devices in Microsoft Intune.
 
 The following example shows an enrollment device platform restrictions policy for Android Enterprise devices:
 
-:::image type="content" source="./media/software-updates-guide-android/android-enrollment-restrictions-policy.png" alt-text="Screenshot that shows enrollment restrictions policy for Android devices in the Microsoft Intune admin center.":::
+:::image type="content" source="images/software-updates-guide-android/android-enrollment-restrictions-policy.png" alt-text="Screenshot that shows enrollment restrictions policy for Android devices in the Microsoft Intune admin center.":::
 
 When users enroll their personal devices, this policy checks the version info. If the devices are outside the versions you enter, then they're prevented from enrolling.
 
@@ -60,7 +60,7 @@ In your compliance policy, you can:
 - Notify the user that the OS version doesn't meet your requirements.
 - Allow a grace period before the device is marked noncompliant, to allow them time to upgrade.
 
-:::image type="content" source="./media/software-updates-guide-android/compliance-policy-actions-noncompliance.png" alt-text="Screenshot that shows a compliance policy with actions for noncompliance in the Microsoft Intune admin center.":::
+:::image type="content" source="images/software-updates-guide-android/compliance-policy-actions-noncompliance.png" alt-text="Screenshot that shows a compliance policy with actions for noncompliance in the Microsoft Intune admin center.":::
 
 If you combine your compliance policies with Conditional Access (CA), then you can block users from resource access until they meet the OS version requirements.
 
@@ -78,7 +78,7 @@ At the app level, you can use app protection policies to determine the minimum O
 
 When users open or resume an app that's managed by you, the app protection policy can prompt users to upgrade the OS. In the policy, if the version they're running doesn't meet your requirements, then you can warn users that a new OS version is required, or block access:
 
-:::image type="content" source="./media/software-updates-guide-android/app-protection-policy-device-conditions.png" alt-text="Screenshot that shows device-based conditions in an app protection policy in the Microsoft Intune admin center.":::
+:::image type="content" source="images/software-updates-guide-android/app-protection-policy-device-conditions.png" alt-text="Screenshot that shows device-based conditions in an app protection policy in the Microsoft Intune admin center.":::
 
 For more information on app protection policies, go to [App protection policies overview](../apps/app-protection-policy.md).
 
@@ -86,7 +86,7 @@ For more information on app protection policies, go to [App protection policies 
 
 ✅ Create a custom notification to alert users of upcoming OS version requirements. Use this feature to proactively communicate to users to update their devices so they don't lose access:
 
-:::image type="content" source="./media/software-updates-guide-android/custom-notification.png" alt-text="Screenshot that shows a custom notification message in the Microsoft Intune admin center.":::
+:::image type="content" source="images/software-updates-guide-android/custom-notification.png" alt-text="Screenshot that shows a custom notification message in the Microsoft Intune admin center.":::
 
 Remember, if the OS updates can't be forced or controlled, which is common on personal devices, then end users need to update their own devices.
 

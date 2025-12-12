@@ -286,7 +286,7 @@ items:
       items:
       - name: BYOD and personal devices
         displayName: software updates, android, ios, ipados
-        href: ../device-updates/software-updates-guide-personal-byod.md
+        href: ../device-updates/byod-software-updates-guide.md
       - name: Android
         displayName: software updates
         href: ./protect/software-updates-guide-android.md
