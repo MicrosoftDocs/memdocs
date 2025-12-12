@@ -188,8 +188,8 @@ items:
         href: ./fundamentals/remote-help-use.md
       - name: Troubleshooting Remote Help
         href: ./fundamentals/remote-help-troubleshoot-monitor.md
-    - name: Advanced analytics
-      href: ../analytics/advanced/toc.yml
+    - name: Advanced Analytics
+      href: ../advanced-analytics/toc.yml
 
   - name: Plan and prepare for Intune
     items:
@@ -1846,7 +1846,9 @@ items:
       href: ./fundamentals/device-cleanup-rules.md
 
     - name: Endpoint analytics
-      href: ../analytics/toc.yml
+      href: ../endpoint-analytics/toc.yml
+    - name: Advanced Analytics
+      href: ../advanced-analytics/toc.yml
 
     - name: View reports and monitor status
       items:
@@ -2098,8 +2100,6 @@ items:
       href: /microsoft-365/solutions/manage-devices-with-intune-overview
     - name: Protect Exchange Online
       href: ./protect/exchange-online-protect.md
-    - name: Prevent data leaks on non-managed devices
-      href: ./protect/data-leak-prevention.md
     - name: App solutions
       items:
       - name: Purchase and add apps for Microsoft Intune

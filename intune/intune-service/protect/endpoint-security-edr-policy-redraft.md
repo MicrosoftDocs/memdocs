@@ -152,9 +152,9 @@ For detailed setup instructions, see [Connect Microsoft Defender for Endpoint to
 
 **About the Endpoint detection and response node:**
 
-In the Intune admin center, the Endpoint detection and response node include:
-- **Summary** -  Lists all EDR policies and the connector status.
-- **EDR Onboarding Status** - Shows onboarding progress and allows deployment of the preconfigured Windows policy.
+In the Intune admin center, the Endpoint detection and response node includes the following tabs:
+- **Summary** - Lists all EDR policies, the connector status, and includes the "Windows devices onboarded to Defender for Endpoint" chart and **Create Policy** option.
+- **EDR Onboarding Status** - Shows the onboarding summary chart, device list with detailed status, and includes the **Deploy preconfigured policy** option. For detailed guidance on using this tab, see [EDR Onboarding Status report](#edr-onboarding-status-report).
 
 Every device that reports security telemetry to Microsoft Defender for Endpoint must be onboarded using a configuration package (called an onboarding "blob"). This package contains:
 
@@ -175,8 +175,8 @@ Whether you use automatic or manual deployment, Intune applies the same onboardi
 | Scenario | Recommended Method | Configuration Package Type |
 |----------|-------------------|---------------------------|
 | No service connection configured between Intune and Defender for Endpoint | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
-| Quick deployment to all Windows devices with service connection active | [Preconfigured Windows EDR policy](#deploy-the-preconfigured-windows-edr-policy) | Auto from connector |
-| Targeted deployment with custom settings and active service connection | [Custom automatic EDR policy](#create-custom-edr-policy-all-platforms) | Auto from connector |
+| Quick deployment to all Windows devices with service connection active | [Quick deployment with preconfigured policy](#quick-deployment-with-preconfigured-policy) | Auto from connector |
+| Targeted deployment with custom settings and active service connection | [Targeted remediation](#targeted-remediation) | Auto from connector |
 | Multiple Defender tenants or air-gapped environments | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
 | Strict change control requiring manual package management | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
 
@@ -189,30 +189,20 @@ Best for environments with standard Intune + Defender integration and a single D
 
 #### Deploy the preconfigured Windows EDR policy
 
-1. Go to **Endpoint security** > **Endpoint detection and response** > **EDR Onboarding Status** tab.
-2. Select **Deploy preconfigured policy**.
-3. Choose your deployment scope:
-   - **Windows + Endpoint detection and response**: Intune-managed devices
-   - **Windows (ConfigMgr) + Endpoint detection and response (ConfigMgr)**: Configuration Manager collections
-4. Provide a descriptive policy name and optional description.
-5. Select **Create** to deploy immediately to all applicable devices.
+The fastest way to deploy EDR onboarding to all Windows devices is using the preconfigured policy option available from the EDR Onboarding Status tab. This method automatically uses the latest onboarding package from your Defender for Endpoint tenant and deploys with recommended settings.
+
+For detailed step-by-step instructions, see [Quick deployment with preconfigured policy](#quick-deployment-with-preconfigured-policy) in the EDR Onboarding Status report section.
 
 #### Create custom EDR policy (all platforms)
 
-1. Go to **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
-2. Select platform and profile:
-   - **Platform**: *Windows*, *macOS*, or *Linux*
-   - **Profile**: Endpoint detection and response
-3. Configure policy basics with a descriptive name.
-4. On **Configuration settings**:
-   - **Microsoft Defender for Endpoint client configuration package type**: Select **Auto from connector** (this option only appears when the service-to-service connection is configured).
-   - **Sample Sharing**: Choose based on your data sensitivity requirements:
-     - **All samples**: Maximum threat detection capability
-     - **Send safe samples**: Balanced approach (recommended)
-     - **None**: Minimal data sharing
-   - **Device Tags** (macOS and Linux only): Configure Type and Value for device filtering and grouping.
-5. Assign to appropriate groups.
-6. Review and create the policy.
+When you need to deploy EDR policies to specific groups or platforms with customized settings, use the **Create Policy** option from the Summary tab. This approach gives you full control over platform selection, configuration settings, and group assignments.
+
+Key configuration options include:
+- **Microsoft Defender for Endpoint client configuration package type**: Select **Auto from connector** when available
+- **Sample Sharing**: Choose based on your data sensitivity requirements
+- **Device Tags** (macOS and Linux): Configure for device filtering and grouping
+
+For detailed policy creation guidance, see [Targeted remediation](#targeted-remediation) in the EDR Onboarding Status report section.
 
 ### Manual EDR policy creation
 
@@ -287,15 +277,122 @@ After you deploy the policy, allow time for **Intune-ConfigMgr synchronization**
 
 For detailed tenant attach configuration, see [Configure tenant attach to support endpoint protection policies](../protect/tenant-attach-intune.md).
 
+## EDR Onboarding Status report
+
+The **EDR Onboarding Status** report provides administrators with a comprehensive view of device onboarding progress across your organization. This report helps you track which devices are successfully onboarded to Microsoft Defender for Endpoint and identify devices that may need attention.
+
+### Accessing the EDR Onboarding Status report
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Endpoint security** > **Endpoint detection and response**.
+2. Select the **EDR Onboarding Status** tab.
+
+### Understanding the report
+
+The **EDR Onboarding Status tab** includes the following:
+
+- **Onboarding summary chart**: **Windows devices onboarded to Defender for Endpoint** - This chart displays counts of devices that have onboarded and devices that have not onboarded.
+
+- **Device list with detailed information**: This device list includes the following columns of details:  
+  - **Device name**: The name of each device in your organization
+  - **Managed by**: How the device is managed (Intune, Configuration Manager via tenant attach, or MDE Security Settings Management)
+  - **Defender sensor state**: Current health status of the Defender for Endpoint sensor.
+    - **Active**: Sensor is running and communicating normally
+    - **Inactive**: Sensor hasn't reported recently
+    - **Impaired**: Sensor is experiencing issues
+  - **Onboarding status**: Current onboarding state for each device.
+    - **Onboarded**: Device is successfully sending telemetry to Defender for Endpoint
+    - **Not onboarded**: Device hasn't completed the onboarding process
+    - **Pending**: Device is in the process of onboarding
+    - **Last check-in**: The time and date of the most recent communication from the device to Intune
+    - **Primary UPN**: The primary user principal name associated with the device
+
+### Using the report for EDR deployment
+
+#### Quick deployment with preconfigured policy
+For rapid deployment to all eligible Windows devices directly from the EDR Onboarding Status tab:
+
+1. From the **EDR Onboarding Status** tab, select **Deploy preconfigured policy**.
+
+   :::image type="content" source="./media/endpoint-security-edr-policy/edr-preconfigured-policy-option.png" alt-text="Screen shot of the admin center that shows where to find the Deploy preconfigured policy option.":::
+
+2. Choose your deployment scope:
+   - **Windows + Endpoint detection and response**: For Intune-managed devices
+   - **Windows (ConfigMgr) + Endpoint detection and response (ConfigMgr)**: For Configuration Manager collections
+3. Provide a policy name and optional description.
+4. Select **Create** to deploy immediately.
+
+This preconfigured policy automatically:
+- Uses the latest onboarding package from your Defender for Endpoint tenant
+- Deploys to all applicable devices in your organization
+- Applies recommended security settings
+
+### Using the report for targeted remediation
+
+The EDR Onboarding Status report helps identify devices that need attention, which you can then address with targeted policy deployment:
+
+#### Identify problem devices
+Use the device list on the **EDR Onboarding Status tab** to identify specific devices requiring attention:
+
+1. **Filter devices by status**: Focus on "Not onboarded" or "Pending" devices
+2. **Review management methods**: Ensure devices are being managed through the appropriate channel
+3. **Check sensor health**: Identify devices with inactive or impaired sensors
+
+#### Create targeted policies
+Once you've identified problem devices, create specific EDR policies using the **Create Policy** option from the **Summary tab**:
+
+:::image type="content" source="./media/endpoint-security-edr-policy/manually-create-edr-policy.png" alt-text="Screen shot of the admin center that shows where to find the Create Policy option.":::
+
+### Monitoring scenarios
+
+The EDR Onboarding Status report supports several key administrative scenarios:
+
+#### Initial deployment validation
+After deploying EDR policies:
+- Monitor the onboarding summary chart for increasing "onboarded" counts
+- Review individual device progress in the device list
+- Identify devices that fail to onboard within expected timeframes
+
+#### Ongoing compliance monitoring
+For continuous security posture management:
+- Set up regular reviews of onboarding status.
+- Track sensor health across your device fleet.
+- Identify devices that become inactive or impaired over time.
+
+#### Troubleshooting deployment issues
+When devices fail to onboard:
+- Use the device list to identify problematic devices.
+- Review management methods to ensure proper policy targeting.
+- Check sensor status for devices showing "Not onboarded" status.
+- Cross-reference with EDR policy compliance reports.
+
+### Best practices for using the report
+
+- **Regular monitoring**: Review the EDR Onboarding Status report weekly to ensure continuous protection coverage.
+- **Proactive remediation**: Address "Not onboarded" devices promptly to maintain security posture.
+- **Correlation with other reports**: Use alongside individual EDR policy compliance reports for comprehensive deployment visibility.
+- **Document baseline metrics**: Track onboarding success rates over time to identify trends.
+
+### Additional onboarding visibility
+
+Beyond the dedicated EDR Onboarding Status report, you can also view device onboarding status through Intune's Microsoft Defender Antivirus reports. These reports include onboarding status information for Windows MDM devices and provide another way to monitor your organization's Defender for Endpoint deployment:
+
+- **[Antivirus agent status report](../fundamentals/reports.md#antivirus-agent-status-report-organizational)**: Shows comprehensive device status including Defender for Endpoint onboarding state
+- **[Unhealthy endpoints report](../protect/endpoint-security-antivirus-policy.md#unhealthy-endpoints)**: Displays devices with detected issues, including onboarding problems
+
+These reports are available at in the admin center at the following lcoations:  
+- Go to **Reports** > **Endpoint security** > **Microsoft Defender Antivirus** > **Reports** > **Antivirus agent status** tile.
+- Go to **Endpoint security** > **Antivirus** > **Unhealthy endpoints** tab.
+
 ## Monitor and validate EDR deployment
 
 **Intune reporting:**  
 
-You can review deployment and onboarding results in the Intune admin center:
+You can review deployment and onboarding results in the Intune admin center at **Endpoint security** > **Endpoint detection and response**:
 
-1. **Policy compliance**: Go to **Endpoint security** > **Endpoint detection and response** and select your policy to view deployment status.
-2. **EDR Onboarding Status**: Check for tenant-wide device onboarding summary and drill down to individual device status.
-3. **Device details**: Select devices for detailed onboarding status and sensor health.
+- **Policy compliance**: On the **Summary** tab you can select your policy to view it's deployment status.
+- **Device details**: On **EDR Onboarding Status** tab, you view  simple report showing device counts, review a list of devices with details for their onboarding status and sensor health, and then select devices to drill in further for more information.
+
+For comprehensive device onboarding oversight, use the [EDR Onboarding Status report](#edr-onboarding-status-report).
 
 **Microsoft Defender portal validation:**
 
@@ -320,7 +417,7 @@ Review the following to ensure continued onboarding success:
 **Devices do not appear in the Defender portal**
 
 - Confirm the device can reach required endpoints (for example, *.securitycenter.windows.com and *.protection.outlook.com).
-- Check the EDR policy compliance status in Intune.
+- Check the EDR policy compliance status in Intune and review device-specific details in the [EDR Onboarding Status report](#edr-onboarding-status-report).
 - Ensure the Microsoft Defender for Endpoint service is running on the device.
 
 **"Auto from connector" option isn't available**

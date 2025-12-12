@@ -172,7 +172,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../analytics/index.md#prerequisites).
+For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../endpoint-analytics/index.md#prerequisites).
 
 ## Microsoft Defender for Endpoint
 
@@ -312,7 +312,7 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../endpoint-analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 
@@ -331,6 +331,48 @@ Different endpoints are used depending on your tenant location. To find your ten
 <a name="windows-update-for-business-deployment-service"></a>
 
 For more information on the required endpoints for Windows Autopatch, see [Windows Autopatch prerequisites](/windows/deployment/windows-autopatch/prepare/windows-autopatch-configure-network#required-microsoft-product-endpoints).
+
+## Azure Front Door Connectivity Diagnostics Tool
+
+To help with validating connectivity to the Azure Front Door (AFD) IP addresses used by Intune, the [Test-IntuneAFDConnectivity.ps1](https://download.microsoft.com/download/52de3524-4108-47e5-acda-5cc820107759/Test-IntuneAFDConnectivity.ps1) script can be used to test connectivity to the required AFD IP address ranges and service endpoints.
+
+This diagnostics tool includes checks for:
+
+- DNS Resolution of Intune service endpoints
+- Outbound TCP Connectivity on ports 80 and 443 to AFD IP addresses
+- HTTPS validation to the Intune cloud service
+
+### Prerequisites
+
+Before running the script, ensure you have:
+
+- PowerShell 5.1 or later
+- Connectivity to Network endpoints for Microsoft Intune, as defined in this article.
+  
+### Usage
+
+Run the script from an Intune-managed device to test connectivity to the Intune network endpoints using Azure Front Door.
+
+Open **PowerShell** and use the following syntax:
+
+
+|Cloud|Command|Notes|
+| -------- | -------- | -------- |
+|Public Cloud (Default)|`.\Test-IntuneAFDConnectivity.ps1`|Tests connectivity to Public Cloud environments|
+|Government Cloud|`.\Test-IntuneAFDConnectivity.ps1 -CloudType gov`|Tests connectivity to US Government, GCC High, and DoD environments|
+|Export Results with Detailed Logging|`.\Test-IntuneAFDConnectivity.ps1 -LogLevel Detailed -OutputPath "C:\Logs" -Verbose`|Runs tests with detailed logging and saves results to the specified output directory|
+
+### Troubleshooting
+
+If the script reports a failure (Exit Code 1):
+
+- **If the Azure Front Door IP Address tests show failed IPs or IP ranges:** Your firewall, proxy, or VPN may be blocking outbound connections on ports **443** or **80** to those Azure Front Door IPs.
+
+- **If the Service Endpoint test shows “HTTPS endpoint unreachable”:** The required Intune service FQDNs or Azure Front Door IPs may not be reachable, or a DNS, proxy, or HTTPS inspection issue is preventing connection to the Intune service FQDN.
+
+- **Review the network endpoints for Microsoft Intune** (as detailed in this article) and ensure your firewall, VPN, or proxy allows all required Intune service FQDNs, Azure Front Door IP ranges, and ports.
+
+- **Check detailed results** in the saved output file, or run the script with detailed logging (-LogLevel Detailed and -Verbose) to capture more diagnostic information.
 
 ## Consolidated Endpoint List
 

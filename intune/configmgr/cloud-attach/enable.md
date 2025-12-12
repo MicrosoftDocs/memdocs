@@ -18,7 +18,7 @@ ms.reviewer: mstewart
 
 *Applies to: Configuration Manager (current branch)*
 
-Starting in version 2111, it's simpler to cloud attach your Configuration Manager environment. You can choose a streamlined set of recommended defaults, or customize your cloud attach features. If you're not running version 2111 yet, use the [Tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [Endpoint analytics](../../analytics/index.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [Co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) articles to enable cloud attach features.
+Starting in version 2111, it's simpler to cloud attach your Configuration Manager environment. You can choose a streamlined set of recommended defaults, or customize your cloud attach features. If you're not running version 2111 yet, use the [Tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [Endpoint analytics](../../endpoint-analytics/index.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [Co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) articles to enable cloud attach features.
 
 :::image type="content" source="./media/10964629-cloud-attach-wizard.png" alt-text="Screenshot of the cloud attach configuration wizard":::
 
@@ -32,7 +32,7 @@ By using the recommended default settings, your eligible devices will be cloud a
     - Enrolls your clients into [co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), with all [workloads](../comanage/workloads.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) pointed to Configuration Manager
     - Devices are eligible if they meet the [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites). These devices are listed in the built-in **Co-management Eligible Devices** collection. <!--12377291-->
     - This option is the only one currently available for China21Vianet (Azure China Cloud).
-- Enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
+- Enables [Endpoint analytics](../../endpoint-analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - Enables automatic upload of all your devices to Microsoft Intune admin center ([tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json))
 - Enables Uploading of Microsoft Defender for Endpoint data for [reporting](../tenant-attach/deploy-antivirus-policy.md#bkmk_mdereports) on devices uploaded to Microsoft Intune admin center
 
@@ -40,7 +40,7 @@ By using the recommended default settings, your eligible devices will be cloud a
 > When you attach your Configuration Manager site with a Microsoft Intune tenant, the site sends more data to Microsoft. [Tenant attach data collection](../tenant-attach/data-collection.md) article summarizes the data that is sent.
 
 > [!Note]
-> Ensure that prerequisites for each of the cloud attach features are met. For more information about prerequisites, see, [prerequisites for tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [prerequisites for Endpoint analytics](../../analytics/index.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites).
+> Ensure that prerequisites for each of the cloud attach features are met. For more information about prerequisites, see, [prerequisites for tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), [prerequisites for Endpoint analytics](../../endpoint-analytics/index.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json), and [prerequisites for co-management](../comanage/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json#prerequisites).
 ## Cloud attach using the default settings
 
 Use the following steps to cloud attach your environment with the default settings:
@@ -80,7 +80,7 @@ Use the following steps to cloud attach your environment with custom settings:
    **Select which devices to upload to Microsoft Endpoint Manager** has the following two options:
    - **All devices managed my Microsoft Endpoint Configuration Manager (recommended)**: Upload all devices
    - **Specific Collection**: Upload a specific collection, including any subcollections.
-1. The **Endpoint Analytics** section of the **Configure Upload** page, enables [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for devices uploaded to Microsoft Intune. Endpoint analytics reports focus on the quality of the experience you're delivering to your users and helps you identify issues to proactively make improvements.
+1. The **Endpoint Analytics** section of the **Configure Upload** page, enables [Endpoint analytics](../../endpoint-analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) for devices uploaded to Microsoft Intune. Endpoint analytics reports focus on the quality of the experience you're delivering to your users and helps you identify issues to proactively make improvements.
 
    Ensure the **Enable Endpoint Analytics for devices uploaded to Microsoft Endpoint Manager** option is selected to enable Endpoint Analytics.
 
@@ -112,5 +112,5 @@ Use the following steps to cloud attach your environment with custom settings:
 Learn more about the following cloud attach features:
 
 - [Co-management](../comanage/tutorial-co-manage-clients.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
-- [Endpoint analytics](../../analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
+- [Endpoint analytics](../../endpoint-analytics/scores.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
 - [Tenant attach](../tenant-attach/device-sync-actions.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)

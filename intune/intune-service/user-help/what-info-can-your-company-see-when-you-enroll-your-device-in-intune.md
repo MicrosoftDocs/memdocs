@@ -96,4 +96,4 @@ Your organization can query these details about a corporate-owned Windows device
 
  - Details about running processes
 
-For more information, see [Device Query](../../analytics/device-query.md).
+For more information, see [Device Query](../../advanced-analytics/device-query.md).
