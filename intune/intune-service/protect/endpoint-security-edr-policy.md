@@ -176,7 +176,7 @@ Whether you use automatic or manual deployment, Intune applies the same onboardi
 |----------|-------------------|---------------------------|
 | No service connection configured between Intune and Defender for Endpoint | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
 | Quick deployment to all Windows devices with service connection active | [Quick deployment with preconfigured policy](#quick-deployment-with-preconfigured-policy) | Auto from connector |
-| Targeted deployment with custom settings and active service connection | [Targeted remediation](#targeted-remediation) | Auto from connector |
+| Targeted deployment with custom settings and active service connection | [Targeted remediation](#using-the-report-for-targeted-remediation) | Auto from connector |
 | Multiple Defender tenants or air-gapped environments | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
 | Strict change control requiring manual package management | [Manual EDR policy](#manual-edr-policy-creation) | Onboard |
 
@@ -202,7 +202,7 @@ Key configuration options include:
 - **Sample Sharing**: Choose based on your data sensitivity requirements
 - **Device Tags** (macOS and Linux): Configure for device filtering and grouping
 
-For detailed policy creation guidance, see [Targeted remediation](#targeted-remediation) in the EDR Onboarding Status report section.
+For detailed policy creation guidance, see [Targeted remediation](#using-the-report-for-targeted-remediation) in the EDR Onboarding Status report section.
 
 ### Manual EDR policy creation
 
@@ -229,8 +229,7 @@ After creating your core EDR policies, you can deploy additional specialized pro
 ### Create a Linux Global Exclusions policy
 
 > [!NOTE]
-> **Linux Global Exclusions**: For Linux devices managed through [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can create a separate **Microsoft Defender Global Exclusions (AV+EDR)** profile. This profile supports path and process name exclusions without wildcards. For details, see [Endpoint detection and response policy for Linux](../protect/endpoint-security-edr-policy.md#linux).
-
+> **Linux Global Exclusions**: For Linux devices managed through [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can create a separate **Microsoft Defender Global Exclusions (AV+EDR)** profile. This profile supports path and process name exclusions without wildcards.
 
 1. Go to **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
 2. Select **Linux** for platform and **Microsoft Defender Global Exclusions (AV+EDR)** for profile.
@@ -290,9 +289,9 @@ The **EDR Onboarding Status** report provides administrators with a comprehensiv
 
 The **EDR Onboarding Status tab** includes the following:
 
-- **Onboarding summary chart**: - This is an onboarding summary chart for Windows devices. It includes counts of devices that onboarded, and have not onboarded.
+- **Onboarding summary chart**: **Windows devices onboarded to Defender for Endpoint** - This chart displays counts of devices that have onboarded and devices that have not onboarded.
 
-- **Device list with detailed information** - This device list includes the following columns of details:  
+- **Device list with detailed information**: This device list includes the following columns of details:  
   - **Device name**: The name of each device in your organization
   - **Managed by**: How the device is managed (Intune, Configuration Manager via tenant attach, or MDE Security Settings Management)
   - **Defender sensor state**: Current health status of the Defender for Endpoint sensor.
@@ -303,8 +302,8 @@ The **EDR Onboarding Status tab** includes the following:
     - **Onboarded**: Device is successfully sending telemetry to Defender for Endpoint
     - **Not onboarded**: Device hasn't completed the onboarding process
     - **Pending**: Device is in the process of onboarding
-    - **Last check-in**: The time and date of the most recent communication from the device to Intune.
-  - **Primary UPN**
+    - **Last check-in**: The time and date of the most recent communication from the device to Intune
+    - **Primary UPN**: The primary user principal name associated with the device
 
 ### Using the report for EDR deployment
 
@@ -458,8 +457,8 @@ When you offboard a device from Defender for Endpoint:
 
 For more information, see the following subjects in the Microsoft Defender for Endpoint documentation:
 
-- [Offboard devices using Mobile Device Management tools](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
-- [Offboard devices](https://learn.microsoft.com/microsoft-365/security/defender-endpoint/offboard-machines)
+- [Offboard devices using Mobile Device Management tools](/microsoft-365/security/defender-endpoint/configure-endpoints-mdm#offboard-devices-using-mobile-device-management-tools)
+- [Offboard devices](/microsoft-365/security/defender-endpoint/offboard-machines)
 
 ## Related content
 
