@@ -44,7 +44,7 @@ This article helps you move your mobile device management (MDM) from Microsoft 3
 
   - **License administrator** - This Microsoft Entra role lets you assign Intune licenses in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854). For more information on this role, go to [Microsoft Entra built-in roles - License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator).
 
-  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, go to [Built-in roles for Microsoft Intune](../fundamentals/role-based-access-control-intune.md#policy-and-profile-manager).
+  - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, go to [Built-in roles for Microsoft Intune](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager).
 
 - Test the steps in this article on a test users group that have devices enrolled in Basic Mobility and Security. Confirm that the policies behave as you expect.
 
