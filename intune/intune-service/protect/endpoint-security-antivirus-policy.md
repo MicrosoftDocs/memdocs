@@ -82,7 +82,7 @@ Prerequisites to support tamper protection for devices managed by Intune:
 - Your environment must meet the [prerequisites for managing  tamper protection with Intune](/windows/security/threat-protection/microsoft-defender-antivirus/prevent-changes-to-security-settings-with-tamper-protection#turn-tamper-protection-on-or-off-for-your-organization-using-intune)
 - Devices are onboarded to Microsoft Defender for Endpoint (P1 or P2)
 
-Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Intune](#devices-managed-by-microsoft-intune):
+Profiles for *Antivirus* policy that support tamper protection for [devices managed by Microsoft Intune](../protect/endpoint-security-edr-policy.md#supported-platforms-and-profiles):
 
 - Platform: **Windows**
   - Profile: **Windows Security experience**
@@ -125,7 +125,7 @@ The following profiles are supported for devices you manage with Intune:
   - Profile: **Microsoft Defender Antivirus** - Manage Antivirus settings on Linux devices.
   - Profile: **Microsoft Defender Antivirus Exclusions** - Manage settings for Microsoft Defender Antivirus that define Antivirus exclusions for paths, extensions, and processes.
 
-  Antivirus exclusions are also managed by Microsoft Defender Antivirus policy, which includes identical settings for exclusions, and from other policies like Intune's Endpoint detection and response profile for [Microsoft Defender Global Exclusions (AV+EDR)](../protect/endpoint-security-edr-policy.md#linux) for Linux, which includes both EDR and Antivirus exclusions. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
+  Antivirus exclusions are also managed by Microsoft Defender Antivirus policy, which includes identical settings for exclusions, and from other policies like Intune's Endpoint detection and response profile for [Microsoft Defender Global Exclusions (AV+EDR)](../protect/endpoint-security-edr-policy.md#create-a-linux-global-exclusions-policy) for Linux, which includes both EDR and Antivirus exclusions. Settings from multiple sources are subject to policy merge, and create a super set of exclusions for applicable devices and users.
 
   > [!IMPORTANT]
   > The *Microsoft Defender Global Exclusions (AV+EDR)* profile is supported only for Linux devices managed by Defender through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
