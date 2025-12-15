@@ -541,4 +541,4 @@ For guidance on this solution, see [Configuring Microsoft Intune devices for Win
 
 ## Next steps
 
-[Manage software updates in Intune](windows-update-for-business-configure.md)
+[Manage software updates in Intune](configure.md)

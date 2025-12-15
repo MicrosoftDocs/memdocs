@@ -17,7 +17,7 @@ Use Microsoft Intune to manage the install of Windows software updates from Wind
 > [!TIP]
 > This feature was formerly known as *Windows Update for Business*.
 
-By using Windows Update client policies, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](windows-update-settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+By using Windows Update client policies, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
 
 Intune stores only the update policy assignments, not the updates themselves. When you save a policy, Intune passes the configuration details to Windows Update, which then determines which of these updates are offered to each device. Devices access Windows Update directly for the updates.
 
@@ -85,13 +85,13 @@ Use the following process to ensure Windows Update has processed your feature up
 
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
 
-2. View the [Windows feature updates (Organizational)](../intune-service/protect/windows-update-reports.md#use-the-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
+2. View the [Windows feature updates (Organizational)](../intune-service/protect/reports.md#use-the-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 
 3. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Update ring policy](../intune-service/protect/update-rings.md), for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
 
 ## Reporting on updates
 
-To learn about report options for Update rings policy and Windows feature updates policy, see [Windows update reports](windows-update-reports.md).
+To learn about report options for Update rings policy and Windows feature updates policy, see [Windows update reports](reports.md).
 
 ## Next steps
 

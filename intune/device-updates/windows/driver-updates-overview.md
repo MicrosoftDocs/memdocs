@@ -134,7 +134,7 @@ For more information, see [Role-based access control for Microsoft Intune](../fu
 
 Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for other capabilities that aren't supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md).
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
 
 ## Architecture
 
@@ -271,9 +271,9 @@ The recommended and preferred path to embrace cloud based updates is to move the
       > [!NOTE]
       > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
 
-   4. Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy drivers and firmware to.
+   4. Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy drivers and firmware to.
 
-   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](windows-update-reports.md).
+   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](reports.md).
 
       > [!NOTE]
       > By default, diagnostic data submission to Microsoft is allowed on Windows devices. Disabling diagnostic data collection prevents the use of Windows Update reports for Microsoft Intune from reporting any update information for your managed devices.
@@ -321,4 +321,4 @@ Here are some more details on when deadlines are applied to drivers:
 ## Next steps
 
 - [Create a Windows driver update policy](windows-driver-updates-policy.md)
-- [Use Windows driver update reports](windows-update-reports.md#reports-for-windows-driver-updates-policy)
+- [Use Windows driver update reports](reports.md#reports-for-windows-driver-updates-policy)

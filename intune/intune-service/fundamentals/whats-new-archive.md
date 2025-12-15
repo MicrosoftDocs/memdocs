@@ -364,7 +364,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 We're introducing a new **Update Substate** in Service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
 
-For more information, see [Use Windows Update for Business reports for Windows Updates](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report)
+For more information, see [Use Windows Update for Business reports for Windows Updates](../../device-updates/windows/reports.md#use-the-windows-10-feature-updates-organizational-report)
 
 ## Week of February 24, 2025 (Service release 2502)
 
@@ -1464,7 +1464,7 @@ Add-on capabilities:
 Plan 2 capabilities:
 
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Firmware-over-the-air update](../protect/zebra-lifeguard-ota-integration.md)
+- [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md)
 - [Specialty devices management](../fundamentals/specialty-devices-with-intune.md)
 
 For more information, see:
@@ -2278,7 +2278,7 @@ You can drill down further in the report for each quality update that aggregates
 
 Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
 
-For more information on Windows update distribution reports, see [Windows Update reports on Intune](../protect/windows-update-reports.md#windows-update-distribution-report).
+For more information on Windows update distribution reports, see [Windows Update reports on Intune](../../device-updates/windows/reports.md#windows-update-distribution-report).
 
 Applies to:
 
@@ -4059,7 +4059,7 @@ With this change for reports for Update rings for Windows 10 and later, when you
   - **Per setting status** – This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings might not be successfully deploying to your organization.
 - **Properties** – View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
 
-For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article.
+For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../../device-updates/windows/reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article.
 
 ### Role-based access
 
@@ -4614,7 +4614,7 @@ Zebra will be releasing support for Android 13 on their devices. You can read mo
 
 - **Update devices to Android 13**
 
-  You'll soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+  You'll soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md).
 
   Before you migrate to Android 13, review [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
 
@@ -4695,7 +4695,7 @@ Update policies can be configured for one of two approval methods:
 
 To help you manage driver updates, you review a policy and decline an update you don't want to install. You can also indefinitely pause any approved update, and reapprove a paused update to restart its deployment.
 
-This release also includes [driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
+This release also includes [driver update reports](../../device-updates/windows/reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
 To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../protect/windows-driver-updates-overview.md).
 
@@ -5409,7 +5409,7 @@ The Microsoft Surface link takes you to the Surface Management Portal where you 
 To access the Partner portals page, you must enable the Devices pane preview and then navigate to **Devices** > **Partner Portals**.
 
 #### Windows Update compatibility reports for Apps and Drivers are now generally available<!-- 17917026  -->
-The following Microsoft Intune reports for [Windows Update compatibility](../protect/windows-update-compatibility-reports.md) are out of preview and now generally available:
+The following Microsoft Intune reports for [Windows Update compatibility](../../device-updates/compatibility-reports.md) are out of preview and now generally available:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 

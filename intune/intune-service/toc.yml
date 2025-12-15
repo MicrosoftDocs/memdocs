@@ -1184,8 +1184,6 @@ items:
             href: ./protect/security-baseline-settings-windows-365.md
         - name: Microsoft Tunnel command-line tools
           href: ./protect/microsoft-tunnel-reference.md
-        - name: Windows update settings
-          href: ./protect/windows-update-settings.md
         - name: Zero Trust security configuration examples
           items:
           - name: Android fully managed compliance and security

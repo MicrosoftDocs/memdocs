@@ -41,7 +41,7 @@ The actual time required for a device to start an update depends on the device i
 
   If a device doesn't restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](windows-update-settings.md#user-experience-settings).
+- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](settings.md#user-experience-settings).
 
 ## Prerequisites
 
@@ -137,13 +137,13 @@ Group Policy settings override mobile device management policies, and the follow
 
 **Monitoring and reporting**:
 
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting).
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](reports.md#configuring-for-client-data-reporting).
 
 ### Limitations for Workplace Joined devices
 
 Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for additional capabilities that are not supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows software updates in Intune*.
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md) in *Manage Windows software updates in Intune*.
 
 ## Create and assign an expedited quality update
 
@@ -263,7 +263,7 @@ From this pane, you can:
 
 ## Monitoring and reporting
 
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting).
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](reports.md#configuring-for-client-data-reporting).
 
 After a policy has been created you can monitor results, update status, and errors from the following reports.
 
@@ -318,5 +318,5 @@ This report can help you find devices with alerts or errors and can help you tro
 
 - Configure [Update rings for Windows 10 and later](update-rings.md)
 - Configure [Feature updates for Windows 10 and later](feature-updates.md)
-- Use [Windows update compatibility reports](windows-update-compatibility-reports.md)
+- Use [Windows update compatibility reports](compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)

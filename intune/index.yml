@@ -79,7 +79,7 @@ productDirectory:
     - title: Update Windows with Intune
       imageSrc: ./media/index/update-windows.svg
       links:
-        - url: ./intune-service/protect/windows-update-for-business-configure.md
+        - url: ./device-updates/configure.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
           text: View the interactive demo

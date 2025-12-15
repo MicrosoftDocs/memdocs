@@ -273,4 +273,4 @@ The bulk driver updates can help the user to manage the driver updates more effi
 ## Next steps
 
 - Use [Windows driver update overview](../intune-service/protect/windows-driver-updates-overview.md)
-- Use [Windows driver update reports](../intune-service/protect/windows-update-reports.md#reports-for-windows-driver-updates-policy)
+- Use [Windows driver update reports](../intune-service/protect/reports.md#reports-for-windows-driver-updates-policy)

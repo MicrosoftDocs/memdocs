@@ -6,7 +6,7 @@ items:
 - name: Feature updates policy
   href: feature-updates.md
 - name: Windows quality updates policy
-  href: quality-update-policy.md
+  href: quality-updates-policy.md
 - name: Expedite updates policy
   href: expedite-updates.md
 - name: Windows driver updates
@@ -16,11 +16,11 @@ items:
   - name: Driver updates policy
     href: windows-driver-updates-policy.md
 - name: Windows rollout options
-  href: windows-update-rollout-options.md
+  href: rollout-options.md
 - name: Windows Update compatibility reports
-  href: windows-update-compatibility-reports.md
+  href: compatibility-reports.md
 - name: Windows Update reports
-  href: windows-update-reports.md
+  href: reports.md
 - name: Delivery Optimization
   href: delivery-optimization.md
   displayName: delivery optimization, windows updates
