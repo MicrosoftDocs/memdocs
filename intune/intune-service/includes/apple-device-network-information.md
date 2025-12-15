@@ -1,8 +1,8 @@
 ---
-author: ErikjeMS
+author: nicholasswhite
 ms.topic: include
-ms.date: 06/02/2020
-ms.author: erikje
+ms.date: 06/02/2025
+ms.author: nwhite
 ---
 
 ## Apple dependencies
