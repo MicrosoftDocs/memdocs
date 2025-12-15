@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: itpro-deploy
-ms.service: windows-client
 ms.topic: include
-ms.date: 04/24/2023
-ms.localizationpriority: medium
+ms.date: 09/24/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -19,23 +13,30 @@ user-driven/hybrid-azure-ad-join-esp.md
 
 Headings are driven by article context. -->
 
-The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
+The main feature of the Enrollment Status Page (ESP) is to display progress and current status to the end user while the device is being set up and enrolled via the Windows Autopilot process. The other main feature of the ESP is to block a user from signing in and using the device until all required policies and applications are installed. Multiple ESP profiles can be created with different settings and assigned appropriately based on different needs and scenarios.
 
-Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Autopilot process. However, it's highly recommended to change this default via a separate custom ESP to show app and profile progress. Enabling and configuring an ESP allows end users to properly see the progress of their device being set up and prevents them using the device until it's fully configured and provisioned. A user signing into the device before it's fully configured and provisioned can cause issues.
+Out of box there's a default ESP that is assigned to all devices. The default setting in the default ESP is to not show app and profile progress during the Windows Autopilot process. However, Microsoft recommends changing this default via a separate custom ESP to show app and profile progress. Enabling and configuring an ESP allows end users to properly see the progress of their device being set up and prevents them using the device until the device is fully configured and provisioned. A user signing into the device before being fully configured and provisioned can cause issues.
 
 The ESP has two phases:
 
-- **Device ESP** - The portion of the ESP that runs during the OOBE process and applies device policies and installs device applications
-- **User ESP** - The portion of the ESP that sets up user account, applies user policies, and installs user applications
+- **Device ESP** - The portion of the ESP that runs during the OOBE process and applies device policies and installs device applications.
+- **User ESP** - The portion of the ESP that sets up user account, applies user policies, and installs user applications.
 
 Device ESP runs first followed by the User ESP.
 
 > [!TIP]
+>
 > For Configuration Manager admins, an ESP is similar and analogous to Configuration Manager client settings.
 
-## Autopilot Enrollment Status Page (ESP) configuration options
+## Windows Autopilot Enrollment Status Page (ESP) configuration options
 
 When the Enrollment Status Page (ESP) is configured, it has several options that can be configured to meet the needs of the organization. The following lists the different options and their possible configurations:
+
+- **Show app and profile configuration progress**:
+
+  - **No**: The enrollment status page doesn't appear during device setup. To disable the configuration progress to users during the provisioning process, select **No**.
+
+  - **Yes**: The enrollment status page appears during device setup. More options become available when this option is selected. Microsoft recommends selecting **Yes** and enabling displaying the enrollment status page configuration progress when using Windows Autopilot.
 
 - **Show an error when installation takes longer than specified number of minutes**:
 
@@ -49,9 +50,9 @@ When the Enrollment Status Page (ESP) is configured, it has several options that
 
 - **Turn on log collection and diagnostics page for end users**:
 
-  - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.  
+  - **No**: The collect logs button isn't shown to users when an installation error occurs. The Windows Autopilot diagnostics page isn't shown on devices running Windows 11.
 
-  - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics may aid with troubleshooting. For this reason, it's recommended to enable this option.
+  - **Yes**: The collect logs button is shown to users when an installation error occurs. The Windows Autopilot diagnostics page is shown on devices running Windows 11. Logs and diagnostics might aid with troubleshooting. For this reason, Microsoft recommends enabling this option.
 
 - **Only show page to devices provisioned by out-of-box experience (OOBE)**:
 
@@ -59,43 +60,63 @@ When the Enrollment Status Page (ESP) is configured, it has several options that
 
   - **Yes**: The enrollment status page (ESP) is shown during the device phase and the OOBE. The page is also shown during the user phase, but only to the first user who signs into the device. It isn't shown to subsequent users who sign into the device.
 
+- **Install Windows quality updates (might restart the device)**: Use this setting to control checking and installation from Windows Updates the available quality updates, also known as monthly security update releases. The available options are:
+
+  - **Yes**: At the end of OOBE, the device checks Windows Updates for any missing and applicable monthly security update releases. During this process, if updates are found, a page is displayed to the user showing update progress.
+
+  - **No**: Monthly security update releases aren't installed during OOBE and the device instead continues to the desktop as usual. Messages regarding installation of monthly security update releases aren't displayed since they aren't installed.
+
+    > [!IMPORTANT]
+    >
+    > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
+    > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
+    > - For important detailed information regarding this option, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+    > - If this option is set to **No**, make sure to set the option **Block device use until all apps and profiles are installed** is set to **Yes** to ensure that monthly security update releases aren't installed. For more information, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+
 - **Block device use until all apps and profiles are installed**:
 
   - **No**: Users can leave the ESP before Intune is finished setting up the device.
 
-  - **Yes**: Users can't leave the ESP until Intune is done setting up the device. Enabling this option unlocks the following additional options:  
+    > [!IMPORTANT]
+    >
+    > Don't set this option to **No** if the option **Install Windows quality updates (might restart the device)** is set to **No**. For more information, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+    >
 
-    - **Allow users to reset device if installation error occurs**:  
+  - **Yes**: Users can't leave the ESP until Intune is done setting up the device.
 
-      - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.  
+    Enabling this option unlocks the following additional options:
 
-      - **Yes**: The ESP gives users the option to reset their devices when an installation fails.  
+    - **Allow users to reset device if installation error occurs**:
+
+      - **No**: The ESP doesn't give users the option to reset theirs devices when an installation fails.
+
+      - **Yes**: The ESP gives users the option to reset their devices when an installation fails.
 
     - **Allow users to use device if installation error occurs**:
 
-      - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.  
+      - **No**: The ESP doesn't give users the option to bypass the ESP when an installation fails.
 
       - **Yes**: The ESP gives users the option to bypass the ESP and use their devices when an installation fails.
 
-    - **Block device use until these required apps are installed if they are assigned to the user/device**:  
+    - **Block device use until these required apps are installed if they are assigned to the user/device**:
 
-      - **All**: All assigned apps must be installed before users can use their devices.  
+      - **All**: All assigned apps must be installed before users can use their devices.
 
       - **Selected**: Selected apps must be installed before users can use their devices. After enabling this option, select **Select apps** to select the managed apps from Intune that are required to be installed before users can use their device.
 
 ## Configure and assign the Enrollment Status Page (ESP)
 
-To configure and assign the Autopilot Enrollment Status Page (ESP), follow these steps:
+To configure and assign the Windows Autopilot Enrollment Status Page (ESP), follow these steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-1. In the **Home** screen, select **Devices** in the left pane.
+1. In the **Home** screen, select **Devices** in the left hand pane.
 
-1. In the **Devices | Overview** screen, under **By platform**, select **Windows**.
+1 In the **Devices | Overview** screen, under **By platform**, select **Windows**.
 
-1. In the **Windows | Windows devices** screen, select **Windows enrollment**.
+1. In the **Windows | Windows devices** screen, under **Device onboarding**, select **Enrollment**.
 
-1. Under **General**, select **Enrollment Status Page**.
+1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot**, select **Enrollment Status Page**.
 
 1. In the **Enrollment Status Page** screen that opens, select **Create**.
 
@@ -109,32 +130,32 @@ To configure and assign the Autopilot Enrollment Status Page (ESP), follow these
 
 1. In the **Settings** page, toggle the option **Show app and profile configuration progress** to **Yes**.
 
-   1. After the option **Show app and profile configuration progress** is toggled to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP as described in the section [Autopilot Enrollment Status Page (ESP) configuration options](#autopilot-enrollment-status-page-esp-configuration-options):
+   1. After the option **Show app and profile configuration progress** is toggled to **Yes**, several new options will appear. Configure these options based on the desired behavior for the ESP as described in the section [Windows Autopilot Enrollment Status Page (ESP) configuration options](#windows-autopilot-enrollment-status-page-esp-configuration-options):
 
-   1. Once the different ESP options under the **Settings** page have been configured as desired, select **Next**.
+   1. Once the different ESP options under the **Settings** page are configured as desired, select **Next**.
 
 1. In the **Assignments** page:
 
    1. Under **Included groups**, select **Add groups**.
 
-   1. In the **Select groups to include** window that opens, select the device group(s) to target the ESP profile. The device group(s) selected would normally be the device group(s) created in the **Create device group** step.
+   1. In the **Select groups to include** window that opens, select the device groups to target the ESP profile. The device groups selected would normally be the device groups created in the **Create device group** step.
 
    1. After selecting the device group, select **Select** to close the **Select groups to include** window.
 
       > [!TIP]
       >
-      > After selecting the device group(s), you can select the **Edit filter** option on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, further filtering can be useful if you want to exclude some of the devices that are members in the device group(s) selected.
+      > After selecting the device groups, the **Edit filter** option can be selected on each device group added to the assignment to further refine what devices are targeted for the ESP profile. For example, further filtering can be useful if some of the devices that are members in the device groups selected need to be excluded.
 
-   1. Select **Next**.  
+   1. Select **Next**.
 
     > [!NOTE]
     >
-    > ESPs are assigned to device groups and not directly to individual devices. To assign an ESP to a specific device, the device must be a member of a device group that has an ESP assigned to it.
+    > An ESP is assigned to a device group and not directly to individual devices. To assign an ESP to a specific device, the device must be a member of a device group that has an ESP assigned to it.
 
 1. In the **Scope tags** page, select **Next**.
 
     > [!NOTE]
     >
-    > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For the purpose of this tutorial, scope tags is being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+    > **Scope tags** are optional and are a method to control who has access to the ESP configuration. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this screen. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
-1. In the **Review + create** page, review the settings and verify everything is correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.
+1. In the **Review + create** page, verify that the settings are correct and configured as desired. Once verified, select **Create** to save the changes and assign the ESP profile.

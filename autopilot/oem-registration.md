@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot OEM registration process
 description: How OEMs add devices to Windows Autopilot.
-ms.service: windows-client
-ms.subservice: itpro-deploy
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -40,6 +33,12 @@ Microsoft manages and maintains Windows Autopilot. This service provides the bac
 ### Customer consent
 
 Before an OEM can register devices for an organization, the organization must grant the OEM permission to do so. The OEM begins this process with approval granted by a Microsoft Entra Global Administrator from the organization. For more information, see [OEM authorization](registration-auth.md#oem-authorization).
+
+<!-- MAXADO-9048730 -->
+
+> [!IMPORTANT]
+>
+> Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
 
 ## Microsoft Surface registration
 

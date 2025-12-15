@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot device guidelines
 description: Learn all about hardware, firmware, and software best practices for Windows Autopilot deployment.
-ms.service: windows-client
-ms.subservice: itpro-deploy
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -40,13 +33,13 @@ The following best practices ensure that devices can easily be provisioned as pa
 
   - PKID + SmbiosSystemSerialNumber
 
-- Before an OEM ships devices to an Autopilot customer or channel partner, they should upload 4K Hardware Hashes to Microsoft by using the CBR report. The hashes should be collected using the OA3 Tool RS3+ run in Audit mode on full OS.
+- Before an OEM ships devices to a Windows Autopilot customer or channel partner, they should upload 4K Hardware Hashes to Microsoft by using the CBR report. The hashes should be collected using the OA3 Tool RS3+ run in Audit mode on full OS.
 
 - Microsoft requires that OEM shipping drivers get published to Windows Update within 30 days of the CBR submission date. System firmware and driver updates are published to Windows Update within 14 days.
 
 - The OEM ensures that the PKID provisioned in the SMBIOS is passed on to the channel.
 
-- When using a VM for Autopilot testing, assign at least 2 processors and 4gb of memory.
+- When using a VM for Windows Autopilot testing, assign at least 2 processors and 4gb of memory.
 
 ## Software best practice guidelines for Windows Autopilot
 

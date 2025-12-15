@@ -1,14 +1,7 @@
 ---
 title: Windows Autopilot registration overview
 description: Overview of Windows Autopilot device registration.
-ms.service: windows-client
-ms.subservice: itpro-deploy
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 03/25/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -27,7 +20,7 @@ Before a device is deployed using Windows Autopilot, the device must be register
 
 Successful registration requires that two processes are complete:
 
-1. The device's unique [hardware identity](#device-identification) (known as a hardware hash) is captured and uploaded to the Autopilot service.
+1. The device's unique [hardware identity](#device-identification) (known as a hardware hash) is captured and uploaded to the Windows Autopilot service.
 1. The device is associated to an Azure tenant ID.
 
 Ideally, the OEM, reseller, or distributor performs both of these processes from which the devices were purchased. An OEM or other device provider uses the [registration authorization](registration-auth.md) process to perform device registration on behalf of the organization.
@@ -39,11 +32,11 @@ Registration can also be performed within the organization by collecting the har
 - [Automatic registration](automatic-registration.md)
 - [Manual registration](manual-registration.md)
 
-When an Autopilot device is registered, it automatically creates a Microsoft Entra object. The Autopilot deployment process needs this object to identify the device before the user signs in. If the object is deleted, the device can fail to enroll through Autopilot.
+When a Windows Autopilot device is registered, it automatically creates a Microsoft Entra object. The Windows Autopilot deployment process needs this object to identify the device before the user signs in. If the object is deleted, the device can fail to enroll through Windows Autopilot.
 
 [!INCLUDE [Registered device warning](includes/registered-vs-joined.md)]
 
-If a profile isn't assigned to an Autopilot device, it receives the default Autopilot profile. If you don't want a device to go through Autopilot, you must remove the Autopilot registration.
+If a profile isn't assigned to a Windows Autopilot device, it receives the default Windows Autopilot profile. If a device shouldn't go through Windows Autopilot, remove the Windows Autopilot registration.
 
 ## Terms
 
@@ -84,13 +77,13 @@ Devices that are registered with the Windows Autopilot service are displayed in 
 >
 > Devices that are listed in Intune under **Devices** > **Windows** > **Windows devices** aren't the same as Windows Autopilot devices **Devices** > **Enrollment** > **Windows** > **Windows Autopilot** > **Devices**. Windows Autopilot devices are added to the list of **Windows devices** when both of the following are complete:
 >
-> - The Autopilot registration process is successful.
+> - The Windows Autopilot registration process is successful.
 > - A [licensed](requirements.md?tabs=licensing) user has signed in on the device.
 
 ## Deregister a device
 
-[!INCLUDE [Deregister an Autopilot device](includes/deregister-autopilot-device.md)]
+[!INCLUDE [Deregister a Windows Autopilot device](includes/deregister-autopilot-device.md)]
 
 ## Related content
 
-- [Register devices manually](add-devices.md).
+- [Manually register devices with Windows Autopilot](add-devices.md).

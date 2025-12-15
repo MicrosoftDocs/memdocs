@@ -1,25 +1,10 @@
 ---
-# required metadata
-
-title: [ARTICLE TITLE | SERVICE NAME]
+title: [ARTICLE TITLE]
 description:
 author: [GITHUB USERNAME]
 manager: [ALIAS]
 ms.date: 04/28/2016
 ms.topic: conceptual #reference troubleshooting how-to end-user-help overview
-ms.service:
-ms.localizationpriority: medium #high null
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-#ms.reviewer: [ALIAS]
-#ms.suite: ems
-#ms.tgt_pltfrm:
-#ms.custom:
-
 ---
 
 # Metadata and Markdown Template
@@ -38,7 +23,7 @@ The full metadata block is above, divided into required fields and optional fiel
 - Colons in a value (e.g., a title) break the metadata parser. In their place, use the HTML encoding of &#58; (e.g., "title: Azure Rights Management&#58; the basics | Azure RMS").
 - **title**: This title will appear in search engine results. The title should end with a pipe (|) followed by the name of the service (e.g. see above). The title need not (and probably should not) be identical to the title in your H1 heading. It should be roughly 65 characters (including | SERVICE NAME)
 - **author**, **manager**, **reviewer**: The author field should contain the **Github username** of the author, not their alias.  The "manager" and "reviewer" fields, on the other hand, should contain aliases. ms.reviewer specifies the name of the PM associated with the article or service.
-- **ms.assetid**: This is the GUID of the article from CAPS. When creating a new markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com). 
+- **ms.assetid**: This is the GUID of the article from CAPS. When creating a new markdown file, get a GUID from [https://www.guidgenerator.com](https://www.guidgenerator.com).
 - **ms.prod**, **ms.service**, **ms.technology**, **ms.devlang**, **ms.topic**, **ms.tgt_pltfrm**: Possible values for these elements can be found [here](https://microsoft.sharepoint.com/teams/STBCSI/Insights/_layouts/15/WopiFrame.aspx?sourcedoc=%7b7A321BF1-0611-4184-84DA-A0E964C435FA%7d&file=WEDCS_MasterList_CSIValues.xlsx&action=default).
 
 ## Basic Markdown and GFM
@@ -50,9 +35,9 @@ All basic and Github-flavored markdown is supported. For more information on the
 
 ## Headings
 
-Examples of first- and second-level headings are above. 
+Examples of first- and second-level headings are above.
 
-There **must** be only one first-level heading in your topic, which will be displayed as the on-page title.  
+There **must** be only one first-level heading in your topic, which will be displayed as the on-page title.
 
 Second-level headings will generate the on-page TOC that appears in the "In this article" section underneath the on-page title.
 
@@ -63,9 +48,9 @@ Second-level headings will generate the on-page TOC that appears in the "In this
 
 ## Text styling
 
-*Italics* 
+*Italics*
 
-**Bold** 
+**Bold**
 
 ~~Strikethrough~~
 
@@ -107,11 +92,11 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
 
 ### Ordered lists
 
-1. This 
+1. This
 1. Is
 1. An
 1. Ordered
-1. List  
+1. List
 
 
 #### Ordered list with an embedded list
@@ -137,12 +122,12 @@ If a URL appears in a markdown file, it will be transformed into a clickable lin
 
 #### Unordered list with an embedded lists
 
-- This 
-- bulleted 
+- This
+- bulleted
 - list
   - Mrs. Peacock
   - Mr. Green
-- contains  
+- contains
 - other
     1. Colonel Mustard
     1. Mrs. White
@@ -187,15 +172,15 @@ This is an example of `in-line code`.
 
 ### Static Image
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text.":::
+:::image type="content" source="intune/media/docs-github-edit.png" alt-text="This is the alt text.":::
 
 ### Image with lightbox
 
-:::image type="content" source="memdocs/media/docs-github-edit.png" alt-text="This is the alt text." lightbox="memdocs/media/docs-github-edit.png":::
+:::image type="content" source="intune/media/docs-github-edit.png" alt-text="This is the alt text." lightbox="intune/media/docs-github-edit.png":::
 
 ### Animated gif
 
-:::image type="content" source="memdocs/media/docs-filter-toc.gif" alt-text="This is the alt text.":::
+:::image type="content" source="intune/media/docs-filter-toc.gif" alt-text="This is the alt text.":::
 
 ## Alerts
 

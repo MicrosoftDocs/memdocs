@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: itpro-deploy
-ms.service: windows-client
 ms.topic: include
-ms.date: 06/03/2024
-ms.localizationpriority: medium
+ms.date: 06/13/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -23,7 +17,7 @@ Headings are driven by article context. -->
 
 1. In the **Overview** screen, under **Manage** in the left hand pane, select **Devices**.
 
-1. In the **Devices | Overview** screen, select **Device Settings** in the left hand pane.
+1. In the **Devices | Overview** screen, under **Manage** in the left hand pane, select **Device Settings**.
 
 1. In the **Devices | Device settings** screen that opens, under **Users may join devices to Microsoft Entra**, select either **All** or **Selected**:
 

@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: itpro-deploy
-ms.service: windows-client
 ms.topic: include
-ms.date: 04/24/2023
-ms.localizationpriority: medium
+ms.date: 06/13/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -19,7 +13,7 @@ user-driven/hybrid-azure-ad-join-register-device.md
 
 Headings are driven by article context. -->
 
-For more information on registering devices as Autopilot devices, see the following article(s):
+For more information on registering devices as Windows Autopilot devices, see the following articles:
 
-- [Manually register devices with Windows Autopilot](/mem/autopilot/add-devices)
-- [Windows Autopilot customer consent](/mem/autopilot/registration-auth)
+- [Manually register devices with Windows Autopilot](/autopilot/add-devices).
+- [Windows Autopilot customer consent](/autopilot/registration-auth).

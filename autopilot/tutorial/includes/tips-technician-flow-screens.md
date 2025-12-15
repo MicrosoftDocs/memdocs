@@ -1,12 +1,6 @@
 ---
-author: frankroj
-ms.author: frankroj
-manager: aaroncz
-ms.subservice: itpro-deploy
-ms.service: windows-client
 ms.topic: include
-ms.date: 06/26/2023
-ms.localizationpriority: medium
+ms.date: 06/13/2025
 ---
 
 <!-- This file is shared by the following articles:
@@ -16,7 +10,7 @@ pre-provisioning\hybrid-azure-ad-join-technician-flow.md
 
 Headings are driven by article context. -->
 
-- Depending on how the Autopilot profile was configured at the **Create and assign Autopilot profile** step, additional screens may appear during the Autopilot deployment before the Microsoft Entra sign-in page such as:<br>
+- Depending on how the Windows Autopilot profile was configured at the **Create and assign Windows Autopilot profile** step, additional screens might appear during the Windows Autopilot deployment before the Microsoft Entra sign-in page such as:<br>
 <br>
   - **Language**/**Country**/**Region**.
   - **Keyboard**.
