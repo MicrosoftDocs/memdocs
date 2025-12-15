@@ -62,7 +62,7 @@ For more information about data protection using app protection policies, see [i
 
 #### Updated device configuration template for Windows Delivery Optimization<!-- 32411831 -->
 
-The device configuration template for Windows [Delivery Optimization](../configuration/delivery-optimization.md) is updated. The new template uses the settings format in the Settings Catalog. Settings are taken directly from the Windows Configuration Service Providers (CSPs) for Windows Delivery Optimization, as documented by Windows at [Policy CSP – DeliveryOptimization](/windows/client-management/mdm/policy-csp-DeliveryOptimization).
+The device configuration template for Windows [Delivery Optimization](../configuration/delivery-optimization-windows.md) is updated. The new template uses the settings format in the Settings Catalog. Settings are taken directly from the Windows Configuration Service Providers (CSPs) for Windows Delivery Optimization, as documented by Windows at [Policy CSP – DeliveryOptimization](/windows/client-management/mdm/policy-csp-DeliveryOptimization).
 
 With this change, you can no longer create new versions of the old profile. However, your preexisting instances of the old profile remain available to use.
 
@@ -2588,7 +2588,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
 
 #### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
 
@@ -2651,7 +2651,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
 
 ### Intune apps
 

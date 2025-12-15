@@ -82,7 +82,7 @@ Use Microsoft Intune to enable or disable Windows settings and features on devic
 |[Configure custom profile](../configuration/custom-settings-configure.md)|Add and assign device settings and features that aren't built into Intune. For a description of the settings in this area, see the [custom settings reference](../configuration/custom-settings-windows-10.md).|
 |[Configure BIOS settings](../configuration/device-firmware-configuration-interface-windows.md)|Set up Intune so that you can control UEFI (BIOS) settings on enrolled devices, using the Device Firmware Configuration Interface (DFCI)|
 |[Configure Domain Join](../configuration/domain-join-configure.md)|If you're planning to enroll Microsoft Entra joined devices, be sure to create a domain join profile so that Intune knows which on-premises domain to join.|
-|[Configure delivery optimization settings](../configuration/delivery-optimization.md)|Use these settings to reduce bandwidth consumption on devices downloading apps and updates.|
+|[Configure delivery optimization settings](../configuration/delivery-optimization-windows.md)|Use these settings to reduce bandwidth consumption on devices downloading apps and updates.|
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
 |[Configure kiosks and dedicated devices](../configuration/kiosk-settings.md)|Create a kiosk profile to manage devices running in kiosk mode. |
 |[Customize shared devices](../configuration/shared-user-device-settings.md)|Control access, accounts, and power features on shared or multi-user devices.|

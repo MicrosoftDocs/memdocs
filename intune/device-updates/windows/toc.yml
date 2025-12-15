@@ -22,5 +22,5 @@ items:
 - name: Windows Update reports
   href: reports.md
 - name: Delivery Optimization
-  href: delivery-optimization.md
+  href: ../../intune-service/configuration/delivery-optimization-windows.md
   displayName: delivery optimization, windows updates
