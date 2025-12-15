@@ -16,13 +16,13 @@ Create update rings that specify how and when Windows as a Service updates your 
 
 Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. To do so, when creating a policy you use the setting named *Upgrade Windows 10 devices to Latest Windows 11 release* by configuring it as *Yes*. When you use update rings to upgrade to Windows 11, devices install the most current version of Windows 11. If you later set the upgrade setting back to *No*, devices that haven't started the upgrade won't start while devices that are in the process of upgrading will continue to do so. Devices that have completed the upgrade will remain with Windows 11. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
 
-Windows update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
+Windows update rings support [scope tags](../intune-service/fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
 
 ## Prerequisites
 
 The following prerequisites must be met to use Windows Update Rings for Windows devices in Intune.
 
-- Devices must have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Devices must have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, see [Network endpoints](../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
 
   > [!NOTE]
@@ -40,7 +40,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
     - **Microsoft product updates**
     - **Servicing channel**: Any update build that is generally available.
 
-    For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
+    For more information, see [Manage Windows Holographic](../intune-service/fundamentals/windows-holographic-for-business.md).
 
   - Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
     - [Pause](update-rings.md#pause) of *Feature* updates

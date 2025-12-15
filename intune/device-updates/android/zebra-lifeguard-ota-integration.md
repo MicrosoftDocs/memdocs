@@ -22,14 +22,14 @@ Intune manages the creation, management, and monitoring of these deployments thr
 
 ## Prerequisites
 
-- [Set up Managed Google Play for your tenant](../enrollment/connect-intune-android-enterprise.md)
+- [Set up Managed Google Play for your tenant](../intune-service/enrollment/connect-intune-android-enterprise.md)
 
 - Administrators must have all the required RBAC (role-based access control) permissions:
 
   - Mobile Apps (to create and deploy app configuration profiles)
   - Android FOTA (to manage firmware OTA updates)
 
-- [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md)
+- [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../intune-service/fundamentals/intune-add-ons.md)
 
 - Access to all appropriate Zebra licenses, and entitlements to use the LG OTA service. For more information, contact Zebra support or see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/faq/).
 - For information about services ports and endpoints used by Zebra OTA updates, refer to [Zebra Lifeguard Over the Air FOTA Updates Ports](https://supportcommunity.zebra.com/s/article/000022419?language=en_US).
@@ -42,14 +42,14 @@ Zebra LifeGuard Over-the-Air updates are supported with the following sovereign 
 - U.S. Government Community Cloud (GCC) High
 - U.S. Department of Defense (DoD)
 
-For more information, see [Microsoft Intune for US Government GCC service description](../fundamentals/intune-govt-service-description.md).
+For more information, see [Microsoft Intune for US Government GCC service description](../intune-service/fundamentals/intune-govt-service-description.md).
 
 ## Supported Devices
 
 LG OTA is supported on the following devices:
 
-- [Android Enterprise dedicated devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
-- [Android Enterprise fully managed devices](../fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
+- [Android Enterprise dedicated devices](../intune-service/fundamentals/deployment-guide-enrollment-android.md#android-enterprise-dedicated-devices)
+- [Android Enterprise fully managed devices](../intune-service/fundamentals/deployment-guide-enrollment-android.md#android-enterprise-fully-managed)
 
 For more specific information on supported devices, see [Zebra's TechDocs](https://techdocs.zebra.com/lifeguard/update/#devicerequirements).
 
@@ -107,13 +107,13 @@ The apps required are:
 - Zebra Enrollment Manager
 - Zebra Common Transport Layer
 
-Use Managed Google Play to add them to your tenant. For information on how to add them to your tenant, see [Add and assign Managed Google Play apps to Android Enterprise devices](../apps/apps-add-android-for-work.md)
+Use Managed Google Play to add them to your tenant. For information on how to add them to your tenant, see [Add and assign Managed Google Play apps to Android Enterprise devices](../intune-service/apps/apps-add-android-for-work.md)
 
 Next, assign **Zebra Enrollment Manager** and **Zebra Common Transport Layer** as Required apps for all the Zebra devices you want to update and use with LG OTA. The apps are deployed automatically to those devices.
 
 #### Enabling a Zebra package as a system app
 
-If you're planning to use LG OTA to update a device running on Android 11, you need to enable another Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../apps/apps-ae-system.md)
+If you're planning to use LG OTA to update a device running on Android 11, you need to enable another Zebra package as a system app. For more information on how to enable system apps, see [Manage Android Enterprise system apps in Microsoft Intune](../intune-service/apps/apps-ae-system.md)
 
 |Build|System app to be enabled|
 |--------|------------------------------|
@@ -125,7 +125,7 @@ If you're planning to use LG OTA to update a device running on Android 11, you n
 
 From the context panel in the Set up Zebra connector screen, select the link - **Go to app configuration policies**. You need to create an app configuration policy for managed devices for each of the two required apps.
 
-For more information, see [Add app configuration policies for managed Android Enterprise devices](../apps/app-configuration-policies-use-android.md)
+For more information, see [Add app configuration policies for managed Android Enterprise devices](../intune-service/apps/app-configuration-policies-use-android.md)
 
 #### Policy targeting Zebra Enrollment Manager app
 

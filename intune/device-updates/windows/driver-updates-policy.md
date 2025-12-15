@@ -67,7 +67,7 @@ Use this procedure to create policies for managing driver updates for groups of 
 
 4. For **Scope tags**, select any desired scope tags to apply.
 
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
+5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../intune-service/configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
 
    > [!TIP]
    > We recommend that a device be assigned a single policy for driver update policies. Assignment of a device to only one policy helps to prevent the installation of a driver update that is declined in one policy but approved in a second policy. Keep in mind that policies for Windows driver updates don't support options to remove or roll-back driver updates.

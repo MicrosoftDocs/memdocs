@@ -81,11 +81,11 @@ Only update builds that are generally available are supported. Preview builds, i
 
 **Devices must**:
 
-- Be [enrolled in Intune](../fundamentals/deployment-guide-enrollment.md) MDM.
+- Be [enrolled in Intune](../intune-service/fundamentals/deployment-guide-enrollment.md) MDM.
 
 - Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
 
-- Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
   - Windows Autopatch

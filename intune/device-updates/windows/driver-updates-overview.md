@@ -90,14 +90,14 @@ Driver updates are supported for the following Windows editions:
 - Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
   You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows devices:
-  - **[Device restriction template](../configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
-  - **[Settings catalog](../configuration/settings-catalog.md)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
+  - **[Device restriction template](../intune-service/configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
+  - **[Settings catalog](../intune-service/configuration/settings-catalog.md)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
 
   For more information about Windows Telemetry settings, including both current and past setting options from Windows, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
 - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
-- Have access to the network endpoints required by Intune managed devices. See [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Have access to the network endpoints required by Intune managed devices. See [Network endpoints](../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 ### Enable data collection for reports
 
@@ -128,7 +128,7 @@ To manage Windows Driver updates, your account must be assigned an Intune role-b
 
 You can add the *Device configurations* permission with one or more rights to your own custom RBAC roles or use one the built-in **Policy and Profile manager** role, which includes these rights.
 
-For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+For more information, see [Role-based access control for Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
 
 ### Limitations for Workplace Joined devices
 
@@ -255,14 +255,14 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### How do I use driver management if I'm currently using Configuration Manager for updates?
 
-You can continue to use Configuration Manager for updates other than Drivers, or start to move other update types to cloud management in Intune one at a time. To do this, first, enable [cloud attach](../configmgr/cloud-attach/overview.md) or co-management in your Configuration Manager hierarchy to enroll your managed devices in Intune.
+You can continue to use Configuration Manager for updates other than Drivers, or start to move other update types to cloud management in Intune one at a time. To do this, first, enable [cloud attach](../intune-service/configmgr/cloud-attach/overview.md) or co-management in your Configuration Manager hierarchy to enroll your managed devices in Intune.
 
-The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](../configmgr/comanage/workloads.md#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
+The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](../intune-service/configmgr/comanage/workloads.md#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
 
 > [!NOTE]
 > The following procedure only works and is supported for managed Windows 11 devices. For Windows 10 devices, we recommend moving the Windows Update workload in the Configuration Manager co-management settings to Intune. Alternatively, configure the Windows Update workload to the Pilot setting and specify a collection containing the in-scope Windows 10 managed devices.
 
-   1. Leave the [Windows Update](../configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
+   1. Leave the [Windows Update](../intune-service/configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
 
    2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
 
@@ -287,7 +287,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
    6. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements).
 
       > [!NOTE]
-      > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
+      > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../intune-service/configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
 
    You can move Feature update management to the cloud in Intune by configuring a [Feature update](feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
 

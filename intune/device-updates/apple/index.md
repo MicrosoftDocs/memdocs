@@ -25,7 +25,7 @@ This article shows how to configure update policies in Intune using Apple's Decl
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../intune-service/../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > The configuration of Software Update for Apple devices requires the following platforms:
@@ -89,7 +89,7 @@ When designing your Apple device update strategy, align with your organization's
 
 ---
 
-For more information about configuring Software Update policies and the available settings, see [Software Update](../configuration/apple-settings-catalog-configurations.md#software-update).
+For more information about configuring Software Update policies and the available settings, see [Software Update](../intune-service/configuration/apple-settings-catalog-configurations.md#software-update).
 
 ## Software Update Settings
 
@@ -101,11 +101,11 @@ When you configure software updates, you might want to manage aspects of the sof
 - Suppress update notifications up to one hour before the enforcement deadline.
 - Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
 
-For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../configuration/apple-settings-catalog-configurations.md#software-update-settings).
+For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../intune-service/configuration/apple-settings-catalog-configurations.md#software-update-settings).
 
 ## Monitor policy settings deployment
 
-Software update policy settings use the same reporting as other device configuration policies. For more information, see [Monitor device configuration policies](../configuration/device-profile-monitor.md).
+Software update policy settings use the same reporting as other device configuration policies. For more information, see [Monitor device configuration policies](../intune-service/configuration/device-profile-monitor.md).
 
 A policy that reports *Success* only means that the configuration policy successfully installed on the device. Monitor the OS version of targeted devices to ensure that they update.\
 After devices have updated to a later OS version than configured in the policy, the policy reports an error as the device sees this task as an attempt to downgrade. It's recommended to remove the older OS version policy from devices in this state.

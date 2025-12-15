@@ -33,9 +33,9 @@ This article applies to:
 
 Users can enroll their personal devices in Microsoft Intune.
 
-- When users enroll their personal Android devices, these devices automatically get a work profile. Any policies you create apply to the work profile, not the personal profile. For information on the Android enrollment option for personal devices, go to [Android enrollment guide](../fundamentals/deployment-guide-enrollment-android.md).
+- When users enroll their personal Android devices, these devices automatically get a work profile. Any policies you create apply to the work profile, not the personal profile. For information on the Android enrollment option for personal devices, go to [Android enrollment guide](../intune-service/fundamentals/deployment-guide-enrollment-android.md).
 
-- When they enroll iOS/iPadOS devices, the behavior depends on the enrollment option you use. For information on the different iOS/iPadOS enrollment options for personal devices, go to [iOS/iPadOS enrollment guide](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
+- When they enroll iOS/iPadOS devices, the behavior depends on the enrollment option you use. For information on the different iOS/iPadOS enrollment options for personal devices, go to [iOS/iPadOS enrollment guide](../intune-service/fundamentals/deployment-guide-enrollment-ios-ipados.md).
 
 ✅ Create an enrollment restrictions policy that requires a minimum and maximum operating system version. This policy helps create a good baseline for new enrollments.
 
@@ -45,7 +45,7 @@ The following example shows an enrollment device platform restrictions policy fo
 
 When users enroll their personal devices, this policy checks the version info. If the devices are outside the versions you enter, then they're prevented from enrolling.
 
-For more information on this feature, go to [Device platform restrictions in Intune](../enrollment/create-device-platform-restrictions.md).
+For more information on this feature, go to [Device platform restrictions in Intune](../intune-service/enrollment/create-device-platform-restrictions.md).
 
 ## Create compliance policies
 
@@ -78,7 +78,7 @@ When users open or resume an app that's managed by you, the app protection polic
 
 :::image type="content" source="images/software-updates-guide-android/app-protection-policy-device-conditions.png" alt-text="Screenshot that shows device-based conditions in an app protection policy in the Microsoft Intune admin center.":::
 
-For more information on app protection policies, go to [App protection policies overview](../apps/app-protection-policy.md).
+For more information on app protection policies, go to [App protection policies overview](../intune-service/apps/app-protection-policy.md).
 
 ## Use custom notifications
 
@@ -90,8 +90,8 @@ Remember, if the OS updates can't be forced or controlled, which is common on pe
 
 For more information on these features, go to:
 
-- [Conditional launch actions with app protection policies in Intune](../apps/app-protection-policies-access-actions.md)
-- [Using custom notifications in Intune](../remote-actions/custom-notifications.md)
+- [Conditional launch actions with app protection policies in Intune](../intune-service/apps/app-protection-policies-access-actions.md)
+- [Using custom notifications in Intune](../intune-service/remote-actions/custom-notifications.md)
 
 ## Related articles
 

@@ -17,7 +17,7 @@ Microsoft Intune uses Apple's declarative software update reporting model to pro
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
+[!INCLUDE [platform](../intune-service/../includes/requirements/platform.md)]
 :::column-end:::
 :::column span="3":::
 > Software update reporting for Apple devices in Intune requires the following platforms:

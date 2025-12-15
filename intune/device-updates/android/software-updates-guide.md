@@ -70,7 +70,7 @@ For enrolled Android Enterprise devices, you can configure this setting and choo
 
   :::image type="content" source="images/software-updates-guide-android/system-update-maintenance-window.png" alt-text="Screenshot that shows the system update setting with a maintenance window for Android Enterprise devices in the Microsoft Intune admin center.":::
 
-For more specific information on this setting and the values you can configure, go to [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
+For more specific information on this setting and the values you can configure, go to [Android template device settings list to restrict features using Intune](../intune-service/configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
 
 ### ✅ Use freeze periods during critical times
 
@@ -80,13 +80,13 @@ During critical periods of the year, like holidays and other events, a freeze pe
 
 :::image type="content" source="images/software-updates-guide-android/android-enterprise-freeze-period-settings.png" alt-text="Screenshot that shows the freeze period start date and end date for Android Enterprise devices in the Microsoft Intune admin center.":::
 
-For more information on this setting, go to [Android template device settings list to restrict features using Intune](../configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
+For more information on this setting, go to [Android template device settings list to restrict features using Intune](../intune-service/configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
 
 ### ✅ Use OEMConfig for firmware updates
 
 For some rugged Android devices, you can use OEMConfig to configure firmware updates and other settings that are specific to that OEM. If an OEM provides an OEMConfig app, then in Intune, you can deploy the app and configure its settings using a configuration profile.
 
-To get started, go to [Use and manage Android Enterprise devices with OEMConfig in Intune](../configuration/android-oem-configuration-overview.md). This article also lists the [Intune-supported OEMConfig apps](../configuration/android-oem-configuration-overview.md#supported-oemconfig-apps).
+To get started, go to [Use and manage Android Enterprise devices with OEMConfig in Intune](../intune-service/configuration/android-oem-configuration-overview.md). This article also lists the [Intune-supported OEMConfig apps](../intune-service/configuration/android-oem-configuration-overview.md#supported-oemconfig-apps).
 
 Contact the manufacturer for the firmware and other settings available in the configuration schema.
 
@@ -101,7 +101,7 @@ Android devices running older versions that are currently enrolled in Intune don
 
 If you currently have devices running older Android versions in your organization, then upgrade or replace them. Use the information in this article to help you define an update strategy. Using newer OS versions provide better productivity and security to your users and your organization.
 
-For more version information, go to [Supported operating systems and browsers in Intune](../fundamentals/supported-devices-browsers.md).
+For more version information, go to [Supported operating systems and browsers in Intune](../intune-service/fundamentals/supported-devices-browsers.md).
 
 ## Related articles
 
