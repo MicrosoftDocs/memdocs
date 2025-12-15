@@ -138,7 +138,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 ## Architecture
 
-:::image type="content" source="./images/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./images/windows-driver-updates-overview/wdum-architecture.png":::
+:::image type="content" source="./images/driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./images/driver-updates-overview/wdum-architecture.png":::
 
 **Windows Driver Update Management architecture**:
 
@@ -255,14 +255,14 @@ To help avoid issues that require rolling back a driver from large numbers of de
 
 ### How do I use driver management if I'm currently using Configuration Manager for updates?
 
-You can continue to use Configuration Manager for updates other than Drivers, or start to move other update types to cloud management in Intune one at a time. To do this, first, enable [cloud attach](../../intune-service/configmgr/cloud-attach/overview.md) or co-management in your Configuration Manager hierarchy to enroll your managed devices in Intune.
+You can continue to use Configuration Manager for updates other than Drivers, or start to move other update types to cloud management in Intune one at a time. To do this, first, enable [cloud attach](../../configmgr/cloud-attach/overview.md) or co-management in your Configuration Manager hierarchy to enroll your managed devices in Intune.
 
-The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](../../intune-service/configmgr/comanage/workloads.md#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
+The recommended and preferred path to embrace cloud based updates is to move the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload to Intune. If your organization isn't ready for this, you can use the Driver and Firmware management capability in Intune without moving the workload by completing the following steps:
 
 > [!NOTE]
 > The following procedure only works and is supported for managed Windows 11 devices. For Windows 10 devices, we recommend moving the Windows Update workload in the Configuration Manager co-management settings to Intune. Alternatively, configure the Windows Update workload to the Pilot setting and specify a collection containing the in-scope Windows 10 managed devices.
 
-   1. Leave the [Windows Update](../../intune-service/configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
+   1. Leave the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
 
    2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
 
@@ -287,7 +287,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
    6. [Optional] Enable device name collection in diagnostic data. For more information on configuration using a domain-based group policy or Intune, see [Diagnostic data requirements](/windows/deployment/update/wufb-reports-prerequisites#diagnostic-data-requirements).
 
       > [!NOTE]
-      > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../../intune-service/configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
+      > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../../configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
 
    You can move Feature update management to the cloud in Intune by configuring a [Feature update](feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
 

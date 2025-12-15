@@ -24,7 +24,7 @@ This article applies to:
 - Android Enterprise devices enrolled in Intune
 
 > [!TIP]
-> If your devices are personally owned, then go to the [software updates planning guide for personal devices](byod-software-updates-guide.md).
+> If your devices are personally owned, then go to the [software updates planning guide for personal devices](../byod-software-updates-guide.md).
 
 ## Before you begin
 
@@ -68,7 +68,7 @@ For enrolled Android Enterprise devices, you can configure this setting and choo
 - Postpone updates for 30 days and then prompt users to install updates. Expect your device manufacturer and/or carrier to prevent important security updates from being postponed.
 - Create a maintenance window to automatically install updates during a specific time frame.
 
-  :::image type="content" source="images/software-updates-guide-android/system-update-maintenance-window.png" alt-text="Screenshot that shows the system update setting with a maintenance window for Android Enterprise devices in the Microsoft Intune admin center.":::
+  :::image type="content" source="images/software-updates-guide/system-update-maintenance-window.png" alt-text="Screenshot that shows the system update setting with a maintenance window for Android Enterprise devices in the Microsoft Intune admin center.":::
 
 For more specific information on this setting and the values you can configure, go to [Android template device settings list to restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
 
@@ -78,7 +78,7 @@ Configure the **Freeze periods for system updates** setting in an Intune device 
 
 During critical periods of the year, like holidays and other events, a freeze period prevents devices from receiving system updates, security patches, and notifications about pending updates. Users can't manually check for updates:
 
-:::image type="content" source="images/software-updates-guide-android/android-enterprise-freeze-period-settings.png" alt-text="Screenshot that shows the freeze period start date and end date for Android Enterprise devices in the Microsoft Intune admin center.":::
+:::image type="content" source="images/software-updates-guide/android-enterprise-freeze-period-settings.png" alt-text="Screenshot that shows the freeze period start date and end date for Android Enterprise devices in the Microsoft Intune admin center.":::
 
 For more information on this setting, go to [Android template device settings list to restrict features using Intune](../../intune-service/configuration/device-restrictions-android-for-work.md) > **Corporate-owned** > **General**.
 

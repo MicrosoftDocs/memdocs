@@ -83,7 +83,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
-   In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](feature-updates.md#limitations-for-feature-updates-for-and-later-policy) and removes the need for a user to sign-on to a device before the policy can apply.
+   In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](feature-updates.md) and removes the need for a user to sign-on to a device before the policy can apply.
 
 7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 
@@ -113,10 +113,10 @@ This view also includes:
   - **View report**: A button opens a more detailed report view for *Device and user check-in status*.
 
   - **Two additional report tiles**: You can select the tiles for the following reports to view additional details:
-    - **Device assignment status** – This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
-    - **Per setting status** – View the configuration status of each setting for this policy across all devices and users.
+    - **Device assignment status**: This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
+    - **Per setting status**: View the configuration status of each setting for this policy across all devices and users.
 
-  For details about this report view, see [Reports for Update rings for Windows 10 and later policy](reports.md#reports-for-update-rings-for-and-later-policy).
+  For details about this report view, see [Reports for Update rings for Windows 10 and later policy](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each area of the policy.
 
@@ -210,7 +210,7 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](reports.md#reports-for-update-rings-for-and-later-policy).
+There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 ## Next steps
 

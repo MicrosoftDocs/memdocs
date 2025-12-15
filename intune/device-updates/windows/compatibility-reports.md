@@ -39,7 +39,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 
 - Run a supported version of Windows with the latest cumulative update
 - Be Microsoft Entra joined or Microsoft Entra hybrid joined
-- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../intune-service/configmgr/tenant-attach/device-sync-actions.md)
+- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 
 
@@ -80,7 +80,7 @@ To use this report:
 > [!IMPORTANT]
 > The data in this report is made available on-demand only. You must configure the Target OS and Scope (Tags) settings, and then click **Generate report** for data to appear in the report.
 
-[![Screen shot of the Windows feature update device readiness report.](./images/windows-update-compatibility-reports/device-readiness-report.png)](./images/windows-update-compatibility-reports/device-readiness-report.png#lightbox)
+[![Screen shot of the Windows feature update device readiness report.](./images/compatibility-reports/device-readiness-report.png)](./images/compatibility-reports/device-readiness-report.png#lightbox)
 
 >[!NOTE]
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps provided and select **Generate again**.
@@ -129,7 +129,7 @@ To use this report:
    - Optionally select **Asset type** and **Risk status** to refine the report.
    - Select **Generate report**. This process can take several minutes. You're notified when report generation is complete.
 
-[![Screen shot of the Windows feature update compatibility risks report.](./images/windows-update-compatibility-reports/compatibility-risks-report.png)](./images/windows-update-compatibility-reports/compatibility-risks-report.png#lightbox)
+[![Screen shot of the Windows feature update compatibility risks report.](./images/compatibility-reports/compatibility-risks-report.png)](./images/compatibility-reports/compatibility-risks-report.png#lightbox)
 
 > [!NOTE]
 > When you generate a report, the data in the report is cached on a per-user basis. Other Intune users in your organization will not be able to see the report you have generated. If you'd like to regenerate the report with different settings or to pull the latest data, follow the steps provided and select **Generate again**.
