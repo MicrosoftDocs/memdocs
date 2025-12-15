@@ -2090,7 +2090,7 @@ Feature updates can now be made available to end users as **Optional** updates, 
 
 End users can easily opt in to try out the next Feature update and provide feedback. When it's time to roll out the feature as a **Required** update, admins can change the setting on the policy and update the rollout settings so that the update is deployed as a **Required** update to devices that don't yet have it installed.
 
-For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
+For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](../../device-updates/windows/feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
 
 Applies to:
 
@@ -2945,7 +2945,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-For more information, see [Bulk driver updates](../protect/windows-driver-updates-policy.md#bulk-driver-updates).
+For more information, see [Bulk driver updates](../../device-updates/windows/driver-updates-policy.md#bulk-driver-updates).
 
 #### App Control for Business policy limitation is resolved<!-- 19548950 -->
 
@@ -3517,7 +3517,7 @@ For more information, see [Microsoft Defender for Endpoint Security settings man
 
 The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins don't need to create or manage groups of eligible and non-eligible devices.
 
-For more information on feature updates, see [Feature updates for Windows 10 and later](../../../protect/windows-10-feature-updates.md).
+For more information on feature updates, see [Feature updates for Windows 10 and later](../../device-updates/windows/feature-updates.md).
 
 ## Week of October 30, 2023
 
@@ -4046,7 +4046,7 @@ You can learn more about Defender for Endpoint settings that are available for L
 
 #### Updated reports for Update rings for Windows 10 and later<!-- 10159960 -->
 
-Reporting for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
+Reporting for [Update rings for Windows 10 and later](../../device-updates/windows/update-rings.md) has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
 
 With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there isn't a left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
 
@@ -4697,7 +4697,7 @@ To help you manage driver updates, you review a policy and decline an update you
 
 This release also includes [driver update reports](../../device-updates/windows/reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
-To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../protect/windows-driver-updates-overview.md).
+To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../../device-updates/windows/driver-updates-overview.md).
 
 Applies to:
 
@@ -5394,7 +5394,7 @@ macOS software update policies now include the following settings to help manage
 
 - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
-For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/updates/software-updates-macos.md).
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../../device-updates/apple/software-updates-macos.md).
 
 Applies to:
 

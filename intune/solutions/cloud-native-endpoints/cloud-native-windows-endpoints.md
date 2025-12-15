@@ -474,8 +474,8 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 
 *Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update client policies can be configured using:
 
-- [Windows update rings](../../intune-service/protect/windows-10-update-rings.md)
-- [Windows Feature Updates](../../intune-service/protect/windows-10-feature-updates.md)
+- [Windows update rings](../../device-updates/windows/update-rings.md)
+- [Windows Feature Updates](../../device-updates/windows/feature-updates.md)
 
 For more information, go to:
 

@@ -12,9 +12,9 @@ items:
 - name: Windows driver updates
   items:
   - name: Driver updates overview
-    href: windows-driver-updates-overview.md
+    href: driver-updates-overview.md
   - name: Driver updates policy
-    href: windows-driver-updates-policy.md
+    href: driver-updates-policy.md
 - name: Windows rollout options
   href: rollout-options.md
 - name: Windows Update compatibility reports

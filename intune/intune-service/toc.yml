@@ -1199,7 +1199,7 @@ items:
         - name: Error codes and descriptions
           items:
           - name: Software update errors
-            href: ./protect/software-update-agent-error-codes.md
+            href: ../../device-updates/windows/software-update-agent-error-codes.md
         - name: Deprecated certificate connectors
           href: ./protect/certificate-connectors.md
 
