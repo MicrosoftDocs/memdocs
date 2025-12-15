@@ -12,7 +12,7 @@ ms.collection:
 # Manage macOS software updates using MDM-based policies in Microsoft Intune
 
 > [!IMPORTANT]
-> [!INCLUDE [Apple MDM software updates deprecation](../../intune-service/includes/apple-mdm-updates-deprecation.md)]
+> [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
 You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../../intune-service/enrollment/macos-enroll.md#user-approved-enrollment). With these MDM-based policies, you can:
 

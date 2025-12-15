@@ -85,7 +85,7 @@ The following features are currently not available and aren't supported in GCC H
 | Feature | Availability |
 | --- | --- |
 | Expedited updates | For more information on this feature, go to [Expedite Windows quality updates in Microsoft Intune](../protect/expedite-updates.md). |
-| Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../protect/windows-10-feature-updates.md). |
+| Feature updates | For more information on this feature, go to [Feature updates for Windows in Intune](../../device-updates/windows/feature-updates.md). |
 | Windows Autopilot device preparation| The following features are in the planning phase: </br></br>- Customize out-of-box experience (OOBE) and rename devices during provisioning based on organizational structure </br>- Self-deploying and pre-provisioning mode </br>- More admin-specified configurations delivered before allowing desktop access. </br>- Enhanced optional desktop onboarding experience inside the Windows Company Portal app </br>- The ability to associate a device with a tenant. </br></br>Provisioning modes which require Windows Autopilot registration are not supported. </br></br>To get started with Windows Autopilot device preparation, go to [Windows Autopilot Device Preparation overview](/autopilot/device-preparation/overview).|
 | Delivery Optimization for Win32 Apps | For more information on the Delivery Optimization feature in Windows, go to [What is Delivery Optimization?](/windows/deployment/do/waas-delivery-optimization). |
 | Windows Device Health Attestation (DHA)| For more information on Device Health Attestation, go to [Device Health Attestation](/windows-server/security/device-health-attestation) |

@@ -585,7 +585,7 @@ You can monitor the status of the Windows Update ring policy:
 2. Select the update ring you deployed as part of cloud config.
 3. Select **Device status**, **User status**, or **End user update status**. The update ring settings details are shown.
 
-For more information on reporting for Windows Update rings, see [Reports for Update rings for Windows policy](../../device-updates/windows/reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
+For more information on reporting for Windows Update rings, see [Reports for Update rings for Windows policy](../../../device-updates/windows/reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 ### Compliance policy
 

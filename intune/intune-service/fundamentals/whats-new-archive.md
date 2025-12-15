@@ -3517,7 +3517,7 @@ For more information, see [Microsoft Defender for Endpoint Security settings man
 
 The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins don't need to create or manage groups of eligible and non-eligible devices.
 
-For more information on feature updates, see [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md).
+For more information on feature updates, see [Feature updates for Windows 10 and later](../../../protect/windows-10-feature-updates.md).
 
 ## Week of October 30, 2023
 
@@ -5409,7 +5409,7 @@ The Microsoft Surface link takes you to the Surface Management Portal where you 
 To access the Partner portals page, you must enable the Devices pane preview and then navigate to **Devices** > **Partner Portals**.
 
 #### Windows Update compatibility reports for Apps and Drivers are now generally available<!-- 17917026  -->
-The following Microsoft Intune reports for [Windows Update compatibility](../../device-updates/compatibility-reports.md) are out of preview and now generally available:
+The following Microsoft Intune reports for [Windows Update compatibility](../../device-updates/windows/compatibility-reports.md) are out of preview and now generally available:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 

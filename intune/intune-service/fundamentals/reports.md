@@ -364,7 +364,7 @@ You can view the **Windows Expedited update failures** report using the followin
 
 A Windows update report, the **Feature update failures** operational report provides failure details for devices that are targeted with a **Feature updates for Windows 10 and later** policy and have attempted an update. The data found in this report is timely and calls out number of devices with errors. You can drill down to help troubleshoot. This report provides filtering, searching, paging, and sorting.
 
-Before this report can show data, you must configure *data collection* for the Windows feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../protect/windows-10-feature-updates.md).
+Before this report can show data, you must configure *data collection* for the Windows feature updates reports. For information about configuring data collection and how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../device-updates/windows/feature-updates.md).
 
 To view the **Feature update failures** report, use the following steps:
 
@@ -407,7 +407,7 @@ You can view the **Installation status for macOS devices** report using the foll
 
 A Windows update report, the **Windows 10 and later feature updates** report provides an overall view of compliance for devices that are targeted with a **Feature updates for Windows 10 and later** policy. This report provides the update status based on update state. You can also see specific device update details. The data found in these reports is timely, calls out the device name and state, and other update related details. A summary report is available in the **Windows updates** workload. This report also provides filtering, searching, paging, and sorting.
 
-For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../protect/windows-10-feature-updates.md).
+For information about how to use this report to resolve update failures, see [Reports for Windows feature updates policy](../../../device-updates/windows/feature-updates.md).
 
 You can view the **Windows 10 and later feature updates** report using the following steps:
 

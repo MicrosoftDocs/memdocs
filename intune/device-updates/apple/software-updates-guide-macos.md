@@ -23,8 +23,8 @@ This article applies to:
 
 > [!TIP]
 >
-> - If your devices are personally owned, then go to the [software updates admin guide for personal devices](../../intune-service/byod-software-updates-guide.md).
-> - [!INCLUDE [Apple MDM software updates deprecation](../../intune-service/includes/apple-mdm-updates-deprecation.md)]
+> - If your devices are personally owned, then go to the [software updates admin guide for personal devices](../byod-software-updates-guide.md).
+> - [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
 ## Before you begin
 
@@ -174,6 +174,6 @@ For each device, you can see its current state of updates (Devices > macOS > Upd
 
 ## Related articles
 
-- [Software updates planning guide for BYOD and personal devices in Microsoft Intune](../../intune-service/byod-software-updates-guide.md)
+- [Software updates planning guide for BYOD and personal devices in Microsoft Intune](../byod-software-updates-guide.md)
 - [Software updates planning guide for managed Android Enterprise devices in Microsoft Intune](../../intune-service/android/software-updates-guide.md)
 - [Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune](software-updates-guide-ios-ipados.md)

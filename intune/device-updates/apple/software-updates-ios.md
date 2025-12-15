@@ -12,7 +12,7 @@ ms.collection:
 # Manage iOS/iPadOS software updates using MDM-based policies in Microsoft Intune
 
 > [!IMPORTANT]
-> [!INCLUDE [Apple MDM software updates deprecation](../../intune-service/includes/apple-mdm-updates-deprecation.md)]
+> [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
 You can use Microsoft Intune device configuration profiles to manage software updates for iOS/iPadOS devices that are enrolled as *supervised devices*.
 
@@ -42,7 +42,7 @@ With these MDM-based policies, you can:
 - If you're new to configuring software updates or want some guidance based on common scenarios, go to:
 
   - [Software updates planning guide for supervised iOS/iPadOS devices](software-updates-guide-ios-ipados.md)
-  - [Software updates planning guide for BYOD and personal devices](../../intune-service/byod-software-updates-guide.md)
+  - [Software updates planning guide for BYOD and personal devices](../byod-software-updates-guide.md)
 
 ## Configure the update policy
 

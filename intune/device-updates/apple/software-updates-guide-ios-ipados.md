@@ -23,8 +23,8 @@ This article applies to:
 
 > [!TIP]
 >
-> - If your devices are personally owned, then go to the [software updates planning guide for personal devices](../../intune-service/byod-software-updates-guide.md).
-> - [!INCLUDE [Apple MDM software updates deprecation](../../intune-service/includes/apple-mdm-updates-deprecation.md)]
+> - If your devices are personally owned, then go to the [software updates planning guide for personal devices](../byod-software-updates-guide.md).
+> - [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
 ## Admin checklist for organization owned devices
 
@@ -79,7 +79,7 @@ Using Intune policies, you can also force users to update their devices:
 ### ✅ Use the built-in settings
 
 > [!NOTE]
-> [!INCLUDE [Apple MDM software updates deprecation](../../intune-service/includes/apple-mdm-updates-deprecation.md)]
+> [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
 To manage updates, Apple has the following options:
 
@@ -265,6 +265,6 @@ To accomplish this task, this scenario involves two policies:
 ## Related articles
 
 - [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
-- [Software updates planning guide and scenarios for BYOD and personal devices](../../intune-service/byod-software-updates-guide.md)
-- [Software updates planning guide for managed Android devices](../../intune-service/android/software-updates-guide.md)
+- [Software updates planning guide and scenarios for BYOD and personal devices](../byod-software-updates-guide.md)
+- [Software updates planning guide for managed Android devices](../android/software-updates-guide.md)
 - [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)
