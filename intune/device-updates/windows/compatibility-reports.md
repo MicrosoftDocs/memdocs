@@ -31,7 +31,7 @@ The Windows feature update device readiness and Windows feature update compatibi
 - Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access (VDA) per user
 
-Before using these reports, you must attest to having the required licenses on the [Windows data page](data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
+Before using these reports, you must attest to having the required licenses on the [Windows data page](../../intune-service/protect/data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
 
 ### Devices
 
@@ -43,7 +43,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 
 
-Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
+Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](../../intune-service/protect/data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
 
 ### Users
 

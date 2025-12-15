@@ -272,5 +272,5 @@ The bulk driver updates can help the user to manage the driver updates more effi
 
 ## Next steps
 
-- Use [Windows driver update overview](windows-driver-updates-overview.md)
+- Use [Windows driver update overview](driver-updates-overview.md)
 - Use [Windows driver update reports](reports.md#reports-for-windows-driver-updates-policy)

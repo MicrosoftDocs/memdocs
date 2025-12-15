@@ -76,7 +76,7 @@ At the app level, you can use app protection policies to determine the minimum O
 
 When users open or resume an app that's managed by you, the app protection policy can prompt users to upgrade the OS. In the policy, if the version they're running doesn't meet your requirements, then you can warn users that a new OS version is required, or block access:
 
-:::image type="content" source="images/software-updates-guide/app-protection-policy-device-conditions.png" alt-text="Screenshot that shows device-based conditions in an app protection policy in the Microsoft Intune admin center.":::
+:::image type="content" source="android/images/software-updates-guide/app-protection-policy-device-conditions.png" alt-text="Screenshot that shows device-based conditions in an app protection policy in the Microsoft Intune admin center.":::
 
 For more information on app protection policies, go to [App protection policies overview](../intune-service/apps/app-protection-policy.md).
 

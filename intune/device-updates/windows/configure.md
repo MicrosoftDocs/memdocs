@@ -35,7 +35,7 @@ Intune provides the following policy types to manage updates, which you assign t
 
 - **Quality updates for Windows 10 and later**: With Quality updates for Windows 10 and later, also referred to as Expedited updates, you can expedite the install of the most recent security updates on devices that you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](expedite-updates.md).
 
-- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](windows-driver-updates-policy.md).
+- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](driver-updates-policy.md).
 
 ## Policy limitations for Workplace Joined devices
 
@@ -85,7 +85,7 @@ Use the following process to ensure Windows Update has processed your feature up
 
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
 
-2. View the [Windows feature updates (Organizational)](reports.md#use-the-windows-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
+2. View the [Windows feature updates (Organizational)](reports.md#use-the-windows-10-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 
 3. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Update ring policy](update-rings.md), for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
 
@@ -98,5 +98,5 @@ To learn about report options for Update rings policy and Windows feature update
 - [Use Windows update rings](update-rings.md)
 - [Use Windows feature updates](feature-updates.md)
 - [Expedite quality updates](expedite-updates.md)
-- [Use Windows driver updates policy](windows-driver-updates-policy.md)
+- [Use Windows driver updates policy](driver-updates-policy.md)
 - For more information, see [Manage updates using Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) in the Windows documentation.
