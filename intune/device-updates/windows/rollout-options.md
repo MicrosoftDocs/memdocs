@@ -17,7 +17,7 @@ Use rollout options in Microsoft Intune policies for *Feature updates for Window
 > [!TIP]
 > The default behavior for Windows Update is to make an update available to an assigned device right away. However, the update doesn't install right away. Instead, when an update is made available, the device becomes eligible to install it. Before a device can install an available update, the device must connect to Windows Update and scan for updates. When the need for an update is confirmed and the device is eligible, the  Windows Update service then offers the update to that device. After a device completes the update, it's then dependent on user behavior and other settings like Deadline.
 
-You configure rollout options when creating [Feature Updates policy](../intune-service/protect/feature-updates.md) by selecting one of the following options:
+You configure rollout options when creating [Feature Updates policy](feature-updates.md) by selecting one of the following options:
 
 - **Make update available as soon as possible** - With this option, there's no delay in making the update available to devices. This selection is the default behavior for Windows Update.
 
@@ -91,4 +91,4 @@ After the profile deploys, devices that use gradual rollouts for Feature update 
 
 ## Next steps
 
-Configure [Feature Updates policy](../intune-service/protect/feature-updates.md)
+Configure [Feature Updates policy](feature-updates.md)

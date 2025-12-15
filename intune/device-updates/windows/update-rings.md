@@ -43,7 +43,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
     For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
 
   - Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
-    - [Pause](../intune-service/protect/update-rings.md#pause) of *Feature* updates
+    - [Pause](update-rings.md#pause) of *Feature* updates
     - [Feature Update Deferral period (days)](settings.md#update-settings)
     - [Set feature update uninstall period (2 - 60 days)](settings.md#update-settings)
     - [Enable pre-release builds](settings.md#update-settings), which includes the following build options:
@@ -60,7 +60,7 @@ Intune Update rings for Windows require the use of Windows Update client policie
 - Feature updates
 - Quality updates (also known as *Expedited* updates)
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../intune-service/protect/configure.md).
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
 
 ## Create and assign update rings
 
@@ -83,7 +83,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
-   In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](../intune-service/protect/feature-updates.md#limitations-for-feature-updates-for-and-later-policy) and removes the need for a user to sign-on to a device before the policy can apply.
+   In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](feature-updates.md#limitations-for-feature-updates-for-and-later-policy) and removes the need for a user to sign-on to a device before the policy can apply.
 
 7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 
@@ -116,7 +116,7 @@ This view also includes:
     - **Device assignment status** – This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
     - **Per setting status** – View the configuration status of each setting for this policy across all devices and users.
 
-  For details about this report view, see [Reports for Update rings for Windows 10 and later policy](../intune-service/protect/reports.md#reports-for-update-rings-for-and-later-policy).
+  For details about this report view, see [Reports for Update rings for Windows 10 and later policy](reports.md#reports-for-update-rings-for-and-later-policy).
 
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each area of the policy.
 
@@ -210,11 +210,11 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](../intune-service/protect/reports.md#reports-for-update-rings-for-and-later-policy).
+There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](reports.md#reports-for-update-rings-for-and-later-policy).
 
 ## Next steps
 
-- Use [Windows feature updates in Intune](../intune-service/protect/feature-updates.md)
-- Use [Windows update compatibility reports](../intune-service/protect/compatibility-reports.md)
-- Use [Windows update reports](../intune-service/protect/reports.md) for Windows updates
+- Use [Windows feature updates in Intune](feature-updates.md)
+- Use [Windows update compatibility reports](compatibility-reports.md)
+- Use [Windows update reports](reports.md) for Windows updates
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution

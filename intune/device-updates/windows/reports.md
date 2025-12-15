@@ -15,9 +15,9 @@ ms.collection:
 
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for:
 
-- [Update rings for Windows](../intune-service/protect/update-rings.md)
-- [Feature updates for Windows](../intune-service/protect/feature-updates.md)
-- [Windows Driver updates for Windows](../intune-service/protect/windows-driver-updates-overview.md)
+- [Update rings for Windows](update-rings.md)
+- [Feature updates for Windows](feature-updates.md)
+- [Windows Driver updates for Windows](windows-driver-updates-overview.md)
 
 Reports for these policy types are available to help you monitor and troubleshoot update deployments. To support reporting, you must configure [Data collection settings](#configuring-for-client-data-reporting).
 
@@ -42,7 +42,7 @@ This method of configuring data collection using Windows diagnostic data in Intu
 To support reporting, you must configure the following data collection settings:
 
 - Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
-- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../intune-service/protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
+- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 >[!NOTE]
 > The [Windows update distribution reports](#windows-update-distribution-report) don't require any additional configuration for client data reporting.
@@ -55,7 +55,7 @@ Intune offers integrated report views for the Windows update ring policies you d
 
 > [!TIP]
 >
-> For details about the policy actions at the top of the policy view, like *Delete*, *Pause*, and *Extend*, see [Manage your Windows Update rings](../intune-service/protect/update-rings.md#manage-your-windows-update-rings) in the *Update rings for Windows 10 and later policy in Intune* article.
+> For details about the policy actions at the top of the policy view, like *Delete*, *Pause*, and *Extend*, see [Manage your Windows Update rings](update-rings.md#manage-your-windows-update-rings) in the *Update rings for Windows 10 and later policy in Intune* article.
 
 On the policy page view:
 
@@ -116,7 +116,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
   Devices must:
 
-  - Meet the [prerequisites for Windows 10 and later feature updates policy](../intune-service/protect/feature-updates.md#prerequisites) as documented in **Feature updates for Windows 10 and later policy in Intune**.
+  - Meet the [prerequisites for Windows 10 and later feature updates policy](feature-updates.md#prerequisites) as documented in **Feature updates for Windows 10 and later policy in Intune**.
   - Be Microsoft Entra joined, or Microsoft Entra hybrid joined to support submitting of data for reporting.
 
 ### About reporting data latency
@@ -129,7 +129,7 @@ The data for these reports is generated at different times, which depend on the 
 
 ### Use the Windows 10 feature updates (Organizational) report
 
-The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](../intune-service/protect/feature-updates.md) policy.
+The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](feature-updates.md) policy.
 
 > [!IMPORTANT]
 > Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
@@ -218,7 +218,7 @@ To use the report:
 
 ### Use the Feature update failures (Operational) report
 
-The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../intune-service/protect/feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
+The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
 > [!IMPORTANT]
 > Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
@@ -316,7 +316,7 @@ The data in the Intune reports for Windows Driver update policies is used only f
 To support reporting on all status and events for driver updates, you must configure the following data collection settings:
 
 - Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
-- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../intune-service/protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
+- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 #### User permissions to use reports
 

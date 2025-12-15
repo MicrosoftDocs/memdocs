@@ -13,7 +13,7 @@ ms.collection:
 
 # App and driver compatibility reports for Windows updates
 
-With Intune, you can deploy updates to Windows devices by using policies for [Update rings for Windows 10 and later](../intune-service/protect/update-rings.md) and [Feature updates for Windows 10 and later](../intune-service/protect/feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
+With Intune, you can deploy updates to Windows devices by using policies for [Update rings for Windows 10 and later](update-rings.md) and [Feature updates for Windows 10 and later](feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 
@@ -31,7 +31,7 @@ The Windows feature update device readiness and Windows feature update compatibi
 - Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
 - Windows Virtual Desktop Access (VDA) per user
 
-Before using these reports, you must attest to having the required licenses on the [Windows data page](../intune-service/protect/data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
+Before using these reports, you must attest to having the required licenses on the [Windows data page](data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
 
 ### Devices
 
@@ -43,7 +43,7 @@ To be eligible for the Windows feature update device readiness and Windows featu
 - Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
 
 
-Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](../intune-service/protect/data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
+Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
 
 ### Users
 
@@ -316,5 +316,5 @@ The FastTrack Center Benefit for Windows provides access to **Desktop App Assure
 
 ## Next step
 
-- Configure [Update rings for Windows](../intune-service/protect/update-rings.md)
-- Configure [Feature updates for Windows](../intune-service/protect/feature-updates.md)
+- Configure [Update rings for Windows](update-rings.md)
+- Configure [Feature updates for Windows](feature-updates.md)
