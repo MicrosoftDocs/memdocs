@@ -222,7 +222,7 @@ items:
       - name: Move to Intune
         displayName: help, get started, migrate, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/deployment-guide-intune-setup.md
-      - name: Migrate from Basic Mobility and Security
+      - name: Move from Basic Mobility and Security
         items:
         - name: Move from Microsoft 365 device management
           displayName: migrate, mdm, office, windows
