@@ -27,19 +27,19 @@ Some capabilities are available to buy as a standalone add-on. Other capabilitie
 
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
-|Capability|Standalone add-on|Intune Plan 2|Intune Suite|
-|:---|:---:|:---:|:---:|
-|Endpoint Privilege Management |✅ | |✅ |
-|Enterprise App Management |✅ | |✅ |
-|Advanced Analytics|✅  | |✅ |
-|Remote Help|✅ | |✅ |
-|Microsoft Tunnel for Mobile Application Management| |✅ |✅ |
-|Microsoft Cloud PKI |✅  ||✅ |
-|Firmware-over-the-air update| |✅  |✅  |
-|Specialized devices management| |✅ |✅ |
+| Capability | Standalone add-on | Intune Plan 2 | Intune Suite |
+|:-|:-:|:-:|:-:|
+| Endpoint Privilege Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Enterprise App Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Advanced Analytics | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Remote Help | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Microsoft Tunnel for Mobile Application Management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Microsoft Cloud PKI | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Firmware-over-the-air update |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Specialized devices management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
-> As a companion to this article, see our [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.  
+> As a companion to this article, see our [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
 
 ### Microsoft Intune Endpoint Privilege Management
 
@@ -55,7 +55,7 @@ Enterprise App Management is an Intune Suite add-on that is available for trial 
 
 Microsoft Intune Advanced Analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
 
-For more information, see [Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md).
+For more information, see [Intune Advanced Analytics](../../advanced-analytics/index.md).
 
 ### Microsoft Intune Remote Help
 
@@ -153,7 +153,7 @@ Learn more about:
 - [Remote Help](remote-help.md)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
-- [Intune Advanced Analytics](../../analytics/index.md)
+- [Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Remote Help](..\fundamentals\remote-help.md)

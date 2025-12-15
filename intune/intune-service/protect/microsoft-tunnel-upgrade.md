@@ -3,7 +3,7 @@ title: Upgrade the Microsoft Tunnel Gateway server software
 description: Understand how Microsoft Tunnel Gateway upgrades to new versions of the tunnel software for Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 04/11/2025
+ms.date: 12/10/2025
 ms.topic: how-to
 ms.reviewer: ochukwunyere
 ms.collection:
@@ -102,18 +102,45 @@ To understand when an upgrade is available for servers, use the [Health check](#
 
 After you choose to upgrade servers, Intune starts the process to do so, which can't be canceled. The time that upgrades begin at the site depends on the configuration of maintenance windows for the site.
 
+## Understanding version identifiers
+
+Microsoft Tunnel uses two types of identifiers for container image versions:
+
+- **Version Number Labels**: Human-readable identifiers that represent the build date and sequence or version of an update. For example, version 20251126.1 represents version 1 for a build created on November 26, 2025.
+- **SHA256 Digests**: Cryptographic hashes that provide precise identification and validation for update deployment.
+
+Version number labels are internal identifiers applied during the build process that help customers and Microsoft support teams quickly identify specific releases. These labels complement the SHA256 digests that are used for actual deployment and validation.
+
+While SHA256 digests remain the official reference for deployment precision, you can use version labels to:
+
+- Reference releases in automation scripts and deployment pipelines
+- Simplify inventory management and compliance reporting
+- Streamline communication with Microsoft support when discussing specific releases
+- Validate that deployed images match expected release dates and sequences
+
+The Microsoft Tunnel version for a server isn't available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of *agentImageDigest* and *serverImageDigest*: `cat /etc/mstunnel/images_configured`
+
 ## Microsoft Tunnel update history
 
 Updates for the Microsoft Tunnel release periodically. When a new version is available, read about the changes here.
 
 After an update releases, it rolls out to tenants over the following days. This rollout time means new updates might not be available for your tunnel servers for a few days.
 
-The Microsoft Tunnel version for a server isn’t available in the Intune UI at this time. Instead, run the following command on the Linux server that hosts the tunnel to identify the hash values of *agentImageDigest* and *serverImageDigest*: `cat /etc/mstunnel/images_configured`
-
 > [!IMPORTANT]
 >
 > Container releases take place in stages. If you notice that your container images aren't the most recent, please be assured that they will be updated and delivered within the following week.
 
+### November 26, 2025 
+
+Version Number: 20251126.1
+
+Image hash values:
+
+- **agentImageDigest**:  sha256:b556382d7aefb94d2be9ae860ed95021abc8d900f11b71db9232a0fcda615c40
+- **serverImageDigest**: sha256:3c8bb39920694f6be510801f49ea61faa297d7df8b8618c1c49374f69fcf9cb2
+
+Changes in this release:
+- Minor bug fixes   
 
 ### November 12, 2025
 
@@ -186,6 +213,12 @@ Image hash values:
 Changes in this release:
 - Minor bug fixes
 
+## Related content
+
+[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
+
+<!-- Archive of past releases that are older than 6 months. 
+Update versions were first made available with the Sept 15, 2025 update.
 
 ### May 21, 2025
 
@@ -302,7 +335,6 @@ Changes in this release:
 - Add diagnostic tools for host troubleshooting
 - Upgrade Azure Linux image to 2.0.20240829
 
-
 ### August 12, 2024
 
 Image hash values:
@@ -315,12 +347,6 @@ Changes in this release:
 - Support customizing container registry during installation
 - Support customizing container creation options during installation
 - Security updates on the base image
-
-## Related content
-
-[Reference for Microsoft Tunnel](../protect/microsoft-tunnel-reference.md)
-
-<!-- Archive of past releases
 
 ### June 20, 2024
 
