@@ -63,7 +63,7 @@ To enhance your use of gradual rollouts, you can configure *Intelligent rollouts
 
 With intelligent rollouts, Windows Autopatch uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group includes the fewest number of devices that have the largest pool of variations in your environment. You can think of this first offer group as a *pilot ring* for the deployment.
 
-To enable intelligent rollout, you deploy a [settings catalog](../intune-service/configuration/settings-catalog.md) profile for device configuration to *Allow Windows Update for Business Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
+To enable intelligent rollout, you deploy a [settings catalog](../../intune-service/configuration/settings-catalog.md) profile for device configuration to *Allow Windows Update for Business Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
 
 ### Likely issue safeguard holds
 
