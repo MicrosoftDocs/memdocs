@@ -1,8 +1,10 @@
 items:
 - name: Configure software updates
   href: index.md
+  displayName: apple updates ios macos
 - name: Software update reports
   href: reports.md
+  displayName: apple updates ios macos
 - name: Update policies (deprecated)
   items:
   - name: iOS/iPadOS update policies (deprecated)
