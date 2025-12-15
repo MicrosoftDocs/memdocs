@@ -76,7 +76,7 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/windows-quality-updates-policy.md",
+      "source_path": "intune/intune-service/protect/windows-quality-update-policy.md",
       "redirect_url": "/intune/device-updates/windows/quality-updates-policy",
       "redirect_document_id": false
     },
