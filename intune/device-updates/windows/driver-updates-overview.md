@@ -108,7 +108,7 @@ To enable the use of Windows diagnostic data:
 
 2. Expand *Windows data* and ensure the setting **Enable features that require Windows diagnostic data in processor configuration** is toggled to **On**.
 
-For more information, see [Enable use of Windows diagnostic data by Intune](data-enable-windows-data.md).
+For more information, see [Enable use of Windows diagnostic data by Intune](../../intune-service/protect/data-enable-windows-data.md).
 
 ### GCC High support
 
@@ -264,7 +264,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
    1. Leave the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
 
-   2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
+   2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](driver-updates-policy.md).
 
    3. Configure a domain-based group policy to configure **Windows Update** as the source for **Driver Updates** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus).
 
@@ -320,5 +320,5 @@ Here are some more details on when deadlines are applied to drivers:
 
 ## Next steps
 
-- [Create a Windows driver update policy](windows-driver-updates-policy.md)
+- [Create a Windows driver update policy](driver-updates-policy.md)
 - [Use Windows driver update reports](reports.md#reports-for-windows-driver-updates-policy)

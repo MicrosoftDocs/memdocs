@@ -58,7 +58,7 @@ In your compliance policy, you can:
 - Notify the user that the OS version doesn't meet your requirements.
 - Allow a grace period before the device is marked noncompliant, to allow them time to upgrade.
 
-:::image type="content" source="images/software-updates-guide/compliance-policy-actions-noncompliance.png" alt-text="Screenshot that shows a compliance policy with actions for noncompliance in the Microsoft Intune admin center.":::
+:::image type="content" source="android/images/software-updates-guide/compliance-policy-actions-noncompliance.png" alt-text="Screenshot that shows a compliance policy with actions for noncompliance in the Microsoft Intune admin center.":::
 
 If you combine your compliance policies with Conditional Access (CA), then you can block users from resource access until they meet the OS version requirements.
 
@@ -84,7 +84,7 @@ For more information on app protection policies, go to [App protection policies 
 
 ✅ Create a custom notification to alert users of upcoming OS version requirements. Use this feature to proactively communicate to users to update their devices so they don't lose access:
 
-:::image type="content" source="images/software-updates-guide/custom-notification.png" alt-text="Screenshot that shows a custom notification message in the Microsoft Intune admin center.":::
+:::image type="content" source="android/images/software-updates-guide/custom-notification.png" alt-text="Screenshot that shows a custom notification message in the Microsoft Intune admin center.":::
 
 Remember, if the OS updates can't be forced or controlled, which is common on personal devices, then end users need to update their own devices.
 

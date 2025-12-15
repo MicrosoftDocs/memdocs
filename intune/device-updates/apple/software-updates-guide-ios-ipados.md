@@ -65,8 +65,8 @@ Automatic updates work together with other update policies, which can provide a 
 Using Intune policies, you can also force users to update their devices:
 
 - Use [Enrollment Restrictions](../../intune-service/enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
-- Create [compliance policies](../../intune-service/compliance-policy-create-ios.md) to determine the devices that aren't updated.
-- Create [Conditional Access (CA) policies](../../intune-service/create-conditional-access-intune.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
+- Create [compliance policies](../../intune-service/protect/compliance-policy-create-ios.md) to determine the devices that aren't updated.
+- Create [Conditional Access (CA) policies](../../intune-service/protect/conditional-access.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
 
 #### What you need to know
 
@@ -87,7 +87,7 @@ To manage updates, Apple has the following options:
 
   On iOS/iPadOS 17.0 and later, use Apple's declarative device management (DDM) to manage software updates. DDM is the modern way to manage devices with an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, & installs the update.
 
-  The DDM settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Managed software updates with the settings catalog](apple.md).
+  The DDM settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Managed software updates with the settings catalog](index.md).
 
 - **Software update policies**
 
