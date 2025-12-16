@@ -1,15 +1,12 @@
 ---
 title: Configure Windows Update rings policy in Intune
 description: Create and manage Intune policy for Windows update rings. You can configure, deploy, and pause update installation with Windows Update client policies using Microsoft Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/18/2024
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-updates
 ---
 
@@ -19,13 +16,13 @@ Create update rings that specify how and when Windows as a Service updates your 
 
 Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. To do so, when creating a policy you use the setting named *Upgrade Windows 10 devices to Latest Windows 11 release* by configuring it as *Yes*. When you use update rings to upgrade to Windows 11, devices install the most current version of Windows 11. If you later set the upgrade setting back to *No*, devices that haven't started the upgrade won't start while devices that are in the process of upgrading will continue to do so. Devices that have completed the upgrade will remain with Windows 11. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
 
-Windows update rings support [scope tags](../fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
+Windows update rings support [scope tags](../../intune-service/fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
 
 ## Prerequisites
 
 The following prerequisites must be met to use Windows Update Rings for Windows devices in Intune.
 
-- Devices must have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Devices must have access to endpoints. To get a detailed list of endpoints required for the associated service listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
 
   > [!NOTE]
@@ -43,17 +40,17 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
     - **Microsoft product updates**
     - **Servicing channel**: Any update build that is generally available.
 
-    For more information, see [Manage Windows Holographic](../fundamentals/windows-holographic-for-business.md).
+    For more information, see [Manage Windows Holographic](../../intune-service/fundamentals/windows-holographic-for-business.md).
 
   - Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
-    - [Pause](../protect/windows-10-update-rings.md#pause) of *Feature* updates
-    - [Feature Update Deferral period (days)](../protect/windows-update-settings.md#update-settings)
-    - [Set feature update uninstall period (2 - 60 days)](../protect/windows-update-settings.md#update-settings)
-    - [Enable pre-release builds](../protect/windows-update-settings.md#update-settings), which includes the following build options:
+    - [Pause](update-rings.md#pause) of *Feature* updates
+    - [Feature Update Deferral period (days)](settings.md#update-settings)
+    - [Set feature update uninstall period (2 - 60 days)](settings.md#update-settings)
+    - [Enable pre-release builds](settings.md#update-settings), which includes the following build options:
       - Windows Insider – Release Preview
       - Beta Channel
       - Dev Channel
-    - [Use deadline settings](../protect/windows-update-settings.md#user-experience-settings) for *Feature* updates.
+    - [Use deadline settings](settings.md#user-experience-settings) for *Feature* updates.
 
 ### Limitations for Workplace Joined devices
 
@@ -63,7 +60,7 @@ Intune Update rings for Windows require the use of Windows Update client policie
 - Feature updates
 - Quality updates (also known as *Expedited* updates)
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](../protect/windows-update-for-business-configure.md).
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
 
 ## Create and assign update rings
 
@@ -72,9 +69,9 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 2. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > **Create profile**.
 
 3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
-  ![Create an update ring](./media/windows-10-update-rings/basics-tab.png)
+  ![Create an update ring](./images/update-rings/basics-tab.png)
 
-4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](../protect/windows-update-settings.md). After configuring *Update and User experience* settings, select **Next**.
+4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](settings.md). After configuring *Update and User experience* settings, select **Next**.
 
 5. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 
@@ -86,7 +83,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
-   In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](../protect/windows-10-feature-updates.md#limitations-for-feature-updates-for-windows-10-and-later-policy) and removes the need for a user to sign-on to a device before the policy can apply.
+   In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](feature-updates.md) and removes the need for a user to sign-on to a device before the policy can apply.
 
 7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 
@@ -94,7 +91,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 In the portal, navigate to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
 
-:::image type="content" source="./media/windows-10-update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./media/windows-10-update-rings/default-policy-view.png":::
+:::image type="content" source="./images/update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings/default-policy-view.png":::
 
 This view includes:
 
@@ -106,7 +103,7 @@ This view includes:
 - [Extend](#extend)
 - [Uninstall](#uninstall)
 
-:::image type="content" source="./media/windows-10-update-rings/overview-actions.png" alt-text="Available actions.":::
+:::image type="content" source="./images/update-rings/overview-actions.png" alt-text="Available actions.":::
 
 This view also includes:
 
@@ -116,10 +113,10 @@ This view also includes:
   - **View report**: A button opens a more detailed report view for *Device and user check-in status*.
 
   - **Two additional report tiles**: You can select the tiles for the following reports to view additional details:
-    - **Device assignment status** – This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
-    - **Per setting status** – View the configuration status of each setting for this policy across all devices and users.
+    - **Device assignment status**: This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
+    - **Per setting status**: View the configuration status of each setting for this policy across all devices and users.
 
-  For details about this report view, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
+  For details about this report view, see [Reports for Update rings for Windows 10 and later policy](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each area of the policy.
 
@@ -197,7 +194,7 @@ Consider the following when you use Uninstall:
 
 - Once the feature or quality update pause elapses on an Update Ring, devices will reinstall previously uninstalled feature or quality updates if they're still applicable.
 
-- Uninstallation will not be successful when the feature update was applied using an Enablement Package. To learn more about Enablement Packages, see [KB5015684](https://support.microsoft.com/topic/kb5015684-featured-update-to-windows-10-version-22h2-by-using-an-enablement-package-09d43632-f438-47b5-985e-d6fd704eee61).
+- Uninstallation will not be successful when the feature update was applied using an Enablement Package. To learn more about Enablement Packages, see [KB5015684](https://support.microsoft.com/topic/kb5015684-featured-update-to-version-22h2-by-using-an-enablement-package-09d43632-f438-47b5-985e-d6fd704eee61).
 
 - For feature updates specifically, the time you can uninstall the update is limited from 2-60 days. This period is configured by the update rings Update setting **Set feature update uninstall period (2 – 60 days)**. You can't roll back a feature update that's been installed on a device after the update has been installed for longer than the configured uninstall period.
 
@@ -213,11 +210,11 @@ For more information about Windows Update policies, see [Update CSP](/windows/cl
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
+There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 ## Next steps
 
-- Use [Windows feature updates in Intune](../protect/windows-10-feature-updates.md)
-- Use [Windows update compatibility reports](../protect/windows-update-compatibility-reports.md)
-- Use [Windows update reports](../protect/windows-update-reports.md) for Windows updates
+- Use [Windows feature updates in Intune](feature-updates.md)
+- Use [Windows update compatibility reports](compatibility-reports.md)
+- Use [Windows update reports](reports.md) for Windows updates
 - Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution

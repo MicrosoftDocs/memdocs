@@ -1,8 +1,6 @@
 ---
 title: Use Intune to expedite Windows quality updates
 description: Use Microsoft Intune policy to expedite the installation of Windows updates on managed devices as soon as possible.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: davguy;bryanke
@@ -16,7 +14,7 @@ ms.collection:
 
 With *Quality updates for Windows 10 and Later* policy, you can expedite the installation of the most recent Windows security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn't deploy the update for some time.
 
-Not all updates can be expedited. Currently, only Windows security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](windows-10-update-rings.md).
+Not all updates can be expedited. Currently, only Windows security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](update-rings.md).
 
 ## How expedited updates work
 
@@ -37,13 +35,13 @@ The actual time required for a device to start an update depends on the device i
   > [!IMPORTANT]
   > In some scenarios, Windows Update can install an update that is more recent than the update you specify in expedite update policy. For more information about this scenario, see [About installing the latest applicable update](#identify-the-latest-applicable-update), later in this article.
 
-- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows update rings](windows-10-update-rings.md) and the setting for **Quality update deferral period**.
+- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows update rings](update-rings.md) and the setting for **Quality update deferral period**.
 
 - When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
 
   If a device doesn't restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](windows-update-settings.md#user-experience-settings).
+- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](settings.md#user-experience-settings).
 
 ## Prerequisites
 
@@ -83,11 +81,11 @@ Only update builds that are generally available are supported. Preview builds, i
 
 **Devices must**:
 
-- Be [enrolled in Intune](../fundamentals/deployment-guide-enrollment.md) MDM.
+- Be [enrolled in Intune](../../intune-service/fundamentals/deployment-guide-enrollment.md) MDM.
 
 - Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
 
-- Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 
   - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
   - Windows Autopatch
@@ -139,13 +137,13 @@ Group Policy settings override mobile device management policies, and the follow
 
 **Monitoring and reporting**:
 
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting).
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](reports.md#configuring-for-client-data-reporting).
 
 ### Limitations for Workplace Joined devices
 
 Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for additional capabilities that are not supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md) in *Manage Windows software updates in Intune*.
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md) in *Manage Windows software updates in Intune*.
 
 ## Create and assign an expedited quality update
 
@@ -153,7 +151,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 2. Select **Devices** > **Manage updates** > **Windows 10 and later updates**> **Quality updates** tab > **Create profile**.
 
-   :::image type="content" source="./media/windows-10-expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI.":::
+   :::image type="content" source="./images/expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI.":::
 
 3. In **Settings**, enter the following properties to identify this profile:
 
@@ -166,7 +164,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
    > [!TIP]
    > Optional Windows quality updates can't be expedited and won't be available to select.
 
-   :::image type="content" alt-text="Screen capture of update selection UI." source="./media/windows-10-expedite-updates/select-update.png" lightbox="./media/windows-10-expedite-updates/select-update.png":::
+   :::image type="content" alt-text="Screen capture of update selection UI." source="./images/expedite-updates/select-update.png" lightbox="./images/expedite-updates/select-update.png":::
 
    When selecting an update:
 
@@ -185,7 +183,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
    - Non-security updates are only shown when it is the most recent release. The drop-down list is updated to display the most recent two security updates, including if one is an out-of-band update. If the most recent non-security update is newer than the newest security update, then the non-security update is also included in the drop-down list. As a result, sometimes two updates are shown, and at other times, three updates are shown.
 
      > [!TIP]
-     > For more information, see the blog [Windows update servicing cadence - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-10-update-servicing-cadence/ba-p/222376).
+     > For more information, see the blog [Windows update servicing cadence - Microsoft Tech Community](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/update-servicing-cadence/ba-p/222376).
 
    - The non-security expedite updates apply to Windows 11 devices. If Windows 10 devices are assigned to an Expedite policy that sets a **D** release, then those devices are not expedited and show an alert in the following reports.
      - **Reports** > **Windows Updates** > **Reports** Tab > **Windows Expedited Update Report**
@@ -200,7 +198,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    - A setting of **1 day** or **2 days** provides device users flexibility to manage a restart before it's forced. These settings correspond to an automatic restart delay of 24 or 48 hours after the update installs on the device.
 
-     :::image type="content" alt-text="Screen capture of selecting days before forced reboot." source="./media/windows-10-expedite-updates/select-reboot-time.png" lightbox="./media/windows-10-expedite-updates/select-reboot-time.png":::
+     :::image type="content" alt-text="Screen capture of selecting days before forced reboot." source="./images/expedite-updates/select-reboot-time.png" lightbox="./images/expedite-updates/select-reboot-time.png":::
 
 6. In **Assignments**, select **Add groups** and then select device or user groups to assign the policy.
 
@@ -265,7 +263,7 @@ From this pane, you can:
 
 ## Monitoring and reporting
 
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting).
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](reports.md#configuring-for-client-data-reporting).
 
 After a policy has been created you can monitor results, update status, and errors from the following reports.
 
@@ -297,7 +295,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
 
-   :::image type="content" alt-text="Example of the device report." source="./media/windows-10-expedite-updates/device-report.png" lightbox="./media/windows-10-expedite-updates/device-report.png":::
+   :::image type="content" alt-text="Example of the device report." source="./images/expedite-updates/device-report.png" lightbox="./images/expedite-updates/device-report.png":::
 
 ### Update states
 
@@ -318,7 +316,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [Update rings for Windows 10 and later](windows-10-update-rings.md)
-- Configure [Feature updates for Windows 10 and later](windows-10-feature-updates.md)
-- Use [Windows update compatibility reports](windows-update-compatibility-reports.md)
+- Configure [Update rings for Windows 10 and later](update-rings.md)
+- Configure [Feature updates for Windows 10 and later](feature-updates.md)
+- Use [Windows update compatibility reports](compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)

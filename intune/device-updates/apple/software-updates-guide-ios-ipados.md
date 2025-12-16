@@ -1,8 +1,6 @@
 ---
 title: Admin checklist for iOS/iPadOS software updates in Microsoft Intune
 description: Guidance and advice for administrators that create and manage software updated for iOS/iPadOS devices using Microsoft Intune. See sample policy for different industry scenarios, including shared devices, kiosk, manufacturing, and information worker.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 07/24/2025
 ms.topic: how-to
 ms.reviewer: beflamm, ahamil, rogerso
@@ -25,8 +23,8 @@ This article applies to:
 
 > [!TIP]
 >
-> - If your devices are personally owned, then go to the [software updates planning guide for personal devices](../software-updates-guide-personal-byod.md).
-> - [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
+> - If your devices are personally owned, then go to the [software updates planning guide for personal devices](../byod-software-updates-guide.md).
+> - [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
 ## Admin checklist for organization owned devices
 
@@ -66,9 +64,9 @@ Automatic updates work together with other update policies, which can provide a 
 
 Using Intune policies, you can also force users to update their devices:
 
-- Use [Enrollment Restrictions](../../enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
-- Create [compliance policies](../compliance-policy-create-ios.md) to determine the devices that aren't updated.
-- Create [Conditional Access (CA) policies](../create-conditional-access-intune.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
+- Use [Enrollment Restrictions](../../intune-service/enrollment/create-device-platform-restrictions.md) to prevent users from enrolling devices that aren't current.
+- Create [compliance policies](../../intune-service/protect/compliance-policy-create-ios.md) to determine the devices that aren't updated.
+- Create [Conditional Access (CA) policies](../../intune-service/protect/conditional-access.md) to block devices that aren't updated. The CA policies can also prompt users to install current updates so they regain access.
 
 #### What you need to know
 
@@ -81,7 +79,7 @@ Using Intune policies, you can also force users to update their devices:
 ### ✅ Use the built-in settings
 
 > [!NOTE]
-> [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
+> [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
 To manage updates, Apple has the following options:
 
@@ -89,7 +87,7 @@ To manage updates, Apple has the following options:
 
   On iOS/iPadOS 17.0 and later, use Apple's declarative device management (DDM) to manage software updates. DDM is the modern way to manage devices with an improved user experience, as the device handles the entire software update lifecycle. It prompts users that an update is available and also downloads the update, prepares the device for the installation, & installs the update.
 
-  The DDM settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Managed software updates with the settings catalog](apple.md).
+  The DDM settings are configurable in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information, go to [Managed software updates with the settings catalog](index.md).
 
 - **Software update policies**
 
@@ -234,7 +232,7 @@ To accomplish this task, create a policy with the following settings:
 
 Shared devices are used by many users who typically sign in and out of the device, including education environments. These devices can be terminal/desktop computers, tablets, laptops, and smartphones. They're often used in offices, classrooms, and retail stores.
 
-For more information on managing shared iOS/iPadOS devices, go to [Shared device solutions for iOS/iPadOS](../../enrollment/device-enrollment-shared-ios.md).
+For more information on managing shared iOS/iPadOS devices, go to [Shared device solutions for iOS/iPadOS](../../intune-service/enrollment/device-enrollment-shared-ios.md).
 
 For iOS/iPadOS shared devices, to apply updates, all users must be signed out. The users can be signed out or the device can be rebooted, which automatically signs out users.
 
@@ -267,6 +265,6 @@ To accomplish this task, this scenario involves two policies:
 ## Related articles
 
 - [Manage iOS/iPadOS software update policies in Intune](software-updates-ios.md)
-- [Software updates planning guide and scenarios for BYOD and personal devices](../software-updates-guide-personal-byod.md)
-- [Software updates planning guide for managed Android devices](../software-updates-guide-android.md)
+- [Software updates planning guide and scenarios for BYOD and personal devices](../byod-software-updates-guide.md)
+- [Software updates planning guide for managed Android devices](../android/software-updates-guide.md)
 - [Software updates planning guide for managed macOS devices](software-updates-guide-macos.md)

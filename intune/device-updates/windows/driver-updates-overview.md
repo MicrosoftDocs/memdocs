@@ -1,15 +1,12 @@
 ---
 title: Learn about Windows Driver updates policy for Windows devices in Intune
 description: Learn about using Microsoft Intune policy to manage Windows driver updates.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - ContentEnagagementFY24
 - sub-updates
 ---
@@ -93,14 +90,14 @@ Driver updates are supported for the following Windows editions:
 - Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
   You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows devices:
-  - **[Device restriction template](../configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
-  - **[Settings catalog](../configuration/settings-catalog.md)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
+  - **[Device restriction template](../../intune-service/configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
+  - **[Settings catalog](../../intune-service/configuration/settings-catalog.md)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
 
   For more information about Windows Telemetry settings, including both current and past setting options from Windows, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
 - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
 
-- Have access to the network endpoints required by Intune managed devices. See [Network endpoints](../fundamentals/intune-endpoints.md#access-for-managed-devices).
+- Have access to the network endpoints required by Intune managed devices. See [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 ### Enable data collection for reports
 
@@ -111,7 +108,7 @@ To enable the use of Windows diagnostic data:
 
 2. Expand *Windows data* and ensure the setting **Enable features that require Windows diagnostic data in processor configuration** is toggled to **On**.
 
-For more information, see [Enable use of Windows diagnostic data by Intune](data-enable-windows-data.md).
+For more information, see [Enable use of Windows diagnostic data by Intune](../../intune-service/protect/data-enable-windows-data.md).
 
 ### GCC High support
 
@@ -131,17 +128,17 @@ To manage Windows Driver updates, your account must be assigned an Intune role-b
 
 You can add the *Device configurations* permission with one or more rights to your own custom RBAC roles or use one the built-in **Policy and Profile manager** role, which includes these rights.
 
-For more information, see [Role-based access control for Microsoft Intune](../fundamentals/role-based-access-control.md).
+For more information, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ### Limitations for Workplace Joined devices
 
 Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for other capabilities that aren't supported for WPJ devices.
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](windows-update-for-business-configure.md).
+For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
 
 ## Architecture
 
-:::image type="content" source="./media/windows-driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./media/windows-driver-updates-overview/wdum-architecture.png":::
+:::image type="content" source="./images/driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./images/driver-updates-overview/wdum-architecture.png":::
 
 **Windows Driver Update Management architecture**:
 
@@ -267,16 +264,16 @@ The recommended and preferred path to embrace cloud based updates is to move the
 
    1. Leave the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
 
-   2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](windows-driver-updates-policy.md).
+   2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](driver-updates-policy.md).
 
    3. Configure a domain-based group policy to configure **Windows Update** as the source for **Driver Updates** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus).
 
       > [!NOTE]
       > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
 
-   4. Enable [data collection](windows-update-reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy drivers and firmware to.
+   4. Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy drivers and firmware to.
 
-   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](windows-update-reports.md).
+   5. [Optional] Enforce allowing diagnostic data submission using a policy. Diagnostic data submission to Microsoft enables the use of [Windows Update reports for Microsoft Intune](reports.md).
 
       > [!NOTE]
       > By default, diagnostic data submission to Microsoft is allowed on Windows devices. Disabling diagnostic data collection prevents the use of Windows Update reports for Microsoft Intune from reporting any update information for your managed devices.
@@ -292,7 +289,7 @@ The recommended and preferred path to embrace cloud based updates is to move the
       > [!NOTE]
       > Using Intune to configure any of the diagnostic data settings mentioned earlier requires that you move the [Device Configuration](../../configmgr/comanage/workloads.md#device-configuration) co-management workload to Intune.
 
-   You can move Feature update management to the cloud in Intune by configuring a [Feature update](windows-10-feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
+   You can move Feature update management to the cloud in Intune by configuring a [Feature update](feature-updates.md) policy in Intune and setting the **Feature Updates** setting to **Windows Update** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus) group policy.
 
    Using Update Ring policies in Intune for Quality or Feature Updates requires you to move the **Windows Update** workload to Intune.
 
@@ -323,5 +320,5 @@ Here are some more details on when deadlines are applied to drivers:
 
 ## Next steps
 
-- [Create a Windows driver update policy](windows-driver-updates-policy.md)
-- [Use Windows driver update reports](windows-update-reports.md#reports-for-windows-driver-updates-policy)
+- [Create a Windows driver update policy](driver-updates-policy.md)
+- [Use Windows driver update reports](reports.md#reports-for-windows-driver-updates-policy)

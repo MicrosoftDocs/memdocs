@@ -2,12 +2,9 @@
 title: Windows quality update policy
 description: Use Hotpatch updates to receive security updates without restarting your device
 ms.date: 04/17/2025
-author: paolomatarazzo
-ms.author: paoloma
 ms.reviewer: Mounika
 ms.topic: how-to
 ms.collection:
-- highpri
 ---
 
 # Windows quality update policy

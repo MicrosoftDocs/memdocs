@@ -40,7 +40,7 @@ The following metrics are weighted and used to compute the **Work from anywhereâ
 
 #### Windows
 
-Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../intune-service/protect/windows-10-feature-updates.md). Your score is based on if these remediation actions have been completed or not.
+Newer versions of Windows provide a better user experience than older versions of Windows. The **Windows** metric measures the percent of devices on supported versions of Windows. The recommended remediation actions vary depending on how the devices are managed. For Intune and co-managed devices, use Intune to [move devices to an updated version of Windows](../device-updates/windows/feature-updates.md). Your score is based on if these remediation actions have been completed or not.
 
 :::image type="content" source="images/work-from-anywhere/windows.png" alt-text="Screenshot of the Windows fly out showing graph and insights" lightbox="images/work-from-anywhere/windows.png":::
 
