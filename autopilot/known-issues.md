@@ -78,18 +78,12 @@ The following issues are under active investigation:
 
   For information on how to mitigate this error, see [Troubleshooting FAQ](/autopilot/troubleshooting-faq#troubleshooting-the-intune-connector-for-active-directory).
 
-### TPM attestation isn't working for TPMs which use high-range RSA 3072EK
-
-Date added: *April 4, 2025*
-
-Platforms with TPMs which use high-range RSA 3072EK might fail TPM attestation. This failure impacts Windows Autopilot pre-provisioning and Windows Autopilot self-deploying flows. The issue has been fixed.
-
 ### Setting up keyboard automatically doesn't accurately update keyboard language
 
 Date added: *April 4, 2025*
 Date updated: *December 16, 2025*
 
-The Windows Autopilot profile setting which enables automatic configuration of the keyboard language based on the **Language (Region)** setting might fail to apply during provisioning due to a known OS issue. To resolve this issue, use [KB5072033] (https://support.microsoft.com/en-us/topic/december-9-2025-kb5072033-os-builds-26200-7462-and-26100-7462-0c1a4334-19ba-406d-bb1e-88fcffc87b79) or above.
+The Windows Autopilot profile setting which enables automatic configuration of the keyboard language based on the **Language (Region)** setting might fail to apply during provisioning due to a known OS issue. To resolve this issue, use [KB5072033](https://support.microsoft.com/en-us/topic/december-9-2025-kb5072033-os-builds-26200-7462-and-26100-7462-0c1a4334-19ba-406d-bb1e-88fcffc87b79) or above.
 
 ### Windows Autopilot report incorrectly shows failure even though the deployment was successful
 
