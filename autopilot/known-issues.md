@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 08/13/2025
+ms.date: 12/15/2025
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -137,13 +137,16 @@ The Windows Autopilot deployment report was updated to a new infrastructure that
 
 <!-- MAXADO-9270654 -->
 
-### Auto logon for Kiosk device profile only partially fixed
+### Auto logon for Kiosk device profile is fixed
 
-Date added: *August 21, 2024*
+Date added: *August 21, 2024*  
+Date updated: *December 15, 2025*
 
-The known issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. However, there are scenarios where the issue might still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted. The issue is being investigated.
+The known issue of [Kiosk device profiles not auto logging in when auto logon was enabled](#kiosk-device-profile-not-auto-logging-in) was previously reported as fixed. There were scenarios where the issue could still occur when using autologon with Kiosks and [Assigned Access](/windows/configuration/assigned-access/overview). If multiple reboots or unexpected reboots occur during the Windows out-of-box experience (OOBE) when initially configuring the Kiosk, the autologon entries in the registry might be deleted.
 
-The following workarounds are available until the issue is resolved:
+**Resolution**: This issue is fixed in Windows 11, version 24H2 on systems that are patched with [KB5058411](https://support.microsoft.com/topic/may-13-2025-kb5058411-os-build-26100-4061-356568c2-c730-469e-819d-b680d43b1265) or later.
+
+Prior to the [KB5058411](https://support.microsoft.com/topic/may-13-2025-kb5058411-os-build-26100-4061-356568c2-c730-469e-819d-b680d43b1265) fix, the following workarounds were available:
 
 1. Apply or reapply the kiosk profile after Windows Autopilot completes.
 
@@ -204,9 +207,9 @@ Platforms with the Infineon SLB9672 TPM with firmware release 15.22 with EK cert
 ### Kiosk device profile not auto logging in
 
 Date added: *January 30, 2023*<br>
-Date updated: *August 21, 2024*
+Date updated: *August 21, 2024*, *December 15, 2025*
 
-There's currently a known issue in the following Windows Updates released in January 2023:
+There was a known issue in the following Windows Updates released in January 2023:
 
 - Windows 11, version 22H2: [KB5022303](https://support.microsoft.com/topic/january-10-2023-kb5022303-os-build-22621-1105-c45956c6-4ccb-4216-832c-2ec6309c7629)
 - Windows 11, version 21H2: [KB5022287](https://support.microsoft.com/topic/january-10-2023-kb5022287-os-build-22000-1455-951898ec-2628-4d25-850e-9a44207bc139)
@@ -218,9 +221,7 @@ If these updates are installed on a device, Kiosk device profiles that have auto
 - Windows 11, version 21H2: [KB5025224](https://support.microsoft.com/topic/april-11-2023-kb5025224-os-build-22000-1817-ebc75372-608d-4a77-a6e0-cb1e15f117fc) or later.
 - Windows 10, version 22H2: [KB5023773](https://support.microsoft.com/topic/march-21-2023-kb5023773-os-builds-19042-2788-19044-2788-and-19045-2788-preview-5850ac11-dd43-4550-89ec-9e63353fef23) or later.
 
-> [!NOTE]
->
-> This issue was only partially fixed and can still occur under certain conditions. For more information, see [Auto logon for Kiosk device profile only partially fixed](#auto-logon-for-kiosk-device-profile-only-partially-fixed).
+**Resolution**: This issue is fixed. For more information, see [Auto logon for Kiosk device profile only partially fixed](#auto-logon-for-kiosk-device-profile-is-fixed).
 
 ### TPM attestation isn't working on AMD platforms with ASP fTPM
 

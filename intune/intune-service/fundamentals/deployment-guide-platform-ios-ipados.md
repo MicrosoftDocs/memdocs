@@ -104,7 +104,7 @@ Use Microsoft Intune to enable or disable settings and features on iOS/iPadOS de
 |[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-ios.md).|
 |[Configure custom profile](../configuration/custom-settings-ios.md)|Add and assign device settings and features that aren't built into Intune.|
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
-|[Managed software updates](../protect/updates/apple.md)| Schedule automatic OS updates and installations for supervised iOS/iPadOS devices.|
+|[Managed software updates](../../device-updates/apple/index.md)| Schedule automatic OS updates and installations for supervised iOS/iPadOS devices.|
 
 
 ## Set up secure authentication methods
