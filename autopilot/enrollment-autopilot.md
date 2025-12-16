@@ -43,25 +43,16 @@ appliesto:
    
      Create rules using Windows Autopilot device attributes. Windows Autopilot devices that meet these rules are automatically added to the group. 
      
-> [!NOTE] 
->
-> You should only create groups using the Autopilot device attributes, which are available only on registered devices. Creating an expression using non-Windows Autopilot attributes doesn't guarantee that devices will be members of the group before provisioning and could result in unexpected configuration during OOBE.
+      > [!NOTE] 
+      >
+      > You should only create groups using the Autopilot device attributes, which are available only on registered devices. Creating an expression using non-Windows Autopilot attributes doesn't guarantee that devices will be members of the group before provisioning and could result in unexpected configuration during OOBE.
    
-```
- When creating expressions:
 
- 
-  - To create a group that includes all of the Windows Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`.
-
-        
-  - Intune's group tag field maps to the `OrderID` attribute on Microsoft Entra devices. To create a group that includes all Windows Autopilot devices with a specific group tag (the Microsoft Entra device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
-
-        
-  - To create a group that includes all the Windows Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
-
-        
- **Save** the expressions.
-```
+      When creating expressions:
+        - To create a group that includes all of the Windows Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`.
+        - Intune's group tag field maps to the `OrderID` attribute on Microsoft Entra devices. To create a group that includes all Windows Autopilot devices with a specific group tag (the Microsoft Entra device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
+        - To create a group that includes all the Windows Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
+      **Save** the expressions.
 
 1. Select **Create**.
 
