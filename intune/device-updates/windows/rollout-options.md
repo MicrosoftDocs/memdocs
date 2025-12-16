@@ -1,8 +1,6 @@
 ---
 title: Configure schedules to gradually roll out Windows Updates in Intune
 description: Configure schedules that manage how and when Windows updates roll out to your managed devices with Microsoft Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: how-to
 ms.reviewer: davguy; bryanke
@@ -19,7 +17,7 @@ Use rollout options in Microsoft Intune policies for *Feature updates for Window
 > [!TIP]
 > The default behavior for Windows Update is to make an update available to an assigned device right away. However, the update doesn't install right away. Instead, when an update is made available, the device becomes eligible to install it. Before a device can install an available update, the device must connect to Windows Update and scan for updates. When the need for an update is confirmed and the device is eligible, the  Windows Update service then offers the update to that device. After a device completes the update, it's then dependent on user behavior and other settings like Deadline.
 
-You configure rollout options when creating [Feature Updates policy](../protect/windows-10-feature-updates.md) by selecting one of the following options:
+You configure rollout options when creating [Feature Updates policy](feature-updates.md) by selecting one of the following options:
 
 - **Make update available as soon as possible** - With this option, there's no delay in making the update available to devices. This selection is the default behavior for Windows Update.
 
@@ -65,7 +63,7 @@ To enhance your use of gradual rollouts, you can configure *Intelligent rollouts
 
 With intelligent rollouts, Windows Autopatch uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group includes the fewest number of devices that have the largest pool of variations in your environment. You can think of this first offer group as a *pilot ring* for the deployment.
 
-To enable intelligent rollout, you deploy a [settings catalog](../configuration/settings-catalog.md) profile for device configuration to *Allow Windows Update for Business Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
+To enable intelligent rollout, you deploy a [settings catalog](../../intune-service/configuration/settings-catalog.md) profile for device configuration to *Allow Windows Update for Business Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
 
 ### Likely issue safeguard holds
 
@@ -93,4 +91,4 @@ After the profile deploys, devices that use gradual rollouts for Feature update 
 
 ## Next steps
 
-Configure [Feature Updates policy](../protect/windows-10-feature-updates.md)
+Configure [Feature Updates policy](feature-updates.md)

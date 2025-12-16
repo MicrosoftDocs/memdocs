@@ -364,7 +364,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 We're introducing a new **Update Substate** in Service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
 
-For more information, see [Use Windows Update for Business reports for Windows Updates](../protect/windows-update-reports.md#use-the-windows-10-feature-updates-organizational-report)
+For more information, see [Use Windows Update for Business reports for Windows Updates](../../device-updates/windows/reports.md#use-the-windows-10-feature-updates-organizational-report)
 
 ## Week of February 24, 2025 (Service release 2502)
 
@@ -1415,7 +1415,7 @@ This change only applies to new policies that are created in the August 2408 rel
 
 In a future release, the **UTC** text will be removed from the **Target Date Time** setting.
 
-For more information on using the settings catalog to configure software updates, see [Managed software updates with the settings catalog](../protect/updates/apple.md).
+For more information on using the settings catalog to configure software updates, see [Managed software updates with the settings catalog](../../device-updates/apple/index.md).
 
 Applies to:
 
@@ -1464,7 +1464,7 @@ Add-on capabilities:
 Plan 2 capabilities:
 
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Firmware-over-the-air update](../protect/zebra-lifeguard-ota-integration.md)
+- [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md)
 - [Specialty devices management](../fundamentals/specialty-devices-with-intune.md)
 
 For more information, see:
@@ -1859,7 +1859,7 @@ When you configure a managed software update policy using the settings catalog, 
 - Select a target OS version from a list of updates made available by Apple.
 - Manually enter the target OS version, if needed.
 
-For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../protect/updates/apple.md).
+For more information about configuring managed software update profiles in Intune, see [Use the settings catalog to configure managed software updates](../../device-updates/apple/index.md).
 
 Applies to:
 
@@ -2090,7 +2090,7 @@ Feature updates can now be made available to end users as **Optional** updates, 
 
 End users can easily opt in to try out the next Feature update and provide feedback. When it's time to roll out the feature as a **Required** update, admins can change the setting on the policy and update the rollout settings so that the update is deployed as a **Required** update to devices that don't yet have it installed.
 
-For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](..//protect/windows-10-feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
+For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](../../device-updates/windows/feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
 
 Applies to:
 
@@ -2278,7 +2278,7 @@ You can drill down further in the report for each quality update that aggregates
 
 Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
 
-For more information on Windows update distribution reports, see [Windows Update reports on Intune](../protect/windows-update-reports.md#windows-update-distribution-report).
+For more information on Windows update distribution reports, see [Windows Update reports on Intune](../../device-updates/windows/reports.md#windows-update-distribution-report).
 
 Applies to:
 
@@ -2588,7 +2588,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
 
 #### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
 
@@ -2651,7 +2651,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../protect/windows-10-expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
 
 ### Intune apps
 
@@ -2945,7 +2945,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-For more information, see [Bulk driver updates](../protect/windows-driver-updates-policy.md#bulk-driver-updates).
+For more information, see [Bulk driver updates](../../device-updates/windows/driver-updates-policy.md#bulk-driver-updates).
 
 #### App Control for Business policy limitation is resolved<!-- 19548950 -->
 
@@ -3079,7 +3079,7 @@ Applies to:
 - iOS/iPadOS
 - macOS
 
-For more information about configuring Managed software updates in Intune, see [Use the settings catalog to configure managed software updates](../protect/updates/apple.md).
+For more information about configuring Managed software updates in Intune, see [Use the settings catalog to configure managed software updates](../../device-updates/apple/index.md).
 
 ### Device management
 
@@ -3517,7 +3517,7 @@ For more information, see [Microsoft Defender for Endpoint Security settings man
 
 The new setting on Feature update policies enables an organization to deploy Windows 11 to those devices that are eligible for the upgrade, while ensuring devices not eligible for the upgrade are on the latest Windows 10 feature update with a single policy. As a result, admins don't need to create or manage groups of eligible and non-eligible devices.
 
-For more information on feature updates, see [Feature updates for Windows 10 and later](../protect/windows-10-feature-updates.md).
+For more information on feature updates, see [Feature updates for Windows 10 and later](../../device-updates/windows/feature-updates.md).
 
 ## Week of October 30, 2023
 
@@ -3740,7 +3740,7 @@ In the settings catalog, the following declarative software update settings are 
 - **Target Local Date Time**: The local date time value that specifies when to force install the software update. If the user doesn't trigger the software update before this time, then the device force installs it.
 - **Target OS Version**: The target OS version to update the device to. This value is the OS version number, like `16.1`. You can also include a supplemental version identifier, like `16.1.1`.
 
-For more information on this feature, see [Manage software updates with the settings catalog](../protect/updates/apple.md).
+For more information on this feature, see [Manage software updates with the settings catalog](../../device-updates/apple/index.md).
 
 In the settings catalog, the following declarative passcode settings are available at **Declarative device management > Passcode**:
 
@@ -4046,7 +4046,7 @@ You can learn more about Defender for Endpoint settings that are available for L
 
 #### Updated reports for Update rings for Windows 10 and later<!-- 10159960 -->
 
-Reporting for [Update rings for Windows 10 and later](../protect/windows-10-update-rings.md) has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
+Reporting for [Update rings for Windows 10 and later](../../device-updates/windows/update-rings.md) has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
 
 With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there isn't a left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
 
@@ -4059,7 +4059,7 @@ With this change for reports for Update rings for Windows 10 and later, when you
   - **Per setting status** – This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings might not be successfully deploying to your organization.
 - **Properties** – View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
 
-For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article.
+For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../../device-updates/windows/reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article.
 
 ### Role-based access
 
@@ -4614,7 +4614,7 @@ Zebra will be releasing support for Android 13 on their devices. You can read mo
 
 - **Update devices to Android 13**
 
-  You'll soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+  You'll soon be able to use Intune's Zebra LifeGuard Over-the-Air integration to update Android Enterprise dedicated and fully managed devices to Android 13. For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md).
 
   Before you migrate to Android 13, review [Migrating to Android 13](https://techdocs.zebra.com/lifeguard/a13/) (opens Zebra's web site).
 
@@ -4695,9 +4695,9 @@ Update policies can be configured for one of two approval methods:
 
 To help you manage driver updates, you review a policy and decline an update you don't want to install. You can also indefinitely pause any approved update, and reapprove a paused update to restart its deployment.
 
-This release also includes [driver update reports](../protect/windows-update-reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
+This release also includes [driver update reports](../../device-updates/windows/reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
-To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../protect/windows-driver-updates-overview.md).
+To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../../device-updates/windows/driver-updates-overview.md).
 
 Applies to:
 
@@ -5394,7 +5394,7 @@ macOS software update policies now include the following settings to help manage
 
 - **Priority**: When the *All other updates* update type is configured to *Install later*, this setting allows you to specify values of *Low* or *High* for the scheduling priority for downloading and preparing minor OS updates. Available for devices running macOS 12.3 and later.
 
-For more information, see [Use Microsoft Intune policies to manage macOS software updates](../protect/updates/software-updates-macos.md).
+For more information, see [Use Microsoft Intune policies to manage macOS software updates](../../device-updates/apple/software-updates-macos.md).
 
 Applies to:
 
@@ -5409,7 +5409,7 @@ The Microsoft Surface link takes you to the Surface Management Portal where you 
 To access the Partner portals page, you must enable the Devices pane preview and then navigate to **Devices** > **Partner Portals**.
 
 #### Windows Update compatibility reports for Apps and Drivers are now generally available<!-- 17917026  -->
-The following Microsoft Intune reports for [Windows Update compatibility](../protect/windows-update-compatibility-reports.md) are out of preview and now generally available:
+The following Microsoft Intune reports for [Windows Update compatibility](../../device-updates/windows/compatibility-reports.md) are out of preview and now generally available:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 

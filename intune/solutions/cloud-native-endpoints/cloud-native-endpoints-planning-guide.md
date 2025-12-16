@@ -144,7 +144,7 @@ Your exact workloads, details, and how to update the workloads for cloud-native 
 
     For more information, go to:
 
-    - [Manage Windows software updates in Intune](../../intune-service/protect/windows-update-for-business-configure.md)
+    - [Manage Windows software updates in Intune](../../device-updates/windows/configure.md)
     - [Integrate Configure Manager with Windows Update client policies](../../configmgr/sum/deploy-use/integrate-windows-update-for-business-windows-10.md)
     - [Choose how to manage updates to Microsoft 365 Apps](/deployoffice/choose-how-manage-updates-microsoft-365-apps)
 

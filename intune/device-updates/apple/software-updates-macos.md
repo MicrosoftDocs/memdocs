@@ -1,8 +1,6 @@
 ---
 title: Use Microsoft Intune policies to manage macOS software updates
 description: Use Microsoft Intune to manage system updates for supervised macOS devices.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 09/24/2025
 ms.topic: how-to
 ms.reviewer: beflamm
@@ -14,9 +12,9 @@ ms.collection:
 # Manage macOS software updates using MDM-based policies in Microsoft Intune
 
 > [!IMPORTANT]
-> [!INCLUDE [Apple MDM software updates deprecation](../../includes/apple-mdm-updates-deprecation.md)]
+> [!INCLUDE [Apple MDM software updates deprecation](includes/apple-mdm-updates-deprecation.md)]
 
-You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../../enrollment/macos-enroll.md#user-approved-enrollment). With these MDM-based policies, you can:
+You can use Microsoft Intune to manage software updates for macOS devices that enrolled as [supervised devices](../../intune-service/enrollment/macos-enroll.md#user-approved-enrollment). With these MDM-based policies, you can:
 
 - Remotely manage how downloads, installations, and notifications should occur when the following types of updates are available:
 
@@ -27,7 +25,7 @@ You can use Microsoft Intune to manage software updates for macOS devices that e
 
 - Create a schedule that determines when the update installs. Schedules can be simple, like installing updates the next time that the device checks in. Or, you can create day-time ranges when updates can install or when they're blocked from installing.
 
-By default, devices check in with [Intune about every 8 hours](../../configuration/device-profile-troubleshoot.md#policy-refresh-intervals). If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
+By default, devices check in with [Intune about every 8 hours](../../intune-service/configuration/device-profile-troubleshoot.md#policy-refresh-intervals). If an update is available through an update policy, the device downloads the update. The device then installs the update upon next check-in within your schedule configuration.
 
 This feature applies to:
 
@@ -102,7 +100,7 @@ This feature applies to:
    > You can deploy a settings catalog policy to hide an update from device users for a specified period of time on your supervised macOS devices. For more information, see the following section [Delay visibility of updates](#delay-visibility-of-updates).
 
    <!--
-   > You can configure settings in a [Settings Catalog](../../protect/updates/software-updates-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
+   > You can configure settings in a [Settings Catalog](../../intune-service/intune-service/protect/updates/software-updates-ios.md#delay-visibility-of-software-updates) policy to hide an update from device users for a period of time on your supervised macOS devices. A restriction period can give you time to test an update before it's visible to users to install. After the device restriction period expires, the update becomes visible to users. Users can then choose to install it, or your Software update policies might automatically install it soon after.
    >
    > When you use a device restriction to hide an update, review your software update policies to ensure they won't schedule the installation of the update before that restriction period ends. Software update policies install updates based on their own schedule, regardless of the update being hidden or visible to the device user.
    -->
@@ -131,7 +129,7 @@ A restriction period gives you time to test an update before users can install i
 
 If you use device restrictions to hide an update, review your software update policies to ensure they don't schedule the installation of that update before the restriction period ends. Software update policies install updates per their schedule regardless of the update being hidden or visible to the device user.
 
-The settings that can restrict visibility of updates on macOS devices are in the [settings catalog](../../configuration/settings-catalog.md) > **Restrictions** category. A few examples of settings you can use to defer an update include:
+The settings that can restrict visibility of updates on macOS devices are in the [settings catalog](../../intune-service/configuration/settings-catalog.md) > **Restrictions** category. A few examples of settings you can use to defer an update include:
 
 - Enforced Software Update Delay
 - Enforced Software Update Major OS Deferred Install Delay
@@ -199,4 +197,4 @@ For each device on the list, the Installation Status displays the error that
 
 ## Next steps
 
-[Monitor device profiles](../../configuration/device-profile-monitor.md)
+[Monitor device profiles](../../intune-service/configuration/device-profile-monitor.md)

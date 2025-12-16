@@ -197,11 +197,11 @@ Your policy options:
 For more information on these features and/or the settings you can configure, go to:
 
 - **Android Enterprise** [Device restrictions profile > Corporate owned > System update](../configuration/device-restrictions-android-for-work.md)
-- **iOS/iPadOS** [Managed software updates](../protect/updates/apple.md)
-- **macOS** [Managed software updates](../protect/updates/apple.md)
+- **iOS/iPadOS** [Managed software updates](../../device-updates/apple/index.md)
+- **macOS** [Managed software updates](../../device-updates/apple/index.md)
 - **Windows**:
-  - [Feature updates policy](../protect/windows-10-feature-updates.md)
-  - [Expedited updates policy](../protect/windows-10-expedite-updates.md)
+  - [Feature updates policy](../../device-updates/windows/feature-updates.md)
+  - [Expedited updates policy](../../device-updates/windows/expedite-updates.md)
 
 ## Level 1 - Access organization email, connect to VPN or Wi-Fi
 
