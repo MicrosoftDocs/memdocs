@@ -77,7 +77,7 @@ For more information, see [Overview of Microsoft Cloud PKI](../protect/microsoft
 
 Firmware over-the-air (FOTA) update allows you to remotely update the firmware of supported devices wirelessly with more control.
 
-For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
+For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
 
 ### Managing specialty devices with Microsoft Intune
 
@@ -152,7 +152,7 @@ Learn more about:
 
 - [Remote Help](remote-help.md)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
+- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
 - [Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)

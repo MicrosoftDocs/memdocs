@@ -1,15 +1,12 @@
 ---
 title: Android FOTA Updates
 description: Use Microsoft Intune to manage firmware updates on Android devices. A FOTA update can include software and security patches, feature updates, and other changes to the device's firmware.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/09/2025
 ms.topic: how-to
 ms.reviewer: jieyan
 ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
-- highpri
 - sub-updates
 ---
 # Android FOTA Updates
@@ -25,7 +22,7 @@ You have two ways to manage software updates on android:
 - Use Firmware Over-the-Air (FOTA), which works for some OEMs.
 
     > [!NOTE]
-    > [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../fundamentals/intune-add-ons.md) is required.
+    > [Microsoft Intune Plan 2 or Microsoft Intune Suite license](../../intune-service/fundamentals/intune-add-ons.md) is required.
     >
     > If Zebra updated the available firmware list in the last 24 hours, then the list of firmware available might take up to 24 hours to populate.
 
@@ -35,7 +32,7 @@ You have two ways to manage software updates on android:
     2. Navigate to **Devices** > **By platform** > **Android** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Fully Managed, Dedicated, and Corporate-Owned Work Profile** > **Device restrictions**.
     3. Device restrictions profiles offer control over how the device handles over-the-air updates and allow you to set a freeze period for these updates.
     > [!NOTE]
-    > Not all device manufacturers support over-the-air updates. For more information, see [Corporate-owned Android Enterprise device restriction settings in Microsoft Intune](../configuration/device-restrictions-android-for-work.md)
+    > Not all device manufacturers support over-the-air updates. For more information, see [Corporate-owned Android Enterprise device restriction settings in Microsoft Intune](../../intune-service/configuration/device-restrictions-android-for-work.md)
 
 Firmware Over-the-Air (FOTA) updates allow remotely updating the firmware of devices using a wireless connection, rather than requiring the devices to be physically connected to a computer or network.
 
@@ -45,5 +42,5 @@ In the context of FOTA, a deployment is an update policy that includes instructi
 
 In addition, Microsoft Intune supports FOTA update management for supported devices from the following manufacturers. Manufacturer-specific FOTA support might offer more controls beyond what Device restrictions profiles offer.
 
-- **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+- **Zebra**: Go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](zebra-lifeguard-ota-integration.md).
 - **Samsung**: Go to [Samsung E-FOTA Update Management with Microsoft Endpoint Manager](https://techcommunity.microsoft.com/t5/intune-customer-success/samsung-e-fota-update-management-with-microsoft-endpoint-manager/ba-p/2002552)

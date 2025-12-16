@@ -178,7 +178,7 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 > [!NOTE]
 > On Android 11, the **Zebra OEMConfig Powered by MX** app schema doesn't work if the board support package (BSP) version is `HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04`. To use the Zebra OEMConfig powered by MX app, you must upgrade to a newer BSP.
 >
-> For more information on updating Zebra devices with Intune, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+> For more information on updating Zebra devices with Intune, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md).
 
 **Create the policy**:
 

@@ -286,16 +286,16 @@ items:
       items:
       - name: BYOD and personal devices
         displayName: software updates, android, ios, ipados
-        href: ./protect/software-updates-guide-personal-byod.md
+        href: ../device-updates/byod-software-updates-guide.md
       - name: Android
         displayName: software updates
-        href: ./protect/software-updates-guide-android.md
+        href: ../device-updates/android/software-updates-guide.md
       - name: iOS/iPadOS
         displayName: software updates
-        href: ./protect/updates/software-updates-guide-ios-ipados.md
+        href: ../device-updates/apple/software-updates-guide-ios-ipados.md
       - name: macOS
         displayName: software updates
-        href: ./protect/updates/software-updates-guide-macos.md
+        href: ../device-updates/apple/software-updates-guide-macos.md
 
   - name: Set up Microsoft Intune
     items:
@@ -804,7 +804,7 @@ items:
             href: /troubleshoot/mem/intune/troubleshoot-jamf
 
       - name: Software updates
-        href: protect/updates/toc.yml
+        href: ../device-updates/toc.yml
 
       - name: Endpoint security
         items:
@@ -1184,8 +1184,6 @@ items:
             href: ./protect/security-baseline-settings-windows-365.md
         - name: Microsoft Tunnel command-line tools
           href: ./protect/microsoft-tunnel-reference.md
-        - name: Windows update settings
-          href: ./protect/windows-update-settings.md
         - name: Zero Trust security configuration examples
           items:
           - name: Android fully managed compliance and security
@@ -1201,7 +1199,7 @@ items:
         - name: Error codes and descriptions
           items:
           - name: Software update errors
-            href: ./protect/software-update-agent-error-codes.md
+            href: ../device-updates/windows/software-update-agent-error-codes.md
         - name: Deprecated certificate connectors
           href: ./protect/certificate-connectors.md
 

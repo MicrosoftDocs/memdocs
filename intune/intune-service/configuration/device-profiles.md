@@ -306,7 +306,7 @@ This feature supports:
 
 ## Update policies
 
-[iOS/iPadOS and macOS managed software updates](../protect/updates/apple.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
+[iOS/iPadOS and macOS managed software updates](../../device-updates/apple/index.md) shows you how to create and assign policies to install software updates on your iOS/iPadOS and macOS devices. You can also review the installation status.
 
 For update policies on Windows devices, see [Delivery optimization](delivery-optimization-windows.md).
 

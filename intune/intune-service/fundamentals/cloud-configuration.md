@@ -75,7 +75,7 @@ Using Microsoft Intune, you can use a guided scenario to deploy a cloud configur
 
 - Creates a Windows client update ring policy. This policy automatically updates the devices, including product updates, drivers, and Windows updates.
 
-  For information about update rings, and creating your policy, go to [Update rings for Windows client devices](../protect/windows-10-update-rings.md).
+  For information about update rings, and creating your policy, go to [Update rings for Windows client devices](../../device-updates/windows/update-rings.md).
 
 > [!TIP]
 > This guided scenario creates all these resources for you, automatically. If you want create your own individual resources, and not use the guided scenario, you can. For the steps, go to the [cloud config overview and setup guide](https://aka.ms/CloudConfigGuide).
