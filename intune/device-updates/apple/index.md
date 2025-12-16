@@ -4,9 +4,6 @@ description: Learn how to configure software update policies for Apple devices u
 ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Configure update policies for Apple devices

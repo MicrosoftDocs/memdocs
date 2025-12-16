@@ -5,9 +5,6 @@ ms.date: 05/29/2019
 ms.topic: reference
 ROBOTS:
 ms.reviewer: mghadial
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Software update agent error codes and descriptions in Microsoft Intune

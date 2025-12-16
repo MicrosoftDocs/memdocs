@@ -4,11 +4,6 @@ description: Use the app and driver compatibility reports for Windows devices be
 ms.date: 11/27/2024
 ms.topic: how-to
 ms.reviewer: zadvor
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- highseo
-- sub-updates
 ---
 
 # App and driver compatibility reports for Windows updates

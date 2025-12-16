@@ -4,7 +4,6 @@ description: Use Hotpatch updates to receive security updates without restarting
 ms.date: 04/17/2025
 ms.reviewer: Mounika
 ms.topic: how-to
-ms.collection:
 ---
 
 # Windows quality update policy

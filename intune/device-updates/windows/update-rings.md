@@ -4,10 +4,6 @@ description: Create and manage Intune policy for Windows update rings. You can c
 ms.date: 04/18/2024
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Windows Update rings policy in Intune

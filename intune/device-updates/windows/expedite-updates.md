@@ -4,10 +4,6 @@ description: Use Microsoft Intune policy to expedite the installation of Windows
 ms.date: 02/20/2025
 ms.topic: how-to
 ms.reviewer: davguy;bryanke
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Expedite Windows quality updates in Microsoft Intune

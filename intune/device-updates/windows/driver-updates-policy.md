@@ -4,11 +4,6 @@ description: Use Microsoft Intune to manage policies that install Windows driver
 ms.date: 04/07/2025
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- ContentEnagagementFY24
-- sub-updates
 ---
 
 # Manage policy for Windows Driver updates with Microsoft Intune

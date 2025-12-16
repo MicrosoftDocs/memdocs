@@ -4,10 +4,6 @@ description: Manage Windows software updates by using Intune policy for Update r
 ms.date: 02/27/2025
 ms.topic: overview
 ms.reviewer: davidmeb; bryanke; davguy
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Manage Windows software updates in Intune

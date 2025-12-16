@@ -4,10 +4,6 @@ description: Create and manage Intune policy for Windows feature updates. Config
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Feature updates for Windows 10 and later policy in Intune

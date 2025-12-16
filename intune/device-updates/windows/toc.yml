@@ -1,4 +1,7 @@
 items:
+- name: overview
+  href: index.md
+  displayName: windows updates
 - name: Use Windows Update client policies
   href: configure.md
   displayName: windows updates

@@ -4,10 +4,6 @@ description: View the settings for Windows Update that you can manage through In
 ms.date: 07/15/2024
 ms.topic: reference
 ms.reviewer: davguy; bryanke
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 

@@ -4,10 +4,6 @@ description: Configure schedules that manage how and when Windows updates roll o
 ms.date: 04/07/2025
 ms.topic: how-to
 ms.reviewer: davguy; bryanke
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Rollout options for Windows Updates in Microsoft Intune

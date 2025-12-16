@@ -4,11 +4,6 @@ description: Use Windows Update for Business reports to view data for Windows Up
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.reviewer: zadvor
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- highseo
-- sub-updates
 ---
 
 # Windows Update reports for Microsoft Intune
