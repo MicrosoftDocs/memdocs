@@ -14,9 +14,7 @@ Headings are driven by article context. -->
 The **Intune Connector for Active Directory**, also known as the Offline Domain Join (ODJ) Connector, joins computers to an on-premises domain during the Windows Autopilot process. The connector creates computer objects in a specified Organizational Unit (OU) in Active Directory during the domain join process.
 
 > [!IMPORTANT]
-> Starting with Intune 2501, the Intune Connector for Active Directory is updated and improves security by following least-privilege principles using a [Managed Service Account (MSA)](/windows-server/identity/ad-ds/manage/understand-service-accounts#standalone-managed-service-accounts). When you download the connector from Intune, you automatically get the updated version.
-> 
-> The [deprecated legacy connector is still available](https://www.microsoft.com/download/details.aspx?id=105392) and will soon stop accepting enrollment requests. If you still use the legacy connector, update immediately to avoid loss of functionality. For more information, see the [Intune Connector for Active Directory with low-privileged account for Windows Autopilot Hybrid Microsoft Entra join deployments](https://aka.ms/Intune-Connector-blog) blog post.
+> The Intune Connector for Active Directory versions older than 6.2501.2000.5 are deprecated and can no longer process enrollment requests. For more information, see the [Intune Connector for Active Directory with low-privileged account for Windows Autopilot Hybrid Microsoft Entra join deployments](https://aka.ms/Intune-Connector-blog) blog post.
 > 
 > To update the connector, you must:
 > 
