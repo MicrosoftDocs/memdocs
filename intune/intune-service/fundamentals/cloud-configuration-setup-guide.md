@@ -1,40 +1,21 @@
 ---
-# required metadata
-
 title: Windows cloud configuration step by step guide
 description: Use this Windows 10/11 cloud configuration step-by-step setup guide to create your own cloud configuration deployment. You create the Microsoft Entra group and policies using Microsoft Intune, including the enrollment profile, compliance policy, and security baseline. You also deploy apps and resources that users need to do their jobs.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 01/22/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: royork
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 - intune-scenario
 ---
 
-# Windows 10/11 in cloud configuration step by step setup guide
+# Windows in cloud configuration step by step setup guide
 
-Windows 10/11 in cloud configuration (cloud config) is a device configuration for Windows client devices. Cloud config is designed to simplify the end user experience. For more information about what cloud config is, including the minimum requirements, see [Windows cloud configuration guided scenario overview](cloud-configuration.md).
+Windows in cloud configuration (cloud config) is a device configuration for Windows client devices. Cloud config is designed to simplify the end user experience. For more information about what cloud config is, including the minimum requirements, see [Windows cloud configuration guided scenario overview](cloud-configuration.md).
 
-With cloud config, you use Microsoft Intune policies to turn a Windows client device into a cloud-optimized device. Windows 10/11 in cloud configuration:
+With cloud config, you use Microsoft Intune policies to turn a Windows client device into a cloud-optimized device. Windows in cloud configuration:
 
 - Optimizes devices for the cloud by configuring them to enroll into Intune management with Microsoft Entra. User data is stored in OneDrive automatically with **Known Folder Move** configured.
 - Installs Microsoft Teams and Microsoft Edge on devices.
@@ -49,7 +30,7 @@ With cloud config, you use Microsoft Intune policies to turn a Windows client de
   - Add essential resources, like Wi-Fi profiles, VPN connections, certificates, and printer drivers that are necessary for user workflows.
 
 > [!TIP]
-> For an overview on Windows 10/11 in cloud configuration and its uses, see [Windows 10/11 in cloud configuration](https://aka.ms/cloud-config).
+> For an overview on Windows in cloud configuration and its uses, see [Windows in cloud configuration](https://aka.ms/cloud-config).
 
 There are two ways to deploy cloud config:
 
@@ -182,7 +163,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
     7. Review the new profile and then select **Create**.
 
 3. **Create and assign an Enrollment Status Page in Intune**.
-  
+
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
     2. Select **Devices** > **By platform** > **Windows** > **Device onboarding** > **Enrollment** > **General** > **Enrollment Status Page**.
     3. Select **Create** and enter a name for the **Enrollment Status Page**.
@@ -199,7 +180,7 @@ To set up Windows Autopilot user-driven enrollment, use the following steps:
         | Allow users to use device if installation error occurs |     No |
         | Block device user until these required apps are installed if they are assigned to the user/device |    All |
 
-        > [!NOTE]  
+        > [!NOTE]
         > If an installation error occurs, we recommend you block users from using the device. Blocking users makes sure they can only start using the device after cloud config is fully applied.
         >
         > If an installation error occurs, based on your deployment needs, you can allow the user to use the device. If you do allow using the device, when the device checks in with Intune, Intune continues trying to apply the configurations.
@@ -242,13 +223,13 @@ With this enrollment option, you:
 
 When you configure OneDrive **Known Folder Move**, user files and data are automatically saved in OneDrive. When you remove built-in Windows apps and the Microsoft Store, the Start menu and device experience are simplified.
 
-This step helps simplify the Windows user experience. 
+This step helps simplify the Windows user experience.
 
 ### ✅ 1 - Configure OneDrive Known Folder Move with an Administrative Template
 
 With **Known Folder Move**, users data (files and folders) is saved to OneDrive. When users sign in to another device, OneDrive automatically synchronizes the data to the new device. Users don't have to manually move their files.
 
-> [!NOTE]  
+> [!NOTE]
 > Due to a sync issue with OneDrive **Known Folder Move** and SharedPC configuration, Microsoft doesn't recommend using Windows in cloud configuration with a device that has multiple users signing in and out.
 
 To configure **Known Folder Move**, use an ADMX template in Intune:
@@ -297,7 +278,7 @@ If you previously removed the Microsoft Store app, you can redeploy it using Mic
 
 Your private organization app repository can be the [Intune Company Portal app or website](../apps/company-portal-app.md).
 
-Using Intune, on Windows 10/11 Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
+Using Intune, on Windows Enterprise and Education devices, you can block end users from installing Microsoft Store apps outside of your organization's private app repository.
 
 To prevent these outside apps, use the following steps:
 
@@ -335,8 +316,8 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
     If you want to deploy other Microsoft 365 apps, then select them from this list. Remember, only deploy what users need.
 
-    > [!TIP]  
-    > You don't need to choose OneDrive. OneDrive is built into Windows 10/11 Pro, Enterprise, and Education.
+    > [!TIP]
+    > You don't need to choose OneDrive. OneDrive is built into Windows Pro, Enterprise, and Education.
 
 7. For **App suite information**, configure the following settings:
 
@@ -353,7 +334,7 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
     | --- | --- |
     | Use shared computer activation | Yes |
     | Accept the Microsoft Software License Terms on behalf of users | Yes|
-  
+
 9. Select **Next**.
 10. Assign the suite to the group you created in [Step 1 - Create a Microsoft Entra group](#step-1---create-a-microsoft-entra-group) (in this article).
 
@@ -361,9 +342,9 @@ This step deploys Microsoft Edge and Microsoft Teams. You can deploy other essen
 
 This step configures endpoint security settings to help keep devices secure, including the built-in Windows security baseline and BitLocker settings.
 
-### ✅ 1 - Deploy the Windows 10/11 MDM security baseline
+### ✅ 1 - Deploy the Windows MDM security baseline
 
-For Windows in cloud configuration, we recommend you use the Windows 10/11 [security baseline](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines). There are some setting values you can change based on your organization's preference.
+For Windows in cloud configuration, we recommend you use the Windows [security baseline](/windows/security/operating-system-security/device-management/windows-security-configuration-framework/windows-security-baselines). There are some setting values you can change based on your organization's preference.
 
 Configure the security baseline in Intune:
 
@@ -604,7 +585,7 @@ You can monitor the status of the Windows Update ring policy:
 2. Select the update ring you deployed as part of cloud config.
 3. Select **Device status**, **User status**, or **End user update status**. The update ring settings details are shown.
 
-For more information on reporting for Windows Update rings, see [Reports for Update rings for Windows 10 and later policy](../protect/windows-update-reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
+For more information on reporting for Windows Update rings, see [Reports for Update rings for Windows policy](../../device-updates/windows/reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 ### Compliance policy
 

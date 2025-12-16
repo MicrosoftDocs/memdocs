@@ -73,7 +73,7 @@ You're presented with the Updates Wizard that displays a list of the product are
 
    - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
    - [Co-management](../../../comanage/overview.md)
-   - [Endpoint analytics](../../../../analytics/enroll-configmgr.md)
+   - [Endpoint analytics](../../../../endpoint-analytics/index.md)
 
   If you don't wish to onboard, clear both of the **Enable Microsoft Intune admin center** and **Enable automatic client enrollment for co-management** options. <!--1074186-->
 

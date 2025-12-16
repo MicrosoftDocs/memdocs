@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Data collection in Intune
-titleSuffix: Microsoft Intune
 description: Learn about personal data collected in Intune.
-keywords: privacy, personal data
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 06/25/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: d1171740-936d-46a5-af37-f418bd6fa63e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bradyw
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy
@@ -143,11 +123,11 @@ Your organization might enable optional features within Intune which enable coll
 
 - Device query for Corporate-owned Windows Devices
 
-  When a customer enables Device query, the admin can query device details such as File Name and File Path. For a complete list of data, see [Intune data platform schema](../../analytics/data-platform-schema.md).
+  When a customer enables Device query, the admin can query device details such as File Name and File Path. For a complete list of data, see [Intune data platform schema](../../advanced-analytics/data-platform-schema.md).
 
 - Enhanced device inventory
-  
-  When a customer enables enhanced device inventory, the admin can see non-sensitive device details such as CPU, disk drive, and memory info. For a complete list of data, see [Intune data platform schema](../../analytics/data-platform-schema.md).
+
+  When a customer enables enhanced device inventory, the admin can see non-sensitive device details such as CPU, disk drive, and memory info. For a complete list of data, see [Intune data platform schema](../../advanced-analytics/data-platform-schema.md).
 
 Customers can control the collection of pseudonymized diagnostics and telemetry data from Intune components installed on their devices. We think there are compelling reasons for people to share this optional data as it helps Microsoft improve the reliability and performance of its products and we understand the importance of providing users the opportunity to make these choices for themselves.
 

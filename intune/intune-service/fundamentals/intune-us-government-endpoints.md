@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Network endpoints for US government deployments
-titleSuffix: Microsoft Intune
-description: See the list of US government endpoint URLs that Intune needs and requires. Allow the ports, IP addresses, and endpoint URLs in your proxy server configuration. 
-keywords:
+description: See the list of US government endpoint URLs that Intune needs and requires. Allow the ports, IP addresses, and endpoint URLs in your proxy server configuration.
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 08/11/2025  
+ms.date: 12/15/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 5f6682cb-5fcd-4018-b7f7-71768ad3152e
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: srink, davidra
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic; get-started
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -47,7 +27,7 @@ This article lists the US Government, US Government Community (GCC) High, and De
 
 - The inspection of SSL traffic is not supported on `*.manage.microsoft.us` or `has.spserv.microsoft.com` endpoints.
 
-For more information about Windows 10 auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).  
+For more information about Windows auto-enrollment and device registration for US government customers, see [Set up automatic enrollment for Windows](../enrollment/windows-enroll.md).
 
 ## Ports and IP addresses list
 
@@ -67,13 +47,17 @@ Intune endpoints also use Azure Front Door for communicating with the Intune ser
 - Intune Company Portal: `https://portal.manage.microsoft.us/`
 - Microsoft Intune admin center: `https://intune.microsoft.us/`
 
-## Network requirements for PowerShell scripts and Win32 apps  
+## Network requirements for PowerShell scripts and Win32 apps
 
 If you're using Intune to deploy PowerShell scripts or Win32 apps, you also need to grant access to endpoints in which your tenant currently resides.
 
 |Azure Scale Unit (ASU) | Storage name | CDN |
 | --- | --- |--- |
-| FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net |
+| FXPASU01 | sovereignprodimedatapri<br>sovereignprodimedatasec<br>sovereignprodimedatahotfix | imeswdsc-afd-pri.manage.microsoft.com<br>imeswdsc-afd-sec.manage.microsoft.com<br>imeswdsc-afd-hotfix.manage.microsoft.com<br>sovereignprodimedatapri.azureedge.net<br>sovereignprodimedatasec.azureedge.net<br>sovereignprodimedatahotfix.azureedge.net<br><br>Starting March 2025, `azureedge.net` domains will migrate to `manage.microsoft.com`. |
+
+For diagnostic data used to monitor the health of the client side components:
+
+- `*.events.data.microsoft.com`
 
 ## Microsoft Defender for Endpoint
 
@@ -96,7 +80,7 @@ For communication between clients and the cloud service:
 
 - `*.dm.microsoft.us` - The use of a wildcard supports the cloud-service endpoints that are used for enrollment, check-in, and reporting, and which can change as the service scales.
 
-  > [!IMPORTANT]  
+  > [!IMPORTANT]
   > SSL Inspection isn't supported on endpoints required for Endpoint Privilege Management.
 
 For more information, see the [Overview of Endpoint Privilege Management](../protect/epm-overview.md).

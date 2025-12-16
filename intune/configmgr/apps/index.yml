@@ -7,7 +7,7 @@ metadata:
   title: App management documentation
   titleSuffix: Configuration Manager
   description: Use Configuration Manager to manage and deploy applications, scripts, and packages. Automate the deployments, or let users install apps from Software Center.
-  ms.subservice: app-mgt
+  ms.subservice: core-infra
   ms.service: configuration-manager
   ms.topic: landing-page
   author: banreet

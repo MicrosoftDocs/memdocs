@@ -241,7 +241,7 @@ For more information, see [Enable tenant attach](../../../tenant-attach/device-s
 
 ## Endpoint analytics
 
-For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information, see [Endpoint analytics proxy configuration](../../../../endpoint-analytics/troubleshoot.md#proxy-server-authentication).
 
 [!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 

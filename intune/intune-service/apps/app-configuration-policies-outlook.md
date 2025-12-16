@@ -1,34 +1,15 @@
 ---
-# required metadata
-
-title: Manage Outlook for iOS and Android with Intune
+title: Manage Outlook for iOS and Android With Intune
 description: Use Intune app protection and configuration policies with Outlook for iOS and Android to ensure team collaboration experiences are always accessed with safeguards in place.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/12/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
 ms.reviewer: beflamm
-
-# optional metadata
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
-ms.custom: intune-azure
 ---
 
-# Manage messaging collaboration access by using Outlook for iOS and Android with Microsoft Intune
+# Manage Messaging Collaboration Access by Using Outlook for iOS and Android With Microsoft Intune
 
 The Outlook for iOS and Android app is designed to enable users in your organization to do more from their mobile devices, by bringing together email, calendar, contacts, and other files.
 
@@ -74,7 +55,7 @@ Regardless of whether the device is enrolled in a unified endpoint management (U
 For more information on the available settings, see [Android app protection policy settings](app-protection-policy-settings-android.md) and [iOS app protection policy settings](app-protection-policy-settings-ios.md).
 
 > [!IMPORTANT]
-> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.  
+> To apply Intune app protection policies against apps on Android devices that are not enrolled in Intune, the user must also install the Intune Company Portal.
 
 ## Use app configuration
 
@@ -91,5 +72,5 @@ For specific procedural steps and detailed documentation on the app configuratio
 
 ## Next steps
 
-- [What are app protection policies?](app-protection-policy.md) 
+- [What are app protection policies?](app-protection-policy.md)
 - [App configuration policies for Microsoft Intune](app-configuration-policies-overview.md)

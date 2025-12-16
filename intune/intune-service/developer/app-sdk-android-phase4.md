@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Microsoft Intune App SDK for Android developer integration and testing guide - MAM integration essentials 
+title: Microsoft Intune App SDK for Android Developer Integration and Testing Guide - MAM Integration Essentials
 description: Understand MAM integration essentials to incorporate Intune mobile app management (MAM) into your Android app.
-keywords: SDK
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 06/12/2025
+ms.date: 11/18/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 0100e1b5-5edd-4541-95f1-aec301fb96af
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier2
 - M365-identity-device-management
 - Android
-ms.custom: intune-classic
 ---
 
-# Intune App SDK for Android - MAM integration essentials
+# Intune App SDK for Android - MAM Integration Essentials
 
 The Microsoft Intune App SDK for Android lets you incorporate Intune app protection policies (also known as MAM policies) into your native Java/Kotlin Android app. An Intune-managed application is one that is integrated with the Intune App SDK. Intune administrators can easily deploy app protection policies to your Intune-managed app when Intune actively manages the app.
 
@@ -401,9 +380,9 @@ This invokes `publish()` on the application handler for every log message.
 
 ```java
 /**
- * Global log handler that enables fine grained PII filtering within MAM logs.  
+ * Global log handler that enables fine grained PII filtering within MAM logs.
  * To start using this you should build your own log handler and add it via
- * MAMComponents.get(MAMLogHandlerWrapper.class).addHandler(myHandler, false);  
+ * MAMComponents.get(MAMLogHandlerWrapper.class).addHandler(myHandler, false);
  * You may also remove the handler entirely via
  * MAMComponents.get(MAMLogHandlerWrapper.class).removeHandler(myHandler);
  */
@@ -411,7 +390,7 @@ public interface MAMLogHandlerWrapper {
     /**
      * Add a handler, PII can be toggled.
      * @param handler handler to add.
-     * @param wantsPII if PII is desired in the logs.    
+     * @param wantsPII if PII is desired in the logs.
      */
     void addHandler(final Handler handler, final boolean wantsPII);
 
@@ -505,7 +484,7 @@ For these tests:
 | Copy text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text to copy, skip. <br> 1. Navigate to all pages in your app that have copyable text. <br> 2. Copy text. <br> 3. Switch to the unmanaged app. <br> 4. Attempt to paste in the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Navigate to the other managed app. <br> 7. Attempt to paste in the managed app. <br> 8. Confirm the paste is allowed. |
 | Paste text | "Restrict cut, copy and paste between other apps" set to "Policy managed apps" | 0. If your app doesn't have any text inputs to paste in, skip. <br> 1. Switch to the unmanaged app. <br> 2. Copy text from the unmanaged app. <br> 3. Navigate to all pages in your app that have text inputs. <br> 5. Attempt to paste from the unmanaged app. <br> 5. Confirm the paste is blocked. <br> 6. Switch to the other managed app. <br> 7. Copy text from the other managed app. <br> 7. Navigate to all pages in your app that have text inputs. <br> 8. Attempt to paste from the other managed app. <br> 9. Confirm the paste is allowed. |
 | Printing | "Printing Org data" set to "Block" | 0. If your app doesn't have any pages or documents that can be printed, skip. <br> 1. Navigate to all pages in your app that invoke Android's print function. <br> 2. Attempt to print from each page. <br> 3. Confirm that printing is blocked. |
-| Managed browser | "Restrict web content transfer with other apps" set to "Microsoft Edge" | 0. If your app doesn't render weblinks, skip. <br> 1. Navigate to all pages in your app that can display weblinks or have text input that render into clickable weblinks. <br> 2. For each page, select the weblink. <br> 3. Confirm that you're prompted to install Microsoft Edge and the weblink doesn't open in another browser.  |
+| Microsoft Edge web content restriction | "Restrict web content transfer with other apps" set to "Microsoft Edge" | 0. If your app doesn't render weblinks, skip. <br> 1. Navigate to all pages in your app that can display weblinks or have text input that render into clickable weblinks. <br> 2. For each page, select the weblink. <br> 3. Confirm that you're prompted to install Microsoft Edge and the weblink doesn't open in another browser.  |
 | Restricted keyboard | "Approved keyboards" set to "Required" <br> "Select keyboards to approve" set to just a keyboard package your device doesn't currently have installed | 0. If your app doesn't have any text inputs, skip. <br> 1. Navigate to all pages in your app that have text inputs. <br> 2. Select the text input to bring up the device keyboard. <br> 3. Confirm that you're prompted to install the configured approved keyboard and the current device keyboard doesn't open. |
 
 #### Data Transfer Tests

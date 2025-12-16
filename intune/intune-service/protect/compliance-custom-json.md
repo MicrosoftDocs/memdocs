@@ -1,29 +1,12 @@
 ---
-# required metadata
-
 title: Create a JSON file for custom compliance settings in Microsoft Intune
 description: Create the JSON file that defines custom settings and values for use with device compliance policies in Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 08/15/2025
 ms.topic: concept-article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ilwu
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - compliance
 - sub-device-compliance
@@ -38,7 +21,7 @@ You include the JSON file in a compliance policy when you configure a policy to 
 This feature applies to:
 
 - Linux – Ubuntu Desktop, version 22.04 LTS and 24.04 LTS
-- Windows 10/11
+- Windows 
 
 A correctly formatted JSON file must include the following information:
 
@@ -100,15 +83,15 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
 
 ```json
 {
-"Rules":[ 
-    { 
+"Rules":[
+    {
        "SettingName":"BiosVersion",
        "Operator":"GreaterEquals",
        "DataType":"Version",
        "Operand":"2.3",
        "MoreInfoUrl":"https://bing.com",
-       "RemediationStrings":[ 
-          { 
+       "RemediationStrings":[
+          {
              "Language":"en_US",
              "Title":"BIOS Version needs to be upgraded to at least 2.3. Value discovered was {ActualValue}.",
              "Description": "BIOS must be updated. Please refer to the link above"
@@ -120,13 +103,13 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
           }
        ]
     },
-    { 
+    {
        "SettingName":"TPMChipPresent",
        "Operator":"IsEquals",
        "DataType":"Boolean",
        "Operand":true,
        "MoreInfoUrl":"https://bing.com",
-       "RemediationStrings":[ 
+       "RemediationStrings":[
           {
              "Language": "en_US",
              "Title": "TPM chip must be enabled.",
@@ -145,8 +128,8 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
        "DataType":"String",
        "Operand":"Microsoft Corporation",
        "MoreInfoUrl":"https://bing.com",
-       "RemediationStrings":[ 
-          { 
+       "RemediationStrings":[
+          {
              "Language": "en_US",
              "Title": "Only Microsoft devices are supported.",
              "Description": "You are not currently using a Microsoft device."
@@ -164,6 +147,6 @@ For more information, see [Available languages for Windows](/windows-hardware/ma
 
 ## Next steps
 
-- [Use custom compliance settings](../protect/compliance-use-custom-settings.md)  
-- [Create a discovery script for custom compliance settings](../protect/compliance-custom-script.md)  
+- [Use custom compliance settings](../protect/compliance-use-custom-settings.md)
+- [Create a discovery script for custom compliance settings](../protect/compliance-custom-script.md)
 - [Create a compliance policy](../protect/create-compliance-policy.md)

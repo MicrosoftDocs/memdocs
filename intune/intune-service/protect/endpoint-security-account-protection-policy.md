@@ -1,28 +1,11 @@
 ---
-# required metadata
-
 title: Manage account protection settings with endpoint security policies in Microsoft Intune
 description: Use Microsoft Intune endpoint security account protection policies to protect the identity and accounts of users.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 10/10/2024
+ms.date: 10/01/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: medium
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-secure-endpoints
@@ -41,25 +24,26 @@ Use Intune endpoint security policies for account protection to protect the iden
 > Any instances of the following older profiles that you have created remain available to use and edit:
 >
 > - **Identity protection** – previously available from *Devices* > *Configuration* > *Create* > *New Policy* > *Windows 10 and later* > *Templates* > *Identity Protection*
-> - **Account protection (Preview)** – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection ( Preview)*
+> - **Account protection (Preview)** – previously available from *Endpoint Security* > *Account protection* > *Windows 10 and later* > *Account protection (Preview)*
 
 Find the endpoint security policies for Account protection under *Manage* in the **Endpoint security** node of the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 ## Prerequisites for Account protection profiles
 
-- To support the *Account protection* profile, devices must run Windows 10 or Windows 11.
+- To support the *Account protection* profile, devices must run Windows.
 - To support the *Local user group membership* profile, devices must run Windows 10 20H2 or later, or Windows 11.
 - To support the *Local admin password solution (Windows LAPS), see [Prerequisites](../protect/windows-laps-overview.md#prerequisites) in *Microsoft Intune support for Windows LAPS*.
 
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune account protection profiles, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ## Account protection profiles
 
-Platform:
-
-- **Windows**
+To configure account protection profiles, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Endpoint Security** > **Account protection** > **Create Policy***. For *Platform* select **Windows**, and then choose from the following Profiles:
 
 Profiles:
 
@@ -75,7 +59,7 @@ Profiles:
 - **Local admin password solution (Windows LAPS)** - Use this profile to configure Windows LAPS on devices. Windows LAPS allows for the management of a single local administrator account per device. Intune policy can specify which local admin account it applies to by use of the policy setting *Administrator Account Name*.
 
   For more information in using Intune to manage Windows LAPS, see:
-  
+
   - Learn about [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
   - [Manage LAPS policy](../protect/windows-laps-policy.md)
 
@@ -90,9 +74,12 @@ Use the *Local user group membership* profile to manage the users that are membe
 > [!TIP]
 > To learn more about support for managing administrator privileges using Microsoft Entra groups, see [Manage administrator privileges using Microsoft Entra groups](/azure/active-directory/devices/assign-local-admin#manage-administrator-privileges-using-microsoft-entra-groups-preview) in the Microsoft Entra documentation.
 
+> [!NOTE]
+> Microsoft Entra groups deployed to a device with this policy don't apply to remote desktop connections. To control remote desktop permissions for Microsoft Entra joined devices, you need to add the individual user's SID to the appropriate group.
+
 ### Configure the profile
 
-This profile manages the local group membership on devices through [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes more details on how configurations apply, and an FAQ about the use of the CSP.
+Use the *Local user group membership* profile to manage the local group membership on devices through the Windows [Policy CSP - LocalUsersAndGroups](/windows/client-management/mdm/policy-csp-localusersandgroups?WT.mc_id=Portal-fx). The CSP documentation includes more details on how configurations apply, and an FAQ about the use of the CSP.
 
 When you configure this profile, on the *Configuration settings* page you can create multiple rules to manage which built-in local groups you want to change, the group action to take, and the method to select the users.
 
@@ -143,4 +130,4 @@ Because the policy can contain multiple rules, consider the following points:
 
 ## Next steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-endpoint-security-policies)

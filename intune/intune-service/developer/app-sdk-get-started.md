@@ -1,35 +1,14 @@
 ---
-# required metadata
-
-title: Get started with the Microsoft Intune App SDK 
+title: Get Started With the Microsoft Intune App SDK
 description: Quickly enable your mobile app for mobile application management (MAM) with Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 04/01/2025
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: developer
-ms.localizationpriority: medium
-ms.assetid: 38ebd3f5-cfcc-4204-8a75-6e2f162cd7c1
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: jamiesil
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune, has-adal-ref
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Get started with the Microsoft Intune App SDK
+# Get Started With the Microsoft Intune App SDK
 
 > [!IMPORTANT]
 > Xamarin support has ended as of May 1, 2024 for all Xamarin SDKs including Xamarin.Forms, Intune App SDK Xamarin Bindings, and related Microsoft Tunnel support. Xamarin.Forms has evolved into .NET Multi-platform App UI (MAUI). Existing Xamarin projects should be migrated to .NET MAUI. For more information about upgrading Xamarin projects to .NET, see the [Upgrade from Xamarin to .NET & .NET MAUI](/dotnet/maui/migration/?WT.mc_id=dotnet-35129-website) and [.NET Multi-platform App UI](/dotnet/maui) documentation. For Intune support on the Android platform, see [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android) and [.NET for Android documentation](/dotnet/android/). For Intune support on the iOS platform, see [Microsoft Intune App SDK for MAUI.iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS) and [.NET for iOS](/dotnet/ios/).
@@ -87,7 +66,7 @@ If your app builds with [.NET Multi-platform App UI (.NET MAUI)](https://dotnet.
 
 * [Intune App SDK for .NET MAUI - Android](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.android)
 * [Intune App SDK for .NET MAUI - iOS](https://www.nuget.org/packages/Microsoft.Intune.Maui.Essentials.iOS)
-  
+
 > [!NOTE]
 > Using the Intune APP SDK for .NET MAUI, you can develop Android or iOS apps for Intune that incorporate the [.NET Multi-platform App UI](https://dotnet.microsoft.com/apps/maui). Apps developed using this framework will allow you to enforce [Intune mobile application management](../apps/app-management.md).
 
@@ -103,7 +82,7 @@ You'll need one of the following developer guides to help you integrate the Intu
 
 > [!IMPORTANT]
 > Intune regularly releases updates to the [Intune App SDK](https://github.com/msintuneappsdk). We recommend subscribing to the [Intune App SDK](https://github.com/msintuneappsdk) repositories for updates so that you can incorporate the update into your software development release cycle and ensure your apps support the latest App Protection Policy settings.
-> 
+>
 > Plan to take mandatory Intune App SDK updates prior to every major OS release to ensure your app continues to run smoothly as OS updates can cause breaking changes. If you do not update to the latest version prior to a major OS release, you may run the risk of encountering a breaking change and/or being unable to apply app protection policies to your app.
 
 
@@ -123,9 +102,9 @@ Microsoft Intune collects data on usage statistics for your app.
 
   * If you choose not to send SDK telemetry data to Microsoft Intune from your app, you must disable telemetry transmission by setting the property `MAMTelemetryDisabled` to "YES" in the IntuneMAMSettings dictionary.
 
-* **Intune App SDK for Android**: The Intune App SDK for Android doesn't control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we don't collect any personally identifiable information (PII). 
+* **Intune App SDK for Android**: The Intune App SDK for Android doesn't control data collection from your app. The Company Portal application logs telemetry data by default. This data is sent to Microsoft Intune. As per Microsoft Policy, we don't collect any personally identifiable information (PII).
 
-  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../user-help/turn-off-microsoft-usage-data-collection-android.md). 
+  * If end users choose not to send this data, they must turn off telemetry under Settings on the Company Portal app. To learn more, see [Turn off Microsoft usage data collection](../user-help/turn-off-microsoft-usage-data-collection-android.md).
 
 ## Line-of-business app version numbers
 
@@ -133,7 +112,7 @@ Line-of-business apps in Intune now display the version number for iOS and Andro
 
 ### Full version number
 
-The full version number identifies a specific release of the app. The number appears as _Version_(_Build_). For example, 2.2(2.2.17560800). 
+The full version number identifies a specific release of the app. The number appears as _Version_(_Build_). For example, 2.2(2.2.17560800).
 
 The full version number has two components:
 
@@ -147,7 +126,7 @@ The full version number has two components:
 
 Android and iOS both use version and build numbers in reference to apps. However, both operating systems have meanings that are OS-specific. The following table explains how these terms are related.
 
-When you're developing a line-of-business application for use in Intune, remember to use both the version, and the build number. Intune App management features rely on a meaningful **CFBundleVersion** (for iOS) and **PackageVersionCode** (for Android). These numbers are included in the app manifest. 
+When you're developing a line-of-business application for use in Intune, remember to use both the version, and the build number. Intune App management features rely on a meaningful **CFBundleVersion** (for iOS) and **PackageVersionCode** (for Android). These numbers are included in the app manifest.
 
 Intune|iOS|Android|Description|
 |---|---|---|---|
@@ -166,7 +145,7 @@ Build number|CFBundleVersion|PackageVersionCode |This number is used to indicate
 - **PackageVersionName**  
   The version number shown to users. This attribute can be set as a raw string or as a reference to a string resource. The string has no other purpose than to be displayed to users.
 - **PackageVersionCode**  
-  An internal version number. This number is used only to determine whether one version is more recent than another, with higher numbers indicating more recent versions. This isn't the version 
+  An internal version number. This number is used only to determine whether one version is more recent than another, with higher numbers indicating more recent versions. This isn't the version
 
 ## Next steps after integration
 
@@ -181,20 +160,20 @@ After you finish the necessary steps to integrate your iOS or Android app with t
 
   * If you're testing your app on a mobile device using an end user account, ensure that you have given that account an Intune license by in the Microsoft 365 admin center website after logging in with an admin account, see [Assign Microsoft Intune license](../fundamentals/licenses-assign.md).
 
-* **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but isn't listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting **Custom Apps**. 
+* **Intune app protection policies**: To test your app against all the Intune app protection policies, you should know what the expected behavior is for each policy setting. See the descriptions for [iOS app protection policies](../apps/app-protection-policy-settings-ios.md) and [Android app protection policies](../apps/app-protection-policy-settings-android.md). If your app has integrated the Intune SDK, but isn't listed in the list of targetable apps, you can specify the app's bundle ID (iOS) or package name (Android) in the text box when selecting **Custom Apps**.
 
-* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install). 
+* **Troubleshoot**: If you run into any issues while manually testing your app's installation user experience, see [Troubleshoot app installation issues](/troubleshoot/mem/intune/troubleshoot-app-install).
 
 ### Give your app access to the Intune Mobile App Management service
 
-If your app is using its own custom Microsoft Entra settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**. 
+If your app is using its own custom Microsoft Entra settings for authentication, then the following steps should be taken for both public store apps, as well as internal LOB apps. The steps **do not need to be taken if your app is using the Intune SDK default client ID**.
 
 Once you have registered your app within an Azure tenant, and it's showing up under **All Applications**, you must give your app access to the Intune Mobile App Management service. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431):
 
 1. Go to the **Microsoft Entra ID** blade.
 2. Under **App registrations**, go to the listing set up for the application.
 3. Click **+ Add a permission**.
-4. Click on the **APIs my organization uses**. 
+4. Click on the **APIs my organization uses**.
 5. In the search box, enter **Microsoft Mobile Application Management**.
 6. Under **Delegated Permissions**, select the **DeviceManagementManagedApps.ReadWrite: Read and Write the User's App Management Data*** checkbox.
 7. Click **Add permissions**.

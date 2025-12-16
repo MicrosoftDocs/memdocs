@@ -6,8 +6,6 @@ ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
 zone_pivot_groups: platforms-windows-ios
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Plan Education device grouping and targeting
@@ -18,34 +16,30 @@ By organizing devices, students, classrooms, or learning curricula into groups, 
 
 ## Grouping and targeting overview
 
-Intune has four targeting methods:
+Intune has four targeting methods. Organizations typically use a combination of these targeting methods.
 
 | Grouping type | Description | Benefits | Disadvantages |
 | --- | --- | --- | --- |
 | Virtual groups | Created by Intune and allow you to target *All devices* and *All users* | Always up to date automatically | Can only be scoped using filters |
 | Assigned groups | Used when you want to manually add users or devices to a group. | Easily manage unique group membership | Membership are manually maintained |
 | Dynamic groups | Groups based on rules that you create to assign students or devices to groups. | Automates the membership maintenance of those groups | Can take between several minutes to 24 hours to update |
-| Filters | Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
+| Assignment filters <br/><br/>* Available in the Intune admin center.| Allows you to further narrow the assignment scope of a policy or app when targeting a group. | Intune quickly evaluates filters on each check-in | Needs to be applied to virtual, assigned, or dynamic groups |
 
-Organizations typically use a combination of these targeting methods.
-
-> [!NOTE]
-> Filters aren't accessible in the Intune for Education admin console but are accessible in the Intune admin console.
-
-Two extra groups are precreated if you use **Microsoft School Data Sync (SDS)**: *All teachers* and *All students*. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
+If you use **Microsoft School Data Sync (SDS)**, two extra groups are precreated - **All teachers** and **All students**. SDS can also be configured to automatically create and maintain groups of students and teachers for each school.
 
 Beyond the defaults, groups can be customized to suit various needs. For example, if you have both *Windows 10* and *Windows 11* devices in your school, you can create groups, such as *Windows 10 devices* and *Windows 11 devices*, to assign different policies and applications to them.
 
-> [!TIP]
-> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune-service/fundamentals/filters-performance-recommendations).
+> [!NOTE]
 >
-> For tips on avoiding policy conflicts, see [Avoid policy conflicts](manage-avoid-policy-conflicts.md).
+> - For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/intune/intune-service/fundamentals/filters-performance-recommendations).
+> - For tips on avoiding policy conflicts, see [Avoid policy conflicts](manage-avoid-policy-conflicts.md).
+> - [!INCLUDE [windows-10-support](../../../includes/windows-10-support.md)]
 
 ## Choose grouping methods
 
 ✅ Select the best option for grouping
 
-The way you target configuration and apps may depend on many factors and the enrollment type.
+The way you target configuration and apps can depend on many factors and the enrollment type.
 
 ::: zone pivot="windows"
 
@@ -74,7 +68,7 @@ The following table provides guidance about which iOS device grouping options to
 ::: zone-end
 
 > [!TIP]
-> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/mem/intune-service/fundamentals/filters-performance-recommendations).
+> For more information on grouping and targeting options, see [Performance recommendations for Grouping, Targeting, and Filtering in large Microsoft Intune environments](/intune/intune-service/fundamentals/filters-performance-recommendations).
 
 ## Create groups and filters
 
@@ -84,8 +78,8 @@ With your enrollment and grouping plan in place, you can create your groups.
 
 ### [Intune](#tab/intune)
 
-- [Create groups in Entra](/entra/fundamentals/how-to-manage-groups)
-- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/mem/intune-service/fundamentals/filters)
+- [Create groups in Microsoft Entra](/entra/fundamentals/how-to-manage-groups)
+- [Use filters when assigning your apps, policies, and profiles in Microsoft Intune](/intune/intune-service/fundamentals/filters)
 - [Create or update a dynamic group in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
 - [Create simpler, more efficient rules for dynamic groups in Microsoft Entra ID](/entra/fundamentals/concept-learn-about-groups)
@@ -95,7 +89,7 @@ With your enrollment and grouping plan in place, you can create your groups.
 - [Create groups in Intune for Education][EDU-1]
 - [Manually add or remove users and devices to an existing assigned group][EDU-2]
 - [Edit dynamic group rules to accommodate for new devices, locations, or school years][EDU-3]
-- [Create Filters](/mem/intune-service/fundamentals/filters)
+- [Create Filters](/intune/intune-service/fundamentals/filters)
 
 ---
 
@@ -125,9 +119,9 @@ This table contains common groups used for devices that are enrolled using Windo
 
 > [!NOTE]
 >
-> - If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
+> - If you plan to create groups or filters based on enrollmentProfileName, make sure you create the enrollment profile with the name that matches the rules.
 > - If you use Windows Autopilot group tags to group devices, make sure the group tags added to device objects match the dynamic group rules.
-> - On Windows, apps and policies can also be targeted at user groups. However, the majority of apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
+> - On Windows, apps and policies can also be targeted at user groups. However, most apps and policies on Windows devices are device-based. As a result, each user of a Windows device receives device-based apps and policies assigned to any previous user of the device - unless the new user has different configurations for settings previously applied.
 
 ### Provisioning packages
 
@@ -171,7 +165,7 @@ To apply settings as quickly as possible during enrollment without waiting for d
 > If you plan to create groups or filters based on enrollmentProfileName make sure you create the enrollment profile with the name that matches the rules.
 
 > [!WARNING]
-> Each time an iOS device enrolls it creates a new Entra device object, so *assigned group* memberships aren't maintained afer a device is reset.
+> Each time an iOS device enrolls it creates a new Entra device object, so *assigned group* memberships aren't maintained after a device is reset.
 
 ::: zone-end
 

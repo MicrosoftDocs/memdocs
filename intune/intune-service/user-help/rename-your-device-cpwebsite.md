@@ -1,31 +1,8 @@
 ---
-# required metadata
-
 title: Rename your device on the Company Portal website
 description: Learn how to rename your work or school device on the Company Portal website.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: laurawi
 ms.date: 11/09/2024
-ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid: 35a34ef8-efbb-4edf-88eb-a03c1b27a026
-searchScope:
- - User help
-
-# optional metadata
-
-ROBOTS:
-#audience:
-
 ms.reviewer: jieyang
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier2
 ---
 
 # Rename your device from the Company Portal website
@@ -35,7 +12,7 @@ ms.collection:
 * Android
 * iOS/iPadOS
 * macOS
-* Windows 10/11
+* Windows 
 
 Rename a device on the Company Portal website. If you use more than one device for work or school, renaming them can make it easier to recognize and manage them when you're in Company Portal.
 

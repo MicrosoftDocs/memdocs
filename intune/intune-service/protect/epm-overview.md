@@ -1,26 +1,13 @@
 ---
 title: Learn about using Endpoint Privilege Management with Microsoft Intune
-description: To enhance the security of your organization, set your users to run with standard permissions while Endpoint Privilege Management ensures those users can seamlessly run specified files with elevated rights. 
-keywords:
+description: To enhance the security of your organization, set your users to run with standard permissions while Endpoint Privilege Management ensures those users can seamlessly run specified files with elevated rights.
 author: brenduns
 ms.author: brenduns
 manager: laurawi
-ms.date: 09/10/2025
+ms.date: 10/20/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -39,8 +26,7 @@ This overview provides information about EPM including the benefits, how it work
 
 Applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Key Features and Benefits
 
@@ -61,12 +47,12 @@ EPM elevation can be triggered using two methods:
 - Automatically, or;
 - User initiated.
 
-EPM can be configured using two types of policies:
+EPM can be configured using two types of policies, which both can be targeted at groups of users or devices:
 
 - **Elevation settings policy** - controls the EPM client, reporting level and default elevation capability.
 - **Elevation rules policy** - defines elevation behavior for binaries or scripts based on criteria.
 
-Both rules and policies can be targeted at groups of users or devices. To perform the elevation on the device, the EPM service uses a virtual account, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group.
+ To perform the elevation on the device, the EPM service uses a virtual account for most elevation types, which is isolated from the logged on users' account. Neither of these accounts are added to the local administrators group. An exception to use of the virtual account is the *Elevate as current user* elevation type, which is explained in more detail in the following section. 
 
 The EPM client is installed automatically when an *Elevation settings policy* is assigned to devices or users. The EPM client uses the 'Microsoft EPM Agent Service' service and stores its binaries in the `"C:\Program Files\Microsoft EPM Agent"` directory.
 
@@ -80,16 +66,30 @@ This diagram shows a high level architecture of how the EPM client is triggered,
 
 EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device.
 
+With the exception of *Elevate as current user* type, EPM uses a *virtual account* to elevate processes. Use of the virtual account isolates elevated actions from the user's profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+
 When you use Endpoint Privilege Management, there are a few options for elevation behavior:
 
 - **Automatic**: For automatic elevation rules, EPM *automatically* elevates these applications without input from the user. Broad rules in this category can have widespread impact to the security posture of the organization.
 
 - **User confirmed**: With user confirmed rules, end users use a new right-click context menu *Run with elevated access*. Administrators can require the user to perform extra validation using an authentication prompt, business justification, or both.
-  
+
   :::image type="content" source="media/epm-overview/epm-user-confirmed-inline.png" alt-text="A screenshot showing the prompt a user receives when they use user confirmed elevation." lightbox="media/epm-overview/epm-user-confirmed-expanded.png":::
 
-- **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
+- **Elevate as Current User**: Use this elevation type for applications that require access to user-specific resources to function correctly, like profile paths, environment variables, or runtime preferences. Unlike elevations that use a virtual account, this mode runs the elevated process under the signed-in user's own account, preserving compatibility with tools and installers that rely on the active user profile. By maintaining the same user identity before and after elevation, this approach ensures consistent and accurate audit trails. It also supports Windows Authentication, requiring the user to reauthenticate with valid credentials before elevation occurs.
+
+  However, because the elevated process inherits the user's full context, this mode introduces a broader attack surface and reduces isolation from user data.
   
+  Key considerations:
+  - Compatibility need: Use this mode only when virtual account elevation causes application failures.
+  - Scope tightly: Limit elevation rules to trusted binaries and paths to reduce risk.
+  - Security tradeoff: Understand that this mode increases exposure to user-specific data.
+
+  >[!TIP]
+  > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
+
+- **Support approved**: For support approved rules, end users must submit a request to run an application with elevated permissions. Once the request is submitted, an administrator can approve the request. Once the request is approved, the end user is notified that they can retry the elevation on the device. For more information about using this rule type, see [Support approved elevation requests](../protect/epm-support-approved.md).
+
   :::image type="content" source="media/epm-overview/epm-support-approval-inline.png" alt-text="A screenshot showing the prompt a user receives when they request to run an application as administrator using support approval." lightbox="media/epm-overview/epm-support-approval-expanded.png":::
 
 - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. In certain scenarios, deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.

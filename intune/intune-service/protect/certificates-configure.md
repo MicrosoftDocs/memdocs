@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Types of certificate that are supported by Microsoft Intune
 description: Learn about Microsoft Intune's support for Simple Certificate Enrollment Protocol (SCEP), Public Key Cryptography Standards (PKCS) certificates.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 10/04/2024
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: wicale
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - certificates
@@ -39,7 +21,7 @@ Use certificates with Intune to authenticate your users to applications and corp
 
 Certificates provide authenticated access without delay through the following two phases:
 
-- Authentication phase: The user’s authenticity is checked to confirm the user is who they claim to be.
+- Authentication phase: The user's authenticity is checked to confirm the user is who they claim to be.
 - Authorization phase: The user is subjected to conditions for which a determination is made on whether the user should be given access.
 
 Typical use scenarios for certificates include:
@@ -52,7 +34,7 @@ Intune supports Simple Certificate Enrollment Protocol (SCEP), Public Key Crypto
 
 - SCEP provisions certificates that are unique to each request for the certificate.
 - PKCS provisions each device with a unique certificate.
-- With Imported PKCS, you can deploy the same certificate that you’ve exported from a source, like an email server, to multiple recipients. This shared certificate is useful to ensure all your users or devices can then decrypt emails that were encrypted by that certificate.
+- With Imported PKCS, you can deploy the same certificate that you've exported from a source, like an email server, to multiple recipients. This shared certificate is useful to ensure all your users or devices can then decrypt emails that were encrypted by that certificate.
 
 To provision a user or device with a specific type of certificate, Intune uses a certificate profile.
 
@@ -62,7 +44,7 @@ In addition to the three certificate types and provisioning methods, you need a 
 >
 > Intune also supports use of [Derived credentials](derived-credentials.md) for environments that require use of smartcards.
 
-### What’s required to use certificates
+### What's required to use certificates
 
 - **A Certification Authority**. Your CA is the source of trust that the certificates reference for authentication. You can use a Microsoft CA or a third-party CA.
 - **On-premises infrastructure**. The infrastructure you require depends on the certificate types you use:
@@ -75,13 +57,13 @@ With a trusted root certificate deployed, you're ready to deploy certificate pro
 
 ### Which certificate profile to use
 
-The following comparisons aren’t comprehensive but intended to help distinguish the use of the different certificate profile types.
+The following comparisons aren't comprehensive but intended to help distinguish the use of the different certificate profile types.
 
 | Profile type               | Details       |
 |----------------------------|---------------|
 | Trusted certificate        | Use to deploy the public key (certificate) from a root CA or intermediary CA to users and devices to establish a trust back to the source CA. Other certificate profiles require the trusted certificate profile and its root certificate.    |
-| SCEP certificate           | Deploys a template for a certificate request to users and devices. Each certificate that’s provisioned using SCEP is unique and tied to the user or device that requests the certificate. </br></br>With SCEP, you can deploy certificates to devices that lack a user affinity, including use of SCEP to provision a certificate on KIOSK or user-less device.   |
-| PKCS certificate           | Deploys a template for a certificate request that specifies a certificate type of either user or device. </br></br> - Requests for a certificate type of user always require user affinity.  When deployed to a user, each of the user’s devices receives a unique certificate. When deployed to a device with a user, that user is associated with the certificate for that device. When deployed to a userless device, no certificate is provisioned. </br> - Templates with a certificate type of device don’t require user affinity to provision a certificate. Deployment to a device provisions the device. Deployment to a user provisions the device the user is signed into with a certificate.   |
+| SCEP certificate           | Deploys a template for a certificate request to users and devices. Each certificate that's provisioned using SCEP is unique and tied to the user or device that requests the certificate. </br></br>With SCEP, you can deploy certificates to devices that lack a user affinity, including use of SCEP to provision a certificate on KIOSK or user-less device.   |
+| PKCS certificate           | Deploys a template for a certificate request that specifies a certificate type of either user or device. </br></br> - Requests for a certificate type of user always require user affinity.  When deployed to a user, each of the user's devices receives a unique certificate. When deployed to a device with a user, that user is associated with the certificate for that device. When deployed to a userless device, no certificate is provisioned. </br> - Templates with a certificate type of device don't require user affinity to provision a certificate. Deployment to a device provisions the device. Deployment to a user provisions the device the user is signed into with a certificate.   |
 | PKCS imported certificate  | Deploys a single certificate to multiple devices and users, which supports scenarios like S/MIME signing and encryption. For example, by deploying the same certificate to each device, each device can decrypt email received from that same email server. </br></br>Other certificate deployment methods are insufficient for this scenario, as SCEP creates a unique certificate for each request, and PKCS associates a different certificate for each user, with different users receiving different certificates.    |
 
 ## Intune supported certificates and usage
@@ -106,7 +88,7 @@ When you use a Microsoft Certification Authority (CA):
 
 - To use PKCS certificate profiles:
   - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
-  
+
 - To use PKCS imported certificates:
   - [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
   - Export certificates from the certification authority and then import them to Microsoft Intune. See [the PFXImport PowerShell project](https://github.com/Microsoft/Intune-Resource-Access/tree/develop/src/PFXImportPowershell).
@@ -124,7 +106,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 - SCEP certificate profiles don't require use of the Microsoft Intune Certificate Connector. Instead, the third-party CA handles the certificate issuance and management directly. To use SCEP certificate profiles without the Intune Certificate Connector:
   - Configure integration with a third-party CA from [one of our supported partners](certificate-authority-add-scep-overview.md#third-party-certification-authority-partners). Setup includes following the instructions from the third-party CA to complete integration of their CA with Intune.
   - [Create an application in Microsoft Entra ID](certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration) that delegates rights to Intune to do SCEP certificate challenge validation.
-  
+
   For more information, see [Set up third-party CA integration](../protect/certificate-authority-add-scep-overview.md#set-up-third-party-ca-integration)
 
 - PKCS imported certificates require use of the Microsoft Intune Certificate Connector. See [Install the Certificate Connector for Microsoft Intune](certificate-connector-install.md).
@@ -148,7 +130,7 @@ When you use a third-party (non-Microsoft) Certification Authority (CA):
 | iOS/iPadOS                   | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) | ![Supported](./media/certificates-configure/green-check.png) |
 | macOS                 | ![Supported](./media/certificates-configure/green-check.png) |  ![Supported](./media/certificates-configure/green-check.png) |![Supported](./media/certificates-configure/green-check.png)|![Supported](./media/certificates-configure/green-check.png)|
 | Windows 8.1 and later |![Supported](./media/certificates-configure/green-check.png)  |  |![Supported](./media/certificates-configure/green-check.png) |   |
-| Windows 10/11  | ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) |
+| Windows  | ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) </br>*(see **Note 2**)*| ![Supported](./media/certificates-configure/green-check.png) |
 
 - ***Note 1*** - Beginning with Android 11, trusted certificate profiles can no longer install the trusted root certificate on devices that are enrolled as *Android device administrator*. This limitation doesn't apply to Samsung Knox. For more information, see [Trusted certificate profiles for Android device administrator](certificates-trusted-root.md#trusted-certificate-profiles-for-android-device-administrator).
 - ***Note 2*** - This profile is supported for [Windows Enterprise multi-session remote desktops](../fundamentals/azure-virtual-desktop-multi-session.md).

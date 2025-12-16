@@ -1,26 +1,12 @@
 ---
 title: Use Endpoint Privilege Management to transition users from administrator to standard user
 description: Understand the steps and phases for using Endpoint Privilege Management to transition users from administrators to standard users.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: laurawi
 ms.date: 09/10/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
 ms.reviewer: mikedano
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -65,7 +51,7 @@ Regardless of whether you're migrating from another endpoint privilege managemen
 
 **To confirm that the rule is functioning as expected:**
 
-- Sign in to the Windows 10 / 11 device with the standard user credentials.
+- Sign in to the Windows device with the standard user credentials.
 - **Start** > **Run** > **Services.msc** > Ok
 - Check that the *'Microsoft EPM Agent Service'* is present, Running, and set to Automatic startup type.
 - Close the Services snap-in.
@@ -141,7 +127,7 @@ For more details on creating a rule, see [Create elevation rules](epm-elevation-
 
 ### Confirm the rule is functioning
 
-- Sign in to the Windows 10 / 11 device with standard user credentials.
+- Sign in to the Windows device with standard user credentials.
 - Right-click the application (for example `Notepad++`) and select **'Run with elevated access'**
 - On the Endpoint Privilege Management pop-up, select **Continue**
 - Verify the application launches with elevated permissions
@@ -158,12 +144,12 @@ For more details on creating a rule, see [Create elevation rules](epm-elevation-
    - **Local group**: Administrators
    - **Group and user action**: Add (Replace)
    - **User selection type:** Manual
-6. Select **Select users(s)**
+6. Select **users(s)**
 7. Add the two Security Identifiers (SIDs) for:
    - Global Administrator
    - Microsoft Entra Joined Device Local Administrator
 
-    > Use Lusmgr.msc on an Entra-joined device to find SIDs starting with S-1-12-1-
+    > Use Lusrmgr.msc on an Entra-joined device to find SIDs starting with S-1-12-1-
 
 8. Assign to a group (for example `Developers`)
 9. Select **Save**

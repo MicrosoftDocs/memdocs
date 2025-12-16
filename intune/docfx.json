@@ -35,8 +35,12 @@
       "breadcrumb_path": "/intune/breadcrumb/toc.json",
       "uhfHeaderId": "MSDocsHeader-Intune",
       "feedback_system": "Standard",
-            "brand": "Microsoft Endpoint Manager",
+      "brand": "Microsoft Intune",
       "searchScope": ["Intune"],
+      "ms.suite": "ems",
+      "ms.service": "microsoft-intune",
+      "manager": "laurawi",
+      "titleSuffix": "Microsoft Intune",
       "contributors_to_exclude": [
         "PRMerger9",
         "PRMerger17",
@@ -99,7 +103,10 @@
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
-        "analytics/**/*.md": ["Analytics"]
+        "endpoint-analytics/**/*.md": ["Intune","advanced-analytics","endpoint-analytics"],
+        "advanced-analytics/**/*.md": ["Intune","advanced-analytics","endpoint-analytics"],
+        "device-updates/**/*.md": ["Intune","device-updates"],
+        "intune-service/user-help/**/*.md": ["User help"]
       },
       "featureFlags": {
         "*.md" : [
@@ -110,36 +117,105 @@
         "configmgr/core/misc/**/*": "None"
       },
       "author": {
-        "intune-service/remote-actions//**/*.md": "paolomatarazzo",
-        "intune-service/remote-actions//**/*.yml": "paolomatarazzo"
+        "intune-service/apps/**/*.md": "nicholasswhite",
+        "intune-service/apps/**/*.yml": "nicholasswhite",
+        "intune-service/copilot/**/*.md": "mandiohlinger",
+        "intune-service/copilot/**/*.yml": "mandiohlinger",
+        "intune-service/developer/**/*.md": "nicholasswhite",
+        "intune-service/developer/**/*.yml": "nicholasswhite",
+        "intune-service/enrollment/**/*.md": "lenewsad",
+        "intune-service/enrollment/**/*.yml": "lenewsad",
+        "intune-service/remote-actions/**/*.md": "paolomatarazzo",
+        "intune-service/remote-actions/**/*.yml": "paolomatarazzo",
+        "intune-service/user-help/**/*.md": "lenewsad",
+        "intune-service/user-help/**/*.yml": "lenewsad",
+        "endpoint-analytics/**/*.md": "paolomatarazzo",
+        "endpoint-analytics/**/*.yml": "paolomatarazzo",
+        "advanced-analytics/**/*.md": "paolomatarazzo",
+        "advanced-analytics/**/*.yml": "paolomatarazzo",
+        "device-updates/**/*.md": "paolomatarazzo",
+        "device-updates/**/*.yml": "paolomatarazzo",
+        "solutions/**/*.md": "mandiohlinger",
+        "solutions/**/*.yml": "mandiohlinger"
       },
       "ms.author": {
-        "intune-service/remote-actions//**/*.md": "paoloma",
-        "intune-service/remote-actions//**/*.yml": "paoloma"
+        "intune-service/apps/**/*.md": "nwhite",
+        "intune-service/apps/**/*.yml": "nwhite",
+        "intune-service/copilot/**/*.md": "mandia",
+        "intune-service/copilot/**/*.yml": "mandia",
+        "intune-service/developer/**/*.md": "nwhite",
+        "intune-service/developer/**/*.yml": "nwhite",
+        "intune-service/enrollment/**/*.md": "lanewsad",
+        "intune-service/enrollment/**/*.yml": "lanewsad",
+        "intune-service/remote-actions/**/*.md": "paoloma",
+        "intune-service/remote-actions/**/*.yml": "paoloma",
+        "intune-service/user-help/**/*.md": "lanewsad",
+        "intune-service/user-help/**/*.yml": "lanewsad",
+        "endpoint-analytics/**/*.md": "paoloma",
+        "endpoint-analytics/**/*.yml": "paoloma",
+        "advanced-analytics/**/*.md": "paoloma",
+        "advanced-analytics/**/*.yml": "paoloma",
+        "device-updates/**/*.md": "paoloma",
+        "device-updates/**/*.yml": "paoloma",
+        "solutions/**/*.md": "mandia",
+        "solutions/**/*.yml": "mandia"
       },
-      "manager": {
-        "intune-service/remote-actions//**/*.md": "laurawi",
-        "intune-service/remote-actions//**/*.yml": "laurawi"
-      },
-      "ms.service": {
-        "intune-service/remote-actions//**/*.md": "microsoft-intune",
-        "intune-service/remote-actions//**/*.yml": "microsoft-intune"
-      },
-      "ms.subservice": {
-        "intune-service/remote-actions//**/*.md": "remote-actions",
-        "intune-service/remote-actions//**/*.yml": "remote-actions"
-      },
-      "ms.suite": {
-        "intune-service/remote-actions//**/*.md": "ems",
-        "intune-service/remote-actions//**/*.yml": "ems"
-      },
-      "search.appverid": {
-        "intune-service/remote-actions//**/*.md": "MET150",
-        "intune-service/remote-actions//**/*.yml": "MET150"
+      "ms.collection": {
+        "intune-service/remote-actions/**/*.md": ["M365-identity-device-management"],
+        "intune-service/remote-actions/**/*.yml": ["M365-identity-device-management"]
       },
       "ms.reviewer": {
-        "intune-service/remote-actions//**/*.md": "mattcall",
-        "intune-service/remote-actions//**/*.yml": "mattcall"
+        "intune-service/remote-actions/**/*.md": "mattcall",
+        "intune-service/remote-actions/**/*.yml": "mattcall"
+      },
+      "ms.service": {
+        "configmgr/**/*.md": "configuration-manager",
+        "configmgr/**/*.yml": "configuration-manager"
+      },
+      "ms.subservice": {
+        "advanced-analytics/**/*.md": "suite",
+        "advanced-analytics/**/*.yml": "suite",
+        "device-updates/**/*.md": "protect",
+        "device-updates/**/*.yml": "protect",
+        "endpoint-analytics/**/*.md": "endpoint-analytics",
+        "endpoint-analytics/**/*.yml": "endpoint-analytics",
+        "intune-service/apps/**/*.md": "apps",
+        "intune-service/apps/**/*.yml": "apps",
+        "intune-service/configuration/**/*.md": "configuration",
+        "intune-service/configuration/**/*.yml": "configuration",
+        "intune-service/developer/**/*.md": "developer",
+        "intune-service/developer/**/*.yml": "developer",
+        "intune-service/enrollment/**/*.md": "enrollment",
+        "intune-service/enrollment/**/*.yml": "enrollment",
+        "intune-service/fundamentals/**/*.md": "fundamentals",
+        "intune-service/fundamentals/**/*.yml": "fundamentals",
+        "intune-service/protect/**/*.md": "protect",
+        "intune-service/protect/**/*.yml": "protect",
+        "intune-service/remote-actions/**/*.md": "remote-actions",
+        "intune-service/remote-actions/**/*.yml": "remote-actions",
+        "intune-service/user-help/**/*.md": "end-user",
+        "intune-service/user-help/**/*.yml": "end-user",
+        "intune-service/industry/education/**/*.md": "education",
+        "intune-service/industry/education/**/*.yml": "education"
+      },
+      "ms.topic": {
+        "intune-service/user-help/**/*.md": "end-user-help",
+        "intune-service/user-help/**/*.yml": "end-user-help"
+      },
+      "search.appverid": {
+        "device-updates/**/*.md": "MET150",
+        "device-updates/**/*.yml": "MET150",
+        "endpoint-analytics/**/*.md": "MET150",
+        "endpoint-analytics/**/*.yml": "MET150",
+        "advanced-analytics/**/*.md": "MET150",
+        "advanced-analytics/**/*.yml": "MET150",
+        "intune-service/**/*.md": "MET150",
+        "intune-service/**/*.yml": "MET150",
+        "solutions/**/*.md": "MET150",
+        "solutions/**/*.yml": "MET150"
+      },
+      "zone_pivot_group_filename": {
+        "intune-service/remote-actions/**/*.md": "intune-service/remote-actions/zone-pivot-groups.json"
       }
     },
     "template": [],

@@ -1,29 +1,12 @@
 ---
-# required metadata
 
 title: Tutorial-Get started with cloud-native Windows endpoints
-titleSuffix: Microsoft Intune
 description: Set up secure cloud-native Windows endpoints that are Microsoft Entra joined, enrolled in Intune, and then deploy at scale with Windows Autopilot.
-keywords:
 author: scottbreenmsft
-
-ms.author: brenduns
-manager: dougeby
+ms.author: scbree
 ms.date: 07/24/2025
 ms.topic: get-started
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: high
-ms.assetid:
-# optional metadata
-
-#audience:
-#ms.devlang:
 ms.reviewer: scbree;rogerso
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
   - M365-identity-device-management
   - highpri
@@ -44,7 +27,7 @@ This feature applies to:
 - Windows cloud-native endpoints
 
 > [!TIP]
-> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). For an Intune [Guided Scenario](../../intune-service/fundamentals/guided-scenarios-overview.md), see [Windows 10/11 in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md).
+> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). For an Intune [Guided Scenario](../../intune-service/fundamentals/guided-scenarios-overview.md), see [Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md).
 >
 > The following table describes the key difference between this guide and *Windows in cloud configuration*:
 >
@@ -57,6 +40,9 @@ This feature applies to:
 > ---
 >
 > You can use this guide combined with *Windows in cloud configuration* to customize the pre-built experience even more.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
 
 ## How to get started
 
@@ -117,14 +103,14 @@ Enrollment restrictions allow you to control what types of devices can enroll in
   To assign licenses, go to [Assign Microsoft Intune licenses](../../intune-service/fundamentals/licenses-assign.md).
 
   > [!NOTE]
-  > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. View comparisons of M365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
+  > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. View comparisons of Microsoft 365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
 
 ### Step 3 - Import your test device
 
 To test the cloud-native Windows endpoint, we need to start by getting a virtual machine or physical device ready for testing. The following steps get the device details and upload them into the Windows Autopilot service, which are used later in this article.
 
 > [!NOTE]
-> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There is more information about Windows Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot).
+> While the following steps provide a way to import a device for testing, Partners and OEMs can import devices into Windows Autopilot on your behalf as part of purchasing. There's more information about Windows Autopilot in [Phase 5](#phase-5--deploy-at-scale-with-windows-autopilot).
 
 1. Install Windows (preferably 20H2 or later) in a virtual machine or reset physical device so that it's waiting at the OOBE setup screen. For a virtual machine, you can optionally create a checkpoint.
 
@@ -148,7 +134,7 @@ To test the cloud-native Windows endpoint, we need to start by getting a virtual
    - `Get-WindowsAutopilotInfo.ps1 -GroupTag CloudNative -Online`
 
    > [!NOTE]
-   > Group Tags allow you to create dynamic Microsoft Entra groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Intune admin center. We'll use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
+   > Group Tags allow you to create dynamic Microsoft Entra groups based on a subset of devices. Group Tags can be set when importing devices or changed later in the Microsoft Intune admin center. We use the Group Tag *CloudNative* in Step 4. You can set the tag name to something different for your testing.
 
 9. When prompted for credentials, sign in with your Intune Administrator account.
 
@@ -177,7 +163,7 @@ To limit the configurations from this guide to the test devices that you import 
 6. Select **OK** > **Save** > **Create**.
 
 > [!TIP]
-> Dynamic groups take a few minutes to populate after changes occur. In large organizations, it [can take much longer](/entra/identity/users/groups-troubleshooting#troubleshooting-dynamic-memberships-for-groups). After creating a new group, wait a few minutes before you check to confirm the device is now a member of the group.
+> Dynamic groups take a few minutes to populate after changes occur. In large organizations, it [can take longer](/entra/identity/users/groups-troubleshooting#troubleshooting-dynamic-memberships-for-groups). After creating a new group, wait a few minutes before you check to confirm the device is now a member of the group.
 >
 > For more information about dynamic groups for devices, go to [Rules for devices](/entra/identity/users/groups-dynamic-membership#rules-for-devices).
 
@@ -223,7 +209,7 @@ The sync takes several minutes and continues in the background. When the sync is
 
 We've selected a few settings to configure. These settings demonstrate an optimal Microsoft 365 end-user experience on your Windows cloud-native device. These settings are configured using a device configuration settings catalog profile. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
 
-After you've created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
+After you created the profile and added your settings, assign the profile to the **Autopilot Cloud-Native Windows Endpoints** group created previously.
 
 - **Microsoft Outlook**
   To improve the first run experience for Microsoft Outlook, the following setting automatically configures a profile when Outlook is opened for the first time.
@@ -295,7 +281,7 @@ Some things to check out on your new cloud-native Windows endpoint:
 - Consider testing access from the device to on-premises resources like file shares, printers, and intranet sites.
 
   > [!NOTE]
-  > If you haven't set up [Windows Hello for Business Hybrid](/windows/security/identity-protection/hello-for-business/hello-identity-verification#hybrid-deployments), you might be prompted on Windows Hello logons to enter passwords to access on-premises resources. To continue testing single sign on access you can configure Windows Hello for Business Hybrid or logon to the device with username and password rather than Windows Hello. To do so, select the key shaped icon on the logon screen.
+  > If you haven't set up [Windows Hello for Business Hybrid](/windows/security/identity-protection/hello-for-business/hello-identity-verification#hybrid-deployments), you might be prompted on Windows Hello logons to enter passwords to access on-premises resources. To continue testing single sign on access, you can configure Windows Hello for Business Hybrid or logon to the device with username and password rather than Windows Hello. To do so, select the key shaped icon on the logon screen.
 
 ## Phase 3 – Secure your cloud-native Windows endpoint
 
@@ -312,7 +298,7 @@ This phase is designed to help you build out security settings for your organiza
 
 ### Microsoft Defender Antivirus (MDAV)
 
-The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). 
+The following settings are recommended as a minimum configuration for Microsoft Defender Antivirus, a built-in OS component of Windows. These settings don't require any specific licensing agreement such as E3 or E5, and can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
 #### [:::image type="icon" source="../../intune-service/media/icons/intune.svg"::: **Intune Admin Console**](#tab/intuneadminconsole)
 
@@ -322,7 +308,7 @@ In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Poli
 
 - Allow Behavior Monitoring: **Allowed. Turns on real-time behavior monitoring.**
 - Allow Cloud Protection: **Allowed. Turns on Cloud Protection.**
-- Allow Email Scanning : **Allowed. Turns on email scanning.**
+- Allow Email Scanning: **Allowed. Turns on email scanning.**
 - Allow scanning of all downloaded files and attachments: **Allowed.**
 - Allow Realtime Monitoring: **Allowed. Turns on and runs the real-time monitoring service.**
 - Allow Scanning Network Files: **Allowed. Scans network files.**
@@ -343,7 +329,7 @@ In the admin center, go to **Endpoint Security** > **Antivirus** > **Create Poli
 
 [!INCLUDE [graph-explorer-introduction](../../intune-service/includes/graph-explorer-intro.md)]
 
-This will create a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
+This creates a policy in your tenant with the name **_MSLearn_Example_Windows - Defender Antivirus** under **Endpoint Security** > **Antivirus**.
 
 ```msgraph-interactive
 POST https://graph.microsoft.com/beta/deviceManagement/configurationPolicies
@@ -364,22 +350,18 @@ For more information on Windows Defender configuration, including Microsoft Defe
 
 Use Endpoint Security in Microsoft Intune to configure the firewall and firewall rules. For more information, go to [Firewall policy for endpoint security in Intune](../../intune-service/protect/endpoint-security-firewall-policy.md).
 
-Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager). And, it can switch to the *domain* firewall profile on endpoints running the following OS versions:
-
-- Windows 11 22H2
-- Windows 11 21H2 with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021234-os-build-22000-1335-56a94ce4-7122-447d-98d8-360e95fc0cf9)
-- Windows 10 20H2 or higher with [2022-12 cumulative update](https://support.microsoft.com/topic/december-13-2022-kb5021233-os-builds-19042-2364-19043-2364-19044-2364-and-19045-2364-44e774aa-60c4-4e38-b7e7-c886d210db3b)
+Microsoft Defender Firewall can detect a trusted network using the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager). And, it can switch to the *domain* firewall profile on endpoints running Windows.
 
 Using the *domain* network profile allows you to separate firewall rules based on a trusted network, a private network, and a public network. These settings can be applied using a Windows custom profile.
 
 > [!NOTE]
-> Microsoft Entra joined endpoints cannot leverage LDAP to detect a domain connection in the same way that domain-joined endpoints do. Instead, use the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) to specify a TLS endpoint that when accessible will switch the endpoint to the *domain* firewall profile.
+> Microsoft Entra joined endpoints can't use LDAP to detect a domain connection in the same way that domain-joined endpoints do. Instead, use the [NetworkListManager CSP](/windows/client-management/mdm/policy-csp-networklistmanager) to specify a TLS endpoint that when accessible, switches the endpoint to the *domain* firewall profile.
 
 ### BitLocker Encryption
 
 Use Endpoint Security in Microsoft Intune to configure encryption with BitLocker.
 
-- For more information about managing BitLocker, go to [Encrypt Windows 10/11 devices with BitLocker in Intune](../../intune-service/protect/encrypt-devices.md).
+- For more information about managing BitLocker, go to [Encrypt Windows devices with BitLocker in Intune](../../intune-service/protect/encrypt-devices.md).
 - Check out our blog series on BitLocker at [Enabling BitLocker with Microsoft Intune](https://techcommunity.microsoft.com/t5/intune-customer-success/enabling-bitlocker-with-microsoft-endpoint-manager-microsoft/ba-p/2149784).
 
 These settings can be enabled in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). In the admin center, go to **Endpoint Security** > **Manage** > **Disk encryption** > **Create Policy** > **Windows and later** > **Profile** = **BitLocker**.
@@ -389,19 +371,19 @@ When you configure the following BitLocker settings, they silently enable 128-bi
 **BitLocker**:
 
 - Require Device Encryption: **Enabled**
-- Allow Warning For Other Disk Encryption: **Disabledd**
+- Allow Warning For Other Disk Encryption: **Disabled**
   - Allow Standard User Encryption: **Enabled**
 - Configure Recovery Password Rotation: **Refresh on for Azure AD-joined devices**
 
 **BitLocker Drive Encryption**:
 
-- Choose drive encryption method and cipher strength (Windows 10 [Version 1511] and later): **Not Configured**
+- Choose drive encryption method and cipher strength: **Not Configured**
 - Provide the unique identifiers for your organization: **Not Configured**
- 
+
 **Operating System Drives**:
 
 - Enforce drive encryption type on operating system drives: **Enabled**
-  - Select the encryption type: (Device) : **Used Space Only encryption**
+  - Select the encryption type (Device): **Used Space Only encryption**
 - Require additional authentication at startup: **Enabled**
   - Allow BitLocker without a compatible TPM (requires a password or a startup key on a USB flash drive): **False**
   - Configure TPM startup key and PIN: **Allow startup key and PIN with TPM**
@@ -421,7 +403,7 @@ When you configure the following BitLocker settings, they silently enable 128-bi
   - Omit recovery options from the BitLocker setup wizard: **True**
   - Save BitLocker recovery information to AD DS for operating system drives: **True**
 - Configure pre-boot recovery message and URL: **Not configured**
-  
+
 **Fixed Data Drives**:
 
 - Enforce drive encryption type on fixed data drives: **Enabled**
@@ -452,9 +434,9 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
 > [!IMPORTANT]
 > Windows LAPS assumes that the default local administrator account is enabled, even if it's renamed or if you create another local admin account. Windows LAPS doesn't create or enable any local accounts for you unless you configure [Automatic account management mode](/windows-server/identity/laps/laps-concepts-account-management-modes#automatic-account-management-mode).
 >
-> You need to create or enable any local accounts separately from configuring Windows LAPS. You can script this task or use the Configuration Service Providers (CSP's), such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
+> You need to create or enable any local accounts separately from configuring Windows LAPS. You can script this task or use the Configuration Service Providers (CSPs), such as the [Accounts CSP](/windows/client-management/mdm/accounts-csp) or [Policy CSP](/windows/client-management/mdm/policy-csp-localpoliciessecurityoptions).
 
-1. Make sure your Windows 10 (20H2 or later) or Windows 11 devices have the April 2023 (or later) security update installed.
+1. Make sure your Windows devices have the April 2023 (or later) security update installed.
 
     For more information, go to [Microsoft Entra operating system updates](/entra/identity/devices/howto-manage-local-admin-passwords#operating-system-updates).
 
@@ -468,7 +450,7 @@ Windows Local Administrator Password Solution (LAPS) is one of the features you 
 3. In Intune, create an endpoint security policy:
 
     1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-    2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows 10 and later** > **Local admin password solution (Windows LAPS)** > **Create**.
+    2. Select **Endpoint Security** > **Account Protection** > **Create Policy** > **Windows** > **Local admin password solution (Windows LAPS)** > **Create**.
 
     For more information, go to [Create a LAPS policy in Intune](../../intune-service/protect/windows-laps-policy.md#create-a-laps-policy).
 
@@ -492,12 +474,12 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 
 *Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update client policies can be configured using:
 
-- [Windows update rings](../../intune-service/protect/windows-10-update-rings.md)
-- [Windows Feature Updates](../../intune-service/protect/windows-10-feature-updates.md)
+- [Windows update rings](../../device-updates/windows/update-rings.md)
+- [Windows Feature Updates](../../device-updates/windows/feature-updates.md)
 
 For more information, go to:
 
-- [Learn about using Windows Update client policies in Microsoft Intune](../../intune-service/protect/windows-update-for-business-configure.md)
+- [Learn about using Windows Update client policies in Microsoft Intune](../../device-updates/windows/configure.md)
 - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
 If you'd like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](../../configmgr/comanage/overview.md).
@@ -525,9 +507,7 @@ In this phase, you apply organization-specific settings, apps, and review your o
 
 Microsoft Edge is included on devices that run:
 
-- Windows 11
-- Windows 10 20H2 or later
-- Windows 10 1803 or later, with the May 2021 or later cumulative monthly security update
+- Windows
 
 After users sign in, Microsoft Edge updates automatically. To trigger an update for Microsoft Edge during deployment, you can run the following command:
 
@@ -554,28 +534,27 @@ You can also set other settings for Microsoft Edge using settings catalog profil
 
 You can customize and set a standard start and taskbar layout using Intune.
 
-- **For Windows 10**:
-  - For more information about start and taskbar customization, go to [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
-  - To create a start and taskbar layout, go to [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
-
-  After the layout has been created, it can be uploaded to Intune by configuring a [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
-
 - **For Windows 11**:
 
   - To create and apply a Start menu layout, go to [Customize the Start menu layout on Windows 11](/windows/configuration/customize-start-menu-layout-windows-11).
   - To create and apply a Taskbar layout, go to [Customize the Taskbar on Windows 11](/windows/configuration/taskbar/configure).
 
+- **For Windows 10**:
+
+  - For more information about start and taskbar customization, go to [Manage Windows Start and taskbar layout (Windows)](/windows/configuration/windows-10-start-layout-options-and-policies).
+  - To create a start and taskbar layout, go to [Customize and export Start layout (Windows)](/windows/configuration/customize-and-export-start-layout).
+
+  After the layout is created, it can be uploaded to Intune by configuring a [Device Restrictions](../../intune-service/configuration/device-restrictions-configure.md) profile. The setting is under the *Start* category.
+
+  > [!IMPORTANT]
+  > [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
+
 ### Settings catalog
 
 The settings catalog is a single location where all configurable Windows settings are listed. This feature simplifies how you create a policy, and how you see all the available settings. For more information, go to [Create a policy using the settings catalog in Microsoft Intune](../../intune-service/configuration/settings-catalog.md).
 
-> [!NOTE]
->
-> - Some settings might not be available in the catalog but are available in Templates for Intune device configuration profiles.
->
-> - Many of the settings you're familiar with from group policy are already available in the settings catalog. For more information, go to [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
->
-> - If you intend to leverage either ADMX templates or settings catalog (recommended), be sure to update your devices with the September 2021 'patch Tuesday' update ([KB5005565](https://support.microsoft.com/topic/september-14-2021-kb5005565-os-builds-19041-1237-19042-1237-and-19043-1237-292cf8ed-f97b-4cd8-9883-32b71e3e6b44)) for Windows 10 versions 2004 and later. This monthly update includes [KB5005101](https://support.microsoft.com/topic/september-1-2021-kb5005101-os-builds-19041-1202-19042-1202-and-19043-1202-preview-82a50f27-a56f-4212-96ce-1554e8058dc1) which brings [1,400+ group policy settings to MDM](https://blogs.windows.com/windows-insider/2021/08/18/releasing-windows-10-build-19043-1198-21h1-to-release-preview-channel/#:~:text=We%20enabled%20over,new%20MDM%20policies.). Failure to apply this update will result in a 'Not Applicable' message alongside the setting in the Intune admin center. While initially only appliable to the Enterprise and Edu versions of Windows, as of May 2022, these additional settings now also work on the Pro versions of Windows 10/11. If using the Pro versions of Windows 10/11, ensure that you install [KB5013942](https://support.microsoft.com/topic/may-10-2022-kb5013942-os-builds-19042-1706-19043-1706-and-19044-1706-60b51119-85be-4a34-9e21-8954f6749504) or later on Windows 10 and [KB5013943](https://support.microsoft.com/topic/may-10-2022-kb5013943-os-build-22000-675-14aa767a-aa87-414e-8491-b6e845541755) or later on Windows 11 as mentioned in [The latest in Group Policy settings parity in Mobile Device Management](https://techcommunity.microsoft.com/t5/intune-customer-success/the-latest-in-group-policy-settings-parity-in-mobile-device/ba-p/2269167).
+> [!TIP]
+> Many of the settings you're familiar with from group policy are built into the settings catalog. If settings aren't available in the settings catalog, then check the device configuration profiles templates.
 
 Following are some settings available in the settings catalog that might be relevant to your organization:
 
@@ -589,7 +568,7 @@ Following are some settings available in the settings catalog that might be rele
 - **Windows Spotlight**
   By default, several consumer features of Windows are enabled which results in selected Store apps installing and third-party suggestions on the lock screen. You can control this using the Experience section of the settings catalog.
 
-  - Experience
+  - Experience > Allow Windows Spotlight
     - Allow Windows Consumer Features - **Block**
     - Allow Third-Party Suggestions in Windows Spotlight (user) - **Block**
 
@@ -614,7 +593,7 @@ Following are some settings available in the settings catalog that might be rele
 
   When this policy is configured on a device, users can only sign in with accounts homed in a Microsoft Entra tenant that is included in the "Tenant Allow List" defined in this policy. The "Tenant Allow List" is a comma separated list of Microsoft Entra tenant IDs. By specifying this policy and defining a Microsoft Entra tenant, you also block sign in to Teams for personal use. For more information, go to [How to restrict sign in on desktop devices](/microsoftteams/sign-in-teams#how-to-restrict-sign-in-on-desktop-devices).
 
-  - Administrative Templates \ Microsoft Teams
+  - Microsoft Teams
     - Restrict sign in to Teams to accounts in specific tenants (User) - **Enabled**
 
 ### Device Restrictions
@@ -624,10 +603,10 @@ Windows Device restrictions templates contain many of the settings required to s
 To create a profile that uses the Device restrictions template, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > Select **Windows 10 and later** for platform > **Templates** **Device restrictions** for profile type.
 
 - **Desktop background picture URL (Desktop only)**
-  Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that has been copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization* and configure **Desktop background picture URL (Desktop only)**.
+  Use this setting to set a wallpaper on Windows Enterprise or Windows Education SKUs. You host the file online or reference a file that's copied locally. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *Personalization*, and configure **Desktop background picture URL (Desktop only)**.
 
 - **Require users to connect to a network during device setup**
-  This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General* and configure **Require users to connect to network during device setup**.
+  This setting reduces the risk that a device can skip Windows Autopilot if the computer is reset. This setting requires devices to have a network connection during the out of box experience phase. To configure this setting, on the *Configuration settings* tab in the *Device restrictions* profile, expand *General*, and configure **Require users to connect to network during device setup**.
 
   > [!NOTE]
   > The setting becomes effective the next time the device is wiped or reset.
@@ -649,11 +628,10 @@ Customers using Microsoft Configuration Manager can deploy connected cache serve
 
 If there's only one user group that needs local administrator access to all Microsoft Entra joined Windows devices, then you can add them to the [Microsoft Entra Joined Device Local Administrator](/entra/identity/role-based-access-control/permissions-reference#microsoft-entra-joined-device-local-administrator).
 
-You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. With Windows 2004 or later, you can meet this requirement by using the following Configuration Service Providers (CSPs).
+You might have a requirement for IT helpdesk or other support staff to have local admin rights on a select group of devices. You can meet this requirement by using the following Configuration Service Providers (CSPs).
 
-- Ideally use [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups), which requires Windows 10 20H2 or later.
-- If you have Windows 10 20H1 (2004) use the [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace).
-- Windows versions prior to Windows 10 20H1 (2004) can't use groups, only individual accounts.
+- [Local Users and Groups CSP](/windows/client-management/mdm/policy-csp-localusersandgroups) (preferred)
+- [Restricted Groups CSP](/windows/client-management/mdm/policy-csp-restrictedgroups) (no update action, only replace)
 
 For more information, go to [How to manage the local administrators group on Microsoft Entra joined devices](/entra/identity/devices/assign-local-admin)
 
@@ -679,7 +657,7 @@ You can use PowerShell scripts for any settings or customizations that you need 
 
 ### Mapping Network Drives and Printers
 
-Cloud-native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive for Business. If migration isn't possible, consider the use of scripts if necessary.
+Cloud-native scenarios have no built-in solution for mapped network drives. Instead, we recommend that users migrate to Teams, SharePoint, and OneDrive. If migration isn't possible, consider the use of scripts if necessary.
 
 For personal storage, in [Step 8 - Configure settings for an optimal Microsoft 365 experience](#step-8---configure-settings-for-an-optimal-microsoft-365-experience), we configured OneDrive Known Folder move. For more information, go to [Redirect Known Folders](/onedrive/redirect-known-folders).
 
@@ -708,13 +686,13 @@ Intune supports the deployment of many different Windows application types.
 If you have applications that use MSI, EXE, or script installers, you can deploy all of these applications using *Win32 app management in Microsoft Intune*. Wrapping these installers in the Win32 format provides more flexibility and benefits, including notifications, delivery optimization, dependencies, detection rules, and support for the Enrollment Status Page in Windows Autopilot.
 
 > [!NOTE]
-> To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. If you have applications that are packaged as `.msi` or `.exe`, those can be converted to Win32 apps (`.intunewin`) by using the *Microsoft Win32 Content Prep Tool*, which is [available from GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
+> To prevent conflicts during installation, we recommend that you stick to using the Windows line-of-business apps or Win32 apps features exclusively. If you have applications that are packaged as `.msi` or `.exe`, then they can be converted to Win32 apps (`.intunewin`) using the *[Microsoft Win32 Content Prep Tool](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool)* available on GitHub.
 
 ## Phase 5 – Deploy at scale with Windows Autopilot
 
 :::image type="content" source="../media/cloud-native-windows-endpoints/phase-5.png" alt-text="Phase 5.":::
 
-Now that you've configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
+Now that you configured your cloud-native Windows endpoint and provisioned it with Windows Autopilot, consider how you can import more devices. Also consider how you can work with your partner or hardware supplier to start provisioning new endpoints from the cloud. Review the following resources to determine the best approach for your organization.
 
 - [Overview of Windows Autopilot](/autopilot/overview)
 - [Module 6.4 - Windows Autopilot Fundamentals - YouTube](https://www.youtube.com/watch?v=wNmLvqZ21AE)
@@ -739,5 +717,5 @@ If for some reason Windows Autopilot isn't the right option for you, there are o
 - Add [Win32 apps](../../intune-service/apps/apps-win32-app-management.md)
 - [Use certificates for authentication in Intune](../../intune-service/protect/certificates-configure.md)
 - Deploy network profiles, including [VPN](../../intune-service/configuration/vpn-settings-windows-10.md) and [Wi-Fi](../../intune-service/configuration/wi-fi-settings-windows.md)
-- Deploy [Multi-Factor Authentication](/entra/identity/authentication/concept-mfa-howitworks)
+- Deploy [multifactor authentication](/entra/identity/authentication/concept-mfa-howitworks)
 - Security baseline for [Microsoft Edge](../../intune-service/protect/security-baseline-settings-edge.md)

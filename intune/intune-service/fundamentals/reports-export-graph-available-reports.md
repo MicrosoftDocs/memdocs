@@ -1,35 +1,17 @@
 ---
-# required metadata
-
-title: Intune Graph API - Reports and properties | Microsoft Docs
+title: Intune Graph API - Reports and Properties | Microsoft Docs
 description: Learn about Intune reports and properties provided via Graph API.
-keywords:
 author: nicholasswhite
 ms.author: nwhite
-manager: laurawi
 ms.date: 09/08/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: medium
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: davidra
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 #ms.custom:
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# Intune reports and properties available using Graph API
+# Intune Reports and Properties Available Using Graph API
 
 Microsoft Intune provides many reports in the Microsoft Intune admin center that can be exported using Graph APIs. Microsoft Graph is a RESTful web API that enables you to access Microsoft Cloud service resources. To export Intune reports, you must use the Microsoft Graph API to make a set of HTTP calls. For more information, see [Export Intune reports using Graph APIs](../fundamentals/reports-export-graph-apis.md).
 
@@ -422,7 +404,7 @@ The following table contains the possible output when calling the `AppInvRawData
 |     UserId  |
 |     UserName  |
 
-You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties: 
+You can filter the `AppInvRawData` report using the `eq` comparison operator on the following properties:
 - ApplicationName
 - ApplicationPublisher
 - ApplicationShortVersion
@@ -746,7 +728,7 @@ To call this report, you need a minimum role-based access control permission of 
 
 The properties `LastOSUpdateTime` and `LastRebootTime` only populate in the report when the **OS Update Status** setting is enabled in the Google Admin Console. This setting can be found in the Google Admin Console under **Devices** > **Chrome** **Settings**.
 
-You can filter the `ChromeOSDevices` report using the following properties: 
+You can filter the `ChromeOSDevices` report using the following properties:
 - IntuneDeviceId
 - MostRecentUserEmail
 - MostRecentLogin
@@ -2278,7 +2260,7 @@ There are no filters for this report.
 > [!NOTE]
 > To maintain backwards compatibility, there are mappings that take place. You can map column names that the export API allows you to select, to what you receive back.
 >
-> The select parameter accepts column aliases, but the filter parameter doesn’t.
+> The select parameter accepts column aliases, but the filter parameter doesn't.
 >
 > The values for `EnrollmentType`, `PartnerFeaturesBitmask`, `ManagementAgents`, `CertExpirationDate`, and `IsManaged` are only exported when they're included in the select parameter. These columns aren't exported by default.
 
@@ -2356,7 +2338,7 @@ You can choose to filter the `DevicesWithInventory` report's output based on the
 - `OwnerType`
 - `PartnerFeaturesBitmask`
 
-The following `ProcessorArchitecture` mappings apply to Windows 10 and later:
+The following `ProcessorArchitecture` mappings apply to Windows:
 - 9 = x64
 - 5 = ARM
 - 12 = ARM64

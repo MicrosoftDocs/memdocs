@@ -1,7 +1,6 @@
 ---
 author: aczechowski
 ms.author: aaroncz
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 10/02/2023
 # note this include file is in this folder because it's used in both ConfigMgr and Intune articles

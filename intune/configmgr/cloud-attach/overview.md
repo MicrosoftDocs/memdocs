@@ -39,12 +39,12 @@ For more information, see [Tenant attach - Create and deploy Antivirus policies 
 
 ### Remote Actions:
 When you upload your clients to Microsoft Intune admin center, you can take CM Client specific actions like sync machine policy, sync user policy and sync app evaluation cycle. Apart from the actions, some of the features you may want to use include:
-- Run PowerShell [scripts](../tenant-attach/scripts.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
-- Install [applications](../tenant-attach/applications.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
-- Query devices with [CMPivot](../tenant-attach/cmpivot-samples-attached.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
-- Display a [timeline](../tenant-attach/timeline.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) of events from the device
-View [software updates](../tenant-attach/software-updates.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
-View [Bitlocker recovery keys](../tenant-attach/bitlocker-recovery-keys.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json)
+- Run PowerShell [scripts](../tenant-attach/scripts.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json)
+- Install [applications](../tenant-attach/applications.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json)
+- Query devices with [CMPivot](../tenant-attach/cmpivot-samples-attached.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json)
+- Display a [timeline](../tenant-attach/timeline.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) of events from the device
+View [software updates](../tenant-attach/software-updates.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json)
+View [Bitlocker recovery keys](../tenant-attach/bitlocker-recovery-keys.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json)
 
 :::image type="content" source="media/tenant-attach-actions.png" alt-text="Screenshot of remote actions for tenant attached devices in Intune admin center." lightbox="media/tenant-attach-actions.png":::
 
@@ -52,25 +52,25 @@ View [Bitlocker recovery keys](../tenant-attach/bitlocker-recovery-keys.md?toc=/
 
 Endpoint analytics gives you insights for measuring the quality of the experience you're delivering to your users. Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end users generate a help desk ticket. Each of the reports provides scores for your organization's user experience. There are built-in baseline scores for the median of all other organizations, which allows you to compare your scores to a typical enterprise. You'll be given **Insights and recommendations** for improving your organization's user experience and your score. Endpoint analytics includes the following reports:
 
-- [Work from anywhere](../../analytics/work-from-anywhere.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The ability for employees to work from anywhere productively is essential in today’s world. This report offers insights into how prepared your workforce is to be productive from anywhere.
+- [Work from anywhere](../../endpoint-analytics/work-from-anywhere.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - The ability for employees to work from anywhere productively is essential in today's world. This report offers insights into how prepared your workforce is to be productive from anywhere.
 
-:::image type="content" source="../../analytics/media/8668496-work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../../analytics/media/8668496-work-from-anywhere-score.png":::
+:::image type="content" source="../../endpoint-analytics/images/work-from-anywhere/work-from-anywhere-score.png" alt-text="Screenshot of endpoint analytics work from anywhere report in Intune admin center." lightbox="../../endpoint-analytics/images/work-from-anywhere/work-from-anywhere-score.png":::
 
-- [Startup performance](../../analytics/startup-performance.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
+- [Startup performance](../../endpoint-analytics/startup-performance.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - The startup performance score helps IT get users from power-on to productivity quickly, without lengthy boot and sign-in delays.
 
-:::image type="content" source="../../analytics/media/8529842-startup-performance-metrics.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="../../analytics/media/8529842-startup-performance-metrics.png":::
+:::image type="content" source="../../endpoint-analytics/images/adoption-score/startup-performance-metrics.png" alt-text="Screenshot of endpoint analytics startup performance report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/startup-performance-metrics.png":::
 
-- [Application reliability](../../analytics/app-reliability.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - The application reliability report provides insight into potential issues for desktop applications on managed devices.
+- [Application reliability](../../endpoint-analytics/app-reliability.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - The application reliability report provides insight into potential issues for desktop applications on managed devices.
 
-:::image type="content" source="../../analytics/media/8529842-application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../analytics/media/8529842-application-reliability.png":::
+:::image type="content" source="../../endpoint-analytics/images/adoption-score/application-reliability.png" alt-text="Screenshot of endpoint analytics application reliability report in Intune admin center." lightbox="../../endpoint-analytics/images/adoption-score/application-reliability.png":::
 
-- [Restart Frequency](../../analytics/restart-frequency.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) – provides insights into restart frequencies within your organization to help you identify problematic devices.
+- [Restart Frequency](../../endpoint-analytics/startup-performance.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - provides insights into restart frequencies within your organization to help you identify problematic devices.
 
-:::image type="content" source="../../analytics/media/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../analytics/media/restart-frequency-tab.png":::
+:::image type="content" source="../../endpoint-analytics/images/restart-frequency-tab.png" alt-text="Screenshot of endpoint analytics restart frequency report in Intune admin center." lightbox="../../endpoint-analytics/images/restart-frequency-tab.png":::
 
 ## Remediations
 
-[Remediations](../../intune-service/fundamentals/remediations.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../analytics/scores.md#bkmk_per-device)
+[Remediations](../../intune-service/fundamentals/remediations.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) - Remediations helps you fix common support issues before end-users notice issues. You can use Remediations to help increase your [User experience score](../../endpoint-analytics/scores.md)
 
 :::image type="content" source="../../intune-service/fundamentals/media/remediations/remediations-create.png" alt-text="Screenshot of Remediations in Intune admin center." lightbox="../../intune-service/fundamentals/media/remediations/remediations-create.png":::
 
@@ -80,11 +80,11 @@ Co-management transforms your on-premises Configuration Manager environment with
 
 :::image type="content" source="media/comanagement-workloads.png" alt-text="Screenshot of comanagement workload tab in cloud attach properties in configuration manager admin console." lightbox="media/comanagement-workloads.png":::
 
-Once you co-manage the devices, you can specify which workloads to move, such as compliance policy to enable Conditional Access. [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) combines granular control over organizational data while maintaining a consistent user experience on any device from any location. Enforcing compliance policy from Intune is a critical part of developing your [Zero Trust](/security/zero-trust/) architecture. Additionally, you can Use [Windows Autopilot](/autopilot/overview) with co-management to simplify the complex process of provisioning devices from the cloud.
+Once you co-manage the devices, you can specify which workloads to move, such as compliance policy to enable Conditional Access. [Conditional Access](../comanage/quickstart-conditional-access.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) combines granular control over organizational data while maintaining a consistent user experience on any device from any location. Enforcing compliance policy from Intune is a critical part of developing your [Zero Trust](/security/zero-trust/) architecture. Additionally, you can Use [Windows Autopilot](/autopilot/overview) with co-management to simplify the complex process of provisioning devices from the cloud.
 
 ## <a name="bkmk_cmg"></a> Cloud management gateway (CMG)
 
-[Cloud management gateway (CMG)](../core/clients/manage/cmg/overview.md?toc=/mem/configmgr/cloud-attach/toc.json&bc=/mem/configmgr/cloud-attach/breadcrumb/toc.json) is an additional cloud feature that allows you to manage internet-based clients using your established workflows and processes. CMG helps minimize the management traffic from Configuration Manager to clients through your VPN. When you enable CMG, you maintain a connection to your devices wherever they are on the internet. This connection enables you to keep up with your usual software deployments, device configuration, and software updates processes for internet clients without having to make large infrastructure investments.
+[Cloud management gateway (CMG)](../core/clients/manage/cmg/overview.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json) is an additional cloud feature that allows you to manage internet-based clients using your established workflows and processes. CMG helps minimize the management traffic from Configuration Manager to clients through your VPN. When you enable CMG, you maintain a connection to your devices wherever they are on the internet. This connection enables you to keep up with your usual software deployments, device configuration, and software updates processes for internet clients without having to make large infrastructure investments.
 
 ## Benefits of Cloud Attaching Configuration Manager with Intune:
 

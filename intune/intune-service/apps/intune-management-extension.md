@@ -1,49 +1,31 @@
 ---
-# required metadata
-
-title: Understand Microsoft Intune management extension
+title: Understand Microsoft Intune Management Extension
 description: Understand Microsoft Intune management extension for Windows.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 08/26/2025
+ms.date: 10/02/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Windows
 - highpri
 - FocusArea_Apps_Win32
 ---
 
-# Intune management extension for Windows
+# Intune Management Extension for Windows
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 The Intune Management Extension (IME) is an installer agent that enhances Windows device management (MDM). It supplements the standard Windows MDM feature by enabling advanced device management capabilities.
 
 > [!NOTE]
-> For details about PowerShell scripts, see [Use PowerShell scripts on Windows 10/11 devices in Intune](../apps/powershell-scripts.md).
+> For details about PowerShell scripts, see [Use PowerShell scripts on Windows devices in Intune](../apps/powershell-scripts.md).
 
 > [!IMPORTANT]
 > To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or later with the Intune Management Extension on Windows clients. If a Windows client uses an earlier version of the .NET Framework, the Intune Management Extension still functions. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, and is included in Windows 10 version 1809 (RS5) and later. Multiple versions of the .NET Framework can coexist on a device.
 
 This feature applies to:
 
-- Windows 10 and later (excluding Windows 10 Home and Windows devices running in S mode).
+- Windows 10 and later (excluding Windows Home and Windows devices running in S mode).
 
 > [!NOTE]
 > After the Intune management extension prerequisites are met, the extension installs automatically when you assign any of the following to the user or device:
@@ -60,7 +42,7 @@ This feature applies to:
 
 The Intune management extension has the following prerequisites. When the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
-- Devices running Windows 10 version 1607 or later. If the device is enrolled using [automatic enrollment](../enrollment/windows-bulk-enroll.md), it must run Windows 10 version 1709 or later. The Intune management extension doesn't support Windows 10 in S mode because S mode doesn't allow running nonstore apps.
+- Devices running Windows 10 version 1607 or later. If the device is enrolled using [automatic enrollment](../enrollment/windows-bulk-enroll.md), it must run Windows 10 version 1709 or later. The Intune management extension doesn't support Windows in S mode because S mode doesn't allow running nonstore apps.
 
 - Devices joined to Microsoft Entra ID, including:
 
@@ -99,7 +81,7 @@ For devices meeting the prerequisites, the Intune management extension installs 
 - [Remediations](../fundamentals/remediations.md)
 - [Discovery scripts for custom compliance](../protect/compliance-custom-script.md)
 - [Win32 apps](../apps/apps-win32-add.md)
-- [Endpoint analytics](../../analytics/settings.md)
+- [Endpoint analytics](../../endpoint-analytics/index.md)
 - [Remote Help](../fundamentals/remote-help-windows.md)
 - [Managed Installers in Intune](../protect/endpoint-security-app-control-policy.md)
 - [Update Windows BIOS using configuration MDM policy](../configuration/bios-configuration.md)
@@ -128,7 +110,7 @@ Alternatively, open **Task Manager**, find the service **IntuneManagementExtensi
 
 The IME is removed from the device under the following conditions:
 
-- Shell scripts are no longer assigned to the device.
+- PowerShell scripts are no longer assigned to the device.
 - The Windows device is no longer managed.
 - The IME is in an irrecoverable state for over 24 hours (device-awake time).
 
@@ -142,7 +124,7 @@ The IME is removed from the device under the following conditions:
 - No PowerShell scripts or Win32 apps are assigned to the groups the user or device belongs to.
 - The device can't check in with the Intune service. For example, there's no internet access or no access to Windows Push Notification Services (WNS).
 - The device is in S mode. The Intune management extension doesn't support devices running in S mode.
-- On Windows 10 devices, if the proxy is configured only at the user level (and not machine-wide), make sure a user is signed into the device. Alternatively, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). For more information, see [bitsadmin util and setieproxy](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy).
+- On Windows devices, if the proxy is configured only at the user level (and not machine-wide), make sure a user is signed into the device. Alternatively, use `bitsadmin /util /setieproxy` to manually configure the proxy for the BITS (Background Intelligent Transfer Service). For more information, see [bitsadmin util and setieproxy](/windows-server/administration/windows-commands/bitsadmin-util-and-setieproxy).
 
 To check if the device is automatically enrolled:
 
@@ -158,7 +140,7 @@ To check if the device is automatically enrolled:
 
 IME logs on the client machine are typically in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Use [CMTrace.exe](/configmgr/core/support/cmtrace) to view these log files.
 
-![Screenshot or sample cmtrace agent logs in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)
+:::image type="content" source="media/intune-management-extension/image.png" alt-text="Screenshot showing Intune Management Extension log files in CMTrace.":::
 
 Also, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app management events on the client. This log file contains all logging information related to app deployment activities conducted by the IME.
 
