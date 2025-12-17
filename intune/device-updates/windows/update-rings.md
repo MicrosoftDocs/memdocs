@@ -117,7 +117,7 @@ This view also includes:
 
 Select a tab to learn more about its purpose and available options.
 
-# :::image type="icon" source="icons/delete.svg" border="false"::: [**Delete**](#tab/delete)
+# [:::image type="icon" source="icons/delete.svg" border="false"::: **Delete**](#tab/delete)
 
 Select **Delete** to stop enforcing the settings of the selected Windows update ring. Deleting a ring removes its configuration from Intune so that Intune no longer applies and enforces those settings.
 
@@ -128,7 +128,7 @@ To delete a ring:
 1. While viewing the overview page for an Update Ring, select **Delete**.
 1. Select **OK**.
 
-# :::image type="icon" source="icons/pause.svg" border="false"::: [**Pause**](#tab/pause)
+# [:::image type="icon" source="icons/pause.svg" border="false"::: **Pause**](#tab/pause)
 Select **Pause** to prevent assigned devices from receiving feature or quality updates for up to 35 days from the time you pause the ring. After the maximum days have passed, pause functionality automatically expires and the device scans Windows Updates for applicable updates. Following this scan, you can pause the updates again.
 If you resume a paused update ring, and then pause that ring again, the pause period resets to 35 days.
 
@@ -143,7 +143,7 @@ When an update type is paused, the Overview pane for that ring displays how many
 > [!IMPORTANT]
 > After you issue a pause command, devices receive this command the next time they check into the service. It's possible that before they check in, they might install a scheduled update. Additionally, if a targeted device is turned off when you issue the pause command, when you turn it on, it might download and install scheduled updates before it checks in with Intune.
 
-# :::image type="icon" source="icons/resume.svg" border="false"::: [**Resume**](#tab/resume)
+# [:::image type="icon" source="icons/resume.svg" border="false"::: **Resume**](#tab/resume)
 While an update ring is paused, you can select **Resume** to restore feature and quality updates for that ring to active operation. After you resume an update ring, you can pause that ring again.
 
 To resume a ring:
@@ -152,7 +152,7 @@ To resume a ring:
 1. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.
 1. After resuming one update type, you can select Resume again to resume the other update type.
 
-# :::image type="icon" source="icons/extend.svg" border="false"::: [**Extend**](#tab/extend)
+# [:::image type="icon" source="icons/extend.svg" border="false"::: **Extend**](#tab/extend)
 While an update ring is paused, you can select **Extend** to reset the pause period for both feature and quality updates for that update ring to 35 days.
 
 To Extend the pause period for a ring:
@@ -161,7 +161,7 @@ To Extend the pause period for a ring:
 1. Select from the available options to resume either **Feature** or **Quality** updates, and then select **OK**.
 1. After extending the pause for one update type, you can select Extend again to extend the other update type.
 
-# :::image type="icon" source="icons/uninstall.svg" border="false"::: [**Uninstall**](#tab/uninstall)
+# [:::image type="icon" source="icons/uninstall.svg" border="false"::: **Uninstall**](#tab/uninstall)
 
 An Intune administrator can use **Uninstall** to uninstall (roll back) the latest *feature* update or the latest *quality* update for an active or paused update ring. After uninstalling one type, you can then uninstall the other type. Intune doesn't support or manage the ability of users to uninstall updates.
 
