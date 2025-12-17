@@ -1,18 +1,23 @@
 ---
-title: Configure feature updates policy for Windows devices in Intune
-description: Create and manage Intune policy for Windows feature updates. Configure and deploy policy to maintain the Windows feature version of Windows devices you manage with Microsoft Intune.
+title: Windows feature update releases
+description: Learn about Windows feature update policy settings and how to create feature update releases in Microsoft Intune.
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy
 ---
 
-# Feature updates for Windows 10 and later policy in Intune
+# Configure Windows feature updates releases
 
-With *Feature updates for Windows 10 and later* in Intune, you can select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at. Intune supports setting a feature level to any version that remains in support at the time you create the policy.
+With Microsoft Intune, you can create and deploy policy settings that ensure your Windows devices remain on a specific Windows feature update version. These settings help you manage and control the feature set of Windows on your devices, providing stability and predictability for your organization's IT environment.
 
-You can also use feature updates policy to [upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-windows-11).
+With these policies, you can:
 
-Windows feature updates policies work with your *Update rings for Windows 10 and later* policies to prevent a device from receiving a Windows feature version that's later than the value specified in the feature updates policy.
+- Select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at. This option supports setting a feature level to any version that remains in support at the time you create the policy.
+- [Upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-windows-11).
+
+Windows feature updates policies work with update rings policies to prevent a device from receiving a Windows feature version that's later than the value specified in the feature updates policy.
+
+## How feature updates work
 
 When a device receives a policy for Feature updates:
 
@@ -26,71 +31,92 @@ When a device receives a policy for Feature updates:
   >   - [Windows 11 release information](/windows/release-health/windows11-release-information)
 
 
-- Unlike using *Pause* with an update ring, which expires after 35 days, the Feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
-- The ability to *Uninstall* the Feature update is still honored by the Update Rings.
+- Unlike using the *Pause* option of an update ring, which expires after 35 days, the feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the Feature updates policy. If you edit the policy to specify a newer version, devices can then install the features from that Windows version.
+- The ability to *Uninstall* the Feature update is still honored by the update rings.
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](rollout-options.md).
 - When a Windows feature update is deployed to a device from the cloud service, the latest monthly quality update is automatically included.
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> This feature isn't supported on GCC and GCC High/DoD cloud environments.
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> - Public cloud
 >
-> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
+>   > [!IMPORTANT]
+>   >
+>   > This feature isn't supported on Government Community Cloud (GCC) High and Department of Defense (DoD) cloud environments.
+>   > [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
 
-The following are prerequisites for Intune's Feature updates for Windows 10 and later:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/licensing.md)]
 
-- The core functionality of creating and targeting a feature update only requires a license for Intune. The core functionality includes creating the policy and selecting a feature update to update devices, using the **Make updates available as soon as possible** option or specifying a start date, and reporting. Capabilities supported by client policies on Professional SKU devices don't require a license.
+:::column-end:::
+:::column span="3":::
 
-- Additional cloud-based functionality requires an additional license. To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
+> The core functionality of creating and targeting a feature update only requires a license for Intune. The core functionality includes creating the policy and selecting a feature update to update devices, using the **Make updates available as soon as possible** option or specifying a start date, and reporting. Capabilities supported by client policies on Professional SKU devices don't require a license.
+>
+> Additional cloud-based functionality requires an additional license. To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
+> - Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+> - Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
+> - Windows Virtual Desktop Access E3 or E5
+> - Microsoft 365 Business Premium
+> 
+> The cloud-based capabilities requiring the additional license are indicated in the *Create feature update deployment* > or policy creation page and include the following items and potentially new features:
+> - Gradual rollout: The [Gradual Rollout](rollout-options.md#make-updates-available-gradually) capability is a cloud > only feature and includes basic controls for deploying a specified feature update and when to start making the update > available to devices.
+> - [Optional feature updates](#create-and-assign-feature-updates-for-windows-10-and-later-policy)
+> - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you're blocked when creating new policies > for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies > through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the > partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows > Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
-  - Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
+:::column-end:::
+:::row-end:::
 
-  - Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
 
-  - Windows Virtual Desktop Access E3 or E5
+:::column-end:::
+:::column span="3":::
+> Feature update policies supports devices that are:
+> - Enrolled in Intune
+> - Microsoft Entra joined
+> - Microsoft Entra hybrid joined
+>
+> Devices must also meet the following requirements:
+> - Telemetry must be turned on, with a minimum setting of [*Required*](../../intune-service/configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
+>    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
+>
+>    Configure Telemetry as part of a [Device Restriction policy](../../intune-service/configuration/device-restrictions-configure.md) for Windows. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
+> - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
+> - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
+>    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
+>    - Windows Autopatch
+>
+> - Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
+> 
+> - Feature updates are supported for the following Windows editions:
+>   - Pro
+>   - Enterprise
+>   - Pro Education
+>   - Education
+>   - Pro for Workstations
+> 
+>   > [!NOTE]
+>   > **Unsupported versions and editions**:
+>   > *Windows Enterprise LTSC*: Windows Update client policies does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+:::column-end:::
+:::row-end:::
 
-  - Microsoft 365 Business Premium
 
-  The cloud-based capabilities requiring the additional license are indicated in the *Create feature update deployment* or policy creation page and include the following items and potentially new features:
+### Limitations for Microsoft Entra registered devices
 
-  - Gradual rollout: The [Gradual Rollout](rollout-options.md#make-updates-available-gradually) capability is a cloud only feature and includes basic controls for deploying a specified feature update and when to start making the update available to devices.
-  - [Optional feature updates](#create-and-assign-feature-updates-for-windows-10-and-later-policy)
-  - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+Feature updates policies require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports Microsoft Entra registered devices, Windows Autopatch provides more capabilities that aren't supported by those devices.
 
-- Devices must:
-  - Run a version of Windows that remains in support.
-  - Be enrolled in Intune MDM and be Microsoft Entra hybrid joined or Microsoft Entra joined.
-  - Have Telemetry turned on, with a minimum setting of [*Required*](../../intune-service/configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
-
-    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
-
-    Configure Telemetry as part of a [Device Restriction policy](../../intune-service/configuration/device-restrictions-configure.md) for Windows. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
-
-  - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
-
-  - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
-    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-    - Windows Autopatch
-
-- Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
-
-- Feature updates are supported for the following Windows editions:
-  - Pro
-  - Enterprise
-  - Pro Education
-  - Education
-  - Pro for Workstations
-
-  > [!NOTE]
-  > **Unsupported versions and editions**:
-  > *Windows Enterprise LTSC*: Windows Update client policies does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
-
-### Limitations for Workplace Joined devices
-
-Intune policies for *Feature updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides more capabilities that aren't supported for WPJ devices.
-
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md) in *Manage Windows 10 and Windows 11 software updates in Intune*.
+For more information about Microsoft Entra registered devices limitations for Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
 
 ## Limitations for Feature updates for Windows 10 and later policy
 
@@ -192,7 +218,7 @@ If you're already using Endpoint analytics, navigate to the [Work from anywhere 
 
 ### Licensing for Windows 11 versions
 
-Windows 11 includes a new license agreement, which can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
+Windows 11 includes a license agreement that can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
 
 When you configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won't see or need to accept the license agreement, making the update process seamless.
 
