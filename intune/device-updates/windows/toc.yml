@@ -13,6 +13,9 @@ items:
   - name: Feature updates policy
     href: feature-updates.md
     displayName: windows feature updates
+  - name: Windows rollout options
+    href: rollout-options.md
+    displayName: windows updates
   - name: Upgrade Windows 10 devices
     href: feature-updates-windows-10.md
 - name: Quality updates
@@ -33,9 +36,6 @@ items:
   - name: Driver updates policy
     href: driver-updates-policy.md
     displayName: windows updates, drivers
-- name: Windows rollout options
-  href: rollout-options.md
-  displayName: windows updates
 - name: Windows updates reporting
   items:
   - name: Windows update reports

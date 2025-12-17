@@ -19,7 +19,7 @@ You configure rollout options when creating [Feature Updates policy](feature-upd
 
 - **Make update available on a specific date** - With this option you can select a day on which the update in the policy is initially available to install. Windows Update doesn't make the update available to devices with this configuration until that day is reached.
 
-
+<!--
 ## Make updates available gradually
 
 > [!WARNING]
@@ -52,6 +52,7 @@ The following behaviors apply to the management of offer groups:
 - If the policy assignment changes to add or remove devices from receiving the policy:
   - New devices are distributed to the remaining offer groups.
   - Windows Update attempts to retract the update offer for devices that are no longer targeted by the policy but were offered the update. However, the offer can't be retracted if the device has started processing that offer.
+-->
 
 ## Intelligent rollouts
 
