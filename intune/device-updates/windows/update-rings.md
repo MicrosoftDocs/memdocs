@@ -26,7 +26,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/platform.md)]
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
