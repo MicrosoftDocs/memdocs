@@ -40,7 +40,7 @@ When a device receives a policy for Feature updates:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [cloud](../includes/requirements/cloud.md)]
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -54,7 +54,7 @@ When a device receives a policy for Feature updates:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../includes/requirements/licensing.md)]
+[!INCLUDE [platform](../../includes/requirements/licensing.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -77,7 +77,7 @@ When a device receives a policy for Feature updates:
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 :::column-end:::
 :::column span="3":::
