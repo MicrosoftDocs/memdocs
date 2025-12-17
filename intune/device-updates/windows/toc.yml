@@ -1,5 +1,5 @@
 items:
-- name: overview
+- name: Overview
   href: index.md
   displayName: windows updates
 - name: Use Windows Update client policies
@@ -8,18 +8,24 @@ items:
 - name: Update rings policy
   href: update-rings.md
   displayName: windows updates, rings
-- name: Feature updates policy
-  href: feature-updates.md
-  displayName: windows feature updates
-- name: Upgrade Windows 10 devices
-  href: feature-updates-windows-10.md
-- name: Windows quality updates policy
-  href: quality-updates-policy.md
-  displayName: windows quality updates
-- name: Expedite updates policy
-  href: expedite-updates.md
-  displayName: windows updates
-- name: Windows driver updates
+- name: Feature updates
+  items:
+  - name: Feature updates policy
+    href: feature-updates.md
+    displayName: windows feature updates
+  - name: Upgrade Windows 10 devices
+    href: feature-updates-windows-10.md
+- name: Quality updates
+  items:
+  - name: Quality updates policy
+    href: quality-updates-policy.md
+    displayName: windows quality updates
+- name: Expedite updates
+  items:
+  - name: Expedite updates policy
+    href: expedite-updates.md
+    displayName: windows updates
+- name: Driver updates
   items:
   - name: Driver updates overview
     href: driver-updates-overview.md
@@ -30,12 +36,14 @@ items:
 - name: Windows rollout options
   href: rollout-options.md
   displayName: windows updates
-- name: Windows Update compatibility reports
-  href: compatibility-reports.md
-  displayName: windows updates, reports
-- name: Windows Update reports
-  href: reports.md
-  displayName: windows updates, reports
+- name: Windows updates reporting
+  items:
+  - name: Windows update reports
+    href: reports.md
+    displayName: windows updates, reports
+  - name: Compatibility reports
+    href: compatibility-reports.md
+    displayName: windows updates, reports
 - name: Delivery Optimization
   href: ../../intune-service/configuration/delivery-optimization-windows.md
   displayName: delivery optimization, windows updates
