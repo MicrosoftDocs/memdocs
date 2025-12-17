@@ -52,6 +52,10 @@ When a device receives a policy for Feature updates:
 >   > This feature isn't supported on Government Community Cloud (GCC) High and Department of Defense (DoD) cloud environments.
 >   > [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
 
+:::column-end:::
+:::row-end:::
+
+
 :::row:::
 :::column span="1":::
 [!INCLUDE [platform](../../includes/requirements/licensing.md)]
@@ -196,48 +200,6 @@ For more information about Microsoft Entra registered devices limitations for Wi
 4. Under **Assignments**, choose **+ Select groups to include** and then assign the feature updates deployment to one or more device groups. Select **Next** to continue.
 
 5. Under **Review + create**, review the settings. When ready to save the Feature updates policy, select **Create**.
-
-
-## Upgrade devices to Windows 11
-
-You can use policy for *Feature updates for Windows 10 and later* to upgrade devices that run Windows 10 to Windows 11.
-
-When you use feature updates policy to deploy Windows 11, you can target the policy to Windows 10 devices that meet the Windows 11 minimum requirements to upgrade them to Windows 11. Devices that don't meet the requirements for Windows 11 won't install the update and remain at their current Windows 10 version.
-
-Another option is to select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**, then devices that don't meet the requirements for Windows 11 will get the latest Windows 10 feature update instead.
-
-However, if a Windows 10 device that can't run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](#update-behavior-when-multiple-policies-target-a-device).
-
-### Prepare to upgrade to Windows 11
-
-The first step in preparing for a Windows 11 upgrade is to ensure your devices meet the [minimum system requirements for Windows 11](/windows/whats-new/windows-11-requirements#hardware-requirements).
-
-You can use [endpoint analytics](../../endpoint-analytics/index.md) to determine which of your devices meet the hardware requirements. If some of your devices don't meet all the requirements, you can see exactly which ones aren't met. To use Endpoint analytics, your devices must be managed by Intune, co-managed, or have the Configuration Manager client with tenant attach enabled.
-
-If you're already using Endpoint analytics, navigate to the [Work from anywhere report](../../endpoint-analytics/work-from-anywhere.md), and select the Windows score category in the middle to open a flyout with aggregate Windows 11 readiness information. For more granular details, go to the Windows tab at the top of the report. On the Windows tab, you'll see device-by-device readiness information.
-
-### Licensing for Windows 11 versions
-
-Windows 11 includes a license agreement that can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
-
-When you configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won't see or need to accept the license agreement, making the update process seamless.
-
-This license reminder appears each time you select a Windows 11 build, even if all your Windows devices already run Windows 11. This prompt is provided because Intune doesn't track which devices will receive the policy, and its possible new devices that run Windows 10 might later enroll and be targeted by the policy.
-
-For more information including general licensing details, see the [Windows 11 documentation](/windows/whats-new/windows-11).
-
-### Create policy for Windows 11
-
-To deploy Windows 11, you'll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It's the [same process](#create-and-assign-feature-updates-for-windows-10-and-later-policy) though instead of selecting a Windows 10 version, you'll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
-
-Also, the admin can choose to deploy the latest Windows 10 update to devices that are not eligible for Windows 11. To enable this feature, the admin must select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** in the deployment policy. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the tenant meets the [licensing requirements](#prerequisites) defined at the beginning of this document.
-
-With this capability, you do not need to create two different deployment policies or two different feature updates. With a single policy, you can get your Windows 10 devices that can't go to Windows 11 to upgrade to the latest Windows 10 version and all the devices that can go to Windows 11 to upgrade to a Windows 11 version that you choose.
-
-You cannot set the checkbox for an existing policy because changing the checkbox value ends the current deployment and starts two new deployments. To change your deployment settings, delete the current feature update policy and create a new policy with the checkbox selected.
-
-- Deploying an older Windows version to a device won't downgrade the device. Devices only install an update when it's newer than the devices current version.
-- Deploying a Windows 11 update to a Windows 10 device that supports Windows 11, [upgrades that device](#upgrade-devices-to-windows-11).
 
 ## Update behavior when multiple policies target a device
 

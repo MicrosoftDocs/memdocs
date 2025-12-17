@@ -11,6 +11,8 @@ items:
 - name: Feature updates policy
   href: feature-updates.md
   displayName: windows feature updates
+- name: Upgrade Windows 10 devices
+  href: feature-updates-windows-10.md
 - name: Windows quality updates policy
   href: quality-updates-policy.md
   displayName: windows quality updates
