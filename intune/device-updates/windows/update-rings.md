@@ -1,12 +1,12 @@
 ---
-title: Configure Windows Update rings policy in Intune
+title: Configure Windows Update rings policy
 description: Create and manage Intune policy for Windows update rings. You can configure, deploy, and pause update installation with Windows Update client policies using Microsoft Intune.
 ms.date: 04/18/2024
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 ---
 
-# Windows Update rings policy in Intune
+# Windows Update rings policy
 
 Create update rings that specify how and when Windows as a Service updates your Windows devices with [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates). With Windows, new feature and quality updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
 
@@ -24,31 +24,38 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
   > [!NOTE]
   > Although not required to configure Windows Update client policies, if the Microsoft Account Sign-In Assistant (wlidsvc) service is disabled, Windows Update doesn't offer feature updates. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 
-- Devices must be one of the following supported Windows editions:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
 
-  - Windows Pro
-  - Windows Enterprise
-  - Windows IoT Enterprise
-  - Windows Education
-  - Windows Team - for Surface Hub devices
-  - Windows Holographic for Business - Windows Holographic for Business supports a subset of settings for Windows updates, including:
-    - **Automatic update behavior**
-    - **Microsoft product updates**
-    - **Servicing channel**: Any update build that is generally available.
+:::column-end:::
+:::column span="3":::
+> Windows update ring policies support the following Windows editions:
+> - Pro
+> - Pro Education
+> - Enterprise
+> - Education
+> - Windows IoT Enterprise
+> - Windows Team - for Surface Hub devices
+> - Windows Holographic for Business - Windows Holographic for Business supports a subset of settings for Windows updates, including:
+>    - **Automatic update behavior**
+>    - **Microsoft product updates**
+>    - **Servicing channel**: Any update build that is generally available.
+> For more information, see [Manage Windows Holographic](../../intune-service/fundamentals/windows-holographic-for-business.md).
+>
+> Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
+>   - [Pause](update-rings.md#pause) of *Feature* updates
+>   - [Feature Update Deferral period (days)](settings.md#update-settings)
+>   - [Set feature update uninstall period (2 - 60 days)](settings.md#update-settings)
+>   - [Enable pre-release builds](settings.md#update-settings), which includes the following build options:
+>     - Windows Insider Release Preview
+>     - Beta Channel
+>     - Dev Channel
+>   - [Use deadline settings](settings.md#user-experience-settings) for *Feature* updates.
+:::column-end:::
+:::row-end:::
 
-    For more information, see [Manage Windows Holographic](../../intune-service/fundamentals/windows-holographic-for-business.md).
-
-  - Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
-    - [Pause](update-rings.md#pause) of *Feature* updates
-    - [Feature Update Deferral period (days)](settings.md#update-settings)
-    - [Set feature update uninstall period (2 - 60 days)](settings.md#update-settings)
-    - [Enable pre-release builds](settings.md#update-settings), which includes the following build options:
-      - Windows Insider – Release Preview
-      - Beta Channel
-      - Dev Channel
-    - [Use deadline settings](settings.md#user-experience-settings) for *Feature* updates.
-
-### Limitations for Workplace Joined devices
+### Limitations for Microsoft Entra registered devices
 
 Intune Update rings for Windows require the use of Windows Update client policies, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview), which provides for additional capabilities that are not supported for WPJ devices.
 
@@ -56,20 +63,16 @@ Intune Update rings for Windows require the use of Windows Update client policie
 - Feature updates
 - Quality updates (also known as *Expedited* updates)
 
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
+For more information about Microsoft Entra registered devices limitations for Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
 
 ## Create and assign update rings
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > **Create profile**.
-
-3. Under *Basics*, specify a name, a description (optional), and then select **Next**.
+1. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > **Create profile**.
+1. Under *Basics*, specify a name, a description (optional), and then select **Next**.
   ![Create an update ring](./images/update-rings/basics-tab.png)
-
-4. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](settings.md). After configuring *Update and User experience* settings, select **Next**.
-
-5. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
+1. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](settings.md). After configuring *Update and User experience* settings, select **Next**.
+1. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 
    When ready, select **Next** to continue to *Assignments*.
 
@@ -77,11 +80,11 @@ For more information about WPJ limitations for Intune Windows Update policies, s
    > When configuring or editing Intune policies, some policy types might not display the Scope Tags configuration page if there are no custom defined scope tags for the tenant.
    > If you don't see the Scope Tag option, ensure that at least one tag in addition to the default scope tag has been defined.
 
-6. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
+1. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
    In most cases, we recommend deploying update rings to device groups. Use of device groups aligns to our guidance for deploying [feature updates](feature-updates.md) and removes the need for a user to sign-on to a device before the policy can apply.
 
-7. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
+1. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 
 ## Manage your Windows Update rings
 
@@ -136,8 +139,8 @@ If you resume a paused update ring, and then pause that ring again, the pause pe
 ##### To pause a ring
 
 1. While viewing the overview page for an Update Ring, select **Pause**.
-2. Select either **Feature** or **Quality** to pause that type of update, and then select **OK**.
-3. After pausing one update type, you can select Pause again to pause the other update type.
+1. Select either **Feature** or **Quality** to pause that type of update, and then select **OK**.
+1. After pausing one update type, you can select Pause again to pause the other update type.
 
 When an update type is paused, the Overview pane for that ring displays how many days remain before that update type resumes.
 

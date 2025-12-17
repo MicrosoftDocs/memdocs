@@ -81,6 +81,24 @@ When a device receives a policy for Feature updates:
 
 :::row:::
 :::column span="1":::
+[!INCLUDE [platform](../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+> The configuration of feature update releases supports the following Windows editions:
+> - Pro
+> - Pro Education
+> - Enterprise
+> - Education
+>
+> > [!IMPORTANT]
+> > *Windows Enterprise LTSC*: Windows Update client policies doesn'o't support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+:::column-end:::
+:::row-end:::
+
+
+:::row:::
+:::column span="1":::
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 :::column-end:::
@@ -101,17 +119,6 @@ When a device receives a policy for Feature updates:
 >    - Windows Autopatch
 >
 > - Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
-> 
-> - Feature updates are supported for the following Windows editions:
->   - Pro
->   - Enterprise
->   - Pro Education
->   - Education
->   - Pro for Workstations
-> 
->   > [!NOTE]
->   > **Unsupported versions and editions**:
->   > *Windows Enterprise LTSC*: Windows Update client policies does not support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 :::column-end:::
 :::row-end:::
 
