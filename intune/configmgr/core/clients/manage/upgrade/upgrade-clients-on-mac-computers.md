@@ -3,8 +3,8 @@ title: Upgrade macOS clients
 titleSuffix: Configuration Manager
 description: Upgrade the Configuration Manager client on Mac computers.
 ms.date: 01/05/2022
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: configuration
+ms.service: microsoft-intune
 ms.topic: upgrade-and-migration-article
 author: LauraWi
 ms.author: laurawi
