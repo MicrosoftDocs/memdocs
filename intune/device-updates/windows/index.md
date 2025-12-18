@@ -24,53 +24,55 @@ All Windows updates flow from Microsoft's global update service; Intune provides
 
 Core policy types
 
+
 :::row:::
+:::column:::
+
+#### Windows Update client policies
+
+>**:::image type="icon" source="icons/client-policies.svg" border="false":::** 
+>
+> Windows Update client policies configure the underlying Windows Update for Business CSPs. These settings are available in Intune both through update rings and directly in the Settings Catalog, giving administrators flexibility to apply granular update behaviors at the device level.
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](feature-updates.md)
+
+:::column-end:::
 :::column:::
 #### Update rings
 
 **:::image type="icon" source="icons/update-ring.svg" border="false":::**    
 
-> Description
+> Intune's management object that applies Windows Update client policies to groups of devices. Update rings control deferral periods, deadlines, restart behavior, and user experience settings, enabling phased rollout across your environment.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](update-rings.md)
-:::column-end:::
-:::column:::
-#### Feature update policies
-
-**:::image type="icon" source="icons/feature-updates.svg" border="false":::** 
-
-> Description
->
->> [!div class="nextstepaction"]
->> [Learn more](feature-updates.md)
 :::column-end:::
 :::row-end:::
 
 :::row:::
 :::column:::
-#### Quality updates
+#### Feature update policies
 
-**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
+**:::image type="icon" source="icons/feature-updates.svg" border="false":::** 
 
-> Description
->
->> [!div class="nextstepaction"]
->> [Learn more](quality-updates-policy.md)
-:::column-end:::
-:::column:::
-
-#### Windows Update client policies
-
-**:::image type="icon" source="icons/client-policies.svg" border="false":::** 
-
-> Description
+> Lock devices to a specific Windows version (e.g., Windows 11 23H2). These policies prevent devices from upgrading beyond the targeted release, ensuring consistency and control over major OS upgrades.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
 :::column-end:::
-:::row-end:::
 
+:::column:::
+#### Quality updates
+
+**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
+
+> Deliver monthly cumulative updates that include security patches and reliability improvements. Quality updates keep devices secure and stable by addressing vulnerabilities and performance issues on a regular cadence.
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](quality-updates-policy.md)
+:::column-end:::
+:::row-end:::
 
 :::row:::
 :::column:::
@@ -78,17 +80,18 @@ Core policy types
 
 **:::image type="icon" source="icons/expedite-updates.svg" border="false":::**
 
-> Description
+> Push critical security updates faster than normal rings. Expedite policies override deferrals and deadlines to immediately deliver high-priority patches (such as zero-day fixes) to devices at risk.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](update-rings.md)
 :::column-end:::
+
 :::column:::
 #### Driver updates
 
 **:::image type="icon" source="icons/driver-updates.svg" border="false":::** 
 
-> Description
+> Manage the delivery of hardware driver updates from Windows Update. Driver update policies help ensure device compatibility and stability by controlling when and how drivers are installed.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
@@ -102,7 +105,7 @@ Core policy types
 
 **:::image type="icon" source="icons/hotpatch-updates.svg" border="false":::**
 
-> Description
+> Apply security patches without requiring a reboot, reducing downtime and disruption. Hotpatch updates are available for eligible Windows editions through Windows Autopatch and provide seamless protection while keeping systems continuously available.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](update-rings.md)
