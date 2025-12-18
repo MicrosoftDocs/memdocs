@@ -23,6 +23,96 @@ Exceptional scenarios, such as urgent security patches
 All Windows updates flow from Microsoft's global update service; Intune provides the policy layer that governs timing, user experience, and safeguards.
 
 Core policy types
+
+:::row:::
+:::column:::
+#### Update rings
+
+**:::image type="icon" source="icons/update-ring.svg" border="false":::**    
+
+> Description
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](update-rings.md)
+:::column-end:::
+:::column:::
+#### Feature update policies
+
+**:::image type="icon" source="icons/feature-updates.svg" border="false":::** 
+
+> Description
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](feature-updates.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column:::
+#### Quality updates
+
+**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
+
+> Description
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](quality-updates-policy.md)
+:::column-end:::
+:::column:::
+
+#### Windows Update client policies
+
+**:::image type="icon" source="icons/client-policies.svg" border="false":::** 
+
+> Description
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](feature-updates.md)
+:::column-end:::
+:::row-end:::
+
+
+:::row:::
+:::column:::
+#### Quality expedite updates
+
+**:::image type="icon" source="icons/expedite-updates.svg" border="false":::**
+
+> Description
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](update-rings.md)
+:::column-end:::
+:::column:::
+#### Driver updates
+
+**:::image type="icon" source="icons/driver-updates.svg" border="false":::** 
+
+> Description
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](feature-updates.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column:::
+
+#### Hotpatch
+
+**:::image type="icon" source="icons/hotpatch-updates.svg" border="false":::**
+
+> Description
+>
+>> [!div class="nextstepaction"]
+>> [Learn more](update-rings.md)
+:::column-end:::
+:::column:::
+
+:::column-end:::
+:::row-end:::
+
+
 Intune provides several policy types, each designed for a specific purpose. Understanding these helps you choose the right tool for each scenario.
 Update rings
 Update rings control the cadence and experience of updates, including:
