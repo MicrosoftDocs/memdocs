@@ -32,17 +32,17 @@ Core policy types
 
 >**:::image type="icon" source="icons/client-policies.svg" border="false":::** 
 >
-> Windows Update client policies configure the underlying Windows Update for Business CSPs. These settings are available in Intune both through update rings and directly in the Settings Catalog, giving administrators flexibility to apply granular update behaviors at the device level.
+> Windows Update client policies configure the underlying Update policy CSP. These settings are available in Intune both through update rings and directly in the Settings Catalog, giving administrators flexibility to apply granular update behaviors at the device level.
 >
 >> [!div class="nextstepaction"]
->> [Learn more](feature-updates.md)
+>> [Learn more](/windows/client-management/mdm/policy-csp-update)
 
 :::column-end:::
 :::column:::
 #### Update rings
 
-**:::image type="icon" source="icons/update-ring.svg" border="false":::**    
-
+>**:::image type="icon" source="icons/update-ring.svg" border="false":::**    
+>
 > Intune's management object that applies Windows Update client policies to groups of devices. Update rings control deferral periods, deadlines, restart behavior, and user experience settings, enabling phased rollout across your environment.
 >
 >> [!div class="nextstepaction"]
@@ -54,19 +54,19 @@ Core policy types
 :::column:::
 #### Feature update policies
 
-**:::image type="icon" source="icons/feature-updates.svg" border="false":::** 
-
-> Lock devices to a specific Windows version (e.g., Windows 11 23H2). These policies prevent devices from upgrading beyond the targeted release, ensuring consistency and control over major OS upgrades.
+>**:::image type="icon" source="icons/feature-updates.svg" border="false":::** 
+>
+> Lock devices to a specific Windows version (for example, Windows 11 24H2). These policies prevent devices from upgrading beyond the targeted release, ensuring consistency and control over major OS upgrades.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
 :::column-end:::
 
 :::column:::
-#### Quality updates
+#### Quality update policies
 
-**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
-
+>**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
+>
 > Deliver monthly cumulative updates that include security patches and reliability improvements. Quality updates keep devices secure and stable by addressing vulnerabilities and performance issues on a regular cadence.
 >
 >> [!div class="nextstepaction"]
