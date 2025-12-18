@@ -8,6 +8,7 @@ ms.reviewer: zadvor
 
 # Windows Update reports for Microsoft Intune
 
+<!--
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for:
 
 - [Update rings for Windows](update-rings.md)
@@ -518,7 +519,7 @@ The report offers sortable columns and search options, along with an export feat
 
 The search bar enables the search for a specific device or UPN. Select a device from the list to view the device's details.
 
-All these reports are cached, and have an expiry time of three days, after which you must generate a new report. Select **Generate Again** to get fresh data.
+All these reports are cached, and have an expiry time of three days, after which you must generate a new report. Select **Generate Again** to get fresh data.-->
 
 ## Use Windows Update for Business reports
 

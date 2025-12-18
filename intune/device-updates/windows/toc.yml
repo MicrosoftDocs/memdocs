@@ -7,12 +7,15 @@ items:
   displayName: windows updates
 - name: Windows updates rings
   items:
-  - name: Update rings policy
+  - name: Update rings policies
     href: update-rings.md
     displayName: windows updates, rings
-  - name: Policy settings reference
-    href: settings.md
+  - name: Reports
+    href: update-rings-reports.md
     displayName: windows updates, rings
+  - name: 🔴 Policy settings reference
+    href: settings.md
+    displayName: windows updates, rings    
 - name: Feature updates
   items:
   - name: Feature updates policy
@@ -25,15 +28,19 @@ items:
     displayName: windows updates
   - name: Upgrade Windows 10 devices
     href: feature-updates-windows-10.md
+  - name: Reports
+    href: feature-updates-reports.md
+    displayName: windows updates
 - name: Quality updates
   items:
   - name: Quality updates policy
     href: quality-updates-policy.md
     displayName: windows quality updates
-- name: Expedite updates
-  items:
   - name: Expedite updates policy
     href: expedite-updates.md
+    displayName: windows updates
+  - name: Reports
+    href: quality-updates-reports.md
     displayName: windows updates
 - name: Driver updates
   items:
@@ -43,6 +50,9 @@ items:
   - name: Driver updates policy
     href: driver-updates-policy.md
     displayName: windows updates, drivers
+  - name: Reports
+    href: driver-updates-reports.md
+    displayName: windows updates
 - name: Windows updates reporting
   items:
   - name: Windows update reports
