@@ -32,7 +32,7 @@ Core policy types
 
 >**:::image type="icon" source="icons/client-policies.svg" border="false":::** 
 >
-> Windows Update client policies configure the underlying Update policy CSP. These settings are available in Intune both through update rings and directly in the Settings Catalog, giving administrators flexibility to apply granular update behaviors at the device level.
+> Windows Update client policies configure the underlying Update policy CSP. The policy settings are available in Intune both through update rings and in the Settings Catalog, giving administrators flexibility to apply granular update behaviors at the device level.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](/windows/client-management/mdm/policy-csp-update)
@@ -76,20 +76,20 @@ Core policy types
 
 :::row:::
 :::column:::
-#### Quality expedite updates
+#### Expedite policies
 
 **:::image type="icon" source="icons/expedite-updates.svg" border="false":::**
 
-> Push critical security updates faster than normal rings. Expedite policies override deferrals and deadlines to immediately deliver high-priority patches (such as zero-day fixes) to devices at risk.
+> Push critical security updates faster than regular rings. Expedite policies override deferrals and deadlines to immediately deliver high-priority patches (such as zero-day fixes) to devices at risk.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](update-rings.md)
 :::column-end:::
 
 :::column:::
-#### Driver updates
+#### Driver update policies
 
-**:::image type="icon" source="icons/driver-updates.svg" border="false":::** 
+**:::image type="icon" source="icons/driver-update.svg" border="false":::** 
 
 > Manage the delivery of hardware driver updates from Windows Update. Driver update policies help ensure device compatibility and stability by controlling when and how drivers are installed.
 >
