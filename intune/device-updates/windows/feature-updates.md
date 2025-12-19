@@ -128,7 +128,7 @@ Feature updates policies require the use of Windows Update client policies and [
 
 For more information, see [Microsoft Entra registered devices limitations for Windows Update policies](configure.md).
 
-## Create and assign Feature updates for Windows 10 and later policy
+## Create and assign feature update policies
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**
 1. Select **Windows updates** > **Feature updates**
@@ -179,7 +179,7 @@ Consider the following points when feature update policies target a device with 
 > [!NOTE]
 > If you create two policies with the same device/s, where one is set to **Required** and the other set to **Optional** and both policies target the same feature update version, then the update is offered as **Required**.
 
-## Manage Feature updates for Windows 10 and later policy
+## Manage Winodws feature update policies
 
 In the admin center, go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Feature updates** tab to view your profiles.
 
@@ -223,7 +223,7 @@ To learn more, see [Intune compliance reports](reports.md).
   >
   > For more information, see [Move from update ring deferrals to feature updates policy](configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
 
-- Feature updates for Windows 10 and later policies can't be applied during the Windows Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
+- Windows feature updates policies can't be applied during the Windows Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
 - If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 

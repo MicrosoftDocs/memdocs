@@ -7,18 +7,11 @@ ms.topic: overview
 
 # Manage Windows updates with Microsoft Intune
 
-Keeping Windows devices secure and up to date is one of the most important responsibilities for any organization. Microsoft Intune offers a modern, cloud‑based approach to managing Windows Update client policies so you can deliver updates with control, predictability, and minimal disruption to your users.
-This overview introduces how Intune manages Windows updates, the policy types you can use, and how these pieces fit together into a complete update strategy.
+Keeping Windows devices secure and up to date is one of the most important responsibilities for any organization. Microsoft Intune offers a cloud‑based approach to managing Windows updates so you can deliver updates with control, predictability, and minimal disruption to your users. This overview introduces how Intune manages Windows updates, the policy types you can use, and how these pieces fit together into a complete update strategy.
 
-How Intune manages Windows updates
-Intune integrates with Windows Update for Business to configure how and when Windows 10 and Windows 11 devices receive updates. Rather than downloading and approving individual patches (as you would in WSUS), Intune defines update behavior through policy. Devices then communicate directly with the Windows Update service to retrieve the correct updates.
-With Intune, you can manage:
+## Windows update management capabilities
 
-All Windows updates flow from Microsoft's global update service; Intune provides the policy layer that governs timing, user experience, and safeguards.
-
-## Windows update management in Intune
-
-Intune provides a comprehensive set of policies to manage how Windows devices receive updates. These policies control everything from the underlying Windows Update client behavior to the rollout of feature updates, monthly quality patches, and driver updates. Intune also supports advanced capabilities like expedited delivery of critical security fixes and Hotpatch for eligible editions, which applies updates without rebooting. Each policy type serves a specific purpose, giving administrators flexibility to design update strategies that balance security, stability, and user experience. Understanding how these policies and features relate to one another is essential for building a predictable and well‑governed update management process.
+Intune provides a comprehensive set of policies and features to manage how Windows devices receive updates. These capabilities control everything from the underlying Windows Update client behavior to the rollout of feature updates, monthly quality patches, and driver updates. Intune also supports advanced options like expedited delivery of critical security fixes and Hotpatch for eligible editions, available through Windows Autopatch or quality update settings, which applies updates without rebooting. Each policy type serves a specific purpose, giving administrators flexibility to design update strategies that balance security, stability, and user experience. Understanding how these policies and features relate to one another is essential for building a predictable and well‑governed update management process.
 
 :::row:::
 :::column:::

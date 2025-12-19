@@ -64,15 +64,15 @@ To find this report, in the admin center go to **Reports** > **Windows updates**
 
 In the following screen capture, the report shows details for the driver update *Microsoft – APPLIANCES – 1.0.0.1*.
 
-:::image type="content" source="./images/reports/report-driver-updates-drivers.png" alt-text="Screen capture of the Windows 10 and later Driver updates report." lightbox="./images/reports/report-driver-updates-drivers.png":::
+:::image type="content" source="./images/reports/report-driver-updates-drivers.png" alt-text="Screen capture of the Windows Driver updates report." lightbox="./images/reports/report-driver-updates-drivers.png":::
 
 To change the focus of this report to a different driver:
 
-1. On the **Windows 10 and later Driver updates** view, select **Select a driver update** to open the **Driver updates** pane on the right.
+1. On the **Windows Driver updates** view, select **Select a driver update** to open the **Driver updates** pane on the right.
 
 2. The *Driver updates* pane displays a list of updates that are approved and applicable for at least one device from across all your driver update policies.
 
-3. On the Driver updates pane, select a driver, and then **OK** to return to the Windows 10 and later Driver updates report view that now shows information for the driver you selected, and select **Generate again** to update the report.
+3. On the Driver updates pane, select a driver, and then **OK** to return to the Windows Driver updates report view that now shows information for the driver you selected, and select **Generate again** to update the report.
 
 In the following screen capture, only four drivers remain applicable to devices with driver updates policy, and those four updates are different versions of the same driver update.
 

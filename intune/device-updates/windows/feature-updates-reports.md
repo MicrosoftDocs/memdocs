@@ -8,13 +8,13 @@ ms.reviewer: zadvor
 
 # Reports for feature updates policies
 
-Intune offers integrated reports to view detailed Windows update deployment status for devices using Feature updates for Windows 10 and later policies. To use reports for this feature, you must first configure prerequisites and policies that support data collection from devices.
+Intune offers integrated reports to view detailed Windows update deployment status for devices using feature updates policies. To use reports for this feature, you must first configure prerequisites and policies that support data collection from devices.
 
-The data in the Intune reports for Feature updates for Windows 10 and later policy is used only for these reports and doesn't surface in other Intune reports.
+The data in the Intune reports for feature updates policies is used only for these reports and doesn't surface in other Intune reports.
 
 - [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report): This report provides an overall view of compliance for devices on a per-policy basis.
 
-- [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report): This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
+- [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report): This report provides details on Alerts - errors, warnings, information, and recommendations - on a per-policy basis to help troubleshoot and optimize your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
 
@@ -33,7 +33,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
   Devices must:
 
-  - Meet the [prerequisites for Windows 10 and later feature updates policy](feature-updates.md#prerequisites) as documented in **Feature updates for Windows 10 and later policy in Intune**.
+  - Meet the [prerequisites for feature updates policies](feature-updates.md#prerequisites).
   - Be Microsoft Entra joined, or Microsoft Entra hybrid joined to support submitting of data for reporting.
 
 ## About reporting data latency
@@ -57,7 +57,7 @@ To use the report:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. To view a summary report across all Windows 10 and later feature updates policies:
+2. To view a summary report across all feature updates policies:
 
    - In the admin center, go to **Reports** > **Windows updates**. The default view displays the **Summary** tab:
      > [!div class="mx-imgBorder"]
@@ -135,7 +135,7 @@ To use the report:
 
 ## Use the Feature update failures (Operational) report
 
-The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
+The **Feature update failures** operational report provides details for devices that you target with a feature updates policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
 > [!IMPORTANT]
 > Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.

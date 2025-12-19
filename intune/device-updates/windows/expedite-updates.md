@@ -8,9 +8,9 @@ ms.reviewer: davguy;bryanke
 
 # Expedite Windows quality updates in Microsoft Intune
 
-With *Quality updates for Windows 10 and Later* policy, you can expedite the installation of the most recent Windows security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn't deploy the update for some time.
+With Windows quality updates policies you can expedite the installation of the most recent Windows security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn't deploy the update for some time.
 
-Not all updates can be expedited. Currently, only Windows security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Update rings for Windows 10 and later policies](update-rings.md).
+Not all updates can be expedited. Currently, only Windows security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Windows Update ring policies](update-rings.md).
 
 ## How expedited updates work
 
@@ -37,7 +37,7 @@ The actual time required for a device to start an update depends on the device i
 
   If a device doesn't restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an Update ring for Windows 10 and later policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](settings.md#user-experience-settings).
+- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an update ring policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](settings.md#user-experience-settings).
 
 ## Prerequisites
 
@@ -114,7 +114,7 @@ If the script returns a 1, the device has UHS client. If the script returns a 0,
 
 **Device settings**:
 
-To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use Intune *Update rings for Windows 10 and later* policies to manage these settings.
+To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use *update rings policies* to manage these settings.
 
 | Update ring setting       | Recommended value        |
 |---------------------------|-------------------------------------|
@@ -137,7 +137,7 @@ Before you can monitor results and update status for expedited updates, your Int
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Quality updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for additional capabilities that are not supported for WPJ devices.
+Quality updates policies require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for additional capabilities that are not supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md) in *Manage Windows software updates in Intune*.
 
@@ -221,29 +221,25 @@ While expedite update policies will override an update deferral for the update v
 
 ### Example of installing an expedited update
 
-The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a *Quality updates for Windows 10 and Later* policy that's assigned to the devices.
+The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a *quality updates policy* that's assigned to the devices.
 
 1. Each month, Intune administrators deploy the most recent Windows quality updates on the fourth Tuesday of the month. This period gives them two weeks after the patch Tuesday event to validate the updates in their environment before they force installation of the update.
-
-2. On January 19, device *Test-1* and *Test-2* install the latest quality update from the patch Tuesday release on January 12. The next day, both devices are turned off by their users who are each leaving on vacation.
-
-3. On the February 9, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2025 – 2025.02 B Security Updates for Windows** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
-
-4. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2025 – 2025.03 B Security Updates for Windows**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14.
-
-5. Now consider the following results for *Test-1* and *Test-2*, based on when each is turned back on:
+1. On January 19, device *Test-1* and *Test-2* install the latest quality update from the patch Tuesday release on January 12. The next day, both devices are turned off by their users who are each leaving on vacation.
+1. On the February 9, the Intune admin creates policy to expedite installation of the patch Tuesday release **02/09/2025 – 2025.02 B Security Updates for Windows** to help secure company devices against a critical threat that the update resolves. The expedite policy is assigned to a group of devices that includes both *Test-1* and *Test-2*. All devices in that group that are active receive and install the expedited update policy.
+1. On the March 9 patch Tuesday event, a new quality update releases as **03/09/2025 – 2025.03 B Security Updates for Windows**. There are no critical issues that require an expedited deployment of this update, but admins do find a possible conflict. To provide time to review the possible issue, admins use a Windows update ring policy to create a seven-day deferral policy. All managed devices are prevented from installing this update until March 14.
+1. Now consider the following results for *Test-1* and *Test-2*, based on when each is turned back on:
 
    - **Test-1** - On March 12, *Test-1* is powered back on, connects to the network, and receives expedited update notifications:
      1. Windows Update determines that *Test-1* still needs to expedite the update installation, per policy.
-     2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
-     3. There's an active deferral for the March update that won't expire until March 14.
+     1. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
+     1. There's an active deferral for the March update that won't expire until March 14.
 
      **Result**: With the deferral policy for the March update still active and blocking installation of that update, *Device-1* installs the February update as configured in policy.
 
    - **Test-2** - On March 20, *Test-2* is powered back on, connects to the network, and receives expedited update notifications:
      1. Windows Update determines that *Test-2* still needs to expedite the update installation, per policy.
-     2. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
-     3. There's no longer an active deferral for the March update.
+     1. Because the March 9 update supersedes the February update, Windows Update could install the March 9 update.
+     1. There's no longer an active deferral for the March update.
 
      **Result**: With the deferral policy for the March update having expired, *Test-2* installs the more recent March update, skipping over the February update and installing a later update than was specified in policy.
 
@@ -312,7 +308,7 @@ This report can help you find devices with alerts or errors and can help you tro
 
 ## Next steps
 
-- Configure [Update rings for Windows 10 and later](update-rings.md)
-- Configure [Feature updates for Windows 10 and later](feature-updates.md)
-- Use [Windows update compatibility reports](compatibility-reports.md)
+- Configure [update ring policies](update-rings.md)
+- Configure [feature updates policies](feature-updates.md)
+- Use [compatibility reports](compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)
