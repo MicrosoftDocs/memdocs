@@ -5,6 +5,7 @@ ms.date: 12/16/2025
 ms.topic: overview
 ---
 
+# Windows update management overview
 
 Keeping Windows devices secure and up to date is one of the most important responsibilities for any organization. Intune provides a **cloud-based approach to Windows update management**, giving you control, predictability, and minimal disruption for users.
 
