@@ -1,19 +1,17 @@
 ---
-title: Manage Windows updates with Microsoft Intune
+title: Windows update management overview
 description: Learn how Microsoft Intune helps you manage Windows updates for your organization.
 ms.date: 12/16/2025
 ms.topic: overview
 ---
 
-# Manage Windows updates with Microsoft Intune
 
-Keeping Windows devices secure and up to date is one of the most important responsibilities for any organization. Microsoft Intune offers a **cloud‑based approach to managing Windows updates**, so you can deliver updates with control, predictability, and minimal disruption to your users.
+Keeping Windows devices secure and up to date is one of the most important responsibilities for any organization. Intune provides a **cloud-based approach to Windows update management**, giving you control, predictability, and minimal disruption for users.
 
-This overview introduces how Intune manages Windows updates, the policy types you can use, and how these pieces fit together into a complete update strategy.
+This overview explains how Intune manages Windows updates, the policy types available, and how these pieces fit together into a complete update strategy.
 
-## Use Intune for Windows updates
+## What you can do with Intune
 
-With Intune, you can:
 - Configure update settings on devices without managing individual patches.
 - Define update rings to control rollout timing and reduce risk.
 - Prevent devices from installing new feature versions until you're ready, while still applying security and quality updates.
@@ -103,14 +101,14 @@ Windows Autopatch is a managed cloud service built on the Windows Update for Bus
 
 The following table compares how update management differs when you use Autopatch and manual Intune configuration:
 
-|                                                                                | **Feature**             | **When NOT using Autopatch**                                                                | **When using Autopatch**                                                                          |
-|--------------------------------------------------------------------------------|-------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
-|                                                                                | **Update coordination** | You control scheduling, deferrals, and rollout manually.                                    | Autopatch orchestrates update rings, feature updates, drivers, and quality updates automatically. |
-| **:::image type="icon" source="icons/update-ring.svg" border="false":::**      | **Update rings**        | You configure update rings in Intune to control deferrals, deadlines, and restart behavior. | Autopatch creates and manages its own rings; do not assign custom rings to Autopatch devices.     |
-| **:::image type="icon" source="icons/feature-updates.svg" border="false":::**  | **Feature updates**     | You use feature updates policies to lock or schedule OS versions.                           | Autopatch manages version targeting and rollout automatically.                                    |
-| **:::image type="icon" source="icons/quality-updates.svg" border="false":::**  | **Quality updates**     | You configure quality updates policies and expedited update policies.                       | Autopatch expedites critical updates and manages monthly patches.                                 |
-| **:::image type="icon" source="icons/driver-update.svg" border="false":::**    | **Driver updates**      | You use driver updates policy for granular control.                                         | Autopatch manages driver approvals and scheduling automatically.                                  |
-| **:::image type="icon" source="icons/hotpatch-updates.svg" border="false":::** | **Hotpatch**            | Enabled through quality update settings; timing follows your update ring configuration.     | Applied automatically for eligible devices; Autopatch coordinates timing with its rings.          |
+| **Feature**             | **When NOT using Autopatch**                                                                | **When using Autopatch**                                                                          |
+|-------------------------|---------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------|
+| **Update coordination** | You control scheduling, deferrals, and rollout manually.                                    | Autopatch orchestrates update rings, feature updates, drivers, and quality updates automatically. |
+| **Update rings**        | You configure update rings in Intune to control deferrals, deadlines, and restart behavior. | Autopatch creates and manages its own rings; do not assign custom rings to Autopatch devices.     |
+| **Feature updates**     | You use feature updates policies to lock or schedule OS versions.                           | Autopatch manages version targeting and rollout automatically.                                    |
+| **Quality updates**     | You configure quality updates policies and expedited update policies.                       | Autopatch expedites critical updates and manages monthly patches.                                 |
+| **Driver updates**      | You use driver updates policy for granular control.                                         | Autopatch manages driver approvals and scheduling automatically.                                  |
+| **Hotpatch**            | Enabled through quality update settings; timing follows your update ring configuration.     | Applied automatically for eligible devices; Autopatch coordinates timing with its rings.          |
 
 
 > [!div class="nextstepaction"]
