@@ -2,9 +2,6 @@ items:
 - name: Overview
   href: index.md
   displayName: windows updates
-- name: Use Windows Update client policies
-  href: configure.md
-  displayName: windows updates
 - name: Windows updates rings
   items:
   - name: Update rings policies
@@ -31,7 +28,7 @@ items:
   - name: Reports
     href: feature-updates-reports.md
     displayName: windows updates
-- name: Quality updates
+- name: Quality updates policies
   items:
   - name: Quality updates policy
     href: quality-updates-policy.md
@@ -42,7 +39,7 @@ items:
   - name: Reports
     href: quality-updates-reports.md
     displayName: windows updates
-- name: Driver updates
+- name: Driver updates policies
   items:
   - name: Driver updates overview
     href: driver-updates-overview.md
@@ -53,11 +50,9 @@ items:
   - name: Reports
     href: driver-updates-reports.md
     displayName: windows updates
-- name: Windows updates reporting
-  items:
-  - name: Compatibility reports
-    href: compatibility-reports.md
-    displayName: windows updates, reports
+- name: Compatibility reports
+  href: compatibility-reports.md
+  displayName: windows updates, reports
 - name: Delivery Optimization
   href: ../../intune-service/configuration/delivery-optimization-windows.md
   displayName: delivery optimization, windows updates

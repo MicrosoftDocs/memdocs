@@ -62,7 +62,7 @@ Intune provides a comprehensive set of policies to manage how Windows devices re
 
 >**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
 >
-> Delivers monthly cumulative updates that include security patches and reliability improvements, keeping devices secure and stable on a regular cadence. This policy also supports expedited updates, which override deferrals and deadlines to push critical security fixes (such as zero-day patches) faster than normal rings.
+> Delivers monthly cumulative updates that include security patches and reliability improvements, keeping devices secure and stable on a regular cadence. This policy also supports expedited updates, which override deferrals and deadlines to push critical security fixes faster than normal rings.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](quality-updates-policy.md)
@@ -70,8 +70,6 @@ Intune provides a comprehensive set of policies to manage how Windows devices re
 :::row-end:::
 
 :::row:::
-:::column:::
-
 :::column:::
 #### Driver updates policy
 
@@ -82,9 +80,6 @@ Intune provides a comprehensive set of policies to manage how Windows devices re
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
 :::column-end:::
-:::row-end:::
-
-:::row:::
 :::column:::
 
 #### Hotpatch updates
@@ -96,79 +91,29 @@ Intune provides a comprehensive set of policies to manage how Windows devices re
 >> [!div class="nextstepaction"]
 >> [Learn more](update-rings.md)
 :::column-end:::
-:::column:::
-
-:::column-end:::
 :::row-end:::
 
 ## Windows Autopatch
 
-Windows Autopatch is a cloud service that automates the management of Windows updates using Intune. Instead of manually configuring update rings, feature update policies, quality updates, driver updates, and hotpatching, Autopatch orchestrates these policies on your behalf. The service applies Microsoft-recommended deployment rings, monitors update health, and automatically adjusts rollout based on device readiness and reliability signals. Autopatch reduces administrative overhead while maintaining a secure and up‑to‑date device fleet.
+Windows Autopatch is a cloud service that integrates with Intune to automate update deployment for Windows Enterprise devices. It doesn't introduce new policy types—instead, it orchestrates existing Intune policies and adds advanced capabilities like dynamic device grouping, phased rollout, and compliance reporting. Autopatch also enables features such as Hotpatch for eligible editions and expedited delivery of critical updates.
+
+### Policy types and Autopatch integration
+
+| **Policy type** | **How Autopatch uses it** | **Additional capabilities Autopatch adds** |
+| --- | --- | --- |
+| **Update rings policy** | Applies Windows Update client settings to device groups. Autopatch organizes devices into rings automatically. | Dynamic ring assignment, phased rollout scheduling, and health monitoring. |
+| **Feature updates policy** | Locks devices to a specific Windows version. Autopatch manages feature update deployment and readiness checks. | Automated rollout and reporting for feature updates. |
+| **Quality updates policy** | Delivers monthly cumulative updates. Autopatch ensures timely deployment and can expedite critical patches. | Expedited updates for zero-day fixes and Hotpatch support for eligible editions. |
+| **Driver updates policy** | Controls delivery of hardware driver updates. Autopatch includes driver and firmware updates in its orchestration. | Approval workflows and staged deployment for drivers and firmware. |
+
+> [!NOTE]
+> Autopatch requires Windows Enterprise E3/E5 (or equivalent Microsoft 365 plans). Intune policies work without Autopatch, but Autopatch adds automation, orchestration, and reporting for enrolled devices.
+
 
 > [!div class="nextstepaction"]
 > [Learn more about Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
 ---
-
-Intune provides several policy types, each designed for a specific purpose. Understanding these helps you choose the right tool for each scenario.
-Update rings
-Update rings control the cadence and experience of updates, including:
-
-Deferral periods for quality and feature updates
-Deadlines and grace periods
-Restart behavior and active hours
-
-Use update rings to set your baseline update behavior and to create staged deployment groups (for example: Pilot → Broad).
-Feature updates policy
-Feature updates policies let you lock devices to a specific Windows version (for example, stay on 22H2) until you choose to upgrade.
-Use this when you want predictable OS version targeting, regardless of ring deferrals.
-Quality updates (expedite) policy
-Expedite policies push a specific quality update as soon as possible to remediate critical vulnerabilities. These settings override deferrals and deadlines in update rings.
-Use this only for urgent or zero‑day scenarios.
-Driver and firmware updates
-Intune can manage whether devices receive driver and firmware updates from Windows Update. You can choose to enable, disable, or selectively allow drivers depending on your device ecosystem.
-Windows Autopatch
-Windows Autopatch is a managed service that automates the update rollout process. Autopatch uses update rings behind the scenes, creates its own deployment groups, and orchestrates updates for you.
-Use Autopatch when you prefer Microsoft to manage update sequencing, validation, and rollout, instead of maintaining your own rings and schedules.
-Hotpatch
-Hotpatch is a servicing mechanism that delivers certain security updates without requiring a reboot. Intune does not configure hotpatch directly, but devices that support hotpatch continue to use Intune's update policies for timing and coordination.
-
-How the pieces fit together
-Intune's Windows update management is designed as a layered system, where each policy type handles a specific need:
-
-Update rings → set the baseline scheduling and user experience
-Feature updates → control the Windows version
-Expedite updates → override schedules for urgent patches
-Driver policies → manage hardware‑level updates
-Autopatch → optional automation layer that manages the above for you
-
-These policies are complementary. For example, you can assign update rings for routine monthly updates while using a feature updates policy to pin devices to 23H2 until you approve an upgrade.
-
-What you can do with Intune
-With Intune, organizations can:
-
-Standardize Windows update behavior across all devices
-Stage updates using rings or Autopatch deployment groups
-Control when devices move to a new Windows version
-Push emergency patches during high‑risk situations
-Reduce user disruption with controlled reboot experiences
-Monitor update compliance across the fleet
-Troubleshoot devices that fall behind or fail to apply updates
-
-Intune gives you the flexibility to adopt a simple, fully automated model or a highly controlled, staged approach — whichever fits your operational needs.
-
-Next steps
-Use the rest of the articles in this section to explore each policy type in more depth:
-
-Plan your update strategy
-Configure update rings
-Deploy feature update targeting
-Expedite critical updates
-Manage driver and firmware updates
-Use Windows Autopatch
-Understand hotpatching scenarios
-Monitor and troubleshoot update compliance
-
 
 |                                                                                | Feature                        | When using Autopatch                                                                             | When NOT using Autopatch                                                                         |
 |--------------------------------------------------------------------------------|--------------------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
@@ -180,3 +125,57 @@ Monitor and troubleshoot update compliance
 | **:::image type="icon" source="icons/hotpatch-updates.svg" border="false":::** | Hotpatch                       | Devices that support hotpatch continue to use Intune's update policies for timing & coordination | Devices that support hotpatch continue to use Intune's update policies for timing & coordination |
 | **:::image type="icon" source="icons/client-policies.svg" border="false":::**  | Windows Update client policies | Intune configures these behind the scenes; you don't assign your own to Autopatch devices        | You configure these directly in Intune                                                           |
 | **:::image type="icon" source="icons/quality-updates.svg" border="false":::**  | Quality updates                | Autopatch manages quality updates                                                                | You configure quality updates via update rings and expedite policies                             |
+
+
+---
+
+<!--from configure.md (deleted)-->
+
+Use Microsoft Intune to manage the install of Windows software updates from Windows Update client policies.
+
+> [!TIP]
+> This feature was formerly known as *Windows Update for Business*.
+
+By using Windows Update client policies, you simplify the update management experience. You don't need to approve individual updates for groups of devices and can manage risk in your environments by configuring an update rollout strategy. With Intune, you can [configure update settings](settings.md) on devices and configure deferral of update installation. You can also prevent devices from installing features from new Windows versions to help keep them stable, while allowing those devices to continue installing updates for quality and security.
+
+Intune stores only the update policy assignments, not the updates themselves. When you save a policy, Intune passes the configuration details to Windows Update, which then determines which of these updates are offered to each device. Devices access Windows Update directly for the updates.
+
+Learn more about Windows [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) in the Windows documentation.
+
+## Policy types to manage updates
+
+Intune provides the following policy types to manage updates, which you assign to groups of devices:
+
+- **Update rings**: This policy is a collection of settings that configures when Windows updates get installed. For more information, see [Update rings policy](update-rings.md).
+
+- **Feature updates policies**: The [feature updates polcies](feature-updates.md) update devices to the Windows version that you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
+
+  You can also use Feature updates policy to [upgrade your devices that run Windows 10 to Windows 11](feature-updates.md#upgrade-devices-to-windows-11).
+
+- **Quality updates policies**: With Quality updates policies, also referred to as Expedited updates, you can expedite the install of the most recent security updates on devices that you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](expedite-updates.md).
+
+- **Driver updates policies**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](driver-updates-policy.md).
+
+## Policy limitations for Workplace Joined devices
+
+Microsoft introduced a cloud service as part of the Windows Update product family, [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). As a cloud service, Windows Autopatch supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren't supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings* policy type.
+
+The following Intune policy types for Windows Updates use Windows Autopatch, which prevents their support on WPJ devices:
+
+- Driver Updates
+- Feature Updates
+- Quality Updates
+
+If you support WPJ devices with Intune, the following information can help you understand the differences in capabilities based on policy type, for both WPJ devices and AADJ devices.
+
+| Capability | Windows Update client policies </br> via Update Ring policy | Windows Autopatch </br> via Driver, Feature, and Quality update policies|
+|-|-|-|
+| **WPJ device support**      | Yes                  | No                                           |
+| **AADJ device support**     | Yes                  | Yes                                          |
+| **Scan for Updates and Restart schedules** |  Yes  | Use Update Ring policies to manage schedules |
+| **Enforce Update Deadlines**               | Yes   | Use Update Ring policies to enforce deadlines|
+| **Control which updates to install** |***Feature***:  Yes </br>  - Defer *all* feature updates by specified days</br></br></br>***Quality***: Yes</br>  - Defer *all* quality updates by specified days</br></br>***Drivers***: Yes</br> - *Allow* or *Block* all *Recommended* drivers</br> - No support for *Other* drivers | ***Feature***:  Yes</br> - Manage *individual* updates</br>  - Specify *Start Date* or *Gradual Rollout* start and end dates. </br></br>  ***Quality***: Use Update Ring policies</br></br></br></br> ***Drivers***: Yes</br> - Manage individual *Recommended* and *Other* drivers. </br></br><!-- </br></br> - Recommended drivers: Per-update  *Allow* or  *Pause* of *Recommended* updates</br>  - Optional drivers: Per-update *Allow* or *Pause* of *Optional* updates</br></br>***Expedited Quality***: Yes    -->                 |
+| **Pause Updates** | ***Feature***: </br>  - Pause all updates  </br></br>  ***Quality***: </br>  - Pause all updates </br></br>  ***Drivers***:  </br>  - Block all updates | ***Feature***: </br>  - Pause individual updates</br></br> ***Quality***: </br>  - Pause individual updates</br></br>***Drivers***: </br>  - Pause individual updates                                                                                 |
+| **Expedite Quality Update** | No                   | Yes                                         |
+| **Reports - Summary count of devices**: </br>  - Feature updates</br>  - Quality updates  | Windows Update for Business reports | Windows Update for Business reports |
+| **Reports – Detailed status**:</br>  - Per Update  | Windows Update for Business reports  | Yes, in Intune              |
