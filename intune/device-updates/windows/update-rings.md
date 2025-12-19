@@ -26,6 +26,16 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
 :::row:::
 :::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+- Microsoft Intune Plan 1
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
 [!INCLUDE [platform](../../includes/requirements/platform.md)]
 
 :::column-end:::
@@ -55,6 +65,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 :::column-end:::
 :::row-end:::
 
+<!--
 ### Limitations for Microsoft Entra registered devices
 
 Intune Update rings for Windows require the use of Windows Update client policies, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview), which provides for additional capabilities that are not supported for WPJ devices.
@@ -63,7 +74,9 @@ Intune Update rings for Windows require the use of Windows Update client policie
 - Feature updates
 - Quality updates (also known as *Expedited* updates)
 
+
 For more information about Microsoft Entra registered devices limitations for Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
+-->
 
 ## Create and assign update rings
 

@@ -61,19 +61,16 @@ When a device receives a feature update policy:
 
 :::column-end:::
 :::column span="3":::
-
-> The core functionality of creating and targeting a feature update only requires a license for Intune. The core functionality includes creating the policy and selecting a feature update to update devices, using the **Make updates available as soon as possible** option or specifying a start date, and reporting. Capabilities supported by client policies on Professional SKU devices don't require a license.
->
-> Additional cloud-based functionality requires an additional license. To use a cloud-based capability, in addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
-> - Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-> - Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
-> - Windows Virtual Desktop Access E3 or E5
+> -** Microsoft Intune Plan 1** is required for core functionality: creating the policy, selecting a feature update, using the **Make updates available as soon as possible** option or specifying a start date, and reporting.
+>- For additional **cloud-based functionality**, your organization must have a Windows license that includes the Autopatch entitlement. This is included with:
+> - Windows Enterprise E3/E5
+> - Windows Education A3/A5 
+> - Windows Virtual Desktop Access E3/E5
 > - Microsoft 365 Business Premium
 > 
-> The cloud-based capabilities requiring the additional license are indicated in the *Create feature update deployment* > or policy creation page and include the following items and potentially new features:
-> - Gradual rollout: The [Gradual Rollout](rollout-options.md#make-updates-available-gradually) capability is a cloud > only feature and includes basic controls for deploying a specified feature update and when to start making the update > available to devices.
+> These licenses enable advanced features such as:
+> - [Gradual Rollout](rollout-options.md#make-updates-available-gradually)
 > - [Optional feature updates](#create-and-assign-feature-updates-for-windows-10-and-later-policy)
-> - Windows 10 (SxS): The Windows 10 (SxS) feature is a cloud-only feature. If you're blocked when creating new policies > for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies > through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the > partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows > Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
 
 :::column-end:::
 :::row-end:::
