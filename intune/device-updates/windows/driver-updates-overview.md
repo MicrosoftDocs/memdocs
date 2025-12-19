@@ -74,7 +74,7 @@ Driver updates are supported for the following Windows editions:
 
 > [!NOTE]
 > **Unsupported versions and editions**:
-> *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, available under the **Windows 10 and later** blade don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
+> *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
 
 **Devices must**:
 
@@ -127,7 +127,7 @@ For more information, see [Role-based access control for Microsoft Intune](../..
 
 ### Limitations for Workplace Joined devices
 
-Intune policies for *Driver updates for Windows 10 and later* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for other capabilities that aren't supported for WPJ devices.
+Intune policies for *Driver updates* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for other capabilities that aren't supported for WPJ devices.
 
 For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
 

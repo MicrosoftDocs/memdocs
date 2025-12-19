@@ -8,7 +8,7 @@ ms.reviewer: zadvor
 
 # App and driver compatibility reports for Windows updates
 
-With Intune, you can deploy updates to Windows devices by using policies for [Update rings for Windows 10 and later](update-rings.md) and [Feature updates for Windows 10 and later](feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
+With Intune, you can deploy updates to Windows devices with [Windows Update rings policies](update-rings.md) and [Feature updates policies](feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 

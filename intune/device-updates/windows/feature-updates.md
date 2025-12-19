@@ -181,7 +181,7 @@ Consider the following points when feature update policies target a device with 
 
 ## Manage Feature updates for Windows 10 and later policy
 
-In the admin center, go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Feature updates** tab to view your profiles.
+In the admin center, go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Feature updates** tab to view your profiles.
 
 For each profile you can view:
 
@@ -212,9 +212,9 @@ There are multiple options to get in-depth reporting for Windows 10/11 updates w
 
 To learn more, see [Intune compliance reports](reports.md).
 
-## Limitations for Feature updates for Windows 10 and later policy
+## Feature updates policies limitations and considerations
 
-- When you deploy a *Feature updates for Windows 10 and later* policy to a device that also receives an *Update rings for Windows 10 and later* policy, review the update ring for the following configurations:
+- When you deploy a feature updates policy to a device that is also targeted by an update ring policy, review the update ring for the following configurations:
   - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates aren't delayed by update deferrals that might be configured in an update ring policy.
   - Feature updates for the update ring must be *running*. They must not be paused.
 
@@ -230,7 +230,7 @@ To learn more, see [Intune compliance reports](reports.md).
   To prevent this initial delay from impacting your co-managed devices:
 
   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-  2. Go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Feature updates** tab > **Create profile**.
+  2. Go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Feature updates** tab > **Create profile**.
   3. For **Deployment settings**, enter a meaningful name and a description for the policy. Then, specify the feature update you want devices to be running.
   4. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you've selected, or a newer version, won't be offered the update.
 

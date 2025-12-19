@@ -68,7 +68,7 @@ For more information about Microsoft Entra registered devices limitations for Wi
 ## Create and assign update rings
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > **Create profile**.
+1. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Update rings** tab > **Create profile**.
 1. Under *Basics*, specify a name, a description (optional), and then select **Next**.
   ![Create an update ring](./images/update-rings/basics-tab.png)
 1. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](settings.md). After configuring *Update and User experience* settings, select **Next**.
@@ -88,7 +88,7 @@ For more information about Microsoft Entra registered devices limitations for Wi
 
 ## Manage your Windows Update rings
 
-In the portal, navigate to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
+In the portal, navigate to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Update rings** tab and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
 
 :::image type="content" source="./images/update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings/default-policy-view.png":::
 
@@ -109,7 +109,7 @@ This view also includes:
     - **Device assignment status**: This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
     - **Per setting status**: View the configuration status of each setting for this policy across all devices and users.
 
-  For details about this report view, see [Reports for Update rings for Windows 10 and later policy](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
+  For details about this report view, see [Reports for update rings policies](update-rings-reports.md).
 
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each area of the policy.
 
@@ -205,7 +205,7 @@ To uninstall the latest Windows update:
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
+There are multiple options to get in-depth reporting for Windows updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
 
 ## Next steps
 

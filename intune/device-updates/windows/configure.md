@@ -23,25 +23,25 @@ Learn more about Windows [*feature* and *quality* updates](/windows/deployment/u
 
 Intune provides the following policy types to manage updates, which you assign to groups of devices:
 
-- **Update rings for Windows 10 and later**: This policy is a collection of settings that configures when Windows updates get installed. For more information, see [Update rings policy](update-rings.md).
+- **Update rings**: This policy is a collection of settings that configures when Windows updates get installed. For more information, see [Update rings policy](update-rings.md).
 
-- **Feature updates for Windows 10 and later**: The [Feature updates](feature-updates.md) policy updates devices to the Windows version that you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
+- **Feature updates policies**: The [feature updates polcies](feature-updates.md) update devices to the Windows version that you specify, and then freezes the feature set version on those devices. This version freeze remains in place until you choose to update them to a later Windows version. While the feature version remains static, devices can continue to install quality and security updates that are available for their feature version.
 
   You can also use Feature updates policy to [upgrade your devices that run Windows 10 to Windows 11](feature-updates.md#upgrade-devices-to-windows-11).
 
-- **Quality updates for Windows 10 and later**: With Quality updates for Windows 10 and later, also referred to as Expedited updates, you can expedite the install of the most recent security updates on devices that you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](expedite-updates.md).
+- **Quality updates policies**: With Quality updates policies, also referred to as Expedited updates, you can expedite the install of the most recent security updates on devices that you manage with Microsoft Intune. Expedited install is accomplished without the need to pause or edit your existing monthly servicing policies. For more information, see [Expedite updates policy](expedite-updates.md).
 
-- **Driver updates for Windows 10 and later**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](driver-updates-policy.md).
+- **Driver updates policies**: With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Your policies can automatically install the newest recommended driver for you, or wait for an admin to manually approve drivers before they're installed. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. For more information, see [Driver updates policy](driver-updates-policy.md).
 
 ## Policy limitations for Workplace Joined devices
 
-Microsoft introduced a cloud service as part of the Windows Update product family, [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). As a cloud service, Windows Autopatch supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren't supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings for Windows 10 and later* policy type.
+Microsoft introduced a cloud service as part of the Windows Update product family, [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). As a cloud service, Windows Autopatch supports device update capabilities that require a device to have a Microsoft Entra registration (AADJ devices). These capabilities aren't supported with Workplace Join (WPJ) devices. Windows update management on WPJ devices remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) capabilities and the Intune *Update rings* policy type.
 
 The following Intune policy types for Windows Updates use Windows Autopatch, which prevents their support on WPJ devices:
 
-- Driver Updates for Windows 10 and later
-- Feature Updates for Windows 10 and later
-- Quality Updates for Windows 10 and later
+- Driver Updates
+- Feature Updates
+- Quality Updates
 
 If you support WPJ devices with Intune, the following information can help you understand the differences in capabilities based on policy type, for both WPJ devices and AADJ devices.
 

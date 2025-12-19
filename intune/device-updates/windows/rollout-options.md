@@ -8,7 +8,7 @@ ms.reviewer: davguy; bryanke
 
 # Rollout options for Windows Updates in Microsoft Intune
 
-Use rollout options in Microsoft Intune policies for *Feature updates for Windows 10 and later*. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to devices that receive your policies.
+Use rollout options for feature updates policies. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to devices that receive your policies.
 
 > [!TIP]
 > The default behavior for Windows Update is to make an update available to an assigned device right away. However, the update doesn't install right away. Instead, when an update is made available, the device becomes eligible to install it. Before a device can install an available update, the device must connect to Windows Update and scan for updates. When the need for an update is confirmed and the device is eligible, the  Windows Update service then offers the update to that device. After a device completes the update, it's then dependent on user behavior and other settings like Deadline.
@@ -73,16 +73,11 @@ To learn more, see [Manage safeguards using Windows Autopatch](/graph/windowsupd
 ### Enable intelligent rollouts
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Go to **Devices** > **Manage devices** > **Configuration** > **Create**.
-
-3. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog**.
-
-4. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow WUfB Cloud Processing**.  This setting is in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window to return to the *Configuration settings* page.
-
-5. Set *Allow WUfB Cloud Processing* to **Enabled**.
-
-6. On the **Assignments** page, assign the profile to the same groups you use for your Feature update profiles, and then complete and *Create* this settings catalog profile, to deploy it.
+1. Go to **Devices** > **Manage devices** > **Configuration** > **Create**.
+1. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog**.
+1. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow WUfB Cloud Processing**.  This setting is in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window to return to the *Configuration settings* page.
+1. Set *Allow WUfB Cloud Processing* to **Enabled**.
+1. On the **Assignments** page, assign the profile to the same groups you use for your Feature update profiles, and then complete and *Create* this settings catalog profile, to deploy it.
 
 After the profile deploys, devices that use gradual rollouts for Feature update profiles will also have intelligent optimization applied.
 

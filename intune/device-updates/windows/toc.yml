@@ -16,12 +16,12 @@ items:
   - name: 🔴 Policy settings reference
     href: settings.md
     displayName: windows updates, rings    
-- name: Feature updates
+- name: Feature updates policies
   items:
-  - name: Feature updates policy
+  - name: Overview
     href: feature-updates.md
     displayName: windows feature updates
-  - name: Move from deferrals to feature updates policy
+  - name: Move from deferrals to feature updates policies
     href: ring-deferrals-to-feature-updates-policy.md
   - name: Windows rollout options
     href: rollout-options.md
@@ -36,7 +36,7 @@ items:
   - name: Quality updates policy
     href: quality-updates-policy.md
     displayName: windows quality updates
-  - name: Expedite updates policy
+  - name: Expedite updates
     href: expedite-updates.md
     displayName: windows updates
   - name: Reports
@@ -55,9 +55,6 @@ items:
     displayName: windows updates
 - name: Windows updates reporting
   items:
-  - name: Windows update reports
-    href: reports.md
-    displayName: windows updates, reports
   - name: Compatibility reports
     href: compatibility-reports.md
     displayName: windows updates, reports

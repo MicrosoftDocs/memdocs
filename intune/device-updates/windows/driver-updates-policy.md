@@ -30,7 +30,7 @@ Use this procedure to create policies for managing driver updates for groups of 
 >
 > By default, both settings use a configuration that *allow* Windows driver updates.
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Driver updates** tab, and select **Create profile**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Driver updates** tab, and select **Create profile**.
 
    :::image type="content" source="./images/driver-updates-policy/view-update-list-1.png" alt-text="A screen capture of the admin center that shows the path to create a profile for Windows Driver Updates." lightbox="./images/driver-updates-policy/view-update-list-1.png":::
 
@@ -97,7 +97,7 @@ When you review the list of driver update policies in the admin center, you can 
 > [!NOTE]
 > An exception is new *recommended driver* updates that are added to a policy set for automatic approval. Recommended driver updates that are the newest or latest are added to the policy and approved automatically, and their status is never set to *Needs review*.
 
-To look for policies that have new driver updates pending a review, in the admin center go to **Devices** > **Manage updates** > **Windows 10 and later updates** > **Driver Updates** tab.
+To look for policies that have new driver updates pending a review, in the admin center go to **Devices** > **Manage updates** > **Windows updates** > **Driver Updates** tab.
 
 In the list of Windows driver update policies, review the **Drivers to review** column for entries that indicate there are new updates that have been added to the policy that you might want to review and approve for deployment. In the following screen capture of the *Driver updates* page, two policies have new driver updates. One displays *1 to review* while another displays that it has *3 to review*:
 
@@ -241,7 +241,7 @@ Bulk driver updates allow the user to approve, pause, or decline multiple driver
 
 #### How to use bulk driver updates
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Driver updates** tab, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Driver updates** tab, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
 2. In the Driver Updates page, select **Bulk actions**.
 
     :::image type="content" source="./images/driver-updates-policy/bulk-actions.png" alt-text="A screen capture that shows the bulk actions button." lightbox="./images/driver-updates-policy/bulk-actions.png":::

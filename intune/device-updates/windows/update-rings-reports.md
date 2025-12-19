@@ -8,13 +8,9 @@ ms.reviewer: zadvor
 
 # Reports for update rings policies
 
-Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Update rings** tab > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
 
 :::image type="content" source="./images/update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings/default-policy-view.png":::
-
-> [!TIP]
->
-> For details about the policy actions at the top of the policy view, like *Delete*, *Pause*, and *Extend*, see [Manage your Windows Update rings](update-rings.md#manage-your-windows-update-rings) in the *Update rings for Windows 10 and later policy in Intune* article.
 
 On the policy page view:
 

@@ -145,7 +145,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
-2. Select **Devices** > **Manage updates** > **Windows 10 and later updates**> **Quality updates** tab > **Create profile**.
+2. Select **Devices** > **Manage updates** > **Windows updates**> **Quality updates** tab > **Create profile**.
 
    :::image type="content" source="./images/expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI.":::
 
@@ -183,7 +183,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
    - The non-security expedite updates apply to Windows 11 devices. If Windows 10 devices are assigned to an Expedite policy that sets a **D** release, then those devices are not expedited and show an alert in the following reports.
      - **Reports** > **Windows Updates** > **Reports** Tab > **Windows Expedited Update Report**
-     - **Devices** > **Manage updates** > **Windows 10 and later updates** > **Monitor** tab > **Expedited quality update policies** with alerts tile, and click the title.
+     - **Devices** > **Manage updates** > **Windows updates** > **Monitor** tab > **Expedited quality update policies** with alerts tile, and click the title.
 
 5. In **Settings**, configure **Number of days to wait before forced reboot**. For this setting, select how soon after installing the update a device will automatically restart to complete the update installation. You can select from zero to two days. The automatic restart is canceled if a device manually restarts before the deadline. If an update doesn't require a restart, this setting isn't enforced.
 
@@ -249,7 +249,7 @@ The following sequence of events provides an example of how two devices, named *
 
 ## Manage policies to expedite quality updates
 
-In the admin center, go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Quality updates** tab and select the policy that you want to manage. The policy opens to its **Overview** pane.
+In the admin center, go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Quality updates** tab and select the policy that you want to manage. The policy opens to its **Overview** pane.
 
 From this pane, you can:
 

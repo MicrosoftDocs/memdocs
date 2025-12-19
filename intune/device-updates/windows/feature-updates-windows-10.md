@@ -8,7 +8,7 @@ ms.reviewer:
 
 # Upgrade devices to Windows 11 using feature updates
 
-You can use policy for *Feature updates for Windows 10 and later* to upgrade devices that run Windows 10 to Windows 11.
+You can use feature updates policies to upgrade devices that run Windows 10 to Windows 11.
 
 When you use feature updates policy to deploy Windows 11, you can target the policy to Windows 10 devices that meet the Windows 11 minimum requirements to upgrade them to Windows 11. Devices that don't meet the requirements for Windows 11 won't install the update and remain at their current Windows 10 version.
 

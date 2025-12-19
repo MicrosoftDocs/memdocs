@@ -16,9 +16,9 @@ With Intune, you can manage:
 
 All Windows updates flow from Microsoft's global update service; Intune provides the policy layer that governs timing, user experience, and safeguards.
 
-## Windows update policy types
+## Windows update management in Intune
 
-Intune provides a comprehensive set of policy types to manage how Windows devices receive updates. These policies work together to control everything from the underlying Windows Update client behavior to the rollout of feature updates, monthly quality patches, driver updates, and critical security fixes. Each policy type serves a specific purpose, giving administrators the flexibility to design update strategies that balance security, stability, and user experience. Understanding how these policies relate to one another is essential for building a predictable and well‑governed update management process.
+Intune provides a comprehensive set of policies to manage how Windows devices receive updates. These policies control everything from the underlying Windows Update client behavior to the rollout of feature updates, monthly quality patches, and driver updates. Intune also supports advanced capabilities like expedited delivery of critical security fixes and Hotpatch for eligible editions, which applies updates without rebooting. Each policy type serves a specific purpose, giving administrators flexibility to design update strategies that balance security, stability, and user experience. Understanding how these policies and features relate to one another is essential for building a predictable and well‑governed update management process.
 
 :::row:::
 :::column:::
@@ -27,14 +27,14 @@ Intune provides a comprehensive set of policy types to manage how Windows device
 
 >**:::image type="icon" source="icons/client-policies.svg" border="false":::** 
 >
-> Windows Update client policies (formerly known as Windows Update for Business) configure the underlying [Update policy CSP](/windows/client-management/mdm/policy-csp-update). The policy settings are available in Intune both through update rings and in the Settings Catalog, giving administrators flexibility to apply granular update behaviors at the device level.
+> Windows Update client policies (formerly known as Windows Update for Business) configure the underlying [Update policy CSP](/windows/client-management/mdm/policy-csp-update). Intune surfaces these settings through update rings and the Settings Catalog, giving administrators flexibility to apply granular update behaviors at the device level.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](/windows/deployment/update/waas-configure-wufb)
 
 :::column-end:::
 :::column:::
-#### Update rings
+#### Update rings policy
 
 >**:::image type="icon" source="icons/update-ring.svg" border="false":::**    
 >
@@ -47,22 +47,22 @@ Intune provides a comprehensive set of policy types to manage how Windows device
 
 :::row:::
 :::column:::
-#### Feature update policies
+#### Feature updates policy
 
 >**:::image type="icon" source="icons/feature-updates.svg" border="false":::** 
 >
-> Lock devices to a specific Windows version (for example, Windows 11 24H2). These policies prevent devices from upgrading beyond the targeted release, ensuring consistency and control over major OS upgrades.
+> Locks devices to a specific Windows version (for example, Windows 11 24H2). These policies prevent devices from upgrading beyond the targeted release, ensuring consistency and control over major OS upgrades.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
 :::column-end:::
 
 :::column:::
-#### Quality update policies
+#### Quality updates policy
 
 >**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
 >
-> Deliver monthly cumulative updates that include security patches and reliability improvements. Quality updates keep devices secure and stable by addressing vulnerabilities and performance issues on a regular cadence.
+> Delivers monthly cumulative updates that include security patches and reliability improvements, keeping devices secure and stable on a regular cadence. This policy also supports expedited updates, which override deferrals and deadlines to push critical security fixes (such as zero-day patches) faster than normal rings.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](quality-updates-policy.md)
@@ -71,22 +71,13 @@ Intune provides a comprehensive set of policy types to manage how Windows device
 
 :::row:::
 :::column:::
-#### Expedite policies
-
-**:::image type="icon" source="icons/expedite-updates.svg" border="false":::**
-
-> Push critical security updates faster than regular rings. Expedite policies override deferrals and deadlines to immediately deliver high-priority patches (such as zero-day fixes) to devices at risk.
->
->> [!div class="nextstepaction"]
->> [Learn more](update-rings.md)
-:::column-end:::
 
 :::column:::
-#### Driver update policies
+#### Driver updates policy
 
 **:::image type="icon" source="icons/driver-update.svg" border="false":::** 
 
-> Manage the delivery of hardware driver updates from Windows Update. Driver update policies help ensure device compatibility and stability by controlling when and how drivers are installed.
+> Manages the delivery of hardware driver updates from Windows Update. Driver update policies help ensure device compatibility and stability by controlling when and how drivers are installed.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
@@ -96,11 +87,11 @@ Intune provides a comprehensive set of policy types to manage how Windows device
 :::row:::
 :::column:::
 
-#### Hotpatch
+#### Hotpatch updates
 
 **:::image type="icon" source="icons/hotpatch-updates.svg" border="false":::**
 
-> Apply security patches without requiring a reboot, reducing downtime and disruption. Hotpatch updates are available for eligible Windows editions through Windows Autopatch and provide seamless protection while keeping systems continuously available.
+> A Windows update mechanism that applies security patches without requiring a reboot, reducing downtime. Hotpatch is available for eligible Windows editions and is managed through Windows Autopatch or quality update settings, not as a separate Intune policy.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](update-rings.md)
