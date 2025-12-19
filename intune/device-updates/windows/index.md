@@ -88,8 +88,9 @@ Intune provides a comprehensive set of policies and features to manage how Windo
 
 ## Windows Autopatch
 
-Windows Autopatch is a cloud service that integrates with Intune to automate update deployment for Windows Enterprise devices. It doesn't introduce new policy types—instead, it orchestrates existing Intune policies and adds advanced capabilities like dynamic device grouping, phased rollout, and compliance reporting. Autopatch also enables features such as Hotpatch for eligible editions and expedited delivery of critical updates.
+Windows Autopatch is a managed cloud service built on the Windows Update for Business Deployment Service (WUfB DS) and integrated with Intune. It doesn't introduce new policy types—instead, it automates and orchestrates existing Intune update policies (feature updates, quality updates, driver updates) using the same backend service. Autopatch adds advanced capabilities such as dynamic device grouping, phased rollout, health monitoring, and compliance reporting. It also enables cloud-powered features like Hotpatch for eligible Windows 11 Enterprise editions and expedited delivery of critical updates, without requiring manual configuration.
 
+<!--
 ### Policy types and Autopatch integration
 
 | **Policy type** | **How Autopatch uses it** | **Additional capabilities Autopatch adds** |
@@ -101,20 +102,20 @@ Windows Autopatch is a cloud service that integrates with Intune to automate upd
 
 > [!NOTE]
 > Autopatch requires Windows Enterprise E3/E5 (or equivalent Microsoft 365 plans). Intune policies work without Autopatch, but Autopatch adds automation, orchestration, and reporting for enrolled devices.
-
+-->
 
 > [!div class="nextstepaction"]
 > [Learn more about Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
 
----
+
 
 |                                                                                | Feature                        | When using Autopatch                                                                             | When NOT using Autopatch                                                                         |
 |--------------------------------------------------------------------------------|--------------------------------|--------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------|
+|                                                                          | Update coordination            | Autopatch orchestrates everything                                                                | You control scheduling & behavior                                                                |
 | **:::image type="icon" source="icons/update-ring.svg" border="false":::**      | Update rings                   | Autopatch creates & manages its own rings; you shouldn't assign your own to these devices        | You configure your own update rings in Intune                                                    |
 | **:::image type="icon" source="icons/feature-updates.svg" border="false":::**  | Feature update policies        | Autopatch manages version targeting                                                              | You use Intune's Feature updates policy                                                          |
 | **:::image type="icon" source="icons/expedite-updates.svg" border="false":::** | Quality expedite updates       | Autopatch handles emergency patching                                                             | You use "Expedite" policy                                                                        |
 | **:::image type="icon" source="icons/driver-update.svg" border="false":::**   | Driver updates                 | Autopatch manages this                                                                           | You can allow/deny via settings                                                                  |
-| ****                                                                           | Update coordination            | Autopatch orchestrates everything                                                                | You control scheduling & behavior                                                                |
 | **:::image type="icon" source="icons/hotpatch-updates.svg" border="false":::** | Hotpatch                       | Devices that support hotpatch continue to use Intune's update policies for timing & coordination | Devices that support hotpatch continue to use Intune's update policies for timing & coordination |
 | **:::image type="icon" source="icons/client-policies.svg" border="false":::**  | Windows Update client policies | Intune configures these behind the scenes; you don't assign your own to Autopatch devices        | You configure these directly in Intune                                                           |
 | **:::image type="icon" source="icons/quality-updates.svg" border="false":::**  | Quality updates                | Autopatch manages quality updates                                                                | You configure quality updates via update rings and expedite policies                             |
@@ -172,3 +173,16 @@ If you support WPJ devices with Intune, the following information can help you u
 | **Expedite Quality Update** | No                   | Yes                                         |
 | **Reports - Summary count of devices**: </br>  - Feature updates</br>  - Quality updates  | Windows Update for Business reports | Windows Update for Business reports |
 | **Reports – Detailed status**:</br>  - Per Update  | Windows Update for Business reports  | Yes, in Intune              |
+
+
+## Prerequisites
+
+Feature Updates, Quality Updates, Driver Updates, and Hotpatch rely on the same backend service as Autopatch: the Windows Update for Business Deployment Service (WUfB DS). Because they use the same cloud orchestration layer, the prerequisites are identical:
+
+- Licensing: Windows Enterprise E3/E5 (or equivalent) for access to WUfB DS capabilities.
+- Device state: Intune-enrolled, Microsoft Entra joined/hybrid joined.
+- Telemetry: Diagnostic data set to Required level.
+- Services: Microsoft Account Sign-In Assistant (wlidsvc) enabled.
+- Connectivity: Access to Microsoft update endpoints.
+
+Autopatch simply automates these policies for you, but when you configure them manually in Intune, you're still calling the same service—so the requirements don't change.
