@@ -61,12 +61,12 @@ When a device receives a feature update policy:
 
 :::column-end:::
 :::column span="3":::
-> -** Microsoft Intune Plan 1** is required for core functionality: creating the policy, selecting a feature update, using the **Make updates available as soon as possible** option or specifying a start date, and reporting.
->- For additional **cloud-based functionality**, your organization must have a Windows license that includes the Autopatch entitlement. This is included with:
-> - Windows Enterprise E3/E5
-> - Windows Education A3/A5 
-> - Windows Virtual Desktop Access E3/E5
-> - Microsoft 365 Business Premium
+> - **Microsoft Intune Plan 1** is required for core functionality: creating the policy, selecting a feature update, using the **Make updates available as soon as possible** option or specifying a start date, and reporting.
+> - For additional **cloud-based functionality**, your organization must have a Windows license that includes the Autopatch entitlement. This is included with:
+>   - Windows Enterprise E3/E5
+>   - Windows Education A3/A5 
+>   - Windows Virtual Desktop Access E3/E5
+>   - Microsoft 365 Business Premium
 > 
 > These licenses enable advanced features such as:
 > - [Gradual Rollout](rollout-options.md#make-updates-available-gradually)
