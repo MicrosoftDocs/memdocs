@@ -29,21 +29,32 @@ To take full advantage of new Configuration Manager changes, after you update th
 As part of Microsoft's Secure Future Initiative (SFI) the 2509 version of Configuration Manager focuses on security and quality updates. For more information, see the [Microsoft Trust Center](https://www.microsoft.com/trust-center/security/secure-future-initiative).
 For a list of significant customer-reported issues resolved in this release, see the [Summary of changes in Configuration Manager version 2509](../../../hotfix/2509/35877153.md) knowledge base article.
 
-**Windows 11 25H2 support**
+## Windows 11 25H2 support
 Windows 11, version 25H2 is supported for OS deployment and in-place upgrade scenarios. For more information about Windows 11 25H2, see the [Windows 11 release information](https://learn.microsoft.com/windows/release-health/windows11-release-information).
 
-**Boot images can be automatically updated to use latest Windows Boot Loader**
+## Boot images can be automatically updated to use latest Windows Boot Loader
 A new checkbox, *Use Windows Boot Loader signed with Windows UEFI CA 2023*, is available in the Data Source tab of boot image properties. When enabled, it updates the boot image to use the boot loader signed with Windows UEFI CA 2023.
 The checkbox automates the mitigation steps described in [KB5025885](https://support.microsoft.com/topic/how-to-manage-the-windows-boot-manager-revocations-for-secure-boot-changes-associated-with-cve-2023-24932-41a975df-beb2-40c1-99a3-b3ff139f832d).
 
 The new functionality only works on WDS-Less PXE-enabled Distribution Points.
 
-**Service Connection Tool improvements**
+## WinPE is now boundary‑aware
+
+Starting in **Configuration Manager 2509**, Windows PE–based OSD scenarios now require **Boundary Group Management Point (MP) assignments**.
+
+- For a successful OSD deployment, the **Boundary Group that the WinPE client belongs to must contain at least one Management Point**.
+- If no MP is associated with the client’s Boundary Group, WinPE will fail to retrieve policy. The **smsts.log** will show errors similar to the following:
+  > Failed to query Management Point locator
+    Exiting TSMediaWizardControl :: GetPolicy.  
+  > QueryMPLocator: no valid MP locations are received
+
+## Service Connection Tool improvements**
 The Service Connection Tool (SCT) is improved to provide better logging and error handling, specifically in the following areas:
 - More detailed information about the actions it performs is recorded in both the console and log file. Error and warning messages in the console are highlighted with colors for better visibility.
 - The SCT explicitly checks for prerequisites and fails if they're not met.
 - Customers are directed to explore the relevant logs, such as ServiceConnectionTool.log and ConfigMgrSetup.log, when there's an error.
 - If there's a download failure, the SCT "Connect" step stops execution thus preventing importing incomplete Update Package payloads.
+
 
 ## Known Issues
 
