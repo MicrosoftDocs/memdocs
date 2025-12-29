@@ -205,6 +205,8 @@ After you give the new profile a name, you can edit the profile to adjust the se
 
 This feature applies to:
 
+- Android
+- iOS/iPadOS
 - Windows
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
