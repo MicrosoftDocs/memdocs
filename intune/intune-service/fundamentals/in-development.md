@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 12/02/2025
+ms.date: 01/07/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -54,6 +54,17 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 ## App management
 
+### Lenovo Device Orchestration (LDO) link in the Intune admin center <!-- 32634377 -->
+
+Microsoft Intune continues to expand its **Partner portals** experience, giving admins a single, secure interface to manage devices across multiple OEM ecosystems. A new integration is in development to provide a direct link to Lenovo Device Orchestration (LDO) from the Intune admin center.
+
+When this feature becomes available, IT admins will be able to open the Lenovo Device Orchestration Portal directly from the Intune admin center to use Lenovo-specific management capabilities for supported devices.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows 11
+
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
 To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
@@ -67,15 +78,42 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
+### Filter by Android management mode in the settings catalog<!-- 31844205 -->
+
+The [settings catalog](../configuration/settings-catalog.md) includes hundreds of settings that you can configure. There are built-in features that help filter the available settings.
+
+When you create an Android settings catalog policy, there's a management mode filter option that filters the available settings by their enrollment type, including:
+
+- Fully managed (COBO)
+- Corporate-owned work profile (COPE)
+- Dedicated (COSU)
+
+To learn more about the settings catalog, see:
+
+- [Android Intune settings catalog settings list](/configuration/settings-catalog-android.md)
+- [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
+
+### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
+
+You'll be able to use assignment filters in policy assignments for DDM-based configurations, like software updates.
+
+To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
 ### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
 
 On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
 
 In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
 
-  - Set a recovery lock password
-  - Configure a password rotation schedule
-  - Clear a recovery lock password
+- Set a recovery lock password
+- Configure a password rotation schedule
+- Clear a recovery lock password
 
 > [!div class="checklist"]
 > Applies to:
@@ -88,7 +126,44 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 <!-- *********************************************** -->
 
-<!-- ## Device management -->
+## Device management
+
+### More options for assignment filters > Device Management Type property for managed apps on Android and iOS/iPadOS<!-- 25040926 -->
+
+When you create policies for your managed apps, you can use [assignment filters](filters.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
+
+For Android, the **Device Management Type** property for managed apps is adding the following options:
+
+- Corporate-owned with work profile
+- Corporate-owned fully managed
+- Corporate-owned dedicated devices without Entra ID Shared mode
+
+For iOS/iPadOS, the **Device Management Type** property for managed apps is adding the following options:
+
+- Automated Device Enrollment user-associated devices
+- Automated Device Enrollment userless devices
+- Account Driven User Enrollment
+- Device Enrollment with Company Portal and Web Enrollment
+
+To learn more about filters, see:
+
+- [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md)
+- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune](filters-device-properties.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise
+> - iOS/iPadOS
+
+### Intune certificate inventory integration with Zimperium mobile threat defense<!-- 35519603 -->
+
+You'll soon be able to configure certificate inventory sync as part of the Mobile Threat Defense (MTD) connector setup when using Zimperium. This enhancement will help you detect when the device threat level is elevated due to approved but potentially malicious certificates on the device. The setting can be configured for Intune to send certificate inventory for corporate and personally owned devices to Zimperium.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
 
 <!-- *********************************************** -->
 
@@ -96,7 +171,7 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 ### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
-As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
+As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allow list that allows outbound traffic based on IP addresses or Azure service tags.
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
