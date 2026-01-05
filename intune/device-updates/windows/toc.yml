@@ -15,10 +15,10 @@ items:
     displayName: windows updates, rings    
 - name: Feature updates policies
   items:
-  - name: Overview
+  - name: Configure feature updates policies
     href: feature-updates.md
     displayName: windows feature updates
-  - name: Reports
+  - name: Feature updates reports
     href: feature-updates-reports.md
     displayName: windows feature updates
   - name: Move from deferrals to feature updates policies
@@ -30,10 +30,10 @@ items:
     href: feature-updates-windows-10.md
 - name: Quality updates policies
   items:
-  - name: Overview
+  - name: Configure quality updates policies
     href: quality-updates.md
     displayName: windows quality updates
-  - name: Reports
+  - name: Quality updates reports
     href: quality-updates-reports.md
     displayName: windows quality updates
   - name: Expedite updates
@@ -41,13 +41,13 @@ items:
     displayName: windows updates
 - name: Driver updates policies
   items:
-  - name: Overview
+  - name: Configure driver updates policies
     href: driver-updates.md
     displayName: windows driver updates
   - name: Driver updates policy
     href: driver-updates-policy.md
     displayName: windows driver updates
-  - name: Reports
+  - name: Driver updates reports
     href: driver-updates-reports.md
     displayName: windows updates
 - name: Compatibility reports
