@@ -90,7 +90,7 @@ When you create an Android settings catalog policy, there's a management mode fi
 
 To learn more about the settings catalog, see:
 
-- [Android Intune settings catalog settings list](/configuration/settings-catalog-android.md)
+- [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md)
 - [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
 
 ### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
