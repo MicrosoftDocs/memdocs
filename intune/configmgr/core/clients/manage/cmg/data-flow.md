@@ -91,7 +91,7 @@ This table lists the required network ports and protocols. The *Client* is the d
 | Client | HTTPS | 443 | Blob storage | Download cloud-based content |
 | CMG connection point | HTTPS or HTTP | 443 or 80 | Management point | On-premises traffic, port depends upon management point configuration |
 | CMG connection point | HTTPS or HTTP | 443 or 80 / 8530 or 8531 | Software update point | On-premises traffic, port depends upon software update point configuration |
-|Site Server|HTTPS|443|Azure|CMG deployment |
+| Site Server | HTTPS | 443 | Blob storage | Distributing content to CMG |
 
 ### Notes on ports
 

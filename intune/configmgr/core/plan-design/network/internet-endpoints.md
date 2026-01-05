@@ -54,8 +54,6 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `download.visualstudio.microsoft.com`
 
-- `sccmconnected-a01.cloudapp.net`
-
 - `definitionupdates.microsoft.com`
 
 > [!NOTE]
