@@ -4697,7 +4697,7 @@ To help you manage driver updates, you review a policy and decline an update you
 
 This release also includes [driver update reports](../../device-updates/windows/reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
-To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../../device-updates/windows/driver-updates-overview.md).
+To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../../device-updates/windows/driver-updates.md).
 
 Applies to:
 

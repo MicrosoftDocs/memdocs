@@ -68,7 +68,7 @@ The following policy types and features help you manage Windows updates in Intun
 > Delivers monthly cumulative updates that include security patches and reliability improvements, keeping devices secure and stable on a regular cadence. This policy also supports expedited updates, which override deferrals and deadlines to push critical security fixes faster than normal rings.
 >
 >> [!div class="nextstepaction"]
->> [Learn more](quality-updates-policy.md)
+>> [Learn more](quality-updates.md)
 :::column-end:::
 :::row-end:::
 

@@ -139,7 +139,7 @@ For more information about WPJ limitations for Intune Windows Update policies, s
 
 ## Architecture
 
-:::image type="content" source="./images/driver-updates-overview/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./images/driver-updates-overview/wdum-architecture.png":::
+:::image type="content" source="./images/driver-updates/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./images/driver-updates/wdum-architecture.png":::
 
 **Windows Driver Update Management architecture**:
 
