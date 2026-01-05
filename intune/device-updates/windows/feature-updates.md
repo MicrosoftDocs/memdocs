@@ -13,7 +13,7 @@ With Microsoft Intune, you can create and deploy policy settings that ensure you
 With Windows feature updates policies, you can:
 
 - Select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at. This option supports setting a feature level to any version that remains in support at the time you create the policy.
-- [Upgrade devices that run Windows 10 to Windows 11](#upgrade-devices-to-windows-11).
+- [Upgrade devices that run Windows 10 to Windows 11](feature-updates-windows-10.md).
 
 Windows feature updates policies work with update rings policies to prevent a device from receiving a Windows feature version that's later than the value specified in the feature updates policy.
 

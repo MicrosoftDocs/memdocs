@@ -106,24 +106,10 @@ Driver updates are supported for the following Windows editions:
 > - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 >    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
 >    - Windows Autopatch
->
-> - Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
-
 
 :::column-end:::
 :::row-end:::
 
-
-### Enable data collection for reports
-
-To support reports for Windows Driver updates, you must enable the use of Windows diagnostic data in Intune. It's possible that diagnostic data is already enabled for other reports, like Windows Feature updates and Expedited Quality update reports.
-To enable the use of Windows diagnostic data:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
-
-2. Expand *Windows data* and ensure the setting **Enable features that require Windows diagnostic data in processor configuration** is toggled to **On**.
-
-For more information, see [Enable use of Windows diagnostic data by Intune](../../intune-service/protect/data-enable-windows-data.md).
 
 ### GCC High support
 

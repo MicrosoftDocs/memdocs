@@ -25,6 +25,18 @@ To support reporting on all status and events for driver updates, you must confi
 - Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
 - At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../../intune-service/protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
+### Enable data collection for reports
+
+To support reports for Windows Driver updates, you must enable the use of Windows diagnostic data in Intune. It's possible that diagnostic data is already enabled for other reports, like Windows Feature updates and Expedited Quality update reports.
+To enable the use of Windows diagnostic data:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Connectors and tokens** > **Windows data**.
+
+2. Expand *Windows data* and ensure the setting **Enable features that require Windows diagnostic data in processor configuration** is toggled to **On**.
+
+For more information, see [Enable use of Windows diagnostic data by Intune](../../intune-service/protect/data-enable-windows-data.md).
+
+
 ### User permissions to use reports
 
 To view these reports, users must be assigned an Intune role with the **Managed devices** > **View reports** permission. This permission is included in the following built-in roles:

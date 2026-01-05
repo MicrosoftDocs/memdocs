@@ -129,7 +129,7 @@ sections:
         answer: |
           You can manage updates for Windows and Microsoft 365 apps with either Configuration Manager or Intune. Configuration Manager provides a very detailed and controlled process for managing these updates and their content, which is important to some customers. A modern approach is to just keep devices up to date, but still control the timing and user experiences.
 
-          If you switch the **Windows Update policies** workload to Intune, then it becomes the management authority for Windows quality and feature updates. Use Intune to configure settings for update rings and feature update settings. For more information, see [Manage Windows software updates in Intune](../../device-updates/windows/configure.md).
+          If you switch the **Windows Update policies** workload to Intune, then it becomes the management authority for Windows quality and feature updates. Use Intune to configure settings for update rings and feature update settings. For more information, see [Manage Windows software updates in Intune](../../device-updates/windows/index.md).
 
           If you switch the **Office Click-to-Run apps** workload to Intune, then it becomes the management authority for Microsoft 365 apps and updates. When you create a new Microsoft 365 suite deployment, choose the update channel for your clients will be at. For more information, see the following articles:
 

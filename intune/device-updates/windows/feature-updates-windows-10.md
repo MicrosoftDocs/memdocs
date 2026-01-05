@@ -14,7 +14,7 @@ When you use feature updates policy to deploy Windows 11, you can target the pol
 
 Another option is to select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**, then devices that don't meet the requirements for Windows 11 will get the latest Windows 10 feature update instead.
 
-However, if a Windows 10 device that can't run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](#update-behavior-when-multiple-policies-target-a-device).
+However, if a Windows 10 device that can't run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](feature-updates.md#update-behavior-when-multiple-policies-target-a-device).
 
 ## Prepare to upgrade to Windows 11
 
@@ -36,13 +36,13 @@ For more information including general licensing details, see the [Windows 11 do
 
 ## Create policy for Windows 11
 
-To deploy Windows 11, you'll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It's the [same process](#create-and-assign-feature-updates-for-windows-10-and-later-policy) though instead of selecting a Windows 10 version, you'll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
+To deploy Windows 11, you'll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It's the [same process](feature-updates.md#create-and-assign-feature-update-policies) though instead of selecting a Windows 10 version, you'll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
 
-Also, the admin can choose to deploy the latest Windows 10 update to devices that are not eligible for Windows 11. To enable this feature, the admin must select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** in the deployment policy. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the tenant meets the [licensing requirements](#prerequisites) defined at the beginning of this document.
+Also, the admin can choose to deploy the latest Windows 10 update to devices that are not eligible for Windows 11. To enable this feature, the admin must select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** in the deployment policy. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the tenant meets the [licensing requirements](feature-updates.md#prerequisites) defined at the beginning of this document.
 
 With this capability, you do not need to create two different deployment policies or two different feature updates. With a single policy, you can get your Windows 10 devices that can't go to Windows 11 to upgrade to the latest Windows 10 version and all the devices that can go to Windows 11 to upgrade to a Windows 11 version that you choose.
 
 You cannot set the checkbox for an existing policy because changing the checkbox value ends the current deployment and starts two new deployments. To change your deployment settings, delete the current feature update policy and create a new policy with the checkbox selected.
 
 - Deploying an older Windows version to a device won't downgrade the device. Devices only install an update when it's newer than the devices current version.
-- Deploying a Windows 11 update to a Windows 10 device that supports Windows 11, [upgrades that device](#upgrade-devices-to-windows-11).
+- Deploying a Windows 11 update to a Windows 10 device that supports Windows 11, upgrades that device.
