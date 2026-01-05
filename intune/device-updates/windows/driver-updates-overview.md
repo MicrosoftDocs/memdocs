@@ -76,23 +76,43 @@ Driver updates are supported for the following Windows editions:
 > **Unsupported versions and editions**:
 > *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
 
-**Devices must**:
 
-- Run a version of Windows that remains in support.
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
-- Be enrolled in Intune MDM and be Hybrid AD joined or Microsoft Entra joined.
+:::column-end:::
+:::column span="3":::
+> Feature update policies supports devices that are:
+> - Enrolled in Intune
+> - Microsoft Entra joined
+> - Microsoft Entra hybrid joined
+>
+> Devices must also meet the following requirements:
+> - Telemetry must be turned on, with a minimum setting of [*Required*](../../intune-service/configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
+>    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
+>
+>    To configure Telemetry as using the Settings catalog:
+> 
+>    1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
+> 
+>      | Category | Setting name | Value |
+>      |--|--|--|
+>      | **System** | Allow Telemetry | **Basic** or **Full** |
+> 
+>     1. Assign the policy to a group that contains as members the devices that you want to configure.
+> 
+> - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
+> - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
+>    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
+>    - Windows Autopatch
+>
+> - Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
 
-- Have Telemetry turned on and configured to report a minimum data level of *Basic* as defined in [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
 
-  You can use one of the following Intune device configuration profile paths to configure Telemetry for Windows devices:
-  - **[Device restriction template](../../intune-service/configuration/device-restrictions-windows-10.md)**: With this profile, set **Share usage data** to **Required**. *Optional* is also supported.
-  - **[Settings catalog](../../intune-service/configuration/settings-catalog.md)**: From the Settings catalog, add **Allow Telemetry** from the **System** category, and set it to **Basic**. *Full* is also supported.
+:::column-end:::
+:::row-end:::
 
-  For more information about Windows Telemetry settings, including both current and past setting options from Windows, see [Changes to Windows diagnostic data collection](/windows/privacy/changes-to-windows-diagnostic-data-collection) in the Windows documentation.
-
-- The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
-
-- Have access to the network endpoints required by Intune managed devices. See [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 
 ### Enable data collection for reports
 

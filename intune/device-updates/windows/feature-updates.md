@@ -118,13 +118,6 @@ When a device receives a feature update policy:
 :::column-end:::
 :::row-end:::
 
-
-### Limitations for Microsoft Entra registered devices
-
-Feature updates policies require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). While Windows Update client policies supports Microsoft Entra registered devices, Windows Autopatch provides more capabilities that aren't supported by those devices.
-
-For more information, see [Microsoft Entra registered devices limitations for Windows Update policies](configure.md).
-
 ## Create and assign feature update policies
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**
@@ -247,14 +240,6 @@ To learn more, see [Intune compliance reports](reports.md).
   - The device is assigned to a new feature update profile.
   - The device is unenrolled from Intune, which unenrolls the device from feature update management by Autopatch.
   - You use the [Windows Autopatch graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
-
-## Next steps
-
-- Use [Windows update rings in Intune](update-rings.md)
-- Use [Windows update compatibility reports](compatibility-reports.md)
-- Use [Windows update reports](reports.md) for Windows 10/11 updates
-- Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution
-
 
 <!-- admin center links -->
 
