@@ -50,6 +50,9 @@ items:
   - name: Driver updates reports
     href: driver-updates-reports.md
     displayName: windows updates
+  - name: Driver updates FAQs
+    href: driver-updates-faqs.md
+    displayName: windows driver updates
 - name: Compatibility reports
   href: compatibility-reports.md
   displayName: windows updates, reports
