@@ -40,6 +40,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
 :::column-end:::
 :::column span="3":::
+
 > Windows update ring policies support the following Windows editions:
 > - Pro
 > - Pro Education
@@ -47,7 +48,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 > - Education
 > - Windows IoT Enterprise
 > - Windows Team - for Surface Hub devices
-> - Windows Holographic for Business - Windows Holographic for Business supports a suset of settings for Windows updates, including:
+> - Windows Holographic for Business - Supports a suset of settings for Windows updates, including:
 >    - **Automatic update behavior**
 >    - **Microsoft product updates**
 >    - **Servicing channel**: Any update build that is generally available.

@@ -31,7 +31,7 @@ When a device receives a feature update policy:
 
 
 - Unlike using the *Pause* option of an update ring, which expires after 35 days, the feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the feature updates policy. If you edit the policy to specify a newer version, devices can install that newer version.
-- The ability to *Uninstall* the Feature update is still honored by the update rings.
+- The ability to *Uninstall* the feature update is honored by the update rings.
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](rollout-options.md).
 - When a Windows feature update is deployed to a device from the cloud service, the latest monthly quality update is automatically included.
 
@@ -44,12 +44,7 @@ When a device receives a feature update policy:
 :::column-end:::
 :::column span="3":::
 
-> - Public cloud
->
->   > [!IMPORTANT]
->   >
->   > This feature isn't supported on Government Community Cloud (GCC) High and Department of Defense (DoD) cloud environments.
->   > [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
+> Feature updates policies are supported on the public cloud only. They aren't supported on Government Community Cloud (GCC) High and Department of Defense (DoD) cloud environments.
 
 :::column-end:::
 :::row-end:::
@@ -61,17 +56,13 @@ When a device receives a feature update policy:
 
 :::column-end:::
 :::column span="3":::
-> - **Microsoft Intune Plan 1** is required for core functionality: creating the policy, selecting a feature update, using the **Make updates available as soon as possible** option or specifying a start date, and reporting.
-> - For additional **cloud-based functionality**, your organization must have a Windows license that includes the Autopatch entitlement. This is included with:
+> To use feature updates policies, the following licenses are required:
+> - Microsoft Intune Plan 1 is required for core functionality, like creating and assigning feature update policies.
+> - For additional cloud-based functionalities like gradual rollout and optional feature updates, you must have a Windows license that includes the Autopatch entitlement. This is included with:
 >   - Windows Enterprise E3/E5
 >   - Windows Education A3/A5 
 >   - Windows Virtual Desktop Access E3/E5
 >   - Microsoft 365 Business Premium
-> 
-> These licenses enable advanced features such as:
-> - [Gradual Rollout](rollout-options.md#make-updates-available-gradually)
-> - [Optional feature updates](#create-and-assign-feature-updates-for-windows-10-and-later-policy)
-
 :::column-end:::
 :::row-end:::
 
@@ -81,14 +72,14 @@ When a device receives a feature update policy:
 
 :::column-end:::
 :::column span="3":::
-> The configuration of feature update releases supports the following Windows editions:
+> Feature updates policies support the following Windows editions:
 > - Pro
 > - Pro Education
 > - Enterprise
 > - Education
 >
 > > [!IMPORTANT]
-> > *Windows Enterprise LTSC*: Windows Update client policies doesn'o't support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
+> > Windows Enterprise LTSC: feature updates policies don't support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
 :::column-end:::
 :::row-end:::
 
