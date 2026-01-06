@@ -26,11 +26,11 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+[!INCLUDE [platform](../../includes/requirements/licensing.md)]
 
 :::column-end:::
 :::column span="3":::
-> - Microsoft Intune Plan 1
+> - Microsoft Intune Plan 1 is required for core functionality, such as creating and assigning Update rings policies.
 :::column-end:::
 :::row-end:::
 
@@ -41,7 +41,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 :::column-end:::
 :::column span="3":::
 
-> Windows update ring policies support the following Windows editions:
+> Windows Update ring policies support the following Windows editions:
 > - Pro
 > - Pro Education
 > - Enterprise

@@ -58,11 +58,7 @@ When a device receives a feature update policy:
 :::column span="3":::
 > To use feature updates policies, the following licenses are required:
 > - Microsoft Intune Plan 1 is required for core functionality, like creating and assigning feature update policies.
-> - For additional cloud-based functionalities like gradual rollout and optional feature updates, you must have a Windows license that includes the Autopatch entitlement. This is included with:
->   - Windows Enterprise E3/E5
->   - Windows Education A3/A5 
->   - Windows Virtual Desktop Access E3/E5
->   - Microsoft 365 Business Premium
+> - For additional cloud-based functionalities like gradual rollout and optional feature updates, you must have a Windows license that includes the [Autopatch entitlement](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites#licenses-and-entitlements).
 :::column-end:::
 :::row-end:::
 
