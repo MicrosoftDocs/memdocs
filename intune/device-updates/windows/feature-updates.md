@@ -100,8 +100,6 @@ When a device receives a feature update policy:
 > - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
 >    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
 >    - Windows Autopatch
->
-> - Enable [data collection](reports.md#configuring-for-client-data-reporting) in Intune for devices that you wish to deploy feature updates.
 :::column-end:::
 :::row-end:::
 

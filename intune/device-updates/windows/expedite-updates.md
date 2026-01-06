@@ -48,6 +48,7 @@ The actual time required for a device to start an update depends on the device i
 
 The following are requirements to qualify for installing expedited quality updates with Intune:
 
+<!--
 **Licensing**:
 
 In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
@@ -60,6 +61,7 @@ In addition to a license for Intune, your organization must have one of the foll
 Beginning in November of 2022, the Windows Autopatch license will be checked and enforced.
 
 If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
+-->
 
 **Supported Windows versions**:
 
@@ -264,28 +266,20 @@ After a policy has been created you can monitor results, update status, and erro
 This report shows the current state of all devices in the profile and provides an overview of how many devices are in progress of installing an update, have completed the installation, or have an error.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
-
-3. To drill in for more information, select the **Reports** tab, and then **Windows Expedited Update Report**.
-
-4. Click the link **Select an expedited update profile**.
-
-5. From the list of profiles that is shown on the right side of the page, select a profile to see results.
-
-6. Select the **Generate report** button.
+1. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
+1. To drill in for more information, select the **Reports** tab, and then **Windows Expedited Update Report**.
+1. Click the link **Select an expedited update profile**.
+1. From the list of profiles that is shown on the right side of the page, select a profile to see results.
+1. Select the **Generate report** button.
 
 ### Device report
 
 This report can help you find devices with alerts or errors and can help you troubleshoot update issues.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431)
-
-2. Select **Devices** > **Monitor**.
-
-3. In the list of monitoring reports, scroll to the Software updates section and select **Windows Expedited update failures**.
-
-4. From the list of profiles that is shown on the right side of the page, select a profile to see results.
+1. Select **Devices** > **Monitor**.
+1. In the list of monitoring reports, scroll to the Software updates section and select **Windows Expedited update failures**.
+1. From the list of profiles that is shown on the right side of the page, select a profile to see results.
 
    :::image type="content" alt-text="Example of the device report." source="./images/expedite-updates/device-report.png" lightbox="./images/expedite-updates/device-report.png":::
 

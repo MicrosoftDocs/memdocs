@@ -99,7 +99,7 @@ For more information about Microsoft Entra registered devices limitations for Wi
 
 1. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 
-## Manage your Windows Update rings
+## Manage update rings
 
 In the portal, navigate to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Update rings** tab and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
 

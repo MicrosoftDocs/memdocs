@@ -2,7 +2,7 @@ items:
 - name: Overview
   href: index.md
   displayName: windows updates
-- name: Updates rings policies
+- name: Updates rings
   items:
   - name: Configure update rings policies
     href: update-rings.md
@@ -13,7 +13,7 @@ items:
   - name: 🔴 Policy settings reference
     href: settings.md
     displayName: windows updates, rings    
-- name: Feature updates policies
+- name: Feature updates
   items:
   - name: Configure feature updates policies
     href: feature-updates.md
@@ -28,7 +28,7 @@ items:
     displayName: windows updates
   - name: Upgrade Windows 10 devices
     href: feature-updates-windows-10.md
-- name: Quality updates policies
+- name: Quality updates
   items:
   - name: Configure quality updates policies
     href: quality-updates.md
@@ -39,7 +39,7 @@ items:
   - name: Expedite updates
     href: expedite-updates.md
     displayName: windows updates
-- name: Driver updates policies
+- name: Driver updates
   items:
   - name: Configure driver updates policies
     href: driver-updates.md
