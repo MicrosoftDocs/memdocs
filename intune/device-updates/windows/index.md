@@ -117,23 +117,17 @@ The following table compares how update management differs when you use Autopatc
 
 ## Prerequisites
 
-Each policy type has its own prerequisites, which the respective documentation details. In general:
+Each policy type has specific prerequisites, detailed in its respective documentation. In general:
 
 - Devices must be enrolled in Intune.
 - Devices must be Microsoft Entra joined or hybrid joined.
-- Devices must be able to access the Microsoft update endpoints.
+  Microsoft Entra registered devices aren't supported for any policy type that relies on the Windows Update for Business Deployment Service (WUfB DS)—including Feature updates, Quality updates, Driver updates, and Hotpatch.
+  For Entra registered devices, update management remains limited to Windows Update client policies and update rings policies.
+- Devices must have access to Microsoft update endpoints.
+
 
 Feature updates, quality updates, driver updates, and Hotpatch all use the same backend service as Autopatch: Windows Update for Business Deployment Service (WUfB DS). Autopatch automates these policies, but when you configure them manually in Intune, you're still calling the same service—so the requirements don't change. Because they share the same cloud orchestration layer, the prerequisites are identical:
 
 - Licensing: Windows Enterprise E3/E5 (or equivalent) for WUfB DS capabilities.
 - Telemetry: Diagnostic data set to Required level.
 - Services: Microsoft Account Sign-In Assistant (`wlidsvc`) enabled.
-
-### Limitations for Microsoft Entra registered devices
-
-Windows Autopatch requires devices to be Microsoft Entra joined. These capabilities aren't supported on Microsoft Entra registered devices. For those devices, Windows update management remains supported through core [Windows Update client policies](/windows/deployment/update/waas-manage-updates-wufb) and update rings policies.
-The following Intune policy types rely on WUfB DS and therefore can't be used on Microsoft Entra registered devices:
-
-- Driver Updates
-- Feature Updates
-- Quality Updates
