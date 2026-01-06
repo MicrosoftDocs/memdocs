@@ -3,7 +3,7 @@ title: Plan and Prepare for Endpoint Privilege Management Deployment
 description: Plan your Endpoint Privilege Management deploying by understanding requirements, fundamentals, and security recommendations.
 author: brenduns
 ms.author: brenduns
-ms.date: 10/20/2025
+ms.date: 01/26/2026
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.subservice: suite
@@ -55,7 +55,7 @@ Endpoint Privilege Management has the following requirements:
 > [!NOTE]
 >
 > - Windows 365 is supported using a supported operating system version
-> - EPM doesn't support workplace-join devices and Azure Virtual Desktop
+> - EPM policies are supported on Azure Virtual Desktop (AVD) single-session virtual machines (VMs)
 
 Endpoint Privilege Management supports the following operating systems:
 
@@ -92,7 +92,7 @@ When you configure the *elevation settings* and *elevation rules* policies that 
 
 - **File elevation and elevation types** – EPM allows users without administrative privileges to run processes in the administrative context. When you create an elevation rule, that rule allows EPM to proxy the target of that rule to run with administrator privileges on the device. The result is that the application has *full administrative* capability on the device. 
 
-With the exception of *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user's profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
+Except for *Elevate as current user*, EPM uses a *virtual account* to elevate processes. This isolates elevated actions from the user's profile, reducing exposure to user-specific data and lowering the risk of privilege escalation.
 
   When you use Endpoint Privilege Management, there are a few options for elevation behavior:
 
@@ -110,7 +110,7 @@ With the exception of *Elevate as current user*, EPM uses a *virtual account* to
     - Security tradeoff: Understand that this mode increases exposure to user-specific data.
 
     >[!TIP]
-    > When compatibility is not an issue, prefer a method that uses the virtual account elevation for stronger security.
+    > When compatibility isn't an issue, prefer a method that uses the virtual account elevation for stronger security.
 
   - **Deny**: A deny rule identifies a file that EPM blocks from running in an elevated context. Deny rules can ensure that known files or potentially malicious software can't be run in an elevated context.
 
