@@ -20,17 +20,6 @@ The data in the Intune reports for Windows Driver update policies is used only f
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
-
-:::column-end:::
-:::column span="3":::
-> To support reporting on all status and events for driver updates, you must configure the following data collection settings:
-> - Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
 [!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
 
 :::column-end:::
@@ -40,9 +29,16 @@ The data in the Intune reports for Windows Driver update policies is used only f
 :::column-end:::
 :::row-end:::
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
-
-
+:::column-end:::
+:::column span="3":::
+> To support reporting on all status and events for driver updates, enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection on devices at the *Required* level or higher.
+> For more information, see [Configure Windows diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
+:::column-end:::
+:::row-end:::
 
 ### User permissions to use reports
 

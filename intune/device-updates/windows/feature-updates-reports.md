@@ -12,7 +12,7 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 
 The data in the Intune reports for feature updates policies is used only for these reports and doesn't surface in other Intune reports.
 
-- [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report): This report provides an overall view of compliance for devices on a per-policy basis.
+- [Windows feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report): This report provides an overall view of compliance for devices on a per-policy basis.
 
 - [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report): This report provides details on Alerts - errors, warnings, information, and recommendations - on a per-policy basis to help troubleshoot and optimize your devices.
 
@@ -20,14 +20,27 @@ Before you can use the feature updates policy reports, you must configure prereq
 
 ## Prerequisites
 
-- **Data collection**:
+:::row:::
+:::column span="1":::
+[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
 
-  Before a device can send the reporting data that's used in the Windows 10 feature updates report for Intune, you must [Configure data collection](#configuring-for-client-data-reporting):
+:::column-end:::
+:::column span="3":::
+> Windows update reports require sharing Windows diagnostic data with Intune.\
+> For more information, see [Enable use of Windows diagnostic data by Intune](../../intune-service/protect/data-enable-windows-data.md).
+:::column-end:::
+:::row-end:::
 
-  - Service-based data is collected for all feature update versions and doesn't require you to configure data collection.
-  - Client-based data is collected from devices only after data collection is configured.
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
-  Service and client-based data is described in [Use the Windows 10 feature updates (Organizational) report](#use-the-windows-feature-updates-organizational-report) later in this article.
+:::column-end:::
+:::column span="3":::
+> To support reporting on all status and events for feature updates, enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection on devices at the *Required* level or higher.
+> For more information, see [Configure Windows diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
+:::column-end:::
+:::row-end:::
 
 ## About reporting data latency
 
@@ -67,61 +80,61 @@ To use the report:
      > ![Review ownership](./images/reports/windows-feature-updates-by-policy.png)
 
    The following list identifies the columns that are available in the view:
-   - **Devices** – The name of the device.
-   - **UPN** – Intune user identifier (email).
-   - **Intune Device ID** – Intune device identifier.
-   - **Microsoft Entra Device ID** – Microsoft Entra identifier for device.
-   - **Last Event Time** – The last time there was new data, or something happened for the device and update.
-   - **Update State** – The state of the update for the device. Initial state data is from the service-side, which is the status of the update in the system before it begins to install on the device. When client-side data is available, client-side data is shown, replacing the server-side data.
-   - **Update Substate** – A low-level detailed version of the Update State.
-   - **Update Aggregated Status** – A high-level summary of the Update State, like *In progress* or *Error*.
-   - **Alert Type** – When applicable, Alert Type displays the most recent alert message.
-   - **Alert Details** – *This column isn't in use.*
-   - **Last Scan Time** – The last time this device ran a scan for Windows Update.
-   - **Target Version** – This column is useful in policy reports as it shows the friendly name of the update being targeted on the device. This field can be particularly useful when the [win10 sxs] checkbox is selected to identify when and which devices were determined to be ineligible for the update and are now being targeted with the Win10 update.
+   - **Devices**: The name of the device.
+   - **UPN**: Intune user identifier (email).
+   - **Intune Device ID**: Intune device identifier.
+   - **Microsoft Entra Device ID**: Microsoft Entra identifier for device.
+   - **Last Event Time**: The last time there was new data, or something happened for the device and update.
+   - **Update State**: The state of the update for the device. Initial state data is from the service-side, which is the status of the update in the system before it begins to install on the device. When client-side data is available, client-side data is shown, replacing the server-side data.
+   - **Update Substate**: A low-level detailed version of the Update State.
+   - **Update Aggregated Status**: A high-level summary of the Update State, like *In progress* or *Error*.
+   - **Alert Type**: When applicable, Alert Type displays the most recent alert message.
+   - **Alert Details**: *This column isn't in use.*
+   - **Last Scan Time**: The last time this device ran a scan for Windows Update.
+   - **Target Version**: This column is useful in policy reports as it shows the friendly name of the update being targeted on the device. This field can be particularly useful when the [win10 sxs] checkbox is selected to identify when and which devices were determined to be ineligible for the update and are now being targeted with the Win10 update.
 
    The following information applies to **Update State** and **Update Substate**:
 
    - **Service-side data**:
      - **Pending**:
-       - **Validation** – The update can't be offered to the device because of a validation issue with the device and Windows Update.
-       - **Scheduled** – The update isn't ready to be offered to the device but is scheduled for offering at a later date.
+       - **Validation**: The update can't be offered to the device because of a validation issue with the device and Windows Update.
+       - **Scheduled**: The update isn't ready to be offered to the device but is scheduled for offering at a later date.
      - **On hold**:
-       - **Admin paused** – The update is on hold because the Deployment being paused by an explicit Administrator action.
-       - **ServicePaused** – The update is on hold because of an automatic action by Windows Update.
+       - **Admin paused**: The update is on hold because the Deployment being paused by an explicit Administrator action.
+       - **ServicePaused**: The update is on hold because of an automatic action by Windows Update.
      - **Canceled**:
-       - **Admin Cancelled** – The update offer was canceled by explicit Administrator action.
-       - **Service Cancelled** – The update was canceled by Windows Update for one of the following reasons:
+       - **Admin Cancelled**: The update offer was canceled by explicit Administrator action.
+       - **Service Cancelled**: The update was canceled by Windows Update for one of the following reasons:
           - The *end of service* for the selected content was reached and it's no longer offered by Windows Update. For example, the device might have been added to a deployment after the content's availability expired, or the content reached its end of service date before it could install on the device.
           - The deployment content has been superseded for the device. This can happen when the device is targeted by another deployment that deploys newer content. For example, one deployment targets the Windows 10 device to install version 2004 and a second deployment targets that same device with version 21H1. In this event, 2004 is superseded by the 21H1 deployment and Windows Update cancels the 2004 deployment to the device.
-       - **Removed from Deployment** – The update offer was canceled because it was removed from the Deployment by explicit Administrator action.
+       - **Removed from Deployment**: The update offer was canceled because it was removed from the Deployment by explicit Administrator action.
        - **Not Supported** - The update was canceled by Windows Update as the device cannot be found in Azure Entra and is an invalid device. This can happen if the device is not Azure Entra joined or does not have a valid Device ID, Global Device ID.
      - **Offering**:
-       - **OfferReady** – The update is currently being offered to the device by Windows Update.
+       - **OfferReady**: The update is currently being offered to the device by Windows Update.
 
    - **Client-side data**:
      - **On Hold**:
-       - **Deferred** – Windows Update client policies are causing the device to defer the update being offered.
+       - **Deferred**: Windows Update client policies are causing the device to defer the update being offered.
      - **Offering**:
-       - **Offer Received** – The device scanned against Windows Update (WU) and identifies that the update is applicable but hasn't begun to download it.
+       - **Offer Received**: The device scanned against Windows Update (WU) and identifies that the update is applicable but hasn't begun to download it.
      - **Installing**:
-       - **Download Start** – The download process has begun.
-       - **Download Complete** – The download process has completed.
-       - **Install Start** – The pre-restart install process has started.
-       - **Install Complete** – The pre-restart install process has finished. If the update doesn't require a restart, the update process ends here.
-       - **Restart Required** – A restart is required to finish update.
-       - **Restart Initiated** – The device has gone into restart.
-       - **Restart Complete** – The device has come back from restart.
+       - **Download Start**: The download process has begun.
+       - **Download Complete**: The download process has completed.
+       - **Install Start**: The pre-restart install process has started.
+       - **Install Complete**: The pre-restart install process has finished. If the update doesn't require a restart, the update process ends here.
+       - **Restart Required**: A restart is required to finish update.
+       - **Restart Initiated**: The device has gone into restart.
+       - **Restart Complete**: The device has come back from restart.
      - **Installed**:
-       - **Update Installed** – The update successfully installed.
+       - **Update Installed**: The update successfully installed.
      - **Uninstalling**:
-       - **Uninstall** – The device is actively uninstalling the update.
-       - **Rollback** – A rollback has been initiated to a previous update because of a serious issue during installation.
-       - **Update Uninstalled** – The update successfully uninstalled.
-       - **Rollback complete** – A rollback has completed.
+       - **Uninstall**: The device is actively uninstalling the update.
+       - **Rollback**: A rollback has been initiated to a previous update because of a serious issue during installation.
+       - **Update Uninstalled**: The update successfully uninstalled.
+       - **Rollback complete**: A rollback has completed.
      - **Cancelled**:
-       - **User Cancelled** – A user canceled the update.
-       - **Device Cancelled** – The device canceled the update for a user. This action is usually because the update no longer applies.
+       - **User Cancelled**: A user canceled the update.
+       - **Device Cancelled**: The device canceled the update for a user. This action is usually because the update no longer applies.
 
    - **Other**:
      - **Needs attention**: The device has some issue and needs attention.

@@ -40,16 +40,12 @@ The report shows the number of devices under each QU level corresponding to the 
 - **Update**: Monthly quality update version. The update format corresponds to YYYY-MM-UpdateType. For example, 2024-02-B.
   - **Older releases**: All windows devices running valid feature version (non-preview/insider) and running older than 3 months of quality update level are combined into a single entity shown as *Older releases*.
   - **Windows insider or other releases**: All those devices whose OS version does not align with the Windows 10/11 generally available feature release version and not on documented QU level, are combined under *Windows insider or other releases*.
-
 - **Update Type**: Monthly quality update type. For more information, go to [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544)
   - B: Security Updates (released on patch Tuesday)
   - D: Non-Security Updates (released on 4th week of month)
   - OOB: Out of band updates
-
 - **Release Date**: Release date of the monthly quality update.
-
 - **Devices on this update**: Number of devices where the target quality update is installed.
-
 - **% of all devices**: Number of devices running a particular quality update represented in percentage of total managed devices in Intune.
 
 All QUs from this page are hyperlinked. When you select one of the current or last 3 months quality update (B, D or OOB), the [Windows quality update distribution per feature version](#windows-quality-update-distribution-per-feature-version) report is displayed.
@@ -73,15 +69,10 @@ Select **Columns** at the top of the table to toggle the visibility of columns, 
 **Column details**:
 
 - **Windows version**: Shows the Windows feature version.
-
 - **Total devices**: Total managed devices corresponding to the Windows feature version.
-
 - **Build Number**: Build number of the windows feature version. Devices running supported Windows 10/11 feature versions that the selected quality update does not cover are marked as **Not applicable**. Devices running unsupported Windows 10/11 feature versions, insider versions, or those with an unknown OS version, are grouped under one line item and marked as **Not applicable**.
-
 - **Devices on this update or later**: Number of devices where the target quality update or later is installed.
-
 - **Devices on this update**: Number of devices where the target quality update is installed.
-
 - **Devices need update**: Number of devices that are applicable for the update but do not currently have it installed.
 KB article: External link to target quality update's KB Article for the corresponding Windows feature version.
 
@@ -97,21 +88,13 @@ The report offers sortable columns and search options, along with an export feat
 **Column details**:
 
 - **Device Name**: The name of the device.
-
 - **Intune Device Id**: Intune device identifier.
-
 - **Entra Device Id**: Microsoft Entra identifier for device.
-
 - **Primary UPN**: Intune user identifier (email).
-
 - **OS version**: Operating System (OS) version build number. The OS version corresponds to the Windows 10/11 Feature Version (For example, Windows 10 22H2, Windows 11 22H1) and the Quality Update level (For example, 2022-08 B, 2023-02 OOB, 2023-02 C).
-
 - **Windows feature version**: Windows feature version.
-
 - **Windows quality version**: Windows quality update.
-
 - **Managed by**: Management agent.
-
 - **Last check-in**: Device last check-in date time
 
 The search bar enables the search for a specific device or UPN. Select a device from the list to view the device's details.
