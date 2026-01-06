@@ -78,11 +78,26 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
+### New updates to the Apple settings catalog<!-- 35787099 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There will be a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
+ 
+#### iOS/iPadOS
+
+**Restrictions**:
+
+- Rating Apps Exempted Bundle IDs
+
+Apple rebranded **Rapid Security Responses** to **Background Security Improvements**. This change will update in the settings catalog. For more information on Background Security Improvements, see [Background Security Improvements on Apple devices](https://support.apple.com/guide/deployment/background-security-improvements-dep93ff7ea78/web) (opens Apple's web site).
+
+
 ### Filter by Android management mode in the settings catalog<!-- 31844205 -->
 
 The [settings catalog](../configuration/settings-catalog.md) includes hundreds of settings that you can configure. There are built-in features that help filter the available settings.
 
-When you create an Android settings catalog policy, there's a management mode filter option that filters the available settings by their enrollment type, including:
+When you create an Android settings catalog policy, there will be a management mode filter option that filters the available settings by their enrollment type, including:
 
 - Fully managed (COBO)
 - Corporate-owned work profile (COPE)
