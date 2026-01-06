@@ -24,11 +24,10 @@ To manage devices and install apps, your users can install the Company Portal ap
 
 1. Use the [Windows Package Manager](/windows/package-manager/winget/download) command-line tool to download the Company Portal app for Windows with dependencies by entering the following command:
 
-```powershell
-winget download "Company Portal" --source msstore
-```
-   > [!NOTE]
-   > By default, files are downloaded to the user’s Downloads folder. Use the `--download-directory` option to specify a custom download path.
+    ```powershell
+    winget download "Company Portal" --source msstore
+    ```
+   By default, files are downloaded to the user’s Downloads folder. Use the `--download-directory` option to specify a custom download path. 
 
 1. In the Microsoft Intune admin center, upload the Company Portal app as a new app.
     1. Go to **Apps** > **Platforms** and select **Windows**.
