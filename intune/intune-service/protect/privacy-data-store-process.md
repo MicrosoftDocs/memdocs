@@ -70,7 +70,7 @@ Microsoft 365 Data Handling Standard policy specifies how long customer data is 
 
 For each of the deletion scenarios, see [Data Retention, Deletion, and Destruction in Microsoft 365](/microsoft-365/enterprise/microsoft-365-data-retention-deletion-and-destruction-overview?view=o365-worldwide&preserve-view=true).
 
-In general, personal data collected by Intune is removed within 30 days after deletion. Audit logs are retained for up to one year for security purposes.
+In general, personal data collected by Intune is removed within 30 days after deletion. Audit logs are retained for up to two year for security purposes.
 
 ## Processing personal data
 
