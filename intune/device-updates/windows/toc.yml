@@ -2,12 +2,12 @@ items:
 - name: Overview
   href: index.md
   displayName: windows updates
-- name: Windows updates rings
+- name: Updates rings policies
   items:
-  - name: Overview
+  - name: Configure update rings policies
     href: update-rings.md
     displayName: windows updates, rings
-  - name: Reports
+  - name: Update rings reports
     href: update-rings-reports.md
     displayName: windows updates, rings
   - name: 🔴 Policy settings reference

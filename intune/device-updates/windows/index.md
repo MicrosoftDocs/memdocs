@@ -120,8 +120,8 @@ The following table compares how update management differs when you use Autopatc
 Each policy type has specific prerequisites, detailed in its respective documentation. In general:
 
 - Devices must be enrolled in Intune.
-- Devices must be Microsoft Entra joined or hybrid joined.
-  Microsoft Entra registered devices aren't supported for any policy type that relies on the Windows Update for Business Deployment Service (WUfB DS)—including Feature updates, Quality updates, Driver updates, and Hotpatch.
+- Devices must be Microsoft Entra joined or hybrid joined.\
+  Microsoft Entra registered devices aren't supported for any policy type that relies on the Windows Update for Business Deployment Service (WUfB DS)—including Feature updates, Quality updates, Driver updates, and Hotpatch.\
   For Entra registered devices, update management remains limited to Windows Update client policies and update rings policies.
 - Devices must have access to Microsoft update endpoints.
 
