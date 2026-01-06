@@ -233,7 +233,23 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-<!-- ## Tenant administration -->
+## Tenant administration
+
+### Admin tasks in Microsoft Intune will soon be out of preview and become generally available<!-- 32978931 -->
+
+*Admin tasks** in the Intune admin center will soon be generally available.
+
+Admin tasks provide a centralized view to discover, organize, and act on security tasks, multi admin approval requests, and user elevation requests. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention—without navigating across multiple nodes.
+
+The following task types are supported:
+
+- Endpoint Privilege Management file elevation requests
+- Microsoft Defender security tasks
+- Multi Admin Approval requests
+
+Intune only shows tasks you have permission to manage. When you select a task, Intune opens the same interface and workflow you'd use if managing the task from its original location. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
+
+For more information, see [Admin tasks](../fundamentals/admin-tasks.md).
 
 <!-- *********************************************** -->
 
