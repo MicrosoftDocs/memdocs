@@ -1,6 +1,6 @@
 ---
-title: Use Windows Update for Business reports for Windows Updates in Microsoft Intune
-description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
+title: Reports for Windows quality updates policies
+description: Learn about the reports available for Windows quality updates policies in Microsoft Intune.
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.reviewer: zadvor

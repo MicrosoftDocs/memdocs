@@ -131,12 +131,6 @@ You can add the *Device configurations* permission with one or more rights to yo
 
 For more information, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
-### Limitations for Workplace Joined devices
-
-Intune policies for *Driver updates* require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for other capabilities that aren't supported for WPJ devices.
-
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
-
 ## Architecture
 
 :::image type="content" source="./images/driver-updates/wdum-architecture.png" alt-text="A conceptual diagram of Windows Driver Update Management." lightbox="./images/driver-updates/wdum-architecture.png":::
@@ -167,5 +161,5 @@ For more information about planning deployments, see [Create a deployment plan](
 
 ## Next steps
 
-- [Create a Windows driver update policy](driver-updates-policy.md)
-- [Use Windows driver update reports](reports.md#reports-for-windows-driver-updates-policy)
+- [Windows Driver update policies](driver-updates-policy.md)
+- [Reports for Windows Driver updates policy](driver-updates-reports.md)

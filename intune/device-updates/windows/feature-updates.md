@@ -160,16 +160,16 @@ In the admin center, go to **Devices** > **By platform** > **Windows** > **Manag
 
 For each profile you can view:
 
-- **Feature Update Version** – The feature update version in the profile.
+- **Feature Update Version**: The feature update version in the profile.
 
-- **Assigned** – If the profile is assigned to one or more groups.
+- **Assigned**: If the profile is assigned to one or more groups.
 
 - **Support**: The status of the feature update:
-  - **Supported** – The feature update version is in support and can deploy to devices.
+  - **Supported**: The feature update version is in support and can deploy to devices.
   - **Support Ending** - The feature update version is within two months of its support end date.
-  - **Not supported** – Support for the feature update has expired and it no longer deploys to devices.
+  - **Not supported**: Support for the feature update has expired and it no longer deploys to devices.
 
-- **Support End Date** – The end of support date for the feature update version.
+- **Support End Date**: The end of support date for the feature update version.
 > [!NOTE]
 > The date provided is for the Enterprise and Education editions of Windows.  To find the support dates for other editions supported by Windows Autopatch, see the [Microsoft Product Lifecycle site](https://aka.ms/lifecycle).
 
@@ -179,13 +179,13 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 - Select **Properties** to modify the deployment.  On the *Properties* pane, select **Edit** to open the *Deployment settings or Assignments*, where you can then modify the deployment.
 
 > [!NOTE]
-> The End user update status Last Scanned Time value will return 'Not scanned yet' until an initial user logs on and Update Session Orchestrator (USO) scan is initiated. For more information on the Unified Update Platform (UUP) architecture and related components, see [Get started with Windows Update](/windows/deployment/update/windows-update-overview).
+> The End user update status Last Scanned Time value will return *Not scanned yet* until a user logs on and Update Session Orchestrator (USO) scan is initiated. For more information on the Unified Update Platform (UUP) architecture and related components, see [Get started with Windows Update](/windows/deployment/update/windows-update-overview).
 
 ## Validation and reporting
 
-There are multiple options to get in-depth reporting for Windows 10/11 updates with Intune. Windows update reports show details about your Windows 10 and Windows 11 devices side by side in the same report.
+There are multiple options to get in-depth reporting for Windows updates with Intune. Windows update reports show details about your Windows devices side by side in the same report.
 
-To learn more, see [Intune compliance reports](reports.md).
+To learn more, see [reports for feature updates policies](feature-updates-reports.md).
 
 ## Feature updates policies limitations and considerations
 
@@ -196,7 +196,7 @@ To learn more, see [Intune compliance reports](reports.md).
   > [!TIP]
   > If you're using feature updates, we recommend you set the Feature update deferral period to *0* in the associated Update Rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations.
   >
-  > For more information, see [Move from update ring deferrals to feature updates policy](configure.md#move-from-update-ring-deferrals-to-feature-updates-policy)
+  > For more information, see [Move from update ring deferrals to feature updates policy](ring-deferrals-to-feature-updates-policy.md).
 
 - Windows feature updates policies can't be applied during the Windows Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 
@@ -205,14 +205,14 @@ To learn more, see [Intune compliance reports](reports.md).
   To prevent this initial delay from impacting your co-managed devices:
 
   1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-  2. Go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Feature updates** tab > **Create profile**.
-  3. For **Deployment settings**, enter a meaningful name and a description for the policy. Then, specify the feature update you want devices to be running.
-  4. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you've selected, or a newer version, won't be offered the update.
+  1. Go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Feature updates** tab > **Create profile**.
+  1. For **Deployment settings**, enter a meaningful name and a description for the policy. Then, specify the feature update you want devices to be running.
+  1. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you've selected, or a newer version, won't be offered the update.
 
      Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** tab > **Feature Updates report**. Select the policy you created and then generate the report.
 
-  5. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows 10 feature updates (Organizational) report](reports.md#use-the-windows-10-feature-updates-organizational-report).
-  6. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
+  1. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows feature updates (Organizational) report](feature-updates-reports.md#use-the-windows-feature-updates-organizational-report).
+  1. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
 

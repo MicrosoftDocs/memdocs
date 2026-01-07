@@ -1,6 +1,6 @@
 ---
-title: Use Windows Update for Business reports for Windows Updates in Microsoft Intune
-description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
+title: Reports for Windows feature updates policies
+description: Learn about the reports available for Windows feature updates policies in Microsoft Intune.
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.reviewer: zadvor
@@ -12,9 +12,8 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 
 The data in the Intune reports for feature updates policies is used only for these reports and doesn't surface in other Intune reports.
 
-- [Windows feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report): This report provides an overall view of compliance for devices on a per-policy basis.
-
-- [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report): This report provides details on Alerts - errors, warnings, information, and recommendations - on a per-policy basis to help troubleshoot and optimize your devices.
+- Windows feature updates (Organizational): This report provides an overall view of compliance for devices on a per-policy basis.
+- Feature update failures report (Operational): This report provides details on Alerts - errors, warnings, information, and recommendations - on a per-policy basis to help troubleshoot and optimize your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
 
@@ -48,33 +47,29 @@ The data for these reports is generated at different times, which depend on the 
 
 - **Service-based data from Windows Update**: This data typically arrives in less than an hour after an event happens in the service. Events include Alerts for a device that can't register with Windows Update (which is viewable in the *Feature update failures report*), to status updates about when Windows Update began offering an update to clients. This data is available without configuring data collection.
 
-- **Client-based data from Intune devices that are configured to send data to Intune**: This data is processed in batches and refreshes every eight hours, but is only available after you [configure data collection](#configuring-for-client-data-reporting). The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
+- **Client-based data from Intune devices that are configured to send data to Intune**: This data is processed in batches and refreshes every eight hours, but is only available after you configure data collection. The data contains information like when a client doesn't have enough disk space to install an update. This data is also used in the Windows 10 feature updates organizational report to show the various installation steps a device moves through when installing feature updates.
 
 ## Use the Windows feature updates (Organizational) report
 
 The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](feature-updates.md) policy.
 
 > [!IMPORTANT]
-> Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
+> Before this report can show data, you must configure data collection for the Windows feature updates reports.
 
 This report provides you update installation status that's based on the update state from device and device-specific update details. The data in this report is timely, calls out the device name and state, and other update-related details. This report also supports filtering, searching, paging, and sorting.
 
 To use the report:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
 2. To view a summary report across all feature updates policies:
 
    - In the admin center, go to **Reports** > **Windows updates**. The default view displays the **Summary** tab:
      > [!div class="mx-imgBorder"]
      > ![Enable data collection for Intune](./images/reports/windows-updates-summary.png)
-
 3. To open the **Windows 10 feature updates** report and view device details for a specific feature updates profile:
 
    - In the admin center, go to **Reports** > **Windows updates** > select the **Reports** tab > select **Windows Feature Update Report**.
-
    - Select on **Select a feature update profile**, select a profile, and then **Generate report**.
-
    - Select **Update status** and **Ownership** to refine the report.
      > [!div class="mx-imgBorder"]
      > ![Review ownership](./images/reports/windows-feature-updates-by-policy.png)
@@ -143,15 +138,11 @@ To use the report:
 
 The **Feature update failures** operational report provides details for devices that you target with a feature updates policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
-> [!IMPORTANT]
-> Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
-
 This report provides insights to update installation status, including the number of devices with errors. It also supports drilling in for more details to help you troubleshoot issues with the installation. This report supports filtering, searching, paging, and sorting.
 
 To use the report:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
 2. Select **Devices** > **Monitor**, and then below *Software updates* select **Feature update failures**.
 
    - The initial view displays a per-profile summary of how many devices have alerts for each of your profiles with the version of Windows that the profile targets:
