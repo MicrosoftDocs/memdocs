@@ -250,7 +250,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ### Admin tasks in Microsoft Intune will soon be out of preview and become generally available<!-- 32978931 -->
 
-*Admin tasks** in the Intune admin center will soon be generally available.
+**Admin tasks** in the Intune admin center will soon be generally available.
 
 Admin tasks provide a centralized view to discover, organize, and act on security tasks, multi admin approval requests, and user elevation requests. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention—without navigating across multiple nodes.
 
