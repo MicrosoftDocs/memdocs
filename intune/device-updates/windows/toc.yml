@@ -54,7 +54,7 @@ items:
     href: driver-updates-reports.md
     displayName: windows updates
   - name: Driver updates FAQs
-    href: driver-updates-faqs.md
+    href: driver-updates-faq.yml
     displayName: windows driver updates
 - name: Delivery Optimization
   href: ../../intune-service/configuration/delivery-optimization-windows.md
