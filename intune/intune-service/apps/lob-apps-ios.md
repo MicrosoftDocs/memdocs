@@ -16,10 +16,8 @@ Use the information in this article to help you add an iOS/iPadOS line-of-busine
 
 > [!NOTE]
 > Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You can't use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
->
-> iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
->
-> Bundle identifiers (for example, *com.contoso.app*) are meant to be unique identifiers of an app. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
+> > iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
+> > Bundle identifiers (for example, _com.contoso.app_) are meant to be unique identifiers of an app. Each line-of-business app instance in the Apps list is treated as a separate app, even if it has the same bundle ID. While you can create multiple instances of the same app in Intune, targeting separate instances of the same app can cause unexpected behaviors on a device. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
 
 You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Intune admin center.
 
