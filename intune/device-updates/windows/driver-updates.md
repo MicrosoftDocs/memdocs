@@ -35,47 +35,46 @@ Windows driver update management applies to:
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> This feature isn't supported on GCC cloud environment.
+:::row:::
+:::column span="1":::
+[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
+
+:::column-end:::
+:::column span="3":::
+
+> Driver updates policies are supported on the public cloud only. They aren't supported on Government Community Cloud (GCC) High and Department of Defense (DoD) cloud environments.
+
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/licensing.md)]
+
+:::column-end:::
+:::column span="3":::
+> To use driver updates policies, the following licenses are required:
+> - Microsoft Intune Plan 1 is required for core functionality, like creating and assigning policies.
+> - A Windows license that includes the [Autopatch entitlement](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites#licenses-and-entitlements).
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+
+:::column-end:::
+:::column span="3":::
+> Feature updates policies support the following Windows editions:
+> - Pro
+> - Pro Education
+> - Enterprise
+> - Education
 >
-> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
-
-To use Windows Driver Update management, your organization must have the following licenses, subscriptions, and network configurations:
-
-### Subscriptions
-
-- **Intune**: Your tenant requires the *Microsoft Intune Plan 1* subscription.
-
-- **Microsoft Entra ID**: *Microsoft Entra ID Free* (or greater) subscription.
-
-**Windows subscriptions and licenses**:
-
-Your organization must have one of the following subscriptions that include a license for Windows Autopatch:
-
-- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows Virtual Desktop Access E3 or E5
-- Microsoft 365 Business Premium
-
-*Review your subscription details for applicability to Windows 11*.
-
-If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants' licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
-
-### Device & Edition requirements
-
-**Windows editions**:
-
-Driver updates are supported for the following Windows editions:
-
-- Pro
-- Enterprise
-- Education
-- Pro for Workstations
-
-> [!NOTE]
-> **Unsupported versions and editions**:
-> *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
-
+> > [!NOTE]
+> > *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
+:::column-end:::
+:::row-end:::
 
 :::row:::
 :::column span="1":::
@@ -110,10 +109,6 @@ Driver updates are supported for the following Windows editions:
 :::column-end:::
 :::row-end:::
 
-
-### GCC High support
-
-Intune policy for Driver Updates isn't currently supported with GCC High environments.
 
 ### RBAC requirements
 
