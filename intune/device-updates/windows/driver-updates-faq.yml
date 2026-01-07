@@ -18,19 +18,19 @@ sections:
           Any driver updates that are currently published to Windows Update and applicable to one or more devices in the policy are available through driver updates policies.
       - question: Where can I learn more about the available drivers?
         answer: |
-          You can get more information about drivers by copying the name and searching the catalog.update.microsoft.com website.
+          You can get more information about drivers by copying the name and searching the [Microsoft Update Catalog](catalog.update.microsoft.com) website.
       - question: Do driver updates policies update drivers for plug-in devices?
         answer: |
           Yes, if the driver updates are published to Windows Update by the OEM vendor.
-      - question: Which driver updates can my device users see?
+      - question: Which driver updates can users see?
         answer: |
-          After a device is assigned to a driver update policy, optional drivers aren't shown to the end user. When the admin approves a driver update, it effectively becomes "required" and installs the next time the device scans for updates.
+          After a device is assigned to a driver update policy, optional drivers aren't shown to the user. When the admin approves a driver update, it effectively becomes *required* and installs the next time the device scans for updates.
 
   - name: Policy configuration
     questions:
-      - question: Do policies for driver updates support Assignment Filters?
+      - question: Do policies for driver updates support assignment filters?
         answer: |
-          No. Driver Updates aren't currently supported with Assignment Filters.
+          No. Driver Updates aren't currently supported with assignment filters.
       - question: Can I manage a device through multiple driver update policies?
         answer: |
           While the use of multiple policies per device is supported, we don't recommend doing so. Instead, we recommend adding devices to a single policy to avoid confusion about whether a driver for a device is or isn't approved.
