@@ -215,14 +215,8 @@ To uninstall the latest Windows update:
 1. After you trigger the uninstall for one update type, you can select Uninstall again to uninstall the remaining update type.
 ---
 
-
-## Validation and reporting
-
-There are multiple options to get in-depth reporting for Windows updates with Intune. To learn more about the reports for update rings, including details for the default  view and the additional report tiles, see [Windows update reports](reports.md#reports-for-update-rings-for-windows-10-and-later-policy).
-
 ## Next steps
 
 - Use [Windows feature updates in Intune](feature-updates.md)
 - Use [Windows update compatibility reports](compatibility-reports.md)
-- Use [Windows update reports](reports.md) for Windows updates
-- Also see [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview) in the Windows deployment content for an alternative solution
+- Use [Windows feature update reports](feature-updates-reports.md)
