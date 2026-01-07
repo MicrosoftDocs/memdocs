@@ -124,7 +124,7 @@ To help avoid conflicts or configurations that can block installation of expedit
 | Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
 | Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
 
-For more information about these settings, see [Policy CSP – Update](/windows/client-management/mdm/policy-csp-update).
+For more information about these settings, see [Policy CSP Update](/windows/client-management/mdm/policy-csp-update).
 
 Group Policy settings override mobile device management policies, and the following list of Group Policy settings can interfere with Expedited policy. On devices where these settings were managed by Group Policy, restore them to their device defaults (Not configured):
 
@@ -135,7 +135,7 @@ Group Policy settings override mobile device management policies, and the follow
 
 **Monitoring and reporting**:
 
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](reports.md#configuring-for-client-data-reporting).
+Before you can monitor results and update status for expedited updates, your Intune tenant must enable data collection.
 
 ### Limitations for Workplace Joined devices
 
@@ -256,8 +256,6 @@ From this pane, you can:
 - Select **Properties** to modify the deployment. On the *Properties* pane, select **Edit** to open the *Settings*, *Scope tags*, or *Assignments*, where you can then modify the deployment.
 
 ## Monitoring and reporting
-
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable [data collection](reports.md#configuring-for-client-data-reporting).
 
 After a policy has been created you can monitor results, update status, and errors from the following reports.
 
