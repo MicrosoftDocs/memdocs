@@ -41,7 +41,7 @@ Windows driver update management applies to:
 
 :::column-end:::
 :::column span="3":::
-> To use driver updates policies, the following licenses are required:
+> To use this feature, the following licenses are required:
 > - Microsoft Intune Plan 1 is required for core functionality, like creating and assigning policies.
 > - A Windows license that includes the [Autopatch entitlement](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites#licenses-and-entitlements).
 >
@@ -58,7 +58,7 @@ Windows driver update management applies to:
 
 :::column-end:::
 :::column span="3":::
-> Feature updates policies support the following Windows editions:
+> This feature supports the following Windows editions:
 > - Pro
 > - Pro Education
 > - Enterprise
@@ -121,7 +121,7 @@ For more information, see [Role-based access control for Microsoft Intune](../..
 
 ## Architecture
 
-:::image type="content" source="./images/autopatch-ds.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./images/driver-updates/autopatch-ds.png":::
+:::image type="content" source="./images/autopatch-ds.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./images/autopatch-ds.png" border="false":::
 
 **Windows Driver Update Management architecture**:
 
