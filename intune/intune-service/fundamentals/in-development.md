@@ -143,19 +143,6 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 ## Device management
 
-### Device Offboarding Agent and Admin Tasks integration<!-- 35967714 -->
-
-We are working to integrate the Device Offboarding Agent with admin tasks to turn recommendations into actionable items. IT operators will be able to assign, monitor, and complete these tasks to ensure smooth offboarding. This integration will help teams:
-
-- Identify and track work tied to Device Offboarding Agent processes
-- Improve clarity and alignment across teams
-- Increase efficiency through structured workflows
-
-To learn more:
-
-- [Admin tasks](../fundamentals/admin-tasks.md)
-- [Device Offboarding Agent](../../agents/device-offboarding-agent.md)
-
 ### More options for assignment filters > Device Management Type property for managed apps on Android and iOS/iPadOS<!-- 25040926 -->
 
 When you create policies for your managed apps, you can use [assignment filters](filters.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
