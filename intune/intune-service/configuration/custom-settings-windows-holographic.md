@@ -96,7 +96,7 @@ The following settings are useful for devices running Windows Holographic for Bu
 > [!div class="mx-tableFixed"]
 > |OMA-URI|Data type|
 > |---|---|
-> | `./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl` |This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update client policies](../../device-updates/windows/configure.md).<br/><br/>String<br/>URL - the device checks for updates from the WSUS server at the specified URL.<br/>Not configured - The device checks for updates from Microsoft Update.|
+> | `./Vendor/MSFT/Policy/Config/Update/UpdateServiceUrl` |This setting is available in RS5 (build 17763) and earlier. Starting with 19H1 (build 18362), use [Windows Update client policies](../../device-updates/windows/index.md).<br/><br/>String<br/>URL - the device checks for updates from the WSUS server at the specified URL.<br/>Not configured - The device checks for updates from Microsoft Update.|
 
 ### [ApprovedUpdates](/windows/client-management/mdm/update-csp)
 

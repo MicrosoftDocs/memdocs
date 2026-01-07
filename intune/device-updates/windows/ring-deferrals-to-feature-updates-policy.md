@@ -26,5 +26,5 @@ Use the following process to ensure Windows Update has processed your feature up
 
 1. In the Microsoft Intune admin center, create a [feature updates policy](feature-updates.md) that configures your desired Windows version, and assign it to applicable devices.
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
-1. View the [Windows feature updates (Organizational)](reports.md#use-the-windows-10-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
+1. View the [Windows feature updates (Organizational)](feature-updates-reports.md#use-the-windows-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 1. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Update ring policy](update-rings.md), for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.

@@ -55,14 +55,14 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 > For more information, see [Manage Windows Holographic](../../intune-service/fundamentals/windows-holographic-for-business.md).
 >
 > Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
->   - [Pause](update-rings.md#pause) of *Feature* updates
->   - [Feature Update Deferral period (days)](settings.md#update-settings)
->   - [Set feature update uninstall period (2 - 60 days)](settings.md#update-settings)
->   - [Enable pre-release builds](settings.md#update-settings), which includes the following build options:
+>   - Pause of feature updates
+>   - Feature Update Deferral period (days)
+>   - Set feature update uninstall period (2 - 60 days)
+>   - Enable pre-release builds, which includes the following build options:
 >     - Windows Insider Release Preview
 >     - Beta Channel
 >     - Dev Channel
->   - [Use deadline settings](settings.md#user-experience-settings) for *Feature* updates.
+>   - Use deadline settings for feature updates
 :::column-end:::
 :::row-end:::
 

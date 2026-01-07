@@ -137,12 +137,6 @@ Group Policy settings override mobile device management policies, and the follow
 
 Before you can monitor results and update status for expedited updates, your Intune tenant must enable data collection.
 
-### Limitations for Workplace Joined devices
-
-Quality updates policies require the use of Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). Where Windows Update client policies supports WPJ devices, Windows Autopatch provides for additional capabilities that are not supported for WPJ devices.
-
-For more information about WPJ limitations for Intune Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md) in *Manage Windows software updates in Intune*.
-
 ## Create and assign an expedited quality update
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).

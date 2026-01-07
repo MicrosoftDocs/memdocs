@@ -21,7 +21,7 @@ Intune stores only the policy assignments, not the updates themselves. When you 
 
 ## Windows update management capabilities
 
-The following policy types and features help you manage Windows updates in Intune:
+The following policy types help you manage Windows updates in Intune:
 
 :::row:::
 :::column:::
@@ -64,8 +64,9 @@ The following policy types and features help you manage Windows updates in Intun
 #### Quality updates policy
 
 >**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
->
-> Delivers monthly cumulative updates that include security patches and reliability improvements, keeping devices secure and stable on a regular cadence. This policy also supports expedited updates, which override deferrals and deadlines to push critical security fixes faster than normal rings.
+>Delivers monthly cumulative updates for security and reliability. Supports:
+>- Expedited updates: Push critical fixes immediately by overriding deferrals and deadlines.
+>- Hotpatch: Apply eligible security patches without reboot to reduce downtime.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](quality-updates.md)
@@ -85,17 +86,6 @@ The following policy types and features help you manage Windows updates in Intun
 :::column-end:::
 :::column:::
 
-#### Hotpatch updates
-
-**:::image type="icon" source="icons/hotpatch-updates.svg" border="false":::**
-
-> Applies security patches without requiring a reboot, reducing downtime. Hotpatch is available for eligible Windows editions and is managed through Windows Autopatch or quality update settings, not as a separate Intune policy.
->
->> [!div class="nextstepaction"]
->> [Learn more](update-rings.md)
-:::column-end:::
-:::row-end:::
-
 ## Windows Autopatch
 
 Windows Autopatch is a managed cloud service built on the *Windows Update for Business Deployment Service (WUfB DS)* and integrated with Intune. It doesn't introduce new policy types—instead, it automates and orchestrates existing Intune update policies using the same backend service. Autopatch adds advanced capabilities such as dynamic device grouping, phased rollout, health monitoring, and compliance reporting. It also enables cloud-powered features like Hotpatch for eligible Windows 11 Enterprise editions and expedited delivery of critical updates, without requiring manual configuration.
@@ -110,7 +100,6 @@ The following table compares how update management differs when you use Autopatc
 | **Quality updates**     | You configure quality updates policies and expedited update policies.                       | Autopatch expedites critical updates and manages monthly patches.                                 |
 | **Driver updates**      | You use driver updates policy for granular control.                                         | Autopatch manages driver approvals and scheduling automatically.                                  |
 | **Hotpatch**            | Enabled through quality update settings; timing follows your update ring configuration.     | Applied automatically for eligible devices; Autopatch coordinates timing with its rings.          |
-
 
 > [!div class="nextstepaction"]
 > [Learn more about Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
