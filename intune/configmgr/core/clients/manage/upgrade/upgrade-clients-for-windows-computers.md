@@ -3,8 +3,8 @@ title: Upgrade clients on Windows
 titleSuffix: Configuration Manager
 description: Upgrade clients on Windows computers in Configuration Manager.
 ms.date: 04/12/2022
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: configuration
+ms.service: microsoft-intune
 ms.topic: how-to
 author: LauraWi
 ms.author: laurawi

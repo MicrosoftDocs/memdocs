@@ -1,15 +1,8 @@
 ---
-title: include file
-description: include file
 author: MandiOhlinger
-ms.service: microsoft-intune
 ms.topic: include
 ms.date: 05/18/2023
 ms.author: mandia
-ms.custom: include file
-ms.collection:
-- tier2
-- M365-identity-device-management
 ---
 
 <!-- This include file is used in the VPN settings lists for all platforms in /configuration. 5.18.2023 - mandia: MS Tunnel doesn't apply to macOS.-->

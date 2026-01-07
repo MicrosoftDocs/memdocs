@@ -1,39 +1,15 @@
 ---
-# required metadata
-
 title: Rename device in Intune Company Portal app for Windows
 description: Rename your work or school device in the Intune Company portal app for Windows.
-keywords:
-author: lenewsad
-ms.author: lanewsad
-manager: dougeby
 ms.date: 10/16/2024
-ms.topic: end-user-help
-ms.service: microsoft-intune
-ms.subservice: end-user
-ms.assetid:
-searchScope:
- - User help
-
-# optional metadata
-
-ROBOTS:
-#audience:
-
 ms.reviewer:
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-enduser
-ms.collection:
-- tier2
 ---
 
 # Rename device from the Company Portal app for Windows
 
 Rename a device to make it easier to recognize and manage in the Intune Company Portal app. The Company Portal app for Windows lets you rename the following types of connected devices:
 
-* Windows 10
-* Windows 11
+* Windows 
 * iOS
 * Android
 

@@ -1,29 +1,11 @@
 ---
-# required metadata
-
 title: Remotely administer devices in Microsoft Intune
 description: View the required roles to use TeamViewer, how to install the TeamViewer connector, and step-by-step guidance to remotely administer devices using Microsoft Intune in the Azure portal
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -60,7 +42,7 @@ This feature applies to:
   > [!NOTE]
   >
   > - Android Enterprise corporate-owned devices are not supported. Team viewer works with the Company portal app. It doesn't work with the Intune app.
-  > - TeamViewer may not support Windows Holographic (HoloLens), Windows Team (Surface Hub), or Windows 10 S. For supportability, see [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) for any updates.
+  > - TeamViewer may not support Windows Holographic (HoloLens) or Windows Team (Surface Hub). For supportability, see [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) for any updates.
 
 
 - A [TeamViewer](https://www.teamviewer.com) (opens TeamViewer's web site) account with the sign-in credentials. Only some TeamViewer licenses support integration with Intune. For specific TeamViewer needs, see [TeamViewer Integration Partner: Microsoft Intune](https://www.teamviewer.com/integrations/microsoft-intune/).

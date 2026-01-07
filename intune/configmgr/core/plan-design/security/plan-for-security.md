@@ -116,7 +116,7 @@ Onboarding your site with Microsoft Entra ID supports the following Configuratio
 
 - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
 
-- [Endpoint analytics](../../../../analytics/overview.md)
+- [Endpoint analytics](../../../../endpoint-analytics/index.md)
 
 - [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)
 

@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Enable use of Windows diagnostic data by Intune
-titleSuffix: Microsoft Intune
 description: Enable Windows diagnostic data in processor configuration for your tenant to enable its use by Microsoft Intune.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 02/28/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: b204a956-18ec-11e8-accf-0ed5f89f718b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: zadvor
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - sub-data-privacy
@@ -51,9 +32,9 @@ Use the *Windows data* category to enable use of Intune features in your tenant 
 
 The following features require you to enable this support:
 
-- [Windows feature update device readiness report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-device-readiness-report) 
-- [Windows feature update compatibility risks report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
-- [Windows driver updates report](../protect/windows-driver-updates-overview.md)
+- [Windows feature update device readiness report](../../device-updates/windows/compatibility-reports.md#use-the-windows-feature-update-device-readiness-report)
+- [Windows feature update compatibility risks report](../../device-updates/windows/compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
+- [Windows driver updates report](../../device-updates/windows/driver-updates-overview.md)
 - Windows feature update report
 - Windows expedited Update Report
 - Driver update policies with alerts / Windows driver update failures
@@ -73,12 +54,12 @@ Use the *Windows license verification* category to enable use of Intune features
 
 The following features require you to attest to having Windows E3 or equivalent licenses:
 
-- [Windows update app and driver compatibility reports](../protect/windows-update-compatibility-reports.md)
+- [Windows update app and driver compatibility reports](../../device-updates/windows/compatibility-reports.md)
 
 Supported licenses include the following options:
 
-- Windows 10 or later Enterprise E3 or E5; or Microsoft 365 F3, E3, or E5.
-- Windows 10 or later Education A3 or A5; or Microsoft 365 A3 or A5.
+- Windows Enterprise E3 or E5; or Microsoft 365 F3, E3, or E5.
+- Windows Education A3 or A5; or Microsoft 365 A3 or A5.
 - Windows Virtual Desktop Access E3 or E5.
 
 To confirm you own the required licenses for these features, set **I confirm that my tenant owns one of these license** to **On**. By default, it's *Off*.

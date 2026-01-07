@@ -1,26 +1,12 @@
 ---
 title: Use EPM support approvals for file elevation requests with Intune
 description: Manage support approvals for elevation requests when you use Endpoint Privilege Management for Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 02/12/2025
+ms.date: 11/13/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
- 
-ms.reviewer: miked"
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: mikedano
+ms.subservice: suite
 ms.collection:
 - tier 1
 - M365-identity-device-management
@@ -31,7 +17,7 @@ ms.collection:
 
 [!INCLUDE [intune-add-on-note](../includes/intune-add-on-note.md)]
 
-With Microsoft Intune Endpoint Privilege Management (EPM) your organization’s users can run as a standard user (without administrator rights) and complete tasks that require elevated privileges. Tasks that commonly require administrative privileges are application installs (like Microsoft 365 Applications), updating device drivers, and running certain Windows diagnostics.
+[!INCLUDE [intune-epm-overview](includes/intune-epm-overview.md)]
 
 This article explains how to use the **support approved** workflow with Endpoint Privilege Management.
 
@@ -39,18 +25,13 @@ Support approved elevations allow you to require approval before an elevation be
 
 When a user tries to run a file in an elevated context, and that file is managed by the *support approved* file elevation type, Intune shows a prompt to the user to submit an elevation request. The elevation request is then sent to Intune for review by an Intune admin. When an admin approves the elevation request, the user on the device is notified, and the file can then be run in the elevated context. To approve requests, the Intune admin's account must have extra permissions that are specific to the review and approval task.
 
-Applies to:
-
-- Windows 10
-- Windows 11
-
 ## About support approved elevations
 
 Use EPM policies with the *support approved* elevation type for files that need an admin's approval before they can run with higher access. They're similar to other EPM  elevation rules, but they have some differences that need extra planning.
 
 > [!TIP]
 >
-> To review the three elevation types and other policy options, see [Windows elevation rules policy](../protect/epm-policies.md#windows-elevation-settings-policy).
+> To review the four elevation types and other policy options, see [Windows elevation rules policy](epm-elevation-rules.md).
 
 The following subjects are details to plan for and expect when you use the support approved elevation type:
 
@@ -68,7 +49,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
 - **Review of elevation requests**
 
-  An Intune admin must have *view* and *manage* rights for the **Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests.
+  An Intune admin must have *view* and *manage* rights for the **Endpoint Privilege Management Elevation Requests** permission before they can review and approve elevation requests. Admins can only view and manage requests that fall within their configured scope.
 
   To find and respond to requests, these admins use the **Elevation requests** tab of the *Endpoint Privilege Management* page in the admin center. Because Intune doesn't have a way to notify admins about new elevation requests, admins should plan to check the tab regularly for pending requests.
 
@@ -76,7 +57,7 @@ The following subjects are details to plan for and expect when you use the suppo
 
   - **For approvals**: When an admin approves an elevation request, Intune sends a policy to the device where the user submitted the request, which enables that user to run the file as elevated for the next 24 hours. This period begins at the time the admin approves the request. There's no current support for a custom time period or cancellation of the approved elevation before the 24-hour period expires.
 
-    Once the request is approved, Intune notifies the device and initiates a sync. *This can take some time.* Intune uses a notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
+    Once the request is approved, Intune notifies the device and initiates a sync. *This can take some time.* Intune displays a toast notification on the device to alert the user that they can now successfully run the file with the *Run with elevated* access right-click option.
 
   - **For denials**: Intune doesn't notify the user. The administrator should manually notify the user that their request was denied.
 
@@ -97,15 +78,17 @@ To provide oversight for elevation approvals, only Intune administrators who hav
   - View elevation requests
   - Modify elevation requests
 
-For more information about all the permissions for managing EPM, see [Role-based access controls for Endpoint Privilege Management](../protect/epm-overview.md#role-based-access-controls-for-endpoint-privilege-management).
+For more information about all the permissions for managing EPM, see [Role-based access controls for Endpoint Privilege Management](../protect/epm-plan.md#role-based-access-controls-for-endpoint-privilege-management).
 
 ## Create policy for support approved file elevations
 
-To create support-approved elevation policy, use the same workflow for creating other EPM elevation rule policies. See [Windows elevation rules policy](../protect/epm-policies.md#windows-elevation-rules-policy) in *Configure policies for Endpoint Privilege Management*.
+To use support-approved elevation, use the same workflow for creating other EPM settings. You can set the default elevation behavior using an [elevation settings policy](../protect/epm-elevation-settings.md), or create or modify rules for specific apps using an [elevation rules policy](../protect/epm-elevation-rules.md)
 
 ## Manage pending elevation requests
 
 Use the following procedure as guidance for reviewing and managing elevation requests.
+
+[!INCLUDE [manage--admin-tasks](../../intune-service/fundamentals/includes/manage-admin-tasks.md)]
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Endpoint security** > **Endpoint Privilege Management** > **Elevation requests** tab.
 1. The elevation requests tab shows **pending requests** and **requests from the last 30 days**. Selecting a row opens that entries elevation request properties, where you can review the request in detail.
@@ -134,9 +117,9 @@ Use the following procedure as guidance for reviewing and managing elevation req
 1. After an admin reviews a request, they can select **Approve** or **Deny**. With either selection, they're presented with the **justification** dialog where they can provide a *Reason* with detail about their decision. Providing a reason is optional. The following displays the approval dialog:
 
     - **For approvals** - The admin completes the justification dialog and then selects **Yes** to approve the request. Intune sends the approval to the device and the end user is notified via a toast notification that they're able to elevate the application.
-  
+
       The end user can now complete the elevation activity by using the **Run with elevated access** right-click menu of the file.
-    
+
       :::image type="content" source="./media/epm-support-approved/sample-request-approval-dialog.png" alt-text="Image that displays the elevation approval dialog with sample approval justification provided as the reason" lightbox="./media/epm-support-approved/sample-request-approval-dialog.png":::
 
     - **For denials** - The admin completes the justification dialog, and then selects **Yes** to deny the request.
@@ -155,16 +138,16 @@ With Endpoint Privilege Management (EPM) plus [Microsoft Security Copilot](/copi
 
 For example, when viewing the file properties for an elevation request, you can select the option to **Analyze with Copilot** to have Security Copilot provide details that are often not apparent, including:
 
-- The apps reputation 
+- The apps reputation
 - Information about the trust of the publisher
 - The risk score for the user requesting the elevation
-- The Risk score of the device from which the elevation was submitted. 
+- The Risk score of the device from which the elevation was submitted.
 
 ### Prerequisites for using Security Copilot with EPM
 
-To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use Security Copilot(/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](../protect/epm-overview.md#prerequisites) for using Endpoint Privilege Management.
+To use Microsoft Security Copilot with Endpoint Privilege Management, your tenant must be licensed to use [Security Copilot](/copilot/security/get-started-security-copilot#minimum-requirements). This requirement is in addition to the [prerequisites](../protect/epm-plan.md#prerequisites) for using Endpoint Privilege Management.
 
-If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.  
+If your Tenant is already licensed for EPM and for Security Copilot, no additional license or configuration is required.
 
 ### Workflow to analyze file requests
 
@@ -179,22 +162,21 @@ You can have Microsoft Security Copilot analyze the properties of a file while y
 4. After the file is analyzed, the results are returned to the admin center where you can review the files details. You can use this detailed information to make a more informed decision to either approve or deny the elevation request.
 
 **Example**:
-The following images display the path and results of an admin using the Intune the admin center path to locate and select a file elevation request that was submitted by a user. The request is a file named *InstallPrinter.msi*. When the file is selected, its *Elevation request properties* open: 
+The following images display the path and results of an admin using the Intune the admin center path to locate and select a file elevation request that was submitted by a user. The request is a file named *InstallPrinter.msi*. When the file is selected, its *Elevation request properties* open:
 
 :::image type="content" source="./media/epm-support-approved/analyze-with-copilot.png" alt-text="Screen capture that displays the path and location of the Analyze with Copilot option." lightbox="./media/epm-support-approved/analyze-with-copilot.png":::
 
-When the admin reviews the file, they note that the file has an unknown publisher. To verify that this file is legitimate, they use the Analyze with Copilot option from the Elevation request properties to have Copilot take a closer look. 
+When the admin reviews the file, they note that the file has an unknown publisher. To verify that this file is legitimate, they use the Analyze with Copilot option from the Elevation request properties to have Copilot take a closer look.
 
 Copilot reviews the file and reports back the following details:
 
 :::image type="content" source="./media/epm-support-approved/malicious-file-results.png" alt-text="Screen capture that displays an example of results from use of the Analyze with Copilot option." lightbox="./media/epm-support-approved/malicious-file-results.png":::
- 
-The preceding image shows a screen capture of the Copilot report on the reputation of that *InstallPrinter.msi* file. In this example, the file is identified as malicious and shouldn’t be approved to run in an elevated context. The results also include additional information and links to references for the malicious file that was identified.
 
-## Related content
+The preceding image shows a screen capture of the Copilot report on the reputation of that *InstallPrinter.msi* file. In this example, the file is identified as malicious and shouldn't be approved to run in an elevated context. The results also include additional information and links to references for the malicious file that was identified.
 
-- [Guidance for creating Elevation Rules](../protect/epm-guidance-for-creating-rules.md)
-- [Configure policies for Endpoint Privilege Management](../protect/epm-policies.md)
-- [Reports for Endpoint Privilege Management](../protect/epm-reports.md)
-- [Data collection and privacy for Endpoint Privilege Management](../protect/epm-data-collection.md)
-- [Deployment considerations and frequently asked questions](../protect/epm-deployment-considerations-ki.md)
+---
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Next: Reports >](epm-reports.md)

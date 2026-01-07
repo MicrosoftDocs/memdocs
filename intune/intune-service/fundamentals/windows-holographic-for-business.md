@@ -1,28 +1,11 @@
 ---
-# required metadata
 title: Use Windows Holographic devices with Microsoft Intune
 description: Use Microsoft Intune to manage and complete different tasks on devices running Windows Holographic for Business and HoloLens. You can configure the Company Portal app, create a compliance policy, customize OMA-URI settings, deploy apps, categorize devices in groups, create profiles, restrict devices, enable software updates, set terms and conditions, configure VPN and Wi-Fi settings, and use Hello for Business.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 03/17/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-ms.assetid: 585a2f17-106b-4f02-adf7-05f08a92dbc1
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -40,7 +23,7 @@ This article describes the different features and services you can use to manage
 
 Microsoft Entra ID helps manage and control your devices running Windows Holographic for Business. When you use Intune and Microsoft Entra ID, you can:
 
-- **[Join devices to Microsoft Entra ID](/entra/identity/devices/device-join-plan)**: In Microsoft Entra ID, you can add your work-owned Windows 10/11 devices, including devices running Windows Holographic for Business. This feature allows Microsoft Entra ID to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
+- **[Join devices to Microsoft Entra ID](/entra/identity/devices/device-join-plan)**: In Microsoft Entra ID, you can add your work-owned Windows devices, including devices running Windows Holographic for Business. This feature allows Microsoft Entra ID to control the device. It helps confirm that users are accessing the company resources from devices that meet your security and compliance standards.
 
   For information, go to [Device identity in Microsoft Entra ID](/entra/identity/devices/overview).
 
@@ -87,22 +70,19 @@ Microsoft Intune can deploy Universal Windows Apps (UWP) to Microsoft HoloLens d
 - To learn about app management with Microsoft Intune, go to [What is app management in Microsoft Intune](../apps/app-management.md).
 - To learn more about developing apps for Microsoft HoloLens, go to [Mixed reality apps for Microsoft HoloLens](https://www.microsoft.com/hololens/apps).
 
-> [!NOTE]
-> HoloLens devices running Windows 10 Holographic for Business 1607 don't support online-licensed apps from the Microsoft Store for Business. To learn more, go to [Install apps on HoloLens](/hololens/holographic-store-apps).
-
 ## Device actions
 
 Intune has some built-in actions that allow IT admins to do different tasks locally on the device, or remotely using the Intune admin center. Users can also issue a remote command from the Intune Company Portal app to personally owned devices that are enrolled in Intune.
 
 When you manage devices running Windows Holographic for Business, the following remote actions can be used:
 
-- **[Wipe](../remote-actions/devices-wipe.md#wipe)**: The **Wipe** action removes the device from Intune, and restores the device back to its factory default settings. Use this action before giving the device to a new user, or when the device is lost or stolen.
+- **[Wipe](../remote-actions/device-wipe.md)**: The **Wipe** action removes the device from Intune, and restores the device back to its factory default settings. Use this action before giving the device to a new user, or when the device is lost or stolen.
 
-- **[Retire](../remote-actions/devices-wipe.md#retire)**: The **Retire** action removes the device from Intune. It also removes managed app data, settings, and email profiles assigned by Intune. The user's personal data stays on the device.
+- **[Retire](../remote-actions/device-retire.md)**: The **Retire** action removes the device from Intune. It also removes managed app data, settings, and email profiles assigned by Intune. The user's personal data stays on the device.
 
 - **[Sync devices to get the latest policies and actions](../remote-actions/device-sync.md)**: The **Sync** action forces the device to immediately check in with Intune. When a device checks in, the device receives any pending actions or policies that are assigned. This feature helps you validate and troubleshoot policies you assigned, without waiting for the next scheduled check-in.
 
-For information about managing devices using the Intune admin center, go to [What is Microsoft Intune device management?](../remote-actions/device-management.md).
+For information about managing devices using the Intune admin center, go to [What is Microsoft Intune device management?](../remote-actions/index.md).
 
 ## Device categories and groups
 
@@ -151,7 +131,7 @@ For more information, go to [Shared devices](../configuration/shared-user-device
 
 ## Software updates
 
-**[Manage software updates](../protect/windows-update-for-business-configure.md)**.
+**[Manage software updates](../../device-updates/windows/configure.md)**.
 
 Intune has different feature that focus on updating Windows client devices. These options include that determine how updates are installed. For example, you can create a maintenance window to install updates, or choose to restart after updates are installed. Updates can be applied to multiple devices running Windows Holographic for Business.
 

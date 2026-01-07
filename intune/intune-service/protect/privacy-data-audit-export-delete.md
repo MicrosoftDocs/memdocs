@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Audit, export or delete personal data collected by Intune
-titleSuffix: Microsoft Intune
 description: Learn how to audit, export, or delete personal data that is collected by Intune.
-keywords: GDPR, personal data, privacy
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 04/10/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 96990be0-eb1e-43a4-a0e4-09c7dbdc2bf4
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: kerimh
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - privacy
 - essentials-privacy
@@ -41,15 +21,15 @@ Intune admins can use audit logs to track activities surrounding personal data. 
 
 ## Audit personal data
 
-Audit logs provide tenant admins with a record of activities that generate a change in Microsoft Intune. Audit logs are available for many manage activities and typically create, update (edit), delete, and assign actions. Remote tasks that generate audit events can also be reviewed. These audit logs might contain personal data from users whose devices are enrolled in Intune.  
+Audit logs provide tenant admins with a record of activities that generate a change in Microsoft Intune. Audit logs are available for many manage activities and typically create, update (edit), delete, and assign actions. Remote tasks that generate audit events can also be reviewed. These audit logs might contain personal data from users whose devices are enrolled in Intune.
 
-For security purposes, Intune maintains audit logs for user and device actions for one year. These logs are automatically deleted after the one-year retention period.
+For security purposes, Intune maintains audit logs for user and device actions for two years. These logs are automatically deleted after the two-year retention period.
 
-To review audit logs, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md). 
+To review audit logs, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md).
 
 Admins can't delete audit logs.
 
-These audit events are retained for one year. Tenant admins can request audit logs using [this support request form](https://privacy.microsoft.com/en-US/privacy-questions?).
+These audit events are retained for two years. Tenant admins can request audit logs using [this support request form](https://privacy.microsoft.com/en-US/privacy-questions?).
 
 ## Export personal data
 

@@ -424,7 +424,7 @@ Select the option to **Enable PXE support for clients**, and then configure the 
     > [!NOTE]
     > When you enable a PXE responder on a distribution point without Windows Deployment Service, it can be on the same server as the DHCP service. <!--3734270-->
 
-- **Enable Preferred Management Point(s) for PXE requests**: This option allows PXE clients to communicate to an initial lookup MP and receive the list of MP(s) to be used for further communication. The lookup MP then returns an MP from the site. <!--2839966-->
+- **Enable Preferred Management Point(s) for PXE requests**: This option allows PXE clients to communicate to an initial lookup MP and receive the list of MP(s) that belong to a Primary site and used for further communication. MP(s) that are members of Secondary sites are not considered and will not be returned. <!--2839966-->
 
 - **Require a password when computers use PXE**: To provide more security for your PXE deployments, specify a strong password.
 

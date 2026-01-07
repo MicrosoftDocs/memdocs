@@ -1,31 +1,11 @@
 ---
-# required metadata
-
 title: Manage and secure user and group identities overview
-titleSuffix: Microsoft Intune
 description: Get an overview of the concepts and features you should know when managing identities in Microsoft Intune. Use existing users and groups, control access using RBAC, establish user affinity, and secure and authenticate users.
-keywords:
 author: MandiOhlinger
-  
 ms.author: mandia
-manager: laurawi
 ms.date: 02/19/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
- 
-#audience:
-#ms.devlang:
-ms.reviewer:
-ms.suite: ems
-search.appverid:
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 ---
@@ -43,6 +23,9 @@ Microsoft Intune can do all these tasks, and more. [Intune is a cloud-based serv
 From a service perspective, Intune uses Microsoft Entra ID for identity storage and permissions. Using the [Microsoft Intune admin center](tutorial-walkthrough-endpoint-manager.md), you can manage these tasks in a central location designed for endpoint management.
 
 This article discusses concepts and features you should consider when managing your identities.
+
+> [!IMPORTANT]
+> [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Use your existing users and groups
 
@@ -74,7 +57,7 @@ By default, Intune automatically creates the **All users** and **All devices** g
 
 ### Move from machine accounts
 
-When a Windows endpoint, like a Windows 10/11 device, joins an on-premises Active Directory (AD) domain, a computer account is automatically created. The computer/machine account can be used to authenticate on-premises programs, services, and apps.
+When a Windows endpoint, like a Windows device, joins an on-premises Active Directory (AD) domain, a computer account is automatically created. The computer/machine account can be used to authenticate on-premises programs, services, and apps.
 
 These machine accounts are local to the on-premises environment and can't be used on devices that are joined to Microsoft Entra ID. In this situation, you need to switch to user-based authentication to authenticate to on-premises programs, services, and apps.
 
