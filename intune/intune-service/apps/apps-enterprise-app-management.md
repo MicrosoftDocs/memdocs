@@ -91,7 +91,7 @@ Microsoft doesn't assert compliance, authorization, authenticity, or integrity f
 
 The apps currently provided in the Enterprise application catalog are Windows Win32 applications (exe and msi).
 
-### How will Microsoft detect if an application from the Enterprise App Catalog is in use?
+### How can Microsoft detect if an application from the Enterprise App Catalog is in use?
 
 At this time, Intune provides no running application detection.
 
