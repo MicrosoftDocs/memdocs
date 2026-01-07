@@ -21,6 +21,9 @@ items:
   - name: Feature updates reports
     href: feature-updates-reports.md
     displayName: windows feature updates
+  - name: Compatibility reports
+    href: compatibility-reports.md
+    displayName: windows updates, reports
   - name: Move from deferrals to feature updates policies
     href: ring-deferrals-to-feature-updates-policy.md
   - name: Windows rollout options
@@ -53,9 +56,6 @@ items:
   - name: Driver updates FAQs
     href: driver-updates-faqs.md
     displayName: windows driver updates
-- name: Compatibility reports
-  href: compatibility-reports.md
-  displayName: windows updates, reports
 - name: Delivery Optimization
   href: ../../intune-service/configuration/delivery-optimization-windows.md
   displayName: delivery optimization, windows updates

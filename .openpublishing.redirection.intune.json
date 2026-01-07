@@ -1,6 +1,26 @@
 {
   "redirections": [
     {
+      "source_path": "intune/device-updates/windows/driver-updates-overview.md",
+      "redirect_url": "/intune/device-updates/windows/driver-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/quality-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/configure.md",
+      "redirect_url": "/intune/device-updates/windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/reports.md",
+      "redirect_url": "/intune/device-updates/windows/feature-updates-reports",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/protect/fota-updates-android.md",
       "redirect_url": "/intune/device-updates/android/fota-updates",
       "redirect_document_id": false
@@ -67,7 +87,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-overview.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates-overview",
+      "redirect_url": "/intune/device-updates/windows/driver-updates",
       "redirect_document_id": false
     },
     {
@@ -87,7 +107,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-for-business-configure.md",
-      "redirect_url": "/intune/device-updates/windows/configure",
+      "redirect_url": "/intune/device-updates/windows",
       "redirect_document_id": false
     },
     {
