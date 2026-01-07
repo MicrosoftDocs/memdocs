@@ -703,6 +703,13 @@ Organizations have the option to enable or disable interactive mode for Web Sing
 |:--|:----|
 |com.microsoft.intune.mam.managedbrowser.EnableInteractiveModeForWebSSO |**false**: (default) disable<br> **true**: enable |
 
+#### Support Web single sign-on in iframe requests
+Organizations have the option to enable or disable Web Single Sign-On (SSO) in iframe requests in Microsoft Edge.
+
+|Key |Value |
+|:--|:----|
+|com.microsoft.intune.mam.managedbrowser.experiments.EnableWebSSOInIframe |**false**: (default) disable<br> **true**: enable |
+
 ### Manage Desktop View in Mobile
 This policy determines the default view mode for websites. Organizations can specify a list of site URL patterns that will always open in desktop or mobile view.
 
