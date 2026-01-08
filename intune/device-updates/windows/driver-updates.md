@@ -45,7 +45,6 @@ Windows driver update management applies to:
 
 [!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
 
-
 ## Architecture
 
 :::image type="content" source="./images/autopatch-ds.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./images/autopatch-ds.png" border="false":::

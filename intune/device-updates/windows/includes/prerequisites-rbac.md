@@ -11,19 +11,16 @@ ms.date: 01/08/2026
 
 :::column-end:::
 :::column span="3":::
-
-To manage Windows Driver updates, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permissions:
-
-- **Device configurations**:
-  - Assign
-  - Create
-  - Delete
-  - View Reports
-  - Update
-  - Read
-
-You can add the *Device configurations* permission with one or more rights to your own custom RBAC roles or use one the built-in **Policy and Profile manager** role, which includes these rights.
-
-For more information, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
+> To manage this feature, use an account with at least one of the following roles:
+>
+> - [Policy and Profile manager][INT-R1]
+> - [Custom role][INT-RC] that includes:
+>   - The **Device configurations** permissions **Assign**,**Create**,**Delete**,**View Reports**,**Update**, and **Read**
+>   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
+
+<!-- role links -->
+
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#policy-and-profile-manager
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
