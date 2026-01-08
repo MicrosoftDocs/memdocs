@@ -98,10 +98,10 @@ The following table compares how update management differs when you use Autopatc
 | **Feature** | **When NOT using Autopatch** | **When using Autopatch** |
 |--|--|--|
 | **Update coordination** | You control scheduling, deferrals, and rollout manually. | Autopatch orchestrates update rings, feature updates, drivers, and quality updates automatically. |
-| **Update rings** | You configure update rings in Intune to control deferrals, deadlines, and restart behavior. | Autopatch creates and manages its own rings; don't assign custom rings to Autopatch devices. |
-| **Feature updates** | You use feature updates policies to lock or schedule OS versions. | Autopatch manages version targeting and rollout automatically. |
-| **Quality updates** | You configure quality updates policies, expedited updates, and optionally enable Hotpatch through quality update settings. | Autopatch manages monthly patches, expedites critical updates, and applies Hotpatch automatically for eligible devices. |
-| **Driver updates** | You use driver updates policy for granular control. | Autopatch manages driver approvals and scheduling automatically. |
+| **Update rings policy** | You configure update rings in Intune to control deferrals, deadlines, and restart behavior. | Autopatch creates and manages its own rings; don't assign custom rings to Autopatch devices. |
+| **Feature updates policy** | You use feature updates policies to lock or schedule OS versions. | Autopatch manages version targeting and rollout automatically. |
+| **Quality updates policy** | You configure quality updates policies, expedited updates, and optionally enable Hotpatch through quality update settings. | Autopatch manages monthly patches, expedites critical updates, and applies Hotpatch automatically for eligible devices. |
+| **Driver updates policy** | You use driver updates policy for granular control. | Autopatch manages driver approvals and scheduling automatically. |
 
 > [!div class="nextstepaction"]
 > [Learn more about Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview)
