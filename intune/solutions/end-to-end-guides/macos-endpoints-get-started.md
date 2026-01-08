@@ -175,6 +175,8 @@ macOS devices with user affinity can be targeted for profiles and apps using use
 
 ### Step 6 - Configure initial settings and single sign-on (SSO)
 
+Platform Single Sign-On (PSSO) is the most secure approach for device attestation and registration. Enforcing the use of the SSO extension during device registration is considered a best practice for a Zero Trust security strategy, ensuring strong device identity and replacing traditional registration through the Company Portal.
+
 ✅ **Optimize first run experience**
 
 Using Intune, you can optimize the first run experience using built-in settings within the ADE enrollment profile. Specifically, when you create the enrollment profile, you can:
