@@ -11,8 +11,10 @@ ms.date: 01/08/2026
 
 :::column-end:::
 :::column span="3":::
-> Windows update reports require sharing Windows diagnostic data with Intune.
+> To enable reporting for this feature, configure your tenant to allow Intune to use Windows diagnostic data collected from your devices.
 >
-> For more information, see [Enable use of Windows diagnostic data by Intune](../../intune-service/protect/data-enable-windows-data.md).
+> For details, see [Enable use of Windows diagnostic data by Intune](../../../intune-service/protect/data-enable-windows-data.md).
 :::column-end:::
 :::row-end:::
+
+

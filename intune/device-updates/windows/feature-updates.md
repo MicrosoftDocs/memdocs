@@ -37,71 +37,13 @@ When a device receives a feature update policy:
 
 ## Prerequisites
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [cloud](../../includes/requirements/cloud.md)]
+[!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
+[!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
+[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
+[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
+[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
+[!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
 
-:::column-end:::
-:::column span="3":::
-
-> Feature updates policies are supported on the public cloud only. They aren't supported on Government Community Cloud (GCC) High and Department of Defense (DoD) cloud environments.
-
-:::column-end:::
-:::row-end:::
-
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/licensing.md)]
-
-:::column-end:::
-:::column span="3":::
-> To use feature updates policies, the following licenses are required:
-> - Microsoft Intune Plan 1 is required for core functionality, like creating and assigning feature update policies.
-> - For additional cloud-based functionalities like gradual rollout and optional feature updates, you must have a Windows license that includes the [Autopatch entitlement](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites#licenses-and-entitlements).
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
-
-:::column-end:::
-:::column span="3":::
-> Feature updates policies support the following Windows editions:
-> - Pro
-> - Pro Education
-> - Enterprise
-> - Education
->
-> > [!IMPORTANT]
-> > Windows Enterprise LTSC: feature updates policies don't support the *Long Term Service Channel* release. Plan to use alternative patching methods, like WSUS or Configuration Manager.
-:::column-end:::
-:::row-end:::
-
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
-
-:::column-end:::
-:::column span="3":::
-> Feature update policies supports devices that are:
-> - Enrolled in Intune
-> - Microsoft Entra joined
-> - Microsoft Entra hybrid joined
->
-> Devices must also meet the following requirements:
-> - Telemetry must be turned on, with a minimum setting of [*Required*](../../intune-service/configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
->    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
->
->    Configure Telemetry as part of a [Device Restriction policy](../../intune-service/configuration/device-restrictions-configure.md) for Windows. In the device restriction profile, under *Reporting and Telemetry*, configure the **Share usage data** with a minimum value of **Required**. Values of **Enhanced (1903 and earlier)** or **Optional** are also supported.
-> - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
-> - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
->    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
->    - Windows Autopatch
-:::column-end:::
-:::row-end:::
 
 ## Create and assign feature update policies
 

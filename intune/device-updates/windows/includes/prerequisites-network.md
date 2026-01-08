@@ -11,7 +11,7 @@ ms.date: 01/08/2026
 :::column-end:::
 :::column span="3":::
 
-> Devices must have internet access and be able to reach required Microsoft endpoints to use update policies:
+> Devices must have internet access and be able to reach required Microsoft endpoints:
 >
 > - [Intune service endpoints](../../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices)
 > - [Windows Update endpoints](/windows/privacy/manage-windows-1809-endpoints#windows-update)

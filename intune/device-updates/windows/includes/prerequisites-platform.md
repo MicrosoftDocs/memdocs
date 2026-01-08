@@ -18,6 +18,6 @@ ms.date: 01/08/2026
 > - Education
 >
 > > [!NOTE]
-> > *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
+> > Windows Enterprise LTSC (Long Term Service Channel) isn't supported. Use update rings policies instead.
 :::column-end:::
 :::row-end:::
