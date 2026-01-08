@@ -111,7 +111,7 @@ The following table compares how update management differs when you use Autopatc
 Each policy type has specific prerequisites, detailed in their respective documentation. In general:
 
 - Devices must be enrolled in Intune.
-- Devices must be Microsoft Entra joined or hybrid joined.\
+- Devices must be Microsoft Entra joined or hybrid joined.
   > Microsoft Entra registered devices aren't supported for any policy type that uses the same backend service as Windows Autopatch—including Feature updates, Quality updates, and Driver updates.\
   > For Entra registered devices, update management remains limited to Windows Update client policies and update rings policies.
 - Devices must have access to Microsoft update endpoints.
