@@ -16,8 +16,8 @@ Use the information in this article to help you add an iOS/iPadOS line-of-busine
 
 > [!NOTE]
 > Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You can't use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
-> > iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
-> > Bundle identifiers (for example, _com.contoso.app_) are meant to be unique identifiers of an app. Each line-of-business app instance in the Apps list is treated as a separate app, even if it has the same bundle ID. While you can create multiple instances of the same app in Intune, targeting separate instances of the same app can cause unexpected behaviors on a device. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
+> iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
+> Bundle identifiers (for example, _com.contoso.app_) are meant to be unique identifiers of an app. Each line-of-business app instance in the Apps list is treated as a separate app, even if it has the same bundle ID. While you can create multiple instances of the same app in Intune, targeting separate instances of the same app can cause unexpected behaviors on a device. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
 
 You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Intune admin center.
 
@@ -90,12 +90,14 @@ The update to the line-of-business app is installed automatically.
 > [!NOTE]
 > For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion and CFBundleShortVersionString in the Info.plist file in your IPA package. You're allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you can't upload a new version of CFBundleVersion and CFBundleShortVersionString of the new app is identical to the existing one.
 
-For an iOS LOB app targeted with available intent, autoupdate of the application happens as long as the following conditions are met:
+For an iOS LOB app targeted with available intent, auto-update of the application happens as long as the following conditions are met:
 
 - The end user must request the specific Intune app from the Company Portal and the app must be successfully installed, or the app is already installed on the device.
 - The targeting for the user isn't changed (app assignment with available intent isn't removed and user isn't removed from the group membership in the life cycle of the app assignment).
 - If the previous version of the app is installed through required intent, then the available app update won't happen. The app is updated automatically as long as the user/device is part of required intent group.
 - If the app has both available and required deployments targeted, the resolved intent becomes `RequiredAndAvailable`. 
+- If the installed app has been manually downgraded, then the available app update won't happen. 
+
 > [!NOTE] 
 > You can't create **Available** and **Required** deployments to the same Microsoft Entra group, but you can use different Microsoft Entra group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
 
