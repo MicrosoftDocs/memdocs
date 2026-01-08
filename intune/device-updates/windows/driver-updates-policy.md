@@ -15,10 +15,6 @@ Use Microsoft Intune to create and manage Windows driver update policies for you
 > [!div class="checklist"]
 > - Ensure your environment meets the requirements in [Windows driver updates overview](driver-updates.md#prerequisites).
 
-## Create Windows driver update policies
-
-Use this procedure to create policies for managing driver updates for groups of devices.
-
 > [!IMPORTANT]
 > Policies for Windows update rings and policies that use the settings catalog can include configurations that block the installation of Windows driver updates. To ensure driver updates aren't blocked, review your policies for configurations that can block the installation.
 >
@@ -26,6 +22,12 @@ Use this procedure to create policies for managing driver updates for groups of 
 > - Settings catalog policy: In the *Windows Update client policies* category, ensure that *Exclude WU Drivers in Quality Update* is set to *Allow Windows Update drivers*.
 >
 > By default, both settings use a configuration that *allow* Windows driver updates.
+
+## Create Windows driver update policies
+
+Use this procedure to create policies for managing driver updates for groups of devices.
+
+
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Driver updates** tab, and select **Create profile**.
 
