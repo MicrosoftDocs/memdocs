@@ -120,4 +120,5 @@ Feature updates, quality updates, and driver updates all use the same cloud orch
 
 - Licensing: Windows Enterprise E3/E5 (or equivalent).
 - Telemetry: Diagnostic data set to *Required* level.
-- Services: Microsoft Account Sign-In Assistant (`wlidsvc`) enabled.
+- Services: Microsoft Account Sign-In Assistant enabled.
+  If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.

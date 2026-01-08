@@ -18,7 +18,7 @@ sections:
           Any driver updates that are currently published to Windows Update and applicable to one or more devices in the policy are available through driver updates policies.
       - question: Where can I learn more about the available drivers?
         answer: |
-          You can get more information about drivers by copying the name and searching the [Microsoft Update Catalog](catalog.update.microsoft.com) website.
+          You can get more information about drivers by copying the name and searching the [Microsoft Update Catalog](https://catalog.update.microsoft.com) website.
       - question: Do driver updates policies update drivers for plug-in devices?
         answer: |
           Yes, if the driver updates are published to Windows Update by the OEM vendor.

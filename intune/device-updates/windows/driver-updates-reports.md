@@ -16,29 +16,10 @@ The data in the Intune reports for Windows Driver update policies is used only f
 - [Windows Driver updates report](#windows-driver-updates-report)
 - [Windows Driver update failures](#windows-driver-update-failures)
 
-## Prerequisites
+## Before you begin
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [tenant-configuration](../../includes/requirements/tenant-configuration.md)]
-
-:::column-end:::
-:::column span="3":::
-> Windows update reports require sharing Windows diagnostic data with Intune.\
-> For more information, see [Enable use of Windows diagnostic data by Intune](../../intune-service/protect/data-enable-windows-data.md).
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
-
-:::column-end:::
-:::column span="3":::
-> To support reporting on all status and events for driver updates, enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection on devices at the *Required* level or higher.
-> For more information, see [Configure Windows diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
-:::column-end:::
-:::row-end:::
+> [!div class="checklist"]
+> - Ensure your environment meets the requirements in [Windows driver updates overview](driver-updates.md#prerequisites).
 
 ### User permissions to use reports
 

@@ -41,21 +41,10 @@ Windows driver update management applies to:
 
 [!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
 
-### RBAC requirements
+[!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
 
-To manage Windows Driver updates, your account must be assigned an Intune role-based access control (RBAC) role that includes the following permissions:
+[!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
 
-- **Device configurations**:
-  - Assign
-  - Create
-  - Delete
-  - View Reports
-  - Update
-  - Read
-
-You can add the *Device configurations* permission with one or more rights to your own custom RBAC roles or use one the built-in **Policy and Profile manager** role, which includes these rights.
-
-For more information, see [Role-based access control for Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Architecture
 
