@@ -116,9 +116,9 @@ Each policy type has specific prerequisites, detailed in their respective docume
   For Entra registered devices, update management remains limited to Windows Update client policies and update rings policies.
 - Devices must have access to Microsoft update endpoints.
 
-Feature updates, quality updates, and driver updates all use the same cloud orchestration layer as Windows Autopatch. Autopatch automates these policies, but when you configure them manually in Intune, you're still calling the same backend service—so the requirements don't change. Because they share this service, the prerequisites are identical:
+Feature updates, quality updates, and driver updates policies all use the same cloud orchestration layer as Windows Autopatch. Autopatch automates these policies, but when you configure them manually in Intune, you're still calling the same backend service—so the requirements don't change. Because they share this service, the prerequisites are the same across these three policy types:
 
-- Licensing: Windows Enterprise E3/E5 (or equivalent).
+- Licensing: A Windows license that includes the [Autopatch entitlement](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites#licenses-and-entitlements).
 - Telemetry: Diagnostic data set to *Required* level.
-- Services: Microsoft Account Sign-In Assistant enabled.
+- Services: Microsoft Account Sign-In Assistant enabled.\
   If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.

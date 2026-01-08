@@ -44,10 +44,10 @@ items:
     displayName: windows updates
 - name: Driver updates
   items:
-  - name: Configure policies
+  - name: Get started
     href: driver-updates.md
     displayName: windows driver updates
-  - name: Driver updates policy
+  - name: Configure policies
     href: driver-updates-policy.md
     displayName: windows driver updates
   - name: Reports

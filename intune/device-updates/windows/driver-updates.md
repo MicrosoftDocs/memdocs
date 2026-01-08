@@ -6,9 +6,9 @@ ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 ---
 
-# Windows Driver update management in Microsoft Intune
+# Windows driver update management
 
-With Windows Driver Update Management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Intune and the Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
+With Windows driver update management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Intune and Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
 
 Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
 
@@ -29,20 +29,13 @@ Later, when a newer driver update from the OEM is recommended for a device in th
 
 Regardless of the policy configuration and the drivers included, only approved drivers can install on devices. Additionally, Windows Update only installs the latest available and approved update when the version is more recent than the one currently installed on the device.
 
-Windows driver update management applies to:
-
-- Windows
-
 ## Prerequisites
 
-[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
-
-[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
-
-[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
-
+[!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
 [!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
-
+[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
+[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
+[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
 [!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
 
 ## Architecture
@@ -75,5 +68,5 @@ For more information about planning deployments, see [Create a deployment plan](
 
 ## Next steps
 
-- [Windows Driver update policies](driver-updates-policy.md)
-- [Reports for Windows Driver updates policy](driver-updates-reports.md)
+> [!div class="nextstepaction"]
+> [Learn how to configure Windows Driver update policies](driver-updates-policy.md)

@@ -21,10 +21,7 @@ ms.date: 01/08/2026
 > - Telemetry must be turned on, with a minimum setting of [*Required*](../../../intune-service/configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
 > - To support reporting on all status and events for driver updates, enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection on devices at the *Required* level or higher.
 >   - For more information, see [Configure Windows diagnostic data collection](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings).
-> - The **Microsoft Account Sign-In Assistant** service (`wlidsvc`) must be enabled and running.
-> - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
->    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
->    - Windows Autopatch
+> - The *Microsoft Account Sign-In Assistant* service (`wlidsvc`) must be enabled and running.
 
 :::column-end:::
 :::row-end:::
