@@ -10,6 +10,17 @@ ms.reviewer: davguy; davidmeb; bryanke
 
 With Windows driver update management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Intune and Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
 
+## Prerequisites
+
+[!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
+[!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
+[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
+[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
+[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
+[!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
+
+## Control driver update approvals
+
 Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
 
 - **Enable automatic approvals of recommended driver updates**. Policies set for automatic approval automatically approve and deploy each new driver update version that is considered a *recommended driver* for the devices assigned to the policy. Recommended drivers are typically the latest driver update published by the driver publisher that the publisher has marked as *required*. Drivers that aren't identified as the current recommended driver are also available as *other drivers*, which can be considered to be optional driver updates.
@@ -29,20 +40,11 @@ Later, when a newer driver update from the OEM is recommended for a device in th
 
 Regardless of the policy configuration and the drivers included, only approved drivers can install on devices. Additionally, Windows Update only installs the latest available and approved update when the version is more recent than the one currently installed on the device.
 
-## Prerequisites
-
-[!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
-[!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
-[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
-[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
-[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
-[!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
-
 ## Architecture
 
-:::image type="content" source="./images/autopatch-ds.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./images/autopatch-ds.png" border="false":::
+The following diagram illustrates the architecture for Windows driver update management when using Intune and Windows Autopatch.
 
-**Windows Driver Update Management architecture**:
+:::image type="content" source="./images/autopatch-ds.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./images/autopatch-ds.png" border="false":::
 
 1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to Windows Autopatch. Intune also provides the list of driver approvals and pause commands to Windows Autopatch.
 2. Windows Autopatch configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.

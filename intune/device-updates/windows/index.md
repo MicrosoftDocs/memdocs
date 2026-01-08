@@ -112,8 +112,8 @@ Each policy type has specific prerequisites, detailed in their respective docume
 
 - Devices must be enrolled in Intune.
 - Devices must be Microsoft Entra joined or hybrid joined.\
-  Microsoft Entra registered devices aren't supported for any policy type that uses the same backend service as Windows Autopatch—including Feature updates, Quality updates, and Driver updates.\
-  For Entra registered devices, update management remains limited to Windows Update client policies and update rings policies.
+  > Microsoft Entra registered devices aren't supported for any policy type that uses the same backend service as Windows Autopatch—including Feature updates, Quality updates, and Driver updates.\
+  > For Entra registered devices, update management remains limited to Windows Update client policies and update rings policies.
 - Devices must have access to Microsoft update endpoints.
 
 Feature update policies, quality update policies, and driver update policies use the same cloud orchestration layer as Windows Autopatch. Autopatch automates these policies, but when you configure them manually in Intune, you're still calling the same backend service—so the requirements don't change. Because they share this service, the prerequisites are the same across these three policy types:
@@ -125,5 +125,5 @@ Feature update policies, quality update policies, and driver update policies use
   > > [!IMPORTANT]
   > > [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
 - **Telemetry**: Diagnostic data set to *Required* level.
-- **Services**: Microsoft Account Sign-In Assistant enabled.\
+- **Services**: Microsoft Account Sign-In Assistant enabled.
   > If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
