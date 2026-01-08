@@ -4,10 +4,10 @@ items:
   displayName: windows updates
 - name: Updates rings
   items:
-  - name: Configure update rings policies
+  - name: Configure policies
     href: update-rings.md
     displayName: windows updates, rings
-  - name: Update rings reports
+  - name: Reports
     href: update-rings-reports.md
     displayName: windows updates, rings
   - name: 🔴 Policy settings reference
@@ -15,7 +15,7 @@ items:
     displayName: windows updates, rings    
 - name: Feature updates
   items:
-  - name: Configure feature updates policies
+  - name: Configure policies
     href: feature-updates.md
     displayName: windows feature updates
   - name: Feature updates reports
@@ -33,7 +33,7 @@ items:
     href: feature-updates-windows-10.md
 - name: Quality updates
   items:
-  - name: Configure quality updates policies
+  - name: Configure policies
     href: quality-updates.md
     displayName: windows quality updates
   - name: Quality updates reports
@@ -44,13 +44,13 @@ items:
     displayName: windows updates
 - name: Driver updates
   items:
-  - name: Configure driver updates policies
+  - name: Configure policies
     href: driver-updates.md
     displayName: windows driver updates
   - name: Driver updates policy
     href: driver-updates-policy.md
     displayName: windows driver updates
-  - name: Driver updates reports
+  - name: Reports
     href: driver-updates-reports.md
     displayName: windows updates
   - name: Driver updates FAQs
