@@ -35,73 +35,11 @@ Windows driver update management applies to:
 
 ## Prerequisites
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/licensing.md)]
+[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
 
-:::column-end:::
-:::column span="3":::
-> To use this feature, the following licenses are required:
-> - Microsoft Intune Plan 1 is required for core functionality, like creating and assigning policies.
-> - A Windows license that includes the [Autopatch entitlement](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites#licenses-and-entitlements).
->
-> If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants' licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
->
-> > [!IMPORTANT]
-> > [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
-:::column-end:::
-:::row-end:::
+[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
 
-:::row:::
-:::column span="1":::
-[!INCLUDE [platform](../../includes/requirements/platform.md)]
-
-:::column-end:::
-:::column span="3":::
-> This feature supports the following Windows editions:
-> - Pro
-> - Pro Education
-> - Enterprise
-> - Education
->
-> > [!NOTE]
-> > *Windows Enterprise LTSC*: Feature updates, Driver updates, and Expedited Quality Update policies under Quality updates, don't support the *Long Term Service Channel* (LTSC) release. Plan to use Update rings policies in Intune.
-:::column-end:::
-:::row-end:::
-
-:::row:::
-:::column span="1":::
-[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
-
-:::column-end:::
-:::column span="3":::
-> Feature update policies supports devices that are:
-> - Enrolled in Intune
-> - Microsoft Entra joined
-> - Microsoft Entra hybrid joined
->
-> Devices must also meet the following requirements:
-> - Telemetry must be turned on, with a minimum setting of [*Required*](../../intune-service/configuration/device-restrictions-windows-10.md#reporting-and-telemetry).
->    Devices that receive a feature updates policy and that have Telemetry set to *Not configured* (off), might install a later version of Windows than defined in the feature updates policy.
->
->    To configure Telemetry as using the Settings catalog:
-> 
->    1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
-> 
->      | Category | Setting name | Value |
->      |--|--|--|
->      | **System** | Allow Telemetry | **Basic** or **Full** |
-> 
->     1. Assign the policy to a group that contains as members the devices that you want to configure.
-> 
-> - The *Microsoft Account Sign-In Assistant* (wlidsvc) must be able to run. If the service is blocked or set to *Disabled*, it fails to receive the update. For more information, see [Feature updates aren't being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are). By default, the service is set to *Manual (Trigger Start)*, which allows it to run when needed.
-> - Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
->    - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
->    - Windows Autopatch
-
-:::column-end:::
-:::row-end:::
-
+[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
 
 ### RBAC requirements
 

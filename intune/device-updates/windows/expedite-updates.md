@@ -41,33 +41,7 @@ The actual time required for a device to start an update depends on the device i
 
 ## Prerequisites
 
-> [!IMPORTANT]
-> This feature isn't supported on GCC and GCC High/DoD cloud environments.
->
-> [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea) isn't applicable to GCC and GCC High/DoD cloud environments for Windows Autopatch capabilities.
-
-The following are requirements to qualify for installing expedited quality updates with Intune:
-
-<!--
-**Licensing**:
-
-In addition to a license for Intune, your organization must have one of the following subscriptions that include a license for Windows Autopatch:
-
-- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows Virtual Desktop Access E3 or E5
-- Microsoft 365 Business Premium
-
-Beginning in November of 2022, the Windows Autopatch license will be checked and enforced.
-
-If you're blocked when creating new policies for capabilities that require Windows Autopatch and you get your licenses to use Windows Update client policies through an Enterprise Agreement (EA), contact the source of your licenses such as your Microsoft account team or the partner who sold you the licenses. The account team or partner can confirm that your tenants licenses meet the Windows Autopatch license requirements. See [Enable subscription activation with an existing EA](/windows/deployment/deploy-enterprise-licenses#enable-subscription-activation-with-an-existing-ea).
--->
-
-**Supported Windows versions**:
-
-- Windows versions that remain in support for Servicing, on x86 or x64 architecture
-
-Only update builds that are generally available are supported. Preview builds, including the Beta and Dev channels, are not supported with expedited updates.
+[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
 
 **Supported Windows 10/11 editions**:
 
