@@ -18,6 +18,9 @@ items:
   - name: Get started
     href: feature-updates.md
     displayName: windows feature updates
+  - name: Configure feature updates policies
+    href: feature-updates-policy.md
+    displayName: windows quality updates
   - name: Feature updates reports
     href: feature-updates-reports.md
     displayName: windows feature updates

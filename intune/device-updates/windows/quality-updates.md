@@ -1,12 +1,31 @@
 ---
 title: Windows quality update policy
-description: Use Hotpatch updates to receive security updates without restarting your device
-ms.date: 04/17/2025
+description: Learn how to manage Windows quality updates in Microsoft Intune using quality updates policies, expedited updates, and Hotpatch to keep devices secure and compliant.
+ms.date: 06/01/2026
 ms.reviewer: Mounika
 ms.topic: how-to
 ---
 
-# Windows quality updates policy
+# Manage Windows quality updates
+
+Windows quality updates are the regular Windows servicing updates that keep devices secure, reliable, and supported. These updates are released frequently—typically monthly—and include security fixes, non‑security improvements, and reliability enhancements. Because quality updates are cumulative, installing the latest update brings a device fully up to date for its currently installed Windows version.
+
+In Microsoft Intune, Windows quality updates are managed through **quality updates policies**, which provide a dedicated policy surface for controlling how and when quality updates are delivered to devices. This policy is built on cloud‑based update orchestration and can be used alongside other Windows update policies, such as feature updates and driver updates. Depending on your deployment model, quality updates may be managed manually through Intune or automatically through Windows Autopatch. Client‑side update behavior—such as restart settings, deadlines, and notifications—continues to be controlled through standard Windows Update policy settings, including [update rings](update-rings.md) and [Windows Update client policies](/windows/deployment/update/waas-configure-wufb).
+
+Quality updates policies also supports advanced deployment options for specific scenarios. You can **expedite updates** to fast‑track the installation of critical or security updates when waiting for regular deployment timelines isn't acceptable. For eligible Windows editions and device configurations, quality updates policies can also enable **Hotpatch**, which delivers certain security updates without requiring an immediate device restart. Together, these options help organizations balance rapid protection, deployment control, and user experience.
+
+## Prerequisites
+
+[!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
+[!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
+[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
+[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
+[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
+[!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
+
+---
+
+## Hotpatch updates
 
 Windows quality updates policy allows you to deploy Hotpatch updates. Hotpatch updates are designed to reduce downtime and disruptions. Hotpatch updates are [Monthly B release security updates](/windows/deployment/update/release-cycle#monthly-security-update-release) that install and take effect without requiring you to restart the device. By minimizing the need to restart, these updates help ensure faster compliance, making it easier for organizations to maintain security while keeping workflows uninterrupted.
 
