@@ -22,9 +22,6 @@ You configure rollout options when creating [Feature Updates policy](feature-upd
 
 ## Make updates available gradually
 
-> [!WARNING]
-> Gradual rollout will no longer be an available option after October 14, 2025.
-
 With the option **Make update available gradually**, you can direct Windows Update to extend an update offer to different subsets of the devices that the policy targets, at different times. We refer to those subsets as *offer groups*. This behavior distributes the availability of the update across the time you've configured, which can reduce the effect to your network as compared to offering the update to all devices at the same time.
 
 To configure this option, you set the following values. Windows Update uses these values to determine how many offer groups to use based on the number of devices that the policy targets, when to offer the update to the first group, and how long to wait until the update is made available to the next offer group:
