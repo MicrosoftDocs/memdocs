@@ -52,7 +52,7 @@ Headings are driven by article context. -->
       - **Failed** - The application failed to install. Check logs for further details.
       
       > [!Note]
-      > A [known issue](./known-issues.md#win32-winget-and-enterprise-app-catalog-applications-are-skipped-when-managed-installer-policy-is-enabled-for-the-tenant) causes Win32, Microsoft Store, and Enterprise app catalog apps to be skipped when a managed installer is configured. 
+      > A [known issue](/autopilot/device-preparation/known-issues#win32-winget-and-enterprise-app-catalog-applications-are-skipped-when-managed-installer-policy-is-enabled-for-the-tenant) causes Win32, Microsoft Store, and Enterprise app catalog apps to be skipped when a managed installer is configured. 
 
    1. **Scripts** - Contains information regarding the PowerShell scripts being run during the Windows Autopilot device preparation including the list of scripts being run. Statuses include:
 
