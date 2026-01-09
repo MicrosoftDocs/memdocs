@@ -8,11 +8,20 @@ ms.reviewer: davguy; davidmeb; bryanke
 
 # Windows Update rings policy
 
+Windows update rings define how and when Windows updates are installed on devices. They control client‑side update behavior such as deferral periods, restart settings, deadlines, active hours, and user notifications. Update rings apply broadly to Windows updates and are commonly used to create deployment stages—for example, test, pilot, and production—by assigning different settings to different device groups.
+
+In Microsoft Intune, update rings are configured through **update rings policies**, which provide a general policy surface for managing Windows Update behavior on devices. These policies use Windows Update client settings and can be used on their own or alongside other Windows update policies, such as feature updates, quality updates, and driver updates. Update rings remain an important tool for shaping the user update experience and controlling installation timing.
+
+> [!NOTE]
+> When devices are managed through Windows Autopatch, update rings may be created and maintained by the service to implement rollout cadence and restart behavior. In these scenarios, admins typically shouldn't assign custom update rings to Autopatch‑managed devices. Instead, update rings work in combination with service‑managed policies that control update targeting and sequencing.
+
+<!--
 Create update rings that specify how and when Windows as a Service updates your Windows devices with [*feature* and *quality* updates](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates). With Windows, new feature and quality updates include the contents of all previous updates. As long as you've installed the latest update, you know your Windows devices are up to date. Unlike with previous versions of Windows, you now must install the entire update instead of part of an update.
 
 Update rings can also be used to upgrade your eligible Windows 10 devices to Windows 11. To do so, when creating a policy you use the setting named *Upgrade Windows 10 devices to Latest Windows 11 release* by configuring it as *Yes*. When you use update rings to upgrade to Windows 11, devices install the most current version of Windows 11. If you later set the upgrade setting back to *No*, devices that haven't started the upgrade won't start while devices that are in the process of upgrading will continue to do so. Devices that have completed the upgrade will remain with Windows 11. For more information on eligibility, see [Windows 11 Specs and System Requirements | Microsoft](https://www.microsoft.com/windows/windows-11-specifications).
 
 Windows update rings support [scope tags](../../intune-service/fundamentals/scope-tags.md). You can use scope tags with update rings to help you filter and manage sets of configurations that you use.
+-->
 
 ## Prerequisites
 
@@ -65,19 +74,6 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 >   - Use deadline settings for feature updates
 :::column-end:::
 :::row-end:::
-
-<!--
-### Limitations for Microsoft Entra registered devices
-
-Intune Update rings for Windows require the use of Windows Update client policies, which supports devices that are Workplace Joined (WPJ). However, the following Intune Windows Update policy types use Windows Update client policies and [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview), which provides for additional capabilities that are not supported for WPJ devices.
-
-- Driver updates
-- Feature updates
-- Quality updates (also known as *Expedited* updates)
-
-
-For more information about Microsoft Entra registered devices limitations for Windows Update policies, see [Policy limitations for Workplace Joined devices](configure.md).
--->
 
 ## Create and assign update rings
 

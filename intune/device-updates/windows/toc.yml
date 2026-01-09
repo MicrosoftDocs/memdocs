@@ -2,7 +2,7 @@ items:
 - name: Overview
   href: index.md
   displayName: windows updates
-- name: Updates rings policies
+- name: Update rings policies
   items:
   - name: Get started
     href: update-rings.md
