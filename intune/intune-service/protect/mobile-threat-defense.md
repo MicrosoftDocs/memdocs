@@ -3,7 +3,7 @@ title: Mobile Threat Defense with Microsoft Intune
 description: Use Intune Mobile Threat Defense (MTD) with your Mobile Threat Defense partner to protect access to company resources based on device risk.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/10/2025
+ms.date: 01/26/2026
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
@@ -50,20 +50,20 @@ For example: A connected MTD app reports to the MTD vendor that a phone on your 
 
 Once you add a Mobile Threat Defense connector to your tenant, the status displays one of the following states:
 
-| Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
-|--------------|-----------|------------|------------|
-| **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308) |
-| **Not Set Up**| Connector setup isn't complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) |
-| **Available**| Connector setup is complete. At least one platform toggle must be turned on for this status to change to **Enabled**. | No | No |
-| **Enabled**| Connector setup is complete, and at least one platform toggle is currently turned on for this connector. | No | No |
-| **Unresponsive**| Connector isn't responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune ignores the compliance state.| No | No |
-| **Error**| Connector has an error code. Some MTD partners may choose to send this in an error case. | No | No |
+| Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? | Certificate sync request messages blocked? |
+|--------------|-----------|------------|------------|------------|
+| **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308) | Yes (starting 2601) |
+| **Not Set Up**| Connector setup isn't complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) | Yes (starting 2601) |
+| **Available**| Connector setup is complete. At least one platform toggle must be turned on for this status to change to **Enabled**. | No | No | No |
+| **Enabled**| Connector setup is complete, and at least one platform toggle is currently turned on for this connector. | No | No | No |
+| **Unresponsive**| Connector isn't responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune ignores the compliance state.| No | No | No |
+| **Error**| Connector has an error code. Some MTD partners may choose to send this in an error case. | No | No | No |
 
 ## Data that Intune collects for Mobile Threat Defense
 
 If enabled, Intune collects app inventory information from both personal and corporate-owned devices and makes it available for MTD providers to fetch, such as Lookout for Work. You can collect an app inventory from the users of iOS devices.
 
-This service is opt-in; no app inventory information is shared by default. An Intune administrator must enable **App Sync for iOS devices** in the Mobile Threat Defense connector settings before any app inventory information is shared.
+These services are opt-in; no app inventory or certificate information is shared by default. An Intune administrator must enable **App Sync for iOS devices** and **Certificate Sync for iOS devices** in the Mobile Threat Defense connector settings before any information is shared.
 
 **App inventory**
 If you enable App Sync for iOS/iPadOS devices, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider. Data in the app inventory includes:
@@ -81,6 +81,20 @@ If you enable App Sync for iOS/iPadOS devices, inventories from both corporate a
 - Whether the app is validated or not
 - Whether the app is managed or not
 
+**Certificate inventory**
+If you enable **Certificate Sync** for iOS/iPadOS devices, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider. Certificate sync data is sent to Mobile Threat Defense partners at an interval based on device check-in. Data in the certificate inventory includes:
+
+- Certificate Identity
+- Certificate Common Name
+- Certificate Issuer
+- Certificate Subject
+- Certificate Serial Number
+- Certificate Valid From date
+- Certificate Valid To date
+- Certificate Signature Algorithm
+- Whether the certificate is managed or not
+- Whether the certificate is trusted or not
+
 ## Sample scenarios for enrolled devices using device compliance policies
 
 When a device is considered infected by the Mobile Threat Defense solution:
@@ -93,10 +107,10 @@ Access is granted when the device is remediated:
 
 ## Sample scenarios for unenrolled devices using Intune app protection policies
 
-When a device is considered infected by the Mobile Threat Defense solution:<br>
+When a device is considered infected by the Mobile Threat Defense solution:  
 ![Image that shows a Mobile Threat Defense infected device](./media/mobile-threat-defense/MTD-image-3.png)
 
-Access is granted when the device is remediated:<br>
+Access is granted when the device is remediated:  
 ![Image showing a Mobile Threat Defense access granted](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
