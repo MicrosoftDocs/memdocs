@@ -33,8 +33,11 @@ items:
     href: feature-updates-windows-10.md
 - name: Quality updates policy
   items:
-  - name: Configure policies
+  - name: Get started
     href: quality-updates.md
+    displayName: windows quality updates
+  - name: Configure policies
+    href: quality-updates-policy.md
     displayName: windows quality updates
   - name: Reports
     href: quality-updates-reports.md

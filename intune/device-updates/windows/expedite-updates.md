@@ -12,6 +12,37 @@ With Windows quality updates policies you can expedite the installation of the m
 
 Not all updates can be expedited. Currently, only Windows security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Windows Update ring policies](update-rings.md).
 
+## Prerequisites
+
+[!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
+[!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
+[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
+[!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
+[!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
+[!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
+
+### Update Health Tools
+
+For **Windows versions earlier than 24H2**, the Update Health Tools are required on devices to support expedited updates. The tools can be installed through [KB4023057](https://support.microsoft.com/topic/fccad0ca-dc10-2e46-9ed1-7e392450fb3a) or manually from the [Microsoft Download Center](https://www.microsoft.com/download/details.aspx?id=103324).
+
+To confirm the presence of the Update Health Tools on a device:
+
+- Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Services* or *Add Remove Programs* for **Microsoft Update Health Tools**.
+- As an Admin (or from Intune), run the following PowerShell script:
+
+```PowerShell
+### Check for the Microsoft Update Health Service; if found, no remediation is needed.
+if (Get-Service -Name "Microsoft Update Health Service" -ErrorAction SilentlyContinue) {
+    Write-Host "Microsoft Update Health Service is present."
+    Exit 0
+} else {
+    Write-Host "Microsoft Update Health Service is missing."
+    Exit 1
+}
+```
+
+If the script returns a `1`, the device has UHS client. If the script returns a `0`, the device doesn't have UHS client.
+
 ## How expedited updates work
 
 With expedited updates, you can expedite the installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
@@ -38,78 +69,6 @@ The actual time required for a device to start an update depends on the device i
   If a device doesn't restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
 - Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an update ring policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](settings.md#user-experience-settings).
-
-## Prerequisites
-
-[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
-
-**Supported Windows 10/11 editions**:
-
-- Professional
-- Enterprise
-- Education
-- Pro Education
-- Pro for Workstations
-
-**Devices must**:
-
-- Be [enrolled in Intune](../../intune-service/fundamentals/deployment-guide-enrollment.md) MDM.
-
-- Be Microsoft Entra joined, or Microsoft Entra hybrid joined. Workplace Join isn't supported.
-
-- Have access to endpoints. To get a detailed list of endpoints required for the associated services listed here, see [Network endpoints](../../intune-service/fundamentals/intune-endpoints.md#access-for-managed-devices).
-
-  - [Windows Update](/windows/privacy/manage-windows-1809-endpoints#windows-update)
-  - Windows Autopatch
-  - [Windows Push Notification Services](/windows/uwp/design/shell/tiles-and-notifications/firewall-allowlist-config): *(Recommended, but not required. Without this access, devices might not expedite updates until their next daily check for updates.)*
-
-- Be configured to get Quality Updates directly from the Windows Update service.
-
-- Have the *Update Health Tools* installed, which are installed with [KB 4023057](https://support.microsoft.com/topic/fccad0ca-dc10-2e46-9ed1-7e392450fb3a) or manually from [Microsoft Download - Update Health Tools](https://www.microsoft.com/download/details.aspx?id=103324).
-
-> [!NOTE]
-> Windows 11, version 24H2 and above cannot apply *KB 4023057*, this is applicable only to Windows 11, version 23H2 and below. Upgrading to 24H2 removes *KB 4023057*, so checking for KB installation is no longer needed.
-
-To confirm the presence of the Update Health Tools on a device:
-
-- Look for the folder **C:\Program Files\Microsoft Update Health Tools** or review *Services* or *Add Remove Programs* for **Microsoft Update Health Tools**.
-- As an Admin (or from Intune), run the following PowerShell script:
-
-```PowerShell
-### Check for the Microsoft Update Health Service; if found, no remediation is needed.
-if (Get-Service -Name "Microsoft Update Health Service" -ErrorAction SilentlyContinue) {
-    Write-Host "Microsoft Update Health Service is present."
-    Exit 0
-} else {
-    Write-Host "Microsoft Update Health Service is missing."
-    Exit 1
-}
-```
-
-If the script returns a 1, the device has UHS client. If the script returns a 0, the device doesn't have UHS client.
-
-**Device settings**:
-
-To help avoid conflicts or configurations that can block installation of expedited updates, configure devices as follows. You can use *update rings policies* to manage these settings.
-
-| Update ring setting       | Recommended value        |
-|---------------------------|-------------------------------------|
-| Enable pre-release builds | This setting should be set to **Not configured**. Preview builds, including the Beta and Dev channels, are not supported with expedited updates. |
-| Automatic update behavior | **Reset to default**  <br><br> Other values might cause a poor user experience and  slow the process to expedite updates. |
-| Change notification update level | Use any value other than **Turn off all notifications, including restart warnings** |
-
-For more information about these settings, see [Policy CSP Update](/windows/client-management/mdm/policy-csp-update).
-
-Group Policy settings override mobile device management policies, and the following list of Group Policy settings can interfere with Expedited policy. On devices where these settings were managed by Group Policy, restore them to their device defaults (Not configured):
-
-- **CorpWuURL** - Specify intranet Microsoft update service location.
-- **AutoUpdateCfg** - Configure Automatic Updates.
-- **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
-- **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
-
-**Monitoring and reporting**:
-
-Before you can monitor results and update status for expedited updates, your Intune tenant must enable data collection.
 
 ## Create and assign an expedited quality update
 
