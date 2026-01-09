@@ -13,6 +13,7 @@ ms.topic: how-to
 > [!div class="checklist"]
 > - Ensure your environment meets the requirements in [Windows quality updates overview](quality-updates.md#prerequisites).
 > - To avoid conflicts or configurations that can block the installation of expedited updates, configure devices as follows. You can use *update rings policies* to manage these settings.
+>
 >    | Update ring setting       | Recommended value        |
 >    |---------------------------|-------------------------------------|
 >    | Enable pre-release builds | This setting should be set to **Not configured**. Preview builds, including the Beta and Dev channels, are not >supported with expedited updates. |

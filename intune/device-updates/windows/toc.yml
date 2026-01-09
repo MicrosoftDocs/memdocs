@@ -2,9 +2,20 @@ items:
 - name: Overview
   href: index.md
   displayName: windows updates
+- name: Updates rings policies
+  items:
+  - name: Get started
+    href: update-rings.md
+    displayName: windows updates, rings
+  - name: Reports
+    href: update-rings-reports.md
+    displayName: windows updates, rings
+  - name: Policy settings reference
+    href: settings.md
+    displayName: windows updates, rings
 - name: Manage Windows feature updates
   items:
-  - name: Configure feature updates policies
+  - name: Get started
     href: feature-updates.md
     displayName: windows feature updates
   - name: Feature updates reports
@@ -48,17 +59,6 @@ items:
   - name: Driver updates FAQs
     href: driver-updates-faq.yml
     displayName: windows driver updates
-- name: Updates rings policies
-  items:
-  - name: Get started
-    href: update-rings.md
-    displayName: windows updates, rings
-  - name: Reports
-    href: update-rings-reports.md
-    displayName: windows updates, rings
-  - name: Policy settings reference
-    href: settings.md
-    displayName: windows updates, rings
 - name: Delivery Optimization
   href: ../../intune-service/configuration/delivery-optimization-windows.md
   displayName: delivery optimization, windows updates
