@@ -2,20 +2,9 @@ items:
 - name: Overview
   href: index.md
   displayName: windows updates
-- name: Updates rings policy
+- name: Manage Windows feature updates
   items:
-  - name: Configure policies
-    href: update-rings.md
-    displayName: windows updates, rings
-  - name: Reports
-    href: update-rings-reports.md
-    displayName: windows updates, rings
-  - name: Policy settings reference
-    href: settings.md
-    displayName: windows updates, rings    
-- name: Feature updates policy
-  items:
-  - name: Configure policies
+  - name: Configure feature updates policies
     href: feature-updates.md
     displayName: windows feature updates
   - name: Feature updates reports
@@ -31,12 +20,12 @@ items:
     displayName: windows updates
   - name: Upgrade Windows 10 devices
     href: feature-updates-windows-10.md
-- name: Quality updates policy
+- name: Manage Windows quality updates
   items:
   - name: Get started
     href: quality-updates.md
     displayName: windows quality updates
-  - name: Configure policies
+  - name: Configure quality updates policies
     href: quality-updates-policy.md
     displayName: windows quality updates
   - name: Reports
@@ -45,12 +34,12 @@ items:
   - name: Expedite updates
     href: expedite-updates.md
     displayName: windows updates
-- name: Driver updates policy
+- name: Manage Windows driver updates
   items:
   - name: Get started
     href: driver-updates.md
     displayName: windows driver updates
-  - name: Configure policies
+  - name: Configure driver updates policies
     href: driver-updates-policy.md
     displayName: windows driver updates
   - name: Reports
@@ -59,6 +48,17 @@ items:
   - name: Driver updates FAQs
     href: driver-updates-faq.yml
     displayName: windows driver updates
+- name: Updates rings policies
+  items:
+  - name: Get started
+    href: update-rings.md
+    displayName: windows updates, rings
+  - name: Reports
+    href: update-rings-reports.md
+    displayName: windows updates, rings
+  - name: Policy settings reference
+    href: settings.md
+    displayName: windows updates, rings
 - name: Delivery Optimization
   href: ../../intune-service/configuration/delivery-optimization-windows.md
   displayName: delivery optimization, windows updates
