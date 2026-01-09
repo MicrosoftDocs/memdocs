@@ -5,7 +5,7 @@ author: brenduns
 ms.author: brenduns
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.reviewer: demerson
+ms.reviewer: ilwu
 ms.collection:
 - M365-identity-device-management
 - sub-mtd-apps
