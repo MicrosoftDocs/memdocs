@@ -45,7 +45,7 @@ This feature applies to:
 > This feature supports the following platforms:
 >
 > - Windows
-> - Devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
+> - Devices must be corporate owned, Intune managed (includes co-managed), Microsoft Entra Hybrid joined, and Microsoft Entra joined.
 :::column-end:::
 :::row-end:::
 
