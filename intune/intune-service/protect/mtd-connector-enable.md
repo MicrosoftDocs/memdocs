@@ -3,7 +3,7 @@ title: Enable Mobile Threat Defense connector in Microsoft Intune
 description: Enable the connector between your Mobile Threat Defense (MTD) partner and Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/05/2024
+ms.date: 01/26/2026
 ms.topic: how-to
 ms.reviewer: aanavath
 ms.collection:
@@ -63,13 +63,13 @@ Enable the toggles for those options your organization requires.
 
 - **Connect iOS/iPadOS devices version _\<supported versions>_ and above to _\<MTD partner name>_**: When you enable this option, compliance policies using the Device Threat Level rule for iOS/iPadOS devices (on supported OS versions) evaluate devices including data from this connector.
 
-- **Enable App Sync for iOS Devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and provides updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
+- **Enable App Sync for iOS devices**: Allows this Mobile Threat Defense partner to request metadata of iOS applications from Intune to use for threat analysis purposes. This iOS device must be MDM-enrolled device and provides updated app data during device check-in. You can find standard Intune policy check-in frequencies in the [Refresh cycle times](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals).
 
   > [!NOTE]
   >
   > App Sync data is sent to Mobile Threat Defense partners at an interval based on device check-in, and should **not** be confused with the refresh interval for the [Discovered Apps report](../apps/app-discovered-apps.md#details-of-discovered-apps).
 
-- **Send full application inventory data on personally-owned iOS/iPadOS Devices​**: This setting controls the application inventory data that Intune shares with this Mobile Threat Defense partner. Data is shared when the partner syncs app data and requests the app inventory list.
+- **Send full application inventory data on personally-owned iOS/iPadOS devices​**: This setting controls the application inventory data that Intune shares with this Mobile Threat Defense partner. Data is shared when the partner syncs app data and requests the app inventory list.
 
   Choose from the following options:
 
@@ -77,6 +77,21 @@ Enable the toggles for those options your organization requires.
   - **Off** - Data about unmanaged apps isn't provided to the partner. Intune does share data for the apps that are deployed through Intune.
 
   This setting has no effect for corporate devices. For corporate devices, Intune sends data about both managed and unmanaged apps when requested by this MTD vendor.
+
+- **Enable Certificate Sync for iOS/iPadOS devices**: Allows this Mobile Threat Defense partner to request a list of installed certificates on iOS/iPadOS devices from Intune to use for threat analysis purposes. This iOS/iPadOS device must be MDM-enrolled and provides updated certificate data during device check-in.
+
+  > [!NOTE]
+  >
+  > Certificate Sync data is sent to Mobile Threat Defense partners at an interval based on device check-in.
+
+- **Send full certificate inventory data on personally-owned iOS/iPadOS devices**: This setting controls the certificate inventory data that Intune shares with this Mobile Threat Defense partner for personally-owned devices. Data is shared when the partner syncs certificate data and requests the certificate inventory list.
+
+  Choose from the following options:
+
+  - **On** - Allows this Mobile Threat Defense partner to request a list of installed certificates from Intune for personally-owned iOS/iPadOS devices. This list includes unmanaged certificates (certificates not deployed through Intune) and certificates that were deployed through Intune.
+  - **Off** - Data about unmanaged certificates isn't provided to the partner for personally-owned devices. No certificate data is sent for personally-owned devices.
+
+  This setting has no effect for corporate devices. For corporate devices, Intune sends data about both managed and unmanaged certificates when requested by this MTD vendor.
 
 - **Block unsupported OS versions**: Block if the device is running an operating system less than the minimum supported version. Details of the minimum supported version would be shared within the docs for the Mobile Threat Defense vendor.
 
