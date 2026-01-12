@@ -10,7 +10,7 @@ ms.reviewer: davguy; davidmeb; bryanke
 
 Windows update rings define how and when Windows updates are installed on devices. They control client‑side update behavior such as deferral periods, restart settings, deadlines, active hours, and user notifications. Update rings apply broadly to Windows updates and are commonly used to create deployment stages—for example, test, pilot, and production—by assigning different settings to different device groups.
 
-In Microsoft Intune, update rings are configured through **update rings policies**, which provide a general policy surface for managing Windows Update behavior on devices. These policies use Windows Update client settings and can be used on their own or alongside other Windows update policies, such as feature updates, quality updates, and driver updates. Update rings remain an important tool for shaping the user update experience and controlling installation timing.
+In Microsoft Intune, update rings are configured through **update rings policies**, which provide a general policy surface for managing Windows Update behavior on devices. These policies use Windows Update client settings and can be used on their own or alongside other Windows update policies, such as feature updates, quality updates, and driver updates.
 
 > [!NOTE]
 > When devices are managed through Windows Autopatch, update rings may be created and maintained by the service to implement rollout cadence and restart behavior. In these scenarios, admins typically shouldn't assign custom update rings to Autopatch‑managed devices. Instead, update rings work in combination with service‑managed policies that control update targeting and sequencing.
@@ -75,12 +75,15 @@ In Microsoft Intune, update rings are configured through **update rings policies
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates**
 1. Select the **Update rings** tab > **Create profile**.
 1. Under *Basics*, specify a name, a description (optional), and then select **Next**.
-1. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](update-rings-policy-settings.md). After configuring *Update and User experience* settings, select **Next**.
+1. Under **Update ring settings**, configure settings aligned with your organization's update deployment strategy
+   - For information about the available settings, see [Windows update settings](update-rings-policy-settings.md).
+   - After configuring *Update and User experience* settings, select **Next**.
 1. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 1. Select **Next** to continue to *Assignments*.
 1. Under **Assignments**, choose **+ Select groups to include** and then assign the update ring to one or more groups. Use **+ Select groups to exclude** to fine-tune the assignment. Select **Next** to continue.
 
-   In most cases, we recommend deploying update rings to device groups. Use of device groups removes the need for a user to sign-on to a device before the policy can apply.
+   > [!TIP]
+   > Assign update rings to device groups. The use of device groups removes the need for a user to sign-on to a device before the policy can apply.
 
 1. Under **Review + create**, review the settings, and then select **Create** when ready to save your Windows update ring. Your new update ring is displayed in the list of update rings.
 

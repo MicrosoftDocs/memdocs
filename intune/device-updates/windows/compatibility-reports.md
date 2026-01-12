@@ -16,45 +16,6 @@ With Intune, you can deploy updates to Windows devices with [Windows Update ring
 
 To use these reports, you must first ensure that prerequisites are met and that devices are properly configured for data collection.
 
-## Prerequisites
-
-### Licensing
-
-The Windows feature update device readiness and Windows feature update compatibility risks reports require users of enrolled devices to have one of the following licenses:
-
-- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows Virtual Desktop Access (VDA) per user
-
-Before using these reports, you must attest to having the required licenses on the [Windows data page](../../intune-service/protect/data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
-
-### Devices
-
-To be eligible for the Windows feature update device readiness and Windows feature update compatibility risks reports, devices must:
-
-- Run a supported version of Windows with the latest cumulative update
-- Be Microsoft Entra joined or Microsoft Entra hybrid joined
-- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
-- Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
-
-
-Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](../../intune-service/protect/data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
-
-### Users
-
-To view these reports, users must be assigned an Intune role with the **Managed devices** > **View reports** permission. This permission is included in the following built-in roles:
-
-- Endpoint Security Manager
-- Read Only Operator
-- Help Desk Operator
-
-In addition, to use the **Windows feature update device readiness report**, users must also have the **Roles** > **Read** permission. This permission is included in the following built-in roles:
-
-- Endpoint Security Manager
-- Read Only Operator
-- Help Desk Operator
-- Intune Role Administrator
-
 ## Use the Windows feature update device readiness report
 
 The **Windows feature update device readiness report**  provides a device-level view of compatibility risks associated with an upgrade or update to a chosen version of Windows.

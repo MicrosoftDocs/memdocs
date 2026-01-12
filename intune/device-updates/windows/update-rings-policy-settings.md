@@ -28,6 +28,7 @@ Update settings control what bits a device will download, and when.
     > Configuration service provider (CSP) reference: [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice)|
     :::column-end:::
 :::row-end:::
+
 :::row:::
     :::column span="1":::
     **Windows drivers**
@@ -38,6 +39,7 @@ Update settings control what bits a device will download, and when.
     > Configuration service provider (CSP) reference: [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate)
     :::column-end:::
 :::row-end:::
+
 :::row:::
     :::column span="1":::
     **Quality update deferral period (days)**
@@ -49,6 +51,7 @@ Update settings control what bits a device will download, and when.
     > Configuration service provider (CSP) reference: [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)
     :::column-end:::
 :::row-end:::
+
 :::row:::
     :::column span="1":::
     **Feature update deferral period (days)**
@@ -58,7 +61,9 @@ Update settings control what bits a device will download, and when.
     >
     > Configuration service provider (CSP) reference: [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays)
     :::column-end:::
-:::row-end::::::row:::
+:::row-end:::
+
+:::row:::
     :::column span="1":::
     **Upgrade Windows 10 devices to Latest Windows 11 release**
     :::column-end:::
@@ -66,7 +71,8 @@ Update settings control what bits a device will download, and when.
     > When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release.
     :::column-end:::
 :::row-end:::
-:::row-end::::::row:::
+
+:::row:::
     :::column span="1":::
     **Set feature update uninstall period (2 - 60 days)**
     :::column-end:::
@@ -76,7 +82,8 @@ Update settings control what bits a device will download, and when.
     >Configuration service provider (CSP) reference: [ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod)
     :::column-end:::
 :::row-end:::
-:::row-end::::::row:::
+
+:::row:::
     :::column span="1":::
     **Enable pre-release builds**
     :::column-end:::
@@ -124,7 +131,7 @@ User experience settings control the end-user experience for device restart and 
     :::column-end:::
 :::row-end:::
 
-:::row-end::::::row:::
+:::row:::
     :::column span="1":::
     **Restart checks (EDU Restart)**
     :::column-end:::
@@ -139,7 +146,7 @@ User experience settings control the end-user experience for device restart and 
 :::row-end:::
 
 
-:::row-end::::::row:::
+:::row:::
     :::column span="1":::
     **Option to pause Windows updates**
     :::column-end:::
@@ -151,7 +158,7 @@ User experience settings control the end-user experience for device restart and 
     :::column-end:::
 :::row-end:::
 
-:::row-end::::::row:::
+:::row:::
     :::column span="1":::
     **Option to check for Windows updates**
     :::column-end:::
@@ -163,7 +170,7 @@ User experience settings control the end-user experience for device restart and 
     :::column-end:::
 :::row-end:::
 
-:::row-end::::::row:::
+:::row:::
     :::column span="1":::
     **Change notification Update level**
     :::column-end:::
