@@ -67,7 +67,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/device-updates/windows/expedite-updates",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -3517,7 +3517,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/intune-service/protect/windows-10-expedite-updates",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
