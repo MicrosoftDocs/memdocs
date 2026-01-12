@@ -193,21 +193,26 @@ User experience settings control the end-user experience for device restart and 
     >Configuration service provider (CSP) reference: [UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel)
 :::row-end:::
 
-#### Use deadline settings
-
-  Allows configuration of deadline settings.
-
-  - **Not configured**
-  - **Allow**
-
-When set to *Allow*, you can configure the following settings for deadlines:
-
-| **Setting** | **Description** | **CSP Reference** |
-|--|--|--|
-| **Deadline for feature updates** | Specifies the number of days a user has before feature updates are installed on their devices automatically (2-30). | [ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates) |
-| **Deadline for quality updates** | Specifies the number of days a user has before quality updates are installed on their devices automatically (2-30). | [ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates) |
-| **Grace period** | Specifies a minimum number of days after deadline until restarts occur automatically (0-7). | [ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod) |
-| **Auto reboot before deadline** | Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are expired. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are expired and then restarts the device and this could occur during active hours. | [ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot) |
-
-For more details about how deadlines and grace periods work together see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
-
+:::row:::
+    :::column span="1":::
+    **Use deadline settings**
+    :::column-end:::
+    :::column span="3":::
+    >Enables the configuration of deadline settings:
+    >- **Not configured**
+    >- **Allow**
+    >
+    >When set to *Allow*, you can configure the following settings for deadlines:
+    > **Deadline for feature updates**: Specifies the number of days a user has before feature updates are installed on their devices automatically (2-30).
+    > **Deadline for quality updates**: Specifies the number of days a user has before quality updates are installed on their devices automatically (2-30).
+    > **Grace period**: Specifies a minimum number of days after deadline until restarts occur automatically (0-7).
+    > **Auto reboot before deadline**: Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are expired. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are expired and then restarts the device and this could occur during active hours.
+    >
+    >For more details about how deadlines and grace periods work together see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
+    >
+    >Configuration service provider (CSP) reference:
+    > - [ConfigureDeadlineForFeatureUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforfeatureupdates)
+    > - [ConfigureDeadlineForQualityUpdates](/windows/client-management/mdm/policy-csp-update#configuredeadlineforqualityupdates)
+    > - [ConfigureDeadlineGracePeriod](/windows/client-management/mdm/policy-csp-update#configuredeadlinegraceperiod)
+    > - [ConfigureDeadlineNoAutoReboot](/windows/client-management/mdm/policy-csp-update#configuredeadlinenoautoreboot)
+:::row-end:::
