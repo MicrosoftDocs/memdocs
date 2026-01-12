@@ -60,7 +60,7 @@ In Microsoft Intune, update rings are configured through **update rings policies
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [device-configuration](../../../includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 
 :::column-end:::
 :::column span="3":::
