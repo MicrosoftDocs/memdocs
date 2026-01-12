@@ -126,11 +126,13 @@ User experience settings control the end-user experience for device restart and 
     >   - **Active hours end**: Specify an end time for suppressing reboots due to update installations.
     >
     >- **Auto install and restart at a scheduled time**: Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart. When set to *Auto install and restart at a scheduled time*, you can configure the following settings:
-    >  - **Automatic behavior frequency** - Use this setting to schedule when updates are installed, including the week, the day, and the time.
-    >  - **Scheduled install day** - Specify on which day of the week you want updates to install.
-    >  - **Scheduled install time** - Specify the time of day when you want updates to install.
-    >>[!NOTE]
-    >>The device might not complete the installation at the specified time because of power policies, user absence, and so on. In this case, it will not attempt installation until the specified time occurs again or until a deadline you have specified is reached.
+    >   - **Automatic behavior frequency** - Use this setting to schedule when updates are installed, including the week, the day, and the time.
+    >   - **Scheduled install day** - Specify on which day of the week you want updates to install.
+    >   - **Scheduled install time** - Specify the time of day when you want updates to install.
+    >
+    >   >[!NOTE]
+    >   >The device might not complete the installation at the specified time because of power policies, user absence, and so on. In this case, it will not attempt installation until the specified time occurs again or until a deadline you have specified is reached.
+    >
     >- **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.
     >- **Reset to default** - Restore the original auto update settings. When you *reset to default*, Windows will automatically determine active hours for the device. Using the active hours, Windows then schedules the best time to install updates and restart the system after updates install.
     >Configuration service provider (CSP) reference:
@@ -150,7 +152,7 @@ User experience settings control the end-user experience for device restart and 
     >>[!NOTE]
     >>In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalog](../../intune-service/configuration/settings-catalog.md) to set this value if required.
     >
-    >Configuration service provider (CSP) reference: [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart)
+    >Configuration service provider (CSP) reference: [SetEDURestart](/windows/client-management/mdm/policy-csp-update#setedurestart).
     :::column-end:::
 :::row-end:::
 
@@ -163,7 +165,7 @@ User experience settings control the end-user experience for device restart and 
     >- **Enable**: Allow device users to pause the installation of an update for a certain number of days.
     >- **Disable**: Prevent device users from pausing the installation of an update.
     >
-    >Configuration service provider (CSP) reference: [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess)
+    >Configuration service provider (CSP) reference: [SetDisablePauseUXAccess](/windows/client-management/mdm/policy-csp-update#setdisablepauseuxaccess).
     :::column-end:::
 :::row-end:::
 
@@ -175,7 +177,7 @@ User experience settings control the end-user experience for device restart and 
     >- **Enable**: Allow device users to use Windows Update scan to find updates.
     >- **Disable**: Prevent device users from accessing the Windows Update scan.
     >
-    >Configuration service provider (CSP) reference: [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess)
+    >Configuration service provider (CSP) reference: [SetDisableUXWUAccess](/windows/client-management/mdm/policy-csp-update#setdisableuxwuaccess).
     :::column-end:::
 :::row-end:::
 
@@ -190,7 +192,7 @@ User experience settings control the end-user experience for device restart and 
     >- **Turn off all notifications, excluding restart warnings**
     >- **Turn off all notifications, including restart warnings**
     >
-    >Configuration service provider (CSP) reference: [UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel)
+    >Configuration service provider (CSP) reference: [UpdateNotificationLevel](/windows/client-management/mdm/policy-csp-update#updatenotificationlevel).
 :::row-end:::
 
 :::row:::
@@ -203,10 +205,10 @@ User experience settings control the end-user experience for device restart and 
     >- **Allow**
     >
     >When set to *Allow*, you can configure the following settings for deadlines:
-    > **Deadline for feature updates**: Specifies the number of days a user has before feature updates are installed on their devices automatically (2-30).
-    > **Deadline for quality updates**: Specifies the number of days a user has before quality updates are installed on their devices automatically (2-30).
-    > **Grace period**: Specifies a minimum number of days after deadline until restarts occur automatically (0-7).
-    > **Auto reboot before deadline**: Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are expired. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are expired and then restarts the device and this could occur during active hours.
+    >- **Deadline for feature updates**: Specifies the number of days a user has before feature updates are installed on their devices automatically (2-30).
+    >- **Deadline for quality updates**: Specifies the number of days a user has before quality updates are installed on their devices automatically (2-30).
+    >- **Grace period**: Specifies a minimum number of days after deadline until restarts occur automatically (0-7).
+    >- **Auto reboot before deadline**: Specifies whether the device will attempt to automatically reboot outside of active hours before the deadline and grace period are expired. The recommended value is **Yes**, as it enables the system to reboot when the user isn't using the device. Setting this value to **No** forces the system to wait until the deadline and grace period are expired and then restarts the device and this could occur during active hours.
     >
     >For more details about how deadlines and grace periods work together see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
     >
