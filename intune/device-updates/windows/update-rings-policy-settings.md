@@ -135,6 +135,7 @@ User experience settings control the end-user experience for device restart and 
     >
     >- **Auto install and reboot without end-user control** - Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used. This option sets the end-users control pane to read-only.
     >- **Reset to default** - Restore the original auto update settings. When you *reset to default*, Windows will automatically determine active hours for the device. Using the active hours, Windows then schedules the best time to install updates and restart the system after updates install.
+    >
     >Configuration service provider (CSP) reference:
     > - [AllowAutoUpdate](/windows/client-management/mdm/policy-csp-update#allowautoupdate)
     > - [ActiveHoursStart](/windows/client-management/mdm/policy-csp-update#activehoursstart)
