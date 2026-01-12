@@ -21,10 +21,10 @@ items:
   - name: Configure feature updates policies
     href: feature-updates-policy.md
     displayName: windows quality updates
-  - name: Reports
+  - name: Feature updates policies reports
     href: feature-updates-reports.md
     displayName: windows feature updates
-  - name: Compatibility reports
+  - name: Feature updates compatibility reports
     href: compatibility-reports.md
     displayName: windows updates, reports
   - name: Windows rollout options
@@ -40,7 +40,7 @@ items:
   - name: Configure quality updates policies
     href: quality-updates-policy.md
     displayName: windows quality updates
-  - name: Reports
+  - name: Quality updates polciies reports
     href: quality-updates-reports.md
     displayName: windows quality updates
   - name: Expedite updates
@@ -54,7 +54,7 @@ items:
   - name: Configure driver updates policies
     href: driver-updates-policy.md
     displayName: windows driver updates
-  - name: Reports
+  - name: Driver updates policies reports
     href: driver-updates-reports.md
     displayName: windows updates
   - name: Driver updates FAQs

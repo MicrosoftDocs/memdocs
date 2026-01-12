@@ -109,7 +109,7 @@ User experience settings control the end-user experience for device restart and 
 
 :::row:::
     :::column span="1":::
-    ##### Automatic update behavior
+    **Automatic update behavior**
     :::column-end:::
     :::column span="3":::
     > Choose how automatic updates are installed and, if necessary, when to restart the device:
@@ -145,7 +145,7 @@ User experience settings control the end-user experience for device restart and 
 
 :::row:::
     :::column span="1":::
-    ###### Restart checks (EDU Restart)
+    **Restart checks (EDU Restart)**
     :::column-end:::
     :::column span="3":::
     >- **Allow**: Perform restart checks: Battery level = 40%, User presence, Display Needed, Presentation mode, Full screen mode, phone call state, game mode etc.
@@ -160,7 +160,7 @@ User experience settings control the end-user experience for device restart and 
 
 :::row:::
     :::column span="1":::
-    **Option to pause Windows updates**
+    #### Option to pause Windows updates
     :::column-end:::
     :::column span="3":::
     >- **Enable**: Allow device users to pause the installation of an update for a certain number of days.
