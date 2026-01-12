@@ -23,15 +23,19 @@ Feature updates policies allow you to **lock devices to a specific Windows relea
 [!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
 [!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
 
----
+## Plan for feature updates policies
 
-<!--
-With Microsoft Intune, you can create and deploy policy settings that ensure your Windows devices remain on a specific Windows feature update version. These settings help you manage and control the feature set of Windows on your devices, providing stability and predictability for your organization's IT environment.
+When planning your feature updates policies, consider the following guidance:
 
-With Windows feature updates policies, you can:
+- If you deploy a feature updates policy to a device that is also targeted by an update ring policy, review the update ring for the following configurations:
+  - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates aren't delayed by update deferrals that might be configured in an update ring policy. For more information, see [Move from update ring deferrals to feature updates policy](ring-deferrals-to-feature-updates-policy.md).
+  - Feature updates for the update ring must be *running*. They must not be paused.
+- Windows feature updates policies can't be applied during the Windows Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
+- When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.
+- Managed devices that receive feature update policy are automatically enrolled with [Windows Autopatch](/windows/deployment/windows-autopatch/overview/windows-autopatch-overview). The service manages the updates a device receives. Microsoft Intune uses this service and works with your Intune policies for Windows updates to deploy feature updates to devices.
+- When a device is no longer assigned to any feature update policies, the device remains enrolled in Autopatch. This change allows time to assign the device to a different policy and ensure that in the meantime the device doesn't receive a feature update that wasn't intended.\
+  As a result, when a feature updates policy no longer applies to a device, that device isn't offered any feature update until one of the following happens:
+  - The device is assigned to a new feature update profile.
+  - The device is unenrolled from Intune, which unenrolls the device from feature update management by Autopatch.
+  - You use the [Windows Autopatch graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
 
-- Select the Windows [feature update](/windows/deployment/update/get-started-updates-channels-tools#types-of-updates) version that you want devices to remain at. This option supports setting a feature level to any version that remains in support at the time you create the policy.
-- [Upgrade devices that run Windows 10 to Windows 11](feature-updates-windows-10.md).
-
-Windows feature updates policies work with update rings policies to prevent a device from receiving a Windows feature version that's later than the value specified in the feature updates policy.
--->

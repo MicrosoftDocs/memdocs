@@ -14,12 +14,6 @@ In Microsoft Intune, Windows driver updates are managed through **driver updates
 
 Driver updates policies support **automatic or manual approval workflows**, allowing you to choose whether recommended drivers are deployed automatically or require administrator review before installation. This approach helps organizations balance hardware stability, risk management, and operational efficiency while maintaining visibility into which drivers are approved for deployment.
 
----
-
-<!--
-With Windows driver update management in Microsoft Intune, you can review, approve for deployment and pause deployments of driver updates for your managed Windows devices. Intune and Windows Autopatch take care of the heavy lifting to identify the applicable driver updates for devices that are assigned a driver updates policy. Intune and Windows Autopatch sort updates by categories that help you easily identify the recommended driver updates for all devices, or updates that might be considered optional for more limited use.
--->
-
 ## Prerequisites
 
 [!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
@@ -44,7 +38,7 @@ Using Windows driver update policies, you remain in control of which driver upda
 
 - **Configure policy to require manual approval of all updates**. This policy ensures that administrators must approve a driver update before it can be deployed. Newer versions of driver updates for devices with this policy are automatically added to the policy but remain inactive until approved.
 
-Later, when a newer driver update from the OEM is recommended for a device in the policy, the policy status updates to indicate there are drivers pending your review. This status becomes a call to action to review the policy and decide if you want to approve deployment of the newest drivers to devices.
+  Later, when a newer driver update from the OEM is recommended for a device in the policy, the policy status updates to indicate there are drivers pending your review. This status becomes a call to action to review the policy and decide if you want to approve deployment of the newest drivers to devices.
 
 - **Manage which drivers are approved for deployment**. You can edit any driver update policy to modify which drivers are approved for deployment. You can pause the deployment of any individual driver update to stop its deployment to new devices, and then later reapprove the paused update to enable Windows Update to resume installing it on applicable devices.
 
@@ -81,4 +75,4 @@ For more information about planning deployments, see [Create a deployment plan](
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Learn how to configure Windows Driver update policies](driver-updates-policy.md)
+> [Learn how to configure driver updates policies](driver-updates-policy.md)

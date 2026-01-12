@@ -21,7 +21,7 @@ items:
   - name: Configure feature updates policies
     href: feature-updates-policy.md
     displayName: windows quality updates
-  - name: Feature updates reports
+  - name: Reports
     href: feature-updates-reports.md
     displayName: windows feature updates
   - name: Compatibility reports
