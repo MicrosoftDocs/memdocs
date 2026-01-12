@@ -3,7 +3,7 @@ title: Move from Microsoft 365 Basic Mobility and Security to Intune
 description: Learn how to move your mobile device management from Microsoft 365 Basic Mobility and Security to Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 12/15/2025
+ms.date: 01/08/2026
 ms.topic: how-to
 ms.reviewer: jamiesil, dagerrit
 ms.collection:
@@ -37,8 +37,6 @@ You can move from Basic Mobility and Security to Microsoft Intune. Moving to Int
 This article helps you move your mobile device management (MDM) from Microsoft 365 Basic Mobility and Security to Microsoft Intune.
 
 ## Before you begin
-
-- Previously, there was a **Migration evaluation** tool in the Microsoft Intune admin center. This tool is removed and no longer available.
 
 - When you sign into the admin centers, you need an account with the following roles:
 
