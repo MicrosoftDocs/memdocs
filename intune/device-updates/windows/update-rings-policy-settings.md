@@ -31,24 +31,23 @@ Update settings control what bits a device will download, and when.
 
 :::row:::
     :::column span="1":::
-        #### Microsoft product updates
+    **Microsoft product updates**
     :::column-end:::
     :::column span="3":::
-    - **Allow** - Select *Allow* to scan for app updates from Microsoft Update.
-    - **Block** - Select *Block* to prevent scanning for app updates.
-  
-    Configuration service provider (CSP) reference: [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice)|
+    > - **Allow** - Select *Allow* to scan for app updates from Microsoft Update.
+    > - **Block** - Select *Block* to prevent scanning for app updates.
+    >
+    > Configuration service provider (CSP) reference: [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice)|
     :::column-end:::
 :::row-end:::
 :::row:::
     :::column span="1":::
-        #### Windows drivers
+    **Windows drivers**
     :::column-end:::
     :::column span="3":::
-    - **Allow** - Select *Allow* include Windows Update drivers during updates.
-    - **Block** - Select *Block* to prevent scanning for drivers.
-     
-    Configuration service provider (CSP) reference: [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate)
+    > - **Allow** - Select *Allow* include Windows Update drivers during updates.
+    > - **Block** - Select *Block* to prevent scanning for drivers.
+    > Configuration service provider (CSP) reference: [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate)
     :::column-end:::
 :::row-end:::
 :::row:::
@@ -56,11 +55,10 @@ Update settings control what bits a device will download, and when.
     **Quality update deferral period (days)**
     :::column-end:::
     :::column span="3":::
-    Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select.
-
-    The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
-
-    Configuration service provider (CSP) reference: [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)
+    > Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select.
+    >
+    > The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
+    > Configuration service provider (CSP) reference: [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)
     :::column-end:::
 :::row-end:::
 
