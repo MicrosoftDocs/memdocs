@@ -17,18 +17,6 @@ The policy settings are divided into two main categories: **Update settings** an
 
 Update settings control what bits a device will download, and when.
 
-| **Setting** | **Description** | **CSP Reference** |
-|-------------|-----------------|-------------------|
-| **Microsoft product updates**|- **Allow** - Select *Allow* to scan for app updates from Microsoft Update.<br>- **Block** - Select Block to prevent scanning for app updates. | [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice)|
-|**Windows drivers**|- **Allow** - Select *Allow* include Windows Update drivers during updates.<br>- **Block** - Select Block to prevent scanning for drivers.|[ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate)|
-|**Quality update deferral period (days)**|Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines)|[DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)|
-|**Feature update deferral period (days)**|Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.|[DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays)|
-|**Upgrade Windows 10 devices to Latest Windows 11 release**|When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release.||
-|**Set feature update uninstall period (2 - 60 days)**|Configure a time after which feature updates can't be uninstalled.<br><br>After this period expires, the previous update bits are removed from the device, and it can no longer uninstall to a previous update version.<br><br>For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.|[ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod)|
-|**Enable pre-release builds**| Devices that receive this setting as *Enabled* will move to the pre-release build you specify, and will also reboot. When enabled, specify one of the following prerelease builds:<br>- **Release Preview**<br>- **Beta Channel**<br>- **Dev Chanel** <br><br> For information about pre-release builds, see [Windows Insider](https://insider.windows.com/understand-flighting).|[BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#branchreadinesslevel)|
-
-
-
 :::row:::
     :::column span="1":::
     **Microsoft product updates**
@@ -61,9 +49,43 @@ Update settings control what bits a device will download, and when.
     > Configuration service provider (CSP) reference: [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)
     :::column-end:::
 :::row-end:::
-
-
-
+:::row:::
+    :::column span="1":::
+    **Feature update deferral period (days)**
+    :::column-end:::
+    :::column span="3":::
+    > Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
+    >
+    > Configuration service provider (CSP) reference: [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays)
+    :::column-end:::
+:::row-end::::::row:::
+    :::column span="1":::
+    **Upgrade Windows 10 devices to Latest Windows 11 release**
+    :::column-end:::
+    :::column span="3":::
+    > When set to *Yes*, eligible Windows 10 devices will upgrade to the most current Windows 11 release.
+    :::column-end:::
+:::row-end:::
+:::row-end::::::row:::
+    :::column span="1":::
+    **Set feature update uninstall period (2 - 60 days)**
+    :::column-end:::
+    :::column span="3":::
+    > Configure a time after which feature updates can't be uninstalled.<br><br>After this period expires, the previous update bits are removed from the device, and it can no longer uninstall to a previous update version.<br><br>For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.
+    >
+    >Configuration service provider (CSP) reference: [ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod)
+    :::column-end:::
+:::row-end:::
+:::row-end::::::row:::
+    :::column span="1":::
+    **Enable pre-release builds**
+    :::column-end:::
+    :::column span="3":::
+    >  Devices that receive this setting as *Enabled* will move to the pre-release build you specify, and will also reboot. When enabled, specify one of the following prerelease builds:<br>- **Release Preview**<br>- **Beta Channel**<br>- **Dev Chanel** <br><br> For information about pre-release builds, see [Windows Insider](https://insider.windows.com/understand-flighting).
+    >
+    >Configuration service provider (CSP) reference: [BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#branchreadinesslevel)
+    :::column-end:::
+:::row-end:::
 
 ## User experience settings
 
