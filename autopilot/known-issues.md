@@ -34,6 +34,16 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Devices don't get Quality Updates during Hybrid Entra joined deployments
+
+Date added: *January 13, 2026*
+
+Scans for Quality Updates offered during OOBE may time out during provisioning for Windows Autopilot Hybrid Entra joined deployments when the **Allow OOBE Updates** policy is configured in the **Enrollment status page** profile. If this occurs, devices will not get the Quality Updates during OOBE.
+
+This issue impacts devices with [KB5041571](https://support.microsoft.com/en-us/topic/august-13-2024-kb5041571-os-build-26100-1457-d218c08d-8de2-4f9a-8fe1-a2c2fd83ca9a) and later.
+
+The issue is being investigated.
+
 ### Deployment duration in the Windows Autopilot deployment report might include the time for user to sign in at the Windows lock screen
 
 Date added: *August 13, 2025*
