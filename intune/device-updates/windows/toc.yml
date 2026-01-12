@@ -10,8 +10,8 @@ items:
   - name: Reports
     href: update-rings-reports.md
     displayName: windows updates, rings
-  - name: Policy settings reference
-    href: settings.md
+  - name: Policy settings
+    href: ring-policy-settings.md
     displayName: windows updates, rings
 - name: Manage Windows feature updates
   items:
