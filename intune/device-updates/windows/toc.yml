@@ -11,7 +11,7 @@ items:
     href: update-rings-reports.md
     displayName: windows updates, rings
   - name: Policy settings
-    href: ring-policy-settings.md
+    href: update-rings-policy-settings.md
     displayName: windows updates, rings
 - name: Manage Windows feature updates
   items:

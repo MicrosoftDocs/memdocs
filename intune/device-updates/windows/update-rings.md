@@ -80,7 +80,7 @@ The following prerequisites must be met to use Windows Update Rings for Windows 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Update rings** tab > **Create profile**.
 1. Under *Basics*, specify a name, a description (optional), and then select **Next**.
-1. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](settings.md). After configuring *Update and User experience* settings, select **Next**.
+1. Under **Update ring settings**, configure settings for your business needs. For information about the available settings, see [Windows update settings](update-rings-policy-settings.md). After configuring *Update and User experience* settings, select **Next**.
 1. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 
    When ready, select **Next** to continue to *Assignments*.

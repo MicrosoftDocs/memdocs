@@ -68,7 +68,7 @@ The actual time required for a device to start an update depends on the device i
 
   If a device doesn't restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an update ring policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](settings.md#user-experience-settings).
+- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an update ring policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](update-rings-policy-settings.md#user-experience-settings).
 
 ## Create and assign an expedited quality update
 
