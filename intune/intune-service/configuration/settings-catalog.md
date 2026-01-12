@@ -3,7 +3,7 @@ title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 01/07/2026
+ms.date: 01/26/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
@@ -156,9 +156,11 @@ When you create a new policy or update an existing policy, there are built-in se
 
   :::image type="content" source="./media/settings-catalog/search-internet-explorer.png" alt-text="Screenshot that shows the settings catalog when you search for Internet Explorer to see all the Internet Explorer settings in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/search-internet-explorer.png":::
 
-- In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value.
+- In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value to filter the settings list.
 
-  When you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
+  Depending on your platform, you can filter on different properties, like Windows OS edition, user or device scope, and Android device enrollment mode (fully managed, corporate-owned work profile, dedicated).
+
+  For example, when you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
 
   :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the settings catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-edition.png":::
 
