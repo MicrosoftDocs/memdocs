@@ -59,7 +59,7 @@ Update settings control what bits a device will download, and when.
     **Feature update deferral period (days)**
     :::column-end:::
     :::column span="3":::
-    > Specify the number of days for which feature updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
+    > Specify the number of days from 0 to 365 for which feature updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
     >
     > Configuration service provider (CSP) reference: [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays).
     :::column-end:::
@@ -93,7 +93,7 @@ Update settings control what bits a device will download, and when.
     :::column-end:::
     :::column span="3":::
     > When enabled, targeted devices will move to the pre-release build you specify. You must specify one of the following prerelease builds:
-    >- **Release Preview**
+    >- **Windows Insider - Release Preview**
     >- **Beta Channel**
     >- **Dev Chanel**
     >
@@ -117,14 +117,14 @@ User experience settings control the end-user experience for device restart and 
     >- **Notify download**: Notify the user before downloading the update. Users choose to download and install updates. If the user takes no action, the update will not install until the deadline you have configured is reached.
     >- **Auto install at maintenance time**: Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, users are prompted to restart for up to seven days, and then restart is forced. This option can restart a device automatically after the update installs.
     >
-    >Use the **Active hours** settings to define a period during which the automatic restarts are blocked:
-    >- **Active hours start**: Specify a start time for suppressing restarts due to update installations.
-    >- **Active hours end**: Specify an end time for suppressing reboots due to update installations.
-    >- **Auto install and restart at maintenance time**: Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used, which is the default for unmanaged devices.
+    >   Use the **Active hours** settings to define a period during which the automatic restarts are blocked:
+    >   - **Active hours start**: Specify a start time for suppressing restarts due to update installations.
+    >   - **Active hours end**: Specify an end time for suppressing reboots due to update installations.
+    >- **Auto install and restart at maintenance time**: Updates download automatically and then install during Automatic Maintenance when the device isn't in use or running on battery power. When restart is required, the device restarts when not being used, which is the default for unmanaged devices.\
+    >  This option can restart a device automatically after the update installs. **Active hours** settings are used to define a period during which the automatic restarts are blocked:
+    >   - **Active hours start** - Specify a start time for suppressing restarts due to update installations.
+    >   - **Active hours end**: Specify an end time for suppressing reboots due to update installations.
     >
-    >This option can restart a device automatically after the update installs. **Active hours** settings are used to define a period during which the automatic restarts are blocked:
-    >- **Active hours start** - Specify a start time for suppressing restarts due to update installations.
-    >- **Active hours end**: Specify an end time for suppressing reboots due to update installations.
     >- **Auto install and restart at a scheduled time**: Specify an installation day and time. If unspecified, installation runs at 3 AM daily, followed by a 15-minute countdown to a restart. Logged on users can delay countdown and restart. When set to *Auto install and restart at a scheduled time*, you can configure the following settings:
     >  - **Automatic behavior frequency** - Use this setting to schedule when updates are installed, including the week, the day, and the time.
     >  - **Scheduled install day** - Specify on which day of the week you want updates to install.
