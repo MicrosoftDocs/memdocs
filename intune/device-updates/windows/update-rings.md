@@ -64,7 +64,7 @@ In Microsoft Intune, update rings are configured through **update rings policies
 
 :::column-end:::
 :::column span="3":::
-> - The *Microsoft Account Sign-In Assistant* service (`wlidsvc`) must be enabled and running.
+> The *Microsoft Account Sign-In Assistant* service (`wlidsvc`) must be enabled and running.
 >
 > If the Microsoft Account Sign-In Assistant service is disabled, Windows Update doesn't offer feature updates. For more information, see [Feature updates are not being offered while other updates are](/windows/deployment/update/windows-update-troubleshooting#feature-updates-are-not-being-offered-while-other-updates-are).
 :::column-end:::

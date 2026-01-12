@@ -31,7 +31,7 @@ Update settings control what bits a device will download, and when.
 
 :::row:::
     :::column span="1":::
-        ### Microsoft product updates
+        #### Microsoft product updates
     :::column-end:::
     :::column span="3":::
     - **Allow** - Select *Allow* to scan for app updates from Microsoft Update.
@@ -42,7 +42,7 @@ Update settings control what bits a device will download, and when.
 :::row-end:::
 :::row:::
     :::column span="1":::
-        ### Windows drivers
+        #### Windows drivers
     :::column-end:::
     :::column span="3":::
     - **Allow** - Select *Allow* include Windows Update drivers during updates.
@@ -53,7 +53,7 @@ Update settings control what bits a device will download, and when.
 :::row-end:::
 :::row:::
     :::column span="1":::
-    ### Quality update deferral period (days)
+    **Quality update deferral period (days)**
     :::column-end:::
     :::column span="3":::
     Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select.
