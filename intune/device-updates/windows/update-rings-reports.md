@@ -8,9 +8,15 @@ ms.reviewer: zadvor
 
 # Reports for update rings policies
 
-Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Update rings** tab > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
+Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status.
 
-:::image type="content" source="./images/update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings/default-policy-view.png":::
+To access reports:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates**
+1. Select **Windows updates** > **Update rings**
+1. Select an update ring policy:
+
+   :::image type="content" source="./images/update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings/default-policy-view.png":::
 
 On the policy page view:
 
@@ -43,3 +49,8 @@ On the policy page view:
     This report supports drilling in to view the list of settings, with subsequent drill-in as seen in for the full report view available from the *View report* button.
 
   - **Per setting status**: View the configuration status of each setting for this policy across all devices and users. This view present a simple view of each setting in the policy, and the count of assigned devices that have success, error, or conflict. This report view doesn't support drilling in for additional detail.
+
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
