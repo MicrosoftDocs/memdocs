@@ -51,12 +51,9 @@ In Microsoft Intune, update rings are configured through **update rings policies
 >
 > Windows Enterprise LTSC and IoT Enterprise LTSC- LTSC is supported for Quality updates, but not for Feature updates. As a result, the following ring controls aren't supported for LTSC:
 >   - Pause of feature updates
->   - Feature Update Deferral period (days)
->   - Set feature update uninstall period (2 - 60 days)
->   - Enable pre-release builds, which includes the following build options:
->     - Windows Insider Release Preview
->     - Beta Channel
->     - Dev Channel
+>   - Feature Update Deferral period
+>   - Set feature update uninstall period
+>   - Enable pre-release builds
 >   - Use deadline settings for feature updates
 :::column-end:::
 :::row-end:::
@@ -196,8 +193,6 @@ To uninstall the latest Windows update:
 - Use [Windows feature updates in Intune](feature-updates.md)
 - Use [Windows update compatibility reports](compatibility-reports.md)
 - Use [Windows feature update reports](feature-updates-reports.md)
-
-
 
 <!-- admin center links -->
 
