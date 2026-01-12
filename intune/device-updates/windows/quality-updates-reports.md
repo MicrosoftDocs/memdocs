@@ -80,7 +80,7 @@ KB article: External link to target quality update's KB Article for the correspo
 
 When you select any device count, the [Windows quality update device version report](#windows-quality-update-device-version) is displayed.
 
-# [**QU device version**](#tab/feature-version)
+# [**QU device version**](#tab/device-version)
 
 The report presents a list of devices based on the selections from the previous 2 reports. The  criteria that you selected in the previous reports are displayed at the top of the page.\
 The report offers sortable columns and search options, along with an export feature allowing high volume data to be downloaded in CSV format.

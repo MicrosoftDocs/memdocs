@@ -40,7 +40,7 @@ items:
   - name: Configure quality updates policies
     href: quality-updates-policy.md
     displayName: windows quality updates
-  - name: Quality updates polciies reports
+  - name: Quality updates policies reports
     href: quality-updates-reports.md
     displayName: windows quality updates
   - name: Expedite updates
