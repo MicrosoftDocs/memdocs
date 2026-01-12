@@ -3,7 +3,7 @@ title: Use OEMConfig on Android Enterprise devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 07/29/2025
+ms.date: 01/26/2026
 ms.topic: how-to
 ms.reviewer: akritis
 ms.collection:
@@ -246,6 +246,7 @@ Intune supports the following OEMConfig apps:
 | Spectralink - VQO | com.spectralink.slnkvqo |  |
 | Sunmi | com.sunmi.oemconfig.V2S | |
 | Unitech Electronics | com.unitech.oemconfig | |
+| X | com.X.rgoem | |
 | Zebra Technologies | com.zebra.oemconfig.release | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig) <br/><br/> This `Zebra OEMConfig Powered by MX` app supports Android 11.0 and newer. |
 | Zebra Technologies | com.zebra.oemconfig.common | [Zebra OEMConfig overview](http://techdocs.zebra.com/oemconfig) <br/><br/> This `Legacy Zebra OEMConfig` app supports Android 11.0 and earlier. |
 
