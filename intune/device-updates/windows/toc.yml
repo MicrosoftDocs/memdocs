@@ -27,8 +27,6 @@ items:
   - name: Compatibility reports
     href: compatibility-reports.md
     displayName: windows updates, reports
-  - name: Move from deferrals to feature updates policies
-    href: ring-deferrals-to-feature-updates-policy.md
   - name: Windows rollout options
     href: rollout-options.md
     displayName: windows updates
