@@ -41,6 +41,7 @@ For clients to use this capability, enable the following setting: **Clients pref
 
 > [!NOTE]
 > OS deployment processes aren't aware of boundary groups for management points.
+> (Need to add that WinPE in version 2509 rely on MP in Boundary Group https://learn.microsoft.com/en-us/intune/configmgr/core/plan-design/changes/whats-new-in-version-2509#winpe-is-now-boundaryaware)
 
 ## Troubleshoot
 
