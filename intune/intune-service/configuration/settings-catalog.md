@@ -158,7 +158,7 @@ When you create a new policy or update an existing policy, there are built-in se
 
 - In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value to filter the settings list.
 
-  Depending on your platform, you can filter on different properties, like Windows OS edition, user or device scope, and Android device enrollment mode (fully managed, corporate-owned work profile, dedicated).
+  Depending on your platform, you can filter on different properties, like Windows OS edition, user or device scope, and Android device enrollment mode (fully managed, corporate-owned work profile, dedicated). If you apply a filter for two or more management modes, all settings that apply to at least one management mode will show up.
 
   For example, when you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
 
@@ -166,6 +166,9 @@ When you create a new policy or update an existing policy, there are built-in se
 
   > [!NOTE]
   > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
+
+> [!TIP]
+> Use Android filters for management modes to avoid applying settings that don’t apply to your device scenario.
 
   You can also filter the settings by device or user scope. For more information, see [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
 
