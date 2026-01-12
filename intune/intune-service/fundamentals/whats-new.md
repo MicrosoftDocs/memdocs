@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 12/08/2025
+ms.date: 01/12/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of January 12, 2026
+
+### App management
+
+#### PowerShell script installer for Win32 apps <!-- 34496511 -->
+
+When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
+
+For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 ## Week of December 8, 2025  
 
