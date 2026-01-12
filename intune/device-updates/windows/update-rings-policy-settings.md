@@ -9,10 +9,6 @@ ms.reviewer: davguy; bryanke
 
 # Settings for Windows Update that you can manage through Intune policy for Update rings
 
-
-
-## Update rings settings
-
 Update rings policies in Microsoft Intune provide a set of configurable settings that control how Windows updates are delivered and installed on managed devices. These settings allow administrators to tailor the update experience to meet organizational needs, balancing update compliance with user productivity.
 
 The policy settings are divided into two main categories: **Update settings** and **User experience settings**.

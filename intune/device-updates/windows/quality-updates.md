@@ -37,16 +37,6 @@ Hotpatch is an extension of Windows Update and requires Autopatch to create and 
 - No changes are required to your existing update ring configurations. Your existing ring configurations are honored alongside Hotpatch policies.
 - The [Hotpatch quality update report](/windows/deployment/windows-autopatch/monitor/windows-autopatch-hotpatch-quality-update-report) provides a per policy level view of the current update statuses for all devices that receive Hotpatch updates.
 
-## Prerequisites
-
-[!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
-
-To benefit from Hotpatch updates, devices must meet the following prerequisites:
-
-- Windows 11 Enterprise version 24H2 or later
-- Devices must be on the latest baseline release version to qualify for Hotpatch updates. Microsoft releases Baseline updates quarterly as standard cumulative updates. For more information on the latest schedule for these releases, see [Release notes for Hotpatch](https://support.microsoft.com/topic/release-notes-for-hotpatch-in-azure-automanage-for-windows-server-2022-4e234525-5bd5-4171-9886-b475dabe0ce8?preview=true).
-- Microsoft Intune to manage hotpatch update deployment with the [Windows quality update policy with hotpatch turned on](#enroll-devices-to-receive-hotpatch-updates).
-
 ## Operating system configuration prerequisites
 
 To prepare a device to receive Hotpatch updates, configure the following operating system settings on the device. You must configure these settings for the device to be offered the Hotpatch update and to apply all Hotpatch updates.
