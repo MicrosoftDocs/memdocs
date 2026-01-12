@@ -25,10 +25,12 @@ The Windows update distribution report includes three nested reports:
 - Windows quality update distribution per feature version report
 - Windows quality update device version report
 
-## Windows quality update distribution report
 
-The report displays the distribution of devices against different Quality Updates (QUs) for the selected scope. It shows the counts of devices corresponding to the displayed QUs.
+Select a tab to learn more about each report. 
 
+# [**QU distribution**](#tab/distribution)
+
+The report displays the distribution of devices against different Quality Updates (QUs) for the selected scope. It shows the counts of devices corresponding to the displayed QUs.\
 Select one or more scope tags from the drop-down list to generate the report. The drop-down list shows all the scope tags the user has access to, based on the user's assigned scope tags.
 
 :::image type="content" source="./images/reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./images/reports/windows-quality-updates-page1.png":::
@@ -54,7 +56,7 @@ When you select **Older releases**, the [Windows quality update device version](
 
 When you select **Windows insider or other releases**, the  [Windows quality update device version](#windows-quality-update-device-version) report is displayed with a list of devices whose feature version is insider release, or the quality update of the device cannot be mapped to documented quality update version in Windows 10/11 release information.
 
-## Windows quality update distribution per feature version
+# [**QU distribution per feature version**](#tab/feature-version)
 
 The report provides the distribution of devices against Windows feature releases. The distribution of devices that are eligible to receive the selected quality update shown based on the Windows 10/11 feature versions that are generally available. The report aids IT administrators in making informed decisions for devices and managing devices that need attention.
 
@@ -78,9 +80,9 @@ KB article: External link to target quality update's KB Article for the correspo
 
 When you select any device count, the [Windows quality update device version report](#windows-quality-update-device-version) is displayed.
 
-## Windows quality update device version
+# [**QU device version**](#tab/feature-version)
 
-The report presents a list of devices based on the selections from the previous 2 reports. The  criteria that you selected in the previous reports are displayed at the top of the page.
+The report presents a list of devices based on the selections from the previous 2 reports. The  criteria that you selected in the previous reports are displayed at the top of the page.\
 The report offers sortable columns and search options, along with an export feature allowing high volume data to be downloaded in CSV format.
 
 :::image type="content" source="./images/reports/windows-quality-updates-page3.png" alt-text="Screen capture of the Windows quality update device version." lightbox="./images/reports/windows-quality-updates-page3.png":::

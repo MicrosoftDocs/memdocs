@@ -160,7 +160,7 @@ User experience settings control the end-user experience for device restart and 
 
 :::row:::
     :::column span="1":::
-    #### Option to pause Windows updates
+    **Option to pause Windows updates**
     :::column-end:::
     :::column span="3":::
     >- **Enable**: Allow device users to pause the installation of an update for a certain number of days.
