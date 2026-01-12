@@ -7,11 +7,11 @@ items:
   - name: Get started
     href: update-rings.md
     displayName: windows updates, rings
-  - name: Reports
-    href: update-rings-reports.md
-    displayName: windows updates, rings
   - name: Policy settings
     href: update-rings-policy-settings.md
+    displayName: windows updates, rings
+  - name: Reports
+    href: update-rings-reports.md
     displayName: windows updates, rings
 - name: Manage Windows feature updates
   items:

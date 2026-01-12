@@ -1,7 +1,7 @@
 ---
 title: Windows Update settings you can manage with Intune Update Ring policies for Windows devices.
 description: View the settings for Windows Update that you can manage through Intune policy for Update rings.
-ms.date: 07/15/2024
+ms.date: 01/12/2026
 ms.topic: reference
 ms.reviewer: davguy; bryanke
 ---
@@ -22,10 +22,10 @@ Update settings control what bits a device will download, and when.
     **Microsoft product updates**
     :::column-end:::
     :::column span="3":::
-    > - **Allow** - Select *Allow* to scan for app updates from Microsoft Update.
-    > - **Block** - Select *Block* to prevent scanning for app updates.
+    > - **Allow**: To scan for app updates from Microsoft Update.
+    > - **Block**: To prevent scanning for app updates.
     >
-    > Configuration service provider (CSP) reference: [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice)|
+    > Configuration service provider (CSP) reference: [AllowMUUpdateService](/windows/client-management/mdm/policy-csp-update#allowmuupdateservice).
     :::column-end:::
 :::row-end:::
 
@@ -34,9 +34,10 @@ Update settings control what bits a device will download, and when.
     **Windows drivers**
     :::column-end:::
     :::column span="3":::
-    > - **Allow** - Select *Allow* include Windows Update drivers during updates.
-    > - **Block** - Select *Block* to prevent scanning for drivers.
-    > Configuration service provider (CSP) reference: [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate)
+    > - **Allow** - To include Windows Update drivers during updates.
+    > - **Block** - To prevent scanning for drivers.
+    >
+    > Configuration service provider (CSP) reference: [ExcludeWUDriversInQualityUpdate](/windows/client-management/mdm/policy-csp-update#excludewudriversinqualityupdate).
     :::column-end:::
 :::row-end:::
 
@@ -45,10 +46,11 @@ Update settings control what bits a device will download, and when.
     **Quality update deferral period (days)**
     :::column-end:::
     :::column span="3":::
-    > Specify the number of days from 0 to 30 for which Quality Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select.
+    > Specify the number of days from 0 to 30 for which quality updates are deferred. This period is in addition to any deferral period that is part of the service channel you select.
     >
     > The deadline calculation for both quality and feature updates is based off the time the client's update scan initially discovered the update. See [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
-    > Configuration service provider (CSP) reference: [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays)
+    > 
+    >Configuration service provider (CSP) reference: [DeferQualityUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferqualityupdatesperiodindays).
     :::column-end:::
 :::row-end:::
 
@@ -57,9 +59,9 @@ Update settings control what bits a device will download, and when.
     **Feature update deferral period (days)**
     :::column-end:::
     :::column span="3":::
-    > Specify the number of days for which Feature Updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
+    > Specify the number of days for which feature updates are deferred. This period is in addition to any deferral period that is part of the service channel you select. The deferral period begins when Microsoft releases the update.
     >
-    > Configuration service provider (CSP) reference: [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays)
+    > Configuration service provider (CSP) reference: [DeferFeatureUpdatesPeriodInDays](/windows/client-management/mdm/policy-csp-update#deferfeatureupdatesperiodindays).
     :::column-end:::
 :::row-end:::
 
@@ -77,9 +79,11 @@ Update settings control what bits a device will download, and when.
     **Set feature update uninstall period (2 - 60 days)**
     :::column-end:::
     :::column span="3":::
-    > Configure a time after which feature updates can't be uninstalled.<br><br>After this period expires, the previous update bits are removed from the device, and it can no longer uninstall to a previous update version.<br><br>For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the Uninstall option.  Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.
+    > Configure a time after which feature updates can't be uninstalled. After this period expires, the previous update bits are removed from the device, and it can no longer uninstall to a previous update version.
     >
-    >Configuration service provider (CSP) reference: [ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod)
+    >For example, consider an update ring with a feature update uninstall period of 20 days. After 25 days, you decide to roll back the latest feature update and use the *Uninstall* option. Devices that installed the feature update over 20 days ago can't uninstall it as they've removed the necessary bits as part of their maintenance. However, devices that only installed the feature update up to 19 days ago can uninstall the update if they successfully check in to receive the uninstall command before exceeding the 20-day uninstall period.
+    >
+    >Configuration service provider (CSP) reference: [ConfigureFeatureUpdateUninstallPeriod](/windows/client-management/mdm/policy-csp-update#configurefeatureupdateuninstallperiod).
     :::column-end:::
 :::row-end:::
 
@@ -88,9 +92,14 @@ Update settings control what bits a device will download, and when.
     **Enable pre-release builds**
     :::column-end:::
     :::column span="3":::
-    >  Devices that receive this setting as *Enabled* will move to the pre-release build you specify, and will also reboot. When enabled, specify one of the following prerelease builds:<br>- **Release Preview**<br>- **Beta Channel**<br>- **Dev Chanel** <br><br> For information about pre-release builds, see [Windows Insider](https://insider.windows.com/understand-flighting).
+    > When enabled, targeted devices will move to the pre-release build you specify. You must specify one of the following prerelease builds:
+    >- **Release Preview**
+    >- **Beta Channel**
+    >- **Dev Chanel**
     >
-    >Configuration service provider (CSP) reference: [BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#branchreadinesslevel)
+    > For information about pre-release builds, see [Windows Insider](https://insider.windows.com/understand-flighting).
+    >
+    >Configuration service provider (CSP) reference: [BranchReadinessLevel](/windows/client-management/mdm/policy-csp-update#branchreadinesslevel).
     :::column-end:::
 :::row-end:::
 
