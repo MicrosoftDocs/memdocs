@@ -9,7 +9,17 @@ ms.topic: troubleshooting
 
 The following sections can be used to help in troubleshooting issues you might come across.
 
-## Known issues
+## Known issues and limitations
+
+### API operator support limitations
+
+The following APIs support a limited set of OData query operators. If you use unsupported operators in your queries, you might receive unexpected results or errors.
+
+|API|Unsupported operators|Supported operators|
+|---|---|---|
+|`UserExperienceAnalyticsDeviceStartupHistory`| - `Top`<br>- `Skip`<br>- `Count`<br>- `OrderBy`<br>- `SkipToken`<br>- `Expand`|- `Select`<br>- `Filter`|
+|`UserExperienceAnalyticsDeviceStartupProcesses`| - `Top`<br>- `Skip`<br>- `Count`<br>- `SkipToken`<br>- `Expand`|- `Select`<br>- `Filter`<br>- `OrderBy`|
+|`SummarizeDevicePerformanceDevices`| - `Top`<br>- `Skip`<br>- `Count`<br>- `OrderBy`<br>- `SkipToken`<br>- `Expand`|- `Select`<br>- `Expand`|
 
 ### Exported csv files display numerical values
 
