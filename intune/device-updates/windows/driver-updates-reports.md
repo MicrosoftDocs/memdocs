@@ -10,16 +10,20 @@ ms.reviewer: zadvor
 
 Intune offers integrated reports to view detailed status for Windows driver updates for devices assigned to Windows Driver update policies. To use these reports, you must first configure the prerequisites and policies that support data collection from devices. These reports are applicable to Windows 10 and Windows 11.
 
-The data in the Intune reports for Windows Driver update policies is used only for these reports and doesn't appear in other Intune reports. The following reports are available:
-
-- [Windows Driver updates summary](#windows-driver-updates-summary)
-- [Windows Driver updates report](#windows-driver-updates-report)
-- [Windows Driver update failures](#windows-driver-update-failures)
-
 ## Before you begin
 
 > [!div class="checklist"]
 > - Ensure your environment meets the requirements in [Windows driver updates overview](driver-updates.md#prerequisites).
+
+## Accessing driver updates reports
+
+The data in the Intune reports for Windows Driver update policies is used only for these reports and doesn't appear in other Intune reports. The following reports are available:
+
+- Windows Driver updates summary
+- Windows Driver updates report
+- Windows Driver update failures
+
+Select a tab to learn more about each report.
 
 # [**Driver updates summary**](#tab/summary)
 
