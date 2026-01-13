@@ -29,20 +29,28 @@ Quality updates policies also support **targeted deployment options for specific
 
 Quality updates policies provide a single management surface for deploying Windows quality updates across different operational scenarios:
 
-- **Standard deployment**: Use quality updates policies with defined approval timing, combined with update rings and client settings, to manage regular servicing updates.
-- **Expedited deployment**: Use the same policy to accelerate the installation of specific security or critical updates when faster remediation is required.
-- **Restart‑optimized deployments**: On supported devices, enable Hotpatch through quality updates policies to apply qualifying security updates without requiring an immediate restart.
+- **Standard deployment**: Use quality updates policies with defined approval timing, together with update rings and Windows Update client settings, to manage regular monthly servicing.
+- **Expedited deployment**: Use expedite policies to accelerate the installation of a specific security or critical update when faster remediation is required.
+- **Restart‑optimized deployments**: On supported devices, enable Hotpatch through quality updates policies to apply qualifying security updates without requiring an immediate device restart.
 
-Each capability uses the same underlying cloud orchestration but differs in how updates are approved, timed, and applied. The following sections link to detailed guidance for each scenario.
+These scenarios use cloud‑based update orchestration to control how updates are approved, timed, and applied, depending on the deployment model.
 
+### Do I need a Windows quality updates policy?
+
+You don't need to create a Windows quality updates policy for devices to continue receiving monthly Windows quality updates. Devices without a quality updates policy continue to receive quality updates through standard Windows Update behavior, using update rings and Windows Update client policies to control deferrals, deadlines, restarts, and notifications.
+
+Create a Windows quality updates policy if you want to:
+- Enable **cloud‑based orchestration** of Windows quality updates
+- Use **Windows Autopatch–managed quality update deployments**
+- Enable **Hotpatch** for eligible devices
+- View **policy‑based quality update reporting**
+
+If you only need to **accelerate the installation of a specific quality update** for a limited set of devices, you can use an **expedite policy** without creating a quality updates policy.
+
+In most environments, you create a Windows quality updates policy only when you need advanced deployment scenarios such as Hotpatch or Windows Autopatch–managed update workflows.
 
 ## Next steps
 
-> [!div class="nextstepaction"]
-> [Learn how expedited updates work with quality updates policies](quality-updates.md)
+- [Learn how expedited updates work with quality updates policies](quality-updates.md)
+- [Learn how Hotpatch works with quality updates policies](hotpatch.md)
 
-> [!div class="nextstepaction"]
-> [Learn how Hotpatch works with quality updates policies](hotpatch.md)
-
-> [!div class="nextstepaction"]
-> [Configure Windows quality updates policies](configure-quality-updates.md)

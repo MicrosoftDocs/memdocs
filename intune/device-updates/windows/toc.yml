@@ -37,13 +37,13 @@ items:
   - name: Get started
     href: quality-updates.md
     displayName: windows quality updates
-  - name: Configure quality updates policies
-    href: expedite-updates-policy.md
-    displayName: windows quality updates
-  - name: Hotpatch updates
+  - name: Use Hotpatch with quality updates
     href: hotpatch.md
     displayName: windows quality updates
-  - name: Quality updates policies reports
+  - name: Expedite Windows quality updates
+    href: expedite-quality-updates.md
+    displayName: windows quality updates
+  - name: Monitor and report on Windows quality updates
     href: quality-updates-reports.md
     displayName: windows quality updates
 - name: Manage Windows driver updates
