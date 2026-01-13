@@ -29,7 +29,7 @@ Quality updates policies also support **targeted deployment options for specific
 
 Quality updates policies provide a single management surface for deploying Windows quality updates across different operational scenarios:
 
-- **Standard deployment**: Use quality updates policies with defined approval timing, together with update rings and Windows Update client settings, to manage regular monthly servicing.
+- **Standard deployment**: Use quality updates policies to enable cloud‑based orchestration of regular monthly quality updates, while update rings and Windows Update client settings continue to control restarts, deadlines, and notifications.
 - **Expedited deployment**: Use expedite policies to accelerate the installation of a specific security or critical update when faster remediation is required.
 - **Restart‑optimized deployments**: On supported devices, enable Hotpatch through quality updates policies to apply qualifying security updates without requiring an immediate device restart.
 
@@ -41,13 +41,13 @@ You don't need to create a Windows quality updates policy for devices to continu
 
 Create a Windows quality updates policy if you want to:
 - Enable **cloud‑based orchestration** of Windows quality updates
-- Use **Windows Autopatch–managed quality update deployments**
+- Use **Windows Autopatch-managed quality update deployments**
 - Enable **Hotpatch** for eligible devices
 - View **policy‑based quality update reporting**
 
 If you only need to **accelerate the installation of a specific quality update** for a limited set of devices, you can use an **expedite policy** without creating a quality updates policy.
 
-In most environments, you create a Windows quality updates policy only when you need advanced deployment scenarios such as Hotpatch or Windows Autopatch–managed update workflows.
+In most environments, you create a Windows quality updates policy only when you need advanced deployment scenarios such as Hotpatch or Windows Autopatch-managed update workflows.
 
 ## Next steps
 

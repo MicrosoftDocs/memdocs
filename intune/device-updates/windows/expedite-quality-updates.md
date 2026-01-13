@@ -1,12 +1,18 @@
 ---
-title: Windows quality updates policy
+title: Expedite Windows quality updates
 description: Use Hotpatch updates to receive security updates without restarting your device
 ms.date: 04/17/2025
 ms.reviewer: Mounika
 ms.topic: how-to
 ---
 
-# Windows quality updates policy
+# Expedite Windows quality updates
+
+Expedite policies let you accelerate the installation of a specific Windows security update on devices you manage with Microsoft Intune. Expedited updates install as soon as possible, bypassing deferral settings and normal deployment timing, without requiring you to pause or modify your existing monthly update policies.
+
+You might use an expedite policy to quickly mitigate a critical security vulnerability when your standard update process wouldn't deploy the update soon enough. Expedite policies are designed for targeted, time‑bound scenarios and don't change how future quality updates are deployed.
+
+Not all updates are eligible for expediting. Only supported Windows security updates can be expedited. To manage regular monthly quality updates, continue using standard Windows Update mechanisms such as update rings or Windows quality updates policies.
 
 ## Before you begin
 
@@ -27,12 +33,6 @@ ms.topic: how-to
 >    - **AutoUpdateCfg** - Configure Automatic Updates.
 >    - **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
 >    - **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
-
-## Expedite Windows quality updates
-
-With Windows quality updates policies you can expedite the installation of the most recent Windows security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn't deploy the update for some time.
-
-Not all updates can be expedited. Currently, only Windows security updates that can be expedited are available to deploy with Quality updates policy. To manage regular monthly quality updates, use [Windows Update ring policies](update-rings.md).
 
 ### Update Health Tools
 
@@ -56,68 +56,58 @@ if (Get-Service -Name "Microsoft Update Health Service" -ErrorAction SilentlyCon
 
 If the script returns a `1`, the device has UHS client. If the script returns a `0`, the device doesn't have UHS client.
 
+
 ## How expedited updates work
 
-With expedited updates, you can expedite the installation of quality updates like the most recent *patch Tuesday* release or an out-of-band security update for a zero-day flaw.
+Expedited updates let you accelerate the installation of a specific Windows security update, such as a Monthly B release or an out‑of‑band security update used to address an active vulnerability.
 
-Expedited update policies temporarily override deferrals and other settings to install updates as quickly as possible. This process enables devices to start the download and installation of an expedited update without having to wait for the device to check in for updates.
+Expedite update policies temporarily override deferral settings and normal deployment timing to install the selected update as quickly as possible. This process helps devices begin downloading and installing the update without waiting for the usual servicing cadence.
 
-The actual time required for a device to start an update depends on the device internet connectivity, its scan timing, whether communication channels to the device are functioning, and other factors like cloud-processing time.
+The time required for a device to start installing an expedited update depends on several factors, including device connectivity, update scan timing, communication with the service, and cloud processing.
 
-- For each expedited update policy, you select a single update to deploy based on its release date. By using the release date, you don't have to create separate policies to deploy different instances of that update to devices that have different versions of Windows.
-
-- Windows Update evaluates the build and architecture of each device, and then delivers the version of the update that applies.
-
-- Only devices that need the update receive the expedited update:
-  - Windows Update doesn't try to expedite the update for devices that already have a revision that's equal to or greater than the update version.
-  - For devices with a lower build version than the update, Windows Update confirms that the device still requires the update before installing it.
+- For each expedite update policy, you select a **single update** to deploy based on its release date. Selecting the update by release date eliminates the need to create separate policies for different Windows versions.
+- Windows Update evaluates each device's build and architecture and delivers the applicable version of the update.
+- Only devices that require the update receive it:
+  - Windows Update doesn't expedite updates for devices that already have the same or a newer update installed.
+  - For devices running an earlier build, Windows Update confirms the update remains applicable before installing it.
 
   > [!IMPORTANT]
-  > In some scenarios, Windows Update can install an update that is more recent than the update you specify in expedite update policy. For more information about this scenario, see [About installing the latest applicable update](#identify-the-latest-applicable-update), later in this article.
+  > In some scenarios, Windows Update might install a newer update than the one specified in the expedite policy. This behavior ensures that devices receive the latest applicable update. For more information, see [About installing the latest applicable update](#identify-the-latest-applicable-update).
 
-- Expedite update policies ignore and override any quality [update deferral periods](/windows/client-management/mdm/policy-csp-update#update-deferqualityupdatesperiodindays) for the update version you deploy. You can configure quality updates deferrals by using Intune [Windows update rings](update-rings.md) and the setting for **Quality update deferral period**.
+- Expedite update policies ignore any configured quality update deferral periods for the selected update.
+- When a restart is required to complete installation, expedite update policies help manage restart behavior. You can configure a deadline that defines how long users have to restart their device before the restart is enforced. Users can also schedule the restart or allow Windows to determine a suitable time outside of active hours. Notifications are displayed to inform users of the pending restart and deadline.
+  If the device doesn't restart before the deadline, the restart can occur during working hours. For more information, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
+- Expedited updates aren't intended for regular monthly servicing. To manage ongoing quality update deployments, use update ring policies and their deadline settings. For more information, see **Use deadline settings** under the user experience options in [Windows update ring policy settings](update-rings-policy-settings.md#user-experience-settings).
 
-- When a restart is required to complete installation of the update, the policy helps to manage the restart. In the policy, you can configure a period that users have to restart a device before the policy forces an automatic restart. Users can also choose to schedule the restart or let the device try to find the best time outside of the devices *Active Hours*. Before reaching the restart deadline, the device displays notifications to alert device users about the deadline and includes options to schedule the restart.
-
-  If a device doesn't restart before the deadline, the restart can happen in the middle of the working day. For more information on restart behavior, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
-
-- Expedited updates are not recommended for normal monthly quality update servicing. Instead, consider using the *deadline settings* from an update ring policy. For information, see *Use deadline settings* under the user experience settings in [Windows update settings](update-rings-policy-settings.md#user-experience-settings).
 
 ## Create and assign an expedited quality update
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Devices** > **Manage updates** > **Windows updates**> **Quality updates** tab > **Create profile**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Windows Updates**.
+1. Select the **Quality updates** tab > **Create profile**.
 
    :::image type="content" source="./images/expedite-updates/create-quality-update-profile.png" alt-text="Screen capture of the Create profile UI.":::
 
-3. In **Settings**, enter the following properties to identify this profile:
+1. In **Settings**, enter the following properties to identify this profile:
 
    - **Name**: Enter a descriptive name for the profile. Name your profiles so you can easily identify them later.
-
    - **Description**: Enter a description for the profile. This setting is optional but recommended.
-
-4. In **Settings**, configure **Expedite installation of quality updates if device OS version less than**. Select the update that you want to expedite from the drop-down list. The list includes only the updates you can expedite.
+   - Configure **Expedite installation of quality updates if device OS version less than** by selecting the update that you want to expedite from the drop-down list. The list includes only the updates you can expedite.
 
    > [!TIP]
-   > Optional Windows quality updates can't be expedited and won't be available to select.
+   > Optional Windows quality updates can't be expedited and won't be available.
 
    :::image type="content" alt-text="Screen capture of update selection UI." source="./images/expedite-updates/select-update.png" lightbox="./images/expedite-updates/select-update.png":::
 
    When selecting an update:
 
    - Updates are identified by their release date, and you can select only one update per policy.
-
    - Updates that include the letter **B** in their name identify updates that released as part of a *patch Tuesday* event. The letter B identifies that the update released on the second Tuesday of the month.
-
    - Security updates for Windows that release out of band from a *patch Tuesday* can be expedited. Instead of the letter B, *out-of-band* patch releases have different identifiers.
-
    - When the update deploys, Windows Update ensures that each device that receives the policy installs a version of the update that applies to that devices architecture and its current Windows version, like version 1809, 2004, and so on.
 
    **Non-Security Expedite Updates**: includes quality fixes after the previous B / Security release. Admins can expedite installation of the latest applicable quality update on devices, without waiting for the deferral period.
 
    - Updates without the word **SecurityUpdate** indicate that it is not a security update. Updates that include the letter **D** in their name identify updates that are released since the latest *patch Tuesday* security week. You might also see 2024.01 OOB Update (*out-of-band* patch releases). [Windows monthly update explained](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/windows-monthly-updates-explained/ba-p/3773544)
-
    - Non-security updates are only shown when it is the most recent release. The drop-down list is updated to display the most recent two security updates, including if one is an out-of-band update. If the most recent non-security update is newer than the newest security update, then the non-security update is also included in the drop-down list. As a result, sometimes two updates are shown, and at other times, three updates are shown.
 
      > [!TIP]
@@ -127,7 +117,7 @@ The actual time required for a device to start an update depends on the device i
      - **Reports** > **Windows Updates** > **Reports** Tab > **Windows Expedited Update Report**
      - **Devices** > **Manage updates** > **Windows updates** > **Monitor** tab > **Expedited quality update policies** with alerts tile, and click the title.
 
-5. In **Settings**, configure **Number of days to wait before forced reboot**. For this setting, select how soon after installing the update a device will automatically restart to complete the update installation. You can select from zero to two days. The automatic restart is canceled if a device manually restarts before the deadline. If an update doesn't require a restart, this setting isn't enforced.
+1. In **Settings**, configure **Number of days to wait before forced reboot**. For this setting, select how soon after installing the update a device will automatically restart to complete the update installation. You can select from zero to two days. The automatic restart is canceled if a device manually restarts before the deadline. If an update doesn't require a restart, this setting isn't enforced.
 
    - A setting of **0 days** means that as soon as the device installs the update, the user is notified about the restart and has limited time to save their work.
 
@@ -138,9 +128,8 @@ The actual time required for a device to start an update depends on the device i
 
      :::image type="content" alt-text="Screen capture of selecting days before forced reboot." source="./images/expedite-updates/select-reboot-time.png" lightbox="./images/expedite-updates/select-reboot-time.png":::
 
-6. In **Assignments**, select **Add groups** and then select device or user groups to assign the policy.
-
-7. In **Review + create**, select **Create**. After the policy is created, it deploys to assigned groups.
+1. In **Assignments**, select **Add groups** and then select device or user groups to assign the policy.
+1. In **Review + create**, select **Create**. After the policy is created, it deploys to assigned groups.
 
 ## Identify the latest applicable update
 
@@ -187,21 +176,24 @@ The following sequence of events provides an example of how two devices, named *
 
 ## Manage policies to expedite quality updates
 
-In the admin center, go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Quality updates** tab and select the policy that you want to manage. The policy opens to its **Overview** pane.
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Windows Updates**.
+1. Select the **Quality updates** tab and then select the policy that you want to manage. The policy opens to its **Overview** pane.
 
 From this pane, you can:
 
 - Select **Delete** to delete the policy from Intune. Deleting a policy removes it from Intune but won't result in the update uninstalling if it has already completed installation. Windows Update will attempt to cancel any in-progress installations, but a successful cancellation of an in-progress install can't be guaranteed.
-
 - Select **Properties** to modify the deployment. On the *Properties* pane, select **Edit** to open the *Settings*, *Scope tags*, or *Assignments*, where you can then modify the deployment.
 
 ## Monitoring and reporting
 
 After a policy has been created you can monitor results, update status, and errors from the following reports.
 
-### Summary report
+# [**Summary report**](#tab/summary)
 
 This report shows the current state of all devices in the profile and provides an overview of how many devices are in progress of installing an update, have completed the installation, or have an error.
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Windows Updates**.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 1. Select **Reports** > **Windows updates**. On the **Summary** tab you can view the **Windows Expedited Quality updates** table.
@@ -210,7 +202,7 @@ This report shows the current state of all devices in the profile and provides a
 1. From the list of profiles that is shown on the right side of the page, select a profile to see results.
 1. Select the **Generate report** button.
 
-### Device report
+# [**Device report**](#tab/summary)
 
 This report can help you find devices with alerts or errors and can help you troubleshoot update issues.
 
@@ -244,3 +236,7 @@ This report can help you find devices with alerts or errors and can help you tro
 - Configure [feature updates policies](feature-updates.md)
 - Use [compatibility reports](compatibility-reports.md)
 - View [Windows release information](/windows/release-information/)
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
