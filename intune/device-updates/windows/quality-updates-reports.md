@@ -17,7 +17,7 @@ The report includes Intune managed and co-managed devices, and is based on the O
 >[!NOTE]
 > The Windows update distribution report can be used if you are using Update Rings, or not using any update policies in Intune.
 
-The Windows update distribution report comprises three distinct organizational reports that function sequentially to provide insights on devices and their corresponding Windows update versions. To access this feature, navigate to **Reports** > **Windows Updates** > **Reports tab** > **Windows Update Distribution Report**.
+The Windows update distribution report comprises distinct organizational reports that function sequentially to provide insights on devices and their corresponding Windows update versions. To access this feature, navigate to **Reports** > **Windows Updates** > **Reports tab** > **Windows Update Distribution Report**.
 
 The Windows update distribution report includes three nested reports:
 
@@ -25,12 +25,11 @@ The Windows update distribution report includes three nested reports:
 - Windows quality update distribution per feature version report
 - Windows quality update device version report
 
-
 Select a tab to learn more about each report. 
 
 # [**QU distribution**](#tab/distribution)
 
-The report displays the distribution of devices against different Quality Updates (QUs) for the selected scope. It shows the counts of devices corresponding to the displayed QUs.\
+The report displays the distribution of devices against different quality updates for the selected scope. It shows the counts of devices corresponding to the displayed quality updates.\
 Select one or more scope tags from the drop-down list to generate the report. The drop-down list shows all the scope tags the user has access to, based on the user's assigned scope tags.
 
 :::image type="content" source="./images/reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./images/reports/windows-quality-updates-page1.png":::
@@ -100,5 +99,23 @@ The report offers sortable columns and search options, along with an export feat
 
 The search bar enables the search for a specific device or UPN. Select a device from the list to view the device's details.
 
+---
+
 All these reports are cached, and have an expiry time of three days, after which you must generate a new report. Select **Generate Again** to get fresh data.
 
+
+## Additional report: Hotpatch quality updates
+
+After a Windows quality updates policy has been created with Hotpatch updates enabled, you can monitor results, hotpatch deployment status, and errors from the reports.
+
+This report shows the total targeted devices and current update states of all Hotpatch update enabled devices.
+
+To access the report:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Reports**
+1. Under the **Windows Autopatch** section, select **Windows quality updates**
+1. On the **Reports** tab, select **Hotpatch quality updates report**.
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

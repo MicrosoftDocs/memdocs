@@ -13,7 +13,7 @@ Intune offers integrated reports to view detailed status for Windows driver upda
 ## Before you begin
 
 > [!div class="checklist"]
-> - Ensure your environment meets the requirements in [Windows driver updates overview](driver-updates.md#prerequisites).
+> - Ensure your environment meets the requirements in [Manage Windows driver updates](driver-updates.md#prerequisites).
 
 ## Accessing driver updates reports
 

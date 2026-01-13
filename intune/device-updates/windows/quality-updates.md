@@ -131,31 +131,4 @@ These steps ensure that targeted devices, which are [eligible](#prerequisites) t
 
 Automatic rollback of a Hotpatch update isn't supported but you can uninstall them. If you experience an unexpected issue with hotpatch updates, you can investigate by uninstalling the hotpatch update and installing the latest standard cumulative update (LCU) and restart. Uninstalling a hotpatch update is quick, however, it does require a device restart.
 
-## Monitoring and reporting
-
-After a Windows quality updates policy has been created with Hotpatch updates enabled, you can monitor results, hotpatch deployment status, and errors from the reports.
-
-### Hotpatch quality updates
-
-This report shows the total targeted devices and current update states of all Hotpatch update enabled devices.
-
-1. Sign in to the Microsoft [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select **Reports > Windows quality updates** under **Windows Autopatch** section.
-
-3. On the **Reports** tab, select **Hotpatch quality updates report**.
-
-## Windows quality update distribution
-
-This report shows the device distribution for different quality update releases. For Hotpatch applicable **Updates**, you can see both Hotpatch and standard quality update build numbers are displayed. Note that Hotpatch builds are lower numbered due to the inclusion of subset of fixes compared to standard builds. You can select **Devices on this update** column for each release to see a detailed list of devices and their corresponding updates.
-
-To go to the device,
-
-1. Sign in to the Microsoft [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-
-2. Select Reports > Windows updates.
-
-3. On the Reports tab, click on Windows quality update distribution report.
-
-Select **Update type** to select the quality update release. The **Build number** column on the Windows quality update distribution per feature version report shows you the Hotpatch and Standard builds.
 
