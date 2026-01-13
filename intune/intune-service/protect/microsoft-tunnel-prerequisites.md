@@ -289,7 +289,7 @@ To access the security token service and Azure storage for logs, provide access 
 - Microsoft authentication: `login.microsoftonline.com`
 - Microsoft Graph: `graph.microsoft.com`
 - Configure firewall rules to support the configurations detailed in [Microsoft Artifact Registry (MAR) Client Firewall Rules Configuration](https://github.com/microsoft/containerregistry/blob/main/docs/client-firewall-rules.md).
-- Powerlift: `powerlift-frontdesk.acompli.net`
+- Diagnostic Endpoint: `powerlift-frontdesk.acompli.net`
 
 ## Proxy
 
