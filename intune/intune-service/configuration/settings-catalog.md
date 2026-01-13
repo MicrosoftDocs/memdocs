@@ -158,18 +158,22 @@ When you create a new policy or update an existing policy, there are built-in se
 
 - In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value to filter the settings list.
 
-  Depending on your platform, you can filter on different properties, like Windows OS edition, user or device scope, and Android device enrollment mode (fully managed, corporate-owned work profile, dedicated).
+  Depending on your platform, you can filter on different properties, like Windows OS edition, [user or device scope](#device-scope-vs-user-scope-settings), and Android device enrollment mode (fully managed, corporate-owned work profile, dedicated).
 
-  For example, when you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
+  - For example, when you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
 
-  :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the settings catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-edition.png":::
+    :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the settings catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-edition.png":::
 
-  > [!NOTE]
-  > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
+    > [!NOTE]
+    > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
 
-  You can also filter the settings by device or user scope. For more information, see [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
+  - Use Android management mode filters to apply settings that are relevant to your device scenarios, like settings that only apply to fully managed devices. Also, if you apply a filter with at least two management modes, then all settings that apply to at least one management mode are shown.
 
-  :::image type="content" source="./media/settings-catalog/settings-picker-filter-scope.png" alt-text="Screenshot that shows the user and device scope filter in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-scope.png":::
+    For example, you choose a filter that includes fully managed and dedicated management modes. All settings that apply to at least one of those modes are shown. It doesn't limit the view to settings that apply to both modes. In other words:
+
+    - If a setting works for fully managed only, the setting is shown.
+    - If another setting works for dedicated only, the setting is shown.
+    - If a setting works for both, the setting is shown.
 
 # [Copilot](#tab/copilot-tooltips)
 
