@@ -23,6 +23,7 @@ Driver updates policies support **automatic or manual approval workflows**, allo
 [!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
 [!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
 
+<!--
 ## Control driver update approvals
 
 Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
@@ -44,33 +45,20 @@ Using Windows driver update policies, you remain in control of which driver upda
 
 Regardless of the policy configuration and the drivers included, only approved drivers can install on devices. Additionally, Windows Update only installs the latest available and approved update when the version is more recent than the one currently installed on the device.
 
+-->
+
 ## Architecture
 
-The following diagram illustrates the architecture for Windows driver update management when using Intune and Windows Autopatch.
+The following diagram illustrates the high‑level architecture for managing Windows driver updates by using Microsoft Intune and Windows Autopatch.
 
 :::image type="content" source="./images/autopatch-ds.png" alt-text="A conceptual diagram of Windows driver update management." lightbox="./images/autopatch-ds.png" border="false":::
 
-1. Microsoft Intune provides the Microsoft Entra IDs and Intune policy settings for devices to Windows Autopatch. Intune also provides the list of driver approvals and pause commands to Windows Autopatch.
-2. Windows Autopatch configures Windows Updates based on the information provided by Intune. Windows Updates provides the applicable driver update inventory per device ID.
-3. Devices send data to Microsoft so that Windows Update can identify the applicable driver updates for a device during its regular Windows Update scans for updates.  Any approved updates install on the device.
-4. Windows Autopatch reports Windows diagnostic data back to Intune for reports.
+1. **Microsoft Intune** provides device identity, assignment, and driver update approval information. Intune sends policy settings, approved drivers, and pause commands to Windows Autopatch.
+1. **Windows Autopatch** uses this information to configure Windows Update behavior for managed devices and to coordinate driver update deployment.
+1. **Windows Update** evaluates device and hardware information to determine which driver updates are applicable, and installs only approved updates during regular update scans.
+1. **Reporting data** collected during update operations is sent through Windows Autopatch and surfaced in Intune reporting.
 
-## Plan for driver updates
-
-Before you create policies and manage the approval of drivers in your policies, we recommend constructing a driver update deployment plan that includes team members who can approve driver and firmware updates. Subjects to consider include:
-
-- When to use *automatic* driver approvals vs using *manual* driver approvals.
-
-- Use of deployment rings for driver update policies to limit installation of new driver updates to test groups of devices before broadly installing those updates on all devices. With this approach, your team can identify potential issues in an early ring before deploying updates broadly. Use of rings can provide you with time to pause a troublesome update in subsequent rings to delay or prevent its deployment. Examples of organizational approaches for rings include:
-
-  - Structuring driver update policies for different device and hardware models, aligned with your organizational units, or a combination of both.
-
-  - Using policy deferral periods for automatic updates and the *make available date* for manually approved updates, to align to your update rings for quality and feature updates schedules.
-
-  You might also set the update availability for manually approved updates to match common update cycles like Microsoft's Patch Tuesday release. Alignment of schedules can help reduce extra system restarts that some driver updates require.
-
-- Assign devices to only one driver update policy to help prevent a device from having its drivers managed through more than one policy. This can help avoid having a driver installed by one policy when you previously declined or paused that same update in a separate policy.
-For more information about planning deployments, see [Create a deployment plan](/windows/deployment/update/create-deployment-plan) in the Windows deployment documentation.
+This architecture allows administrators to approve and control driver updates centrally in Intune while relying on Windows Update and Autopatch to determine applicability and handle installation.
 
 ## Next steps
 

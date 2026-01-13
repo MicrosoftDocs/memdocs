@@ -85,13 +85,6 @@ While most of the column details should be clear, the following warrant some exp
 - **Policy**: This column identifies the name of the policy in which the update was approved.
 - **Last Scan Time**: This column provides insight into when a device last checked for updates. This can help explain why approved updates haven't installed. For instance, if the last scan time is several weeks old, it may indicate that the device is either offline or unable to connect to scan for updates.
 
-### Data retention
-
-As devices across all your updates policies install the latest versions of a driver update, older driver update versions that are no longer needed by any device drops off the driver updates list. However, this isn't necessarily an immediate event. Reporting data for driver updates remains available until the end of a data retention period is reached. This period is six months since the last time an event for the update is received.
-
-- If the update is approved and all applicable devices have installed the update, then six months after the last device updates is status, the update is removed from reporting details.
-- Similarly, if an update is paused and shows no activity for the retention period, that update is also dropped from reporting details after six months. After an updates data ages out, if a paused update that remains applicable to a device is reapproved, subsequent status for that update begins to appear in reports. Previous data that aged out of reports won't be restored or available.
-
 # [**Update failures**](#tab/failures)
 
 Windows driver updates include a report on driver update failures.
@@ -111,9 +104,14 @@ By selecting that policy and entry, you can then view more information about the
 - UPN
 - Intune Device ID
 
-This view is a useful place to identify and start investigation of driver update installation failures.
-
 ---
+
+## Data retention
+
+As devices across all your updates policies install the latest versions of a driver update, older driver update versions that are no longer needed by any device drops off the driver updates list. However, this isn't necessarily an immediate event. Reporting data for driver updates remains available until the end of a data retention period is reached. This period is six months since the last time an event for the update is received.
+
+- If the update is approved and all applicable devices have installed the update, then six months after the last device updates is status, the update is removed from reporting details.
+- Similarly, if an update is paused and shows no activity for the retention period, that update is also dropped from reporting details after six months. After an updates data ages out, if a paused update that remains applicable to a device is reapproved, subsequent status for that update begins to appear in reports. Previous data that aged out of reports won't be restored or available.
 
 <!-- admin center links -->
 

@@ -17,14 +17,45 @@ Use Microsoft Intune to create and manage Windows driver update policies for you
 > - Policies for Windows update rings and policies that use the settings catalog can include configurations that block the installation of Windows driver updates. To ensure driver updates aren't blocked, review your policies for configurations that can block the installation.
 >   - Windows update ring policy: Ensure the *Windows driver* setting is set to *Allow*.
 >   - Settings catalog policy: In the *Windows Update client policies* category, ensure that *Exclude WU Drivers in Quality Update* is set to *Allow Windows Update drivers*.
->  
->   By default, both settings use a configuration that *allow* Windows driver updates.
+
+## Plan for driver updates
+Before creating Windows driver update policies, plan how driver and firmware updates will be evaluated, approved, and deployed across your organization. A well‑defined plan helps reduce deployment risk and ensures that updates are reviewed and released in a controlled manner.
+When planning your driver update strategy, consider the following areas:
+
+- Approval responsibilities: Identify the individuals or teams responsible for reviewing and approving driver and firmware updates. Determine which updates can be approved automatically and which require manual review based on device role, hardware criticality, and organizational risk tolerance.
+- Phased deployments: Plan a staged rollout strategy that deploys driver updates to test groups of devices before broader deployment. Phased deployments help surface compatibility or stability issues early and provide time to pause or block updates before they reach additional devices.
+- Alignment with update cadences: Consider aligning driver update availability with existing quality and feature update schedules where possible. Coordinating update timing can reduce the frequency of restarts and minimize disruption for end users.
+- Policy assignment strategy: Ensure that each device is targeted by only one driver update policy. Assigning a device to multiple driver update policies can result in conflicting approvals or unintended installations.
+
+For general guidance on planning update deployments, see [Create a deployment plan](/windows/deployment/update/create-deployment-plan) in the Windows deployment documentation.
+
+## Understand driver update approval behavior
+
+Windows driver update policies let you control which driver updates are allowed to install on managed devices. You can choose between automatic approval of recommended drivers or require manual review for every update.
+
+### Automatic approval of recommended drivers
+
+When automatic approval is enabled, the policy automatically approves and deploys each new recommended driver version for devices assigned to the policy. Recommended drivers are typically the latest versions published by the OEM and marked as required. Other available driver versions remain optional and appear as other drivers.
+
+- When a newer recommended driver becomes available, Intune automatically adds it to the policy and moves the previously recommended version to the other drivers list. Previously approved drivers remain approved.
+- If multiple approved versions exist, Windows Update installs only the latest approved version that is newer than the one currently installed.
+- When devices are managed by Windows Autopatch, if the latest approved version is paused, Autopatch offers the next most recent approved version to ensure a previously approved, known‑good driver remains available for installation.
+
+### Manual approval of drivers
+
+When manual approval is required, administrators must explicitly approve each driver update before it can be deployed. Newly available driver versions are automatically added to the policy but remain inactive until approved.
+
+- When a new recommended driver becomes available, the policy indicates that drivers are pending review, prompting you to decide whether to approve deployment.
+
+### Manage approved drivers
+
+You can edit a driver update policy at any time to manage which drivers are approved. Individual driver updates can be paused to stop deployment to new devices and later reapproved to resume installation.
+
+Regardless of approval mode, only approved drivers can install, and Windows Update installs only the latest available approved version that is newer than the currently installed driver.
 
 ## Create Windows driver update policies
 
-Use this procedure to create policies for managing driver updates for groups of devices.
-
-
+To create a Windows driver update policy in the Microsoft Intune admin center, follow these steps:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Driver updates** tab, and select **Create profile**.
 
