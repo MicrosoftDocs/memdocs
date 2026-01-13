@@ -1,6 +1,6 @@
 ---
 title: Windows feature update policies
-description: Learn about Windows feature update policy settings and how to create feature update releases in Microsoft Intune.
+description: Learn about Windows feature update polies and how to manage them in Microsoft Intune.
 ms.date: 09/10/2024
 ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy

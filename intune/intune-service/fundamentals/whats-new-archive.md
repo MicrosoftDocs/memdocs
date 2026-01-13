@@ -364,7 +364,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 We're introducing a new **Update Substate** in service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
 
-For more information, see [Use Windows Update for Business reports for Windows Updates](../../device-updates/windows/feature-updates-reports.md#use-the-windows-feature-updates-organizational-report)
+For more information, see [Use Windows Update for Business reports](../../device-updates/windows/feature-updates-reports.md)
 
 ## Week of February 24, 2025 (Service release 2502)
 
@@ -2588,7 +2588,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/quality-updates.md).
 
 #### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
 
@@ -2651,7 +2651,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/quality-updates.md).
 
 ### Intune apps
 
