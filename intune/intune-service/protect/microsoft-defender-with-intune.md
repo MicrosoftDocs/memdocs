@@ -19,7 +19,7 @@ Learn how integrating Microsoft Defender for Endpoint with Microsoft Intune can 
 For example, if a user's device is compromised by malware, Microsoft Defender for Endpoint will flag it as high-risk and Intune can automatically cut off its access to corporate resources.
 
 > [!TIP]
-> Before you begin, ensure your account is assigned the proper Intune role (like Endpoint Security Manager) assigned, so you can configure these settings.
+> Before you begin, ensure your account is assigned an Intune role with sufficient permissions to configure these settings. For example, the built-in [Endpoint Security Manager](../undamentals/role-based-access-control#built-in-roles) role has the necessary permissions.
 
 ## Integration workflow
 
