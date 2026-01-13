@@ -38,7 +38,10 @@ items:
     href: quality-updates.md
     displayName: windows quality updates
   - name: Configure quality updates policies
-    href: quality-updates-policy.md
+    href: expedite-updates-policy.md
+    displayName: windows quality updates
+  - name: Hotpatch updates
+    href: hotpatch.md
     displayName: windows quality updates
   - name: Quality updates policies reports
     href: quality-updates-reports.md
