@@ -1,7 +1,7 @@
 ---
 title: Manage Windows driver update policies
 description: Learn how to create, approve, deploy, and pause Windows driver updates using Intune policies to keep Windows devices current and stable.
-ms.date: 04/07/2025
+ms.date: 01/13/2026
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 ---
@@ -55,24 +55,20 @@ Regardless of approval mode, only approved drivers can install, and Windows Upda
 
 ## Create Windows driver update policies
 
-To create a Windows driver update policy in the Microsoft Intune admin center, follow these steps:
-
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Driver updates** tab, and select **Create profile**.
-
-   :::image type="content" source="./images/driver-updates-policy/view-update-list-1.png" alt-text="A screen capture of the admin center that shows the path to create a profile for Windows Driver Updates." lightbox="./images/driver-updates-policy/view-update-list-1.png":::
-
-2. On the **Basics** page, enter the following properties:
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows updates**
+1. Select the **Driver updates** tab, and select **Create profile**.
+1. On the **Basics** page, enter the following properties:
 
    - **Name**: Enter a descriptive name for the profile. Name profiles so you can easily identify them later.
    - **Description**: Enter a description for the profile. This setting is optional but recommended.
 
-3. On **Settings**, configure the approval method for device updates in this policy. Select one of the following options for **Approval method**:
+1. On **Settings**, configure the approval method for device updates in this policy. Select one of the following options:
 
-   - **Manually approve and deploy driver updates** - With this option, each new driver update that is added to the policy has its status set to *Needs review*. An admin must edit the policy to change the status of each individual update to *Approved* before that update can deploy to applicable devices.
+   - **Manually approve and deploy driver updates**: With this option, each new driver update that is added to the policy has its status set to *Needs review*. An admin must edit the policy to change the status of each individual update to *Approved* before that update can deploy to applicable devices.
 
      When you manually approve an update, you can specify a date on which it becomes available for Windows Update to install on applicable devices. This date is distinct from the deferral period that is required for automatically approved updates in policies that use automatic approvals.
 
-   - **Automatically approve all recommended driver updates** – With this option, all new *recommended* driver updates that are added to the policy are added with a status of *Approved* and begin to install on applicable devices without having to be reviewed or approved by an admin.
+   - **Automatically approve all recommended driver updates**: With this option, all new *recommended* driver updates that are added to the policy are added with a status of *Approved* and begin to install on applicable devices without having to be reviewed or approved by an admin.
 
      Use an automatic approval policy when you want to ensure the drivers on your devices remain current with an OEMs latest recommended update.
 
@@ -80,21 +76,20 @@ To create a Windows driver update policy in the Microsoft Intune admin center, f
 
      When you set a policy for automatic approvals, you must configure the following setting that creates a deferral period for the automatically approved updates:
 
-     - **Make updates available after (days)** – This setting is a deferral period that delays when Windows Update begins to deploy and install the new recommended update that was automatically added to the policy with a status of *Approved*. The delay supports from zero to 30 days and starts from the day the update is added to the policy, not from the date the update was made available or published by the OEM. The deferral is intended to provide you with time to identify and if necessary, pause deployment of the new recommended update.
+     - **Make updates available after (days)**: This setting is a deferral period that delays when Windows Update begins to deploy and install the new recommended update that was automatically added to the policy with a status of *Approved*. The delay supports from zero to 30 days and starts from the day the update is added to the policy, not from the date the update was made available or published by the OEM. The deferral is intended to provide you with time to identify and if necessary, pause deployment of the new recommended update.
 
     For example, consider a driver update policy that uses automatic approvals and has a deferral of three days. On June 1, Windows Autopatch identifies a new recommended driver update that applies to devices with this policy and adds the update to the policy as approved. Due to the deferral period of three days, Windows Update waits to offer this update to any device until June 4, three days after it was added to the policy. If the deferral was set to zero days, Windows Update would begin installing the update on devices immediately.
 
    > [!TIP]
    > After a policy is created, you won't be able to edit the policy to change the approval type. If the approval type is automatic, you can edit the value for *Make updates available after (days)*.
 
-4. For **Scope tags**, select any desired scope tags to apply.
-
-5. For **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
+1. On **Scope tags**, select any desired scope tags to apply.
+1. On **Assignments**, select the groups that receive the policy. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md). Devices must be assigned to this policy and the policy saved before Windows Autopatch can identify the applicable driver updates to add to this policies driver list.
 
    > [!TIP]
    > We recommend that a device be assigned a single policy for driver update policies. Assignment of a device to only one policy helps to prevent the installation of a driver update that is declined in one policy but approved in a second policy. Keep in mind that policies for Windows driver updates don't support options to remove or roll-back driver updates.
 
-6. For **Review + create**, review the policy configuration, and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The profile is also shown in the policy list.
+1. On **Review + create**, review the policy configuration, and then select **Create**. When you select *Create*, your changes are saved, and the profile is assigned. The profile is also shown in the policy list.
 
 ## Manage and maintain driver update policies
 
@@ -124,13 +119,15 @@ When you review the list of driver update policies in the admin center, you can 
 > [!NOTE]
 > An exception is new *recommended driver* updates that are added to a policy set for automatic approval. Recommended driver updates that are the newest or latest are added to the policy and approved automatically, and their status is never set to *Needs review*.
 
-To look for policies that have new driver updates pending a review, in the admin center go to **Devices** > **Manage updates** > **Windows updates** > **Driver Updates** tab.
+To look for policies that have new driver updates pending a review:
 
-In the list of Windows driver update policies, review the **Drivers to review** column for entries that indicate there are new updates that have been added to the policy that you might want to review and approve for deployment. In the following screen capture of the *Driver updates* page, two policies have new driver updates. One displays *1 to review* while another displays that it has *3 to review*:
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows updates**
+1. Select the **Driver updates** tab
+1. In the list of Windows driver update policies, review the **Drivers to review** column for entries that indicate there are new updates that have been added to the policy that you might want to review and approve for deployment. In the following screen capture of the *Driver updates* page, two policies have new driver updates. One displays *1 to review* while another displays that it has *3 to review*:
 
-:::image type="content" source="./images/driver-updates-policy/drivers-to-review.png" alt-text="A screen capture that shows policies that have new drivers to review." lightbox="./images/driver-updates-policy/drivers-to-review.png":::
+   :::image type="content" source="./images/driver-updates-policy/drivers-to-review.png" alt-text="A screen capture that shows policies that have new drivers to review." lightbox="./images/driver-updates-policy/drivers-to-review.png":::
 
-The two policies that have new driver updates won't deploy those new updates until an admin explicitly approves them. You can also review the other policies that haven't received new updates should you seek to modify the approved updates for those policies.
+   The two policies that have new driver updates won't deploy those new updates until an admin explicitly approves them. You can also review the other policies that haven't received new updates should you seek to modify the approved updates for those policies.
 
 Policies continue to display a count of new updates until each update has been *approved* or *declined*. After all the current updates are managed, the count drops to zero (0) until new updates are identified and added to the policy.
 
@@ -148,11 +145,11 @@ You can use the *driver list* to review the driver updates that Windows Autopatc
 
 The driver list is divided into two tabs:
 
-- **Recommended drivers** – Recommended drivers are the best match for the 'required' driver updates that Windows Update can identify for a device. To be a recommended update, the OEM or driver publisher must mark the update as *required* and the update must be the most recent update version marked as required. These updates are the same ones available through Windows Update and are almost always the most current update version for a driver.
+- **Recommended drivers**: Recommended drivers are the best match for the 'required' driver updates that Windows Update can identify for a device. To be a recommended update, the OEM or driver publisher must mark the update as *required* and the update must be the most recent update version marked as required. These updates are the same ones available through Windows Update and are almost always the most current update version for a driver.
 
   When an OEM releases a newer update version that qualifies to be the new recommended driver, it replaces the previous update as the recommended driver update. If the older update version is still applicable to a device in the policy, it's moved to the *Other drivers* tab. If the older version was previously approved, it remains approved.
 
-- **Other drivers** – Other driver updates are updates that are available from the original equipment manufacturer (OEM) aside from the current recommended driver update. These updates remain in a policy as long as they're newer than the driver version that's installed on at least one device with the policy.
+- **Other drivers**: Other driver updates are updates that are available from the original equipment manufacturer (OEM) aside from the current recommended driver update. These updates remain in a policy as long as they're newer than the driver version that's installed on at least one device with the policy.
 
   These updates can include:
   - A previously recommended update was superseded by a newer update version
@@ -176,12 +173,12 @@ For comparison, the following screen capture shows the contents of the *Other dr
 
 Each driver list displays the following details for updates in the policy. Most of the following details are based on information obtained from the driver update from the OEM or driver manufacturer:
 
-- **Driver name** – The driver update name. It's not uncommon for subsequent versions of an update from an OEM or manufacturer to have identical names. Use the update *Version* and *Release date* to differentiate between update instances.
-- **Version** - The update version as provided by the OEM or manufacturer.
-- **Manufacturer** – The manufacturer of the driver update.
-- **Driver class** - The driver class is determined from the details authored by the driver publisher, and usually represents the drivers hardware class. This information isn't always easily determined or consistent across updates from different OEM sources or manufacturers. When a driver's class can't be identified, it's assigned to the *Other* hardware class.
-- **Release date** – The date the OEM made this driver update available.
-- **Status** – The current status of the driver update in this policy. You can modify the status for individual updates by selecting the name of the driver update from the list. There are four status options available for updates:
+- **Driver name**: The driver update name. It's not uncommon for subsequent versions of an update from an OEM or manufacturer to have identical names. Use the update *Version* and *Release date* to differentiate between update instances.
+- **Version**: The update version as provided by the OEM or manufacturer.
+- **Manufacturer**: The manufacturer of the driver update.
+- **Driver class**: The driver class is determined from the details authored by the driver publisher, and usually represents the drivers hardware class. This information isn't always easily determined or consistent across updates from different OEM sources or manufacturers. When a driver's class can't be identified, it's assigned to the *Other* hardware class.
+- **Release date**: The date the OEM made this driver update available.
+- **Status**: The current status of the driver update in this policy. You can modify the status for individual updates by selecting the name of the driver update from the list. There are four status options available for updates:
 
   - **Needs review**
   - **Approved**
@@ -190,7 +187,7 @@ Each driver list displays the following details for updates in the policy. Most 
 
   For more information about these four status types and how to manage them in a policy, see [Manage the status of updates](#manage-the-status-of-driver-updates) in this article.
 
-- **Applicable devices** – This number indicates how many devices can install a certain version of an update. The same device can be reported for multiple versions of a driver update from both the *Recommended drivers* and *Other drivers* tabs. Devices report multiple times when there's more than one newer version available for a driver that is still being used by the device.
+- **Applicable devices**: This number indicates how many devices can install a certain version of an update. The same device can be reported for multiple versions of a driver update from both the *Recommended drivers* and *Other drivers* tabs. Devices report multiple times when there's more than one newer version available for a driver that is still being used by the device.
 
 ### Manage the status of driver updates
 
@@ -205,9 +202,9 @@ Select the update from the driver list to open its *Manage driver* pane. In the 
 On the *Manage driver* pane, you can:
 
 1. Confirm the name of the driver update.
-2. View the update's status. The update in the screen capture has a status of *Needs review*.
-3. View a count of devices that have installed this update version. Because this driver update version isn't yet approved and hasn't been installed on devices, this count displays *N/A* for *Not applicable*.
-4. Select the dropdown box for *Actions* where you can choose an action to change the update's status. The options for a new driver update include *Declined* and *Approve*.
+1. View the update's status. The update in the screen capture has a status of *Needs review*.
+1. View a count of devices that have installed this update version. Because this driver update version isn't yet approved and hasn't been installed on devices, this count displays *N/A* for *Not applicable*.
+1. Select the dropdown box for *Actions* where you can choose an action to change the update's status. The options for a new driver update include *Declined* and *Approve*.
 
 **The following are rules for managing the status of a driver update**:
 
@@ -268,22 +265,23 @@ Bulk driver updates allow the user to approve, pause, or decline multiple driver
 
 #### How to use bulk driver updates
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Driver updates** tab, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
-2. In the Driver Updates page, select **Bulk actions**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows updates**
+1. Select the **Driver updates** tab, and select an existing policy. If you need to create a new policy, see [Create Windows driver update policies](#create-windows-driver-update-policies).
+1. In the Driver Updates page, select **Bulk actions**.
 
     :::image type="content" source="./images/driver-updates-policy/bulk-actions.png" alt-text="A screen capture that shows the bulk actions button." lightbox="./images/driver-updates-policy/bulk-actions.png":::
 
-3. In the **Select action** tab, select one of the actions from the **Driver actions** drop-down list; *Approve*, *Pause* or *Decline* multiple drivers.
-4. If you select an action that needs further information, for example, if you select *Approve*, then you also need to select the start date using **Make available in Windows update**. Select **Next**.
-5. In the **Select drivers** tab, use **Select drivers to include** to see and select the available drivers. The **Select available drivers** fly-out appears.
+1. In the **Select action** tab, select one of the actions from the **Driver actions** drop-down list; *Approve*, *Pause* or *Decline* multiple drivers.
+1. If you select an action that needs further information, for example, if you select *Approve*, then you also need to select the start date using **Make available in Windows update**. Select **Next**.
+1. In the **Select drivers** tab, use **Select drivers to include** to see and select the available drivers. The **Select available drivers** fly-out appears.
 The displayed list includes drivers that are able to be approved. For example, drivers that have a status of *Paused* or *Needs Review*. This is because you can (re)approve drivers that are *Paused* or have status as *Needs Review*. Drivers that are already approved are filtered out.
-6. In the **Select available drivers** fly-out you can also bulk select the drivers.
+1. In the **Select available drivers** fly-out you can also bulk select the drivers.
 
    > [!NOTE]
    > You can only select up to 100 drivers at a time. If  you select more than a 100 and select **Save**, an error  message is displayed.
 
-7. Select **Save** and then **Next**.
-8. In the **Review +Save** tab, you can review and save the changes you made.
+1. Select **Save** and then **Next**.
+1. In the **Review +Save** tab, you can review and save the changes you made.
 
 > [!NOTE]
 > You can't mix actions. For example, you can't *Pause* and *Approve* a set in one action. You must go through each action separately.
@@ -299,4 +297,8 @@ After you create driver update policies, plan to review them regularly for newly
 ## Next steps
 
 - [Windows driver updates overview](driver-updates.md)
-- Reports for Windows Driver updates policy
+- [Reports for Windows Driver updates policy](driver-updates-reports.md)
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
