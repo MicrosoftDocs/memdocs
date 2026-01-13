@@ -16,7 +16,7 @@ ms.collection:
 
 Learn how integrating Microsoft Defender for Endpoint with Microsoft Intune can protect your organization. This integration lets you assess device risk in real time and automatically block compromised devices from corporate resources to prevent security breaches and limit their impact by automatically marking risky devices as noncompliant.
 
-For example, if a user's device is compromised by malware, Microsoft Defender for Endpoint will flag it as high-risk and Intune can automatically cut off its access to corporate resources.
+For example, if malware compromises a user's device, Microsoft Defender for Endpoint flags that device as high-risk and Intune can automatically cut off its access to corporate resources.
 
 > [!TIP]
 > Before you begin, ensure your account is assigned an Intune role with sufficient permissions to configure these settings. For example, the built-in [Endpoint Security Manager](../undamentals/role-based-access-control#built-in-roles) role has the necessary permissions.
@@ -58,7 +58,7 @@ For licensing options, see [Microsoft Intune licensing](../fundamentals/licenses
 
 ### Microsoft Defender for Endpoint requirements
 
-**Subscription**: Microsoft Defender for Endpoint subscription provides access to the [Microsoft 365 Defender portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
+**Subscription**: Microsoft Defender for Endpoint subscription provides access to the [Microsoft Defender XDR portal](https://go.microsoft.com/fwlink/p/?linkid=2077139).
 
 For licensing and system requirements, see:
 - [Licensing requirements in Microsoft Defender for Endpoint minimum requirements](/windows/security/threat-protection/microsoft-defender-atp/minimum-requirements)
@@ -84,7 +84,7 @@ This example shows how Microsoft Defender for Endpoint and Intune work together 
    - Malicious code injection
    - Suspicious remote shell activity
 
-2. **Risk assessment**: Based on these threat indicators, Microsoft Defender for Endpoint [classifies the device as high-risk](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) and creates a detailed report in the Microsoft 365 Defender portal.
+2. **Risk assessment**: Based on these threat indicators, Microsoft Defender for Endpoint [classifies the device as high-risk](/windows/security/threat-protection/microsoft-defender-atp/alerts-queue#severity) and creates a detailed report in the Microsoft Defender XDR portal.
 
 3. **Compliance enforcement**: Your Intune device compliance policy automatically marks devices with *Medium* or *High* risk levels as noncompliant.
 
@@ -123,4 +123,4 @@ Different platforms offer unique configuration options when integrating with Mic
 **Microsoft Defender for Endpoint resources**:
 
 - [Microsoft Defender for Endpoint Conditional Access](/defender-endpoint/conditional-access)
-- [Microsoft 365 Defender portal](/defender-xdr/microsoft-365-defender-portal)
+- [Microsoft Defender XDR portal](/defender-xdr/microsoft-365-defender-portal)
