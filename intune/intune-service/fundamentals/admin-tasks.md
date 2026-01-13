@@ -1,16 +1,16 @@
 ---
-title: Manage Admin Tasks
-description: Use the centralized Admin tasks view in Microsoft Intune to manage tasks across capabilities.
+title: Centrally manage Admin Tasks
+description: Use the centralized Admin tasks view in Microsoft Intune to manage common administrative tasks from across Intune capabilities.
 author: brenduns
 ms.author: brenduns
-ms.date: 11/18/2025
+ms.date: 01/12/2026
 ms.topic: article
 ms.reviewer: davidra
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Manage admin tasks in Microsoft Intune
+# Centrally manage common admin tasks in Microsoft Intune
 
 *This feature is in public preview*.
 

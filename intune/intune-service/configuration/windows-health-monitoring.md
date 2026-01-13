@@ -12,7 +12,7 @@ ms.collection:
 
 # Use Windows Health Monitoring profile on Windows devices in Microsoft Intune
 
-Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint analytics](../../analytics/index.md) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
+Microsoft can collect event data, and provide recommendations to improve performance on your Windows devices. [Endpoint analytics](../../endpoint-analytics/index.md) analyzes this data, and can recommend software, help improve startup performance, and fix common support issues.
 
 In Intune, you can create a Windows Health Monitoring device configuration profile to enable this data collection, and then deploy this profile to your devices.
 
@@ -26,7 +26,7 @@ This article shows you how to create the profile, and enable the monitoring.
 
 ## Before you begin
 
-- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, see [Endpoint Analytics Overview](../../analytics/index.md).
+- Endpoint Analytics has its own prerequisites. For more information, including enrollment requirements, see [Endpoint Analytics Overview](../../endpoint-analytics/index.md).
 - If you use co-management, then to use this profile, the Device Configuration workload must be in Intune. For more information on these features, go to [What is co-management?](../../configmgr/comanage/overview.md) and [Switch Configuration Manager workloads to Intune](../../configmgr/comanage/how-to-switch-workloads.md).
 - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 
@@ -84,4 +84,4 @@ The next time each device checks in, the policy is applied.
 ## Related content
 
 - After the [profile is assigned](device-profile-assign.md), be sure to [monitor its status](device-profile-monitor.md).
-- [Endpoint Analytics Overview](../../analytics/index.md)
+- [Endpoint Analytics Overview](../../endpoint-analytics/index.md)

@@ -79,7 +79,7 @@ productDirectory:
     - title: Update Windows with Intune
       imageSrc: ./media/index/update-windows.svg
       links:
-        - url: ./intune-service/protect/windows-update-for-business-configure.md
+        - url: ./device-updates/windows/configure.md
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
           text: View the interactive demo
@@ -175,7 +175,7 @@ conceptualContent:
           url: ./intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md
         - text: Analyze endpoint performance with Intune cloud attachment
           itemType: how-to-guide
-          url: ./analytics/configure.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json
+          url: ./endpoint-analytics/configure.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json
         - text: Follow the interactive guide to co-managing workloads
           itemType: how-to-guide
           url: https://www.microsoft.com/microsoft-365/business-insights-ideas/resources/what-is-endpoint-management?slide=15#/SystemConfig?slide=15
@@ -214,7 +214,7 @@ additionalContent:
       # Card
       - title: Endpoint analytics docs
         summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
-        url: ./analytics/index.md
+        url: ./endpoint-analytics/index.md
 
     - title: Related services
       items:

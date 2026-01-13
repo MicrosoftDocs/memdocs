@@ -54,8 +54,6 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 
 - `download.visualstudio.microsoft.com`
 
-- `sccmconnected-a01.cloudapp.net`
-
 - `definitionupdates.microsoft.com`
 
 > [!NOTE]
@@ -241,7 +239,7 @@ For more information, see [Enable tenant attach](../../../tenant-attach/device-s
 
 ## Endpoint analytics
 
-For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#proxy-server-authentication).
+For more information, see [Endpoint analytics proxy configuration](../../../../endpoint-analytics/troubleshoot.md#proxy-server-authentication).
 
 [!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 

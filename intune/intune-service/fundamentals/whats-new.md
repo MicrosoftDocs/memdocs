@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 12/08/2025
+ms.date: 01/12/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,6 +57,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of January 12, 2026
+
+### App management
+
+#### PowerShell script installer for Win32 apps <!-- 34496511 -->
+
+When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
+
+For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 ## Week of December 8, 2025  
 
 ### Device enrollment  
@@ -108,8 +123,6 @@ For more information about available Setup Assistant skipkeys, see:
 ### App management
 
 #### Secure enterprise browser managed by Intune (public preview) <!-- 31609121 -->
-
-[!INCLUDE [public-preview-notification](../includes/public-preview-notification.md)]
 
 Microsoft Intune now supports policy management for Microsoft Edge for Business as a secure enterprise browser. By implementing policies through Intune, admins can confidently transition from Windows-based desktop environments to secure, browser-based workflows for accessing corporate resources without requiring device enrollment.
 
@@ -754,7 +767,7 @@ You can use Microsoft Copilot in Intune to explore new prompts related to your I
 - Android and Apple device updates
 - Windows Autopilot
 - [Endpoint Privilege Management](../protect/epm-overview.md)
-- [Advanced Analytics](../../analytics/advanced-endpoint-analytics.md)
+- [Advanced Analytics](../../advanced-analytics/index.md)
 
 When you start typing your request, a list of prompts that best match your request are shown. You can also continue typing for more suggestions.
 
@@ -884,7 +897,7 @@ For more information, see [Microsoft Tunnel for Mobile Application Management fo
 
 > [!IMPORTANT]
 >
-> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+> Beginning on January 13, 2026, this capability is available. The first Windows Update that is offered as available is the `2026-01 B` quality update.
 
 The Windows out-of-box experience (OOBE) by default installs the latest available security updates to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these security updates Windows quality updates.
 
@@ -1155,7 +1168,7 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Declarative software update reports for Apple devices<!-- 25207078, 31557946 -->
 
-You can now use several new [software update reports for Apple devices](../protect/updates/apple-reports.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
+You can now use several new [software update reports for Apple devices](../../device-updates/apple/reports.md) that are powered by Apples built-in declarative reporting infrastructure. The declarative reporting infrastructure provides Intune with a near real-time view of the software update status of managed devices. The following Apple software update reports are now available:
 
 - A *per-device software update report* - Per-device software update reports are available in the Intune Admin center by going to *Devices* and then selecting an applicable device. In the Devices Overview pane for that device, below Monitor, you see the report listed as **iOS software updates** for iOS or iPadOS devices, and as **macOS software updates** for macOS devices.
 
@@ -1382,7 +1395,7 @@ You can now use Microsoft Copilot in Intune to explore your Intune data using na
 
 #### Export device query results to CSV file <!-- 27967896 -->
 
-Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../analytics/device-query-multiple-devices.md#how-to-use-device-query-for-multiple-devices).
+Now after running a multiple-device query, you can export up to 50,000 query results to a CSV file. For more information, see [How to use device query for multiple devices](../../advanced-analytics/device-query-multiple-devices.md#use-device-query-for-multiple-devices).
 
 ## Week of June 23, 2025 (Service release 2506)
 
@@ -1645,7 +1658,7 @@ To learn about root detection support for Microsoft Defender on Android, see Key
 
 #### New endpoint security profile for configuring Endpoint detection and response and Antivirus exclusion settings on Linux devices <!-- 26549863 -->
 
-As part of the Intune scenario for [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use a new *Endpoint detection and response* profile for Linux named [**Microsoft Defender Global Exclusions (AV+EDR)**](../protect/endpoint-security-edr-policy.md#linux) that you can now use to manage Linux device exclusions for both Microsoft Defender *Endpoint detection and response* (EDR) and *Antivirus* (AV).
+As part of the Intune scenario for [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use a new *Endpoint detection and response* profile for Linux named [**Microsoft Defender Global Exclusions (AV+EDR)**](../protect/endpoint-security-edr-policy.md#create-a-linux-global-exclusions-policy) that you can now use to manage Linux device exclusions for both Microsoft Defender *Endpoint detection and response* (EDR) and *Antivirus* (AV).
 
 This profile supports settings related to global exclusion settings as detailed in [Configure and validate exclusions on Linux](/defender-endpoint/linux-exclusions) in the Microsoft Defender documentation. These exclusion configurations can apply to both the antivirus and EDR engines on the Linux client to stop associated real time protection EDR alerts for excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
 
@@ -1667,7 +1680,7 @@ For details about the available Defender settings, see [Configure security setti
 #### Data collection from SimInfo entity on Windows devices<!--30120558 -->
 
 You can now collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-For more information, see [Intune Data Platform](../../analytics/data-platform-schema.md).
+For more information, see [Intune Data Platform](../../advanced-analytics/data-platform-schema.md).
 
 > [!div class="checklist"]
 > Applies to:

@@ -81,7 +81,7 @@ For devices meeting the prerequisites, the Intune management extension installs 
 - [Remediations](../fundamentals/remediations.md)
 - [Discovery scripts for custom compliance](../protect/compliance-custom-script.md)
 - [Win32 apps](../apps/apps-win32-add.md)
-- [Endpoint analytics](../../analytics/settings.md)
+- [Endpoint analytics](../../endpoint-analytics/index.md)
 - [Remote Help](../fundamentals/remote-help-windows.md)
 - [Managed Installers in Intune](../protect/endpoint-security-app-control-policy.md)
 - [Update Windows BIOS using configuration MDM policy](../configuration/bios-configuration.md)
@@ -135,6 +135,27 @@ To check if the device is automatically enrolled:
 5. Search for the **MDMDeviceWithAAD** property. If the property exists, the device is automatically enrolled. If this property doesn't exist, the device isn't automatically enrolled.
 
 [Enable Windows automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
+
+### Issue: Microsoft Intune Windows Agent app gets automatically disabled
+
+Microsoft Intune Windows Agent is a Microsoft Entra ID app. The IME agent uses the Microsoft Intune Windows Agent app to authenticate against the gateway to get other apps, scripts, and other critical payloads. This application isn't linked to any subscription-based lifecycle flow.
+
+Under some conditions, the Microsoft Intune Windows Agent app can fail subscription validity checks and get continuously disabled, even when the admin re-enables the app. When disabled, the IME agent can't retrieve tokens against the Microsoft Intune Windows Agent application and user targetted payloads stop working.
+
+**Possible resolution**:
+
+Delete the service principal from your organization tenant using Microsoft Graph API, preferably through Graph Explorer:
+
+1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using an organization admin account that can delete service principals, like the **[Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)** role. Make sure the top-right corner shows your tenant name, not "sample tenant".
+
+    For a list of Microsoft Entra built-in roles, and what they can do, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+
+2. Select **API Explorer** > `servicePrincipals` > `{servicePrincipal-id}` > `DELETE`.
+3. In the Graph URL syntax, replace `{servicePrincipal-id}` with the ID of the service principal.
+4. Select **Run Query** to execute the deletion.
+
+> [!NOTE]
+> These steps should be completed by someone who is familiar with Graph Explorer. To learn more about Graph Explorer, see [Use Graph Explorer to try Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview).
 
 ## Intune management extension logs
 

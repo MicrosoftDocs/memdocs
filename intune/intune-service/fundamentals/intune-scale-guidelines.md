@@ -173,7 +173,7 @@ The [Full delegation model](#full-delegation-model) is recommended.
 #### Windows update rings
 
 - We recommend that Windows update rings are managed centrally. The Central team should create as many common Windows update ring policies as they need to support the variance of the local admins.
-- The local admins shouldn't create their own Windows update rings. When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. Best practices vary for each feature. For more information, see [Windows update rings](../protect/windows-10-update-rings.md).
+- The local admins shouldn't create their own Windows update rings. When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. Best practices vary for each feature. For more information, see [Windows update rings](../../device-updates/windows/update-rings.md).
 
 #### Feature updates
 
@@ -286,6 +286,6 @@ For more information, see [Device categories](../enrollment/device-group-mapping
 
 ### Endpoint analytics
 
-- The Central team should create as many common Endpoint Analytics baselines as they need to support the variance of the Local admins.
+- The Central team should create as many common endpoint analytics baselines as they need to support the variance of the Local admins.
 - If possible, local admins shouldn't create their own Endpoint Analytics baselines. When you delegate to a large number of administrators, the total number of objects might become large and difficult to manage. The best practice varies per feature area.
-- For more information, see [Configuring settings in Endpoint analytics](../../analytics//settings.md#bkmk_baselines).
+- For more information, see [Configure settings in endpoint analytics](../../endpoint-analytics/configure.md).

@@ -1,7 +1,7 @@
 ---
 title: Add an Enterprise App Catalog App to Microsoft Intune
 description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
-ms.date: 11/14/2025
+ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -13,12 +13,12 @@ ms.collection:
 
 # Add an Enterprise App Catalog App to Microsoft Intune
 
-The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that have been designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
 
 > [!IMPORTANT]
 > The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
-When you add an app to Intune, you'll commonly want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings have been configured and confirmed by Microsoft. You must be careful if you modify the application properties as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
+When you add an app to Intune, you want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings are configured and confirmed by Microsoft. You must be careful if you modify the application properties as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
 
 > [!IMPORTANT]
 > Microsoft doesn't assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
@@ -30,7 +30,7 @@ Once you add an Enterprise App Catalog app to Intune, you can assign that app to
 
 ## App update availability
 
-Microsoft has established Service Level Objectives (SLOs) to provide predictable timelines for when app updates become available in the Enterprise App Catalog. Most app updates complete automated validation and are available within 24 hours. Updates requiring manual testing typically complete within seven days. For more information about SLOs and processing timelines, see [Enterprise App Management overview](apps-enterprise-app-management.md).
+Microsoft established Service Level Objectives (SLOs) to provide predictable timelines for when app updates become available in the Enterprise App Catalog. Most app updates complete automated validation and are available within 24 hours. Updates requiring manual testing typically complete within seven days. For more information about SLOs and processing timelines, see [Enterprise App Management overview](apps-enterprise-app-management.md).
 
 ## Add a Windows catalog app (Win32) to Intune
 
@@ -44,7 +44,7 @@ The following steps help you add a Windows App Catalog app to Intune:
 
 ## Step 1: App information
 
-The **App information** steps allow you to select an app from the Enterprise App Catalog based on name and publisher. Once you select the app, you must choose a specific app package based on package name, language, architecture, and version. When you've completed selecting the app, the app information is displayed. Based on the app that you chose, the values for this step are automatically filled in.
+The **App information** steps allow you to select an app from the Enterprise App Catalog based on name and publisher. Once you select the app, you must choose a specific app package based on package name, language, architecture, and version. When you complete selecting the app, the app information is displayed. Based on the app that you chose, the values for this step are automatically filled in.
 
 ### Select the app from the Enterprise App Catalog
 
@@ -69,7 +69,7 @@ The **App information** step provides the fields:
 - **Developer**: The name of the company or individual that developed the app. This information is visible to people signed into the Intune admin center.
 - **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name is visible to people signed in to the Intune admin center.​
 - **Notes**: Add more notes about the app. Notes are visible to people signed in to the admin center.
-- **Logo**: Upload a logo that's associated with the app. This logo appears next to the app throughout the Company Portal.​
+- **Logo**: Upload a logo associated with the app. This logo appears next to the app throughout the Company Portal.​
 
 5. Select **Next** to display the **Program** step.
 
@@ -80,7 +80,10 @@ On the **Program** step, you configure the app installation and removal commands
 > [!IMPORTANT]
 > Many of the app details are prepopulated and designed to function without change. Changing the install commands or using custom PowerShell scripts might cause the app installation to fail. Unexpected or harmful commands can be passed via the **Install command** and **Uninstall command** fields, or through custom PowerShell scripts. Use script overrides judiciously and test thoroughly.
 
-By default, the install and uninstall commands for a catalog app are prepopulated with Microsoft-recommended values. You can now choose to override these with a PowerShell script if needed.
+By default, the install and uninstall commands for a catalog app are prepopulated with Microsoft-recommended values. You can now choose to override these values with a PowerShell script if needed.
+
+> [!NOTE]
+> If Multi-Admin Approval (MAA) is enabled for your tenant, you can't upload PowerShell scripts during app creation. You must first create the app, then add or modify scripts afterward. For more information about MAA limitations with script installers, see [Known limitations](#known-limitations).
 
 The **Program** step provides the following options:
 
@@ -95,7 +98,7 @@ The **Program** step provides the following options:
     For [PowerShell script](#powershell-script-installer-for-enterprise-app-catalog-apps) installations, select **PowerShell script** to upload your own install script (maximum size 50 KB) when you have a specific need to customize installation behavior. The script should execute the necessary installer for the app (you can find the default command for reference) and any custom actions you require. Use this option only if you have a specific need to customize installation behavior.
 
     > [!IMPORTANT]
-    > If a script is used, Intune will run it in place of the standard command – an incorrect script could cause the app installation to fail, so test carefully. Changing the install logic of a Catalog app might affect its ability to install or update properly. Ensure that your script calls the app's installer with the right parameters and handles updates if applicable. Intune will still enforce the app's detection rules to confirm installation success.
+    > If a script is used, Intune runs it in place of the standard command – an incorrect script could cause the app installation to fail, so test carefully. Changing the install logic of a Catalog app might affect its ability to install or update properly. Ensure that your script calls the app's installer with the right parameters and handles updates if applicable. Intune enforces the app's detection rules to confirm installation success.
 
 - **Uninstall command**: Configure how the app is uninstalled from devices.
 
@@ -110,11 +113,11 @@ The **Program** step provides the following options:
     > [!IMPORTANT]
     > Changing the uninstall logic might affect the app's ability to be properly removed. Test uninstall scripts thoroughly to ensure they completely remove the application and its components.
 
-- **Installation time required (mins)**: The number of minutes the system waits for the install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system will initially report the app installation as failed but won't stop it on the device. Max timeout value is 1440 minutes (one day).
+- **Installation time required (mins)**: The number of minutes the system waits for the install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system reports the app installation as failed but won't stop it on the device. Max timeout value is 1440 minutes (one day).
 
 - **Allow available uninstall**: Select 'Yes' to provide the uninstall option for this app for users from the Company Portal. Select 'No' to prevent users from uninstalling the app from the Company Portal.
 
-- **Install behavior**: Enterprise App Management selects the install behavior. This can't be modified and is determined by the installer.
+- **Install behavior**: Enterprise App Management selects the install behavior. It can't be modified and is determined by the installer.
 
 - **Device restart behavior**: Select the device restart behavior after the app has successfully installed, based on the following options:
     - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device restarts based on the configured return code.
@@ -274,13 +277,15 @@ PowerShell script installers are available for Enterprise App Catalog apps, prov
 
 - Scripts are limited to 50 KB in size
 - Scripts run in the same context as the app installer (system or user context)
+- If there's no Microsoft Entra user on the device, the script falls back to system context
+- For devices with multiple users, the script runs for each user
 - Return codes from the script determine installation success or failure status
 - Scripts should run silently without user interaction
 
 ### Security considerations
 
 - Don't store secrets or sensitive information in PowerShell scripts, as they're stored in plaintext on the service and might be logged on the agent
-- Script signature checking is available and can be enforced to verify that a trusted publisher has signed the script
+- Script signature checking is available and can be enforced to verify that a trusted publisher signed the script
 - Scripts execute with the same privileges as specified by the install behavior
 
 ### Important considerations for EAM apps
@@ -289,6 +294,18 @@ PowerShell script installers are available for Enterprise App Catalog apps, prov
 - Ensure your script calls the app's installer with the right parameters and handles updates if applicable
 - Intune will still enforce the app's detection rules to confirm installation success
 - Test scripts thoroughly as incorrect scripts could cause app installation to fail
+
+### Known limitations
+
+When Multi-Admin Approval (MAA) is enabled for your tenant, there are some limitations to be aware of when using PowerShell script installers with Enterprise App Catalog apps:
+
+- **Script upload during app creation**: If MAA is enabled, you can't upload scripts during Enterprise App Catalog app creation in the Intune admin center. However, after the app is created, you can add or modify scripts.
+
+- **Script properties and MAA**: Currently, certain script properties such as `enforceSignatureCheck` and `runAs32Bit` can be edited without triggering MAA approval requests. This behavior is addressed in an upcoming update to ensure these changes also require MAA approval when enabled.
+
+- **Graph API modifications**: Using the Microsoft Graph API to directly modify apps that use script installers might break the scripts. Use the Intune admin center for making changes to scripted apps.
+
+- **App updates**: When creating a superseding app, you need to create a new script. Scripts aren't automatically carried over to new app versions.
 
 ## Next steps
 

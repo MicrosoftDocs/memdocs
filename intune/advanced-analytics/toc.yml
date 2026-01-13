@@ -1,0 +1,33 @@
+items:
+- name: Overview
+  href: index.md
+  displayName: Advanced Analytics
+- name: Advanced Analytics reports and capabilities
+  items:
+  - name: Resource performance report
+    href: resource-performance.md
+    displayName: Advanced Analytics
+  - name: Battery health report
+    href: battery-health.md
+    displayName: Advanced Analytics
+  - name: Anomalies report
+    href: anomalies.md
+    displayName: Advanced Analytics
+  - name: Device timeline report
+    href: device-timeline.md
+    displayName: Advanced Analytics
+  - name: Device query
+    href: device-query.md
+    displayName: Advanced Analytics
+  - name: Device query for multiple devices
+    href: device-query-multiple-devices.md
+    displayName: Advanced Analytics
+  - name: Device scopes
+    href: device-scopes.md
+    displayName: Advanced Analytics
+- name: Data platform schema
+  href: data-platform-schema.md
+  displayName: Advanced Analytics schema
+- name: Frequently asked questions
+  href: faq.yml
+  displayName: Advanced Analytics FAQs

@@ -294,7 +294,7 @@ Set a grace period of 0 to 120 hours. Use this setting along with the deployment
 
 ### Enable Endpoint analytics data collection
 
-Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../analytics/enroll-configmgr.md).
+Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../endpoint-analytics/configure.md?pivots=cm).
 
 ## Computer restart
 
@@ -988,7 +988,7 @@ For UUP-based feature updates, this setting doesn't control Dynamic Update exclu
 ### <a name="bkmk_fserv"></a>Enable features introduced via servicing are off by default.
 
 <!--16834520-->
-To learn more about the settings: “Enable features introduced via servicing are off by default”, please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
+To learn more about the settings: "Enable features introduced via servicing are off by default", please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
 
 - **Not Configured** - The default value, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
   - Enable features introduced via servicing are off by default on all supported versions of Windows 11 22621.1344 or later.

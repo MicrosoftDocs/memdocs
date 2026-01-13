@@ -16,9 +16,10 @@ This article provides sample responses to show how the agent helps with device o
 
 ## Before you begin
 
-- This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
-- Make sure you meet the requirements detailed in the [Get Started with the Device Offboarding Agent](device-offboarding-agent.md) article.
-- The agent fails to run if no retire, wipe, or deletion actions have occurred in the past 30 days.
+> [!div class="checklist"]
+> - This feature is in [public preview](../intune-service/fundamentals/public-preview.md).
+> - Confirm that your environment meets the requirements in [Get Started with the Device Offboarding Agent](device-offboarding-agent.md).
+> - The agent won't run if no retire, wipe, or deletion actions occurred in the past 30 days.
 
 ## Explore the agent options
 

@@ -1276,7 +1276,7 @@
     },
     {
       "source_path": "intune/analytics/whats-new.md",
-      "redirect_url": "/intune/analytics/overview",
+      "redirect_url": "/intune/endpoint-analytics",
       "redirect_document_id": false
     },
     {
@@ -1526,7 +1526,7 @@
     },
     {
       "source_path": "intune/analytics/recommended-software.md",
-      "redirect_url": "/intune/analytics/work-from-anywhere",
+      "redirect_url": "/intune/endpoint-analytics/work-from-anywhere",
       "redirect_document_id": true
     },
     {
@@ -1561,7 +1561,7 @@
     },
     {
       "source_path": "intune/analytics/productivity-score.md",
-      "redirect_url": "/intune/analytics/adoption-score",
+      "redirect_url": "/intune/endpoint-analytics/adoption-score",
       "redirect_document_id": false
     },
     {
@@ -1631,7 +1631,7 @@
     },
     {
       "source_path": "intune/analytics/proactive-remediations.md",
-      "redirect_url": "/intune/analytics/remediations",
+      "redirect_url": "/intune/intune-service/fundamentals/remediations",
       "redirect_document_id": false
     },
     {
@@ -2650,7 +2650,7 @@
     },
     {
       "source_path": "intune/analytics/advanced-endpoint-analytics.md",
-      "redirect_url": "/intune/analytics/advanced-analytics",
+      "redirect_url": "/intune/advanced-analytics",
       "redirect_document_id": false
     },
     {

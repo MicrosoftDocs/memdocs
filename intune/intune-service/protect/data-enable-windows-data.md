@@ -32,9 +32,9 @@ Use the *Windows data* category to enable use of Intune features in your tenant 
 
 The following features require you to enable this support:
 
-- [Windows feature update device readiness report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-device-readiness-report)
-- [Windows feature update compatibility risks report](../protect/windows-update-compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
-- [Windows driver updates report](../protect/windows-driver-updates-overview.md)
+- [Windows feature update device readiness report](../../device-updates/windows/compatibility-reports.md#use-the-windows-feature-update-device-readiness-report)
+- [Windows feature update compatibility risks report](../../device-updates/windows/compatibility-reports.md#use-the-windows-feature-update-compatibility-risks-report)
+- [Windows driver updates report](../../device-updates/windows/driver-updates-overview.md)
 - Windows feature update report
 - Windows expedited Update Report
 - Driver update policies with alerts / Windows driver update failures
@@ -54,7 +54,7 @@ Use the *Windows license verification* category to enable use of Intune features
 
 The following features require you to attest to having Windows E3 or equivalent licenses:
 
-- [Windows update app and driver compatibility reports](../protect/windows-update-compatibility-reports.md)
+- [Windows update app and driver compatibility reports](../../device-updates/windows/compatibility-reports.md)
 
 Supported licenses include the following options:
 

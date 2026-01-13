@@ -3,7 +3,7 @@ title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 09/25/2025
+ms.date: 01/07/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
@@ -45,7 +45,7 @@ This feature applies to:
 
   Includes device settings that are directly generated from Apple Profile-Specific Payload Keys. More settings and keys are continually being added. To learn more about profile-specific payload keys, see [Profile-Specific Payload Keys](https://developer.apple.com/documentation/devicemanagement/profile-specific_payload_keys) on Apple's website.
 
-  Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../protect/updates/apple.md), passcode restrictions, and more.
+  Apple's declarative device management (DDM) is available in the settings catalog. You can [use DDM to manage software updates](../../device-updates/apple/index.md), passcode restrictions, and more.
 
   You can also use the settings catalog to configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, see:
 
@@ -202,10 +202,6 @@ After you give the new profile a name, you can edit the profile to adjust the se
 5. **Save** your changes.
 
 ## Import and export a profile
-
-This feature applies to:
-
-- Windows
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 

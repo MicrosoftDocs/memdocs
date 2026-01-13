@@ -65,7 +65,7 @@ You must have:
 1. You have the option to control if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the work or school account registration flow (referring to [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506)). To control the behavior of the flow, use the **Disable MDM enrollment when adding work or school account** setting.
 
    > [!NOTE]
-   > This feature is in public preview and undergoing rollout. During rollout, some users will not see the new setting.   
+   > This feature is in public preview and undergoing rollout. During rollout, some users will not see this setting.   
    
    This setting is turned off by default. If you're enforcing Windows MAM for your work or school accounts, enable this setting. This setting applies to:  
     - Users in the **Some** or **All** category in the MDM auto-enrollment configuration.  
@@ -103,6 +103,10 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 * Device users must access the Company Portal website through Microsoft Edge to view apps assigned for specific versions of Windows. Other browsers such as Google Chrome, Mozilla Firefox, and Internet Explorer do not support this type of filtering.
 
 * After enrollment, you'll see two records in the Microsoft Intune admin center if automatic MDM enrollment is disabled and devices are joined to Microsoft Entra ID. To stop the duplicate records, instruct users on joined devices to **Settings** > **Accounts** > **Access work or school**. Then they can **Connect** using the same account.
+
+## Known issues  
+
+MDM auto-enrollment might occur when the **Disable MDM enrollment when adding work or school account** setting is enabled. This is a known issue that we are working to fix. During the public preview rollout while we work on this issue, some users will not be able to see this setting.   
 
 ## Next steps
 
