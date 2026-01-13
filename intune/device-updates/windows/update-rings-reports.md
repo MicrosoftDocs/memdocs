@@ -16,7 +16,7 @@ To access reports:
 1. Select **Windows updates** > **Update rings**
 1. Select an update ring policy:
 
-   :::image type="content" source="./images/update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings/default-policy-view.png":::
+   :::image type="content" source="./images/update-rings.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings.png":::
 
 On the policy page view:
 
