@@ -28,7 +28,7 @@ Feature updates policies allow you to **lock devices to a specific Windows relea
 When planning your feature updates policies, consider the following guidance:
 
 - If you deploy a feature updates policy to a device that is also targeted by an update ring policy, review the update ring for the following configurations:
-  - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates aren't delayed by update deferrals that might be configured in an update ring policy. For more information, see [Move from update ring deferrals to feature updates policy](ring-deferrals-to-feature-updates-policy.md).
+  - We recommend setting the **Feature update deferral period (days)** to **0**. This configuration ensures your feature updates aren't delayed by update deferrals that might be configured in an update ring policy. For more information, see [Move from update ring deferrals to feature updates policy](feature-updates-policy.md#move-from-update-ring-deferrals-to-feature-updates-policy).
   - Feature updates for the update ring must be *running*. They must not be paused.
 - Windows feature updates policies can't be applied during the Windows Autopilot out of box experience (OOBE). Instead, the policies apply at the first Windows Update scan after a device has finished provisioning, which is typically a day.
 - When the device checks in to the Windows Update service, the device's group membership is validated against the security groups assigned to the feature updates policy settings for any feature update holds.

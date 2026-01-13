@@ -14,7 +14,7 @@ When you use feature updates policy to deploy Windows 11, you can target the pol
 
 Another option is to select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**, then devices that don't meet the requirements for Windows 11 will get the latest Windows 10 feature update instead.
 
-However, if a Windows 10 device that can't run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](update-rings-policy-settings.md#update-behavior-when-multiple-policies-target-a-device).
+However, if a Windows 10 device that can't run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](feature-updates-policy.md#update-behavior-when-multiple-policies-target-a-device).
 
 ## Prepare to upgrade to Windows 11
 

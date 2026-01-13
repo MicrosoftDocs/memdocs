@@ -65,11 +65,8 @@ When the admin switches from **Required** to **Optional**, the following behavio
 Consider the following points when feature update policies target a device with more than one update policy, or target a Windows 10 device with an update for Windows 11:
 
 - Each Windows feature update policy supports a single update. When a device is targeted by more than one policy, it might be targeted with multiple update versions.
-
 - The Windows Update service can only offer a device one feature update at a time, and always offers the latest update version that targets the device.
-
 - Because Windows 11 updates are considered to be later versions than Windows 10, the service always offers the Windows 11 update to a device targeted by both Windows 10 and Windows 11 updates. This is done because deploying a Windows 11 update to a Windows 10 device is a supported upgrade path.
-
 - Using the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** when using multiple policies avoids the problems mentioned in this section and configures the service to detect when the Windows 11 is not eligible for a device and instead offers the latest Windows 10 feature update.
 
 > [!NOTE]
@@ -114,7 +111,7 @@ To prevent this initial delay from impacting your co-managed devices:
 1. For **Deployment settings**, enter a name and a description for the policy. Then, specify the feature update you want devices to be running.
 1. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you've selected, or a newer version, won't be offered the update.\
    Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** tab > **Feature Updates report**. Select the policy you created and then generate the report.
-1. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows feature updates (Organizational) report](feature-updates-reports.md#use-the-windows-feature-updates-organizational-report).
+1. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows feature updates (Organizational) report](feature-updates-reports.md#accessing-feature-updates-reports).
 1. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
 ## Move from update ring deferrals to feature updates policy
@@ -137,7 +134,7 @@ Use the following process to ensure Windows Update has processed your feature up
 
 1. In the Microsoft Intune admin center, create a [feature updates policy](feature-updates.md) that configures your desired Windows version, and assign it to applicable devices.
    After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
-1. View the [Windows feature updates (Organizational)](feature-updates-reports.md#use-the-windows-feature-updates-organizational-report) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
+1. View the [Windows feature updates (Organizational)](feature-updates-reports.md#accessing-feature-updates-reports) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
 1. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Update ring policy](update-rings.md), for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
 
 <!-- admin center links -->

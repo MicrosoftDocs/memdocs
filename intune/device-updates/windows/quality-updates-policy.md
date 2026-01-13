@@ -28,7 +28,7 @@ ms.topic: how-to
 >    - **DeferFeatureUpdates** - Select when Preview Builds and Feature Updates are received.
 >    - **Disable Dual Scan** - Don't allow update deferral policies to cause scans against Windows Update.
 
-## Expedite Windows quality updates in Microsoft Intune
+## Expedite Windows quality updates
 
 With Windows quality updates policies you can expedite the installation of the most recent Windows security updates on devices you manage with Microsoft Intune. Deployment of expedited updates is done without the need to pause or edit your existing monthly update policies. For example, you might expedite a specific update to mitigate a security threat when your normal update process wouldn't deploy the update for some time.
 

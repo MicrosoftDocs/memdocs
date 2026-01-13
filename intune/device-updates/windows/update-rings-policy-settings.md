@@ -157,7 +157,6 @@ User experience settings control the end-user experience for device restart and 
     :::column-end:::
 :::row-end:::
 
-
 :::row:::
     :::column span="1":::
     **Option to pause Windows updates**
