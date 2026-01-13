@@ -17,6 +17,7 @@ Feature updates policies allow you to **lock devices to a specific Windows relea
 ## Prerequisites
 
 [!INCLUDE [prerequisites-network](includes/prerequisites-network.md)]
+[!INCLUDE [prerequisites-cloud](includes/prerequisites-cloud.md)]
 [!INCLUDE [prerequisites-tenant](includes/prerequisites-tenant.md)]
 [!INCLUDE [prerequisites-licensing](includes/prerequisites-licensing.md)]
 [!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]

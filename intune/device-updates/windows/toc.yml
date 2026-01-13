@@ -43,9 +43,6 @@ items:
   - name: Quality updates policies reports
     href: quality-updates-reports.md
     displayName: windows quality updates
-  - name: Expedite updates
-    href: expedite-updates.md
-    displayName: windows updates
 - name: Manage Windows driver updates
   items:
   - name: Get started
