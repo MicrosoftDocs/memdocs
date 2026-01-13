@@ -103,19 +103,6 @@ The search bar enables the search for a specific device or UPN. Select a device 
 
 All these reports are cached, and have an expiry time of three days, after which you must generate a new report. Select **Generate Again** to get fresh data.
 
-
-## Additional report: Hotpatch quality updates
-
-After a Windows quality updates policy has been created with Hotpatch updates enabled, you can monitor results, hotpatch deployment status, and errors from the reports.
-
-This report shows the total targeted devices and current update states of all Hotpatch update enabled devices.
-
-To access the report:
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Reports**
-1. Under the **Windows Autopatch** section, select **Windows quality updates**
-1. On the **Reports** tab, select **Hotpatch quality updates report**.
-
 <!-- admin center links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

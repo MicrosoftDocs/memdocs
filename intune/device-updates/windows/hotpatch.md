@@ -1,8 +1,8 @@
 ---
 title: Use Hotpatch with Windows quality updates
 description: Learn how Hotpatch works with Windows quality updates policies in Microsoft Intune to install eligible security updates without requiring an immediate device restart.
-ms.date: 01/06/2026
-ms.reviewer: Mounika
+ms.date: 01/13/2026
+ms.reviewer: mobattul
 ms.topic: how-to
 ---
 
@@ -116,5 +116,19 @@ These steps ensure that targeted devices, which are [eligible](#prerequisites) t
 ## Roll back a hotpatch update
 
 Automatic rollback of a Hotpatch update isn't supported but you can uninstall them. If you experience an unexpected issue with Hotpatch updates, you can investigate by uninstalling the hotpatch update and installing the latest standard cumulative update (LCU) and restart. Uninstalling a hotpatch update is quick, however, it requires a device restart.
+
+## Hotpatch quality updates report
+
+After a Windows quality updates policy has been created with Hotpatch updates enabled, you can monitor results, hotpatch deployment status, and errors from the reports.
+
+This report shows the total targeted devices and current update states of all Hotpatch update enabled devices.
+
+To access the report:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Reports**
+1. Under the **Windows Autopatch** section, select **Windows quality updates**
+1. On the **Reports** tab, select **Hotpatch quality updates report**.
+
+<!-- admin center links -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
