@@ -164,8 +164,8 @@ When you create a new policy or update an existing policy, there are built-in se
 
     :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the settings catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-edition.png":::
 
-  > [!NOTE]
-  > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
+    > [!NOTE]
+    > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
 
   - Use Android management mode filters to apply settings that are relevant to your device scenarios, like settings that only apply to fully managed devices. Also, if you apply a filter with at least two management modes, then all settings that apply to at least one management mode are shown.
 
