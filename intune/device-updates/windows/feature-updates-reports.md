@@ -185,3 +185,8 @@ The following list identifies Alert Messages, and suggested remediation actions:
 | **WUDecryptionIssue** | Windows Update couldn't decrypt the encrypted update file because it couldn't find the proper key. | Retry the installation. |
 | **WUDiskError**  | Windows Update encountered an error while reading or writing to the system drive. | Run the Windows Update Troubleshooter on the device. Retry the installation. |
 | **WUIssue**  | Windows Update couldn't understand the metadata provided by the update service. This error usually indicates a problem with the update. | Contact support. |
+
+
+<!-- admin center links -->
+
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431

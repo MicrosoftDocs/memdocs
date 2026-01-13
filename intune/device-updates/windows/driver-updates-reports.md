@@ -21,7 +21,7 @@ The data in the Intune reports for Windows Driver update policies is used only f
 > [!div class="checklist"]
 > - Ensure your environment meets the requirements in [Windows driver updates overview](driver-updates.md#prerequisites).
 
-## Windows Driver updates summary
+# [**Driver updates summary**](#tab/summary)
 
 The *Windows Driver updates summary* report provides an overview of the status of driver updates across all your Windows Driver update policies.
 
@@ -46,9 +46,9 @@ For example: A policy might have three applicable driver updates for an assigned
 
 This report doesn't support drilling in for more details about devices, driver updates, or policy details.
 
-## Windows Driver updates report
+# [**Driver updates**](#tab/updates)
 
-The *Windows Driver Updates report* allows you to select a single driver update and view details about the policies in which it's applicable for a device. This report provides information about the driver from all your driver update policies, offering a different perspective than other reports, which only provide details specific to a single policy.
+The Windows driver updates report allows you to select a single driver update and view details about the policies in which it's applicable for a device. This report provides information about the driver from all your driver update policies, offering a different perspective than other reports, which only provide details specific to a single policy.
 
 To access the Windows Driver updates report:
 
@@ -88,7 +88,7 @@ As devices across all your updates policies install the latest versions of a dri
 - If the update is approved and all applicable devices have installed the update, then six months after the last device updates is status, the update is removed from reporting details.
 - Similarly, if an update is paused and shows no activity for the retention period, that update is also dropped from reporting details after six months. After an updates data ages out, if a paused update that remains applicable to a device is reapproved, subsequent status for that update begins to appear in reports. Previous data that aged out of reports won't be restored or available.
 
-## Windows Driver update failures
+# [**Update failures**](#tab/failures)
 
 Windows driver updates include a report on driver update failures.
 
@@ -108,6 +108,8 @@ By selecting that policy and entry, you can then view more information about the
 - Intune Device ID
 
 This view is a useful place to identify and start investigation of driver update installation failures.
+
+---
 
 <!-- admin center links -->
 
