@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 12/15/2025
+ms.date: 01/13/2026
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -33,6 +33,16 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Windows Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Devices don't get quality updates during Microsoft Entra hybrid joined deployments  
+
+Date added: *January 13, 2026*  
+
+Scans for quality updates offered during OOBE might time out during provisioning for Windows Autopilot Microsoft Entra hybrid joined deployments when the **Allow OOBE Updates** policy is configured in the enrollment status page profile. When this occurs, devices don't get the quality updates during OOBE.  
+
+This issue impacts devices with [KB5041571](https://support.microsoft.com/en-us/topic/august-13-2024-kb5041571-os-build-26100-1457-d218c08d-8de2-4f9a-8fe1-a2c2fd83ca9a) and later.  
+
+The issue is being investigated.  
 
 ### Deployment duration in the Windows Autopilot deployment report might include the time for user to sign in at the Windows lock screen
 
