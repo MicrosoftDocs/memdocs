@@ -71,7 +71,6 @@ You can purchase and distribute public and private apps using Apple Business Man
 > - Import of the same token to another device management solution after you import the location token to Intune can result in the loss of license assignment and user records.
 
 ## Migrate from Volume Purchase Program (VPP) to Apps and Books
-If your organization isn't migrated to Apple Business Manager or Apple School Manager, review [Apple's guidance on migrating to Apps and Books](https://support.apple.com/HT208257) before proceeding to manage purchased apps in Intune.
 
 > [!IMPORTANT]
 > - Only migrate one VPP purchaser per location. If each purchaser migrates to a unique location, all licenses—assigned and unassigned—move to Apps and Books.
