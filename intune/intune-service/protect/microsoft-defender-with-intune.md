@@ -19,7 +19,7 @@ Learn how integrating Microsoft Defender for Endpoint with Microsoft Intune can 
 For example, if malware compromises a user's device, Microsoft Defender for Endpoint flags that device as high-risk and Intune can automatically cut off its access to corporate resources.
 
 > [!TIP]
-> Before you begin, ensure your account is assigned an Intune role with sufficient permissions to configure these settings. For example, the built-in [Endpoint Security Manager](../fundamentals/role-based-access-control.md#built-in-roles) role has the necessary permissions.
+> Before you begin, ensure your account is assigned an Intune role with sufficient permissions to configure these settings. For example, the Intune built-in role of [Endpoint Security Manager](../fundamentals/role-based-access-control.md#built-in-roles) has the necessary permissions.
 
 ## Integration workflow
 
@@ -65,7 +65,7 @@ For licensing and system requirements, see:
 - [Microsoft 365 E5 trial subscription setup](/microsoft-365/security/defender/setup-m365deval#enable-microsoft-365-trial-subscription)
 - [Microsoft Defender for Endpoint system requirements](/defender-endpoint/minimum-requirements#hardware-and-software-requirements)
 
-## 📌 Real-world scenario: Stopping a phishing attack
+## Real-world scenario: Stopping a phishing attack
 
 This example shows how Microsoft Defender for Endpoint and Intune work together to automatically contain threats. In this scenario, the integration is already configured.
 
