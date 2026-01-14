@@ -56,6 +56,12 @@ The Service Connection Tool (SCT) is improved to provide better logging and erro
 - Customers are directed to explore the relevant logs, such as ServiceConnectionTool.log and ConfigMgrSetup.log, when there's an error.
 - If there's a download failure, the SCT "Connect" step stops execution thus preventing importing incomplete Update Package payloads.
 
+###  AdminService now rejects NTLM authentication
+
+- AdminService now rejects NTLM authentication attempts. `AdminService.log` should write the below message when NTLM authentication is attempted:
+
+> Rejecting NTLM authentication.
+
  
 ## Known Issues
 
