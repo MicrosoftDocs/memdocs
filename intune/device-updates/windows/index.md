@@ -66,8 +66,8 @@ The following policy types help you manage Windows updates in Intune:
 >**:::image type="icon" source="icons/quality-updates.svg" border="false":::**
 >
 >Delivers monthly cumulative updates for security and reliability. Supports:
->- Expedited updates: Push critical fixes immediately by overriding deferrals and deadlines.
->- Hotpatch: Apply eligible security patches without reboot to reduce downtime.
+> - **Hotpatch**: Apply eligible security patches without a reboot to reduce downtime.
+> - **Expedite policies**: Push critical security updates immediately by overriding deferral settings.
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](quality-updates.md)

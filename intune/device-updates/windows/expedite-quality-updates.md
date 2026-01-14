@@ -56,35 +56,33 @@ if (Get-Service -Name "Microsoft Update Health Service" -ErrorAction SilentlyCon
 
 If the script returns a `1`, the device has UHS client. If the script returns a `0`, the device doesn't have UHS client.
 
-
 ## How expedited updates work
 
-Expedited updates let you accelerate the installation of a specific Windows security update, such as a Monthly B release or an out‑of‑band (OOB) security update used to address an active vulnerability.
+When you create an expedite policy, you select a single supported Windows security update to deploy. The update is identified by its release date, which allows one policy to apply across multiple supported Windows versions without creating version‑specific policies.
 
-Expedite update policies temporarily override deferral settings and normal deployment timing to install the selected update as quickly as possible. This process helps devices begin downloading and installing the update without waiting for the usual servicing cadence.
+After the policy is assigned, Windows Update evaluates each targeted device to determine applicability. Evaluation accounts for the device's current build, architecture, and update state, and Windows Update delivers the appropriate version of the update when required.
 
-The time required for a device to start installing an expedited update depends on several factors, including device connectivity, update scan timing, communication with the service, and cloud processing.
+Only devices that need the update receive it:
 
-- For each expedite update policy, you select a **single update** to deploy based on its release date. Selecting the update by release date eliminates the need to create separate policies for different Windows versions.
-- Windows Update evaluates each device's build and architecture and delivers the applicable version of the update.
-- Only devices that require the update receive it:
-  - Windows Update doesn't expedite updates for devices that already have the same or a newer update installed.
-  - For devices running an earlier build, Windows Update confirms the update remains applicable before installing it.
+- Devices that already have the same update, or a newer applicable update, don't receive the expedited update.
+- For devices on earlier builds, Windows Update verifies the update remains applicable before installation.
 
   > [!IMPORTANT]
-  > In some scenarios, Windows Update might install a newer update than the one specified in the expedite policy. This behavior ensures that devices receive the latest applicable update. For more information, see [About installing the latest applicable update](#identify-the-latest-applicable-update).
+  > In some scenarios, Windows Update might install a newer update than the one specified in the expedite policy. This behavior ensures devices receive the latest applicable security update. For more information, see About installing the latest applicable update.
 
-- Expedite update policies ignore any configured quality update deferral periods for the selected update.
-- When a restart is required to complete installation, expedite update policies help manage restart behavior. You can configure a deadline that defines how long users have to restart their device before the restart is enforced. Users can also schedule the restart or allow Windows to determine a suitable time outside of active hours. Notifications are displayed to inform users of the pending restart and deadline.
-  If the device doesn't restart before the deadline, the restart can occur during working hours. For more information, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
-- Expedited updates aren't intended for regular monthly servicing. To manage ongoing quality update deployments, use update ring policies and their deadline settings. For more information, see **Use deadline settings** under the user experience options in [Windows update ring policy settings](update-rings-policy-settings.md#user-experience-settings).
+Expedited updates begin installing after the device completes its next update scan and communicates with the service. The time required for installation to start can vary based on factors such as device connectivity, scan timing, and service processing.
 
+If a restart is required, you can configure a restart deadline that defines how long users have to restart their device before enforcement. Users can restart immediately, schedule a restart, or allow Windows to select a time outside active hours. Notifications inform users of the pending restart and deadline.
+
+If the device doesn't restart before the deadline, the restart can occur during working hours. For more information, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
+
+Expedite policies don't affect how future quality updates are deployed. To manage ongoing monthly servicing, use update ring policies or Windows quality updates policies and their deadline settings.
 
 ## Create and assign an expedited quality update
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows Updates**.
 1. Select the **Quality updates**.
-1. Selec **Create** > **Expedite policy**.
+1. Select **Create** > **Expedite policy**.
 1. In **Settings**, enter the following properties to identify this profile:
 
    - **Name**: Enter a descriptive name for the profile.
@@ -191,7 +189,7 @@ This report shows the current status of all devices targeted by an expedite poli
 1. From the list of profiles that is shown on the right side of the page, select a profile to see results.
 1. Select the **Generate report** button.
 
-# [**Device report**](#tab/summary)
+# [**Device report**](#tab/device)
 
 This report can help you find devices with alerts or errors and can help you troubleshoot update issues.
 
