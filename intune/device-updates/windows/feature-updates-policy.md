@@ -8,6 +8,16 @@ ms.reviewer: davidmeb; bryanke; davguy
 
 # Manage Windows feature updates policies
 
+
+Feature update policies in Microsoft Intune let you control which Windows version devices are offered and when that version can install. You can use these policies to target a specific Windows release, upgrade devices to a newer version, or ensure devices remain on a designated version until you're ready to move forward.
+
+If a device already runs a newer Windows version than the one specified in the policy, the device isn't downgraded and continues running its current version. By controlling version targeting, feature update policies help maintain version consistency, reduce unexpected upgrades, and align OS updates with application readiness and organizational rollout plans.
+
+Unlike pausing feature updates in update rings—which automatically expires after 35 days—a feature update policy remains in effect until you modify or remove it. When a feature update installs, the latest applicable monthly quality update is included as part of the upgrade.
+
+For information about controlling the availability of feature update offers, see [Rollout options for Windows Updates](rollout-options.md).
+
+<!--
 When a device receives a feature update policy:
 
 - The device updates to the version of Windows specified in the policy.
@@ -23,12 +33,13 @@ When a device receives a feature update policy:
 - The ability to *Uninstall* the feature update is honored by the update rings.
 - You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](rollout-options.md).
 - When a Windows feature update is deployed to a device from the cloud service, the latest monthly quality update is automatically included.
+- -->
 
 ## Create and assign feature update policies
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**
-1. Select **Windows updates** > **Feature updates**
-1. Select **Create profile**
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
+1. Select **Windows updates** > **Feature updates**.
+1. Select **Create profile**.
 1. Under **Deployment settings**:
    - Specify a **Name** and an optional **Description** for the feature updates deployment.
    - From the **Feature update to deploy** dropdown, select the Windows version you want to deploy. Only versions of Windows that remain in support are available to select.
@@ -40,41 +51,47 @@ When a device receives a feature update policy:
 1. Under **Assignments**, assign the policy to one or more device groups. Select **Next** to continue.
 1. Under **Review + create**, review the settings. When ready to save the policy, select **Create**.
 
+
 ## User experience
 
-When the admin makes the update available as an **Optional** update, the user must navigate to the **Windows update settings** page to see and choose to install the update. It is recommended to communicate to end users through your communication channels that an optional update is available to them.
+The user experience depends on whether the update is offered as required or optional.\
+When a feature update is made available as an **Optional** update, users must navigate to **Windows Update** in device settings to see and choose to install the update. Users must select **Download** to begin installation. If they don't take action, the update isn't installed unless an admin later changes the update to **Required**.
 
-When the user navigates to the **Windows update settings** page, they can see and choose to install the update when they're willing to take the update.
-Users have to click **Download** to install the update. Otherwise it doesn't get installed until the admin makes it a **Required** update.
-It's the same optional update experience that users are familiar with in their personal PCs.
+This experience matches the optional update behavior users see on personal Windows devices. It's recommended that administrators notify users through organizational communication channels when an optional feature update is available.
 
-When the admin switches from **Optional** to **Required**, the following behavior is observed:
+### Switching update availability
 
-- Updates aren't reinstalled for people who went ahead and opted to install the update back when it was an **Optional** update.
-- If a device has not started on an update, the next time the device checks for updates the update is treated and automatically installed as a **Required** update.
+If an update is changed from **Optional** to **Required**:
 
-When the admin switches from **Required** to **Optional**, the following behavior is observed:
+- Devices that already installed the update aren't affected.
+- Devices that haven't started the update install it automatically during the next update scan.
 
-- Devices that have already installed the update are not impacted.
-- Devices that are pending restart are likely to continue to install the update as a **Required** update.
-- Switching only impacts devices that haven't started the update yet or were early enough in the update process so they could be changed to an **Optional** update.
+If an update is changed from **Required** to **Optional**:
+
+- Devices that have already completed installation aren't affected.
+- Devices that are pending restart typically continue installation as a required update.
+- Only devices that haven't started installation, or are early in the process, switch to optional behavior.
 
 
-## Update behavior when multiple policies target a device
+## How feature update policies are evaluated
 
-Consider the following points when feature update policies target a device with more than one update policy, or target a Windows 10 device with an update for Windows 11:
+When a device is targeted by multiple feature update policies, Windows Update evaluates all applicable policies and determines which feature update to offer.
 
-- Each Windows feature update policy supports a single update. When a device is targeted by more than one policy, it might be targeted with multiple update versions.
-- The Windows Update service can only offer a device one feature update at a time, and always offers the latest update version that targets the device.
-- Because Windows 11 updates are considered to be later versions than Windows 10, the service always offers the Windows 11 update to a device targeted by both Windows 10 and Windows 11 updates. This is done because deploying a Windows 11 update to a Windows 10 device is a supported upgrade path.
-- Using the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** when using multiple policies avoids the problems mentioned in this section and configures the service to detect when the Windows 11 is not eligible for a device and instead offers the latest Windows 10 feature update.
+Keep the following behavior in mind:
+
+- Each feature update policy can target only one Windows version. A device targeted by multiple policies can therefore be eligible for multiple feature updates.
+- The Windows Update service offers only one feature update to a device at a time and always selects the **latest applicable version**.
+- Windows 11 feature updates are always considered later versions than Windows 10 feature updates. If a Windows 10 device is targeted by both Windows 10 and Windows 11 feature update policies, the Windows 11 update is offered because upgrading from Windows 10 to Windows 11 is a supported path.
+- To avoid unintended targeting, use **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**. This option ensures that devices evaluated as ineligible for Windows 11 receive the most recent supported Windows 10 feature update instead.
 
 > [!NOTE]
-> If you create two policies with the same device/s, where one is set to **Required** and the other set to **Optional** and both policies target the same feature update version, then the update is offered as **Required**.
+> If two policies target the same feature update version for the same device, and one policy is configured as **Required** while the other is **Optional**, the update is offered as **Required**.
+
 
 ## Manage Winodws feature update policies
 
-In the admin center, go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates** > **Feature updates** tab to view your profiles.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
+1. Select **Windows updates** > **Feature updates**.
 
 For each profile you can view:
 
@@ -106,36 +123,44 @@ If you co-manage devices with Configuration Manager, feature updates policies mi
 
 To prevent this initial delay from impacting your co-managed devices:
 
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates**
-1. Select **Feature updates** > **Create profile**.
+1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
+1. Select **Windows updates** > **Feature updates**.
+1. Select **Create profile**.
 1. For **Deployment settings**, enter a name and a description for the policy. Then, specify the feature update you want devices to be running.
 1. Complete the policy configuration, including assigning the policy to devices. The policy deploys to devices, though any device that already has the version you've selected, or a newer version, won't be offered the update.\
    Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** tab > **Feature Updates report**. Select the policy you created and then generate the report.
 1. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows feature updates (Organizational) report](feature-updates-reports.md#accessing-feature-updates-reports).
 1. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
 
-## Move from update ring deferrals to feature updates policy
 
-When using Intune to manage Windows updates, it's possible to use both *update rings* policy with update deferrals, and *feature updates* policy to manage the updates you want to install on devices. If you're using feature updates, we recommend you end use of deferrals as configured in your update rings policy. Combining update ring deferrals with feature updates policy can create complexity that might delay update installations. You can continue to use the user experience settings from update rings, as they don't create issues when combined with feature updates policy.
+## Move from update ring deferrals to feature update policies
 
-While nothing prohibits use of both policy types to control which updates can install on a device, there's typically no advantage to doing so. When both policy types apply to a device, the conditions of both policy types must be met (be true) on the device before it's offered an applicable update. This scenario can lead to updates not installing as expected due to a block by one of the policy types.
+When managing Windows feature updates in Intune, you can use either update ring deferrals or feature update policies to control which Windows versions devices can install. If you use feature update policies, Microsoft recommends that you stop using feature update deferrals in update ring policies.
 
-### Plan to transition
+Combining feature update deferrals with feature update policies adds unnecessary complexity and can delay or block feature updates. While update rings can continue to manage user experience settings—such as restart behavior and notifications—feature update policies should be the primary mechanism for controlling feature update versions.
 
-Plan to manage the change from using update ring deferrals to feature updates so that the Windows Update service can be ready to deploy the updates you expect.
+When both policy types apply to a device, the conditions of both must be met before an update is offered. This evaluation can lead to unintended blocking of feature updates if deferrals remain configured.
 
-- When Intune policies for Windows updates are created or modified, Intune passes the policy details to Windows Update, which then determines the updates that are applicable for each device that's assigned one or more update policies.
-- The process to evaluate updates for devices can take up to 10 minutes to complete, and in some cases might take a bit longer.
-- If a device starts a scan for updates *after* a deferral has been set to zero or removed for the device, but *before* Windows Update completes the processing of the feature updates policy, that device can be offered an update you didn't plan for it to install.
+### Plan the transition
 
-Use the following process to ensure Windows Update has processed your feature updates policy before deferrals are removed.
+Plan the transition from update ring deferrals to feature update policies to ensure Windows Update offers the updates you expect.
 
-### Switch to feature updates policy
+When Intune Windows update policies are created or modified, policy details are sent to the Windows Update service, which evaluates update applicability for each device. This evaluation typically completes within 10 minutes, but in some cases can take longer.
 
-1. In the Microsoft Intune admin center, create a [feature updates policy](feature-updates.md) that configures your desired Windows version, and assign it to applicable devices.
-   After the saved policy is assigned to devices, it will take a few minutes for Windows Update to process the policy.
-1. View the [Windows feature updates (Organizational)](feature-updates-reports.md#accessing-feature-updates-reports) report for the feature update policy, and verify devices have a state of **OfferReady** before you proceed. Once all devices show **OfferReady**, Windows Update has completed processing the policy.
-1. After devices are verified to be in the **OfferReady** state you can safely reconfigure the [Update ring policy](update-rings.md), for that same set of devices to change the setting **Feature update deferral period (days)** to a value of **0**.
+If a device scans for updates after a deferral is removed but before Windows Update finishes processing the feature update policy, the device might be offered a feature update you didn't intend to deploy.
+
+### Switch to feature update policies
+
+Use the following process to ensure Windows Update processes the feature update policy before feature update deferrals are removed:
+
+1. In the Microsoft Intune admin center, create a feature update policy that targets the desired Windows version and assign it to the appropriate devices. After the policy is assigned, allow several minutes for Windows Update to process the policy.
+1. Review the [Windows feature updates (Organizational)](feature-updates-reports.md#accessing-feature-updates-reports) report for the policy and verify that devices show a state of **OfferReady**. This state indicates that Windows Update has completed policy processing.
+1. After all targeted devices report **OfferReady**, update the applicable [update ring policy](update-rings.md) and set **Feature update deferral period (days)** to **0**.
+
+## Next steps
+
+- [Manage Windows Feature Updates](feature-updates.md)
+- [Reports for Windows Feature Updates Policies](feature-updates-reports.md)
 
 <!-- admin center links -->
 

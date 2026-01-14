@@ -24,6 +24,7 @@ Feature updates policies allow you to **lock devices to a specific Windows relea
 [!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
 [!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
 
+<!--
 ## Plan for feature updates policies
 
 When planning your feature updates policies, consider the following guidance:
@@ -39,4 +40,34 @@ When planning your feature updates policies, consider the following guidance:
   - The device is assigned to a new feature update profile.
   - The device is unenrolled from Intune, which unenrolls the device from feature update management by Autopatch.
   - You use the [Windows Autopatch graph API](/graph/windowsupdates-enroll) to [remove the device](/graph/api/windowsupdates-updatableasset-unenrollassets) from feature update management.
+-->
 
+## Plan feature update deployments
+
+When planning feature update deployments, consider how feature update policies interact with other Windows update settings and services in your tenant.
+
+### Interaction with update rings
+
+If a device is targeted by both a feature update policy and an update ring policy, review the update ring configuration to avoid unintended delays:
+
+- Set **Feature update deferral period (days)** to **0** so deferrals in update rings don't delay feature updates controlled by the feature update policy. For more information, see [Move from update ring deferrals to feature updates policy](feature-updates-policy.md#move-from-update-ring-deferrals-to-feature-updates-policy).
+- Ensure feature updates in the update ring aren't paused.
+
+Client‑side behaviors such as restart experience, deadlines, and active hours continue to be governed by update rings and Windows Update client settings.
+
+### Deployment timing and enforcement
+
+Feature update policies don't apply during Windows Autopilot out‑of‑box experience (OOBE). Instead, they take effect at the first Windows Update scan after provisioning is complete.
+
+When devices check in with the Windows Update service, group membership is evaluated against the security groups assigned to feature update policies. Any configured holds are enforced during this evaluation.
+
+### Working with Windows Autopatch
+
+Feature update policies can be used on their own or as part of Windows Autopatch. In Autopatch‑managed environments, the service uses feature update policies to coordinate controlled and phased OS upgrades.
+
+If a device managed by Autopatch is no longer targeted by a feature update policy, the device remains enrolled in Autopatch. This behavior helps prevent unintended upgrades while administrators adjust policy targeting or deployment plans.
+
+## Next steps
+
+> [!div class="nextstepaction"]
+> [Learn how to configure feature updates policies](featrure-updates-policy.md)
