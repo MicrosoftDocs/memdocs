@@ -1,5 +1,5 @@
 ---
-title: Windows quality update policy
+title: Windows Quality Updates Policies
 description: Learn how to manage Windows quality updates in Microsoft Intune using quality updates policies, expedited updates, and Hotpatch to keep devices secure and compliant.
 ms.date: 01/06/2026
 ms.reviewer: mobattul

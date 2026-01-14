@@ -1,7 +1,7 @@
 ---
-title: Windows feature update policies
+title: Windows Feature Update Policies
 description: Learn about Windows feature update polies and how to manage them in Microsoft Intune.
-ms.date: 09/10/2024
+ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy
 ---

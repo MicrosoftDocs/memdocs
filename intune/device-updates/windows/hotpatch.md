@@ -1,5 +1,5 @@
 ---
-title: Use Hotpatch with Windows quality updates
+title: Use Hotpatch With Windows Quality Updates
 description: Learn how Hotpatch works with Windows quality updates policies in Microsoft Intune to install eligible security updates without requiring an immediate device restart.
 ms.date: 01/13/2026
 ms.reviewer: mobattul

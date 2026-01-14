@@ -1,7 +1,7 @@
 ---
 title: Expedite Policies for Windows Quality Updates
-description: Expedite policies let you accelerate the installation of a specific Windows security update on devices you manage with Microsoft Intune. Learn how to create, assign, and monitor expedite policies.
-ms.date: 04/17/2025
+description: Learn how to use expedite policies in Microsoft Intune to quickly deploy a specific Windows security update, bypass deferrals, and monitor installation status across devices.
+ms.date: 01/14/2026
 ms.reviewer: mobattul
 ms.topic: how-to
 ---

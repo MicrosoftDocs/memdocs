@@ -1,5 +1,5 @@
 ---
-title: Reports for Windows update rings policies
+title: Reports for Windows Update Rings Policies
 description: Learn about the reports available for Windows update rings policies in Microsoft Intune.
 ms.date: 01/12/2026
 ms.topic: how-to

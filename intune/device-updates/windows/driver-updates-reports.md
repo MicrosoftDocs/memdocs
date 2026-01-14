@@ -1,12 +1,12 @@
 ---
-title: Reports for Windows Driver updates policy
+title: Reports for Windows Driver Updates Policies reports
 description: Learn how to use Intune reports to monitor Windows driver updates for devices assigned to Windows Driver update policies.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: zadvor
 ---
 
-# Reports for Windows Driver updates policy
+# Reports for Windows Driver updates policies
 
 Intune offers integrated reports to view detailed status for Windows driver updates for devices assigned to Windows Driver update policies. To use these reports, you must first configure the prerequisites and policies that support data collection from devices. These reports are applicable to Windows 10 and Windows 11.
 

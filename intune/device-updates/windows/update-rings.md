@@ -1,12 +1,12 @@
 ---
-title: Windows Update rings policy
+title: Windows Update Rings Policies
 description: Learn about update rings policies for Windows devices and how to create and manage them.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 ---
 
-# Windows Update rings policy
+# Windows Update rings policies
 
 Windows update rings define how and when Windows updates are installed on devices. They control client‑side update behavior such as deferral periods, restart settings, deadlines, active hours, and user notifications. Update rings apply broadly to Windows updates and are commonly used to create deployment stages—for example, test, pilot, and production—by assigning different settings to different device groups.
 

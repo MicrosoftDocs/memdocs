@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/device-updates/windows/quality-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/expedite-policy",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/device-updates/windows/settings.md",
       "redirect_url": "/intune/device-updates/windows/update-rings-policy-settings",
       "redirect_document_id": false

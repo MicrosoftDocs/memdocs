@@ -1,7 +1,7 @@
 ---
-title: Learn about Windows Driver updates policy for Windows devices in Intune
-description: Learn about using Microsoft Intune policy to manage Windows driver updates.
-ms.date: 09/10/2024
+title: Manage Windows Driver Updates
+description: Learn how to manage Windows driver updates using Intune driver updates policies to keep Windows devices current and stable.
+ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 ---
@@ -23,30 +23,6 @@ Driver updates policies support **automatic or manual approval workflows**, allo
 [!INCLUDE [prerequisites-platform](includes/prerequisites-platform.md)]
 [!INCLUDE [prerequisites-device-configuration](includes/prerequisites-device-configuration.md)]
 [!INCLUDE [prerequisites-rbac](includes/prerequisites-rbac.md)]
-
-<!--
-## Control driver update approvals
-
-Using Windows driver update policies, you remain in control of which driver updates can install on your devices. You can:
-
-- **Enable automatic approvals of recommended driver updates**. Policies set for automatic approval automatically approve and deploy each new driver update version that is considered a *recommended driver* for the devices assigned to the policy. Recommended drivers are typically the latest driver update published by the driver publisher that the publisher has marked as *required*. Drivers that aren't identified as the current recommended driver are also available as *other drivers*, which can be considered to be optional driver updates.
-
-  Later, when a newer driver update from the OEM is released and identified as the current *recommended* driver update, Intune automatically adds it to the policy and moves the previously recommended driver to the list of other drivers.
-
-  > [!TIP]
-  > An approved recommended driver update that is moved to the *other drivers* list due to a newer recommended driver update becoming available, remains approved. When a newer recommended and approved driver update is available, Windows Autopatch installs only that latest approved version. If the latest approved update version is paused, Autopatch automatically offers the next most recent and approved update version, which is now on the *other drivers* list. This behavior ensures that the last known-good driver update version that was approved can continue to install on devices, while the more recent recommended version remains paused.
-
-  With this policy configuration, you can also choose to review the available updates to selectively approve, pause, or decline *any* update that remains available for devices with the policy.
-
-- **Configure policy to require manual approval of all updates**. This policy ensures that administrators must approve a driver update before it can be deployed. Newer versions of driver updates for devices with this policy are automatically added to the policy but remain inactive until approved.
-
-  Later, when a newer driver update from the OEM is recommended for a device in the policy, the policy status updates to indicate there are drivers pending your review. This status becomes a call to action to review the policy and decide if you want to approve deployment of the newest drivers to devices.
-
-- **Manage which drivers are approved for deployment**. You can edit any driver update policy to modify which drivers are approved for deployment. You can pause the deployment of any individual driver update to stop its deployment to new devices, and then later reapprove the paused update to enable Windows Update to resume installing it on applicable devices.
-
-Regardless of the policy configuration and the drivers included, only approved drivers can install on devices. Additionally, Windows Update only installs the latest available and approved update when the version is more recent than the one currently installed on the device.
-
--->
 
 ## Architecture
 

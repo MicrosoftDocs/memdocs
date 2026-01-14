@@ -1,7 +1,7 @@
 ---
-title: Manage Windows feature updates
+title: Manage Windows Feature Updates
 description: Learn how to use Microsoft Intune policies to manage Windows feature updates.
-ms.date: 09/10/2024
+ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy
 ---

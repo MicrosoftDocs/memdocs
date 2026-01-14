@@ -1,7 +1,7 @@
 ---
-title: Configure schedules to gradually roll out Windows Updates in Intune
+title: Configure Schedules to Gradually Roll Out Windows Updates
 description: Configure schedules that manage how and when Windows updates roll out to your managed devices with Microsoft Intune.
-ms.date: 04/07/2025
+ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: davguy; bryanke
 ---

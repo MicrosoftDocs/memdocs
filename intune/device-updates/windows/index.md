@@ -1,7 +1,7 @@
 ---
-title: Windows update management overview
+title: Windows Update Management Overview
 description: Learn how Microsoft Intune helps you manage Windows updates for your organization.
-ms.date: 12/16/2025
+ms.date: 01/14/2026
 ms.topic: overview
 ---
 
