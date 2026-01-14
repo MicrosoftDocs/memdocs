@@ -80,3 +80,43 @@ After the profile deploys, devices that use gradual rollouts for Feature update 
 ## Next steps
 
 Configure [Feature Updates policy](feature-updates.md)
+
+
+
+<!--
+
+### Make updates available gradually
+
+With gradual rollout, Windows Update offers an update to subsets of targeted devices over time. These subsets are called *offer groups*. Gradual rollout helps reduce network impact and surface issues early.
+
+To configure a gradual rollout, specify:
+
+- **First group availability** – The date when the update is first offered. This date must be at least two days in the future to allow Windows Update to evaluate targeting and create offer groups.
+- **Final group availability** – The date when any remaining devices receive the update offer. Devices added after this date receive the offer immediately.
+- **Days between groups** – Determines how many offer groups are created and how frequently Windows Update advances the offer.
+
+#### Example
+
+If the first group availability is January 1, the final group availability is January 10, and three days are set between groups, Windows Update creates four offer groups and offers the update on January 1, 4, 7, and 10.
+
+#### Offer group behavior
+
+- Devices are assigned to offer groups randomly and evenly, with a minimum of 100 devices per group.
+- Editing rollout dates or group spacing recalculates offer groups for devices that haven't yet received the offer.
+- Devices that were already offered the update keep that offer.
+- If the final group date is set in the past, remaining devices are offered the update immediately.
+
+
+
+## Intelligent rollouts
+
+Intelligent rollouts enhance gradual deployments by optimizing offer group membership using telemetry data analyzed by Windows Autopatch. The first offer group functions as a pilot and includes fewer devices with greater environmental diversity.
+
+To enable intelligent rollouts, deploy a settings catalog profile that enables **Allow Windows Update for Business Cloud Processing** and assign it to the same groups used by feature update policies. This setting only needs to be applied once per device and affects all future gradual rollouts.
+
+As deployments progress, Autopatch monitors for issues and can apply likely issue safeguard holds to devices expected to encounter problems.
+
+
+(You can then link out to safeguard documentation instead of re‑explaining.)
+
+>

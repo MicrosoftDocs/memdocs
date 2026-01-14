@@ -21,17 +21,17 @@ items:
   - name: Configure feature updates policies
     href: feature-updates-policy.md
     displayName: windows quality updates
+  - name: Windows rollout options
+    href: rollout-options.md
+    displayName: windows updates
+  - name: Upgrade Windows 10 devices
+    href: feature-updates-windows-10.md
   - name: Feature updates policies reports
     href: feature-updates-reports.md
     displayName: windows feature updates
   - name: Feature updates compatibility reports
     href: compatibility-reports.md
     displayName: windows updates, reports
-  - name: Windows rollout options
-    href: rollout-options.md
-    displayName: windows updates
-  - name: Upgrade Windows 10 devices
-    href: feature-updates-windows-10.md
 - name: Manage Windows quality updates
   items:
   - name: Get started

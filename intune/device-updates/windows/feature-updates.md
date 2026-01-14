@@ -71,3 +71,9 @@ If a device managed by Autopatch is no longer targeted by a feature update polic
 
 > [!div class="nextstepaction"]
 > [Learn how to configure feature updates policies](featrure-updates-policy.md)
+
+
+<!-->
+Toadd: 
+
+Feature update policies support scheduled and gradual deployments using rollout options. For details on configuring rollout timing, see Rollout options for Windows Updates.-->
