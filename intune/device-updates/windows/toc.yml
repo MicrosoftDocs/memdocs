@@ -41,7 +41,7 @@ items:
     href: hotpatch.md
     displayName: windows quality updates
   - name: Expedite Windows quality updates
-    href: expedite-quality-updates.md
+    href: expedite-policy.md
     displayName: windows quality updates
   - name: Monitor and report on Windows quality updates
     href: quality-updates-reports.md

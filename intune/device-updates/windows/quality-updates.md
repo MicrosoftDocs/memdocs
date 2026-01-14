@@ -2,12 +2,11 @@
 title: Windows quality update policy
 description: Learn how to manage Windows quality updates in Microsoft Intune using quality updates policies, expedited updates, and Hotpatch to keep devices secure and compliant.
 ms.date: 01/06/2026
-ms.reviewer: Mounika
+ms.reviewer: mobattul
 ms.topic: how-to
 ---
 
 # Manage Windows quality updates
-
 
 Windows quality updates are the regular Windows servicing updates that keep devices secure, reliable, and supported. These updates are released frequently—typically monthly—and include security fixes, non‑security improvements, and reliability enhancements. Because quality updates are cumulative, installing the latest update brings a device fully up to date for its currently installed Windows version.
 
@@ -52,4 +51,4 @@ In most environments, you create a Windows quality updates policy only when you 
 ## Next steps
 
 - [Learn how Hotpatch works with quality updates policies](hotpatch.md)
-- [Learn how expedited updates work with quality updates policies](quality-updates.md)
+- [Learn how expedite policies work with quality updates policies](quality-updates.md)

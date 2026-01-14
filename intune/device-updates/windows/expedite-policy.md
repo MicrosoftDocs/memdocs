@@ -1,12 +1,12 @@
 ---
-title: Expedite Windows quality updates
-description: Use Hotpatch updates to receive security updates without restarting your device
+title: Expedite Policies for Windows Quality Updates
+description: Expedite policies let you accelerate the installation of a specific Windows security update on devices you manage with Microsoft Intune. Learn how to create, assign, and monitor expedite policies.
 ms.date: 04/17/2025
-ms.reviewer: Mounika
+ms.reviewer: mobattul
 ms.topic: how-to
 ---
 
-# Expedite Windows quality updates
+# Expedite policies for Windows quality updates
 
 Expedite policies let you accelerate the installation of a specific Windows security update on devices you manage with Microsoft Intune. Expedited updates install as soon as possible, bypassing deferral settings and normal deployment timing, without requiring you to pause or modify your existing monthly update policies.
 
