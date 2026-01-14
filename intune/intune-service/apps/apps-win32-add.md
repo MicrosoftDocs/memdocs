@@ -1,7 +1,7 @@
 ---
 title: Add and Assign Win32 Apps to Microsoft Intune
 description: Learn how to add, assign, and manage Win32 apps with Microsoft Intune.
-ms.date: 10/02/2025
+ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -82,7 +82,13 @@ Select **Next** to display the **Program** page.
 
 On the **Program** page, configure the app installation and removal commands for the app:
 
-- **Install command**: Add the complete installation command line to install the app.
+- **Install command**: Configure how the app is installed on devices.
+
+    **Installer type**: Choose between two options:
+    - **Command line**: Specify a command line to install the app
+    - **PowerShell script**: Upload a PowerShell script to serve as the installer
+
+    For command line installations, add the complete installation command line to install the app.
 
     For example, if your app's file name is **MyApp123**, add the following:
 
@@ -95,6 +101,11 @@ On the **Program** page, configure the app installation and removal commands for
     In the preceding command, the `ApplicationName.exe` package supports the `/quiet` command argument.
 
     For the specific arguments that the application package supports, contact your application vendor.
+
+    For PowerShell script installations, select **PowerShell script** to upload your install script (maximum size 50 KB). The script replaces the standard install command and enables richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Intune packages the script with the app content and runs it in the same context as the app installer. Installation results appear in the Intune admin center based on the script's return code.
+
+    > [!NOTE]
+    > If Multi-Admin Approval (MAA) is enabled for your tenant, you can't upload PowerShell scripts during app creation. You must first create the app, then add or modify scripts afterward. Currently, script properties like `enforceSignatureCheck` and `runAs32Bit` can be edited without MAA requests, but this behavior will change in a future update to require MAA approval.
 
     > [!IMPORTANT]
     > Admins must be careful when they use the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields.
