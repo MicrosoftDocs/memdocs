@@ -1,7 +1,7 @@
 ---
 title: Add an iOS/iPadOS Line-of-Business App to Microsoft Intune
 description: Learn about how to add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune.
-ms.date: 01/07/2026
+ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -12,12 +12,12 @@ ms.collection:
 
 # Add an iOS/iPadOS Line-of-Business App to Microsoft Intune
 
-Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business (LOB) app is an app that you add to Intune from an IPA app installation file. This kind of app is typically written in-house. First, join the iOS Developer Enterprise Program.
+Use the information in this article to help you add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune. A line-of-business app is an app that you add to Intune from an iOS App Store Package (IPA) app installation file. This kind of app is typically written in-house. First, join the iOS Developer Enterprise Program.
 
 > [!NOTE]
 > Users of iOS/iPadOS devices can remove some of the built-in iOS/iPadOS apps, like Stocks and Maps. You can't use Intune to redeploy these apps. If users delete these apps, they must go to the app store and manually reinstall them.
 > iOS/iPadOS LOB apps have a maximum size limit of 2 GB per app.
-> Bundle identifiers (for example, _com.contoso.app_) are meant to be unique identifiers of an app. Each line-of-business app instance in the Apps list is treated as a separate app, even if it has the same bundle ID. While you can create multiple instances of the same app in Intune, targeting separate instances of the same app can cause unexpected behaviors on a device. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version will overlap with the production and be treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
+> Bundle identifiers (for example, _com.contoso.app_) are meant to be unique identifiers of an app. Each line-of-business app instance in the Apps list is treated as a separate app, even if it has the same bundle ID. While you can create multiple instances of the same app in Intune, targeting separate instances of the same app can cause unexpected behaviors on a device. For example, to install a beta version of an LOB app next to the production version for testing purposes, the beta version must have a different unique identifier (for example, *com.contoso.app-beta*). Otherwise, the beta version overlaps the production and is treated as an upgrade. Renaming the .ipa file has no effect on this behavior.
 
 You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of-business apps must be assigned as **required** to a device group containing Shared iPad devices from the Microsoft Intune admin center.
 
@@ -43,7 +43,7 @@ You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of
     - **Name**: Enter the name of the app as it appears in the company portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.
     - **Description**: Enter the description of the app. The description appears in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
-    - **Minimum Operating System**: From the list, choose the minimum operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, it will not be installed.
+    - **Minimum Operating System**: From the list, choose the minimum operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, the app fails to install.
     - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
     - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.
     - **Information URL**: Optionally, enter the URL of a website that contains information about this app. The URL appears in the company portal.
@@ -90,13 +90,13 @@ The update to the line-of-business app is installed automatically.
 > [!NOTE]
 > For the Intune service to successfully deploy a new IPA file to the device, you must update the CFBundleVersion and CFBundleShortVersionString in the Info.plist file in your IPA package. You're allowed to upgrade an app by increasing the value, or downgrade an app by decreasing the value, however you can't upload a new version of CFBundleVersion and CFBundleShortVersionString of the new app is identical to the existing one.
 
-For an iOS LOB app targeted with available intent, auto-update of the application happens as long as the following conditions are met:
+For an iOS LOB app targeted with available intent, auto update of the application happens as long as the following conditions are met:
 
 - The end user must request the specific Intune app from the Company Portal and the app must be successfully installed, or the app is already installed on the device.
 - The targeting for the user isn't changed (app assignment with available intent isn't removed and user isn't removed from the group membership in the life cycle of the app assignment).
 - If the previous version of the app is installed through required intent, then the available app update won't happen. The app is updated automatically as long as the user/device is part of required intent group.
 - If the app has both available and required deployments targeted, the resolved intent becomes `RequiredAndAvailable`. 
-- If the installed app has been manually downgraded, then the available app update won't happen. 
+- If the installed app is manually downgraded, then the available app update won't happen. 
 
 > [!NOTE] 
 > You can't create **Available** and **Required** deployments to the same Microsoft Entra group, but you can use different Microsoft Entra group with same members in it. If the app was installed automatically on devices after the **Required** deployment is created (not manually installed from Company Portal) and the required deployment is later removed, the **Available** app update won't happen automatically on those devices and the users have to request the app from Company Portal.
