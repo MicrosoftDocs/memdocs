@@ -1,6 +1,6 @@
 ---
-title: Use Windows Update for Business reports for Windows Updates in Microsoft Intune
-description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
+title: Reports for Windows Driver updates policy
+description: Learn how to use Intune reports to monitor Windows driver updates for devices assigned to Windows Driver update policies.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: zadvor
