@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 12/08/2025
+ms.date: 01/12/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,21 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of January 12, 2026
+
+### App management
+
+#### PowerShell script installer for Win32 apps <!-- 34496511 -->
+
+When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer, enabling richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Installation results appear in the Intune admin center based on the script's return code.
+
+For more information, see [Win32 app management in Microsoft Intune](../apps/apps-win32-app-management.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 ## Week of December 8, 2025  
 
@@ -882,7 +897,7 @@ For more information, see [Microsoft Tunnel for Mobile Application Management fo
 
 > [!IMPORTANT]
 >
-> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+> Beginning on January 13, 2026, this capability is available. The first Windows Update that is offered as available is the `2026-01 B` quality update.
 
 The Windows out-of-box experience (OOBE) by default installs the latest available security updates to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these security updates Windows quality updates.
 
