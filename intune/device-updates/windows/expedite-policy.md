@@ -18,7 +18,7 @@ Not all updates are eligible for expediting. Only supported Windows security upd
 
 > [!div class="checklist"]
 > - Ensure your environment meets the requirements in [Windows quality updates overview](quality-updates.md#prerequisites).
-> - To avoid conflicts or configurations that can block the installation of expedited updates, configure devices as follows. You can use *update rings policies* to manage these settings.
+> - To avoid conflicts or configurations that can block the installation of expedited updates, configure devices as follows. You can use *update ring policies* to manage these settings.
 >
 >    | Update ring setting       | Recommended value        |
 >    |---------------------------|-------------------------------------|

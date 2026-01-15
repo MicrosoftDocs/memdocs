@@ -1,23 +1,23 @@
 ---
-title: Reports for Windows Update Rings Policies
-description: Learn about the reports available for Windows update rings policies in Microsoft Intune.
+title: Reports for Windows Update Ring Policies
+description: Learn about the reports available for Windows update ring policies in Microsoft Intune.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: zadvor
 ---
 
-# Reports for update rings policies
+# Reports for update ring policies
 
 Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status.
 
-To access update rings policies reports:
+To access update ring policies reports:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**
 1. Under **Manage updates**, select **Windows updates**
 1. Select the **Update rings** tab
 1. Select an update ring policy:
 
-   :::image type="content" source="./images/update-rings.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings.png":::
+   :::image type="content" source="./images/update-rings.png" alt-text="Screen capture of the default view for update ring policy." lightbox="./images/update-rings.png":::
 
 On the policy page view:
 

@@ -1,16 +1,16 @@
 ---
-title: Windows Update Rings Policies
-description: Learn about update rings policies for Windows devices and how to create and manage them.
+title: Windows Update Ring Policies
+description: Learn about update ring policies for Windows devices and how to create and manage them.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 ---
 
-# Windows Update rings policies
+# Windows Update ring policies
 
 Windows update rings define how and when Windows updates are installed on devices. They control client‑side update behavior such as deferral periods, restart settings, deadlines, active hours, and user notifications. Update rings apply broadly to Windows updates and are commonly used to create deployment stages—for example, test, pilot, and production—by assigning different settings to different device groups.
 
-In Microsoft Intune, update rings are configured through **update rings policies**, which provide a general policy surface for managing Windows Update behavior on devices. These policies use Windows Update client settings and can be used on their own or alongside other Windows update policies, such as feature updates, quality updates, and driver updates.
+In Microsoft Intune, update rings are configured through **update ring policies**, which provide a general policy surface for managing Windows Update behavior on devices. These policies use Windows Update client settings and can be used on their own or alongside other Windows update policies, such as feature updates, quality updates, and driver updates.
 
 > [!NOTE]
 > When devices are managed through Windows Autopatch, update rings may be created and maintained by the service to implement rollout cadence and restart behavior. In these scenarios, admins typically shouldn't assign custom update rings to Autopatch‑managed devices. Instead, update rings work in combination with service‑managed policies that control update targeting and sequencing.
@@ -76,7 +76,7 @@ In Microsoft Intune, update rings are configured through **update rings policies
 1. Select the **Update rings** tab > **Create profile**.
 1. Under *Basics*, specify a name, a description (optional), and then select **Next**.
 1. Under **Update ring settings**, configure settings aligned with your organization's update deployment strategy
-   - For information about the available settings, see [Windows update settings](update-rings-policy-settings.md).
+   - For information about the available settings, see [Windows update settings](update-ring-policy-settings.md).
    - After configuring *Update and User experience* settings, select **Next**.
 1. Under **Scope tags**, select **+ Select scope tags** to open the *Select tags* pane if you want to apply them to the update ring. Choose one or more tags, and then click **Select** to add them to the update ring and return to the *Scope tag*s page.
 1. Select **Next** to continue to *Assignments*.
@@ -92,7 +92,7 @@ In Microsoft Intune, update rings are configured through **update rings policies
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows updates**
 1. Select the **Update rings** tab and select the ring policy that you want to manage. Intune displays details similar to the following for the selected policy:
 
-   :::image type="content" source="./images/update-rings.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings.png":::
+   :::image type="content" source="./images/update-rings.png" alt-text="Screen capture of the default view for Update ring policy." lightbox="./images/update-rings.png":::
 
 This view includes:
 
@@ -104,7 +104,7 @@ This view includes:
     - **Device assignment status**: This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
     - **Per setting status**: View the configuration status of each setting for this policy across all devices and users.
 
-  For details about this report view, see [Reports for update rings policies](update-rings-reports.md).
+  For details about this report view, see [Reports for update ring policies](update-rings-reports.md).
 
 - **Properties**: View details for each configuration page of the policy, including an option to **Edit** each area of the policy.
 

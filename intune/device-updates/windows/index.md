@@ -37,7 +37,7 @@ The following policy types help you manage Windows updates in Intune:
 
 :::column-end:::
 :::column:::
-#### Update rings policy
+#### Update ring policy
 
 >**:::image type="icon" source="icons/update-ring.svg" border="false":::**    
 >
@@ -97,14 +97,14 @@ Autopatch uses feature update policies, quality update policies, and driver upda
 
 Autopatch adds service-managed capabilities such as dynamic device grouping, phased rollouts, health monitoring, and reporting. For eligible Windows editions, it also enables cloud-powered update scenarios like Hotpatch and expedited updates with minimal manual configuration.
 
-Update rings policies are used in Intune to configure Windows Update behavior such as deferrals, deadlines, and restart settings. For Autopatch‑enrolled devices, update rings may be created and managed by the service to implement rollout cadence.
+Update ring policies are used in Intune to configure Windows Update behavior such as deferrals, deadlines, and restart settings. For Autopatch‑enrolled devices, update rings may be created and managed by the service to implement rollout cadence.
 
 The following table compares how update management differs when you use Autopatch and manual Intune configuration:
 
 | **Feature** | **When NOT using Autopatch** | **When using Autopatch** |
 |--|--|--|
 | **Update coordination** | You control scheduling, deferrals, and rollout manually using Intune policies. | Autopatch orchestrates updates using service-managed policies and rollout logic. |
-| **Update rings policy** | You configure update rings in Intune to control deferrals, deadlines, and restart behavior. | Autopatch may create and manage update rings to control rollout cadence and restart behavior. Admins shouldn't assign custom update rings to Autopatch-managed devices. |
+| **Update ring policy** | You configure update ring policies in Intune to control deferrals, deadlines, and restart behavior. | Autopatch may create and manage update ring policies to control rollout cadence and restart behavior. Admins shouldn't assign custom update ring policies to Autopatch-managed devices. |
 | **Feature update policy** | You use feature update policies to lock or schedule OS versions. | Autopatch manages version targeting and rollout automatically. |
 | **Quality update policy** | You configure quality update policies, expedited updates, and Hotpatch settings manually. | Autopatch manages monthly patches, expedites critical updates, and applies Hotpatch automatically for eligible devices. |
 | **Driver update policy** | You use driver update policies to review and approve drivers manually. | Autopatch manages driver approvals and scheduling automatically. |
@@ -120,7 +120,7 @@ Each policy type has specific prerequisites, detailed in their respective docume
 - Devices must be enrolled in Intune.
 - Devices must be Microsoft Entra joined or hybrid joined.
   > Microsoft Entra registered devices aren't supported for any policy type that uses the same backend service as Windows Autopatch—including Feature updates, Quality updates, and Driver updates.\
-  > For Entra registered devices, update management remains limited to Windows Update client policies and update rings policies.
+  > For Entra registered devices, update management remains limited to Windows Update client policies and update ring policies.
 - Devices must have access to Microsoft update endpoints.
 
 Feature update policies, quality update policies, and driver update policies use the same cloud orchestration layer as Windows Autopatch. Autopatch automates these policies, but when you configure them manually in Intune, you're still calling the same backend service—so the requirements don't change. Because they share this service, the prerequisites are the same across these three policy types:
