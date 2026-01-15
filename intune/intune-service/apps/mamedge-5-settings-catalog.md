@@ -1,7 +1,7 @@
 ---
 title: Step 5. Create Settings Catalog policies for Microsoft Edge for Business
 description: Step 5. Create Settings Catalog policies for Microsoft Edge for Business on Windows and macOS.
-ms.date: 12/05/2025
+ms.date: 01/15/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -18,6 +18,31 @@ Settings Catalog policies provide deep device-level control for Microsoft Edge b
 
 > [!NOTE]
 > Settings Catalog requires device enrollment and provides device-level controls. For unmanaged devices, use App Protection Policies (Step 2) and App Configuration Policies (Step 4).
+
+## Policy Selection for Enrolled Devices
+
+App Configuration Policies (Step 4) are designed for non-enrolled devices and use the Managed Apps configuration channel, while Settings Catalog policies (this step) are designed for enrolled devices and provide device-level controls.
+
+> [!IMPORTANT]
+> Never deploy both App Configuration Policies and Settings Catalog policies to the same client, as this creates policy conflicts.
+
+For enrolled Windows devices, you can choose to use either Settings Catalog policies (recommended for flexibility) or the Microsoft Edge Security Baseline from **Endpoint Security** > **Security baselines**, but not both simultaneously as this creates conflicts.
+
+## Security Level Selection
+
+The three security levels (Level 1, 2, 3) are not cumulative - they represent progressively stricter configurations designed for different user roles and data sensitivity requirements.
+
+### Implementation Guidance
+
+- Evaluate your scenarios and user roles to determine which level is appropriate for each user group
+- Deploy only one level per user/device, not all three levels simultaneously
+- Align security level assignment with business role and data access requirements
+
+### Example Assignments
+
+- **Level 1 (Basic)**: General users, standard productivity workflows (~80% of users)
+- **Level 2 (Enhanced)**: Finance, HR, IT staff handling sensitive data (~15% of users)
+- **Level 3 (High)**: Executives, SecOps, Legal, users with access to highly confidential data (~5% of users)
 
 ::: zone pivot="windows"
 
@@ -470,6 +495,6 @@ After deploying Settings Catalog policies:
 
 ## Next steps
 
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-06.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-6-security-baseline.md)
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-06.png" alt-text="Step 6 to understand end user experience.":::](mamedge-6-end-user-experience.md)
 
-Continue to [Step 6](mamedge-6-security-baseline.md) to deploy the Microsoft Edge security baseline.
+Continue to [Step 6](mamedge-6-end-user-experience.md) to understand the Microsoft Edge for Business end user experience.

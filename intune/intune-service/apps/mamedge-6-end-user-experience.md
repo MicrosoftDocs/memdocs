@@ -1,7 +1,7 @@
 ---
-title: Step 7. Understand Microsoft Edge for Business End User Experience for Windows
-description: Step 7. Understand Microsoft Edge for Business end user experience Windows.
-ms.date: 12/05/2025
+title: Step 6. Understand Microsoft Edge for Business End User Experience for Windows
+description: Step 6. Understand Microsoft Edge for Business end user experience Windows.
+ms.date: 01/15/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -11,9 +11,9 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 7. Understand Microsoft Edge for Business End User Experience for Windows
+# Step 6. Understand Microsoft Edge for Business End User Experience for Windows
 
-Now that you configured your Microsoft Entra Conditional Access policy, app protection policies, app configuration policies, settings catalog, and security baseline, you can launch **Microsoft Edge for Business** using a managed or unmanaged device.
+Now that you configured your Microsoft Entra Conditional Access policy, app protection policies, app configuration policies, and settings catalog, you can launch **Microsoft Edge for Business** using a managed or unmanaged device.
 
 The end user experience in Microsoft Edge for Business is designed to be productive, secure, and user-friendly. This secure enterprise browser experience includes the following features:
 
@@ -89,6 +89,6 @@ Intune displays notifications when a policy requirement isn’t met. The followi
 
 ## Next step
 
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-08.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-8-troubleshoot.md)
+[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-07.png" alt-text="Step 7 to troubleshoot Microsoft Edge for Business.":::](mamedge-7-troubleshoot.md)
 
-Continue with [Step 8](mamedge-8-troubleshoot.md) to troubleshoot Microsoft Edge for Business.
+Continue with [Step 7](mamedge-7-troubleshoot.md) to troubleshoot Microsoft Edge for Business.

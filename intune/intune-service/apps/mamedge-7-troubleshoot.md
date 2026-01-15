@@ -1,7 +1,7 @@
 ---
-title: Step 8. Troubleshoot Microsoft Edge for Business Data Security
-description: Step 8. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
-ms.date: 12/05/2025
+title: Step 7. Troubleshoot Microsoft Edge for Business Data Security
+description: Step 7. Troubleshoot Microsoft Edge for Business corporate data security in Microsoft Intune.
+ms.date: 01/15/2026
 ms.topic: troubleshooting
 ms.reviewer: samarti
 ms.custom:
@@ -11,7 +11,7 @@ ms.collection:
 - FocusArea_Apps_AppManagement
 ---
 
-# Step 8. Troubleshoot Microsoft Edge for Business Data Security
+# Step 7. Troubleshoot Microsoft Edge for Business Data Security
 
 Troubleshooting app protection policies and app configuration policies (ACP) in Microsoft Intune can involve several different checks. This section consolidates the most common issues and resolutions so that you can quickly diagnose problems and restore your secure enterprise browser experience.
 
@@ -80,11 +80,11 @@ Use this list when users report issues with Microsoft Edge for Business:
 
 ## Platform-specific issues
 
-### Windows: Edge security baseline not applying
+### Windows: Settings Catalog policies showing conflicts
 
-- **Likely cause:** Unsupported Windows build or Microsoft Edge version  
+- **Likely cause:** Multiple policies targeting the same settings or overlap with other configuration sources  
 - **How to fix:**
-  - Confirm the device is on a supported Windows 11 build.
+  - Review all policies assigned to the device and check for conflicts in the Intune console
 
 ### Windows: Application Guard not working
 
