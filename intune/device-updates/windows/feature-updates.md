@@ -34,8 +34,7 @@ If a device is targeted by both a feature update policy and an update ring polic
 
 - Set **Feature update deferral period (days)** to **0** so deferrals in update rings don't delay feature updates controlled by the feature update policy. For more information, see [Move from update ring deferrals to feature update policies](feature-update-policy.md#move-from-update-ring-deferrals-to-feature-update-policies).
 - Ensure feature updates in the update ring aren't paused.
-
-Client‑side behaviors such as restart experience, deadlines, and active hours continue to be governed by update rings and Windows Update client settings.
+- Client‑side behaviors such as restart experience, deadlines, and active hours continue to be governed by update rings and Windows Update client settings.
 
 ### Deployment timing and enforcement
 

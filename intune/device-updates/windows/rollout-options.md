@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: davguy; bryanke
 ---
 
-# Rollout options for Windows Updates in Microsoft Intune
+# Rollout options for Windows Updates
 
 Use rollout options for feature update policies. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to devices that receive your policies.
 
