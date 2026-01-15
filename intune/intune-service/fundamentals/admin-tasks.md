@@ -1,6 +1,6 @@
 ---
-title: Manage Admin Tasks
-description: Use the centralized Admin tasks view in Microsoft Intune to manage tasks across capabilities.
+title: Centrally manage Admin Tasks
+description: Use the centralized Admin tasks view in Microsoft Intune to manage common administrative tasks from across Intune capabilities.
 author: brenduns
 ms.author: brenduns
 ms.date: 01/26/2026
@@ -10,7 +10,7 @@ ms.collection:
 - M365-identity-device-management
 ---
 
-# Manage admin tasks in Microsoft Intune
+# Centrally manage common admin tasks in Microsoft Intune
 
 In the Microsoft Intune admin center, the **admin tasks** node provides a centralized view to discover, organize, and act on administrative tasks and user elevation requests. This unified experience helps you focus on what matters most without navigating across multiple nodes.
 
@@ -33,7 +33,7 @@ When viewing Admin tasks, you can only see and manage tasks permitted by your as
 - [Device Offboarding tasks](/intune/agents/device-offboarding-agent#prerequisites)
 - [Endpoint Privilege Management file elevation requests](/intune/intune-service/protect/epm-support-approved#rbac-permissions-for-elevation-requests)
 - [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#prerequisites)
-- [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#prerequisites-for-access-policies-and-approvers) 
+- [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#prerequisites-for-access-policies-and-approvers)
 
 ## Manage tasks in the admin tasks node
 
