@@ -1,6 +1,12 @@
 {
   "redirections": [
     {
+      "source_path": "intune/device-updates/windows/driver-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_document_id": false
+    },
+     
+    {
       "source_path": "intune/device-updates/windows/quality-updates-policy.md",
       "redirect_url": "/intune/device-updates/windows/expedite-policy",
       "redirect_document_id": false
@@ -102,12 +108,12 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-quality-update-policy.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -3552,7 +3558,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/intune-service/protect/windows-driver-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
     },
     {
