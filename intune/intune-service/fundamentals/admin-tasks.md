@@ -1,6 +1,6 @@
 ---
 title: Centrally manage Admin Tasks
-description: Use the centralized Admin tasks view in Microsoft Intune to manage common administrative tasks from across Intune capabilities.
+description: Centrally manage admin tasks in Microsoft Intune. Use the unified Admin tasks view to organize and act on administrative tasks from Device Offboarding, Endpoint Privilege Management, and more.
 author: brenduns
 ms.author: brenduns
 ms.date: 01/26/2026
@@ -21,12 +21,11 @@ Admin tasks supports tasks from the following Intune capabilities:
 - [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#work-with-security-tasks) - Found in the admin center at *Endpoint security > Security Tasks*.
 - [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#approve-requests) - Found in the admin center at *Tenant administration > Multi Admin Approval*.
 
-## Role-based access control for admin tasks
+## Role-based access control for Admin tasks
 
-Access to tasks in the admin tasks node is based on your Intune role-based access control (RBAC) permissions:
+Access to tasks in the admin tasks node is based on your Intune role-based access control (RBAC) permissions.The following permission is required to access the Admin tasks pane in the Intune admin center:
 
-The following permission is required to access the Admin tasks pane in the Intune admin center:  
-- **Organization** > **Read**  
+- **Organization** > **Read**
 
 When viewing Admin tasks, you can only see and manage tasks permitted by your assigned roles within the task’s original source node. For RBAC requirements and related prerequisites specific to each capability, see:
 
@@ -35,7 +34,7 @@ When viewing Admin tasks, you can only see and manage tasks permitted by your as
 - [Microsoft Defender security tasks](/intune/intune-service/protect/atp-manage-vulnerabilities#prerequisites)
 - [Multi Admin Approval requests](/intune/intune-service/fundamentals/multi-admin-approval#prerequisites-for-access-policies-and-approvers)
 
-## Manage tasks in the admin tasks node
+## Manage admin tasks in the centralized view
 
 **To review and manage tasks:**
 
