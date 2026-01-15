@@ -14,8 +14,6 @@ Feature update policies don't downgrade devices. If a device is already running 
 
 Feature update policies remain in effect until you modify or remove them. This behavior differs from pausing feature updates in update rings, which expires automatically after 35 days.
 
-For information about controlling when feature updates become available to devices, including scheduled and gradual deployments, see [Rollout options for Windows Updates](rollout-options.md).
-
 ## Before you begin
 
 > [!div class="checklist"]

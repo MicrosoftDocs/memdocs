@@ -66,9 +66,9 @@ Here are the steps to enable intelligent rollouts for gradual feature update dep
 
 1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
 
-  | Category | Setting name | Value |
-  |--|--|--|
-  | **System** | Allow WUfB Cloud Processing| Enabled|
+    | Category | Setting name | Value |
+    |--|--|--|
+    | **System** | Allow WUfB Cloud Processing| Enabled|
 
 1. Assign the policy to a group that contains as members the devices that you want to configure.
 
