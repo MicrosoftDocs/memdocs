@@ -21,7 +21,7 @@ items:
   - name: Configure feature update policies
     href: feature-update-policy.md
     displayName: windows quality updates
-  - name: Windows rollout options
+  - name: Rollout options
     href: rollout-options.md
     displayName: windows updates
   - name: Upgrade Windows 10 devices

@@ -51,6 +51,13 @@ On the policy page view:
 
   - **Per setting status**: View the configuration status of each setting for this policy across all devices and users. This view present a simple view of each setting in the policy, and the count of assigned devices that have success, error, or conflict. This report view doesn't support drilling in for additional detail.
 
+## Windows Update for Business reports
+
+You can also monitor Windows update rollouts by using Windows Update for Business reports. Windows Update for Business reports is a cloud-based solution that provides information about your Microsoft Entra joined devices' compliance with Windows updates. It's offered through the Azure portal, and it's included as part of the Windows licenses.
+
+To use this solution, you can use Intune to configure the required settings on your Windows devices.
+
+For more information, see [Windows Update for Business reports overview](/windows/deployment/update/wufb-reports-overview).
 
 <!-- admin center links -->
 

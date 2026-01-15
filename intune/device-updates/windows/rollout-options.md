@@ -1,122 +1,93 @@
 ---
-title: Configure Schedules to Gradually Roll Out Windows Updates
-description: Configure schedules that manage how and when Windows updates roll out to your managed devices with Microsoft Intune.
+title: Configure Rollout Options for Feature Update Policies
+description: Configure rollout options in feature update policies to control when Windows feature updates become available to devices and deploy updates gradually.
 ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: davguy; bryanke
 ---
 
-# Rollout options for Windows Updates
+# Configure rollout options for feature update policies
 
-Use rollout options for feature update policies. With rollout options, you configure schedule options for Windows Update that result in the gradual rollout of updates to devices that receive your policies.
+Use rollout options with feature update policies to control when a Windows feature update becomes available to devices. Rollout options help you manage update availability by making an update available immediately, on a specific date, or gradually across groups of devices.
 
-> [!TIP]
-> The default behavior for Windows Update is to make an update available to an assigned device right away. However, the update doesn't install right away. Instead, when an update is made available, the device becomes eligible to install it. Before a device can install an available update, the device must connect to Windows Update and scan for updates. When the need for an update is confirmed and the device is eligible, the  Windows Update service then offers the update to that device. After a device completes the update, it's then dependent on user behavior and other settings like Deadline.
+When an update becomes available, devices are eligible to install it the next time they scan Windows Update. The actual installation timing is still influenced by user behavior and settings such as deadlines and restart controls.
 
-You configure rollout options when creating [feature update policies](feature-updates.md) by selecting one of the following options:
+You configure rollout options when creating or editing a feature update policy by selecting one of the following availability behaviors.
 
-- **Make update available as soon as possible** - With this option, there's no delay in making the update available to devices. This selection is the default behavior for Windows Update.
-
-- **Make update available on a specific date** - With this option you can select a day on which the update in the policy is initially available to install. Windows Update doesn't make the update available to devices with this configuration until that day is reached.
+- **Make update available as soon as possible**: Makes the update available to targeted devices without delay. This option reflects the default Windows Update behavior.
+- **Make update available on a specific date**: Delays update availability until the date you specify. Devices don't receive the update offer until that date is reached.
+- **Make update available gradually**: Distributes the update offer to targeted devices over time, using offer groups. This option helps reduce network impact and allows early detection of issues.
 
 
 ## Make updates available gradually
 
-With the option **Make update available gradually**, you can direct Windows Update to extend an update offer to different subsets of the devices that the policy targets, at different times. We refer to those subsets as *offer groups*. This behavior distributes the availability of the update across the time you've configured, which can reduce the effect to your network as compared to offering the update to all devices at the same time.
+The **Make update available gradually** option lets you stage a feature update by making it available to subsets of targeted devices at different times. These subsets are called *offer groups*. Staggering availability across offer groups helps reduce deployment risk and limits the impact on network and support resources compared to offering the update to all devices at once.
+When you select this option, you define the rollout schedule. Windows Update uses these settings to determine how many offer groups are created, when the update is first offered, and how availability progresses across devices.
 
-To configure this option, you set the following values. Windows Update uses these values to determine how many offer groups to use based on the number of devices that the policy targets, when to offer the update to the first group, and how long to wait until the update is made available to the next offer group:
+### Rollout schedule settings
 
-- **First group availability** : Configure the first day that Windows Update offers the update to devices that receive this policy.
+- **First group availability**: Specifies the date when the update is first offered to devices targeted by the policy.\
+  This date must be at least two days in the future. The lead time allows Windows Update to identify targeted devices, calculate the number of offer groups, and assign devices to those groups. If you select a date that's too soon, Intune prompts you to choose the earliest valid date.
+- **Final group availability**: Specifies the date when the update is offered to the final offer group. This group includes any devices that haven't already received the update offer.\
+  Depending on the number of days between groups, the final offer might occur earlier than this date. Devices assigned to the policy after the final group availability date receive the update offer immediately.
+- **Days between groups**: Defines the interval between update offers and determines how many offer groups are created.
 
-  This date must be at least two days in the future from when you configure this policy. The delay enables Windows Update time to identify the devices that the policy targets, how many offer groups to use, and to assign devices to those offer groups. If you select a date less than two days in the future, Intune prompts you to reenter the date and shows the first valid date you can use.
+Example: If the first group availability is January 1, the final group availability is January 10, and the interval is three days, Windows Update creates four offer groups. The update is offered on January 1, January 4, January 7, and January 10, with approximately the same number of devices in each group. Devices become eligible for the update only when their group receives the offer.
 
-- **Final group availability** : Configure the last day that Windows Update makes the update available, which is to the final offer group. The last offer group includes all remaining devices that haven't already received the offer. Depending on the number of days between groups, the last offer might not occur on the last day of the schedule. Devices that are assigned this policy after the *final group availability* date receive the offer immediately.
+### Offer group behavior
 
-- **Days between groups** : Windows Update uses this value to determine how many offer groups to use when making the update available to devices.
+Devices are assigned to offer groups randomly, with groups kept evenly sized and a minimum of 100 devices per group.
 
-  For example, you set the first group availability to be January 1, and the final group of availability to be January 10. Then you set three days between groups. The results are that Windows Update creates four groups to use for making the update available. Windows Update then makes the update available to devices in the first group on January 1, available to devices in the next group on January 4, and so on. The update is offered to devices in the last group on the 10th. In this example, each group gets a quarter of the devices, and devices can only get the update after their group becomes eligible.
+If you modify rollout dates or the interval between groups:
 
-The following behaviors apply to the management of offer groups:
+- Windows Update recalculates offer groups as needed.
+- Devices that haven't yet received an offer can be reassigned, which may change when they receive the update.
+- If the final group availability date is set in the past, all remaining devices receive the update offer as soon as possible.
+- If the first group availability date is moved to the future, devices that already received the offer keep it, while new devices wait until the revised start date.
 
-- Windows Update assigns targeted devices to groups randomly, keeping groups evenly sized, with a minimum unit of 100 devices per group.
+If the policy assignment changes:
 
-- If you edit a policy to change the date for the first or final group availability, or change the number of days between groups for the policy:
-  - Windows Update recalculates the number of groups to use, if necessary.
-  - For devices that aren't offered the update, Windows Update adjusts group membership. This adjustment can change when a device is offered the update.
-  - If the date of the *final group availability* is changed to be in the past, all remaining devices are offered the update as soon as possible.
-  - If you change the date of the *first group availability* to the future, devices that were offered the update keep that offer, and new devices don't get an offer until the new start date.
-
-- If the policy assignment changes to add or remove devices from receiving the policy:
-  - New devices are distributed to the remaining offer groups.
-  - Windows Update attempts to retract the update offer for devices that are no longer targeted by the policy but were offered the update. However, the offer can't be retracted if the device has started processing that offer.
+- Newly added devices are placed into the remaining offer groups.
+- Windows Update attempts to retract the update offer from devices that are no longer targeted, unless the device has already begun processing the update.
 
 ## Intelligent rollouts
 
-To enhance your use of gradual rollouts, you can configure *Intelligent rollouts*.
+To further optimize gradual deployments, you can use *intelligent rollouts*.
 
-With intelligent rollouts, Windows Autopatch uses data that it collects from devices to optimize the device members in the offer groups of your gradual rollout deployments. The first offer group includes the fewest number of devices that have the largest pool of variations in your environment. You can think of this first offer group as a *pilot ring* for the deployment.
+With intelligent rollouts, Windows Autopatch uses data collected from devices to optimize how devices are assigned to offer groups. Instead of assigning devices randomly, Autopatch prioritizes diversity in the first offer group by selecting a small set of devices that represent a broad range of hardware, drivers, and configurations. This first group effectively acts as a *pilot ring* for the deployment.
 
-To enable intelligent rollout, you deploy a [settings catalog](../../intune-service/configuration/settings-catalog.md) profile for device configuration to *Allow Windows Update for Business Cloud Processing*. Then, you assign the profile to the same groups that you use with your Feature update profiles. You only need to deploy this profile to a device a single time. The change then applies to all future deployments for that device.
+To enable Intelligent rollouts, deploy a settings catalog device configuration profile and set **Allow Windows Update for Business Cloud Processing**. Assign this profile to the same groups used by your feature update policies.
 
-### Likely issue safeguard holds
+You only need to deploy this profile once per device. After it's enabled, Intelligent rollouts apply automatically to all future gradual rollouts for that device.
 
-The Windows Update client policies that you enable, *Allow WUfB Cloud Processing*, is the same setting that enables Autopatch to create a *likely issue* safeguard hold for a device. To learn more, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook) in the documentation for Windows Update for Business reports.
+## Enable intelligent rollouts
 
-As your rollout progresses, Autopatch monitors for unexpected issues. The service uses insights from the Windows ecosystem to create *likely issue* safeguard holds to proactively pause deployments to devices that are likely to encounter an issue. By applying safeguard holds to devices that are likely to have issues with the update, devices and end users are protected from potential productivity affecting issues.
+Here are the steps to enable intelligent rollouts for gradual feature update deployments.
 
-To learn more, see [Manage safeguards using Windows Autopatch](/graph/windowsupdates-manage-safeguards) in the Graph API documentation for device updates.
+1. [Create a Settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the Windows platform and use the following setting:
 
-### Enable intelligent rollouts
+  | Category | Setting name | Value |
+  |--|--|--|
+  | **System** | Allow WUfB Cloud Processing| Enabled|
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-1. Go to **Devices** > **Manage devices** > **Configuration** > **Create**.
-1. For Platform, select **Windows 10 and later** and then for Profile type, select **Settings catalog**.
-1. On the **Configuration settings** page, select **Add settings**, and then on the *Settings picker* page, search for **Allow WUfB Cloud Processing**.  This setting is in the *System* category. Select the checkbox for this setting and then close the *Settings picker* window to return to the *Configuration settings* page.
-1. Set *Allow WUfB Cloud Processing* to **Enabled**.
-1. On the **Assignments** page, assign the profile to the same groups you use for your Feature update profiles, and then complete and *Create* this settings catalog profile, to deploy it.
+1. Assign the policy to a group that contains as members the devices that you want to configure.
 
-After the profile deploys, devices that use gradual rollouts for Feature update profiles will also have intelligent optimization applied.
+After the profile deploys, devices that use gradual rollouts for feature update policies will also have intelligent optimization applied.
+
+## Likely issue safeguard holds
+
+The **Allow Windows Update for Business Cloud Processing** setting also enables Autopatch to apply *likely issue* safeguard holds. For background information, see [Safeguard holds](/windows/deployment/update/wufb-reports-workbook).
+
+As a rollout progresses, Autopatch monitors for unexpected issues using signals from the broader Windows ecosystem. When a device is likely to encounter an issue with the update, Autopatch can apply a likely issue safeguard hold to pause the update for that device.
+
+By proactively applying safeguard holds, Autopatch helps protect devices and end users from potential productivity‑impacting issues during feature update deployments.
+To learn more about managing safeguards programmatically, see Manage safeguards using Windows Autopatch in the Graph API documentation.
 
 ## Next steps
 
-Configure [Feature Update policy](feature-updates.md)
+Configure [Feature Update policies](feature-updates.md)
 
 
+<!-- admin center links -->
 
-<!--
-
-### Make updates available gradually
-
-With gradual rollout, Windows Update offers an update to subsets of targeted devices over time. These subsets are called *offer groups*. Gradual rollout helps reduce network impact and surface issues early.
-
-To configure a gradual rollout, specify:
-
-- **First group availability** – The date when the update is first offered. This date must be at least two days in the future to allow Windows Update to evaluate targeting and create offer groups.
-- **Final group availability** – The date when any remaining devices receive the update offer. Devices added after this date receive the offer immediately.
-- **Days between groups** – Determines how many offer groups are created and how frequently Windows Update advances the offer.
-
-#### Example
-
-If the first group availability is January 1, the final group availability is January 10, and three days are set between groups, Windows Update creates four offer groups and offers the update on January 1, 4, 7, and 10.
-
-#### Offer group behavior
-
-- Devices are assigned to offer groups randomly and evenly, with a minimum of 100 devices per group.
-- Editing rollout dates or group spacing recalculates offer groups for devices that haven't yet received the offer.
-- Devices that were already offered the update keep that offer.
-- If the final group date is set in the past, remaining devices are offered the update immediately.
-
-
-
-## Intelligent rollouts
-
-Intelligent rollouts enhance gradual deployments by optimizing offer group membership using telemetry data analyzed by Windows Autopatch. The first offer group functions as a pilot and includes fewer devices with greater environmental diversity.
-
-To enable intelligent rollouts, deploy a settings catalog profile that enables **Allow Windows Update for Business Cloud Processing** and assign it to the same groups used by feature update policies. This setting only needs to be applied once per device and affects all future gradual rollouts.
-
-As deployments progress, Autopatch monitors for issues and can apply likely issue safeguard holds to devices expected to encounter problems.
-
-
-(You can then link out to safeguard documentation instead of re‑explaining.)
-
->
+[INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
