@@ -1,17 +1,17 @@
 ---
-title: Create a user in Intune
-description: Create a user in Intune.
+title: Create a user in Intune and assign a license
+description: Learn how to create a user in Microsoft Intune and assign an Intune license to this user.
 services: microsoft-intune
 author: paolomatarazzo
 ms.author: paoloma
 ms.topic: how-to
-ms.date: 04/07/2025
+ms.date: 01/14/2026
 ms.reviewer: jlynn
 ms.collection:
 - M365-identity-device-management
 ---
 
-# Step 2: Create a user in Intune and assign the user a license
+# Step 2 - Create a user in Intune and assign the user a license
 
 In this article, you create a user and then assign the user an Intune license. When you use Intune, each person you want to have access to company data must have their own user account. Intune admins can configure users later to manage access control.
 
@@ -19,98 +19,96 @@ In this article, you create a user and then assign the user an Intune license. W
 
 ## Prerequisites
 
-- A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+:::column-end:::
+:::column span="3":::
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+:::column-end:::
+:::row-end:::
 
-## Sign in to the Microsoft Intune admin center
-
-Sign in to [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the built-in **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** Microsoft Entra role.
-
-If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
-
-> [!CAUTION]
-> [!INCLUDE [global-admin](../includes/global-admin.md)]
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) with the following role:
+> - Built-in **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** Microsoft Entra role
+:::column-end:::
+:::row-end:::
 
 ## Create a user
 
-A user must have a user account to enroll in Intune device management. To create a new user:
+A user needs a user account to enroll in Intune device management. To create a new user:
 
-1. In the Microsoft Intune admin center, select **Users** > **All users** > **New user**:
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All users** > **New user**:
 
-   :::image type="content" alt-text="In the Microsoft Intune admin center, select New user." source="./media/quickstart-create-user/create-user.png" lightbox="./media/quickstart-create-user/create-user.png":::
+   :::image type="content" alt-text="Screenshot that shows how to add a new user in Microsoft Intune." source="./media/quickstart-create-user/create-user.png" lightbox="./media/quickstart-create-user/create-user.png":::
 
-1. In the **Name** box, enter a name, such as *Dewey Kellum*:
+2. In the **Name** box, enter a name, such as *Dewey Kellum*:
 
-   :::image type="content" alt-text="Add user details." source="./media/quickstart-create-user/create-user-02.png" lightbox="./media/quickstart-create-user/create-user-02.png":::
+   :::image type="content" alt-text="Screenshot that shows how to add user details in Microsoft Intune." source="./media/quickstart-create-user/create-user-02.png" lightbox="./media/quickstart-create-user/create-user-02.png":::
 
-1. In the **User name** box, enter a user identifier, such as `Dewey@contoso.onmicrosoft.com`.
+3. In the **User name** box, enter a user identifier, such as `Dewey@contoso.onmicrosoft.com`.
 
     > [!NOTE]
-    > If you haven't configured your customer domain name, use the verified domain name you used to create the Intune subscription (or [free trial](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)).
+    > If you didn't configure your customer domain name, use the verified domain name you used to create the Intune subscription (or [free trial](free-trial-sign-up.md#sign-up-for-a-microsoft-intune-free-trial)).
 
-4. Select **Show password** and be sure to remember the automatically generated password so that you can sign in to a test device.
+4. Select **Show password** and remember the automatically generated password so that you can sign in to a test device.
 5. Select **Create**.
 
-## Assign a license to an individual user
+## Assign a license to a user
 
-After you create a user, you must use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) to assign an Intune license to the user. If you don't assign the user a license, they'll be unable to enroll their device into Intune.
+After you create a user, assign an Intune license to the user in the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854). When you assign a license, the user can enroll their device into Intune.
 
 To assign an Intune license to a user:
 
-1. Sign in to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) with the same credentials you used to sign in to Intune.
-2. Select **Users** > **Active Users**, and then select the user you created.
-3. Select the **Licenses and Apps** tab.
-4. Under **Select location**, select a location for the user, if it's not already set.
-2. Select the **Intune** check box in the **Licenses** section. If another license includes Intune, you can select that license. The displayed [product name](/azure/active-directory/users-groups-roles/licensing-service-plan-reference) is used as the service plan in Azure management.
+1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Users** > **Active Users**, and then select the user you created.
+2. Select the **Licenses and Apps** tab.
+3. In **Select location**, select a location for the user. It might be already set.
+4. In **Licenses**, select the **Intune** check box. You can select any other license that includes Intune. The [product name](/entra/identity/users/licensing-service-plan-reference) you see is also the service plan in Azure management.
 
-   :::image type="content" alt-text="Select the location and Intune license." source="./media/quickstart-create-user/create-user-03.png" lightbox="./media/quickstart-create-user/create-user-03.png":::
+   :::image type="content" alt-text="Select the location and Intune license in the Microsoft 365 admin center." source="./media/quickstart-create-user/create-user-03.png" lightbox="./media/quickstart-create-user/create-user-03.png":::
 
    > [!NOTE]
-   > This setting uses one of your licenses for the user. If you're using a trial environment, you'll later reassign this license to a real user in a live environment.
+   > This setting uses one of your licenses for the user. If you're using a trial environment, you reassign this license to a real user in a live environment.
 
-6. Select **Save changes**.
+5. Select **Save changes**.
 
 The new active Intune user shows that they're using an **Intune** license.
 
-> [!NOTE]
-> You can also assign an Intune license via [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by selecting **Users** > **All Users** > *the user's name* > **Licenses** > **Assignments**. The **Update license assignments** pane is displayed.
+For more information, see [Add users individually or in bulk](/microsoft-365/admin/add-users/add-users).
 
-## Assign Intune licenses to multiple users
+## Assign licenses to many users or groups
 
 The following steps allow you to assign Intune licenses to multiple users all at once:
 
-1. Sign in to the [**Microsoft Entra admin center**](https://aad.portal.azure.com) as a Microsoft Entra [License Administrator](/entra/identity/role-based-access-control/permissions-reference#license-administrator) or [User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator).
-
-    If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
-
-    > [!CAUTION]
-    > [!INCLUDE [global-admin](../includes/global-admin.md)]
-
-2. Select **Microsoft Entra ID** > **Licenses** > **All products** to see and manage all licensable products that you have available for your organization.
-3. Select the box next to **Intune**.
-4. Select **Assign** > **Add users and groups**.
-5. If you created a group of users, select the group to add it to the **Selected items** list. Otherwise, select individual users that you created earlier. Select **Select** to confirm your selection.
-6. Select **Next: Assignment options** to confirm **Microsoft Intune** is **On**.
-7. Select **Review + assign** to confirm your license assignment settings.
-8. Select **Assign** to assign the licenses to the selected users.
-
-   A notification is displayed in the upper-right corner that shows the status and outcome of the process. If the assignment to the group couldn't be completed (for example, because of pre-existing licenses in the group), you can select the notification to view details.
+1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Billing** > **Licenses**. You see all licensable products that are available for your organization.
+2. Select the license you want to assign.
+3. Select **Users** or **Groups**, and then select **Assign licenses**.
+4. Select all the users or all the groups you want to assign the license to > **Assign licenses**.
+   A notification shows the status and outcome of the process. If the assignment to the group can't be completed (for example, because of pre-existing licenses in the group), you can select the notification to view details.
 
    The user accounts now have the permissions needed to use the service and enroll devices into management.
 
 > [!TIP]
-> You can also assign Intune licenses to users by using School Data Sync (SDS). For more information, see [Overview of School Data Sync](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91).
+> You can also assign Intune licenses to users by using School Data Sync (SDS). For more information, see [Overview of School Data Sync](/schooldatasync/school-data-sync-overview).
 
 ## Clean up resources
 
-If you don't need this user anymore, you can delete the user by going to the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854) and selecting **Users** > *the user* > *the delete user icon* > **Delete user** > **Close**.
+If you don't need this user anymore, you can delete the user.
 
-   ![Select the delete icon](./media/quickstart-create-user/create-user-04.png)
+1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Users** > **Active users**.
+2. Select the user you want to delete > **Delete user** > **Close**.
+
+   :::image type="content" source="./media/quickstart-create-user/create-user-04.png" alt-text="Screenshot that shows how to delete a user in the Microsoft 365 admin center.":::
 
 ## Next steps
 
-In this topic, you created a user and assigned an Intune license to that user. For more information about adding users to Intune, see [Add users and grant administrative permission to Intune](users-add.md).
+In this article, you created a user and assigned an Intune license to that user. For more information on adding users to Intune, see [Add users and grant administrative permission to Intune](users-add.md).
 
-To continue to evaluate Microsoft Intune, go to the next step:
+To continue evaluating Microsoft Intune, go to the next step:
 
 > [!div class="nextstepaction"]
 > [Step 3 - Create a group to manage users](quickstart-create-group.md)
