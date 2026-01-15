@@ -85,7 +85,7 @@ To learn more about managing safeguards programmatically, see Manage safeguards 
 
 ## Next steps
 
-Configure [Feature Update policies](feature-updates.md)
+- Configure [Feature Update policies](feature-updates.md)
 
 
 <!-- admin center links -->
