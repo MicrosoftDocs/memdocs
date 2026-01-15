@@ -1,12 +1,12 @@
 ---
-title: Reports for Windows Driver Updates Policies reports
+title: Reports for Windows Driver Update Policies reports
 description: Learn how to use Intune reports to monitor Windows driver updates for devices assigned to Windows Driver update policies.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: zadvor
 ---
 
-# Reports for Windows Driver updates policies
+# Reports for Windows driver update policies
 
 Intune offers integrated reports to view detailed status for Windows driver updates for devices assigned to Windows Driver update policies. To use these reports, you must first configure the prerequisites and policies that support data collection from devices. These reports are applicable to Windows 10 and Windows 11.
 
@@ -69,9 +69,9 @@ To change the focus of this report to a different driver:
 1. The *Driver updates* pane displays a list of updates that are approved and applicable for at least one device from across all your driver update policies.
 1. On the Driver updates pane, select a driver, and then **OK** to return to the Windows Driver updates report view that now shows information for the driver you selected, and select **Generate again** to update the report.
 
-In the following screen capture, only four drivers remain applicable to devices with driver updates policy, and those four updates are different versions of the same driver update.
+In the following screen capture, only four drivers remain applicable to devices with driver update policies, and those four updates are different versions of the same driver update.
 
-:::image type="content" source="./images/reports/report-driver-updates-pane.png" alt-text="Screen capture of Driver Updates pane of a driver updates policy." lightbox="./images/reports/report-driver-updates-pane.png":::
+:::image type="content" source="./images/reports/report-driver-updates-pane.png" alt-text="Screen capture of Driver Updates pane of a driver update policy." lightbox="./images/reports/report-driver-updates-pane.png":::
 
 ### Column details
 

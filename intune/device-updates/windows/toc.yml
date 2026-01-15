@@ -18,15 +18,15 @@ items:
   - name: Get started
     href: feature-updates.md
     displayName: windows feature updates
-  - name: Configure feature updates policies
-    href: feature-updates-policy.md
+  - name: Configure feature update policies
+    href: feature-update-policy.md
     displayName: windows quality updates
   - name: Windows rollout options
     href: rollout-options.md
     displayName: windows updates
   - name: Upgrade Windows 10 devices
     href: feature-updates-windows-10.md
-  - name: Feature updates policies reports
+  - name: Feature update policies reports
     href: feature-updates-reports.md
     displayName: windows feature updates
   - name: Feature updates compatibility reports
@@ -51,10 +51,10 @@ items:
   - name: Get started
     href: driver-updates.md
     displayName: windows driver updates
-  - name: Configure driver updates policies
-    href: driver-updates-policy.md
+  - name: Configure driver update policies
+    href: driver-update-policy.md
     displayName: windows driver updates
-  - name: Driver updates policies reports
+  - name: Driver update policies reports
     href: driver-updates-reports.md
     displayName: windows updates
   - name: Driver updates FAQs

@@ -1,6 +1,6 @@
 ---
 title: Manage Windows Driver Updates
-description: Learn how to manage Windows driver updates using Intune driver updates policies to keep Windows devices current and stable.
+description: Learn how to manage Windows driver updates using Intune driver update policies to keep Windows devices current and stable.
 ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
@@ -10,9 +10,9 @@ ms.reviewer: davguy; davidmeb; bryanke
 
 Windows driver updates provide updated device drivers and firmware that help ensure hardware compatibility, stability, and performance. These updates are released by device manufacturers and can include fixes for reliability issues, security vulnerabilities, and support for new hardware capabilities. Because driver updates can vary by device model and hardware configuration, organizations often prefer a more controlled approval process.
 
-In Microsoft Intune, Windows driver updates are managed through **driver updates policies**, which provide a dedicated policy surface for reviewing, approving, and deploying driver updates to managed devices. This policy is built on cloud‑based update orchestration and works alongside other Windows update policies, such as feature updates and quality updates. Driver updates policies can be used independently or as part of Windows Autopatch. Client‑side install behavior—such as restarts and user notifications—continues to be governed by standard Windows Update policy settings.
+In Microsoft Intune, Windows driver updates are managed through **driver update policies**, which provide a dedicated policy surface for reviewing, approving, and deploying driver updates to managed devices. This policy is built on cloud‑based update orchestration and works alongside other Windows update policies, such as feature updates and quality updates. Driver update policies can be used independently or as part of Windows Autopatch. Client‑side install behavior—such as restarts and user notifications—continues to be governed by standard Windows Update policy settings.
 
-Driver updates policies support **automatic or manual approval workflows**, allowing you to choose whether recommended drivers are deployed automatically or require administrator review before installation. This approach helps organizations balance hardware stability, risk management, and operational efficiency while maintaining visibility into which drivers are approved for deployment.
+Driver update policies support **automatic or manual approval workflows**, allowing you to choose whether recommended drivers are deployed automatically or require administrator review before installation. This approach helps organizations balance hardware stability, risk management, and operational efficiency while maintaining visibility into which drivers are approved for deployment.
 
 ## Prerequisites
 
@@ -40,4 +40,4 @@ This architecture allows administrators to approve and control driver updates ce
 ## Next steps
 
 > [!div class="nextstepaction"]
-> [Learn how to configure driver updates policies](driver-updates-policy.md)
+> [Learn how to configure driver update policies](driver-update-policy.md)

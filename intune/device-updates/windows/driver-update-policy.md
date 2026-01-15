@@ -297,7 +297,7 @@ After you create driver update policies, plan to review them regularly for newly
 ## Next steps
 
 - [Manage Windows driver updates](driver-updates.md)
-- [Reports for Windows Driver updates policies](driver-updates-reports.md)
+- [Reports for Windows driver update policies](driver-updates-reports.md)
 
 <!-- admin center links -->
 

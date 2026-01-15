@@ -1,6 +1,6 @@
 ---
-title: Reports for Windows Quality Updates Policies
-description: Learn about the reports available for Windows quality updates policies in Microsoft Intune.
+title: Reports for Windows Quality Update Policies
+description: Learn about the reports available for Windows quality update policies in Microsoft Intune.
 ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: zadvor

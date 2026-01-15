@@ -1,25 +1,25 @@
 ### YamlMime:FAQ
 metadata:
-  title: Frequently Asked Questions About Windows Driver Updates Policies
-  description: This article provides answers to some frequently asked questions about Windows Driver Updates Policies.
+  title: Frequently Asked Questions About Windows Driver Update Policies
+  description: This article provides answers to some frequently asked questions about Windows Driver Update Policies.
   ms.date: 01/06/2026
   ms.topic: faq
 
 title: |
-  Windows Driver Updates Policies FAQs
+  Windows Driver Update Policies FAQs
 summary: |
-  This article addresses frequently asked questions about Windows driver updates policies in Microsoft Intune.
+  This article addresses frequently asked questions about Windows driver update policies in Microsoft Intune.
 
 sections:
   - name: Policy basics
     questions:
       - question: What drivers are available to be managed?
         answer: |
-          Any driver updates that are currently published to Windows Update and applicable to one or more devices in the policy are available through driver updates policies.
+          Any driver updates that are currently published to Windows Update and applicable to one or more devices in the policy are available through driver update policies.
       - question: Where can I learn more about the available drivers?
         answer: |
           You can get more information about drivers by copying the name and searching the [Microsoft Update Catalog](https://catalog.update.microsoft.com) website.
-      - question: Do driver updates policies update drivers for plug-in devices?
+      - question: Do driver update policies update drivers for plug-in devices?
         answer: |
           Yes, if the driver updates are published to Windows Update by the OEM vendor.
       - question: Which driver updates can users see?
@@ -57,9 +57,9 @@ sections:
 
   - name: Deployment scenarios
     questions:
-      - question: Can I apply driver updates policy during Windows Autopilot?
+      - question: Can I apply driver update policies during Windows Autopilot?
         answer: |
-          No. Driver Updates aren't supported during Windows Autopilot at this time.
+          No. Driver updates aren't supported during Windows Autopilot at this time.
           > [!NOTE]
           > Windows applies critical updates during Windows Autopilot. These updates may include critical driver updates that have not yet been approved by an admin.
       - question: How do I use driver management if I'm currently using Configuration Manager for updates?
@@ -72,7 +72,7 @@ sections:
           > The following procedure is supported for Windows 11 devices. For Windows 10 devices, we recommend moving the Windows Update workload in the Configuration Manager co-management settings to Intune. Alternatively, configure the Windows Update workload to the Pilot setting and specify a collection containing the in-scope Windows 10 managed devices.
 
             1. Leave the [Windows Update](../../configmgr/comanage/workloads.md#windows-update-policies) workload set to Configuration Manager.
-            2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](driver-updates-policy.md).
+            2. Configure your driver policies in Intune to enroll devices and get them ready for management as detailed at [Manage policy for Windows Driver updates with Microsoft Intune](driver-update-policy.md).
             3. Configure a domain-based group policy to configure **Windows Update** as the source for **Driver Updates** using the [Specify source for specific classes of Windows Updates policy](/windows/deployment/update/wufb-wsus).
                 > [!NOTE]
                 > Because Configuration Manager uses a local group policy to configure the update source policy, using Intune or a CSP to attempt to configure these same settings result in an undefined and unpredictable device state.
@@ -114,7 +114,7 @@ sections:
           To help mitigate this type of recurring challenge, we're evaluating changes that can mitigate the need to manually coordinate driver updates with *Patch Tuesday* updates.
       - question: Why has a driver disappeared from the list of available drivers in my policy?
         answer: |
-          - When an OEM replaces a driver with a new recommended driver, the older driver can be moved to the *Other drivers* category. However, if that older driver is the same version or older than the drivers in use by all devices, that driver is entirely removed from the policy as there are no devices that can install it through Driver updates policies.
+          - When an OEM replaces a driver with a new recommended driver, the older driver can be moved to the *Other drivers* category. However, if that older driver is the same version or older than the drivers in use by all devices, that driver is entirely removed from the policy as there are no devices that can install it through driver update policies.
       - question: How do I remove older drivers from the driver list of my policies?
         answer: |
           To ensure that the list of available drivers is up-to-date, drivers with older versions than those already installed across all devices targeted by a policy are no longer applicable. These older drivers are removed from the driver list of previously deployed and active policies. Only drivers that can update the driver version currently installed on a device targeted by a policy remain available in the policy.

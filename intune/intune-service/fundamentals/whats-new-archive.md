@@ -2945,7 +2945,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-For more information, see [Bulk driver updates](../../device-updates/windows/driver-updates-policy.md#bulk-driver-updates).
+For more information, see [Bulk driver updates](../../device-updates/windows/driver-update-policy.md#bulk-driver-updates).
 
 #### App Control for Business policy limitation is resolved<!-- 19548950 -->
 

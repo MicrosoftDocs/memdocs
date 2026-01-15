@@ -193,7 +193,7 @@ To uninstall the latest Windows update:
 
 ## Next steps
 
-- [Windows feature updates policies](feature-updates.md)
+- [Windows feature update policies](feature-update-policy.md)
 - [Windows feature updates reports](feature-updates-reports.md)
 - [Windows update compatibility reports](compatibility-reports.md)
 

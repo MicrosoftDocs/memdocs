@@ -12,7 +12,7 @@ Expedite policies let you accelerate the installation of a specific Windows secu
 
 You might use an expedite policy to quickly mitigate a critical security vulnerability when your standard update process wouldn't deploy the update soon enough. Expedite policies are designed for targeted, time‑bound scenarios and don't change how future quality updates are deployed.
 
-Not all updates are eligible for expediting. Only supported Windows security updates can be expedited. To manage regular monthly quality updates, continue using standard Windows Update mechanisms such as update rings or Windows quality updates policies.
+Not all updates are eligible for expediting. Only supported Windows security updates can be expedited. To manage regular monthly quality updates, continue using standard Windows Update mechanisms such as update rings or Windows quality update policies.
 
 ## Before you begin
 
@@ -76,7 +76,7 @@ If a restart is required, you can configure a restart deadline that defines how 
 
 If the device doesn't restart before the deadline, the restart can occur during working hours. For more information, see [Enforcing compliance deadlines for updates](/windows/deployment/update/wufb-compliancedeadlines).
 
-Expedite policies don't affect how future quality updates are deployed. To manage ongoing monthly servicing, use update ring policies or Windows quality updates policies and their deadline settings.
+Expedite policies don't affect how future quality updates are deployed. To manage ongoing monthly servicing, use update ring policies or Windows quality update policies and their deadline settings.
 
 ## Create and assign an expedited quality update
 
@@ -142,7 +142,7 @@ While expedite update policies will override an update deferral for the update v
 
 ### Example of installing an expedited update
 
-The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a *quality updates policy* that's assigned to the devices.
+The following sequence of events provides an example of how two devices, named *Test-1* and *Test-2*, install an update based on a quality update policy that's assigned to the devices.
 
 1. Each month, Intune administrators deploy the most recent Windows quality updates on the fourth Tuesday of the month. This period gives them two weeks after the patch Tuesday event to validate the updates in their environment before they force installation of the update.
 1. On January 19, device *Test-1* and *Test-2* install the latest quality update from the patch Tuesday release on January 12. The next day, both devices are turned off by their users who are each leaving on vacation.
@@ -217,7 +217,7 @@ This report can help you find devices with alerts or errors and can help you tro
 ## Next steps
 
 - Configure [update ring policies](update-rings.md)
-- Configure [feature updates policies](feature-updates.md)
+- Configure [feature update policies](feature-update-policy.md)
 - View [Windows release information](/windows/release-information/)
 
 <!-- admin center links -->

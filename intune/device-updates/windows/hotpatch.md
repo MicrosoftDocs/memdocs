@@ -1,6 +1,6 @@
 ---
 title: Use Hotpatch With Windows Quality Updates
-description: Learn how Hotpatch works with Windows quality updates policies in Microsoft Intune to install eligible security updates without requiring an immediate device restart.
+description: Learn how Hotpatch works with Windows quality update policies in Microsoft Intune to install eligible security updates without requiring an immediate device restart.
 ms.date: 01/13/2026
 ms.reviewer: mobattul
 ms.topic: how-to
@@ -8,9 +8,9 @@ ms.topic: how-to
 
 # Hotpatch for Windows quality updates
 
-Windows quality updates policies in Microsoft Intune support **Hotpatch**, a deployment capability designed to reduce device downtime and user disruption. Hotpatch applies eligible **Monthly B security updates** so that they take effect without requiring an immediate device restart.
+Windows quality update policies in Microsoft Intune support **Hotpatch**, a deployment capability designed to reduce device downtime and user disruption. Hotpatch applies eligible **Monthly B security updates** so that they take effect without requiring an immediate device restart.
 
-Hotpatch is an extension of Windows Update and is managed through **Windows Autopatch** using quality updates policies. When enabled, Autopatch orchestrates the deployment of Hotpatch updates to eligible devices enrolled in the Autopatch quality updates policy. This approach helps organizations maintain security compliance while minimizing workflow interruptions.
+Hotpatch is an extension of Windows Update and is managed through **Windows Autopatch** using quality update policies. When enabled, Autopatch orchestrates the deployment of Hotpatch updates to eligible devices enrolled in the Autopatch quality update policy. This approach helps organizations maintain security compliance while minimizing workflow interruptions.
 
 ### Key benefits
 
@@ -20,7 +20,7 @@ Hotpatch is an extension of Windows Update and is managed through **Windows Auto
 
 ## Prerequisites
 
-Hotpatch has the same [prerequisites](quality-updates.md#prerequisites) as Windows quality updates policies. This section highlights additional prerequisites specific to Hotpatch.
+Hotpatch has the same [prerequisites](quality-updates.md#prerequisites) as Windows quality update policies. This section highlights additional prerequisites specific to Hotpatch.
 
 :::row:::
 :::column span="1":::
@@ -119,7 +119,7 @@ Automatic rollback of a Hotpatch update isn't supported but you can uninstall th
 
 ## Hotpatch quality updates report
 
-After a Windows quality updates policy has been created with Hotpatch updates enabled, you can monitor results, hotpatch deployment status, and errors from the reports.
+After a Windows quality update policy has been created with Hotpatch updates enabled, you can monitor results, hotpatch deployment status, and errors from the reports.
 
 This report shows the total targeted devices and current update states of all Hotpatch update enabled devices.
 

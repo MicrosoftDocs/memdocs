@@ -6,7 +6,7 @@ ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy
 ---
 
-# Manage Windows feature updates policies
+# Manage Windows feature update policies
 
 
 Feature update policies in Microsoft Intune let you control which Windows version devices are offered and when that version can install. You can use these policies to target a specific Windows release, upgrade devices to a newer version, or ensure devices remain on a designated version until you're ready to move forward.
@@ -17,23 +17,10 @@ Unlike pausing feature updates in update rings—which automatically expires aft
 
 For information about controlling the availability of feature update offers, see [Rollout options for Windows Updates](rollout-options.md).
 
-<!--
-When a device receives a feature update policy:
-
-- The device updates to the version of Windows specified in the policy.
-    - A device that already runs a later version of Windows remains at its current version. By freezing the version, the devices feature set remains stable during the duration of the policy.
-
-  > [!NOTE]
-  > A device won't install an update when it has a [*safeguard hold*](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) for that Windows version. When a device evaluates applicability of an update version, Windows creates the temporary safeguard hold if an unresolved known issue exists. Once the issue is resolved, the hold is removed and the device can then update.
-  >
-  > - To learn about known issues that can result in a safeguard hold, see the applicable Windows release information and then reference the relevant Windows version from the table of contents for that page: [Windows 11 release information](/windows/release-health/windows11-release-information).
-
-
-- Unlike using the *Pause* option of an update ring, which expires after 35 days, the feature updates policy remains in effect. Devices won't install a new Windows version until you modify or remove the feature updates policy. If you edit the policy to specify a newer version, devices can install that newer version.
-- The ability to *Uninstall* the feature update is honored by the update rings.
-- You can configure policy to manage the schedule by which Windows Update makes the offer available to devices. For more information, see [Rollout options for Windows Updates](rollout-options.md).
-- When a Windows feature update is deployed to a device from the cloud service, the latest monthly quality update is automatically included.
-- -->
+> [!NOTE]
+> A device won't install an update when it has a [*safeguard hold*](/windows/deployment/update/update-compliance-feature-update-status#safeguard-holds) for that Windows version. When a device evaluates applicability of an update version, Windows creates the temporary safeguard hold if an unresolved known issue exists. Once the issue is resolved, the hold is removed and the device can then update.
+>
+> - To learn about known issues that can result in a safeguard hold, see the applicable Windows release information and then reference the relevant Windows version from the table of contents for that page: [Windows 11 release information](/windows/release-health/windows11-release-information).
 
 ## Create and assign feature update policies
 
@@ -119,7 +106,7 @@ Selecting a profile from the list opens the profiles **Overview** pane where you
 
 ## Co-management considerations
 
-If you co-manage devices with Configuration Manager, feature updates policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
+If you co-manage devices with Configuration Manager, feature update policies might not immediately take effect on devices when you newly configure the [Windows Update policies workload](../../configmgr/comanage/workloads.md#windows-update-policies) to Intune. This delay is temporary but can initially result in devices updating to a later feature update version than is configured in the policy.
 
 To prevent this initial delay from impacting your co-managed devices:
 
@@ -160,7 +147,7 @@ Use the following process to ensure Windows Update processes the feature update 
 ## Next steps
 
 - [Manage Windows Feature Updates](feature-updates.md)
-- [Reports for Windows Feature Updates Policies](feature-updates-reports.md)
+- [Reports for Windows Feature Update Policies](feature-updates-reports.md)
 
 <!-- admin center links -->
 

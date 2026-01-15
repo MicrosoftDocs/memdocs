@@ -8,13 +8,13 @@ ms.reviewer:
 
 # Upgrade devices to Windows 11 using feature updates
 
-You can use feature updates policies to upgrade devices that run Windows 10 to Windows 11.
+You can use feature update policies to upgrade devices that run Windows 10 to Windows 11.
 
-When you use feature updates policy to deploy Windows 11, you can target the policy to Windows 10 devices that meet the Windows 11 minimum requirements to upgrade them to Windows 11. Devices that don't meet the requirements for Windows 11 won't install the update and remain at their current Windows 10 version.
+When you use feature update policies to deploy Windows 11, you can target the policy to Windows 10 devices that meet the Windows 11 minimum requirements to upgrade them to Windows 11. Devices that don't meet the requirements for Windows 11 won't install the update and remain at their current Windows 10 version.
 
 Another option is to select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**, then devices that don't meet the requirements for Windows 11 will get the latest Windows 10 feature update instead.
 
-However, if a Windows 10 device that can't run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy. See [Update behavior when multiple policies target a device](feature-updates-policy.md#update-behavior-when-multiple-policies-target-a-device).
+However, if a Windows 10 device that can't run Windows 11 is targeted with a Windows 11 update, future Windows 10 updates won't be offered to that device automatically. In this case, remove the not eligible device from the Windows 11 policy and assign the device to a Windows 10 feature update policy.
 
 ## Prepare to upgrade to Windows 11
 
@@ -28,7 +28,7 @@ If you're already using Endpoint analytics, navigate to the [Work from anywhere 
 
 Windows 11 includes a license agreement that can be viewed at [https://www.microsoft.com/useterms/](https://www.microsoft.com/useterms/). This license agreement is automatically accepted by an organization that submits a policy to deploy Windows 11.
 
-When you configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature updates policy, end users won't see or need to accept the license agreement, making the update process seamless.
+When you configure a policy in the Microsoft Intune admin center to deploy any Windows 11 version, the Microsoft Intune admin center displays a notice to remind you that by submitting the policy you are accepting the Windows 11 License Agreement terms on behalf of the devices, and your device users. After submitting the feature update policy, users won't see or need to accept the license agreement, making the update process seamless.
 
 This license reminder appears each time you select a Windows 11 build, even if all your Windows devices already run Windows 11. This prompt is provided because Intune doesn't track which devices will receive the policy, and its possible new devices that run Windows 10 might later enroll and be targeted by the policy.
 
@@ -36,7 +36,7 @@ For more information including general licensing details, see the [Windows 11 do
 
 ## Create policy for Windows 11
 
-To deploy Windows 11, you'll create and deploy a feature updates policy just as you might have done previously for a Windows 10 device. It's the [same process](feature-updates.md) though instead of selecting a Windows 10 version, you'll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
+To deploy Windows 11, you'll create and deploy a feature update policy just as you might have done previously for a Windows 10 device. It's the [same process](feature-updates.md) though instead of selecting a Windows 10 version, you'll select a Windows 11 version from the *Feature update to deploy* dropdown list. The dropdown list displays both Windows 10 and Windows 11 version updates that are in support.
 
 Also, the admin can choose to deploy the latest Windows 10 update to devices that are not eligible for Windows 11. To enable this feature, the admin must select the checkbox **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update** in the deployment policy. This capability is only available if you choose a Windows 11 version from the *Feature update to deploy* dropdown list, and if the tenant meets the [licensing requirements](feature-updates.md#prerequisites) defined at the beginning of this document.
 

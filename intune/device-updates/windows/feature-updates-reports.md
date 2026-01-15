@@ -1,14 +1,14 @@
 ---
-title: Reports for Windows Feature Updates Policies
-description: Learn about the reports available for Windows feature updates policies in Microsoft Intune.
+title: Reports for Windows Feature Update Policies
+description: Learn about the reports available for Windows feature update policies in Microsoft Intune.
 ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: zadvor
 ---
 
-# Reports for feature updates policies
+# Reports for feature update policies
 
-Intune offers integrated reports to view detailed Windows update deployment status for devices using feature updates policies.
+Intune offers integrated reports to view detailed Windows update deployment status for devices using feature update policies.
 
 ## Before you begin
 
@@ -25,7 +25,7 @@ The data for these reports is generated at different times, which depend on the 
 
 ## Accessing feature updates reports
 
-The data in the Intune reports for feature updates policies is used only for these reports and doesn't surface in other Intune reports.
+The data in the Intune reports for feature update policies is used only for these reports and doesn't surface in other Intune reports.
 
 - Windows feature updates (Organizational): This report provides an overall view of compliance for devices on a per-policy basis.
 - Feature update failures report (Operational): This report provides details on Alerts - errors, warnings, information, and recommendations - on a per-policy basis to help troubleshoot and optimize your devices.
@@ -109,7 +109,7 @@ To access the report:
 
 # [**Feature update failures**](#tab/operational)
 
-The **Feature update failures** operational report provides details for devices that you target with a feature updates policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
+The **Feature update failures** operational report provides details for devices that you target with a feature update policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
 This report provides insights to update installation status, including the number of devices with errors. It also supports drilling in for more details to help you troubleshoot issues with the installation. This report supports filtering, searching, paging, and sorting.
 
