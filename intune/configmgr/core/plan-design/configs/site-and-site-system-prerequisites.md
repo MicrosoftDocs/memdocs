@@ -140,6 +140,9 @@ Starting in version 2309, Configuration Manager requires the installation of the
 
 For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
 
+> [!NOTE]
+> We recommend installing the latest version of the Microsoft ODBC Driver for SQL Server to benefit from the most recent fixes and security updates. However, Configuration Manager does __not__ test every new ODBC driver version as soon as it is released. The version shipped with Configuration Manager 2503 and later is __18.4.1.1__, which is the last validated version. If you encounter issues with a newer ODBC driver, you may be asked to revert to a previously validated version until the issue is resolved by the respective component team. Configuration Manager will update the redistributable ODBC driver in future releases if there are security fixes or deprecations.
+
 ### SQL Server Native Client for the site server
 
 When you install a new site, Configuration Manager automatically installs SQL Server Native Client as a redistributable component. After the site is installed, Configuration Manager doesn't upgrade SQL Server Native Client. Make sure this component is up to date. For more information, see [Prerequisite checks - SQL Server Native Client](../../servers/deploy/install/list-of-prerequisite-checks.md#sql-server-native-client).
