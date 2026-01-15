@@ -78,7 +78,7 @@ Enable the toggles for those options your organization requires.
 
   This setting has no effect for corporate devices. For corporate devices, Intune sends data about both managed and unmanaged apps when requested by this MTD vendor.
 
-- **Enable Certificate Sync for iOS/iPadOS devices**: Allows this Mobile Threat Defense partner to request a list of installed certificates on iOS/iPadOS devices from Intune to use for threat analysis purposes. This iOS/iPadOS device must be MDM-enrolled and provides updated certificate data during device check-in.
+- **Enable Certificate Sync for iOS/iPadOS devices**: This option is only available when supported by the Mobile Threat Defense partner. When enabled it allows the Mobile Threat Defense partner to request a list of installed certificates on iOS/iPadOS devices from Intune to use for threat analysis purposes. This iOS/iPadOS device must be MDM-enrolled and provides updated certificate data during device check-in.
 
   > [!NOTE]
   >

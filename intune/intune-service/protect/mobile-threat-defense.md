@@ -50,7 +50,7 @@ For example: A connected MTD app reports to the MTD vendor that a phone on your 
 
 Once you add a Mobile Threat Defense connector to your tenant, the status displays one of the following states:
 
-| Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? | Certificate sync request messages blocked? |
+| Connector status     | Definition | Device threat messages blocked?     | App Sync request messages blocked? | Certificate Sync request messages blocked? |
 |--------------|-----------|------------|------------|------------|
 | **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308) | Yes (starting 2601) |
 | **Not Set Up**| Connector setup isn't complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) | Yes (starting 2601) |
@@ -61,13 +61,13 @@ Once you add a Mobile Threat Defense connector to your tenant, the status displa
 
 ## Data that Intune collects for Mobile Threat Defense
 
-If enabled, Intune collects app inventory information from both personal and corporate-owned devices and makes it available for MTD providers to fetch, such as Lookout for Work. You can collect an app inventory from the users of iOS devices.
+Intune can collect and share two types of inventory data with Mobile Threat Defense (MTD) partners to enhance threat analysis capabilities. Both services are opt-in; no information is shared by default. An Intune administrator must explicitly enable these features in the Mobile Threat Defense connector settings before any data is shared.
 
-These services are opt-in; no app inventory or certificate information is shared by default. An Intune administrator must enable **App Sync for iOS devices** and **Certificate Sync for iOS devices** in the Mobile Threat Defense connector settings before any information is shared.
+### App inventory (App Sync)
 
-**App inventory**
-If you enable App Sync for iOS/iPadOS devices, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider. Data in the app inventory includes:
+**App Sync for iOS/iPadOS devices** allows MTD partners to request metadata about applications installed on enrolled devices. When enabled, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider during device check-in intervals.
 
+**Data shared includes:**
 - App ID
 - App Version
 - App Short Version
@@ -81,19 +81,21 @@ If you enable App Sync for iOS/iPadOS devices, inventories from both corporate a
 - Whether the app is validated or not
 - Whether the app is managed or not
 
-**Certificate inventory**
-If you enable **Certificate Sync** for iOS/iPadOS devices, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider. Certificate sync data is sent to Mobile Threat Defense partners at an interval based on device check-in. Data in the certificate inventory includes:
+### Certificate inventory (Certificate Sync)
 
-- Certificate Identity
-- Certificate Common Name
-- Certificate Issuer
-- Certificate Subject
-- Certificate Serial Number
-- Certificate Valid From date
-- Certificate Valid To date
-- Certificate Signature Algorithm
-- Whether the certificate is managed or not
-- Whether the certificate is trusted or not
+**Certificate Sync for iOS/iPadOS devices** allows supported MTD partners to request information about certificates installed on enrolled devices. When enabled, certificate inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider during device check-in intervals.
+
+**Data shared includes:**  
+- Account ID
+- Entra ID Device ID
+- Device Owner
+- Certificate List
+  - Common Name
+  - Data
+  - Is Identity
+
+**Certificate Sync is supported by the following Mobile Threat Defense partners:**  
+- Zimperium
 
 ## Sample scenarios for enrolled devices using device compliance policies
 
