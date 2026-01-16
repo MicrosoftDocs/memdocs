@@ -3,7 +3,7 @@ title: Sign Up for Microsoft Intune Free Trial Setup Guide
 description: Sign up for a Microsoft Intune free trial and configure your tenant. Learn the setup process, prerequisites, and how to configure domain names. Start evaluating Intune today.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 01/14/2026
+ms.date: 01/15/2026
 ms.topic: how-to
 ms.reviewer: tycast
 ms.collection:
@@ -146,7 +146,7 @@ If your organization has its own custom domain that you want to use without **.o
 
 6. Verify that you're the owner of the domain that you entered. Select the method that you'll use to verify your domain.
 
-    :::image type="content" source="(./media/free-trial-sign-up/domain-custom-verify.png)" alt-text="Screenshot of Microsoft 365 admin center - Verify domain ownership.":::
+    :::image type="content" source="./media/free-trial-sign-up/domain-custom-verify.png" alt-text="Screenshot of Microsoft 365 admin center - Verify domain ownership.":::
 
     > [!NOTE]
     > For TXT record verification details, see [Create DNS records at any DNS hosting provider for Microsoft 365](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).
