@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 01/13/2026
+ms.date: 01/16/2026
 ms.collection:
   - M365-modern-desktop
   - highpri
@@ -34,13 +34,13 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-### Local Autopilot Reset can’t be triggered by local administrator when “Deny access from network” is configured
+### Local Autopilot Reset can’t be triggered by local administrator when you deny access from network  
 
 **Date added:** January 16, 2026
 
-When a device is configured with an Intune policy that sets **Deny access to this computer from the network** for the **Local account**, the local Windows administrator account isn’t able to initiate a local Windows Autopilot Reset.
+When a device is configured with an Intune policy that sets **Deny access to this computer from the network** for the local account, the local Windows administrator account can't start a local Windows Autopilot Reset.  
 
-This issue impacts scenarios where administrators rely on the local administrator account to trigger **local Autopilot Reset** on a device (for example, from the Windows sign-in screen or after local sign-in). As a workaround, remove the **Deny access to this computer from the network** setting for the **Local account**, or exclude devices that require local Autopilot Reset from this policy. After the policy change syncs to the device, local Autopilot Reset can be initiated successfully.
+This issue affects scenarios where administrators rely on the local administrator account to trigger local Autopilot Reset on a device (for example, from the Windows sign-in screen or after local sign-in). As a workaround, remove the **Deny access to this computer from the network** setting for the local account, or exclude devices that require local Autopilot Reset from this policy. After the device syncs the updated policy, local Autopilot Reset works. 
 
 This issue is under investigation.
 
