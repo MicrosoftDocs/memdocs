@@ -68,7 +68,9 @@ Keep the following behavior in mind:
 - Each feature update policy can target only one Windows version. If a device is targeted by multiple policies, it can therefore be eligible for multiple feature updates.
 - Windows Update offers only one feature update to a device at a time and always selects the **latest applicable version**.
 - Windows 11 feature updates are always considered later versions than Windows 10 feature updates. If a Windows 10 device is targeted by both Windows 10 and Windows 11 feature update policies, the Windows 11 update is offered because upgrading from Windows 10 to Windows 11 is a supported upgrade path.
+<!--
 - To avoid unintended targeting, use **When a device isn't capable of running Windows 11, install the latest Windows 10 feature update**. This setting ensures that devices evaluated as ineligible for Windows 11 receive the most recent supported Windows 10 feature update instead.
+-->
 
 > [!NOTE]  
 > If two policies target the same feature update version for the same device and one policy is configured as **Required** while the other is **Optional**, the update is offered as **Required**.
