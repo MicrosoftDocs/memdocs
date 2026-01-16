@@ -37,7 +37,7 @@ items:
   - name: Get started
     href: quality-updates.md
     displayName: windows quality updates
-  - name: Use Hotpatch with quality updates
+  - name: Use hotpatch with quality updates
     href: hotpatch.md
     displayName: windows quality updates
   - name: Expedite Windows quality updates

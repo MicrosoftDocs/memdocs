@@ -95,7 +95,7 @@ Windows Autopatch is a managed cloud service integrated with Microsoft Intune th
 
 Autopatch uses feature update policies, quality update policies, and driver update policies as its policy surface. These policy types are built on the same cloud orchestration service that powers Windows Autopatch and are also available in Intune for admins who want to manage updates without enrolling devices in Autopatch.
 
-Autopatch adds service-managed capabilities such as dynamic device grouping, phased rollouts, health monitoring, and reporting. For eligible Windows editions, it also enables cloud-powered update scenarios like Hotpatch and expedited updates with minimal manual configuration.
+Autopatch adds service-managed capabilities such as dynamic device grouping, phased rollouts, health monitoring, and reporting. For eligible Windows editions, it also enables cloud-powered update scenarios like hotpatch and expedited updates with minimal manual configuration.
 
 Update ring policies are used in Intune to configure Windows Update behavior such as deferrals, deadlines, and restart settings. For Autopatch‑enrolled devices, update rings may be created and managed by the service to implement rollout cadence.
 
@@ -106,7 +106,7 @@ The following table compares how update management differs when you use Autopatc
 | **Update coordination** | You control scheduling, deferrals, and rollout manually using Intune policies. | Autopatch orchestrates updates using service-managed policies and rollout logic. |
 | **Update ring policy** | You configure update ring policies in Intune to control deferrals, deadlines, and restart behavior. | Autopatch may create and manage update ring policies to control rollout cadence and restart behavior. Admins shouldn't assign custom update ring policies to Autopatch-managed devices. |
 | **Feature update policy** | You use feature update policies to lock or schedule OS versions. | Autopatch manages version targeting and rollout automatically. |
-| **Quality update policy** | You configure quality update policies, expedited updates, and Hotpatch settings manually. | Autopatch manages monthly patches, expedites critical updates, and applies Hotpatch automatically for eligible devices. |
+| **Quality update policy** | You configure quality update policies, expedited updates, and hotpatch settings manually. | Autopatch manages monthly patches, expedites critical updates, and applies hotpatch automatically for eligible devices. |
 | **Driver update policy** | You use driver update policies to review and approve drivers manually. | Autopatch manages driver approvals and scheduling automatically. |
 
 
