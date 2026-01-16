@@ -1,6 +1,6 @@
 ---
 title: Windows Update Ring Policies
-description: Learn about update ring policies for Windows devices and how to create and manage them.
+description: Learn about Windows Update ring policies for Windows devices, how to create and manage them, and improve update deployment.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke

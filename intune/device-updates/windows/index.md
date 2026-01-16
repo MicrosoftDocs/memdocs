@@ -1,13 +1,13 @@
 ---
 title: Windows Update Management Overview
-description: Learn how Microsoft Intune helps you manage Windows updates for your organization.
+description: Learn how to manage Windows updates with Intune. Control update settings, define rollout strategies, and ensure consistent device security across your organization.
 ms.date: 01/14/2026
 ms.topic: overview
 ---
 
 # Windows update management overview
 
-Keeping Windows devices secure and up to date is one of the most important responsibilities for any organization. Intune provides a **cloud-based approach to Windows update management**, giving you control, predictability, and minimal disruption for users.
+Keeping Windows devices secure and up to date is one of the most important responsibilities for any organization. Microsoft Intune provides a **cloud-based approach to Windows update management**, giving you control, predictability, and minimal disruption for users.
 
 This overview explains how Intune manages Windows updates, the policy types available, and how these pieces fit together into a complete update strategy.
 

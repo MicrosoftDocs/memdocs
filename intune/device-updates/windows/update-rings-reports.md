@@ -1,12 +1,12 @@
 ---
 title: Reports for Windows Update Ring Policies
-description: Learn about the reports available for Windows update ring policies in Microsoft Intune.
+description: Learn about the reports available for Windows update ring policies in Intune. Discover how to access and interpret these reports to monitor update deployments.
 ms.date: 01/12/2026
 ms.topic: how-to
 ms.reviewer: zadvor
 ---
 
-# Reports for update ring policies
+# Reports for Windows update ring policies
 
 Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status.
 
