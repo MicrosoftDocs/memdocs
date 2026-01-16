@@ -24,7 +24,7 @@ Settings Catalog policies provide deep device-level control for Microsoft Edge b
 App Configuration Policies (Step 4) are designed for non-enrolled devices and use the Managed Apps configuration channel, while Settings Catalog policies (this step) are designed for enrolled devices and provide device-level controls.
 
 > [!IMPORTANT]
-> Never deploy both App Configuration Policies and Settings Catalog policies to the same client, as this creates policy conflicts.
+> Never deploy both App Configuration Policies and Settings Catalog policies targeting Microsoft Edge to the same client, as this creates policy conflicts.
 
 For enrolled Windows devices, you can choose to use either Settings Catalog policies (recommended for flexibility) or the Microsoft Edge Security Baseline from **Endpoint Security** > **Security baselines**, but not both simultaneously as this creates conflicts.
 

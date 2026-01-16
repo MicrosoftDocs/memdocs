@@ -52,7 +52,7 @@ This guide provides comprehensive step-by-step instructions to implement the Sec
 > [!IMPORTANT]
 > **Policy Selection Guidance**: When configuring browser policies for enrolled Windows devices, you should choose **either** Settings Catalog policies (Step 5) **or** the Microsoft Edge Security Baseline from Endpoint Security, not both. Implementing both creates policy conflicts. The Settings Catalog approach provides more flexibility and granular control across all three security levels. For comprehensive coverage, this guide focuses on Settings Catalog implementation.
 >
-> Similarly, for non-enrolled devices, use App Configuration Policies (Step 4). For enrolled devices, use Settings Catalog policies (Step 5). Never deploy both App Configuration Policies and Settings Catalog policies to the same client as this creates policy conflicts.
+> Similarly, for non-enrolled devices, use App Configuration Policies (Step 4). For enrolled devices, use Settings Catalog policies (Step 5). Never deploy both App Configuration Policies and Settings Catalog policies targeting Microsoft Edge to the same client as this creates policy conflicts.
 
 For more information about Microsoft Edge Security content, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecuritywhitepaper).
 
