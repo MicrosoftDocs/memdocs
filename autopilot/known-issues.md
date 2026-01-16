@@ -34,6 +34,16 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
+### Local Autopilot Reset can’t be triggered by local administrator when “Deny access from network” is configured
+
+**Date added:** January 16, 2026
+
+When a device is configured with an Intune policy that sets **Deny access to this computer from the network** for the **Local account**, the local Windows administrator account isn’t able to initiate a local Windows Autopilot Reset.
+
+This issue impacts scenarios where administrators rely on the local administrator account to trigger **local Autopilot Reset** on a device (for example, from the Windows sign-in screen or after local sign-in). As a workaround, remove the **Deny access to this computer from the network** setting for the **Local account**, or exclude devices that require local Autopilot Reset from this policy. After the policy change syncs to the device, local Autopilot Reset can be initiated successfully.
+
+This issue is under investigation.
+
 ### Devices don't get quality updates during Microsoft Entra hybrid joined deployments  
 
 Date added: *January 13, 2026*  
