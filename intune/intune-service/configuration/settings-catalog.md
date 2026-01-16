@@ -3,7 +3,7 @@ title: Create a policy using settings catalog in Microsoft Intune
 description: Use settings catalog in Microsoft Intune to configure thousands of settings for Windows 10/11, iOS/iPadOS, macOS, and Android client devices, including Microsoft Office apps, Microsoft Edge, administrative templates (ADMX), and more. Add these settings in a device configuration profile to secure devices, and control different programs and features. Use Microsoft Copilot to get What If analysis, and learn more about each setting.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 09/25/2025
+ms.date: 01/26/2026
 ms.update-cycle: 180-days
 ms.topic: how-to
 ms.reviewer: mayurjadhav, beflamm, cchristenson, rashok
@@ -156,18 +156,24 @@ When you create a new policy or update an existing policy, there are built-in se
 
   :::image type="content" source="./media/settings-catalog/search-internet-explorer.png" alt-text="Screenshot that shows the settings catalog when you search for Internet Explorer to see all the Internet Explorer settings in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/search-internet-explorer.png":::
 
-- In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value.
+- In your policy, use **Add settings** > **Add filter**. Select the key, operator, and value to filter the settings list.
 
-  When you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
+  Depending on your platform, you can filter on different properties, like Windows OS edition, [user or device scope](#device-scope-vs-user-scope-settings), and Android device enrollment mode (fully managed, corporate-owned work profile, dedicated).
 
-  :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the settings catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-edition.png":::
+  - For example, when you **filter on OS Edition**, you can filter the settings that apply to specific Windows editions:
 
-  > [!NOTE]
-  > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
+    :::image type="content" source="./media/settings-catalog/settings-picker-filter-edition.png" alt-text="Screenshot that shows the settings catalog when you filter the settings list by Windows edition in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-edition.png":::
 
-  You can also filter the settings by device or user scope. For more information, see [Device scope vs. user scope settings](#device-scope-vs-user-scope-settings) (in this article):
+    > [!NOTE]
+    > For the Microsoft Edge, Office, and OneDrive settings, the OS version or edition doesn't determine if the settings apply. So, if you filter to a specific edition, like Windows Professional, the Microsoft Edge, Office, and OneDrive settings aren't shown.
 
-  :::image type="content" source="./media/settings-catalog/settings-picker-filter-scope.png" alt-text="Screenshot that shows the user and device scope filter in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog/settings-picker-filter-scope.png":::
+  - Use Android management mode filters to apply settings that are relevant to your device scenarios, like settings that only apply to fully managed devices. Also, if you apply a filter with at least two management modes, then all settings that apply to at least one management mode are shown.
+
+    For example, you choose a filter that includes fully managed and dedicated management modes. All settings that apply to at least one of those modes are shown. It doesn't limit the view to settings that apply to both modes. In other words:
+
+    - If a setting works for fully managed only, the setting is shown.
+    - If another setting works for dedicated only, the setting is shown.
+    - If a setting works for both, the setting is shown.
 
 # [Copilot](#tab/copilot-tooltips)
 
@@ -202,10 +208,6 @@ After you give the new profile a name, you can edit the profile to adjust the se
 5. **Save** your changes.
 
 ## Import and export a profile
-
-This feature applies to:
-
-- Windows
 
 When you create a settings catalog policy, you can export the policy to a `.json` file. You can then import this file to create a new policy. This feature is useful if you want to create a policy that's similar to an existing policy. For example, you export a policy, import it to create a new policy, and then make changes to the new policy.
 
