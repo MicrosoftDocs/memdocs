@@ -191,9 +191,9 @@ The Intune **Audit logs** and **Operational logs** are available for routing usi
 After the action:
 
 - The Intune **Audit Logs** and **Operational Logs** are sent immediately from Intune to Azure Monitor services.
-- The Intune **Device Compliance Organizational Logs** and **IntuneDevices** report data is sent from Intune to Azure Monitor services once every 24 hours. This data can be sent anytime in each 24-hour period, so, it can take up to an additional 24 hours to get the logs in the Azure Monitor services.
+- The Intune **Device Compliance Organizational Logs** and **Intune Devices** report data are sent from Intune to Azure Monitor services once every 24 hours. This can be sent anytime in each 24-hour period, so, it can take up to an additional 24 hours to get the logs in the Azure Monitor services.
 
-Once the data is sent from Intune, then it typically shows in the Azure Monitor service within 30 minutes.
+Once Azure Monitor services receive the data, it typically shows in the Azure Monitor service within 30 minutes.
 
 ### What happens if an administrator changes the retention period of a diagnostic setting?
 
