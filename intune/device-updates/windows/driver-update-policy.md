@@ -1,12 +1,12 @@
 ---
-title: Manage Windows Driver Update Policies
+title: Configure Windows Driver Update Policies
 description: Learn how to create, approve, deploy, and pause Windows driver updates using Intune policies to keep Windows devices current and stable.
 ms.date: 01/13/2026
 ms.topic: how-to
 ms.reviewer: davguy; davidmeb; bryanke
 ---
 
-# Manage Windows driver update policies
+# Configure Windows driver update policies
 
 Use Microsoft Intune to create and manage Windows driver update policies for your devices. These policies let you view available driver updates for targeted devices, approve or pause individual updates, and send assignments to Windows Update, which installs updates based on your configuration.
 

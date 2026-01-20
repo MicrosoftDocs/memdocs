@@ -1,12 +1,12 @@
 ---
-title: Windows Feature Update Policies
+title: Configure Windows Feature Update Policies
 description: Learn about Windows feature update polies and how to manage them in Microsoft Intune.
 ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: davidmeb; bryanke; davguy
 ---
 
-# Manage Windows feature update policies
+# Configure Windows feature update policies
 
 Feature update policies in Microsoft Intune specify which Windows version devices are eligible to install and keep that version enforced until the policy is changed or removed. Use these policies to target a specific Windows release or to upgrade devices to a newer version according to your deployment plan.
 
@@ -117,7 +117,6 @@ To prevent this initial delay from impacting your co-managed devices:
    Monitor the report for the policy. To do so, go to **Reports** > **Windows Updates** > **Reports** tab > **Feature Updates report**. Select the policy you created and then generate the report.
 1. Devices that have a state of *OfferReady* or later, are enrolled for feature updates and protected from updating to anything newer than the update you specified in step 3. See [Use the Windows feature updates (Organizational) report](feature-updates-reports.md#accessing-feature-updates-reports).
 1. With devices enrolled for updates and protected, you can safely change the *Windows Update policies* workload from Configuration Manager to Intune. See, [Switch workloads to Intune](/configmgr/comanage/how-to-switch-workloads) in the co-management documentation.
-
 
 ## Move from update ring deferrals to feature update policies
 
