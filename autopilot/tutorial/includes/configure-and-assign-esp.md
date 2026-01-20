@@ -70,8 +70,8 @@ When the Enrollment Status Page (ESP) is configured, it has several options that
     >
     > - This option is only supported for [currently supported versions of Windows 11](/windows/release-health/windows11-release-information).
     > - When this option is enabled, monthly security update releases are installed during OOBE after the ESP completes.
-    > - For important detailed information regarding this option, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
-    > - If this option is set to **No**, make sure to set the option **Block device use until all apps and profiles are installed** is set to **Yes** to ensure that monthly security update releases aren't installed. For more information, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+    > - For important detailed information regarding this option, see [Windows monthly security update release details](/intune/intune-service/enrollment/windows-enrollment-status#windows-monthly-security-update-release-details).
+    > - If this option is set to **No**, make sure to set the option **Block device use until all apps and profiles are installed** is set to **Yes** to ensure that monthly security update releases aren't installed. For more information, see [Windows monthly security update release details](/intune/intune-service/enrollment/windows-enrollment-status#windows-monthly-security-update-release-details).
 
 - **Block device use until all apps and profiles are installed**:
 
@@ -79,7 +79,7 @@ When the Enrollment Status Page (ESP) is configured, it has several options that
 
     > [!IMPORTANT]
     >
-    > Don't set this option to **No** if the option **Install Windows quality updates (might restart the device)** is set to **No**. For more information, see [Install Windows quality updates](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases).
+    > Don't set this option to **No** if the option **Install Windows quality updates (might restart the device)** is set to **No**. For more information, see [Windows monthly security update release details](/intune/intune-service/enrollment/windows-enrollment-status#windows-monthly-security-update-release-details).
     >
 
   - **Yes**: Users can't leave the ESP until Intune is done setting up the device.
