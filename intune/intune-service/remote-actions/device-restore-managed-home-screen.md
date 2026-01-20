@@ -7,7 +7,7 @@ ms.topic: how-to
 
 # Remote device action: restore managed home screen
 
-Intro
+The *restore managed home screen* remote action in Intune re-enables the managed home screen on a device that was previously suspended. When the managed home screen is restored, the device will enforce the managed home screen policies again, restricting access to only the apps and settings defined by those policies.
 
 ## Prerequisites
 
@@ -19,7 +19,8 @@ Intro
 :::column span="3":::
 
 > This remote action supports the following platforms:
-> - Android
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
 
 :::column-end:::
 :::row-end:::
@@ -35,7 +36,7 @@ Intro
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission ****
+>   - The permission **Remote tasks/Restore Managed Home Screen**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
@@ -52,7 +53,7 @@ Once the managed home screen is restored, the device will enforce the managed ho
 
 ## Reference links
 
-- Microsoft Graph API: [XYZ action][GRAPH-1]
+- Microsoft Graph API: [managedDevice resource type][GRAPH-1]
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
@@ -61,4 +62,4 @@ Once the managed home screen is restored, the device will enforce the managed ho
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-xyz
+[GRAPH-1]: /graph/api/intune-devices-manageddevice
