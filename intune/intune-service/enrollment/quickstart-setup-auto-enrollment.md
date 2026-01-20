@@ -3,7 +3,7 @@ title: Set up automatic enrollment in Intune
 description: Enable Intune automatic enrollment of Windows devices that join or register with your Microsoft Entra ID.
 services: microsoft-intune
 ms.topic: how-to
-ms.date: 01/14/2026
+ms.date: 01/20/2026
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management

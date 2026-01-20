@@ -3,7 +3,7 @@ title: Sign Up for Microsoft Intune Free Trial Setup Guide
 description: Sign up for a Microsoft Intune free trial and configure your tenant. Learn the setup process, prerequisites, and how to configure domain names. Start evaluating Intune today.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: tycast
 ms.collection:
@@ -13,11 +13,17 @@ ms.collection:
 
 # Step 1 - Sign up for a free trial and configure a Microsoft Intune tenant
 
-Sign up for a Microsoft Intune free trial to evaluate mobile device management for your organization. In this article, you learn how to sign up for a free trial, create a new tenant, configure essential settings, and prepare your environment for testing.
+Sign up for a Microsoft Intune free trial to evaluate mobile device management for your organization. In this article, you learn how to sign up for a free trial, create a new tenant, set up Intune, and prepare your environment for testing.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
 When you complete the signup process, you automatically create a new tenant. A tenant is a dedicated instance of Microsoft Entra ID that hosts your Intune subscription. After creating the tenant, you can add users and groups, and assign licenses to users.
+
+The free trial includes a Enterprise Mobility + Security (EMS) subscription, which includes Microsoft Entra ID P1 or P2 and Microsoft Intune. You also have access to the following admin centers, which are used by Intune admins:
+
+- **Microsoft Intune admin center** ([https://intune.microsoft.com](https://intune.microsoft.com/)) - Intune admins use this admin center. You can explore the [Intune features and capabilities](what-is-intune.md).
+
+- **Microsoft 365 admin center** ([https://admin.microsoft.com](https://admin.microsoft.com)) - Add and manage users, if you don't use Microsoft Entra ID for this task. You can also manage other aspects of your account, including billing and support.
 
 ## Prerequisites
 
@@ -46,8 +52,6 @@ Before you set up Microsoft Intune, review the following requirements:
 ## Sign up for a Microsoft Intune free trial
 
 The Intune trial is free for 30 days. If you have an existing work or school account, you can **sign in** with that account and add Intune to your subscription. Or, you can **sign up** for a new account. If you sign up for a new account, you can't combine the new account with an existing work or school account.
-
-The account that creates the subscription is assigned the Microsoft Entra [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator). This built-in role is a privileged Microsoft Entra role and has more permissions than needed for Intune.
 
 To sign up for the Microsoft Intune free trial, use the following steps:
 
@@ -87,7 +91,9 @@ To sign up for the Microsoft Intune free trial, use the following steps:
    > [!NOTE]
    > If you select **Get Started**, the **Microsoft 365 admin center** opens. If you select **Manage your subscription**, you see **Your products** and can view details about your Microsoft Intune Trial subscription.
 
-## Sign in to the Microsoft Intune admin center
+You can also [confirm your free trial licenses](licenses.md#confirm-your-licenses).
+
+## Sign in to the Microsoft Intune admin center and create your admin team
 
 If you're not already signed in to the admin center, sign in now:
 
@@ -101,11 +107,38 @@ To get the user ID, refer to the email message you received after signing up for
 > [!TIP]
 > When working with Microsoft Intune, you get better results by using a browser in regular mode, rather than private mode.
 
+### Assign built-in roles to your admin team
+
+Intune uses role-based access control (RBAC) to manage permissions.
+
+The account that creates the subscription is assigned the Microsoft Entra [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator). This built-in role is a privileged Microsoft Entra role and has more permissions than needed for most Intune tasks.
+
+There are built-in roles specifically created and used to manage Intune. Your goal is to use the least privilege role that can perform the necessary tasks. For this series of articles, the following built-in roles are needed:
+
+| Role | Description |
+|---|---|
+| **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** | A Microsoft Entra role that has full access to all features in Microsoft Intune. You can use this account to set up Intune. |
+| **[Domain Name Administrator role](/entra/identity/role-based-access-control/permissions-reference#domain-name-administrator)** | A Microsoft Entra role that can add and verify custom domain names in your tenant. This role is only used if you configure a custom domain name in this series, which is optional. |
+| **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** | A Microsoft Entra role that can create and manage user accounts and groups in Intune and Microsoft 365. |
+| **[Policy and Profile Manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** | An Intune role that can create and manage Intune policies. |
+| **[Application Manager](../fundamentals/role-based-access-control-reference.md#application-manager)** | An Intune role that can add and manage apps in Intune. |
+| **[Intune Role Administrator](../fundamentals/role-based-access-control-reference.md#intune-role-administrator)** | An Intune role that can create and manage custom roles and add users to Intune roles. |
+| **[Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator)** | A Microsoft Entra role that sets up Automatic Enrollment for Windows devices. This role is only used once in this series. |
+
+If many admins are testing Intune, then assign their accounts to only the roles they need. For example, if an admin is only responsible for adding and managing apps, assign that admin only to the **Application Manager** role.
+
+We also suggest that you sign out of the Global Administrator role account and sign in with an account that's needed for the Intune task.
+
+For more information about Intune built-in roles, see:
+
+- [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
+- [Built-in role permissions for Microsoft Intune](role-based-access-control-reference.md)
+
 ## Confirm the MDM authority
 
 By default, the Mobile Device Management (MDM) authority is set when you create your free trial. You can confirm that the MDM authority is set by using the following steps:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the **Intune Administrator** Microsoft Entra role
 2. Select **Tenant administration**.
 3. View the tenant details. The **MDM authority** should be set to **Microsoft Intune**.
 
@@ -113,15 +146,14 @@ If you see an orange banner that states you didn't set the MDM authority, you ca
 
 ### Set the MDM authority to Intune
 
-1. If the MDM authority isn't set, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+1. If the MDM authority isn't set, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) as the **Intune Administrator** Microsoft Entra role.
 2. Select the orange banner to open the **Mobile Device Management Authority** setting. The orange banner appears only if you didn't set the MDM authority.
 
-    > [!NOTE]
-    > If you set the MDM Authority, you see the MDM authority value on the **Tenant administration** pane. The orange banner appears only if you didn't set the MDM authority.
-
-   :::image type="content" source="./media/free-trial-sign-up/choose-mdm-authority.png" alt-text="Screenshot of the Microsoft Intune choose MDM Authority page." lightbox="./media/free-trial-sign-up/choose-mdm-authority.png":::
+    You can confirm the MDM Authority is set using the steps in [Confirm the MDM authority](#confirm-the-mdm-authority) (in this article).
 
 3. If your MDM Authority isn't set, under **Choose MDM Authority**, set your MDM authority to **Intune MDM Authority**.
+
+   :::image type="content" source="./media/free-trial-sign-up/choose-mdm-authority.png" alt-text="Screenshot of the Microsoft Intune choose MDM Authority page." lightbox="./media/free-trial-sign-up/choose-mdm-authority.png":::
 
 For more information about the MDM authority, see [Set the mobile device management authority](mdm-authority-set.md).
 
@@ -132,7 +164,7 @@ If your organization has its own custom domain that you want to use without **.o
 > [!IMPORTANT]
 > You can't rename or remove the initial **onmicrosoft.com** part of the domain name. However, you can add, verify, or remove *custom* domain names used with Intune to keep your business identity clear. For more information, see [Configure a custom domain name](custom-domain-name-configure.md).
 
-1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) with your administrator account.
+1. Sign in to the [Microsoft 365 admin center](https://admin.microsoft.com) as the **Domain Name Administrator** Microsoft Entra role.
 
 2. In the navigation pane, choose **Setup**.
 
@@ -150,20 +182,6 @@ If your organization has its own custom domain that you want to use without **.o
 
     > [!NOTE]
     > For TXT record verification details, see [Create DNS records at any DNS hosting provider for Microsoft 365](/microsoft-365/admin/get-help-with-domains/create-dns-records-at-any-dns-hosting-provider).
-
-## Confirm your licenses
-
-When you sign up for the Intune free trial, you get a Microsoft Intune license. As part of this trial, you get a trial Enterprise Mobility + Security (EMS) subscription. An Enterprise Mobility + Security (EMS) subscription includes both Microsoft Entra ID P1 or P2 and Microsoft Intune.
-
-To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune licenses, see [Confirm your licenses](licenses.md#confirm-your-licenses).
-
-## Admin centers
-
-You use the following admin centers most often:
-
-- **Microsoft Intune admin center** ([https://intune.microsoft.com](https://intune.microsoft.com/)) - Intune admins use this admin center. You can explore the [Intune features and capabilities](what-is-intune.md).
-
-- **Microsoft 365 admin center** ([https://admin.microsoft.com](https://admin.microsoft.com)) - Add and manage users, if you don't use Microsoft Entra ID for this task. You can also manage other aspects of your account, including billing and support.
 
 ## Next steps
 

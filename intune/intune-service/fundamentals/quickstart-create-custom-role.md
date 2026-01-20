@@ -5,7 +5,7 @@ services: microsoft-intune
 author: brenduns
 ms.author: brenduns
 ms.topic: how-to
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 
 ms.collection:
 - M365-identity-device-management
@@ -81,6 +81,9 @@ When you create a custom role, you can set permissions for a wide range of actio
 4. On **Scope tags**, select **Next**. You don't need to configure scope tags for this evaluation scenario.
 
 5. On **Review + Create**, select *Create*. Intune creates the custom role, which now appears on the **Intune roles | All roles** page in the Intune admin center, with a **Type** of *Custom Intune role*.
+
+> [!TIP]
+> For a list of permissions by role, see [Role-based access control (RBAC) reference](role-based-access-control-reference.md).
 
 ## Assign the role to a group
 

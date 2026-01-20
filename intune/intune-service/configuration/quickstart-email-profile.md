@@ -3,7 +3,7 @@ title: Create an Email Device Profile for iOS/iPadOS Devices
 description: Learn how to create an email device profile in Microsoft Intune for iOS/iPadOS devices. Configure email settings to help users securely access organization email.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: beflamm
 ms.collection:
@@ -12,13 +12,11 @@ ms.collection:
 
 # Step 11 - Create an email device profile for iOS/iPadOS in Microsoft Intune
 
-This article is part of a series that walks you through common Intune tasks. In this article, you create an email profile for iOS/iPadOS devices.
-
-The profile includes the required settings that allow a device to connect to your organization's email. Email device profiles help standardize settings across your devices. By using these profiles, end users can access organization email on their personal devices without any confusing setup.
-
-To help safeguard your email, use an email profile to determine if devices are compliant. Then, set up Conditional Access to allow only compliant devices access to email. For details about email profiles, see [How to configure email settings in Microsoft Intune](email-settings-configure.md).
+In this article, you create an email profile for iOS/iPadOS devices. Email device profiles help standardize settings across your devices. By using these profiles, end users can access organization email on their personal devices without any confusing setup.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+
+To help safeguard your email, you can create a compliance policy that sets rules on devices that connect to email. Then, set up Conditional Access to allow only compliant devices access to your email profiles. To learn more about email profiles, see [configure email settings in Microsoft Intune](email-settings-configure.md).
 
 ## Prerequisites
 
@@ -42,6 +40,8 @@ To help safeguard your email, use an email profile to determine if devices are c
 :::row-end:::
 
 ## Create an iOS/iPadOS email profile
+
+The profile includes the required settings that allow a device to connect to your organization's email.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -85,7 +85,7 @@ To help safeguard your email, use an email profile to determine if devices are c
 
 If you don't use this profile for other tutorials or testing, delete it:
 
-1. In the Intune admin center, select **Devices** > **Manage devices** > **Configuration**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **Manage devices** > **Configuration**.
 2. Select the **iOS/iPadOS require work email** profile you created, and then select **Delete**.
 
 ## Next steps

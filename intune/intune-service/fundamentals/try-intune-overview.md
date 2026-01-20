@@ -3,7 +3,7 @@ title: Try Microsoft Intune for free
 description: Evaluate Microsoft Intune with a free trial. Step through common settings, enroll devices, create policies, and learn about cloud-based device management. Start your trial today.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 01/13/2026
+ms.date: 01/20/2026
 ms.topic: concept-article
 ms.reviewer: tycast
 ms.collection:
@@ -23,10 +23,10 @@ To learn more about Intune, see [What is Microsoft Intune?](what-is-intune.md) a
 
 The following list includes recommended prerequisites when setting up Microsoft Intune:
 
-- Available devices on [supported operating systems](supported-devices-browsers.md)
-- Familiarity with [network endpoints for Microsoft Intune](intune-endpoints.md)
-- An [app](../apps/apps-supported-intune-apps.md) that you can add to Intune, like a Microsoft 365 app
-- Familiarity with [role-based access control (RBAC) in Intune](role-based-access-control.md)
+- Use available devices on [supported operating systems](supported-devices-browsers.md)
+- Be familiar with [network endpoints for Microsoft Intune](intune-endpoints.md)
+- Have an [app](../apps/apps-supported-intune-apps.md) that you can add to Intune, like a Microsoft 365 app
+- Be familiar with [role-based access control (RBAC) in Intune](role-based-access-control.md)
 
 ## Tasks in this series
 
@@ -44,7 +44,7 @@ In these topics, you set up a test environment. Then, you step through common ta
 - [Step 10 - Create and assign custom roles](quickstart-create-custom-role.md)
 - [Step 11 - Create a device configuration profile](../configuration/quickstart-email-profile.md)
 
-## Next step
+## Get started
 
 > [!div class="nextstepaction"]
 > [Step 1 - Set up the Microsoft Intune free trial](free-trial-sign-up.md)
@@ -54,4 +54,4 @@ When you complete the setup, you have a new tenant that's ready to step through 
 ## Learn more
 
 - [What is Microsoft Intune?](what-is-intune.md)
-- [Introduction to Microsoft Intune training path](/training/modules/intro-to-endpoint-manager)
+- [Training path - Introduction to Microsoft Intune](/training/modules/intro-to-endpoint-manager)

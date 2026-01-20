@@ -1,7 +1,7 @@
 ---
 title: Add and Assign an App
 description: Learn how to add and assign apps to user groups in Microsoft Intune. Ensure your workforce has access to the apps they need.
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -63,17 +63,17 @@ Use the following steps to add an app to Intune:
 7. Select **Next** to display the **Review + create** page. Review the values and settings you entered for the app.
 8. When you're done, select **Create** to add the app to Intune.
 
-## Assign the app to a group
+## Update the app assignment (optional)
 
-After you add an app to Microsoft Intune, you can assign the app to more groups of users or devices.
+After you add an app to Microsoft Intune, you can assign the app to more groups of users or devices at any time.
 
-Use the following steps to assign an app to a group:
+Use the following steps to update an app assignment:
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **All Apps**.
 2. Select the app that you want to assign to a group.
 3. Select **Properties**. Next to **Assignments**, select **Edit**.
 4. Select **Add Group** under the **Required** section. The **Select group** pane is displayed.
-5. Find the group that you need to add and choose **Select** at the bottom of the pane.
+5. Find the group that you want to add and choose **Select** at the bottom of the pane.
 6. Select **Review + save** > **Save** to assign the group.
 
 You now have assigned the app to another group.
@@ -82,14 +82,15 @@ You now have assigned the app to another group.
 
 End users must install and use the Company Portal app to install an app made available by Intune. You, acting as an end user, can use the following steps to verify that the app is available to the user on Intune-enrolled devices.
 
-1. Sign in to your enrolled Windows device.
+1. Sign in to your enrolled Windows device. You can use the device you enrolled in [Step 5 - Enroll a Windows device in Microsoft Intune](../enrollment/quickstart-enroll-windows-device.md).
 
     > [!IMPORTANT]
-    > The device must be [enrolled in Intune](../enrollment/quickstart-enroll-windows-device.md). Also, you must sign in to the device by using an account in the group you assigned to the app.
+    > - The device must be enrolled in Intune.
+    > - You must sign in to the device with an account that belongs to the same group you assigned the app to.
 
 2. From the **Start** menu, open the **Microsoft Store**. Then, find the **Company Portal** app and install it.
 3. Launch the **Company Portal** app.
-1. Select the app that you added to Intune. In this article, you added the **Microsoft 365 Apps** suite.
+4. Select the app that you added to Intune. In this article, you added the **Microsoft 365 Apps** suite.
 
     > [!NOTE]
     > If you don't successfully assign any apps to the Intune user, you see the following message:

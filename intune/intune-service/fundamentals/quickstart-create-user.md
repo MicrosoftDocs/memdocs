@@ -5,7 +5,7 @@ services: microsoft-intune
 author: paolomatarazzo
 ms.author: paoloma
 ms.topic: how-to
-ms.date: 01/14/2026
+ms.date: 01/20/2026
 ms.reviewer: jlynn
 ms.collection:
 - M365-identity-device-management
@@ -13,7 +13,7 @@ ms.collection:
 
 # Step 2 - Create a user in Intune and assign the user a license
 
-In this article, you create a user and then assign the user an Intune license. When you use Intune, each person you want to have access to company data must have their own user account. Intune admins can configure users later to manage access control.
+In this article, you create a user and then assign the user an Intune license. When you use Intune, each person you want to have access to company data must have their own user account. To manage access control, Intune admins can configure users at any time.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
@@ -40,7 +40,9 @@ In this article, you create a user and then assign the user an Intune license. W
 
 ## Create a user
 
-A user needs a user account to enroll in Intune device management. To create a new user:
+A user needs a user account to enroll in Intune device management. You use this user account in other steps in this series.
+
+To create a new user:
 
 1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Users** > **All users** > **New user**:
 
@@ -97,7 +99,9 @@ The following steps allow you to assign Intune licenses to multiple users all at
 
 ## Clean up resources
 
-If you don't need this user anymore, you can delete the user.
+You can continue using this user in other steps of this series. When finished with this series, you can delete the user.
+
+To delete the user:
 
 1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Users** > **Active users**.
 2. Select the user you want to delete > **Delete user** > **Close**.

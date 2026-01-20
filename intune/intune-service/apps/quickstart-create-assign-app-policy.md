@@ -2,7 +2,7 @@
 title: Create and Assign an App Protection Policy
 description: Learn how to create and assign an app protection policy in Microsoft Intune to protect your organization's data. Get step-by-step guidance.
 ms.topic: how-to
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.reviewer: dagerrit
 ms.collection:
 - M365-identity-device-management
@@ -66,14 +66,14 @@ Use the following steps to create an app protection policy:
 6. Select **Allow Overrides** to set the Windows Information Protection mode. Selecting this option blocks enterprise data from leaving the protected app.
 7. Select **Next** to display the **Advanced settings**.
 8. Select **Next** to display the **Assignments**.
-9. Select **Select groups to include**, select the group, and select **Select**.
+9. Select **Select groups to include**, select the users group, and select **Select**.
+
+    You can only apply app protection policies to groups that contain users, not groups that contain devices.
+
 10. Select **Next** to display the **Review + create** step.
 11. Select **Create** to create your policy.
 
 You see the app protection policy in Intune.
-
-> [!NOTE]
-> You can only apply app protection policies to groups that contain users, not groups that contain devices.
 
 ## Next steps
 

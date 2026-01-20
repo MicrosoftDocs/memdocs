@@ -2,7 +2,7 @@
 title: Enroll a Windows device
 description: Learn how to enroll a Windows device into Microsoft Intune. Follow this step-by-step evaluation guide to test device enrollment and verify it in the Intune admin center.
 services: microsoft-intune
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -12,11 +12,11 @@ ms.collection:
 
 # Step 5 - Enroll a Windows device in Microsoft Intune
 
-Employees and students who want remote access to work or school resources can enroll their devices into Microsoft Intune. Enrollment ensures that all devices trying to access data within your organization are secure and compliant with your policies and requirements. Upon enrollment, the device gets access to resources like work email, files, VPN, and Wi-Fi.
+Enrollment ensures that all devices trying to access data within your organization are secure and compliant with your policies and requirements. Upon enrollment, the device gets access to resources like work email, files, VPN, and Wi-Fi. Employees and students who want remote access to work or school resources can also enroll their devices into Microsoft Intune.
 
 [!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
 
-In this task, you:
+In this article, you:
 
 * Try out the device user experience by enrolling a device running Windows into Microsoft Intune.
 * Try out the admin user experience by verifying the enrollment in the Microsoft Intune admin center.
@@ -55,7 +55,9 @@ In this task, you:
 
 ## Enroll device
 
-1. In the Settings app, select **Accounts**.
+These steps guide you through using the Settings app on a Windows device to enroll the device into Intune.
+
+1. On the device, open the Settings app, and select **Accounts**.
 
 2. Select **Access work or school**.
 

@@ -3,7 +3,7 @@ title: Send Email Notifications to Noncompliant Devices
 description: Learn how to create notification templates and send email alerts to users with noncompliant devices in Microsoft Intune. Configure actions for noncompliance.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 01/15/2026
+ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: tycast
 ms.collection:
@@ -81,7 +81,7 @@ When you create a device compliance policy, Intune automatically creates an acti
 
 The following steps create a compliance policy for Windows devices:
 
-1. In the Intune admin center, go to **Devices** > **Compliance**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Compliance**.
 2. On the **Policies** tab, choose **Create policy**.
 3. Under **Platform**, select **Windows 10 and later**.
 4. Select **Create**.
