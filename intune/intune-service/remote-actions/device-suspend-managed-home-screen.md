@@ -19,7 +19,7 @@ Intro
 :::column span="3":::
 
 > This remote action supports the following platforms:
-> > - Android
+> - Android
 
 :::column-end:::
 :::row-end:::
