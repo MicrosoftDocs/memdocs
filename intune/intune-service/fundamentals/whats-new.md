@@ -218,7 +218,7 @@ When certificate sync is enabled, the following data is shared:
   - Data
   - Is Identity
 
-For more information, see [Mobile Threat Defense toggle options](../protect/mobile-threat-defense.md#mobile-threat-defense-toggle-options).
+For more information, see [Mobile Threat Defense toggle options](../protect/mtd-connector-enable.md#mobile-threat-defense-toggle-options).
 
 > [!div class="checklist"]
 > Applies to:
