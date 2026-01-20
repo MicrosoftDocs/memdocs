@@ -21,122 +21,21 @@ ms.collection:
      Maintain ~2 years of archived content -->
 
 
-## Week of May 26, 2025 (Service release 2505)
-
-### Microsoft Intune Suite
-
-#### Endpoint Privilege Management rules explicitly deny elevation<!-- 30225542 -->
-
-Endpoint Privilege Management (EPM) elevation rules now include a new file elevation type of **Deny**. An EPM elevation rule set to *Deny* blocks the specified file from running in an elevated context. We recommend using file elevation rules to allow users to elevate specific files. But, a deny rule can help you ensure that certain files like known and potentially malicious software can't be run in an elevated context.
-
-*Deny* rules support the same configuration options as other [elevation types](../protect/epm-elevation-rules.md#creating-elevation-rules-with-endpoint-privilege-management) except for child processes, which aren't used.
-
-For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
+## Week of April 28, 2025
 
 ### App management
 
-#### Newly available protected apps for Intune<!-- 31844143, 31974161, 32037902, 32038043 -->
+#### Intune support for Apple specialty devices<!-- 32486291 -->
 
-The following protected apps are now available for Microsoft Intune:
-
-- Windows App by Microsoft Corporation (Android)
-- Microsoft Clipchamp by Microsoft Corporation (iOS)
-- 4CEE Connect by 4CEE Development
-- Mobile Helix Link for Intune by Mobile Helix
-
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-### Device configuration
-
-### Manage DFCI profiles for Windows devices<!-- 30305262 -->
-
-You can use DFCI profiles to manage UEFI (BIOS) settings for NEC devices that run Windows 10 or Windows 11. Not all NEC devices running Windows are enabled for DFCI. Contact your device vendor or device manufacturer for eligible devices.
-
-You can manage DFCI profiles from within the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) by going to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **Windows 10 and later** for platform > **Templates** > **Device Firmware Configuration Interface** for profile type. For more information about DFCI profiles, see:
-
-- [Configure Device Firmware Configuration Interface (DFCI) profiles on Windows devices in Microsoft Intune](../configuration/device-firmware-configuration-interface-windows.md)
-- [Device Firmware Configuration Interface (DFCI) management with Windows Autopilot](../../autopilot/dfci-management.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-### Device enrollment
-
-#### Custom naming template for AOSP devices <!-- 31707864 -->
-
-Use a custom template for naming AOSP user-affiliated and userless devices when they enroll with Intune. The template is available to configure in the enrollment profile. It can contain a combination of free text and predefined variables (like device serial number, device type), and for user-affiliated devices, the owner's username. For more information about how to configure the template, see:
-
-- [Set up Intune enrollment for Android (AOSP) corporate-owned userless devices](../enrollment/android-aosp-corporate-owned-userless-enroll.md)
-- [Set up Intune enrollment for Android (AOSP) corporate-owned user-associated devices](../enrollment/android-aosp-corporate-owned-user-associated-enroll.md)
-
-
-#### Change to role-based access control for device enrollment limits<!-- 27115176 -->
-
-We updated role-based access control (RBAC) for device limits. If you're currently assigned the [policy and profile manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager) role, or the *device configurations* permissions that are built-in to the role, you now have read-only access to device enrollment limit policies. To create and edit these policies, you must be an Intune Administrator.
-
-### Device management
-
-#### Cross Platform Device Inventory<!-- 25964936 -->
-
-Android, iOS, and Mac devices are added to device inventory. Intune now collects a default set of inventory data including 74 Apple properties and 32 Android properties.
-
-For more information, see [View device details with Microsoft Intune](../fundamentals/device-inventory.md).
-
-#### Enhanced security during unattended Remote Help sessions on Android devices<!--25977108 -->
-
-During an unattended Remote Help sessions on Android devices, the screen of the device is blocked and users are notified if they interact with it. This feature enhances the security and user awareness during remote assistance.
-
-This feature is for Zebra and Samsung devices that enrolled as Android Enterprise corporate owned dedicated devices.
-
-For more information on Remote Help, see [Remote Help](../fundamentals/remote-help-android.md).
-
-### Device security
-
-#### Detect rooted corporate-owned Android Enterprise devices<!--31672848 -->
-
-Configure compliance policies to detect if a corporate-owned Android Enterprise device is rooted. If Microsoft Intune detects that a device is rooted, you can mark it as noncompliant. This feature is now available for devices enrolled as fully managed, dedicated, or corporate-owned with a work profile. For more information, see [Device compliance settings for Android Enterprise in Intune](../protect/compliance-policy-create-android-for-work.md).
-
-To learn about root detection support for Microsoft Defender on Android, see Key capabilities in [Microsoft Defender for Endpoint](/defender-endpoint/mtd) in the Defender documentation, and the Defender for Endpoint blog [Native root detection support for Microsoft Defender on Android](https://techcommunity.microsoft.com/blog/microsoftdefenderatpblog/native-root-detection-support-for-microsoft-defender-on-android/4461576).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android
-
-#### New endpoint security profile for configuring Endpoint detection and response and Antivirus exclusion settings on Linux devices <!-- 26549863 -->
-
-As part of the Intune scenario for [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md), you can use a new *Endpoint detection and response* profile for Linux named [**Microsoft Defender Global Exclusions (AV+EDR)**](../protect/endpoint-security-edr-policy.md#create-a-linux-global-exclusions-policy) that you can now use to manage Linux device exclusions for both Microsoft Defender *Endpoint detection and response* (EDR) and *Antivirus* (AV).
-
-This profile supports settings related to global exclusion settings as detailed in [Configure and validate exclusions on Linux](/defender-endpoint/linux-exclusions) in the Microsoft Defender documentation. These exclusion configurations can apply to both the antivirus and EDR engines on the Linux client to stop associated real time protection EDR alerts for excluded items. Exclusions can be defined by the file path, folder, or process explicitly defined by the admin in the policy.
-
-The new Intune profile:
-
-- Is available in addition to the existing endpoint security Antivirus policy for Microsoft Defender Antivirus.
-- Is supported for devices you manage through the [Microsoft Defender for Endpoint security settings management](../protect/mde-security-integration.md) scenario.
-- Isn't supported for Linux devices managed directly by Intune.
-
-For details about the available Defender settings, see [Configure security settings in Microsoft Defender for Endpoint on Linux - Microsoft Defender for Endpoint](/defender-endpoint/linux-preferences) in the Defender for Endpoint documentation.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Linux
+App protection policies (APP) support Microsoft Edge (v136 or later), OneDrive (v16.8.4 or later), and Outlook (v4.2513.0 or later). To enable this setting for these specific apps on visionOS devices, you must set `com.microsoft.intune.mam.visionOSAllowiPadCompatApps` to `Enabled` in your app configuration policy. Once you assign your app configuration policy, you can create and assign your app protection policy for your VisionOS devices. For more information, see [Protect data on VisionOS devices](../apps/app-configuration-policies-managed-app.md#protect-data-on-visionos-devices).
 
 ### Tenant administration
 
-#### Data collection from SimInfo entity on Windows devices<!--30120558 -->
+#### New icon for Microsoft Intune<!-- 29148691 -->
 
-You can now collect data from the SimInfo entity on Windows devices with enhanced device inventory.
-For more information, see [Intune Data Platform](../../advanced-analytics/data-platform-schema.md).
+Microsoft Intune has a new icon. The Intune icon is being updated across platforms and apps associated with Intune, such as the Intune admin center and Intune Company Portal app. The new icon will gradually be implemented over the next few months.
 
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
-
-## Week of April 28, 2025
+## Week of April 21, 2025
 
 ### Microsoft Intune Suite
 
