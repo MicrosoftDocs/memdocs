@@ -48,6 +48,9 @@ You can send notifications to individual devices or to users in groups. Custom n
 >
 > - The Company Portal app or Microsoft Intune app is installed.
 > - Push notification permissions for the apps are granted by the user.
+>
+> >[!NOTE]
+> > Battery optimization settings on some devices can prevent notifications from being delivered. Consider disabling battery optimization for the Company Portal or Intune app to ensure reliable notification delivery.
 
 ::: zone-end
 ::: zone pivot="ios"
