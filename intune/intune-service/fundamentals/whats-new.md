@@ -72,6 +72,19 @@ From the Intune admin center, IT admins can open the Lenovo Device Orchestration
 >
 > - Windows 11
 
+#### Newly available protected apps for Intune<!-- 35601128, 36072132, 36072263, 36072390, 36072616, 36078662 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Clarity Express for Intune by Rego Consulting Corporation
+- Datadog by Datadog Inc.
+- Jump AI by Accio, Inc.
+- Mijn InPlanning / Swisio by Intus Workforce Solutions (Android)
+- Qlik Analytics by Qlik
+- Tier1 for Intune by SS&C Technologies, Inc. (iOS)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
 ### Device configuration
 
 #### New settings in the Windows settings catalog<!-- 34625889 -->
