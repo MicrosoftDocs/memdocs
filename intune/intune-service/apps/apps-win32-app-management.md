@@ -1,7 +1,7 @@
 ---
 title: Win32 App Management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
-ms.date: 10/02/2025
+ms.date: 01/14/2026
 ms.topic: overview
 ms.reviewer: bryanke
 ai-usage: ai-assisted
@@ -47,6 +47,40 @@ To use Win32 app management, be sure the following criteria are met:
   > [!NOTE]
   >
   > The [Microsoft Intune management extension (IME)](../apps/intune-management-extension.md) provides Intune's Win32 app type capabilities on managed clients. It's installed automatically when a PowerShell script or Win32 app is assigned to the user or device. Additionally, the Intune management extension agent checks every hour (or on service or device restart) for any new Win32 app assignments.
+
+## PowerShell script installer
+
+When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer. This capability enables richer setup workflows, including:
+
+- Prerequisite checks before installation
+- Configuration changes during installation
+- Post-install actions and validation
+- Complex conditional logic based on device state
+
+The PowerShell script runs in place of the standard install command, and installation results appear in the Intune admin center based on the script's return code.
+
+### Script requirements
+
+- Scripts are limited to 50 KB in size
+- Scripts run in the same context as the app installer (system or user context)
+- Return codes from the script determine installation success or failure status
+- Scripts should run silently without user interaction
+
+> [!NOTE]
+> If Multi-Admin Approval (MAA) is enabled for your tenant, you can't upload PowerShell scripts during app creation. You must first create the app, then add or modify scripts afterward. Currently, script properties like `enforceSignatureCheck` and `runAs32Bit` can be edited without MAA requests, but this behavior will change in a future update to require MAA approval.
+
+### When to use script installers
+
+Consider using PowerShell script installers when:
+
+- Your app requires prerequisite validation before installation
+- You need to perform configuration changes alongside app installation
+- The installation process requires conditional logic
+- Post-installation actions are needed (like registry modifications or service configuration)
+
+For command line installations, you can continue using the traditional Install command field.
+
+For more information about adding Win32 apps with script installers, see [Add, assign, and monitor a Win32 app in Microsoft Intune](../apps/apps-win32-add.md).
 
 ## Prepare the Win32 app content for upload
 

@@ -1,7 +1,7 @@
 ---
 title: Manage Apple Volume-Purchased Apps
 description: Learn how to sync apps you bought in volume through Apple Business Manager with Microsoft Intune. Then manage and track these apps on iOS/iPadOS and macOS devices.
-ms.date: 10/27/2025
+ms.date: 01/13/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -71,7 +71,6 @@ You can purchase and distribute public and private apps using Apple Business Man
 > - Import of the same token to another device management solution after you import the location token to Intune can result in the loss of license assignment and user records.
 
 ## Migrate from Volume Purchase Program (VPP) to Apps and Books
-If your organization isn't migrated to Apple Business Manager or Apple School Manager, review [Apple's guidance on migrating to Apps and Books](https://support.apple.com/HT208257) before proceeding to manage purchased apps in Intune.
 
 > [!IMPORTANT]
 > - Only migrate one VPP purchaser per location. If each purchaser migrates to a unique location, all licenses—assigned and unassigned—move to Apps and Books.
