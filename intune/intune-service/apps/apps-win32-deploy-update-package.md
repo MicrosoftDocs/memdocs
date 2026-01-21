@@ -18,6 +18,8 @@ If you want to deploy a specific Windows update package (*.msu* file) to Windows
 
 The following steps help you deploy a Windows update package to Intune.
 
+**Note: Deploying updates using application method is not a recommended way of mass deploying patches/updates, Below article is provided AS-IS**
+
 ## Step 1: Prepare the update package as Win32 app content
 
 1. Download the  Windows update package by searching on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).
