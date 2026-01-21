@@ -14,7 +14,9 @@ ms.collection:
 
 [!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
-If you want to deploy a specific Windows update package (*.msu* file) to Windows devices managed by Intune, you can use the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities to deploy an *.msu* file as a Win32 app.
+If you want to deploy a specific Windows update package (*.msu* file) to Windows devices managed by Intune, you can use the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities to deploy an *.msu* file as a Win32 app.  
+  
+**Note: Deploying updates using application method is not a recommended way of deploying updates, Below article is provided AS-IS**
 
 The following steps help you deploy a Windows update package to Intune.
 
