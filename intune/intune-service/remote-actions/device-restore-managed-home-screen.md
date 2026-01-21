@@ -51,9 +51,11 @@ The *restore managed home screen* remote action in Intune re-enables the managed
 
 Once the managed home screen is restored, the device will enforce the managed home screen policies again, and the user will have access to the managed home screen and apps.
 
+
 ## Reference links
 
 - Microsoft Graph API: [managedDevice resource type][GRAPH-1]
+- Microsoft Graph API: [restoreManagedHomeScreen action][GRAPH-2]
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
@@ -62,4 +64,5 @@ Once the managed home screen is restored, the device will enforce the managed ho
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice
+[GRAPH-1]: /graph/api/resources/intune-devices-manageddevice
+[GRAPH-2]: /graph/api/intune-devices-manageddevice-RestoreManagedHomeScreen

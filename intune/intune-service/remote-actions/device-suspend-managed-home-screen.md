@@ -54,6 +54,7 @@ Once the managed home screen is suspended, the device will no longer enforce the
 ## Reference links
 
 - Microsoft Graph API: [managedDevice resource type][GRAPH-1]
+- Microsoft Graph API: [temporarilySuspendManagedHomeScreen action][GRAPH-2]
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
@@ -62,4 +63,5 @@ Once the managed home screen is suspended, the device will no longer enforce the
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 
-[GRAPH-1]: /graph/api/intune-devices-manageddevice-TemporarilySuspendManagedHomeScreen
+[GRAPH-1]: /graph/api/resources/intune-devices-manageddevice
+[GRAPH-2]: /graph/api/intune-devices-manageddevice-TemporarilySuspendManagedHomeScreen
