@@ -19,7 +19,7 @@ Sign up for a Microsoft Intune free trial to evaluate mobile device management f
 
 When you complete the signup process, you automatically create a new tenant. A tenant is a dedicated instance of Microsoft Entra ID that hosts your Intune subscription. After creating the tenant, you can add users and groups, and assign licenses to users.
 
-The free trial is a Enterprise Mobility + Security (EMS) subscription, which includes Microsoft Entra ID P1 or P2 and Microsoft Intune. After the free trial is configured, you can [confirm your free trial licenses](licenses.md#confirm-your-licenses).
+The free trial is an Enterprise Mobility + Security (EMS) subscription, which includes Microsoft Entra ID P1 or P2 and Microsoft Intune. After the free trial is configured, you can [confirm your free trial licenses](licenses.md#confirm-your-licenses).
 
 You also get access to the following admin centers, which are used by Intune admins:
 

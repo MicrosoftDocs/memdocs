@@ -90,7 +90,7 @@ The following steps allow you to assign Intune licenses to multiple users all at
 2. Select the license you want to assign.
 3. Select **Users** or **Groups**, and then select **Assign licenses**.
 4. Select all the users or all the groups you want to assign the license to > **Assign licenses**.
-   A notification shows the status and outcome of the process. If the assignment to the group can't be completed (for example, because of pre-existing licenses in the group), you can select the notification to view details.
+   A notification shows the status and outcome of the process. If the assignment to the group can't be completed (for example, because of preexisting licenses in the group), you can select the notification to view details.
 
    The user accounts now have the permissions needed to use the service and enroll devices into management.
 
