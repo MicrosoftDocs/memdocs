@@ -196,7 +196,7 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
 
   Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
 
-  Platform SSO is the most secure approach for device attestation and registration. Microsoft recommends you enforce using Platform SSO during device registration, an is a best practice for a Zero Trust security strategy. It ensures strong device identity and replaces traditional registration typically done through the Company Portal.
+  Platform SSO is the most secure approach for device attestation and registration. Microsoft recommends you enforce using Platform SSO during device registration, as it's considered a best practice for a Zero Trust security strategy. It ensures strong device identity and replaces traditional registration typically done through the Company Portal.
 
   For more information, go to:
 
