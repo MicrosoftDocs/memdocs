@@ -1,7 +1,7 @@
 ---
 title: Get started with macOS endpoints
 description: Microsoft Intune guide to set up and configure macOS devices from setup to creating policies and enrolling devices. You secure your corporate and organization-owned endpoints that are enrolled in Intune, and then deploy at scale with Apple Business Manager or Apple School Manager.
-ms.date: 07/31/2025
+ms.date: 01/22/2026
 ms.topic: get-started
 ms.reviewer: scbree;rogerso
 ms.collection:
@@ -175,8 +175,6 @@ macOS devices with user affinity can be targeted for profiles and apps using use
 
 ### Step 6 - Configure initial settings and single sign-on (SSO)
 
-Platform Single Sign-On (PSSO) is the most secure approach for device attestation and registration. Enforcing the use of the SSO extension during device registration is considered a best practice for a Zero Trust security strategy, ensuring strong device identity and replacing traditional registration through the Company Portal.”
-
 ✅ **Optimize first run experience**
 
 Using Intune, you can optimize the first run experience using built-in settings within the ADE enrollment profile. Specifically, when you create the enrollment profile, you can:
@@ -197,6 +195,8 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
   # [Platform SSO](#tab/psso)
 
   Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+
+  Platform SSO is the most secure approach for device attestation and registration. Microsoft recommends you enforce using Platform SSO during device registration, an is a best practice for a Zero Trust security strategy. It ensures strong device identity and replaces traditional registration typically done through the Company Portal.
 
   For more information, go to:
 
