@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 01/26/2026
+ms.date: 01/30/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -98,6 +98,8 @@ The new policies include:
   - **Allow sharing tenant-approved browsing history with Microsoft 365 Copilot Search**
   - **Enable RAM (memory) resource controls**
   - **Specifies whether to opt out of Local Network access restrictions**
+
+  Due to differences in release cadences between Microsoft Edge and Intune, there can be a one-to-two-week delay in the settings catalog.
 
 - Experience > **Disable Share App Promotions** - This policy setting allows IT admins to control if promotional apps are shown in the [Windows Share Sheet](/windows/apps/develop/windows-integration/integrate-sharesheet-overview). If you enable this policy, Windows doesn't show promotional apps in the Share Sheet.
 

@@ -3,7 +3,7 @@ title: What's new in previous months in the Microsoft Intune
 description: Review older announcements from the Intune what's new page
 author: brenduns
 ms.author: brenduns
-ms.date: 01/26/2026
+ms.date: 01/30/2026
 ms.topic: whats-new
 
 ROBOTS: NOINDEX,NOFOLLOW
