@@ -54,7 +54,9 @@ Once the managed home screen is suspended, the device will no longer enforce the
 ## Reference links
 
 - Microsoft Graph API: [managedDevice resource type][GRAPH-1]
+<!--
 - Microsoft Graph API: [temporarilySuspendManagedHomeScreen action][GRAPH-2]
+-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814

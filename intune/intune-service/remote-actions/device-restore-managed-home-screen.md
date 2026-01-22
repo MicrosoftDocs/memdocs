@@ -55,7 +55,9 @@ Once the managed home screen is restored, the device will enforce the managed ho
 ## Reference links
 
 - Microsoft Graph API: [managedDevice resource type][GRAPH-1]
+<!--
 - Microsoft Graph API: [restoreManagedHomeScreen action][GRAPH-2]
+-->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
