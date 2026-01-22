@@ -131,7 +131,7 @@ For more information, go to [Shared devices](../configuration/shared-user-device
 
 ## Software updates
 
-**[Manage software updates](../protect/windows-update-for-business-configure.md)**.
+**[Manage software updates](../../device-updates/windows/configure.md)**.
 
 Intune has different feature that focus on updating Windows client devices. These options include that determine how updates are installed. For example, you can create a maintenance window to install updates, or choose to restart after updates are installed. Updates can be applied to multiple devices running Windows Holographic for Business.
 

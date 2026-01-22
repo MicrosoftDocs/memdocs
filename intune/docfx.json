@@ -103,7 +103,9 @@
         "configmgr/**/*.md": ["ConfigMgr"],
         "configmgr/**/*.yml": ["ConfigMgr"],
         "configmgr/core/**/*.md": ["ConfigMgr"],
-        "endpoint-analytics/**/*.md": ["Intune","endpoint-analytics"],
+        "endpoint-analytics/**/*.md": ["Intune","advanced-analytics","endpoint-analytics"],
+        "advanced-analytics/**/*.md": ["Intune","advanced-analytics","endpoint-analytics"],
+        "device-updates/**/*.md": ["Intune","device-updates"],
         "intune-service/user-help/**/*.md": ["User help"]
       },
       "featureFlags": {
@@ -131,8 +133,8 @@
         "endpoint-analytics/**/*.yml": "paolomatarazzo",
         "advanced-analytics/**/*.md": "paolomatarazzo",
         "advanced-analytics/**/*.yml": "paolomatarazzo",
-        "data-platform/**/*.md": "paolomatarazzo",
-        "data-platform/**/*.yml": "paolomatarazzo",
+        "device-updates/**/*.md": "paolomatarazzo",
+        "device-updates/**/*.yml": "paolomatarazzo",
         "solutions/**/*.md": "mandiohlinger",
         "solutions/**/*.yml": "mandiohlinger"
       },
@@ -153,8 +155,8 @@
         "endpoint-analytics/**/*.yml": "paoloma",
         "advanced-analytics/**/*.md": "paoloma",
         "advanced-analytics/**/*.yml": "paoloma",
-        "data-platform/**/*.md": "paoloma",
-        "data-platform/**/*.yml": "paoloma",
+        "device-updates/**/*.md": "paoloma",
+        "device-updates/**/*.yml": "paoloma",
         "solutions/**/*.md": "mandia",
         "solutions/**/*.yml": "mandia"
       },
@@ -173,8 +175,8 @@
       "ms.subservice": {
         "advanced-analytics/**/*.md": "suite",
         "advanced-analytics/**/*.yml": "suite",
-        "data-platform/**/*.md": "fundamentals",
-        "data-platform/**/*.yml": "fundamentals",
+        "device-updates/**/*.md": "protect",
+        "device-updates/**/*.yml": "protect",
         "endpoint-analytics/**/*.md": "endpoint-analytics",
         "endpoint-analytics/**/*.yml": "endpoint-analytics",
         "intune-service/apps/**/*.md": "apps",
@@ -201,6 +203,8 @@
         "intune-service/user-help/**/*.yml": "end-user-help"
       },
       "search.appverid": {
+        "device-updates/**/*.md": "MET150",
+        "device-updates/**/*.yml": "MET150",
         "endpoint-analytics/**/*.md": "MET150",
         "endpoint-analytics/**/*.yml": "MET150",
         "advanced-analytics/**/*.md": "MET150",

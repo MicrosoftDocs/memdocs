@@ -50,6 +50,9 @@ Headings are driven by article context. -->
       - **In progress** - Application is currently being installed.
       - **Skipped** - Usually indicates that the application was selected in the Windows Autopilot device preparation policy, but wasn't assigned to the device group specified in the Windows Autopilot device preparation policy. It can also mean that the application isn't applicable to the device.
       - **Failed** - The application failed to install. Check logs for further details.
+      
+      > [!Note]
+      > A [known issue](/autopilot/device-preparation/known-issues#win32-winget-and-enterprise-app-catalog-applications-are-skipped-when-managed-installer-policy-is-enabled-for-the-tenant) causes Win32, Microsoft Store, and Enterprise app catalog apps to be skipped when a managed installer is configured. 
 
    1. **Scripts** - Contains information regarding the PowerShell scripts being run during the Windows Autopilot device preparation including the list of scripts being run. Statuses include:
 

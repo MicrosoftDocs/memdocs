@@ -26,24 +26,6 @@ This feature applies to:
 
 - Windows cloud-native endpoints
 
-> [!TIP]
-> If you want a Microsoft recommended, standardized solution to build on top of, then you might be interested in [Windows in cloud configuration](https://www.microsoft.com/microsoft-365/windows/cloud-configuration). For an Intune [Guided Scenario](../../intune-service/fundamentals/guided-scenarios-overview.md), see [Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md).
->
-> The following table describes the key difference between this guide and *Windows in cloud configuration*:
->
-> ---
-> | Solution | Objective |
-> | --- | --- |
-> | **Tutorial: Get started with cloud-native Windows endpoints** (this guide) | Guides you through creating your own configuration for your environment, based on Microsoft recommended settings, and helps you start testing. |
-> | [**Windows in cloud configuration**](https://www.microsoft.com/microsoft-365/windows/cloud-configuration) | A guided scenario experience that creates and applies a pre-built configuration based on Microsoft best practices for frontline, remote, and other workers with more focused needs. |
->
-> ---
->
-> You can use this guide combined with *Windows in cloud configuration* to customize the pre-built experience even more.
-
-> [!IMPORTANT]
-> [!INCLUDE [windows-10-support](../../intune-service/includes/windows-10-support.md)]
-
 ## How to get started
 
 Use the five ordered phases in this guide, which build on each other to help you prepare your cloud-native Windows endpoint configuration. By completing these phases in order, you see tangible progress and are ready to provision new devices.
@@ -474,12 +456,12 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 
 *Windows Update client policies* is the cloud technology for controlling how and when updates are installed on devices. In Intune, Windows Update client policies can be configured using:
 
-- [Windows update rings](../../intune-service/protect/windows-10-update-rings.md)
-- [Windows Feature Updates](../../intune-service/protect/windows-10-feature-updates.md)
+- [Windows update rings](../../device-updates/windows/update-rings.md)
+- [Windows Feature Updates](../../device-updates/windows/feature-updates.md)
 
 For more information, go to:
 
-- [Learn about using Windows Update client policies in Microsoft Intune](../../intune-service/protect/windows-update-for-business-configure.md)
+- [Learn about using Windows Update client policies in Microsoft Intune](../../device-updates/windows/configure.md)
 - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
 If you'd like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](../../configmgr/comanage/overview.md).

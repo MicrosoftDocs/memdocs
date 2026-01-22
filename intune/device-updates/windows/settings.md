@@ -1,8 +1,6 @@
 ---
 title: Windows Update settings you can manage with Intune Update Ring policies for Windows devices.
 description: View the settings for Windows Update that you can manage through Intune policy for Update rings.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 07/15/2024
 ms.topic: reference
 ms.reviewer: davguy; bryanke
@@ -17,7 +15,7 @@ ms.collection:
 
 When you use Intune policies for *Update rings*, you're configuring the Windows settings that manage how and when devices will install Windows updates. If a Windows update setting has a Windows version dependency, the version dependency is noted in the settings details.
 
-Following are the Windows Update settings for Windows Updates that you can [manage with update rings](windows-10-update-rings.md) with Microsoft Intune.
+Following are the Windows Update settings for Windows Updates that you can [manage with update rings](update-rings.md) with Microsoft Intune.
 
 ## Update settings
 
@@ -147,7 +145,7 @@ User experience settings control the end-user experience for device restart and 
 - **Restart checks (EDU Restart)**
 
   > [!NOTE]
-  > In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalog](../configuration/settings-catalog.md) to set this value if required.
+  > In policies where this value is currently set to *Skip*, the value will remain in place until that value is changed to *Allow* and saved. However, When creating new policies, it will not be available, and you can use [Settings catalog](../../intune-service/configuration/settings-catalog.md) to set this value if required.
 
   **Default**: Allow
 

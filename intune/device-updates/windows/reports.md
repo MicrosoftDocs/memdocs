@@ -1,15 +1,12 @@
 ---
 title: Use Windows Update for Business reports for Windows Updates in Microsoft Intune
 description: Use Windows Update for Business reports to view data for Windows Updates you deploy with Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 03/04/2025
 ms.topic: how-to
 ms.reviewer: zadvor
 #ms.custom:
 ms.collection:
 - M365-identity-device-management
-- highpri
 - highseo
 - sub-updates
 ---
@@ -18,19 +15,19 @@ ms.collection:
 
 With Intune, you can deploy updates to Windows 10/11 devices by using policies for:
 
-- [Update rings for Windows](../protect/windows-10-update-rings.md)
-- [Feature updates for Windows](../protect/windows-10-feature-updates.md)
-- [Windows Driver updates for Windows](../protect/windows-driver-updates-overview.md)
+- [Update rings for Windows](update-rings.md)
+- [Feature updates for Windows](feature-updates.md)
+- [Windows Driver updates for Windows](driver-updates-overview.md)
 
 Reports for these policy types are available to help you monitor and troubleshoot update deployments. To support reporting, you must configure [Data collection settings](#configuring-for-client-data-reporting).
 
 Intune supports the following report options:
 
 - **Reports in Intune**:
-  - **Windows 10 update rings** – Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
-  - **Windows 10 feature updates** – Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
-  - **Windows Driver updates** – Use the [built-in reports](#reports-for-windows-driver-updates-policy) to understand which driver updates are applicable to your devices and which of those updates have been approved, installed, or paused.
-  - **Windows update distribution** – Use the [three built-in reports](#windows-update-distribution-report) to understand the number of devices that are on each quality update level and the percentage coverage for each update across devices managed by Intune (including co-managed devices). The three distinct organizational reports function sequentially to provide insights on devices and their corresponding Windows update versions.
+  - **Windows 10 update rings**: Use a [built-in report](#reports-for-update-rings-for-windows-10-and-later-policy) that's ready by default when you deploy update rings to your devices.
+  - **Windows 10 feature updates**: Use [two built-in reports](#reports-for-windows-10-and-later-feature-updates-policy) that work together to gain a deep picture of update status and issues. These reports require you to configure data collection from devices before the reports can display data about feature updates.
+  - **Windows Driver updates**: Use the [built-in reports](#reports-for-windows-driver-updates-policy) to understand which driver updates are applicable to your devices and which of those updates have been approved, installed, or paused.
+  - **Windows update distribution**: Use the [three built-in reports](#windows-update-distribution-report) to understand the number of devices that are on each quality update level and the percentage coverage for each update across devices managed by Intune (including co-managed devices). The three distinct organizational reports function sequentially to provide insights on devices and their corresponding Windows update versions.
 
 - **Windows Update for Business reports**:
 
@@ -45,7 +42,7 @@ This method of configuring data collection using Windows diagnostic data in Intu
 To support reporting, you must configure the following data collection settings:
 
 - Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
-- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
+- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../../intune-service/protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 >[!NOTE]
 > The [Windows update distribution reports](#windows-update-distribution-report) don't require any additional configuration for client data reporting.
@@ -54,11 +51,11 @@ To support reporting, you must configure the following data collection settings:
 
 Intune offers integrated report views for the Windows update ring policies you deploy. These views display details about the update ring deployment and status. To access reports, in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) go to **Devices** > **By platform** > **Windows** > **Manage updates** > **Windows 10 and later updates** > **Update rings** tab > and select an update ring policy.  Intune displays details similar to the following for the selected policy:
 
-:::image type="content" source="./media/windows-10-update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./media/windows-10-update-rings/default-policy-view.png":::
+:::image type="content" source="./images/update-rings/default-policy-view.png" alt-text="Screen capture of the default view for Update rings policy." lightbox="./images/update-rings/default-policy-view.png":::
 
 > [!TIP]
 >
-> For details about the policy actions at the top of the policy view, like *Delete*, *Pause*, and *Extend*, see [Manage your Windows Update rings](../protect/windows-10-update-rings.md#manage-your-windows-update-rings) in the *Update rings for Windows 10 and later policy in Intune* article.
+> For details about the policy actions at the top of the policy view, like *Delete*, *Pause*, and *Extend*, see [Manage your Windows Update rings](update-rings.md#manage-your-windows-update-rings) in the *Update rings for Windows 10 and later policy in Intune* article.
 
 On the policy page view:
 
@@ -76,21 +73,21 @@ On the policy page view:
   - Check-in status
   - Last report modification time
 
-  :::image type="content" source="./media/windows-update-reports/report-view-details.png" alt-text="Screen capture that shows details available from the View report action.":::
+  :::image type="content" source="./images/reports/report-view-details.png" alt-text="Screen capture that shows details available from the View report action.":::
 
   From this report view, you can select a device to drill in to view the list of the settings in the policy, and the status of the selected device for each of those settings. Additional drill-in is available by selecting a setting to open the *Setting details*. The *Setting details* display the name of the setting, the devices status (State) for that setting, and a list of profiles that manage the setting and that are assigned to the device. This is useful to help identify the source of a settings conflict.
 
 - **Two additional report tiles**: You can select the tiles for the following reports to view additional details:
 
-  - **Device assignment status** – This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
+  - **Device assignment status**: This report shows all the devices that are targeted by the policy, including devices in a pending policy assignment state.
 
     For this report, you can select one or more status details you are interested in, and then select *Generate report* to update the view with only that information. In this following image, we have generated a report that displays only the devices that were successfully assigned this policy:
 
-    :::image type="content" source="./media/windows-update-reports/successful-assignment-view.png" alt-text="Image of the results of the Assignment status report.":::
+    :::image type="content" source="./images/reports/successful-assignment-view.png" alt-text="Image of the results of the Assignment status report.":::
 
     This report supports drilling in to view the list of settings, with subsequent drill-in as seen in for the full report view available from the *View report* button.
 
-  - **Per setting status** – View the configuration status of each setting for this policy across all devices and users. This view present a simple view of each setting in the policy, and the count of assigned devices that have success, error, or conflict. This report view doesn't support drilling in for additional detail.
+  - **Per setting status**: View the configuration status of each setting for this policy across all devices and users. This view present a simple view of each setting in the policy, and the count of assigned devices that have success, error, or conflict. This report view doesn't support drilling in for additional detail.
 
 ## Reports for Windows 10 and later feature updates policy
 
@@ -98,9 +95,9 @@ Intune offers integrated reports to view detailed Windows update deployment stat
 
 The data in the Intune reports for Feature updates for Windows 10 and later policy is used only for these reports and doesn't surface in other Intune reports.
 
-- [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report)- This report provides an overall view of compliance for devices on a per-policy basis.
+- [Windows 10 feature updates (Organizational)](#use-the-windows-10-feature-updates-organizational-report): This report provides an overall view of compliance for devices on a per-policy basis.
 
-- [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report) – This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
+- [Feature update failures report (Operational)](#use-the-feature-update-failures-operational-report): This report provides details on Alerts – errors, warnings, information, and recommendations – on a per-policy basis to help troubleshoot and optimize your devices.
 
 Before you can use the feature updates policy reports, you must configure prerequisites for the report.
 
@@ -119,7 +116,7 @@ Before you can use the feature updates policy reports, you must configure prereq
 
   Devices must:
 
-  - Meet the [prerequisites for Windows 10 and later feature updates policy](../protect/Windows-10-feature-updates.md#prerequisites) as documented in **Feature updates for Windows 10 and later policy in Intune**.
+  - Meet the [prerequisites for Windows 10 and later feature updates policy](feature-updates.md#prerequisites) as documented in **Feature updates for Windows 10 and later policy in Intune**.
   - Be Microsoft Entra joined, or Microsoft Entra hybrid joined to support submitting of data for reporting.
 
 ### About reporting data latency
@@ -132,7 +129,7 @@ The data for these reports is generated at different times, which depend on the 
 
 ### Use the Windows 10 feature updates (Organizational) report
 
-The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](../protect/windows-10-feature-updates.md) policy.
+The **Windows 10 feature updates** report provides an overview of compliance for devices you target with a [Windows feature updates](feature-updates.md) policy.
 
 > [!IMPORTANT]
 > Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
@@ -147,7 +144,7 @@ To use the report:
 
    - In the admin center, go to **Reports** > **Windows updates**. The default view displays the **Summary** tab:
      > [!div class="mx-imgBorder"]
-     > ![Enable data collection for Intune](./media/windows-update-reports/windows-updates-summary.png)
+     > ![Enable data collection for Intune](./images/reports/windows-updates-summary.png)
 
 3. To open the **Windows 10 feature updates** report and view device details for a specific feature updates profile:
 
@@ -157,7 +154,7 @@ To use the report:
 
    - Select **Update status** and **Ownership** to refine the report.
      > [!div class="mx-imgBorder"]
-     > ![Review ownership](./media/windows-update-reports/windows-feature-updates-by-policy.png)
+     > ![Review ownership](./images/reports/windows-feature-updates-by-policy.png)
 
    The following list identifies the columns that are available in the view:
    - **Devices** – The name of the device.
@@ -221,7 +218,7 @@ To use the report:
 
 ### Use the Feature update failures (Operational) report
 
-The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](../protect/windows-10-feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
+The **Feature update failures** operational report provides details for devices that you target with a [Windows 10 and later feature updates](feature-updates.md) policy, and that have attempted to install an update. Devices in this report might have an Alert that prevents the device from completing installation of the update.
 
 > [!IMPORTANT]
 > Before this report can show data, you must [configure data collection](#configuring-for-client-data-reporting) for the Windows feature updates reports.
@@ -237,7 +234,7 @@ To use the report:
    - The initial view displays a per-profile summary of how many devices have alerts for each of your profiles with the version of Windows that the profile targets:
 
      > [!div class="mx-imgBorder"]
-     > ![Per-profile view](./media/windows-update-reports/update-failures-summary.png)
+     > ![Per-profile view](./images/reports/update-failures-summary.png)
 
    - Selecting a profile opens a dedicated view that contains all active Alerts for that profile.
 
@@ -245,11 +242,11 @@ To use the report:
 
      - Select an *Alert Message* to open a pane that displays more details for that alert:
        > [!div class="mx-imgBorder"]
-       > ![Alert message details](./media/windows-update-reports/alert-message-details.png)
+       > ![Alert message details](./images/reports/alert-message-details.png)
 
      - Select the device name to open the Device page:
        > [!div class="mx-imgBorder"]
-       > ![View the device page](./media/windows-update-reports/device-details.png)
+       > ![View the device page](./images/reports/device-details.png)
 
 The following list identifies Alert Messages, and suggested remediation actions:
 
@@ -319,7 +316,7 @@ The data in the Intune reports for Windows Driver update policies is used only f
 To support reporting on all status and events for driver updates, you must configure the following data collection settings:
 
 - Enable [Windows diagnostic data](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) collection from devices at a level of [*Required*](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher.
-- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
+- At the Tenant level, set [Enable features that require Windows diagnostic data in processor configuration](../../intune-service/protect/data-enable-windows-data.md#windows-data) to **On**. This setting can be configured in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) at **Tenant administration** > **Connectors and tokens** > **Windows data**.
 
 #### User permissions to use reports
 
@@ -335,7 +332,7 @@ On the Summary tab of the Windows Updates node of Reports, you can view summary 
 
 The following screen capture displays a summary of four policies, each assigned to a single device.
 
-:::image type="content" source="./media/windows-update-reports/report-driver-updates-summary.png" alt-text="Screen capture of the Windows Driver Updates summary page." lightbox="./media/windows-update-reports/report-driver-updates-summary.png":::
+:::image type="content" source="./images/reports/report-driver-updates-summary.png" alt-text="Screen capture of the Windows Driver Updates summary page." lightbox="./images/reports/report-driver-updates-summary.png":::
 
 This report allows you to view the status of driver updates for each policy (*Profile* column). It displays the number of devices that are up-to-date (*Success*), failed (*Error*), paused (*Paused*), etc. for the driver updates in that policy. However, each device is only represented once in a single status column, based on the worst status across all of the updates that apply to that device.
 
@@ -360,7 +357,7 @@ To find this report, in the admin center go to **Reports** > **Windows updates**
 
 In the following screen capture, the report shows details for the driver update *Microsoft – APPLIANCES – 1.0.0.1*.
 
-:::image type="content" source="./media/windows-update-reports/report-driver-updates-drivers.png" alt-text="Screen capture of the Windows 10 and later Driver updates report." lightbox="./media/windows-update-reports/report-driver-updates-drivers.png":::
+:::image type="content" source="./images/reports/report-driver-updates-drivers.png" alt-text="Screen capture of the Windows 10 and later Driver updates report." lightbox="./images/reports/report-driver-updates-drivers.png":::
 
 To change the focus of this report to a different driver:
 
@@ -372,7 +369,7 @@ To change the focus of this report to a different driver:
 
 In the following screen capture, only four drivers remain applicable to devices with driver updates policy, and those four updates are different versions of the same driver update.
 
-:::image type="content" source="./media/windows-update-reports/report-driver-updates-pane.png" alt-text="Screen capture of Driver Updates pane of a driver updates policy." lightbox="./media/windows-update-reports/report-driver-updates-pane.png":::
+:::image type="content" source="./images/reports/report-driver-updates-pane.png" alt-text="Screen capture of Driver Updates pane of a driver updates policy." lightbox="./images/reports/report-driver-updates-pane.png":::
 
 **Column details**:
 
@@ -400,7 +397,7 @@ As devices across all your updates policies install the latest versions of a dri
 
 Windows driver updates include a report on driver update failures. To find this report, in the admin center go to **Devices** > **Monitor** > **Windows Driver update failures**. This report is part of the *Software updates* group and might require you to scroll down the admin center to locate it.
 
-:::image type="content" source="./media/windows-update-reports/report-driver-updates-failures.png" alt-text="Screen capture of the Windows Driver update failure report." lightbox="./media/windows-update-reports/report-driver-updates-failures.png":::
+:::image type="content" source="./images/reports/report-driver-updates-failures.png" alt-text="Screen capture of the Windows Driver update failure report." lightbox="./images/reports/report-driver-updates-failures.png":::
 
 When you select the report, you can view a list of your update policies and see a count of devices in each policy that have at least one driver update error. In the previous screen capture, only one driver has such an error.
 
@@ -441,7 +438,7 @@ The report displays the distribution of devices against different Quality Update
 
 Select one or more scope tags from the drop-down list to generate the report. The drop-down list shows all the scope tags the user has access to, based on the user's assigned scope tags.
 
-:::image type="content" source="./media/windows-update-reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./media/windows-update-reports/windows-quality-updates-page1.png":::
+:::image type="content" source="./images/reports/windows-quality-updates-page1.png" alt-text="Screen capture of the Windows quality update distribution report." lightbox="./images/reports/windows-quality-updates-page1.png":::
 
 The report shows the number of devices under each QU level corresponding to the current month and the last 3 months from the day of reporting. The top rows typically represent the last three months, followed by other device data distributions.
 
@@ -472,7 +469,7 @@ When you select **Windows insider or other releases**, the  [Windows quality upd
 
 The report provides the distribution of devices against Windows feature releases. The distribution of devices that are eligible to receive the selected quality update shown based on the Windows 10/11 feature versions that are generally available. The report aids IT administrators in making informed decisions for devices and managing devices that need attention.
 
-:::image type="content" source="./media/windows-update-reports/windows-quality-updates-page2.png" alt-text="Screen capture of the Windows quality update distribution per feature version." lightbox="./media/windows-update-reports/windows-quality-updates-page2.png":::
+:::image type="content" source="./images/reports/windows-quality-updates-page2.png" alt-text="Screen capture of the Windows quality update distribution per feature version." lightbox="./images/reports/windows-quality-updates-page2.png":::
 
 The stacked chart displays the counts of devices that are up to date, those that need updates, and those for which the chosen quality update does not apply. Together, these counts make up the total Windows devices that Intune manages, including co-managed devices.
 
@@ -502,7 +499,7 @@ When you select any device count, the [Windows quality update device version rep
 The report presents a list of devices based on the selections from the previous 2 reports. The  criteria that you selected in the previous reports are displayed at the top of the page.
 The report offers sortable columns and search options, along with an export feature allowing high volume data to be downloaded in CSV format.
 
-:::image type="content" source="./media/windows-update-reports/windows-quality-updates-page3.png" alt-text="Screen capture of the Windows quality update device version." lightbox="./media/windows-update-reports/windows-quality-updates-page3.png":::
+:::image type="content" source="./images/reports/windows-quality-updates-page3.png" alt-text="Screen capture of the Windows quality update device version." lightbox="./images/reports/windows-quality-updates-page3.png":::
 
 **Column details**:
 
@@ -544,4 +541,4 @@ For guidance on this solution, see [Configuring Microsoft Intune devices for Win
 
 ## Next steps
 
-[Manage software updates in Intune](windows-update-for-business-configure.md)
+[Manage software updates in Intune](configure.md)

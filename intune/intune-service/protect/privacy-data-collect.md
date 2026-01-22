@@ -69,7 +69,7 @@ Required data collected by Intune includes, but isn't limited to:
 |         |   Intune device ID                             | Yes (If device is MDM enrolled with Intune) |
 |         |   Device storage space                         | No  |
 |         |   EAS device ID                                | No  |
-|         |   Intune device management ID                  | Yes (If device is MDM enrolled with Intune) |
+
 |         |   Location (corporate devices only)            | No  |
 |         |   Mac Address for Mac devices                  | No  |
 |         |   Network information                          | No  |
@@ -91,7 +91,7 @@ Required data collected by Intune includes, but isn't limited to:
 |         |   Device enrollment status                     | Yes |
 |         |   Device health status                         | Yes (Includes threat status if a Mobile Threat Defense connector is configured) |
 |         |   Encryption keys                              | Yes |
-|         |   Intune device management ID                  | Yes (If device is MDM enrolled with Intune) |
+|         |   Intune device management ID                  | Yes |
 |         |   Last application check-in date/time          | Yes |
 |         |   Managed application device tag               | Yes |
 |         |   Managed application ID                       | Yes |
