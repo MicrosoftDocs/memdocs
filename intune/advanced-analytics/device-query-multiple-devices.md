@@ -169,7 +169,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | --- | --- |
 | `count` | Returns a table with a single record containing the number of records. |
 | `distinct` | Produces a table with the distinct combination of the provided columns of the input table. |
-| `join` | Merge the rows of two tables to form a new table by matching row for the same device. The following join types are supported:<br>- `innerunique` (default)<br>- `inner`<br>- `leftouter`<br>- `rightouter`<br>- `fullouter`<br>- `leftsemi`<br>- `rightsemi`<br>- `leftanti`<br>- `rightanti`.<br><br>If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device`.<br> Common syntax for join is:<br> `LeftEntity | join [hints] (RightEntity) on Conditions`.<br><br>For more information, see [Join](/kusto/query/join-operator) documentation.|
+| `join` | Merge the rows of two tables to form a new table by matching row for the same device. The following join types are supported:<br>- `innerunique` (default)<br>- `inner`<br>- `leftouter`<br>- `rightouter`<br>- `fullouter`<br>- `leftsemi`<br>- `rightsemi`<br>- `leftanti`<br>- `rightanti`.<br><br>Join statements support `on` syntax if joined with `Device`.<br> Common syntax for join is:<br> `LeftEntity | join [hints] (RightEntity) on Conditions`.<br><br>For more information, see [Join](/kusto/query/join-operator) documentation.|
 | `order by` | Sort the rows of the input table into order by one or more columns. |
 | `project` | Select the columns to include, rename or drop, and insert new computed columns. |
 | `take` | Return up to the specified number of rows. |
