@@ -169,7 +169,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | --- | --- |
 | `count` | Returns a table with a single record containing the number of records. |
 | `distinct` | Produces a table with the distinct combination of the provided columns of the input table. |
-| `join` | Merge the rows of two tables to form a new table by matching row for the same device. The following join types are supported:<br>- `innerunique` (default)<br>- `inner`<br>- `leftouter`<br>- `rightouter`<br>- `fullouter`<br>- `leftsemi`<br>- `rightsemi`<br>- `leftanti`<br>- `rightanti`. If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device`. Common syntax for join is `LeftEntity \| join [hints] (RightEntity) on Conditions`. For more info, see [Join](/kusto/query/join-operator) documentation.|
+| `join` | Merge the rows of two tables to form a new table by matching row for the same device. The following join types are supported:<br>- `innerunique` (default)<br>- `inner`<br>- `leftouter`<br>- `rightouter`<br>- `fullouter`<br>- `leftsemi`<br>- `rightsemi`<br>- `leftanti`<br>- `rightanti`.<br><br>If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device`.<br> Common syntax for join is:<br> `LeftEntity | join [hints] (RightEntity) on Conditions`.<br><br>For more information, see [Join](/kusto/query/join-operator) documentation.|
 | `order by` | Sort the rows of the input table into order by one or more columns. |
 | `project` | Select the columns to include, rename or drop, and insert new computed columns. |
 | `take` | Return up to the specified number of rows. |
@@ -307,21 +307,21 @@ The `Device` entity is automatically joined to every other entity for ease of us
 Using `Device` by itself in a query parses to `Device.DeviceId`. In the `Device` column returned by default, the `DeviceId` is translated to `DeviceName` to allow for easier identification of devices.
 The `Device` entity and its properties can also be referenced in queries by referencing `Device.[Insert property]`.
 
-The following query returns all the DiskDrive information for all devices with serial number 123:
+The following query returns all the `DiskDrive` information for all devices with serial number *123*:
 
 ```kusto
 DiskDrive
 where Device.SerialNumber = 123
 ```
 
-The following query projects the Device ID and Manufacturer properties of the entity DiskDrive:
+The following query projects the `DeviceId` and `Manufacturer` properties of the entity `DiskDrive`:
 
 ```kusto
 DiskDrive | project Device.DeviceId, Manufacturer
 ```
 
-Although the Device entity that is shown as the first column by default appears as device names using Device by itself in a query parses to Device.DeviceId.
-This query returns results ordered by the DeviceID, not by DeviceName:
+Although the `Device` entity that is shown as the first column by default appears as device names using Device by itself in a query parses to `Device.DeviceId`.
+This query returns results ordered by the `DeviceID`, not by `DeviceName`:
 
 ```kusto
 MemoryInfo | order by Device
@@ -341,7 +341,7 @@ Cpu | where Device.DeviceName == 'Desktop123"
 
 ## Known limitations
 
-- Using the Device entity in aggregation functions shows a red underline. However, the query can  still run and can return results as expected. For example, the following query shows a red underline under **Device** but still runs:
+- Using the `Device` entity in aggregation functions shows a red underline. However, the query can  still run and can return results as expected. For example, the following query shows a red underline under **Device** but still runs:
 
   ```kusto
   Cpu | summarize max(Device) by Manufacturer.
