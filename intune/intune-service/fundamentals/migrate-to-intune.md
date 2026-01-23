@@ -1,5 +1,5 @@
 ---
-title: Move from Basic Mobility and Security to Intune: Migration Guide
+title: Move from Basic Mobility and Security to Intune-Migration Guide
 description: Follow this migration guide to move your mobile device management from Microsoft 365 Basic Mobility and Security to Intune. Includes policy mapping and license assignment steps.
 author: MandiOhlinger
 ms.author: mandia
@@ -12,7 +12,7 @@ ms.collection:
 
 # Move to Intune from Microsoft 365 Basic Mobility and Security
 
-**Basic Mobility and Security** is a basic set of policies included with Microsoft 365 that help protect devices that access Microsoft 365 apps, like Outlook.
+**Basic Mobility and Security** is a basic set of policies included with Microsoft 365 that helps protect devices that access Microsoft 365 apps, like Outlook.
 
 Many organizations want more advanced device management features that Microsoft Intune provides. For a comparison of the features, see [Choose between Basic Mobility and Security or Intune](/microsoft-365/admin/basic-mobility-security/choose-between-basic-mobility-and-security-and-intune).
 
@@ -26,7 +26,7 @@ If you use Basic Mobility and Security and want to move to Intune, this article 
 
     Use the policy mapping guidance to create new Intune policies that correspond to your existing Basic Mobility and Security policies.
 
-3. **Assign the policies and complete the move**:
+3. **Assign the licenses and policies**:
 
     Assign the Intune licenses to users or groups, which automatically switches the users to Intune device management. When you assign licenses, users and devices are ready to receive the new Intune policies you create.
 
@@ -44,6 +44,10 @@ This article helps you move your mobile device management (MDM) from Microsoft 3
 
   - **Policy and profile manager** - This Microsoft Intune role lets you create and assign policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager).
 
+  - **Endpoint Security Manager** - This Microsoft Intune role lets you create and assign app-based Conditional Access policies in the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). For more information on this role, see [Built-in roles for Microsoft Intune](../fundamentals/role-based-access-control-reference.md#endpoint-security-manager).
+
+  - **Conditional Access Administrator** - This Microsoft Entra role lets you create and assign device-based Conditional Access policies in the [Microsoft Entra admin center](https://entra.microsoft.com/). For more information on this role, see [Microsoft Entra built-in roles - Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator).
+
 - Test the steps in this article on a test users group that have devices enrolled in Basic Mobility and Security. Confirm that the policies behave as you expect.
 
 - After you move to Intune, the existing Basic Mobility and Security policies are still available and shown in [Basic Mobility and Security](https://compliance.microsoft.com/basicmobilityandsecurity). However, the Basic Mobility and Security policies no longer apply to users that are assigned Intune licenses.
@@ -57,7 +61,7 @@ For more information, see [Basic Mobility and Security overview](/microsoft-365/
 Before you move from Basic Mobility and Security device management to Intune device management:
 
 1. Make sure you have enough [Intune licenses](licenses.md) to cover all your users managed by Basic Mobility and Security. If you don't have enough licenses, group your users by priority and assign licenses in stages.
-1. Review the existing Basic Mobility and Security policies and delete any policies that you no longer need. Deleting unneeded policies reduces the number of new Intune policies you create.
+1. Review the existing Basic Mobility and Security policies and [remove any policies](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-turn-off) that you no longer need. Deleting unneeded policies reduces the number of new Intune policies you create.
 
     The following articles list and describe the Basic Mobility and Security policies:
 
@@ -91,7 +95,7 @@ After you prepare your licenses and review the information in [Step 1 - Prepare]
     | [Access requirements policy mapping](policy-map-access-requirements.md) | [Compliance policies](../protect/device-compliance-get-started.md) |  [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Compliance** |
     | [Configurations policy mapping](policy-map-configurations.md) | [Device configuration profiles](../configuration/device-profiles.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
     | [Miscellaneous policy mapping](policy-map-miscellaneous.md) | [Device configuration profiles](../configuration/device-profiles.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Manage devices** > **Configuration** |
-    | Basic Conditional Access policies described at [Set up Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-set-up) and [Configure policies in Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-policies-configure). | [Conditional Access policies]( ../protect/conditional-access.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional Access** > **Classic policies** <br/><br/>Conditional Access is a Microsoft Entra feature. |
+    | Basic Conditional Access policies described in: <br/><br/>-[Set up Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-set-up)<br/>- [Configure policies in Basic Mobility and Security](/microsoft-365/admin/security-and-compliance/m365b-devices-basic-mobility-security-policies-configure) | [Conditional Access policies]( ../protect/conditional-access.md) | [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) > **Devices** > **Conditional Access** > **Classic policies** <br/><br/>Conditional Access is a Microsoft Entra feature. |
 
 ## Step 3 - Assign the policies in stages
 
