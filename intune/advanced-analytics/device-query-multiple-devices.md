@@ -90,7 +90,10 @@ To help you get started, some sample queries are provided in this section. To ac
 This query lists the top five CPUs sorted by core count.
 
 ```kusto
-Cpu| project Device, ProcessorId, Model, Architecture, CpuStatus, ProcessorType, CoreCount, LogicalProcessorCount, Manufacturer, AddressWidth| order by CoreCount asc| take 5
+Cpu
+| project Device, ProcessorId, Model, Architecture, CpuStatus, ProcessorType, CoreCount, LogicalProcessorCount, Manufacturer, AddressWidth
+| order by CoreCount asc
+| take 5
 ```
 
 ### Devices with unprotected disks
@@ -98,7 +101,9 @@ Cpu| project Device, ProcessorId, Model, Architecture, CpuStatus, ProcessorType,
 This query lists devices with unencrypted disks.
 
 ```kusto
-EncryptableVolume| where ProtectionStatus != "PROTECTED"| join LogicalDrive
+EncryptableVolume
+| where ProtectionStatus != "PROTECTED"
+| join LogicalDrive on Device
 ```
 
 ### Arm64 devices
@@ -106,7 +111,8 @@ EncryptableVolume| where ProtectionStatus != "PROTECTED"| join LogicalDrive
 This query lists all devices with an ARM64 processor.
 
 ```kusto
-Cpu | where Architecture == "ARM64"
+Cpu
+| where Architecture == "ARM64"
 ```
 
 ### Device count by processor architecture
@@ -114,7 +120,8 @@ Cpu | where Architecture == "ARM64"
 This query provides a summary of devices by CPU architecture.
 
 ```kusto
-Cpu| summarize DeviceCount=count() by Architecture
+Cpu
+| summarize DeviceCount = count() by Architecture
 ```
 
 ### Top devices by battery capacity
@@ -122,7 +129,12 @@ Cpu| summarize DeviceCount=count() by Architecture
 This query lists the top 10 devices by fully charged battery capacity.
 
 ```kusto
-Battery| project Device, InstanceName, Manufacturer, Model, SerialNumber, CycleCount, DesignedCapacity, FullChargedCapacity, FullChargedCapacityPercent = (FullChargedCapacity*100)/DesignedCapacity| top 10 by FullChargedCapacityPercent asc
+Battery
+| project Device, InstanceName, Manufacturer, Model, SerialNumber, CycleCount,
+          DesignedCapacity,
+          FullChargedCapacity,
+          FullChargedCapacityPercent = (FullChargedCapacity * 100) / DesignedCapacity
+| top 10 by FullChargedCapacityPercent asc
 ```
 
 ### Devices memory information
@@ -130,7 +142,11 @@ Battery| project Device, InstanceName, Manufacturer, Model, SerialNumber, CycleC
 This query lists devices with physical and virtual memory in GB.
 
 ```kusto
-MemoryInfo| project Device, PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000), VirtualMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000) | order by PhysicalMemoryGB asc
+MemoryInfo
+| project Device,
+          PhysicalMemoryGB = PhysicalMemoryTotalBytes/(1000*1000*1000),
+          VirtualMemoryGB = VirtualMemoryTotalBytes/(1000*1000*1000)
+| order by PhysicalMemoryGB asc
 ```
 
 ### Device count by OS version
