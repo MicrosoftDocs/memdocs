@@ -74,6 +74,9 @@ The following notification message displays when the end user opens the installa
 
 ![Customized task sequence notification to the end user from Software Center.](../media/user-notification-enduser.png)
 
+## Deploying a High-impact task sequence
+If you select to deploy a Task Sequence as High-impact, this will display under teh Operating Systems node in Software Center. If you do not select 'This is a high-impact task sequence' the deployment will show under the Applications note.
+
 ## Next steps
 
 [Task sequence performance](task-sequence-performance.md)
