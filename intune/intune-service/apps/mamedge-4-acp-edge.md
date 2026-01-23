@@ -26,7 +26,7 @@ This step defines three progressive ACP configurations per platform, Level 1 (Ba
 App Configuration Policies (this step) are designed for non-enrolled devices using the Managed Apps configuration channel, while Settings Catalog policies (Step 5) are designed for enrolled devices with device-level controls.
 
 > [!IMPORTANT]
-Choose the appropriate policy type based on device enrollment status to avoid policy conflicts.
+> Choose the appropriate policy type based on device enrollment status to avoid policy conflicts.
 
 ## Security Level Selection
 
