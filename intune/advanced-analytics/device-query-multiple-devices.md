@@ -165,17 +165,17 @@ Device query supports only a subset of the operators supported in the Kusto Quer
 
 Table operators can be used to filter, summarize, and transform data streams. The following operators are supported:
 
-| Table Operators | Description |
+| Table operator | Description |
 | --- | --- |
 | `count` | Returns a table with a single record containing the number of records. |
-| `distinct` | Produces a table with the distinct combination of the provided columns of the input table. |
-| `join` | Merge the rows of two tables to form a new table by matching row for the same device. The following join types are supported:<br>- `innerunique` (default)<br>- `inner`<br>- `leftouter`<br>- `rightouter`<br>- `fullouter`<br>- `leftsemi`<br>- `rightsemi`<br>- `leftanti`<br>- `rightanti`.<br><br>Join statements support `on` syntax if joined with `Device`.<br> Common syntax for join is:<br> `LeftEntity | join [hints] (RightEntity) on Conditions`.<br><br>For more information, see [Join](/kusto/query/join-operator) documentation.|
-| `order by` | Sort the rows of the input table into order by one or more columns. |
-| `project` | Select the columns to include, rename or drop, and insert new computed columns. |
-| `take` | Return up to the specified number of rows. |
+| `distinct` | Produces a table with distinct combinations of the provided columns from the input table. |
+| `join` | Merges rows from two tables to form a new table based on matching values in the specified columns. The following join types are supported:<br>- `innerunique` (default)<br>- `inner`<br>- `leftouter`<br>- `rightouter`<br>- `fullouter`<br>- `leftsemi`<br>- `rightsemi`<br>- `leftanti`<br>- `rightanti`<br><br>Join statements support an optional `on` clause. In device query scenarios, you typically use `on Device` when joining tables that contain a `Device` entity. Common syntax for `join` is: `LeftTable | join [hints] (RightTable) on Conditions`.<br><br>For more information, see [Join operator](/kusto/query/join-operator). |
+| `order by` | Sorts the rows of the input table by one or more columns. |
+| `project` | Selects columns to include, rename, or drop, and inserts new computed columns. |
+| `take` | Returns up to the specified number of rows. |
 | `top` | Returns the first N records sorted by the specified columns. |
-| `where` | Filter a table to the subset of rows that satisfy a predicate. |
-| `summarize` | produces a table that aggregates the contents of the input table. |
+| `where` | Filters a table to the subset of rows that satisfy a predicate. |
+| `summarize` | Produces a table that aggregates the contents of the input table. |
 
 > [!NOTE]
 > `Device` is an entity-type and can't be used directly in operators that require scalar values (such as `distinct`, `summarize`, and `order by`). Use a specific device property (for example, `Device.DeviceId`) instead.
@@ -300,62 +300,70 @@ Device query for multiple devices supports a linked entity. The Device entity ca
 | `LastSeenDateTime` | String | The date and time that the device last connected to Intune. |
 | `Ownership` | String | Ownership of the device. |
 
-`Device` entity allows you to reference the device associated with a resulting row without needing to write a separate query to join them together. Essentially, it acts as an automatic join to include device information in your query results.
 
-The `Device` entity is automatically joined to every other entity for ease of use. The `Device` entity is the first column in they query results, unless the query updates the return type through use of operators like a `project`, `summarize`, or `distinct`.
+The `Device` entity allows you to reference device information associated with each resulting row without needing to explicitly join to a device table.
 
-Using `Device` by itself in a query parses to `Device.DeviceId`. In the `Device` column returned by default, the `DeviceId` is translated to `DeviceName` to allow for easier identification of devices.
-The `Device` entity and its properties can also be referenced in queries by referencing `Device.[Insert property]`.
+By default, query results include a `Device` entity column that provides device context for each row. Operators such as `project`, `summarize`, or `distinct` can change which columns are returned.
 
-The following query returns all the `DiskDrive` information for all devices with serial number *123*:
+`Device` represents the device associated with the resulting row and can be referenced directly as an entity-type column. When displayed in query results, the `Device` entity is shown using a friendly identifier, such as the device name, to make it easier to identify devices.
+
+You can reference properties of the `Device` entity in queries using `Device.[Property]`.
+
+The following query returns all `DiskDrive` information for devices with a specific serial number:
 
 ```kusto
 DiskDrive
-where Device.SerialNumber = 123
+| where Device.SerialNumber == "123"
 ```
 
-The following query projects the `DeviceId` and `Manufacturer` properties of the entity `DiskDrive`:
+
+The following query projects the `Device` entity and the `Manufacturer` property from the `DiskDrive` entity:
 
 ```kusto
-DiskDrive | project Device.DeviceId, Manufacturer
+
+DiskDrive
+| project Device, Manufacturer
+
 ```
 
-Although the `Device` entity that is shown as the first column by default appears as device names using Device by itself in a query parses to `Device.DeviceId`.
-This query returns results ordered by the `DeviceID`, not by `DeviceName`:
+By default, query results include a `Device` entity that represents the device associated with each row. The `Device` entity is an entity-type column and does not implicitly resolve to a specific scalar property.
+When sorting or filtering results, explicitly reference the device property you want to use. For example, this query orders results by device name:
 
 ```kusto
-MemoryInfo | order by Device
+
+MemoryInfo
+| order by Device.DeviceName
+
 ```
 
-Similarly, this query returns no results unless the device ID is Desktop123. It doesn't query on device name:
+Similarly, to filter by device name, reference the `DeviceName` property directly:
 
 ```kusto
-Cpu | where Device == "Desktop123"
-```
 
-Use the following example to query on device name:
+Cpu
+| where Device.DeviceName == "Desktop123"
 
-```kusto
-Cpu | where Device.DeviceName == 'Desktop123"
 ```
 
 ## Known limitations
 
-- Using the `Device` entity in aggregation functions shows a red underline. However, the query can  still run and can return results as expected. For example, the following query shows a red underline under **Device** but still runs:
+
+- Using entity-type columns such as `Device` in aggregation functions can show a red underline in the editor because aggregation functions require scalar values. To avoid this, reference a specific scalar property of the entity. For example:
 
   ```kusto
-  Cpu | summarize max(Device) by Manufacturer.
+  Cpu
+  | summarize max(CpuUsage) by Device.Manufacturer
   ```
 
-- Queries with a join operator, $left and $right parameters show a red underline under $left and $right. However, the query can still run and returns results as expected.
-- A single query can contain a maximum of three join operators. Queries with more joins fail.
-- A max of ~50,000 records are returned for a query.
-- A maximum of 10 queries can be submitted per minute. Any other queries within the same minute fail.
+- Queries that use the `join` operator with `$left` and `$right` parameters may show a red underline in the editor. However, the query can still run and return results as expected.
+- A single query can contain a maximum of three `join` operators. Queries with more joins fail.
+- A maximum of ~50,000 records are returned for a query.
+- A maximum of 10 queries can be submitted per minute. Additional queries within the same minute fail.
 - A maximum of 1,000 queries can be submitted per month.
-- Negative values for the amounts parameter of the datetime_add() function aren't supported.
-- Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example:
-  - The query `Device | summarize dcount(DeviceId) | order by dcount_DeviceId` fails
-  - The query `Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename` succeeds.
+- Negative values for the `amount` parameter of the `datetime_add()` function aren't supported.
+- Referencing a variable that was generated by an aggregation function without explicitly naming it can cause a query to fail. Explicitly naming the variable allows the query to succeed. For example:
+  - The query `Device | summarize dcount(DeviceId) | order by dcount_DeviceId` fails.
+  - The query `Device | summarize DCountDeviceIdRename = dcount(DeviceId) | order by DCountDeviceIdRename` succeeds.
 
 <!--links-->
 
