@@ -222,7 +222,7 @@ items:
       - name: Move to Intune
         displayName: help, get started, migrate, mdm, mam, android, ios, ipados, macos, windows
         href: ./fundamentals/deployment-guide-intune-setup.md
-      - name: Migrate from Basic Mobility and Security
+      - name: Move from Basic Mobility and Security
         items:
         - name: Move from Microsoft 365 device management
           displayName: migrate, mdm, office, windows
@@ -508,12 +508,10 @@ items:
               href: ./apps/mamedge-4-acp-edge.md
             - name: Step 5. Create Settings Catalog policies
               href: ./apps/mamedge-5-settings-catalog.md
-            - name: Step 6. Deploy Microsoft Edge security baseline
-              href: ./apps/mamedge-6-security-baseline.md
-            - name: Step 7. Understand end user experience
-              href: ./apps/mamedge-7-end-user-experience.md
-            - name: Step 8. Troubleshoot
-              href: ./apps/mamedge-8-troubleshoot.md
+            - name: Step 6. Understand end user experience
+              href: ./apps/mamedge-6-end-user-experience.md
+            - name: Step 7. Troubleshoot
+              href: ./apps/mamedge-7-troubleshoot.md
 
         - name: Concepts
           items:
@@ -2236,12 +2234,10 @@ items:
           href: ./apps/mamedge-4-acp-edge.md
         - name: Step 5. Create Settings Catalog policies
           href: ./apps/mamedge-5-settings-catalog.md
-        - name: Step 6. Deploy Microsoft Edge security baseline
-          href: ./apps/mamedge-6-security-baseline.md
-        - name: Step 7. Understand end user experience
-          href: ./apps/mamedge-7-end-user-experience.md
-        - name: Step 8. Troubleshoot
-          href: ./apps/mamedge-8-troubleshoot.md
+        - name: Step 6. Understand end user experience
+          href: ./apps/mamedge-6-end-user-experience.md
+        - name: Step 7. Troubleshoot
+          href: ./apps/mamedge-7-troubleshoot.md
 
   - name: Developer guidance
     items:
