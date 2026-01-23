@@ -1,7 +1,7 @@
 ---
 title: Secure Your Corporate Data in Intune with Microsoft Edge for Business
 description: Secure your corporate data in Microsoft Intune with Microsoft Edge for Business across all platforms.
-ms.date: 12/05/2025
+ms.date: 01/15/2026
 ms.topic: overview
 ms.reviewer: samarti
 ms.custom:
@@ -46,9 +46,13 @@ This guide provides comprehensive step-by-step instructions to implement the Sec
 3. **[Integrate Mobile Threat Defense](mamedge-3-scc.md)** - Enhance the overall security posture of your organization by integrating the secure enterprise browser with Windows Security Center, Microsoft Defender, or MTD partners.
 4. **[App configuration policies for Microsoft Edge for Business](mamedge-4-acp-edge.md)** - Configure Level 1, Level 2, and Level 3 app configuration policies for Android, iOS, and Windows to customize browser behavior and features.
 5. **[Settings catalog for Microsoft Edge for Business](mamedge-5-settings-catalog.md)** - Apply Level 1, Level 2, and Level 3 settings catalog configurations for Windows and macOS to establish comprehensive device-level browser controls.
-6. **[Security baseline for Microsoft Edge](mamedge-6-security-baseline.md)** - Deploy the Microsoft Edge security baseline to rapidly implement Level 2 security with 23 preconfigured settings.
-7. **[Microsoft Edge for Business end user experience](mamedge-7-end-user-experience.md)** - Understand how security measures affecting user interaction for Microsoft Edge for Business.
-8. **[Troubleshooting and FAQ](mamedge-8-troubleshoot.md)** - Troubleshoot app protection policies with validation examples and frequently asked questions.
+6. **[Microsoft Edge for Business end user experience](mamedge-6-end-user-experience.md)** - Understand how security measures affecting user interaction for Microsoft Edge for Business.
+7. **[Troubleshooting and FAQ](mamedge-7-troubleshoot.md)** - Troubleshoot app protection policies with validation examples and frequently asked questions.
+
+> [!IMPORTANT]
+> **Policy Selection Guidance**: When configuring browser policies for enrolled Windows devices, you should choose **either** Settings Catalog policies (Step 5) **or** the Microsoft Edge Security Baseline from Endpoint Security, not both. Implementing both creates policy conflicts. The Settings Catalog approach provides more flexibility and granular control across all three security levels. For comprehensive coverage, this guide focuses on Settings Catalog implementation.
+>
+> Similarly, for non-enrolled devices, use App Configuration Policies (Step 4). For enrolled devices, use Settings Catalog policies (Step 5). Never deploy both App Configuration Policies and Settings Catalog policies targeting Microsoft Edge to the same client as this creates policy conflicts.
 
 For more information about Microsoft Edge Security content, see [Microsoft Edge for Business: AI and protection in one secure enterprise browser](https://aka.ms/EdgeSecuritywhitepaper).
 
