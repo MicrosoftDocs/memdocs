@@ -657,7 +657,7 @@
     },
     {
       "source_path": "intune/intune/apps/mamedge-5-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-end-user-experience",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
@@ -667,32 +667,47 @@
     },
     {
       "source_path": "intune/intune/apps/mamedge-6-security-baseline.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-6-security-baseline",
+      "redirect_url": "/intune/intune-service/apps/mamedge-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/mamedge-6-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-8-troubleshoot",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/apps/mamedge-5-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-end-user-experience",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/apps/mamedge-6-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-8-troubleshoot",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/mamedge-7-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-end-user-experience",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/mamedge-8-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-8-troubleshoot",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-6-security-baseline.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-7-end-user-experience.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-8-troubleshoot.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
