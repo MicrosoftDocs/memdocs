@@ -1,7 +1,7 @@
 ---
 title: Step 4. Create App Configuration Policies for Microsoft Edge for Business
 description: Step 4. Create app configuration policies for Microsoft Edge for Business across Windows, Android, and iOS platforms.
-ms.date: 01/15/2026
+ms.date: 01/23/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -26,7 +26,7 @@ This step defines three progressive ACP configurations per platform, Level 1 (Ba
 App Configuration Policies (this step) are designed for non-enrolled devices using the Managed Apps configuration channel, while Settings Catalog policies (Step 5) are designed for enrolled devices with device-level controls.
 
 > [!IMPORTANT]
-> Never deploy both App Configuration Policies and Settings Catalog policies targeting Microsoft Edge to the same client. Choose the appropriate policy type based on device enrollment status to avoid policy conflicts.
+Choose the appropriate policy type based on device enrollment status to avoid policy conflicts.
 
 ## Security Level Selection
 
@@ -825,8 +825,6 @@ Level 3 configuration enforces maximum security with zero-trust controls and com
 
 ::: zone-end
 
-## Next steps
-
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-05.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-5-settings-catalog.md)
+## Next step
 
 Continue to [Step 5](mamedge-5-settings-catalog.md) to configure Settings Catalog policies for enrolled Windows and macOS devices.

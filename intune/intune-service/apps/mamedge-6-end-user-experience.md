@@ -1,7 +1,7 @@
 ---
 title: Step 6. Understand Microsoft Edge for Business End User Experience for Windows
 description: Step 6. Understand Microsoft Edge for Business end user experience Windows.
-ms.date: 01/15/2026
+ms.date: 01/23/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -88,7 +88,5 @@ Intune displays notifications when a policy requirement isn’t met. The followi
     :::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png" alt-text="Offline Grace Period Expired in Microsoft Edge for Business." lightbox="./media/securing-data-edge-for-business/securing-data-edge-for-business29.png":::
 
 ## Next step
-
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-07.png" alt-text="Step 7 to troubleshoot Microsoft Edge for Business.":::](mamedge-7-troubleshoot.md)
 
 Continue with [Step 7](mamedge-7-troubleshoot.md) to troubleshoot Microsoft Edge for Business.

@@ -1,7 +1,7 @@
 ---
 title: Step 5. Create Settings Catalog policies for Microsoft Edge for Business
 description: Step 5. Create Settings Catalog policies for Microsoft Edge for Business on Windows and macOS.
-ms.date: 01/15/2026
+ms.date: 01/23/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -493,8 +493,6 @@ After deploying Settings Catalog policies:
 
 ::: zone-end
 
-## Next steps
-
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-06.png" alt-text="Step 6 to understand end user experience.":::](mamedge-6-end-user-experience.md)
+## Next step
 
 Continue to [Step 6](mamedge-6-end-user-experience.md) to understand the Microsoft Edge for Business end user experience.
