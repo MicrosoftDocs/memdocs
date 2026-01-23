@@ -169,13 +169,16 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | --- | --- |
 | `count` | Returns a table with a single record containing the number of records. |
 | `distinct` | Produces a table with the distinct combination of the provided columns of the input table. |
-| `join` | Merge the rows of two tables to form a new table by matching row for the same device. Only the join types of `innerunique`, `Leftouter`, `Fullouter`, `Rightouter`, and inner are supported. If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device` or `Device.Deviceid`. Common syntax for join is LeftEntity \| join [hints] (RightEntity) on Conditions. For more info, see [Join](/kusto/query/join-operator) documentation.|
+| `join` | Merge the rows of two tables to form a new table by matching row for the same device. The following join types are supported:<br>- `innerunique` (default)<br>- `inner`<br>- `leftouter`<br>- `rightouter`<br>- `fullouter`<br>- `leftsemi`<br>- `rightsemi`<br>- `leftanti`<br>- `rightanti`. If you type in a join type other than the ones supported, they're ignored. Join statements support `on` syntax if joined with `Device`. Common syntax for join is `LeftEntity \| join [hints] (RightEntity) on Conditions`. For more info, see [Join](/kusto/query/join-operator) documentation.|
 | `order by` | Sort the rows of the input table into order by one or more columns. |
 | `project` | Select the columns to include, rename or drop, and insert new computed columns. |
 | `take` | Return up to the specified number of rows. |
 | `top` | Returns the first N records sorted by the specified columns. |
 | `where` | Filter a table to the subset of rows that satisfy a predicate. |
 | `summarize` | produces a table that aggregates the contents of the input table. |
+
+> [!NOTE]
+> `Device` is an entity-type and can't be used directly in operators that require scalar values (such as `distinct`, `summarize`, and `order by`). Use a specific device property (for example, `Device.DeviceId`) instead.
 
 ### Scalar operators
 
@@ -297,12 +300,12 @@ Device query for multiple devices supports a linked entity. The Device entity ca
 | `LastSeenDateTime` | String | The date and time that the device last connected to Intune. |
 | `Ownership` | String | Ownership of the device. |
 
-Device entity allows you to reference the device associated with a resulting row without needing to write a separate query to join them together. Essentially, it acts as an automatic join to include device information in your query results.
+`Device` entity allows you to reference the device associated with a resulting row without needing to write a separate query to join them together. Essentially, it acts as an automatic join to include device information in your query results.
 
-The device entity is automatically joined to every other entity for ease of use. The device entity is the first column in they query results, unless the query updates the return type through use of operators like a `project`, `summarize`, or `distinct`.
+The `Device` entity is automatically joined to every other entity for ease of use. The `Device` entity is the first column in they query results, unless the query updates the return type through use of operators like a `project`, `summarize`, or `distinct`.
 
-Using Device by itself in a query parses to `Device.DeviceId`. In the Device column returned by default, the DeviceId is translated to DeviceName to allow for easier identification of devices.
-The device entity and its properties can also be referenced in queries by referencing Device.[Insert property].
+Using `Device` by itself in a query parses to `Device.DeviceId`. In the `Device` column returned by default, the `DeviceId` is translated to `DeviceName` to allow for easier identification of devices.
+The `Device` entity and its properties can also be referenced in queries by referencing `Device.[Insert property]`.
 
 The following query returns all the DiskDrive information for all devices with serial number 123:
 
@@ -350,7 +353,9 @@ Cpu | where Device.DeviceName == 'Desktop123"
 - A maximum of 10 queries can be submitted per minute. Any other queries within the same minute fail.
 - A maximum of 1,000 queries can be submitted per month.
 - Negative values for the amounts parameter of the datetime_add() function aren't supported.
-- Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example, the query Device | summarize dcount(DeviceId) | order by dcount_DeviceId will fail. Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename succeeds.
+- Referencing a variable that has been summarized by an aggregation function throws an error. Explicitly naming the variable allows the query to succeed again. For example:
+  - The query `Device | summarize dcount(DeviceId) | order by dcount_DeviceId` fails
+  - The query `Device | summarize DCountDeviceIdRename=dcount(DeviceId) | order by DCountDeviceIdRename` succeeds.
 
 <!--links-->
 
