@@ -194,7 +194,7 @@ Table operators can be used to filter, summarize, and transform data streams. Th
 | `summarize` | Produces a table that aggregates the contents of the input table. |
 
 > [!NOTE]
-> `Device` is an entity-type and can't be used directly in operators that require scalar values (such as `distinct`, `summarize`, and `order by`). Use a specific device property (for example, `Device.DeviceId`) instead.
+> `Device` is an entity-type and can't be used directly in operators that require scalar values (such as `distinct`, `summarize`, and `order by`). For these operators, use a specific scalar property of the device (for example, `Device.SerialNumber` or `Device.OSVersion`).
 
 ### Scalar operators
 
