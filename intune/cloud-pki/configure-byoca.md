@@ -144,7 +144,7 @@ To complete these steps, use notepad.exe on a Windows device, or equivalent prog
 1. For **Certificate Template**, select **Subordinate Certification Authority**.
 
    >[!NOTE]
-   > The subordinate CA template must be published and available on the CA that's signing the certificate. Open **certsrv.msc – Certificate Authority management console** on your device to view available certificate templates.
+   > The subordinate CA template must be published and available on the CA that's signing the certificate. Open **certsrv.msc - Certificate Authority management console** on your device to view available certificate templates.
 
 1. Select **Submit** to continue.
 1. Under **Certificate Issued**, choose **DER encoded** or **Base 4 encoded**. Cloud PKI supports both file formats. Then complete these steps:

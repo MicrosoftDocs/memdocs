@@ -1,6 +1,46 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-audit-logs.md",
+      "redirect_url": "/intune/cloud-pki/audit-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-configure-byoca.md",
+      "redirect_url": "/intune/cloud-pki/configure-byoca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-configure-ca.md",
+      "redirect_url": "/intune/cloud-pki/configure-ca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-delete.md",
+      "redirect_url": "/intune/cloud-pki/delete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-deployment.md",
+      "redirect_url": "/intune/cloud-pki/deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-overview.md",
+      "redirect_url": "/intune/cloud-pki/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-fundamentals.md",
+      "redirect_url": "/intune/cloud-pki/fundamentals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-monitor.md",
+      "redirect_url": "/intune/cloud-pki/monitor",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/protect/fota-updates-android.md",
       "redirect_url": "/intune/device-updates/android/fota-updates",
       "redirect_document_id": false
