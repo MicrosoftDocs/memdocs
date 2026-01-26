@@ -247,24 +247,6 @@ Endpoint Privilege Management (EPM) elevation policies now support deployment to
 
 For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../protect/epm-plan.md).
 
-#### Update firewall configurations for new Intune network endpoints<!-- 34445623 -->
-
-As part of Microsoft's ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune have begun use of new IP addresses as defined by Azure Front Door.
-
-As a result of this change, you might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change affects customers using a firewall allowlist that allows outbound traffic based on IP addresses or Azure service tags.
-
-The following IP addresses comprise the list of Azure Front Door endpoints that should be allowed:
-
-- 13.107.219.0/24
-- 13.107.227.0/24
-- 13.107.228.0/23
-- 150.171.97.0/24
-- 2620:1ec:40::/48
-- 2620:1ec:49::/48
-- 2620:1ec:4a::/47
-
-For more information on the IP addresses that should be allowed for use by Intune client and host services, see [Intune core service](../fundamentals/intune-endpoints.md#intune-core-service) in Network endpoints for Microsoft Intune.
-
 ### Tenant administration
 
 #### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->

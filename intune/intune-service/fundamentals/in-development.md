@@ -93,6 +93,10 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 ## Device security
 
+### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
+
+As part of Microsoft's ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allow list that allows outbound traffic based on IP addresses or Azure service tags.
+
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
 We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
