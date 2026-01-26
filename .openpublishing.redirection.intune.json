@@ -6,32 +6,32 @@
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-configure-byoca.md",
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-configure-byoca.md",
       "redirect_url": "/intune/cloud-pki/configure-byoca",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-configure-ca.md",
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-configure-ca.md",
       "redirect_url": "/intune/cloud-pki/configure-ca",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-delete.md",
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-delete.md",
       "redirect_url": "/intune/cloud-pki/delete",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-deployment.md",
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-deployment.md",
       "redirect_url": "/intune/cloud-pki/deploy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/microsoft-cloud-pki-overview.md",
-      "redirect_url": "/intune/cloud-pki/",
+      "redirect_url": "/intune/cloud-pki",
       "redirect_document_id": false
     },
     {
-      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals-fundamentals.md",
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals.md",
       "redirect_url": "/intune/cloud-pki/fundamentals",
       "redirect_document_id": false
     },
