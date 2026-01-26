@@ -354,10 +354,41 @@ Before running the script, ensure you have:
   
 ### Usage
 
-Run the script from an Intune-managed device to test connectivity to the Intune network endpoints using Azure Front Door.
+Run the script from an Intune-managed device to test connectivity to the Intune network endpoints using Azure Front Door. The script can be run in the context of the logged-on user or as the Local System account (Device context).
 
-Open **PowerShell** and use the following syntax:
+#### Script Execution
 
+**Option 1: Run as Current User**
+
+Open **PowerShell** as the current user, navigate to the directory containing the script and run with the following command: 
+
+```powershell
+.\Test-IntuneAFDConnectivity.ps1
+```
+
+**Option 2: Run as System (Device Context)**
+
+To test connectivity as the device itself, use [PsExec](/sysinternals/downloads/psexec) from [Microsoft Sysinternals](/sysinternals/downloads/pstools).
+
+1. Download [PsExec](/sysinternals/downloads/psexec)
+
+2. Open a **PowerShell** as an Administrator. Navigate to the directory containing **PsExec**.
+
+3. Run the following command to run the script as SYSTEM:
+
+```powershell
+.\psexec.exe -accepteula -i -s powershell.exe
+```
+
+1. In the new PowerShell window, navigate to the directory containing the script and run with the following command:
+
+```powershell
+.\Test-IntuneAFDConnectivity.ps1
+```
+
+### Options and Commands
+
+Use the following options based on your environment:
 
 |Cloud|Command|Notes|
 | -------- | -------- | -------- |
