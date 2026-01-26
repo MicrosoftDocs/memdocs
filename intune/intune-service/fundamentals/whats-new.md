@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 01/30/2026
+ms.date: 02/02/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,7 +57,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of January 26, 2026
+## Week of February 2, 2026
 
 ### App management
 
@@ -72,14 +72,12 @@ From the Intune admin center, IT admins can open the Lenovo Device Orchestration
 >
 > - Windows 11
 
-#### Newly available protected apps for Intune<!-- 35601128, 36072132, 36072263, 36072390, 36072616, 36078662 -->
+#### Newly available protected apps for Intune<!-- 35601128, 36072132, 36072263, 36078662 -->
 
 The following protected apps are now available for Microsoft Intune:
 
 - Clarity Express for Intune by Rego Consulting Corporation
 - Datadog by Datadog Inc.
-- Jump AI by Accio, Inc.
-- Mijn InPlanning / Swisio by Intus Workforce Solutions (Android)
 - Qlik Analytics by Qlik
 - Tier1 for Intune by SS&C Technologies, Inc. (iOS)
 
@@ -208,12 +206,13 @@ For iOS/iPadOS, the **Device Management Type** property for managed apps is addi
 To learn more about filters, see:
 
 - [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune](filters-device-properties.md)
+- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune
+](filters-device-properties.md)
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - Android Enterprise
+> - Android
 > - iOS/iPadOS
 
 #### Intune certificate inventory integration with Zimperium mobile threat defense<!-- 35519603 -->
