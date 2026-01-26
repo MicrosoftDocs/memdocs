@@ -30,8 +30,8 @@ Date added: *January 30, 2026*
 
 You can now configure up to 25 apps in a Windows Autopilot device preparation policy. This increase helps you install more apps during OOBE so that you can take full advantage of Autopilot device preparation. The limit change applies to both user-driven and automatic modes, including all Cloud PC offerings. If you configure more apps, be sure to adjust your deployment timeout settings to avoid unexpected timeouts. For more information about assigning apps, see:  
 
-*  [Windows Autopilot device preparation user-driven Microsoft Entra join: Assign applications and PowerShell scripts to device group](device-preparation/tutorial/user-driven/entra-join-assign-apps-scripts.md)
-*  [Windows Autopilot device preparation in automatic mode: Assign applications and PowerShell scripts to device group](device-preparation/tutorial/automatic/automatic-assign-apps-scripts.md)
+*  [Windows Autopilot device preparation user-driven Microsoft Entra join: Assign applications and PowerShell scripts to device group](tutorial/user-driven/entra-join-assign-apps-scripts.md)
+*  [Windows Autopilot device preparation in automatic mode: Assign applications and PowerShell scripts to device group](tutorial/automatic/automatic-assign-apps-scripts.md)
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps is in public preview  
 
