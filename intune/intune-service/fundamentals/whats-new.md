@@ -279,6 +279,8 @@ The following task types are supported:
 - Microsoft Defender security tasks
 - Multi Admin Approval requests
 
+Intune only shows tasks you have permission to manage. When you select a task, Intune opens the same interface and workflow you'd use if managing the task from its original location. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
+
 To learn more, see:
 
 - [Admin tasks](../fundamentals/admin-tasks.md)
