@@ -268,7 +268,7 @@ For more information on the IP addresses that should be allowed for use by Intun
 
 ### Tenant administration
 
-#### Admin tasks in Microsoft Intune are now generally available with new support for Device Offboarding Agent tasks<!-- 32978931, 35967714 -->
+#### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->
 
 **Admin tasks** in the Intune admin center are out of public preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
 
@@ -278,16 +278,6 @@ The following task types are supported:
 - Endpoint Privilege Management file elevation requests
 - Microsoft Defender security tasks
 - Multi Admin Approval requests
-
-**Device Offboarding Agent integration**
-
-The Device Offboarding Agent is now integrated with admin tasks to turn recommendations into actionable items. IT operators can assign, monitor, and complete these tasks to ensure smooth offboarding. This integration helps teams:
-
-- Identify and track work tied to Device Offboarding Agent processes
-- Improve clarity and alignment across teams
-- Increase efficiency through structured workflows
-
-Intune only shows tasks you have permission to manage. When you select a task, Intune opens the same interface and workflow you'd use if managing the task from its original location. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
 
 To learn more, see:
 
