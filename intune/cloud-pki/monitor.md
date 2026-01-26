@@ -1,18 +1,10 @@
 ---
 title: Monitor issued PKI certificates with Microsoft Intune
 description: Monitor reports for certificates issued via Microsoft Intune cloud PKI.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Monitoring for Microsoft Cloud PKI
 
 Monitor the certificates deployed to Intune-managed devices by the Microsoft Cloud PKI service. Every Microsoft Cloud PKI issuing CA has a dashboard that shows the number of deployed certificates, including:

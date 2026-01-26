@@ -1,18 +1,10 @@
 ---
 title: Microsoft Cloud PKI for Microsoft Intune
 description: An overview of the Microsoft Cloud PKI service, available with Microsoft Intune Suite or as an Intune add-on.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Overview of Microsoft Cloud PKI for Microsoft Intune
 
 **Applies to**:

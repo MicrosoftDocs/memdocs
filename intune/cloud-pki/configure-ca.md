@@ -1,18 +1,10 @@
 ---
 title: Configure Microsoft Cloud PKI root and issuing CA for Microsoft Intune
 description: Configure a root and issuing CA for the Microsoft Cloud PKI service.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Configure root and issuing CA for Microsoft Cloud PKI
 
 This article describes how to create and deploy a Microsoft Cloud PKI root CA and issuing CA in Microsoft Intune. An issuing CA issues certificates to devices based on the certificate profiles you create in Intune.

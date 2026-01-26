@@ -1,17 +1,10 @@
 ---
 title: Delete issued PKI certificates with Microsoft Intune
 description: Delete certificates issued via Microsoft Intune cloud PKI.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
 ---
+
 # Delete Microsoft Cloud PKI certification authority
 Delete an issuing and root certification authority (CA) from the Microsoft Cloud PKI service in Microsoft Intune. You can use the following actions in the Microsoft Intune admin center to manage certification authorities (CAs) in your tenant:
 

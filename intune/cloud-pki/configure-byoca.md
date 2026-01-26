@@ -1,18 +1,10 @@
 ---
 title: Bring your own certificate authority with Cloud PKI
 description: Create a Microsoft Cloud PKI BYOCA issuing CA in Intune and anchor it to an on-premises or private CA.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Configure Microsoft Cloud PKI - Bring your own CA
 
 This article describes how to configure Microsoft Cloud PKI for Intune with your own certification authority (CA). The Intune-supported *bring your own CA (BYOCA)* deployment model lets you create and anchor a private issuing CA in the cloud to your on-premises or private CA. The private CA can be made up of N+1 CA hierarchies.

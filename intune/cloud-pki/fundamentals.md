@@ -1,18 +1,10 @@
 ---
 title: Microsoft Intune cloud PKI fundamentals
 description: Describes fundamentals for Microsoft Intune cloud PKI.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Microsoft Cloud PKI fundamentals
 
 *Microsoft Cloud PKI* is an Intune Suite feature that enables you as an IT pro to manage your public key infrastructure (PKI) in the cloud. You can create, configure, and manage your own certification authorities (CAs) and certificates without having to install and maintain on-premises infrastructure. The Microsoft Cloud PKI service integrates with Microsoft Entra ID and Microsoft Intune to provide identity and device management for your cloud-based devices and apps.
