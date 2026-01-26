@@ -372,7 +372,7 @@ To test connectivity as the device itself, use [PsExec](/sysinternals/downloads/
 
 1. Download [PsExec](/sysinternals/downloads/psexec)
 
-2. Open a **PowerShell** as an Administrator. Navigate to the directory containing **PsExec**.
+1. Open **PowerShell** as an Administrator. Navigate to the directory containing **PsExec**.
 
 3. Run the following command to run the script as SYSTEM:
 
