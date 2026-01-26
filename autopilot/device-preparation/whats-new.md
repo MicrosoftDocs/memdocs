@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 11/21/2025
+ms.date: 01/30/2026
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -23,6 +23,15 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.  
+
+## Admins can configure up to 25 apps to install during Autopilot device preparation 
+
+Date added: *January 30, 2026*  
+
+You can now configure up to 25 apps in a Windows Autopilot device preparation policy. This increase helps you install more apps during OOBE so that you can take full advantage of Autopilot device preparation. The limit change applies to both user-driven and automatic modes, including all Cloud PC offerings. If you configure more apps, be sure to adjust your deployment timeout settings to avoid unexpected timeouts. For more information about assigning apps, see:  
+
+*  [Windows Autopilot device preparation user-driven Microsoft Entra join: Assign applications and PowerShell scripts to device group](device-preparation/tutorial/user-driven/entra-join-assign-apps-scripts.md)
+*  [Windows Autopilot device preparation in automatic mode: Assign applications and PowerShell scripts to device group](device-preparation/tutorial/automatic/automatic-assign-apps-scripts.md)
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps is in public preview  
 
