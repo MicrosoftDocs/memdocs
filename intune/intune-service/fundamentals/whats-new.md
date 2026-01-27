@@ -57,7 +57,15 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of February 2, 2026
+## Week of February 2, 2026 (Service release 2601)
+
+### Microsoft Intune Suite
+
+#### Endpoint Privilege Management support on Azure Virtual Desktop<!-- 26079227 -->
+
+Endpoint Privilege Management (EPM) elevation policies now support deployment to users on Azure Virtual Desktop (AVD) single-session virtual machines.
+
+For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../protect/epm-plan.md).
 
 ### App management
 
@@ -170,7 +178,7 @@ To learn more about filters, see [Use assignment filters to assign your apps, po
 
 #### New updates to the Apple settings catalog<!-- 35787099 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
 
 There is a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
 
@@ -238,14 +246,6 @@ For more information, see [Mobile Threat Defense toggle options](../protect/mtd-
 > Applies to:
 >
 > - iOS/iPadOS
-
-### Device security
-
-#### Endpoint Privilege Management support on Azure Virtual Desktop<!-- 26079227 -->
-
-Endpoint Privilege Management (EPM) elevation policies now support deployment to users on Azure Virtual Desktop (AVD) single-session virtual machines.
-
-For information about using EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Plan and Prepare for Endpoint Privilege Management Deployment](../protect/epm-plan.md).
 
 ### Tenant administration
 
@@ -487,7 +487,7 @@ The following settings are available in the settings catalog:
   - Number of uppercase characters required
 - Required unlock frequency
 
-To learn more about these settings, go to [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
+To learn more about these settings, see [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md).
 
 Applies to:
 
