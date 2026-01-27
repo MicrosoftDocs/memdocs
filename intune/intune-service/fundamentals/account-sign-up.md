@@ -22,7 +22,7 @@ This article can help system administrators sign up for an Intune account. Befor
   - [Billing Administrator](/entra/identity/role-based-access-control/permissions-reference#billing-administrator)
   - [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator)
 
-- If you don't have a Microsoft Entra tenant, then a tenant is created for your organization when you **sign up** for an Intune subscription. You can also sign up for a [trial subscriptions](try-intune-overview.md).
+- If you don't have a Microsoft Entra tenant, then a tenant is created for your organization when you **sign up** for an Intune subscription. You can also sign up for a [trial subscription](try-intune-overview.md).
 
 > [!WARNING]
 > You can't combine an existing work or school account after you sign up for a new account.
