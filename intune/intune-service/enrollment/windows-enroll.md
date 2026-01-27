@@ -26,13 +26,27 @@ Automatic enrollment can be used in the following device management and provisio
 
 This article describes how to enable automatic mobile device management (MDM) enrollment for personal and corporate-owned devices.
 
-## Requirements
+## Prerequisites  
 
-You must have:
+:::row:::
+:::column span="1":::
+[!INCLUDE [licensing](../../includes/requirements/licensing.md)]
+:::column-end:::
+:::column span="3":::
+> - A Microsoft Intune subscription. [Sign up for a free trial account](../fundamentals/free-trial-sign-up.md).
+> - [Microsoft Entra ID P1 or P2](/azure/active-directory/active-directory-get-started-premium) or the [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845). You can activate a free Premium trial subscription during setup.
+:::column-end:::
+:::row-end:::
 
-- A [Microsoft Entra ID P1 or P2 subscription](/azure/active-directory/active-directory-get-started-premium) or [Premium trial subscription](https://go.microsoft.com/fwlink/?LinkID=816845) for automatic MDM enrollment and custom company branding.
-- A Microsoft Intune subscription.
-- A Microsoft Entra Global Administrator role. For more information about role-based-access-control (RBAC), see [RBAC with Microsoft Intune](../fundamentals/role-based-access-control.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
+> - Built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role
+:::column-end:::
+:::row-end:::
 
 ## Enable Windows automatic enrollment
 
