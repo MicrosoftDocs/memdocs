@@ -1,9 +1,9 @@
 ---
 title: Microsoft Intune Service Description
 description: Microsoft Intune is a cloud-based service that helps you manage Windows, iOS/iPadOS, macOS, and Android devices.
-author: dougeby
-ms.author: dougeby
-ms.date: 12/12/2023
+author: MandiOhlinger
+ms.author: mandia
+ms.date: 01/27/2026
 ms.topic: article
 ms.reviewer: cacamp
 ms.collection:
@@ -22,25 +22,19 @@ Intune is a cloud-based enterprise mobility management (EMM) service that helps 
 
 Intune integrates closely with Microsoft Entra ID for identity and access control, and Azure Information Protection for data protection. You can also integrate it with Configuration Manager to extend your management capabilities.
 
-To learn more about how you can manage devices, apps, and protect corporate data with Intune, see the [Intune documentation](../index.yml).
+To learn more about how you can manage devices, apps, and protect corporate data with Intune, see [Microsoft Intune securely manages identities, apps, and devices](what-is-intune.md).
 
 ## 30-day free trial
 
 You can start to use Intune with a 30-day free trial that includes 100 user licenses. To start your free trial, [go to the Intune Sign up page](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). If your organization has an Enterprise Agreement or equivalent volume licensing agreement, contact your Microsoft representative to set up your free trial.
 
-> [!NOTE]
-> If your organization has a Microsoft Online Services work or school account, and you might continue with this Intune subscription in production after the trial period ends, then choose the **Sign in** option on that page and authenticate by using the Global Administrator account for your organization. This action ensures that your Intune trial links to your existing work or school account.
+If your organization has a Microsoft Online Services work or school account, and you might continue with this Intune subscription in production after the trial period ends, then choose the **Sign in** option on that page and authenticate by using the Microsoft Entra Global Administrator account for your organization. This action ensures that your Intune trial links to your existing work or school account.
 
-Microsoft recommends that you use roles with the fewest permissions. Using lower permissioned accounts helps improve security for your organization. Global Administrator is a highly privileged role that should be limited to the initial set up or emergency scenarios when you can't use an existing role.
+[!INCLUDE [global-admin](../includes/global-admin.md)]
 
-<!--- For a list of settings that you can set up on mobile devices, see:
-
-- [Enrolled device management capabilities of Microsoft Intune](introduction-intune.md)
-
---->
 ## Intune Onboarding benefit
 
-Microsoft offers the Intune Onboarding benefit for eligible services in eligible plans. The Onboarding benefit lets you work remotely with Microsoft specialists to get your Intune environment ready for use. For more about the Onboarding benefit, see [Microsoft Intune Onboarding Benefit Description](/fasttrack/introduction).
+Microsoft offers the Intune Onboarding benefit for eligible services in eligible plans. The Onboarding benefit lets you work remotely with Microsoft specialists to get your Intune environment ready for use. For more about the Onboarding benefit, see [Microsoft Intune Onboarding Benefit Description](/microsoft-365/fasttrack/introduction).
 
 ## Learn how Intune service updates affect you
 
@@ -48,7 +42,7 @@ Because the mobile device management ecosystem changes frequently with operating
 
 * [What's new in Microsoft Intune](whats-new.md). This topic is updated with the monthly service update and weekly when, for example, apps such as the Company Portal app are released.
 
-* Important service updates are also announced in the [Microsoft 365 admin center](https://admin.microsoft.com/) Message Center. If you install the companion [Microsoft 365 Admin mobile app](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a), you can receive notifications on your mobile device. Learn more about how to work with the [Microsoft 365 Message Center](/microsoft-365/admin/manage/message-center).
+* Important service updates are also announced in the [Microsoft 365 admin center](https://admin.microsoft.com/) Message Center. If you install the companion [Microsoft 365 Admin mobile app](/microsoft-365/admin/admin-overview/admin-mobile-app), you can receive notifications on your mobile device. Learn more about how to work with the [Microsoft 365 Message Center](/microsoft-365/admin/manage/message-center).
 
   A few helpful hints:
 
@@ -67,7 +61,7 @@ Because the mobile device management ecosystem changes frequently with operating
   * [Intune Customer Success Blog](https://aka.ms/IntuneCustomerSuccess)
 
 > [!NOTE]
-> You can monitor Intune service health in the [Microsoft 365 admin center](https://admin.microsoft.com). Choose **Service Health** in the left pane. You can also use the [Microsoft 365 Admin mobile app](https://support.office.com/article/Office-365-Admin-Mobile-App-e16f6421-2a1a-4142-bf9d-9846600a060a) to view service health.
+> You can monitor Intune service health in the [Microsoft 365 admin center](https://admin.microsoft.com). Choose **Service Health** in the left pane. You can also use the [Microsoft 365 Admin mobile app](/microsoft-365/admin/admin-overview/admin-mobile-app) to view service health.
 
 ## Types of notices Microsoft provides about the Intune service
 
@@ -81,7 +75,7 @@ To help you plan for service changes, we notify you at least 7-90 days prior to 
 
 - In the event of Intune service retirement, you would be notified 12 months in advance.
 
-Finally, in the rare event there's any post-incident action needed to get your service back to normal or a large change that we deem potentially disruptive based on customer feedback, we will email the service administrators based on how your [Microsoft 365 communication preferences](https://support.office.com/article/Change-your-contact-preferences-for-communications-from-Microsoft-6f70de1b-a64d-4498-bfbd-be8c83a9c0fc) are set and whether you include a valid (and preferably work) email address.
+Finally, in the rare event there's any post-incident action needed to get your service back to normal or a large change that we deem potentially disruptive based on customer feedback, we will email the service administrators based on how your [Microsoft 365 communication preferences](/microsoft-365/admin/manage/change-address-contact-and-more) are set and whether you include a valid (and preferably work) email address.
 
 ## Language support
 
