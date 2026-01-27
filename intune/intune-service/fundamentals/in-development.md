@@ -68,6 +68,18 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
+### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
+
+You'll be able to use assignment filters in policy assignments for DDM-based configurations, like software updates.
+
+To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
 ### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
 
 On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.

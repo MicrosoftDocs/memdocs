@@ -164,18 +164,6 @@ To learn more about the settings catalog, see:
 - [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
 - [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md)
 
-#### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
-
-You can use assignment filters in policy assignments for DDM-based configurations, like software updates.
-
-To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
-
 #### New updates to the Apple settings catalog<!-- 35787099 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
