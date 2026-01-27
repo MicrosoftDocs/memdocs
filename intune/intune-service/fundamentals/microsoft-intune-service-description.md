@@ -13,7 +13,7 @@ ms.collection:
 
 # Microsoft Intune service description
 
-Intune is a cloud-based enterprise mobility management (EMM) service that helps enable your workforce to be productive while keeping your corporate data protected. With Intune, you can:
+Intune is a cloud-based enterprise mobility management (EMM) service that helps enable your workforce to be productive while keeping your corporate data protected. By using Intune, you can:
 
 * Manage the mobile devices your workforce uses to access company data.
 * Manage the client apps your workforce uses.
@@ -28,9 +28,10 @@ To learn more about how you can manage devices, apps, and protect corporate data
 
 You can start to use Intune with a 30-day free trial that includes 100 user licenses. To start your free trial, [go to the Intune Sign up page](https://admin.microsoft.com/Signup/Signup.aspx?OfferId=40BE278A-DFD1-470a-9EF7-9F2596EA7FF9&dl=INTUNE_A&ali=1#0%20). If your organization has an Enterprise Agreement or equivalent volume licensing agreement, contact your Microsoft representative to set up your free trial.
 
-If your organization has a Microsoft Online Services work or school account, and you might continue with this Intune subscription in production after the trial period ends, then choose the **Sign in** option on that page and authenticate by using the Microsoft Entra Global Administrator account for your organization. This action ensures that your Intune trial links to your existing work or school account.
+If your organization has a Microsoft Online Services work or school account, and you might continue with this Intune subscription in production after the trial period ends, select the **Sign in** option on that page and authenticate by using the Microsoft Entra Global Administrator account for your organization. This action ensures that your Intune trial links to your existing work or school account.
 
-[!INCLUDE [global-admin](../includes/global-admin.md)]
+> [!IMPORTANT]
+> [!INCLUDE [global-admin](../includes/global-admin.md)]
 
 ## Intune Onboarding benefit
 
@@ -38,23 +39,23 @@ Microsoft offers the Intune Onboarding benefit for eligible services in eligible
 
 ## Learn how Intune service updates affect you
 
-Because the mobile device management ecosystem changes frequently with operating system updates and mobile app releases, Microsoft updates Intune regularly. There are three ways you can learn about changes in the Intune service:
+Because the mobile device management ecosystem changes frequently with operating system updates and mobile app releases, Microsoft regularly updates Intune. You can learn about changes in the Intune service through three main sources:
 
-* [What's new in Microsoft Intune](whats-new.md). This topic is updated with the monthly service update and weekly when, for example, apps such as the Company Portal app are released.
+* [What's new in Microsoft Intune](whats-new.md). This article is updated monthly and can be updated weekly when, for example, apps such as the Company Portal app are released.
 
-* Important service updates are also announced in the [Microsoft 365 admin center](https://admin.microsoft.com/) Message Center. If you install the companion [Microsoft 365 Admin mobile app](/microsoft-365/admin/admin-overview/admin-mobile-app), you can receive notifications on your mobile device. Learn more about how to work with the [Microsoft 365 Message Center](/microsoft-365/admin/manage/message-center).
+* The [Microsoft 365 admin center](https://admin.microsoft.com/) Message Center announces important service updates. If you install the companion [Microsoft 365 Admin mobile app](/microsoft-365/admin/admin-overview/admin-mobile-app), you can receive notifications on your mobile device. Learn more about how to work with the [Microsoft 365 Message Center](/microsoft-365/admin/manage/message-center).
 
   A few helpful hints:
 
-  * The messages in the Microsoft 365 Message Center are targeted. This means that if your company doesn't have an Intune for Education offer, we won't message you about Intune for Education.
+  * The messages in the Microsoft 365 Message Center are targeted. So, if your company doesn't have an Intune for Education offer, you won't receive messages about Intune for Education.
 
-  * Messages expire. For example, the notification that your service has been updated with a link to the What's new page will likely expire prior to the next service update notification. Otherwise, you'd have a large backlog of posts that may no longer be relevant.
+  * Messages expire. For example, the notification that your service is updated with a link to the What's new page likely expires prior to the next service update notification. Otherwise, you'd have a large backlog of posts that might no longer be relevant.
 
-  * The Microsoft 365 admin mobile app allows you to search through all the messages and to forward the notification if you wanted to share it with peers in your organization.
+  * The Microsoft 365 admin mobile app allows you to search through all the messages. You can also forward the notification to share it with others in your organization.
 
-  * Under Edit message center preferences, we'll eventually have a toggle for **Intune** so you can look at those messages posted to an Intune subscription. If you see Mobile Device Management for Microsoft 365, that is a different service, not Intune.
+    * Under **Edit message center preferences**, you might see an **Intune** toggle so you can look at those messages posted to an Intune subscription. If you see **Mobile Device Management for Microsoft 365**, that is a different service, not Intune.
 
-* We also use two blogs to share new features and capabilities and best practices with Microsoft Intune:
+* Two blogs share new features, capabilities, and best practices for Microsoft Intune:
 
   * [Microsoft Intune Blog](https://aka.ms/IntuneBlog)
 
@@ -65,17 +66,17 @@ Because the mobile device management ecosystem changes frequently with operating
 
 ## Types of notices Microsoft provides about the Intune service
 
-To help you plan for service changes, we notify you at least 7-90 days prior to the service change, depending on the impact of the change. These changes might include any of the following types of change:
+To help you plan for service changes, Microsoft notifies you at least 7-90 days prior to the service change, depending on the impact of the change. These changes might include any of the following types of change:
 
-- Changes to the end-user experience that you may want to share with your helpdesk staff or your end users. We provide typically 7 to 30 days notice of those changes and document them on the [What's new in Intune App UI](whats-new-app-ui.md). For something like a spelling error fix, we won't typically call out in documentation. But a change in the end-user enrollment experience is significant enough in the UI that we'll both post a message to customers in the Microsoft 365 Message center and link to the What's new in the Intune App UI so you are notified of what's changing and have time to evaluate and update your end-user guidance before the changes rolling out in production.
+- Changes to the end-user experience that you might want to share with your helpdesk staff or your end users. Microsoft typically provides 7 to 30 days' notice of those changes and documents them on the [What's new in Intune App UI](whats-new-app-ui.md). For something like a spelling error fix, Microsoft typically doesn't call out the change in documentation. But a change in the end-user enrollment experience is significant enough in the UI that Microsoft posts a message to customers in the Microsoft 365 Message center and links to the What's new in the Intune App UI. So, you're notified of what's changing and have time to evaluate and update your end-user guidance before the changes roll out in production.
 
-- Changes that require you to take action are called **Plan for Change** and typically provide about 30 days notice. In the Microsoft 365 Message Center the Category specifically says Plan for Change, and if we have an exact date for when the change is in production, we also put in an **Act By** date and that gives you a visual queue and an explanation mark.
+- Changes that require you to take action are called **Plan for Change** and typically provide about 30 days' notice. In the Microsoft 365 Message Center, the category specifically says Plan for Change. If Microsoft has an exact date for when the change is in production, there's an **Act By** date. That date gives you a visual queue and an explanation mark.
 
-- For most deprecations, we prefer to provide 90 days notice of that deprecation. For example, if we're no longer going to support a specific version of IE, our goal is to provide 90 days notice. However, deprecations do get complicated when it's another company announcing the deprecation. For example, a browser company provided notice that they would no longer support Silverlight with their latest build, so we let customers know we were dropping support of that browser, but our notification to customers under the 90-day period.
+- For most deprecations, Microsoft prefers to provide 90 days' notice of that deprecation. For example, if Microsoft is no longer going to support a specific version of IE, the goal is to provide 90 days' notice. However, deprecations get complicated when it's another company announcing the deprecation. For example, a browser company provided notice that they won't support Silverlight with their latest build. So, Microsoft lets customers know we're dropping support of that browser, but the Microsoft notification to customers might be under the 90-day period.
 
 - In the event of Intune service retirement, you would be notified 12 months in advance.
 
-Finally, in the rare event there's any post-incident action needed to get your service back to normal or a large change that we deem potentially disruptive based on customer feedback, we will email the service administrators based on how your [Microsoft 365 communication preferences](/microsoft-365/admin/manage/change-address-contact-and-more) are set and whether you include a valid (and preferably work) email address.
+Finally, in the rare event there's any post-incident action needed to get your service back to normal or a large change that Microsoft deems potentially disruptive based on customer feedback, Microsoft emails the service administrators based on how your [Microsoft 365 communication preferences](/microsoft-365/admin/manage/change-address-contact-and-more) are set. Be sure to include a valid work email address.
 
 ## Language support
 

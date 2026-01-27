@@ -21,7 +21,7 @@ The first step when deploying Microsoft Intune is to set up your Intune environm
 
 This article takes you through each step in the process of setting up Microsoft Intune. This article also provides the choices and considerations you need to make when setting up an endpoint-management solution such as Intune.
 
-The purpose of this article is to help you get a better understanding of Intune's supported configurations. After reviewing the article, you should be able to sign up for the Microsoft Intune's free trial, add end users, define user groups, assign licenses to users, and set up the other needed settings to begin using Microsoft Intune. All the steps provided in the article help you to add and manage devices and apps using Intune.
+The purpose of this article is to help you get a better understanding of Intune's supported configurations. After reviewing the article, you should be able to sign up for the [Microsoft Intune's free trial](try-intune-overview.md), add end users, define user groups, assign licenses to users, and set up the other needed settings to begin using Microsoft Intune. All the steps provided in the article help you to add and manage devices and apps using Intune.
 
 ## Prerequisites
 
@@ -117,7 +117,7 @@ For guidance, go to [Microsoft Intune licensing](licenses.md).
 
 ✔️ **Get started with assigning licenses to users**
 
-Whether you added users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The Microsoft Intune free trial provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
+Whether you added users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The [Microsoft Intune's free trial](try-intune-overview.md) provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
 Give users permission to use Intune. Each user or userless device requires an Intune license to access the service.
 
 For guidance, go to [Assign licenses](licenses-assign.md).
