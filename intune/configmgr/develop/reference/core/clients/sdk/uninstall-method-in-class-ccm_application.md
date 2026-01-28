@@ -1,18 +1,10 @@
 ---
 description: Learn how to uninstall an application using the Uninstall Windows Management Instrumentation (WMI) class method.
 title: Uninstall Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 24654af4-e004-417f-8874-d0e77279822b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Uninstall Method in Class CCM_Application
 The `Uninstall` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that uninstalls an application.

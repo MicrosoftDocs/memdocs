@@ -1,16 +1,10 @@
 ---
 title: Get ready for deployment
-titleSuffix: Configuration Manager
 description: Find topics that will help you plan a Configuration Manager deployment.
 ms.date: 10/06/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: Banreet
-ms.author: banreetkaur
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Get ready for Configuration Manager
 

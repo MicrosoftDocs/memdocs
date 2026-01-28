@@ -1,18 +1,10 @@
 ---
 title: SetSourceSite Method in SMS_DriverPackage
-titleSuffix: Configuration Manager
 description: Learn how to set the source site for the driver package.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: b81c2f09-9270-4387-a0f7-b3a103ad99bb
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SetSourceSite Method in Class SMS_DriverPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site for the driver package.

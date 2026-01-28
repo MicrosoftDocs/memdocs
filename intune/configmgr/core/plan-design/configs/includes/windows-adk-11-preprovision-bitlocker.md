@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 11/15/2021
-ms.localizationpriority: medium
 ---
 
 ### Pre-provisioning BitLocker during task sequence doesn't own TPM

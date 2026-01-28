@@ -1,17 +1,10 @@
 ---
 title: Audit remote control usage
-titleSuffix: Configuration Manager
 description: Audit remote control use in Configuration Manager.
 ms.date: 04/23/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to audit remote control usage in Configuration Manager
 

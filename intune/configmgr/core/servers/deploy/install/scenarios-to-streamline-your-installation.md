@@ -1,17 +1,10 @@
 ---
 title: Installation scenarios
-titleSuffix: Configuration Manager
 description: Learn techniques for installing a new Configuration Manager hierarchy when you update or upgrade a site.
 ms.date: 04/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Scenarios to streamline your installation of Configuration Manager

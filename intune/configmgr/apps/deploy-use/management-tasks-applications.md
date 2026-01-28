@@ -1,17 +1,10 @@
 ---
 title: Management tasks for applications
-titleSuffix: Configuration Manager
 description: Manage Configuration Manager applications and deployment types.
 ms.date: 04/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Management tasks for Configuration Manager applications
