@@ -24,85 +24,52 @@ For more general information about log files in Configuration Manager, see [Abou
 
 The following sections provide details about the different log files available to you. Monitor Configuration Manager client and server logs for operation details, and view error information to troubleshoot problems.
 
-- [Client log files](#BKMK_ClientLogs)
-
-  - [Client operations](#BKMK_ClientOpLogs)
-
-  - [Client installation](#BKMK_ClientInstallLog)
-
-  - [Client for Mac computers](#BKMK_LogfilesforMac)
-
-- [Server log files](#BKMK_ServerLogs)
-
-  - [Site server and site systems](#BKMK_SiteSiteServerLog)
-
-  - [Site server installation](#BKMK_SiteInstallLog)
-
-  - [Data warehouse service point](#BKMK_DataWarehouse)
-
-  - [Fallback status point](#BKMK_FSPLog)
-
-  - [Management point](#BKMK_MPLog)
-
-  - [Service connection point](#BKMK_WITLog)
-
-  - [Software update point](#BKMK_SUPLog)
-
-- [Log files by functionality](#BKMK_FunctionLogs)
-
-  - [Application management](#BKMK_AppManageLog)
-
-  - [Asset Intelligence](#BKMK_AILog)
-
-  - [Backup and recovery](#BKMK_BnRLog)
-
-  - [Certificate enrollment](#BKMK_CertificateEnrollment)
-
-  - [Client notification](#BKMK_BGB)
-
-  - [Cloud management gateway](#cloud-management-gateway)
-
-  - [Compliance settings and company resource access](#BKMK_CompSettingsLog)
-
-  - [Configuration Manager console](#BKMK_ConsoleLog)
-
-  - [Content management](#BKMK_ContentLog)
-
-  - [Discovery](#BKMK_DiscoveryLog)
-
-  - [Endpoint analytics](#bkmk_analytics)
-
-  - [Endpoint Protection](#BKMK_EPLog)
-
-  - [Extensions](#BKMK_Extensions)
-
-  - [Inventory](#BKMK_InventoryLog)
-
-  - [Migration](#BKMK_MigrationLog)
-
-  - [Mobile devices](#BKMK_MDMLog)
-
-  - [OS deployment](#BKMK_OSDLog)
-
-  - [Power management](#BKMK_PowerMgmtLog)
-
-  - [Remote control](#BKMK_RCLog)
-
-  - [Reporting](#BKMK_ReportLog)
-
-  - [Role-based administration](#BKMK_RBALog)
-
-  - [Software metering](#BKMK_MeteringLog)
-
-  - [Software updates](#BKMK_SU_NAPLog)
-
-  - [Wake On LAN](#BKMK_WOLLog)
-
-  - [Windows servicing](#BKMK_WindowsServicingLog)
-
-  - [Windows Update Agent](#BKMK_WULog)
-
-  - [WSUS server](#BKMK_WSUSLog)
+- [Log file reference](#log-file-reference)
+  - [ Client log files](#-client-log-files)
+    - [ Client operations](#-client-operations)
+    - [ Client installation](#-client-installation)
+    - [ Client for Mac computers](#-client-for-mac-computers)
+  - [ Server log files](#-server-log-files)
+    - [ Site server and site systems](#-site-server-and-site-systems)
+    - [ Site server installation](#-site-server-installation)
+    - [ Data warehouse service point](#-data-warehouse-service-point)
+    - [ Fallback status point](#-fallback-status-point)
+    - [ Management point](#-management-point)
+    - [ Service connection point](#-service-connection-point)
+    - [ Software update point](#-software-update-point)
+  - [ Log files by functionality](#-log-files-by-functionality)
+    - [ Application management](#-application-management)
+      - [Packages and programs](#packages-and-programs)
+    - [ Asset Intelligence](#-asset-intelligence)
+    - [ Backup and recovery](#-backup-and-recovery)
+    - [ Certificate enrollment](#-certificate-enrollment)
+    - [ Client notification](#-client-notification)
+    - [Cloud management gateway](#cloud-management-gateway)
+    - [ Compliance settings and company resource access](#-compliance-settings-and-company-resource-access)
+    - [ Configuration Manager console](#-configuration-manager-console)
+    - [ Content management](#-content-management)
+    - [ Discovery](#-discovery)
+    - [ Endpoint analytics](#-endpoint-analytics)
+    - [ Endpoint Protection](#-endpoint-protection)
+    - [ Extensions](#-extensions)
+    - [ Inventory](#-inventory)
+    - [ Metering](#-metering)
+    - [ Migration](#-migration)
+    - [ Mobile devices](#-mobile-devices)
+      - [ Enrollment](#-enrollment)
+      - [ Exchange Server connector](#-exchange-server-connector)
+      - [ Mobile device legacy](#-mobile-device-legacy)
+    - [ OS deployment](#-os-deployment)
+    - [ Power management](#-power-management)
+    - [ Remote control](#-remote-control)
+    - [ Reporting](#-reporting)
+    - [ Role-based administration](#-role-based-administration)
+    - [ Software updates](#-software-updates)
+    - [ Wake On LAN](#-wake-on-lan)
+    - [ Windows servicing](#-windows-servicing)
+    - [ Windows Update Agent](#-windows-update-agent)
+    - [ WSUS server](#-wsus-server)
+  - [See also](#see-also)
 
 ## <a name="BKMK_ClientLogs"></a> Client log files
 
@@ -114,7 +81,7 @@ The following table lists the log files located on the Configuration Manager cli
 
 |Log name|Description|
 |--------------|-----------------|
-|ADALOperationProvider.log|Information about client authentication token requests with Azure Active Directory (Azure AD) Authentication Library (ADAL). (Replaced by CcmAad.log starting in version 2107)|
+|ADALOperationProvider.log|Information about client authentication token requests with Microsoft Entra ID (Azure AD) Authentication Library (Microsoft Authentication Library). (Replaced by CcmAad.log starting in version 2107)|
 |ATPHandler.log| Records details about handling ATP Onboarding and policies.
 |BitLockerManagementHandler.log|Records information about BitLocker management policies.|
 |CAS.log|The Content Access service. Maintains the local package cache on the client.|
@@ -564,6 +531,7 @@ The following table lists the log files that contain information related to cont
 |CloudDP-&lt;guid\>.log|Records details for a specific cloud-based content source, including information about storage and content access.|Site system server|
 |CloudMgr.log|Records details about content provisioning, collecting storage and bandwidth statistics, and administrator-initiated actions to stop or start the cloud service that runs a content-enabled cloud management gateway (CMG).|Site system server|
 |DataTransferService.log|Records all BITS communication for policy or package access. This log also is used for content management by pull-distribution points.|Computer that is configured as a pull-distribution point|
+|distmgr.log|Records details about package creation, compression, delta replication, and information updates. It can also include other activities from the distribution manager component. For example, installing a distribution point, connection attempts, and installing components. |Site server|
 |PullDP.log|Records details about content that the pull-distribution point transfers from source distribution points.|Computer that is configured as a pull-distribution point|
 |PrestageContent.log|Records the details about the use of the ExtractContent.exe tool on a remote, prestaged distribution point. This tool extracts content that has been exported to a file.|Site system role|
 |PkgXferMgr.log|Records the actions of the SMS_Executive component that is responsible for sending content from a primary site to a remote distribution point.|Site server|
@@ -584,6 +552,7 @@ The following table lists the log files that contain information related to disc
 |ddm.log|Records activities of the discovery data manager.|Site server|
 |InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|
 |netdisc.log|Records Network Discovery actions.|Site server|
+|ntsvrdis.log|Records the discovery activity of site system servers.|Site server|
 
 ### <a name="bkmk_analytics"></a> Endpoint analytics
 
@@ -601,6 +570,7 @@ The following table lists the log files that contain information related to Endp
 |Log name|Description|Computer with log file|
 |--------------|-----------------|----------------------------|
 |EndpointProtectionAgent.log|Records details about the installation of the Endpoint Protection client and the application of antimalware policy to that client.|Client|
+|ExternalEventAgent.log|Records the history of Endpoint Protection malware detection and events related to client status.|Client|
 |EPCtrlMgr.log|Records details about the syncing of malware threat information from the Endpoint Protection role server with the Configuration Manager database.|Site system server|
 |EPMgr.log|Monitors the status of the Endpoint Protection site system role.|Site system server|
 |EPSetup.log|Provides information about the installation of the Endpoint Protection site system role.|Site system server|
@@ -621,6 +591,9 @@ The following table lists the log files that contain information related to proc
 
 |Log name|Description|Computer with log file|
 |--------------|-----------------|----------------------------|
+|AssetAdvisor.log|Records the activities of Asset Intelligence inventory actions.|Client|
+|InventoryAgent.log|Records activities of hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|
+|InventoryProvider.log|More details about hardware inventory, software inventory, and heartbeat discovery actions on the client.|Client|
 |dataldr.log|Records information about the processing of MIF files and hardware inventory in the Configuration Manager database.|Site server|
 |invproc.log|Records the forwarding of MIF files from a secondary site to its parent site.|Secondary site server|
 |sinvproc.log|Records information about the processing of software inventory data to the site database.|Site server|
@@ -726,7 +699,7 @@ The following table lists the log files that contain information related to OS d
 |smpperf.log|Records the state migration point performance counter updates.|Site system server|
 |smspxe.log|Records details about the responses to clients that use PXE boot, and details about the expansion of boot images and boot files.|Site system server|
 |smssmpsetup.log|Records installation and configuration details about the state migration point.|Site system server|
-| SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
+|SMS_PhasedDeployment.log| Log file for phased deployments|Top-level site in the Configuration Manager hierarchy|
 |Smsts.log|Records task sequence activities.|Client|
 |TSAgent.log|Records the outcome of task sequence dependencies before starting a task sequence.|Client|
 |TaskSequenceProvider.log|Records details about task sequences when they're imported, exported, or edited.|Site system server|
@@ -747,7 +720,8 @@ The following table lists the log files that contain information related to remo
 
 |Log name|Description|Computer with log file|
 |--------------|-----------------|----------------------------|
-|CMRcViewer.log|Records details about the activity of the remote control viewer.|On the computer that runs the remote control viewer, in the %temp% folder.|
+|CmRcViewer.log|Records details about the activity of the remote control viewer.|On the computer that runs the remote control viewer, in the %temp% folder.|
+|CmRcService.log|Records information for the remote control service, in the Client logs folder.|
 
 ### <a name="BKMK_ReportLog"></a> Reporting
 
@@ -769,14 +743,6 @@ The following table lists the log files that contain information related to mana
 |hman.log|Records information about site configuration changes and the publishing of site information to Active Directory Domain Services.|Site server|
 |SMSProv.log|Records WMI provider access to the site database.|Computer with the SMS Provider|
 
-### <a name="BKMK_MeteringLog"></a> Software metering
-
-The following table lists the log files that contain information related to software metering.
-
-|Log name|Description|Computer with log file|
-|--------------|-----------------|----------------------------|
-|mtrmgr.log|Monitors all software metering processes.|Site server|
-
 ### <a name="BKMK_SU_NAPLog"></a> Software updates
 
 The following table lists the log files that contain information related to software updates.
@@ -794,7 +760,6 @@ The following table lists the log files that contain information related to soft
 |ServiceWindowManager.log|Records details about the evaluation of maintenance windows.|Client|
 |SMS_ISVUPDATES_SYNCAGENT.log| Log file for synchronization of third-party software updates.| Top-level software update point in the Configuration Manager hierarchy.|
 |SMS_OrchestrationGroup.log| Log file for orchestration groups|Site server|
-|SmsWusHandler.log|Records details about the scan process for the Inventory Tool for Microsoft Updates.|Client|
 |StateMessage.log|Records details about software update state messages that are created and sent to the management point.|Client|
 |SUPSetup.log|Records details about the software update point installation. When the software update point installation completes, **Installation was successful** is written to this log file.|Site system server|
 |UpdatesDeployment.log|Records details about deployments on the client, including software update activation, evaluation, and enforcement. Verbose logging shows additional information about the interaction with the client user interface.|Client|
