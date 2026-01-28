@@ -227,6 +227,7 @@ You can use the following command line parameters with the App Wrapping Tool:
 |`-dt`|(Optional) Disable collection of Microsoft Intune client data.
 |`-dl`|(Optional) Disable MSAL logs from the Intune logs for applications that are integrated with MSAL and implement their own MSAL logging callback.
 |`-ds`|(Optional) Disable Intune's protections for SFSafariViewController, SFAuthSession, and ASWebAuthenticationSession.
+|`-mp`|(Optional) `<Path to a plist file containing MAM settings to merge into the wrapped app>`. Use this property to provide custom Intune MAM SDK settings that will be merged into the app's IntuneMAMSettings dictionary during the wrapping process. Note that protected settings required by the App Wrapping Tool (such as MultiIdentity, MAMPolicyRequired, AutoEnrollOnLaunch) cannot be overridden and will be set after the merge operation completes. |
 
 ### Use a plist to input arguments
 
@@ -250,6 +251,7 @@ In the IntuneMAMPackager/Contents/MacOS folder, open `Parameters.plist` (a blank
 | Extension Provisioning Profile Paths |Array of Strings|empty| An array of extension provisioning profiles for the app.
 | Disable Telemetry |Boolean|false| Same as -dt
 | Disable MSAL Log Override |Boolean|false| Same as -dl
+| MAM Settings Plist Path |String|empty| Same as -mp
 
 Run the IntuneMAMPackager with the plist as the sole argument:
 
