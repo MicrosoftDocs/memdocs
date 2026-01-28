@@ -154,7 +154,7 @@ You can configure settings globally or for a specific component on the Configura
 <!--13817527-->
 
 > [!NOTE]
-> The settings in this section apply for components implemented in the native code (most of the older site server components). They don't apply to modern components like `SMS_MESSAGE_PROCESSING_ENGINE` or `SMS_ISVUPDATES_SYNCAGENT` implemented in the managed code. The later components log names are usually longer than eight characters and may contain underscores.
+> The settings in this section don't apply to modern components like `SMS_MESSAGE_PROCESSING_ENGINE` or `SMS_ISVUPDATES_SYNCAGENT`. The later components log names are usually longer than eight characters and may contain underscores.
 
 Configure these values under the following Windows Registry key:
 
