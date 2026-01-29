@@ -276,7 +276,7 @@ Intune only shows tasks you have permission to manage. When you select a task, I
 
 To learn more, see:
 
-- [Admin tasks](../fundamentals/admin-tasks.md
+- [Admin tasks](../fundamentals/admin-tasks.md)
 
 ## Week of January 12, 2026
 
