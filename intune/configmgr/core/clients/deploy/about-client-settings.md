@@ -1,17 +1,10 @@
 ---
 title: Client settings
-titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
 ms.date: 12/08/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About client settings in Configuration Manager

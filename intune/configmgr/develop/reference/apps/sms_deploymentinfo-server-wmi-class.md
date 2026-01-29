@@ -1,18 +1,10 @@
 ---
 title: SMS_DeploymentInfo Class
-titleSuffix: Configuration Manager
 description: The SMS_DeploymentInfo Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents information for all types of deployment.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0fd6b2bb-50f6-440e-a603-937d0b37dd97
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_DeploymentInfo Server WMI Class
 The `SMS_DeploymentInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents information for all types of deployment.

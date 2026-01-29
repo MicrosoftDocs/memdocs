@@ -1,17 +1,10 @@
 ---
 title: Updates and servicing
-titleSuffix: Configuration Manager
 description: Learn about the in-console service method called Updates and Servicing that makes it easy to locate and install recommended updates.
 ms.date: 12/04/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Updates and servicing for Configuration Manager

@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent an update to an instance of SMS_UserApplicationRequest using SMS_UserApplicationRequestHistoryItem class.
 title: SMS_UserApplicationRequestHistoryItem Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 4d140550-c95a-4367-8d24-b0704de33c0a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_UserApplicationRequestHistoryItem Server WMI Class
 The `SMS_UserApplicationRequestHistoryItem` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an update to an instance of `SMS_UserApplicationRequest`.

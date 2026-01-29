@@ -1,16 +1,9 @@
 ---
 title: Create a task sequence for non-OS deployments
-titleSuffix: Configuration Manager
 description: Create task sequences that aren't for deploying an OS, such as distributing software or automating tasks
 ms.date: 11/30/2020
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

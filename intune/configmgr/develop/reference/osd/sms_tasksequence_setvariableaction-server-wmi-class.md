@@ -1,18 +1,10 @@
 ---
 title: SMS_TaskSequence_SetVariableAction class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a task sequence action. It sets the value of a task sequence environment variable.
 ms.date: 08/11/2020
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0fdecda3-7ed0-486f-a3a5-7a339979cad4
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # SMS_TaskSequence_SetVariableAction server WMI class

@@ -1,18 +1,10 @@
 ---
 title: Console RootNodes Element
-titleSuffix: Configuration Manager
 description: The RootNodes element is responsible for rendering a node. The NodeDescription node defines these user interface elements.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 28814bf8-e339-4b32-85bc-0676d530dcff
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Configuration Manager Console RootNodes Element
 `RootNodes` elements are the topmost nodes for a feature. For example, software distribution.

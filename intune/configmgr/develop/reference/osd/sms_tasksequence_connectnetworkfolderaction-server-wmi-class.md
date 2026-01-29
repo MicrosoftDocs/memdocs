@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a task sequence action that makes a connection to a network share with SMS_TaskSequence_ConnectNetworkFolderAction.
 title: SMS_TaskSequence_ConnectNetworkFolderAction Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 3d4a32d4-7a09-41dc-8e94-0d087ade9f94
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_ConnectNetworkFolderAction Server WMI Class
 The `SMS_TaskSequence_ConnectNetworkFolderAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that makes a connection to a network share.

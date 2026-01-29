@@ -1,18 +1,10 @@
 ---
 title: GetEncryptDecryptKey Method
-titleSuffix: Configuration Manager
 description: The GetEncryptDecryptKey WMI class method retrieves the symmetric key that is used to encrypt and decrypt the user state during state migration.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 36957b2c-a2b1-46dc-86ca-e8604bfb4270
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetEncryptDecryptKey Method in Class SMS_StateMigration
 The `GetEncryptDecryptKey` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the symmetric key that is used to encrypt and decrypt the user state during state migration.

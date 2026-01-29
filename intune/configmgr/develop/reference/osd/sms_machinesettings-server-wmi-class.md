@@ -1,18 +1,10 @@
 ---
 title: SMS_MachineSettings Class
-titleSuffix: Configuration Manager
 description: The SMS_MachineSettings WMI class describes attributes that are specific to a single computer that is managed by Configuration Manager.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 940ea289-0ae3-4b72-a394-58cb63f2a158
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_MachineSettings Server WMI Class
 The `SMS_MachineSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes attributes that are specific to a single computer that is managed by Configuration Manager.

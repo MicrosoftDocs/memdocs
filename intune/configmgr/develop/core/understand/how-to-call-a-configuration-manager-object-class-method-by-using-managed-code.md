@@ -1,18 +1,10 @@
 ---
 title: Call an Object Class Method by Using Managed Code
-titleSuffix: Configuration Manager
 description: To call a SMS Provider class method in Configuration Manager, use the ExecuteMethod method.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 46cb95e6-9dae-4c08-9cfb-1a570e4c05bc
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Call a Configuration Manager Object Class Method by Using Managed Code
 To call a SMS Provider class method, in Configuration Manager, you use the [ExecuteMethod](/previous-versions/system-center/developer/cc146186(v=msdn.10)) method. You populate a [Dictionary](/previous-versions/visualstudio/visual-studio-6.0/aa239680(v=vs.60)) object with the method's parameters, and the return value is an [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) object that contains the result of the method call.

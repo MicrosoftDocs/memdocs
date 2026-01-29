@@ -1,17 +1,10 @@
 ---
 title: Migrate data
-titleSuffix: Configuration Manager
 description: Learn how to transfer data from a source hierarchy to a Configuration Manager destination hierarchy.
 ms.date: 11/05/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Migrate data between hierarchies in Configuration Manager

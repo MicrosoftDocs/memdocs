@@ -1,18 +1,10 @@
 ---
 description: Learn how to use Configuration Manager SMS_TaskSequence_OSConditionGroup Windows Management Instrumentation (WMI) class  to represent an evaluation of a group of operating system platforms.
 title: SMS_TaskSequence_OSConditionGroup Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 89182703-07ff-410a-9406-f2424eca5550
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_OSConditionGroup Server WMI Class
 The `SMS_TaskSequence_OSConditionGroup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an evaluation of a group of operating system platforms, for example, Windows Vista, in a task sequence.

@@ -1,18 +1,11 @@
 ---
 title: Checklist for 1602
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating from Configuration Manager version 1511 to version 1602.
 ms.date: 02/7/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Checklist for installing update 1602 for Configuration Manager
 
