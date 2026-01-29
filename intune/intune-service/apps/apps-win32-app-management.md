@@ -13,8 +13,6 @@ ms.collection:
 
 # Win32 app management in Microsoft Intune
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 Microsoft Intune enables Windows Win32 app management. Win32 app management in Intune allows you to install, configure, protect, and monitor your Windows applications on devices at your organization. Win32 apps are deployed using the Microsoft Intune management extension (IME), which is installed automatically when a PowerShell script or a Win32 app is assigned to the user or device using Intune.
 
 In addition to supporting extensive management capabilities, Win32 app management in Microsoft Intune provides support for the following capabilities:
@@ -37,7 +35,7 @@ Although it's possible for cloud-connected customers to use Microsoft Configurat
 
 To use Win32 app management, be sure the following criteria are met:
 
-- Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
+- Use a [supported Windows version](../fundamentals/supported-devices-browsers.md) (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register)
   - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join)
@@ -95,7 +93,7 @@ After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepar
 
 ## Delivery optimization
 
-Windows 10 1709 and later clients will download Intune Win32 app content by using the delivery optimization component of Windows. Delivery optimization provides peer-to-peer functionality that's turned on by default.
+Windows devices can download Intune Win32 app content by using the delivery optimization component of Windows. Delivery optimization provides peer-to-peer functionality that's turned on by default.
 
 You can configure Delivery Optimization to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured using Intune device configuration (or by group policy). For more information, see [Delivery Optimization for Windows](/windows/deployment/update/waas-delivery-optimization).
 
