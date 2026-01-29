@@ -154,27 +154,7 @@ items:
         href: ./apps/apps-add-enterprise-app.md
 
     - name: Microsoft Cloud PKI
-      items:
-      - name: Microsoft Cloud PKI overview
-        href: ./protect/microsoft-cloud-pki-overview.md
-        displayName: RBAC, requirements
-      - name: PKI fundamentals
-        href: ./protect/microsoft-cloud-pki-fundamentals.md
-      - name: Configure and deploy
-        items:
-        - name: Deployment overview
-          href: ./protect/microsoft-cloud-pki-deployment.md
-        - name: Configure root and issuing CA for Cloud PKI
-          href: ./protect/microsoft-cloud-pki-configure-ca.md
-          displayName: root, certification, authority, ca, issuing, BYO
-        - name: Configure bring your own CA for Cloud PKI
-          href: ./protect/microsoft-cloud-pki-configure-byoca.md
-      - name: Monitor issued certificates
-        href: ./protect/microsoft-cloud-pki-monitor.md
-      - name: Get audit logs
-        href: ./protect/microsoft-cloud-pki-audit-logs.md
-      - name: Pause, revoke, and delete CA
-        href: ./protect/microsoft-cloud-pki-delete.md
+      href: ../cloud-pki/toc.yml
 
     - name: Remote Help
       items:
@@ -508,12 +488,10 @@ items:
               href: ./apps/mamedge-4-acp-edge.md
             - name: Step 5. Create Settings Catalog policies
               href: ./apps/mamedge-5-settings-catalog.md
-            - name: Step 6. Deploy Microsoft Edge security baseline
-              href: ./apps/mamedge-6-security-baseline.md
-            - name: Step 7. Understand end user experience
-              href: ./apps/mamedge-7-end-user-experience.md
-            - name: Step 8. Troubleshoot
-              href: ./apps/mamedge-8-troubleshoot.md
+            - name: Step 6. Understand end user experience
+              href: ./apps/mamedge-6-end-user-experience.md
+            - name: Step 7. Troubleshoot
+              href: ./apps/mamedge-7-troubleshoot.md
 
         - name: Concepts
           items:
@@ -989,27 +967,7 @@ items:
       - name: Passwordless, certificates, and single sign-on
         items:
         - name: Microsoft Cloud PKI
-          items:
-          - name: Microsoft Cloud PKI overview
-            href: ./protect/microsoft-cloud-pki-overview.md
-            displayName: RBAC, requirements
-          - name: PKI fundamentals
-            href: ./protect/microsoft-cloud-pki-fundamentals.md
-          - name: Configure and deploy
-            items:
-            - name: Deployment overview
-              href: ./protect/microsoft-cloud-pki-deployment.md
-            - name: Configure root and issuing CA for Cloud PKI
-              href: ./protect/microsoft-cloud-pki-configure-ca.md
-              displayName: root, certification, authority, ca, issuing, BYO
-            - name: Configure bring your own CA for Cloud PKI
-              href: ./protect/microsoft-cloud-pki-configure-byoca.md
-          - name: Monitor issued certificates
-            href: ./protect/microsoft-cloud-pki-monitor.md
-          - name: Get audit logs
-            href: ./protect/microsoft-cloud-pki-audit-logs.md
-          - name: Pause, revoke, and delete CA
-            href: ./protect/microsoft-cloud-pki-delete.md
+          href: ../cloud-pki/toc.yml
         - name: Certificates
           items:
           - name: Use certificates for authentication
@@ -2236,12 +2194,10 @@ items:
           href: ./apps/mamedge-4-acp-edge.md
         - name: Step 5. Create Settings Catalog policies
           href: ./apps/mamedge-5-settings-catalog.md
-        - name: Step 6. Deploy Microsoft Edge security baseline
-          href: ./apps/mamedge-6-security-baseline.md
-        - name: Step 7. Understand end user experience
-          href: ./apps/mamedge-7-end-user-experience.md
-        - name: Step 8. Troubleshoot
-          href: ./apps/mamedge-8-troubleshoot.md
+        - name: Step 6. Understand end user experience
+          href: ./apps/mamedge-6-end-user-experience.md
+        - name: Step 7. Troubleshoot
+          href: ./apps/mamedge-7-troubleshoot.md
 
   - name: Developer guidance
     items:
