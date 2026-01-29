@@ -1,18 +1,10 @@
 ---
 title: Microsoft Cloud PKI for Microsoft Intune
 description: An overview of the Microsoft Cloud PKI service, available with Microsoft Intune Suite or as an Intune add-on.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Overview of Microsoft Cloud PKI for Microsoft Intune
 
 **Applies to**:
@@ -79,7 +71,7 @@ The following table lists the features and scenarios supported with Microsoft Cl
 Microsoft Cloud PKI is made up of several key components working together to simplify the complexity and management of a public key infrastructure. It includes a Cloud PKI service for creating and hosting certification authorities, combined with a certificate registration authority to automatically service incoming certificate requests from Intune-enrolled devices. The registration authority supports the Simple Certificate Enrollment Protocol (SCEP).
 
 > [!div class="mx-imgBorder"]
-> ![Drawing of the Microsoft Cloud PKI architecture.](./media/microsoft-cloud-pki/architecture-flow.png)
+> ![Drawing of the Microsoft Cloud PKI architecture.](./images/architecture-flow.png)
 `*`  See **Components** for a breakdown of services.
 
 **Components**:
@@ -129,7 +121,7 @@ Microsoft Cloud PKI requires one of the following licenses:
 * Microsoft Intune Suite license
 * Microsoft Cloud PKI standalone Intune add-ons license
 
-For more information about licensing options, see [Microsoft Intune licensing](../fundamentals/licenses.md).
+For more information about licensing options, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md).
 
 ## Role based access control
 
@@ -139,14 +131,14 @@ The following permissions are available to assign to custom Intune roles. These 
 * Create certificate authorities: Any user assigned this permission can create a root or issuing CA.
 * Revoke issued leaf certificates: Any user assigned this permission has the ability to manually revoke a certificate issued by an issuing CA. This permission also requires the *read CA* permission.
 
-You can assign scope tags to the root and issuing CAs. For more information about how to create custom roles and scope tags, see [Role-based access control with Microsoft Intune](../fundamentals/scope-tags.md).
+You can assign scope tags to the root and issuing CAs. For more information about how to create custom roles and scope tags, see [Role-based access control with Microsoft Intune](../intune-service/fundamentals/scope-tags.md).
 
 ## Try Microsoft Cloud PKI
 
 You can try out the Microsoft Cloud PKI feature in the Intune admin center during a trial period. Available trials include:
 
 * [Microsoft Intune Suite trial](https://www.microsoft.com/security/business/microsoft-intune-pricing)
-* [Standalone add-on trial](../fundamentals/intune-add-ons.md#try-or-buy-intune-add-ons)
+* [Standalone add-on trial](../intune-service/fundamentals/intune-add-ons.md#try-or-buy-intune-add-ons)
 
 During the trial period, you can create up to six CAs in your tenant. Cloud PKI CAs created during the trial use software-backed keys, and use `System.Security.Cryptography.RSA` to generate and sign the keys. You can continue to use the CAs after purchasing a Cloud PKI license. However, the keys remain software-backed, and can't be converted to HSM backed keys. The Microsoft Intune service managed CA keys. No Azure subscription is required for Azure HSM capabilities.
 
@@ -161,14 +153,14 @@ Two-tier Cloud PKI root & issuing CAs, and bring-your-own CAs can coexist in Int
 
 ## Known issues and limitations
 
-For the latest changes and additions, see [What's new in Microsoft Intune](../fundamentals/whats-new.md).
+For the latest changes and additions, see [What's new in Microsoft Intune](../intune-service/fundamentals/whats-new.md).
 
 * You can create up to six CAs in an Intune tenant.
-  * Licensed Cloud PKI – A total of 6 CAs can be created using Azure mHSM keys.
+  * Licensed Cloud PKI - A total of 6 CAs can be created using Azure mHSM keys.
   * Trial Cloud PKI - A total of 6 CAs can be created during a trial of Intune Suite or Cloud PKI standalone add-on.
 * The following CA types count toward the CA capacity:
   * Cloud PKI Root CA
   * Cloud PKI Issuing CA
   * BYOCA Issuing CA
 * In the admin center, when you select **View all certificates** for an issuing CA, Intune only shows the first 1,000 issued certificates. We're actively working to address this limitation. As a workaround, go to **Devices** > **Monitor**. Then select **Certificates** to view all issued certificates.
-* A [data residency option](../protect/privacy-data-store-process.md#data-residency-option) is currently not available to customers using Cloud PKI.
+* A [data residency option](../intune-service/protect/privacy-data-store-process.md#data-residency-option) is currently not available to customers using Cloud PKI.

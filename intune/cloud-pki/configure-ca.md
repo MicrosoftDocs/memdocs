@@ -1,18 +1,10 @@
 ---
 title: Configure Microsoft Cloud PKI root and issuing CA for Microsoft Intune
 description: Configure a root and issuing CA for the Microsoft Cloud PKI service.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Configure root and issuing CA for Microsoft Cloud PKI
 
 This article describes how to create and deploy a Microsoft Cloud PKI root CA and issuing CA in Microsoft Intune. An issuing CA issues certificates to devices based on the certificate profiles you create in Intune.
@@ -21,15 +13,15 @@ This article describes how to create and deploy a Microsoft Cloud PKI root CA an
 
 For more information about how to prepare your tenant for Microsoft Cloud PKI, including key concepts and requirements, see:
 
-- [Overview of Microsoft Cloud PKI for Intune](microsoft-cloud-pki-overview.md): Review the architecture, tenant requirements, a feature summary, and known issues and limitations.
+- [Overview of Microsoft Cloud PKI for Intune](index.md): Review the architecture, tenant requirements, a feature summary, and known issues and limitations.
 
-- [Deployment models](microsoft-cloud-pki-deployment.md): Review the Microsoft Cloud PKI deployment options.
+- [Deployment models](deploy.md): Review the Microsoft Cloud PKI deployment options.
 
-- [Fundamentals](microsoft-cloud-pki-fundamentals.md): Review the PKI fundamentals and concepts that are important to know prior to configuration and deployment.
+- [Fundamentals](fundamentals.md): Review the PKI fundamentals and concepts that are important to know prior to configuration and deployment.
 
 ## Role based access control
 
-The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The Microsoft Entra Intune Administrator (also known as Intune service administrator) role has the built-in permissions to create CAs. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+The account you use to sign into the Microsoft Intune admin center must have permission to create a certification authority (CA). The Microsoft Entra Intune Administrator (also known as Intune service administrator) role has the built-in permissions to create CAs. Alternatively, you can assign Cloud PKI CA permissions to an admin user. For more information, see [Role-based access control (RBAC) with Microsoft Intune](../intune-service/fundamentals/role-based-access-control.md).
 
 ## Step 1: Create root CA in admin center
 
@@ -39,7 +31,7 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Go to **Tenant administration** > **Cloud PKI**, and then select **Create**.
 
    > [!div class="mx-imgBorder"]
-   > ![Image of the Microsoft Intune admin center Cloud PKI page, highlighting the path to create a Cloud PKI root CA.](./media/microsoft-cloud-pki/cloud-pki-create.png)
+   > ![Image of the Microsoft Intune admin center Cloud PKI page, highlighting the path to create a Cloud PKI root CA.](./images/cloud-pki-create.png)
 
 1. For **Basics**, enter the following properties:
 
@@ -56,7 +48,7 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. For **Extended Key Usages**, select how you intend to use the CA.
 
    > [!div class="mx-imgBorder"]
-   > ![Image of the Configuration settings tab, showing the Extended Key Usages section for Cloud PKI.](./media/microsoft-cloud-pki/cloud-pki-extended-key-usage.png)
+   > ![Image of the Configuration settings tab, showing the Extended Key Usages section for Cloud PKI.](./images/cloud-pki-extended-key-usage.png)
 
    To prevent potential security risks, CAs are limited to select use. Your options:
 
@@ -82,7 +74,7 @@ Before you can start to issue certificates to managed devices, you need to creat
      - **RSA-4096 and SHA-512**
 
       > [!div class="mx-imgBorder"]
-      > ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./media/microsoft-cloud-pki/key-size-algorithm.png)
+      > ![Image of Key size and algorithm setting in Cloud PKI configuration settings.](./images/key-size-algorithm.png)
 
    This setting enforces the upper bound key size and hash algorithm that can be used when configuring a device configuration SCEP certificate profile in Intune. It enables you to select any key size and hash up to what is set on the Cloud PKI issuing CA. Keep in mind a 1024 key size and SHA-1 hash isn't supported with Cloud PKI.
 1. Select **Next** to continue to **Scope tags**.
@@ -94,7 +86,7 @@ Before you can start to issue certificates to managed devices, you need to creat
 1. Return to the Cloud PKI CA list in the admin center. Select **Refresh** to see your new CA.
 
       > [!div class="mx-imgBorder"]
-      > ![Image of the Microsoft Cloud PKI list showing the new root CA.](./media/microsoft-cloud-pki/cloud-pki-refresh.png)
+      > ![Image of the Microsoft Cloud PKI list showing the new root CA.](./images/cloud-pki-refresh.png)
 
 ## Step 2: Create issuing CA in admin center
 
@@ -113,7 +105,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Select the CA type and root CA source.
 
      > [!div class="mx-imgBorder"]
-     > ![Admin center showing the CA type selected and the root CA source expanded, highlighting the Intune option.](./media/microsoft-cloud-pki/create-ca-configuration-settings.png)
+     > ![Admin center showing the CA type selected and the root CA source expanded, highlighting the Intune option.](./images/create-ca-configuration-settings.png)
 
    Your options:
    - **CA type**: Select **Issuing CA**. Then configure these additional settings:
@@ -133,7 +125,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Under **Subject attributes** enter a **Common name (CN)** for the issuing CA.
 
       > [!div class="mx-imgBorder"]
-      > ![Intune admin center showing Cloud PKI subject attributes settings.](./media/microsoft-cloud-pki/subject-attributes-issuing.png)
+      > ![Intune admin center showing Cloud PKI subject attributes settings.](./images/subject-attributes-issuing.png)
 
    Optional attributes include:
      - Organization (O)
@@ -155,7 +147,7 @@ An issuing CA is required to issue certificates for Intune-managed devices. Clou
 1. Return to the Microsoft Cloud PKI CA list in the admin center. Select **Refresh** to see your new issuing CA.
 
       > [!div class="mx-imgBorder"]
-      > ![Image of the Microsoft Cloud PKI list showing the new issuing CA.](./media/microsoft-cloud-pki/cloud-pki-refresh-issuing.png)
+      > ![Image of the Microsoft Cloud PKI list showing the new issuing CA.](./images/cloud-pki-refresh-issuing.png)
 
 To view the properties of root CAs and issuing CAs in your tenant, select the CA and then go to **Properties**.  Available properties include:
 
@@ -182,7 +174,7 @@ This step requires you to:
 
 ### Create trusted certificate profile
 
- In the admin center, [create a trusted certificate profile](certificates-trusted-root.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. Create one trusted certificate profile for the root CA certificate and one for the issuing CA.
+ In the admin center, [create a trusted certificate profile](../intune-service/protect/certificates-trusted-root.md#to-create-a-trusted-certificate-profile) for each OS platform you're targeting. Create one trusted certificate profile for the root CA certificate and one for the issuing CA.
 
 When prompted to, enter the public keys for the root CA and issuing CA. Complete the following steps to download the public keys for your CAs.
 
@@ -206,7 +198,7 @@ The Cloud PKI root CA and issuing CA you download must be installed on all relyi
 The file name given to the downloaded public keys is based on the Common Names specified in the CA. Some browsers, like Microsoft Edge, show a warning if you download a file with a .cer or other well-known certificate extension. If you receive this warning, select **Keep**.
 
  > [!div class="mx-imgBorder"]
- > ![Image of Downloads prompt highlighting the keep option. ](./media/microsoft-cloud-pki/download-warning.png)
+ > ![Image of Downloads prompt highlighting the keep option. ](./images/download-warning.png)
 
 ### Create SCEP certificate profile
 
@@ -219,13 +211,13 @@ Just like you did for the trusted certificate profiles, create an SCEP certifica
 1. Select a CA that has an **Issuing** type.
 1. Go to **Properties**.
 1. Next to the SCEP URI property, select **Copy to clipboard**.
-1. In the admin center, [create a SCEP certificate profile](certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.
+1. In the admin center, [create a SCEP certificate profile](../intune-service/protect/certificates-profile-scep.md#create-a-scep-certificate-profile) for each OS platform you're targeting.
 1. In the profile, under **Root Certificate**, link the trusted certificate profile. The trusted certificate you select must be the root CA certificate that the issuing CA is anchored to in the CA hierarchy.
 
       > [!div class="mx-imgBorder"]
-      > ![Image of the root certificate setting, with a root CA certificate selected.](./media/microsoft-cloud-pki/scep-root-certificate.png)
+      > ![Image of the root certificate setting, with a root CA certificate selected.](./images/scep-root-certificate.png)
 
-1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For more information about Intune endpoints, see [Network Endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md).
+1. For **SCEP Server URLS**, paste the SCEP URI. It's important to leave the string `{{CloudPKIFQDN}}` as-is. Intune replaces this placeholder string with the appropriate FQDN when the profile is delivered to the device. The FQDN will appear within the *.manage.microsoft.com namespace, a core Intune endpoint. For more information about Intune endpoints, see [Network Endpoints for Microsoft Intune](../intune-service/fundamentals/intune-endpoints.md).
 1. Configure the remaining settings, following these best practices:
    - **Subject name format**: Ensure the variables specified are available on the user or device object in Microsoft Entra ID. For example, if the target user of this profile doesn't have an email address attribute but the email address in this profile is filled in, the certificate won't be issued. An error also appears in the SCEP certificate profile report.
 
