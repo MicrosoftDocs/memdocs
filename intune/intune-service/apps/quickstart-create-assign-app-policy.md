@@ -53,7 +53,7 @@ In this article, you learn how to create and assign an app protection policy in 
 
 Use the following steps to create an app protection policy:
 
-1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Protection** > **Create** > **Windows**.
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and select **Apps** > **Windows** > **Create**.
 2. Enter the following details:
 
     - **Name**: *Windows content protection*
