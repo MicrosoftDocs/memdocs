@@ -235,6 +235,31 @@ For more information, see [Mobile Threat Defense toggle options](../protect/mtd-
 >
 > - iOS/iPadOS
 
+### Device security
+
+#### Update firewall configurations for new Intune network endpoints<!-- 34445623 -->
+
+As part of Microsoft’s ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), Microsoft Intune has begun using Azure Front Door (AFD) IP addresses in addition to the existing Intune service IPs.
+
+Starting December 2, 2025, this change supports improved service resiliency and security. As a result, you might need to review and update network (firewall, proxy, or VPN) configurations in third-party applications to ensure proper function of Intune device and app management. This change primarily affects customers who restrict outbound traffic using IP-based allowlists or Azure service tags.
+
+- **If your organization uses FQDN-based rules or does not restrict outbound traffic**, no changes are typically required. However, you should verify that the appropriate wildcard rules are configured, specifically `*.manage.microsoft.com`, to ensure all Intune services remain reachable. Microsoft continues to recommend using FQDN-based rules whenever possible to reduce ongoing administrative overhead.
+- **If your organization uses IP-based allowlists** (like firewall, proxy, or VPN rules), you must ensure that the Azure Front Door IP ranges are included to avoid potential connectivity issues for managed devices.
+
+The following IP addresses comprise the current list of Azure Front Door endpoints that should be allowed:
+
+- 13.107.219.0/24
+- 13.107.227.0/24
+- 13.107.228.0/23
+- 150.171.97.0/24
+- 2620:1ec:40::/48
+- 2620:1ec:49::/48
+- 2620:1ec:4a::/47
+
+For the authoritative and up-to-date list of network endpoints required by Intune client and host services, see [Intune core service](../fundamentals/intune-endpoints.md#intune-core-service) in *Network endpoints for Microsoft Intune*.
+
+For additional context on this change, see [Support Tip: Upcoming Microsoft Intune Network Changes](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-upcoming-microsoft-intune-network-changes/4452738).
+
 ### Tenant administration
 
 #### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->
