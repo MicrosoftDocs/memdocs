@@ -198,7 +198,7 @@ With the service connection established, Intune automatically receives an onboar
 
 ##### Custom setup steps
 
-1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Endpoint detection and response** > **Create Policy**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Endpoint security** > **Endpoint detection and response** > **Summary** tab > **Create Policy**.
 
 2. **Platform and profile:**
    - **Platform**: **Windows**
@@ -214,8 +214,8 @@ With the service connection established, Intune automatically receives an onboar
      - **Onboard**: For disconnected environments - paste the WindowsDefenderATP.onboarding blob content.
 
    - **Sample Sharing**: Configure whether devices share suspicious file samples with Microsoft for analysis.  
-     - **On**: Enables automatic sample sharing for enhanced threat detection
-     - **Off**: Disables sample sharing (can reduce detection capabilities).
+     - **All**: Enables automatic sample sharing for enhanced threat detection
+     - **None**: Disables sample sharing (can reduce detection capabilities)
 
    > [!NOTE]
    > **Telemetry Reporting Frequency** is deprecated and doesn't affect new devices. The setting remains visible for older policy compatibility.
