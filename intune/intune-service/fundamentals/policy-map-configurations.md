@@ -3,7 +3,7 @@ title: Configurations policy mapping from Basic Mobility and Security to Intune
 description: A detailed list of the policy map between Basic Mobility and Security configurations and Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/14/2024
+ms.date: 12/03/2025
 ms.topic: article
 ms.reviewer: dagerrit
 ms.collection:
@@ -12,9 +12,9 @@ ms.collection:
 
 # Configurations policy mapping from Basic Mobility and Security to Intune
 
-You can migrate from Basic Mobility and Security to Microsoft Intune. You can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
+You can move from Basic Mobility and Security to Microsoft Intune.
 
-After you migrate, use this article to map the settings in Microsoft Purview compliance portal configuration policies to the equivalent settings in Intune.
+Use this article to map the settings in Microsoft Purview compliance portal configuration policies to the equivalent settings in Intune.
 
 Intune offers more policy flexibility. So, each Office policy translates into multiple Intune and Microsoft Entra policies to achieve the same result.
 
@@ -146,4 +146,4 @@ Two Intune configuration profiles:
 
 ## Related article
 
-To migrate these policies, you can use the [Migration evaluation tool](migrate-to-intune.md).
+- [Move from Basic Mobility and Security to Intune](migrate-to-intune.md)

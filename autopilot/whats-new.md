@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Autopilot
 description: News and resources about the latest updates and past versions of Windows Autopilot. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 09/09/2025
+ms.date: 01/26/2026
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -28,11 +28,11 @@ appliesto:
 ## Enrollment Status Page support for installing Windows security updates during Windows OOBE
 
 Date added: *September 3, 2025*<br>
-Date updated: *September 9, 2025*
+Date updated: *January 26, 2026*
 
-> [!IMPORTANT]
+> [!NOTE]
 >
-> As of September 9, 2025, this capability is delayed to help ensure delivery of the best possible experience. The new setting on the Enrollment Status Page (ESP) can be configured on both new and existing ESP profiles, but the automatic installation of monthly security update releases and the new user interface isn't available yet. This post will be updated with a revised timeline as soon as it's available.
+> As of January 13, 2026, this capability is included in the Windows `2026-01 B` quality update.
 
 The Windows out-of-box experience (OOBE) by default installs the latest available monthly security update releases to help ensure devices are secure and up to date from day one. Windows OOBE is used by Intune and by Windows Autopilot scenarios through the Intune enrollment status page (ESP) configurations. Intune refers to these monthly security update releases as quality updates.
 

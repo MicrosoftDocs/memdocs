@@ -1,17 +1,10 @@
 ---
 title: Delete issued PKI certificates with Microsoft Intune
 description: Delete certificates issued via Microsoft Intune cloud PKI.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
 ---
+
 # Delete Microsoft Cloud PKI certification authority
 Delete an issuing and root certification authority (CA) from the Microsoft Cloud PKI service in Microsoft Intune. You can use the following actions in the Microsoft Intune admin center to manage certification authorities (CAs) in your tenant:
 
@@ -40,7 +33,7 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
 1. Select **Pause**.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot highlighting the Pause action for Cloud PKI.](.\media\microsoft-cloud-pki-delete\image.png)
+   > ![Example screenshot highlighting the Pause action for Cloud PKI.](./images/delete.png)
 
 1. Select **Pause** again when prompted to confirm.
 
@@ -52,7 +45,7 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
 1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is paused.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot highlighting the Status column in the table of CAs.](.\media\microsoft-cloud-pki-delete\image-2.png)
+    > ![Example screenshot highlighting the Status column in the table of CAs.](./images/delete-2.png)
 
 1. Select the paused CA to open all available options again. Two new options appear:
    - **Resume**: This option unpauses the CA and makes it active again.
@@ -63,7 +56,7 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
    > For this action to work, all active leaf certificates belonging to the CA must already be revoked. For more information and steps, see [Revoke active leaf certificates](#revoke-active-leaf-certificates) in this article.
 
     > [!div class="mx-imgBorder"]
-    > ![Example screenshot highlighting the Revoke action for the CA.](.\media\microsoft-cloud-pki-delete\image-3.png)
+    > ![Example screenshot highlighting the Revoke action for the CA.](./images/delete-3.png)
 
 1. Select **Revoke** again when prompted to confirm.
 
@@ -80,13 +73,13 @@ Permanently remove an issuing CA from Microsoft Intune. If you're trying to dele
 1. Go back to your list of CAs and choose **Refresh**. Then look under the **Status** column to confirm that the issuing CA is revoked.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the CA list, highlighting the revoked status.](.\media\microsoft-cloud-pki-delete\image-4.png)
+   > ![Example screenshot of the CA list, highlighting the revoked status.](./images/delete-4.png)
 
 1. Select the revoked CA to open all available options again.
 1. The option to delete the CA should be available now. Select **Delete** to remove the CA from Microsoft Intune.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot highlighting the delete action for an issuing CA.](.\media\microsoft-cloud-pki-delete\image-5.png)
+   > ![Example screenshot highlighting the delete action for an issuing CA.](./images/delete-5.png)
 
 1. Select **Delete** again when prompted to confirm.
 
@@ -105,12 +98,12 @@ Permanently remove a root CA from Microsoft Intune.
 1. Select a root CA from the list of available CAs. Selecting a CA opens its available actions.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the CA list, highlighting a root CA.](.\media\microsoft-cloud-pki-delete\image-6.png)
+   > ![Example screenshot of the CA list, highlighting a root CA.](./images/delete-6.png)
 
 1. Select **Delete** to remove the CA from Microsoft Intune.
 
    > [!div class="mx-imgBorder"]
-   > ![Example screenshot of the admin center highlighting the delete action for the root CA.](.\media\microsoft-cloud-pki-delete\image-8.png)
+   > ![Example screenshot of the admin center highlighting the delete action for the root CA.](./images/delete-8.png)
 
 1. Select **Delete** again when prompted to confirm.
 

@@ -75,7 +75,7 @@ The following table identifies the Microsoft Entra roles that have access to Int
 | Security Reader [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
 | Compliance Administrator | None | Read only |
 | Compliance Data Administrator | None | Read only |
-| Global Reader [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
+| Global Reader [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read Only | Read Only |
 | Helpdesk administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
 | Reports Reader | None | Read Only|
 

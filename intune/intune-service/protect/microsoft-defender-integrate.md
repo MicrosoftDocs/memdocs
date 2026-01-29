@@ -13,7 +13,7 @@ ms.collection:
 - sub-secure-endpoints
 ---
 
-# Integrate Microsoft Defender for Endpoint with Intune and Onboard Devices
+# Configure Microsoft Defender for Endpoint with Intune and Onboard Devices
 
 Use the information and procedures in this article to connect Microsoft Defender for Endpoint with Intune and to then onboard and configure devices for Defender for Endpoint. Information in this article includes the following general steps:
 
