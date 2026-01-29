@@ -246,7 +246,7 @@ Do not alter them unless instructed by Microsoft support. The [Support policies 
 
 | Display name | Canonical name | Required value | More information link |
 |--------------|---------------|----------------|------------------|
-| Database owner | `owner_sid` | `sa` | [Change the database owner](/sql/relational-databases/databases/change-the-database-owner) |
+| Database owner | `owner_sid` | `sa` | [ALTER AUTHORIZATION for databases](/sql/t-sql/statements/alter-authorization-transact-sql#alter-authorization-for-databases) |
 | Change tracking | `CHANGE_TRACKING` | True (ON) | [Enable change tracking](/sql/relational-databases/track-changes/about-change-tracking-sql-server) |
 | Recursive Triggers Enabled | `RECURSIVE_TRIGGERS` | True (ON) | [Recursive Triggers](/sql/relational-databases/triggers/create-nested-triggers#recursive-triggers) |
 | Broker Enabled | `ENABLE_BROKER` | True (ON) | [Activate Service Broker in a database](/sql/database-engine/service-broker/how-to-activate-service-broker-message-delivery-in-databases-transact-sql#activate-service-broker-in-a-database) |
