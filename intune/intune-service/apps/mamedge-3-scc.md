@@ -1,7 +1,7 @@
 ---
 title: Step 3. Integrate Mobile Threat Defense for App Protection Policy
 description: Step 3. Integrate Mobile Threat Defense signals with Microsoft Edge for Business app protection policies in Microsoft Intune.
-ms.date: 01/23/2026
+ms.date: 01/26/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -64,13 +64,13 @@ Use the conditional launch settings to maintain progressive security across the 
 
 - **Offline grace period (Block access)**: Set to **10080** minutes.
 - **Offline grace period (Wipe data)**: Set to **90** days.
-- **Max allowed device threat level**: Select **Low**, with the **Block access** action.
+- **Max allowed device threat level**: Select **High**, with the **Block access** action.
 
 #### Level 2 – Enhanced
 
 - **Disabled account**: Set to **Block access**.
 - **Min OS version**: Enter **10.0.22621.2506** and select **Block access**.
-- **Max allowed device threat level**: Select **Medium**, with the **Block access** action.
+- **Max allowed device threat level**: Select **Low**, with the **Block access** action.
 - **Offline grace period (Wipe data)**: Set to **30** days.
 
 #### Level 3 – High
