@@ -2,8 +2,8 @@
 title: Upgrade clients on Windows
 description: Upgrade clients on Windows computers in Configuration Manager.
 ms.date: 04/12/2022
-ms.subservice: configuration
 ms.topic: how-to
+ms.subservice: core-infra
 ms.collection: tier3
 ---
 

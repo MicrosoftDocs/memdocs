@@ -2,7 +2,7 @@
 title: Upgrade macOS clients
 description: Upgrade the Configuration Manager client on Mac computers.
 ms.date: 01/05/2022
-ms.subservice: configuration
+ms.subservice: core-infra
 ms.topic: upgrade-and-migration-article
 ms.collection: tier3
 ---
