@@ -268,7 +268,6 @@ For additional context on this change, see [Support Tip: Upcoming Microsoft Intu
 
 The following task types are supported:
 
-- Device Offboarding tasks (new)
 - Endpoint Privilege Management file elevation requests
 - Microsoft Defender security tasks
 - Multi Admin Approval requests
@@ -277,8 +276,7 @@ Intune only shows tasks you have permission to manage. When you select a task, I
 
 To learn more, see:
 
-- [Admin tasks](../fundamentals/admin-tasks.md)
-- [Device Offboarding Agent](../../agents/device-offboarding-agent.md)
+- [Admin tasks](../fundamentals/admin-tasks.md
 
 ## Week of January 12, 2026
 
