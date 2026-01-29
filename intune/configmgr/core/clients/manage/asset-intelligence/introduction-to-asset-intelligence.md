@@ -1,16 +1,9 @@
 ---
 title: Asset intelligence introduction
-titleSuffix: Configuration Manager
 description: Use asset intelligence in Configuration Manager to inventory and manage software license usage throughout your enterprise.
 ms.date: 12/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

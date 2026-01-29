@@ -1,18 +1,10 @@
 ---
 description: Learn how to specify how client computers retrieve software inventory in Configuration Manager using SMS_SoftwareInventoryAgentConfig.
 title: SMS_SoftwareInventoryAgentConfig Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: cd15f059-a89a-4990-8048-b8976237128a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SoftwareInventoryAgentConfig Server WMI Class
 The `SMS_SoftwareInventoryAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies how client computers retrieve software inventory.

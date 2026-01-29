@@ -1,18 +1,10 @@
 ---
 title: How to use the admin service
-titleSuffix: Configuration Manager
 description: Learn how you can use the administration service in custom scenarios.
 ms.date: 07/20/2020
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 7491b6bb-4479-469a-8a4f-1ee139834c96
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to use the administration service in Configuration Manager

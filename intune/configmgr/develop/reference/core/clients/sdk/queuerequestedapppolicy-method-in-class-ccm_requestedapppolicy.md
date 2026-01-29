@@ -1,18 +1,10 @@
 ---
 title: QueueRequestedAppPolicy Method
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the QueueRequestedAppPolicy Windows Management Instrumentation class method that queues an application policy request.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0fd7952e-eeed-4dc0-a66b-af6442156523
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # QueueRequestedAppPolicy Method in Class CCM_RequestedAppPolicy
 The `QueueRequestedAppPolicy` Windows Management Instrumentation (WMI) class method in Configuration Manager that queues and application policy request.

@@ -1,18 +1,10 @@
 ---
 title: Set the PXE Service Point Response to All Network Interfaces
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 9ef702dc-1d13-4c4a-99d8-a5503628fde1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to set the PXE service point response to all network interfaces by setting the BindPolicy embedded property.
-ms.reviewer: mstewart
 ---
 # How to Set the PXE Service Point Response to All Network Interfaces
 In Configuration Manager, you set the operating system deployment PXE service point response to network interfaces by setting the `BindPolicy` embedded property.

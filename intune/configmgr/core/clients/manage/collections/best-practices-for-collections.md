@@ -1,17 +1,10 @@
 ---
 title: Collections best practices
-titleSuffix: Configuration Manager
 description: Get recommendations for configuring collections and collection evaluation in Configuration Manager.
 ms.date: 04/13/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: best-practice
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Best practices for collections in Configuration Manager

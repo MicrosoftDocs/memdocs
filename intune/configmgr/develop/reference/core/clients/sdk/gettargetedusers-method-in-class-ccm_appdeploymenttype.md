@@ -1,18 +1,10 @@
 ---
 description: Learn how to retrieve the targeted users of an application deployment type using GetTargetedUsers class method.
 title: GetTargetedUsers Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 125f04db-bfe4-4d5d-8d8c-d754eda35065
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetTargetedUsers Method in Class CCM_AppDeploymentType
 The `GetTargetedUsers` Windows Management Instrumentation (WMI) class method in Configuration Manager that retrieves the targeted users of an application deployment type.

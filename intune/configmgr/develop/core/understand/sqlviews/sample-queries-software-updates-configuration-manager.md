@@ -1,18 +1,11 @@
 ---
 title: Sample queries for software updates
-titleSuffix: Configuration Manager
 description: Sample queries that show how to join software updates views to each other and to views from other view categories.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 583e373f-1619-4385-8c86-0484820c6b02
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

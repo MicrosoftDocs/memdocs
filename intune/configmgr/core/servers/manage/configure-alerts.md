@@ -1,17 +1,10 @@
 ---
 title: Configure alerts
-titleSuffix: Configuration Manager
 description: Configure alerts to understand the state of your Configuration Manager environment.
 ms.date: 08/02/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure alerts in Configuration Manager

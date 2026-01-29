@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent application policy in Configuration Manager using the CCM_ApplicationPolicy class.
 title: CCM_ApplicationPolicy Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: b068007e-ee61-47ce-841d-d1f534b5aaff
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_ApplicationPolicy Client WMI Class
 The `CCM_ApplicationPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents application policy.

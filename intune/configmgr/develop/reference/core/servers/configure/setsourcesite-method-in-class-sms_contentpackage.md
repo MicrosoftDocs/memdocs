@@ -1,18 +1,10 @@
 ---
 description: Learn how to change the source site code using SetSourceSite Windows Management Instrumentation (WMI) class method.
 title: SetSourceSite method in class SMS_ContentPackage
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6057c670-f3c8-4632-9a06-777f68a41dba
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SetSourceSite Method in Class SMS_ContentPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, changes the source site code.

@@ -1,17 +1,10 @@
 ---
 title: Remote control security privacy
-titleSuffix: Configuration Manager
 description: Get security and privacy information for remote control in Configuration Manager.
 ms.date: 04/23/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Security and privacy for remote control in Configuration Manager
 

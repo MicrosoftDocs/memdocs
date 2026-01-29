@@ -1,18 +1,10 @@
 ---
 description: Article outlining how to use the SMS_PfxCertificateSettings in Configuration Manager to represent personal information exchange (PFX) certificate settings.
 title: SMS_PfxCertificateSettings Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e04ba594-ce7a-4f9d-ac0f-893c3374d257
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_PfxCertificateSettings Server WMI Class
 The  `SMS_PfxCertificateSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents personal information exchange (PFX) certificate settings.
