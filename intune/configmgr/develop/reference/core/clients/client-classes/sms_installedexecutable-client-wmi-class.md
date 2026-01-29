@@ -1,18 +1,10 @@
 ---
 title: SMS_InstalledExecutable Class
-titleSuffix: Configuration Manager
 description: The SMS_InstalledExecutable class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that identifies executable files associated with a software installation.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 31fa9595-6ece-4fc0-a6b2-d8eb280f0cc1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_InstalledExecutable Client WMI Class
 The `SMS_InstalledExecutable` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that identifies executable files associated with a software installation.

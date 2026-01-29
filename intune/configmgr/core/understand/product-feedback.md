@@ -1,17 +1,10 @@
 ---
 title: Product feedback
-titleSuffix: Configuration Manager
 description: Share feedback with the Configuration Manager product team.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Product feedback for Configuration Manager

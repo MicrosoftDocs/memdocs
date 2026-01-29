@@ -1,18 +1,10 @@
 ---
 description: Learn how the following example shows how to configure the properties of an existing package, in Configuration Manager, by using the SMS_Package class.
 title: Configure Package Properties
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 60d90c19-2810-4f10-860f-aa3087f35b03
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Configure Package Properties
 The following example shows how to configure the properties of an existing package, in Configuration Manager, by using the `SMS_Package` class.

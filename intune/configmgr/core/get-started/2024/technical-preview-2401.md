@@ -1,17 +1,10 @@
 ---
 title: Technical preview 2401
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2401.
 ms.date: 01/24/2024
-ms.service: configuration-manager
 ms.topic: whats-new
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ROBOTS: NOINDEX, NOFOLLOW
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Features in Configuration Manager technical preview version 2401
 

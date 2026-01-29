@@ -1,17 +1,10 @@
 ---
 title: Migration security and privacy
-titleSuffix: Configuration Manager
 description: Get security best practices and privacy information for migration to your Configuration Manager current branch environment.
 ms.date: 10/06/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Security and privacy for migration to Configuration Manager current branch
 

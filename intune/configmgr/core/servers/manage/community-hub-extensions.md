@@ -1,17 +1,10 @@
 ---
 title: Console extensions from Community hub
-titleSuffix: Configuration Manager
 description: Learn about managing Community hub console extensions for Configuration Manager
 ms.date: 10/31/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Console extensions from Community hub

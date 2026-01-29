@@ -3,12 +3,7 @@ title: Software updates in the admin center
 description: Software updates for Configuration Manager devices from the admin center
 ms.date: 06/07/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
-author: LauraWi
-ms.author: laurawi
-ms.manager: apoorvseth
 ms.topic: how-to
-ms.localizationpriority: high
 ---
 # Tenant attach: Software updates in the admin center
 <!--13035723-->

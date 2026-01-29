@@ -1,17 +1,10 @@
 ---
 title: Prepare to install sites
-titleSuffix: Configuration Manager
 description: If you're planning to install multiple Configuration Manager sites, read this information to help you save time, and to prevent errors.
 ms.date: 09/18/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Prepare to install Configuration Manager sites
 

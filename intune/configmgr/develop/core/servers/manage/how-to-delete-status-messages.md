@@ -1,18 +1,10 @@
 ---
 title: Delete Status Messages
-titleSuffix: Configuration Manager
 description: In Configuration Manager, you delete status messages by calling the SMS_StatusMessage class DeleteByID method and supplying an array of status message RecordID identifiers.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 883d80f4-a623-4d5e-9b98-84f62f068205
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Delete Status Messages
 In Configuration Manager, you delete status messages by calling the `SMS_StatusMessage` class `DeleteByID` method and supplying an array of status message `RecordID` identifiers. Alternatively, you can call the `SMS_StatusMessage` class `DeleteByQuery` method and supply a WQL query that identifies the status messages to be deleted.

@@ -1,17 +1,10 @@
 ---
 title: Checklist for 2509
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2509.
 ms.date: 11/11/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Checklist for installing update 2509 for Configuration Manager

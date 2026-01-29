@@ -1,17 +1,10 @@
 ---
 title: Supported Configurations for the LTSB
-titleSuffix: Configuration Manager
 description: Understand what operating systems and dependent products work with the Long-Term Servicing Branch of System Center Configuration Manager.
 ms.date: 10/11/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Supported Configurations for the Long-Term Servicing Branch of System Center Configuration Manager

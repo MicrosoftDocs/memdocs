@@ -1,16 +1,9 @@
 ---
 title: Manage OS images
-titleSuffix: Configuration Manager
 description: Learn the methods to manage OS images stored in Windows image (WIM) files.
 ms.date: 07/31/2025
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

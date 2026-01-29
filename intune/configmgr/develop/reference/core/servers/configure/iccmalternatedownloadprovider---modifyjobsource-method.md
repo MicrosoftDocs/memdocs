@@ -1,18 +1,10 @@
 ---
 description: Learn how to instruct the provider to modify the source location for a given job in Configuration Manager.
 title: "ICcmAlternateDownloadProvider: ModifyJobSource"
-titleSuffix: Configuration Manager
 ms.date: 07/25/2017
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 13498951-c8f6-437b-91c3-d37acce33d49
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ICcmAlternateDownloadProvider: ModifyJobSource Method
 The **ICcmAlternateDownloadProvider::ModifyJobSource** method, in Configuration Manager, instructs the provider to modify the source location for a given job.
