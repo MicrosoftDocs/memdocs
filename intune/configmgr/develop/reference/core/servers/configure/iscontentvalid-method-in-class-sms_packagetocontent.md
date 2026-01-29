@@ -1,18 +1,10 @@
 ---
 description: Learn how to determine if the package content is valid using IsContentValid WMI class method in Configuration Manager.
 title: IsContentValid Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 371c8d22-2384-4c28-8255-50e94e6fdf49
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IsContentValid Method in Class SMS_PackageToContent
 The `IsContentValid` Windows Management (WMI) class method, in Configuration Manager, determines if the package content is valid.

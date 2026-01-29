@@ -1,16 +1,9 @@
 ---
 title: Monitor the CMG
-titleSuffix: Configuration Manager
 description: Monitor clients and network traffic through the cloud management gateway (CMG).
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

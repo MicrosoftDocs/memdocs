@@ -1,18 +1,10 @@
 ---
 title: RunOfflineServicingManager Method in SMS_ImagePackage
-titleSuffix: Configuration Manager
 description: The RunOfflineServicingManager WMI class method updates the site control file of the offline servicing manager.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 95f79650-f052-4038-bd61-bd8554541b90
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # RunOfflineServicingManager Method in Class SMS_ImagePackage
 The `RunOfflineServicingManager` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that updates the site control file of the offline servicing manager to run the offline image servicing component as soon as possible on the specified operating system image at the specified site server.

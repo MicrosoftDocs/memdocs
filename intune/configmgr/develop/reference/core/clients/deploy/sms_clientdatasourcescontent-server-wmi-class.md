@@ -1,18 +1,10 @@
 ---
 description: The SMS_ClientDataSourcesContent Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager.
 title: SMS_ClientDataSourcesContent Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ae23d777-a5a2-48a6-b04f-fa1b8ab9284e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ClientDataSourcesContent Server WMI Class
 The `SMS_ClientDataSourcesContent` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client content data sources per boundary group.

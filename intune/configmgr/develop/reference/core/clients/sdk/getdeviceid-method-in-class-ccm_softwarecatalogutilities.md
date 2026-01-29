@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the GetDeviceId method to return the device (client) identifier.
 title: GetDeviceId Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6c185a47-b593-4a6e-8f59-205e10c2a314
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetDeviceId Method in Class CCM_SoftwareCatalogUtilities
 The `GetDeviceId` Windows Management Instrumentation (WMI) class method in Configuration Manager that returns the device (client) identifier.

@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the current client state at the time of the last hardware inventory using SMS_G_System_Current as an abstract base class.
 title: SMS_G_System_Current Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 01e0699f-7031-47a7-a3c2-5e98aeebe5f6
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_G_System_Current Server WMI Class
 The `SMS_G_System_Current` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as an abstract base class and represents the current client state at the time of the last hardware inventory.

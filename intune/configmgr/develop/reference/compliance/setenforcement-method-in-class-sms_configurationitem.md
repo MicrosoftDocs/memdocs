@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SetEnforcement method in class SMS_ConfigurationItem to set the enforcement and the enforcement date for a configuration item.
 title: SetEnforcement method in class SMS_ConfigurationItem
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 56815dfb-89f5-4e32-bbb7-d654daa044df
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SetEnforcement Method in Class SMS_ConfigurationItem
 The `SetEnforcement` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the enforcement and the enforcement date for a configuration item.

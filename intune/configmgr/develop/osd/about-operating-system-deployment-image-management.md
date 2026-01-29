@@ -1,18 +1,10 @@
 ---
 title: OS Deployment Image Management
 description: There are several package types that Configuration Manager uses to manage reference computer operating system images.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.assetid: c996a3dc-fff5-4c15-a2ce-a9590969d75e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # About Operating System Deployment Image Management
 There are several package types that Configuration Manager uses to manage reference computer operating system images.

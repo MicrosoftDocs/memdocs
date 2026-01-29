@@ -1,18 +1,10 @@
 ---
 title: SMS_LicensedVppApps Class
-titleSuffix: Configuration Manager
 description: The SMS_LicensedVppApps WMI class represents license Information for Apple App Store Volume Purchase Program (VPP) and Microsoft Store for Business applications.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: c5c499ab-97f4-4d11-befa-e5151db75cba
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_LicensedVppApps Server WMI Class
 The `SMS_LicensedVppApps` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents license Information for Apple App Store Volume Purchase Program (VPP) and Microsoft Store for Business applications.

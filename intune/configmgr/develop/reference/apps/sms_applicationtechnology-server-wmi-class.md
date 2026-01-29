@@ -1,18 +1,10 @@
 ---
 title: SMS_ApplicationTechnology Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class, in Configuration Manager, that represents the technology extension of an application.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: b43c5dfb-707e-438d-b241-89df35062670
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ApplicationTechnology Server WMI Class
 The `SMS_ApplicationTechnology` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the technology extension of an application.

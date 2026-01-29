@@ -1,18 +1,10 @@
 ---
 description: Learn how to update the Advertisement Status in Configuration Manager console using SoftDistProgramCompletedSuccessfullyEvent message.
 title: SoftDistProgramCompletedSuccessfullyEvent
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 71fb1c06-d7fc-45d4-be40-356f829ea566
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SoftDistProgramCompletedSuccessfullyEvent
 The `SoftDistProgramCompletedSuccessfullyEvent` message, in Configuration Manager,  is sent when a program is completed successfully with an exit code (not MIFsuccess). It appears in the **Advertisement Status** in the Configuration Manager console.
