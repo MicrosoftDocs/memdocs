@@ -270,7 +270,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 #### Android onboarding quick start
 
-1. **Deploy the app**: Follow [Microsoft Defender for Endpoint for Android](/defender-endpoint/microsoft-defender-atp-android) prerequisites and onboarding instructions.
+1. **Deploy the app**: Follow [Microsoft Defender for Endpoint for Android](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-android) prerequisites and onboarding instructions.
 2. **Configure web protection**: Use [Microsoft Defender for Endpoint web protection](../protect/microsoft-defender-configure-android.md) policies for additional security.
 3. **Verify onboarding**: Confirm device registration in Microsoft Defender XDR portal.
 
@@ -287,7 +287,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 #### iOS onboarding quick start
 
-1. **Deploy the app**: Follow [Microsoft Defender for Endpoint for iOS](/defender-endpoint/microsoft-defender-atp-ios) prerequisites and onboarding instructions.
+1. **Deploy the app**: Follow [Microsoft Defender for Endpoint for iOS](/microsoft-365/security/defender-endpoint/microsoft-defender-endpoint-ios) prerequisites and onboarding instructions.
 2. **Configure supervision detection**: Set up supervised mode detection for enhanced features
 3. **Verify onboarding**: Check device registration in Microsoft Defender XDR portal.
 
@@ -429,7 +429,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 **Prerequisites:**
 - Admin access to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
-- Permissions equal to the [Conditional Access Administrator](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) role in Microsoft Entra ID for managing Conditional Access policies.
+- Permissions equal to the [Conditional Access Administrator](/entra/identity/role-based-access-control/permissions-reference#conditional-access-administrator) role in Microsoft Entra ID for managing Conditional Access policies.
 
 **Purpose:** Block noncompliant devices from accessing corporate resources automatically
 
@@ -497,7 +497,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
 
 **Microsoft Defender for Endpoint:**
 - [Conditional Access integration](/defender-endpoint/conditional-access) - Advanced access control scenarios
-- [Security operations dashboard](/defender-endpoint/security-operations-dashboard) - Threat monitoring and response
+- [Security operations dashboard](/microsoft-365/security/defender-endpoint/security-operations-dashboard) - Threat monitoring and response
 
 ### Support resources
 
