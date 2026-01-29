@@ -1,16 +1,9 @@
 ---
 title: Task sequence steps
-titleSuffix: Configuration Manager
 description: Learn about the steps that you can add to a Configuration Manager task sequence.
 ms.date: 04/30/2024
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart,frankroj
 ms.collection: tier3
 ---
 

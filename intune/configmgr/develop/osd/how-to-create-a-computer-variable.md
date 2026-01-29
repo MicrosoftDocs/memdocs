@@ -1,18 +1,10 @@
 ---
 title: Create a Computer Variable
-titleSuffix: Configuration Manager
 description: Create a computer variable for a computer that is running Configuration Manager by adding instances of SMS_MachineVariable to the SMS_MachineSettings class MachineVariables array property.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: e4db0e59-84c0-44eb-8e41-acb91c4ee463
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Create a Computer Variable in Configuration Manager
 You create a computer variable for a computer that is running Configuration Manager by adding instances of [SMS_MachineVariable](../../develop/reference/osd/sms_machinevariable-server-wmi-class.md) to the [SMS_MachineSettings](../../develop/reference/osd/sms_machinesettings-server-wmi-class.md) class `MachineVariables` array property.

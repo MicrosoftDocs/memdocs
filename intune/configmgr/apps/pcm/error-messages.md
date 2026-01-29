@@ -1,17 +1,10 @@
 ---
 title: Error messages
-titleSuffix: Configuration Manager
 description: Learn about the error messages from Package Conversion Manager.
 ms.date: 08/24/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Technical reference for Package Conversion Manager error messages

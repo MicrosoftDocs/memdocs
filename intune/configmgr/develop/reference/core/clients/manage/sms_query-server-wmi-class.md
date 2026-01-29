@@ -1,18 +1,10 @@
 ---
 title: SMS_Query Class
-titleSuffix: Configuration Manager
 description: The SMS_Query Windows Management Instrumentation (WMI) class is an SMS Provider server class. It serves as a container for predefined queries.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 92214631-1cd5-45ac-a7d9-f49c32530be0
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_Query Server WMI Class
 The `SMS_Query` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that serves as a container for predefined queries.

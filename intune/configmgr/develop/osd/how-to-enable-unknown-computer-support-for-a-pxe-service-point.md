@@ -1,18 +1,10 @@
 ---
 title: Enable Unknown Computer Support for a PXE Service Point
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: fbabd2ed-c3ee-48f0-8d9d-7d0c48f69af6
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about how to set an operating system deployment response to PXE service requests from unknown computers.
-ms.reviewer: mstewart
 ---
 # How to Enable Unknown Computer Support for a PXE Service Point
 In Configuration Manager, you set the operating system deployment PXE service point response to incoming PXE requests from unknown computers by setting the **SupportUnknownMachines** embedded property.

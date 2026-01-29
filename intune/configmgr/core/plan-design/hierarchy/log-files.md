@@ -1,17 +1,10 @@
 ---
 title: Log file reference
-titleSuffix: Configuration Manager
 description: A reference of all log files for Configuration Manager client, server, and dependent components.
 ms.date: 08/11/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Log file reference

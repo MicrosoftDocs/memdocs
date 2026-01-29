@@ -1,18 +1,10 @@
 ---
 description: Learn how to take two collections as arguments and verify that no circular dependencies form using VerifyNoCircularDependencies.
 title: VerifyNoCircularDependencies Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 233501a5-2b33-4394-8732-e77e46331871
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # VerifyNoCircularDependencies Method in Class SMS_Collection
 In Configuration Manager, the `VerifyNoCircularDependencies` Windows Management Instrumentation (WMI) class method takes two collections as arguments and verifies that no circular dependencies would be formed if one collection were the parent of another.

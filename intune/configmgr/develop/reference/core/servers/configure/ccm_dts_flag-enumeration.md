@@ -1,18 +1,10 @@
 ---
 title: CCM_DTS_FLAG Enumeration
-titleSuffix: Configuration Manager
 description: The CCM_DTS_FLAG enumeration indicates special options on download jobs.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 90f20778-f069-4af1-bcfd-c27230818a77
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_DTS_FLAG Enumeration
 The **CCM_DTS_FLAG** enumeration indicates special options on download jobs.

@@ -1,18 +1,10 @@
 ---
 title: About status messages
-titleSuffix: Configuration Manager
 description: Learn about status messages in Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.assetid: f3011860-6a66-407d-b3fc-93e4f6f892e1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About Configuration Manager Status Messages

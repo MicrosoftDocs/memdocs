@@ -1,17 +1,10 @@
 ---
 title: Select discovery methods
-titleSuffix: Configuration Manager
 description: Review considerations for which methods to use and at which sites to run them.
 ms.date: 10/06/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Select discovery methods to use for Configuration Manager
 

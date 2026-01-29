@@ -1,17 +1,10 @@
 ---
 title: Manage distribution points
-titleSuffix: Configuration Manager
 description: Use distribution points to host the content that you deploy to devices and users.
 ms.date: 07/17/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart
 ---
 
 # Install and configure distribution points in Configuration Manager

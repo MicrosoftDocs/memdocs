@@ -1,17 +1,10 @@
 ---
 title: Prerequisite checks
-titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
 ms.date: 03/28/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # List of prerequisite checks for Configuration Manager
