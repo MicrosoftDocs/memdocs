@@ -207,6 +207,17 @@ Podman uses the file **/etc/cni/net.d as 87-podman-bridge.conflist** to configur
 
 For more information, see [Configuring container networking with Podman](https://www.redhat.com/sysadmin/container-networking-podman) in the Red Hat documentation.
 
+Starting RedHat 9, Podman uses **/etc/containers/containers.conf** to configure bridge networking.
+
+1. Use any file editor of your choice with root permissions, update **/etc/containers/containers.conf** `default_subnet` value with your desired subnet. The address must be specified in CIDR notation
+2. Use the following command to restart the MS Tunnel Gateway containers: `sudo mst-cli agent start ; sudo mst-cli server start`
+
+  Additional command references for podman network:
+  ```
+  podman network ls - This will list all the networks on the podman host.
+  podman network inspect podman - Displays the network configuration for one or more networks.
+  ```
+
 ### Linux system auditing
 
 Linux system auditing can help identify security-relevant information or security violations on a Linux server that hosts Microsoft Tunnel. Linux system auditing is recommended for Microsoft Tunnel, but not required. To use system auditing, a Linux server must have the **auditd** package installed to `/etc/audit/auditd.conf`.
