@@ -42,7 +42,7 @@ After completing this guide, you'll have completed the following integration wor
 
 **Additional capabilities:** Beyond enrolled devices, you can also manage Defender for Endpoint security configurations on devices that aren't enrolled with Intune (including Linux devices). This scenario is called *Security Management for Microsoft Defender for Endpoint*. To enable this, set the *Allow Microsoft Defender for Endpoint to enforce Endpoint Security Configurations* toggle to *On*. For details, see [Microsoft Defender for Endpoint Security Configuration Management](../protect/mde-security-integration.md).
 
-[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]   <!-- How long should we persist this note? This dates to June 2024. -->
+[!INCLUDE [android_device_administrator_support](../includes/android-device-administrator-support.md)]
 
 ## Connect Microsoft Defender for Endpoint to Intune
 
@@ -378,7 +378,7 @@ Unlike Windows devices, macOS requires manual configuration since Intune doesn't
      - **Blocks**: High-level threats only
      - **Use when**: Moderate security requirements
 
-   - **High (Least Secure)** ⚠️⚠️⚠️
+   - **High (Least Secure)**
      - **Allows**: All threat levels
      - **Blocks**: None (reporting only)
      - **Use when**: Maximum productivity, minimal blocking
