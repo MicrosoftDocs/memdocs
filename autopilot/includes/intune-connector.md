@@ -227,7 +227,7 @@ Update `ODJConnectorEnrollmentWizard.exe.config`. Its default location is `C:\Pr
 
 1. In the **appSettings section** of the file, add the following line:
 
-``<add key="TenantConfiguredManagedServiceAccount" value="{accountname}" />``     
+  ``<add key="TenantConfiguredManagedServiceAccount" value="{accountname}" />``     
 
 1. Sign in to the connector.   
 
@@ -237,7 +237,7 @@ Using your own MSA will disable the connector from making any OU updates, regard
 
 1. In the **appSettings section** of the file, add the following line:
 
-``<add key="DisableOUUpdates" value="true" />``    
+  ``<add key="DisableOUUpdates" value="true" />``    
 
 1. Sign in to the connector.  
 
