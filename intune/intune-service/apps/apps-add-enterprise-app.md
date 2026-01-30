@@ -1,0 +1,314 @@
+---
+title: Add an Enterprise App Catalog App to Microsoft Intune
+description: Learn how to add an Enterprise App Catalog app to Microsoft Intune.
+ms.date: 01/12/2026
+ms.topic: how-to
+ms.reviewer: dguilory
+ms.subservice: suite
+ms.collection:
+- M365-identity-device-management
+- highpri
+- FocusArea_Apps_EAC
+---
+
+# Add an Enterprise App Catalog App to Microsoft Intune
+
+The Enterprise App Catalog is a collection of prepackaged [Win32 apps](../apps/apps-win32-app-management.md) that are designed and prepared by Microsoft to support Intune. The catalog contains both Microsoft apps and non-Microsoft apps. An Enterprise App Catalog app is a Windows app that you can add via the Enterprise App Catalog in Intune. This app type uses the Win32 platform and has support for customizable capabilities, including PowerShell script installers for enhanced deployment flexibility (introduced in 2025).
+
+> [!IMPORTANT]
+> The Enterprise App Catalog is a feature of Enterprise App Management (EAM) which is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+
+When you add an app to Intune, you want to use default installation, requirements, and detection settings. For apps within the Enterprise App Catalog, these default settings are configured and confirmed by Microsoft. You must be careful if you modify the application properties as unexpected or harmful commands could be passed via the **Install command** and **Uninstall command** fields. In addition, changing the install commands might cause installation to fail.
+
+> [!IMPORTANT]
+> Microsoft doesn't assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
+
+Once you add an Enterprise App Catalog app to Intune, you can assign that app to end-users or devices.
+
+> [!NOTE]
+> Enterprise App Catalog apps are supported with Windows Autopilot. Using Windows Autopilot, you can select blocking apps from the Enterprise App Catalog in the Enrollment Status Page (ESP) and the Device Preparation Page (DPP) profiles. This allows you to update apps more easily without needing to update those profiles with the latest versions.
+
+## App update availability
+
+Microsoft established Service Level Objectives (SLOs) to provide predictable timelines for when app updates become available in the Enterprise App Catalog. Most app updates complete automated validation and are available within 24 hours. Updates requiring manual testing typically complete within seven days. For more information about SLOs and processing timelines, see [Enterprise App Management overview](apps-enterprise-app-management.md).
+
+## Add a Windows catalog app (Win32) to Intune
+
+The following steps help you add a Windows App Catalog app to Intune:
+
+1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+2. Select **Apps** > **All Apps** > **Create**.
+3. Select **Enterprise App Catalog app** on the **Select app type** pane under the **Other** app types.
+4. Choose **Select** to add the app type.
+   The **Add app** pane appear and shows the steps needed to add the app to Intune.
+
+## Step 1: App information
+
+The **App information** steps allow you to select an app from the Enterprise App Catalog based on name and publisher. Once you select the app, you must choose a specific app package based on package name, language, architecture, and version. When you complete selecting the app, the app information is displayed. Based on the app that you chose, the values for this step are automatically filled in.
+
+### Select the app from the Enterprise App Catalog
+
+1. Select **Search the Enterprise App Catalog** from the **App information** step.
+2. Find and select the app name, then select **Next**.
+3. Select the app package based on name, language, architecture, and version.
+4. Choose **Select** to update the **App information** step.
+   App details are populated into appropriate fields.
+
+   :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-01.png" alt-text="Include app information when adding a Enterprise App Catalog app":::
+
+The **App information** step provides the fields:
+
+- **Name**: (Required) Add a name for the app. This name is visible in the Intune apps list and to users in the Company Portal.​ If the same app name exists twice, only one of the apps appears in the Company Portal.
+- **Description**: (Required) Help your device users understand what the app is and/or what they can do in the app. This description is visible to them in the Company Portal.
+- **Publisher**: (Required) The name of the developer or company that created the app. This information is visible to users in the Company Portal.
+- **App version**: The version of the app. This information is visible to users in the Company Portal.
+- **Category**: Select one or more of the built-in app categories, or select a category that you created. When you categorize the app, end-users are able to more easily sort and find the app in the Company Portal. You can choose multiple categories.
+- **Show this as a featured app in the Company Portal**: Featured apps are prominently placed in the Company Portal so that users can quickly get to them.
+- **Information URL**: Link end-users to a website or documentation that has more information about the app. The information URL is visible to users in the Company Portal.
+- **Privacy URL**: Provide a link for people who want to learn more about the app's privacy settings and terms. The privacy URL is visible to users in the Company Portal.
+- **Developer**: The name of the company or individual that developed the app. This information is visible to people signed into the Intune admin center.
+- **Owner**: The name of the person in your organization who manages licensing or is the point-of-contact for this app. This name is visible to people signed in to the Intune admin center.​
+- **Notes**: Add more notes about the app. Notes are visible to people signed in to the admin center.
+- **Logo**: Upload a logo associated with the app. This logo appears next to the app throughout the Company Portal.​
+
+5. Select **Next** to display the **Program** step.
+
+## Step 2: Program
+
+On the **Program** step, you configure the app installation and removal commands for the app.
+
+> [!IMPORTANT]
+> Many of the app details are prepopulated and designed to function without change. Changing the install commands or using custom PowerShell scripts might cause the app installation to fail. Unexpected or harmful commands can be passed via the **Install command** and **Uninstall command** fields, or through custom PowerShell scripts. Use script overrides judiciously and test thoroughly.
+
+By default, the install and uninstall commands for a catalog app are prepopulated with Microsoft-recommended values. You can now choose to override these values with a PowerShell script if needed.
+
+> [!NOTE]
+> If Multi-Admin Approval (MAA) is enabled for your tenant, you can't upload PowerShell scripts during app creation. You must first create the app, then add or modify scripts afterward. For more information about MAA limitations with script installers, see [Known limitations](#known-limitations).
+
+The **Program** step provides the following options:
+
+- **Install command**: Configure how the app is installed on devices.
+
+    **Installer type**: Choose between two options:
+    - **Command line**: Use the default commands provided
+    - **PowerShell script**: Provide your own install script instead of the default command
+
+    For command line installations, leave the Installer type as **Command line** to use the default commands provided by Enterprise App Management.
+
+    For [PowerShell script](#powershell-script-installer-for-enterprise-app-catalog-apps) installations, select **PowerShell script** to upload your own install script (maximum size 50 KB) when you have a specific need to customize installation behavior. The script should execute the necessary installer for the app (you can find the default command for reference) and any custom actions you require. Use this option only if you have a specific need to customize installation behavior.
+
+    > [!IMPORTANT]
+    > If a script is used, Intune runs it in place of the standard command – an incorrect script could cause the app installation to fail, so test carefully. Changing the install logic of a Catalog app might affect its ability to install or update properly. Ensure that your script calls the app's installer with the right parameters and handles updates if applicable. Intune enforces the app's detection rules to confirm installation success.
+
+- **Uninstall command**: Configure how the app is uninstalled from devices.
+
+    **Uninstaller type**: Choose between two options:
+    - **Command line**: Use the default commands provided
+    - **PowerShell script**: Provide your own removal script instead of the default command
+
+    For command line uninstallations, leave the Uninstaller type as **Command line** to use the default commands provided by Enterprise App Management.
+
+    For PowerShell script uninstallations, select **PowerShell script** to upload a removal script (maximum size 50 KB) when you need to customize the uninstallation process. Similarly to install scripts, ensure your uninstall script properly removes the app and any associated components.
+
+    > [!IMPORTANT]
+    > Changing the uninstall logic might affect the app's ability to be properly removed. Test uninstall scripts thoroughly to ensure they completely remove the application and its components.
+
+- **Installation time required (mins)**: The number of minutes the system waits for the install program to finish. Default value is 60 minutes. If the app takes longer to install than the set installation time, the system reports the app installation as failed but won't stop it on the device. Max timeout value is 1440 minutes (one day).
+
+- **Allow available uninstall**: Select 'Yes' to provide the uninstall option for this app for users from the Company Portal. Select 'No' to prevent users from uninstalling the app from the Company Portal.
+
+- **Install behavior**: Enterprise App Management selects the install behavior. It can't be modified and is determined by the installer.
+
+- **Device restart behavior**: Select the device restart behavior after the app has successfully installed, based on the following options:
+    - **Determine behavior based on return codes**: Choose this option to restart the device based on the return codes. This option means that the device restarts based on the configured return code.
+    - **No specific action**: Choose this option to suppress device restarts during the app installation of MSI-based apps.
+    - **App install may force a device restart**: Choose this option to allow the app installation to finish without suppressing restarts. This option means that the Windows catalog app (Win32) installation is allowed to complete without suppressing restarts. With this configuration, a hard reboot return code notifies the user that a restart of the device will be triggered in 120 minutes and a soft reboot return code will only notify the user that a restart is required to finish the installation.
+    - **Intune will force a mandatory device restart**: Choose this option to always restart the device after a successful app installation.
+
+- **Specify return codes to indicate post-installation behavior**: Add the return codes that are used to specify either app installation retry behavior or post-installation behavior. Return code entries are added by default during app creation. However, you can add more return codes or change existing return codes.
+    1. In the **Return code** column, add the return code.
+    2. In the **Code type** column, set the **Code type** to one of the following:
+        - **Failed**: The return value that indicates an app installation failure.
+        - **Hard reboot**: The hard reboot return code doesn't allow the next Windows catalog app (Win32) to be installed on the client without reboot.
+        - **Soft reboot**: The soft reboot return code allows the next Windows catalog app (Win32) to be installed without requiring a client reboot. Reboot is necessary to complete installation of the current application.
+        - **Retry**: The agent attempts to install the app three times. It waits for five minutes between each attempt.
+        - **Success**: The return value that indicates the app was successfully installed.
+    3. If needed, select **Add** to add more return codes, or modify existing return codes.
+
+Select **Next** to display the **Requirements** step.
+
+## Step 3: Requirements
+
+> [!IMPORTANT]
+> EAM only supports managed Windows devices running 64-bit versions of Windows.
+
+> [!NOTE]
+> If your intention is to install an application on a 32-bit OS, you need to modify some of the prefilled information.
+
+On the **Requirements** step, specify the requirements that devices must meet before the app is installed:
+
+The **Requirements** step provides the following options:
+
+- **Operating system architecture**: Prefilled by Enterprise App Management.
+- **Minimum operating system**: Prefilled by Enterprise App Management.
+- **Disk space required (MB)**: Add the free disk space needed on the system drive to install the app.
+- **Physical memory required (MB)**: Add the physical memory (RAM) required to install the app.
+- **Minimum number of logical processors required**: Add the minimum number of logical processors required to install the app.
+- **Minimum CPU speed required (MHz)**: Add the minimum CPU speed required to install the app.
+- **Configure additional requirement rules**:
+    1. Select **Add** to display the **Add a Requirement rule** pane and create and configure requirement rules.
+    2. **Requirement type**: (Required) Choose the type of rule that you use to determine how a requirement is validated. Requirement rules can be based on file system information, registry values, or PowerShell scripts.
+        - **File**: When you choose **File** as the **Requirement type** value, the requirement rule must detect a file or folder, date, version, or size.
+            - **Path**: (Required) The full path of the folder that contains the file or folder to detect.
+            - **File or folder**: (Required) The file or folder to detect.
+            - **Property**: (Required) Select the type of rule used to validate the presence of the app.
+            - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
+        - **Registry**: When you choose **Registry** as the **Requirement type** value, the requirement rule must detect a registry setting based on value, string, integer, or version.
+            - **Key path**: (Required) The full path of the registry entry that contains the value to detect.
+            - **Value name**: The name of the registry value to detect. If this value is empty, the detection happens on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.
+            - **Registry key requirement**: (Required) Select the type of registry key comparison that's used to determine how the requirement rule is validated.
+            - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
+        - **Script**: Choose **Script** as the **Requirement type** value when you can't create a requirement rule based on file, registry, or any other method available to you in the Microsoft Intune admin center.
+            - **Script name**: (Required) Add a script name used to identify the script.
+            - **Script file**: For a rule based on a PowerShell script requirement, if the existing code is 0, we detect the standard output (STDOUT) in more detail. For example, we can detect STDOUT as an integer that has a value of 1.
+            - **Script content**: Add the script to your requirement rule.
+            - **Run script as 32-bit process on 64-bit clients**: Select **Yes** to run the script in a 32-bit process on 64-bit clients. Select **No** (default) to run the script in a 64-bit process on 64-bit clients. 32-bit clients run the script in a 32-bit process.
+            - **Run this script using the logged on credentials**: Select **Yes** to run the script by using the signed-in device credentials.
+            - **Enforce script signature check**: Select **Yes** to verify that a trusted publisher has signed the script, which will allow the script to run with no warnings or prompts displayed. The script runs unblocked. Select **No** (default) to run the script with user confirmation without signature verification.
+            - **Select output data type**: (Required) Select the data type used for determining a requirement rule match.
+    3. When you're finished setting the requirement rules, select **OK**.
+
+Select **Next** to display the **Detection rules** step.
+
+## Step 4: Detection rules
+
+The **Detection rules** step allows you to configure the rules to detect the presence of the app. Enterprise App Management automatically prefills this information.
+
+The **Detection rules** step provides the following options:
+
+- **Rules format**: (Required) Select how the presence of the app will be detected. You can choose to either manually configure the detection rules or use a custom script to detect the presence of the app. You must choose at least one detection rule.
+
+  > [!IMPORTANT]
+  > The conditions for *all* rules must be met to detect the app.
+  >
+  > If Intune detects that the app isn't present on the device, Intune will offer the app again within approximately 24 hours. This occurs only for apps targeted with the **Required** intent.
+  >
+  > You can add up to 25 detection rules.
+
+The **Rules format** provides the following options:
+
+- **Manually configure detection rules** - You must select one of the following required **Rule types**:
+    - **MSI**: Verify based on an MSI version check. This option can be added only once. When you choose this rule type, you have two settings:
+        - **MSI product code**: (Required) Add a valid MSI product code for the app.
+        - **MSI product version check**: Select **Yes** to verify the MSI product version in addition to the MSI product code.
+    - **File**: Verify based on file or folder detection, date, version, or size.
+        - **Path**: (Required) Enter the full path of the folder that contains the file or folder to detect. This shouldn't include special characters such as `,` or `"`.
+        - **File or folder**: (Required) Enter the file or folder to detect.
+        - **Detection method**: (Required) Select the type of detection method used to validate the presence of the app. You can choose options, such as **File or folder exists**, **Date created**, **String (version)**, **Size in MB**, and **Size in bytes**.
+        - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to expand any path environment variables in the 32-bit context on 64-bit clients. Select **No** (default) to expand any path variables in the 64-bit context on 64-bit clients. 32-bit clients will always use the 32-bit context.
+        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location shows as the app version in reporting. This might differ from the version of the app properties. Only one detection rule can have this setting. Adding this setting to another rule for this app clears it from the prior rule.
+
+          :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-09.png" alt-text="Screenshot of file detection rule.":::
+
+    - **Registry**: Verify based on value, string, integer, or version.
+        - **Key path**: The full path of the registry entry that contains the value to detect. A valid syntax is HKEY_LOCAL_MACHINE\Software\WinRAR or HKLM\Software\WinRAR.
+        - **Value name**: The name of the registry value to detect. If this value is empty, the detection happens on the key. The (default) value of a key will be used as detection value if the detection method is other than file or folder existence.
+        - **Detection method**: Select the type of detection method that's used to validate the presence of the app.
+        - **Associated with a 32-bit app on 64-bit clients**: Select **Yes** to search the 32-bit registry on 64-bit clients. Select **No** (default) to search the 64-bit registry on 64-bit clients. 32-bit clients will always search the 32-bit registry.
+        - **Report the detected registry value as the app version**: Select **Yes** to indicate that this version found on the client device in this registry location shows as the app version in reporting. This might differ from the version of the app properties. Only one detection rule can have this setting. Adding this setting to another rule for this app clears it from the prior rule.
+
+          :::image type="content" source="./media/enterprise-app-catalog/apps-add-enterprise-app-08.png" alt-text="Screenshot of registry detection rule.":::
+
+- **Use a custom detection script**: Specify the PowerShell script that is used to detect this app.
+
+   - **Script file**: Select a PowerShell script that detects the presence of the app on the client. The app is detected when the script both returns a **0** value exit code and writes a string value to STDOUT.
+   - **Script content**: Add the script to your detection rule.
+   - **Run script as 32-bit process on 64-bit clients**: Select **Yes** to run the script in a 32-bit process on 64-bit clients. Select **No** (default) to run the script in a 64-bit process on 64-bit clients. 32-bit clients run the script in a 32-bit process.
+
+   - **Enforce script signature check**: Select **Yes** to verify that a trusted publisher has signed the script, which will allow the script to run with no warnings or prompts displayed. The script runs unblocked. Select **No** (default) to run the script without signature verification.
+
+   The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed.
+
+   > [!NOTE]
+   > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
+
+When you add the app to Intune, the version of your Windows catalog app (Win32) is displayed in the Microsoft Intune admin center. The app version is provided in the **All Apps** list, where you can filter by Windows catalog app (Win32) and select the optional **version** column. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Apps** > **All Apps** > **Columns** > **Version** to display the app version in the app list.
+
+After you've added your rules, select **Next** to display the **Scope tags** step.
+
+## Step 5: Select scope tags (optional)
+You can use scope tags to determine who can see client app information in Intune. For full details about scope tags, see [Use role-based access control and scope tags for distributed IT](../fundamentals/scope-tags.md).
+
+Choose **Select scope tags** to optionally add scope tags for the app. Then select **Next** to display the **Review + create** step.
+
+## Step 6: Assignments
+
+You can select the **Required**, **Available for enrolled devices**, or **Uninstall** group assignments for the app. For more information, see [Add groups to organize users and devices](../fundamentals/groups-add.md) and [Assign apps to groups with Microsoft Intune](apps-deploy.md).
+
+> [!IMPORTANT]
+> For the scenario when a Win32 app is deployed and assigned based on user targeting, if the Win32 app requires device admin privileges or any other permissions that the standard user of the device doesn't have, the app fails to install.
+
+1. For the specific app, select an assignment type:
+    - **Required**: The app is installed on devices in the selected groups.
+    - **Available for enrolled devices**: Users install the app from the company portal app or the company portal website.
+    - **Uninstall**: The app is uninstalled from devices in the selected groups.
+2. Select **Add group** and assign the groups that use this app.
+3. On the **Select groups** pane, select groups to assign based on users or devices.
+4. After you select your groups, you can also set **End user notifications**, **Availability**, and **Installation deadline**. For more information, see [Set Win32 app availability and notifications](apps-win32-app-management.md#set-win32-app-availability-and-notifications).
+5. If you don't want this app assignment to affect groups of users, select **Included** under the **MODE** column. In the **Edit assignment** pane, change the **mode** value from  **Included** to **Excluded**. Select **OK** to close the **Edit assignment** pane.
+6. In the **App settings** section, select the **Delivery optimization priority** value for the app. This setting determines how the app content is downloaded. You can choose to download the app content in background mode or foreground mode based on assignment.
+
+After you finish setting the assignments for the apps, select **Next** to display the **Review + create** page.
+
+## Step 7: Review and create
+
+1. Review the values and settings that you entered for the app. Verify that you configured the app information correctly.
+2. Select **Create** to add the app to Intune.
+
+    The **Overview** pane for the LOB app appears.
+
+At this point, you've completed steps to add a Windows catalog app (Win32) to Intune.
+
+## PowerShell script installer for Enterprise App Catalog apps
+
+PowerShell script installers are available for Enterprise App Catalog apps, providing the same script installer capabilities available for Win32 apps. When using PowerShell scripts with EAM apps:
+
+### Script requirements
+
+- Scripts are limited to 50 KB in size
+- Scripts run in the same context as the app installer (system or user context)
+- If there's no Microsoft Entra user on the device, the script falls back to system context
+- For devices with multiple users, the script runs for each user
+- Return codes from the script determine installation success or failure status
+- Scripts should run silently without user interaction
+
+### Security considerations
+
+- Don't store secrets or sensitive information in PowerShell scripts, as they're stored in plaintext on the service and might be logged on the agent
+- Script signature checking is available and can be enforced to verify that a trusted publisher signed the script
+- Scripts execute with the same privileges as specified by the install behavior
+
+### Important considerations for EAM apps
+
+- The script should execute the necessary installer for the app and any custom actions you require
+- Ensure your script calls the app's installer with the right parameters and handles updates if applicable
+- Intune will still enforce the app's detection rules to confirm installation success
+- Test scripts thoroughly as incorrect scripts could cause app installation to fail
+
+### Known limitations
+
+When Multi-Admin Approval (MAA) is enabled for your tenant, there are some limitations to be aware of when using PowerShell script installers with Enterprise App Catalog apps:
+
+- **Script upload during app creation**: If MAA is enabled, you can't upload scripts during Enterprise App Catalog app creation in the Intune admin center. However, after the app is created, you can add or modify scripts.
+
+- **Script properties and MAA**: Currently, certain script properties such as `enforceSignatureCheck` and `runAs32Bit` can be edited without triggering MAA approval requests. This behavior is addressed in an upcoming update to ensure these changes also require MAA approval when enabled.
+
+- **Graph API modifications**: Using the Microsoft Graph API to directly modify apps that use script installers might break the scripts. Use the Intune admin center for making changes to scripted apps.
+
+- **App updates**: When creating a superseding app, you need to create a new script. Scripts aren't automatically carried over to new app versions.
+
+## Next steps
+
+- [App relationship viewer](../apps/apps-win32-app-management.md#app-relationship-viewer)
+- [Monitor app information and assignments with Microsoft Intune](apps-monitor.md)
+- [Troubleshoot Win32 app issues](apps-win32-troubleshoot.md)

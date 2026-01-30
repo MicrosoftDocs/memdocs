@@ -1,14 +1,7 @@
 ---
 title: Automatic registration of existing devices
 description: Automatically add devices to Windows Autopilot.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
@@ -28,17 +21,17 @@ An existing device can automatically register if it's:
 
 - Running a [supported version](/windows/release-information/) of Windows
 - Enrolled in a mobile device management (MDM) service such as Intune
-- A corporate device that isn't already registered with Autopilot
+- A corporate device that isn't already registered with Windows Autopilot
 
 For devices that meet these requirements, the MDM service can ask the device for the hardware hash. After it has that, it can automatically register the device with Windows Autopilot.
 
-For more information on how to automatically register devices for Windows Autopilot with Microsoft Intune, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile) and review the description of the **Convert all targeted devices to Autopilot** setting. See the following example:
+For more information on how to automatically register devices for Windows Autopilot with Microsoft Intune, see [Create a Windows Autopilot deployment profile](profiles.md#create-a-windows-autopilot-deployment-profile) and review the description of the **Convert all targeted devices to Autopilot** setting. See the following example:
 
 :::image type="content" source="images/convert-devices.png" alt-text="Screenshot that shows how to convert all targeted devices.":::
 
 > [!NOTE]
 >
-> Using the setting **Convert all targeted devices to Autopilot** in the Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Autopilot service. For more information, see [Create an Autopilot deployment profile](profiles.md#create-an-autopilot-deployment-profile).
+> Using the setting **Convert all targeted devices to Autopilot** in the Windows Autopilot profile doesn't automatically convert existing hybrid Microsoft Entra device in the assigned groups into a Microsoft Entra device. The setting only registers the devices in the assigned groups for the Windows Autopilot service. For more information, see [Create a Windows Autopilot deployment profile](profiles.md#create-a-windows-autopilot-deployment-profile).
 
 ## Windows Autopilot for existing devices
 

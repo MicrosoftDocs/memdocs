@@ -1,14 +1,7 @@
 ---
 title: Overview of Windows Autopilot
 description: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/11/2024
+ms.date: 06/13/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
@@ -23,7 +16,7 @@ appliesto:
 
 # Overview of Windows Autopilot
 
-Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. Windows Autopilot can be used to deploy Windows PCs or HoloLens 2 devices. For more information about deploying HoloLens 2 with Autopilot, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
+Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. Windows Autopilot can be used to deploy Windows PCs or HoloLens 2 devices. For more information about deploying HoloLens 2 with Windows Autopilot, see [Windows Autopilot for HoloLens 2](/hololens/hololens2-autopilot).
 
 Windows Autopilot can also be used to reset, repurpose, and recover devices. This solution enables an IT department to achieve these goals with little to no infrastructure to manage, with a process that's easy and simple.
 
@@ -35,7 +28,7 @@ Windows Autopilot simplifies the Windows device lifecycle, for both IT and end u
 
 See the following video:
 
-> [!VIDEO https://www.microsoft.com/videoplayer/embed/RE4C7G9?autoplay=false]
+> [!VIDEO https://learn-video.azurefd.net/vod/player?id=af8941a0-1b9c-4bbd-8b75-9754d8badf56]
 
 > [!NOTE]
 >
@@ -54,7 +47,7 @@ When new Windows devices are initially deployed, Windows Autopilot uses the OEM-
 Once deployed, Windows devices can be managed with:
 
 - Microsoft Intune.
-- Windows Update for Business.
+- Windows Update client policies.
 - Microsoft Configuration Manager.
 - Other similar tools from non-Microsoft parties.
 

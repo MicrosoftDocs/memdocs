@@ -1,0 +1,47 @@
+---
+description: Learn how to retrieve the System Definition Model (SDM) definition of the configuration item in XML format using GetSDMDefinition class method.
+title: GetSDMDefinition Method
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.topic: reference
+ms.collection: tier3
+---
+# GetSDMDefinition Method in Class SMS_ConfigurationItem
+The `GetSDMDefinition` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the System Definition Model (SDM) definition of the configuration item in XML format.
+
+ The following syntax is simplified from Managed Object Format (MOF) code and defines the method.
+
+## Syntax
+
+```
+SInt32 GetSDMDefinition(
+     String SDMDefinition
+);
+```
+
+#### Parameters
+ `SDMDefinition`
+ Data type: `String`
+
+ Qualifiers: [out]
+
+ The SDM definition in XML format.
+
+## Return Values
+ An `SInt32` data type that is 0 to indicate success or non-zero to indicate failure.
+
+ For information about handling returned errors, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
+
+## Remarks
+ For more information about SDM definitions, see About Authoring Configuration Baselines and Configuration Items.
+
+## Requirements
+
+## Runtime Requirements
+ For more information, see [Configuration Manager Server Runtime Requirements](../../../develop/core/reqs/server-runtime-requirements.md).
+
+## Development Requirements
+ For more information, see [Configuration Manager Server Development Requirements](../../../develop/core/reqs/server-development-requirements.md).
+
+## See Also
+ [SMS_ConfigurationItem Server WMI Class](../../../develop/reference/compliance/sms_configurationitem-server-wmi-class.md)

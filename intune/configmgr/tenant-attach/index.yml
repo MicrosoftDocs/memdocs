@@ -1,0 +1,59 @@
+### YamlMime:Landing
+
+title: Tenant attach documentation
+summary: Upload your Configuration Manager devices to the cloud service and take actions on them.
+
+
+metadata:
+  title: Tenant attach documentation
+  description: Upload your Configuration Manager devices to the cloud service and take actions on them.
+  ms.subservice: core-infra
+  ms.topic: landing-page
+  ms.date: 02/08/2022
+  ms.collection: tier3
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About tenant attach
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Enable tenant attach
+            url: device-sync-actions.md
+          - text: Set up tenant attach (step-by-step)
+            url: /training/modules/setup-tenant-attach-using-configuration-manager/
+      - linkListType: reference
+        links:
+          - text: Troubleshoot tenant attach and device actions
+            url: troubleshoot.md
+          - text: Troubleshoot ConfigMgr client details
+            url: troubleshoot-client-details.md
+ # Card
+  - title: Get information about uploaded devices
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: View ConfigMgr client details
+            url: client-details.md
+          - text: Device timeline
+            url: timeline.md
+          - text: Resource explorer
+            url: resource-explorer.md
+ # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Run scripts
+            url: scripts.md
+          - text: Install applications
+            url: applications.md
+          - text: Launch CMPivot
+            url: cmpivot-start.md
+      - linkListType: concept
+        links:
+          - text: CMPivot usage overview
+            url: cmpivot-overview-attached.md
+          - text: CMPivot sample scripts
+            url: cmpivot-samples-attached.md

@@ -1,24 +1,17 @@
 ---
-title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 3 of 9 - Register devices as Autopilot devices
-description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 3 of 9 - Register devices as Autopilot devices.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/19/2024
+title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 3 of 9 - Register devices as Windows Autopilot devices
+description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 3 of 9 - Register devices as Windows Autopilot devices.
+ms.date: 03/25/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
 ---
 
-# Pre-provision Microsoft Entra join: Register devices as Autopilot devices
+# Pre-provision Microsoft Entra join: Register devices as Windows Autopilot devices
 
 Windows Autopilot for pre-provisioned deployment Microsoft Entra join steps:
 
@@ -27,12 +20,12 @@ Windows Autopilot for pre-provisioned deployment Microsoft Entra join steps:
 
 > [!div class="checklist"]
 >
-> - **Step 3: Register devices as Autopilot devices**
+> - **Step 3: Register devices as Windows Autopilot devices**
 
 - Step 4: [Create a device group](azure-ad-join-device-group.md)
-- Step 5: [Configure and assign Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
-- Step 6: [Create and assign Autopilot profile](azure-ad-join-autopilot-profile.md)
-- Step 7: [Assign Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
+- Step 5: [Configure and assign Windows Autopilot Enrollment Status Page (ESP)](azure-ad-join-esp.md)
+- Step 6: [Create and assign Windows Autopilot profile](azure-ad-join-autopilot-profile.md)
+- Step 7: [Assign Windows Autopilot device to a user (optional)](azure-ad-join-assign-device-to-user.md)
 - Step 8: [Technician flow](azure-ad-join-technician-flow.md)
 - Step 9: [User flow](azure-ad-join-user-flow.md)
 
@@ -40,11 +33,11 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 > [!NOTE]
 >
-> If devices are already registered as Autopilot devices, skip this step and move on to [Step 4: Create a device group](azure-ad-join-device-group.md).
+> If devices are already registered as Windows Autopilot devices, skip this step and move on to [Step 4: Create a device group](azure-ad-join-device-group.md).
 
-## Register devices as Autopilot devices
+## Register devices as Windows Autopilot devices
 
-[!INCLUDE [How to register a device as an Autopilot device in Intune](../includes/register-autopilot-device.md)]
+[!INCLUDE [How to register a device as a Windows Autopilot device in Intune](../includes/register-autopilot-device.md)]
 
 ## Next step: Create a device group
 
@@ -53,4 +46,4 @@ For an overview of the Windows Autopilot for pre-provisioned deployment Microsof
 
 ## Related content
 
-[!INCLUDE [More information register Autopilot device](../includes/more-info-register-device.md)]
+[!INCLUDE [More information register Windows Autopilot device](../includes/more-info-register-device.md)]

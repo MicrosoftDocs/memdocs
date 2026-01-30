@@ -1,18 +1,11 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a Windows Autopilot device preparation policy
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 6 of 7 - Create a Windows Autopilot device preparation policy.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 06/28/2024
+ms.date: 06/11/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -23,7 +16,7 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 
 - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-- Step 3: [Create a device group](entra-join-device-group.md)
+- Step 3: [Create an assigned device group](entra-join-device-group.md)
 - Step 4: [Create a user group](entra-join-user-group.md)
 - Step 5: [Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
 
@@ -31,13 +24,13 @@ Windows Autopilot device preparation user-driven Microsoft Entra join steps:
 >
 > - **Step 6: Create Windows Autopilot device preparation policy**
 
-- Step 7: [Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+- Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 For an overview of the Windows Autopilot device preparation user-driven Microsoft Entra join workflow, see [Windows Autopilot device preparation user-driven Microsoft Entra join overview](entra-join-workflow.md#workflow).
 
 ## Create user-driven Microsoft Entra join Windows Autopilot device preparation policy
 
-The Autopilot policy specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
+The Windows Autopilot policy specifies how the device is configured during Windows Setup and what is shown during the out-of-box experience (OOBE).
 
 To create a user-driven Microsoft Entra join Windows Autopilot device preparation policy, follow these steps:
 
@@ -51,7 +44,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
 1. In the **Windows | Windows enrollment** screen, under **Windows Autopilot device preparation**, select **Device preparation policies**.
 
-1. In the **Device preparation policies** screen, select **Create**.
+1. In the **Device preparation policies** screen, select **Create**, and then select **User Driven**.
 
 1. The **Create profile** screen opens. In the **Introduction** page, select **Next**.
 
@@ -63,7 +56,7 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
    1. Once a name and description is entered, select **Next**.
 
-1. In the **Device group** page, select the **Search by group name..** box, and then either select or search for the device group created in [Step 3: Create a device group](entra-join-device-group.md). Make sure to select the device group created in [Step 3: Create a device group](entra-join-device-group.md) and not the user group created in [Step 4: Create a user group](entra-join-user-group.md). Once the correct device group is selected, select **Next**.
+1. In the **Device group** page, select the **Search by group name..** box, and then either select or search for the device group created in [Step 3: Create an assigned device group](entra-join-device-group.md). Make sure to select the device group created in [Step 3: Create an assigned device group](entra-join-device-group.md) and not the user group created in [Step 4: Create a user group](entra-join-user-group.md). Once the correct device group is selected, select **Next**.
 
 1. In the **Configuration settings** page, configure the various settings as desired and then select **Next**. For detailed information on the configurations on this page, see the next section [Configuration settings](#configuration-settings).
 
@@ -71,9 +64,9 @@ To create a user-driven Microsoft Entra join Windows Autopilot device preparatio
 
     > [!NOTE]
     >
-    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune/fundamentals/scope-tags).
+    > **Scope tags** are optional. For this tutorial, scope tags are being skipped and left at the default scope tag. However if a custom scope tag needs to be specified, do so at this page. For more information about scope tags, see [Use role-based access control and scope tags for distributed IT](/mem/intune-service/fundamentals/scope-tags).
 
-1. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create a device group](entra-join-device-group.md). Once the correct user group is selected, select **Next**.
+1. In the **Assignments** page, select the **Search by group name..** box, and then either select or search for the user group created in [Step 4: Create a user group](entra-join-user-group.md). Make sure to select the user group created in [Step 4: Create a user group](entra-join-user-group.md) and not the device group created in [Step 3: Create an assigned device group](entra-join-device-group.md). Once the correct user group is selected, select **Next**.
 
 1. In the **Review + create** page, review all settings to make sure they're all correct. Once everything is verified, select **Save** to finish creating the Windows Autopilot device preparation policy.
 
@@ -83,19 +76,33 @@ The **Configuration settings** page has several configuration options. The follo
 
 In the **Configuration settings** page:
 
+1. Expand the **Deployment settings** section by selecting it:
+
+   1. **Deployment mode** - Select **User-driven** in the drop-down menu.
+
+   1. **Deployment type** - Select **Single user** in the drop-down menu.
+
+   1. **Join type** - Select **Microsoft Entra joined** in the drop-down menu.
+
+   1. **User account type** - Select either **Standard User** or **Administrator** as desired by toggling the switch.
+
+    > [!IMPORTANT]
+    >
+    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
+
 1. Expand the **Out-of-box experience settings** section by selecting it.
 
-   1. **Minutes allowed before showing installation error** - enter the number of minutes allowed before failing a deployment.
+   1. **Minutes allowed before showing installation error** - Enter the number of minutes allowed before failing a deployment.
 
       The value entered is for the whole deployment and not for an individual application install or PowerShell script. The acceptable value is an integer between 15 and 720.
 
-   1. **Custom error message** - enter a custom message to display to the end-user if the deployment fails.
+   1. **Custom error message** - Enter a custom message to display to the end-user if the deployment fails.
 
-   1. **Allow users to skip setup after multiple attempts** - select either **Yes** or **No** as desired by toggling the switch.
+   1. **Allow users to skip setup after multiple attempts** - Select either **Yes** or **No** as desired by toggling the switch.
 
       Normally after a deployment failure, a **Retry** button is displayed allowing the end-user to retry the deployment. Setting this option as **Yes** also adds a **Continue anyway** button that allows the deployment to just fail, signs the end-user in, and lets them continue to the desktop.
 
-   1. **Show link to diagnostics** - select either **Yes** or **No** as desired by toggling the switch.
+   1. **Show link to diagnostics** - Select either **Yes** or **No** as desired by toggling the switch.
 
       If there's a deployment failure, setting this option to **Yes** displays a link at the deployment failure page allowing the end-user to retrieve diagnostic logs.
 
@@ -123,26 +130,13 @@ In the **Configuration settings** page:
     >
     > The following types of applications are supported for use with Windows Autopilot device preparation:
     >
-    > - [Line-of-business (LOB)](/mem/intune/apps/lob-apps-windows).
-    > - [Win32](/mem/intune/apps/apps-win32-prepare).
-    > - [Microsoft Store](/mem/intune/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
-    > - [Microsoft 365](/mem/intune/apps/apps-add-office365).
+    > - [Line-of-business (LOB)](/mem/intune-service/apps/lob-apps-windows).
+    > - [Win32](/mem/intune-service/apps/apps-win32-prepare).
+    > - [Microsoft Store](/mem/intune-service/apps/store-apps-microsoft) - only Microsoft Store apps that support WinGet are supported.
+    > - [Microsoft 365](/mem/intune-service/apps/apps-add-office365).
+    > - [Enterprise App Catalog](/intune/intune-service/apps/apps-add-enterprise-app).
     >
     > In addition, Windows Autopilot device preparation supports deploying both Win32 and line-of-business (LOB) applications in the same deployment.
-
-1. Expand the **Deployment settings** section by selecting it:
-
-   1. **Deployment mode** - select **User-driven** in the drop-down menu.
-
-   1. **Deployment type** - select **Single user** in the drop-down menu.
-
-   1. **Join type** - select **Microsoft Entra joined** in the drop-down menu.
-
-   1. **User account type** - select either **Standard User** or **Administrator** as desired by toggling the switch.
-
-    > [!IMPORTANT]
-    >
-    > By default, when a device is enrolled in Microsoft Entra ID, the user is automatically added to the **Administrator** group on the device. If this setting is set to **Standard User**, the Windows Autopilot device preparation deployment ensures that the user is removed from the **Administrator** group before the deployment completes, the user is signed in, and the user reaches the desktop.
 
 1. Expand the **Scripts** section by selecting it:
 
@@ -172,11 +166,11 @@ In the **Configuration settings** page:
 
 If multiple Windows Autopilot device preparation polices are deployed to a user, the policy with the highest priority as displayed in the **Home** > **Enroll devices | Windows enrollment** > **Device preparation policies** screen gets priority. The policy with the highest priority is higher in the list and has the smallest number under the **Priority** column. To change a policy's priority, move it in the list by dragging the policy within the list.
 
-## Next step: Add Windows corporate identifier to device (optional)
+## Next step: Add Windows corporate identifier to device
 
 > [!div class="nextstepaction"]
-> [Step 7: Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+> [Step 7: Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 > [!NOTE]
 >
-> Adding a [corporate identifier](../../overview.md#corporate-identifiers-for-windows) to the device is an optional step. If corporate identifiers aren't being used, then the next step is to deploy the device.
+> Windows Autopilot device preparation only requires [corporate identifiers for Windows](../../overview.md#corporate-identifiers-for-windows) if Intune enrollment restrictions are being used to block personal device enrollments. If Intune enrollment restrictions aren't being used to block personal device enrollments, then the next step is to deploy the device.

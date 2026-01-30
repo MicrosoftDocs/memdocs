@@ -1,0 +1,40 @@
+---
+title: Reporting Status Messages from Clients
+description: You can raise Configuration Manager client status messages in the Windows event log by using a compiled Managed Object Format (MOF) file on client computers.
+ms.date: 09/20/2016
+ms.subservice: sdk
+ms.topic: concept-article
+ms.collection: tier3
+---
+# About Reporting Status Messages from Configuration Manager Clients
+You can raise Configuration Manager client status messages in the Windows event log by using a compiled Managed Object Format (MOF) file on client computers. This can be useful for administrators who are managing servers with System Center Operations Manager. A Configuration Manager status message that is raised by the Configuration Manager client can be caught by the Operations Manager agent on the same computer, which in turn raises an Operations Manager alert for the Configuration Manager status message.
+
+ The following example MOF file shows how to raise Configuration Manager program status messages:
+
+```
+#pragma namespace("\\\\.\\root\\ccm\\policy\\machine\\requestedconfig")
+instance of CCM_EventForwarder_Configuration
+{
+    InstanceID = "SmsSoftwareDistribution.EventLog";
+    Name = "SmsEventLogForwarder";
+    PolicyID = "SomePolicyID";
+    PolicyInstanceID = "SomePolicyInstance";
+    PolicyRuleID = "SomeRuleID";
+    PolicySource = "Local";
+    PolicyVersion = "1";
+        QueryList           = {
+                            "SELECT * FROM SoftDistProgramStartedEvent",
+                            "SELECT * FROM SoftDistProgramCompletedSuccessfullyEvent",
+                            "SELECT * FROM SoftDistProgramCompletedSuccessfulMIFEvent",
+                            "SELECT * FROM SoftDistProgramErrorEvent",
+                            "SELECT * FROM SoftDistProgramErrorMIFEvent",
+                            "SELECT * FROM SoftDistProgramExceededTime",
+                            "SELECT * FROM SoftDistProgramPrelimSuccessEvent",
+                            "SELECT * FROM SoftDistProgramUnexpectedRebootEvent",
+                            "SELECT * FROM SoftDistWarningProgramErrorEvent"
+                            };
+};
+```
+
+## See Also
+ [About Configuration Manager Status Summarizers](../../../../develop/core/servers/manage/about-configuration-manager-status-summarizers.md)

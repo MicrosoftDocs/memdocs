@@ -1,18 +1,11 @@
 ---
 title: Overview for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune
 description: Overview for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
-ms.date: 09/13/2024
+ms.date: 03/27/2025
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
@@ -27,7 +20,7 @@ Before beginning, refer to the [How to: Plan your Microsoft Entra join implement
 
 ## Windows Autopilot device preparation user-driven Microsoft Entra join overview
 
-Windows Autopilot device preparation user-driven Microsoft Entra join is a solution that automates the configuration of Windows on a new device without the need for IT intervention. Normally the device is delivered directly from an OEM or reseller to the end-user  Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
+Windows Autopilot device preparation user-driven Microsoft Entra join is a solution that automates the configuration of Windows on a new device without the need for IT intervention. Normally the device is delivered directly from an OEM or reseller to the end-user. Windows Autopilot device preparation user-driven deployments use the existing Windows installation installed by the OEM at the factory. The end-user only needs to perform a minimal number of actions during the deployment process such as:
 
 - Powering on the device.
 - In certain scenarios, selecting the language, locale, and keyboard layout.
@@ -59,7 +52,7 @@ During the out-of-box experience (OOBE), a user authenticates with their corpora
 
 1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If a PowerShell script fails, then the deployment fails at this point.
 
-1. The deployment checks if Win32 and Microsoft Store applications are selected in the Windows Autopilot device preparation policy. If there are Win32 and Microsoft Store applications selected in the policy, then they're installed. If a Win32 or Microsoft Store application fails to install, then the deployment fails at this point.
+1. The deployment checks if Win32, Microsoft Store, or Enterprise App Catalog applications are selected in the Windows Autopilot device preparation policy. If there are Win32, Microsoft Store, or Enterprise App Catalog applications selected in the policy, then they're installed. If a Win32, Microsoft Store, or Enterprise App Catalog application fails to install, then the deployment fails at this point.
 
 1. If all steps succeed, the **Required setup complete** page is displayed for the user.
 
@@ -79,11 +72,11 @@ The following steps are needed to configure and then perform a Windows Autopilot
 >
 > - Step 1: [Set up Windows automatic Intune enrollment](entra-join-automatic-enrollment.md)
 > - Step 2: [Allow users to join devices to Microsoft Entra ID](entra-join-allow-users-to-join.md)
-> - Step 3: [Create a device group](entra-join-device-group.md)
+> - Step 3: [Create an assigned device group](entra-join-device-group.md)
 > - Step 4: [Create a user group](entra-join-user-group.md)
 > - Step 5: [Assign applications and PowerShell scripts to device group](entra-join-assign-apps-scripts.md)
 > - Step 6: [Create Windows Autopilot device preparation policy](entra-join-autopilot-policy.md)
-> - Step 7: [Add Windows corporate identifier to device (optional)](entra-join-corporate-identifier.md)
+> - Step 7: [Add Windows corporate identifier to device](entra-join-corporate-identifier.md)
 
 > [!NOTE]
 >

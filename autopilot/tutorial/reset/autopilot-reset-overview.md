@@ -1,18 +1,11 @@
 ---
 title: Overview for Windows Autopilot Reset in Intune
 description: Overview for Windows Autopilot Reset in Intune.
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: jubaptis
-manager: aaroncz
 ms.date: 10/08/2024
 ms.topic: tutorial
 ms.collection:
   - tier1
   - highpri
-ms.subservice: autopilot
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -24,13 +17,13 @@ Windows Autopilot Reset takes the device back to a business-ready state, allowin
 
 > [!IMPORTANT]
 >
-> Windows Autopilot Reset only supports Microsoft Entra join devices. Windows Autopilot Reset doesn't support Microsoft Entra hybrid join devices. For Microsoft Entra hybrid join devices, a [full device wipe](/mem/intune/remote-actions/devices-wipe) is required. When a hybrid Microsoft Entra device goes through a full device reset, it might take up to 24 hours for it to be ready to be deployed again. This request can be expedited by re-registering the device. Consider also using the [Windows Autopilot deployment for existing devices](../existing-devices/existing-devices-workflow.md) scenario to wipe the device.
+> Windows Autopilot Reset only supports Microsoft Entra join devices. Windows Autopilot Reset doesn't support Microsoft Entra hybrid join devices. For Microsoft Entra hybrid join devices, a [device wipe](/intune/intune-service/remote-actions/devices-wipe) is required. When a hybrid Microsoft Entra device goes through a full device reset, it might take up to 24 hours for it to be ready to be deployed again. This request can be expedited by re-registering the device. Consider also using the [Windows Autopilot deployment for existing devices](../existing-devices/existing-devices-workflow.md) scenario to wipe the device.
 
 ## Information removed and reset by a Windows Autopilot Reset
 
 The Windows Autopilot Reset process removes or resets the following information from the existing device:
 
-- The device's primary user is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the primary user. Shared devices will remain shared after the remote Autopilot Reset.
+- The device's primary user is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the primary user. Shared devices will remain shared after the remote Windows Autopilot Reset.
 - The device's owner in Microsoft Entra is removed when a remote Windows Autopilot Reset is used. The next user who signs in after the Windows Autopilot Reset will be set as the owner.
 - Removes personal files, apps, and settings.
 - Reapplies a device's original settings.
@@ -47,7 +40,7 @@ The Windows Autopilot Reset process automatically keeps the following informatio
 - A provisioning package present on a USB drive when the reset process is started.
 - Microsoft Entra device membership and Intune enrollment information.
 - System Center Endpoint Protection (SCEP) certificates.
-- The device's primary user and owner in Microsoft Entra aren't updated when a local Windows Autopilot Reset is used. 
+- The device's primary user and owner in Microsoft Entra aren't updated when a local Windows Autopilot Reset is used.
 
 ## Windows Autopilot Reset requirements
 
@@ -75,7 +68,7 @@ Windows Autopilot Reset works by using the [push-button reset](/windows-hardware
 
 ## Walkthrough
 
-Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal number of steps to implement. Unlike other Autopilot scenarios, instructions with multiple steps aren't needed. Select the desired Windows Autopilot Reset scenario for instructions on how to implement the scenario:
+Both local Windows Autopilot Reset and remote Windows Autopilot Reset require a minimal number of steps to implement. Unlike other Windows Autopilot scenarios, instructions with multiple steps aren't needed. Select the desired Windows Autopilot Reset scenario for instructions on how to implement the scenario:
 
 > [!div class="nextstepaction"]
 > [Local Windows Autopilot Reset](local-autopilot-reset.md)

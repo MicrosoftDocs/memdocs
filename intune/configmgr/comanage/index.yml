@@ -1,0 +1,49 @@
+### YamlMime:Landing
+
+title: Co-management documentation
+summary: Co-management enables you to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune.
+ 
+
+metadata:
+  title: Co-management documentation
+  description: Co-management enables you to concurrently manage Windows 10 or later devices by using both Configuration Manager and Microsoft Intune.
+  ms.subservice: co-management
+  ms.topic: landing-page
+  ms.date: 03/21/2022
+  
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  - title: About co-management
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: What is co-management?
+            url: overview.md
+          - text: Understand co-management (step-by-step)
+            url: /training/modules/understand-co-management/         
+          - text: Paths to co-management
+            url: quickstart-paths.md
+
+
+  # Card 
+  - title: Get started
+    linkLists:
+      - linkListType: tutorial
+        links:
+          - text: Enable co-management for existing Configuration Manager clients
+            url: tutorial-co-manage-clients.md
+          - text: Enable co-management for new internet-based devices
+            url: tutorial-co-manage-new-devices.md
+
+  # Card
+  - title: Top tasks
+    linkLists:
+      - linkListType: how-to-guide
+        links:
+          - text: Switch Configuration Manager workloads to Intune
+            url: how-to-switch-workloads.md
+          - text: Enroll with Windows Autopilot
+            url: autopilot-enrollment.md
+          - text: Use the Company Portal app on co-managed devices
+            url: company-portal.md
