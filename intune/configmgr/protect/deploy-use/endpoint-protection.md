@@ -1,16 +1,9 @@
 ---
 title: Endpoint Protection
-titleSuffix: Configuration Manager
 description: Learn how to manage antimalware policies and Windows Defender Firewall security for clients.
 ms.date: 09/09/2021
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: overview
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

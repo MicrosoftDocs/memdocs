@@ -1,17 +1,10 @@
 ---
 title: International support
-titleSuffix: Configuration Manager
 description: Configure Configuration Manager to comply with specific international requirements.
 ms.date: 10/06/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # International support in Configuration Manager
 

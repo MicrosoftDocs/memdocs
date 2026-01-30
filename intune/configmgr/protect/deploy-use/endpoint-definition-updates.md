@@ -1,16 +1,9 @@
 ---
 title: Configure definition updates
-titleSuffix: Configuration Manager
 description: Learn how to select and configure methods with Endpoint Protection in Configuration Manager to keep antimalware definitions up to date on client computers.
 ms.date: 10/05/2021
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

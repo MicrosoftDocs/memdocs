@@ -1,18 +1,10 @@
 ---
 title: Handle Asynchronous Errors by Using WMI
-titleSuffix: Configuration Manager
 description: In Configuration Manager, when an error occurs in an asynchronous call, the error object is passed as the second parameter to the `OnCompleted` method.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 6371b349-5bd0-41c5-93e8-14157c053417
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Handle Configuration Manager Asynchronous Errors by Using WMI
 In Configuration Manager, when an error occurs in an asynchronous call, the error object is passed as the second parameter to the `OnCompleted` method. Inside your `OnCompleted` implementation, you check the error object the same as you would for a synchronous call.

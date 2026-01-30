@@ -1,16 +1,9 @@
 ---
 title: Create Endpoint Protection point site system role
-titleSuffix: Configuration Manager
 description: Learn how to configure Endpoint Protection to manage security and malware on Configuration Manager client computers.
 ms.date: 02/14/2017
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

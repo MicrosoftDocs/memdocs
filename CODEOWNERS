@@ -1,0 +1,7 @@
+# These owners will be the default owners for everything in the noted folder unless a later match takes precedence
+
+# intune
+/intune/ @LauraWi @lenewsad @Brenduns @MandiOhlinger @nicholasswhite @paolomatarazzo
+
+# configmgr
+/intune/configmgr/ @umair0204 @bhuney @Yupiter2005 @MandiOhlinger @LauraWi @lenewsad @Brenduns @nicholasswhite @paolomatarazzo

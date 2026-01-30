@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a device that can interpret a sequence of instructions on a computer that is running a Windows O.S. using SMS_Processor class.
 title: SMS_Processor Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 7f338a23-33c5-44c0-adc2-a8d44ceaa179
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_Processor Client WMI Class
 The `SMS_Processor` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that represents a device that can interpret a sequence of instructions on a computer that is running a Windows operating system. On a multiprocessor computer, one `SMS_Processor` object exists for each processor.

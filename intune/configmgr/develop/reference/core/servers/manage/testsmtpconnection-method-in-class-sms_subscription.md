@@ -1,18 +1,10 @@
 ---
 title: TestSmtpConnection Method
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that tests the SMTP connection.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ff6b4c0d-9482-4169-9035-2af757c50450
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # TestSmtpConnection Method in Class SMS_Subscription
 The `TestSmtpConnection` Windows Management Instrumentation (WMI) class method, in Configuration Manager, tests the SMTP connection.

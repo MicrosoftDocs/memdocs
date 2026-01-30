@@ -1,18 +1,10 @@
 ---
 description: Learn how to define a media certificate that is registered by Configuration Manager and used by PXE clients to communicate with a management point.
 title: SMS_PXECertificateInfo Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 8a647b49-306e-427e-93e8-1c0f479246da
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_PXECertificateInfo Server WMI Class
 The `SMS_PXECertificateInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a media certificate that is registered by Configuration Manager and used by PXE clients to communicate with a management point.

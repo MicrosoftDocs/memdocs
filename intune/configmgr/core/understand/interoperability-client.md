@@ -1,17 +1,10 @@
 ---
 title: Extended interoperability client
-titleSuffix: Configuration Manager
 description: Learn about using the extended interoperability client for long-term support of a static Configuration Manager client with a current branch site.
 ms.date: 06/22/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use the Configuration Manager client software for extended interoperability with future versions of a Current Branch site
