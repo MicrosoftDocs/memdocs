@@ -12,8 +12,6 @@ ms.collection:
 
 # Prepare Win32 App Content for Upload
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 Before you can add a Win32 app to Microsoft Intune, you must prepare the app by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730).
 
 > [!TIP]
@@ -23,7 +21,7 @@ Before you can add a Win32 app to Microsoft Intune, you must prepare the app by 
 
 To use Win32 app management, be sure you meet the following criteria:
 
-- Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
+- Use a [supported Windows version](../fundamentals/supported-devices-browsers.md) (Enterprise, Pro, and Education versions).
 - Devices must be registered or joined to Microsoft Entra ID and autoenrolled. The Intune management extension supports devices that are Microsoft Entra registered, Microsoft Entra joined, hybrid domain joined, and group policy enrolled.
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune management extension is installed automatically when a PowerShell script or Win32 app, Microsoft Store apps, Custom compliance policy settings, or Proactive remediations is assigned to the user or device.
