@@ -467,11 +467,19 @@ Organizations can configure a search provider for users. To configure a search p
 
 Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by selecting the Copilot button in bottom bar.
 
-There are three settings in **Settings**->**General**->**Copilot**.
+If CopilotMode policy is off, there are settings in **Settings**->**Microsoft Services**->**Copilot**. 
 
-- **Show Copilot** – Control whether to show Bing button on bottom bar
-- **Allow access to any web page or PDF** – Control whether to allow Copilot to access page content or PDF
-- **Quick access on text selection** – Control whether to show quick chat panel when text on a webpage is selected
+- **Show Copilot** – Control whether to show Copilot button on address bar
+- **Allow Copilot to use page content** – Control whether to allow Copilot to access page content or PDF
+
+If CopilotMode policy is on, there are settings in **Settings**->**AI Innovations**->**Copilot**.
+
+- **Show Copilot** – Control whether to show Copilot button on address bar
+- **Allow Copilot to use page content** – Control whether to allow Copilot to access page content or PDF
+
+And settings in **Settings**->**AI Innovations**->**Copilot Mode**.
+
+- **Enable Copilot prompts card** – Control whether to show Copilot prompts card in the NTP
 
 You can manage the settings for Copilot.
 
@@ -479,6 +487,7 @@ You can manage the settings for Copilot.
 |:-----------|:-------------|
 |com.microsoft.intune.mam.managedbrowser.Chat |**true** (default) Users can see Copilot button in bottom bar. Setting **Show Copilot** is on by default and can be turned off by users <br>**false** Users can't see Copilot button in bottom bar. Setting **Show Copilot** is disabled and can't be turned on by users|
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext |**true** (default) **Allow access to any web page or PDF** and **Quick access on text selection** can be turned on by users <br>**false** **Allow access to any web page or PDF** and **Quick access on text selection** are disabled and can't be turned on by users|
+|com.microsoft.intune.mam.managedbrowser.CopilotMode |**true** (default) Copilot Mode features in the settings can be turned on by users <br>**false** Copilot Mode features in the settings are disabled and can't be turned on by users|
 
 ## Data protection app configuration scenarios
 
@@ -749,6 +758,7 @@ As app configuration policies for managed devices needs device enrollment, any u
 |com.microsoft.intune.mam.managedbrowser.DefaultSearchProviderSearchURL | DefaultSearchProviderSearchURL|
 |com.microsoft.intune.mam.managedbrowser.Chat | EdgeCopilotEnabled |
 |com.microsoft.intune.mam.managedbrowser.ChatPageContext	| EdgeChatPageContext|
+|com.microsoft.intune.mam.managedbrowser.CopilotMode	| CopilotMode |
 
 ## Deploy app configuration scenarios with Microsoft Intune
 
