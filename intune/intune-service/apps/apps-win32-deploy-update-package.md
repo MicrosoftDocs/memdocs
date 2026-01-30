@@ -17,7 +17,7 @@ ms.collection:
 You can deploy a Windows update package (*.msu* file) to Windows devices managed by Intune by using the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities.
 
 > [!NOTE]
-> Deploying updates as Win32 apps isn't the recommended approach as described in this article. Use Windows Update policies instead, including [Update rings](../../../device-updates/windows/update-rings.md), [Feature updates](../../../device-updates/windows/feature-updates.md), and [Quality updates](../../../device-updates/windows/expedite-updates.md). The Win32 app method can provide more granular control when needed but requires more manual effort.
+> Deploying updates as Win32 apps isn't the recommended approach as described in this article. Use Windows Update policies instead, including [Update rings](../../device-updates/windows/update-rings.md), [Feature updates](../../device-updates/windows/feature-updates.md), and [Quality updates](../../device-updates/windows/expedite-updates.md). The Win32 app method can provide more granular control when needed but requires more manual effort.
 
 The following steps help you deploy a Windows update package to Intune.
 
