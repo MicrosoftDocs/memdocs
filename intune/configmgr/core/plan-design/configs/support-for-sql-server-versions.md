@@ -77,43 +77,15 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 > [!IMPORTANT]
 > When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](size-and-scale-numbers.md).
 
-### SQL Server 2022: Standard, Enterprise
+### Full SQL Editions (Standard / Enterprise)
 
-Starting with current branch 2303, support is added for SQL server 2022 with Compatibility Level/Cardinality Estimation set to 150 on the Configuration Manager database.  SQL 2022 native (160) is not currently supported.
-
-You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
-
-
-### SQL Server 2019: Standard, Enterprise
-
-You can use this version with cumulative update 5 (CU5) or later, as long as your cumulative update version is supported by the SQL Server lifecycle. CU5 is the minimum requirement for SQL Server 2019 as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining).
-
-You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
-
-### SQL Server 2017: Standard, Enterprise
-
-You can use this version with [cumulative update version 2](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate2) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
-  <!--SMS.498506-->
-
-### SQL Server 2016: Standard, Enterprise
-<!--514985-->
-You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A central administration site
-- A primary site
-- A secondary site
+| SQL Version | Supported Editions | Minimum Required CU/SP | Supported CM Site Types | Notes |
+|------------|--------------------|-------------------------|--------------------------|-------|
+| **SQL Server 2022** | Standard, Enterprise | Compatibility Level **150** required (SQL 2022 native 160 not supported) | CAS, Primary, Secondary | Support added starting **CB 2303**. Must set CM DB to CL 150. |
+| **SQL Server 2019** | Standard, Enterprise | **CU5 or later** | CAS, Primary, Secondary | CU5 required due to scalar UDF inlining fix. CU must be supported by SQL lifecycle. |
+| **SQL Server 2017** | Standard, Enterprise | **CU2 or later** | CAS, Primary, Secondary | CU must be supported by SQL lifecycle. |
+| **SQL Server 2016** | Standard, Enterprise | Minimum SP/CU supported by SQL lifecycle | CAS, Primary, Secondary | Fully supported as long as lifecycle-supported CU/SP is applied. |
+| ~~**SQL Server 2014**~~ | Standard, Enterprise | Deprecated | CAS, Primary, Secondary | Deprecated starting CM 2409. SQL 2014 lifecycle ended July 2024. |
 
 <!--### SQL Server 2014: Standard, Enterprise
 
@@ -129,32 +101,19 @@ You can use this version with the minimum service pack and cumulative update sup
 
 - A central administration site
 - A primary site
-- A secondary site-->
+- A secondary site
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
+### Express Editions (Secondary Sites Only)
 
-### SQL Server 2022 Express
-
-- A secondary site
-
-### SQL Server 2019 Express
-
-- A secondary site
-
-
-### SQL Server 2017 Express
-
-You can use this version with [cumulative update version 2](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate2) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A secondary site
-<!--SMS.498506-->
-
-### SQL Server 2016 Express
-
-You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
-
-- A secondary site
+| SQL Version | Supported Editions | Minimum Required CU/SP | Supported CM Site Types | Notes |
+|------------|--------------------|-------------------------|--------------------------|-------|
+| **SQL Server 2022 Express** | Express | **RTM (CU0) or later**, with CM DB Compatibility Level **150** | Secondary | Shipped in ConfigMgr redist. SQL 2022 native CL 160 not supported. |
+| **SQL Server 2019 Express** | Express | **CU5 or later** | Secondary | CU5 required due to scalar UDF inlining fix. Same requirement as full SQL 2019. |
+| **SQL Server 2017 Express** | Express | **CU2 or later** | Secondary | CU must be supported by SQL lifecycle. |
+| **SQL Server 2016 Express** | Express | Minimum SP/CU supported by SQL lifecycle | Secondary | Fully supported as long as lifecycle-supported CU/SP is applied. |
+| ~~**SQL Server 2014 Express**~~ | Express | Deprecated | Secondary | Deprecated starting CM 2409. SQL 2014 lifecycle ended July 2024. |
 
 <!--### SQL Server 2014 Express
 
@@ -166,10 +125,11 @@ You can use this version with the minimum service pack and cumulative update sup
 
 You can use this version with the minimum service pack and cumulative update supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
 
-- A secondary site-->
+- A secondary site
 
 > [!IMPORTANT]
-> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
+> Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
+
 
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
