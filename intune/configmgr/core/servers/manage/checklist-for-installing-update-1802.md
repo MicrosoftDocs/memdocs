@@ -1,18 +1,11 @@
 ---
 title: Checklist for 1802
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 1802.
 ms.date: 06/08/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Checklist for installing update 1802 for Configuration Manager
 

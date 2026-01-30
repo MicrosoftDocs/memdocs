@@ -1,18 +1,10 @@
 ---
 title: Policy Agent Client WMI Classes
-titleSuffix: Configuration Manager
 description: Describe the classes used, in Configuration Manager, to manage policy on client computers and devices.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 7b14f97b-fe27-4479-9a53-5ca0fdf2699b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Policy Agent Client WMI Classes
 This section describes the classes used, in Configuration Manager, to manage policy on client computers and devices.

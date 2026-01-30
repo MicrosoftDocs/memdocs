@@ -1,16 +1,9 @@
 ---
 title: Deploy a task sequence
-titleSuffix: Configuration Manager
 description: Use this information to deploy a task sequence to the computers in a collection.
 ms.date: 04/05/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

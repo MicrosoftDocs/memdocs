@@ -1,18 +1,10 @@
 ---
 title: RequestLocks Method
-titleSuffix: Configuration Manager
 description: The RequestLocks Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronously acquires locks to edit multiple global objects.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: c7e2f093-bd48-4d8f-a06e-c3d731626145
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # RequestLocks Method in Class SMS_ObjectLock
 The `RequestLocks` Windows Management Instrumentation (WMI) class method, in Configuration Manager, synchronously acquires locks to edit multiple global objects.

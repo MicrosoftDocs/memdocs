@@ -1,17 +1,10 @@
 ---
 title: Fundamentals
-titleSuffix: Configuration Manager
 description: Learn about basic concepts for Configuration Manager.
 ms.date: 11/29/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Fundamentals of Configuration Manager

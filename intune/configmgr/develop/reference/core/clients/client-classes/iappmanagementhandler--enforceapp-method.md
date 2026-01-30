@@ -1,18 +1,10 @@
 ---
 title: "IAppManagementHandler::EnforceApp"
-titleSuffix: Configuration Manager
 description: A method that starts the installation of a specific application.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 3c554beb-fe34-42ec-bc02-d427238ec811
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IAppManagementHandler::EnforceApp Method
 The `IAppManagementHandler::EnforceApp` method, in Configuration Manager, starts the installation of a specific application.

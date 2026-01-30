@@ -1,18 +1,10 @@
 ---
 title: SMS_RemoteToolsAgentConfig Class
 description: Learn how the SMS_RemoteToolsAgentConfig class is an SMS Provider server class that specifies the Remote Control settings on client computers.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9b0190b8-5eec-40f5-9bb1-da8223c95951
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_RemoteToolsAgentConfig Server WMI Class
 The `SMS_RemoteToolsAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies the Remote Control settings on client computers.

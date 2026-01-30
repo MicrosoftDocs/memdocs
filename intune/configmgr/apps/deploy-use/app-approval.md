@@ -1,17 +1,10 @@
 ---
 title: Approve applications
-titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
 ms.date: 08/12/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Approve applications in Configuration Manager
