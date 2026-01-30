@@ -1,18 +1,10 @@
 ---
 description: Learn how to stop clients from connecting to the client notification server with SMS_BigGreenButtonConfig.
 title: SMS_BigGreenButtonConfig Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 3fd7c3a1-bab9-4970-93a4-0b6e978fd3eb
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_BigGreenButtonConfig Server WMI Class
 The `SMS_BigGreenButtonConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that can stop clients from connecting to the client notification server (a hidden role, co-located with management point).

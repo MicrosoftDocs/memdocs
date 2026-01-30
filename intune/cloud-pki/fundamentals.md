@@ -1,18 +1,10 @@
 ---
 title: Microsoft Intune cloud PKI fundamentals
 description: Describes fundamentals for Microsoft Intune cloud PKI.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Microsoft Cloud PKI fundamentals
 
 *Microsoft Cloud PKI* is an Intune Suite feature that enables you as an IT pro to manage your public key infrastructure (PKI) in the cloud. You can create, configure, and manage your own certification authorities (CAs) and certificates without having to install and maintain on-premises infrastructure. The Microsoft Cloud PKI service integrates with Microsoft Entra ID and Microsoft Intune to provide identity and device management for your cloud-based devices and apps.
@@ -100,7 +92,7 @@ A certificate chain with an ordered list of certificates enables the relying par
 The following diagram illustrates the *name matching* chain validation flow.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the chain validation process using the name match method.](./media/microsoft-cloud-pki-fundamentals/chain-validation.png)
+> ![Diagram of the chain validation process using the name match method.](./images/chain-validation.png)
 
 ### Ensure a chain of trust
 
@@ -109,7 +101,7 @@ When you use certificates to perform certificate-based authentication, you must 
 The root CA must be present. If the issuing CA certificate isn't present, then it can be requested by the relying party using the native certificate chain engine for the intended OS platform. The relying party can request the issuing CA certificate using the leaf certificate's *authority information access* property.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the chain of validation process.](./media/microsoft-cloud-pki-fundamentals/chain-of-trust.png)
+> ![Diagram of the chain of validation process.](./images/chain-of-trust.png)
 
 ## Certificate-based authentication
 This section provides a basic understanding of the various certificates being used when a client or device performs certificate-based authentication.
@@ -122,6 +114,6 @@ The following steps describe the handshake that takes place between a client and
 4. The client presents its client authentication certificate to the relying party to authenticate.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of a handshake between a client and relying party service.](./media/microsoft-cloud-pki-fundamentals/certificate-handshake.png)
+> ![Diagram of a handshake between a client and relying party service.](./images/certificate-handshake.png)
 
 In an environment without Microsoft Cloud PKI, a private CA is responsible for issuing both the TLS/SSL certificate used by the relying party, and the device client authentication certificate. Microsoft Cloud PKI can be used to issue the device client authentication certificate, effectively replacing the private CA for this specific task.

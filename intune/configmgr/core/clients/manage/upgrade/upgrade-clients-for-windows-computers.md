@@ -1,17 +1,10 @@
 ---
 title: Upgrade clients on Windows
-titleSuffix: Configuration Manager
 description: Upgrade clients on Windows computers in Configuration Manager.
 ms.date: 04/12/2022
-ms.subservice: configuration
-ms.service: microsoft-intune
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
+ms.subservice: core-infra
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to upgrade clients for Windows computers in Configuration Manager

@@ -1,18 +1,10 @@
 ---
 title: SMS_TaskSequence_Condition Class
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_TaskSequence_Condition Server WMI Class WMI class is an SMS Provider server class that defines a condition for an operating system deployment step.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e0d3dae7-c185-4915-8a3a-e45e529cca9a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_Condition Server WMI Class
 The `SMS_TaskSequence_Condition Server WMI Class` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that defines a condition for an operating system deployment step. This class is the base class for all conditions.

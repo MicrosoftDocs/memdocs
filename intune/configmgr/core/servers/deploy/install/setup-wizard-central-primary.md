@@ -1,17 +1,10 @@
 ---
 title: Install a CAS or primary site
-titleSuffix: Configuration Manager
 description: Use the Configuration Manager setup wizard to install a new central administration site (CAS) or primary site.
 ms.date: 05/02/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use the setup wizard to install a central administration or primary site

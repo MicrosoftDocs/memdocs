@@ -1,17 +1,10 @@
 ---
 title: Configure clients for CMG
-titleSuffix: Configuration Manager
 description: Understand how to configure clients to use the cloud management gateway (CMG).
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure clients for cloud management gateway

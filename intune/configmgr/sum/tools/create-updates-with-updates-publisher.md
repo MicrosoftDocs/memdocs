@@ -1,16 +1,9 @@
 ---
 title: Create updates
-titleSuffix: Configuration Manager
 description: Create and bundle software updates with System Center Updates Publisher
 ms.date: 04/29/2017
-ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Create  software updates and update bundles with Updates Publisher

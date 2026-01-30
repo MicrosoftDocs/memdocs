@@ -1,17 +1,10 @@
 ---
 title: Procedures for boundary groups
-titleSuffix: Configuration Manager
 description: Configure boundary groups to logically organize related network locations called boundaries.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to configure boundary groups for Configuration Manager

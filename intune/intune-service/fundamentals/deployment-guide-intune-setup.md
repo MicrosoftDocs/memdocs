@@ -3,7 +3,7 @@ title: Migration guide to Microsoft Intune
 description: Deployment guide to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 06/03/2025
+ms.date: 12/15/2025
 ms.topic: upgrade-and-migration-article
 ms.reviewer: dougeby
 ms.collection:
@@ -239,9 +239,7 @@ Next, [Step 1: Set up Microsoft Intune](deployment-plan-setup.md).
 
 ## Currently use Microsoft 365 Basic Mobility and Security
 
-If you created and deployed Microsoft 365 Basic Mobility and Security policies, then you can migrate the users, groups, and policies to Microsoft Intune.
-
-For more information, go to [Migrate from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
+If you created and deployed Microsoft 365 Basic Mobility and Security policies, then see [Move from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
 
 ## Tenant to tenant migration
 
