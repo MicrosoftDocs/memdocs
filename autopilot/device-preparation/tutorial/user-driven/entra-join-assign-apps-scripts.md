@@ -1,7 +1,7 @@
 ---
 title: Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group.
-ms.date: 06/11/2025
+ms.date: 01/30/2026
 ms.topic: tutorial
 ms.collection:
   - tier1
@@ -32,7 +32,7 @@ For an overview of the Windows Autopilot device preparation user-driven Microsof
 
 During the out-of-box experience (OOBE) experience before the end-user is signed in for the first time, Windows Autopilot device preparation allows deployment of up to:
 
-- 10 managed applications
+- 25 managed applications
 - 10 PowerShell scripts
 
 The applications and PowerShell scripts specified should be the essential applications to install and the essential PowerShell scripts to run before the end-user can start using the device.
