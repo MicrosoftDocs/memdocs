@@ -77,15 +77,15 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 > [!IMPORTANT]
 > When you use SQL Server Standard for the database at the central administration site, you limit the total number of clients that a hierarchy can support. See [Size and scale numbers](size-and-scale-numbers.md).
 
-### Full SQL Editions (Standard / Enterprise)
+### Standard / Enterprise SQL Editions
 
-| SQL Version | Supported Editions | Minimum Required CU/SP | Supported CM Site Types | Notes |
-|------------|--------------------|-------------------------|--------------------------|-------|
-| **SQL Server 2022** | Standard, Enterprise | Compatibility Level **150** required (SQL 2022 native 160 not supported) | CAS, Primary, Secondary | Support added starting **CB 2303**. Must set CM DB to CL 150. |
-| **SQL Server 2019** | Standard, Enterprise | **CU5 or later** | CAS, Primary, Secondary | CU5 required due to scalar UDF inlining fix. CU must be supported by SQL lifecycle. |
-| **SQL Server 2017** | Standard, Enterprise | **CU2 or later** | CAS, Primary, Secondary | CU must be supported by SQL lifecycle. |
-| **SQL Server 2016** | Standard, Enterprise | Minimum SP/CU supported by SQL lifecycle | CAS, Primary, Secondary | Fully supported as long as lifecycle-supported CU/SP is applied. |
-| ~~**SQL Server 2014**~~ | Standard, Enterprise | Deprecated | CAS, Primary, Secondary | Deprecated starting CM 2409. SQL 2014 lifecycle ended July 2024. |
+| SQL Version | Minimum Required Update | Supported Site Types | Notes |
+|------------|-------------------------|--------------------------|-------|
+| **SQL Server 2022** | RTM | CAS, Primary, Secondary | Support added in **version 2303**. SQL 2022 Compatibility Level (160) is not supported. CU must be supported by SQL lifecycle. |
+| **SQL Server 2019** | Cumulative Update 5 (CU5) or later | CAS, Primary, Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
+| **SQL Server 2017** | Cumulative Update 2 (CU2) or later | CAS, Primary, Secondary | CU must be supported by SQL lifecycle. |
+| **SQL Server 2016** | Minimum Service Pack supported by  [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | CAS, Primary, Secondary |  |
+| ~~**SQL Server 2014**~~ | Deprecated | CAS, Primary, Secondary | Deprecated in **version 2409**. SQL 2014 support ended July 2024. |
 
 <!--### SQL Server 2014: Standard, Enterprise
 
@@ -107,13 +107,13 @@ You can use this version with the minimum service pack and cumulative update sup
 > Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
 ### Express Editions (Secondary Sites Only)
 
-| SQL Version | Supported Editions | Minimum Required CU/SP | Supported CM Site Types | Notes |
-|------------|--------------------|-------------------------|--------------------------|-------|
-| **SQL Server 2022 Express** | Express | **RTM (CU0) or later**, with CM DB Compatibility Level **150** | Secondary | Shipped in ConfigMgr redist. SQL 2022 native CL 160 not supported. |
-| **SQL Server 2019 Express** | Express | **CU5 or later** | Secondary | CU5 required due to scalar UDF inlining fix. Same requirement as full SQL 2019. |
-| **SQL Server 2017 Express** | Express | **CU2 or later** | Secondary | CU must be supported by SQL lifecycle. |
-| **SQL Server 2016 Express** | Express | Minimum SP/CU supported by SQL lifecycle | Secondary | Fully supported as long as lifecycle-supported CU/SP is applied. |
-| ~~**SQL Server 2014 Express**~~ | Express | Deprecated | Secondary | Deprecated starting CM 2409. SQL 2014 lifecycle ended July 2024. |
+| SQL Version | Minimum Required Update | Supported Site Types | Notes |
+|------------|-------------------------|--------------------------|-------|
+| **SQL Server 2022 Express** | RTM | Secondary | Shipped with version 2509. SQL 2022 Compatibility Level (160) is not currently supported. |
+| **SQL Server 2019 Express** | Cumulative Update 5 (CU5) or later | Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
+| **SQL Server 2017 Express** | Cumulative Update 2 (CU2) or later | Secondary | CU must be supported by SQL lifecycle. |
+| **SQL Server 2016 Express** | Minimum Service Pack supported by [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | Secondary |  |
+| ~~**SQL Server 2014 Express**~~ | Deprecated | Secondary | Deprecated in **version 2409**. SQL 2014 support ended July 2024.  |
 
 <!--### SQL Server 2014 Express
 
