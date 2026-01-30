@@ -1,18 +1,10 @@
 ---
 description: Learn about the client runtime requirements for applications that run on Microsoft Configuration Manager.
 title: Client Runtime Requirements
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6edd0792-9e2e-4ed0-9936-0eb9c815726d
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Configuration Manager Client Runtime Requirements
 Applications that run on Microsoft Configuration Manager clients have the following runtime requirements.

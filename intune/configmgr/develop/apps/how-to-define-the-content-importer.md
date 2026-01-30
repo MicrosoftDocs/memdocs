@@ -1,18 +1,10 @@
 ---
 title: How to Define the Content Importer
 description: To define the application management deployment technology content importer, use an instance of the Microsoft.ConfigurationManagement.ApplicationManagement.ContentImporter class.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: cee3a4a5-3b65-4561-9d12-449407abcb19
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Define the Content Importer
 To define the application management deployment technology content importer, use an instance of the `Microsoft.ConfigurationManagement.ApplicationManagement.ContentImporter` class. The new class instance will define the content importer used by the installer.

@@ -1,16 +1,9 @@
 ---
 title: Tenant attach - Onboard Configuration Manager clients to Microsoft Defender for Endpoint from the Microsoft Intune admin center
-titleSuffix: Configuration Manager
 description: Deploy Microsoft Defender for Endpoint Detection and Response (EDR) onboarding policies to Configuration Manager managed clients from the admin center.
 ms.date: 03/21/2022
 ms.topic: how-to
 ms.subservice: core-infra
-ms.service: configuration-manager
-author: LauraWi
-ms.author: laurawi
-ms.localizationpriority: high
-manager: apoorvseth
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

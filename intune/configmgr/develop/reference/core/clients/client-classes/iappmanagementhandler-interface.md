@@ -1,18 +1,10 @@
 ---
 description: Learn how to define functions to interact with the handler in Configuration Manager using IAppManagementHandler.
 title: IAppManagementHandler Interface
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 674e4aa0-f1bf-45f5-b369-4c0592a93b57
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IAppManagementHandler Interface
 The `IAppManagementHandler` interface, in Configuration Manager defines functions to interact with the handler.

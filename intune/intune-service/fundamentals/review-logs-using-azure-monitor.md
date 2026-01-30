@@ -3,7 +3,7 @@ title: Route logs to Azure Monitor using Microsoft Intune
 description: Use Diagnostics Settings to send audit logs and operational logs in Microsoft Intune to Azure Storage account, Event Hubs, or Log Analytics. Choose how long you want to keep the data, and see some estimated costs for different size tenants.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 09/03/2024
+ms.date: 01/22/2026
 ms.topic: how-to
 ms.reviewer: chnatar, daviales
 ms.collection:
@@ -191,9 +191,9 @@ The Intune **Audit logs** and **Operational logs** are available for routing usi
 After the action:
 
 - The Intune **Audit Logs** and **Operational Logs** are sent immediately from Intune to Azure Monitor services.
-- The Intune **Device Compliance Organizational Logs** and **IntuneDevices** report data is sent from Intune to Azure Monitor services once every 24 hours. So, it can take up to 24 hours to get the logs in the Azure Monitor services.
+- The Intune **Device Compliance Organizational Logs** and **Intune Devices report** data can take up to 48 hours to be sent to Azure Monitor services. Intune sends this data to Azure Monitor services once every 24 hours and this export can happen anytime within each 24-hour period.
 
-Once the data is sent from Intune, then it typically shows in the Azure Monitor service within 30 minutes.
+When Azure Monitor services receive the data, it typically shows in the Azure Monitor service within 30 minutes.
 
 ### What happens if an administrator changes the retention period of a diagnostic setting?
 

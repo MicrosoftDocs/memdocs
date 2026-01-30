@@ -1,17 +1,10 @@
 ---
 title: Migrate objects
-titleSuffix: Configuration Manager
 description: Learn how to plan for the migration of objects between hierarchies in a Configuration Manager current branch environment.
 ms.date: 01/12/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Plan for the migration of Configuration Manager objects to Configuration Manager current branch
 

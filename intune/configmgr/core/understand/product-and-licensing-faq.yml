@@ -1,15 +1,10 @@
 ### YamlMime:FAQ
 metadata:
   title: Product and licensing FAQ
-  titleSuffix: Configuration Manager
   description: Find answers for common product and license questions for Configuration Manager.
   ms.date: 12/16/2024
   ms.subservice: core-infra
-  ms.service: configuration-manager
   ms.topic: faq
-  author: Baladelli
-  ms.author: baladell
-  manager: apoorvseth
   ms.collection: highpri
 
 title: Frequently asked questions for Configuration Manager branches and licensing

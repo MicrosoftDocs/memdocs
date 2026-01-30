@@ -1,18 +1,10 @@
 ---
 title: Audit logs for Microsoft Intune cloud PKI
 description: Get audit logs for Microsoft cloud public key infrastructure (PKI) activity in the admin center.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Microsoft Cloud PKI audit logs
 
 This article describes how to access and utilize audit logs for Microsoft Cloud PKI admin actions. *Intune audit logs* are records of actions invoked by Intune administrators and authorized users. Audit logs provide information about who performed what action, when it occurred, and other data points relating to the actions executed. You can use the Microsoft PKI audit logs to monitor the creation, access, deletion, and modification of certification authorities and issued certificates in Intune.

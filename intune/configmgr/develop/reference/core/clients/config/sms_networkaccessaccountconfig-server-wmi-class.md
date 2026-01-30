@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a computer or domain account used to access files on a Configuration Manager site system.
 title: SMS_NetworkAccessAccountConfig Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 51f0329c-e8ed-4a24-8439-de6597d5f7da
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_NetworkAccessAccountConfig Server WMI Class
 The `SMS_NetworkAccessAccountConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a computer or domain account used to access files on a Configuration Manager site system.

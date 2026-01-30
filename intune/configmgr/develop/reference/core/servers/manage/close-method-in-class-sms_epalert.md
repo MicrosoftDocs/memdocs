@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the Close method in Class SMS_EPAlert to postpone the alert.
 title: Close Method in Class SMS_EPAlert
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 2637f1c4-037b-4f91-b0d3-ce61e9eeb63b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Close Method in Class SMS_EPAlert
 The `Close` Windows Management Instrumentation (WMI) class method, in Configuration Manager, postpones the alert.

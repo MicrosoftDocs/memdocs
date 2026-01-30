@@ -1,17 +1,10 @@
 ---
 title: What's new in version 2509
-titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2509 of Configuration Manager current branch.
 ms.date: 11/11/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in version 2509 of Configuration Manager current branch
@@ -55,6 +48,12 @@ The Service Connection Tool (SCT) is improved to provide better logging and erro
 - The SCT explicitly checks for prerequisites and fails if they're not met.
 - Customers are directed to explore the relevant logs, such as ServiceConnectionTool.log and ConfigMgrSetup.log, when there's an error.
 - If there's a download failure, the SCT "Connect" step stops execution thus preventing importing incomplete Update Package payloads.
+
+###  AdminService now rejects NTLM authentication
+
+- AdminService now rejects NTLM authentication attempts. `AdminService.log` should write the below message when NTLM authentication is attempted:
+
+> Rejecting NTLM authentication.
 
  
 ## Known Issues

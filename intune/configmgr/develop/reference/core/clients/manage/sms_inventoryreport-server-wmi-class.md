@@ -1,18 +1,10 @@
 ---
 title: SMS_InventoryReport Class
-titleSuffix: Configuration Manager
 description: The SMS_InventoryReport WMI class is an SMS Provider server class that represents the classes and properties that are enabled to be collected.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 2068768c-2746-42f0-b4d4-e7a43241b160
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_InventoryReport Server WMI Class
 The `SMS_InventoryReport` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the classes and properties that are enabled to be collected.
