@@ -134,6 +134,15 @@ You can use this version with the minimum service pack and cumulative update sup
 > [!IMPORTANT]
 > Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).
 
+### SQL Server 2022 Express
+
+- A secondary site
+
+### SQL Server 2019 Express
+
+- A secondary site
+
+
 ### SQL Server 2017 Express
 
 You can use this version with [cumulative update version 2](/troubleshoot/sql/releases/sqlserver-2017/cumulativeupdate2) or higher, as long as your cumulative update version is supported by the SQL Server lifecycle. You can use this version of SQL Server for the following sites:
