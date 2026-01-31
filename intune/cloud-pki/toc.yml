@@ -13,6 +13,8 @@ items:
     displayName: root, certification, authority, ca, issuing, BYO
   - name: Configure bring your own CA for Cloud PKI
     href: configure-byoca.md
+  - name: Renew a certificate authority
+    href: renew-ca.md
 - name: Monitor issued certificates
   href: monitor.md
 - name: Get audit logs
