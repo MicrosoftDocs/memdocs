@@ -7,41 +7,54 @@ ms.topic: how-to
 
 # Microsoft Cloud PKI CA expiration
 
-When a Certificate Authority (CA) in Cloud PKI approaches its expiration date, take action to ensure continued certificate issuance and avoid service disruptions. This article explains how to renew your CA and update SCEP certificate profiles in Microsoft Intune. Follow these steps to maintain secure device connectivity and uninterrupted access to corporate resources.
+When a Microsoft Cloud PKI issuing certification authority (CA) approaches its expiration date, Intune administrators must take action to maintain certificate issuance and avoid service disruption. This article describes the steps to create a new issuing CA and update SCEP certificate profiles.
 
-Renewing a CA is a customer-specific action. Microsoft can't automatically update your CA or SCEP profiles.
+> [!IMPORTANT]  
+> Renewing or replacing a CA is a customer‑managed action. Microsoft can't automatically update your Cloud PKI CA or associated SCEP certificate profiles.
 
-If you need assistance, contact Microsoft support or your account representative.
+If you need assistance, contact Microsoft Support or your account representative.
 
-## Action required: Cloud PKI Certificate Authority expiring soon - Create new issuing CA and update SCEP profiles to prevent service disruption
+## User impact
 
-### User impact
+If no action is taken, SCEP certificate profiles that reference the expiring CA will stop issuing new certificates after the CA expires. Devices and users may experience:
 
-If you don't take action, SCEP certificate profiles that use the expiring Certificate Authority (CA) can't issue new certificates after the CA's expiration date. This condition might result in device connectivity loss, inability to access corporate resources, or failed certificate-based authentication for affected users.
+- Loss of Wi‑Fi, VPN, or email connectivity  
+- Inability to access corporate resources  
+- Failed certificate‑based authentication  
+
+These impacts are consistent with known Cloud PKI expiring CA behavior.
 
 ## Action needed
 
-To avoid service disruption, Intune administrators must create a new issuing CA and update all SCEP certificate profiles that reference the expiring CA.
+To avoid service disruption, create a new Cloud PKI issuing CA and update all SCEP certificate profiles that reference the expiring CA.
 
-- Use the same *Root CA Source* as the expiring CA.
-- Ensure all CA properties match the expiring CA, especially Extended Key Usages and Key Sizes.
+### 1. Create a new issuing CA
 
-### Update SCEP Certificate Profiles
+When creating the replacement issuing CA:
 
-1. After creating the new Issuing CA, copy the SCEP URI from its properties.
-1. For each SCEP certificate profile using the soon‑to‑expire CA, update the profile to reference the new Issuing CA's SCEP URI.
-1. Replace the existing (expiring) Issuing CA SCEP URI with the new SCEP URI copied in step 1.
+- Use the same *Root CA Source* as the expiring CA.  
+- Ensure all CA properties match the existing CA, including:
+  - Extended Key Usages (EKUs)  
+  - Key sizes  
 
-> [!NOTE] 
-> - Don't add an additional SCEP URI. Cloud PKI doesn't support multiple SCEP URIs within a single SCEP certificate profile.
-> - Updating the SCEP URI on a profile will not trigger a cert re-issuance.
+### 2. Update SCEP certificate profiles
 
-## Additional Diagnostics
+After you create the new issuing CA:
 
-Review all SCEP certificate profiles to confirm they reference the new CA.
+1. In the CA properties, copy the **SCEP URI**.  
+2. For each SCEP certificate profile referencing the expiring CA, replace the old SCEP URI with the new one.
 
-For more information on managing CAs and SCEP profiles, refer to the Intune documentation.
+> [!NOTE]
+> - Don't add additional SCEP URIs. Cloud PKI doesn't support multiple SCEP URIs in a single SCEP certificate profile.  
+> - Updating the SCEP URI doesn't trigger certificate re‑issuance.
 
-## Coming Soon
+## Additional diagnostics
 
-Cloud PKI will soon provide the ability to renew an existing CA. Be sure to look for this upcoming feature at https://aka.ms/IntuneWhatsNew.
+To confirm configuration:
+
+- Review all SCEP certificate profiles to verify they reference the new issuing CA.  
+- For Cloud PKI and SCEP guidance, see [Overview of Microsoft Cloud PKI for Microsoft Intune](index.md).
+
+## Coming soon
+
+Cloud PKI will soon support **renewing an existing CA** directly. Watch for updates at:  [What's new in Microsoft Intune](../intune-service/fundamentals/whats-new.md).
