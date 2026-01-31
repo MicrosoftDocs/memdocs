@@ -45,10 +45,10 @@ After you create the new issuing CA:
 2. For each SCEP certificate profile referencing the expiring CA, replace the old SCEP URI with the new one.
 
 > [!NOTE]
-> - Don't add additional SCEP URIs. Cloud PKI doesn't support multiple SCEP URIs in a single SCEP certificate profile.  
+> - Don't add more SCEP URIs. Cloud PKI doesn't support multiple SCEP URIs in a single SCEP certificate profile.  
 > - Updating the SCEP URI doesn't trigger certificate re‑issuance.
 
-## Additional diagnostics
+## More diagnostics
 
 To confirm configuration:
 
