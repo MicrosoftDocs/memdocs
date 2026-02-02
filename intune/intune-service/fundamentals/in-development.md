@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 01/07/2026
+ms.date: 02/05/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -51,26 +51,9 @@ You can use RSS to be notified when this article is updated. For more informatio
 Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
 
 
-### Endpoint Privileged Management support on Azure Virtual Desktop<!-- 26079227 -->
-
-We're adding support to deploy Endpoint Privilege Management (EPM) policies to users on Azure Virtual Desktop (AVD) single-session virtual machines. With this support EPM elevation policies will work on AVD single-session environments.
-
-For more information about EPM, which is available as an [Intune Suite add-on-capability](../fundamentals/intune-add-ons.md), see [Endpoint Privilege Management overview](../protect/epm-overview.md).
-
 <!-- ***********************************************-->
 
 ## App management
-
-### Lenovo Device Orchestration (LDO) link in the Intune admin center <!-- 32634377 -->
-
-Microsoft Intune continues to expand its **Partner portals** experience, giving admins a single, secure interface to manage devices across multiple OEM ecosystems. A new integration is in development to provide a direct link to Lenovo Device Orchestration (LDO) from the Intune admin center.
-
-When this feature becomes available, IT admins will be able to open the Lenovo Device Orchestration Portal directly from the Intune admin center to use Lenovo-specific management capabilities for supported devices.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows 11
 
 ### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
 
@@ -85,35 +68,34 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
-### New updates to the Apple settings catalog<!-- 35787099 -->
+### New Wired Networks device configuration profile for iOS/iPadOS<!-- 34968897 -->
 
-The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, go to [Create a policy using settings catalog](../configuration/settings-catalog.md).
+We're adding a 802.1x Wired Networks device configuration profile for iOS/iPadOS devices. The feature will support 802.1x Ethernet access controls, which is ideal for M series iPads that support native resolution screen extension. It will allow iPads to securely connect to hot desk docks and monitors using wired access.
 
-There will be a new setting in the Settings Catalog. To see this setting, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** for platform > **Settings catalog** for profile type.
- 
-#### iOS/iPadOS
+This profile:
 
-**Restrictions**:
+- Supports EAP protocols, like TLS, PEAP, and TTLS
+- Is similar to the macOS wired network profile experience
 
-- Rating Apps Exempted Bundle IDs
+This feature helps with secure enterprise deployments for iPads in education, finance, and other regulated industries.
 
-Apple rebranded **Rapid Security Responses** to **Background Security Improvements**. This change will update in the settings catalog. For more information on Background Security Improvements, see [Background Security Improvements on Apple devices](https://support.apple.com/guide/deployment/background-security-improvements-dep93ff7ea78/web) (opens Apple's web site).
+To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../configuration/wired-networks-configure.md).
 
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS 17 and newer
 
-### Filter by Android management mode in the settings catalog<!-- 31844205 -->
+### Disable MAC address randomization on macOS Wi‑Fi profiles <!-- 8457343 -->
 
-The [settings catalog](../configuration/settings-catalog.md) includes hundreds of settings that you can configure. There are built-in features that help filter the available settings.
+On macOS devices, the **Disable MAC address randomization** setting will be available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices. Currently, this setting is only available for [iOS/iPadOS Wi‑Fi profiles](../configuration/wi-fi-settings-ios.md).
 
-When you create an Android settings catalog policy, there will be a management mode filter option that filters the available settings by their enrollment type, including:
+When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. But, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
 
-- Fully managed (COBO)
-- Corporate-owned work profile (COPE)
-- Dedicated (COSU)
-
-To learn more about the settings catalog, see:
-
-- [Android Intune settings catalog settings list](../configuration/settings-catalog-android.md)
-- [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md)
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS 15 and later
 
 ### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
 
@@ -127,11 +109,11 @@ To learn more about filters, see [Use assignment filters to assign your apps, po
 > - iOS/iPadOS
 > - macOS
 
-### Recovery Lock settings catalog settings are available for macOS<!-- 32541429 -->
+### Recovery Lock settings catalog settings for macOS<!-- 32541429 -->
 
 On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
 
-In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+In a [settings catalog](../configuration/settings-catalog.md) policy, you can soon use the Recovery Lock settings to:
 
 - Set a recovery lock password
 - Configure a password rotation schedule
@@ -150,63 +132,55 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can us
 
 ## Device management
 
-### Device Offboarding Agent and Admin Tasks integration<!-- 35967714 -->
+### Multi-administrator approval support for device compliance and device configuration policies<!-- 26838614 -->
 
-We are working to integrate the Device Offboarding Agent with admin tasks to turn recommendations into actionable items. IT operators will be able to assign, monitor, and complete these tasks to ensure smooth offboarding. This integration will help teams:
+Multi-administrator approval will soon support device configuration policies created through the settings catalog, device compliance policies, compliance settings, and device cleanup rules. When you turn on this feature, any changes you make, including creating, editing, or deleting a policy, must be approved by a second administrator before they take effect. This dual-authorization process helps protect your organization from unauthorized or accidental changes to role-based access control.
 
-- Identify and track work tied to Device Offboarding Agent processes
-- Improve clarity and alignment across teams
-- Increase efficiency through structured workflows
-
-To learn more:
-
-- [Admin tasks](../fundamentals/admin-tasks.md)
-- [Device Offboarding Agent](../../agents/device-offboarding-agent.md)
-
-### More options for assignment filters > Device Management Type property for managed apps on Android and iOS/iPadOS<!-- 25040926 -->
-
-When you create policies for your managed apps, you can use [assignment filters](filters.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
-
-For Android, the **Device Management Type** property for managed apps is adding the following options:
-
-- Corporate-owned with work profile
-- Corporate-owned fully managed
-- Corporate-owned dedicated devices without Entra ID Shared mode
-
-For iOS/iPadOS, the **Device Management Type** property for managed apps is adding the following options:
-
-- Automated Device Enrollment user-associated devices
-- Automated Device Enrollment userless devices
-- Account Driven User Enrollment
-- Device Enrollment with Company Portal and Web Enrollment
-
-To learn more about filters, see:
-
-- [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune](filters-device-properties.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise
-> - iOS/iPadOS
-
-### Intune certificate inventory integration with Zimperium mobile threat defense<!-- 35519603 -->
-
-You'll soon be able to configure certificate inventory sync as part of the Mobile Threat Defense (MTD) connector setup when using Zimperium. This enhancement will help you detect when the device threat level is elevated due to approved but potentially malicious certificates on the device. The setting can be configured for Intune to send certificate inventory for corporate and personally owned devices to Zimperium.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
 
 <!-- *********************************************** -->
 
 ## Device security
 
-### Updated firewall configurations for new Intune network endpoints<!-- 34445623 -->
+### Operator updates for device query for multiple devices<!--36180651 -->
 
-As part of Microsoft's ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), network service endpoints for Microsoft Intune will be moving to new IP addresses. As a result, customers might need to update network (firewall) configurations in third-party applications to enable proper function of Intune device and app management. This change will affect customers using a firewall allow list that allows outbound traffic based on IP addresses or Azure service tags.
+The following operator and behavior changes will be coming to **Device query for multiple devices**.
+
+- **New join types**\
+  The following join types will be supported:
+  - `leftsemi`
+  - `rightsemi`
+  - `leftanti`
+  - `rightanti`
+
+- **Changes to join behavior**\
+  Joins that use `on Device.DeviceID` will no longer be supported. Queries that currently use `on Device.DeviceId` should switch to using `on Device`, or omit the `on` clause entirely.
+
+- **Changes to device references in operators**\
+  Using `Device` by itself will no longer be valid in operators such as `distinct`, `summarize`, or `order by`. Queries will need to reference a specific device property instead.
+
+- **Updates to query results**\
+  Queries that involve a device—either by querying a device directly or by joining a device to another entity—will return the device as a clickable link in the results, allowing navigation to the device details.
+
+- **Improved error messages**\
+  Some error cases have been updated to provide clearer, more descriptive messages.
+
+### Autopatch update readiness<!--34573480 -->
+
+Autopatch update readiness will deliver a unified experience for tracking and remediating Windows update issues across Intune‑enrolled devices and Autopatch group‑enrolled devices.
+
+This experience will provide complete Intune-enrolled device accounting, enabling admins to view all managed devices, their enrollment status, and their policy assignments in a single dashboard.
+
+Autopatch update readiness will include the following capabilities:
+
+- A *device update journey* that surfaces granular update states for each device, making it easier to identify where updates stall and why.
+- A *centralized alerting framework* that consolidates actionable alerts for update failures, policy conflicts, and readiness gaps, with remediation guidance integrated into a single dashboard.
+- An *update readiness checker* that enables admins to proactively evaluate devices for deployment risks and flag devices as *At Risk* based on signals like disk space, appraiser data, and setup conditions.
+- *Repair Devices with OS Reinstall*, a capability that enables admins to remediate upgrade‑blocked devices by triggering an OS reinstall for common issues such as insufficient disk space and app compatibility problems, with supporting alerts and reporting.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
@@ -252,24 +226,6 @@ When this change takes effect, devices that are assigned this policy while manag
 <!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
-
-## Tenant administration
-
-### Admin tasks in Microsoft Intune will soon be out of preview and become generally available<!-- 32978931 -->
-
-**Admin tasks** in the Intune admin center will soon be generally available.
-
-Admin tasks provide a centralized view to discover, organize, and act on security tasks, multi admin approval requests, and user elevation requests. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention—without navigating across multiple nodes.
-
-The following task types are supported:
-
-- Endpoint Privilege Management file elevation requests
-- Microsoft Defender security tasks
-- Multi Admin Approval requests
-
-Intune only shows tasks you have permission to manage. When you select a task, Intune opens the same interface and workflow you'd use if managing the task from its original location. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
-
-For more information, see [Admin tasks](../fundamentals/admin-tasks.md).
 
 <!-- *********************************************** -->
 
