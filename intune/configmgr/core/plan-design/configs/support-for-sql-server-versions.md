@@ -48,7 +48,7 @@ The site database can use the default instance of a full installation of SQL Ser
 SQL Server must be located on the site server computer.
 
 > [!IMPORTANT]
-> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. VC++ need to be upgraded to latest version on Secondary site [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. Visual C++ need to be upgraded to latest version on Secondary site [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ### Limitations to support
 
@@ -81,7 +81,7 @@ Unless specified otherwise, the following versions of SQL Server are supported w
 
 | SQL Version | Minimum Required Update | Supported Site Types | Notes |
 |------------|-------------------------|--------------------------|-------|
-| **SQL Server 2022** | RTM | CAS, Primary, Secondary | Support added in **version 2303**. SQL 2022 Compatibility Level (160) is not supported. CU must be supported by SQL lifecycle. |
+| **SQL Server 2022** | RTM | CAS, Primary, Secondary | Support added in **version 2303**. SQL 2022 Compatibility Level (160) is not currently supported for CAS and Primary sites. CU must be supported by SQL lifecycle. |
 | **SQL Server 2019** | Cumulative Update 5 (CU5) or later | CAS, Primary, Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
 | **SQL Server 2017** | Cumulative Update 2 (CU2) or later | CAS, Primary, Secondary | CU must be supported by SQL lifecycle. |
 | **SQL Server 2016** | Minimum Service Pack supported by  [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | CAS, Primary, Secondary |  |
@@ -109,7 +109,7 @@ You can use this version with the minimum service pack and cumulative update sup
 
 | SQL Version | Minimum Required Update | Supported Site Types | Notes |
 |------------|-------------------------|--------------------------|-------|
-| **SQL Server 2022 Express** | RTM | Secondary | Shipped with version 2509. SQL 2022 Compatibility Level (160) is not currently supported. |
+| **SQL Server 2022 Express** | RTM | Secondary | Shipped with version 2509. |
 | **SQL Server 2019 Express** | Cumulative Update 5 (CU5) or later | Secondary | CU5 is the minimum requirement as it resolves an issue with [scalar UDF inlining](/sql/relational-databases/user-defined-functions/scalar-udf-inlining). CU must be supported by SQL lifecycle. |
 | **SQL Server 2017 Express** | Cumulative Update 2 (CU2) or later | Secondary | CU must be supported by SQL lifecycle. |
 | **SQL Server 2016 Express** | Minimum Service Pack supported by [SQL 2016 lifecycle](/lifecycle/products/sql-server-2016) | Secondary |  |
