@@ -487,7 +487,7 @@ When using an availability group, replicas are in a healthy state.
 
 *Applies to: Site database server*
 
-The SQL Server meets the minimum requirements for site upgrade. For more information, see required [SQL Server](../../../plan-design/configs/support-for-sql-server-versions.md#other-required-sql-server-configurations) and [Database](../../../plan-design/configs/support-for-sql-server-versions.md#other-required-database-configurations) configurations.
+The SQL Server meets the minimum requirements for site upgrade. For more information, see required [SQL Server](../../../plan-design/configs/support-for-sql-server-versions.md#required-sql-server-configurations) and [Database](../../../plan-design/configs/support-for-sql-server-versions.md#required-database-configurations) configurations.
 
 ### SQL Server edition
 
