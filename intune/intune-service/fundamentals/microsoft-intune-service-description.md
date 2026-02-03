@@ -3,7 +3,7 @@ title: Microsoft Intune Service Description
 description: Microsoft Intune is a cloud-based service that helps you manage Windows, iOS/iPadOS, macOS, and Android devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 02/02/2026
+ms.date: 02/03/2026
 ms.topic: article
 ms.reviewer: mmikkelson, cacamp
 ms.collection:
@@ -67,15 +67,17 @@ Because the mobile device management ecosystem changes frequently with operating
 
 To help you plan for service changes, Microsoft notifies you at least 7-90 days prior to the service change, depending on the impact of the change. These changes might include any of the following types of change:
 
-- Changes to the end-user experience that you might want to share with your helpdesk staff or your end users. Microsoft typically provides 7 to 30 days' notice of those changes. For something like a spelling error fix, Microsoft typically doesn't call out the change in documentation. For a change in the end-user enrollment experience that's significant enough in the UI, Microsoft posts a message to customers in the Microsoft 365 Message center. So, you're notified of what's changing and have time to evaluate and update your end-user guidance before the changes roll out in production.
+- Changes to the end-user experience that you might want to share with your helpdesk staff or your end users. Microsoft typically provides 7 to 30 days' notice of those changes. For something like a spelling error fix, Microsoft typically doesn't call out the change in documentation. For a change in the end-user enrollment experience that's significant enough in the UI, Microsoft posts a message to customers. So, you're notified of what's changing and have time to evaluate and update your end-user guidance before the changes roll out in production.
 
-- Changes that require you to take action are called **Plan for Change** and typically provide about 30 days' notice. In the Microsoft 365 Message Center, the category specifically says **Plan for Change**. If Microsoft has an exact date for when the change is in production, there's an **Act By** date. That date gives you a visual queue and an explanation mark.
+  - Changes that require you to take action are called **Plan for Change** and typically provide about 30 days' notice. In the Microsoft 365 Message Center, the category specifically says **Plan for Change**. If Microsoft has an exact date for when the change is in production, there's an **Act By** date. That date gives you a visual queue and an explanation mark.
 
-- For most deprecations, Microsoft prefers to provide 90 days' notice of that deprecation. For example, if Microsoft is no longer going to support a specific version of IE, the goal is to provide 90 days' notice. Deprecations get complicated when it's another company announcing the deprecation. For example, a browser company provided notice that they won't support Silverlight with their latest build. So, Microsoft lets customers know we're dropping support of that browser, but the Microsoft notification to customers might be under the 90-day period.
+  - Service change notices and service health notices are also shown in the Intune admin center. You can see them by going to **Tenant administration** > **Tenant status** > **Service health and message center**.
+
+- For most deprecations, Microsoft prefers to provide 90 days' notice of that deprecation. For example, if Microsoft is no longer going to support a feature, the goal is to provide 90 days' notice. Deprecations get complicated when it's another company announcing the deprecation. So, Microsoft lets customers know we're dropping support as soon as possible, but the Microsoft notification to customers might be under the 90-day period.
 
 - In the event of Intune service retirement, you are notified 12 months in advance.
 
-Finally, in the rare event there's any post-incident action needed to get your service back to normal or a large change that Microsoft deems potentially disruptive based on customer feedback, Microsoft emails the service administrators using your [Microsoft 365 communication preferences](/microsoft-365/admin/manage/change-address-contact-and-more). Be sure to include a valid work email address.
+- In the rare event there's any post-incident action needed to get your service back to normal or a large change that Microsoft deems potentially disruptive based on customer feedback, Microsoft emails the service administrators using your [Microsoft 365 communication preferences](/microsoft-365/admin/manage/change-address-contact-and-more). Be sure to include a valid work email address.
 
 ## Language support
 
