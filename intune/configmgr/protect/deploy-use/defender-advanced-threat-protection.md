@@ -1,16 +1,9 @@
 ---
 title: Microsoft Defender for Endpoint
-titleSuffix: Configuration Manager
 description: Learn how to manage and monitor Microsoft Defender for Endpoint, a new service that helps enterprises respond to advanced attacks.
 ms.date: 12/16/2024
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Microsoft Defender for Endpoint

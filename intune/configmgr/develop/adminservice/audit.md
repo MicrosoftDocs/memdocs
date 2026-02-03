@@ -1,13 +1,8 @@
 ---
 title: How to view authorization failure message in administration service
-titleSuffix: Configuration Manager
 description: Learn how to audit authorization failure message in administration service.
 ms.date: 03/30/2023
-ms.service: configuration-manager
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: sunitashaw
 ---
 
 # How to view authorization failure message in administration service.

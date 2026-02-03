@@ -1,17 +1,10 @@
 ---
 title: Diagnostic and usage data for 2107
-titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 2107.
 ms.date: 08/02/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Diagnostic and usage data for version 2107

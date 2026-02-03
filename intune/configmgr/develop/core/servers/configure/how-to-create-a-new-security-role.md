@@ -1,18 +1,10 @@
 ---
 title: Create a New Security Role
 description: Learn how the administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: a97841c0-5cab-4a84-a480-3a2eb60d706a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Create a New Security Role
 The administrative assignments for a user or security group are defined by the roles and security scopes assigned to that user or security group. The Windows Management Instrumentation (WMI)`SMS_Admin` class contains all the administrators defined in Configuration Manager. The security roles for an admin are in the `SMS_Admin.Roles` property and the security scopes for an admin are in the `SMS_Admin.Categories` property. Both of these properties expose an array of strings which correspond to the identifier of the role or security scope. Both properties are also marked as `lazy` and are read-only.

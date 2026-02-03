@@ -1,17 +1,10 @@
 ---
 title: Supported SQL Server versions
-titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
 ms.date: 12/04/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Supported SQL Server versions for Configuration Manager
@@ -48,7 +41,7 @@ The site database can use the default instance of a full installation of SQL Ser
 SQL Server must be located on the site server computer.
 
 > [!IMPORTANT]
-> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. VC++ need to be upgraded to latest version on Secondary site [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. Visual C++ Redistributable need to be upgraded to latest version on Secondary site: [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ### Limitations to support
 
@@ -86,7 +79,6 @@ You can use this version of SQL Server for the following sites:
 - A central administration site
 - A primary site
 - A secondary site
-
 
 ### SQL Server 2019: Standard, Enterprise
 
@@ -192,7 +184,7 @@ The following table identifies the recommended compatibility levels for Configur
 | SQL Server 2016 | 130, 120, 110 | 130 |
 <!--| SQL Server 2014 | 120, 110 | 110 |-->
 
-To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:
+To identify the compatibility level in use for your site database, run the following SQL query on the site database server:
 
 ```SQL
 SELECT name, compatibility_level FROM sys.databases
@@ -228,17 +220,17 @@ Reserve memory for SQL Server by using SQL Server Management Studio. Set the **M
   - For a primary site: Set a minimum of 8 GB.
   - For a secondary site: Set a minimum of 4 GB.
 
-### Other required SQL Server configurations
+### Required SQL Server configurations
 
-Configuration Manager sets the below SQL Server configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios.
+Configuration Manager sets the below SQL Server configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios. Do not alter them unless instructed by Microsoft support.
 
 | Display name | Canonical name | Required value | More information link |
 |--------------|---------------|----------------|------------------|
 | CLR integration | `clr enabled` | True | [Introduction to SQL Server CLR Integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration). |
-| Allow Triggers to Fire Others | `nested triggers` | True |[Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option). |
-| Max Text Replication Size | `max text repl size (B)` | 2147483647 | See [Configure the max text repl size server configuration option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option). |
+| Allow Triggers to Fire Others | `nested triggers` | True | [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option). |
+| Max Text Replication Size | `max text repl size (B)` | 2147483647 | [Configure the max text repl size server configuration option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option). |
 
-### Other required database configurations
+### Required database configurations
 
 Configuration Manager sets the below database configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios - as well as for SQL Always On configurations.
 
@@ -260,7 +252,7 @@ Do not alter them unless instructed by Microsoft support. The [Support policies 
 | Arithmetic Abort Enabled | `ARITHABORT` | True (ON) | [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql) |
 | Concatenate Null Yields Null | `CONCAT_NULL_YIELDS_NULL` | True (ON) | [SET CONCAT_NULL_YIELDS_NULL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql) |
 | Quoted Identifiers Enabled | `QUOTED_IDENTIFIER` | True (ON) | [SET QUOTED_IDENTIFIER](/sql/t-sql/statements/set-quoted-identifier-transact-sql) |
-| Numeric Round-abort | `NUMERIC_ROUNDABORT` | FALSE (OFF) | [SET NUMERIC_ROUNDABORT](/sql/t-sql/statements/set-numeric-roundabort-transact-sql) |
+| Numeric Round-abort | `NUMERIC_ROUNDABORT` | False (OFF) | [SET NUMERIC_ROUNDABORT](/sql/t-sql/statements/set-numeric-roundabort-transact-sql) |
 
 ## <a name="bkmk_optional"></a> Optional configurations for SQL Server
 

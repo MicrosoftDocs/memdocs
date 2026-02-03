@@ -1,18 +1,10 @@
 ---
 title: SMS_AzureService class
-titleSuffix: Configuration Manager
 description: The SMS_AzureService WMI class is an SMS Provider server class in Configuration Manager, that represents a Microsoft Azure service that is a cloud distribution point for Configuration Manager.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a7506056-7433-4903-8a9a-b3dcd417bf8c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # SMS_AzureService server WMI class

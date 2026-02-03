@@ -1,17 +1,10 @@
 ---
 title: Publishing and the Active Directory schema
-titleSuffix: Configuration Manager
 description: Extend the Active Directory schema for Configuration Manager to simplify the process of deploying and configuring clients.
 ms.date: 01/21/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Prepare Active Directory for site publishing

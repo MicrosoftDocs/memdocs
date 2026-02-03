@@ -1,17 +1,10 @@
 ---
 title: Boundary group options
-titleSuffix: Configuration Manager
 description: Configure boundary group options to control policy and content distribution.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Boundary group options

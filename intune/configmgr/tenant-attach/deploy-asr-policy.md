@@ -1,16 +1,9 @@
 ---
 title: Tenant attach - Create and deploy Attack surface reduction policies from the admin center
-titleSuffix: Configuration Manager
 description: Create and deploy Attack surface reduction policies from the Microsoft Intune admin center and for Configuration Manager collections.
 ms.date: 05/31/2022
 ms.topic: install-set-up-deploy
 ms.subservice: core-infra
-ms.service: configuration-manager
-ms.assetid: 07379821-02b3-4c61-af03-329c782e10d6
-manager: apoorvseth
-author: LauraWi
-ms.author: laurawi
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

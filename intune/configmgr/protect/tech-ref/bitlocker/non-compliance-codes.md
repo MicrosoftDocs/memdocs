@@ -1,16 +1,9 @@
 ---
 title: Non-compliance codes
-titleSuffix: Configuration Manager
 description: A technical reference for the possible codes from a Configuration Manager client that's not compliant with BitLocker policy
 ms.date: 11/29/2019
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

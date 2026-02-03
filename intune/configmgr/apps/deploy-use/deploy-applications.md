@@ -1,17 +1,10 @@
 ---
 title: Deploy applications
-titleSuffix: Configuration Manager
 description: Create or simulate a deployment of an application to a device or user collection
 ms.date: 12/16/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Deploy applications with Configuration Manager
