@@ -1,18 +1,10 @@
 ---
 title: Commit Method
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method, which indicates that the content package is ready for processing.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0765d2ae-4d37-4caf-9393-f66ceb5e50d2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Commit Method in Class SMS_ContentPackage
 The `Commit` Windows Management Instrumentation (WMI) class method, in Configuration Manager, indicates that the content package is ready for processing.

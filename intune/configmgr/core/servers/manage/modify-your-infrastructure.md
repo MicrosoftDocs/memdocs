@@ -1,17 +1,10 @@
 ---
 title: Modify infrastructure
-titleSuffix: Configuration Manager
 description: Make changes or take actions that affect your Configuration Manager infrastructure.
 ms.date: 04/01/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Modify your Configuration Manager infrastructure

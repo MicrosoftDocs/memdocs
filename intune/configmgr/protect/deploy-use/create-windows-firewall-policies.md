@@ -1,16 +1,9 @@
 ---
 title: Windows Firewall policies for Endpoint Protection
-titleSuffix: Configuration Manager
 description: Learn how to create and deploy firewall policies for Endpoint Protection in System Center 2012 Configuration Manager.
 ms.date: 03/07/2017
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Create and deploy Windows Firewall policies for Endpoint Protection in Configuration Manager

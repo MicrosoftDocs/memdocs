@@ -1,17 +1,10 @@
 ---
 title: Flowchart - Update replication
-titleSuffix: Configuration Manager
 description: See the process by which an in-console update you select to install replicates to additional sites.
 ms.date: 10/06/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Flowchart - Update replication for Configuration Manager
 

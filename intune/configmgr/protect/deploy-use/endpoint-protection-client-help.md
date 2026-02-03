@@ -1,16 +1,9 @@
 ---
 title: Endpoint Protection Client Help
-titleSuffix: Configuration Manager
 description: Learn about features and enhancements in Endpoint Protection that better help you protect your computer from threats.
 ms.date: 10/05/2021
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Endpoint Protection Client Help

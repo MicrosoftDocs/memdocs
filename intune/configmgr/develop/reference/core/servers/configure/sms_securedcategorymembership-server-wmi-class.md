@@ -1,18 +1,10 @@
 ---
 title: SMS_SecuredCategoryMembership Class
 description: Learn how to use the SMS_SecuredCategoryMembership class in Configuration Manager.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 918f15b3-ce2a-408b-b83f-949e5a4f1369
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SecuredCategoryMembership Server WMI Class
 The `SMS_SecuredCategoryMembership` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents object to security category assignment.

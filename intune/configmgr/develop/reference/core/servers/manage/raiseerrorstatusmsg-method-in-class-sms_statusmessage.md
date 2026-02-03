@@ -1,18 +1,10 @@
 ---
 description: Learn how to create an error status message using RaiseErrorStatusMsg class method in Configuration Manager.
 title: RaiseErrorStatusMsg Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 200abc40-4ff2-44ba-8e8f-d49225637bf5
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # RaiseErrorStatusMsg Method in Class SMS_StatusMessage
 The `RaiseErrorStatusMsg` Windows Management Instrumentation (WMI) class method, in Configuration Manager, creates an error status message.

@@ -1,10 +1,6 @@
 ---
-author: banreet
-ms.author: banreetkaur
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 04/08/2022
-ms.localizationpriority: medium
 ---
 <!--This file is shared by the admin-console-extensions.md, admin-console-notifications.md, and community-hub-extension.md files. Some headings may be context driven by the article. -->
 

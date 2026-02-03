@@ -1,18 +1,10 @@
 ---
 title: Perform a Synchronous Query by Using Managed Code
-titleSuffix: Configuration Manager
 description: To perform a synchronous query by using the managed SMS Provider, you use *WqlConnectionManager.QueryProcessor.ExecuteQuery* method.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 0ec43754-0e84-472a-af93-e7d11ab32654
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Perform a Synchronous Configuration Manager Query by Using Managed Code
 To perform a synchronous query by using the managed SMS Provider, you use *WqlConnectionManager.QueryProcessor.ExecuteQuery* method.

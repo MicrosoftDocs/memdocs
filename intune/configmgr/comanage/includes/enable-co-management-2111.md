@@ -1,11 +1,7 @@
 ---
-ms.author: gokarthi
-author: gowdhamankarthikeyan
 ms.subservice: co-management
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 12/01/2021
-ms.localizationpriority: high
 ---
 <!-- 10964629 This file is shared by comanage/how-to-enable.md, tutorial-co-manage-clients.md, and tutorial-co-manage-new-devices.md. Don't apply H2/H3 in this include file since they are context driven by article-->
 

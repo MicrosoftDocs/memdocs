@@ -1,17 +1,10 @@
 ---
 title: State messages
-titleSuffix: Configuration Manager
 description: Descriptions of state messages in Configuration Manager.
 ms.date: 01/11/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # State messages in Configuration Manager

@@ -1,18 +1,10 @@
 ---
 title: SMS_CM_RES_COLL_CollectionID Class
-titleSuffix: Configuration Manager
 description: The SMS_CM_RES_COLL_CollectionID Windows Management Instrumentation class represents a particular member of an SMS_Collection Server WMI Class object by collection ID.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ad11fe22-620e-4259-b71d-c393e464f3ff
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CM_RES_COLL_CollectionID Server WMI Class
 The `SMS_CM_RES_COLL_CollectionID` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a particular member of an [SMS_Collection Server WMI Class](../../../../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object by collection ID.
