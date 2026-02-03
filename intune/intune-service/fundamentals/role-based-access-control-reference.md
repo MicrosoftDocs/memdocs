@@ -14,8 +14,14 @@ ms.collection:
 
 The following tables list the built-in roles for Microsoft Intune. The tables also list the permissions that are associated with each role.
 
+For a list of all available permission/actions combinations see [Custom role permissions](create-custom-role.md#custom-role-permissions) in *Create a custom role in Intune*.
+
 > [!TIP]
 > When your tenant includes a subscription to Windows 365 to support Cloud PCs, you'll also find the following Cloud PC roles in the Intune admin center. These roles aren't available by default and include permissions within Intune for tasks related to Cloud PCs. For more information about these roles, see [Cloud PC built-in roles](/windows-365/enterprise/role-based-access#cloud-pc-built-in-roles) in the Windows 365 documentation.
+
+
+> [!TIP]
+> For detailed descriptions of each permission and instructions for creating custom roles with specific permissions, see [Create a custom role in Intune](create-custom-role.md).
 
 > [!NOTE]
 > This article was partially created with the help of artificial intelligence. Before publishing, an author reviewed and revised the content as needed. See [Our principles for using AI-generated content in Microsoft Learn](https://aka.ms/ai-content-principles).

@@ -3,7 +3,7 @@ title: Create a custom role in Intune
 description: Learn how to create a custom role in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 07/28/2025
+ms.date: 02/03/2026
 ms.topic: article
 ms.collection:
   - M365-identity-device-management
@@ -46,21 +46,22 @@ You can also copy an existing role.
 
 ## Custom role permissions
 
-> [!NOTE]
-> You can view and manage VPP apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change doesn't apply to Intune for Education tenants who still need to assign the **Managed apps** permission.
-
 The following permissions are available when creating custom roles.
 
-| Category / permission | Description |
-| -------------------- | ---------------- |
+> [!TIP]
+> For a list of permissions for each Intune built-in role, see [Intune built-in roles and their permissions](../fundamentals/role-based-access-control-reference.md).
+
+| Permission / Action | Description |
+| ---------- | ----------- |
 | Admin tasks/Create | Allows creation of new device management administrative tasks. |
 | Admin tasks/Delete | Allows deletion of device management administrative tasks. |
 | Admin tasks/Read | Allows read access to device management administrative tasks. |
 | Admin tasks/Update | Allows updating of device management administrative task properties and status. |
-| Android Enterprise/Read | View the Android Enterprise configuration used to sync applications with the Play for Work store or view the Android for Work enrollment prerequisites and enrollment profiles. |
-| Android Enterprise/Update app sync | Manage or change the Android Enterprise configuration that is used to sync applications with the Play for Work store, or sync the apps that you approved from the store with Intune. |
-| Android Enterprise/Update onboarding | Manage or change the Android Enterprise configuration used to enroll Android for Work devices or manage the Android for Work enrollment profiles. |
-| Android Enterprise/Update Enrollment Profiles | Manage or change AOSP and Android for work Device Owner enrollment profiles that are used to enroll devices. |
+| Android Enterprise/Enrollment time device membership assignment for Android Enterprise | Allows Intune to assign devices to Entra ID groups during enrollment. |
+| Android Enterprise/Read | View the Android Enterprise configuration used to sync applications with the Managed Google Play store or view the Android Enterprise enrollment prerequisites and enrollment profiles. |
+| Android Enterprise/Update app sync | Manage or change the Managed Google Play configuration used to sync applications with the Managed Google Play store, or sync the apps you've approved from the store with Intune. |
+| Android Enterprise/Update Enrollment Profiles | Manage or change Android Enterprise Device Owner enrollment profiles used to enroll devices. |
+| Android Enterprise/Update onboarding | Manage or change the Android Enterprise binding to Managed Google Play and other account-wide configurations. |
 | Android FOTA/Assign | Assign Android firmware over-the-air (FOTA) deployments to Microsoft Entra security groups. |
 | Android FOTA/Delete | Delete and cancel pending Android firmware over-the-air (FOTA) deployments and delete deployment history. |
 | Android FOTA/Create | Create and manage all aspects of Android firmware over-the-air (FOTA) deployments. |
@@ -85,16 +86,20 @@ The following permissions are available when creating custom roles.
 | Chrome Enterprise/Read | View the organization's Chrome Enterprise connection settings and device details for Chrome OS devices. |
 | Chrome Enterprise/Update connection settings | Manage or change the organization's Chrome Enterprise connection settings. |
 | Cloud attached devices/Enroll Now | Enrolls an eligible CM device into co-management. |
+| Cloud attached devices/Run CMPivot query | Displays the *CMPivot* page for Configuration Manager cloud attached devices. |
+| Cloud attached devices/Run script | Displays the *Run script* action and allows the user to run scripts on Configuration Manager cloud attached devices. |
+| Cloud attached devices/Take application actions | Displays application actions in the *Applications* page and allows the user to take application actions on Configuration Manager cloud attached devices. |
+| Cloud attached devices/View applications | Displays the *Applications* page for Configuration Manager cloud attached devices. |
+| Cloud attached devices/View client details | Displays the *Client details* page for Configuration Manager cloud attached devices. |
 | Cloud attached devices/View collections | Displays the *Collections* page for Configuration Manager cloud attached devices. |
 | Cloud attached devices/View resource explorer | Displays the *Resource explorer* page for Configuration Manager cloud attached devices. |
-| Cloud attached devices/View timeline | Displays the *Timeline* page for Configuration Manager cloud attached devices. |
-| Cloud attached devices/View software updates | Displays the *Software updates* page for Configuration Manager cloud attached devices. |
 | Cloud attached devices/View scripts | Displays the *Scripts* page for Configuration Manager cloud attached devices. |
-| Cloud attached devices/Run script | Displays the *Run script* action and allows the user to run scripts on Configuration Manager cloud attached devices. |
-| Cloud attached devices/Run CMPivot query | Displays the *CMPivot* page for Configuration Manager cloud attached devices. |
-| Cloud attached devices/View client details | Displays the *Client details* page for Configuration Manager cloud attached devices. |
-| Cloud attached devices/View applications | Displays the *Applications* page for Configuration Manager cloud attached devices. |
-| Cloud attached devices/Take application actions | Displays application actions in the *Applications* page and allows the user to take application actions on Configuration Manager cloud attached devices. |
+| Cloud attached devices/View software updates | Displays the *Software updates* page for Configuration Manager cloud attached devices. |
+| Cloud attached devices/View timeline | Displays the *Timeline* page for Configuration Manager cloud attached devices. |
+| Cloud PKI/Create certificate authorities (CAs) | Create a root or issuing certification authority. |
+| Cloud PKI/Disable and reenable CAs | Pause or resume certification authorities. |
+| Cloud PKI/Read CAs | Read CAs and the leaf certificates issued by them. |
+| Cloud PKI/Revoke issued leaf certificates | Manually revoke a certificate issued by an issuing certification authority. This permission also requires the Read CAs permission. |
 | Corporate device identifiers/Create | Create new corporate device identifiers or import a CSV file containing a list of corporate device identifiers. |
 | Corporate device identifiers/Delete | Delete IMEI or serial numbers used as corporate device identifiers. |
 | Corporate device identifiers/Read | View the IMEI or serial numbers used as corporate device identifiers. |
@@ -104,6 +109,10 @@ The following permissions are available when creating custom roles.
 | Customization/Delete | Delete customization options for the Company Portal. |
 | Customization/Read | Read customization options for the Company Portal. |
 | Customization/Update | Update customization options for the Company Portal. |
+| Deployment Plans/Create | Create Deployment Plans. |
+| Deployment Plans/Delete | Delete Deployment Plans. |
+| Deployment Plans/Read | Read Deployment Plans. |
+| Deployment Plans/Update | Delete Deployment Plans. |
 | Derived Credentials/Modify | Configure the Derived Credentials for your Microsoft Intune tenant. |
 | Derived Credentials/Read | View the Derived Credentials for your Microsoft Intune tenant. |
 | Device compliance policies/Assign | Assign device compliance policies to Microsoft Entra security groups, and assign Exchange on-premises access to Microsoft Entra security groups. |
@@ -118,6 +127,7 @@ The following permissions are available when creating custom roles.
 | Device configurations/Read | View device configuration profiles. |
 | Device configurations/Update | Change device configuration profiles. |
 | Device configurations/View Reports | View, generate, and export device configuration reports and reports for endpoint security policies. |
+| Device configurations/Update Windows Backup and Restore | Change Windows Backup and Restore settings. |
 | Device enrollment managers/Read | View the list of device enrollment manager accounts. |
 | Device enrollment managers/Update | Create new device enrollment manager accounts, or delete device enrollment manager accounts. |
 | Endpoint Analytics/Create | Create new baselines and edit endpoint analytics settings. |
@@ -130,6 +140,8 @@ The following permissions are available when creating custom roles.
 | Endpoint Detection and Response/Read | Read Endpoint Detection and Response policies. - *Added with the 2406 service release*. |
 | Endpoint Detection and Response/Update | Change Endpoint Detection and Response policies. - *Added with the 2406 service release*. |
 | Endpoint Detection and Response/View Reports | Generate, view, or export reports for Endpoint Detection and Response policies. - *Added with the 2406 service release*. |
+| Endpoint Privilege Management Elevation Requests/Modify elevation requests | Allows administrators to approve, deny, or revoke Endpoint Privilege Management (EPM) support approved requests from end users. |
+| Endpoint Privilege Management Elevation Requests/View elevation requests | Allows administrators to view Endpoint Privilege Management (EPM) support approved requests. |
 | Endpoint Privilege Management Policy Authoring/Assign | Allows administrators to assign Endpoint Privilege Management (EPM) policies. |
 | Endpoint Privilege Management Policy Authoring/Create | Allows administrators to create Endpoint Privilege Management (EPM) policies. |
 | Endpoint Privilege Management Policy Authoring/Delete | Allows administrators to delete Endpoint Privilege Management (EPM) policies. |
@@ -137,6 +149,7 @@ The following permissions are available when creating custom roles.
 | Endpoint Privilege Management Policy Authoring/Update | Allows administrators to update Endpoint Privilege Management (EPM) policies. |
 | Endpoint Privilege Management Policy Authoring/View Reports | Allows administrators to view Endpoint Privilege Management (EPM) reports. |
 | Endpoint protection reports/Read | View endpoint protection reports. |
+
 | Enrollment programs/Assign profile | Manage Windows Autopilot deployment profile assignment settings. |
 | Enrollment programs/Create device | Import Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. |
 | Enrollment programs/Create profile | Create new profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. |
@@ -144,15 +157,21 @@ The following permissions are available when creating custom roles.
 | Enrollment programs/Delete device | Delete Apple devices for the Device Enrollment Program, Apple School or Business Manager, Apple Configurator or Windows Autopilot devices. |
 | Enrollment programs/Delete profile | Delete profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. |
 | Enrollment programs/Delete token | Delete Apple Device Enrollment Program or Apple School Manager token .pem file(s). |
+| Enrollment programs/Enrollment time device membership assignment | Allows Intune to assign devices to Entra ID groups during enrollment. |
 | Enrollment programs/Read device | View Apple devices for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot devices. |
 | Enrollment programs/Read profile | View profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. |
 | Enrollment programs/Read token | View the Apple Device Enrollment Program or Apple School Manager token status. |
+| Enrollment programs/Release Apple devices | 
+Release Apple ADE (automated device enrollment) enrolled devices from Apple Business or School Manager and Intune. |
+| Enrollment programs/Rotate macOS admin password | 
+Rotate local admin account password for macOS devices enrolled through Apple's automated device enrollment. |
 | Enrollment programs/Sync device | Initiate the Sync command for Windows Autopilot devices. |
 | Enrollment programs/Update profile | Manage profiles for the Device Enrollment Program, Apple School Manager, Apple Configurator, or Windows Autopilot. |
 | Enrollment programs/Update token | Upload the Apple Device Enrollment or Apple School Manager token and sync Apple Device Enrollment Program or Apple School Manager devices. |
+| Enrollment programs/View macOS admin password | View local admin account password for macOS devices enrolled through Apple's automated device enrollment. |
 | [Filters/Create](filters.md#create-a-filter) | Create new filter. |
 | [Filters/Delete](filters.md#delete-a-filter) | Delete filters. |
-| Filters/Read | View filters. |
+| [Filters/Read](filters.md#create-a-filter) | View filters. |
 | [Filters/Update](filters.md#change-an-existing-filter) | Edit filters. |
 | Intune data warehouse/Read | View all data and reports from the data warehouse. Power BI or other reporting services can use this data. |
 | Managed apps/Assign | Assign application protection policies to Microsoft Entra security groups. |
@@ -162,11 +181,10 @@ The following permissions are available when creating custom roles.
 | Managed apps/Update | Change application protection policies, or delete pending wipe requests for protected apps. |
 | Managed apps/Wipe | Create a wipe request to selectively remove company data from a protected app. |
 | Managed Device Cleanup Rules/Update | Change the managed device cleanup rules. |
-| Managed Device Cleanup Settings/Update | Change the managed device cleanup settings.<br/><br/> Note: This permission is replaced by **Managed Device Cleanup Rules/Update**, should not be used in new role configurations, and will be removed from Intune with a future update. |
+| Managed Device Cleanup Settings/Update | Change the managed device cleanup settings.<br/><br/> *Note: This permission is replaced by **Managed Device Cleanup Rules/Update**, should not be used in new role configurations, and will be removed from Intune with a future update.* |
 | Managed devices/Delete | Delete Intune managed devices. Intune can no longer manage Deleted devices, and the device can no longer access company resources. Company data could be wiped from the device if a user tries to check-in after it's deleted. |
 | Managed devices/Read | View Intune managed devices. |
 | Managed devices/Query | Allows Intune to query a managed device for the purposes of retrieving detailed inventory information, device state, or other properties of a managed device from the device itself. |
-| Managed devices/Read | View Intune managed devices. |
 | Managed devices/Read Bios Password | Read BIOS password for devices with managed BIOS and firmware configuration. |
 | Managed devices/Set primary user | Choose, change, or remove the primary user of a managed device. This permission must be used in combination with the managed devices read and update permissions. |
 | Managed devices/Update | Change settings or ownership properties of a managed device. This permission doesn't enable remote actions for devices. To perform remote actions on the device, grant one or more of the Remote Task permissions. |
@@ -181,14 +199,15 @@ The following permissions are available when creating custom roles.
 | Microsoft Tunnel Gateway/Read | View Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports, and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel. |
 | Microsoft Tunnel Gateway/Update | Update Microsoft Tunnel Gateway server configurations and sites. Server configurations include settings for IP address ranges, DNS servers, ports, and split tunneling rules. Sites are logical groupings of multiple servers that support Microsoft Tunnel. |
 | Mobile apps/Assign | Assign Windows, macOS or mobile applications or eBooks to Microsoft Entra security groups. |
-| Mobile apps/Create | Add new Windows, macOS or mobile applications to Intune such as store apps, line-of-business apps, web-links, or built-in apps. You can also add books purchased through the Apple Volume Purchase Program or add eBook categories. You can setup iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. |
-| Mobile apps/Delete | Delete Windows, macOS or mobile applications such as store apps, line-of-business apps, web-links, or built-in apps. You can also delete books purchased through the Apple Volume Purchase Program or delete eBook categories. You can delete iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. |
-| Mobile apps/Read | View Windows, macOS or mobile applications such as store apps, line-of-business apps, web-links, or built-in apps. You can also view books purchased through the Apple Volume Purchase Program or add eBook categories. You can view iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. |
+| Mobile apps/Create | Add new Windows, macOS or mobile applications to Intune such as store apps, line-of-business apps, web-links, or built-in apps. You can also add books purchased through the Apple Volume Purchase Program or add eBook categories. You can setup iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. *See the note following this table regarding Apple Volume Purchase Program (VPP) apps.* |
+| Mobile apps/Delete | Delete Windows, macOS or mobile applications such as store apps, line-of-business apps, web-links, or built-in apps. You can also delete books purchased through the Apple Volume Purchase Program or delete eBook categories. You can delete iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. *See the note following this table regarding Apple Volume Purchase Program (VPP) apps.* |
+| Mobile apps/Read | View Windows, macOS or mobile applications such as store apps, line-of-business apps, web-links, or built-in apps. You can also view books purchased through the Apple Volume Purchase Program or add eBook categories. You can view iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. *See the note following this table regarding Apple Volume Purchase Program (VPP) apps.* |
 | Mobile apps/Relate | Create relationships with other managed apps using Dependencies and Supersedence features. Without this permission, IT admins aren't able to add App dependency or supersedence relationships when creating or editing Win32 apps. |
-| Mobile apps/Update | Manage Windows, macOS or mobile applications such as store apps, line-of-business apps, web-links, or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. |
-| Mobile apps/View reports | View reports on Windows, macOS or mobile applications such as store apps, line-of-business apps, web links, and built-in apps. |
+| Mobile apps/Update | Manage Windows, macOS or mobile applications such as store apps, line-of-business apps, web-links, or built-in apps. You can also manage books purchased through the Apple Volume Purchase Program or add eBook categories. You can manage iOS VPP Tokens, Windows Symantec certificates, Windows side loading keys, app categories, or the Android for Work connection. *See the note following this table regarding Apple Volume Purchase Program (VPP) apps.* |
+| Mobile apps/View reports | View reports on Windows, macOS or mobile applications such as store apps, line-of-business apps, web links, and built-in apps. *See the note following this table regarding Apple Volume Purchase Program (VPP) apps.* |
 | Mobile Threat Defense/Modify | Add, remove, or modify the Mobile Threat Defense connectors between Intune and your chosen MTD vendors. |
 | Mobile Threat Defense/Read | View the Mobile Threat Defense connectors between Intune and your chosen MTD vendors. |
+| Multi Admin Approval/Approval for Multi Admin Approval | Approve or reject approval requests for Multi Admin Approval configuration |
 | Multi Admin Approval/Create access policy | Create access policies for Multi Admin Approval. |
 | Multi Admin Approval/Delete access policy | Delete access policies for Multi Admin Approval. |
 | Multi Admin Approval/Read access policy | Read access policies for Multi Admin Approval. |
@@ -203,6 +222,11 @@ The following permissions are available when creating custom roles.
 | Organizational messages/Delete | Delete organizational messages. |
 | Organization messages/Assign | Assign organizational messages. |
 | Organizational messages/Update organizational message control | Enable or block organizational messages directly from Microsoft, while allowing admin messages to display. |
+| Operating System Recovery Configurations/Assign Profiles | Assign Operating System Recovery profiles. |
+| Operating System Recovery Configurations/Create Profiles | Create Operating System Recovery profiles. |
+| Operating System Recovery Configurations/Delete Profiles | Delete Operating System Recovery profiles. |
+| Operating System Recovery Configurations/Read Profiles | Read Operating System Recovery profiles. |
+| Operating System Recovery Configurations/Update Profiles | Update Operating System Recovery profiles. |
 | Partner Device Management/Modify | Configure the Compliance Connector for Jamf. |
 | Partner Device Management/Read | View the Compliance Connector for Jamf. |
 | Policy Sets/Assign | Assign Policy Sets to Microsoft Entra security groups. |
@@ -224,38 +248,43 @@ The following permissions are available when creating custom roles.
 | Remote Help app/Unattended control | For Android devices, unattended control starts Remote Help as soon as the helper selects a new session, without a sharer having to grant access. |
 | Remote Help app/View screen | View screen allows the helper to view the sharer's device when Remote Help is enabled. |
 | Remote tasks/Bypass activation lock | Remove the Activation Lock from supervised devices without requiring the user's Apple ID and password. This may be required if a user leaves the company and returns the device; without the user's Apple ID and password, there's no way to reactivate the device. Or, you need to reassign some devices to a different department during a device refresh in your organization. You can only reassign devices that don't have Activation Lock enabled. You must also have the Managed Device Read permission to view devices in the Azure portal before initiating this remote task. |
-| Remote tasks/Change organizational unit | Move a Chrome Enterprise device to an existing organizational unit in your Google Workspace domain. |
+| Remote tasks/Change assignments | Allows IT Admin to initiate an change assignments action. Action allows the selection of assigned applications and configuration to be removed from a device. Additionally, previously removed applications and configuration to be restored on the device. |
 | Remote tasks/Clean PC | Initiate a Fresh start device action. This action removes any apps that are installed on a Windows device. |
 | Remote tasks/Collect diagnostics | Collect device diagnostics. |
 | Remote tasks/Disable lost mode | Turn off the lost mode for an iOS device. |
 | Remote tasks/Enable lost mode | Initiate lost mode on lost or stolen iOS devices. This mode lets you enter a message and a phone number that appears on the lock screen of the device. To use lost mode, the device must be a corporate-owned iOS device that is in supervised mode. |
 | Remote tasks/Enable Windows IntuneAgent | Enable Windows Intune agent. |
-| Remote tasks/Get filevault key. | Get Mac FileVault key. |
+| Remote tasks/Get FileVault key. | Get Mac FileVault key. |
 | Remote tasks/Initiate Configuration Manager action | Initiate a remote action on a device managed by Configuration Manager. |
 | Remote tasks/Locate device | View the location of a lost or stolen corporate-owned device on a map. Can locate supervised iOS/iPadOS devices, Android dedicated devices (COSU), and Windows devices. |
 | Remote tasks/Manage shared device users | Sign out the user with the current session on a shared device. This action doesn't delete users from a shared device but it forces the user with a current session to be logged out. |
+| Remote tasks/Offboard | Offboard the devices associated with a user, when the user is leaving the organization. |
 | Remote tasks/Offer remote assistance | Initiate a remote assistance session with a user's device by using a remote assistance provider. The remote assistance option for your provider must be enabled for your tenant. |
-| Remote tasks/Play lost mode sound | Initiate the lost mode ring sound on a device that is placed in MDM Lost mode. |
 | Remote tasks/Play sound to locate lost devices | Play a sound to locate lost Android dedicated devices, or iOS devices placed in MDM lost mode. |
 | Remote tasks/Reboot now | Initiates a device restart. This causes the device you choose to be restarted. The device owner isn't automatically notified of the restart, and they might lose work. |
 | Remote tasks/Recover MDM Key | Initiate Mobile Device Management (MDM) certificate's private key recovery with TPM attestation. |
 | Remote tasks/Remove Device Firmware Configuration Interface Management. | Allows admin to initiate removal of device from Device Firmware Configuration Interface management before deleting the Intune and Windows Autopilot records. |
 | Remote tasks/Remote lock | The Remote lock device action locks the device. To unlock the device, the device owner enters their passcode. You can remotely lock devices that have a PIN or password set. Devices that don't have a PIN or password can't be remotely locked. |
 | Remote tasks/Reset passcode | Initiates a forced removal of the passcode, and requires the device user to set a new passcode. Supported on iOS devices, and certain later versions of Android and Android for work. Not supported on older Android versions, macOS, or Windows. |
+| Remote tasks/Restore Managed Home Screen | 
+Manually restore Managed Home Screen on Android Enterprise devices to return them to kiosk mode from a temporarily suspended state. Complements the temporary suspend action for complete kiosk mode management. |
 | Remote tasks/Retire | Initiates a retire action for a device. Also called remove company data. The Remove company data action removes managed app data (where applicable), settings, and email profiles that were assigned by using Intune. The device is removed from Intune management. This happens the next time the device checks in and receives the remote Remove company data action. Remove company data leaves the user's personal data on the device. |
-| Remote tasks/Revoke App Licenses | Revokes any iOS VPP application licenses that are associated with the device. |
+| Remote tasks/Revoke App Licenses | Revokes any iOS VPP application licenses that are associated with the device. *See the note following this table regarding Apple Volume Purchase Program (VPP) apps.* |
 | Remote tasks/Rotate BitLockerKeys (preview) | Initiates a key rotation for BitLocker Recovery Passwords on the device. |
-| Remote tasks/Rotate filevault key. | Rotate Mac FileVault key. |
+| Remote tasks/Rotate FileVault key. | Rotate Mac FileVault key. |
 | Remote tasks/Rotate Local Admin Password | Initiates a manual rotation for the local admin password on the device. |
+| Remote tasks/Rotate macOS recovery lock password | |
 | Remote tasks/Run Pause Configuration Refresh | Initiate On Demand pause configuration refresh. |
 | Remote tasks/Run Remediation | Initiate On Demand Proactive Remediation. |
-| Remote tasks/Indicates remote device action to initiate Mobile Device Management (MDM) attestation if device is capable for it. |
+| Remote tasks/Indicates remote device action to initiate Mobile Device Management (MDM) attestation if device is capable for it. | |
 | Remote tasks/Send custom notifications | Allows admin to send customized notifications to devices. Devices receive notifications in Company Portal. |
 | Remote tasks/Set device name | Set or change the name of a device. |
 | Remote tasks/Shut down | Initiates a shutdown of the device, and automatically closes all applications and running services and leaves the device in a powered-off state. |
 | Remote tasks/Sync devices. | Initiates a sync operation on the device and forces the selected device to immediately check in with Intune. When a device checks in, it immediately receives any pending actions or policies that are assigned to it. |
+| Remote tasks/Temporarily suspend Managed Home Screen | |
 | Remote tasks/Update cellular data plan | Activate the data plan for cellular iOS/iPadOS devices that support eSIM. |
 | Remote tasks/Update device account | Allows changing the device account associated with Surface Hub devices, and set authentication options such as password rotation. |
+| Remote tasks/View macOS recovery lock password | |
 | Remote tasks/Windows defender | Initiates a Windows Defender signature update. |
 | Remote tasks/Wipe | Initiates a wipe of the device. Also called a factory reset. The Factory reset action restores a device to its factory default settings. The user data is kept or wiped depending on whether or not you choose the Retain enrollment state and user account checkbox. |
 | Roles/Assign | Assign Intune built-in or custom roles to Microsoft Entra security groups. |
@@ -282,6 +311,9 @@ The following permissions are available when creating custom roles.
 | Terms and conditions/Update | Manage existing terms and conditions but not assignments. |
 | Windows Enterprise Certificate/Modify | Add, remove, or modify the code-signing certificate used to distribute line-of-business apps to your managed Windows devices. |
 | Windows Enterprise Certificate/Read | View the code-signing certificate used to distribute line-of-business apps to your managed Windows devices. |
+
+> [!NOTE]
+> You can view and manage Apple Volume Purchase Program (VPP) apps with only the **Mobile apps** permission assigned. Previously, the **Managed apps** permission was required to view and manage VPP apps. This change doesn't apply to Intune for Education tenants who still need to assign the **Managed apps** permission.
 
 ## Next steps
 
