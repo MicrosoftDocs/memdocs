@@ -5,16 +5,10 @@ summary: Fundamental information about the Configuration Manager product, includ
 
 metadata:
   title: Core infrastructure documentation
-  titleSuffix: Configuration Manager
   description: Fundamental information about the Configuration Manager product, including site servers and clients.
   ms.subservice: core-infra
-  ms.service: configuration-manager
   ms.topic: landing-page
-  author: banreet
-  ms.author: banreetkaur
-  manager: apoorvseth
   ms.date: 10/05/2021
-  ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | sample | tutorial | video | whats-new
 

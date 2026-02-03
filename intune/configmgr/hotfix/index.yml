@@ -5,16 +5,10 @@ summary: Knowledge Base articles for Microsoft Configuration Manager hotfixes, u
 
 metadata:
   title: Configuration Manager hotfixes
-  titleSuffix: Configuration Manager
   description: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and summary articles for new releases.
   ms.subservice: core-infra
-  ms.service: configuration-manager
   ms.topic: landing-page
-  author: bhuney
-  ms.author: brianhun
-  manager: dougeby
   ms.date: 12/09/2021
-  ms.localizationpriority: high
 
 landingContent:
   - title: Configuration Manager 2509

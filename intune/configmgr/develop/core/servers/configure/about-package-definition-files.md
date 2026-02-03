@@ -1,18 +1,10 @@
 ---
 description: Learn how to use Configuration Manager to help automate package creation using package definition files.
 title: About Package Definition Files
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.assetid: fbd5743c-ff78-4890-9e32-5a133c02878c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # About Package Definition Files
 Package definition files are predefined scripts that you can use to help automate package creation with Configuration Manager. These are files that contain the package and program information that is needed to distribute a package to clients, with the exception of the source file location.

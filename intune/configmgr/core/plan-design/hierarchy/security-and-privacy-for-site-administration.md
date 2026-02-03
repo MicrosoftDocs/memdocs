@@ -1,17 +1,10 @@
 ---
 title: Site administration security and privacy
-titleSuffix: Configuration Manager
 description: Optimize security and privacy for site administration in Configuration Manager
 ms.date: 04/05/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Security and privacy for site administration in Configuration Manager

@@ -1,17 +1,10 @@
 ---
 title: Setup wizard
-titleSuffix: Configuration Manager
 description: Use the Configuration Manager setup wizard to install a new site.
 ms.date: 12/16/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: overview
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use the Setup Wizard to install Configuration Manager sites

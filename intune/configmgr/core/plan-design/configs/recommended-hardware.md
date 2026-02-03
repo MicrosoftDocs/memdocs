@@ -1,17 +1,10 @@
 ---
 title: Recommended hardware
-titleSuffix: Configuration Manager
 description: Get hardware recommendations to help you scale your Configuration Manager environment beyond a basic deployment.
 ms.date: 03/04/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Recommended hardware for Configuration Manager

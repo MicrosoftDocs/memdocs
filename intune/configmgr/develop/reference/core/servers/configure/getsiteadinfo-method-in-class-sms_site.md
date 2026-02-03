@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the GetSiteADInfo method to get Active Directory information of the site server.
 title: GetSiteADInfo Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 34cd1ffb-97f9-4177-8b1b-751203358528
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetSiteADInfo Method in Class SMS_Site
 The `GetSiteADInfo` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets Active Directory information of site server.

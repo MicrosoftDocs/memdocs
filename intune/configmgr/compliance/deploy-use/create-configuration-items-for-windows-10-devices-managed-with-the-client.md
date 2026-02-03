@@ -1,17 +1,10 @@
 ---
 title: Create configuration items for Windows 10 or later
-titleSuffix: Configuration Manager
 description: Use a configuration item to manage settings for Windows 10 or later computers that are managed by the Configuration Manager client.
 ms.date: 10/05/2021
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Create configuration items for Windows 10 or later devices
