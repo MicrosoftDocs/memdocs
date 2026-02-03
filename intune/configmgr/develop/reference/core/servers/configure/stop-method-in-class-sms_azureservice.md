@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the Stop method to stop a Microsoft Azure service that represents a cloud distribution point for Configuration Manager.
 title: Stop method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6dbd4a5d-a1aa-403e-9431-b97276d2b200
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Stop method in class SMS_AzureService

@@ -1,16 +1,9 @@
 ---
 title: Windows in-place upgrade
-titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to upgrade Windows to a later version.
 ms.date: 12/19/2024
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: upgrade-and-migration-article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

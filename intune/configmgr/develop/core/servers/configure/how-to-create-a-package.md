@@ -1,18 +1,10 @@
 ---
 title: Create a Package
-titleSuffix: Configuration Manager
 description: Learn how to create a package in Configuration Manager by using the SMS_Package class and class properties.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 2c295b3b-e23c-4084-ad4a-8bba328ef6fc
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Create a Package
 The following example shows how to create a package in Configuration Manager by using the `SMS_Package` class and class properties.

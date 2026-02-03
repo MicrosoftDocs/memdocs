@@ -1,17 +1,10 @@
 ---
 title: Site system role options
-titleSuffix: Configuration Manager
 description: Consult this article for details about Configuration Manager site system roles that are not necessarily self-explanatory.
 ms.date: 03/29/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configuration options for site system roles in Configuration Manager

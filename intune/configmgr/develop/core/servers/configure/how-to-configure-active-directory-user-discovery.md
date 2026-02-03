@@ -1,18 +1,10 @@
 ---
 description: Learn how to configure the Active Directory User Discovery settings by modifying the necessary site control file settings.
 title: Configure Active Directory User Discovery
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: d64464a2-dba8-4e87-a487-bfdeb9073e12
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Configure Active Directory User Discovery
 In Configuration Manager, you configure the Active Directory User Discovery settings by modifying the necessary site control file settings.

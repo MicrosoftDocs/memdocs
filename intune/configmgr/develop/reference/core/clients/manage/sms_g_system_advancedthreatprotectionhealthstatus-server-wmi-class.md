@@ -1,18 +1,10 @@
 ---
 title: SMS_G_System_AdvancedThreatProtectionHealthStatus Class
-titleSuffix: Configuration Manager
 ms.date: 05/13/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 677fcbd0-9b4d-4e44-8601-3975dc59c9b9
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 description: An overview of SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
-ms.reviewer: mstewart
 ---
 # SMS_G_System_AdvancedThreatProtectionHealthStatus Server WMI Class
 The  `SMS_G_System_AdvancedThreatProtectionHealthStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Microsoft Defender for Endpoint client health status.

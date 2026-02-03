@@ -1,16 +1,9 @@
 ---
 title: Manage drivers
-titleSuffix: Configuration Manager
 description: Use the Configuration Manager driver catalog to import device drivers, group drivers in packages, and distribute those packages to distribution points.
 ms.date: 11/30/2020
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

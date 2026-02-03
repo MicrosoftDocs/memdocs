@@ -1,18 +1,10 @@
 ---
 title: SetSourceSite method in class SMS_DeviceSettingPackage
-titleSuffix: Configuration Manager
 description: The SetSourceSite WMI class method sets the code of the source site for the device setting package.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 74fbfebb-62da-42c8-a67b-45192a660cf4
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SetSourceSite Method in Class SMS_DeviceSettingPackage
 The `SetSourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the code of the source site for the device setting package.

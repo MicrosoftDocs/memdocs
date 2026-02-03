@@ -1,17 +1,10 @@
 ---
 title: Flowchart - promote site server
-titleSuffix: Configuration Manager
 description: A flowchart diagram for how the site server in passive mode is promoted to active in Configuration Manager.
 ms.date: 07/30/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Flowchart - Promote site server (planned)
