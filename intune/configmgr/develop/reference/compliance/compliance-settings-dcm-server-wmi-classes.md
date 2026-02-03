@@ -1,18 +1,10 @@
 ---
 title: Compliance settings classes
-titleSuffix: Configuration Manager
 description: Assists you in assessing computer compliance. You can also use these classes to check for compliance with software updates and security settings.
 ms.date: 08/02/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 4dbfce7f-1b58-4998-9b38-f5f3c3ba77c6
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About compliance settings server WMI classes

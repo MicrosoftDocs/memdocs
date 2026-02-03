@@ -1,18 +1,10 @@
 ---
 title: Deployment models for Microsoft Intune cloud PKI
 description: Describes the deployment options for Microsoft Intune cloud PKI.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/06/2024
 ms.topic: how-to
-ms.reviewer: wicale
-ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- certificates
-- IntuneSuite
-- sub-intune-suite
 ---
+
 # Microsoft Cloud PKI deployment for Microsoft Intune
 
 This article describes the deployment models supported by Microsoft Intune and the Microsoft Cloud PKI service.
@@ -29,7 +21,7 @@ Alternatively, you can *bring your own certificate authority (BYOCA)*. With this
 
 ## Before you begin
 
-It's important to review and understand certificate trust chains before you begin deployment. For more PKI concepts and fundamentals, see [Microsoft Cloud PKI fundamentals](microsoft-cloud-pki-fundamentals.md).
+It's important to review and understand certificate trust chains before you begin deployment. For more PKI concepts and fundamentals, see [Microsoft Cloud PKI fundamentals](fundamentals.md).
 
 ### Identify relying parties
 
@@ -94,12 +86,12 @@ Relying parties require the following CA certificate trust chain.
 The following diagram shows certificates in action for both client and relying parties.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the certificate flow for client and relying parties.](./media/microsoft-cloud-pki-deployment/certs-in-play-for-CBA.png)
+> ![Diagram of the certificate flow for client and relying parties.](./images/certs-in-play-for-CBA.png)
 
 The following diagram shows the respective CA certificate trust chains that must be deployed to both managed devices and relying parties. The CA trust chains ensure Cloud PKI certificates issued to Intune-managed devices are trusted and can be used to authenticate to relying parties.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the Microsoft Cloud PKI root CA deployment flow.](./media/microsoft-cloud-pki-deployment/root-ca-deployment.png)
+> ![Diagram of the Microsoft Cloud PKI root CA deployment flow.](./images/root-ca-deployment.png)
 
 
 ### Option 2: Bring your own CA (BYOCA)
@@ -128,7 +120,7 @@ Relying parties trust the Cloud PKI BYOCA issued SCEP certificate to the managed
 The following diagram illustrates how the respective CA certificate trust chains are deployed to Intune managed devices.
 
 > [!div class="mx-imgBorder"]
-> ![Diagram of the CA certificate trust chains that must be deployed to Intune managed devices.](./media/microsoft-cloud-pki-deployment/byoca-ca-deployment.png)
+> ![Diagram of the CA certificate trust chains that must be deployed to Intune managed devices.](./images/byoca-ca-deployment.png)
 `*` In this diagram, *private* refers to the Active Directory Certificate Service or a non-Microsoft service.
 
 ## Summary

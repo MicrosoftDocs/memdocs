@@ -117,6 +117,8 @@
         "configmgr/core/misc/**/*": "None"
       },
       "author": {
+        "configmgr/**/*.md": "sccmavenger",
+        "configmgr/**/*.yml": "sccmavenger",
         "intune-service/apps/**/*.md": "nicholasswhite",
         "intune-service/apps/**/*.yml": "nicholasswhite",
         "intune-service/copilot/**/*.md": "mandiohlinger",
@@ -133,12 +135,16 @@
         "endpoint-analytics/**/*.yml": "paolomatarazzo",
         "advanced-analytics/**/*.md": "paolomatarazzo",
         "advanced-analytics/**/*.yml": "paolomatarazzo",
+        "cloud-pki/**/*.md": "paolomatarazzo",
+        "cloud-pki/**/*.yml": "paolomatarazzo",
         "device-updates/**/*.md": "paolomatarazzo",
         "device-updates/**/*.yml": "paolomatarazzo",
         "solutions/**/*.md": "mandiohlinger",
         "solutions/**/*.yml": "mandiohlinger"
       },
       "ms.author": {
+        "configmgr/**/*.md": "dannygu",
+        "configmgr/**/*.yml": "dannygu",
         "intune-service/apps/**/*.md": "nwhite",
         "intune-service/apps/**/*.yml": "nwhite",
         "intune-service/copilot/**/*.md": "mandia",
@@ -155,6 +161,8 @@
         "endpoint-analytics/**/*.yml": "paoloma",
         "advanced-analytics/**/*.md": "paoloma",
         "advanced-analytics/**/*.yml": "paoloma",
+        "cloud-pki/**/*.md": "paoloma",
+        "cloud-pki/**/*.yml": "paolomatarazzo",
         "device-updates/**/*.md": "paoloma",
         "device-updates/**/*.yml": "paoloma",
         "solutions/**/*.md": "mandia",
@@ -164,11 +172,17 @@
         "intune-service/device-updates/**/*.md": ["M365-identity-device-management","sub-updates"],
         "intune-service/device-updates/**/*.yml": ["M365-identity-device-management","sub-updates"],
         "intune-service/remote-actions/**/*.md": ["M365-identity-device-management"],
-        "intune-service/remote-actions/**/*.yml": ["M365-identity-device-management"]
+        "intune-service/remote-actions/**/*.yml": ["M365-identity-device-management"],
+        "cloud-pki/**/*.md": ["M365-identity-device-management","certificates","IntuneSuite","sub-intune-suite"],
+        "cloud-pki/**/*.yml": ["M365-identity-device-management","certificates","IntuneSuite","sub-intune-suite"]
       },
       "ms.reviewer": {
+        "configmgr/**/*.md": ["umaikhan", "brianhun", "payur"],
+        "configmgr/**/*.yml": ["umaikhan", "brianhun", "payur"],
         "intune-service/remote-actions/**/*.md": "mattcall",
-        "intune-service/remote-actions/**/*.yml": "mattcall"
+        "intune-service/remote-actions/**/*.yml": "mattcall",
+        "cloud-pki/**/*.md": "wicale",
+        "cloud-pki/**/*.yml": "wicale"
       },
       "ms.service": {
         "configmgr/**/*.md": "configuration-manager",
@@ -177,6 +191,8 @@
       "ms.subservice": {
         "advanced-analytics/**/*.md": "suite",
         "advanced-analytics/**/*.yml": "suite",
+        "cloud-pki/**/*.md": "suite",
+        "cloud-pki/**/*.yml": "suite",
         "device-updates/**/*.md": "protect",
         "device-updates/**/*.yml": "protect",
         "endpoint-analytics/**/*.md": "endpoint-analytics",
@@ -215,6 +231,10 @@
         "intune-service/**/*.yml": "MET150",
         "solutions/**/*.md": "MET150",
         "solutions/**/*.yml": "MET150"
+      },
+      "titleSuffix": {
+        "configmgr/**/*.md": "Configuration Manager",
+        "configmgr/**/*.yml": "Configuration Manager"
       },
       "zone_pivot_group_filename": {
         "intune-service/remote-actions/**/*.md": "intune-service/remote-actions/zone-pivot-groups.json"

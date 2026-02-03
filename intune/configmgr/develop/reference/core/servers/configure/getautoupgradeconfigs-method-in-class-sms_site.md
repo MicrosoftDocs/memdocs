@@ -1,18 +1,10 @@
 ---
 title: GetAutoUpgradeConfigs Method
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that gets configurations for autoupgrade settings.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 01ad5660-fcae-4e18-bafd-453caa15bc30
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetAutoUpgradeConfigs Method in Class SMS_Site
 The `GetAutoUpgradeConfigs` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets configurations for autoupgrade settings.

@@ -3,15 +3,8 @@ title: Configuration Manager Queries
 description: Create and run the queries that are accessible in the Configuration Manager console under Queries.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.assetid: e20ee196-8b6b-49c1-98e8-613438ea8279
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # About Configuration Manager Queries
 You can create and run the queries that are accessible in the Configuration Manager console under **Queries**. The queries can be used to locate objects in a Configuration Manager site that match your query criteria. These objects include items such as specific types of computers or user groups. Queries can return most types of Configuration Manager objects, including sites, collections, packages, and saved queries themselves. However, queries are most useful for extracting information that is related to resource discovery, inventory data, and status messages.

@@ -71,7 +71,7 @@ For more information, see [Microsoft Tunnel for Mobile Application Management](.
 
 Microsoft Cloud PKI is a cloud-based service that simplifies and automates certificate lifecycle management for Intune-managed devices. It provides a dedicated public key infrastructure (PKI) for your organization and handles the certificate issuance, renewal, and revocation for all Intune-supported platforms.
 
-For more information, see [Overview of Microsoft Cloud PKI](../protect/microsoft-cloud-pki-overview.md).
+For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/index.md).
 
 ### Mobile Firmware-over-the-air update
 

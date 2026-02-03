@@ -1,18 +1,10 @@
 ---
 title: UserHasPermissions Method
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the UserHasPermissions Windows Management Instrumentation class method determines whether the current user has the requested permissions for the specified object.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 167967c1-fc34-400a-8eb5-0db5fecfb2a2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # UserHasPermissions Method in Class SMS_RbacSecuredObject
 The `UserHasPermissions` Windows Management Instrumentation (WMI) class method, in Configuration Manager, determines whether the current user has the requested permissions for the specified object.

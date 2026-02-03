@@ -1,7 +1,7 @@
 ---
 title: What's new in Windows Autopilot device preparation
 description: News and resources about the latest updates of Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 11/21/2025
+ms.date: 01/30/2026
 ms.collection:
   - M365-modern-desktop
   - tier2
@@ -23,6 +23,15 @@ appliesto:
 > This example includes the `&locale=en-us` variable. The `locale` variable is required, but it can be changed to another supported locale. For example, `&locale=es-es`.
 >
 > For more information on using RSS for notifications, see [How to use the docs](/mem/use-docs#notifications) in the Intune documentation.  
+
+## Admins can configure up to 25 apps to install during Autopilot device preparation 
+
+Date added: *January 30, 2026*  
+
+The maximum number of apps that can be configured in a Windows Autopilot device preparation policy has been increased to 25. This update supports organizations that require more apps to be delivered during the out-of-box experience (OOBE). The increased limit applies to both user-driven and automatic modes, including all Cloud PC offerings. Review and adjust your deployment timeout settings as needed to help avoid unexpected timeouts. For more information about assigning apps, see:  
+
+*  [Windows Autopilot device preparation user-driven Microsoft Entra join: Assign applications and PowerShell scripts to device group](tutorial/user-driven/entra-join-assign-apps-scripts.md)  
+*  [Windows Autopilot device preparation in automatic mode: Assign applications and PowerShell scripts to device group](tutorial/automatic/automatic-assign-apps-scripts.md)  
 
 ## Windows Autopilot device preparation in automatic mode for Windows 365 Enterprise, Windows 365 Frontline in dedicated mode, and Windows 365 Cloud Apps is in public preview  
 
@@ -46,7 +55,7 @@ Date updated: *September 9, 2025*
 
 [Monthly security update releases](/windows/deployment/update/release-cycle#monthly-security-update-release), also known as Windows quality updates, are installed during a Windows Autopilot device preparation deployment as part of the Windows out-of-box experience (OOBE). The monthly security update releases are installed after the device preparation page completes. These updates can't be disabled for Windows Autopilot device preparation deployments. Installation of monthly security update releases during OOBE normally adds 20-40 minutes to the provisioning process. Installation of monthly security update releases also might require restarts.
 
-More details regarding automatic installation of monthly security update releases can be found in the article [Install Windows monthly security update releases](/intune/intune-service/enrollment/windows-enrollment-status#install-windows-monthly-security-update-releases). However, this article is in regards to using the Enrollment Status Page (ESP) with Windows Autopilot. Windows Autopilot device preparation doesn't use the ESP, so the **Install Windows quality updates (might restart the device)** setting mentioned in this article isn't applicable to Windows Autopilot device preparation.
+More details regarding automatic installation of monthly security update releases can be found in the article [Install Windows monthly security update releases](/intune/intune-service/enrollment/windows-enrollment-status#windows-monthly-security-update-release-details). However, this article is in regards to using the Enrollment Status Page (ESP) with Windows Autopilot. Windows Autopilot device preparation doesn't use the ESP, so the **Install Windows quality updates (might restart the device)** setting mentioned in this article isn't applicable to Windows Autopilot device preparation.
 
 For more information, see [Get ready for Windows quality updates out of the box](https://techcommunity.microsoft.com/blog/windows-itpro-blog/get-ready-for-windows-quality-updates-out-of-the-box/4434498).  
 

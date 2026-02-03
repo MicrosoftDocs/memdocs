@@ -1,17 +1,10 @@
 ---
 title: External notifications
-titleSuffix: Configuration Manager
 description: Enable the site to send notifications to an external system or application.
 ms.date: 09/18/2023
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # External notifications

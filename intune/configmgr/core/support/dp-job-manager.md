@@ -1,17 +1,10 @@
 ---
 title: DP Job Queue Manager
-titleSuffix: Configuration Manager
 description: Use the DP Job Queue Manager to troubleshoot and manage content distribution jobs to Configuration Manager distribution points.
 ms.date: 07/30/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # DP Job Queue Manager

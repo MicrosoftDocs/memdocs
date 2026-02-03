@@ -1,17 +1,10 @@
 ---
 title: Migration checklists
-titleSuffix: Configuration Manager
 description: Use administrator checklists to help you plan a migration strategy to Configuration Manager current branch.
 ms.date: 12/29/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Administrator checklists for migration planning in Configuration Manager
 

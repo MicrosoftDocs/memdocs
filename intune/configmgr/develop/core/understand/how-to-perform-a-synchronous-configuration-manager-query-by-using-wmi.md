@@ -1,18 +1,10 @@
 ---
 title: Perform a Synchronous Query by Using WMI
-titleSuffix: Configuration Manager
 description: In Configuration Manager, you perform a synchronous query for Configuration Manager objects by calling the SWbemServices object ExecQuery method and passing a WQL query.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: d08b5e24-7026-4328-b67d-3ba2c87aea63
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Perform a Synchronous Configuration Manager Query by Using WMI
 In Configuration Manager, you perform a synchronous query for Configuration Manager objects by calling the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [ExecQuery](/windows/win32/wmisdk/swbemservices-execquery) method and passing a WQL query.

@@ -1,17 +1,10 @@
 ---
 title: Supported SQL Server versions
-titleSuffix: Configuration Manager
 description: Get SQL Server version and configuration requirements for hosting a Configuration Manager site database.
 ms.date: 12/04/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Supported SQL Server versions for Configuration Manager
@@ -48,7 +41,7 @@ The site database can use the default instance of a full installation of SQL Ser
 SQL Server must be located on the site server computer.
 
 > [!IMPORTANT]
-> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. VC++ need to be upgraded to latest version on Secondary site [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+> Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. Visual C++ Redistributable need to be upgraded to latest version on Secondary site: [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ### Limitations to support
 
@@ -86,7 +79,6 @@ You can use this version of SQL Server for the following sites:
 - A central administration site
 - A primary site
 - A secondary site
-
 
 ### SQL Server 2019: Standard, Enterprise
 
@@ -192,7 +184,7 @@ The following table identifies the recommended compatibility levels for Configur
 | SQL Server 2016 | 130, 120, 110 | 130 |
 <!--| SQL Server 2014 | 120, 110 | 110 |-->
 
-To identify the SQL Server cardinality estimation compatibility level in use for your site database, run the following SQL query on the site database server:
+To identify the compatibility level in use for your site database, run the following SQL query on the site database server:
 
 ```SQL
 SELECT name, compatibility_level FROM sys.databases
@@ -228,21 +220,39 @@ Reserve memory for SQL Server by using SQL Server Management Studio. Set the **M
   - For a primary site: Set a minimum of 8 GB.
   - For a secondary site: Set a minimum of 4 GB.
 
-### SQL Server nested triggers
+### Required SQL Server configurations
 
-SQL Server nested triggers must be enabled. For more information, see [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option)
+Configuration Manager sets the below SQL Server configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios. Do not alter them unless instructed by Microsoft support.
 
-### SQL Server CLR integration
+| Display name | Canonical name | Required value | More information link |
+|--------------|---------------|----------------|------------------|
+| CLR integration | `clr enabled` | True | [Introduction to SQL Server CLR Integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration). |
+| Allow Triggers to Fire Others | `nested triggers` | True | [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option). |
+| Max Text Replication Size | `max text repl size (B)` | 2147483647 | [Configure the max text repl size server configuration option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option). |
 
-The site database requires SQL Server common language runtime (CLR) to be enabled. This option is enabled automatically when Configuration Manager installs. For more information about CLR, see [Introduction to SQL Server CLR Integration](/dotnet/framework/data/adonet/sql/introduction-to-sql-server-clr-integration).
+### Required database configurations
 
-### SQL Server Service Broker (SSB)
+Configuration Manager sets the below database configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios - as well as for SQL Always On configurations.
 
-The SQL Server Service Broker is required both for intersite replication as well as for a single primary site.
+Do not alter them unless instructed by Microsoft support. The [Support policies for manual database changes](/troubleshoot/mem/configmgr/setup-migrate-backup-recovery/support-policy-for-manual-database-changes) article applies for database options.
 
-### TRUSTWORTHY setting
-
-Configuration Manager automatically enables the SQL [TRUSTWORTHY database property](/sql/relational-databases/security/trustworthy-database-property). This property is required by Configuration Manager to be **ON**.
+| Display name | Canonical name | Required value | More information link |
+|--------------|---------------|----------------|------------------|
+| Database owner | `owner_sid` | `sa` | [ALTER AUTHORIZATION for databases](/sql/t-sql/statements/alter-authorization-transact-sql#alter-authorization-for-databases) |
+| Change tracking | `CHANGE_TRACKING` | True (ON) | [Enable change tracking](/sql/relational-databases/track-changes/about-change-tracking-sql-server) |
+| Recursive Triggers Enabled | `RECURSIVE_TRIGGERS` | True (ON) | [Recursive Triggers](/sql/relational-databases/triggers/create-nested-triggers#recursive-triggers) |
+| Broker Enabled | `ENABLE_BROKER` | True (ON) | [Activate Service Broker in a database](/sql/database-engine/service-broker/how-to-activate-service-broker-message-delivery-in-databases-transact-sql#activate-service-broker-in-a-database) |
+| Honor Broker Priority | `HONOR_BROKER_PRIORITY` | True (ON) | [Enable conversation priorities](/sql/database-engine/service-broker/managing-conversation-priorities#enable-conversation-priorities) |
+| Trustworthy | `TRUSTWORTHY` | True (ON) | [TRUSTWORTHY database property](/sql/relational-databases/security/trustworthy-database-property) |
+| Allow Snapshot Isolation | `ALLOW_SNAPSHOT_ISOLATION` | True (ON) | [Snapshot Isolation in SQL Server](/dotnet/framework/data/adonet/sql/snapshot-isolation-in-sql-server) |
+| Is Read Committed Snapshot On | `READ_COMMITTED_SNAPSHOT` | True (ON) | [Set Transaction Isolation Level](/sql/t-sql/statements/set-transaction-isolation-level-transact-sql) |
+| ANSI Nulls Enabled | `ANSI_NULLS` | True (ON) | [SET ANSI_NULLS](/sql/t-sql/statements/set-ansi-nulls-transact-sql) |
+| ANSI Padding Enabled | `ANSI_PADDING` | True (ON) | [SET ANSI_PADDING](/sql/t-sql/statements/set-ansi-padding-transact-sql) |
+| ANSI Warnings Enabled | `ANSI_WARNINGS` | True (ON) | [SET ANSI_WARNINGS](/sql/t-sql/statements/set-ansi-warnings-transact-sql) |
+| Arithmetic Abort Enabled | `ARITHABORT` | True (ON) | [SET ARITHABORT](/sql/t-sql/statements/set-arithabort-transact-sql) |
+| Concatenate Null Yields Null | `CONCAT_NULL_YIELDS_NULL` | True (ON) | [SET CONCAT_NULL_YIELDS_NULL](/sql/t-sql/statements/set-concat-null-yields-null-transact-sql) |
+| Quoted Identifiers Enabled | `QUOTED_IDENTIFIER` | True (ON) | [SET QUOTED_IDENTIFIER](/sql/t-sql/statements/set-quoted-identifier-transact-sql) |
+| Numeric Round-abort | `NUMERIC_ROUNDABORT` | False (OFF) | [SET NUMERIC_ROUNDABORT](/sql/t-sql/statements/set-numeric-roundabort-transact-sql) |
 
 ## <a name="bkmk_optional"></a> Optional configurations for SQL Server
 

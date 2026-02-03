@@ -1,18 +1,10 @@
 ---
 title: InventoryDataItem Class
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class that defines an inventory.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 45f7e59f-85d2-4594-9fd7-79b3e6de8c25
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # InventoryDataItem Client WMI Class
 In Configuration Manager, the `InventoryDataItem` class is a client Windows Management Instrumentation (WMI) class that defines an inventory collection query.

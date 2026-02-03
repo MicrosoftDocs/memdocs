@@ -1,17 +1,10 @@
 ---
 title: About upgrade, update, and install
-titleSuffix: Configuration Manager
 description: Learn the difference between the terms Install, Update, and Upgrade, when managing Configuration Manager infrastructure.
 ms.date: 04/30/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About upgrade, update, and install for site and hierarchy infrastructure

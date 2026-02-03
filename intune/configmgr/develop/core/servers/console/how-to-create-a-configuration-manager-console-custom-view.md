@@ -1,18 +1,10 @@
 ---
 title: Create a Console Custom View
 description: Learn how to create  a view that displays a custom control. In this example, the view displays the string content of a label control.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 4bd77dc3-97d1-475b-a860-bff0157054be
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Create a Configuration Manager Console Custom View
 In Configuration Manager, to create a custom console view, you must create two .NET Framework classes. If you do not wish to create your own custom view control, see [How to Create Node XML for a Configuration Manager Console View](../../../../develop/core/servers/console/how-to-create-node-xml-for-a-configuration-manager-console-grid-view.md) for more information.
