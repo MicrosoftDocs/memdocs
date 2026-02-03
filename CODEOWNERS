@@ -1,5 +1,5 @@
 # These owners will be the default owners for everything in the repo and/or noted folder unless a later match takes precedence
-* @MicrosoftDocs/msecd-maintainers
+* @MicrosoftDocs/msecd-codeowners
 
 # intune
 /intune/ @LauraWi @lenewsad @Brenduns @MandiOhlinger @nicholasswhite @paolomatarazzo
