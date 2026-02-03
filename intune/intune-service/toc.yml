@@ -2,6 +2,8 @@ items:
 - name: Microsoft Intune documentation
   href: index.yml
   items:
+  - name: Microsoft Intune service description
+    href: ./fundamentals/microsoft-intune-service-description.md
   - name: Learn about Microsoft Intune
     items:
     - name: Microsoft Intune overview
