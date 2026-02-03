@@ -2,8 +2,6 @@ items:
 - name: Microsoft Intune documentation
   href: index.yml
   items:
-  - name: Microsoft Intune service description
-    href: ./fundamentals/microsoft-intune-service-description.md
   - name: Learn about Microsoft Intune
     items:
     - name: Microsoft Intune overview
@@ -2350,3 +2348,5 @@ items:
       href: ./protect/privacy-data-view-correct.md
     - name: Audit, export, delete
       href: ./protect/privacy-data-audit-export-delete.md
+  - name: Microsoft Intune service description
+    href: ./fundamentals/microsoft-intune-service-description.md
