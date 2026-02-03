@@ -1,7 +1,7 @@
 ---
 title: Android App Protection Policy Settings
 description: This article describes the app protection policy settings for Android devices.
-ms.date: 11/18/2025
+ms.date: 02/03/2026
 ms.topic: article
 ms.reviewer: demerson
 ms.collection:
