@@ -3,7 +3,7 @@ title: Assignment filter properties and operators reference
 description: Reference guide for device and app properties, operators, and rule syntax when creating assignment filters in Microsoft Intune. Includes examples and supported values.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/19/2025
+ms.date: 01/26/2026
 ms.topic: reference
 ms.reviewer: mattcall
 ms.collection:
@@ -333,16 +333,25 @@ You can use the following app properties in your managed app filter rules:
   | Value | Supported platforms |
   |-----------|------------------------|
   | `Unmanaged` | Android <br/>iOS/iPadOS |
-  | `Managed`   | iOS/iPadOS |
+  | `Managed` | iOS/iPadOS |
   | `Android device administrator` | Android |
   | `Android Enterprise` | Android |
   | `AOSP userless devices` | Android |
   | `AOSP user-associated devices` | Android |
   | `Corporate-owned dedicated devices with Azure AD Shared mode` | Android |
+  | `Corporate-owned dedicated devices without Entra ID Shared mode` | Android |
+  | `Corporate-owned with work profile` | Android |
+  | `Corporate-owned fully managed` | Android |
+  | `Automated Device Enrollment user-associated devices` | iOS/iPadOS |
+  | `Automated Device Enrollment userless devices` | iOS/iPadOS |
+  | `Account Driven User Enrollment` | iOS/iPadOS |
+  | `Device Enrollment with Company Portal and Web Enrollment` | iOS/iPadOS |
 
   Example:
 
   - `(app.deviceManagementType -eq "Unmanaged")`
+  - `(app.deviceManagementType -eq "Corporate-owned dedicated devices without Entra ID Shared mode")`
+  - `(app.deviceManagementType -ne "Android device administrator")`
 
   This property applies:
 
