@@ -239,14 +239,14 @@ For more information, see [Mobile Threat Defense toggle options](../protect/mtd-
 
 #### Update firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
-As part of Microsoft’s ongoing [Secure Future Initiative (SFI)]( https://www.microsoft.com/trust-center/security/secure-future-initiative), Microsoft Intune has begun using Azure Front Door (AFD) IP addresses in addition to the existing Intune service IPs.
+As part of Microsoft’s ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), Microsoft Intune began using Azure Front Door (AFD) IP addresses in addition to the existing Intune service IPs in December 2025.
 
-Starting December 2, 2025, this change supports improved service resiliency and security. As a result, you might need to review and update network (firewall, proxy, or VPN) configurations in third-party applications to ensure proper function of Intune device and app management. This change primarily affects customers who restrict outbound traffic using IP-based allowlists or Azure service tags.
+Customers that use IP-based allowlist, Azure service tags, or have strict outbound filtering in their firewall, VPN, proxy, or other network infrastructure may block this new traffic, causing degraded or failed device connectivity. This can affect core Intune functions including device and app management.
 
-- **If your organization uses FQDN-based rules or does not restrict outbound traffic**, no changes are typically required. However, you should verify that the appropriate wildcard rules are configured, specifically `*.manage.microsoft.com`, to ensure all Intune services remain reachable. Microsoft continues to recommend using FQDN-based rules whenever possible to reduce ongoing administrative overhead.
-- **If your organization uses IP-based allowlists** (like firewall, proxy, or VPN rules), you must ensure that the Azure Front Door IP ranges are included to avoid potential connectivity issues for managed devices.
+- **If your organization uses Fully Qualified Domain Name (FQDN)-based rules or does not restrict outbound traffic**, no changes are typically required. However, you should verify that the appropriate wildcard rules are configured, specifically `*.manage.microsoft.com`, to ensure all Intune services remain reachable. Microsoft continues to recommend using FQDN-based wildcard rules whenever possible to reduce administrative overhead for organizations that require outbound filtering.
+- **If your organization uses IP-based allowlists** in your firewall, proxy, or VPN rules, you must add the Azure Front Door IP ranges below or use Azure service tag `AzureFrontDoor.MicrosoftSecurity` to avoid potential connectivity issues for managed devices.
 
-The following IP addresses comprise the current list of Azure Front Door endpoints that should be allowed:
+Required IP addresses for commercial endpoints:
 
 - 13.107.219.0/24
 - 13.107.227.0/24
@@ -256,7 +256,13 @@ The following IP addresses comprise the current list of Azure Front Door endpoin
 - 2620:1ec:49::/48
 - 2620:1ec:4a::/47
 
-For the authoritative and up-to-date list of network endpoints required by Intune client and host services, see [Intune core service](../fundamentals/intune-endpoints.md#intune-core-service) in *Network endpoints for Microsoft Intune*.
+Required IP addresses for US government endpoints:
+
+- 51.54.53.136/29
+- 51.54.114.160/29
+- 62.11.173.176/29
+
+For the authoritative and up-to-date list of network endpoints required by Intune client and host services, see [Intune core service](../fundamentals/intune-endpoints.md#intune-core-service) in *Network endpoints for Microsoft Intune*, and [Ports and IP addresses list](../fundamentals/intune-us-government-endpoints.md#ports-and-ip-addresses-list) in *US government endpoints for Microsoft Intune*.
 
 For additional context on this change, see [Support Tip: Upcoming Microsoft Intune Network Changes](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-upcoming-microsoft-intune-network-changes/4452738).
 
