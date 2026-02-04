@@ -5,7 +5,7 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 07/22/2024
 ms.topic: install-set-up-deploy
-ms.reviewer: dougeby
+ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
 ---
