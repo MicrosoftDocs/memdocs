@@ -113,7 +113,7 @@ For more information, see [Enable management point for HTTPS](#enable-management
 
 Management Points enabled for CMG traffic can be either EHTTP or HTTPS. If you can't join devices to Microsoft Entra ID or use PKI client authentication certificates, then use Configuration Manager token-based authentication. For more information, or to create a bulk registration token, see [Token-based authentication for cloud management gateway](../../deploy/deploy-clients-cmg-token.md).
 
-### Configure the management point for Enhanced HTTP
+### Enable management point for HTTPS
 
 When you enable Enhanced HTTP, the site server generates a self-signed certificate named **SMS Role SSL Certificate**. This certificate is issued by the root **SMS Issuing** certificate. The management point adds this certificate to the IIS Default Web site bound to port 443.
 
