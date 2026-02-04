@@ -1,18 +1,11 @@
 ---
 title: Sample queries for client deployment
-titleSuffix: Configuration Manager
 description: Sample queries that show how to join the most common client deployment views to other views.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 66e102b8-f80c-4dc8-b39c-e2a5a50c74a6
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

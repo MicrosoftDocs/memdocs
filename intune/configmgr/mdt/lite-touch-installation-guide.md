@@ -1,17 +1,10 @@
 ---
 title: Quickstart - LTI
-titleSuffix: Microsoft Deployment Toolkit
 description: A quickstart guide for Microsoft Deployment Toolkit (MDT) lite-touch installation (LTI)
 ms.date: 09/09/2016
 ms.subservice: mdt
-ms.service: configuration-manager
 ms.topic: quickstart
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart
 ---
 
 # Quick Start Guide for Lite Touch Installation

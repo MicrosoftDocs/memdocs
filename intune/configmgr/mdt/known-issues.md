@@ -3,14 +3,8 @@ title: MDT known issues
 description: Current limitations with the Microsoft Deployment Toolkit (MDT).
 ms.date: 03/08/2022
 ms.subservice: mdt
-ms.service: configuration-manager
 ms.topic: troubleshooting-known-issue
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart
 ---
 
 # Microsoft Deployment Toolkit known issues

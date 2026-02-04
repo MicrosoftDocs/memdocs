@@ -1,18 +1,10 @@
 ---
 title: Read an Object by Using WMI
-titleSuffix: Configuration Manager
 description: In Configuration Manager, you read a Configuration Manager object by using the SWbemServices object Get method to return an object instance that is identified by a key value.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 17017166-8b01-4a7d-99df-97be3bdda83f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Read a Configuration Manager Object by Using WMI
 In Configuration Manager, you read a Configuration Manager object by using the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [Get](/windows/win32/wmisdk/swbemservices-get) method to return an object instance that is identified by a key value.

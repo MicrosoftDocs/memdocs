@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SMS_SofwareDistribution_Event class to create other advertisement status-message classes.
 title: SMS_SofwareDistribution_Event
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e382ccd4-fd11-4036-ad2a-a40397b86239
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SofwareDistribution_Event
 The `SMS_SofwareDistribution_Event` class is the base class for all software-distribution advertisement status-message classes, in Configuration Manager. All advertisement status messages have the insertion strings of this class. Also, each derived class must set the properties of its base `SMS_SofwareDistribution_Event` class.

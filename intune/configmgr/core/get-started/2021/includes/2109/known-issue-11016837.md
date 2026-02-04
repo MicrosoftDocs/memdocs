@@ -1,11 +1,7 @@
 ---
-author: Banreet
-ms.author: banreetkaur
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 10/20/2021
-ms.localizationpriority: medium
 ---
 
 ### Community hub download button is always enabled

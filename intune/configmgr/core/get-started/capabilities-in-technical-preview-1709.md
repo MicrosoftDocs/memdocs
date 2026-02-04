@@ -1,18 +1,11 @@
 ---
 title: Technical Preview 1709
-titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview version 1709 for Configuration Manager.
 ms.date: 09/28/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1709 for Configuration Manager
 
