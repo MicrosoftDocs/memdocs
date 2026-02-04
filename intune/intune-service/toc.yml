@@ -2348,3 +2348,5 @@ items:
       href: ./protect/privacy-data-view-correct.md
     - name: Audit, export, delete
       href: ./protect/privacy-data-audit-export-delete.md
+  - name: Microsoft Intune service description
+    href: ./fundamentals/microsoft-intune-service-description.md
