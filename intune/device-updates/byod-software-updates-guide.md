@@ -4,9 +4,6 @@ description: Guidance and advice for administrators that create and manage softw
 ms.date: 04/07/2025
 ms.topic: how-to
 ms.reviewer: ahamil, talima, mandia
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Software updates planning guide for BYOD and personal devices in Microsoft Intune
