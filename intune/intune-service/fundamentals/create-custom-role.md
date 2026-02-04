@@ -453,7 +453,7 @@ The following permissions are available when creating custom roles.
 | Permission | Action | Description |
 | --- | --- | --- |
 | Remote assistance connectors | Read | View the status of the TeamViewer connector and remote help. This permission isn't required to initiate remote assistance requests for devices. |
-| Remote assistance connectors | Update | Manage the state of the TeamViewer connector and remote help. This permission also requires the Remote assistance connectors \\| Read permission to view the status of the TeamViewer connector and remote help. |
+| Remote assistance connectors | Update | Manage the state of the TeamViewer connector and remote help. This permission also requires the *Remote assistance connectors > Read* permission to view the status of the TeamViewer connector and remote help. |
 | Remote assistance connectors | View reports | View, generate and export remote help sessions and monitor reports. |
 
 ### Remote Help app
