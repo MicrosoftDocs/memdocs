@@ -479,7 +479,7 @@ The following permissions are available when creating custom roles.
 | Remote tasks | Enable lost mode | Initiate lost mode on lost or stolen iOS or ChromeOS devices. This mode lets you enter a message and a phone number that appears on the lock screen of the device. To use lost mode, the device must be a corporate-owned iOS device that is in supervised mode. |
 | Remote tasks | Enable Windows IntuneAgent | Enable Windows Intune agent. |
 | Remote tasks | Get FileVault key. | Get Mac FileVault key. |
-| Remote tasks | Indicates remote device action to initiate Mobile Device Management (MDM) attestation if device is capable for it. |  |
+| Remote tasks | Indicates remote device action to initiate Mobile Device Management (MDM) attestation if device is capable for it. | Indicates remote device action to initiate Mobile Device Management (MDM) attestation if device is capable for it. |
 | Remote tasks | Initiate Configuration Manager action | Initiate a remote action on a device managed by Configuration Manager. |
 | Remote tasks | Locate device | View the location of a lost or stolen corporate-owned device on a map. Can locate supervised iOS/iPadOS devices, Android dedicated devices (COSU), and Windows devices. |
 | Remote tasks | Manage shared device users | Sign out the user with the current session on a shared device.  This action doesn't delete users from a shared device, it only forces the user with a current session to be logged out. |
