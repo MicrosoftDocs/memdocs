@@ -174,6 +174,4 @@ Furthermore, Microsoft Edge for Business aligns with the Zero Trust methodology 
 
 This solution provides comprehensive guidance for implementing the Secure Enterprise Browser configuration using Microsoft Edge for Business and Microsoft Intune. The step-by-step approach covers all policy types and platforms, organized by configuration method to help you build a complete security framework.
 
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps.png" alt-text="Steps to secure your corporate data in Intune with Microsoft Edge for Business.":::](mamedge-1-mamca.md)
-
 Continue with [Step 1](mamedge-1-mamca.md) to create Microsoft Entra Conditional Access.

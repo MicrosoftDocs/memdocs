@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 12/15/2025
 ms.topic: upgrade-and-migration-article
-ms.reviewer: dougeby
+ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - highpri

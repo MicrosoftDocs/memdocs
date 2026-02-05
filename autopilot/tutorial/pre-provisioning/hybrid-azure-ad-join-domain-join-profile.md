@@ -3,9 +3,6 @@ title: Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid j
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra hybrid join - Step 8 of 11 - Create and assign a domain join profile.
 ms.date: 04/01/2025
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

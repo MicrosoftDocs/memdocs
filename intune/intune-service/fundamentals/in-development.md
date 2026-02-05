@@ -3,7 +3,11 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
+<<<<<<< HEAD
 ms.date: 02/05/2026
+=======
+ms.date: 02/02/2026
+>>>>>>> df0b3f28b7af378369b5c5a0bc3c4a807c42198f
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -68,6 +72,7 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
+<<<<<<< HEAD
 ### New Wired Networks device configuration profile for iOS/iPadOS<!-- 34968897 -->
 
 We're adding a 802.1x Wired Networks device configuration profile for iOS/iPadOS devices. The feature will support 802.1x Ethernet access controls, which is ideal for M series iPads that support native resolution screen extension. It will allow iPads to securely connect to hot desk docks and monitors using wired access.
@@ -97,6 +102,8 @@ When connecting to a network, devices can present a randomized MAC address inste
 >
 > - macOS 15 and later
 
+=======
+>>>>>>> df0b3f28b7af378369b5c5a0bc3c4a807c42198f
 ### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
 
 You'll be able to use assignment filters in policy assignments for DDM-based configurations, like software updates.
@@ -130,6 +137,7 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can so
 
 <!-- *********************************************** -->
 
+<<<<<<< HEAD
 ## Device management
 
 ### Multi-administrator approval support for device compliance and device configuration policies<!-- 26838614 -->
@@ -137,10 +145,13 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can so
 Multi-administrator approval will soon support device configuration policies created through the settings catalog, device compliance policies, compliance settings, and device cleanup rules. When you turn on this feature, any changes you make, including creating, editing, or deleting a policy, must be approved by a second administrator before they take effect. This dual-authorization process helps protect your organization from unauthorized or accidental changes to role-based access control.
 
 
+=======
+>>>>>>> df0b3f28b7af378369b5c5a0bc3c4a807c42198f
 <!-- *********************************************** -->
 
 ## Device security
 
+<<<<<<< HEAD
 ### Operator updates for device query for multiple devices<!--36180651 -->
 
 The following operator and behavior changes will be coming to **Device query for multiple devices**.
@@ -182,6 +193,8 @@ Autopatch update readiness will include the following capabilities:
 >
 > - Windows
 
+=======
+>>>>>>> df0b3f28b7af378369b5c5a0bc3c4a807c42198f
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
 We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.

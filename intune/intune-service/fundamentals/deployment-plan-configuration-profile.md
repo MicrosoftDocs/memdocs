@@ -192,7 +192,7 @@ Your policy options:
 | Android Enterprise personally owned devices | Not available <br/><br/>Can use compliance policies to set a minimum patch level, min/max OS version, and more. |
 | iOS/iPadOS | Intune update policy |
 | macOS | Intune update policy |
-| Windows client | - Intune feature updates policy </br>- Intune expedited updates policy |
+| Windows client | - Intune feature updates policy </br>- Intune quality updates policy |
 
 For more information on these features and/or the settings you can configure, go to:
 
@@ -201,7 +201,7 @@ For more information on these features and/or the settings you can configure, go
 - **macOS** [Managed software updates](../../device-updates/apple/index.md)
 - **Windows**:
   - [Feature updates policy](../../device-updates/windows/feature-updates.md)
-  - [Expedited updates policy](../../device-updates/windows/expedite-updates.md)
+  - [Quality updates policy](../../device-updates/windows/quality-updates.md)
 
 ## Level 1 - Access organization email, connect to VPN or Wi-Fi
 

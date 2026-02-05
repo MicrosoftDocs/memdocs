@@ -1,13 +1,10 @@
 ---
-title: Software update errors and descriptions in Microsoft Intune
-description: See a list of the Software Update agent error code in Microsoft Intune, including the error code, symbolic name, and error description.
-ms.date: 05/29/2019
+title: Software Update Errors and Descriptions
+description: Reference article with a list of the Software Update agent error code in Microsoft Intune, including the symbolic name and error description.
+ms.date: 01/14/2026
 ms.topic: reference
 ROBOTS:
 ms.reviewer: mghadial
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Software update agent error codes and descriptions in Microsoft Intune
