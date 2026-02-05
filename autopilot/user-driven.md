@@ -4,8 +4,6 @@ description: With Windows Autopilot user-driven mode, devices can be configured 
 ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier1
 ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

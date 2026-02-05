@@ -4,8 +4,6 @@ description: Information regarding known issues that might occur during a Window
 ms.date: 11/10/2025
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier2
 ms.topic: troubleshooting
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
