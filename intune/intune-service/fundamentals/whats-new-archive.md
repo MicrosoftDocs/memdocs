@@ -362,9 +362,9 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 
 #### Updates to the Feature updates report<!--31305861 -->
 
-We're introducing a new **Update Substate** in Service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
+We're introducing a new **Update Substate** in service-side data. This substate is displayed in the reports for devices that are invalid in Microsoft Entra and is known as **Not supported**.
 
-For more information, see [Use Windows Update for Business reports for Windows Updates](../../device-updates/windows/reports.md#use-the-windows-10-feature-updates-organizational-report)
+For more information, see [Use Windows Update for Business reports](../../device-updates/windows/feature-updates-reports.md)
 
 ## Week of February 24, 2025 (Service release 2502)
 
@@ -2090,7 +2090,7 @@ Feature updates can now be made available to end users as **Optional** updates, 
 
 End users can easily opt in to try out the next Feature update and provide feedback. When it's time to roll out the feature as a **Required** update, admins can change the setting on the policy and update the rollout settings so that the update is deployed as a **Required** update to devices that don't yet have it installed.
 
-For more information on Optional Feature updates, see [Feature updates for Windows 10 and later policy in Intune](../../device-updates/windows/feature-updates.md#create-and-assign-feature-updates-for-windows-10-and-later-policy).
+For more information about optional feature updates, see [Feature updates policy in Intune](../../device-updates/windows/feature-updates.md).
 
 Applies to:
 
@@ -2278,7 +2278,7 @@ You can drill down further in the report for each quality update that aggregates
 
 Finally, the admins can get the list of devices that aggregate to the numbers shown in the previous two reports, which can also be exported and used for troubleshooting and analysis along with the Windows Update for business reports.
 
-For more information on Windows update distribution reports, see [Windows Update reports on Intune](../../device-updates/windows/reports.md#windows-update-distribution-report).
+For more information see [Windows update distribution report](../../device-updates/windows/quality-updates-reports.md#windows-update-distribution-report).
 
 Applies to:
 
@@ -2588,7 +2588,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/quality-updates.md).
 
 #### Introducing a remote action to pause the config refresh enforcement interval<!--24249019 -->
 
@@ -2651,7 +2651,7 @@ Applies to:
 
 - Windows 11 devices
 
-For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/expedite-updates.md#create-and-assign-an-expedited-quality-update).
+For more information about installing an expedited update, see [Expedite Windows quality updates in Microsoft Intune](../../device-updates/windows/quality-updates.md).
 
 ### Intune apps
 
@@ -2945,7 +2945,7 @@ Applies to:
 - Windows 10
 - Windows 11
 
-For more information, see [Bulk driver updates](../../device-updates/windows/driver-updates-policy.md#bulk-driver-updates).
+For more information, see [Bulk driver updates](../../device-updates/windows/driver-update-policy.md#bulk-driver-updates).
 
 #### App Control for Business policy limitation is resolved<!-- 19548950 -->
 
@@ -4044,22 +4044,22 @@ You can learn more about Defender for Endpoint settings that are available for L
 
 ### Monitor and troubleshoot
 
-#### Updated reports for Update rings for Windows 10 and later<!-- 10159960 -->
+#### Updated reports for Windows update rings policies<!-- 10159960 -->
 
-Reporting for [Update rings for Windows 10 and later](../../device-updates/windows/update-rings.md) has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
+Reporting for Windows update rings policies has been updated to use Intune's improved reporting infrastructure. These changes align to similar improvements introduced for other Intune features.
 
-With this change for reports for Update rings for Windows 10 and later, when you select an update rings policy in the Intune admin center, there isn't a left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
+With this change for reports for Windows update rings, when you select an update rings policy in the Intune admin center, there isn't a left-pane navigation for *Overview*, *Manage*, or *Monitor* options. Instead, the policy view opens to a single pane that includes the following policy details:
 
-- **Essentials** – including the policy name, created and modified dates, and more details.
-- **Device and user check-in status** – This view is the default report view and includes:
+- **Essentials**: including the policy name, created and modified dates, and more details.
+- **Device and user check-in status**: This view is the default report view and includes:
   - A high-level overview of device status for this policy, and a *View report* button to open a more comprehensive report view.
   - A streamlined representation and count of the different device status values returned by devices assigned to the policy. The simplified bar and chart replace former doughnut charts seen in the prior reporting representation.
 - Two other report tiles to open more reports. These tiles include:
-  - **Device assignment status** – This report combines the same information as the previous Device status and User status reports, which are no longer available. However, with this change, pivots and drill-in through based on the user name is no longer available.
-  - **Per setting status** – This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings might not be successfully deploying to your organization.
-- **Properties** – View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
+  - **Device assignment status**: This report combines the same information as the previous Device status and User status reports, which are no longer available. However, with this change, pivots and drill-in through based on the user name is no longer available.
+  - **Per setting status**: This new report provides success metrics for each setting configured differently than the defaults, allowing for new insight to which settings might not be successfully deploying to your organization.
+- **Properties**: View details for each configuration page of the policy, including an option to **Edit** each areas profile details.
 
-For more information about reports for update rings for Windows 10 and later, see [Reports for Update rings for Windows 10 and later policy](../../device-updates/windows/reports.md#reports-for-update-rings-for-windows-10-and-later-policy) in the Windows Update reports for Microsoft Intune article.
+For more information, see [Reports for update rings policies](../../device-updates/windows/update-rings-reports.md).
 
 ### Role-based access
 
@@ -4695,9 +4695,9 @@ Update policies can be configured for one of two approval methods:
 
 To help you manage driver updates, you review a policy and decline an update you don't want to install. You can also indefinitely pause any approved update, and reapprove a paused update to restart its deployment.
 
-This release also includes [driver update reports](../../device-updates/windows/reports.md#reports-for-windows-driver-updates-policy) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
+This release also includes [driver update reports](../../device-updates/windows/driver-updates-reports.md) that provide a success summary, per-device update status for each approved driver, and error and troubleshooting information. You can also select an individual driver update and view details about it across all the policies that include that driver version.
 
-To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../../device-updates/windows/driver-updates-overview.md).
+To learn about using Windows Driver update policies, see [Manage policy for Windows Driver updates with Microsoft Intune](../../device-updates/windows/driver-updates.md).
 
 Applies to:
 

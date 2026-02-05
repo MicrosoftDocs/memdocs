@@ -44,7 +44,7 @@ After moving the Windows Update workload to Intune, the client settings in Confi
 > [!NOTE]
 > To use Windows Autopatch with these devices, this workload must be moved to Intune, and client settings for Software Updates set to 'No' in Configuration Manager. For more information, see [Prerequisites for Windows Autopatch](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites).
 
-For more information on the Intune feature, see [Manage Windows software updates in Intune](../../device-updates/windows/configure.md).
+For more information on the Intune feature, see [Manage Windows software updates in Intune](../../device-updates/windows/index.md).
 
 ## Resource access policies
 
