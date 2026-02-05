@@ -169,6 +169,8 @@
         "solutions/**/*.yml": "mandia"
       },
       "ms.collection": {
+        "intune-service/device-updates/**/*.md": ["M365-identity-device-management","sub-updates"],
+        "intune-service/device-updates/**/*.yml": ["M365-identity-device-management","sub-updates"],
         "intune-service/remote-actions/**/*.md": ["M365-identity-device-management"],
         "intune-service/remote-actions/**/*.yml": ["M365-identity-device-management"],
         "cloud-pki/**/*.md": ["M365-identity-device-management","certificates","IntuneSuite","sub-intune-suite"],

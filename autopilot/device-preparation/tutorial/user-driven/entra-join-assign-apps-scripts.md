@@ -3,9 +3,6 @@ title: Windows Autopilot device preparation user-driven Microsoft Entra join - S
 description: How to - Windows Autopilot device preparation user-driven Microsoft Entra join - Step 5 of 7 - Assign applications and PowerShell scripts to device group.
 ms.date: 01/30/2026
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
