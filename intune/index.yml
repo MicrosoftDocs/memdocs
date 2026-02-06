@@ -1,26 +1,26 @@
 ### YamlMime:Hub
-title: Microsoft Intune product and capabilities documentation
-summary: Learn more about how Microsoft Intune products and capabilities can help you secure, deploy, and manage users, apps, and endpoint devices.
+title: Microsoft Intune documentation
+summary: Learn more about managing devices, apps, and security with Microsoft Intune.
 brand: azure
 
 metadata:
   ms.topic: hub-page
   author: paolomatarazzo
   ms.author: paoloma
-  ms.date: 11/17/2025
+  ms.date: 02/06/2026
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
   items:
-    - title: What is Intune?
+    - title: What is Microsoft Intune?
       itemType: overview
       url: ./intune-service/fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: whats-new
       url: ./intune-service/fundamentals/whats-new.md
-    - title: Intune Blog and Community
-      itemType: learn
-      url: https://aka.ms/IntuneCommunity
+    - title: Features in development
+      itemType: whats-new
+      url: ./intune-service/fundamentals/in-development.md
     - title: Microsoft Intune Suite add-ons
       itemType: how-to-guide
       url: ./intune-service/fundamentals/intune-add-ons.md
@@ -36,10 +36,10 @@ productDirectory:
       summary: Enroll and prepare devices for management.
       url: ./fundamentals/deployment-guide-enrollment.md
 
-    - title: Device enrollment
+    - title: Device configuration
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+      summary: Configure settings and features across managed devices.
+      url: ./configuration/device-profiles.md
 
     - title: Device enrollment
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
@@ -175,59 +175,3 @@ conceptualContent:
         - text: Read the tutorial for enabling co-management
           itemType: how-to-guide
           url: ./configmgr/comanage/tutorial-co-manage-clients.md
-
-
-additionalContent:
-  # Supports up to 4 subsections
-  sections:
-
-    - title: Explore Microsoft Intune products and capabilities
-      items:
-
-      # Card
-      - title: Microsoft Intune core capabilities
-        summary: Manage and protect cloud-connected endpoints across Windows, Android, macOS, iOS, and Linux operating systems.
-        url: ./intune-service/index.yml
-      # Card
-      - title: Device protection overview
-        summary: Protect data and devices across Windows, Android, macOS, iOS, and Linux operating systems.
-        url: ./intune-service/protect/device-protect.md
-      # Card
-      - title: Microsoft Intune Suite
-        summary: Provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune.
-        url: ./intune-service/fundamentals/intune-add-ons.md
-      # Card
-      - title: Microsoft Configuration Manager
-        summary: Manage on-premises endpoints, such as Windows PCs and servers, and cloud-connected devices.
-        url: ./configmgr/index.yml
-      # Card
-      - title: Windows Autopilot docs
-        summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. Also, it can reset, repurpose, and recover devices.
-        url: /autopilot/index
-      # Card
-      - title: Endpoint analytics docs
-        summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
-        url: ./endpoint-analytics/index.md
-
-    - title: Related services
-      items:
-        # Card
-        - title: Windows Autopatch docs
-          summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
-          url: /windows/deployment/windows-autopatch/
-        # Card
-        - title: Azure Active Directory
-          summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
-          url: /azure/active-directory/
-        # Card
-        - title: Windows client docs for IT Pros
-          summary: Evaluate, plan, deploy, secure, and manage devices running Windows.
-          url: /windows/resources/
-        # Card
-        - title: Windows 365 docs
-          summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users.
-          url: /windows-365/
-        # Card
-        - title: Microsoft Defender for Endpoint
-          summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
-          url: /microsoft-365/security/defender-endpoint/
