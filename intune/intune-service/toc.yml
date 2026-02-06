@@ -1391,75 +1391,57 @@ items:
               displayName: wifi, wireless, android, device administrator, da
               href: ./configuration/wi-fi-settings-android.md
 
-        - name: iOS/iPadOS
+        - name: Apple
           items:
           - name: Custom
-            displayName: ios, ipados
-            href: ./configuration/custom-settings-ios.md
-          - name: Derived credential
+            displayName: apple, ios, ipados, macos
+            href: ./configuration/custom-settings-apple.md
+          - name: Derived credentials
+            displayName: apple, ios, ipados
             href: ./protect/derived-credentials.md
           - name: Device features
-            displayName: ios, ipados
-            href: ./configuration/ios-device-features-settings.md
+            displayName: apple, ios, ipados, macos
+            href: ./configuration/device-features-apple.md
           - name: Device restrictions
-            href: ./configuration/device-restrictions-ios.md
-            displayName: ios, ipados
+            displayName: apple, ios, ipados, macos
+            href: ./configuration/device-restrictions-apple.md
           - name: Email
-            displayName: ios, ipados
+            displayName: apple, ios, ipados
             href: ./configuration/email-settings-ios.md
-          - name: PKCS certificate
-            href: ./protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
-          - name: PKCS imported certificate
-            href: ./protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
-          - name: SCEP certificate
-            href: ./protect/certificates-profile-scep.md
-          - name: Trusted certificate
-            href: ./protect/certificates-trusted-root.md
-          - name: VPN
-            displayName: ios, ipados
-            href: ./configuration/vpn-settings-ios.md
-          - name: Wi-Fi
-            displayName: wifi, wireless, ios, ipados
-            href: ./configuration/wi-fi-settings-ios.md
-          - name: Bundle IDs for built-in apps
-            displayName: ios, ipados
-            href: ./configuration/bundle-ids-built-in-ios-apps.md
-        - name: macOS
-          items:
-          - name: Custom
-            displayName: macos
-            href: ./configuration/custom-settings-macos.md
-          - name: Device features
-            displayName: macos
-            href: ./configuration/macos-device-features-settings.md
-          - name: Device restrictions
-            displayName: macos
-            href: ./configuration/device-restrictions-macos.md
           - name: Endpoint protection (deprecated)
-            displayName: macos
+            displayName: apple, macos
             href: ./protect/endpoint-protection-macos.md
           - name: Extensions (deprecated)
             displayName: kernel, system, macos
             href: ./configuration/kernel-extensions-settings-macos.md
           - name: PKCS certificate
+            displayName: apple, ios, ipados, macos
             href: ./protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
+            displayName: apple, ios, ipados, macos
             href: ./protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
           - name: Preference file
+            displayName: apple, macos
             href: ./configuration/preference-file-settings-macos.md
           - name: SCEP certificate
+            displayName: apple, ios, ipados, macos
             href: ./protect/certificates-profile-scep.md
           - name: Trusted certificate
+            displayName: apple, ios, ipados, macos
             href: ./protect/certificates-trusted-root.md
           - name: VPN
-            displayName: macos
-            href: ./configuration/vpn-settings-macos.md
+            displayName: apple, ios, ipados, macos
+            href: ./configuration/vpn-settings-apple.md
           - name: Wi-Fi
-            displayName: wifi, wireless, macos
-            href: ./configuration/wi-fi-settings-macos.md
+            displayName: wifi, wireless, apple, ios, ipados, macos
+            href: ./configuration/wi-fi-settings-apple.md
           - name: Wired networks
-            displayName: macos
+            displayName: apple, macos
             href: ./configuration/wired-network-settings-macos.md
+          - name: Bundle IDs for built-in apps
+            displayName: apple, ios, ipados, macos
+            href: ./configuration/bundle-ids-built-in-ios-apps.md
+
         - name: Windows
           items:
           - name: BIOS configurations and other settings

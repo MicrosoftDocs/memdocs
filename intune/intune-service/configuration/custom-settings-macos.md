@@ -59,4 +59,4 @@ When you configure the profile, enter the following settings:
 ## Related content
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Create a [custom profile on iOS/iPadOS devices](custom-settings-ios.md).
+- Learn about [custom profiles](custom-settings-configure.md).

@@ -1,39 +1,66 @@
 ---
-title: Configure Wi-Fi settings for iOS/iPadOS devices in Microsoft Intune
-description: Create or add a WiFi device configuration profile for iOS/iPadOS devices. See the different settings, including adding certificates, choosing an EAP type, and selecting an authentication method in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
-ms.date: 06/25/2024
-ms.topic: reference
-ms.reviewer: abalwan
+title: Configure Wi-FI settings for Apple devices in Microsoft Intune
+description: Add or create a Wi-Fi configuration profile on iOS/iPadOS and macOS devices using Wi-Fi configuration settings in Microsoft Intune. Configure the connection details, authentication methods, SSIDs, security types, and proxy settings.
+ms.date: 02/05/2026
+ms.topic: article
+ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
+zone_pivot_groups: platforms-apple
 ---
 
-# Add Wi-Fi settings for iOS and iPadOS devices in Microsoft Intune
+# Add Wi-Fi settings to Apple devices in Microsoft Intune
 
-You can create a profile with specific WiFi settings, and then deploy this profile to your iOS/iPadOS devices using Intune. As part of your mobile device management (MDM) solution, use these settings to authenticate your network, add a PKCS (Public Key Cryptography Standards) or SCEP (Simple Certificate Enrollment Protocol) certificate, configure a proxy, and more.
+You can create a profile with specific WiFi settings, and then deploy this profile to your iOS/iPadOS and macOS devices using Intune. As part of your mobile device management (MDM) solution, use these settings to authenticate your network, add a PKCS (Public Key Cryptography Standards) or SCEP (Simple Certificate Enrollment Protocol) certificate, configure a proxy, and more.
 
-This feature applies to:
-
-- iOS/iPadOS
-
-These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise-level settings.
+These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise settings.
 
 This article describes the settings you can configure.
 
-## Before you begin
+## Prerequisites
 
-- Create an [iOS/iPadOS Wi-Fi device configuration profile](wi-fi-settings-configure.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
+:::column-end:::
+:::column span="3":::
+> This feature supports the following platforms:
+>
+> - iOS/iPadOS
+> - macOS
+:::column-end:::
+:::row-end:::
 
-- These settings are available for all enrollment types. For more information on the enrollment types, go to [iOS/iPadOS enrollment](../fundamentals/deployment-guide-enrollment-ios-ipados.md).
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+:::column-end:::
+:::row-end:::
 
-- These settings use the [Apple Wi-Fi payload](https://developer.apple.com/documentation/devicemanagement/wifi) (opens Apple's web site).
+:::row:::
+:::column span="1":::
+[!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
+:::column-end:::
+:::column span="3":::
+> - Create a [Wi-Fi device configuration profile](wi-fi-settings-configure.md)
+:::column-end:::
+:::row-end:::
 
 ## Basic profiles
 
+Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on devices. Typically, WPA/WPA2 is used on home networks or personal networks. You can also add a preshared key to authenticate the connection.
+
 - **Wi-Fi type**: Select **Basic**.
+
+::: zone pivot="ios-ipados"
+
 - **Network name**: Enter a name for this Wi-Fi connection. Users see this name when they browse the list of available connections on their device.
+
+::: zone-end
+
 - **SSID**: This **service set identifier** (SSID) property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: **Enable** automatically connects to this network when the device is in range. **Disable** prevents devices from automatically connecting.
 - **Hidden network**: **Enable** matches this device setting with the setting on the router Wi-Fi configuration. So if the network is set to hidden, then the network is also hidden in the Wi-Fi profile. Select **Disable** if the network SSID is broadcasted and visible.
@@ -50,6 +77,8 @@ This article describes the settings you can configure.
 
     For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
+::: zone pivot="ios-ipados"
+
 - **Disable MAC address randomization**: Starting with iOS/iPadOS 14, devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
 
   Your options:
@@ -62,7 +91,24 @@ This article describes the settings you can configure.
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 
+::: zone-end
+
 ## Enterprise profiles
+
+Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate Wi-Fi connections. EAP is often used by enterprises, as you can use certificates to authenticate and secure connections, and configure more security options.
+
+::: zone pivot="macos"
+
+- **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To do so, you must create a new profile.
+
+  > [!NOTE]
+  > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.
+
+   You have two options:
+  - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.
+  - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.
+
+::: zone-end
 
 - **Wi-Fi type**: Select **Enterprise**.
 - **Network name**: Enter a name for this Wi-Fi connection. Users see this name when they browse the list of available connections on their device.
@@ -139,6 +185,8 @@ This article describes the settings you can configure.
 
     For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
+::: zone pivot="ios-ipados"
+
 - **Disable MAC address randomization**: Starting with iOS/iPadOS 14, devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. Randomized MAC addresses also break functionality that relies on a static MAC address, including network access control (NAC).
 
   Your options:
@@ -152,8 +200,10 @@ This article describes the settings you can configure.
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 
+::: zone-end
+
 ## Related articles
 
-- Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Aassign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), [macOS](wi-fi-settings-apple.md), and [Windows](wi-fi-settings-windows.md) devices.
+- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), and [Windows](wi-fi-settings-windows.md) devices.

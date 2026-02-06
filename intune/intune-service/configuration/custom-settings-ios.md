@@ -68,4 +68,4 @@ When you configure the profile, enter the following settings:
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- [Create custom profiles on macOS devices](custom-settings-macos.md).
+- Learn about [custom profiles](custom-settings-configure.md).

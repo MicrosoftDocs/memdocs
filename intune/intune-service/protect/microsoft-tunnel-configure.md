@@ -393,7 +393,7 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
    - **On-Demand VPN Rules**:
      Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
 
-     For more information, see [Automatic VPN settings](../configuration/vpn-settings-ios.md#automatic-vpn).
+     For more information, see [Automatic VPN settings](../configuration/vpn-settings-apple.md#automatic-vpn).
 
    - **Proxy**:
      Configure proxy server details for your environment.

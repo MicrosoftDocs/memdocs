@@ -127,3 +127,12 @@ groups:
     title: Windows
   - id: macos
     title: macOS
+
+- id: platforms-apple
+  title: Apple device platforms
+  prompt: Select your platform
+  pivots:
+  - id: ios-ipados
+    title: iOS/iPadOS
+  - id: macos
+    title: macOS

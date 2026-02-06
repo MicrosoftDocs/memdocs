@@ -28,7 +28,7 @@ Before beginning setup, complete the following tasks:
 - [Get Apple MDM Push certificate](apple-mdm-push-certificate-get.md)
 - [Create Managed Apple IDs for device users](https://support.apple.com/en-us/HT210737) (Opens Apple Support website)
 
-You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To complete this prerequisite, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `“https://contoso.com/.well-known/com.apple.remotemanagement”`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.
+You also need to set up service discovery so that Apple can reach the Intune service and retrieve enrollment information. To complete this prerequisite, set up and publish an HTTP well-known resource file on the same domain that employees sign into. Apple retrieves the file via an HTTP GET request to `"https://contoso.com/.well-known/com.apple.remotemanagement"`, with your organization's domain in place of `contoso.com`. Publish the file on a domain that can handle HTTP GET requests.
 
 
 > [!NOTE]
@@ -152,6 +152,6 @@ The volume and cryptographic keys created to manage the work data on the device 
 * For troubleshooting, see [Troubleshooting iOS/iPadOS device enrollment errors in Microsoft Intune](/troubleshoot/mem/intune/device-enrollment/troubleshoot-ios-enrollment-errors).
 * For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-ios.md)
-   * [iOS and iPadOS device features](../configuration/ios-device-features-settings.md)
+   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../configuration/device-features-apple.md)
    * [Set up per-app Virtual Private Network (VPN)](../configuration/vpn-setting-configure-per-app.md)

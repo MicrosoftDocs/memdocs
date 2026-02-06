@@ -461,4 +461,4 @@ The restricted apps settings don't prevent users from installing and opening spe
 
 [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-You can also restrict device features and settings on [iOS/iPadOS](device-restrictions-ios.md) devices.
+You can also restrict device features and settings on [iOS/iPadOS](device-restrictions-apple.md) devices.

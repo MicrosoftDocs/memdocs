@@ -1,9 +1,7 @@
 ---
 title: iOS/iPadOS device feature settings in Microsoft Intune
 description: See all the settings to configure iOS and iPadOS devices for AirPrint, home screen layout, app notifications, shared devices, single sign-on, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS/iPadOS devices to use these Apple features on your devices.
-author: MandiOhlinger
-ms.author: mandia
-ms.date: 06/17/2024
+ms.date: 02/05/2026
 ms.topic: reference
 ms.reviewer: beflamm
 ms.collection:
@@ -442,11 +440,10 @@ You can experience unexpected behavior when a profile with no image is assigned 
 
 > [!TIP]
 >
-> - When configuring a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-ios.md#general) setting. This setting prevents users from changing the wallpaper.
+> - When configuring a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-apple.md#general) setting. This setting prevents users from changing the wallpaper.
 > - To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS/iPadOS user or device groups.
 
 ## Related articles
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-
-- Create device feature configuration profiles for [macOS](macos-device-features-settings.md) devices.
+- Learn about the [device features template](device-features-apple.md) for Apple devices.

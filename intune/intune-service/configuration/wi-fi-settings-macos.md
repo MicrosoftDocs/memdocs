@@ -55,12 +55,12 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
 - **Deployment channel**: Select how you want to deploy the profile. This setting also determines the keychain where the authentication certificates are stored, so it's important to select the proper channel. It's not possible to edit the deployment channel after you deploy the profile. To do so, you must create a new profile.
 
-  >[!NOTE]
+  > [!NOTE]
   > We recommend rechecking the deployment channel setting in existing profiles when the linked authentication certificates are up for renewal to ensure the intended channel is selected. If it isn't, create a new profile with the correct deployment channel.
 
    You have two options:
-   - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.
-   - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.
+  - **User channel**: Always select the user deployment channel in profiles with user certificates. This option stores certificates in the user keychain.
+  - **Device channel**: Always select the device deployment channel in profiles with device certificates. This option stores certificates in the system keychain.
 - **Wi-Fi type**: Select **Enterprise**.
 - **SSID**: Short for **service set identifier**. This property is the real name of the wireless network that devices connect to. However, users only see the network name you configured when they choose the connection.
 - **Connect automatically**: Select **Enable** to automatically connect to this network when the device is in range. Select **Disable** to prevent devices from automatically connecting.
@@ -127,4 +127,4 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 ## Related articles
 
 - Be sure to [assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
-- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), [iOS/iPadOS](wi-fi-settings-ios.md), and [Windows](wi-fi-settings-windows.md) devices.
+- Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), [iOS/iPadOS](wi-fi-settings-apple.md), and [Windows](wi-fi-settings-windows.md) devices.

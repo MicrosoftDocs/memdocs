@@ -64,8 +64,8 @@ This article shows you how to create a device restrictions profile. You can also
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Select your platform for detailed settings:
 
     - [Android](device-restrictions-android-for-work.md)
-    - [iOS/iPadOS](device-restrictions-ios.md)
-    - [macOS](device-restrictions-macos.md)
+    - [iOS/iPadOS](device-restrictions-apple.md)
+    - [macOS](device-restrictions-apple.md)
     - [Windows](device-restrictions-windows-10.md)
 
 8. Select **Next**.
