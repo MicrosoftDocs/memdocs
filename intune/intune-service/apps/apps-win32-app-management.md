@@ -1,7 +1,7 @@
 ---
 title: Win32 App Management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
-ms.date: 01/14/2026
+ms.date: 02/06/2026
 ms.topic: overview
 ms.reviewer: bryanke
 ai-usage: ai-assisted
@@ -30,6 +30,9 @@ Although it's possible for cloud-connected customers to use Microsoft Configurat
 
 > [!IMPORTANT]
 > When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Windows Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported.
+
+> [!IMPORTANT]
+> Microsoft Intune does not support interactive application installations. Applications deployed through Intune must install silently and cannot require user interaction, such as dialog boxes, prompts, or UI input during installation. Techniques that attempt to force interaction with the signed-in user session (for example, using tools like serviceui.exe or similar workarounds) are not supported and may result in inconsistent or unpredictable behavior.
 
 ## Prerequisites
 
