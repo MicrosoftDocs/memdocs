@@ -104,9 +104,9 @@ items:
       href: ./intune-service/copilot/security-copilot.md
     - name: Copilot in Surface Management Portal
       displayName: ai, copilot, surface, models, fleet, warranty
-      href: /surface/security-copilot-surface-management-portal?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+      href: /surface/security-copilot-surface-management-portal?/intune/context/context
     - name: Copilot in Windows 365 Cloud PCs
-      href: /windows-365/enterprise/copilot-in-intune-for-windows365?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+      href: /windows-365/enterprise/copilot-in-intune-for-windows365?/intune/context/context
     - name: Security Copilot agents in Microsoft Intune
       href: ./agents/toc.yml
 
@@ -355,124 +355,124 @@ items:
           - name: Purchase and add apps for Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-guide-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-guide-overview?/intune/context/context
               displayName: purchase, buy, app, license
             - name: Understand app types
               items:
               - name: App types overview
-                href: /microsoft-365/solutions/apps-type-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-type-overview?/intune/context/context
               - name: Understand store apps
-                href: /microsoft-365/solutions/apps-type-store?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-type-store?/intune/context/context
               - name: Understand line-of-business apps
-                href: /microsoft-365/solutions/apps-type-lob?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-type-lob?/intune/context/context
               - name: Understand built-in apps
-                href: /microsoft-365/solutions/apps-type-built-in?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-type-built-in?/intune/context/context
               - name: Understand web apps
-                href: /microsoft-365/solutions/apps-type-web?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-type-web?/intune/context/context
               - name: Understand Microsoft apps
-                href: /microsoft-365/solutions/apps-type-microsoft?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-type-microsoft?/intune/context/context
             - name: Understand app purchases
               items:
               - name: Purchase apps overview
-                href: /microsoft-365/solutions/apps-purchase-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-purchase-overview?/intune/context/context
               - name: Purchase store apps
-                href: /microsoft-365/solutions/apps-purchase-store?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-purchase-store?/intune/context/context
               - name: Purchase apps in-volume
-                href: /microsoft-365/solutions/apps-purchase-volume?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-purchase-volume?/intune/context/context
             - name: Understand app licenses
               items:
               - name: App licenses overview
-                href: /microsoft-365/solutions/apps-license-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-license-overview?/intune/context/context
               - name: Manage app licenses
-                href: /microsoft-365/solutions/apps-license-manage?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-license-manage?/intune/context/context
             - name: Add apps to Intune
               items:
               - name: Add apps overview
-                href: /microsoft-365/solutions/apps-add-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-add-overview?/intune/context/context
               - name: Step 1. Assess app requirements
-                href: /microsoft-365/solutions/apps-add-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-add-step-1?/intune/context/context
               - name: Step 2. Create categories for apps
-                href: /microsoft-365/solutions/apps-add-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-add-step-2?/intune/context/context
               - name: Step 3. Purchase apps
-                href: /microsoft-365/solutions/apps-add-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-add-step-3?/intune/context/context
               - name: Step 4. Add apps to Intune
-                href: /microsoft-365/solutions/apps-add-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-add-step-4?/intune/context/context
               - name: Step 5. Manage apps and licenses
-                href: /microsoft-365/solutions/apps-add-step-5?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-add-step-5?/intune/context/context
 
           - name: Configure apps using Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-config-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-overview?/intune/context/context
               displayName: configure, app, apps, channel
             - name: Step 1. Configure the Company Portal
-              href: /microsoft-365/solutions/apps-config-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-step-1?/intune/context/context
             - name: Step 2. Configure Microsoft Outlook
-              href: /microsoft-365/solutions/apps-config-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-step-2?/intune/context/context
             - name: Step 3. Configure Microsoft 365 Apps
-              href: /microsoft-365/solutions/apps-config-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-step-3?/intune/context/context
             - name: Step 4. Configure Microsoft Edge
-              href: /microsoft-365/solutions/apps-config-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-step-4?/intune/context/context
             - name: Step 5. Configure Microsoft Teams
-              href: /microsoft-365/solutions/apps-config-step-5?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-step-5?/intune/context/context
             - name: Step 6. Configure other apps
-              href: /microsoft-365/solutions/apps-config-step-6?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-step-6?/intune/context/context
             - name: Step 7. Verify app configuration
-              href: /microsoft-365/solutions/apps-config-step-7?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-config-step-7?/intune/context/context
 
           - name: Secure and protect apps using Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-protect-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-protect-overview?/intune/context/context
               displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
             - name: Understand app data protection
-              href: /microsoft-365/solutions/apps-protect-data-protection?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-protect-data-protection?/intune/context/context
             - name: Understand app protection access requirements
-              href: /microsoft-365/solutions/apps-protect-access-requirements?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-protect-access-requirements?/intune/context/context
             - name: Understand app protection conditional launch
-              href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-protect-conditional-launch?/intune/context/context
             - name: Understand app protection health checks
-              href: /microsoft-365/solutions/apps-protect-health-checks?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-protect-health-checks?/intune/context/context
             - name: Use the app protection framework
               items:
               - name: App protection framework overview
-                href: /microsoft-365/solutions/apps-protect-framework?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-protect-framework?/intune/context/context
               - name: Step 1. Apply basic data protection
-                href: /microsoft-365/solutions/apps-protect-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-protect-step-1?/intune/context/context
               - name: Step 2. Apply enhanced data protection
-                href: /microsoft-365/solutions/apps-protect-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-protect-step-2?/intune/context/context
               - name: Step 3. Apply high data protection
-                href: /microsoft-365/solutions/apps-protect-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-protect-step-3?/intune/context/context
               - name: Step 4. Understand app protection delivery
-                href: /microsoft-365/solutions/apps-protect-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-protect-step-4?/intune/context/context
               - name: Step 5. Verify and monitor app protection
-                href: /microsoft-365/solutions/apps-protect-step-5?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-protect-step-5?/intune/context/context
               - name: Step 6. Use app protection actions
-                href: /microsoft-365/solutions/apps-protect-step-6?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-protect-step-6?/intune/context/context
 
           - name: Assign and deploy apps using Microsoft Intune
             items:
             - name: Overview
-              href: /microsoft-365/solutions/apps-assign-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-assign-overview?/intune/context/context
               displayName: assign, deploy, app, apps, monitor, troubleshoot
             - name: Understand app management
-              href: /microsoft-365/solutions/apps-assign-management?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-assign-management?/intune/context/context
             - name: Understand app assignments
-              href: /microsoft-365/solutions/apps-assign-assignments?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-assign-assignments?/intune/context/context
             - name: Understand app deployment
-              href: /microsoft-365/solutions/apps-assign-deployment?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /microsoft-365/solutions/apps-assign-deployment?/intune/context/context
             - name: Assign apps to your organization
               items:
               - name: Assign apps overview
-                href: /microsoft-365/solutions/apps-assign-steps-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-assign-steps-overview?/intune/context/context
               - name: Step 1. Confirm users, devices, or groups
-                href: /microsoft-365/solutions/apps-assign-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-assign-step-1?/intune/context/context
               - name: Step 2. Assign apps to users, devices, or groups
-                href: /microsoft-365/solutions/apps-assign-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-assign-step-2?/intune/context/context
               - name: Step 3. Verify and monitor app assignments
-                href: /microsoft-365/solutions/apps-assign-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-assign-step-3?/intune/context/context
               - name: Step 4. Troubleshoot app deployment issues
-                href: /microsoft-365/solutions/apps-assign-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+                href: /microsoft-365/solutions/apps-assign-step-4?/intune/context/context
 
           - name: Secure your corporate data using Edge for Business
             items:
@@ -835,7 +835,7 @@ items:
             - name: Microsoft Defender for Endpoint Security settings management
               href: ./intune-service/protect/mde-security-integration.md
             - name: Manage endpoint security policies in Microsoft Defender
-              href: /defender-endpoint/manage-security-policies?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+              href: /defender-endpoint/manage-security-policies?/intune/context/context
         - name: Endpoint Privilege Management overview
           href: ./intune-service/protect/epm-overview.md
         - name: Tenant attach
@@ -1872,7 +1872,7 @@ items:
     - name: Get support in the Intune admin center
       href: ./get-support.md
     - name: Troubleshoot issues
-      href: /troubleshoot/mem/intune/welcome-intune?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+      href: /troubleshoot/mem/intune/welcome-intune?/intune/context/context
 
   - name: Industry guides
     items:
@@ -2061,124 +2061,124 @@ items:
       - name: Purchase and add apps for Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-guide-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-guide-overview?/intune/context/context
           displayName: purchase, buy, app, license
         - name: Understand app types
           items:
           - name: App types overview
-            href: /microsoft-365/solutions/apps-type-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-type-overview?/intune/context/context
           - name: Understand store apps
-            href: /microsoft-365/solutions/apps-type-store?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-type-store?/intune/context/context
           - name: Understand line-of-business apps
-            href: /microsoft-365/solutions/apps-type-lob?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-type-lob?/intune/context/context
           - name: Understand built-in apps
-            href: /microsoft-365/solutions/apps-type-built-in?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-type-built-in?/intune/context/context
           - name: Understand web apps
-            href: /microsoft-365/solutions/apps-type-web?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-type-web?/intune/context/context
           - name: Understand Microsoft apps
-            href: /microsoft-365/solutions/apps-type-microsoft?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-type-microsoft?/intune/context/context
         - name: Understand app purchases
           items:
           - name: Purchase apps overview
-            href: /microsoft-365/solutions/apps-purchase-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-purchase-overview?/intune/context/context
           - name: Purchase store apps
-            href: /microsoft-365/solutions/apps-purchase-store?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-purchase-store?/intune/context/context
           - name: Purchase apps in-volume
-            href: /microsoft-365/solutions/apps-purchase-volume?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-purchase-volume?/intune/context/context
         - name: Understand app licenses
           items:
           - name: App licenses overview
-            href: /microsoft-365/solutions/apps-license-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-license-overview?/intune/context/context
           - name: Manage app licenses
-            href: /microsoft-365/solutions/apps-license-manage?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-license-manage?/intune/context/context
         - name: Add apps to Intune
           items:
           - name: Add apps overview
-            href: /microsoft-365/solutions/apps-add-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-add-overview?/intune/context/context
           - name: Step 1. Assess app requirements
-            href: /microsoft-365/solutions/apps-add-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-add-step-1?/intune/context/context
           - name: Step 2. Create categories for apps
-            href: /microsoft-365/solutions/apps-add-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-add-step-2?/intune/context/context
           - name: Step 3. Purchase apps
-            href: /microsoft-365/solutions/apps-add-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-add-step-3?/intune/context/context
           - name: Step 4. Add apps to Intune
-            href: /microsoft-365/solutions/apps-add-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-add-step-4?/intune/context/context
           - name: Step 5. Manage apps and licenses
-            href: /microsoft-365/solutions/apps-add-step-5?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-add-step-5?/intune/context/context
 
       - name: Configure apps using Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-config-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-overview?/intune/context/context
           displayName: configure, app, apps, channel
         - name: Step 1. Configure the Company Portal
-          href: /microsoft-365/solutions/apps-config-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-step-1?/intune/context/context
         - name: Step 2. Configure Microsoft Outlook
-          href: /microsoft-365/solutions/apps-config-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-step-2?/intune/context/context
         - name: Step 3. Configure Microsoft 365 Apps
-          href: /microsoft-365/solutions/apps-config-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-step-3?/intune/context/context
         - name: Step 4. Configure Microsoft Edge
-          href: /microsoft-365/solutions/apps-config-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-step-4?/intune/context/context
         - name: Step 5. Configure Microsoft Teams
-          href: /microsoft-365/solutions/apps-config-step-5?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-step-5?/intune/context/context
         - name: Step 6. Configure other apps
-          href: /microsoft-365/solutions/apps-config-step-6?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-step-6?/intune/context/context
         - name: Step 7. Verify app configuration
-          href: /microsoft-365/solutions/apps-config-step-7?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-config-step-7?/intune/context/context
 
       - name: Secure and protect apps using Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-protect-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-protect-overview?/intune/context/context
           displayName: secure, protect, app, apps, conditional, launch, framework, basic, enhanced, high
         - name: Understand app data protection
-          href: /microsoft-365/solutions/apps-protect-data-protection?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-protect-data-protection?/intune/context/context
         - name: Understand app protection access requirements
-          href: /microsoft-365/solutions/apps-protect-access-requirements?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-protect-access-requirements?/intune/context/context
         - name: Understand app protection conditional launch
-          href: /microsoft-365/solutions/apps-protect-conditional-launch?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-protect-conditional-launch?/intune/context/context
         - name: Understand app protection health checks
-          href: /microsoft-365/solutions/apps-protect-health-checks?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-protect-health-checks?/intune/context/context
         - name: Use the app protection framework
           items:
           - name: App protection framework overview
-            href: /microsoft-365/solutions/apps-protect-framework?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-protect-framework?/intune/context/context
           - name: Step 1. Apply basic data protection
-            href: /microsoft-365/solutions/apps-protect-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-protect-step-1?/intune/context/context
           - name: Step 2. Apply enhanced data protection
-            href: /microsoft-365/solutions/apps-protect-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-protect-step-2?/intune/context/context
           - name: Step 3. Apply high data protection
-            href: /microsoft-365/solutions/apps-protect-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-protect-step-3?/intune/context/context
           - name: Step 4. Understand app protection delivery
-            href: /microsoft-365/solutions/apps-protect-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-protect-step-4?/intune/context/context
           - name: Step 5. Verify and monitor app protection
-            href: /microsoft-365/solutions/apps-protect-step-5?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-protect-step-5?/intune/context/context
           - name: Step 6. Use app protection actions
-            href: /microsoft-365/solutions/apps-protect-step-6?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-protect-step-6?/intune/context/context
 
       - name: Assign and deploy apps using Microsoft Intune
         items:
         - name: Overview
-          href: /microsoft-365/solutions/apps-assign-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-assign-overview?/intune/context/context
           displayName: assign, deploy, app, apps, monitor, troubleshoot
         - name: Understand app management
-          href: /microsoft-365/solutions/apps-assign-management?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-assign-management?/intune/context/context
         - name: Understand app assignments
-          href: /microsoft-365/solutions/apps-assign-assignments?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-assign-assignments?/intune/context/context
         - name: Understand app deployment
-          href: /microsoft-365/solutions/apps-assign-deployment?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+          href: /microsoft-365/solutions/apps-assign-deployment?/intune/context/context
         - name: Assign apps to your organization
           items:
           - name: Assign apps overview
-            href: /microsoft-365/solutions/apps-assign-steps-overview?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-assign-steps-overview?/intune/context/context
           - name: Step 1. Confirm users, devices, or groups
-            href: /microsoft-365/solutions/apps-assign-step-1?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-assign-step-1?/intune/context/context
           - name: Step 2. Assign apps to users, devices, or groups
-            href: /microsoft-365/solutions/apps-assign-step-2?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-assign-step-2?/intune/context/context
           - name: Step 3. Verify and monitor app assignments
-            href: /microsoft-365/solutions/apps-assign-step-3?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-assign-step-3?/intune/context/context
           - name: Step 4. Troubleshoot app deployment issues
-            href: /microsoft-365/solutions/apps-assign-step-4?toc=/intune/intune-service/toc.json&bc=/intune/breadcrumb/toc.json
+            href: /microsoft-365/solutions/apps-assign-step-4?/intune/context/context
 
       - name: Secure your corporate data using Edge for Business
         items:
