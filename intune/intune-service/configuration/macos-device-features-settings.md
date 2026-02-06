@@ -122,7 +122,7 @@ This setting applies to:
 
 ### Settings apply to: All enrollment types
 
-For more information on these settings, go to [Content Caching payload settings](https://support.apple.com/guide/mdm/content-caching-mdm163612d39/1/web/1) (opens Apple's web site).
+For more information on these settings, go to [Content Caching payload settings](https://support.apple.com/guide/deployment/content-caching-payload-settings-dep163612d39/web) (opens Apple's web site).
 
 **Enable content caching**: **Yes** turns on content caching, and users can't disable it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn it off.
 

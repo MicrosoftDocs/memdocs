@@ -130,7 +130,7 @@ groups:
 
 - id: platforms-apple
   title: Apple device platforms
-  prompt: Select your platform
+  prompt: Select the platform you're configuring
   pivots:
   - id: ios-ipados
     title: iOS/iPadOS

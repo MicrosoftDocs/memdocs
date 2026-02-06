@@ -15,7 +15,7 @@ Using Microsoft Intune, you can add or create custom settings for your iOS/iPadO
 
 This article describes the properties you can configure and provides some guidance on the Apple tools, like Apple Configurator.
 
-[!INCLUDE [settings-catalog-more-settings](../includes/settings-catalog-more-settings.md)] It's possible you don't need a custom profile.
+The Intune settings catalog has many settings, and more are continually added. Before you create this template profile, look for the settings in the [Intune settings catalog](../configuration/settings-catalog.md). It's possible you don't need a custom profile.
 
 ## Prerequisites
 

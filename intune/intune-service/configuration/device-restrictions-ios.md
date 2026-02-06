@@ -780,7 +780,7 @@ You can also:
 
   - When set to **Yes**:
 
-    - Make sure you configure a Wi-Fi device configuration profile using the [built-in Wi-Fi template](wi-fi-settings-configure.md) (not the settings catalog). Don't assign Wi-Fi profiles created using [custom profiles](custom-settings-apple.md), as this setting doesn't support custom Wi-Fi profiles.
+    - Make sure you configure a Wi-Fi device configuration profile using the [built-in Wi-Fi template](wi-fi-settings-configure.md) (not the settings catalog). Don't assign Wi-Fi profiles created using [custom profiles](custom-settings-configure.md), as this setting doesn't support custom Wi-Fi profiles.
 
       If you don't use the built-in Wi-Fi device configuration template, then the policy shows an error state for this settiing (**Require devices to use Wi-Fi networks set up via configuration profiles**).
 
