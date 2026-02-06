@@ -1,6 +1,41 @@
 {
   "redirections": [
     {
+      "source_path": "intune/device-updates/windows/driver-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/quality-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/expedite-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/settings.md",
+      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/expedite-updates.md",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-updates-overview.md",
+      "redirect_url": "/intune/device-updates/windows/driver-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/configure.md",
+      "redirect_url": "/intune/device-updates/windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/reports.md",
+      "redirect_url": "/intune/device-updates/windows/feature-updates-reports",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/protect/microsoft-cloud-pki-audit-logs.md",
       "redirect_url": "/intune/cloud-pki/audit-logs",
       "redirect_document_id": false
@@ -92,7 +127,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/device-updates/windows/expedite-updates",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -107,17 +142,17 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-overview.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates-overview",
+      "redirect_url": "/intune/device-updates/windows/driver-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-quality-update-policy.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -127,7 +162,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-for-business-configure.md",
-      "redirect_url": "/intune/device-updates/windows/configure",
+      "redirect_url": "/intune/device-updates/windows",
       "redirect_document_id": false
     },
     {
@@ -142,7 +177,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-settings.md",
-      "redirect_url": "/intune/device-updates/windows/settings",
+      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
       "redirect_document_id": false
     },
     {
@@ -3557,7 +3592,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/intune-service/protect/windows-10-expedite-updates",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -3567,7 +3602,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-update-rings.md",
-      "redirect_url": "/intune/intune-service/protect/windows-10-update-rings",
+      "redirect_url": "/intune/device-updates/windows/update-rings",
       "redirect_document_id": false
     },
     {
@@ -3577,7 +3612,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/intune-service/protect/windows-driver-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
     },
     {
