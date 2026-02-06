@@ -27,108 +27,69 @@ highlightedContent:
 
 # productDirectory section (optional)
 productDirectory:
-  title: I want to...
-  summary: We have highlighted some of the most requested objectives and key resources in the following section.
+  title: Manage devices, apps, and security with Intune
+  summary: Explore the core capabilities of Microsoft Intune and learn how to manage, secure, and support devices across your organization.
   items:
-    # Card
-    - title: Try and evaluate
-      imageSrc: ./media/index/get-started.svg
-      links:
-        - url: ./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md
-          text: Walkthrough Microsoft Intune admin center
-        - url: ./intune-service/fundamentals/try-intune-overview.md
-          text: Evaluate and try Intune tasks
 
-    # Card
-    - title: Plan a migration to Intune
-      imageSrc: ./media/index/plan-migrate.svg
-      links:
-        - url: ./intune-service/fundamentals/intune-planning-guide.md
-          text: Microsoft Intune planning guide
-        - url: ./intune-service/fundamentals/supported-devices-browsers.md
-          text: Supported operating systems and browsers
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
 
-    # Card
-    - title: Use Intune with Configuration Manager
-      imageSrc: ./media/index/co-manage.svg
-      links:
-        - url: ./configmgr/comanage/overview.md
-          text: Learn about co-management
-        - url: ./configmgr/comanage/tutorial-co-manage-clients.md
-          text: "See the tutorial: Enable co-management"
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
 
-    # Card
-    - title: Move to cloud native endpoints
-      imageSrc: ./media/index/cloud-endpoint.svg
-      links:
-        - url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-          text: Learn about cloud native endpoints
-        - url: ./solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
-          text: "See the tutorial: Get started with cloud native Windows endpoints"
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
 
-    # Card
-    - title: Set up Conditional Access with Intune
-      imageSrc: ./media/index/conditional-access.svg
-      links:
-        - url: ./intune-service/protect/conditional-access.md
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/0/0
-          text: View the interactive demo
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
 
-    # Card
-    - title: Update Windows with Intune
-      imageSrc: ./media/index/update-windows.svg
-      links:
-        - url: ./device-updates/windows/index.md
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
-          text: View the interactive demo
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
 
-    - title: Manage macOS devices
-      imageSrc: ./media/index/macos-manage.svg
-      links:
-        - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
-          text: Read the documentation
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
 
-    - title: 8. Analytics and reporting
-      imageSrc: ./media/index/reports.svg
-      links:
-        - url: /mem/autopilot/windows-autopilot
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
-          text: View the interactive demo
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
 
-    - title: 9. Remote actions and support
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management.
+      url: ./fundamentals/deployment-guide-enrollment.md
+
+    - title: Analytics and reporting
+      imageSrc: ./media/icons/hub-page/reports.svg
+      summary: Monitor device health, compliance, and activity.
+      url: ./endpoint-analytics/index.md
+
+    - title: Remote actions and support
       imageSrc: ./media/icons/hub-page/remote-actions.svg
-      links:
-        - url: /mem/autopilot/windows-autopilot
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
-          text: View the interactive demo
+      summary: Take actions on devices and help users remotely.
+      url: ./intune-service/remote-actions/index.md
 
-    - title: 9. Remote actions and support
-      imageSrc: ./media/icons/hub-page/remote-actions.svg
-      links:
-        - url: /mem/autopilot/windows-autopilot
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
-          text: View the interactive demo
-
-
-    - title: 11. Role-based access control
+    - title: Role-based access control
       imageSrc: ./media/icons/hub-page/rbac.svg
-      links:
-        - url: /mem/autopilot/windows-autopilot
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
-          text: View the interactive demo
+      summary: EDelegate administration securely and at scale.
+      url: ./intune-service/fundamentals/role-based-access-control.md
 
-
-    - title: 12. Co-management and Configuration Manager
+    - title: Co-management and Configuration Manager
       imageSrc: ./media/icons/hub-page/co-management.svg
-      links:
-        - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
-          text: Read the documentation
+      summary: Manage devices using both cloud and on-premises tools.
+      url: ./configmgr/co-management.md
 
 # additionalContent section (optional)
 # Card with summary style
