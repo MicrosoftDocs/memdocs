@@ -52,7 +52,7 @@ You can add the software update point site system role to an existing site syste
 
 #### Determine the port settings used in IIS
 
- 1. On the WSUS server, open Internet Information Services (IIS) Manager.
+1. On the WSUS server, open Internet Information Services (IIS) Manager.
  1. Expand **Sites**, select the **WSUS Administration** site, and then select **Bindings** from the **Actions** pane. In the **Site Bindings** dialog, the HTTP and HTTPS port values are displayed in the **Port** column.
 
 ### Configure SSL communications to WSUS
@@ -150,7 +150,16 @@ Configure the classifications settings on the **Classifications** page of the wi
 
 ## Products
 
- Configure the product settings on the **Products** page of the wizard, or on the **Products** tab in Software Update Point Component Properties.
+Configure the product settings on the **Products** page of the wizard, or on the **Products** tab in Software Update Point Component Properties.
+
+> [!WARNING]
+> Selecting too many Products & Categories for sync will result in a negative performance impact. Devices must scan every update in the SUSDB, whether it's deployed or not. Only select products that are relevant and necessary.
+> Many products and categories shown in the admin console are only for stand-alone WSUS, Configuration Manager can't deploy them. Don't select these items. Some examples include:
+> - Dynamic Updates
+> - Servicing Drivers
+> - Legacy versions of Microsoft Office: Office 2002/XP through Office 2013
+> - Legacy operating systems that are no longer supported: Windows 7, Windows 8, Server 2008, etc.
+> - 'Rollups' category, 'Feature Packs' category, 'Service Packs' category, etc.
 
 > [!TIP]
 > - The **Products** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.
