@@ -123,7 +123,6 @@ You can use this version with the minimum service pack and cumulative update sup
 > [!IMPORTANT]
 > Starting in version 2409, support for SQL Server 2014 is deprecated.<!--10092858--> <!--Its support lifecycle ends in July 2024. Plan to upgrade all database servers before that time. For more information, see [SQL Server](../changes/deprecated/removed-and-deprecated-server.md#sql-server).-->
 
-
 ## <a name="bkmk_SQLConfig"></a> Required configurations for SQL Server
 
 The following configurations are required by all installations of SQL Server that you use for a site database, including SQL Server Express. When Configuration Manager installs SQL Server Express as part of a secondary site installation, it automatically creates these configurations.
@@ -132,35 +131,11 @@ The following configurations are required by all installations of SQL Server tha
 
 Configuration Manager requires a 64-bit version of SQL Server to host the site database.
 
-### Database collation
+### SQL Instance and Database collations
 
 At each site, both the instance of SQL Server that's used for the site and the site database must use the following collation: **SQL_Latin1_General_CP1_CI_AS**.
 
 Configuration Manager supports two exceptions to this collation for the China GB18030 standard. For more information, see [International support](../hierarchy/international-support.md).
-
-### Database compatibility level
-
-Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version.
-
-When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. When you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server.
-
-The following table identifies the recommended compatibility levels for Configuration Manager site databases:
-
-|SQL Server version | Supported compatibility levels | Recommended level |
-|----------------|--------------------|--------|
-| SQL Server 2022 | **150**, 140, 130, 120, 110 | 150 |
-| SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
-| SQL Server 2017 | 140, 130, 120, 110 | 140 |
-| SQL Server 2016 | 130, 120, 110 | 130 |
-<!--| SQL Server 2014 | 120, 110 | 110 |-->
-
-To identify the compatibility level in use for your site database, run the following SQL query on the site database server:
-
-```SQL
-SELECT name, compatibility_level FROM sys.databases
-```
-
-For more information on SQL Server compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
 
 ### SQL Server features
 
@@ -190,7 +165,7 @@ Reserve memory for SQL Server by using SQL Server Management Studio. Set the **M
   - For a primary site: Set a minimum of 8 GB.
   - For a secondary site: Set a minimum of 4 GB.
 
-### Required SQL Server configurations
+### Other required SQL Server configurations
 
 Configuration Manager sets the below SQL Server configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios. Do not alter them unless instructed by Microsoft support.
 
@@ -200,7 +175,33 @@ Configuration Manager sets the below SQL Server configurations during setup to f
 | Allow Triggers to Fire Others | `nested triggers` | True | [Configure the nested triggers server configuration option](/sql/database-engine/configure-windows/configure-the-nested-triggers-server-configuration-option). |
 | Max Text Replication Size | `max text repl size (B)` | 2147483647 | [Configure the max text repl size server configuration option](/sql/database-engine/configure-windows/configure-the-max-text-repl-size-server-configuration-option). |
 
-### Required database configurations
+## <a name="bkmk_DBConfig"></a>Required SQL database configurations
+
+### Database compatibility level
+
+Configuration Manager requires that the compatibility level for the site database is no less than the lowest supported SQL Server version for your Configuration Manager version.
+
+When you upgrade a site database from an earlier version of SQL Server, the database keeps its existing cardinality estimation level, if it's at the minimum allowed for that instance of SQL Server. When you upgrade SQL Server with a database at a compatibility level lower than the allowed level, it automatically sets the database to the lowest compatibility level allowed by SQL Server.
+
+The following table identifies the recommended compatibility levels for Configuration Manager site databases:
+
+|SQL Server version | Supported compatibility levels | Recommended level |
+|----------------|--------------------|--------|
+| SQL Server 2022 | **150**, 140, 130, 120, 110 | 150 |
+| SQL Server 2019 | 150, 140, 130, 120, 110 | 150 |
+| SQL Server 2017 | 140, 130, 120, 110 | 140 |
+| SQL Server 2016 | 130, 120, 110 | 130 |
+<!--| SQL Server 2014 | 120, 110 | 110 |-->
+
+To identify the compatibility level in use for your site database, run the following SQL query on the site database server:
+
+```SQL
+SELECT name, compatibility_level FROM sys.databases
+```
+
+For more information on SQL Server compatibility levels and how to set them, see [ALTER DATABASE Compatibility Level (Transact-SQL)](/sql/t-sql/statements/alter-database-transact-sql-compatibility-level).
+
+### Other required database configurations
 
 Configuration Manager sets the below database configurations during setup to function correctly. They apply for both standalone primary site and hierarchy scenarios - as well as for SQL Always On configurations.
 
@@ -247,6 +248,13 @@ When the computer running SQL Server doesn't use its local system account to run
 For information about SPNs for the site database, see [Manage the SPN for the site database server](../../servers/manage/modify-your-infrastructure.md#bkmk_SPN).
 
 For information about how to change the account that is used by the SQL Server service, see [SCM Services - Change the service startup account](/sql/database-engine/configure-windows/scm-services-change-the-service-startup-account).
+
+### SQL Extended Protection for Authentication
+<!--24501008-->
+
+Starting from version 2409, Configuration Manager supports SQL extended protection for authentication. It's a security feature that enhances protection against MITM attacks, making SQL server more secure when connections are made using extended protection. These enhancements collectively reduce the risk of unauthorized access and protect sensitive data managed by the SQL Server database engine.
+
+For more information, see [Connect to the Database Engine Using Extended Protection](/sql/database-engine/configure-windows/connect-to-the-database-engine-using-extended-protection).
 
 ### SQL Server Reporting Services
 
