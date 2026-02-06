@@ -84,19 +84,51 @@ productDirectory:
         - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
           text: View the interactive demo
 
-    # Card
     - title: Manage macOS devices
       imageSrc: ./media/index/macos-manage.svg
       links:
         - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
           text: Read the documentation
-    - title: Deploy devices with Windows Autopilot
-      imageSrc: ./media/index/windows-autopilot.svg
+
+    - title: 8. Analytics and reporting
+      imageSrc: ./media/index/reports.svg
       links:
         - url: /mem/autopilot/windows-autopilot
           text: Read the documentation
         - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
           text: View the interactive demo
+
+    - title: 9. Remote actions and support
+      imageSrc: ./media/icons/hub-page/remote-actions.svg
+      links:
+        - url: /mem/autopilot/windows-autopilot
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
+          text: View the interactive demo
+
+    - title: 9. Remote actions and support
+      imageSrc: ./media/icons/hub-page/remote-actions.svg
+      links:
+        - url: /mem/autopilot/windows-autopilot
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
+          text: View the interactive demo
+
+
+    - title: 11. Role-based access control
+      imageSrc: ./media/icons/hub-page/rbac.svg
+      links:
+        - url: /mem/autopilot/windows-autopilot
+          text: Read the documentation
+        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
+          text: View the interactive demo
+
+
+    - title: 12. Co-management and Configuration Manager
+      imageSrc: ./media/icons/hub-page/co-management.svg
+      links:
+        - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
+          text: Read the documentation
 
 # additionalContent section (optional)
 # Card with summary style
