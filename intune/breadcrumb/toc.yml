@@ -53,6 +53,3 @@ items:
     - name: Hotfix
       tocHref: /intune/configmgr/hotfix
       topicHref: /intune/configmgr/hotfix
-  - name: Windows Autopilot
-    tocHref: /autopilot/
-    topicHref: /autopilot/
