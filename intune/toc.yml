@@ -1868,7 +1868,7 @@ items:
       - name: Powershell scripts for Remediations
         href: ./intune-service/fundamentals/powershell-scripts-remediation.md
     - name: Using the Intune docs
-      href: ./use-docs
+      href: ./use-docs.md
     - name: Get support in the Intune admin center
       href: ./get-support.md
     - name: Troubleshoot issues
