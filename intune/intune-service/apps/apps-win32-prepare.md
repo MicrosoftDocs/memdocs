@@ -1,7 +1,7 @@
 ---
 title: Prepare a Win32 App to Be Uploaded to Microsoft Intune
 description: Learn how to prepare a Win32 app to be uploaded to Microsoft Intune.
-ms.date: 10/02/2025
+ms.date: 02/06/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -15,17 +15,23 @@ ms.collection:
 Before you can add a Win32 app to Microsoft Intune, you must prepare the app by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730).
 
 > [!TIP]
-> As a companion to this article, see our Intune app protection for Windows setup guide](https://go.microsoft.com/fwlink/?linkid=2309605) to review best practices and learn to enforce policies, deploy apps, and protect corporate data across a variety of devices. For a customized experience based on your environment, you can access the [Intune app protection for Windows guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.  
+> For a customized experience based on your environment, you can access the [Intune app protection for Windows guide](https://go.microsoft.com/fwlink/?linkid=2309606) in the Microsoft 365 admin center.  
 
 ## Prerequisites
 
 To use Win32 app management, be sure you meet the following criteria:
 
 - Use a [supported Windows version](../fundamentals/supported-devices-browsers.md) (Enterprise, Pro, and Education versions).
-- Devices must be registered or joined to Microsoft Entra ID and autoenrolled. The Intune management extension supports devices that are Microsoft Entra registered, Microsoft Entra joined, hybrid domain joined, and group policy enrolled.
+- Devices must be registered or joined to Microsoft Entra ID and autoenrolled. The Intune management extension supports devices that are:
+    - Microsoft Entra registered
+    - Microsoft Entra joined
+    - hybrid domain joined
+    - group policy enrolled
+
   > [!NOTE]
-  > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune management extension is installed automatically when a PowerShell script or Win32 app, Microsoft Store apps, Custom compliance policy settings, or Proactive remediations is assigned to the user or device.
+  > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows device. The user must sign in the device by using their Microsoft Entra user account and enroll in Intune. Intune management extension is installed automatically when a PowerShell script or Win32 app, Microsoft Store apps, Custom compliance policy settings, or Proactive remediations is assigned to the user or device.
 - Windows application size is capped at 30 GB per app.
+- Apps must support silent installation: Win32 apps deployed through Intune must be able to install without user interaction. Ensure your application installers support silent or unattended installation modes before packaging them with the Content Prep Tool.
 
 ## Convert the Win32 app content
 
@@ -42,14 +48,14 @@ You can download the [Microsoft Win32 Content Prep Tool](https://go.microsoft.co
 
 ### Running the Microsoft Win32 Content Prep Tool
 
-If you run `IntuneWinAppUtil.exe` from the command window without parameters, the tool will guide you to enter the required parameters step by step. Or, you can add the parameters to the command based on the following available command-line parameters.
+If you run `IntuneWinAppUtil.exe` from the command window without parameters, the tool guides you to enter the required parameters step by step. Or, you can add the parameters to the command based on the following available command-line parameters.
 
 ### Available command-line parameters
 
 |    **Command-line   parameter**    |    **Description**    |
 |--------------------------------|------------------------------------------------------------|
 |    `-h`     |    Help    |
-|    `-c <setup_folder>`     |    Folder for all setup files. All files in this folder will be compressed into an *.intunewin* file.    |
+|    `-c <setup_folder>`     |    Folder for all setup files. All files in this folder are compressed into an *.intunewin* file.    |
 |    `-s <setup_file>`     |    Setup file (such as *setup.exe* or *setup.msi*).    |
 |    `-o <output_folder>`     |    Output folder for the generated *.intunewin* file.    |
 |    `-q`       |    Quiet mode.    |

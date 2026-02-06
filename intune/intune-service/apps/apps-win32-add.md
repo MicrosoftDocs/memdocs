@@ -1,7 +1,7 @@
 ---
 title: Add and Assign Win32 Apps to Microsoft Intune
 description: Learn how to add, assign, and manage Win32 apps with Microsoft Intune.
-ms.date: 01/14/2026
+ms.date: 02/06/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -79,6 +79,11 @@ Select **Next** to display the **Program** page.
 ## Step 2: Program
 
 On the **Program** page, configure the app installation and removal commands for the app:
+
+> [!IMPORTANT]
+> Microsoft Intune does not support interactive application installations. Applications deployed through Intune must install silently and cannot require user interaction, such as dialog boxes, prompts, or UI input during installation.
+>
+> Techniques that attempt to force interaction with the signed-in user session (for example, using tools like serviceui.exe or similar workarounds) are not supported and may result in inconsistent or unpredictable behavior. Although some applications might appear to install interactively in certain scenarios, this behavior is not supported by Intune and should not be relied upon in production environments.
 
 - **Install command**: Configure how the app is installed on devices.
 
