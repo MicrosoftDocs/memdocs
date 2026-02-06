@@ -175,9 +175,9 @@ Within the Intune admin center, you can go to **Tenant admin** > **Roles** and e
 When you select this node, you see a combined list of the current Intune RBAC categories and permissions that your account is granted. This combined list includes all the permissions from all role assignments, but not which role assignments provide them or by which group membership they're assigned.
 
 ### Roles by permission
-With this view, you can see details about a specific Intune RBAC [category and permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available.
+With this view, you can see details about a specific Intune RBAC [permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available.
 
-To get started, select an Intune permission Category and then a specific Permission from that category. The admin center then displays a list of instances that lead to that permission being assigned that includes:
+To get started, select an Intune permission and then a specific action from that permission. The admin center then displays a list of instances that lead to that permission being assigned that includes:
 
 - **Role display name** – The name of the built-in or custom RBAC role that grants the permission.
 - **Role assignment display name** – The name of the role assignment that assigns the role to groups of users.
@@ -186,7 +186,7 @@ To get started, select an Intune permission Category and then a specific Permiss
 ### Admin permissions
 Use the Admin permissions node to identify the specific permissions that an account is currently granted.
 
-Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Category* and *Permission*.
+Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Permission* and *Action*.
 
 :::image type="content" source="./media/role-based-access-control/admin-permission-view.png" alt-text="A screen capture that shows an example of the Admin permissions view in the Intune admin center.":::
 ## Next steps
