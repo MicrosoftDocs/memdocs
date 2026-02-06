@@ -189,7 +189,7 @@ You can use the **Run remediation** device action to run a remediation script on
 > [!NOTE]
 > - Only a single **Run remediation** device action can be issued at a time for the same device. If you run multiple **Run remediation** device actions in a short period of time to a device, they can overwrite each other.
 >
-> - The device might not receive the **Run remediation** device action if the device is offline or can't successfully communicate with Intune or Windows Push Notification Service (WNS) when the device action is sent.
+> - The device will not receive the **Run remediation** device action if the device is offline or can't successfully communicate with Intune or Windows Push Notification Service (WNS) when the device action is sent.
 
 ## Client policy retrieval and client reporting
 
