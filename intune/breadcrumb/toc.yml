@@ -48,3 +48,23 @@ items:
     - name: Hotfix
       tocHref: /intune/configmgr/hotfix
       topicHref: /intune/configmgr/hotfix
+
+- name: Microsoft Intune
+  tocHref: /defender-endpoint/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /microsoft-365/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /surface/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /troubleshoot/
+  topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /windows-365/
+  topicHref: /intune/index
