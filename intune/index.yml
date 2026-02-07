@@ -56,15 +56,15 @@ productDirectory:
       summary: Secure devices and apply security baselines.
       url: ./intune-service/protect/endpoint-security.md
 
-    - title: App protection
-      imageSrc: ./media/icons/hub-page/app-protection.svg
-      summary: Protect corporate data at the app level.
-      url: ./intune-service/apps/app-protection-policy.md
-
     - title: Compliance and access
       imageSrc: ./media/icons/hub-page/compliance-access.svg
       summary: Evaluate device compliance and control access to resources.
       url: ./intune-service/protect/device-compliance-get-started.md
+
+    - title: App protection
+      imageSrc: ./media/icons/hub-page/app-protection.svg
+      summary: Protect corporate data at the app level.
+      url: ./intune-service/apps/app-protection-policy.md
 
     - title: Copilot and agents
       imageSrc: ./media/icons/hub-page/agent.svg
