@@ -62,7 +62,7 @@ productDirectory:
       url: ./intune-service/protect/device-compliance-get-started.md
 
     - title: Copilot and agents
-      imageSrc: ./media/icons/hub-page/copilot.svg
+      imageSrc: ./media/icons/hub-page/agent.svg
       summary: Use AI-powered assistance and agents to analyze, configure, and manage Intune environments.
       url: ./intune-service/copilot/copilot-intune-overview.md
 
