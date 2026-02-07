@@ -103,11 +103,11 @@ conceptualContent:
         links:
         - url: ./intune-service/fundamentals/account-sign-up.md
           itemType: get-started
-          text: Sign up and sign in to Microsoft Intune
-        - url: /mem/intune/
+          text: Sign up or sign in to Microsoft Intune
+        - url: https://aka.ms/Intune_GuidedDemo
           itemType: get-started
           text: Interactive demos for Intune
-        - url: https://aka.ms/Intune_GuidedDemo
+        - url: ./intune-service/fundamentals/licenses.md
           itemType: get-started
           text: Microsoft Intune licensing
         - url: ./intune-service/fundamentals/intune-planning-guide.md
