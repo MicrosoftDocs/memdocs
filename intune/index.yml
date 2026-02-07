@@ -46,6 +46,11 @@ productDirectory:
       summary: Deploy and manage apps across platforms.
       url: ./intune-service/apps/app-management.md
 
+    - title: Device updates 
+      imageSrc: ./media/icons/hub-page/device-updates.svg
+      summary: Manage operating system updates across Windows, Apple, and Android devices.
+      url: ./device-updates/windows/index.md
+
     - title: Endpoint security
       imageSrc: ./media/icons/hub-page/endpoint-security.svg
       summary: Secure devices and apply security baselines.
@@ -65,11 +70,6 @@ productDirectory:
       imageSrc: ./media/icons/hub-page/agent.svg
       summary: Use AI-powered assistance and agents to analyze, configure, and manage Intune environments.
       url: ./intune-service/copilot/copilot-intune-overview.md
-
-    - title: Device updates 
-      imageSrc: ./media/icons/hub-page/device-updates.svg
-      summary: Manage operating system updates across Windows, Apple, and Android devices.
-      url: ./device-updates/windows/index.md
 
     - title: Analytics and reporting
       imageSrc: ./media/icons/hub-page/reports.svg
