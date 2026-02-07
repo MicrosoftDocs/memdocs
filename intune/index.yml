@@ -86,10 +86,10 @@ productDirectory:
       summary: Delegate administration securely and at scale.
       url: ./intune-service/fundamentals/role-based-access-control.md
 
-    - title: Co-management and Configuration Manager
+    - title: Configuration Manager and Co-management 
       imageSrc: ./media/icons/hub-page/co-management.svg
       summary: Manage devices using both cloud and on-premises tools.
-      url: ./configmgr/comanage/index.yml
+      url: ./configmgr/index.yml
 
 conceptualContent:
 
