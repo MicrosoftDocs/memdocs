@@ -120,9 +120,15 @@ conceptualContent:
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
         links:
-        - text: Platform deployment guides
+        - url: ./intune-service/fundamentals/deployment-guide-platform-windows.md
           itemType: how-to-guide
-          url: ./intune-service/fundamentals/deployment-guide-platform-windows.md
+          text: Manage Windows devices
+        - url: ./intune-service/fundamentals/deployment-guide-platform-android.md
+          itemType: how-to-guide
+          text: Manage Android devices
+        - url: ./intune-service/fundamentals/deployment-guide-platform-ios-ipados.md
+          itemType: how-to-guide
+          text: Manage iOS/iPadOS devices
         - text: Education
           itemType: architecture
           url: ./intune-service/industry/education/introduction-intune-education.md
@@ -158,3 +164,6 @@ conceptualContent:
         - text: Windows 365
           itemType: overview
           url: /windows-365/
+        - text: Microsoft Purview
+          itemType: overview
+          url: /purview/
