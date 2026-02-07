@@ -37,39 +37,39 @@ productDirectory:
       url: ./fundamentals/deployment-guide-enrollment.md
 
     - title: Device configuration
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      imageSrc: ./media/icons/hub-page/devices.svg
       summary: Configure settings and features across managed devices.
       url: ./configuration/device-profiles.md
 
-    - title: Device enrollment
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+    - title: Application management
+      imageSrc: ./media/icons/hub-page/apps.svg
+      summary: Deploy and manage apps across platforms.
+      url: ./apps/app-management.md
 
-    - title: Device enrollment
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+    - title: Endpoint security
+      imageSrc: ./media/icons/hub-page/endpoint-security.svg
+      summary: Secure devices and apply security baselines.
+      url: ./protect/endpoint-security.md
 
-    - title: Device enrollment
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+    - title: App protection
+      imageSrc: ./media/icons/hub-page/app-protection.svg
+      summary: Protect corporate data at the app level.
+      url: ./apps/app-protection-policy.md
 
-    - title: Device enrollment
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+    - title: Compliance and access
+      imageSrc: ./media/icons/hub-page/compliance-acccess.svg
+      summary: Evaluate device compliance and control access to resources.
+      url: ./protect/device-compliance-get-started.md
 
-    - title: Device enrollment
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+    - title: Copilot and agents
+      imageSrc: ./media/icons/hub-page/copilot.svg
+      summary: Use AI-powered assistance and agents to analyze, configure, and manage Intune environments.
+      url: /intune/agents/
 
-    - title: Device enrollment
-      imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+    - title: Device updates 
+      imageSrc: ./media/icons/hub-page/device-updates.svg
+      summary: Manage operating system updates across Windows, Apple, and Android devices.
+      url: ./protect/windows-update.md
 
     - title: Analytics and reporting
       imageSrc: ./media/icons/hub-page/reports.svg
