@@ -33,7 +33,7 @@ productDirectory:
 
     - title: Device enrollment
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
-      summary: Enroll and prepare devices for management.
+      summary: Enroll and prepare devices for management, including Windows Autopilot scenarios.
       url: ./intune-service/fundamentals/deployment-guide-enrollment.md
 
     - title: Device configuration
