@@ -142,12 +142,16 @@ conceptualContent:
           - text: Intune Tech Community
             url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
             itemType: training
+          - text: Microsoft Intune Blog
+            itemType: training
+            url: https://techcommunity.microsoft.com/category/microsoftintune/blog/microsoftintuneblog
           - text: Intune Customer Success
             itemType: training
             url: https://aka.ms/IntuneCustomerSuccess
           - text: Feedback for Intune
             itemType: whats-new
             url: https://aka.ms/IntuneFeedback
+
 
       - title: Related services
         summary: Learn more about identity, security, and cloud services that integrate with Microsoft Intune.
