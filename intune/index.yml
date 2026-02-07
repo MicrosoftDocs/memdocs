@@ -116,9 +116,6 @@ conceptualContent:
         - url: ./intune-service/fundamentals/supported-devices-browsers.md
           itemType: get-started
           text: Supported platforms and requirements
-      
-
-          
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
