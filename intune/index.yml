@@ -91,87 +91,61 @@ productDirectory:
       summary: Manage devices using both cloud and on-premises tools.
       url: ./configmgr/co-management.md
 
-# additionalContent section (optional)
-# Card with summary style
 conceptualContent:
-  # Supports up to 4 subsections
+
   sections:
 
-  - title: Additional resources
-    summary: "Go beyond the documentation with videos, blogs, training guides, communities, and more from Microsoft Experts and partners"
+  - title: Plan, deploy, and extend Intune
+    summary: Learn more about planning your Intune deployment and understanding supported platforms and requirements.
     items:
-      - title: Get to know Intune capabilities
+      - title: Get started
         summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment.
         links:
-        - url: https://aka.ms/Intune_GuidedDemo
+        - url: ./fundamentals/intune-planning-guide.md
           itemType: overview
-          text: Interactive demos for Intune
-        - url: ./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md
+          text: Plan your Intune deployment Link
+        - url: ./fundamentals/supported-devices-browsers.md
           itemType: how-to-guide
-          text: Walk through the Intune Admin Center
-        - url: ./intune-service/fundamentals/free-trial-sign-up.md
-          itemType: how-to-guide
-          text: Sign up for a 30-day trial
-        - url: https://techcommunity.microsoft.com/t5/educator-developer-blog/register-for-microsoft-365-and-power-apps-developer-account-with/ba-p/3490280
-          itemType: how-to-guide
-          text: Create a Microsoft 365 Developer tenant for a longer trial
-        - url: https://youtu.be/4x7NDxdEo94?feature=shared
-          itemType: how-to-guide
-          text: Watch a tutorial to set up Intune on Developer (community)
+          text: Supported platforms and requirements Link
 
-      - title: Plan a move to Intune
+      - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
         links:
-        - text: Set up or move to Intune
+        - text: Platform deployment guides (Windows, iOS/iPadOS, Android, macOS)
           itemType: how-to-guide
           url: ./intune-service/fundamentals/deployment-guide-intune-setup.md
-        - text: Get started with cloud-native endpoints
+        - text: Education
           itemType: how-to-guide
           url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-        - text: Download the migration guide (PDF)
+        - text: Government
           itemType: how-to-guide
           url: https://www.microsoft.com/en-us/download/details.aspx?id=105665
-        - text: Customize your migration instructions with the setup wizard
-          itemType: how-to-guide
-          url: https://setup.microsoft.com/intune/deploy-and-set-up-microsoft-intune
 
-      - title: Blog and community resources
+      - title: Community and support
         summary: Checkout Intune community resources for blogs, announcements, discussions, and more.
         links:
           - url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
             itemType: how-to-guide
-            text: Microsoft Intune Tech Community blog
+            text: Intune Tech Community
           - text: Intune Customer Success
             itemType: how-to-guide
             url: https://aka.ms/IntuneCustomerSuccess
-          - text: "#MSIntune on X (formerly Twitter)"
-            itemType: overview
-            url: https://twitter.com/hashtag/msintune
           - text: Feedback for Intune
             itemType: overview
             url: https://aka.ms/IntuneFeedback
-          - text: Microsoft Q & A - Microsoft Intune
-            itemType: overview
-            url: https://learn.microsoft.com/answers/tags/415/intune
-          - text: Intune training video series (Community)
-            itemType: how-to-guide
-            url: https://www.youtube.com/@IntuneTraining
 
-      - title: Co-manage devices with Intune and Configuration Manager
-        summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology.
+      - title: Related services
+        summary: 
         links:
-        - text: Get Intune benefits without changing management policies
+        - text: Microsoft Entra ID
           itemType: how-to-guide
           url: ./configmgr/tenant-attach/index.yml
-        - text: Add Intune security benefits for Windows devices
+        - text: Microsoft Defender for Endpoint
           itemType: how-to-guide
           url: ./intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md
-        - text: Analyze endpoint performance with Intune cloud attachment
+        - text: Windows Autopatch
           itemType: how-to-guide
-          url: ./endpoint-analytics/configure.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json
-        - text: Follow the interactive guide to co-managing workloads
+          url: ./endpoint-analytics/configure.md
+        - text: Windows 365
           itemType: how-to-guide
-          url: https://www.microsoft.com/microsoft-365/business-insights-ideas/resources/what-is-endpoint-management?slide=15#/SystemConfig?slide=15
-        - text: Read the tutorial for enabling co-management
-          itemType: how-to-guide
-          url: ./configmgr/comanage/tutorial-co-manage-clients.md
+          url: ./endpoint-analytics/configure.md
