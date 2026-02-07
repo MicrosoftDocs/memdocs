@@ -135,7 +135,7 @@ conceptualContent:
             url: https://aka.ms/IntuneFeedback
 
       - title: Related services
-        summary: Learn more about Microsoft services that integrate with Intune to help manage identity, security, updates, and cloud-based endpoints.
+        summary: Learn more about identity, security, and cloud services that integrate with Microsoft Intune.
         links:
         - text: Microsoft Entra ID
           itemType: how-to-guide
