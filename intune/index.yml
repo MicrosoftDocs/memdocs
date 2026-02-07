@@ -44,7 +44,7 @@ productDirectory:
     - title: Application management
       imageSrc: ./media/icons/hub-page/apps.svg
       summary: Deploy and manage apps across platforms.
-      url: ./apps/app-management.md
+      url: ./intune-service/apps/app-management.md
 
     - title: Endpoint security
       imageSrc: ./media/icons/hub-page/endpoint-security.svg
@@ -69,7 +69,7 @@ productDirectory:
     - title: Device updates 
       imageSrc: ./media/icons/hub-page/device-updates.svg
       summary: Manage operating system updates across Windows, Apple, and Android devices.
-      url: ./protect/windows-update.md
+      url: ./device-updates/windows/index.md
 
     - title: Analytics and reporting
       imageSrc: ./media/icons/hub-page/reports.svg
@@ -89,7 +89,7 @@ productDirectory:
     - title: Co-management and Configuration Manager
       imageSrc: ./media/icons/hub-page/co-management.svg
       summary: Manage devices using both cloud and on-premises tools.
-      url: ./configmgr/comanage/index.md
+      url: ./configmgr/comanage/index.yml
 
 conceptualContent:
 
@@ -101,11 +101,11 @@ conceptualContent:
       - title: Get started
         summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment.
         links:
-        - url: ./fundamentals/intune-planning-guide.md
-          itemType: overview
+        - url: ./intune-service/fundamentals/intune-planning-guide.md
+          itemType: get-started
           text: Plan your Intune deployment
-        - url: ./fundamentals/supported-devices-browsers.md
-          itemType: how-to-guide
+        - url: ./intune-service/fundamentals/supported-devices-browsers.md
+          itemType: get-started
           text: Supported platforms and requirements
 
       - title: Industry and platform guides
@@ -115,37 +115,37 @@ conceptualContent:
           itemType: how-to-guide
           url: ./intune-service/fundamentals/deployment-guide-platform-windows.md
         - text: Education
-          itemType: how-to-guide
+          itemType: architecture
           url: ./intune-service/industry/education/introduction-intune-education.md
         - text: Government
-          itemType: how-to-guide
-          url: ./intune-service/industry/education/intune-govt-service-description.md
+          itemType: architecture
+          url: ./intune-service/fundamentals/intune-govt-service-description.md
 
       - title: Community and support
         summary: Check out Intune community resources for blogs, announcements, discussions, and more.
         links:
-          - url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
-            itemType: how-to-guide
-            text: Intune Tech Community
+          - text: Intune Tech Community
+            url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
+            itemType: training
           - text: Intune Customer Success
-            itemType: how-to-guide
+            itemType: training
             url: https://aka.ms/IntuneCustomerSuccess
           - text: Feedback for Intune
-            itemType: overview
+            itemType: whats-new
             url: https://aka.ms/IntuneFeedback
 
       - title: Related services
         summary: Learn more about identity, security, and cloud services that integrate with Microsoft Intune.
         links:
         - text: Microsoft Entra ID
-          itemType: how-to-guide
+          itemType: overview
           url: /entra/
         - text: Microsoft Defender for Endpoint
-          itemType: how-to-guide
+          itemType: overview
           url: /microsoft-365/security/defender-endpoint/
         - text: Windows Autopatch
-          itemType: how-to-guide
+          itemType: overview
           url: /windows/deployment/windows-autopatch/
         - text: Windows 365
-          itemType: how-to-guide
+          itemType: overview
           url: /windows-365/
