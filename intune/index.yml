@@ -22,7 +22,7 @@ highlightedContent:
       itemType: whats-new
       url: ./intune-service/fundamentals/in-development.md
     - title: Microsoft Intune Suite add-ons
-      itemType: how-to-guide
+      itemType: overview
       url: ./intune-service/fundamentals/intune-add-ons.md
 
 # productDirectory section (optional)
@@ -34,12 +34,12 @@ productDirectory:
     - title: Device enrollment
       imageSrc: ./media/icons/hub-page/device-enrollment.svg
       summary: Enroll and prepare devices for management.
-      url: ./fundamentals/deployment-guide-enrollment.md
+      url: ./intune-service/fundamentals/deployment-guide-enrollment.md
 
     - title: Device configuration
       imageSrc: ./media/icons/hub-page/devices.svg
       summary: Configure settings and features across managed devices.
-      url: ./configuration/device-profiles.md
+      url: ./intune-service/configuration/device-profiles.md
 
     - title: Application management
       imageSrc: ./media/icons/hub-page/apps.svg
@@ -49,22 +49,22 @@ productDirectory:
     - title: Endpoint security
       imageSrc: ./media/icons/hub-page/endpoint-security.svg
       summary: Secure devices and apply security baselines.
-      url: ./protect/endpoint-security.md
+      url: ./intune/intune-service/protect/device-protect.md
 
     - title: App protection
       imageSrc: ./media/icons/hub-page/app-protection.svg
       summary: Protect corporate data at the app level.
-      url: ./apps/app-protection-policy.md
+      url: ./intune-service/apps/app-management.md
 
     - title: Compliance and access
-      imageSrc: ./media/icons/hub-page/compliance-acccess.svg
+      imageSrc: ./media/icons/hub-page/compliance-access.svg
       summary: Evaluate device compliance and control access to resources.
-      url: ./protect/device-compliance-get-started.md
+      url: ./intune-service/protect/device-compliance-get-started.md
 
     - title: Copilot and agents
       imageSrc: ./media/icons/hub-page/copilot.svg
       summary: Use AI-powered assistance and agents to analyze, configure, and manage Intune environments.
-      url: /intune/agents/
+      url: ./intune-service/copilot/copilot-intune-overview.md
 
     - title: Device updates 
       imageSrc: ./media/icons/hub-page/device-updates.svg
@@ -89,7 +89,7 @@ productDirectory:
     - title: Co-management and Configuration Manager
       imageSrc: ./media/icons/hub-page/co-management.svg
       summary: Manage devices using both cloud and on-premises tools.
-      url: ./configmgr/co-management.md
+      url: ./configmgr/comanage/index.md
 
 conceptualContent:
 
