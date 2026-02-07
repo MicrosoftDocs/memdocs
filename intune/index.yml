@@ -25,7 +25,7 @@ highlightedContent:
       itemType: overview
       url: ./intune-service/fundamentals/intune-add-ons.md
 
-# productDirectory section (optional)
+
 productDirectory:
   title: Manage devices, apps, and security with Intune
   summary: Explore the core capabilities of Microsoft Intune and learn how to manage, secure, and support devices across your organization.
@@ -103,23 +103,23 @@ conceptualContent:
         links:
         - url: ./fundamentals/intune-planning-guide.md
           itemType: overview
-          text: Plan your Intune deployment Link
+          text: Plan your Intune deployment
         - url: ./fundamentals/supported-devices-browsers.md
           itemType: how-to-guide
-          text: Supported platforms and requirements Link
+          text: Supported platforms and requirements
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
         links:
-        - text: Platform deployment guides (Windows, iOS/iPadOS, Android, macOS)
+        - text: Platform deployment guides
           itemType: how-to-guide
-          url: ./intune-service/fundamentals/deployment-guide-intune-setup.md
+          url: ./intune-service/fundamentals/deployment-guide-platform-windows.md
         - text: Education
           itemType: how-to-guide
-          url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
+          url: ./intune-service/industry/education/introduction-intune-education.md
         - text: Government
           itemType: how-to-guide
-          url: https://www.microsoft.com/en-us/download/details.aspx?id=105665
+          url: ./intune-service/industry/education/intune-govt-service-description.md
 
       - title: Community and support
         summary: Check out Intune community resources for blogs, announcements, discussions, and more.
@@ -142,7 +142,7 @@ conceptualContent:
           url: /entra/
         - text: Microsoft Defender for Endpoint
           itemType: how-to-guide
-          url: ./microsoft-365/security/defender-endpoint/
+          url: /microsoft-365/security/defender-endpoint/
         - text: Windows Autopatch
           itemType: how-to-guide
           url: /windows/deployment/windows-autopatch/
