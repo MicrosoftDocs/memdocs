@@ -99,14 +99,26 @@ conceptualContent:
     summary: Learn more about planning your Intune deployment and understanding supported platforms and requirements.
     items:
       - title: Get started
-        summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment.
+        summary: Resources to see Intune capabilities, get access to the admin center, and plan your deployment.
         links:
+        - url: ./intune-service/fundamentals/account-sign-up.md
+          itemType: get-started
+          text: Sign up and sign in to Microsoft Intune
+        - url: /mem/intune/
+          itemType: get-started
+          text: Interactive demos for Intune
+        - url: https://aka.ms/Intune_GuidedDemo
+          itemType: get-started
+          text: Microsoft Intune licensing
         - url: ./intune-service/fundamentals/intune-planning-guide.md
           itemType: get-started
           text: Plan your Intune deployment
         - url: ./intune-service/fundamentals/supported-devices-browsers.md
           itemType: get-started
           text: Supported platforms and requirements
+      
+
+          
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
