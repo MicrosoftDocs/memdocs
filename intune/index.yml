@@ -145,6 +145,9 @@ conceptualContent:
           - text: Microsoft Intune Blog
             itemType: training
             url: https://techcommunity.microsoft.com/category/microsoftintune/blog/microsoftintuneblog
+          - text: Microsoft Security Q&A
+            itemType: training
+            url: https://learn.microsoft.com/en-us/answers/tags/827/microsoft-security
           - text: Intune Customer Success
             itemType: training
             url: https://aka.ms/IntuneCustomerSuccess
