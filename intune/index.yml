@@ -49,12 +49,12 @@ productDirectory:
     - title: Endpoint security
       imageSrc: ./media/icons/hub-page/endpoint-security.svg
       summary: Secure devices and apply security baselines.
-      url: ./intune/intune-service/protect/device-protect.md
+      url: ./intune-service/protect/endpoint-security.md
 
     - title: App protection
       imageSrc: ./media/icons/hub-page/app-protection.svg
       summary: Protect corporate data at the app level.
-      url: ./intune-service/apps/app-management.md
+      url: ./intune-service/apps/app-protection-policy.md
 
     - title: Compliance and access
       imageSrc: ./media/icons/hub-page/compliance-access.svg
@@ -83,7 +83,7 @@ productDirectory:
 
     - title: Role-based access control
       imageSrc: ./media/icons/hub-page/rbac.svg
-      summary: EDelegate administration securely and at scale.
+      summary: Delegate administration securely and at scale.
       url: ./intune-service/fundamentals/role-based-access-control.md
 
     - title: Co-management and Configuration Manager
@@ -122,7 +122,7 @@ conceptualContent:
           url: https://www.microsoft.com/en-us/download/details.aspx?id=105665
 
       - title: Community and support
-        summary: Checkout Intune community resources for blogs, announcements, discussions, and more.
+        summary: Check out Intune community resources for blogs, announcements, discussions, and more.
         links:
           - url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
             itemType: how-to-guide
@@ -135,17 +135,17 @@ conceptualContent:
             url: https://aka.ms/IntuneFeedback
 
       - title: Related services
-        summary: rr
+        summary: Learn more about Microsoft services that integrate with Intune to help manage identity, security, updates, and cloud-based endpoints.
         links:
         - text: Microsoft Entra ID
           itemType: how-to-guide
-          url: ./configmgr/tenant-attach/index.yml
+          url: /entra/
         - text: Microsoft Defender for Endpoint
           itemType: how-to-guide
-          url: ./intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md
+          url: ./microsoft-365/security/defender-endpoint/
         - text: Windows Autopatch
           itemType: how-to-guide
-          url: ./endpoint-analytics/configure.md
+          url: /windows/deployment/windows-autopatch/
         - text: Windows 365
           itemType: how-to-guide
-          url: ./endpoint-analytics/configure.md
+          url: /windows-365/
