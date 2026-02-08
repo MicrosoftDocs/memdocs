@@ -53,17 +53,17 @@ productDirectory:
 
     - title: Endpoint security
       imageSrc: ./media/icons/hub-page/endpoint-security.svg
-      summary: Secure devices and apply security baselines.
+      summary: Secure devices using endpoint security policies, security baselines, and Defender integrations in Intune.
       url: ./intune-service/protect/endpoint-security.md
 
     - title: Compliance and access
       imageSrc: ./media/icons/hub-page/compliance-access.svg
-      summary: Evaluate device compliance and control access to resources.
+      summary: Evaluate device compliance in Intune and integrate compliance with Conditional Access to protect access to resources.
       url: ./intune-service/protect/device-compliance-get-started.md
 
     - title: App protection
       imageSrc: ./media/icons/hub-page/app-protection.svg
-      summary: Protect corporate data at the app level.
+      summary: Protect corporate data at the app level without requiring device enrollment.
       url: ./intune-service/apps/app-protection-policy.md
 
     - title: Copilot and agents
@@ -81,9 +81,9 @@ productDirectory:
       summary: Take actions on devices and help users remotely.
       url: ./intune-service/remote-actions/index.md
 
-    - title: Role-based access control
-      imageSrc: ./media/icons/hub-page/rbac.svg
-      summary: Delegate administration securely and at scale.
+    - title: Administration and governance
+      imageSrc: ./media/icons/hub-page/administration.svg
+      summary: Manage administrative access, roles, scope, and governance features to operate Intune securely and at scale.
       url: ./intune-service/fundamentals/role-based-access-control.md
 
     - title: Configuration Manager and Co-management 
