@@ -1,17 +1,10 @@
 ---
 title: Import admin console extensions for Configuration Manager
-titleSuffix: Configuration Manager
 description: Learn about importing Configuration Manager console extensions
 ms.date: 12/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Import Configuration Manager console extensions

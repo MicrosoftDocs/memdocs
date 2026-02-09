@@ -1,17 +1,10 @@
 ---
 title: Conditional Access with co-management
-titleSuffix: Configuration Manager
 description: Control user access to organizational resources based on compliance rules from Intune
 ms.date: 11/08/2021
 ms.subservice: co-management
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Conditional Access with co-management

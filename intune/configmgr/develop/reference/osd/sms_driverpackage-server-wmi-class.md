@@ -1,18 +1,10 @@
 ---
 title: SMS_DriverPackage Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents the package, which is the unit of distribution of program binaries with which one or more device drivers are associated.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e3bd9853-f190-48b0-b516-d7f2427d35bf
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_DriverPackage Server WMI Class
 The `SMS_DriverPackage` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the package that is the unit of distribution of program binaries with which one or more device drivers are associated.

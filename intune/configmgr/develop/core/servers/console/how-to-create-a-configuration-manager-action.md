@@ -3,15 +3,8 @@ title: Create a Configuration Manager Action
 description: Learn how to create a console action by creating an XML file that populates an ActionDescription XML element for the action.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: affca54f-bebb-44f8-9c94-58598670770e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Create a Configuration Manager Action
 To create a Configuration Manager console action, in Configuration Manager, you create an XML file that populates an [ActionDescription](/previous-versions/system-center/developer/cc147252(v=msdn.10)) XML element for the action. You must then copy the XML file to the %*ProgramFiles*%\Microsoft Endpoint Manager\AdminConsole\XmlStorage\Extensions\Actions\GUID folder.

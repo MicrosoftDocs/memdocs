@@ -1,18 +1,10 @@
 ---
 description: Article outlining the use of the GetSuppressComputerActivityInPresentationMode in Configuration Manager.
 title: GetSuppressComputerActivityInPresentationMode Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 2286886d-040d-49e6-9739-d2950606b9e2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetSuppressComputerActivityInPresentationMode Method in Class CCM_ClientUXSettings
 The `GetSuppressComputerActivityInPresentationMode` Windows Management Instrumentation (WMI) class method, in Configuration Manager, that gets the value for `SuppressComputerActivityInPresentationMode`

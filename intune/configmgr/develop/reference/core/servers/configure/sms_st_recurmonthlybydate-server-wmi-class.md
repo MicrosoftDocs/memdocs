@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a schedule token for events that occur on designated days at designated monthly intervals using SMS_ST_RecurMonthlyByDate class.
 title: SMS_ST_RecurMonthlyByDate Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a0f5758c-0195-4f2d-b734-3586f1b1cb46
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ST_RecurMonthlyByDate Server WMI Class
 The `SMS_ST_RecurMonthlyByDate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for events that occur on designated days at designated monthly intervals, for example, every third month on the 15th day of the month.

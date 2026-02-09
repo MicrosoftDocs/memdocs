@@ -1,15 +1,9 @@
 ---
 title: Enable Microsoft Intune tenant attach
-titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
 ms.date: 12/16/2024
 ms.topic: how-to
 ms.subservice: core-infra
-ms.service: configuration-manager
-manager: apoorvseth
-author: LauraWi
-ms.author: laurawi
-ms.localizationpriority: high
 ms.collection: tier3
 ---
 

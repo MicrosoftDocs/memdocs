@@ -1,18 +1,10 @@
 ---
 title: SMS_TaskSequence_Step Class
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_TaskSequence_Step WMI class is an SMS Provider server class. This class serves as an abstract base class that represents a single step in a task sequence.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 8115f7ad-c818-437e-bab3-da7654c02b43
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_Step Server WMI Class
 The `SMS_TaskSequence_Step` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager. This class serves as an abstract base class that represents a single step in a task sequence.

@@ -1,7 +1,7 @@
 ---
 title: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business
 description: Step 1. Create Microsoft Entra Conditional Access with Microsoft Edge for Business.
-ms.date: 12/05/2025
+ms.date: 01/23/2026
 ms.topic: how-to
 ms.reviewer: samarti
 ms.custom:
@@ -167,7 +167,5 @@ Use this companion policy to ensure that desktop applications on Windows devices
 - Document the final configuration so helpdesk teams can troubleshoot sign-in denials quickly.
 
 ## Next step
-
-[:::image type="content" source="./media/securing-data-edge-for-business/securing-data-edge-for-business-steps-02.png" alt-text="Step 2 to create an app protection policy.":::](mamedge-2-app.md)
 
 Continue with [Step 2](mamedge-2-app.md) to create an app protection policy.

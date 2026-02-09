@@ -1,18 +1,10 @@
 ---
 title: SMS_AzureServicesTask Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a Microsoft Azure specific operation that can be performed on the specified Microsoft Azure service. This class can be used to initiate an operation and monitor the results of the operation.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d9f0070c-a6ff-45d7-b5e7-62deafabb297
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # SMS_AzureServicesTask server WMI class

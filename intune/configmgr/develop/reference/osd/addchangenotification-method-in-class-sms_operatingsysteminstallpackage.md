@@ -1,18 +1,10 @@
 ---
 title: AddChangeNotification Method in SMS_OperatingSystemInstallPackage
-titleSuffix: Configuration Manager
 description: The AddChangeNotification WMI class method adds an operating system install package change notification.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0556f9cb-9b85-44fb-a1e3-c07bd03868ec
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # AddChangeNotification Method in Class SMS_OperatingSystemInstallPackage
 The `AddChangeNotification` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds an operating system install package change notification.

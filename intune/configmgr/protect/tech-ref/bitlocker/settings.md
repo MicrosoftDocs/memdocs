@@ -1,16 +1,9 @@
 ---
 title: BitLocker settings reference
-titleSuffix: Configuration Manager
 description: All of the BitLocker management settings available in Configuration Manager
 ms.date: 04/12/2022
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

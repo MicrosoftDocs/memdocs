@@ -1,17 +1,10 @@
 ---
 title: Migrate content
-titleSuffix: Configuration Manager
 description: Use distribution points to manage content while you migrate data to a Configuration Manager current branch destination hierarchy.
 ms.date: 12/30/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Plan a content deployment migration strategy in Configuration Manager
 

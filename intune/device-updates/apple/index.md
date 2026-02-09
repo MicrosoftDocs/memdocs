@@ -4,9 +4,6 @@ description: Learn how to configure software update policies for Apple devices u
 ms.date: 10/14/2025
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Configure update policies for Apple devices
@@ -32,6 +29,18 @@ This article shows how to configure update policies in Intune using Apple's Decl
 >
 > - iOS/iPadOS 17.0 and later
 > - macOS 14.0 and later
+:::column-end:::
+:::row-end:::
+
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../../includes/requirements/enrollment-methods.md)]
+:::column-end:::
+:::column span="3":::
+> The following enrollment methods are supported:
+>
+> - Device Enrollment
+> - Automated Device Enrollment
 :::column-end:::
 :::row-end:::
 

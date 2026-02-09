@@ -1,16 +1,9 @@
 ---
 title: Enable third-party updates
-titleSuffix: Configuration Manager
 description: Enable third-party updates in Configuration Manager
 ms.date: 10/08/2024
-ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

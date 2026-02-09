@@ -1,16 +1,9 @@
 ---
 title: View BitLocker reports
-titleSuffix: Configuration Manager
 description: Learn about the BitLocker management reports in Configuration Manager
 ms.date: 11/23/2021
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: reference
-author: BalaDelli
-ms.author: brianhun
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 

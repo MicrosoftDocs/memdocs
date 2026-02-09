@@ -461,7 +461,7 @@ For more information, see [Troubleshooting policy conflicts with Windows Autopil
 
 For more information, go to:
 
-- [Learn about using Windows Update client policies in Microsoft Intune](../../device-updates/windows/configure.md)
+- [Learn about using Windows Update client policies in Microsoft Intune](../../device-updates/windows/index.md)
 - [Module 4.2 - Windows Update for Business Fundamentals](https://www.youtube.com/watch?v=TXwp-jLDcg0&list=PLMuDtq95SdKsEc_BmAbvwI5l6RPQ2Y2ak&index=6&t=5s) from the Intune for Education Deployment Workshop video series
 
 If you'd like more granular control for Windows Updates and you use Configuration Manager, consider [co-management](../../configmgr/comanage/overview.md).

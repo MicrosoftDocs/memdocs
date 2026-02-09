@@ -1,18 +1,10 @@
 ---
 title: Get the Unique Identifier Value for a Client
-titleSuffix: Configuration Manager
 description: When you discover system resource data for a client, in Configuration Manager, you must specify the client's unique identifier value in the data discovery record (DDR).
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 5c2a9bd7-9a0f-439d-9238-5bad67a0ad58
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Get the Unique Identifier Value for a Client
 When you discover system resource data for a client, in Configuration Manager, you must specify the client's unique identifier value in the data discovery record (DDR), such as:

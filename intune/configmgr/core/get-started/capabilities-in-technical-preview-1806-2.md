@@ -1,18 +1,11 @@
 ---
 title: Technical Preview 1806.2
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1806.2.
 ms.date: 06/27/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Capabilities in Technical Preview 1806.2 for Configuration Manager

@@ -1,14 +1,8 @@
 ---
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
-ms.localizationpriority: high
 ms.date: 09/29/2021
-author:  gowdhamankarthikeyan
-ms.author: gokarthi
 ms.collection: tier3
-manager: apoorvseth
-ms.reviewer: mstewart
 ---
 <!--This file is currently used by deploy-firewall-policy.md, deploy-asr-policy.md, deploy-antivirus-policy.md, and atp-onboard.md-->
 

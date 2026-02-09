@@ -5,7 +5,7 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: article
-ms.reviewer: dougeby
+ms.reviewer: intuneprivacy
 ms.collection:
 - M365-identity-device-management
 - privacy

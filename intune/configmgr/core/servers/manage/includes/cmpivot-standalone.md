@@ -1,10 +1,6 @@
 ---
-ms.author: gokarthi
-author: gowdhamankarthikeyan
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 10/01/2021
-ms.localizationpriority: medium
 ---
 
 <!--This file is shared by the cmpivot.md file and the cmpivot-changes.md file and contains information on how to run CMPivot standalone. H2s or HJ3s are determined by the article for which the include file is used.-->

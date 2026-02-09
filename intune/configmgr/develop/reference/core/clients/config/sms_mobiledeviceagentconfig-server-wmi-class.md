@@ -1,18 +1,10 @@
 ---
 description: Learn how to specify general settings for mobile devices in Configuration Manager using the SMS_MobileDeviceAgentConfig class.
 title: SMS_MobileDeviceAgentConfig Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9eabac3a-3186-48b2-bd71-482163b7f83c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_MobileDeviceAgentConfig Server WMI Class
 The `SMS_MobileDeviceAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that specifies general settings for mobile devices.

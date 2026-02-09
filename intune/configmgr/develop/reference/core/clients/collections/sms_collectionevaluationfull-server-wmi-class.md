@@ -1,18 +1,10 @@
 ---
 title: SMS_CollectionEvaluationFull class
-titleSuffix: Configuration Manager
 description: Show full evaluated collections.
 ms.date: 11/30/2020
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 54cee097-715c-4c4e-b8d3-49e69bb1fa2e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # SMS_CollectionEvaluationFull server WMI class

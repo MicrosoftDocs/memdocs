@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the settings and properties used by the software updates client agent using SMS_SoftwareUpdatesAgentConfig class.
 title: SMS_SoftwareUpdatesAgentConfig Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: efb91a02-0377-479d-ae95-a135ff57e901
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SoftwareUpdatesAgentConfig Server WMI Class
 The `SMS_SoftwareUpdatesAgentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings and properties used by the software updates client agent.

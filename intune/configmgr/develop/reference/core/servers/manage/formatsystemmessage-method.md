@@ -1,18 +1,10 @@
 ---
 title: FormatSystemMessage Method
 description: Learn how the FormatSystemMessage method, in Configuration Manager, formats a system error message by using the error code and optional insertion strings.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 2aaf8fa4-9ad5-4497-af59-7106631969b7
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # FormatSystemMessage Method
 The `FormatSystemMessage` method, in Configuration Manager, formats a system error message by using the error code and optional insertion strings.

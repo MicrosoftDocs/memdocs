@@ -5,17 +5,10 @@ summary: Configuration Manager is secure by default. Learn more about how to con
 
 metadata:
   title: Security documentation
-  titleSuffix: Configuration Manager
   description: Configuration Manager is secure by default. Learn more about how to configure and use features to help keep your environment secure.
   ms.subservice: core-infra
-  ms.service: configuration-manager
   ms.topic: landing-page
-  author: Banreet
-  ms.author: banreetkaur
-  manager: apoorvseth
   ms.date: 09/23/2021
-  ms.localizationpriority: high
-  ms.reviewer: mstewart
   ms.collection: tier3
 
 landingContent:

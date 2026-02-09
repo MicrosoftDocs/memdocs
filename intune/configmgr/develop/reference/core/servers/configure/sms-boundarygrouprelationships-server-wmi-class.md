@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the fallback relationships for boundary groups in Configuration Manager using SMS_BoundaryGroupRelationships.
 title: SMS_BoundaryGroupRelationships Class
-titleSuffix: Configuration Manager
 ms.date: 03/13/2017
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 155ed51e-a6a9-4ed6-bddb-5eabbb77ec4c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_BoundaryGroupRelationships Server WMI Class
 

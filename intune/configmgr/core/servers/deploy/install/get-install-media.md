@@ -1,17 +1,10 @@
 ---
 title: Get installation media
-titleSuffix: Configuration Manager
 description: Where to find installation media for new Configuration Manager installations.
 ms.date: 01/11/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Where to get installation media for Configuration Manager
 

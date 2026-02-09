@@ -1,17 +1,10 @@
 ---
 title: Changes to CMPivot
-titleSuffix: Configuration Manager
 description: Learn about changes made to CMPivot between Configuration Manager versions.
 ms.date: 08/02/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Changes to CMPivot

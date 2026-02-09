@@ -1,18 +1,11 @@
 ---
 title: Learn about updates
-titleSuffix: Configuration Manager
 description: Learn more about available updates
 ms.date: 10/06/2016
 ms.topic: article
 ms.subservice: other
-ms.service: configuration-manager
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Learn more about available updates for Configuration Manager
 

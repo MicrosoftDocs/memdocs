@@ -1,8 +1,5 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: client-mgt
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/02/2021
 ---

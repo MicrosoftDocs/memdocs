@@ -1,17 +1,10 @@
 ---
 title: Revise and supersede applications
-titleSuffix: Configuration Manager
 description: Learn how to work with Configuration Manager application versions and supersede applications.
 ms.date: 12/16/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Revise and supersede applications in Configuration Manager

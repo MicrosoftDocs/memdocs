@@ -1,18 +1,10 @@
 ---
 title: Set Operating System Deployment Branding Information
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 95a1f0b7-2568-403f-bd24-43abc859eaf0
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to set operating system deployment branding information in the configuration manager by changing the property of the client agent component section.
-ms.reviewer: mstewart
 ---
 # How to Set Operating System Deployment Branding Information in Configuration Manager
 You set the operating system deployment branding information for the Configuration Manager client by changing the `OSDBrandingSubtitle` property of the client agent component section in the site control file.

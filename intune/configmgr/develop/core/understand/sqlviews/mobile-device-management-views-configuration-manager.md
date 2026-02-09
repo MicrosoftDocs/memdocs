@@ -1,18 +1,11 @@
 ---
 title: Mobile device management views
-titleSuffix: Configuration Manager
 description: Information about the mobile device configuration items and configuration packages.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 
 
-ms.assetid: 3c8dc27b-0839-488d-9931-c897f136bfad
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

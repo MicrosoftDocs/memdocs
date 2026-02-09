@@ -1,17 +1,10 @@
 ---
 title: Get started with compliance settings
-titleSuffix: Configuration Manager
 description: Learn about core concepts and how compliance settings work
 ms.date: 01/04/2022
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: get-started
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Get started with compliance settings in Configuration Manager

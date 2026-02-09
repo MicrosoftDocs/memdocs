@@ -1,18 +1,10 @@
 ---
 description: Learn how to provide a summary report of the health of packages and distribution points in the site within Configuration Manager.
 title: SMS_PackageStatus Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d11a4300-8477-4d7b-a405-eb4e6f81e28e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_PackageStatus Server WMI Class
 The `SMS_PackageStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that provides a summary report of the health of packages and distribution points in the site.

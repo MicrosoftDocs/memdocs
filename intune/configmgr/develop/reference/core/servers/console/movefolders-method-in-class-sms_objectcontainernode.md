@@ -1,18 +1,10 @@
 ---
 title: MoveFolders Method
 description: Learn how the MoveFolders Windows Management (WMI) class method, in Configuration Manager, moves folders to another folder location.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: bc248af9-a09e-42cc-aceb-2a465e20d3f0
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # MoveFolders Method in Class SMS_ObjectContainerNode
 The `MoveFolders` Windows Management (WMI) class method, in Configuration Manager, moves folders to another folder location.

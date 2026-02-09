@@ -1,14 +1,7 @@
 ---
-author: Banreet
-ms.author: banreetkaur
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 07/17/2022
-ms.localizationpriority: high
-author:  gowdhamankarthikeyan
-ms.author: gokarthi
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

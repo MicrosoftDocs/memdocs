@@ -1,17 +1,10 @@
 ---
 title: Supported site system servers
-titleSuffix: Configuration Manager
 description: Learn which Windows versions you can use to host a Configuration Manager site or site system role.
 ms.date: 12/19/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Supported operating systems for Configuration Manager site system servers

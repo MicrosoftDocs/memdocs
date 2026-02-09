@@ -1,17 +1,10 @@
 ---
 title: Monitor compliance settings
-titleSuffix: Configuration Manager
 description: Use one or more of the procedures in this topic to display the compliance status of the configuration baseline.
 ms.date: 10/06/2016
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Monitor compliance settings in Configuration Manager
 

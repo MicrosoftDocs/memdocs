@@ -1,18 +1,10 @@
 ---
 description: Learn how to import computer information using ImportMachineEntry class method in Configuration Manager.
 title: ImportMachineEntry Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 89d8d59f-79b1-4be7-85a8-43e741528a8e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ImportMachineEntry Method in Class SMS_Site
 The `ImportMachineEntry` Windows Management Instrumentation (WMI) class method in Configuration Manager that imports computer information.

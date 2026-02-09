@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the site install map, which describes the layout of all installed features in Configuration Manager.
 title: SMS_SiteInstallMap Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 17514bfd-e80e-483d-98fd-12d39c2718eb
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SiteInstallMap Server WMI Class
 The `SMS_SiteInstallMap` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the site install map, which describes the layout of all installed features.

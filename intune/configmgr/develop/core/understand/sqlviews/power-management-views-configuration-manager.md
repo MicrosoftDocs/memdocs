@@ -1,18 +1,11 @@
 ---
 title: Power management views
-titleSuffix: Configuration Manager
 description: Information about the power plans applied to computers by Configuration Manager.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 
 
-ms.assetid: bfb0f6a9-09c1-4065-b0e5-be06cdc1800a
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

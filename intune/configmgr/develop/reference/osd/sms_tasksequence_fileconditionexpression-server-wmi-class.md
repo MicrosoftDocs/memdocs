@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SMS_TaskSequence_FileConditionExpression class to represent a condition expression to check for the existence of a file and its creation time.
 title: SMS_TaskSequence_FileConditionExpression Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 50f9834c-2f20-48ca-80a2-676b388abe63
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_FileConditionExpression Server WMI Class
 The `SMS_TaskSequence_FileConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to check for the existence of a file and its creation time.

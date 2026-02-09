@@ -1,17 +1,10 @@
 ---
 title: Custom properties for devices
-titleSuffix: Configuration Manager
 description: Use the administration service to set custom property data on devices, for reporting or collections.
 ms.date: 12/01/2021
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Custom properties for devices

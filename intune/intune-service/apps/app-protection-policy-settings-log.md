@@ -14,11 +14,10 @@ Learn about the settings you can review in the app protection logs. Access logs 
 
 The process to enable and collect logs varies by platform:
 - **iOS/iPadOS devices** - Use Microsoft Edge for iOS/iPadOS to collect logs. For details, see [Use Microsoft Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
+
 ## Log files
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
-- **Windows devices** - Use *MDMDiag* and event logs. See, [Diagnose MDM failures in Windows 10](/windows/client-management/mdm/diagnose-mdm-failures-in-windows-10) in the Windows client management content, and the blog [Troubleshooting Windows 10 Intune Policy Failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures).
+- **Windows devices** - Use *MDMDiag* and event logs. See, [Collect MDM logs](/windows/client-management/mdm-collect-logs) in the Windows client management content, and the blog [Troubleshooting Windows Intune Policy Failures](/archive/blogs/configmgrdogs/troubleshooting-windows-10-intune-policy-failures).
 - **Android devices** - Use Microsoft Edge for Android to collect logs. For details, see [Use Microsoft Edge for iOS and Android to access managed app logs](manage-microsoft-edge.md#use-microsoft-edge-for-ios-and-android-to-access-managed-app-logs).
 
   > [!NOTE]

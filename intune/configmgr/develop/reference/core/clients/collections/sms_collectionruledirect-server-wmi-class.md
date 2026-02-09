@@ -1,18 +1,10 @@
 ---
 title: SMS_CollectionRuleDirect Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a resource. The resource is to be made an unconditional member of the collection.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: b564eab3-baf1-4c32-8d0a-598774bb93c3
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CollectionRuleDirect Server WMI Class
 The `SMS_CollectionRuleDirect` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a resource that is to be made an unconditional member of the collection.

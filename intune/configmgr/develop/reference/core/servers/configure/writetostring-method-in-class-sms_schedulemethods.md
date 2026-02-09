@@ -1,18 +1,10 @@
 ---
 description: The WriteToString Windows Management Instrumentation (WMI) class method, in Configuration Manager, writes an interval string from objects.
 title: WriteToString Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 365617e1-9caf-4e90-99be-f486bcbb23ff
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # WriteToString Method in Class SMS_ScheduleMethods
 The `WriteToString` Windows Management Instrumentation (WMI) class method, in Configuration Manager, writes an interval string from [SMS_ScheduleToken Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_scheduletoken-server-wmi-class.md) objects.

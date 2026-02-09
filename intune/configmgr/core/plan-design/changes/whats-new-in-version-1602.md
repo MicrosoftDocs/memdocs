@@ -1,18 +1,11 @@
 ---
 title: New in version 1602
-titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 1602 of Configuration Manager.
 ms.date: 12/30/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # What&#39;s new in version 1602 of Configuration Manager
 

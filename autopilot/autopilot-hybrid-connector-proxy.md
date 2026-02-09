@@ -6,7 +6,6 @@ description: Covers how to configure the Intune Connector for Active Directory t
 ms.date: 11/24/2025
 ms.collection:
   - M365-modern-desktop
-  - tier2
 ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

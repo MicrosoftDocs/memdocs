@@ -1,16 +1,9 @@
 ---
 title: Tenant attach - Run Scripts from the admin center
-titleSuffix: Configuration Manager
 description: Run scripts for Configuration Manager devices from the admin center.
 ms.date: 07/11/2022
 ms.topic: how-to
 ms.subservice: core-infra
-ms.service: configuration-manager
-manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
-ms.localizationpriority: high
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

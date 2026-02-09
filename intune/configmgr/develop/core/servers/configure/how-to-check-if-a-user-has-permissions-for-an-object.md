@@ -1,18 +1,10 @@
 ---
 title: Check if a User Has Permissions for an Object
-titleSuffix: Configuration Manager
 description: In Configuration Manager, you can check for object permissions using the UserHasPermissions Method in Class SMS_RbacSecuredObject.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: c249e680-0275-4d8a-a3f5-39643b40a8b7
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Check if a User Has Permissions for an Object
 In Configuration Manager, you can check for object permissions using the [UserHasPermissions Method in Class SMS_RbacSecuredObject](../../../../develop/reference/core/servers/configure/userhaspermissions-method-in-class-sms_rbacsecuredobject.md).

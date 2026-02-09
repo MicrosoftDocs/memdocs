@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the database link status between the child and parent site for each replication group with SMS_ReplicationLinkStatus.
 title: SMS_ReplicationLinkStatus Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: eb30cf7e-c3dc-4d9f-b70b-453dbf059896
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ReplicationLinkStatus Server WMI Class
 The `SMS_ReplicationLinkStatus` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents the database link status between the child and parent site for each replication group.

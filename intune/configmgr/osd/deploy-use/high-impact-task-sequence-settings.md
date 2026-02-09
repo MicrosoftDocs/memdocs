@@ -1,16 +1,9 @@
 ---
 title: High-impact task sequence settings
-titleSuffix: Configuration Manager
 description: Configure a task sequence as high-impact and customize the messages that users receive when they run the task sequence.
 ms.date: 04/08/2022
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-ms.localizationpriority: medium
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -73,6 +66,9 @@ You configure the following custom notification in task sequence properties:
 The following notification message displays when the end user opens the installation from Software Center:
 
 ![Customized task sequence notification to the end user from Software Center.](../media/user-notification-enduser.png)
+
+> [!NOTE]
+> If you set up a non-OS deployment task sequence as high-impact, it displays under the Operating Systems node in Software Center as well as all OSD task sequence deployments. Normally, non-OSD task sequence deployments are displayed under the Applications node.
 
 ## Next steps
 

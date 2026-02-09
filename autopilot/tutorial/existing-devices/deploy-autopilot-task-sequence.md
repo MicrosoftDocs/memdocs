@@ -3,9 +3,6 @@ title: Windows Autopilot deployment for existing devices in Intune and Configura
 description: Windows Autopilot deployment for existing devices in Intune and Configuration Manager - Step 7 of 10 - Deploy a Windows Autopilot task sequence to collection in Configuration Manager.
 ms.date: 06/13/2025
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

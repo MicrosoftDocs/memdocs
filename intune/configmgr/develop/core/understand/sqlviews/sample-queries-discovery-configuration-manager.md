@@ -1,18 +1,11 @@
 ---
 title: Sample queries for discovery
-titleSuffix: Configuration Manager
 description: Sample queries that show how to join discovery views to each other and views from other view categories.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 0a31df14-00b0-4880-b36a-3d60d3108129
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

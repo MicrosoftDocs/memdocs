@@ -1,18 +1,10 @@
 ---
 title: Read Lazy Properties by Using WMI
-titleSuffix: Configuration Manager
 description: To read a lazy property from a Configuration Manager object returned in a query, you get the object instance, which in turn retrieves any lazy object properties from the SMS Provider.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 1fa2d52e-b5e6-4362-81cf-e175ff45435a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Read Lazy Properties by Using WMI
 To read a lazy property from a Configuration Manager object returned in a query, you get the object instance, which in turn retrieves any lazy object properties from the SMS Provider.

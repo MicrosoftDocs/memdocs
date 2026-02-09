@@ -1,18 +1,10 @@
 ---
 description: Learn how to use Configuration Manager SMS_AutoDeployment Windows Management Instrumentation (WMI) class to represent an automatic deployment.
 title: SMS_AutoDeployment Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: fd4929f6-441f-4589-8325-3c0aff129fb1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_AutoDeployment Server WMI Class
 The  `SMS_AutoDeployment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an automatic deployment.

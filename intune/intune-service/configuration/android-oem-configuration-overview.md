@@ -3,7 +3,7 @@ title: Use OEMConfig on Android Enterprise devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 07/29/2025
+ms.date: 01/26/2026
 ms.topic: how-to
 ms.reviewer: akritis
 ms.collection:
@@ -216,6 +216,8 @@ Intune supports the following OEMConfig apps:
 | Ecom - Ex-Handy 10 | com.ecom.econfig | |
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
 | Elo | com.elotouch.oemconfig | [Elo OEMConfig Configurations](https://www.elotouch.com/oemconfig-configurations) |
+| FCNT - Senior Care | com.fcnt.mobile_phone.seniorcareconfig | |
+| FCNT - Schema | com.fcnt.mobile_phone.schematest | |
 | Getac | com.getac.app.getacoemconfig | |
 | Handheld | com.handheldgroup.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
@@ -239,6 +241,7 @@ Intune supports the following OEMConfig apps:
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
 | Seuic | com.seuic.seuicoemconfig | |
 | Social Mobile | com.rhinomobility.oemconfig | |
+| Sonim | com.sonim.oemappconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
 | Spectralink - Buttons | com.spectralink.buttons |  |
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |

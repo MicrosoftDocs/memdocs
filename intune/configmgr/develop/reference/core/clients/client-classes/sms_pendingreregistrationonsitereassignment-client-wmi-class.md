@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a pending re-registration at the time of site reassignment in Configuration Manager.
 title: SMS_PendingReRegistrationOnSiteReAssignment Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: c3387ae1-f546-4e05-b30e-b47ed252c15f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_PendingReRegistrationOnSiteReAssignment Client WMI Class
 > [!IMPORTANT]

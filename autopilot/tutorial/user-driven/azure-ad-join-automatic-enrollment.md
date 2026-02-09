@@ -3,9 +3,6 @@ title: Windows Autopilot user-driven Microsoft Entra join - Step 1 of 8 - Set up
 description: How to - Windows Autopilot user-driven Microsoft Entra join - Step 1 of 8 - Set up Windows automatic Intune enrollment.
 ms.date: 06/13/2025
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

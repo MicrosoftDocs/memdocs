@@ -1,18 +1,11 @@
 ---
 title: Inventory views
-titleSuffix: Configuration Manager
 description: Hardware and software inventory information about the clients, files, and products, in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 
 
-ms.assetid: 4487dbcb-1652-454f-8c45-3f543db1ad50
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

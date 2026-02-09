@@ -1,17 +1,10 @@
 ---
 title: Find help
-titleSuffix: Configuration Manager
 description: Find resources for additional information about Configuration Manager.
 ms.date: 11/10/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Find help for using Configuration Manager

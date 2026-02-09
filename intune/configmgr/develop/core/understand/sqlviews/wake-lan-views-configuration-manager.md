@@ -1,18 +1,11 @@
 ---
 title: Wake On LAN views
-titleSuffix: Configuration Manager
 description: Information about the objects that have Wake On LAN enabled.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 
 
-ms.assetid: c31b2528-de90-4a60-8a99-75990b9ad0ea
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

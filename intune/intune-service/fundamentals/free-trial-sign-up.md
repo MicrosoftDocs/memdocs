@@ -3,7 +3,7 @@ title: Sign Up for Microsoft Intune Free Trial Setup Guide
 description: Sign up for a Microsoft Intune free trial and configure your tenant. Learn the setup process, prerequisites, and how to configure domain names. Start evaluating Intune today.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 01/20/2026
+ms.date: 01/27/2026
 ms.topic: how-to
 ms.reviewer: tycast
 ms.collection:
@@ -113,23 +113,22 @@ Intune uses role-based access control (RBAC) to manage permissions.
 
 The account that creates the subscription is assigned the Microsoft Entra [Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator). This built-in role is a privileged Microsoft Entra role and has more permissions than needed for most Intune tasks.
 
+We suggest that you sign out of the Global Administrator role account and sign in with an account that's needed for the Intune task.
+
 There are built-in roles specifically created and used to manage Intune. Your goal is to use the least privilege role that can perform the necessary tasks. For this series of articles, the following built-in roles are needed:
 
 | Role | Description |
 |---|---|
-| **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** | A Microsoft Entra role that has full access to all features in Microsoft Intune. You can use this account to set up Intune. |
 | **[Domain Name Administrator role](/entra/identity/role-based-access-control/permissions-reference#domain-name-administrator)** | A Microsoft Entra role that can add and verify custom domain names in your tenant. This role is only used if you configure a custom domain name in this series, which is optional. |
+| **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** | A Microsoft Entra role that has full access to all features in Microsoft Intune. You can use this account to set up Intune and set up Automatic Enrollment for Windows devices. |
 | **[User Administrator](/entra/identity/role-based-access-control/permissions-reference#user-administrator)** | A Microsoft Entra role that can create and manage user accounts and groups in Intune and Microsoft 365. |
-| **[Policy and Profile Manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** | An Intune role that can create and manage Intune policies. |
 | **[Application Manager](../fundamentals/role-based-access-control-reference.md#application-manager)** | An Intune role that can add and manage apps in Intune. |
 | **[Intune Role Administrator](../fundamentals/role-based-access-control-reference.md#intune-role-administrator)** | An Intune role that can create and manage custom roles and add users to Intune roles. |
-| **[Global Administrator role](/entra/identity/role-based-access-control/permissions-reference#global-administrator)** | A Microsoft Entra role that sets up Automatic Enrollment for Windows devices. This role is only used once in this series. |
+| **[Policy and Profile Manager](../fundamentals/role-based-access-control-reference.md#policy-and-profile-manager)** | An Intune role that can create and manage Intune policies, including compliance, device configuration, and most enrollment policies. |
 
 If many admins are testing Intune, then assign their accounts to only the roles they need. For example, if an admin is only responsible for adding and managing apps, assign that admin only to the **Application Manager** role.
 
 - To assign built-in roles to your admin team, see [Assign Microsoft Intune roles for role-based access control](assign-role.md).
-
-We also suggest that you sign out of the Global Administrator role account and sign in with an account that's needed for the Intune task.
 
 For more information about Intune built-in roles, see:
 

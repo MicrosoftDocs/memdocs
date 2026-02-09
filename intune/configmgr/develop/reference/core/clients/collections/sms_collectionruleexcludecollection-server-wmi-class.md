@@ -1,18 +1,10 @@
 ---
 title: SMS_CollectionRuleExcludeCollection Class
 description: The SMS_CollectionRuleExcludeCollection class is an SMS Provider server class represents an exclusion rule that is added as a rule to the SMS_Collection instance.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a624418d-40f9-46b8-a079-d6776c2f3132
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CollectionRuleExcludeCollection Server WMI Class
 The `SMS_CollectionRuleExcludeCollection` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, represents an exclusion rule which is added as a rule to the `SMS_Collection` instance. Any members of a collection defined by this rule will be excluded from the collection.

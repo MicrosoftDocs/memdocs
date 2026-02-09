@@ -29,7 +29,7 @@ Before you assign roles to groups, ensure you have sufficient groups for the dif
 To manage RBAC roles and assignments in Intune, your account must have one of the following permission sets:
 
 - The Intune built-in role of [**Intune Role Administrator**](../fundamentals/role-based-access-control.md#built-in-roles). *Least privileged built-in role*
-- A custom role that includes the following categories and category permissions:
+- A custom role that includes the following permissions and actions:
 
   **Roles**:
   - Assign

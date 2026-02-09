@@ -1,17 +1,10 @@
 ---
 title: Setup reference
-titleSuffix: Configuration Manager
 description: Review this reference to help you prepare to install a Configuration Manager site or hierarchy.
 ms.date: 01/04/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Reference for Configuration Manager Setup
 

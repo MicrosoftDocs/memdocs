@@ -1,18 +1,10 @@
 ---
 title: SetRemCtrlSettings Method
-titleSuffix: Configuration Manager
 description: The SetRemCtrlSettings WMI class method specifies the remote control settings on a client computer.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: df307c37-020a-4972-8d7a-df0a57377ead
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SetRemCtrlSettings Method in Class CCM_RemoteControlManager
 The `SetRemCtrlSettings` Windows Management Instrumentation (WMI) class method in Configuration Manager that specifies the remote control settings on a client computer.

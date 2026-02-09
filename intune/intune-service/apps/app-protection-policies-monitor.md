@@ -9,17 +9,18 @@ ms.collection:
 ---
 
 # How to Monitor App Protection Policies
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 You can monitor the status of the app protection policies that you applied to users from the Intune app protection pane in Intune. Additionally, you can find information about the users affected by app protection policies, policy compliance status, and any issues that your users might be experiencing.
 
 App protection data is retained for a minimum of 90 days. Any app instances that checked in to the Intune service within the past 90 days is included in the app protection status report.
 
-> [!NOTE]
-> When you delete an app protection policy, scoped admins no longer see app instances associated with that policy. Global admins continue to see the policy name listed as "not available."
+## Before you begin
 
-> [!NOTE]
-> For iOS 16 and later devices, the **Device Name** value in all app protection reports is a generic device name. For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
+- When you delete an app protection policy, scoped admins no longer see app instances associated with that policy. Global Administrators continue to see the policy name listed as "not available."
+
+  [!INCLUDE [global-admin](../includes/global-admin.md)]
+
+- For iOS 16 and later devices, the **Device Name** value in all app protection reports is a generic device name. For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
 
 ## View the **App protection status** report
 

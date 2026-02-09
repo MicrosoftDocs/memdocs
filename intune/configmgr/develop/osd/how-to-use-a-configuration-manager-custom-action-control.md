@@ -1,18 +1,10 @@
 ---
 title: Use a Custom Action Control
-titleSuffix: Configuration Manager
 description: The custom action control is used to configure a custom action that you have defined. The custom action then becomes a step in the task sequence you are editing.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: b08bf2a3-d433-4024-ab38-824620dacd05
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Use a Configuration Manager Custom Action Control
 In Configuration Manager, you use a custom action control by selecting it in the Configuration Manager console Task Sequence Editor. The custom action control is used to configure a custom action that you have defined. The custom action becomes a step in the task sequence you are editing. The following procedure assumes that you have completed the tasks in the following topics:

@@ -1,17 +1,10 @@
 ---
 title: Supported clients and devices
-titleSuffix: Configuration Manager
 description: Learn which OS versions Configuration Manager supports for clients and devices.
 ms.date: 12/19/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Supported OS versions for clients and devices for Configuration Manager

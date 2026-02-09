@@ -1,16 +1,9 @@
 ---
 title: Set up BitLocker portals
-titleSuffix: Configuration Manager
 description: Install the BitLocker management components for the self-service portal, and the administration and monitoring website
 ms.date: 09/15/2020
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: BalaDelli
-ms.author: brianhun
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 

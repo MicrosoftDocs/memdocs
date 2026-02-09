@@ -1,17 +1,10 @@
 ---
 title: Cloud connecting with co-management
-titleSuffix: Configuration Manager
 description: Co-management offers immediate value when you enable it.
 ms.date: 11/08/2021
 ms.subservice: co-management
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Cloud connecting with co-management

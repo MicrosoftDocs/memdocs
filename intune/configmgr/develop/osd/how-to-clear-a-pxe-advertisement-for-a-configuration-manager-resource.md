@@ -1,18 +1,10 @@
 ---
 title: Clear a PXE Advertisement for a Resource
-titleSuffix: Configuration Manager
 description: To clear a PXE advertisement for a Configuration Manager resource, call the SMS_Collection object ClearLastNBSAdvForMachines method.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 29ad0de3-fd1a-4a22-b5ac-61a762a8c1a6
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Clear a PXE Advertisement for a Configuration Manager Resource
 To clear a PXE advertisement for a Configuration Manager resource, you call the [SMS_Collection](../../develop/reference/core/clients/collections/sms_collection-server-wmi-class.md) object [ClearLastNBSAdvForMachines](../../develop/reference/core/clients/collections/clearlastnbsadvformachines-method-in-class-sms_collection.md) method.

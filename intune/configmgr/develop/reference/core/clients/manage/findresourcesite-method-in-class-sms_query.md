@@ -1,18 +1,10 @@
 ---
 description: Article describing how to use FindResourceSite in Configuration Manager to get site code information for resources from SQL.
 title: FindResourceSite method in class SMS_Query
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 27d9cf32-728f-4834-97f3-4c9f28268fba
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # FindResourceSite Method in Class SMS_Query
 The `FindResourceSite` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets site code information for resources from SQL.

@@ -1,16 +1,9 @@
 ---
 title: Customize operating system images
-titleSuffix: Configuration Manager
 description: Use capture-and-build task sequences, manual configuration, or a combination of both to customize an operating system image.
 ms.date: 07/31/2025
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
-ms.reviewer: frankroj,mstewart
 ms.collection: tier3
 ---
 # Customize operating system images with Configuration Manager

@@ -1,18 +1,10 @@
 ---
 title: SMS_Category_LocalizedProperties Class
-titleSuffix: Configuration Manager
 description: The SMS_Category_LocalizedProperties Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes various localized properties for a category, for example, a product or a classification.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 1ffc950b-4a68-4d59-8080-dc5393f71a20
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_Category_LocalizedProperties Server WMI Class
 The `SMS_Category_LocalizedProperties` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that describes various localized properties for a category, for example, a product or a classification.

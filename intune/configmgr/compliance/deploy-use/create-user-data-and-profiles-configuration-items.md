@@ -1,17 +1,10 @@
 ---
 title: Create user data and profiles configuration items
-titleSuffix: Configuration Manager
 description: Use data and profiles configuration items in Configuration Manager to manage folder redirection, offline files, and roaming profiles.
 ms.date: 10/05/2021
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Create user data and profiles configuration items in Configuration Manager

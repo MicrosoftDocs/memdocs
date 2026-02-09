@@ -1,18 +1,10 @@
 ---
 title: Set the Deletion Policy for a State Migration Point
-titleSuffix: Configuration Manager
 description: In Configuration Manager, configure the state migration point deletion policy by updating the embedded properties of SMPStoreDeletionDelayTimeInMinutes and SMPStoreDeletionCycleTimeInMinutes.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: ffe6aa50-dd9c-4920-a694-fa05309f5863
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Set the Deletion Policy for a State Migration Point
 In Configuration Manager, you configure the state migration point deletion policy by updating the **SMPStoreDeletionDelayTimeInMinutes** and **SMPStoreDeletionCycleTimeInMinutes** embedded properties. The deletion policy defines when the state migration point should remove data marked for deletion.

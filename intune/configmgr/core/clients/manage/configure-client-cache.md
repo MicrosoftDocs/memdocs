@@ -1,17 +1,10 @@
 ---
 title: Configure the client cache
-titleSuffix: Configuration Manager
 description: Configure the client content cache during or after client install.
 ms.date: 12/16/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure the content cache for Configuration Manager clients

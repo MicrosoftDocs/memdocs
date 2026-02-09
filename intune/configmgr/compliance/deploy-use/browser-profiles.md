@@ -1,17 +1,10 @@
 ---
 title: Configure Microsoft Edge settings
-titleSuffix: Configuration Manager
 description: Configure settings for the Microsoft Edge Legacy web browser on Windows 10 clients
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ms.date: 03/02/2021
 ms.topic: how-to
-ms.service: configuration-manager
 ms.subservice: compliance
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure Microsoft Edge Legacy settings in Configuration Manager

@@ -3,15 +3,8 @@ title: Configuration Manager Status Summarizers
 description: Summarizers are summary classes that help you determine the health or status of different aspects of your Configuration Manager site.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.assetid: 99ab10c8-3095-4a73-966e-9c14091341d2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # About Configuration Manager Status Summarizers
 Summarizers are summary classes that help you determine the health, or status, of different aspects of your Configuration Manager site. The summaries, which are produced from status messages, states, and counts, give you a real-time view of the health of Configuration Manager sites, components, packages, and advertisements.

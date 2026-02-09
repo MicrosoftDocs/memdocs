@@ -1,18 +1,11 @@
 ---
 title: Technical Preview 1803
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager Technical Preview version 1803.
 ms.date: 03/27/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Capabilities in Technical Preview 1803 for Configuration Manager

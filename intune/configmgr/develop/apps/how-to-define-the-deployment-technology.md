@@ -1,18 +1,10 @@
 ---
 title: How to Define the Deployment Technology
 description: To define a custom application management deployment technology, implement the Microsoft.ConfigurationManagement.ApplicationManagement.DeploymentTechnology class.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: afacc3b0-db65-4f10-8410-5a94c27d1ea6
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Define the Deployment Technology
 To define a custom application management deployment technology, implement the `Microsoft.ConfigurationManagement.ApplicationManagement.DeploymentTechnology` class. The new class instance will define the deployment technology used to deploy a specific application to devices.

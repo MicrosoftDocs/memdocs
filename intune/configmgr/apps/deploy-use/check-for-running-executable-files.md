@@ -1,17 +1,10 @@
 ---
 title: Check for running executable files
-titleSuffix: Configuration Manager
 description: Configure an app deployment to check if certain executable files are running on the client.
 ms.date: 04/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Check for running executable files

@@ -1,18 +1,10 @@
 ---
 title: Compliance settings views
-titleSuffix: Configuration Manager
 description: Information about the compliance of devices with regard to a number of configurations.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: cf84f727-0993-455b-9184-313bc10a3ce2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Compliance settings views in Configuration Manager

@@ -1,18 +1,11 @@
 ---
 title: Technical preview 2007
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2007.
 ms.date: 07/27/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2007

@@ -1,17 +1,10 @@
 ---
 title: Content Library Explorer
-titleSuffix: Configuration Manager
 description: Use the Content Library Explorer to view and troubleshoot the content library on a Configuration Manager distribution point.
 ms.date: 07/30/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Content Library Explorer

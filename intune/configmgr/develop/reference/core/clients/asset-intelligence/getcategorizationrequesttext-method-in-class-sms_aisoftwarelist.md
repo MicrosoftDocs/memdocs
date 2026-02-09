@@ -1,18 +1,10 @@
 ---
 title: GetCategorizationRequestText Method
-titleSuffix: Configuration Manager
 description: The GetCategorizationRequestText retrieves the XML that is sent to System Center Online for categorization.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0181433b-d409-4739-8582-2d11dadf2f5b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetCategorizationRequestText Method in Class SMS_AISoftwareList
 The `GetCategorizationRequestText` Windows Management Instrumentation (WMI) class method, in Configuration Manager, retrieves the XML that is sent to System Center Online for categorization.

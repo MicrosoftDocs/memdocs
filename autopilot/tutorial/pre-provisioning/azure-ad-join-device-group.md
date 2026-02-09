@@ -3,9 +3,6 @@ title: Windows Autopilot for pre-provisioned deployment Microsoft Entra join - S
 description: How to - Windows Autopilot for pre-provisioned deployment Microsoft Entra join - Step 4 of 9 - Create a device group.
 ms.date: 06/13/2025
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

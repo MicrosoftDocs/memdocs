@@ -1,18 +1,10 @@
 ---
 title: Schema view mapping
-titleSuffix: Configuration Manager
 description: Learn how the SQL Server schema of the Configuration Manager site database maps to the WMI schema.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 3a3bee08-602d-40f8-b62b-e2ffe116d103
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configuration Manager Schema View Mapping

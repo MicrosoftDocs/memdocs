@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 04/30/2025
 ms.topic: overview
-ms.reviewer: dougeby
+ms.reviewer: davguy
 ms.collection:
 - essentials-overview
 - M365-identity-device-management

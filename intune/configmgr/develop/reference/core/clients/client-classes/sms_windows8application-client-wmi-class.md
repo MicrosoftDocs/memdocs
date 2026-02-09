@@ -1,18 +1,10 @@
 ---
 description: Learn how to define a Windows 8 style application or a Windows Store application in Configuration Manager.
 title: SMS_Windows8Application Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a8d947db-3396-42df-a01a-cfb9665ebf81
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_Windows8Application Client WMI Class
 In Configuration Manager, the `SMS_Windows8Application` class is a client Windows Management Instrumentation (WMI) class that defines a Windows 8 style application or a Windows Store application.

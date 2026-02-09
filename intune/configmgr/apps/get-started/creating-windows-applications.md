@@ -1,17 +1,10 @@
 ---
 title: Create Windows applications
-titleSuffix: Configuration Manager
 description: Learn more information about creating and deploying Windows applications in Configuration Manager.
 ms.date: 12/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Create Windows applications in Configuration Manager

@@ -1,17 +1,10 @@
 ---
 title: Content management fundamentals
-titleSuffix: Configuration Manager
 description: Use tools and options in Configuration Manager to manage the content that you deploy.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Fundamental concepts for content management in Configuration Manager

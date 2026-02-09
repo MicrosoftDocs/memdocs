@@ -1,16 +1,9 @@
 ---
 title: How to enroll with Windows Autopilot
-titleSuffix: Configuration Manager
 description: Enable clients to enroll with co-management when they provision with Windows Autopilot.
 ms.date: 05/18/2022
 ms.subservice: co-management
-ms.service: configuration-manager
 ms.topic: how-to
-ms.localizationpriority: medium
-author: gowdhamankarthikeyan
-ms.author: brianhun
-ms.reviewer: mstewart,frankroj
-manager: apoorvseth
 ms.collection: tier3
 ---
 

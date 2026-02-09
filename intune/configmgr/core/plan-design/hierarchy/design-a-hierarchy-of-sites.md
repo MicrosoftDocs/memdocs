@@ -1,17 +1,10 @@
 ---
 title: Design a site hierarchy
-titleSuffix: Configuration Manager
 description: Understand the available topologies and management options for Configuration Manager to plan your site hierarchy.
 ms.date: 10/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Design a hierarchy of sites for Configuration Manager

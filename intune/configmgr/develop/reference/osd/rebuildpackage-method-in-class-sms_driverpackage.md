@@ -1,18 +1,10 @@
 ---
 title: RebuildPackage method in class SMS_DriverPackage
-titleSuffix: Configuration Manager
 description: The RebuildPackage Windows Management Instrumentation (WMI) class method, in Configuration Manager, restores the contents for the driver package.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ea311e8c-5ad5-4c0c-882f-eeb8e74ba0f0
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # RebuildPackage Method in Class SMS_DriverPackage
 The `RebuildPackage` Windows Management Instrumentation (WMI) class method, in Configuration Manager, restores the contents for the driver package.

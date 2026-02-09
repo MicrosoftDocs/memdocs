@@ -1,17 +1,10 @@
 ---
 title: Site installation resources
-titleSuffix: Configuration Manager
 description: Review a list of articles that help you install Configuration Manager or add sites to your hierarchy.
 ms.date: 04/30/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: overview
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Resources for installing Configuration Manager sites

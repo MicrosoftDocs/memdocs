@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SMS_ServiceWindow class to represent a window of time called a maintenance window, in which a program is allowed to execute on a group of computers.
 title: SMS_ServiceWindow Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a45f7f94-d2c4-4185-9035-ef07b90c7846
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ServiceWindow Server WMI Class
 The `SMS_ServiceWindow` Windows Management Instrumentation (WMI) class, in Configuration Manager, is an SMS Provider server class that represents a window of time, called a maintenance window, in which a program is allowed to execute on a group of computers.

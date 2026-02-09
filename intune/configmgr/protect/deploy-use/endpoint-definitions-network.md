@@ -1,16 +1,9 @@
 ---
 title: Download definitions from a network share
-titleSuffix: Configuration Manager
 description: Learn how to manually download the latest definition updates from Microsoft and then configure clients to download these definitions.
 ms.date: 11/18/2019
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

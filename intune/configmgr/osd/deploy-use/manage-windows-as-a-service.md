@@ -1,16 +1,9 @@
 ---
 title: Manage Windows as a Service
-titleSuffix: Configuration Manager
 description: View the state of Windows as a Service (WaaS) using Configuration Manager, create servicing plans to form deployment rings, and view alerts when Windows clients are near end of support.
 ms.date: 06/20/2024
-ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

@@ -1,18 +1,10 @@
 ---
 description: Learn how to get the summarization schedule using the GetSummarizationSettings class method in Configuration Manager.
 title: GetSummarizationSettings Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: de5971eb-2e4a-400e-b6f7-273015cae137
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetSummarizationSettings Method in Class SMS_SummarizationSettings
 The `GetSummarizationSettings` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets the summarization schedule.

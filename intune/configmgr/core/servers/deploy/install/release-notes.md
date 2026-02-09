@@ -1,17 +1,10 @@
 ---
 title: Release notes
-titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
 ms.date: 04/24/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: release-notes
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 

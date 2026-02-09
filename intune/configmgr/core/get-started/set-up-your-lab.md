@@ -1,17 +1,10 @@
 ---
 title: Set up your lab
-titleSuffix: Configuration Manager
 description: Set up a lab for evaluating Configuration Manager with simulated real-life activities.
 ms.date: 09/26/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: Banreet
-manager: apoorvseth
-ms.author: banreetkaur
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Set up a Configuration Manager lab

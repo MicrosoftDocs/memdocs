@@ -1,18 +1,10 @@
 ---
 title: DeleteByQuery Method
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the DeleteByQuery WMI class method deletes status messages specified by a WQL query.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0b96f338-dd8a-449d-a4c0-8177ebbb0bc3
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # DeleteByQuery Method in Class SMS_StatusMessage
 The `DeleteByQuery` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes status messages specified by a WQL query.

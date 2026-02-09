@@ -1,18 +1,10 @@
 ---
 title: Asset intelligence views
-titleSuffix: Configuration Manager
 description: Information about software applications that are in use throughout the Configuration Manager hierarchy.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a2ab0d62-4053-4a59-8c5c-613604275909
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Asset intelligence views in Configuration Manager

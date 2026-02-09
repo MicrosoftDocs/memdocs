@@ -1,17 +1,10 @@
 ---
 title: Reinit missing message
-titleSuffix: Configuration Manager
 description: Use this diagram to start troubleshooting a missing message with SQL Server replication reinit in Configuration Manager
 ms.date: 08/09/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Reinit missing message

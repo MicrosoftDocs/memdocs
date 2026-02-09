@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/20/2024
 ms.topic: overview
-ms.reviewer: dougeby
+ms.reviewer:
 ms.custom:
   - get-started
   - intro-overview

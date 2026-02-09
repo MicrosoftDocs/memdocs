@@ -1,18 +1,11 @@
 ---
 title: How to create reports
-titleSuffix: Configuration Manager
 description: Information about how to create two types of reports directly from the Configuration Manager console.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 3b07899b-2301-475b-9803-5ec5a82b5aa1
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

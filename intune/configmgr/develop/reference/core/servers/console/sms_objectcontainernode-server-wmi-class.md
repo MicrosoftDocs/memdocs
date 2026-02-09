@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SMS_ObjectContainerNode WMI class which contains information for a given Configuration Manager console folder.
 title: SMS_ObjectContainerNode Class
-titleSuffix: Configuration Manager
 ms.date: 02/12/2021
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: aae03d45-ffa1-4524-9a85-3b10000c00f6
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ObjectContainerNode Server WMI Class
 The `SMS_ObjectContainerNode` WMI class is an SMS Provider server class, in Configuration Manager, that contains information for a given Configuration Manager console folder.

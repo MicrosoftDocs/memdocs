@@ -1,16 +1,9 @@
 ---
 title: Planning certificate template permissions
-titleSuffix: Configuration Manager
 description: Learn about planning for the permissions that you need to configure the certificate templates that Configuration Manager uses.
 ms.date: 03/29/2022
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Planning for certificate template permissions for certificate profiles in Configuration Manager

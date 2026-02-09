@@ -1,18 +1,11 @@
 ---
 title: Sample queries for site administration
-titleSuffix: Configuration Manager
 description: Sample queries that show how to join site administration views to other views to retrieve specific data.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 965581db-786b-413e-a444-26533a339642
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

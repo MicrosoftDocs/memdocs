@@ -3,7 +3,7 @@ title: Set up automatic enrollment in Intune
 description: Enable Intune automatic enrollment of Windows devices that join or register with your Microsoft Entra ID.
 services: microsoft-intune
 ms.topic: how-to
-ms.date: 01/20/2026
+ms.date: 01/27/2026
 ms.reviewer: maholdaa
 ms.collection:
 - M365-identity-device-management
@@ -34,7 +34,7 @@ In this article, you set up Microsoft Intune to automatically enroll Windows cor
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)** Microsoft Entra role
+> - Built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
 

@@ -1,18 +1,10 @@
 ---
 description: "Learn how to retrieve the baseline info for the specified configuration item using IDCMSDK::GetBaselineInfo method."
 title: "IDCMSDK::GetBaselineInfo"
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: cfb7ce37-44b3-4cd1-b0f7-16b7c2823c09
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IDCMSDK::GetBaselineInfo Method
 The `IDCMSDK::GetBaselineInfo` method, in Configuration Manager, retrieves information for the specified configuration item baseline.

@@ -1,18 +1,11 @@
 ---
 title: Diagnostic data for 1606
-titleSuffix: Configuration Manager
 description: Learn about the levels of diagnostics and usage data that Configuration Manager version 1606 collects.
 ms.date: 12/29/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Levels of diagnostic usage data collection for version 1606 of Configuration Manager

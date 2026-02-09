@@ -1,18 +1,10 @@
 ---
 description: Learn how to block specified client computers from communicating with the site in Configuration Manager using BlockClients.
 title: BlockClients Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 72debf3d-bc74-4993-95b0-31cc99843d8e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # BlockClients Method in Class SMS_Collection
 The `BlockClients` Windows Management Instrumentation (WMI) class method, in Configuration Manager, blocks specified client computers from communicating with the site.

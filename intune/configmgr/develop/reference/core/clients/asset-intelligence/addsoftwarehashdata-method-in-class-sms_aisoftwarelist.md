@@ -1,18 +1,10 @@
 ---
 description: Learn how to add the SoftwarePropertiesHash from SoftwareCode and Title in Configuration Manager using the AddSoftwareHashData class method.
 title: AddSoftwareHashData Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 3a07f56d-e00f-4d46-9f4b-36b99e3a243b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # AddSoftwareHashData Method in Class SMS_AISoftwareList
 The `AddSoftwareHashData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, adds the `SoftwarePropertiesHash` from `SoftwareCode` and `Title`.

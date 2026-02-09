@@ -6,17 +6,10 @@ summary: Configuration Manager helps manage the complex task of tracking and app
 
 metadata:
   title: Software update management documentation
-  titleSuffix: Configuration Manager
   description: Configuration Manager helps manage the complex task of tracking and applying software updates to clients in your organization.
-  ms.service: configuration-manager
   ms.subservice: software-updates
   ms.topic: landing-page
-  author: LauraWi
-  ms.author: laurawi
-  manager: apoorvseth
   ms.date: 09/23/2021
-  ms.localizationpriority: high
-  ms.reviewer: mstewart
   ms.collection: tier3
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new

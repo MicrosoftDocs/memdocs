@@ -1,18 +1,10 @@
 ---
 title: SMS_MDMDeviceEnrollmentManagers Class
-titleSuffix: Configuration Manager
 description: The SMS_MDMDeviceEnrollmentManagers WMI class represents On-premises Mobile Device Management (MDM) device enrollment managers.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9b1f9352-f6bb-4a57-ae32-8d2c70045c34
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_MDMDeviceEnrollmentManagers Server WMI Class
 The `SMS_MDMDeviceEnrollmentManagers` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents On-premises Mobile Device Management (MDM) device enrollment managers.

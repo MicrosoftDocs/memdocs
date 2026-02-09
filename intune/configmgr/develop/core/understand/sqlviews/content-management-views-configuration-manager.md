@@ -1,18 +1,10 @@
 ---
 title: Content management views
-titleSuffix: Configuration Manager
 description: Provides the tools for you to manage content files for applications, packages, software updates, and operating system deployment.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 80e86983-2e3b-4a10-9755-5f0d98688462
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Content management views in Configuration Manager

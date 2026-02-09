@@ -1,17 +1,10 @@
 ---
 title: Configure software inventory
-titleSuffix: Configuration Manager
 description: Configure software inventory, and exclude folders from software inventory in Configuration Manager.
 ms.date: 01/03/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to configure software inventory in Configuration Manager
 

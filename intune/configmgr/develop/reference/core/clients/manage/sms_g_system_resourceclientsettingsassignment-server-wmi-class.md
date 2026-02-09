@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent resource-specific client agent settings assignments in Configuration Manager.
 title: SMS_G_SYSTEM_ResourceClientSettingsAssignment Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6561a03d-01a3-4fe2-b6cf-220dd743421e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_G_SYSTEM_ResourceClientSettingsAssignment Server WMI Class
 The `SMS_G_System_ResourceClientSettingsAssignment` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents resource-specific (device or user) client agent settings assignments.

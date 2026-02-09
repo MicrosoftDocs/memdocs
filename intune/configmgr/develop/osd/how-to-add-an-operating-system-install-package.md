@@ -1,18 +1,10 @@
 ---
 title: Add an OS Install Package
-titleSuffix: Configuration Manager
 description: Creates and populates an instance of SMS_OperatingSystemInstallPackage.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 3410a7c8-03b1-4c9e-874a-05324fcb569e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Add an Operating System Install Package in Configuration Manager
 You add an operating system install package to Configuration Manager by creating and populating an instance of [SMS_OperatingSystemInstallPackage](../../develop/reference/osd/sms_operatingsysteminstallpackage-server-wmi-class.md).

@@ -1,17 +1,10 @@
 ---
 title: Plan for the SMS Provider
-titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
 ms.date: 10/19/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Plan for the SMS Provider

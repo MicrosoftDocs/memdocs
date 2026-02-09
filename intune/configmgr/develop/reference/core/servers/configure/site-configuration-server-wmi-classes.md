@@ -1,18 +1,10 @@
 ---
 title: Site Configuration Server WMI Classes
 description: The site configuration server WMI classes in Configuration Manager relate to an installation that consists of one or more computers running the Configuration Manager components.
-titleSuffix: Configuration Manager
 ms.date: 03/13/2017
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: fac9263e-4e47-4e15-b07a-27a39c9ecd74
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Site configuration server WMI classes

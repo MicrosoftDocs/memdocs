@@ -1,17 +1,10 @@
 ---
 title: Use cloud services
-titleSuffix: Configuration Manager
 description: Provision cloud resources for Configuration Manager to supplement your on-premises infrastructure.
 ms.date: 07/15/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Use cloud services with Configuration Manager

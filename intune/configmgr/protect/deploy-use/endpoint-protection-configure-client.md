@@ -1,16 +1,9 @@
 ---
 title: Endpoint Protection client settings
-titleSuffix: Configuration Manager
 description: Learn how to configure custom client settings for Endpoint Protection.
 ms.date: 07/30/2018
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

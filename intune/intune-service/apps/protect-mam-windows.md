@@ -18,20 +18,21 @@ ms.collection:
 You can enable protected Mobile Application Management (MAM) access to org data on personal Windows devices. This capability uses the following functionality:
 - Intune Application Configuration Policies (ACP) to customize the org user experience
 - Intune app protection policies to secure org data and ensure the client device is healthy
-- Windows Security Center client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
+- Windows Security app client threat defense integrated with Intune APP to detect local health threats on personal Windows devices
 - Application Protection Conditional Access to ensure the device is protected and healthy before granting protected service access via Microsoft Entra ID
 
-> [!NOTE]
-> Intune Mobile Application Management (MAM) for Windows is available for Windows 10, build 19045.3636, KB5031445 or later and Windows 11, build 10.0.22621.2506, KB5031455 (22H2) or later.  This includes the supporting changes for Microsoft Intune (2309 release), Microsoft Edge (Stable and Extended Stable releases for Windows) and Windows Security Center (v 1.0.2310.2002 and later). App Protection Conditional Access is generally available.
->
-> Windows MAM is supported in government cloud environments. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md).
->
-> For more information about MAM, see [Mobile Application Management (MAM) basics](../apps/app-management.md#mobile-application-management-mam-basics).
+## Before you begin
 
-> [!NOTE]
-> The Mobile Threat Defense (MTD) Connector for the Windows Security Center (WSC) component is only supported on Windows 11 version 22631 (23H2) or later.
+- Intune Mobile Application Management (MAM) for Windows is available for [supported Windows versions](../fundamentals/supported-devices-browsers.md). This includes the supporting changes for Microsoft Edge (Stable and Extended Stable releases for Windows) and Windows Security app. App Protection Conditional Access is generally available.
+- Windows MAM is supported in government cloud environments. For related information, see [Deploying apps using Intune on the GCC High and DoD Environments](../apps/apps-deploy-gcc-dod.md).
 
-Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user’s unmanaged assets on their device aren't impacted by your organization's policies.
+  For more information about MAM, see [Mobile Application Management (MAM) basics](../apps/app-management.md#mobile-application-management-mam-basics).
+
+- The Mobile Threat Defense (MTD) Connector for the Windows Security Center (WSC) component is only supported on Windows 11 version 22631 (23H2) or later.
+
+## Overview
+
+Both end-users and organizations need to have protected organizational access from personal devices. Organizations need to ensure that corporate data is protected on personal, unmanaged devices. As an Intune admin, you have the responsibility to determine how members (end-users) of your organization access corporate resources in a protected way from an unmanaged device. You need to ensure when accessing organizational data, that the unmanaged devices are healthy, the applications adhere to your organization data's protection policies, and that the end-user's unmanaged assets on their device aren't impacted by your organization's policies.
 
 As the Intune admin, you need to have the following app management functionality:
 - Ability to deploy app protection policies to apps/users protected by the Intune APP SDK, including the following:
@@ -92,9 +93,9 @@ For related information, see [create an MTD app protection policy for Windows](.
 App protection policies define which apps are allowed and the actions they can take with your organization's data. The choices available in app protection policies enable organizations to tailor the protection to their specific needs. For some, it may not be obvious which policy settings are required to implement a complete scenario.
 
 As an admin, you can configure how data is protected through app protection policies. This configuration applies to the native Windows application interaction with the data. App protection policy settings are segmented into three categories:
--	**Data Protection** - These settings control how data can move into and out of an org context (account, document, location, services) for the user.
-<!-- -	**Access** - These settings control how the user must verify their identity before interacting with org data. -->
--	**Health Checks** (Conditional Launch) - These settings controls the device conditions required to access org data and the remediation action(s) if the conditions aren't met.
+-    **Data Protection** - These settings control how data can move into and out of an org context (account, document, location, services) for the user.
+<!-- -    **Access** - These settings control how the user must verify their identity before interacting with org data. -->
+-    **Health Checks** (Conditional Launch) - These settings controls the device conditions required to access org data and the remediation action(s) if the conditions aren't met.
 
 To help organizations prioritize client endpoint hardening, Microsoft has introduced taxonomy for its app protection policies data protection framework for mobile app management.
 

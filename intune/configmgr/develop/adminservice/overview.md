@@ -1,17 +1,10 @@
 ---
 title: What is the administration service
-titleSuffix: Configuration Manager
 description: Use the Configuration Manager administration service REST API to interact with the site over an HTTPS OData connection.
 ms.date: 12/21/2021
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: overview
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What is the administration service in Configuration Manager?

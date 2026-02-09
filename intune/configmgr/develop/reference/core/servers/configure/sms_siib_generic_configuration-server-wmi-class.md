@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the generic configuration for Configuration Manager components with SMS_SIIB_Generic_Configuration.
 title: SMS_SIIB_Generic_Configuration Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 778a6935-63c4-4101-983a-28222492373c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SIIB_Generic_Configuration Server WMI Class
 The `SMS_SIIB_Generic_Configuration` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents generic configuration for Configuration Manager components.

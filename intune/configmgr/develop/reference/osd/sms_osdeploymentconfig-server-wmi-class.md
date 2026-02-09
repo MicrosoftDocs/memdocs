@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent all OSD-related constants and settings with their ADK-specific values using SMS_OSDeploymentConfig class.
 title: SMS_OSDeploymentConfig Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ee7798f1-3288-448f-b356-95518c58b9d8
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_OSDeploymentConfig Server WMI Class
 The `SMS_OSDeploymentConfig` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all OSD-related constants and settings with their ADK-specific values.

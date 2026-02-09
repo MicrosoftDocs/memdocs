@@ -1,17 +1,10 @@
 ---
 title: Introduction to the LTSB
-titleSuffix: Configuration Manager
 description: Learn about the long-term servicing branch of Configuration Manager.
 ms.date: 08/23/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Introduction to the long-term servicing branch of Configuration Manager

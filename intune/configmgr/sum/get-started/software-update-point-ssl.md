@@ -1,17 +1,10 @@
 ---
 title: Configure a software update point to use TLS/SSL with a PKI certificate tutorial
-titleSuffix: Configuration Manager
 description: Tutorial - Configure Windows Server Update Services (WSUS) servers and the software update points to use TLS/SSL with a PKI certificate.
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ms.date: 01/14/2022
 ms.topic: tutorial
-ms.service: configuration-manager
 ms.subservice: software-updates
 # Customer intent: As a Configuration Manager admin, I want to enable my WSUS servers and software update points to use TLS/SSL to reduce the ability of a potential attacker to remotely compromise a client and elevate privileges.
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

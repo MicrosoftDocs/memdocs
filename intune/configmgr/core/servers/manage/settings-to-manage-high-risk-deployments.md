@@ -1,17 +1,10 @@
 ---
 title: Manage high-risk deployments
-titleSuffix: Configuration Manager
 description: Configure deployment verification site settings in Configuration Manager to warn admins if they create a high-risk deployment.
 ms.date: 03/10/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Settings to manage high-risk deployments for Configuration Manager

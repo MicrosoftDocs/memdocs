@@ -1,18 +1,11 @@
 ---
 title: Technical preview 2311
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2311.
 ms.date: 11/24/2023
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2311

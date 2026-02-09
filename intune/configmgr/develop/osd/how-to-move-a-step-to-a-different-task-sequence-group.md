@@ -1,18 +1,10 @@
 ---
 title: Move a Step to a Different OS Deployment Task Sequence Group
-titleSuffix: Configuration Manager
 description: Move a step from one operating system deployment task sequence group to another by adding the step to the target group.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: f93360ef-677e-48e0-886a-a07b8451611c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Move a Step to a Different Operating System Deployment Task Sequence Group
 You move a step (an action or a group) from one operating system deployment task sequence group to another, in Configuration Manager, by adding the step to the target group and then by deleting the step from the source group.

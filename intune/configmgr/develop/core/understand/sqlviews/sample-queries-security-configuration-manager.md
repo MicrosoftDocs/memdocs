@@ -1,18 +1,11 @@
 ---
 title: Sample queries for security
-titleSuffix: Configuration Manager
 description: Sample queries that show how to join security views to other views.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: dc2b403f-b824-47ed-a68f-f9473573e199
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

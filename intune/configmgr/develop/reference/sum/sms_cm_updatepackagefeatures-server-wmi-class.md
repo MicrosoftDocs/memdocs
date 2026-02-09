@@ -1,18 +1,10 @@
 ---
 title: SMS_CM_UpdatePackageFeatures Class
 description: Learn how to use the SMS_CM_UpdatePackageFeatures class in Configuration Manager to update feature extensions.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 1f1b0614-be4e-4e4a-a2a5-6df5a2d97c1c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CM_UpdatePackageFeatures Server WMI Class
 The  `SMS_CM_UpdatePackageFeatures` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update feature extensions.

@@ -1,17 +1,10 @@
 ---
 title: Role-based administration tool
-titleSuffix: Configuration Manager
 description: Use the role-based administration and auditing tool to model and audit security roles and scopes in Configuration Manager.
 ms.date: 04/16/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Role-based administration and auditing tool

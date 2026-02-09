@@ -1,17 +1,10 @@
 ---
 title: Import configuration data
-titleSuffix: Configuration Manager
 description: Import configuration data if it's contained in a cabinet file format and adheres to the supported Service Modeling Language schema.
 ms.date: 10/06/2016
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Import configuration data with Configuration Manager
 

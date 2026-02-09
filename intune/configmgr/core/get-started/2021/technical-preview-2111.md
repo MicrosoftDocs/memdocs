@@ -1,17 +1,10 @@
 ---
 title: Technical preview 2111
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2111.
 ms.date: 11/01/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Features in Configuration Manager technical preview version 2111

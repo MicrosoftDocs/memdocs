@@ -1,18 +1,10 @@
 ---
 title: SMS_CM_UpdateFeatures Class
-titleSuffix: Configuration Manager
 description: The  SMS_CM_UpdateFeatures Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update feature extensions.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9de78bee-635b-470e-a090-37c097fbad7d
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CM_UpdateFeatures Server WMI Class
 The  `SMS_CM_UpdateFeatures` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents update feature extensions.

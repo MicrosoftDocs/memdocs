@@ -1,17 +1,10 @@
 ---
 title: Plan client migration
-titleSuffix: Configuration Manager
 description: Learn about the tasks that migrate clients from a source hierarchy to a Configuration Manager current branch destination hierarchy.
 ms.date: 12/30/2016
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Plan a client migration strategy in Configuration Manager
 

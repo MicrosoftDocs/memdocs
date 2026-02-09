@@ -1,18 +1,10 @@
 ---
 description: "Learn how to run a synchronous discovery operation for the provided synclet using IAppManagementHandler::DiscoveryApp."
 title: "IAppManagementHandler::DiscoverApp"
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 818e9387-2599-405e-913a-642e96c97fd2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IAppManagementHandler::DiscoverApp Method
 The `IAppManagementHandler::DiscoverApp` method, in Configuration Manager, runs a synchronous discovery operation for the provided synclet.

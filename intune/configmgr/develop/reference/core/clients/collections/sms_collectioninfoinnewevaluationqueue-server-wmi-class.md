@@ -1,18 +1,10 @@
 ---
 title: SMS_CollectionInfoInNewEvaluationQueue class
-titleSuffix: Configuration Manager
 description: Show collection info from new evaluation queue.
 ms.date: 11/30/2020
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9807ade7-dc2d-41de-98f3-8ed15c3ac3f7
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # SMS_CollectionInfoInNewEvaluationQueue server WMI class

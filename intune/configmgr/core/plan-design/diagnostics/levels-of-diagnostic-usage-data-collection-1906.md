@@ -1,18 +1,11 @@
 ---
 title: Diagnostic and usage data for 1906
-titleSuffix: Configuration Manager
 description: Learn about the specific data that Configuration Manager collects at each level in version 1906.
 ms.date: 07/26/2019
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Diagnostic and usage data for version 1906

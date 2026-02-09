@@ -1,18 +1,11 @@
 ---
 title: SQL statement reference for reports
-titleSuffix: Configuration Manager
 description: Information about SQL Server statements that can be used when creating Configuration�Manager reports.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 
 
-ms.assetid: be1ea4b0-b003-488e-bb88-860d37d6b72c
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

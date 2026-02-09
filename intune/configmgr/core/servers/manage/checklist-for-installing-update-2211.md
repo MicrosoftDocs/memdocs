@@ -1,15 +1,9 @@
 ---
 title: Checklist for 2211
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2211.
 ms.date: 12/05/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2211 for Configuration Manager

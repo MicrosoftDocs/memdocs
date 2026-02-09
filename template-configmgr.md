@@ -7,9 +7,9 @@ ms.prod: configuration-manager
 ms.technology: configmgr-other #analytics app client comanage compliance core mdm mdt osd other protect sdk sum
 ms.topic: conceptual #reference troubleshooting how-to end-user-help overview
 ms.localizationpriority: medium #high null
-author: # GitHub username (aczechowski)
-ms.author: # MS alias (aaroncz)
-manager: # MS alias of manager (dougeby)
+author: # GitHub username (sccmavenger)
+ms.author: # MS alias (dannygu)
+manager: # MS alias of manager (laurawi)
 ---
 
 # Metadata and Markdown Template

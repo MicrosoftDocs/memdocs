@@ -1,16 +1,9 @@
 ---
 title: Troubleshoot Endpoint Protection
-titleSuffix: Configuration Manager
 description: Learn how to troubleshoot problems with Windows Defender and Endpoint Protection.
 ms.date: 09/10/2019
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: conceptual
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ms.topicc: troubleshooting-general
 ---

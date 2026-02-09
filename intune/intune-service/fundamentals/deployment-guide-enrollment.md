@@ -77,11 +77,6 @@ Microsoft Intune automatically marks devices that meet certain criteria as corpo
 
 - Sign in as a member of the **Policy and Profile Manager** built-in Intune role. For information on the permissions in this role, go to [Built-in role permissions for Microsoft Intune - Policy and Profile manager](role-based-access-control-reference.md#policy-and-profile-manager).
 
-  If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
-
-  > [!CAUTION]
-  > [!INCLUDE [global-admin](../includes/global-admin.md)]
-
   It's possible some enrollment platforms might require a more privileged Microsoft Entra role, like the **Intune Administrator** built-in role. For information on this role, go to [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
 - Different platforms can have other requirements. For example, iOS/iPadOS and macOS devices require an [MDM push certificate from Apple](../enrollment/apple-mdm-push-certificate-get.md). Any other platform requirements are listed.

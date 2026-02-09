@@ -1,18 +1,10 @@
 ---
 title: "'Advanced exercise 2 solution: Create a new report for hardware inventory'"
-titleSuffix: Configuration Manager
 description: Create the report for Advanced Exercise 2
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: d1b574f9-d765-4f37-a552-bd018ce86224
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Advanced exercise 2 solution: Create a new report for hardware inventory in Configuration Manager

@@ -1,18 +1,10 @@
 ---
 title: "IPxeAuthClass::CreateIdentity"
 description: Learn how to use the CreateIdentity method to create a new self-signed certificate.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 8966724d-f663-42a9-98a5-d10cfa9a6a5c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IPxeAuthClass::CreateIdentity Method
 In Configuration Manager, the `CreateIdentity` method creates a PXE certificate identity that is used in the client configuration file. This method is used to create a new self-signed certificate.

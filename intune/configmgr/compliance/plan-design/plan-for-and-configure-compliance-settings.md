@@ -1,17 +1,10 @@
 ---
 title: Plan for and configure compliance settings
-titleSuffix: Configuration Manager
 description: Learn about the prerequisites and configuration tasks for working with compliance settings in Configuration Manager.
 ms.date: 10/06/2016
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: how-to
-author: laurawi
-manager: apoorvseth
-ms.author: LauraWi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Plan for and configure compliance settings in Configuration Manager
 

@@ -1,19 +1,12 @@
 ---
 title: Accessibility
-titleSuffix: Configuration Manager
 description: Learn about the features that make Configuration Manager accessible for everyone.
 ms.date: 07/21/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection:
     - tier3
     - essentials-accessibility
-ms.reviewer: mstewart
 ---
 
 # Accessibility features in Configuration Manager

@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SMS_SystemConsoleUsage class to define usage data about devices based on the Windows security event log.
 title: SMS_SystemConsoleUsage Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: eae81dae-8af9-4e82-8b1f-9b13d01581b7
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SystemConsoleUsage Client WMI Class
 The `SMS_SystemConsoleUsage` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that defines usage data about devices, based on the Windows security event log.

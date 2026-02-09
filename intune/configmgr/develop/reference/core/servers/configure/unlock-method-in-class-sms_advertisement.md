@@ -1,18 +1,10 @@
 ---
 title: Unlock Method in Class SMS_Advertisement
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the Unlock WMI class method sets the source site to the current site, unlocking the advertisement.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: efec7fc8-6680-47f6-b442-4efd5a9645f2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Unlock Method in Class SMS_Advertisement
 The `Unlock` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the source site to the current site, unlocking the advertisement.

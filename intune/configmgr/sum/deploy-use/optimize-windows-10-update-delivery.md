@@ -1,16 +1,9 @@
 ---
 title: Optimize Windows update delivery
-titleSuffix: Configuration Manager
 description: Learn how to use Configuration Manager to manage update content to stay current with Windows.
 ms.date: 02/11/2025
-ms.service: configuration-manager
 ms.subservice: software-updates
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

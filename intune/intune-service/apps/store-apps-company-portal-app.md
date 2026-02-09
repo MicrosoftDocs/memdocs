@@ -1,6 +1,6 @@
 ---
 title: Manually Add the Windows Company Portal App
-description: Learn how your workforce can manually add the Windows 10 Company Portal app to their PC from the Microsoft Store.
+description: Learn how your workforce can manually add the Windows Company Portal app to their PC from the Microsoft Store.
 ms.date: 01/06/2026
 ms.topic: how-to
 ms.reviewer: bryanke
@@ -27,7 +27,8 @@ To manage devices and install apps, your users can install the Company Portal ap
     ```powershell
     winget download "Company Portal" --source msstore
     ```
-   By default, files are downloaded to the user’s Downloads folder. Use the `--download-directory` option to specify a custom download path. 
+
+   By default, files are downloaded to the user's Downloads folder. Use the `--download-directory` option to specify a custom download path. 
 
 1. In the Microsoft Intune admin center, upload the Company Portal app as a new app.
     1. Go to **Apps** > **Platforms** and select **Windows**.

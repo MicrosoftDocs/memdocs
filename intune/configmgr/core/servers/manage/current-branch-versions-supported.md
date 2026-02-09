@@ -1,17 +1,10 @@
 ---
 title: Current branch versions
-titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Support for Configuration Manager current branch versions

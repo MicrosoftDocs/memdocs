@@ -1,17 +1,10 @@
 ---
 title: Configuration Manager and Windows as a Service
-titleSuffix: Configuration Manager
 description: Get basic information on adopting Configuration Manager current branch to support Windows as a service.
 ms.date: 12/07/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configuration Manager and Windows as a service

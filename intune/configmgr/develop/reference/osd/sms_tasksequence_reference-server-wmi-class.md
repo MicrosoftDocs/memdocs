@@ -1,18 +1,10 @@
 ---
 description: The SMS_TaskSequence_Reference Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents the package ID and optional program name.
 title: SMS_TaskSequence_Reference Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 7df3c90d-eba4-4ece-a2b8-e12e4781ed8b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_Reference Server WMI Class
 The `SMS_TaskSequence_Reference` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the package ID and optional program name used by the task sequence.

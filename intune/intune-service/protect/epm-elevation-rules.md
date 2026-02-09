@@ -64,11 +64,16 @@ Each elevation rule instructs EPM on how to:
 
   - **Automatic**: An automatic elevation happens invisibly to the user. There's no prompt, and no indication that the file is running in an elevated context.
 
-- **Manage the behavior of child processes.** You can set the elevation behavior that applies to any child processes that the elevated process creates.
+- **Manage the behavior of child processes.** You can control how elevation rules apply to any child processes that the elevated parent process launches.
 
-  - **Require rule to elevate** - Configure a child processes to require its own rule before that child process can run in an elevated context.
-  - **Deny all** - All child processes launch without elevated context.
-  - **Allow child processes to run elevated** - Configure a child process to always run elevated.
+    - **Require rule to elevate** – Child processes must meet their own rule requirements before they can run elevated. The child process elevates according to its rule definition, including any deny rules.
+
+    - **Deny all** – All child processes launch without elevated context.
+
+    - **Allow child processes to run elevated** – Any child process launched by the elevated parent will automatically run elevated. When this option is selected, rule evaluation for the child process is skipped, including deny rules. This means a child process may run elevated even when an explicit deny rule exists for that process.
+
+    **Best practice:** Avoid creating overly broad elevation rules for applications that can start other processes (for example, command shells or script engines) to prevent unintended elevation.
+
 
 > [!NOTE]
 > For more information about creating *strong rules*, see [Defining rules for use with Endpoint Privilege Management](#defining-rules-for-use-with-endpoint-privilege-management).

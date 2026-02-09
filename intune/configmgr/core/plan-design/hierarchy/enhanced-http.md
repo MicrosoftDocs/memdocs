@@ -1,17 +1,10 @@
 ---
 title: Enhanced HTTP
-titleSuffix: Configuration Manager
 description: Use modern authentication to secure client communication without the need for PKI certificates.
 ms.date: 12/20/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Enhanced HTTP

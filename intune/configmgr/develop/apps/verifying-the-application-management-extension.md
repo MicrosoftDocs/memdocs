@@ -1,18 +1,10 @@
 ---
 title: Verifying the Application Management Extension
-titleSuffix: Configuration Manager
 description: Verifying the Application Management Extension. Verify the new Deployment Type is available in the console.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: a93ed163-3b08-4d56-991f-630586f835a7
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Verifying the Application Management Extension
 ## Server

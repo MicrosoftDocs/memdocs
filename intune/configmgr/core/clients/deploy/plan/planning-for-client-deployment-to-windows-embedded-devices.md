@@ -1,17 +1,10 @@
 ---
 title: Planning client deployment to Windows Embedded devices
-titleSuffix: Configuration Manager
 description: Plan for client deployment to Windows Embedded devices in Configuration Manager.
 ms.date: 10/11/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Planning for client deployment to Windows Embedded devices in Configuration Manager
 

@@ -1,18 +1,10 @@
 ---
 description: Learn how to reinitialize a specific replication group between two specified sites using InitializeData class method.
 title: InitializeData Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a7c12a4e-85a0-4293-9888-095cc60640f5
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # InitializeData Method in Class SMS_ReplicationGroup
 The `InitializeData` Windows Management Instrumentation (WMI) class method, in Configuration Manager, reinitializes a specific replication group between two specified sites.

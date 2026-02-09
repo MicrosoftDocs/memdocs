@@ -1,18 +1,10 @@
 ---
 title: Modify an Object by Using Managed Code
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: ebb14714-c951-479e-9fad-dd2d7a32e739
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 description: Learn how to modify a configuration manager object by using managed code with the provided examples and links.
-ms.reviewer: mstewart
 ---
 # How to Modify a Configuration Manager Object by Using Managed Code
 To modify a Configuration Manager object instance by using the managed SMS Provider, use the object's [IResultObject](/previous-versions/system-center/developer/cc147376(v=msdn.10)) interface to make modifications. You then call the [IResultObject.Put](/previous-versions/system-center/developer/cc146500(v=msdn.10)) method to submit the changes.

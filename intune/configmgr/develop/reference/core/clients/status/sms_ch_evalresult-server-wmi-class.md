@@ -1,18 +1,10 @@
 ---
 title: SMS_CH_EvalResult Class
-titleSuffix: Configuration Manager
 description: The SMS_CH_EvalResult Windows Management Instrumentation class is an SMS Provider server class, in Configuration Manager, that represents client evaluation results.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 92dead34-4152-4c81-9a41-678087880c07
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CH_EvalResult Server WMI Class
 The `SMS_CH_EvalResult` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents client evaluation results.

@@ -1,17 +1,10 @@
 ---
 title: About boundary groups
-titleSuffix: Configuration Manager
 description: Help clients find site systems by using boundary groups to logically organize related network locations.
 ms.date: 08/02/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About boundary groups in Configuration Manager

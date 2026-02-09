@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent an application in Configuration Manager using SMS_ApplicationLatest class.
 title: SMS_ApplicationLatest Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 51447f4f-dc60-428e-9ce7-25abdea37b7c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ApplicationLatest Server WMI Class
 The `SMS_ApplicationLatest` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application.

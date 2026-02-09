@@ -3,9 +3,6 @@ title: Overview for Windows Autopilot self-deploying mode in Intune
 description: Overview for Windows Autopilot self-deploying mode in Intune.
 ms.date: 09/13/2024
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

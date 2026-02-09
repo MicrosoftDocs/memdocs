@@ -4,8 +4,6 @@ description: Self-deploying mode allows a device to be deployed with little to n
 ms.date: 09/13/2024
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier1
 ms.topic: how-to
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

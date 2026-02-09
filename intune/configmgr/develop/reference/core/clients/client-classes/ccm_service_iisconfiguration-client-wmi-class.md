@@ -1,18 +1,10 @@
 ---
 title: CCM_Service_IISConfiguration Class
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the CCM_Service_IISConfiguration class is a client Windows Management Instrumentation class that supports Internet Information Services-related settings used by CCMEXEC for staging and receiving message payloads on a Management Point.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 5a146fad-e8af-4af2-8317-91876b5e1249
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_Service_IISConfiguration Client WMI Class
 In Configuration Manager, the `CCM_Service_IISConfiguration` class is a client Windows Management Instrumentation (WMI) class that supports Internet Information Services (IIS)-related settings used by CCMEXEC for staging and receiving message payloads on a Management Point.

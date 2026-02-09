@@ -4,9 +4,6 @@ description: Guidance and advice for administrators that create and manage softw
 ms.date: 07/24/2025
 ms.topic: how-to
 ms.reviewer: beflamm, ahamil, rogerso
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Software updates planning guide and scenarios for supervised iOS/iPadOS devices in Microsoft Intune

@@ -3,9 +3,6 @@ title: Overview for Windows Autopilot device preparation user-driven Microsoft E
 description: Overview for Windows Autopilot device preparation user-driven Microsoft Entra join in Intune.
 ms.date: 03/27/2025
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---

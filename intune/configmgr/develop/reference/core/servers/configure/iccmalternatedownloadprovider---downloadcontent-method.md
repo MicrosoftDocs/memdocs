@@ -1,18 +1,10 @@
 ---
 title: "ICcmAlternateDownloadProvider : DownloadContent"
-titleSuffix: Configuration Manager
 description: Learn about the ICcmAlternateDownloadProvider::DownloadContent method. In Configuration Manager, this method instructs the provider to download content.
 ms.date: 07/25/2017
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e3c904db-2838-47e2-ad60-68411e262778
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ICcmAlternateDownloadProvider : DownloadContent Method
 The **ICcmAlternateDownloadProvider::DownloadContent** method, in Configuration Manager, instructs the provider to download content.

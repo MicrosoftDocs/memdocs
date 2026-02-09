@@ -1,18 +1,10 @@
 ---
 description: "Learn how to get the current operational state of the configuration item that is part of a job or task with ICIINFO::GetJobState."
 title: "ICIINFO::GetJobState"
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 07a12352-3271-43a8-8ebd-fd31ceaf5ce4
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ICIINFO::GetJobState Method
 The `ICIINFO::GetJobState` method, in Configuration Manager, gets the current operational state of the configuration item that is part of a job or task.

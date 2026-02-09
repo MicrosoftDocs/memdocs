@@ -5,7 +5,7 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 03/04/2025
 ms.topic: how-to
-ms.reviewer: dougeby
+ms.reviewer: mattcall
 ms.collection:
 - M365-identity-device-management
 - highpri

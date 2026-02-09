@@ -1,11 +1,6 @@
 ---
-author: BalaDelli
-ms.author: baladell
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 04/08/2022
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

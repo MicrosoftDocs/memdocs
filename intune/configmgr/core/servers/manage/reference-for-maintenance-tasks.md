@@ -1,17 +1,10 @@
 ---
 title: Reference for maintenance tasks
-titleSuffix: Configuration Manager
 description: Details for each of the Configuration Manager site maintenance tasks
 ms.date: 04/27/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Reference for maintenance tasks in Configuration Manager

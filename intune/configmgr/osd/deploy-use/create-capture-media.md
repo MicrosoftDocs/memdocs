@@ -1,16 +1,9 @@
 ---
 title: Create capture media
-titleSuffix: Configuration Manager
 description: Use capture media in Configuration Manager to capture an OS image from a reference computer.
 ms.date: 05/02/2019
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

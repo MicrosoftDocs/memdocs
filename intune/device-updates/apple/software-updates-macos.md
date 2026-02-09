@@ -4,9 +4,6 @@ description: Use Microsoft Intune to manage system updates for supervised macOS 
 ms.date: 09/24/2025
 ms.topic: how-to
 ms.reviewer: beflamm
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Manage macOS software updates using MDM-based policies in Microsoft Intune

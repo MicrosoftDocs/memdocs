@@ -1,18 +1,10 @@
 ---
 title: Application Management Client Infrastructure
 description: Learn about reference information for the Configuration Manager application management client infrastructure.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0d22ecc3-d5f9-4833-a711-044c10d5e93a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Application Management Client Infrastructure
 This section provides reference information for the Configuration Manager application management client infrastructure.

@@ -1,17 +1,10 @@
 ---
 title: MDT samples
-titleSuffix: Microsoft Deployment Toolkit
 description: Microsoft Deployment Toolkit (MDT) samples
 ms.date: 09/09/2016
 ms.subservice: mdt
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart
 ---
 
 # Microsoft Deployment Toolkit Samples Guide

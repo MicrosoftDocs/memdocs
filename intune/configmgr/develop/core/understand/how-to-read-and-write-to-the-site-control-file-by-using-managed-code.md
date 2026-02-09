@@ -1,18 +1,10 @@
 ---
 title: Read and Write to the Site Control File by Using Managed Code
-titleSuffix: Configuration Manager
 description: To write to the Configuration Manager site control file by using the managed SMS Provider, get the site definition file by querying for the required resource or component.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 7fc4e08d-bccf-4616-a789-71070d3c6f7b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Read and Write to the Configuration Manager Site Control File by Using Managed Code
 To write to the Configuration Manager site control file by using the managed SMS Provider, you get the site definition file by querying for the required resource or component. You then update the embedded property, embedded property list, or multi-string list as required.

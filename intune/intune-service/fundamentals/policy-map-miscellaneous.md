@@ -3,7 +3,7 @@ title: Miscellaneous policy mapping from Basic Mobility and Security to Intune
 description: A detailed miscellaneous policy map between Basic Mobility and Security access requirements and Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/02/2023
+ms.date: 12/03/2025
 ms.topic: reference
 ms.reviewer: dagerrit
 ms.collection:
@@ -19,8 +19,6 @@ This article provides mapping details between Basic Mobility and Security to Int
 - Device security policies Name and Description
 
 Intune offers more policy flexibility. So, each Office policy translates into multiple Intune and Microsoft Entra policies to achieve the same result.
-
-If you're migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 
 ## Device properties and actions
 
@@ -114,4 +112,4 @@ Up to three compliance policies and up to six configuration profiles (three for 
 
 ## Related article
 
-To migrate these policies, you can use the [Migration evaluation tool](migrate-to-intune.md).
+- [Move from Basic Mobility and Security to Intune](migrate-to-intune.md)

@@ -1,17 +1,10 @@
 ---
 title: Communications between endpoints
-titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site systems and components communicate across a network.
 ms.date: 04/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Communications between endpoints in Configuration Manager

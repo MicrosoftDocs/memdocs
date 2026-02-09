@@ -1,18 +1,10 @@
 ---
 title: SMS_AmPolicySummary Class
-titleSuffix: Configuration Manager
 description: The SMS_AmPolicySummary Windows Management Instrumentation class is an SMS Provider server class in Configuration Manager.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: adfce640-adc5-48d7-a723-5be5c9f40206
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_AmPolicySummary Server WMI Class
 The `SMS_AmPolicySummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the endpoint protection client antimalware policy status.

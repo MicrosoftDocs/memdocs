@@ -1,17 +1,10 @@
 ---
 title: Common compliance management tasks
-titleSuffix: Configuration Manager
 description: Learn about Configuration Manager compliance settings by working through some common scenarios.
 ms.date: 10/05/2021
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: article
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Common tasks for managing compliance on devices with the Configuration Manager client

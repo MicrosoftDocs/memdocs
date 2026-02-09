@@ -1,18 +1,10 @@
 ---
 title: IDCMSDK Interface
-titleSuffix: Configuration Manager
 description: The interface represents the Desired Configuration Management SDK and defines methods used to perform operations on baseline configuration items.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: da537a4c-b9a8-4bbd-86f3-a9798a420198
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IDCMSDK Interface
 The `IDCMSDK` interface, in Configuration Manager, represents the Desired Configuration Management SDK and defines methods used to perform operations on baseline configuration items. The interface inherits from `IDispatch`.

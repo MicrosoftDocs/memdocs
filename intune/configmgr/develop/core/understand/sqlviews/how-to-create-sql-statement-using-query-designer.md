@@ -1,18 +1,11 @@
 ---
 title: How to create a SQL statement by using query designer
-titleSuffix: Configuration Manager
 description: How to create Configuration Manager report queries using Query Designer.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 2ca0c0b4-2fd1-4373-9f8d-3db7dbc92045
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

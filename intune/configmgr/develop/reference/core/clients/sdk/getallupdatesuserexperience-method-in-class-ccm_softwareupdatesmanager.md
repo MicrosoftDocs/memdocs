@@ -1,18 +1,10 @@
 ---
 description: Learn how to get the user experience mode that determines how software updates are displayed with GetAllUpdatesUserExperience.
 title: GetAllUpdatesUserExperience Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: b2da1509-c11f-405d-9606-8ac9784b68b2
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetAllUpdatesUserExperience Method in Class CCM_SoftwareUpdatesManager
 The `GetAllUpdatesUserExperience` WMI class method, in Configuration Manager, gets the user experience mode that determines how software updates are displayed on a target computer.

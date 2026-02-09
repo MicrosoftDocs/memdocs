@@ -1,18 +1,10 @@
 ---
 title: Configure the Default Compliance Evaluation Schedule
 description: In Configuration Manager, the site control file maintains configuration for the configuration of the site.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 56d60eea-d506-4611-a489-0e719961d17a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Configure the Default Compliance Evaluation Schedule
 In Configuration Manager, the site control file maintains configuration for the configuration of the site. These code samples query for the specific site control file item Configuration Management Agent, and change the EvaluationSchedule value to set the client agent evaluation schedule.

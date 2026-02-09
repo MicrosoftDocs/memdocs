@@ -5,16 +5,10 @@ summary: Use the Microsoft Intune family of products to manage mobile devices in
 
 metadata:
   title: Mobile device management
-  titleSuffix: Configuration Manager
   description: Use Microsoft Intune and Configuration Manager to manage mobile devices in your organization, either on-premises or cloud-based
   ms.subservice: mdm
-  ms.service: configuration-manager
   ms.topic: landing-page
-  author: banreet
-  ms.author: banreetkaur
-  manager: apoorvseth
   ms.date: 09/23/2021
-  ms.localizationpriority: medium
 
 landingContent:
   - title: About on-premises MDM

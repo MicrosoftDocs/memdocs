@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent an application policy request with CCM_RequestedAppPolicy in Configuration Manager.
 title: CCM_Requested AppPolicy Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 600ccdef-b722-4e0d-a7dc-4e3591afcf1b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_Requested AppPolicy Client WMI Class
 The `CCM_RequestedAppPolicy` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents an application policy request.

@@ -1,18 +1,10 @@
 ---
 title: SMS_UnManagedApps Class
-titleSuffix: Configuration Manager
 description: The SMS_UnManagedApps WMI class is an SMS Provider server class that represents unmanaged apps.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: bbd5d3eb-27fb-47cc-be08-a75f7507fb16
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_UnManagedApps Server WMI Class
 The  `SMS_UnManagedApps` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents unmanaged apps.

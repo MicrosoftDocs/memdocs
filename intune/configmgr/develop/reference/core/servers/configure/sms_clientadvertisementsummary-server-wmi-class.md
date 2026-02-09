@@ -1,18 +1,10 @@
 ---
 title: SMS_ClientAdvertisementSummary Class
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_ClientAdvertisementSummary Windows Management Instrumentation class is an SMS Provider server class that represents a summary for an advertisement.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: bc249ca7-68d9-4e6a-965b-9428b68f9646
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ClientAdvertisementSummary Server WMI Class
 The `SMS_ClientAdvertisementSummary` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a summary for an advertisement.

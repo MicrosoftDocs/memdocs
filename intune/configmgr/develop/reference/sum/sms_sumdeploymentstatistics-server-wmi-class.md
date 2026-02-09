@@ -1,16 +1,9 @@
 ---
 title: "SMS_SUMDeploymentStatistics Class"
-titleSuffix: "Configuration Manager"
 description: "An SMS Provider server class that represents a per-deployment summary for SUM deployments in-console monitoring."  
 ms.date: "09/20/2016"
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d77facc8-c945-4ea7-920c-0d3714e6d14e
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 
 

@@ -1,16 +1,9 @@
 ---
 title: Configure pre-cache content
-titleSuffix: Configuration Manager
 description: Learn how clients can download OS deployment content before a user installs the task sequence.
 ms.date: 04/13/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

@@ -1,18 +1,10 @@
 ---
 title: Set the Response Delay for a PXE Service Point
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 8877b3f1-f437-40ab-b7b8-826d6785fddb
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 description: In Configuration Manager, you set the operating system deployment PXE service point response delay by updating the ResponseDelay embedded property.
-ms.reviewer: mstewart
 ---
 # How to Set the Response Delay for a PXE Service Point
 In Configuration Manager, you set the operating system deployment PXE service point response delay by updating the *ResponseDelay* embedded property. *ResponseDelay* specifies how long the delay should be for this PXE service point before it responds to computer requests when multiple PXE service points are used. By default, the Configuration Manager PXE service point will respond immediately to the network PXE requests.

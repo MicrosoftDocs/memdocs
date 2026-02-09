@@ -1,18 +1,10 @@
 ---
 title: General Configuration Item Example 1
 description: The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 4c27ec03-c358-4244-a5c5-d0784e5b4713
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # General Configuration Item Example 1
 The following example is a general configuration item schema example that checks the registry to see whether, in this case, remote control is enabled in Configuration Manager.

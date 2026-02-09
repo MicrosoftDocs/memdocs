@@ -1,16 +1,9 @@
 ---
 title: Manage user state
-titleSuffix: Configuration Manager
 description: Configuration Manager uses the User State Migration Tool to capture and restore user state data in OS deployment scenarios.
 ms.date: 04/05/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

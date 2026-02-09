@@ -1,18 +1,10 @@
 ---
 title: InstallUpdates Method
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that installs software updates, which have been deployed to the client computer.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 32d00893-e70c-4dbf-b864-ed828b7d9487
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # InstallUpdates Method in Class CCM_SoftwareUpdatesManager
 The `InstallUpdates` WMI class method, in Configuration Manager, installs software updates that have been deployed to the client computer.

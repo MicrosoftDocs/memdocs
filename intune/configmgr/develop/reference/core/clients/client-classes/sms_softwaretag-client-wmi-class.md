@@ -1,18 +1,10 @@
 ---
 description: Learn how to use SMS_SoftwareTag class to indicate the presence of a software application on a computer.
 title: SMS_SoftwareTag Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 480a698f-3120-4469-9a9b-aa7a83fce474
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SoftwareTag Client WMI Class
 The `SMS_SoftwareTag` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that indicates the presence of a software application on a computer.

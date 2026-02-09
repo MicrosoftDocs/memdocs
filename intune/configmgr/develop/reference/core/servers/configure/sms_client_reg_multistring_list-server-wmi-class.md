@@ -1,18 +1,10 @@
 ---
 title: SMS_Client_Reg_MultiString_List Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a list of client registry multi-string items from the site control file.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ff5fa70d-5bea-469d-bc84-a940d6558733
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_Client_Reg_MultiString_List Server WMI Class
 The `SMS_Client_Reg_MultiString_List` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that represents a list of client registry multi-string items from the site control file.

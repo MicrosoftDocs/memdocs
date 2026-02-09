@@ -1,17 +1,10 @@
 ---
 title: Manage the LTSB
-titleSuffix: Configuration Manager
 description: Management differences for the LTSB of Configuration Manager.
 ms.date: 03/24/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Manage the long term servicing branch of Configuration Manager

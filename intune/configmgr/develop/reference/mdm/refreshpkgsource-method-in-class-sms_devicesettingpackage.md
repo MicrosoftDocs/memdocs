@@ -1,18 +1,10 @@
 ---
 title: RefreshPkgSource method in class SMS_DeviceSettingPackage
-titleSuffix: Configuration Manager
 description: The RefreshPkgSource class method refreshes the package source at all distribution points.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: df79aea4-1ff7-400a-b160-f3eff63f277a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # RefreshPkgSource Method in Class SMS_DeviceSettingPackage
 The `RefreshPkgSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the package source at all distribution points.

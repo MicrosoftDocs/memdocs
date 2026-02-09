@@ -1,64 +1,20 @@
 ---
-title: Use Windows compatibility reports for Windows updates in Intune
+title: Use Compatibility Reports for Windows Updates in Intune
 description: Use the app and driver compatibility reports for Windows devices before you deploy Intune policies for feature updates or update rings.
-ms.date: 11/27/2024
+ms.date: 01/14/2026
 ms.topic: how-to
 ms.reviewer: zadvor
-#ms.custom:
-ms.collection:
-- M365-identity-device-management
-- highseo
-- sub-updates
 ---
 
 # App and driver compatibility reports for Windows updates
 
-With Intune, you can deploy updates to Windows devices by using policies for [Update rings for Windows 10 and later](update-rings.md) and [Feature updates for Windows 10 and later](feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
+With Intune, you can deploy updates to Windows devices with [Windows Update ring policies](update-rings.md) and [feature update policies](feature-updates.md). To help prepare for update deployments, Intune offers integrated reports to help you understand compatibility risks that might affect your devices during or after an update:
 
 - **Windows feature update device readiness report** - This report provides per-device information about compatibility risks that are associated with an upgrade or update to a chosen version of Windows.
 
 - **Windows feature update compatibility risks report** - This report provides a summary view of the top compatibility risks across your organization for a chosen version of Windows. You can use this report to understand which compatibility risks affect the greatest number of devices in your organization.
 
 To use these reports, you must first ensure that prerequisites are met and that devices are properly configured for data collection.
-
-## Prerequisites
-
-### Licensing
-
-The Windows feature update device readiness and Windows feature update compatibility risks reports require users of enrolled devices to have one of the following licenses:
-
-- Windows Enterprise E3 or E5 (included in Microsoft 365 F3, E3, or E5)
-- Windows Education A3 or A5 (included in Microsoft 365 A3 or A5)
-- Windows Virtual Desktop Access (VDA) per user
-
-Before using these reports, you must attest to having the required licenses on the [Windows data page](../../intune-service/protect/data-enable-windows-data.md#windows-license-verification) of the Intune admin center.
-
-### Devices
-
-To be eligible for the Windows feature update device readiness and Windows feature update compatibility risks reports, devices must:
-
-- Run a supported version of Windows with the latest cumulative update
-- Be Microsoft Entra joined or Microsoft Entra hybrid joined
-- Be managed by Intune (including co-managed devices) or a supported version of the Configuration Manager client with [tenant attach enabled](../../configmgr/tenant-attach/device-sync-actions.md)
-- Have [Windows diagnostic data enabled](/windows/privacy/configure-windows-diagnostic-data-in-your-organization) at the [Required level](/windows/privacy/configure-windows-diagnostic-data-in-your-organization#diagnostic-data-settings) or higher
-
-
-Additionally, you must set the [Enable features that require Windows diagnostic data in processor configuration](../../intune-service/protect/data-enable-windows-data.md#windows-data) setting in **Tenant administration** > **Connectors and tokens** > **Windows data** to On.
-
-### Users
-
-To view these reports, users must be assigned an Intune role with the **Managed devices** > **View reports** permission. This permission is included in the following built-in roles:
-
-- Endpoint Security Manager
-- Read Only Operator
-- Help Desk Operator
-
-In addition, to use the **Windows feature update device readiness report**, users must also have the **Roles** > **Read** permission. This permission is included in the following built-in roles:
-
-- Endpoint Security Manager
-- Read Only Operator
-- Help Desk Operator
-- Intune Role Administrator
 
 ## Use the Windows feature update device readiness report
 

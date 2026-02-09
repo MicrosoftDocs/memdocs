@@ -1,17 +1,10 @@
 ---
 title: Security and privacy for compliance settings
-titleSuffix: Configuration Manager
 description: Learn about the security guidance and recommendations for compliance settings in Configuration Manager.
 ms.date: 05/05/2021
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: article
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Security and privacy for compliance settings in Configuration Manager

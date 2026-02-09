@@ -1,15 +1,9 @@
 ---
 title: After the site updates
-titleSuffix: Configuration Manager
 description: Learn what to do after the Configuration Manager site installs an in-console update.
 ms.date: 12/04/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
 
 ---

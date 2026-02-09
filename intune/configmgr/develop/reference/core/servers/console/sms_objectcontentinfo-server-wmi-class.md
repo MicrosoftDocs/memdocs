@@ -1,18 +1,10 @@
 ---
 title: SMS_ObjectContentInfo Class
 description: Learn how to use the SMS_ObjectContentInfo class in Configuration Manager to set application or package content information.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e35cbfe6-ad35-4ffb-a480-3aee332f7171
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ObjectContentInfo Server WMI Class
 The `SMS_ObjectContentInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents Application or Package Content Information.

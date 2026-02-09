@@ -1,16 +1,9 @@
 ---
 title: Introduction to software updates
-titleSuffix: Configuration Manager
 description: Learn the basics of software updates in Configuration Manager.
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ms.date: 10/30/2017
 ms.topic: article
-ms.service: configuration-manager
 ms.subservice: software-updates
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 # Introduction to software updates in Configuration Manager

@@ -1,18 +1,10 @@
 ---
 title: Deny Method
-titleSuffix: Configuration Manager
 description: The Deny Windows Management Instrumentation (WMI) class method, in Configuration Manager, denies user application requests.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e1204ee0-7193-41ff-9061-4bd8ca07a76b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Deny Method in Class SMS_UserApplicationRequest
 The `Deny` Windows Management Instrumentation (WMI) class method, in Configuration Manager, denies user application requests.

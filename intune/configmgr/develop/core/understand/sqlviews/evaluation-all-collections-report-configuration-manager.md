@@ -1,18 +1,10 @@
 ---
 title: Evaluation of the All collections report
-titleSuffix: Configuration Manager
 description: Information about all of the collections in the Configuration Manager hierarchy.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 75e0e5a3-4bb5-421b-a9e1-b4bae4e71961
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Evaluation of the All collections report in Configuration Manager

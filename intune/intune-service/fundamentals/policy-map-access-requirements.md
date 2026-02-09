@@ -3,7 +3,7 @@ title: Access requirements policy mapping from Basic Mobility and Security to In
 description: A detailed list of the policy map between Basic Mobility and Security access requirements and Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/02/2023
+ms.date: 12/03/2025
 ms.topic: reference
 ms.reviewer: dagerrit
 ms.collection:
@@ -13,8 +13,6 @@ ms.collection:
 # Access requirements policy mapping from Basic Mobility and Security to Intune
 
 This article provides mapping details between Basic Mobility and Security to Intune. Specifically, this page maps the Microsoft Purview compliance portal Access Requirement policies to the equivalent policies in Microsoft Intune. Intune offers more policy flexibility. So, each Office policy translates into multiple Intune and Microsoft Entra policies to achieve the same result.
-
-If you're migrating from Basic Mobility and Security to Intune, you can use the [Migration evaluation tool](migrate-to-intune.md) to automate much of this mapping.
 
 To see these settings in the Microsoft Purview compliance portal, sign in to the [Purview compliance portal](https://protection.office.com/devicev2). Then, go to the **Device security policies** list, select your policy name > **Edit policy** > **Access Requirements**.
 
@@ -303,6 +301,6 @@ The following settings aren't deployed by device security policies. But when dep
 | Windows | Sync Calendar | true |
 | Windows | Sync Tasks | true |
 
-## Related articles
+## Related article
 
-[Migration evaluation tool](migrate-to-intune.md)
+- [Move from Basic Mobility and Security to Intune](migrate-to-intune.md)

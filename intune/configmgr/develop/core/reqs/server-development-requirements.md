@@ -1,18 +1,10 @@
 ---
 title: Server Development Requirements
-titleSuffix: Configuration Manager
 description: The SMS Provider and associated technologies can be programmed by using managed code, VBScript, C++, and other languages.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 186d3283-419b-417f-a168-0b7fba5ec628
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Configuration Manager Server Development Requirements
 In Configuration Manager, the SMS Provider and associated technologies can be programmed by using the following programming languages.

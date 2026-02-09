@@ -1,16 +1,9 @@
 ---
 title: Task sequence variable reference
-titleSuffix: Configuration Manager
 description: Learn about the variables to control and customize a Configuration Manager task sequence.
 ms.date: 07/17/2025
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: reference
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
-ms.reviewer: frankroj.mstewart
 ms.collection: tier3
 ---
 

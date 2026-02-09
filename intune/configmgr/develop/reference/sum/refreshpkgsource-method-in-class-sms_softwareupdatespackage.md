@@ -1,18 +1,10 @@
 ---
 title: RefreshPkgSource method in class SMS_SoftwareUpdatesPackage
-titleSuffix: Configuration Manager
 description: Refresh the package source at all distribution points. The source version of the package is incremented, and the package content is replicated to child sites.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 136541e4-0d5a-458d-89a3-f3dea24d6e5f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # RefreshPkgSource Method in Class SMS_SoftwareUpdatesPackage
 The `RefreshPkgSource` Windows Management Instrumentation (WMI) class method, in Configuration Manager, refreshes the package source at all distribution points. The latest version of the package is copied to all the distribution points of the package. The source version of the package is incremented, and the package content is replicated to child sites.

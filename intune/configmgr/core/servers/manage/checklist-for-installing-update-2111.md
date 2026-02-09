@@ -1,17 +1,10 @@
 ---
 title: Checklist for 2111
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2111.
 ms.date: 12/15/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Checklist for installing update 2111 for Configuration Manager

@@ -1,16 +1,9 @@
 ---
 title: Install Software Updates
-titleSuffix: Configuration Manager
 description: Recommendations for using the task sequence step Install Software Updates in Configuration Manager.
 ms.date: 03/05/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: troubleshooting
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

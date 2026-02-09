@@ -1,17 +1,10 @@
 ---
 title: Discover device and user resources
-titleSuffix: Configuration Manager
 description: Read an overview of the discovery process and discovery data records.
 ms.date: 02/8/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Run discovery for Configuration Manager
 

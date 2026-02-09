@@ -1,0 +1,5 @@
+# These owners will be the default owners for everything in the repo and/or noted folder unless a later match takes precedence
+* @LauraWi @lenewsad @Brenduns @MandiOhlinger @nicholasswhite @paolomatarazzo @MicrosoftDocs/msecd-codeowners
+
+# configmgr
+/intune/configmgr/ @umair0204 @bhuney @Yupiter2005 @MandiOhlinger @LauraWi @lenewsad @Brenduns @nicholasswhite @paolomatarazzo

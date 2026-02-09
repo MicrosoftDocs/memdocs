@@ -1,18 +1,11 @@
 ---
 title: Sample queries for collections
-titleSuffix: Configuration Manager
 description: Sample queries that show how to join some of the most commonly used collection views to other views.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 9b2fec1a-41d1-4c62-8a3b-154e63a67ddf
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

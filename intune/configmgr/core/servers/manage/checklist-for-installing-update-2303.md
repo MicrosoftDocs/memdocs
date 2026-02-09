@@ -1,15 +1,9 @@
 ---
 title: Checklist for 2303
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2303.
 ms.date: 04/10/2023
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ---
 
 # Checklist for installing update 2303 for Configuration Manager

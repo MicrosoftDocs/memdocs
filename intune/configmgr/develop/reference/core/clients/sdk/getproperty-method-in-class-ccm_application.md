@@ -1,18 +1,10 @@
 ---
 title: GetProperty method in class CCM_Application
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the GetProperty Windows Management Instrumentation class method that gets an application property value.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 564b89ee-b9bb-459d-a8cc-1babb6220757
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetProperty Method in Class CCM_Application
 The `GetProperty` Windows Management Instrumentation (WMI) class method in Configuration Manager that gets an application property value.

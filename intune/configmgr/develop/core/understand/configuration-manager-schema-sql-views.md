@@ -1,18 +1,10 @@
 ---
 title: Schema SQL Views
-titleSuffix: Configuration Manager
 description: Creates schema information views. These are particularly useful for determining the names for custom inventory resource type (architecture) tables.
 ms.date: 03/08/2018
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0da896ff-441e-4ee3-af8b-ff79ccca73bc
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Configuration Manager Schema SQL Views
 In Configuration Manager, a number of schema information views are created to get information about the names of all the available views and the schema for the inventory and discovery classes. These are particularly useful for determining the names for custom inventory resource type (architecture) tables. The following table shows a list of these schema information views.

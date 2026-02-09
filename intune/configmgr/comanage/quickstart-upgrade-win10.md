@@ -1,17 +1,10 @@
 ---
 title: Upgrade Windows 10
-titleSuffix: Configuration Manager
 description: Upgrade devices to a supported version of Windows 10 or later, which is required for co-management.
 ms.date: 11/08/2021
 ms.subservice: co-management
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Upgrade Windows for co-management
