@@ -32,6 +32,18 @@ This article shows how to configure update policies in Intune using Apple's Decl
 :::column-end:::
 :::row-end:::
 
+:::row:::
+:::column span="1":::
+[!INCLUDE [enrollment-methods](../../includes/requirements/enrollment-methods.md)]
+:::column-end:::
+:::column span="3":::
+> The following enrollment methods are supported:
+>
+> - Device Enrollment
+> - Automated Device Enrollment
+:::column-end:::
+:::row-end:::
+
 ## Configuration
 
 When designing your Apple device update strategy, align with your organization's security policies, user experience expectations, and compliance mandates. Intune supports two primary policy models for managing software updates:
