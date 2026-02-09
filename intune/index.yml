@@ -176,7 +176,7 @@ conceptualContent:
           url: /purview/
 
 tools:
-  title: Tools and extensibility
+  title: Tools and automation
   summary: Explore, query, and automate Microsoft Intune using built-in and external tools.
   items:
     - title: Device query
