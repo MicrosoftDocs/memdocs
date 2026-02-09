@@ -266,6 +266,17 @@ For the authoritative and up-to-date list of network endpoints required by Intun
 
 For additional context on this change, see [Support Tip: Upcoming Microsoft Intune Network Changes](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-upcoming-microsoft-intune-network-changes/4452738).
 
+### Monitor and troubleshoot
+
+#### Windows feature update reports support Windows 11, version 25H2<!-- 36157178 -->
+ 
+The *Windows feature update compatibility risks report* and *Windows feature update device readiness report* support Windows 11, version 25H2 as a selectable target OS. When you choose this version under **Select target OS**, the reports provide updated insights to help you assess device readiness and identify potential compatibility risks before deploying the feature update.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
 ### Tenant administration
 
 #### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->
