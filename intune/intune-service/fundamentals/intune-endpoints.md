@@ -156,7 +156,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 | ID |Desc |Category |ER |Addresses |Ports|Notes|
 |----|-----|---------|---|----------|-----|-----|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for NA, ROW customers)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for APAC customers)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for EU customers)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443 |
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443 |
 
@@ -419,6 +419,7 @@ FQDNs
 *.manage.microsoft.com
 manage.microsoft.com
 *.dl.delivery.mp.microsoft.com
+*.dm.microsoft.com
 *.do.dsp.mp.microsoft.com
 *.update.microsoft.com
 *.windowsupdate.com
@@ -457,7 +458,7 @@ intunecdnpeasd.azureedge.net
 *.monitor.azure.com
 *.support.services.microsoft.com
 *.trouter.communication.microsoft.com
-*.trouter.skype.com
+*.trouter.communications.svc.cloud.microsoft
 *.trouter.teams.microsoft.com
 api.flightproxy.skype.com
 ecs.communication.microsoft.com
