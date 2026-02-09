@@ -68,3 +68,7 @@ items:
 - name: Microsoft Intune
   tocHref: /windows-365/
   topicHref: /intune/index
+
+- name: Microsoft Intune
+  tocHref: /windows/deployment/windows-autopatch/
+  topicHref: /intune/index
