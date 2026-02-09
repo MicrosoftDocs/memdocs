@@ -95,7 +95,7 @@ conceptualContent:
 
   sections:
 
-  - title: Plan, deploy, and extend Intune
+  - title: Plan, deploy, and manage Intune
     summary: Learn more about planning your Intune deployment and understanding supported platforms and requirements.
     items:
       - title: Get started
@@ -174,3 +174,23 @@ conceptualContent:
         - text: Microsoft Purview
           itemType: overview
           url: /purview/
+
+tools:
+  title: Tools and extensibility
+  summary: Explore, query, and automate Microsoft Intune using built-in and external tools.
+  items:
+    - title: Device query
+      imageSrc: ./media/icons/hub-page/device-query.svg
+      url: /intune/advanced-analytics/device-query
+
+    - title: Microsoft Graph for Intune
+      imageSrc: ./media/icons/hub-page/graph.svg
+      url: /graph/api/resources/intune-graph-overview
+
+    - title: Graph Explorer
+      imageSrc: ./media/icons/hub-page/graph.svg
+      url: /graph/graph-explorer/graph-explorer-overview
+
+    - title: Microsoft Graph PowerShell
+      imageSrc: ./media/icons/hub-page/powershell.svg
+      url: /powershell/microsoftgraph
