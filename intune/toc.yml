@@ -24,6 +24,8 @@ items:
         displayName: architecture, diagram, components, design, svg, family, products, suite, on-premises, tunnel
     - name: Intune service release information
       href: ./intune-service/fundamentals/intune-service-servicing-information.md
+    - name: Endpoint management at Microsoft
+      href: endpoint-manager-overview.md
     - name: What is device management?
       href: ./intune-service/fundamentals/what-is-device-management.md
 
