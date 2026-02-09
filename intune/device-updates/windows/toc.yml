@@ -64,4 +64,4 @@ items:
   href: ../../intune-service/configuration/delivery-optimization-windows.md
   displayName: delivery optimization, windows updates
 - name: Windows Autopatch
-  href: /windows/deployment/windows-autopatch/?context=/intune/context
+  href: /windows/deployment/windows-autopatch/?context=/intune/context/context
