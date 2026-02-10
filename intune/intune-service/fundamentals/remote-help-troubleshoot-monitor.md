@@ -3,7 +3,7 @@ title: Troubleshoot and monitor Remote Help for Microsoft Intune.
 description: Use the troubleshooting and monitoring information for Remote Help with Microsoft Intune to ensure healthy and successful deployment.
 author: lenewsad
 ms.author: lanewsad
-ms.date: 10/01/2025
+ms.date: 02/10/2026
 ms.topic: how-to
 ms.localizationpriority: high
 ms.reviewer: Karawang
@@ -73,7 +73,7 @@ Use the table in this section to troubleshoot common issues with Remote Help on 
   |-----------------------------------|-----------------------------------------------|
   | The device meets the requirements for Remote Help | See [Plan Remote Help](remote-help-plan.md#supported-platforms) for details. |
   | The device has network access to the required endpoints | See [Network endpoints for Remote Help](remote-help-plan.md#network-considerations) for details. |
-  | The device has blocked applications from using notifications | See [Policy CSP - Notifications](/windows/client-management/mdm/policy-csp-notifications.md#disallowcloudnotification) for details. |
+  | The device has blocked applications from using notifications | See [Policy CSP - Notifications](/windows/client-management/mdm/policy-csp-notifications#disallowcloudnotification) for details. |
   | The Intune Win32 app detection rule (if used) is correct | Incorrect version detection can cause Intune to think the app is already installed or never installed. See [Deploy Remote Help](remote-help-deploy.md) for details. |
   | The device is in *do not disturb* mode | If the device is in *do not disturb* mode, notifications for Remote Help session requests won't be shown. Disable *don't disturb* mode and try again or ask the sharer to check their notifications pane. |
 
