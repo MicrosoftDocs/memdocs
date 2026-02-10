@@ -19,12 +19,12 @@ This article explains what Settings insight shows, where it's available, and how
 
 ## Applies to
 
-Settings insight is available for the following security baselines:
+Settings insight is currently available for the following Intune security baselines:
 
 - **Microsoft Edge Baseline**
 - **Microsoft 365 Apps for Enterprise Security Baseline**
 
-Settings insight isn't currently available for other security baselines, including the Security Baseline for Windows 10 and later or the Microsoft Defender for Endpoint baseline.
+Settings insight isn't currently available for other Intune security baselines, including the Security Baseline for Windows 10 and later or the Microsoft Defender for Endpoint baseline.
 
 ## What Settings insight provides
 
@@ -79,6 +79,8 @@ Settings insight doesn't appear for settings where:
 
 The presence or absence of an insight doesn't indicate the importance of a setting. All settings in security baselines are recommended by Microsoft's security teams regardless of whether peer data is available.
 
+As more organizations adopt settings and additional data becomes available, insights that aren't currently shown might appear in the future.
+
 ## How recommendations are determined
 
 Settings insight uses machine learning to identify organizations similar to yours and compare their configuration choices.
@@ -97,7 +99,7 @@ Clustering algorithms and key attributes are selected to ensure organizations ar
 
 For organizations within the same cluster:
 
-1. Healthy organizations are identified based on Endpoint Analytics scores
+1. Healthy organizations are identified based on Endpoint analytics scores
 2. Common setting values used by these organizations are analyzed
 3. When most similar organizations use Microsoft's default value for a setting, an insight appears
 4. Insights only appear when peer behavior aligns with Microsoft's baseline recommendations (positive reinforcement)
@@ -106,8 +108,8 @@ For organizations within the same cluster:
 
 Settings insight is designed with privacy and security safeguards:
 
-- **No customer data is used** - The model uses aggregated usage data at the organization level only
-- **Data is categorical** - Information is converted to categorical formats when possible (for example, Boolean attributes for feature usage, ranges instead of exact values)
+- **Customer data isn't used in the model** - Usage data is aggregated at the organization level only
+- **Data is converted when possible** - Usage data is converted to categorical formats when possible (for example, Boolean attributes for feature usage, ranges for deployment ratios rather than exact values)
 - **Aggregation thresholds** - No recommendation appears if the number of similar organizations is below a minimum threshold
 - **Minimum adoption requirements** - Settings must be configured by a minimum number of organizations before insights appear
 - **Privacy reviews** - All data usage is reviewed and approved for privacy and security compliance
