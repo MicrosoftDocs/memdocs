@@ -1,5 +1,57 @@
 {
   "redirections": [
+
+
+    {
+      "source_path": "intune/intune-service/configuration/custom-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/custom-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/ios-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/macos-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/vpn-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/vpn-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
+      "redirect_document_id": false
+    },
     {
       "source_path": "intune/intune-service/index.yml",
       "redirect_url": "/intune",
@@ -977,7 +1029,7 @@
     },
     {
       "source_path": "intune/intune/configuration/custom-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/custom-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -987,7 +1039,7 @@
     },
     {
       "source_path": "intune/intune/configuration/custom-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/custom-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -1077,12 +1129,12 @@
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-ios",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-macos",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
       "redirect_document_id": false
     },
     {
@@ -1182,7 +1234,7 @@
     },
     {
       "source_path": "intune/intune/configuration/ios-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/ios-device-features-settings",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
@@ -1212,7 +1264,7 @@
     },
     {
       "source_path": "intune/intune/configuration/macos-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/macos-device-features-settings",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
@@ -1327,12 +1379,12 @@
     },
     {
       "source_path": "intune/intune/configuration/vpn-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/vpn-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/vpn-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/vpn-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -1377,12 +1429,12 @@
     },
     {
       "source_path": "intune/intune/configuration/wi-fi-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/wi-fi-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
       "redirect_document_id": false
     },
     {

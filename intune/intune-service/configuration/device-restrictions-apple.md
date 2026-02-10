@@ -1,7 +1,7 @@
 ---
 title: Apple device restriction settings in Microsoft Intune
 description: Add, configure, or create settings on iOS, iPadOS, and macOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
-ms.date: 02/09/2026
+ms.date: 02/10/2026
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
 ms.collection:
@@ -184,16 +184,6 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
 - **Require Safari fraud warnings**: **Yes** requires fraud warnings to be shown in the web browser on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not show these warnings.
 
-- **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation. Also available for user enrollment.
-
-  This setting applies to:
-  - iOS/iPadOS 14.5 and newer
-
-- **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for translation. Also available for user enrollment.
-
-  This setting applies to:
-  - iOS/iPadOS 15.0 and newer
-
 ### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
 - **Block internet search results from Spotlight**: **Yes** stops Spotlight from returning any results from an Internet search. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Spotlight search to connect to the Internet to provide search results.
@@ -207,6 +197,16 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block Safari JavaScript**: **Yes** prevents Java scripts in the browser from running on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Java scripts.
 
 - **Block Safari Pop-ups**: **Yes** blocks all pop-ups in the Safari web browser. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the pop-up blocker.
+
+- **Block Siri for dictation**: **Yes** prevents connections to Siri servers. Users can't use Siri to dictate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for dictation. Also available for user enrollment.
+
+  This setting applies to:
+  - iOS/iPadOS 14.5 and newer
+
+- **Block Siri for translation**: **Yes** prevents connections to Siri servers so that users can't use Siri to translate text. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Siri to be used for translation. Also available for user enrollment.
+
+  This setting applies to:
+  - iOS/iPadOS 15.0 and newer
 
 ### Settings apply to: Automated device enrollment (supervised)
 
@@ -331,6 +331,7 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 ### Settings apply to: All enrollment types
 
 - **Block iCloud Keychain sync**: **Yes** disables syncing credentials stored in the Keychain to iCloud. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to sync these credentials.
+- **Block iCloud desktop and documents sync**: **Yes** blocks iCloud from syncing the desktop and documents folders to the cloud. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow syncing the desktop and documents folders to iCloud.
 - **Block iCloud Document and Data Sync**: **Yes** prevents iCloud from syncing documents and data. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow document and key-value synchronization to your iCloud storage space.
 - **Block iCloud Mail Backup**: **Yes** prevents iCloud from syncing to the macOS Mail app. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow Mail synchronization to iCloud.
 - **Block iCloud Contact Backup**: **Yes** prevents iCloud from syncing the device contacts. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow contact sync using iCloud.
@@ -459,17 +460,6 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block over-the-air PKI updates**: **Yes** prevents your users from receiving software updates unless devices are connected to a computer. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow a device to receive software updates without being connected to a computer.
 - **Force limited ad tracking**: **Yes** disables the device advertising identifier. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might keep it enabled.
 - **Block trusting new enterprise app authors**: **Yes** removes the **Trust Enterprise Developer** button in **Settings** > **General** > **Profiles & Device Management** on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might let users choose to trust apps that aren't downloaded from the app store.
-- **Block app clips**: **Yes** blocks App Clips on managed devices. Specifically, setting to **Yes**:
-
-  - Prevents users from adding App Clips on devices.
-  - Removes existing App Clips on devices.
-
-  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and removing App Clips on devices.
-
-  This setting applies to:
-  - iOS 14.0 and newer
-  - iPadOS 14.0 and newer
-
 - **Limit Apple personalized advertising**: **Yes** limits Apple's personalized advertising in the App Store, Apple News, and Stocks apps. On the device, the **Settings** > **Privacy** > **Apple Advertising** is toggled off. This setting only impacts personalized ads in these apps. It doesn't impact non-personalized ads, and may not reduce ads. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might turn on personalized ads.
 
   For more information on Apple's policy, see [Apple Advertising & Privacy](https://support.apple.com/HT205223) (opens Apple's web site).
@@ -519,6 +509,17 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 - **Block configuration profile changes**: **Yes** prevents configuration profile changes on devices. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to install configuration profiles.
 - **Allow activation Lock**: **Yes** enables Activation Lock on supervised iOS/iPadOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
 - **Block removing apps**: **Yes** prevents removing apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow users to remove apps from devices.
+- **Block app clips**: **Yes** blocks App Clips on managed devices. Specifically, setting to **Yes**:
+
+  - Prevents users from adding App Clips on devices.
+  - Removes existing App Clips on devices.
+
+  When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow adding and removing App Clips on devices.
+
+  This setting applies to:
+  - iOS 14.0 and newer
+  - iPadOS 14.0 and newer
+
 - **Allow USB accessories while device is locked**: **Yes** lets USB accessories exchange data with devices that are locked for over an hour. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not update USB Restricted mode on devices, and USB accessories are blocked from transferring data from devices if locked for over an hour.
 
   This setting applies to:
@@ -610,11 +611,6 @@ You can also **Import** a CSV file with the list of app names and their bundle I
      This setting applies to:
     - macOS 11.0 and newer
 
-  - **Allow activation lock**: **Yes**, enables Activation Lock on supervised macOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
-
-     This setting applies to:
-    - macOS 10.15 or later
-
 ### Settings apply to: Automated device enrollment
 
 - **Disable AirPlay, view screen by Classroom app, and screen sharing**: **Yes** blocks AirPlay, and prevents screen sharing to other devices. It also prevents teachers from using the Classroom app to see their students' screens. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow teachers to see their students' screens.
@@ -641,6 +637,11 @@ You can also **Import** a CSV file with the list of app names and their bundle I
 
   This setting applies to:
   - macOS 12 and newer
+
+  - **Allow activation lock**: **Yes**, enables Activation Lock on supervised macOS devices. Activation Lock makes it harder for a lost or stolen device to be reactivated. When set to **Not configured** (default), Intune doesn't change or update this setting.
+
+     This setting applies to:
+    - macOS 10.15 or later
 
 ::: zone-end
 

@@ -1749,12 +1749,12 @@ items:
         - name: Deploy apps to Government environments
           displayName: assign apps, app assignment, gcc, dod, windows
           href: ./intune-service/apps/apps-deploy-gcc-dod.md
-      - name: Use filters when assigning policies
+      - name: Use assignment filters
         items:
-        - name: Create a filter
+        - name: Create an assignment filter
           displayName: assignment filter, android, ios, ipados, macos, windows
           href: ./intune-service/fundamentals/filters.md
-        - name: Filter properties
+        - name: Assignment filter properties
           displayName: assignment filter, android, ios, ipados, macos, windows
           href: ./intune-service/fundamentals/filters-device-properties.md
         - name: Supported workloads
