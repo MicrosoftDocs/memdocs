@@ -51,10 +51,10 @@ productDirectory:
       summary: Manage operating system updates across Windows, Apple, and Android devices.
       url: ./device-updates/windows/index.md
 
-    - title: Endpoint security
-      imageSrc: ./media/icons/hub-page/endpoint-security.svg
+    - title: Device security
+      imageSrc: ./media/icons/hub-page/device-security.svg
       summary: Secure devices using endpoint security policies, security baselines, and Defender integrations in Intune.
-      url: ./intune-service/protect/endpoint-security.md
+      url: ./intune-service/protect/device-protect.md
 
     - title: Compliance and access
       imageSrc: ./media/icons/hub-page/compliance-access.svg
