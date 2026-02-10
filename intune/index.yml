@@ -1,240 +1,196 @@
 ### YamlMime:Hub
-title: Microsoft Intune product and capabilities documentation
-summary: Learn more about how Microsoft Intune products and capabilities can help you secure, deploy, and manage users, apps, and endpoint devices.
+title: Microsoft Intune documentation
+summary: Learn more about managing devices, apps, and security with Microsoft Intune.
 brand: azure
 
 metadata:
   ms.topic: hub-page
   author: paolomatarazzo
   ms.author: paoloma
-  ms.date: 11/17/2025
+  ms.date: 02/06/2026
   ms.custom: intro-hub-or-landing
 
 highlightedContent:
   items:
-    - title: What is Intune?
+    - title: What is Microsoft Intune?
       itemType: overview
       url: ./intune-service/fundamentals/what-is-intune.md
     - title: What's new in Intune
       itemType: whats-new
       url: ./intune-service/fundamentals/whats-new.md
-    - title: Intune Blog and Community
-      itemType: learn
-      url: https://aka.ms/IntuneCommunity
+    - title: Features in development
+      itemType: whats-new
+      url: ./intune-service/fundamentals/in-development.md
     - title: Microsoft Intune Suite add-ons
-      itemType: how-to-guide
+      itemType: overview
       url: ./intune-service/fundamentals/intune-add-ons.md
 
-# productDirectory section (optional)
+
 productDirectory:
-  title: I want to...
-  summary: We have highlighted some of the most requested objectives and key resources in the following section.
+  title: Manage devices, apps, and security with Intune
+  summary: Explore the core capabilities of Microsoft Intune and learn how to manage, secure, and support devices across your organization.
   items:
-    # Card
-    - title: Try and evaluate
-      imageSrc: ./media/index/get-started.svg
-      links:
-        - url: ./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md
-          text: Walkthrough Microsoft Intune admin center
-        - url: ./intune-service/fundamentals/try-intune-overview.md
-          text: Evaluate and try Intune tasks
 
-    # Card
-    - title: Plan a migration to Intune
-      imageSrc: ./media/index/plan-migrate.svg
-      links:
-        - url: ./intune-service/fundamentals/intune-planning-guide.md
-          text: Microsoft Intune planning guide
-        - url: ./intune-service/fundamentals/supported-devices-browsers.md
-          text: Supported operating systems and browsers
+    - title: Device enrollment
+      imageSrc: ./media/icons/hub-page/device-enrollment.svg
+      summary: Enroll and prepare devices for management, including Windows Autopilot scenarios.
+      url: ./intune-service/fundamentals/deployment-guide-enrollment.md
 
-    # Card
-    - title: Use Intune with Configuration Manager
-      imageSrc: ./media/index/co-manage.svg
-      links:
-        - url: ./configmgr/comanage/overview.md
-          text: Learn about co-management
-        - url: ./configmgr/comanage/tutorial-co-manage-clients.md
-          text: "See the tutorial: Enable co-management"
+    - title: Device configuration
+      imageSrc: ./media/icons/hub-page/devices.svg
+      summary: Configure settings and features across managed devices.
+      url: ./intune-service/configuration/device-profiles.md
 
-    # Card
-    - title: Move to cloud native endpoints
-      imageSrc: ./media/index/cloud-endpoint.svg
-      links:
-        - url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-          text: Learn about cloud native endpoints
-        - url: ./solutions/cloud-native-endpoints/cloud-native-windows-endpoints.md
-          text: "See the tutorial: Get started with cloud native Windows endpoints"
+    - title: Application management
+      imageSrc: ./media/icons/hub-page/apps.svg
+      summary: Deploy and manage apps across platforms.
+      url: ./intune-service/apps/app-management.md
 
-    # Card
-    - title: Set up Conditional Access with Intune
-      imageSrc: ./media/index/conditional-access.svg
-      links:
-        - url: ./intune-service/protect/conditional-access.md
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2900/prescriptive-guidance-intune-conditional-access-policies/index.html#/0/0
-          text: View the interactive demo
+    - title: Device updates 
+      imageSrc: ./media/icons/hub-page/device-updates.svg
+      summary: Manage operating system updates across Windows, Apple, and Android devices.
+      url: ./device-updates/windows/index.md
 
-    # Card
-    - title: Update Windows with Intune
-      imageSrc: ./media/index/update-windows.svg
-      links:
-        - url: ./device-updates/windows/index.md
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2905/prescriptive-guidance-intune-windows-update-policy/index.html#/0/0
-          text: View the interactive demo
+    - title: Endpoint security
+      imageSrc: ./media/icons/hub-page/endpoint-security.svg
+      summary: Secure devices using endpoint security policies, security baselines, and Defender integrations in Intune.
+      url: ./intune-service/protect/endpoint-security.md
 
-    # Card
-    - title: Manage macOS devices
-      imageSrc: ./media/index/macos-manage.svg
-      links:
-        - url: ./solutions/end-to-end-guides/macos-endpoints-get-started.md
-          text: Read the documentation
-    - title: Deploy devices with Windows Autopilot
-      imageSrc: ./media/index/windows-autopilot.svg
-      links:
-        - url: /mem/autopilot/windows-autopilot
-          text: Read the documentation
-        - url: https://regale.cloud/Microsoft/viewer/2910/prescriptive-guidance-autopilot-profiles/index.html#/0/0
-          text: View the interactive demo
+    - title: Compliance and access
+      imageSrc: ./media/icons/hub-page/compliance-access.svg
+      summary: Evaluate device compliance in Intune and integrate compliance with Conditional Access to protect access to resources.
+      url: ./intune-service/protect/device-compliance-get-started.md
 
-# additionalContent section (optional)
-# Card with summary style
+    - title: App protection
+      imageSrc: ./media/icons/hub-page/app-protection.svg
+      summary: Protect corporate data at the app level without requiring device enrollment.
+      url: ./intune-service/apps/app-protection-policy.md
+
+    - title: Copilot and agents
+      imageSrc: ./media/icons/hub-page/agent.svg
+      summary: Use AI-powered assistance and agents to analyze, configure, and manage Intune environments.
+      url: ./intune-service/copilot/copilot-intune-overview.md
+
+    - title: Analytics and reporting
+      imageSrc: ./media/icons/hub-page/reports.svg
+      summary: Monitor device health, compliance, and activity.
+      url: ./endpoint-analytics/index.md
+
+    - title: Remote actions and support
+      imageSrc: ./media/icons/hub-page/remote-actions.svg
+      summary: Take actions on devices and help users remotely.
+      url: ./intune-service/remote-actions/index.md
+
+    - title: Administration and governance
+      imageSrc: ./media/icons/hub-page/administration.svg
+      summary: Manage administrative access, roles, scope, and governance features to operate Intune securely and at scale.
+      url: ./intune-service/fundamentals/role-based-access-control.md
+
+    - title: Configuration Manager and Co-management 
+      imageSrc: ./media/icons/hub-page/co-management.svg
+      summary: Manage devices using both cloud and on-premises tools.
+      url: ./configmgr/index.yml
+
 conceptualContent:
-  # Supports up to 4 subsections
+
   sections:
 
-  - title: Additional resources
-    summary: "Go beyond the documentation with videos, blogs, training guides, communities, and more from Microsoft Experts and partners"
+  - title: Plan, deploy, and manage Intune
+    summary: Learn more about planning your Intune deployment and understanding supported platforms and requirements.
     items:
-      - title: Get to know Intune capabilities
-        summary: Resources to see Intune capabilities, get to know the user interface, and then set up a trial environment.
+      - title: Get started
+        summary: Resources to see Intune capabilities, get access to the admin center, and plan your deployment.
         links:
+        - url: ./intune-service/fundamentals/account-sign-up.md
+          itemType: get-started
+          text: Sign up or sign in to Microsoft Intune
         - url: https://aka.ms/Intune_GuidedDemo
-          itemType: overview
+          itemType: get-started
           text: Interactive demos for Intune
-        - url: ./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md
-          itemType: how-to-guide
-          text: Walk through the Intune Admin Center
-        - url: ./intune-service/fundamentals/free-trial-sign-up.md
-          itemType: how-to-guide
-          text: Sign up for a 30-day trial
-        - url: https://techcommunity.microsoft.com/t5/educator-developer-blog/register-for-microsoft-365-and-power-apps-developer-account-with/ba-p/3490280
-          itemType: how-to-guide
-          text: Create a Microsoft 365 Developer tenant for a longer trial
-        - url: https://youtu.be/4x7NDxdEo94?feature=shared
-          itemType: how-to-guide
-          text: Watch a tutorial to set up Intune on Developer (community)
+        - url: ./intune-service/fundamentals/licenses.md
+          itemType: get-started
+          text: Microsoft Intune licensing
+        - url: ./intune-service/fundamentals/intune-planning-guide.md
+          itemType: get-started
+          text: Plan your Intune deployment
+        - url: ./intune-service/fundamentals/supported-devices-browsers.md
+          itemType: get-started
+          text: Supported platforms and requirements
 
-      - title: Plan a move to Intune
+      - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
         links:
-        - text: Set up or move to Intune
+        - url: ./intune-service/fundamentals/deployment-guide-platform-windows.md
           itemType: how-to-guide
-          url: ./intune-service/fundamentals/deployment-guide-intune-setup.md
-        - text: Get started with cloud-native endpoints
+          text: Manage Windows devices
+        - url: ./intune-service/fundamentals/deployment-guide-platform-android.md
           itemType: how-to-guide
-          url: ./solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md
-        - text: Download the migration guide (PDF)
+          text: Manage Android devices
+        - url: ./intune-service/fundamentals/deployment-guide-platform-ios-ipados.md
           itemType: how-to-guide
-          url: https://www.microsoft.com/en-us/download/details.aspx?id=105665
-        - text: Customize your migration instructions with the setup wizard
-          itemType: how-to-guide
-          url: https://setup.microsoft.com/intune/deploy-and-set-up-microsoft-intune
+          text: Manage iOS/iPadOS devices
+        - text: Education
+          itemType: architecture
+          url: ./intune-service/industry/education/introduction-intune-education.md
+        - text: Government
+          itemType: architecture
+          url: ./intune-service/fundamentals/intune-govt-service-description.md
 
-      - title: Blog and community resources
-        summary: Checkout Intune community resources for blogs, announcements, discussions, and more.
+      - title: Community and support
+        summary: Check out Intune community resources for blogs, announcements, discussions, and more.
         links:
-          - url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
-            itemType: how-to-guide
-            text: Microsoft Intune Tech Community blog
+          - text: Intune Tech Community
+            url: https://techcommunity.microsoft.com/t5/microsoft-intune-blog/bg-p/MicrosoftEndpointManagerBlog
+            itemType: training
+          - text: Microsoft Intune Blog
+            itemType: training
+            url: https://techcommunity.microsoft.com/category/microsoftintune/blog/microsoftintuneblog
+          - text: Microsoft Security Q&A
+            itemType: training
+            url: https://learn.microsoft.com/en-us/answers/tags/827/microsoft-security
           - text: Intune Customer Success
-            itemType: how-to-guide
+            itemType: training
             url: https://aka.ms/IntuneCustomerSuccess
-          - text: "#MSIntune on X (formerly Twitter)"
-            itemType: overview
-            url: https://twitter.com/hashtag/msintune
           - text: Feedback for Intune
-            itemType: overview
+            itemType: whats-new
             url: https://aka.ms/IntuneFeedback
-          - text: Microsoft Q & A - Microsoft Intune
-            itemType: overview
-            url: https://learn.microsoft.com/answers/tags/415/intune
-          - text: Intune training video series (Community)
-            itemType: how-to-guide
-            url: https://www.youtube.com/@IntuneTraining
 
-      - title: Co-manage devices with Intune and Configuration Manager
-        summary: Enabling management of workloads from the cloud helps reduce the complexity and cost of current technology.
+
+      - title: Related services
+        summary: Learn more about identity, security, and cloud services that integrate with Microsoft Intune.
         links:
-        - text: Get Intune benefits without changing management policies
-          itemType: how-to-guide
-          url: ./configmgr/tenant-attach/index.yml
-        - text: Add Intune security benefits for Windows devices
-          itemType: how-to-guide
-          url: ./intune-service/protect/antivirus-windows-security-settings-windows-tenant-attach.md
-        - text: Analyze endpoint performance with Intune cloud attachment
-          itemType: how-to-guide
-          url: ./endpoint-analytics/configure.md?toc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Ftoc.json&bc=%2Fmem%2Fconfigmgr%2Fcloud-attach%2Fbreadcrumb%2Ftoc.json
-        - text: Follow the interactive guide to co-managing workloads
-          itemType: how-to-guide
-          url: https://www.microsoft.com/microsoft-365/business-insights-ideas/resources/what-is-endpoint-management?slide=15#/SystemConfig?slide=15
-        - text: Read the tutorial for enabling co-management
-          itemType: how-to-guide
-          url: ./configmgr/comanage/tutorial-co-manage-clients.md
-
-
-additionalContent:
-  # Supports up to 4 subsections
-  sections:
-
-    - title: Explore Microsoft Intune products and capabilities
-      items:
-
-      # Card
-      - title: Microsoft Intune core capabilities
-        summary: Manage and protect cloud-connected endpoints across Windows, Android, macOS, iOS, and Linux operating systems.
-        url: ./intune-service/index.yml
-      # Card
-      - title: Device protection overview
-        summary: Protect data and devices across Windows, Android, macOS, iOS, and Linux operating systems.
-        url: ./intune-service/protect/device-protect.md
-      # Card
-      - title: Microsoft Intune Suite
-        summary: Provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune.
-        url: ./intune-service/fundamentals/intune-add-ons.md
-      # Card
-      - title: Microsoft Configuration Manager
-        summary: Manage on-premises endpoints, such as Windows PCs and servers, and cloud-connected devices.
-        url: ./configmgr/index.yml
-      # Card
-      - title: Windows Autopilot docs
-        summary: Windows Autopilot is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use. Also, it can reset, repurpose, and recover devices.
-        url: /autopilot/index
-      # Card
-      - title: Endpoint analytics docs
-        summary: Endpoint analytics can help identify policies or hardware issues that may be slowing down devices and help you proactively make improvements before end-users generate a help desk ticket.
-        url: ./endpoint-analytics/index.md
-
-    - title: Related services
-      items:
-        # Card
-        - title: Windows Autopatch docs
-          summary: Windows Autopatch is a cloud service that automates Windows, Microsoft 365 Apps for enterprise, Microsoft Edge, and Microsoft Teams updates to improve security and productivity across your organization.
-          url: /windows/deployment/windows-autopatch/
-        # Card
-        - title: Azure Active Directory
-          summary: Azure Active Directory (Azure AD) is a cloud-based identity and access management service.
-          url: /azure/active-directory/
-        # Card
-        - title: Windows client docs for IT Pros
-          summary: Evaluate, plan, deploy, secure, and manage devices running Windows.
-          url: /windows/resources/
-        # Card
-        - title: Windows 365 docs
-          summary: Windows 365 is a cloud-based service that automatically creates a new type of Windows virtual machine (Cloud PCs) for your end users.
-          url: /windows-365/
-        # Card
-        - title: Microsoft Defender for Endpoint
-          summary: Microsoft Defender for Endpoint delivers preventative protection, post-breach detection, automated investigation, and response.
+        - text: Microsoft Entra ID
+          itemType: overview
+          url: /entra/
+        - text: Microsoft Defender for Endpoint
+          itemType: overview
           url: /microsoft-365/security/defender-endpoint/
+        - text: Windows Autopatch
+          itemType: overview
+          url: /windows/deployment/windows-autopatch/
+        - text: Windows 365
+          itemType: overview
+          url: /windows-365/
+        - text: Microsoft Purview
+          itemType: overview
+          url: /purview/
+
+tools:
+  title: Tools and automation
+  summary: Explore, query, and automate Microsoft Intune using built-in and external tools.
+  items:
+    - title: Device query
+      imageSrc: ./media/icons/hub-page/device-query.svg
+      url: /intune/advanced-analytics/device-query
+
+    - title: Microsoft Graph for Intune
+      imageSrc: ./media/icons/hub-page/graph.svg
+      url: /graph/api/resources/intune-graph-overview
+
+    - title: Graph Explorer
+      imageSrc: ./media/icons/hub-page/graph.svg
+      url: /graph/graph-explorer/graph-explorer-overview
+
+    - title: Microsoft Graph PowerShell
+      imageSrc: ./media/icons/hub-page/powershell.svg
+      url: /powershell/microsoftgraph

@@ -21,7 +21,7 @@ When you manage devices through security settings management:
 
 - You can use the *Microsoft Intune admin center* or the *Microsoft 365 Defender portal* to manage Intune endpoint security policies for Defender for Endpoint and assign those policies to Microsoft Entra ID groups. The Defender portal includes the user interface for device views, policy management, and reports for security settings management.
 
-  To manage policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json) in the Defender content.
+  To manage policies from within the Defender portal, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
 
 - Devices get their assigned policies based on their Microsoft Entra ID device object. A device that isn't already registered in Microsoft Entra is joined as part of this solution.
 
@@ -498,7 +498,7 @@ You can also monitor the Intune policies that are applied from within the [Micro
 - **Applied devices** - View the devices to which the policy is applied.
 - **Assigned Groups** - View the groups to which the policy is assigned.
 
-For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies?toc=/mem/intune/toc.json&bc=/mem/breadcrumb/toc.json) in the Defender content.
+For more information, see [Manage endpoint security policies in Microsoft Defender for Endpoint](/microsoft-365/security/defender-endpoint/manage-security-policies) in the Defender content.
 
 ## Frequently asked questions and considerations
 
