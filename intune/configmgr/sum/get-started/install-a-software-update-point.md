@@ -152,16 +152,16 @@ Configure the classifications settings on the **Classifications** page of the wi
 
 Configure the product settings on the **Products** page of the wizard, or on the **Products** tab in Software Update Point Component Properties.
 
-> [!WARNING]
-> Selecting too many Products & Categories for sync will result in a negative performance impact. Devices must scan every update in the SUSDB, whether it's deployed or not. Only select products that are relevant and necessary.
-> Many products and categories shown in the admin console are only for stand-alone WSUS, Configuration Manager can't deploy them. Don't select these items. Some examples include:
-> - Dynamic Updates
-> - Servicing Drivers
-> - Legacy versions of Microsoft Windows & Office: Windows 7, Windows 8, Server 2008, Office 2002/XP through Office 2013, etc.
-
 > [!TIP]
 > - The **Products** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.
 > - When you first install the software update point on the top-level site, clear all of the products. After the initial software updates synchronization, configure the products from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.
+
+> [!WARNING]
+> Select only the products that are required in your environment. Selecting unnecessary products increases the size of the WSUS metadata catalog and can negatively affect software update scan performance. Configuration Manager clients evaluate update metadata during every scan, even for updates that aren’t deployed.
+>
+> To reduce scan time and improve performance:
+> - Remove legacy products that are no longer used in your environment, such as unsupported versions of Windows and Office.
+> - Avoid selecting update products that Configuration Manager can’t deploy. These products are intended for standalone WSUS scenarios only (for example, Dynamic Updates and Servicing Drivers).
 
 ## Languages
 
