@@ -13,7 +13,7 @@ ms.collection:
 
 # Settings insight
 
-Settings insight provides peer benchmarking information during security baseline configuration. When you configure specific security baselines in Intune, you might see light bulb icons next to certain settings. These icons indicate that organizations with similar characteristics to yours—such as industry type and organization size—commonly use Microsoft's recommended default value for that setting.
+Settings insight provides peer benchmarking information during security baseline configuration. When you configure specific security baselines in Intune, you might see light bulb icons next to certain settings. These icons indicate that organizations with similar characteristics to yours, like industry type and organization size, commonly use Microsoft's recommended default value for that setting.
 
 This article explains what Settings insight shows, where it's available, and how the recommendations are determined.
 
@@ -28,16 +28,16 @@ Settings insight is currently available for the following Intune security baseli
 
 Settings insight offers context about peer behavior, not prescriptive guidance. The feature:
 
-- Shows when similar organizations commonly use Microsoft's recommended default value for a setting
-- Appears as light bulb icons next to settings during baseline configuration
-- Functions as positive reinforcement when peer behavior aligns with Microsoft's security recommendations
-- Doesn't suggest alternative values or configurations
+- Shows when similar organizations commonly use Microsoft's recommended default value for a setting.
+- Appears as light bulb icons next to settings during baseline configuration.
+- Functions as positive reinforcement when peer behavior aligns with Microsoft's security recommendations.
+- Doesn't suggest alternative values or configurations.
 
 Settings insight is informational. You remain responsible for evaluating each setting against your organization's security requirements, compliance obligations, and operational needs.
 
 ## Prerequisites
 
-- **Licensing/Subscriptions**: You must have a Microsoft Intune Plan 1 license to use Settings insight. For more information, see [Licenses available for Microsoft Intune](../fundamentals/licenses.md)
+- **Licensing/Subscriptions**: You must have a Microsoft Intune Plan 1 license to use Settings insight. For more information, see [Licenses available for Microsoft Intune](../fundamentals/licenses.md).
 - **Permissions**: Endpoint Security Administrators can create a profile using Baselines.
 
   To learn more about this Intune built-in role, see [Role-based access control (RBAC) with Intune](../fundamentals/role-based-access-control.md) and [Built-in role permissions for Intune](../fundamentals/role-based-access-control-reference.md).
@@ -66,14 +66,14 @@ Settings insight is informational. You remain responsible for evaluating each se
 
 When you see a light bulb icon, it indicates that organizations similar to yours commonly keep Microsoft's recommended default value for that setting. Settings insight only appears when:
 
-- Sufficient peer data is available from similar organizations
-- The peer behavior aligns with Microsoft's default recommendation for the baseline
+- Sufficient peer data is available from similar organizations.
+- The peer behavior aligns with Microsoft's default recommendation for the baseline.
 
 Settings insight doesn't appear for settings where:
 
-- There isn't enough data from similar organizations to make a reliable comparison
-- Peer behavior doesn't align with Microsoft's recommended defaults
-- The setting is new or rarely configured
+- There isn't enough data from similar organizations to make a reliable comparison.
+- Peer behavior doesn't align with Microsoft's recommended defaults.
+- The setting is new or rarely configured.
 
 The presence or absence of an insight doesn't indicate the importance of a setting. All settings in security baselines are recommended by Microsoft's security teams regardless of whether peer data is available.
 
@@ -97,21 +97,21 @@ Clustering algorithms and key attributes are selected to ensure organizations ar
 
 For organizations within the same cluster:
 
-1. Healthy organizations are identified based on Endpoint analytics scores
-2. Common setting values used by these organizations are analyzed
-3. When most similar organizations use Microsoft's default value for a setting, an insight appears
-4. Insights only appear when peer behavior aligns with Microsoft's baseline recommendations (positive reinforcement)
+1. Healthy organizations are identified based on Endpoint analytics scores.
+2. Common setting values used by these organizations are analyzed.
+3. When most similar organizations use Microsoft's default value for a setting, an insight appears.
+4. Insights only appear when peer behavior aligns with Microsoft's baseline recommendations (positive reinforcement).
 
 ### Privacy and data protection
 
 Settings insight is designed with privacy and security safeguards:
 
-- **Customer data isn't used in the model** - Usage data is aggregated at the organization level only
-- **Data is converted when possible** - Usage data is converted to categorical formats when possible (for example, Boolean attributes for feature usage, ranges for deployment ratios rather than exact values)
-- **Aggregation thresholds** - No recommendation appears if the number of similar organizations is below a minimum threshold
-- **Minimum adoption requirements** - Settings must be configured by a minimum number of organizations before insights appear
-- **Privacy reviews** - All data usage is reviewed and approved for privacy and security compliance
-- **Secure storage** - Data is stored with appropriate protection and retention management
+- **Customer data isn't used in the model** - Usage data is aggregated at the organization level only.
+- **Data is converted when possible** - Usage data is converted to categorical formats when possible (for example, Boolean attributes for feature usage, ranges for deployment ratios rather than exact values).
+- **Aggregation thresholds** - No recommendation appears if the number of similar organizations is below a minimum threshold.
+- **Minimum adoption requirements** - Settings must be configured by a minimum number of organizations before insights appear.
+- **Privacy reviews** - All data usage is reviewed and approved for privacy and security compliance.
+- **Secure storage** - Data is stored with appropriate protection and retention management.
 
 These safeguards protect the confidentiality of individual organizations and prevent inference about specific customers.
 
