@@ -273,10 +273,10 @@ You can specify **Derived credential** for the following profile types and purpo
   - [iOS and iPadOS](../configuration/email-settings-ios.md)
   - [Android Enterprise](../configuration/email-settings-android-enterprise.md)
 - VPN:
-  - [iOS and iPadOS](../configuration/vpn-settings-ios.md)
+  - [iOS and iPadOS](../configuration/vpn-settings-apple.md)
 - [S/MIME signing and encryption](certificates-s-mime-encryption-sign.md)
 - Wi-Fi:
-  - [iOS and iPadOS](../configuration/wi-fi-settings-ios.md)
+  - [iOS and iPadOS](../configuration/wi-fi-settings-apple.md)
   - [Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md)
 
   For Wi-Fi profiles, *Authentication method* is available only when the **EAP type** is set to one of the following values:

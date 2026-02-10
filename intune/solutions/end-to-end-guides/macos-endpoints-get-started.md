@@ -592,7 +592,7 @@ For more information, go to [Notifications MDM payload settings for Apple device
 
   Microsoft recommends you use the built-in settings in the settings catalog. If the settings catalog doesn't have the settings you need, then use a custom profile.
 
-  For more information, go to [custom profiles](../../intune-service/configuration/custom-settings-macos.md).
+  For more information, go to [custom profiles](../../intune-service/configuration/custom-settings-apple.md).
 
 ✅ **Wallpaper**
 
@@ -625,7 +625,7 @@ For more information, go to [Types of certificate available in Microsoft Intune]
 
 Using Intune, you can create a Wi-Fi connection that includes your network information, and then deploy the connection to your macOS devices. If your devices connect to the organization using Wi-Fi, then create a Wi-Fi connection policy.
 
-For more information, go to [Configure Wi-Fi settings for macOS devices in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-macos.md).
+For more information, go to [Configure Wi-Fi settings for macOS devices in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-apple.md).
 
 ## Phase 5 - Caching (optional)
 
