@@ -1397,52 +1397,52 @@ items:
           items:
           - name: Custom
             displayName: apple, ios, ipados, macos
-            href: ./configuration/custom-settings-apple.md
+            href: ./intune-service/configuration/custom-settings-apple.md
           - name: Derived credentials
             displayName: apple, ios, ipados
-            href: ./protect/derived-credentials.md
+            href: ./intune-service/protect/derived-credentials.md
           - name: Device features
             displayName: apple, ios, ipados, macos
-            href: ./configuration/device-features-apple.md
+            href: ./intune-service/configuration/device-features-apple.md
           - name: Device restrictions
             displayName: apple, ios, ipados, macos
-            href: ./configuration/device-restrictions-apple.md
+            href: ./intune-service/configuration/device-restrictions-apple.md
           - name: Email
             displayName: apple, ios, ipados
-            href: ./configuration/email-settings-ios.md
+            href: ./intune-service/configuration/email-settings-ios.md
           - name: Endpoint protection (deprecated)
             displayName: apple, macos
-            href: ./protect/endpoint-protection-macos.md
+            href: ./intune-service/protect/endpoint-protection-macos.md
           - name: Extensions (deprecated)
             displayName: kernel, system, macos
-            href: ./configuration/kernel-extensions-settings-macos.md
+            href: ./intune-service/configuration/kernel-extensions-settings-macos.md
           - name: PKCS certificate
             displayName: apple, ios, ipados, macos
-            href: ./protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
+            href: ./intune-service/protect/certificates-pfx-configure.md#create-a-pkcs-certificate-profile
           - name: PKCS imported certificate
             displayName: apple, ios, ipados, macos
-            href: ./protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
+            href: ./intune-service/protect/certificates-imported-pfx-configure.md#create-a-pkcs-imported-certificate-profile
           - name: Preference file
             displayName: apple, macos
-            href: ./configuration/preference-file-settings-macos.md
+            href: ./intune-service/configuration/preference-file-settings-macos.md
           - name: SCEP certificate
             displayName: apple, ios, ipados, macos
-            href: ./protect/certificates-profile-scep.md
+            href: ./intune-service/protect/certificates-profile-scep.md
           - name: Trusted certificate
             displayName: apple, ios, ipados, macos
-            href: ./protect/certificates-trusted-root.md
+            href: ./intune-service/protect/certificates-trusted-root.md
           - name: VPN
             displayName: apple, ios, ipados, macos
-            href: ./configuration/vpn-settings-apple.md
+            href: ./intune-service/configuration/vpn-settings-apple.md
           - name: Wi-Fi
             displayName: wifi, wireless, apple, ios, ipados, macos
-            href: ./configuration/wi-fi-settings-apple.md
+            href: ./intune-service/configuration/wi-fi-settings-apple.md
           - name: Wired networks
             displayName: apple, macos
-            href: ./configuration/wired-network-settings-macos.md
+            href: ./intune-service/configuration/wired-network-settings-macos.md
           - name: Bundle IDs for built-in apps
             displayName: apple, ios, ipados, macos
-            href: ./configuration/bundle-ids-built-in-ios-apps.md
+            href: ./intune-service/configuration/bundle-ids-built-in-ios-apps.md
 
         - name: Windows
           items:
