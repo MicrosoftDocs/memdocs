@@ -5,10 +5,6 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 08/20/2024
 ms.topic: overview
-ms.reviewer:
-ms.custom:
-  - get-started
-  - intro-overview
 ms.collection:
   - M365-identity-device-management
 ---

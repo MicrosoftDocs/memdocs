@@ -39,7 +39,7 @@ WHERE UpdateTime >@cutoffTime
 
 ```sql
 SELECT * FROM ServerData
-WHERE Status = 120
+WHERE SiteStatus = 120
 ```
 
 ## Next steps

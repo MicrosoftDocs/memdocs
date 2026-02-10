@@ -75,7 +75,7 @@ Keep the following behavior in mind:
 > [!NOTE]  
 > If two policies target the same feature update version for the same device and one policy is configured as **Required** while the other is **Optional**, the update is offered as **Required**.
 
-## Manage Winodws feature update policies
+## Manage Windows feature update policies
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Windows**.
 1. Select **Windows updates** > **Feature updates**.
