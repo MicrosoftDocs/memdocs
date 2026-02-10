@@ -3,7 +3,7 @@ title: Settings insight
 description: Settings insight provides peer benchmarking information during security baseline configuration, showing when organizations similar to yours use Microsoft's recommended default values.
 author: BrenDuns
 ms.author: brenduns
-ms.date: 7/31/2024
+ms.date: 02/10/2026
 ms.topic: article
 ms.reviewer: Lavanya.lakshman
 ms.collection:
