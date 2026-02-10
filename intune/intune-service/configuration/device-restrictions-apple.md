@@ -1,7 +1,7 @@
 ---
 title: Apple device restriction settings in Microsoft Intune
 description: Add, configure, or create settings on iOS, iPadOS, and macOS devices to restrict features in Microsoft Intune. Create password requirements, control the locked screen, use built-in apps, add restricted or approved apps, handle bluetooth devices, connect to the cloud for backup and storage, enable kiosk mode, add domains, and control how users interact with the Safari web browser.
-ms.date: 02/05/2026
+ms.date: 02/09/2026
 ms.topic: reference
 ms.reviewer: beflamm, jayeren
 ms.collection:
@@ -1079,8 +1079,6 @@ This feature applies to:
       - **Allow**: Allows the app or process to send the restricted Apple event to the receiving app or process.
       - **Block**: Prevents the app or process from sending a restricted Apple event to the receiving app or process.
 
-  - **Save** your changes.
-
 ::: zone-end
 
 ## Restricted apps
@@ -1094,7 +1092,10 @@ The restricted apps settings don't prevent users from installing and opening spe
 
 ### Settings apply to: Device enrollment and Automated device enrollment (supervised)
 
-To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
+> [!NOTE]
+> These settings create lists of approved and prohibited apps. They don't block users from installing or running apps. Instead, if a user installs or runs an app on either list, it's reported in Intune. You can use this information to help inform your app management strategy.
+>
+> To prevent an app from running or being shown on iOS/iPadOS, create an [Intune settings catalog](settings-catalog.md) policy > **Restrictions** > **Allow Listed App Bundle IDs** or **Blocked App Bundle IDs** settings.
 
 ::: zone-end
 

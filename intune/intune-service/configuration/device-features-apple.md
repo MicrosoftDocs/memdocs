@@ -1,7 +1,7 @@
 ---
 title: Apple device feature settings in Microsoft Intune
 description: See all the settings to configure iOS, iPadOS, and macOS devices for AirPrint, home screen layout, app notifications, shared devices, single sign-on, and web content filter settings in Microsoft Intune. Use these settings in a device configuration profile to configure iOS, iPadOS, and macOS devices to use these Apple features on your devices.
-ms.date: 02/04/2026
+ms.date: 02/09/2026
 ms.topic: reference
 ms.reviewer: beflamm
 ms.collection:
@@ -166,11 +166,11 @@ Add up to four (4) items for iPhones, and up to six (6) items for iPads (apps an
 
 In the following example, the dock screen shows the Safari, Mail, and Stocks apps. The Stocks app is selected to show its properties:
 
-:::image type="content" source="./media/ios-device-features-settings/dock-screen-stocks-app.png" alt-text="Sample iOS/iPadOS Home screen layout dock settings in Microsoft Intune":::
+:::image type="content" source="./media/device-features-apple/dock-screen-stocks-app.png" alt-text="Sample iOS/iPadOS Home screen layout dock settings in Microsoft Intune":::
 
 When you assign the policy to an iPhone, the dock looks similar to the following image:
 
-:::image type="content" source="./media/ios-device-features-settings/safari-mail-stocks-apps-ios-dock.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
+:::image type="content" source="./media/device-features-apple/safari-mail-stocks-apps-ios-dock.png" alt-text="Sample iOS/iPadOS dock layout on an iPhone device":::
 
 ::: zone-end
 
@@ -182,7 +182,7 @@ When you assign the policy to an iPhone, the dock looks similar to the following
 
 - **Add**: Add notifications for apps:
 
-  :::image type="content" source="./media/ios-device-features-settings/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
+  :::image type="content" source="./media/device-features-apple/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
 
   - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add.
 
@@ -498,7 +498,7 @@ This feature applies to:
   - **Not configured**: Intune doesn't change or update this setting. By default, the OS prompts users for a Kerberos principal name when the profile is deployed to devices. A principal name is required for MDMs to install SSO profiles.
   - **User principal name**: The user principal name (UPN) is parsed in the following way:
 
-    :::image type="content" source="./media/ios-device-features-settings/User-name-attribute.png" alt-text="iOS/iPadOS Username SSO attribute in Microsoft Intune":::
+    :::image type="content" source="./media/device-features-apple/user-name-attribute.png" alt-text="iOS/iPadOS Username SSO attribute in Microsoft Intune":::
 
     You can also overwrite the realm with the text you enter in the **Realm** text box.
 
@@ -577,55 +577,73 @@ This feature applies to:
 
 ### Settings apply to: All enrollment types
 
-- **SSO app extension type**: Choose the type of SSO app extension. Your options:
+::: zone-end
 
-    - **Not configured**: Intune doesn't change or update this setting. By default, the OS doesn't use app extensions. To disable an app extension, change the SSO app extension type to **Not configured**.
-  - **Microsoft Entra ID**: Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for on-premises Active Directory accounts across all applications that support [Apple's Enterprise single sign-on](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID.
+::: zone pivot="macos"
 
-    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements. All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/azure/active-directory/develop/apple-sso-plugin).
+This feature applies to:
 
-    > [!IMPORTANT]
-    > To achieve SSO with the Microsoft Entra SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, go to [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
+- macOS 10.15 and newer
 
-    For more information, see [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md).
+> [!NOTE]
+> On macOS devices, Microsoft recommends you use Platform SSO to enable single sign-on (SSO). For more information, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
 
-  - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension ID for your organization's app extension.
-  - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
-  - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on iOS 13.0+ and iPadOS 13.0+. This option is a Kerberos-specific version of the **Credential** app extension.
+### Settings apply to: User approved device enrollment, and Automated device enrollment
 
-  > [!TIP]
-  > With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the **Kerberos** type.
+::: zone-end
 
-  After users successfully sign in to the Authenticator app, they aren't prompted to sign in to other apps that use the SSO extension. The first time users open managed apps that don't use the SSO extension, the users are prompted to select the account that's signed in.
+**SSO app extension type**: Choose the type of SSO app extension. Your options:
 
-- **Enable shared device mode** (Microsoft Entra ID only): Choose **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Microsoft Entra shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
+#### Not configured
 
-  For more information about shared device mode and how to enable it, see [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices) and [Shared device mode for iOS devices](/azure/active-directory/develop/msal-ios-shared-devices).
+Intune doesn't change or update this setting. By default, the OS doesn't use app extensions. To disable an app extension, change the SSO app extension type to **Not configured**.
+
+#### Microsoft Entra ID SSO app extension type
+
+Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for on-premises Active Directory accounts across all applications that support [Apple's Enterprise single sign-on](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID. The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements.
+
+::: zone pivot="ios-ipados"
+
+All apps that use the Microsoft Authenticator app for authentication continue to get SSO with the [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin). For more information, see [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](use-enterprise-sso-plug-in-ios-ipados-with-intune.md).
+
+> [!IMPORTANT]
+> To achieve SSO with the Microsoft Entra SSO app extension type, first install the iOS/iPadOS Microsoft Authenticator app on devices. The Authenticator app delivers the Microsoft Enterprise SSO plug-in to devices, and the MDM SSO app extension settings activate the plug-in. Once Authenticator and the SSO app extension profile are installed on devices, users must enter their credentials to sign in, and establish a session on their devices. This session is then used across different applications without requiring users to authenticate again. For more information about Authenticator, go to [What is the Microsoft Authenticator app](/azure/active-directory/user-help/user-help-auth-app-overview).
+
+::: zone-end
+
+::: zone pivot="macos"
+
+For more information, go to [Use the Microsoft Enterprise SSO plug-in on macOSOS devices](use-enterprise-sso-plug-in-macos-with-intune.md).
+
+> [!IMPORTANT]
+> To achieve SSO with the Microsoft Entra SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
+>
+> For more information about the Company Portal app, go to [What happens if you install the Company Portal app and enroll your macOS device in Intune](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).
+>
+> You can also [download the Company Portal app](https://go.microsoft.com/fwlink/?linkid=853070).
+
+::: zone-end
+
+::: zone pivot="ios-ipados"
+
+- **Enable shared device mode**: Choose **Yes** if you're deploying the Microsoft Enterprise SSO plug-in to iOS/iPadOS devices configured for Microsoft Entra shared device mode feature. Devices in shared mode allow many users to globally sign in and out of applications that support shared device mode. When set to **Not configured**, Intune doesn't change or update this setting. By default, iOS/iPadOS devices aren't intended to be shared among multiple users.
+
+  For more information about shared device mode and how to enable it, see [Overview of shared device mode](/entra/identity-platform/msal-shared-devices).
 
   This setting applies to:
 
   - iOS/iPadOS 13.5 and newer
 
-- **Extension ID** (Redirect and Credential): Enter the bundle identifier that identifies your SSO app extension, like `com.apple.extensiblesso`.
+::: zone-end
 
-- **Team ID** (Redirect and Credential): Enter the team identifier of your SSO app extension. A team identifier is a 10-character alphanumerical (numbers and letters) string generated by Apple, like `ABCDE12345`. The team ID isn't required.
+- **App bundle IDs**: Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
-  [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's website) has more information.
+  - These apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in.
+  - The app bundle IDs you enter have permission to use the Microsoft Entra SSO app extension if they don't use any Microsoft libraries, like Microsoft Authentication Library (MSAL).
 
-- **Realm** (Credential and Kerberos): Enter the name of your authentication realm. The realm name should be capitalized, like `CONTOSO.COM`. Typically, your realm name is the same as your DNS domain name, but in all uppercase.
+    The experience for these apps might not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.
 
-- **Domains** (Credential and Kerberos): Enter the domain or host names of the sites that can authenticate through SSO. For example, if your website is `mysite.contoso.com`, then `mysite` is the host name, and `.contoso.com` is the domain name. When users connect to any of these sites, the app extension handles the authentication challenge. This authentication allows users to use Face ID, Touch ID, or Apple pincode/passcode to sign in.
-
-  - All the domains in your single sign-on app extension Intune profiles must be unique. You can't repeat a domain in any sign-on app extension profile, even if you're using different types of SSO app extensions.
-  - These domains aren't case-sensitive.
-  - The domain must begin with a period (`.`).
-
-- **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension uses SSO. When users are redirected to these URLs, the SSO app extension intervenes and prompts SSO.
-
-  - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
-  - The URLs must begin with `http://` or `https://`.
-
-- **Additional configuration** (Microsoft Entra ID, Redirect, and Credential): Enter more extension-specific data to pass to the SSO app extension:
+- **Additional configuration**: Enter more extension-specific data to pass to the SSO app extension:
   - **Key**: Enter the name of the item you want to add, like `user name` or `AppAllowList`.
   - **Type**: Enter the type of data. Your options:
 
@@ -635,117 +653,33 @@ This feature applies to:
 
   - **Value**: Enter the data.
 
-  - **Add**: Select to add your configuration keys.
+#### Redirect SSO app extension type
 
-- **Block keychain usage** (Kerberos only): **Yes** prevents passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
+Use a generic, customizable redirect app extension to use SSO with modern authentication flows.
 
-- **Require Face ID, Touch ID, or passcode** (Kerberos only): **Yes** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Keychain usage** is blocked, then this setting doesn't apply.
-
-- **Set as default realm** (Kerberos only): **Yes** sets the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
-
-  - If you're configuring multiple Kerberos SSO app extensions in your organization, select **Yes**.
-  - If you're using multiple realms, select **Yes**. It sets the **Realm** value you entered as the default realm.
-  - If you only have one realm, select **Not configured** (default).
-
-- **Block Autodiscover** (Kerberos only): **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name. When set to **Not configured** (default), Intune doesn't change or update this setting.
-
-- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow nonmanaged apps to access the credential.
-
-  This setting applies to:
-
-  - iOS/iPadOS 14 and newer
-
-- **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
-
-  - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter `Username: {{username}}`.
-  - Be careful with variable substitution. Variables aren't validated in the UI and they're case sensitive. Be sure to enter the correct information.
-
-- **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You might not need to change this value, as the Kerberos extension can automatically find the Active Directory site code.
-
-- **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
-
-- **Sign in window text** (Kerberos only): Enter the text shown to users at the Kerberos sign in window.
-
-  This setting applies to:
-
-  - iOS/iPadOS 14 and newer
-
-- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
-
-  If you use the **Microsoft Entra ID** SSO app extension type, then:
-
-  - These apps use the Microsoft Enterprise SSO plug-in to authenticate the user without requiring a sign-in.
-  - The app bundle IDs you enter have permission to use the Microsoft Entra SSO app extension if they don't use any Microsoft libraries, like Microsoft Authentication Library (MSAL).
-
-    The experience for these apps might not be as seamless compared to the Microsoft libraries. Older apps that use MSAL authentication, or apps that don't use the newest Microsoft libraries, must be added to this list to work properly with the Microsoft Azure SSO app extension.
-
-  If you use the **Kerberos SSO app extension** type, then these apps:
-
-  - Have access to the Kerberos Ticket Granting Ticket
-  - Have access to the authentication ticket
-  - Authenticate users to services they're authorized to access
-
-- **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
-
-- **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you added in Intune.
-
-  For more information about certificates, go to [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
-
-::: zone-end
-
-::: zone pivot="macos"
-
-This setting applies to:
-
-- macOS 10.15 and newer
-
-> [!NOTE]
-> On macOS devices, Microsoft recommends you use Platform SSO to enable single sign-on (SSO). For more information, go to [Configure Platform SSO for macOS devices in Microsoft Intune](platform-sso-macos.md).
-
-### Settings apply to: User approved device enrollment, and Automated device enrollment
-
-- **SSO app extension type**: Choose the type of SSO app extension. Your options:
-
-  - **Not configured**: App extensions aren't used. To disable an app extension, switch the SSO app extension type to **Not configured**.
-
-  - **Microsoft Entra ID**: Uses the Microsoft Entra ID Enterprise SSO plug-in, which is a redirect-type SSO app extension. This plug-in provides SSO for on-premises Active Directory accounts across all macOS applications that support [Apple's Enterprise single sign-on](https://developer.apple.com/documentation/authenticationservices) feature. Use this SSO app extension type to enable SSO on Microsoft apps, organization apps, and websites that authenticate using Microsoft Entra ID. For more information, go to [Use the Microsoft Enterprise SSO plug-in on macOSOS devices](use-enterprise-sso-plug-in-macos-with-intune.md).
-
-    The SSO plug-in acts as an advanced authentication broker that offers security and user experience improvements.
-
-    > [!IMPORTANT]
-    > To achieve SSO with the Microsoft Entra SSO app extension type, install the macOS Company Portal app on devices. The Company Portal app delivers the Microsoft Enterprise SSO plug-in to devices. The MDM SSO app extension settings activate the plug-in. After the Company Portal app and the SSO app extension profile are installed on devices, users sign in with their credentials, and create a session on their devices. This session is used across different applications without requiring users to authenticate again.
-    >
-    > For more information about the Company Portal app, go to [What happens if you install the Company Portal app and enroll your macOS device in Intune](../user-help/what-happens-if-you-install-the-Company-Portal-app-and-enroll-your-device-in-intune-macos.md).
-    >
-    > You can also [download the Company Portal app](https://go.microsoft.com/fwlink/?linkid=853070).
-
-  - **Redirect**: Use a generic, customizable redirect app extension to use SSO with modern authentication flows. Be sure you know the extension and team ID for your organization's app extension.
-  - **Credential**: Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID and team ID for your organization's SSO app extension.
-  - **Kerberos**: Use Apple's built-in Kerberos extension, which is included on macOS Catalina 10.15 and newer. This option is a Kerberos-specific version of the **Credential** app extension.
-
-  > [!TIP]
-  > With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the the **Kerberos** type.
-
-- **Extension ID** (Redirect, Credential): Enter the bundle identifier that identifies your SSO app extension, like `com.apple.ssoexample`.
-- **Team ID** (Redirect, Credential): Enter the team identifier of your SSO app extension. A team identifier is a 10-character alphanumerical (numbers and letters) string generated by Apple, like `ABCDE12345`.
+- **Extension ID**: Enter the bundle identifier that identifies your SSO app extension, like `com.apple.extensiblesso`.
+- **Team ID**: Enter the team identifier of your SSO app extension. A team identifier is a 10-character alphanumerical (numbers and letters) string generated by Apple, like `ABCDE12345`.
 
   [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's website) has more information.
 
-- **Realm** (Credential, Kerberos): Enter the name of your authentication realm. The realm name should be capitalized, like `CONTOSO.COM`. Typically, your realm name is the same as your DNS domain name, but in all uppercase.
+- **URLs**: Enter the URLs where your identity provider can be reached. When a user is redirected to these URLs, the SSO app extension intervenes and prompts for SSO. Each URL must be unique and can't already exist in another profile. Must use HTTP or HTTPS protocols.
 
-- **Domains** (Credential, Kerberos): Enter the domain or host names of the sites that can authenticate through SSO. For example, if your website is `mysite.contoso.com`, then `mysite` is the host name, and `.contoso.com` is the domain name. When users connect to any of these sites, the app extension handles the authentication challenge. This authentication allows users to use Face ID, Touch ID, or Apple pincode/passcode to sign in.
+  For example, when a user connects to any of these sites, the device uses the SSO credentials. Users don't need to enter credentials again. If multifactor authentication (MFA) is enabled, users are required to enter the second authentication.
 
-  - All the domains in your single sign-on app extension Intune profiles must be unique. You can't repeat a domain in any sign-on app extension profile, even if you're using different types of SSO app extensions.
-  - These domains aren't case-sensitive.
-  - The domain must start with a period (`.`).
+  Also:
 
-- **URLs** (Redirect only): Enter the URL prefixes of your identity providers on whose behalf the redirect app extension uses SSO. When users are redirected to these URLs, the SSO app extension intervenes, and prompts for SSO.
-
+  - These URLs must be properly formatted FQDN. Apple requires the URLs be in the `http://<yourURL.domain>` format.
   - All the URLs in your Intune single sign-on app extension profiles must be unique. You can't repeat a domain in any SSO app extension profile, even if you're using different types of SSO app extensions.
-  - The URLs must begin with `http://` or `https://`.
+  - The URLs must begin with `http://.com` or `https://.com`. A simple string match is run, so the `http://www.contoso.com/` URL prefix doesn't match `http://www.contoso.com:80/`.
 
-- **Additional configuration** (Microsoft Entra ID, Redirect, Credential): Enter more extension-specific data to pass to the SSO app extension:
-  - **Key**: Enter the name of the item you want to add, like `user name`.
+  ::: zone pivot="ios-ipados"
+
+  With iOS 10.0+ and iPadOS 13.0+, a single wildcard \* can be used to enter all matching values. For example, `http://*.contoso.com/` matches both `http://store.contoso.com/` and `http://www.contoso.com`.
+
+  ::: zone-end
+
+- **Additional configuration**: Enter more extension-specific data to pass to the SSO app extension:
+  - **Key**: Enter the name of the item you want to add, like `user name` or `AppAllowList`.
   - **Type**: Enter the type of data. Your options:
 
     - String
@@ -754,65 +688,127 @@ This setting applies to:
 
   - **Value**: Enter the data.
 
-- **Block keychain usage** (Kerberos only): **Yes** prevents passwords from being saved and stored in the keychain. And, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
-- **Require Face ID, Touch ID, or passcode** (Kerberos only): **Yes** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Block keychain usage** is set to **Yes**, then this setting doesn't apply.
-- **Set as default realm** (Kerberos only): Choose **Yes** to set the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
+#### Credential SSO app extension type
+
+Use a generic, customizable credential app extension to use SSO with challenge-and-response authentication flows. Be sure you know the extension ID for your organization's app extension.
+
+- **Extension ID**: Enter the bundle identifier that identifies your SSO app extension, like `com.apple.extensiblesso`.
+- **Team ID**: Enter the team identifier of your SSO app extension. A team identifier is a 10-character alphanumerical (numbers and letters) string generated by Apple, like `ABCDE12345`.
+
+  [Locate your Team ID](https://help.apple.com/developer-account/#/dev55c3c710c) (opens Apple's website) has more information.
+
+- **Realm**: Enter the name of your authentication realm. The realm name should be capitalized, like `CONTOSO.COM`. Typically, your realm name is the same as your DNS domain name, but in all uppercase.
+
+- **Domains**: Enter the domain or host names of the sites that can authenticate through SSO. For example, if your website is `mysite.contoso.com`, then `mysite` is the host name, and `.contoso.com` is the domain name. When users connect to any of these sites, the app extension handles the authentication challenge. This authentication allows users to use Face ID, Touch ID, or Apple pincode/passcode to sign in.
+
+  - All the domains in your single sign-on app extension Intune profiles must be unique. You can't repeat a domain in any sign-on app extension profile, even if you're using different types of SSO app extensions.
+  - These domains aren't case-sensitive.
+  - The domain must begin with a period (`.`).
+
+- **Additional configuration**: Enter more extension-specific data to pass to the SSO app extension:
+  - **Key**: Enter the name of the item you want to add, like `user name` or `AppAllowList`.
+  - **Type**: Enter the type of data. Your options:
+
+    - String
+    - Boolean: In **Configuration value**, enter `True` or `False`.
+    - Integer: In **Configuration value**, enter a number.
+
+  - **Value**: Enter the data.
+
+#### Kerberos SSO app extension type
+
+Use Apple's built-in Kerberos extension, which is a Kerberos-specific version of the **Credential** app extension.
+
+The Kerberos extension is included on:
+
+::: zone pivot="ios-ipados"
+
+- iOS 13.0+ and iPadOS 13.0+
+
+After users successfully sign in to the Authenticator app, they aren't prompted to sign in to other apps that use the SSO extension. The first time users open managed apps that don't use the SSO extension, the users are prompted to select the account that's signed in.
+
+::: zone-end
+
+::: zone pivot="macos"
+
+- macOS Catalina 10.15 and newer
+
+::: zone-end
+
+> [!TIP]
+> With the **Redirect** and **Credential** types, you add your own configuration values to pass through the extension. If you're using **Credential**, consider using built-in configuration settings provided by Apple in the **Kerberos** type.
+
+- **Block keychain usage**: **Yes** prevents passwords from being saved and stored in the keychain. If blocked, users aren't prompted to save their password, and need to reenter the password when the Kerberos ticket expires. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow passwords to be saved and stored in the keychain. Users aren't prompted to reenter their password when the ticket expires.
+- **Require Face ID, Touch ID, or passcode**: **Yes** forces users to enter their Face ID, Touch ID, or device passcode when the credential is needed to refresh the Kerberos ticket. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to use biometrics or device passcode to refresh the Kerberos ticket. If **Block keychain usage** is set to **Yes**, then this setting doesn't apply.
+- **Set as default realm**: **Yes** sets the **Realm** value you entered as the default realm. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not set a default realm.
 
   - If you're configuring multiple Kerberos SSO app extensions in your organization, select **Yes**.
   - If you're using multiple realms, select **Yes**. It sets the **Realm** value you entered as the default realm.
-  - If you only have one realm, leave it **Not configured** (default).
+  - If you only have one realm, select **Not configured** (default).
 
-- **Block Autodiscover** (Kerberos only): When set to **Yes**, the Kerberos extension doesn't automatically use LDAP and DNS to determine its Active Directory site name. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the extension to automatically find the Active Directory site name.
+- **Block Autodiscover**: **Yes** prevents the Kerberos extension from automatically using LDAP and DNS to determine its Active Directory site name. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow the extension to automatically find the Active Directory site name.
 
-- **Allow only managed apps** (Kerberos only): When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow nonmanaged apps to access the credential.
+- **Allow only managed apps**: When set to **Yes**, the Kerberos extension allows only managed apps, and any apps entered with the app bundle ID to access the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow nonmanaged apps to access the credential.
 
   This setting applies to:
 
+  ::: zone pivot="ios-ipados"
+
+  - iOS/iPadOS 14 and newer
+
+  ::: zone-end
+  
+  ::: zone pivot="macos"
+
   - macOS 12 and newer
 
-- **Block password changes** (Kerberos only): **Yes** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.
-- **Enable local password sync** (Kerberos only): Choose **Yes** to sync your users' local passwords to Microsoft Entra ID. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Microsoft Entra ID.
+  ::: zone-end
+
+::: zone pivot="macos"
+
+- **Block password changes**: **Yes** prevents users from changing the passwords they use to sign in to the domains you entered. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow password changes.
+- **Enable local password sync**: Choose **Yes** to sync your users' local passwords to Microsoft Entra ID. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might disable password sync to Microsoft Entra ID.
 
   Use this setting as an alternative or backup to SSO. This setting doesn't work if users are signed in with an Apple mobile account.
 
-- **Delay Kerberos extension setup** (Kerberos only): When set to **Yes**, the user isn't prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might immediately prompt the user to set up the Kerberos extension.
+- **Delay Kerberos extension setup**: When set to **Yes**, the user isn't prompted to set up the Kerberos extension until the extension is enabled by the admin, or a Kerberos challenge is received. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might immediately prompt the user to set up the Kerberos extension.
 
   This setting applies to:
 
   - macOS 11 and newer
 
-- **Allow standard Kerberos utilities** (Kerberos only): When set to **Yes**, the Kerberos extension allows any apps entered with the app bundle ID, managed apps, and standard Kerberos utilities, like TicketViewer and klist, to access and use the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not allow listed apps to access and use the credential.
+- **Allow standard Kerberos utilities**: When set to **Yes**, the Kerberos extension allows any apps entered with the app bundle ID, managed apps, and standard Kerberos utilities, like TicketViewer and klist, to access and use the credential. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not allow listed apps to access and use the credential.
 
   This setting applies to:
 
   - macOS 12 and newer
 
-- **Request credential** (Kerberos only): When set to **Yes**, the credential is requested on the next matching Kerberos challenge or network state change. When the credential is expired or missing, a new credential is created. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not request a new credential.
+- **Request credential**: When set to **Yes**, the credential is requested on the next matching Kerberos challenge or network state change. When the credential is expired or missing, a new credential is created. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not request a new credential.
 
   This setting applies to:
 
   - macOS 12 and newer
 
-- **Require LDAP connections for TLS** (Kerberos only): When set to **Yes**, LDAP connections are required to use Transport Layer Security (TLS). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require LDAP connections to use TLS.
+- **Require LDAP connections for TLS**: When set to **Yes**, LDAP connections are required to use Transport Layer Security (TLS). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require LDAP connections to use TLS.
 
   This setting applies to:
 
   - macOS 11 and newer
 
-- **Require Active Directory password complexity** (Kerberos only): Choose **Yes** to force user passwords to meet Active Directory's password complexity requirements. On devices, this setting shows a pop-up window with check boxes so users see they're completing the password requirements. It helps users know what they need to enter for the password. For more information, go to [Password must meet complexity requirements](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to meet Active Directory's password requirement.
-- **Minimum password length** (Kerberos only): Enter the minimum number of characters that can make up users passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum password length on the users.
-- **Password reuse limit** (Kerberos only): Enter the number of new passwords, from 1-24, that are used until a previous password can be reused on the domain. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a password reuse limit.
-- **Minimum password age (days)** (Kerberos only): Enter the number of days that a password is used on the domain before users can change it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum age of passwords before they can be changed.
-- **Password expiration notification (days)** (Kerberos only): Enter the number of days before a password expires that users get notified that their password will expire. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might use `15` days.
-- **Password expiration (days)** (Kerberos only): Enter the number of days before the device password must change. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might never expire passwords.
-- **Password change URL** (Kerberos only): Enter the URL that opens when users start a Kerberos password change.
-- **Custom user name** (Kerberos only): Enter the text that replaces the user name shown in the Kerberos extension. You can enter a name that matches the name of your company or organization. For example, you can enter `Contoso`.
+- **Require Active Directory password complexity**: Choose **Yes** to force user passwords to meet Active Directory's password complexity requirements. On devices, this setting shows a pop-up window with check boxes so users see they're completing the password requirements. It helps users know what they need to enter for the password. For more information, go to [Password must meet complexity requirements](/windows/security/threat-protection/security-policy-settings/password-must-meet-complexity-requirements). When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not require users to meet Active Directory's password requirement.
+- **Minimum password length**: Enter the minimum number of characters that can make up users passwords. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum password length on the users.
+- **Password reuse limit**: Enter the number of new passwords, from 1-24, that are used until a previous password can be reused on the domain. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a password reuse limit.
+- **Minimum password age (days)**: Enter the number of days that a password is used on the domain before users can change it. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might not enforce a minimum age of passwords before they can be changed.
+- **Password expiration notification (days)**: Enter the number of days before a password expires that users get notified that their password will expire. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might use `15` days.
+- **Password expiration (days)**: Enter the number of days before the device password must change. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might never expire passwords.
+- **Password change URL**: Enter the URL that opens when users start a password change.
+- **Custom user name**: Enter the text that replaces the user name shown in the extension. You can enter a name that matches the name of your company or organization. For example, you can enter `Contoso`.
 
   This setting applies to:
 
   - macOS 11 and newer
 
-- **Kerberos extension use** (Kerberos only): Select how other processes use the Kerberos Extension credential. Your options:
+- **Kerberos extension use**: Select how other processes use the Kerberos Extension credential. Your options:
   - **Always**: The extension credential is always used if the SPN is listed in **Domains**. It isn't used if the calling app isn't listed in **App Bundle IDs**.
   - **When not specified**: The extension credential is only used when another credential isn't entered by the caller, and the SPN is listed in Domains. It's not used if the calling app isn't listed in **App Bundle IDs**.
   - **Kerberos default**: Intune doesn't change or update this setting. By default, the OS uses the default Kerberos processes for selecting credentials. This option is the same as not configuring this setting.
@@ -821,32 +817,58 @@ This setting applies to:
 
   - macOS 11 and newer
 
-- **Principal name** (Kerberos only): Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
+  ::: zone-end
+
+- **Principal name**: Enter the username of the Kerberos principal. You don't need to include the realm name. For example, in `user@contoso.com`, `user` is the principal name, and `contoso.com` is the realm name.
 
   - You can also use variables in the principal name by entering curly brackets `{{ }}`. For example, to show the username, enter `Username: {{username}}`.
-  - Be careful with variable substitution because the UI doesn't validate variables and they're case sensitive. Enter the correct information.
+  - Be careful with variable substitution. Variables aren't validated in the UI and they're case sensitive. Be sure to enter the correct information.
 
-- **Active Directory site code** (Kerberos only): Enter the name of the Active Directory site that the Kerberos extension should use. You might not need to change this value, as the Kerberos extension can automatically find the Active Directory site code.
-- **Cache name** (Kerberos only): Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
-- **Sign in window text** (Kerberos only): Enter the text shown to users at the Kerberos sign in window.
+- **Active Directory site code**: Enter the name of the Active Directory site that the Kerberos extension should use. You might not need to change this value, as the Kerberos extension can automatically find the Active Directory site code.
+- **Cache name**: Enter the Generic Security Services (GSS) name of the Kerberos cache. You most likely don't need to set this value.
+- **Sign in window text**: Enter the text shown to users at the Kerberos sign in window.
 
   This setting applies to:
 
+  ::: zone pivot="ios-ipados"
+
+  - iOS/iPadOS 14 and newer
+
+  ::: zone-end
+
+  ::: zone pivot="macos"
+
   - macOS 11 and newer
 
-- **Password requirements message** (Kerberos only): Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.
+  ::: zone-end
+
+::: zone pivot="macos"
+
+- **Password requirements message**: Enter a text version of your organization's password requirements that's shown to users. The message shows if you don't require Active Directory's password complexity requirements, or don't enter a minimum password length.
 
   When set to **Yes**, all existing user accounts are wiped from the devices. To avoid data loss, or prevent a factory reset, make sure you understand how this setting changes your devices.
 
-  For more information about shared device mode, see [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
+  For more information about shared device mode, go to [Overview of shared device mode](/azure/active-directory/develop/msal-shared-devices).
 
-- **App bundle IDs** (Microsoft Entra ID, Kerberos): Enter the app bundle identifiers that should use single sign-on on your devices. These apps are granted access to the Kerberos Ticket Granting Ticket and the authentication ticket. The apps also authenticate users to services they're authorized to access.
+::: zone-end
 
-  To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+- **App bundle IDs**: Enter the bundle IDs of any other apps that should get single sign-on through an extension on your devices. To get the bundle ID of an app added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
-- **Domain realm mapping** (Kerberos only): Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
-- **PKINIT certificate** (Kerberos only): **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you add in Intune. For more information about certificates, see [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
-- **Preferred KDCs** (Kerberos only): Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers aren't discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don't respond, then the device uses DNS discovery.
+  If you use the **Kerberos SSO app extension** type, then these apps:
+
+  - Have access to the Kerberos Ticket Granting Ticket
+  - Have access to the authentication ticket
+  - Authenticate users to services they're authorized to access
+
+- **Domain realm mapping**: Enter the domain DNS suffixes that should map to your realm. Use this setting when the DNS names of the hosts don't match the realm name. You most likely don't need to create this custom domain-to-realm mapping.
+
+- **PKINIT certificate**: **Select** the Public Key Cryptography for Initial Authentication (PKINIT) certificate that can be used for Kerberos authentication. You can choose from [PKCS](../protect/certificates-pfx-configure.md) or [SCEP](../protect/certificates-scep-configure.md) certificates that you added in Intune.
+
+  For more information about certificates, go to [Use certificates for authentication in Microsoft Intune](../protect/certificates-configure.md).
+
+::: zone pivot="macos"
+
+- **Preferred KDCs**: Enter the Key Distribution Centers (KDCs) to use for Kerberos traffic in order of preference. This list is used when the servers aren't discoverable using DNS. When the servers are discoverable, the list is used for both connectivity checks, and used first for Kerberos traffic. If the servers don't respond, then the device uses DNS discovery.
 
   This setting applies to:
 

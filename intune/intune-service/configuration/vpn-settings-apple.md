@@ -1,7 +1,7 @@
 ---
 title: Configure VPN settings for Apple devices in Microsoft Intune
 description: Add or create a VPN configuration profile on iOS/iPadOS and macOS devices using virtual private network (VPN) configuration settings in Microsoft Intune. Configure the connection details, authentication methods, split tunneling, custom VPN settings with the identifier, key and value pairs, per-app VPN settings that include Safari URLs, and on-demand VPNs with SSIDs or DNS search domains, proxy settings to include a configuration script, IP or FQDN address, and TCP port.
-ms.date: 02/05/2026
+ms.date: 02/09/2026
 ms.topic: article
 ms.reviewer: beflamm
 ms.collection:
@@ -153,7 +153,7 @@ Select the VPN connection type from the following list of vendors:
 
   - To remove this setting, recreate the profile, and don't select **I agree**. Then, reassign the profile.
 
-- **Enter key and value pairs for the NetMotion Mobility VPN attributes** (NetMotion Mobility only): Enter or import key and value pairs. These values may be supplied by your VPN provider.
+- **Enter key and value pairs for the NetMotion Mobility VPN attributes** (NetMotion Mobility only): Enter or import key and value pairs. These values might be supplied by your VPN provider.
 
 - **Microsoft Tunnel site** (Microsoft Tunnel only): Select an existing site. The VPN client connects to the public IP address or FQDN of this site.
 
@@ -232,7 +232,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 - **Remote identifier**: Enter the network IP address, FQDN, UserFQDN, or ASN1DN of the IKEv2 server. For example, enter `10.0.0.3` or `vpn.contoso.com`. Typically, you enter the same value as the [**Connection name**](#base-vpn-settings) (in this article). But, it does depend on your IKEv2 server settings.
 
-- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate's identity. The IKEv2 server may require the values to match so it can validate the client's identity.
+- **Local identifier**: Enter the device FQDN or subject common name of the IKEv2 VPN client on the device. Or, you can leave this value empty (default). Typically, the local identifier should match the user or device certificate's identity. The IKEv2 server might require the values to match so it can validate the client's identity.
 
 - **Client Authentication type**: Choose how the VPN client authenticates to the VPN. Your options:
   - **User authentication** (default): User credentials authenticate to the VPN.
@@ -253,7 +253,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 - **Server certificate common name**: Enter the CN for the certificate itself. If left blank, the remote identifier value is used.
 
 - **Dead peer detection rate**: Choose how often the VPN client checks if the VPN tunnel is active. Your options:
-  - **Not configured**: Uses the iOS/iPadOS system default, which may be the same as choosing **Medium**.
+  - **Not configured**: Uses the iOS/iPadOS system default, which might be the same as choosing **Medium**.
   - **None**: Disables dead peer detection.
   - **Low**: Sends a keepalive message every 30 minutes.
   - **Medium** (default): Sends a keepalive message every 10 minutes.
@@ -268,7 +268,7 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 - **Mobility and multihoming (MOBIKE)**: MOBIKE allows VPN clients to change their IP address without recreating a security association with the VPN server. **Enable** (default) turns on MOBIKE, which can improve VPN connections when traveling between networks. **Disable** turns off MOBIKE.
 - **Redirect**: **Enable** (default) redirects the IKEv2 connection if a redirect request is received from the VPN server.​ **Disable** prevents the IKEv2 connection from redirecting if a redirect request is received from the VPN server.​
 
-- **Maximum transmission unit**: Enter the maximum transmission unit (MTU) in bytes, from 1-65536. When set to **Not configured** or left blank, Intune doesn't change or update this setting. By default, Apple may set this value to 1280.
+- **Maximum transmission unit**: Enter the maximum transmission unit (MTU) in bytes, from 1-65536. When set to **Not configured** or left blank, Intune doesn't change or update this setting. By default, Apple might set this value to 1280.
 
   This setting applies to:
   - iOS/iPadOS 14 and newer
