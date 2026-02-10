@@ -157,9 +157,7 @@ Configure the product settings on the **Products** page of the wizard, or on the
 > Many products and categories shown in the admin console are only for stand-alone WSUS, Configuration Manager can't deploy them. Don't select these items. Some examples include:
 > - Dynamic Updates
 > - Servicing Drivers
-> - Legacy versions of Microsoft Office: Office 2002/XP through Office 2013
-> - Legacy operating systems that are no longer supported: Windows 7, Windows 8, Server 2008, etc.
-> - 'Rollups' category, 'Feature Packs' category, 'Service Packs' category, etc.
+> - Legacy versions of Microsoft Windows & Office: Windows 7, Windows 8, Server 2008, Office 2002/XP through Office 2013, etc.
 
 > [!TIP]
 > - The **Products** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.
