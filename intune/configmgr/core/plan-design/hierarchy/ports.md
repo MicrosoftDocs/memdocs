@@ -619,7 +619,7 @@ Intersite database replication requires the SQL Server at one site to communicat
 |-----------------|---------|---------|
 |SQL Server service|--|1433 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
 |SQL Server Service Broker|--|4022 <sup>[Note 2](#bkmk_note2) Alternate port available</sup>|
-|SQL Server Browser|--|1434|
+|SQL Server Browser|1434|--|
 
 > [!TIP]
 > Configuration Manager requires the SQL Browser service when using a named instance and non-default SQL port.
