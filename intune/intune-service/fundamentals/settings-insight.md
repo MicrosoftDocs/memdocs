@@ -24,8 +24,6 @@ Settings insight is currently available for the following Intune security baseli
 - **Microsoft Edge Baseline**
 - **Microsoft 365 Apps for Enterprise Security Baseline**
 
-Settings insight isn't currently available for other Intune security baselines, including the Security Baseline for Windows 10 and later or the Microsoft Defender for Endpoint baseline.
-
 ## What Settings insight provides
 
 Settings insight offers context about peer behavior, not prescriptive guidance. The feature:
