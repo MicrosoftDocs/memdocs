@@ -116,7 +116,7 @@ To view the local Administrator password of a device, your own account must be a
 
 ### To view the admin account password
 
-1.	In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
+1.    In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
 
 On the **Passwords and keys** pane, you can retrieve the admin password for the macOS device under the **Local administrator account password** section. Here you can also see the last time the password was rotated, manually or automatically.
 
@@ -141,7 +141,7 @@ To use this device action, your account must be assigned the [Intune RBAC permis
    :::image type="content" source="./media/macos-laps/macos-device-overview.png" alt-text="Screen capture of a devices overview pane.":::
 
 
-3. To confirm when the password was last rotated for the device, from the device’s *Overview* pane:
+3. To confirm when the password was last rotated for the device, from the device's *Overview* pane:
    1. Expand **Monitor** and then select **Passwords and keys**.
    2. On the **Passwords and keys** pane, you can find the last date and time that the password was rotated.
 
@@ -158,4 +158,3 @@ Look for the following entries:
 ## Related content
 
 - Get started with the [macOS enrollment guide](../fundamentals/deployment-guide-enrollment-macos.md).
-- After macOS devices are enrolled, you can [create custom settings for macOS devices](../configuration/custom-settings-macos.md).
