@@ -32,7 +32,7 @@ This article describes known issues that can often be resolved with configuratio
 
 ## Known issues
 
-### Hybrid Entra join Autopilot deployments time out with error code 0x80004005
+### Microsoft Entra hybrid join Autopilot deployments time out with error code 0x80004005
 
 Date added: *February 9, 2026*
 
