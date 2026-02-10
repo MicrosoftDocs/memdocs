@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/index.yml",
+      "redirect_url": "/intune",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/device-updates/windows/driver-updates-policy.md",
       "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
