@@ -199,7 +199,7 @@ After installing the Tunnel Gateway server, you can configure Podman to use the 
 
    `systemctl edit --force mstunnel_monitor`
 
-2. Add the following three lines to the file. Replace each instance of *address* with your proxy DN or address, and then save the file. For example, if the *address* of your proxy is `10.10.10.1`  and available on port `3128`, the first line after [Service] might appear as `Environment=”http_proxy=http//10.10.10.1:3128”` and the following line as `Environment=”https_proxy=http//10.10.10.1:3128”`
+2. Add the following three lines to the file. Replace each instance of *address* with your proxy DN or address, and then save the file. For example, if the *address* of your proxy is `10.10.10.1`  and available on port `3128`, the first line after [Service] might appear as `Environment="http_proxy=http//10.10.10.1:3128"` and the following line as `Environment="https_proxy=http//10.10.10.1:3128"`
 
    ```
    [Service]
@@ -283,10 +283,10 @@ In the following PowerShell commands, replace variables, which appear similar to
 4. Create the new setting with a desired value:
 
    ```powershell
-   $setting = New-Object -TypeName Microsoft.Graph.Beta.PowerShell.Models.MicrosoftGraphKeyValuePair;  $setting.Name = “session-timeout";  $setting.Value = <integer-in-seconds>
+   $setting = New-Object -TypeName Microsoft.Graph.Beta.PowerShell.Models.MicrosoftGraphKeyValuePair;  $setting.Name = "session-timeout";  $setting.Value = <integer-in-seconds>
    ```
 
-5. Update the configuration’s AdvancedSettings:
+5. Update the configuration's AdvancedSettings:
 
    ```powershell
    Update-MgBetaDeviceManagementMicrosoftTunnelConfiguration -MicrosoftTunnelConfigurationId <id> -AdvancedSettings @($setting)
@@ -393,7 +393,7 @@ After the Microsoft Tunnel installs and devices install Microsoft Defender for E
    - **On-Demand VPN Rules**:
      Define on-demand rules that allow use of the VPN when conditions are met for specific FQDNs or IP addresses.
 
-     For more information, see [Automatic VPN settings](../configuration/vpn-settings-ios.md#automatic-vpn).
+     For more information, see [Automatic VPN settings](../configuration/vpn-settings-apple.md).
 
    - **Proxy**:
      Configure proxy server details for your environment.

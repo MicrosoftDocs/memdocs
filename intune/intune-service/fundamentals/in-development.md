@@ -68,34 +68,17 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
-### New Wired Networks device configuration profile for iOS/iPadOS<!-- 34968897 -->
+### Apple declarative device management (DDM) support for assignment filters<!-- 24298491 -->
 
-We're adding a 802.1x Wired Networks device configuration profile for iOS/iPadOS devices. The feature supports 802.1x Ethernet access controls, which is ideal for M series iPads that support native resolution screen extension. It will allow iPads to securely connect to hot desk docks and monitors using wired access.
+You'll be able to use assignment filters in policy assignments for DDM-based configurations, like software updates.
 
-This profile:
-
-- Supports EAP protocols, like TLS, PEAP, and TTLS
-- Is similar to the macOS wired network profile experience
-
-This feature helps with secure enterprise deployments for iPads in education, finance, and other regulated industries.
-
-To learn more about wired networks, see [Add and use wired networks settings on your macOS and Windows devices](../configuration/wired-networks-configure.md).
+To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
 
 > [!div class="checklist"]
 > Applies to:
 >
-> - iOS/iPadOS 17 and newer
-
-### Disable MAC address randomization on macOS Wi‑Fi profiles <!-- 8457343 -->
-
-On macOS devices, the **Disable MAC address randomization** setting will soon be available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices. Currently, this setting is only available for [iOS/iPadOS Wi‑Fi profiles](../configuration/wi-fi-settings-ios.md).
-
-When connecting to a network, devices can present a randomized MAC address instead of the physical MAC address. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. But, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS 15 and later
+> - iOS/iPadOS
+> - macOS
 
 ### Recovery Lock settings catalog settings for macOS<!-- 32541429 -->
 

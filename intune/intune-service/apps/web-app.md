@@ -49,7 +49,7 @@ To add an app to Intune as a shortcut to an app on the web, do the following:
    - **Require a managed browser to open this link**: Select this option to assign to your users a link to a website or web app that they can open in Microsoft Edge. Microsoft Edge must be installed on their device.
 
       > [!NOTE]
-      > iOS/iPadOS web clips that require a managed browser will not work with [home screen layout policies.](../configuration/ios-device-features-settings.md)
+      > iOS/iPadOS web clips that require a managed browser will not work with [home screen layout policies.](../configuration/device-features-apple.md)
     - **Full screen**: [iOS/iPadOS only] If configured to **Yes**, launches the web clip as a full-screen web app without a browser. Additionally, there's no URL or search bar, and no bookmarks.
     - **Ignore manifest scope**: [iOS/iPadOS only] If configured to **Yes**, a full screen web clip can navigate to an external web site without showing Safari UI. Otherwise, Safari UI appears when navigating away from the web clip's URL. This setting has no effect when **Full screen** is set to **No**. Available in iOS 14 and later.
     - **Precomposed**: [iOS/iPadOS only] If configured to **Yes**, prevents Apple's application launcher (SpringBoard) from adding "shine" to the icon.

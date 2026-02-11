@@ -13,9 +13,9 @@ ms.collection:
 
 Provisioning a device as a Shared iPad sets it up so that it can be shared among more than one employee or student. iPads enrolled in Intune using automated device enrollment, and without user affinity, can be provisioned as shared iPads.
 
-Shared iPad creates a pre-defined number of *user partitions* on the device. User partitions ensure that each user’s apps, data, and preferences are stored separately on the iPad. If you allow it, these partitions can be backed up to iCloud for seamless transition across other shared iPads in your organization.
+Shared iPad creates a pre-defined number of *user partitions* on the device. User partitions ensure that each user's apps, data, and preferences are stored separately on the iPad. If you allow it, these partitions can be backed up to iCloud for seamless transition across other shared iPads in your organization.
 
-When you federate your organization’s Microsoft Entra instance in Apple Business or School Manager, a device user can sign in on a Shared iPad using their Microsoft Entra username and password. This automatically creates a Managed Apple ID for the user that matches their Microsoft Entra username when they sign in on a Shared iPad for the first time. In addition, at first sign-in on a Shared iPad, the user sets up an alphanumeric passcode for their user partition and the apps assigned to the device are installed to the user partition. The next time the user accesses a Shared iPad, they only need to provide their Managed Apple ID (same as their Microsoft Entra username) and the alphanumeric passcode.
+When you federate your organization's Microsoft Entra instance in Apple Business or School Manager, a device user can sign in on a Shared iPad using their Microsoft Entra username and password. This automatically creates a Managed Apple ID for the user that matches their Microsoft Entra username when they sign in on a Shared iPad for the first time. In addition, at first sign-in on a Shared iPad, the user sets up an alphanumeric passcode for their user partition and the apps assigned to the device are installed to the user partition. The next time the user accesses a Shared iPad, they only need to provide their Managed Apple ID (same as their Microsoft Entra username) and the alphanumeric passcode.
 
 ## Configure Shared iPad
 
@@ -92,7 +92,7 @@ When creating the device configuration profile for Shared iPads, keep in mind th
 
   In iPadOS 13.4 or later, users can initiate a temporary session by tapping **Guest** on the device sign-in screen. A *temporary session* allows users to sign in to the device as a guest, and doesn't require them to enter a Managed Apple ID or password. All user data, including browsing history, is deleted when the user signs out of the session. Temporary sessions are allowed by default with Shared iPad. For more information, see [Shared iPad overview](https://support.apple.com/guide/deployment/dep9a34c2ba2/1/web/1.0) (opens Apple documentation).
 
- You can configure temporary sessions in an iOS device restrictions profile in the admin center. For more information, see [Shared iPad - Automated device enrollment (supervised)](../configuration/device-restrictions-ios.md#settings-apply-to-automated-device-enrollment-supervised-10).
+ You can configure temporary sessions in an iOS device restrictions profile in the admin center. For a list of the settings you can configure, see [Shared iPad - Automated device enrollment (supervised)](../configuration/device-restrictions-apple.md).
 
 ## Add apps
 
@@ -112,7 +112,7 @@ The following table shows each iOS app type and describes the type of assignment
 |     Web app    |     Not supported    |     User    |
 |     App Store app    |     Not applicable    |     Not applicable    |
 
-Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Microsoft Entra user groups. For more information, see [Home screen layout](../configuration/ios-device-features-settings.md#home-screen-layout).
+Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Microsoft Entra user groups. For a list of the settings you can configure, see [Home screen layout](../configuration/device-features-apple.md).
 
 ## Recommended policy and app assignment for Shared iPads
 
