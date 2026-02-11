@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Microsoft Intune documentation
-summary: Learn more about managing devices, apps, and security with Microsoft Intune.
+summary: Manage devices, apps, and security with Microsoft Intune.
 brand: azure
 
 metadata:
@@ -86,7 +86,7 @@ productDirectory:
       summary: Manage administrative access, roles, scope, and governance features to operate Intune securely and at scale.
       url: ./intune-service/fundamentals/role-based-access-control.md
 
-    - title: Configuration Manager and Co-management 
+    - title: Configuration Manager and co-management 
       imageSrc: ./media/icons/hub-page/co-management.svg
       summary: Manage devices using both cloud and on-premises tools.
       url: ./configmgr/index.yml
