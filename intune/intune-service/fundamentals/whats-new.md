@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 01/12/2026
+ms.date: 02/11/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,9 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+> [!NOTE]
+> The 2601 release includes feature updates in 2512 and 2601. The 2601 release is expected later than normal. Your tenant might still show 2511, which is expected and normal.
 
 ## Week of January 12, 2026
 
