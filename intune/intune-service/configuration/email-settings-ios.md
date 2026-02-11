@@ -1,30 +1,10 @@
 ---
-# required metadata
-
 title: Configure Email settings for iOS/iPadOS devices in Microsoft Intune
 description: See a list of all the email settings you can configure and add to iOS and iPadOS devices in Microsoft Intune, including using Exchange servers, and getting attributes from Microsoft Entra ID. You can also enable SSL, authenticate users with certificates or username/password, and synchronize email on iOS/iPadOS devices using device configuration profiles in Microsoft Intune.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
 ms.date: 04/15/2024
 ms.topic: reference
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm, sheetg
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier3
 - M365-identity-device-management
 ---
 
@@ -54,7 +34,7 @@ This article describes all the email settings available for devices running iOS/
 - **Username attribute from Microsoft Entra ID**: This name is the attribute Intune gets from Microsoft Entra ID. Intune dynamically generates the username that this profile uses. Your options:
   - **User Principal Name**: Gets the name, like `user1` or `user1@contoso.com`
   - **Primary SMTP address**: Gets the Simple Mail Transfer Protocol (SMTP) name in email address format, like `user1@contoso.com`
-  - **sAM Account Name**: Requires the domain, like `domain\user1`. Also enter:  
+  - **sAM Account Name**: Requires the domain, like `domain\user1`. Also enter:
     - **User domain name source**: Select **Microsoft Entra ID** or **Custom**:
       - **Microsoft Entra ID**: Get the attributes from Microsoft Entra ID. Also enter:
         - **User domain name attribute from Microsoft Entra ID**: Choose to get the **Full domain name** (`contoso.com`) or the **NetBIOS name** (`contoso`) attribute of the user.
@@ -73,7 +53,7 @@ This article describes all the email settings available for devices running iOS/
 
   > [!NOTE]
   > Azure multifactor authentication isn't supported.
-  
+
 - **SSL**: **Enable** uses Secure Sockets Layer (SSL) communication when sending emails, receiving emails, and communicating with the Exchange server. **Disable** uses Secure Sockets Layer (SSL) communication.
 - **OAuth**: **Enable** uses Open Authorization (OAuth) communication when sending emails, receiving emails, and communicating with Exchange. If your OAuth server uses certificate authentication, choose **Certificate** as the **Authentication method**, and include the certificate with the profile. Otherwise, choose **Username and password** as the **Authentication method**. When using OAuth, be sure to:
 
@@ -104,7 +84,7 @@ Configuring these settings deploys a new profile to the device, even when an exi
   - **Calendar and Contacts only**: Sync is enabled for Calendar and Contacts only. Sync is disabled for the other services.
   - **Contacts only**: Sync is enabled for Contacts only. Sync is disabled for the other services.
 
-  This feature applies to:  
+  This feature applies to:
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer
 
@@ -116,7 +96,7 @@ Configuring these settings deploys a new profile to the device, even when an exi
   > [!TIP]
   > If you configured the **Exchange data to sync** setting to sync only some services, we recommend selecting **No** for this setting. Choosing **No** prevents users from changing the Exchange service that's synced.
 
-  This feature applies to:  
+  This feature applies to:
   - iOS 13.0 and newer
   - iPadOS 13.0 and newer
 
@@ -138,14 +118,14 @@ Configuring these settings deploys a new profile to the device, even when an exi
         - **Certificates**: Select an existing [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile that signs email messages.
       - **Allow user to change setting**: **Enable** allows users to change the signing certificate. **Disable** (default) prevents users from changing the signing certificate, and forces users to use the certificate you configured.
 
-        This feature applies to:  
+        This feature applies to:
         - iOS 12 and newer
         - iPadOS 12 and newer
 
     - **Encrypt by default**: **Enable** encrypts all messages as the default behavior. **Disable** (default) doesn't encrypt all messages as the default behavior.
       - **Allow user to change setting**: **Enable** allows users to change the default encryption behavior. **Disable** prevents users from changing the encryption default behavior, and forces users to use the encryption you configured.
 
-        This feature applies to:  
+        This feature applies to:
         - iOS 12 and newer
         - iPadOS 12 and newer
 
@@ -162,7 +142,7 @@ Configuring these settings deploys a new profile to the device, even when an exi
         - **Certificates**: Select an existing [SCEP](../protect/certificates-profile-scep.md) or [PKCS](../protect/certificates-pfx-configure.md) certificate profile that signs email messages.
       - **Allow user to change setting**: **Enable** allow users to change the encryption certificate. **Disable** (default) prevents users from changing the encryption certificate, and forces users to use the certificate you configured.
 
-        This feature applies to:  
+        This feature applies to:
         - iOS 12 and newer
         - iPadOS 12 and newer
 
@@ -174,7 +154,7 @@ Configuring these settings deploys a new profile to the device, even when an exi
 
   Per-app VPN connections you create are shown in this list. If you select a VPN profile from the list, any email that's sent to and from this account in the Mail app uses the VPN tunnel. The per-app VPN connection automatically turns on when users use their organization account in the Mail app.
 
-  This feature applies to:  
+  This feature applies to:
   - iOS 14 and newer
   - iPadOS 14 and newer
 
@@ -182,4 +162,4 @@ Configuring these settings deploys a new profile to the device, even when an exi
 
 - [Assign the profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [Windows 10](email-settings-windows-10.md) devices.
+- Configure email settings on [Android](email-settings-android.md), [Android Enterprise](email-settings-android-enterprise.md), and [Windows](email-settings-windows-10.md) devices.

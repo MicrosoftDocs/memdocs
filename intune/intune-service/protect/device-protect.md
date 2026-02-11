@@ -1,32 +1,12 @@
 ---
-# required metadata
-
-title: Protect devices with Microsoft Intune 
-titleSuffix: Microsoft Intune
+title: Protect devices with Microsoft Intune
 description: Learn about the Intune capabilities that can help you protect your devices and data against unauthorized access and other threats.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/23/2024
 ms.topic: overview
-ms.subservice: protect
-ms.service: microsoft-intune
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
+ms.reviewer: davidra
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-secure-endpoints
 ---
@@ -73,11 +53,11 @@ Following are a few of the security settings and tasks you can manage through av
 - **Software updates** – Manage how and when devices get software updates. The following are supported:
 
   - Android *firmware* updates:
-    - [Firmware Over-the-Air (FOTA)](../protect/fota-updates-android.md) - Supported by some OEMs, you can use FOTA to remotely update firmware of devices.
-    - [Zebra LifeGuard Over-the-Air (LG OTA)](../protect/zebra-lifeguard-ota-integration.md) - Manage firmware updates for supported Zebra devices through the Intune admin center.
+    - [Firmware Over-the-Air (FOTA)](../../device-updates/android/fota-updates.md) - Supported by some OEMs, you can use FOTA to remotely update firmware of devices.
+    - [Zebra LifeGuard Over-the-Air (LG OTA)](../../device-updates/android/zebra-lifeguard-ota-integration.md) - Manage firmware updates for supported Zebra devices through the Intune admin center.
   - [iOS](/mem/intune-service/protect/managed-software-updates-ios-macos) - Manage device operating system versions, and when devices check for and install updates.
   - [macOS](/mem/intune-service/protect/managed-software-updates-ios-macos) - Manage software updates for macOS devices that enrolled as supervised devices.
-  - [Windows](../protect/windows-update-for-business-configure.md)- To manage the Windows Update experience for devices, you can configure when devices scan or install updates, hold a set of your managed devices at specific feature versions, and more.
+  - [Windows](../../device-updates/windows/index.md)- To manage the Windows Update experience for devices, you can configure when devices scan or install updates, hold a set of your managed devices at specific feature versions, and more.
 
 - **Security baselines** – Deploy [security baselines](../protect/security-baselines.md) to establish a core security posture on your Windows devices. Security baselines are preconfigured groups of Windows settings that come recommended by the relevant product teams. You can use baselines as provided or edit instances of them to meet your security goals for targeted groups of devices.
 
@@ -106,7 +86,7 @@ The following are examples of protections and restrictions you can set with app 
 
 ## Use device actions to protect devices and data
 
-From the Microsoft Intune admin center, you can run [device actions](../remote-actions/device-management.md#available-remote-actions) that help keep a selected device protected. You can run a subset of these actions as [bulk device actions](../remote-actions/bulk-device-actions.md) to affect multiple devices at the same time. And several [remote actions from Intune](../../configmgr/comanage/quickstart-remote-actions.md) can also be used with co-managed devices.
+From the Microsoft Intune admin center, you can run [device actions](../remote-actions/index.md) that help keep a selected device protected. You can run a subset of these actions as [bulk device actions](../remote-actions/index.md#bulk-device-actions) to affect multiple devices at the same time. And several [remote actions from Intune](../../configmgr/comanage/quickstart-remote-actions.md) can also be used with co-managed devices.
 
 Device actions aren't policy and take effect a single time when invoked. They apply either immediately if the device is accessible on-line, or when the device next boots up or checks in with Intune. Considered these actions as supplemental to the use of policies that configure and maintain security configurations for a population of devices.
 
@@ -173,11 +153,11 @@ With an integrated MTD app:
 Intune supports integration with:
 
 - Several [third-party MTD partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners).
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md), which supports extra capabilities with Intune.
+- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md), which supports extra capabilities with Intune.
 
 ### Microsoft Defender for Endpoint
 
-On its own, Microsoft Defender for Endpoint provides several security focused benefits. Microsoft Defender for Endpoint also [integrates with Intune](../protect/advanced-threat-protection.md) and is supported on several device platforms. With integration, you gain a mobile threat defense app and add capabilities to Intune for keeping data and devices safe. These capabilities include:
+On its own, Microsoft Defender for Endpoint provides several security focused benefits. Microsoft Defender for Endpoint also [integrates with Intune](../protect/microsoft-defender-with-intune.md) and is supported on several device platforms. With integration, you gain a mobile threat defense app and add capabilities to Intune for keeping data and devices safe. These capabilities include:
 
 - **Support for Microsoft Tunnel** - On Android devices, Microsoft Defender for Endpoint is the client application you use with [Microsoft Tunnel](../protect/microsoft-tunnel-overview.md), a VPN gateway solution for Intune. When used as the Microsoft Tunnel client app, you don't need a subscription for Microsoft Defender for Endpoint.
 
@@ -219,7 +199,7 @@ By deploying EPM *elevation rules* that you define, you can allow only the appli
 
 > [!TIP]
 >
-> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/intune-add-ons.md) which requires an additional license to use, and supports Windows 10 and Windows 11 devices.
+> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/intune-add-ons.md) which requires an additional license to use, and supports Windows devices.
 
 For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
 

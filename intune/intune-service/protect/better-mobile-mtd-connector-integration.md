@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Set up Better Mobile integration with Intune
 description: Integrate the third-party mobile threat defense solution of Better Mobile with Microsoft Intune.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 07/19/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: aanavath
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.reviewer: ilwu
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---

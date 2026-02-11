@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Check Point Harmony Mobile Mobile Threat Defense Intune
-titleSuffix: Microsoft Intune
 description: How to set up Check Point Harmony Mobile Threat Defense with Microsoft Intune control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/22/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 706a4228-9bdf-41e0-b8d1-64c923dd2d2b
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -49,7 +29,7 @@ You can configure Conditional Access policies based on Check Point Harmony Mobil
 
 - Microsoft Intune Plan 1 subscription
 
-- Check Point Harmony Mobile Threat Defense subscription  
+- Check Point Harmony Mobile Threat Defense subscription
   - See the [CheckPoint Harmony website](https://www.checkpoint.com/harmony).
 
 ## How do Intune and Check Point Harmony Mobile help protect your company resources?

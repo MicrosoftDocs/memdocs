@@ -1,17 +1,10 @@
 ---
 title: Install the client with Microsoft Entra ID
-titleSuffix: Configuration Manager
 description: Install and assign the Configuration Manager client on Windows devices using Microsoft Entra ID for authentication
 ms.date: 02/16/2022
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Install and assign Configuration Manager clients using Microsoft Entra ID for authentication
@@ -44,6 +37,9 @@ Setting up Microsoft Entra ID may be easier for some customers than setting up a
 - Determine whether your management point needs HTTPS. For more information, see [Enable management point for HTTPS](../manage/cmg/configure-authentication.md#enable-management-point-for-https).
 
 - Optionally set up a [cloud management gateway](../manage/cmg/overview.md) (CMG) to deploy internet-based clients. For on-premises clients that authenticate with Microsoft Entra ID, you don't need a CMG.
+
+> [!IMPORTANT]
+> Use of the NLM AllowedTlsAuthenticationEndpoints Intune Policy can cause Entra-only joined devices to fail to register when on a local network with connectivity to the endpoints specified in the policy.
 
 > [!TIP]
 > Configuration Manager extends its support for internet-based devices that don't often connect to the internal network, aren't able to join Microsoft Entra ID, and don't have a method to install a PKI-issued certificate. For more information, see [Token-based authentication for CMG](deploy-clients-cmg-token.md).<!--5686290-->
@@ -98,10 +94,8 @@ The `/mp` parameter and `CCMHOSTNAME` property specify one of the following, dep
 - Cloud management gateway
 - Internet-based management point
 
-The `SMSMP` property specifies the on-premises management point. It's not required. It's recommended for Microsoft Entra joined devices that roam onto the intranet, so they can find an on-premises management point.
-
 This example uses a cloud management gateway. It replaces sample values:
-`ccmsetup.exe /mp:https://CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.CLOUDAPP.NET/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC SMSMP=https://mp1.contoso.com AADTENANTID=daf4a1c2-3a0c-401b-966f-0b855d3abd1a AADCLIENTAPPID=7506ee10-f7ec-415a-b415-cd3d58790d97 AADRESOURCEURI=https://contososerver`
+`ccmsetup.exe /mp:https://CONTOSO.EASTUS.CLOUDAPP.AZURE.COM/CCM_Proxy_MutualAuth/72186325152220500 CCMHOSTNAME=CONTOSO.EASTUS.CLOUDAPP.AZURE.COM/CCM_Proxy_MutualAuth/72186325152220500 SMSSITECODE=ABC`
 
 The site publishes additional Microsoft Entra information to the cloud management gateway (CMG). A Microsoft Entra joined client gets this information from the CMG during the ccmsetup process, using the same tenant to which it's joined. This behavior further simplifies installing the client in an environment with more than one Microsoft Entra tenant. The only two required ccmsetup properties are `CCMHOSTNAME` and `SMSSITECODE`.<!--3607731-->
 

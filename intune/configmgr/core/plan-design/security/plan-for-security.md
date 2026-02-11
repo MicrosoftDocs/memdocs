@@ -1,19 +1,12 @@
 ---
 title: Plan for security
-titleSuffix: Configuration Manager
 description: Get best practices and other information about security in Configuration Manager.
 ms.date: 08/02/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection:
     - tier3
     - essentials-security
-ms.reviewer: mstewart
 ---
 
 # Plan for security in Configuration Manager
@@ -116,7 +109,7 @@ Onboarding your site with Microsoft Entra ID supports the following Configuratio
 
 - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
 
-- [Endpoint analytics](../../../../analytics/overview.md)
+- [Endpoint analytics](../../../../endpoint-analytics/index.md)
 
 - [Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm)
 

@@ -1,18 +1,10 @@
 ---
 title: SMS_BoundaryGroup Class
-titleSuffix: Configuration Manager
 description: The SMS_BoundaryGroup WMI class is an SMS Provider server class that represents a boundary group defined in the site hierarchy.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6c6cea04-987d-4ace-8ac4-7414493efb70
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_BoundaryGroup Server WMI Class
 The `SMS_BoundaryGroup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a boundary group defined in the site hierarchy.
@@ -28,6 +20,7 @@ Class SMS_BoundaryGroup : SMS_BaseClass
     DateTime CreatedOn;
     String DefaultSiteCode;
     String Description;
+    UInt64 Flags;
     UInt32 GroupID;
     UInt32 MemberCount;
     String ModifiedBy;
@@ -84,6 +77,26 @@ Class SMS_BoundaryGroup : SMS_BaseClass
  Qualifiers: none
 
  Description for the boundary group.
+
+ `Flags`  
+ Data type: `UInt64`  
+
+ Access type: Read/Write  
+
+ Qualifiers: none
+
+ Boundary group property flags.  
+
+ |Value|Execution context|  
+ |-|-|  
+ |0|Allow peer downloads in this boundary group|  
+ |1|Allow peer downloads in this boundary group **is not enabled**|  
+ |2|During peer downloads, only use peers within the same subnet|  
+ |4|Prefer distribution points over peers within the same subnet|  
+ |8|Prefer cloud based sources over on-premises sources|  
+
+ > [!NOTE]
+ > These are binary flags. So multiple can be set at once. E.g. if a value of 6 is shown, then the first 3 are enabled.
 
  `GroupID`
  Data type: `UInt32`

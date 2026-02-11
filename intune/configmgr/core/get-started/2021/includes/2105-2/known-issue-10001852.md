@@ -1,11 +1,7 @@
 ---
-author: Banreet
-ms.author: banreetkaur
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 05/28/2021
-ms.localizationpriority: medium
 ---
 
 ### <a name="ki_ta"></a> Known issue with tenant attach onboarding

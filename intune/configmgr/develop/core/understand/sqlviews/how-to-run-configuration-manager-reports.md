@@ -1,18 +1,11 @@
 ---
 title: How to run reports
-titleSuffix: Configuration Manager
 description: Information about how to access reports in the Configuration Manager console or by using Report Manager.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: 2020b94b-fc6f-4a70-91fb-51df948b9cb1
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

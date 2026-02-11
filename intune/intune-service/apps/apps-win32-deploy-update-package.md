@@ -1,50 +1,42 @@
 ---
-title: Deploy Windows update packages in Intune
-titleSuffix: Microsoft Intune
+title: Deploy Windows Update Packages in Intune
 description: Learn how to deploy a Windows update package (.msu file) in Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 11/21/2024
+ms.date: 01/22/2026
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-ms.custom: 
+ms.custom:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - FocusArea_Apps_Win32
 ---
 
-# Deploy Windows update packages in Intune
+# Deploy Windows Update Packages in Intune
 
-If you want to deploy a specific Windows update package (*.msu* file) to Windows 10/11 devices managed by Intune, you can use the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities to deploy an *.msu* file as a Win32 app.
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
+
+You can deploy a Windows update package (*.msu* file) to Windows devices managed by Intune by using the [Intune Win32 app management](../apps/apps-win32-app-management.md) capabilities.
+
+> [!NOTE]
+> Deploying updates as Win32 apps isn't the recommended approach as described in this article. Use Windows Update policies instead, including [Update rings](../../device-updates/windows/update-rings.md), [Feature updates](../../device-updates/windows/feature-updates.md), and [Quality updates](../../device-updates/windows/expedite-updates.md). The Win32 app method can provide more granular control when needed but requires more manual effort.
 
 The following steps help you deploy a Windows update package to Intune.
 
 ## Step 1: Prepare the update package as Win32 app content
 
 1. Download the  Windows update package by searching on [Microsoft Update Catalog](https://www.catalog.update.microsoft.com/).
-2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool will guide you to input the required parameters in a step-by-step process if you don't specify the parameters in the command-line. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content).
+2. Use the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730) to convert the *.msu* file into the *.intunewin* format. This tool guides you to input the required parameters in a step-by-step process if you don't specify the parameters in the command-line. For more information about the Microsoft Win32 Content Prep Tool, see [Convert the Win32 app content](../apps/apps-win32-prepare.md#convert-the-win32-app-content).
 
 ## Step 2: Create the Win32 app
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Apps** > **All Apps** > **Create**.
 3. In the **Select app type** pane, under **Other** app types, select **Windows app (Win32)**.
-4. Click **Select**, locate the **Add app** pane, and then select **Select app package file**.
+4. Choose **Select**, locate the **Add app** pane, and then select **Select app package file**.
 5. In the **App package file** pane, select the *.intunewin* file, and then select **OK**.
 6. On the **App information** page, add the details for your app.
 7. On the **Program** page, specify the following installation and removal commands for the app:
 
-    **Install command:**  
+    **Install command:**
 
     `wusa.exe <full path of the .msu file> /quiet /norestart -Wait`
 
@@ -52,7 +44,7 @@ The following steps help you deploy a Windows update package to Intune.
 
     `wusa.exe .\windows10.0-kb5031356-x64_65d5bbc39ccb461472d9854f1a370fe018b79fcc.msu /quiet /norestart -Wait`
 
-    **Uninstall command:**  
+    **Uninstall command:**
 
     `dism /online /remove-package /PackageName:<package name> /Quiet /NoRestart`
 
@@ -72,7 +64,7 @@ The following steps help you deploy a Windows update package to Intune.
 
     **Minimum operating system**: Select the minimum operating system that is required to apply the update.
 
-    To specify additional requirements, such as build number and Update Build Revision (UBR), select **Add** to display the **Add a Requirement rule** pane.
+    To specify more requirements, such as build number and Update Build Revision (UBR), select **Add** to display the **Add a Requirement rule** pane.
 
     For example, to install the app on only devices that are running Windows 10, version 1903, build 18362, UBR less than 329, select **Registry** as the **Requirement type**, and then specify the following rules:
 

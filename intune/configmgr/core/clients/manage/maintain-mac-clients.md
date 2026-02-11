@@ -1,17 +1,10 @@
 ---
 title: Maintain Mac clients
-titleSuffix: Configuration Manager
 description: Maintenance tasks for Configuration Manager Mac clients.
 ms.date: 01/05/2022
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Maintain Mac clients

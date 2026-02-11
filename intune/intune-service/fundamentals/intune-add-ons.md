@@ -1,33 +1,15 @@
 ---
-# required metadata
-
 title: Use Intune Suite add-on capabilities
-titleSuffix: Microsoft Intune
-description: Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.  
-keywords:
-author: MandiOhlinger 
+description: Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.
+author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 08/01/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.subservice: suite
 ms.collection:
 - M365-identity-device-management
 - highpri
-- tier1
 ---
 
 # Use Microsoft Intune Suite add-on capabilities
@@ -45,19 +27,19 @@ Some capabilities are available to buy as a standalone add-on. Other capabilitie
 
 The following table provides a list of add-on capabilities and associated Intune Plans. For information about Microsoft Intune Plans and pricing, see [Intune Plans and pricing](https://aka.ms/IntuneSuitePricing).
 
-|Capability|Standalone add-on|Intune Plan 2|Intune Suite|
-|:---|:---:|:---:|:---:|
-|Endpoint Privilege Management |✅ | |✅ |
-|Enterprise App Management |✅ | |✅ |
-|Advanced Analytics|✅  | |✅ |
-|Remote Help|✅ | |✅ |
-|Microsoft Tunnel for Mobile Application Management| |✅ |✅ |
-|Microsoft Cloud PKI |✅  ||✅ |
-|Firmware-over-the-air update| |✅  |✅  |
-|Specialized devices management| |✅ |✅ |
+| Capability | Standalone add-on | Intune Plan 2 | Intune Suite |
+|:-|:-:|:-:|:-:|
+| Endpoint Privilege Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Enterprise App Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Advanced Analytics | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Remote Help | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Microsoft Tunnel for Mobile Application Management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Microsoft Cloud PKI | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Firmware-over-the-air update |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| Specialized devices management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
-> As a companion to this article, see our [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.  
+> As a companion to this article, see our [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
 
 ### Microsoft Intune Endpoint Privilege Management
 
@@ -73,7 +55,7 @@ Enterprise App Management is an Intune Suite add-on that is available for trial 
 
 Microsoft Intune Advanced Analytics is set of analytics-driven capabilities that help IT admins understand, anticipate, and improve the end-user experience.
 
-For more information, see [Intune Advanced Analytics](../../analytics/advanced-endpoint-analytics.md).
+For more information, see [Intune Advanced Analytics](../../advanced-analytics/index.md).
 
 ### Microsoft Intune Remote Help
 
@@ -83,19 +65,19 @@ Remote Help is a cloud-based solution for secure help desk connections with role
 
 When you use the Microsoft Tunnel VPN Gateway, you can extend Tunnel support by adding Tunnel for Mobile Application Management (MAM). Tunnel MAM extends the Microsoft Tunnel VPN gateway to support devices that run Android or iOS, and that aren't enrolled with Microsoft Intune.
 
-For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).  
+For more information, see [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md).
 
-### Microsoft Cloud PKI  
+### Microsoft Cloud PKI
 
-Microsoft Cloud PKI is a cloud-based service that simplifies and automates certificate lifecycle management for Intune-managed devices. It provides a dedicated public key infrastructure (PKI) for your organization and handles the certificate issuance, renewal, and revocation for all Intune-supported platforms.  
+Microsoft Cloud PKI is a cloud-based service that simplifies and automates certificate lifecycle management for Intune-managed devices. It provides a dedicated public key infrastructure (PKI) for your organization and handles the certificate issuance, renewal, and revocation for all Intune-supported platforms.
 
-For more information, see [Overview of Microsoft Cloud PKI](../protect/microsoft-cloud-pki-overview.md).  
+For more information, see [Overview of Microsoft Cloud PKI](../../cloud-pki/index.md).
 
 ### Mobile Firmware-over-the-air update
 
 Firmware over-the-air (FOTA) update allows you to remotely update the firmware of supported devices wirelessly with more control.
 
-For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
+For more information, see [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
 
 ### Managing specialty devices with Microsoft Intune
 
@@ -122,7 +104,7 @@ For more information, see [Managing specialized devices with Microsoft Intune](s
 
 Global and Billing administrators can choose to start free trials or purchase licenses for Intune add-ons through the [Microsoft 365 admin center](https://admin.microsoft.com). Administrators who aren't Global or Billing administrators can still see the status of their tenant's Intune add-ons trial or active licenses in the centralized Intune add-on page in the Intune admin center. However, they can't start a free trial or purchase licenses.
 
-Starting a free trial gives you a 90-day period to use the Intune add-on capability without any charge. Trials can be up to 250 users per tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Intune add-on capability in Microsoft Intune for users within your tenant unless you've purchased the appropriate licenses. There's a one-time limit to start a trial for each tenant.  
+Starting a free trial gives you a 90-day period to use the Intune add-on capability without any charge. Trials can be up to 250 users per tenant. At the end of the trial period, there's a 30-day grace period. After this point, you'll be unable to use the Intune add-on capability in Microsoft Intune for users within your tenant unless you've purchased the appropriate licenses. There's a one-time limit to start a trial for each tenant.
 
 Purchasing licenses lets you use the Intune add-on capability in your tenant for the duration in which the licenses are active on your tenant based on the option selected during the Billing process.
 
@@ -170,8 +152,8 @@ Learn more about:
 
 - [Remote Help](remote-help.md)
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
-- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md)
-- [Intune Advanced Analytics](../../analytics/overview.md)
+- [Managing Mobile Firmware-over-the-air updates with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md)
+- [Intune Advanced Analytics](../../advanced-analytics/index.md)
 - [Endpoint Privilege Management](../protect/epm-overview.md).
 - [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md)
 - [Remote Help](..\fundamentals\remote-help.md)

@@ -1,17 +1,10 @@
 ---
 title: Plan for the SMS Provider
-titleSuffix: Configuration Manager
 description: Learn about the SMS Provider site system role in Configuration Manager.
 ms.date: 10/19/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Plan for the SMS Provider
@@ -37,7 +30,7 @@ The SMS Provider helps enforce Configuration Manager security. It returns only t
 The SMS Provider also provides API interoperability access over HTTPS, called the **administration service**. This REST API can be used in place of a custom web service to access information from the site. For more information, see [What is the administration service?](../../../develop/adminservice/overview.md).
 
 > [!IMPORTANT]
-> When each instance of the SMS Provider for a site is offline, Configuration Manager consoles can't connect to the site.
+> When there are multiple SMS providers and one or more providers are offline or unavailable, connections may fail. This includes scenarios using Site Server High Availability.
 
 For more information about how to manage the SMS Provider, see [Manage the SMS Provider](../../servers/manage/modify-your-infrastructure.md#BKMK_ManageSMSprovider).
 

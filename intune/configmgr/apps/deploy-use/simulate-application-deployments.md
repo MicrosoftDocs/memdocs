@@ -1,17 +1,10 @@
 ---
 title: Simulate application deployments
-titleSuffix: Configuration Manager
 description: Evaluate the detection method, requirements, and dependencies for a deployment type without installing the application.
 ms.date: 10/06/2016
-ms.subservice: app-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: install-set-up-deploy
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Simulate application deployments with Configuration Manager
 

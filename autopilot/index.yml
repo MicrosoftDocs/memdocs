@@ -5,19 +5,10 @@ summary: Windows Autopilot and Windows Autopilot device preparation is a collect
 metadata:
   title: Windows Autopilot and Windows Autopilot device preparation documentation
   description: Windows Autopilot and Windows Autopilot device preparation is a collection of technologies used to set up and pre-configure new devices, getting them ready for productive use.
-  ms.service: windows-client
-  ms.subservice: autopilot
   ms.topic: landing-page
   ms.collection:
-    - tier1
-    - highpri
     - essentials-navigation
-  author: frankroj
-  ms.author: frankroj
-  manager: bpardi
-  ms.reviewer: madakeva
   ms.date: 06/13/2025
-  ms.localizationpriority: high
 
 # linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | whats-new
 

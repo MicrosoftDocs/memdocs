@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Enable the Mobile Threat Defense connector for unenrolled devices
-titleSuffix: Microsoft Intune
 description: Enable the Mobile Threat Defense connector in Microsoft Intune for unenrolled devices.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/20/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
+ms.reviewer: ilwu
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -39,7 +19,7 @@ During Mobile Threat Defense (MTD) setup, you've configured a policy for classif
 
 ## Classic Conditional Access policies for Mobile Threat Defense (MTD) apps
 
-When you integrate a new Mobile Threat Defense application with Intune and enable the connection to Intune, Intune creates a classic Conditional Access policy in Microsoft Entra ID. Each third-party MTD partner you integrate with creates a new classic Conditional Access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled. 
+When you integrate a new Mobile Threat Defense application with Intune and enable the connection to Intune, Intune creates a classic Conditional Access policy in Microsoft Entra ID. Each third-party MTD partner you integrate with creates a new classic Conditional Access policy. These policies can be ignored, but shouldn't be edited, deleted, or disabled.
 
 > [!NOTE]
 >

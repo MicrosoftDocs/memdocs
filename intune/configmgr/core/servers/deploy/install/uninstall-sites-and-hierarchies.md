@@ -1,17 +1,10 @@
 ---
 title: Uninstall sites
-titleSuffix: Configuration Manager
 description: A guide for removing roles, and uninstalling sites and hierarchies
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Uninstall roles, sites, and hierarchies in Configuration Manager

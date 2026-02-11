@@ -1,33 +1,12 @@
 ---
-# required metadata
-
 title: Endpoint management services and solutions at Microsoft
 description: Microsoft Intune is a family of on-premises products and cloud services. It includes Intune, Configuration Manager, co-management, Endpoint Analytics, Windows Autopilot, and the admin center to manage cloud devices and on on-premises.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: dougeby
 ms.date: 08/20/2024
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice:
-ms.localizationpriority: high
-ms.assetid:
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom:
-  - get-started
-  - intro-overview
 ms.collection:
   - M365-identity-device-management
-  - tier1
 ---
 
 # Endpoint management at Microsoft
@@ -185,10 +164,10 @@ You can use Endpoint Analytics on devices that are managed with Intune or Config
 
 For more information, go to:
 
-- [What is Endpoint analytics?](./analytics/overview.md)
-- [Endpoint analytics scores, baselines, and insights](./analytics/scores.md)
+- [Endpoint analytics overview](./endpoint-analytics/index.md)
+- [Endpoint analytics scores, baselines, and insights](./endpoint-analytics/scores.md)
 - [Tutorial: Walkthrough the Microsoft Intune admin center](./intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Quickstart - Enroll Configuration Manager devices](./analytics/enroll-configmgr.md)
+- [Quickstart - Enroll Configuration Manager devices](./endpoint-analytics/configure.md)
 
 ## Learn more
 

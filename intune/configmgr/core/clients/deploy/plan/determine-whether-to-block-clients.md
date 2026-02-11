@@ -1,17 +1,10 @@
 ---
 title: Blocking clients
-titleSuffix: Configuration Manager
 description: Block client access for system security by using Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Determine whether to block clients in Configuration Manager
 

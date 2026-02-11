@@ -1,17 +1,10 @@
 ---
 title: Test client upgrades
-titleSuffix: Configuration Manager
 description: Test client upgrades in a pre-production collection in Configuration Manager.
 ms.date: 04/12/2022
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to test client upgrades in a pre-production collection

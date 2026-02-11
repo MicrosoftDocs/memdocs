@@ -1,17 +1,10 @@
 ---
 title: Manage VDI clients
-titleSuffix: Configuration Manager
 description: Manage Configuration Manager clients in a virtual desktop infrastructure (VDI).
 ms.date: 08/11/2020
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Manage Configuration Manager clients in a virtual desktop infrastructure (VDI)

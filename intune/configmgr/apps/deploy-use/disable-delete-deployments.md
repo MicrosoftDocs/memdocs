@@ -1,17 +1,10 @@
 ---
 title: Disable and delete app deployments
-titleSuffix: Configuration Manager
 description: If you want to stop the deployment of an application, you can either disable it temporarily or delete it entirely.
 ms.date: 04/05/2021
-ms.subservice: app-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Disable and delete application deployments

@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: desktop-analytics
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/11/2020
-ms.localizationpriority: medium
 ---
 
 ### Endpoints required for Configuration Manager-managed devices
@@ -23,4 +19,4 @@ To enroll devices to Endpoint analytics, they need to send required functional d
 
 | Endpoint  | Function  |
 |-----------|-----------|
-| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](../../../../../analytics/data-collection.md#bkmk_datacollection) to the Intune data collection endpoint. |
+| `https://*.events.data.microsoft.com` | Used by Intune-managed devices to send [required functional data](../../../../../endpoint-analytics/data-collection.md) to the Intune data collection endpoint. |

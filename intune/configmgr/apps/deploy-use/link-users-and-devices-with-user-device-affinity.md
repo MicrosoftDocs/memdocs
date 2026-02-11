@@ -1,17 +1,10 @@
 ---
 title: Link users and devices with user device affinity
-titleSuffix: Configuration Manager
 description: Link users and devices with user device affinity and automatically deploy apps to all devices associated with a user.
 ms.date: 04/05/2021
-ms.subservice: app-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Link users and devices with user device affinity in Configuration Manager
 

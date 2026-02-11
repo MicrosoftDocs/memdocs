@@ -1,30 +1,12 @@
 ---
-# required metadata
-
 title: Deployment guide to manage macOS devices in Microsoft Intune
 description: Learn the recommended processes to manage macOS devices in Microsoft Intune.
-keywords:
 author: lenewsad
 ms.author: lanewsad
-manager: laurawi
 ms.date: 07/31/2025
 ms.topic: install-set-up-deploy
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: dougeby
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: get-started
+ms.reviewer: beflamm
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -90,12 +72,12 @@ Use Microsoft Intune to enable or disable settings and features on macOS devices
 | Task | Detail |
 | ---- | ------ |
 |[Create a device profile in Microsoft Intune](../configuration/device-profile-create.md) |Learn about the different types of device profiles you can create for your organization.|
-|[Configure device features](../configuration/device-features-configure.md)|Configure common macOS features and functionality. For a description of the settings in this area, see the [device features reference](../configuration/macos-device-features-settings.md).|
-|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference](../configuration/wi-fi-settings-macos.md).|
-|[Configure wired network profile](../configuration/wired-networks-configure.md)|This profile enables people on desktop computers to connect to your organization's wired network. For a description of the settings in this area, see the [wired network reference](../configuration/wi-fi-settings-macos.md).|
-|[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-macos.md). |
-|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-macos.md).|
-|[Configure custom profile](../configuration/custom-settings-macos.md)|Add and assign device settings and features that aren't built into Intune.|
+|[Configure device features](../configuration/device-features-configure.md)|Configure common macOS features and functionality. For a description of the settings in this area, see the [device features reference](../configuration/device-features-apple.md).|
+|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference](../configuration/wi-fi-settings-apple.md).|
+|[Configure wired network profile](../configuration/wired-networks-configure.md)|This profile enables people on desktop computers to connect to your organization's wired network. For a description of the settings in this area, see the [wired network reference](../configuration/wi-fi-settings-apple.md).|
+|[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network.  For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-apple.md). |
+|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-apple.md).|
+|[Configure custom profile](../configuration/custom-settings-apple.md)|Add and assign device settings and features that aren't built into Intune.|
 |[Add and manage macOS extensions](../configuration/kernel-extensions-overview-macos.md)|Add kernel extensions and system extensions, which enable users to install app extensions that extend the native capabilities of the operating system. For a description of the settings in this area, see the [macOS extensions reference](../configuration/kernel-extensions-settings-macos.md).|
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
 
@@ -144,7 +126,7 @@ After devices are set up, you can use remote actions in Intune to manage and tro
 
 | Task | Detail |
 | ---- | ------ |
-|[Take remote action on devices](../remote-actions/device-management.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
+|[Take remote action on devices](../remote-actions/index.md)|Learn how to drill down and remotely manage and troubleshoot individual devices in Intune. This article lists all remote actions available in Intune and links to those procedures.   |
 |[Use TeamViewer to remotely administer Intune devices](../fundamentals/teamviewer-support.md)|Configure TeamViewer within Intune, and learn how to remotely administer a device.  |
 |[Use security tasks to view threats and vulnerabilities](../protect/atp-manage-vulnerabilities.md)|Integrate Intune with Microsoft Defender for Endpoint to take advantage of Defender for Endpoint's threat and vulnerability management and use Intune to remediate endpoint weakness identified by Defender's vulnerability management capability.|
 

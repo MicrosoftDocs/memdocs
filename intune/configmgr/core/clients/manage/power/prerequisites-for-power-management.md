@@ -1,17 +1,10 @@
 ---
 title: Prerequisites for power management
-titleSuffix: Configuration Manager
 description: Get the prerequisites for power management in Configuration Manager.
 ms.date: 10/06/2016
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: article
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Prerequisites for power management in Configuration Manager
 

@@ -1,36 +1,15 @@
 ---
-# required metadata
-
-title: Manage volume-purchased iOS/iPadOS eBooks
-titleSuffix: Microsoft Intune
+title: Manage Volume-Purchased iOS/iPadOS eBooks
 description: Learn how to sync books you purchased in volume from the iOS store with Intune. You can then manage and track usage.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 07/31/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: f5617074-2384-4812-b913-dc94f64c0818
-
-# optional metadata
-
-#ROBOTS:
-#audience:
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 - iOS/iPadOS
 ---
 
-# How to manage iOS/iPadOS eBooks you purchased through a volume-purchase program with Microsoft Intune
+# How to Manage iOS/iPadOS eBooks You Purchased Through a Volume-Purchase Program with Microsoft Intune
 
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
@@ -57,7 +36,7 @@ Before you start, get a VPP token from Apple and upload it to your Intune accoun
 * You can't currently assign books to end-user categories in the same way as you do apps.
 * You can't reclaim a license once the book is assigned.
 * When a user with an eligible device first tries to install a VPP book, they must join the Apple Volume Purchase program before they can install a book. You can also assign licenses to security groups with managed Apple Accounts. If you do this, then users aren't prompted for their Apple Account when a book is installed.
-* Devices must be enrolled with user affinity as e-books can only be assigned to user groups.   
+* Devices must be enrolled with user affinity as e-books can only be assigned to user groups.
 
 
 ## To get and upload an Apple Business Manager location token
@@ -82,7 +61,7 @@ You can synchronize the data held by Apple with Intune at any time by choosing *
 2. On the list of books pane, choose the book you want to assign, and then choose '**...**' > **Assign Groups**.
 3. On the <*book name*> - **Groups Assigned** pane, choose **Manage** > **Groups Assigned**.
 4. Choose **Assign Groups** then, on the **Select groups** pane, choose the Microsoft Entra user groups to which you want to assign the book. Device groups are currently not supported.
-Choose an assignment action of **Available**, or **Required**. 
+Choose an assignment action of **Available**, or **Required**.
 5. Once you're done, choose **Save**.
 
 ## Next steps

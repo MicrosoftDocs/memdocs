@@ -1,17 +1,10 @@
 ---
 title: Configure role-based administration
-titleSuffix: Configuration Manager
 description: Combine security roles, security scopes, and assigned collections to define the administrative scope for each administrative user.
 ms.date: 07/17/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: bhuney
-ms.author: brianhun
-manager: averyspa
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,frankroj
 ---
 
 # Configure role-based administration for Configuration Manager
@@ -300,7 +293,7 @@ Manage administrative users:
 
 - [Get-CMAdministrativeUser](/powershell/module/configurationmanager/Get-CMAdministrativeUser): Get an administrative user object.
 - [New-CMAdministrativeUser](/powershell/module/configurationmanager/New-CMAdministrativeUser): Create a new administrative user.
-- [New-CMAdministrativeUserPermission](/powershell/module/configurationmanager/New-CMAdministrativeUserPermission): {{ Fill in the Synopsis }}
+- [New-CMAdministrativeUserPermission](/powershell/module/configurationmanager/New-CMAdministrativeUserPermission): Create a permissions object.
 - [Remove-CMAdministrativeUser](/powershell/module/configurationmanager/Remove-CMAdministrativeUser): Remove an administrative user.
 
 Manage roles and scopes on users:

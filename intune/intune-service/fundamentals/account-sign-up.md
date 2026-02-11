@@ -1,30 +1,11 @@
 ---
-# required metadata
-
 title: Sign up or sign in to Microsoft Intune
 description: How to sign up for a Microsoft Intune subscription or sign in to start with your subscription.
-keywords:
 author: paolomatarazzo
 ms.author: paoloma
-manager: laurawi
 ms.date: 05/21/2025
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: fundamentals
-ms.localizationpriority: high
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer:
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-classic
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - highseo
@@ -34,14 +15,14 @@ ms.collection:
 
 # Sign up or sign in to Microsoft Intune
 
-This article can help system administrators sign up for an Intune account. Before you sign up for Intune, determine if your organization already uses [Microsoft Entra ID](/entra/fundamentals/what-is-entra). Entra ID supports work or school accounts that you use with Intune and other Microsoft online services and subscriptions, like Microsoft Azure and Microsoft 365.
+This article can help system administrators sign up for an Intune account. Before you sign up for Intune, determine if your organization already uses [Microsoft Entra ID](/entra/fundamentals/what-is-entra). Microsoft Entra supports work or school accounts that you use with Intune and other Microsoft online services and subscriptions, like Microsoft Azure and Microsoft 365.
 
-- To add an Intune subscription to an Entra tenant, you must use an account that is assigned an Entra ID built-in role with sufficient permissions to add Intune. The initial sign-up page identifies the applicable built-in roles, which include [Billing Administrator](/entra/identity/role-based-access-control/permissions-reference#billing-administrator), [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator), and [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
+- To add an Intune subscription to an Entra tenant, you must use an account that is assigned an Entra ID built-in role with sufficient permissions to add Intune. The initial sign-up page identifies the applicable built-in roles, including:
 
-  > [!CAUTION]
-  > [!INCLUDE [global-admin](../includes/global-admin.md)]
+  - [Billing Administrator](/entra/identity/role-based-access-control/permissions-reference#billing-administrator)
+  - [Compliance Administrator](/entra/identity/role-based-access-control/permissions-reference#compliance-administrator)
 
-- If you don't have an Entra tenant, then an Entra tenant is created for your organization when you **sign up** for an Intune subscription, which is common for trial subscriptions. In this scenario, the account you use to sign up automatically receives the Global Administrator role for the new Entra tenant.
+- If you don't have a Microsoft Entra tenant, then a tenant is created for your organization when you **sign up** for an Intune subscription. You can also sign up for a [trial subscription](try-intune-overview.md).
 
 > [!WARNING]
 > You can't combine an existing work or school account after you sign up for a new account.
@@ -56,7 +37,7 @@ The Intune Administrator is a privileged account. The permissions this role incl
 
 In addition to configuring Intune, an Intune Administrator can use the Intune admin center to assign other user accounts to the specific Intune built-in roles that they require to complete their regular day-to-day administrative tasks. Use of lesser-privileged roles to manage daily tasks follows the principle of *least privileged* access and reduces risk.
 
-For enhanced security, consider enabling multi-administrator approval (MAA) for role-based access control changes. [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
+For enhanced security, consider enabling [Multi Admin Approval](../fundamentals/multi-admin-approval.md) for role-based access control changes. [!INCLUDE [multi-admin-approval-rbac](../includes/multi-admin-approval-rbac.md)]
 
 For more information, see [Best practices](/entra/identity/role-based-access-control/best-practices) for Microsoft Entra roles, and [Role-based access control](../fundamentals/role-based-access-control.md) (RBAC) with Microsoft Intune.
 

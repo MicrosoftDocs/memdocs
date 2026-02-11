@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: client-mgt
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 01/27/2022
-ms.localizationpriority: medium
 ---
 
 The following table lists the log files that contain information related to the cloud management gateway.

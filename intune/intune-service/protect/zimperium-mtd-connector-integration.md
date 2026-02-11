@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Set up Zimperium MTD integration with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: How to set up the Zimperium Mobile Threat Defense (MTD) solution with Microsoft Intune to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 08/27/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 363fd280-1865-4a61-855b-eb75c3c62753
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 
@@ -67,7 +47,7 @@ For more information about consent and Microsoft Entra applications, see [Introd
 
 ## To set up Zimperium integration
 
-1. Go to [Zimperium MTD console](https://zconsole.zimperium.com/#!/login) and sign in with your credentials. To perform the Zimperium integration setup process, you must sign in with a Microsoft Entra user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Zimperium apps to communicate with Intune. 
+1. Go to [Zimperium MTD console](https://zconsole.zimperium.com/#!/login) and sign in with your credentials. To perform the Zimperium integration setup process, you must sign in with a Microsoft Entra user who has the Global Administrator role. This one-time setup operation uses the Global Administrator rights to grant permission in your organization for the Zimperium apps to communicate with Intune.
 
 2. Choose **Management** from the left menu.
 

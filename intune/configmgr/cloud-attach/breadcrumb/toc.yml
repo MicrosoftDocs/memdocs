@@ -1,6 +1,6 @@
-### 
-### STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the EMMDocs team. 
-###  
+###
+### STOP! This file is a breadcrumb used for contextual TOCs and should only be modified by members of the EMMDocs team.
+###
 items:
 - name: Docs
   tocHref: /
@@ -11,16 +11,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Cloud attach
-          tocHref: /mem/configmgr/comanage/
-          topicHref: /mem/configmgr/cloud-attach/index
+          tocHref: /intune/configmgr/comanage/
+          topicHref: /intune/configmgr/cloud-attach/index
 
 - name: Docs
   tocHref: /
@@ -31,16 +31,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/analytics/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/endpoint-analytics/
+        topicHref: /intune/configmgr/index
         items:
         - name: Cloud attach
-          tocHref: /mem/analytics/
-          topicHref: /mem/configmgr/cloud-attach/index
+          tocHref: /intune/endpoint-analytics/
+          topicHref: /intune/configmgr/cloud-attach/index
 
 - name: Docs
   tocHref: /
@@ -51,16 +51,16 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Cloud attach
-          tocHref: /mem/configmgr/core/
-          topicHref: /mem/configmgr/cloud-attach/index
+          tocHref: /intune/configmgr/core/
+          topicHref: /intune/configmgr/cloud-attach/index
 
 - name: Docs
   tocHref: /
@@ -71,13 +71,13 @@ items:
     topicHref: /enterprise-mobility-security/
     items:
     - name: Microsoft Endpoint Manager
-      tocHref: /mem/
-      topicHref: /mem/
+      tocHref: /intune/
+      topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /mem/configmgr/
-        topicHref: /mem/configmgr/index
+        tocHref: /intune/configmgr/
+        topicHref: /intune/configmgr/index
         items:
         - name: Cloud attach
-          tocHref: /mem/configmgr/tenant-attach/
-          topicHref: /mem/configmgr/cloud-attach/index
+          tocHref: /intune/configmgr/tenant-attach/
+          topicHref: /intune/configmgr/cloud-attach/index

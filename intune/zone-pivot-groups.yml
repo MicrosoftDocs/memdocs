@@ -56,7 +56,7 @@ groups:
       title: December 2020
     - id: atp-sept-2020
       title: September 2020
-    - id: atp-april-2020 
+    - id: atp-april-2020
       title: April 2020
     - id: atp-march-2020
       title: March 2020
@@ -93,9 +93,46 @@ groups:
 - id: platforms-windows-ios
   title: Device platform
   prompt: Choose which platform you are configuring
-  pivots: 
+  pivots:
   - id: windows
     title: Windows
   - id: ios
     title: iOS
 
+- id: manage-intune-cm
+  title: Management platform
+  prompt: Select how you manage your devices
+  pivots:
+  - id: intune
+    title: Microsoft Intune
+  - id: cm
+    title: Configuration Manager
+
+- id: app-protection-platforms
+  title: Device platform
+  prompt: "Choose the platform for app protection policies:"
+  pivots:
+  - id: windows
+    title: Windows
+  - id: ios-ipados
+    title: iOS/iPadOS
+  - id: android
+    title: Android
+
+- id: platforms-windows-macos
+  title: Device platform
+  prompt: Choose your platform
+  pivots:
+  - id: windows
+    title: Windows
+  - id: macos
+    title: macOS
+
+- id: platforms-apple
+  title: Apple device platforms
+  prompt: Select the platform you're configuring
+  pivots:
+  - id: ios-ipados
+    title: iOS/iPadOS
+  - id: macos
+    title: macOS

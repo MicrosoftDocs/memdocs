@@ -1,16 +1,9 @@
 ---
 title: Debug a task sequence
-titleSuffix: Configuration Manager
 description: Use the task sequence debugging tool to troubleshoot a task sequence.
 ms.date: 05/04/2022
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

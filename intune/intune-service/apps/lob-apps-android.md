@@ -1,44 +1,23 @@
 ---
-# required metadata
-
-title: Add an Android line-of-business app to Microsoft Intune
+title: Add an Android Line-of-Business App to Microsoft Intune
 description: Learn about how to add a Android line-of-business (LOB) app to Microsoft Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 02/24/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 061d793c-c724-4cd9-9240-adb0cbda5661
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
 ms.collection:
-- tier1
 - M365-identity-device-management
 - Android
 - FocusArea_Apps_LOB
-ms.custom: intune-azure
 ---
 
-# Add an Android line-of-business app to Microsoft Intune
+# Add an Android Line-of-Business App to Microsoft Intune
 
 [!INCLUDE [azure_portal](../includes/azure_portal.md)]
 
 A line-of-business (LOB) app is an app that you add to Intune from an app installation file. This kind of app is typically written in-house. Intune installs the LOB app on the user's device.
 
 > [!NOTE]
-> For more information about LOB apps and the Google Play Developer Console, see [Managed Google Play private (LOB) app publishing using the Google Developer Console](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console). 
+> For more information about LOB apps and the Google Play Developer Console, see [Managed Google Play private (LOB) app publishing using the Google Developer Console](apps-add-android-for-work.md?#managed-google-play-private-lob-app-publishing-using-the-google-developer-console).
 
 > [!NOTE]
 > For Android Enterprise devices, see [Add Managed Google Play apps to Android Enterprise devices with Intune](apps-add-android-for-work.md).
@@ -65,7 +44,7 @@ A line-of-business (LOB) app is an app that you add to Intune from an app instal
     - **Name**: Enter the name of the app as it appears in the company portal. Make sure all app names that you use are unique. If the same app name exists twice, only one of the apps appears in the company portal.
     - **Description**: Enter the description of the app. The description appears in the company portal.
     - **Publisher**: Enter the name of the publisher of the app.
-    - **Targeted platform**: From the list, choose the targeted platform on which the app can be installed. 
+    - **Targeted platform**: From the list, choose the targeted platform on which the app can be installed.
     - **Minimum Operating System**: From the list, choose the minimum operating system version on which the app can be installed. If you assign the app to a device with an earlier operating system, it will not be installed.
     - **Category**: Select one or more of the built-in app categories, or select a category that you created. Categories make it easier for users to find the app when they browse through the company portal.
     - **Show this as a featured app in the Company Portal**: Display the app prominently on the main page of the company portal when users browse for apps.

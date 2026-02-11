@@ -1,17 +1,10 @@
 ---
 title: Release notes
-titleSuffix: Configuration Manager
 description: Learn about urgent issues that aren't yet fixed in the product or covered in a Microsoft Support knowledge base article.
 ms.date: 04/24/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: release-notes
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 
@@ -27,9 +20,10 @@ This article contains release notes for the current branch of Configuration Mana
 
 For information about the new features introduced with different versions, see the following articles:
 
+- [What's new in version 2509](../../../plan-design/changes/whats-new-in-version-2509.md)
 - [What's new in version 2503](../../../plan-design/changes/whats-new-in-version-2503.md)
 - [What's new in version 2409](../../../plan-design/changes/whats-new-in-version-2409.md)
-- [What's new in version 2403](../../../plan-design/changes/whats-new-in-version-2403.md)
+
 
 
 

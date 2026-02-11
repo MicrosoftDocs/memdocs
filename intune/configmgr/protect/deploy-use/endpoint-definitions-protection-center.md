@@ -1,16 +1,9 @@
 ---
 title: Download definitions from MMPC
-titleSuffix: Configuration Manager
 description: Configure Configuration Manager clients to download Endpoint Protection definition updates from the Microsoft Malware Protection Center (MMPC).
 ms.date: 02/14/2017
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

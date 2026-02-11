@@ -1,17 +1,10 @@
 ---
 title: Incremental versions
-titleSuffix: Configuration Manager
 description: Learn about what's new in the latest update for Configuration Manager.
 ms.date: 03/31/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in Configuration Manager incremental versions
@@ -26,12 +19,7 @@ Different update versions are identified by year and month. For example, version
 
 ## Supported versions
 
-Use the following links to discover what's new with each supported version:
-
-- [What's new in version 2503](whats-new-in-version-2503.md)
-- [What's new in version 2409](whats-new-in-version-2409.md)
-- [What's new in version 2403](whats-new-in-version-2403.md)
-
+Refer to the *Supported versions* section of the [Updates and Servicing](../../../core/servers/manage/updates.md) page for the latest version information.
 
 Each update version remains in support for 18 months from its initial availability date. Stay current with the most recent update version. For more information, see [Support for Configuration Manager current branch versions](../../servers/manage/current-branch-versions-supported.md).
 

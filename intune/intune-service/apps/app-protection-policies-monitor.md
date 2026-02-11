@@ -1,47 +1,26 @@
 ---
-# required metadata
-
-title: How to monitor app protection policies 
-titleSuffix: Microsoft Intune
+title: How to Monitor App Protection Policies
 description: This article describes how to monitor app protection policies in Intune.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
 ms.date: 06/16/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: medium
-ms.assetid: 9b0afb7d-cd4e-4fc6-83e2-3fc0da461d02
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: ilwu
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
-# How to monitor app protection policies
-[!INCLUDE [azure_portal](../includes/azure_portal.md)]
+# How to Monitor App Protection Policies
 
 You can monitor the status of the app protection policies that you applied to users from the Intune app protection pane in Intune. Additionally, you can find information about the users affected by app protection policies, policy compliance status, and any issues that your users might be experiencing.
 
-App protection data is retained for a minimum of 90 days. Any app instances that checked in to the Intune service within the past 90 days is included in the app protection status report. 
+App protection data is retained for a minimum of 90 days. Any app instances that checked in to the Intune service within the past 90 days is included in the app protection status report.
 
-> [!NOTE]
-> When you delete an app protection policy, scoped admins no longer see app instances associated with that policy. Global admins continue to see the policy name listed as "not available."
+## Before you begin
 
-> [!NOTE]
-> For iOS 16 and later devices, the **Device Name** value in all app protection reports is a generic device name. For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
+- When you delete an app protection policy, scoped admins no longer see app instances associated with that policy. Global Administrators continue to see the policy name listed as "not available."
+
+  [!INCLUDE [global-admin](../includes/global-admin.md)]
+
+- For iOS 16 and later devices, the **Device Name** value in all app protection reports is a generic device name. For more information, see [Apple Developer documentation](https://developer.apple.com/documentation/uikit/uidevice/1620015-name).
 
 ## View the **App protection status** report
 
@@ -56,7 +35,7 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 - **App Instance ID**: The string that identities a unique user + app + device that has checked-in with the Intune service.
 - **Device type**: The type of device or operating system of the device.
 - **Microsoft Entra Device ID**: The Microsoft Entra device ID is displayed if the device is Microsoft Entra joined.
-- **Management type**: The type of management on the device. For example, **unmanaged**, **MDM**, or **Android Enterprise**.  
+- **Management type**: The type of management on the device. For example, **unmanaged**, **MDM**, or **Android Enterprise**.
 - **Platform**: The operating system of the device.
 - **Policy name**: The name of the app protection policy targeted to the app for the user.
 - **Last sync**: The timestamp of the last sync of the app with Microsoft Intune.
@@ -69,7 +48,7 @@ App protection data is retained for a minimum of 90 days. Any app instances that
 - **App Protection Status**: The app is considered protected if targeted with a MAM policy.
 - **iOS SDK version**: The current iOS MAM SDK version of the iOS app.
 - **Compliance State**: The app meets compliance if targeted with MAM policy.
- 
+
 >[!NOTE]
 > The **Last Sync** column represents the same value in both the in-console User status report and the App Protection Policy [exportable .csv report](/mem/intune-service/apps/app-protection-policies-monitor#export-app-protection-activities). The difference is a small delay in synchronization between the value in the two reports.
 >

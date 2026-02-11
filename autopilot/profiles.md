@@ -1,18 +1,9 @@
 ---
 title: Configure Windows Autopilot profiles
 description: Learn how to configure device profiles for Windows Autopilot deployment.
-ms.subservice: autopilot
-ms.service: windows-client
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 03/27/2025
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier1
   - essentials-manage
 ms.topic: how-to
 appliesto:

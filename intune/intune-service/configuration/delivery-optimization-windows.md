@@ -1,27 +1,11 @@
 ---
-# required metadata
-
 title: Windows Delivery Optimization settings in Microsoft Intune
 description: Configure device configuration policy to manage Delivery Optimization settings on Windows devices you manage with Intune.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
 ms.date: 04/23/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.suite: ems
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ms.reviewer: juidaewo; davguy
 ---
@@ -31,7 +15,7 @@ ms.reviewer: juidaewo; davguy
 With Intune, you can use Delivery Optimization settings for your Windows devices to reduce bandwidth consumption when those devices download applications and updates. This article describes how to configure Delivery Optimization settings as part of an Intune device configuration profile. After you create a profile, you then assign or deploy that profile to your Windows devices.
 
 > [!IMPORTANT]
-> In April 2025, the settings format of the Delivery Optimization template was updated. Profiles for this new platform use the settings format as found in the Settings Catalog.  With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use. 
+> In April 2025, the settings format of the Delivery Optimization template was updated. Profiles for this new platform use the settings format as found in the Settings Catalog.  With this change you can no longer create new versions of the old profile. Your existing instances of the old profile remain available to use.
 >
 > For more information about this change, see the Intune Customer Success blog at [Support tip: Windows device configuration policies migrating to unified settings platform in Intune](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-windows-device-configuration-policies-migrating-to-unified-settings-/4189665).
 
@@ -39,8 +23,7 @@ With Intune, you can use Delivery Optimization settings for your Windows devices
 
 This feature applies to:
 
-- Windows 10
-- Windows 11
+- Windows
 
 ## Create the profile
 
@@ -66,11 +49,11 @@ This feature applies to:
 
    When you're done configuring settings, select **Next**.
 
-8. On the **Scope tags** page (optional), assign scope tags to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+8. On the **Scope tags** page (optional), assign scope tags to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
    Select **Next** to continue.
 
-9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
 
    Select **Next**.
 
@@ -81,4 +64,4 @@ The next time each device checks in, the policy is applied.
 ## Next steps
 
 - [Monitor the profiles status](device-profile-monitor.md).
-- [Review available settings for the older profile format](../configuration/delivery-optimization-settings.md). *Applies to profiles created before April 24, 2025*
+- [Review available settings for the older profile format](../../intune-service/configuration/delivery-optimization-settings.md). *Applies to profiles created before April 24, 2025*

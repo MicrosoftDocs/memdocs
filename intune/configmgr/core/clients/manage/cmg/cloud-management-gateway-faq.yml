@@ -1,15 +1,10 @@
 ### YamlMime:FAQ
 metadata:
   title: CMG FAQ
-  titleSuffix: Configuration Manager
   description: Use this article to answer frequently asked questions about the cloud management gateway (CMG).
-  author: baladelli  
-  ms.author: baladell
-  manager: apoorvseth
   ms.date: 12/04/2024
   ms.topic: faq
-  ms.subservice: client-mgt
-  ms.service: configuration-manager
+  ms.subservice: core-infra
   ms.collection: highpri
 
 title: Frequently asked questions about the CMG

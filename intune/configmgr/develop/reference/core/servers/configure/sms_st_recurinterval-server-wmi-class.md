@@ -1,18 +1,10 @@
 ---
 title: SMS_ST_RecurInterval Class
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the SMS_ST_RecurInterval Windows Management Instrumentation class is an SMS Provider server class that represents a schedule token for events that occur at regular intervals, such as every 10 days.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 1d3d70ee-36b2-41a7-b0a6-2a55f63aed0b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ST_RecurInterval Server WMI Class
 The `SMS_ST_RecurInterval` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a schedule token for events that occur at regular intervals, for example, every 10 days.

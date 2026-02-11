@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Set permissions to Managed Home Screen using Android Enterprise OEMConfig
 description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX, and Legacy Zebra OEMConfig apps to Intune, and use the app schemas to configure permissions for the Managed Home Screen (MHS) app on Android Enterprise devices.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 02/27/2025
+ms.date: 02/02/2026
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: medium
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: abigailstein
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -69,8 +50,8 @@ The following table lists the permissions that you can configure for the MHS app
 |---|---|---|---|
 | **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
 | **Notification Permission** is required by:<br/><br/>- Notification badge| ✅ | ✅ | ✅ |
-| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch   | ✅ | n/a | n/a |
-| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | n/a | n/a |
+| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch   | ✅ | ✅ | n/a |
+| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ✅ | n/a |
 
 For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](oemconfig-zebra-android-devices.md#oemconfig-apps-for-zebra-devices).
 
@@ -193,11 +174,13 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 
 - **Overlay Permission**
 - **Notification Permission**
+- **Alarms & Reminders Permission**
+- **Write Settings**
 
 > [!NOTE]
 > On Android 11, the **Zebra OEMConfig Powered by MX** app schema doesn't work if the board support package (BSP) version is `HE_FULL_UPDATE_11-20-18.00-RG-U00-STD-HEL-04`. To use the Zebra OEMConfig powered by MX app, you must upgrade to a newer BSP.
 >
-> For more information on updating Zebra devices with Intune, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../protect/zebra-lifeguard-ota-integration.md).
+> For more information on updating Zebra devices with Intune, go to [Zebra LifeGuard Over-the-Air Integration with Microsoft Intune](../../device-updates/android/zebra-lifeguard-ota-integration.md).
 
 **Create the policy**:
 
@@ -224,6 +207,7 @@ Using the schema settings in the **Zebra OEMConfig Powered by MX** app, this pro
 
     - [Enable Notification Access Permission via MDM/EMM OEMConfig 11.9.x.x and Up](https://supportcommunity.zebra.com/s/article/000027795) (opens Zebra's web site)
     - [Enabling Display Over Other Apps Permission via MDM/EMM OEMConfig](https://supportcommunity.zebra.com/s/article/000021297) (opens Zebra's web site)
+    - [Zebra Managed Configurations docs](https://techdocs.zebra.com/oemconfig/15-0/mc2/#pkgConfig.package.packagePermissions.packagePermission) (opens Zebra's web site)
 
     When you create the Intune policy, you enter the following info:
 

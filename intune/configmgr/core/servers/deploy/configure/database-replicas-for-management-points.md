@@ -1,17 +1,10 @@
 ---
 title: Management point database replicas
-titleSuffix: Configuration Manager
 description: Use a database replica to reduce the CPU load placed on the site database server by management points.
 ms.date: 04/27/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Database replicas for management points for Configuration Manager

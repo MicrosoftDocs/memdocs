@@ -1,17 +1,10 @@
 ---
 title: Configure Azure services
-titleSuffix: Configuration Manager
 description: Connect your Configuration Manager environment with Azure services for cloud management, Microsoft Store for Business, and Log Analytics.
 ms.date: 08/24/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure Azure services for use with Configuration Manager
@@ -27,29 +20,23 @@ Configure the following Azure services using this wizard:
 - **Cloud Management**: This service enables the site and clients to authenticate by using Microsoft Entra ID. This authentication enables other scenarios, such as:
 
   - [Install and assign Configuration Manager clients using Microsoft Entra ID for authentication](../../../clients/deploy/deploy-clients-cmg-azure.md)
-
+    
   - [Configure Microsoft Entra user Discovery](configure-discovery-methods.md#azureaadisc)
-
+    
   - [Configure Microsoft Entra user Group Discovery](configure-discovery-methods.md#bkmk_azuregroupdisco)
-
+    
   - Support certain [cloud management gateway scenarios](../../../clients/manage/cmg/overview.md)
-
-    > [!TIP]
-    > For more information specific to cloud management, see [Configure Microsoft Entra ID for cloud management gateway](../../../clients/manage/cmg/configure-azure-ad.md).
-
+    
   - [App approval email notifications](../../../../apps/deploy-use/app-approval.md#bkmk_email-approve)
-
-- **Log Analytics Connector**: [Connect to Azure Log Analytics](/azure/azure-monitor/platform/collect-sccm). Sync collection data to Log Analytics.
-
-    > [!IMPORTANT]
-    > This article refers to the *Log Analytics Connector*, which was formerly called the *OMS Connector*. This feature was deprecated in November 2020. It's removed from Configuration Manager in version 2107. For more information, see [Removed and deprecated features](../../../plan-design/changes/deprecated/removed-and-deprecated-cmfeatures.md#unsupported-and-removed-features).<!-- 9649296 -->
-
-- **Microsoft Store for Business**: Connect to the [Microsoft Store for Business](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md). Get store apps for your organization that you can deploy with Configuration Manager.
-
+    
+  > [!TIP]
+  > For more information specific to cloud management, see [Configure Microsoft Entra ID for cloud management gateway](../../../clients/manage/cmg/configure-azure-ad.md).
+  
 - **Administration Service Management**: When configuring Azure Services, for enhanced security you can select Administration Service Management option. Selecting this option allows administrators to segment their admin privileges between [cloud management](../../../clients/manage/cmg/overview.md) and [administration service](../../../../develop/adminservice/overview.md). By enabling this option, access is restricted to only administration service endpoints. Configuration Management clients will authenticate to the site using Microsoft Entra ID. *(version 2207 or later)*
-    > [!NOTE]
-    > Only CMG VMSS customers can enable administrative service management option. This option is not applicable for classic CMG customers.
 
+  > [!NOTE]
+  > Only CMG VMSS customers can enable administrative service management option. This option is not applicable for classic CMG customers.
+  
 ### Service details
 
 The following table lists details about each of the services.
@@ -67,10 +54,8 @@ The following table lists details about each of the services.
 |Service  |Tenants  |Clouds  |Web app  |Native app  |Actions  |
 |---------|---------|---------|---------|---------|---------|
 |Cloud management with<br>Microsoft Entra discovery | Multiple | Public, Private | ![Supported](media/green_check.png) | ![Supported](media/green_check.png) | Import, Create |
-|Log Analytics Connector | One | Public, Private | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import |
-|Microsoft Store for<br>Business | One | Public | ![Supported](media/green_check.png) | ![Not supported](media/Red_X.png) | Import, Create |
 
-<a name='about-azure-ad-apps'></a>
+<a name='about-azure-ad-apps'>
 
 ### About Microsoft Entra apps
 
@@ -189,9 +174,8 @@ Select **Sign in** to authenticate to Azure as an administrative user. These cre
 
 Select **OK** to create the web app in Microsoft Entra ID and close the Create Server Application dialog. This action returns to the [Server app dialog](#server-app-dialog).
 
-> [!NOTE]
-> If you have a Microsoft Entra Conditional Access policy defined and applies to **All Cloud apps** - you must exclude the created Server Application from this policy. For more information on how to exclude specific apps, see [Microsoft Entra Conditional Access Documentation](/azure/active-directory/conditional-access/).
-
+> [!WARNING]
+> If you have a Microsoft Entra Conditional Access policy defined and applies to **All Cloud apps** - you *must* exclude the Server Application from this policy. For more information on how to exclude specific apps, see [Microsoft Entra Conditional Access Documentation](/azure/active-directory/conditional-access/).
 ### Native Client app
 
 This app is the Microsoft Entra ID type *Native*, also referred to as a client app in Configuration Manager.
@@ -237,13 +221,9 @@ Select **OK** to create the native app in Microsoft Entra ID and close the Creat
 
 ## Configuration or Discovery
 
-After specifying the web and native apps on the **Apps** page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see one of the following articles:
+After specifying the web and native apps on the **Apps** page, the Azure Services Wizard proceeds to either a **Configuration** or **Discovery** page, depending upon the service to which you're connecting. The details of this page vary from service to service. For more information, see the following:
 
 - **Cloud Management** service, **Discovery** page: [Configure Microsoft Entra user Discovery](configure-discovery-methods.md#azureaadisc)
-
-- **Log Analytics Connector** service, **Configuration** page: [Configure the connection to Log Analytics](/azure/azure-monitor/platform/collect-sccm)
-
-- **Microsoft Store for Business** service, **Configurations** page: [Configure Microsoft Store for Business synchronization](../../../../apps/deploy-use/manage-apps-from-the-windows-store-for-business.md#supplemental-information-and-configuration)
 
 Finally, complete the Azure Services Wizard through the Summary, Progress, and Completion pages. You've completed the configuration of an Azure service in Configuration Manager. Repeat this process to configure other Azure services.
 
@@ -270,7 +250,7 @@ To mitigate both cases, renew the secret key.
 For more information on how to interact with these notifications, see [Configuration Manager console notifications](../../manage/admin-console-notifications.md).
 
 > [!NOTE]
-> You need to have at least the "Cloud Application Administrator" Microsoft Entra role assigned to be able to renew the key.
+> You need to have at least the "Cloud Application Administrator" Microsoft Entra role assigned to be able to renew the secret key.
 > From ConfigMgr 2409 onwards, Microsoft graph replaces the Azure AD graph which has [changed permissions for the same role](/graph/migrate-azure-ad-graph-permissions-differences). The mimimum privileged security role for renewing the security key now is Privileged Role Administrator.
 
 ### Renew key for created app
@@ -317,7 +297,7 @@ Starting in version 2010, you can disable Microsoft Entra authentication for ten
 
 View the properties of an Azure service you've configured for use. In the Configuration Manager console, go to the **Administration** workspace, expand **Cloud Services**, and select **Azure Services**. Select the service you want to view or edit, and then select **Properties**.
 
-If you select a service and then choose **Delete** in the ribbon, this action deletes the connection in Configuration Manager. It doesn't remove the app in Microsoft Entra ID. Ask your Azure administrator to delete the app when it's no longer needed. Or run the Azure Service Wizard to import the app.<!--483440-->
+If you select a service and then choose **Delete** in the ribbon, this action deletes the connection in Configuration Manager. It doesn't remove the app in Microsoft Entra ID. Ask your Azure administrator to manually delete the app if it's no longer needed. Or run the Azure Service Wizard to import the app.<!--483440-->
 
 ## Cloud management data flow
 
@@ -331,8 +311,8 @@ The following diagram is a conceptual data flow for the interaction between Conf
 
 3. The site stores data about the user objects. For more information, see [Microsoft Entra user Discovery](about-discovery-methods.md#azureaddisc).
 
-4. The Configuration Manager client requests the Microsoft Entra user token. The client makes the claim using the application ID of the Microsoft Entra client app, and the server app as the audience. For more information, see [Claims in Microsoft Entra Security Tokens](/azure/active-directory/develop/authentication-scenarios#security-tokens).
+1. The Configuration Manager client requests the Microsoft Entra user token. The client makes the claim using the application ID of the Microsoft Entra client app, and the server app as the audience. For more information, see [Claims in Microsoft Entra Security Tokens](/azure/active-directory/develop/authentication-scenarios#security-tokens).
 
-5. The client authenticates with the site by presenting the Microsoft Entra token to the cloud management gateway and on-premises HTTPS-enabled management point.
+1. The client authenticates with the site by presenting the Microsoft Entra token to the cloud management gateway and on-premises management point.
 
 For more detailed information, see [Microsoft Entra authentication workflow](../../../clients/manage/azure-ccmsetup.md).

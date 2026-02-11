@@ -1,17 +1,10 @@
 ---
 title: About schema extensions
-titleSuffix: Configuration Manager
 description: Understand the benefits of extending the Active Directory schema to support Configuration Manager.
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About schema extensions for Configuration Manager

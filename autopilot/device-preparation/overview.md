@@ -1,20 +1,11 @@
 ---
 title: Overview of Windows Autopilot device preparation
 description: Windows Autopilot device preparation is used to set up and configure new devices, getting them ready for productive use.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 04/02/2025
 ms.topic: overview
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
-  - highpri
-  - tier1
   - essentials-overview # this is the only article in Autopilot with this value
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

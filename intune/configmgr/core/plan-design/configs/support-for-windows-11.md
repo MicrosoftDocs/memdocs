@@ -1,16 +1,10 @@
 ---
 title: Support for Windows 11
-titleSuffix: Configuration Manager
 description: Learn about the Windows 11 versions that are supported as clients with Configuration Manager.
 ms.date: 07/31/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: bhuney
-ms.author: brianhun
-manager: averyspa
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Support for Windows 11 in Configuration Manager
@@ -46,11 +40,11 @@ A Configuration Manager version drops from the matrix after [support for that ve
 
 The following table lists the versions of Windows 11 that you can use as a client with different versions of Configuration Manager.
 
-| Windows 11 version                         | ConfigMgr 2309 | ConfigMgr 2403 | ConfigMgr 2409 |
+| Windows 11 version                         | ConfigMgr 2409 | ConfigMgr 2503|ConfigMgr 2509 | 
 |--------------------------------------------|----------------|----------------|----------------|
-| **24H2**<br>(10.0.26100) <!--2027-10-12--> |:::image type="icon" source="media/red-x.png":::  | :::image type="icon" source="media/red-x.png"::: | :::image type="icon" source="media/green-check.png"::: |
-| **23H2**<br>(10.0.22631) <!--2026-10-31--> | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: |
-| **22H2**<br>(10.0.22621) <!--2025-10-14--> | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: | :::image type="icon" source="media/green-check.png"::: |
+| **25H2**<br>(10.0.26200) <!--2027-10-12--> |❌ | ❌ | ✅ |
+| **24H2**<br>(10.0.26100) <!--2027-10-12--> |✅ |✅ | ✅ |
+| **23H2**<br>(10.0.22631) <!--2026-10-31--> | ✅ | ✅ | ✅ |
 
 
 <!--
@@ -63,8 +57,8 @@ For more information on Windows lifecycle, see the [Windows lifecycle fact sheet
 
 | Key |
 |--|
-| :::image type="icon" source="media/green-check.png"::: = **Supported** |
-|:::image type="icon" source="media/red-x.png":::  = **Not supported** |
+|✅  = **Supported** |
+|❌  = **Not supported** |
 
 
 ## Support notes

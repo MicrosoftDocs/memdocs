@@ -1,34 +1,18 @@
 ---
-# required metadata
-
-title: Get support in the Microsoft Intune admin center 
-titleSuffix: Microsoft Intune
-description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center. 
-keywords:
-author: Smritib17
-ms.author: smbhardwaj
-manager: dougeby
+title: Get support in the Microsoft Intune admin center
+description: Get online and telephone support for Microsoft Intune and other device management cloud services from within the Microsoft Intune admin center.
+author: lenewsad
+ms.author: lanewsad
 ms.date: 02/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: 
-ms.localizationpriority: high
-ms.assetid: 
-# optional metadata
- 
-#audience:
-#ms.devlang:
 ms.reviewer: hipethe
 ms.suite: ems
 search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: 
 ms.collection:
   - M365-identity-device-management
-  - tier1
   - help-support
 ---
- 
+
 # How to get support in the Microsoft Intune admin center
 
 Microsoft provides global technical, presales, billing, and subscription support for device management cloud-based services. These cloud-based services include Intune, Configuration Manager, Windows 365, and Microsoft Managed Desktop. You can access support for all of these options from **Help and support** in the Microsoft Intune admin center. In this article, we explain how to get to Help and support and review your different support options from within the admin center.
@@ -89,7 +73,7 @@ The following information can help you choose the correct focus:
   - [Co-management workloads](./configmgr/comanage/workloads.md) with Intune or Configuration Manager as the management authority
 
 - **Microsoft Managed Desktop**:
-  
+
   *This tile is available only to Microsoft Managed Desktop customers.*
 
   - Information requests for the Microsoft Managed Desktop tenant or configuration
@@ -101,7 +85,7 @@ The following information can help you choose the correct focus:
 - **Windows 365**:
   - When you have a subscription for Windows 365, this tile opens Help and support for Windows 365.
 
-> [!TIP]  
+> [!TIP]
 > Help and Support might fail to open for newly created tenants, and the following message is presented:
 >
 > - *We encountered an unknown problem. Refresh the page but if the problem persists, create a case through [M365 Admin Center](https://admin.microsoft.com) and reference the session ID provided.*
@@ -121,7 +105,7 @@ When you select a support scenario, the admin center displays the Help and Suppo
 
 Above the *How can we help?* title, there are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. An underlined icon indicates the active pane you're viewing. By default, the Help and support page opens to the *Find solutions* pane.
 
-> [!TIP]  
+> [!TIP]
 > Customers with a **Premier** or **Unified** support contract have [other options](#premier-and-unified-support-options) for support. If you've a Premier or Unified support contract, you'll see a banner similar to the following image:
 >
 > :::image type="content" source="./media/get-support/premier-banner.png" alt-text="Screenshot that shows the premier support option in the Intune admin center.":::
@@ -166,7 +150,7 @@ When presented, you can run automated tests or diagnostics where applicable, and
 
 The **Contact Support** option is available after you provide some basic keywords on the *Search for solutions* pane. You can use this pane to file an online support ticket for a supported service.
 
-> [!IMPORTANT]  
+> [!IMPORTANT]
 > For technical support with third-party products that work with Intune (like Cisco or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
 
 :::image type="content" source="./media/get-support/contact-support.png" alt-text="Screenshot that shows how to select the contact support icon in the Intune admin center.":::

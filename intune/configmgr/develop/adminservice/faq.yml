@@ -1,16 +1,10 @@
 ### YamlMime:FAQ
 metadata:
   title: Admin service FAQ
-  titleSuffix: Configuration Manager
   description: Frequently asked questions (FAQ) about the Configuration Manager administration service
   ms.date: 04/16/2021
   ms.subservice: sdk
-  ms.service: configuration-manager
   ms.topic: faq
-  ms.assetid: 4902b9ea-eaff-4f59-a9cf-c600d008eade
-  author: banreet
-  ms.author: banreetkaur
-  manager: apoorvseth
 title: Administration service frequently asked questions (FAQ)
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch, long-term servicing branch)*
@@ -52,12 +46,12 @@ sections:
           
           - Control access to the web service with the certificate trust. If a device doesn't trust the certificate chain, a user on that device can't query the administration service.
           
-          - Add additional security layers. For example, [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
+          - Add additional security layers. For example, [Azure App Proxy](/entra/identity/app-proxy/).
           
       - question: |
           Can I use it with Conditional Access?
         answer: |
-          Yes, and that configuration is easiest if you use [Azure App Proxy](/azure/active-directory/manage-apps/application-proxy).
+          Yes, and that configuration is easiest if you use [Azure App Proxy](/entra/identity/app-proxy/).
           
   - name: Miscellaneous
     questions:

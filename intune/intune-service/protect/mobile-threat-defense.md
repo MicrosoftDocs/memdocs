@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: Mobile Threat Defense with Microsoft Intune
-titleSuffix: Microsoft Intune
 description: Use Intune Mobile Threat Defense (MTD) with your Mobile Threat Defense partner to protect access to company resources based on device risk.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
-ms.date: 08/21/2024
+ms.date: 01/26/2026
 ms.topic: article
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: ac77b590-a7ec-45a0-9516-ebf5243b6210
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
-ms.reviewer: demerson
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier2
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -35,7 +15,7 @@ ms.collection:
 
 > [!NOTE]
 >
-> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md).
+> This article is about third-party Mobile Threat Defense vendors, for more information on Microsoft Defender for Endpoint, see [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md).
 
 Intune can integrate data from a Mobile Threat Defense (MTD) vendor as an information source for device compliance policies and device Conditional Access rules. You can use this information to help protect corporate resources like Exchange and SharePoint, by blocking access from compromised mobile devices.
 
@@ -56,7 +36,7 @@ Learn more about Intune and government clouds:
 
 ## Protect corporate resources
 
-Integrating information from MTD vendors can help you protect your corporate resources from threats that affect mobile platforms.  
+Integrating information from MTD vendors can help you protect your corporate resources from threats that affect mobile platforms.
 
 Typically, companies are proactive in protecting PCs from vulnerabilities and attack while mobile devices often go unmonitored and unprotected. Where mobile platforms have built-in protection such as app isolation and vetted consumer app stores, these platforms remain vulnerable to sophisticated attacks. As more employees use devices for work and to access sensitive information, the information from MTD vendors can help you protect devices and your resources from increasingly sophisticated attacks.
 
@@ -70,24 +50,24 @@ For example: A connected MTD app reports to the MTD vendor that a phone on your 
 
 Once you add a Mobile Threat Defense connector to your tenant, the status displays one of the following states:
 
-| Connector status     | Definition | Device threat messages blocked?     | AppSync request messages blocked? |
-|--------------|-----------|------------|------------|
-| **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308) |
-| **Not Set Up**| Connector setup isn't complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) |
-| **Available**| Connector setup is complete. At least one platform toggle must be turned on for this status to change to **Enabled**. | No | No |
-| **Enabled**| Connector setup is complete, and at least one platform toggle is currently turned on for this connector. | No | No |
-| **Unresponsive**| Connector isn't responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune ignores the compliance state.| No | No |
-| **Error**| Connector has an error code. Some MTD partners may choose to send this in an error case. | No | No |
+| Connector status     | Definition | Device threat messages blocked?     | App Sync request messages blocked? | Certificate Sync request messages blocked? |
+|--------------|-----------|------------|------------|------------|
+| **Unavailable**| Connector is/was deprovisioned. The MTD partner needs to talk to Intune to provision it once more. | Yes (starting 2308) | Yes (starting 2308) | Yes (starting 2601) |
+| **Not Set Up**| Connector setup isn't complete. There may be additional steps or permissions required within Intune or the MTD partner for this status to change to **Available** | Yes (starting 2309) | Yes (starting 2309) | Yes (starting 2601) |
+| **Available**| Connector setup is complete. At least one platform toggle must be turned on for this status to change to **Enabled**. | No | No | No |
+| **Enabled**| Connector setup is complete, and at least one platform toggle is currently turned on for this connector. | No | No | No |
+| **Unresponsive**| Connector isn't responsive. If the connector status continues to be unresponsive for the days defined in **Number of days until partner is unresponsive**, Intune ignores the compliance state.| No | No | No |
+| **Error**| Connector has an error code. Some MTD partners may choose to send this in an error case. | No | No | No |
 
 ## Data that Intune collects for Mobile Threat Defense
 
-If enabled, Intune collects app inventory information from both personal and corporate-owned devices and makes it available for MTD providers to fetch, such as Lookout for Work. You can collect an app inventory from the users of iOS devices.
+Intune can collect and share two types of inventory data with Mobile Threat Defense (MTD) partners to enhance threat analysis capabilities. Both services are opt-in; no information is shared by default. An Intune administrator must explicitly enable these features in the Mobile Threat Defense connector settings before any data is shared.
 
-This service is opt-in; no app inventory information is shared by default. An Intune administrator must enable **App Sync for iOS devices** in the Mobile Threat Defense connector settings before any app inventory information is shared.
+### App inventory (App Sync)
 
-**App inventory**  
-If you enable App Sync for iOS/iPadOS devices, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider. Data in the app inventory includes:
+**App Sync for iOS/iPadOS devices** allows MTD partners to request metadata about applications installed on enrolled devices. When enabled, inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider during device check-in intervals.
 
+**Data shared includes:**
 - App ID
 - App Version
 - App Short Version
@@ -101,6 +81,22 @@ If you enable App Sync for iOS/iPadOS devices, inventories from both corporate a
 - Whether the app is validated or not
 - Whether the app is managed or not
 
+### Certificate inventory (Certificate Sync)
+
+**Certificate Sync for iOS/iPadOS devices** allows supported MTD partners to request information about certificates installed on enrolled devices. When enabled, certificate inventories from both corporate and personally owned iOS/iPadOS devices are sent to your MTD service provider during device check-in intervals.
+
+**Data shared includes:**  
+- Account ID
+- Entra ID Device ID
+- Device Owner
+- Certificate List
+  - Common Name
+  - Data
+  - Is Identity
+
+**Certificate Sync is supported by the following Mobile Threat Defense partners:**  
+- Zimperium
+
 ## Sample scenarios for enrolled devices using device compliance policies
 
 When a device is considered infected by the Mobile Threat Defense solution:
@@ -113,10 +109,10 @@ Access is granted when the device is remediated:
 
 ## Sample scenarios for unenrolled devices using Intune app protection policies
 
-When a device is considered infected by the Mobile Threat Defense solution:<br>
+When a device is considered infected by the Mobile Threat Defense solution:  
 ![Image that shows a Mobile Threat Defense infected device](./media/mobile-threat-defense/MTD-image-3.png)
 
-Access is granted when the device is remediated:<br>
+Access is granted when the device is remediated:  
 ![Image showing a Mobile Threat Defense access granted](./media/mobile-threat-defense/MTD-image-4.png)
 
 > [!NOTE]
@@ -134,9 +130,10 @@ Learn how to protect access to company resource based on device, network, and ap
 - [BlackBerry Protect Mobile](blackberry-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Check Point Harmony Mobile](checkpoint-sandblast-mobile-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [CrowdStrike Falcon for Mobile](crowdstrike-falcon-defense-connector.md) - *(Android, iOS/iPadOS)*
+- [iVerify Enterprise](iverify-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Jamf Mobile Threat Defense](jamf-mtd-connector.md) - *(Android, iOS/iPadOS)*
 - [Lookout for Work](lookout-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
-- [Microsoft Defender for Endpoint](../protect/advanced-threat-protection.md) - *(Android, iOS/iPadOS, Windows)*
+- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) - *(Android, iOS/iPadOS, Windows)*
 - [Pradeo](pradeo-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [SentinelOne](Sentinelone-mobile-threat-defense-connector.md) - *(Android, iOS/iPadOS)*
 - [Sophos Mobile](sophos-mtd-connector.md) - *(Android, iOS/iPadOS)*

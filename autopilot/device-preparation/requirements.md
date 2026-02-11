@@ -1,18 +1,9 @@
 ---
 title: Windows Autopilot device preparation requirements
 description: Software, Networking, Licensing, Configuration, and RBAC requirements for Windows Autopilot device preparation. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 06/11/2025
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier1
 ms.topic: article
 ms.custom:
   - CI 116757
@@ -99,12 +90,10 @@ Additional configuration might be required to grant access to required services 
 
 Windows Autopilot device preparation relies on several different type of services to function properly. In order for these services to function properly, certain network configurations might need to be performed. These services and their required network configurations are as follows:
 
-#### Windows Autopilot device preparation deployment service
+#### Windows Autopilot deployment service
 
-After a network connection is in place, each Windows device will contact the Windows Autopilot device preparation deployment service. The following URLs are used:
+After a network connection is in place, each Windows device will contact the Windows Autopilot deployment service. The following URLs are used:
 
-- `https://ztd.dds.microsoft.com`
-- `https://cs.dds.microsoft.com`
 - `https://login.live.com`
 
 #### Windows activation

@@ -1,13 +1,8 @@
 ---
-title: include file
-description: include file
-author: nicholasswhite  
-ms.service: microsoft-intune
+author: MandiOhlinger
 ms.topic: include
-ms.date: 03/30/2023
-ms.author: nwhite
-ms.custom: include file
+ms.date: 01/15/2026
+ms.author: mandia
 ---
 
-> [!NOTE]
-> Use the information provided in this series of topics to try and evaluate Microsoft Intune. When you're ready, follow the complete process to set up Intune. For more information, see [Set up Microsoft Intune](../fundamentals/deployment-plan-setup.md).
+This article is [part of an Evaluate and Try series](../fundamentals/try-intune-overview.md) that helps you evaluate Microsoft Intune's capabilities.

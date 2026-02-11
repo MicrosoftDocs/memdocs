@@ -1,17 +1,10 @@
 ---
 title: Checklist for 2503
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2503.
 ms.date: 03/31/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Checklist for installing update 2503 for Configuration Manager
@@ -63,13 +56,13 @@ The first time you use a Configuration Manager console after finishing the insta
 
 ### Early update ring
 
-<!-- SCCMDocs#1397 -->
+<!-- SCCMDocs#1397
 
 At this time, version 2503 is released for the early update ring. To install this update, you need to opt-in. The following PowerShell script adds your hierarchy or standalone primary site to the early update ring for version 2503:
 
 [Version 2503 opt-in script](https://go.microsoft.com/fwlink/?linkid=2099733) <!-- This fwlink points to the script package on the Download Center, don't change the link here! Make any changes to the fwlink target -->
 
-Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
+<!-- Microsoft digitally signs the script, and bundles it inside a signed self-extracting executable.
 
 > [!NOTE]
 > The version 2503 update is only applicable to sites running version 2403 or later.
@@ -90,8 +83,8 @@ The version 2503 update should now be available in the console.
 
 > [!IMPORTANT]
 > This script only adds your site to the early update ring for version 2503. It's not a permanent change.
-
-<!-- As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version. -->
+-->
+As of April 15, 2025, version 2503 is globally available for all customers to install. If you previously opted in to the early update ring, watch for an update to this current branch version.
 
 ## Pre-update checklist
 
@@ -109,7 +102,7 @@ For more information, see [Licensing and branches](../../understand/learn-more-e
 
 ### Review Microsoft .NET versions
 
-Configuration Manager now requires Microsoft .NET Framework version 4.6.2 for site servers, specific site systems, clients, and the console.<!--10402814--> Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8.
+Configuration Manager now requires Microsoft .NET Framework version 4.8 for site servers, specific site systems, and the console.<!--10402814--> Before you run setup to install or update the site, first update .NET and restart the system. If possible in your environment, install the latest version of .NET version 4.8 on all site systems.
 
 This installation can put the site system server into a reboot pending state and report errors to the Configuration Manager component status viewer. .NET applications on the server might experience random failures until you restart the server.
 

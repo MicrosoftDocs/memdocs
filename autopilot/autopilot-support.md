@@ -1,17 +1,9 @@
 ---
 title: Windows Autopilot support
 description: Find out who to contact for help with Windows Autopilot installation.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
 ms.date: 08/02/2024
-ms.reviewer: madakeva
-manager: bpardi
 ms.collection:
   - M365-modern-desktop
-  - tier2
 ms.topic: troubleshooting
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>

@@ -1,23 +1,12 @@
 ---
 title: Create device groups for Windows Autopilot
 description: Learn how to create device groups for Windows Autopilot.
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 09/13/2024
 ms.topic: how-to
-ms.localizationpriority: high
-ms.service: windows-client
-ms.subservice: autopilot
-ms.suite: ems
-search.appverid: MET150
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
   - M365-identity-device-management
-  - highpri
-  - tier1
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>
@@ -48,25 +37,22 @@ appliesto:
 
     - **Owners**: Select users that own the group. Owners can also delete this group.
 
-    - **Dynamic device members**: Select **Add dynamic query** > **Add expression**.
-
-      Create rules using Windows Autopilot device attributes. Windows Autopilot devices that meet these rules are automatically added to the group. Creating an expression using non-Windows Autopilot attributes doesn't guarantee that devices included in the group are registered to Windows Autopilot.
+   - **Dynamic device members**: Select **Add dynamic query** > **Add expression**.
+   
+     Create rules using Windows Autopilot device attributes. Windows Autopilot devices that meet these rules are automatically added to the group. 
+     
+      > [!NOTE] 
+      >
+      > You should only create groups using the Autopilot device attributes, which are available only on registered devices. Creating an expression using non-Windows Autopilot attributes doesn't guarantee that devices will be members of the group before provisioning and could result in unexpected configuration during OOBE.
+   
 
       When creating expressions:
-
-      - To create a group that includes all of the Windows Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`.
-
-      - Intune's group tag field maps to the `OrderID` attribute on Microsoft Entra devices. To create a group that includes all Windows Autopilot devices with a specific group tag (the Microsoft Entra device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
-
-      - To create a group that includes all the Windows Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
-
+        - To create a group that includes all of the Windows Autopilot devices, enter: `(device.devicePhysicalIDs -any (_ -startsWith "[ZTDid]"))`.
+        - Intune's group tag field maps to the `OrderID` attribute on Microsoft Entra devices. To create a group that includes all Windows Autopilot devices with a specific group tag (the Microsoft Entra device `OrderID`), enter: `(device.devicePhysicalIds -any (_ -eq "[OrderID]:179887111881"))`.
+        - To create a group that includes all the Windows Autopilot devices with a specific Purchase Order ID, enter: `(device.devicePhysicalIds -any (_ -eq "[PurchaseOrderId]:76222342342"))`
       **Save** the expressions.
 
 1. Select **Create**.
-
-> [!NOTE]
->
-> Anything assigned to these attributes is only assigned if the device is registered with Windows Autopilot.
 
 For a detailed tutorial on creating a device group for each of the Windows Autopilot scenarios using Intune, see the following links:
 

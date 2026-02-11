@@ -2,18 +2,9 @@
 metadata:
   title: Windows Autopilot troubleshooting FAQ
   description: Troubleshooting of common Windows Autopilot issues
-  ms.service: windows-client
-  ms.subservice: autopilot
-  ms.localizationpriority: medium
-  author: frankroj
-  ms.author: frankroj
-  ms.reviewer: madakeva
-  manager: bpardi
   ms.date: 04/21/2025
   ms.collection:
     - M365-modern-desktop
-    - highpri
-    - tier1
   ms.topic: faq
 title: Windows Autopilot troubleshooting FAQ
 summary: |
@@ -347,11 +338,11 @@ sections:
           See [Windows Autopilot Reset: Troubleshooting](windows-autopilot-reset.md#troubleshooting) for more help if Windows Autopilot Reset fails immediately with the error:
 
           `Ran into trouble. Please sign in with an administrator account to see why and reset manually.`
-          
+
       - question: |
           Why are Windows Autopilot Hybrid deployments failing during ESP with error code "0x80070774"?
         answer: |
-          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain. 
+          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain.
 
   - name: Troubleshooting Windows OOBE issues during Windows Autopilot
     questions:
@@ -523,7 +514,7 @@ sections:
       - question: |
           Why are Windows Autopilot Hybrid deployments failing during ESP with error code "0x80070774"?
         answer: |
-          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain. 
+          Error **0x80070774** might occur if there's a domain mismatch between where the Intune Connector for Active Directory is installed and where device configurations are targeted. For example, the Intune Connector for Active Directory is installed on one Active Directory domain but devices are configured for another. To resolve this issue, configure the Intune Connector for Active Directory in the matching domain.
 
 
 additionalContent: |

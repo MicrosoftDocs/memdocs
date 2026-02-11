@@ -1,17 +1,10 @@
 ---
 title: Exclude client upgrades for Windows
-titleSuffix: Configuration Manager
 description: Learn how to exclude Windows clients from getting upgraded in Configuration Manager.
 ms.date: 02/16/2022
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to exclude clients from upgrade in Configuration Manager

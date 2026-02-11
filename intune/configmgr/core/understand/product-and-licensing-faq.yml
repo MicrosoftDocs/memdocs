@@ -1,15 +1,10 @@
 ### YamlMime:FAQ
 metadata:
   title: Product and licensing FAQ
-  titleSuffix: Configuration Manager
   description: Find answers for common product and license questions for Configuration Manager.
   ms.date: 12/16/2024
   ms.subservice: core-infra
-  ms.service: configuration-manager
   ms.topic: faq
-  author: Baladelli
-  ms.author: baladell
-  manager: apoorvseth
   ms.collection: highpri
 
 title: Frequently asked questions for Configuration Manager branches and licensing
@@ -116,7 +111,7 @@ sections:
           - [Co-management prerequisites](../../comanage/overview.md#prerequisites)
           - [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
           - [Tenant attach prerequisites](../../tenant-attach/prerequisites.md)
-          - [Endpoint analytics licensing prerequisites](../../../analytics/overview.md#licensing-prerequisites)
+          - [Endpoint analytics licensing prerequisites](../../../endpoint-analytics/index.md#prerequisites)
           - [Use Conditional Access with Intune](../../../intune-service/protect/conditional-access.md#ways-to-use-conditional-access-with-intune)
           - [TeamViewer prerequisites](../../../intune-service/fundamentals/teamviewer-support.md#prerequisites)
 

@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Use OEMConfig on Android Enterprise devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
-keywords:
 author: MandiOhlinger
 ms.author: mandia
-manager: laurawi
-ms.date: 07/29/2025
+ms.date: 01/26/2026
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: Low
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: akritis
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 ---
 
@@ -165,7 +146,7 @@ After the app is added to Intune, you create an OEMConfig profile to configure t
 
       - Clicking **Clear** deletes a setting from the profile. If a setting isn't in the profile, its value on the device doesn't change when the profile is applied.
 
-      - Use the **Locate** button to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting. 
+      - Use the **Locate** button to look for settings. In the side panel, type in a keyword to see all the relevant settings and their descriptions. Select any setting to automatically add the setting to the configuration designer tree, if it's not there already. It also automatically opens the tree so you can see the setting.
 
       - If you create an empty (unconfigured) bundle in the configuration designer, then the bundle is deleted when you switch to the JSON editor.
 
@@ -235,6 +216,8 @@ Intune supports the following OEMConfig apps:
 | Ecom - Ex-Handy 10 | com.ecom.econfig | |
 | Ecom - Smart-Ex 02 | com.ecom.econfig.smart | |
 | Elo | com.elotouch.oemconfig | [Elo OEMConfig Configurations](https://www.elotouch.com/oemconfig-configurations) |
+| FCNT - Senior Care | com.fcnt.mobile_phone.seniorcareconfig | |
+| FCNT - Schema | com.fcnt.mobile_phone.schematest | |
 | Getac | com.getac.app.getacoemconfig | |
 | Handheld | com.handheldgroup.oemconfig | |
 | Honeywell | com.honeywell.oemconfig | |
@@ -256,8 +239,9 @@ Intune supports the following OEMConfig apps:
 | Point Mobile | device.apps.emkitagent | |
 | RugGear | com.ruggear.rgoem | |
 | Samsung | com.samsung.android.knox.kpu | [Knox Service Plugin Admin Guide](https://docs.samsungknox.com/admin/knox-platform-for-enterprise/knox-service-plugin/welcome/) |
-| Seuic | com.seuic.seuicoemconfig | | 
+| Seuic | com.seuic.seuicoemconfig | |
 | Social Mobile | com.rhinomobility.oemconfig | |
+| Sonim | com.sonim.oemappconfig | |
 | Spectralink - Barcodes | com.spectralink.barcode.service |  |
 | Spectralink - Buttons | com.spectralink.buttons |  |
 | Spectralink - Device | com.spectralink.slnkdevicesettings  |  |

@@ -1,23 +1,11 @@
 ---
-title: Win32 app management in Microsoft Intune
+title: Win32 App Management in Microsoft Intune
 description: Learn how to manage Win32 apps with Microsoft Intune. This article provides an overview of the Intune Win32 app delivery and management capabilities.
-keywords:
-author: nicholasswhite
-ms.author: nwhite
-manager: laurawi
-ms.date: 06/13/2025
+ms.date: 02/06/2026
 ms.topic: overview
-ms.service: microsoft-intune
-ms.subservice: apps
-ms.localizationpriority: high
-ms.assetid: efdc196b-38f3-4678-ae16-cdec4303f8d2
-
 ms.reviewer: bryanke
-ms.suite: ems
-search.appverid: MET150
 ai-usage: ai-assisted
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - FocusArea_Apps_Win32
@@ -28,7 +16,7 @@ ms.collection:
 Microsoft Intune enables Windows Win32 app management. Win32 app management in Intune allows you to install, configure, protect, and monitor your Windows applications on devices at your organization. Win32 apps are deployed using the Microsoft Intune management extension (IME), which is installed automatically when a PowerShell script or a Win32 app is assigned to the user or device using Intune.
 
 In addition to supporting extensive management capabilities, Win32 app management in Microsoft Intune provides support for the following capabilities:
-- Management of large traditional desktop apps 
+- Management of large traditional desktop apps
 - Support for several app types
 - Control for complex app installations
 - Support for detection rules, dependencies, and requirements
@@ -43,11 +31,14 @@ Although it's possible for cloud-connected customers to use Microsoft Configurat
 > [!IMPORTANT]
 > When you're deploying Windows Win32 apps, consider using the Win32 app type in Intune exclusively, particularly when you have a multiple-file Win32 app installer. If you mix the installation of Win32 apps and line-of-business apps during Windows Autopilot enrollment, the app installation might fail as they both may attempt to use the Trusted Installer service at the same time which causes a failure due to this conflict. However, mixing of Win32 and line-of-business apps during Windows Autopilot device preparation is supported.
 
+> [!IMPORTANT]
+> Microsoft Intune does not support interactive application installations. Applications deployed through Intune must install silently and cannot require user interaction, such as dialog boxes, prompts, or UI input during installation. Techniques that attempt to force interaction with the signed-in user session (for example, using tools like serviceui.exe or similar workarounds) are not supported and may result in inconsistent or unpredictable behavior.
+
 ## Prerequisites
 
 To use Win32 app management, be sure the following criteria are met:
 
-- Use Windows 10 version 1607 or later (Enterprise, Pro, or Education editions).
+- Use a [supported Windows version](../fundamentals/supported-devices-browsers.md) (Enterprise, Pro, or Education editions).
 - Devices must be enrolled in Intune and either:
   - [Microsoft Entra registered](/azure/active-directory/devices/concept-azure-ad-register)
   - [Microsoft Entra joined](/azure/active-directory/devices/concept-azure-ad-join)
@@ -57,6 +48,40 @@ To use Win32 app management, be sure the following criteria are met:
   > [!NOTE]
   >
   > The [Microsoft Intune management extension (IME)](../apps/intune-management-extension.md) provides Intune's Win32 app type capabilities on managed clients. It's installed automatically when a PowerShell script or Win32 app is assigned to the user or device. Additionally, the Intune management extension agent checks every hour (or on service or device restart) for any new Win32 app assignments.
+
+## PowerShell script installer
+
+When adding a Win32 app, you can upload a PowerShell script to serve as the installer instead of specifying a command line. Intune packages the script with the app content and runs it in the same context as the app installer. This capability enables richer setup workflows, including:
+
+- Prerequisite checks before installation
+- Configuration changes during installation
+- Post-install actions and validation
+- Complex conditional logic based on device state
+
+The PowerShell script runs in place of the standard install command, and installation results appear in the Intune admin center based on the script's return code.
+
+### Script requirements
+
+- Scripts are limited to 50 KB in size
+- Scripts run in the same context as the app installer (system or user context)
+- Return codes from the script determine installation success or failure status
+- Scripts should run silently without user interaction
+
+> [!NOTE]
+> If Multi-Admin Approval (MAA) is enabled for your tenant, you can't upload PowerShell scripts during app creation. You must first create the app, then add or modify scripts afterward. Currently, script properties like `enforceSignatureCheck` and `runAs32Bit` can be edited without MAA requests, but this behavior will change in a future update to require MAA approval.
+
+### When to use script installers
+
+Consider using PowerShell script installers when:
+
+- Your app requires prerequisite validation before installation
+- You need to perform configuration changes alongside app installation
+- The installation process requires conditional logic
+- Post-installation actions are needed (like registry modifications or service configuration)
+
+For command line installations, you can continue using the traditional Install command field.
+
+For more information about adding Win32 apps with script installers, see [Add, assign, and monitor a Win32 app in Microsoft Intune](../apps/apps-win32-add.md).
 
 ## Prepare the Win32 app content for upload
 
@@ -71,9 +96,9 @@ After you have [prepared a Win32 app to be uploaded to Intune](apps-win32-prepar
 
 ## Delivery optimization
 
-Windows 10 1709 and later clients will download Intune Win32 app content by using the delivery optimization component of Windows. Delivery optimization provides peer-to-peer functionality that's turned on by default.
+Windows devices can download Intune Win32 app content by using the delivery optimization component of Windows. Delivery optimization provides peer-to-peer functionality that's turned on by default.
 
-You can configure Delivery Optimization to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured using Intune device configuration (or by group policy). For more information, see [Delivery Optimization for Windows 10](/windows/deployment/update/waas-delivery-optimization).
+You can configure Delivery Optimization to download Win32 app content in either background or foreground mode based on assignment. Delivery optimization can be configured using Intune device configuration (or by group policy). For more information, see [Delivery Optimization for Windows](/windows/deployment/update/waas-delivery-optimization).
 
 > [!NOTE]
 > You can also install a Microsoft Connected Cache server on your Configuration Manager distribution points to cache delivery optimization aware content like Intune Win32 app content. For more information, see [Microsoft Connected Cache in Configuration Manager](/configmgr/core/plan-design/hierarchy/microsoft-connected-cache#bkmk_intune).
@@ -139,7 +164,7 @@ Set the app availability and other app assignment properties using the following
     - **App installation deadline** to **As soon as possible** or **A specific date and time** and select your date and time. This date and time specify when the app is installed on the targeted device. When more than one assignment is made for the same user or device, the app installation deadline time is picked based on the following conditions:
       - A specific deadline is picked over the earliest time possible.
       - An earlier specific deadline is picked over a later specific deadline.
-      
+
       > [!NOTE]
       > If a win32 app is configured with a deadline to install, it will be downloaded but it won't install until the deadline. The Company Portal doesn't provide this level of detail. The Company Portal will show an **Installing** status for the app as soon as it's downloaded. Once the app is installed, the Company Portal will show the app installation status as **Installed**. The time between showing an **Installing** status verses an **Installed** status depends on the configuration for the deadline in Intune.
 

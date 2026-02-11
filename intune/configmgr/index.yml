@@ -1,21 +1,17 @@
-### YamlMime:Hub 
+### YamlMime:Hub
 title: Microsoft Configuration Manager documentation
 summary: "Official product documentation for Configuration Manager"
 metadata:
    ms.topic: hub-page
    ms.subservice: core-infra
-   ms.service: configuration-manager
-   ms.localizationpriority: high
    ms.date: 06/10/2024
-   ms.collection: 
+   ms.collection:
     - highpri
     - essentials-navigation
    ms.custom: intro-overview
-   ms.author: dougeby
-   author: dougeby
 
-highlightedContent: 
-  items: 
+highlightedContent:
+  items:
     - title: What's new
       itemType: learn
       url: ./core/plan-design/changes/whats-new-incremental-versions.md
@@ -46,7 +42,7 @@ conceptualContent:
           url: ./tenant-attach/index.yml
           itemType: overview
         - text: Endpoint analytics
-          url: ../analytics/index.yml
+          url: ../endpoint-analytics/index.md
           itemType: overview
         - text: Overview of cloud management gateway (CMG)
           url: ./core/clients/manage/cmg/overview.md

@@ -1,29 +1,10 @@
 ---
-# required metadata
-
 title: Single sign-on (SSO) for iOS/iPadOS and macOS
 description: Overview of Microsoft Enterprise SSO plug-in in Microsoft Intune, Jamf Pro, and other MDM solution providers. The Enterprise SSO plug-in is available on iOS/iPadOS and macOS devices.
-keywords:
-author: MandiOhlinger
-ms.author: mandia
-manager: laurawi
 ms.date: 05/01/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: configuration
-ms.localizationpriority: high
-# optional metadata
-
-#ROBOTS:
-#audience:
-
 ms.reviewer: beflamm, arnab
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier2
 - M365-identity-device-management
 zone_pivot_groups: apple-enterprise-sso
 ---
@@ -73,7 +54,7 @@ With Platform SSO:
     - Use Platform SSO to enhance your SSO configuration. You can configure different authentication methods, create new organizational users at sign in, and assign authorization modes for users.
 
 - End users:
-  
+
   - Get a more secure sign-in experience as Microsoft Entra ID integrates with the Microsoft Enterprise SSO plug-in.
   - Get a single sign-on experience when combined with the SSO app extension. The SSO app extension allows using Touch ID and passkeys with Microsoft Entra ID.
   - Can sign in with their Microsoft Entra user account and minimize the number of times they need to enter their Microsoft Entra credentials on their macOS devices.
@@ -130,12 +111,12 @@ For more information on the SSO app extension, go to:
 - iOS/iPadOS:
 
   - [Use the SSO app extension on iOS/iPadOS devices in Intune](use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
-  - [SSO app extension settings list - iOS/iPadOS in Intune](ios-device-features-settings.md#single-sign-on-app-extension)
+  - [SSO app extension settings list - iOS/iPadOS in Intune](device-features-apple.md#single-sign-on-app-extension)
 
 - macOS:
 
   - [Use the SSO app extension on macOS devices in Intune](use-enterprise-sso-plug-in-macos-with-intune.md)
-  - [SSO app extension settings list - macOS in Intune](macos-device-features-settings.md#single-sign-on-app-extension)
+  - [SSO app extension settings list - macOS in Intune](device-features-apple.md#single-sign-on-app-extension)
 
 ### SSO app extension feature summary
 
@@ -165,7 +146,7 @@ Applies to:
 
 This single sign-on policy is based on Kerberos. Kerberos is a network authentication protocol that uses secret key cryptography to authenticate client-server applications. The Intune policy settings define Kerberos account information when accessing servers or specific apps, and handle Kerberos challenges for web pages and native apps.
 
-For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](ios-device-features-settings.md#single-sign-on).
+For a list of the settings you can configure in Intune, go to [Single sign-on on iOS/iPadOS](device-features-apple.md#single-sign-on).
 
 To use single sign-on, be sure you have:
 

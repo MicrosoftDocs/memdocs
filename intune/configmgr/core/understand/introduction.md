@@ -1,20 +1,13 @@
 ---
 title: What is Configuration Manager?
-titleSuffix: Configuration Manager
 description: Learn the basics of Microsoft Configuration Manager.
 ms.date: 06/19/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.custom: intro-overview
 ms.topic: overview
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection:
     - tier3
     - essentials-overview
-ms.reviewer: mstewart
 ---
 
 # What is Configuration Manager?
@@ -29,7 +22,7 @@ The following Microsoft management solutions are all now part of the **Microsoft
 
 - [Configuration Manager](../../index.yml)
 - [Intune](../../../intune-service/index.yml)
-- [Endpoint analytics](../../../analytics/index.yml)
+- [Endpoint analytics](../../../endpoint-analytics/index.md)
 - [Windows Autopilot](/autopilot/index)
 
 For more information, see [Microsoft Configuration Manager FAQ](microsoft-endpoint-manager-faq.yml).

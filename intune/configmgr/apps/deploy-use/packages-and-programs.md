@@ -1,17 +1,10 @@
 ---
 title: Packages and programs
-titleSuffix: Configuration Manager
 description: Support deployments that use legacy packages and programs with Configuration Manager.
 ms.date: 04/08/2022
-ms.subservice: app-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: article
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Packages and programs in Configuration Manager

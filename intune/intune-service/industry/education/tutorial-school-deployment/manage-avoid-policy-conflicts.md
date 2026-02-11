@@ -5,8 +5,6 @@ ms.date: 7/11/2024
 ms.topic: tutorial
 ms.author: scbree
 author: scottbreenmsft
-ms.service: microsoft-intune
-ms.subservice: education
 ---
 
 # Avoiding policy conflicts
@@ -42,7 +40,7 @@ Default policy names:
   - Default Admx policy for EDU
   - Edition Upgrade
   - Shared PC Policy
-- **Devices** – **Windows** – **Windows 10 and later updates** – **Update rings**
+- **Devices** – **Windows** – **Windows updates** – **Update rings**
   - Windows Update Policy
 
 > [!NOTE]
@@ -65,9 +63,9 @@ This list provides examples of configuration profiles created by Intune for Educ
   - *\<GROUP NAME>* ConfigurationPolicy
 - **Devices** – **Windows** – **Enrollment** – **Windows Autopilot/Deployment Profiles**
   - *\<GROUP NAME>* Windows10AutopilotProfile
-- **Devices** – **Windows** – **Windows 10 and later updates** – **Update rings**
+- **Devices** – **Windows** – **Windows updates** – **Update rings**
   - *\<GROUP NAME>* Windows10UpdatesForBusiness
-- **Devices** – **Windows** – **Windows 10 and later updates** – **Feature Updates**
+- **Devices** – **Windows** – **Windows updates** – **Feature Updates**
   - *\<GROUP NAME>* WindowsFeatureUpdates
 - **Endpoint security** – **Account protection**
   - *\<GROUP NAME>*_LocalUsersAndGroupsConfig_EDU

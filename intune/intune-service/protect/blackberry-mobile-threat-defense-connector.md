@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: BlackBerry Protect Mobile MTD and Intune
-titleSuffix: Intune on Azure
 description: How to set up CylancePROTECT Mobile (BlackBerry) with Microsoft Intune to control mobile device access to your corporate resources
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 10/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:  
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt-pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -131,4 +111,4 @@ Access is granted on remediation:
 
 - [Create CylancePROTECT device compliance policy](mtd-device-compliance-policy-create.md)
 
-- [Enable CylancePROTECT Mobile MTD connector](mtd-connector-enable.md)  
+- [Enable CylancePROTECT Mobile MTD connector](mtd-connector-enable.md)

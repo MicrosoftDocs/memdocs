@@ -1,15 +1,10 @@
 ### YamlMime:FAQ
 metadata:
   title: Diagnostic and usage data FAQ
-  titleSuffix: Configuration Manager
   description: Frequently asked questions about diagnostic and usage data for Configuration Manager
   ms.date: 12/01/2021
   ms.subservice: core-infra
-  ms.service: configuration-manager
   ms.topic: faq
-  author: banreet
-  ms.author: banreetkaur
-  manager: apoorvseth
 
 title: Frequently asked questions about diagnostics and usage data
 summary: |
@@ -79,7 +74,7 @@ sections:
           For example, the following cloud services are a part of Microsoft Intune family of products:
 
           - [Tenant attach data collection](../../../tenant-attach/data-collection.md)
-          - [Endpoint analytics data collection](../../../../analytics/data-collection.md)
+          - [Endpoint analytics data collection](../../../../endpoint-analytics/data-collection.md)
           - [Privacy and personal data in Intune](/mem/intune-service/protect/privacy-personal-data)
           - [Windows Autopilot requirements](/windows/deployment/windows-autopilot/windows-autopilot-requirements)
 

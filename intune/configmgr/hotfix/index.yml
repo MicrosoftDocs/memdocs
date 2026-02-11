@@ -5,18 +5,18 @@ summary: Knowledge Base articles for Microsoft Configuration Manager hotfixes, u
 
 metadata:
   title: Configuration Manager hotfixes
-  titleSuffix: Configuration Manager
   description: Knowledge Base articles for Microsoft Configuration Manager hotfixes, update rollups, and summary articles for new releases.
   ms.subservice: core-infra
-  ms.service: configuration-manager
   ms.topic: landing-page
-  author: bhuney
-  ms.author: brianhun
-  manager: dougeby
   ms.date: 12/09/2021
-  ms.localizationpriority: high
 
 landingContent:
+  - title: Configuration Manager 2509
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: KB 35877153 Summary of changes in 2509
+            url: 2509/35877153.md
   - title: Configuration Manager 2503
     linkLists:
       - linkListType: overview
@@ -27,6 +27,12 @@ landingContent:
             url: 2503/32480179.md
           - text: KB 33177653 Azure for US Government Update
             url: 2503/33177653.md
+          - text: KB 34503790 Revised security update for Microsoft Configuration Manager
+            url: 2503/34503790.md
+          - text: KB 32851084 Update rollup for Microsoft Configuration Manager version 2503
+            url: 2503/32851084.md
+          - text: KB 35958849 Cloud management gateway deployment maintenance update
+            url: 2503/35958849.md
   - title: Configuration Manager 2409
     linkLists:
       - linkListType: overview
@@ -41,6 +47,12 @@ landingContent:
             url: 2503/33177653.md
           - text: KB 33926600 Security update for Microsoft Configuration Manager
             url: 2409/33926600.md
+          - text: KB 34503790 Revised security update for Microsoft Configuration Manager
+            url: 2503/34503790.md
+          - text: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
+            url: 2409/35360093.md
+          - text: KB 35958849 Cloud management gateway deployment maintenance update
+            url: 2503/35958849.md
   - title: Configuration Manager 2403
     linkLists:
       - linkListType: overview
@@ -57,6 +69,10 @@ landingContent:
             url: 2503/33177653.md
           - text: KB 33926600 Security update for Microsoft Configuration Manager
             url: 2409/33926600.md
+          - text: KB 34503790 Revised security update for Microsoft Configuration Manager
+            url: 2503/34503790.md
+          - text: KB 35360093 Administration service and CMPivot security update for Microsoft Configuration Manager
+            url: 2409/35360093.md
   - title: Configuration Manager 2309
     linkLists:
       - linkListType: overview
@@ -143,13 +159,3 @@ landingContent:
             url: 2103/9603111.md
           - text: KB 10036164 Update rollup for 2103
             url: 2103/10036164.md
-  - title: Configuration Manager 2010
-    linkLists:
-      - linkListType: overview
-        links:
-          - text: KB 4599442 Summary of changes in 2010
-            url: 2010/4599442.md
-          - text: KB 4600089 Update rollup for 2010
-            url: 2010/4600089.md
-          - text: KB 5001600 Connected cache update
-            url: 2010/5001600.md

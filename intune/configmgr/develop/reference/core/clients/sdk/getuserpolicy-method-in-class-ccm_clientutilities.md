@@ -1,18 +1,10 @@
 ---
 description: Learn how to get and evaluate the user policy for a client device using GetUserPolicy WMI class method.
 title: GetUserPolicy Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 8845a1f5-b53d-464b-8652-50a9f0dea44b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetUserPolicy Method in Class CCM_ClientUtilities
 The `GetUserPolicy` Windows Management Instrumentation (WMI) class method gets and evaluates the user policy for a client device.

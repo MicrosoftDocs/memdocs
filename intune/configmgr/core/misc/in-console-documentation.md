@@ -1,18 +1,11 @@
 ---
 title: In-console documentation
-titleSuffix: Configuration Manager
 description: This article only displays in the Configuration Manager console.
 ms.date: 10/11/2023
 ms.topic: article
 ms.subservice: other
-ms.service: configuration-manager
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 <!--
@@ -45,7 +38,7 @@ For the latest product changes, see the following articles:<!-- 8625956 -->
 A curated list of important articles.  <!--URLs MUST BE ABSOLUTE LINKS-->
 
 - [Microsoft Intune tenant attach](https://learn.microsoft.com/intune/configmgr/tenant-attach?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
-- [Endpoint analytics](https://learn.microsoft.com/mem/analytics/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
+- [Endpoint analytics](https://learn.microsoft.com/intune/analytics/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Co-management for Windows devices](https://learn.microsoft.com/intune/configmgr/comanage/?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [CMPivot](https://learn.microsoft.com/intune/configmgr/core/servers/manage/cmpivot?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->
 - [Plan for BitLocker management](https://learn.microsoft.com/intune/configmgr/protect/plan-design/bitlocker-management?WT.mc_id=configmgr-console)<!--Links must be absolute in this article-->

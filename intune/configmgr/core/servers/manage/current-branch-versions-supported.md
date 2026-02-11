@@ -1,17 +1,10 @@
 ---
 title: Current branch versions
-titleSuffix: Configuration Manager
 description: Review the Configuration Manager version history, and learn about the phases of service offered.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Support for Configuration Manager current branch versions
@@ -36,7 +29,9 @@ For example, version 2203 releases in April 2022. Microsoft provides security an
 > [!NOTE]
 > A **Critical Update** specifies a widely released fix for a specific problem that addresses a critical, non-security-related bug. Security updates provide a severity rating for the updates, which includes the **Critical** rating.  To understand the different uses for the term **Critical** and for more information about each, see [update classifications](/mem/configmgr/sum/get-started/configure-classifications-and-products#to-configure-classifications-and-products-to-synchronize) and [Security update severity](/troubleshoot/windows-client/installing-updates-features-roles/standard-terminology-software-updates#security-update).
 
-For a list of the current branch versions, see [Version details](updates.md#version-details).
+For a list of the current branch supported versions*, see [Version details](updates.md#version-details).
+
+> [!NOTE]
+> `*` **Supported Versions in Configuration Manager**: In the context of Configuration Manager, the term `supported` encompasses both *engineering* and *assisted technical support*. While no further engineering development will occur for the versions that phase out of support, users will not have access to phone or online assisted technical support for these versions. However, Technical Support will assist with upgrading to a supported version of Configuration Manager. Users will resume their regular assisted technical support once Configuration Manager is upgraded to a supported version.
 
 For more information about version numbers, and availability as an in-console update or as a baseline, see [Baseline and update versions](updates.md#bkmk_Baselines).
-l

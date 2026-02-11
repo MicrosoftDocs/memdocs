@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Set up Jamf Mobile Security with Intune
 description: How to set up Jamf Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 01/28/2025
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:  
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: aanavath
-#ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-#ms.custom:
+ms.reviewer: ilwu
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -90,7 +71,7 @@ When malicious apps such as malware are detected on devices, you can block devic
 
 :::image type="content" source="./media/jamf-mtd-connector/jamf-malicious-apps-blocked.png" alt-text="Product flow for blocking access due to malicious apps.":::
 
-*Access granted on remediation*: 
+*Access granted on remediation*:
 
 :::image type="content" source="./media/jamf-mtd-connector/jamf-malicious-apps-unblocked.png" alt-text="Product flow for granting access when malicious apps are remediated.":::
 

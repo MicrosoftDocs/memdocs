@@ -1,17 +1,10 @@
 ---
 title: Internet access requirements
-titleSuffix: Configuration Manager
 description: Learn about the internet endpoints to allow for full functionality of Configuration Manager features.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Internet access requirements
@@ -53,8 +46,6 @@ For more information, see [Updates and servicing](../../servers/manage/updates.m
 - `download.windowsupdate.com`
 
 - `download.visualstudio.microsoft.com`
-
-- `sccmconnected-a01.cloudapp.net`
 
 - `definitionupdates.microsoft.com`
 
@@ -241,7 +232,7 @@ For more information, see [Enable tenant attach](../../../tenant-attach/device-s
 
 ## Endpoint analytics
 
-For more information, see [Endpoint analytics proxy configuration](../../../../analytics/troubleshoot.md#bkmk_endpoints).
+For more information, see [Endpoint analytics proxy configuration](../../../../endpoint-analytics/troubleshoot.md#proxy-server-authentication).
 
 [!INCLUDE [Internet endpoints for Endpoint analytics](includes/internet-endpoints-endpoint-analytics.md)]
 

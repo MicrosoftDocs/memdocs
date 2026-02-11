@@ -1,19 +1,11 @@
 ---
 title: Manual registration of devices for Windows Autopilot
 description: Manual registration overview.
-ms.service: windows-client
-ms.subservice: autopilot
-ms.localizationpriority: medium
-author: frankroj
-ms.author: frankroj
-ms.reviewer: madakeva
-manager: bpardi
 ms.date: 03/27/2025
 ms.topic: how-to
 ms.collection:
   - M365-modern-desktop
   - m365initiative-coredeploy
-  - tier1
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 10</a>

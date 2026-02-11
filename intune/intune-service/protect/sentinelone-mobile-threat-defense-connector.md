@@ -1,32 +1,12 @@
 ---
-# required metadata
-
 title: SentinelOne MTD connector with Microsoft Intune
-titleSuffix: Intune on Azure
 description: How to set up SentinelOne Mobile Threat Defense with Microsoft Intune to control mobile device access to your corporate resources.
-keywords:
 author: brenduns
 ms.author: brenduns
-manager: dougeby
 ms.date: 10/14/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid: 
-
-# optional metadata
-
-#ROBOTS:
-#audience:
-#ms.devlang:
-ms.reviewer: aanavath
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt-pltfrm:
-ms.custom: intune-azure
+ms.reviewer: ilwu
 ms.collection:
-- tier3
 - M365-identity-device-management
 - sub-mtd-apps
 ---
@@ -64,7 +44,7 @@ For Android and iOS/iPadOS The SentinelOne app captures file system, network sta
   - [Add the MTD app to unenrolled devices](../protect/mtd-add-apps-unenrolled-devices.md)
   - [Create a Mobile Threat Defense app protection policy](../protect/mtd-app-protection-policy.md)
   - [Enable the MTD connector in Intune for unenrolled devices](../protect/mtd-enable-unenrolled-devices.md)
-  
+
 ## Sample scenarios
 
 See below a few scenarios when integrating SentinelOne with Intune:

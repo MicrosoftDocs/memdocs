@@ -1,31 +1,12 @@
 ---
-# required metadata
-
 title: Use derived credentials for mobile devices with Microsoft Intune
 description: Use a third-party partners derived credential as an authentication method for Intune.
-keywords:
-author: brenduns
-ms.author: brenduns
-manager: dougeby
+author: paolomatarazzo
+ms.author: paoloma
 ms.date: 07/19/2024
 ms.topic: how-to
-ms.service: microsoft-intune
-ms.subservice: protect
-ms.localizationpriority: high
-ms.assetid:  
-
-# optional metadata
- 
-#ROBOTS:
-#audience:
-#ms.devlang:
 ms.reviewer: lacranda
-ms.suite: ems
-search.appverid: MET150
-#ms.tgt_pltfrm:
-ms.custom: intune-azure
 ms.collection:
-- tier1
 - M365-identity-device-management
 - highpri
 - sub-certificates
@@ -34,13 +15,6 @@ ms.collection:
 # Use derived credentials with Microsoft Intune
 
 Derived credentials are an implementation of the National Institute of Standards and Technology (NIST) guidelines for Derived Personal Identity Verification (PIV) credentials as part of [Special Publication (SP) 800-157](https://nvlpubs.nist.gov/nistpubs/SpecialPublications/NIST.SP.800-157.pdf) *(Link opens a .pdf file on nvlpubs.nist.gov)*.
-
-*This article applies to:*
-
-- *Android Enterprise fully managed devices that run version 7.0 and above*
-- *iOS/iPadOS*
-- *Windows 10*
-- *Windows 11*
 
 Organizations that require use of smart cards for authentication or encryption and signing can use Intune to provision mobile devices with a certificate that's derived from a user's smart card. That certificate is called a *derived credential*. Intune [supports several derived credential issuers](#supported-issuers), but use of only one issuer per tenant.
 
@@ -61,7 +35,7 @@ To use Intune derived credentials, an Intune administrator must configure the te
 
   **For Windows**:
   - Common profile types like Wi-Fi, and VPN
-  
+
   > [!NOTE]
   > Currently, derived credentials as an authentication method for VPN profiles isn't working as expected on Windows devices. This behavior only affects VPN profiles on Windows devices and will be fixed in a future release (no ETA).
 
@@ -73,24 +47,29 @@ a
 
 Review the following information before you configure your tenant to use derived credentials.
 
-### Supported platforms
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-Intune supports derived credentials on the following platforms:
-
-- iOS/iPadOS
-- Android Enterprise:
-  - Fully Managed devices (version 7.0 and above)
-  - Corporate-Owned Work Profile
-- Windows 10
-- Windows 11
+:::column-end:::
+:::column span="3":::
+> Intune supports derived credentials on the following platforms:
+>
+> - Android Enterprise corporate-owned fully managed (COBO) - version 7.0 and above
+> - Android Enterprise corporate-owned work profile (COPE)
+> - iOS/iPadOS
+> - Windows
+:::column-end:::
+:::row-end:::
 
 ### Supported issuers
 
-Intune supports a single derived credential issuer per tenant. The following issuers are supported:
-
-- **DISA Purebred**: https://public.cyber.mil/pki-pke/purebred/
-- **Entrust**: https://www.entrust.com/
-- **Intercede**: https://www.intercede.com/
+> [!div class="checklist"]
+> Intune supports a single derived credential issuer per tenant. The following issuers are supported:
+>
+> - **DISA Purebred**: https://public.cyber.mil/pki-pke/purebred/
+> - **Entrust**: https://www.entrust.com/
+> - **Intercede**: https://www.intercede.com/
 
 For important details about using the different issuers, review guidance for that issuer. For more information, see [Plan for derived credentials](#plan-for-derived-credentials) in this article.
 
@@ -101,10 +80,11 @@ For important details about using the different issuers, review guidance for tha
 
 ### Required apps
 
-Plan to deploy the relevant user-facing app to devices that enroll for a derived credential. Device users use the app to start the credential enrollment process.
-
-- iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
-- Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
+> [!div class="checklist"]
+> Plan to deploy the relevant user-facing app to devices that enroll for a derived credential. Device users use the app to start the credential enrollment process.
+>
+> - iOS devices use the Company Portal app. See [Add iOS store apps to Microsoft Intune](../apps/store-apps-ios.md).
+> - Android Enterprise Fully Managed and Corporate-Owned work profile devices use the Intune App. See  [Add Android store apps to Microsoft Intune](../apps/store-apps-android.md).
 
 ## Plan for derived credentials
 
@@ -272,7 +252,7 @@ To use **DISA Purebred** as your derived credential issuer for Intune, you must 
 In addition to deploying the DISA Purebred app with Intune, the device must have access to the on-premises network. To provide this access, consider using a VPN or corporate Wi-Fi.
 
 **Complete the following tasks**:
-  
+
 1. Download the DISA Purebred application: https:\//cyber.mil/pki-pke/purebred/.
 
 2. Deploy the DISA Purebred application in Intune.
@@ -293,10 +273,10 @@ You can specify **Derived credential** for the following profile types and purpo
   - [iOS and iPadOS](../configuration/email-settings-ios.md)
   - [Android Enterprise](../configuration/email-settings-android-enterprise.md)
 - VPN:
-  - [iOS and iPadOS](../configuration/vpn-settings-ios.md)
+  - [iOS and iPadOS](../configuration/vpn-settings-apple.md)
 - [S/MIME signing and encryption](certificates-s-mime-encryption-sign.md)
 - Wi-Fi:
-  - [iOS and iPadOS](../configuration/wi-fi-settings-ios.md)
+  - [iOS and iPadOS](../configuration/wi-fi-settings-apple.md)
   - [Android Enterprise](../configuration/wi-fi-settings-android-enterprise.md)
 
   For Wi-Fi profiles, *Authentication method* is available only when the **EAP type** is set to one of the following values:

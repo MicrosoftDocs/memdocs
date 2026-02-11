@@ -3,15 +3,9 @@ title: Configuration Manager
 ms.date: 10/06/2016
 ms.topic: article
 ms.subservice: other
-ms.service: configuration-manager
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
 description: Placeholder file for Configuration Manager documentation
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Configuration Manager
 

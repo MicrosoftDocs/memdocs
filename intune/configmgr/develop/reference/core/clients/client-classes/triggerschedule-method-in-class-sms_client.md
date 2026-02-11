@@ -1,18 +1,10 @@
 ---
 title: TriggerSchedule Method
-titleSuffix: Configuration Manager
 description: Trigger the client to run a specific schedule.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a4e13dea-899a-4d9e-8e5b-60b7f81c0c45
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # TriggerSchedule Method in Class SMS_Client
 The `TriggerSchedule` method, in Configuration Manager, triggers the client to run the specified schedule.
@@ -117,7 +109,8 @@ Invoke-CimMethod -Namespace 'root\CCM' -ClassName SMS_Client -MethodName Trigger
 %windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm\invagt path inventoryActionStatus where InventoryActionID="{00000000-0000-0000-0000-000000000113}" DELETE /NOINTERACTIVE
 %windir%\System32\wbem\WMIC.exe /namespace:\\root\ccm path sms_client CALL TriggerSchedule "{00000000-0000-0000-0000-000000000113}" /NOINTERACTIVE
 ```
-
+>[!IMPORTANT]
+>Windows Deprecated Features - [Update - January 2024]: Currently, WMIC is a Feature on Demand (FoD) that's preinstalled by default in Windows 11 22H2 and 23H2. In the future releases of Windows 11, 24H2+, the WMIC FoD will be disabled by default.
 ## See also
 
  [SMS_Client Client WMI Class](../../../../../develop/reference/core/clients/client-classes/sms_client-client-wmi-class.md)
