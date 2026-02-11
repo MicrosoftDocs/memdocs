@@ -66,8 +66,9 @@ When you deploy a site system role that uses Internet Information Services (IIS)
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
 > [!WARNING]
-> HTTP Strict Transport Security (HSTS) requires the Site System to be configured for HTTPS and isn’t compatible with enhanced HTTP.  
-> Enable HTTPS on an applicable site system before configuring HSTS. Configuration Manager clients don’t honor HSTS headers, and this configuration isn’t supported for client communication.
+> HTTP Strict Transport Security (HSTS) requires the Site System to be configured for HTTPS and isn’t compatible with Enhanced HTTP. Enable HTTPS on an applicable site system before configuring HSTS.
+>
+> Configuration Manager clients don’t honor HSTS headers, and this configuration isn’t supported for client communication.
 >
 > Enabling HSTS breaks site system roles that rely on HTTP:
 >
