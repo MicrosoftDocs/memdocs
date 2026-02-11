@@ -1,9 +1,9 @@
 ---
 title: Configure WiFi settings for Apple devices in Microsoft Intune
 description: Add or create a Wi-Fi configuration profile on iOS/iPadOS and macOS devices using Wi-Fi configuration settings in Microsoft Intune. Configure the connection details, authentication methods, SSIDs, security types, and proxy settings.
-ms.date: 02/09/2026
+ms.date: 02/24/2026
 ms.topic: article
-ms.reviewer: beflamm
+ms.reviewer: wicale
 ms.collection:
 - M365-identity-device-management
 zone_pivot_groups: platforms-apple
@@ -13,9 +13,9 @@ zone_pivot_groups: platforms-apple
 
 You can create a profile with specific WiFi settings, and then deploy this profile to your iOS/iPadOS and macOS devices using Intune. As part of your mobile device management (MDM) solution, use these settings to authenticate your network, add a PKCS (Public Key Cryptography Standards) or SCEP (Simple Certificate Enrollment Protocol) certificate, configure a proxy, and more.
 
-These Wi-Fi settings are separated in to two categories: Basic settings and Enterprise settings.
+These Wi-Fi settings are separated in to two categories: **Basic settings** and **Enterprise settings**.
 
-This article describes the settings you can configure.
+This article describes the settings you can configure. To learn more about Wi-Fi profiles in Intune, see [Wi-Fi device configuration profile](wi-fi-settings-configure.md).
 
 ## Prerequisites
 
@@ -78,9 +78,7 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
 
     For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
-::: zone pivot="ios-ipados"
-
-- **Disable MAC address randomization**: Starting with iOS/iPadOS 14, devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
+- **Disable MAC address randomization**: Devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. However, randomized MAC addresses break functionality that relies on a static MAC address, including network access control (NAC).
 
   Your options:
 
@@ -89,10 +87,19 @@ Basic or personal profiles use WPA/WPA2 to secure the Wi-Fi connection on device
   - **No**: Enables MAC address randomization on devices. Users can't turn it off. When devices connect to a new network, devices present a randomized MAC address, instead of the physical MAC address.
 
   This setting applies to:
+
+  ::: zone pivot="ios-ipados"
+  
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 
-::: zone-end
+  ::: zone-end
+
+  ::: zone pivot="macos"
+
+  - macOS 15 and newer
+
+  ::: zone-end
 
 ## Enterprise profiles
 
@@ -217,9 +224,7 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
     For more information on PAC files, go to [Proxy Auto-Configuration (PAC) file](https://developer.mozilla.org/docs/Web/HTTP/Proxy_servers_and_tunneling/Proxy_Auto-Configuration_(PAC)_file) (opens a non-Microsoft site).
 
-::: zone pivot="ios-ipados"
-
-- **Disable MAC address randomization**: Starting with iOS/iPadOS 14, devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. Randomized MAC addresses also break functionality that relies on a static MAC address, including network access control (NAC).
+- **Disable MAC address randomization**: Devices present a randomized MAC address instead of the physical MAC address when connecting to a network. Using randomized MAC addresses is recommended for privacy, as it's harder to track a device by its MAC address. Randomized MAC addresses also break functionality that relies on a static MAC address, including network access control (NAC).
 
   Your options:
 
@@ -229,10 +234,18 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
   This setting applies to:
 
+  ::: zone pivot="ios-ipados"
+
   - iOS 14.0 and newer
   - iPadOS 14.0 and newer
 
-::: zone-end
+  ::: zone-end
+
+  ::: zone pivot="macos"
+
+  - macOS 15 and newer
+
+  ::: zone-end
 
 ## Related articles
 
