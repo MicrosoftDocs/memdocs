@@ -61,7 +61,7 @@ The following table lists the various options when *assigning* apps to users and
      > [!NOTE]
      > **For iOS/iPadOS apps only**:
      > - To configure what happens to managed apps when devices are no longer managed, you can select the intended setting under **Uninstall on device removal**. For more information, see [App uninstall setting for iOS/iPadOS managed apps](apps-deploy.md#app-uninstall-setting-for-ios-managed-apps).
-     > - If you create an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app runs, the VPN connection opens. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-ios.md).
+     > - If you create an iOS/iPadOS VPN profile that contains per-app VPN settings, you can select the VPN profile under **VPN**. When the app runs, the VPN connection opens. For more information, see [VPN settings for iOS/iPadOS devices](../configuration/vpn-settings-apple.md).
      > - To configure whether a required iOS/iPadOS app is installed as a removable app by end users, you can select the setting under **Install as removable**.
      > - To prevent the iCloud backup of the managed iOS/iPadOS app, select one of the following settings after adding a group assignment: VPN, Uninstall on device removal, or Install as removable. Then, configure the setting called Prevent iCloud app backup. For more information, see [Prevent iCloud app backup setting for iOS/iPadOS and macOS apps](#prevent-icloud-app-backup-setting-for-iosipados-and-macos-apps).
 	  >
