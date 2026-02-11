@@ -86,18 +86,6 @@ To learn more about wired networks, see [Add and use wired networks settings on 
 >
 > - iOS/iPadOS 17 and newer
 
-### Apple declarative device management (DDM) support for assignment filters<!-- 24298491 -->
-
-You'll be able to use assignment filters in policy assignments for DDM-based configurations, like software updates.
-
-To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
-
 ### Disable MAC address randomization on macOS Wi‑Fi profiles <!-- 8457343 -->
 
 On macOS devices, the **Disable MAC address randomization** setting will soon be available for Wi-Fi profiles. Use this setting to disable MAC address randomization on managed macOS devices. Currently, this setting is only available for [iOS/iPadOS Wi‑Fi profiles](../configuration/wi-fi-settings-ios.md).
