@@ -180,41 +180,41 @@ When you assign the policy to an iPhone, the dock looks similar to the following
 
 ### Settings apply to: Automated device enrollment (supervised)
 
-- **Add**: Add notifications for apps:
+**Add**: Add notifications for apps:
 
-  :::image type="content" source="./media/device-features-apple/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
+:::image type="content" source="./media/device-features-apple/ios-ipados-app-notifications.png" alt-text="Add app notification in iOS/iPadOS device features configuration profile in Microsoft Intune":::
 
-  - **App bundle ID**: Enter the **App Bundle ID** of the app you want to add.
+- **App bundle ID**: Enter the **App Bundle ID** of the app you want to add.
 
-    To get the app bundle ID:
+  To get the app bundle ID:
 
-    - For some examples, see [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md).
-    - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
+  - For some examples, see [Bundle IDs for built-in iOS/iPadOS apps](bundle-ids-built-in-ios-apps.md).
+  - For apps added to Intune, [you can use the Intune admin center](../apps/get-app-bundle-id-intune-admin-center.md).
 
-    When set to **Not configured** or left blank, Intune doesn't change or update this setting.
-  - **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
-  - **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
-  - **Notifications**: **Enable** or **Disable** the app from sending notifications to devices. When set to **Not configured** (default), Intune doesn't change or update this setting.
+  When set to **Not configured** or left blank, Intune doesn't change or update this setting.
+- **App name**: Enter the name of the app you want to add. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
+- **Publisher**: Enter the publisher of the app you're adding. This name is used for your reference in the Microsoft Intune admin center. It *isn't* shown on devices. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
+- **Notifications**: **Enable** or **Disable** the app from sending notifications to devices. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-    When set to **Enable**, also configure:
+  When set to **Enable**, also configure:
 
-    - **Show in notifications center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
-    - **Show on Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
-    - **Alert type**: When devices are unlocked, choose how the notification is shown. Your options:
-      - **None**: No notification is shown.
-      - **Banner**: A banner is briefly shown with the notification. This setting might also be known as Temporary Banner.
-      - **Modal**: The notification is shown and users must manually dismiss it before continuing to use the device. This setting might also be known as Persistent Banner.
-    - **Badge on app icon**: **Enable** adds a badge to the app icon. The badge means the app sent a notification. **Disable** doesn't add a badge to the app icon. When set to **Not configured**, Intune doesn't change or update this setting.
-    - **Enable sounds**: **Enable** plays a sound when a notification is delivered. **Disable** doesn't play a sound when a notification is delivered. When set to **Not configured**, Intune doesn't change or update this setting.
-    - **Show previews**: Shows a preview of recent app notifications. Select when to show the preview. The value you choose overrides the user configured value on the device (Settings > Notifications > Show Previews). Your options:
-      - **Not configured**: Intune doesn't change or update this setting.
-      - **When unlocked**: The preview only shows when the device is unlocked.
-      - **Always**: The preview always shows on the lock screen.
-      - **Never**: The preview never shows.
+  - **Show in notifications center**: **Enable** allows the app to show notifications in the device Notification Center. **Disable** prevents the app from showing notifications in the Notification Center. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
+  - **Show on Lock Screen**: **Enable** shows app notifications on the device lock screen. **Disable** prevents the app from showing notifications on the lock screen. When set to **Not configured** or left blank, Intune doesn't change or update this setting.
+  - **Alert type**: When devices are unlocked, choose how the notification is shown. Your options:
+    - **None**: No notification is shown.
+    - **Banner**: A banner is briefly shown with the notification. This setting might also be known as Temporary Banner.
+    - **Modal**: The notification is shown and users must manually dismiss it before continuing to use the device. This setting might also be known as Persistent Banner.
+  - **Badge on app icon**: **Enable** adds a badge to the app icon. The badge means the app sent a notification. **Disable** doesn't add a badge to the app icon. When set to **Not configured**, Intune doesn't change or update this setting.
+  - **Enable sounds**: **Enable** plays a sound when a notification is delivered. **Disable** doesn't play a sound when a notification is delivered. When set to **Not configured**, Intune doesn't change or update this setting.
+  - **Show previews**: Shows a preview of recent app notifications. Select when to show the preview. The value you choose overrides the user configured value on the device (Settings > Notifications > Show Previews). Your options:
+    - **Not configured**: Intune doesn't change or update this setting.
+    - **When unlocked**: The preview only shows when the device is unlocked.
+    - **Always**: The preview always shows on the lock screen.
+    - **Never**: The preview never shows.
 
-      This setting applies to:
+    This setting applies to:
 
-      - iOS/iPadOS 14.0 and newer
+    - iOS/iPadOS 14.0 and newer
 
 ::: zone-end
 
@@ -544,25 +544,25 @@ This feature applies to:
 
 These settings use Apple's Web Content Filter settings. For more information on these settings, go to [Apple's Platform Deployment site](https://support.apple.com/guide/deployment/web-content-filter-payload-settings-depc77c9609/web) (opens Apple's web site).
 
-- **Filter Type**: Choose to allow specific websites. Your options:
+**Filter Type**: Choose to allow specific websites. Your options:
 
-  - **Not configured**: Intune doesn't change or update this setting.
+- **Not configured**: Intune doesn't change or update this setting.
 
-  - **Configure URLs**: Use Apple's built-in web filter that looks for adult terms, including profanity and sexually explicit language. This setting evaluates each web page as it loads, and identifies and blocks unsuitable content. You can also add URLs that you don't want checked by the filter. Or, block specific URLs, regardless of Apple's filter settings.
+- **Configure URLs**: Use Apple's built-in web filter that looks for adult terms, including profanity and sexually explicit language. This setting evaluates each web page as it loads, and identifies and blocks unsuitable content. You can also add URLs that you don't want checked by the filter. Or, block specific URLs, regardless of Apple's filter settings.
 
-    - **Permitted URLs**: **Add** the URLs you want to allow. These URLs bypass Apple's web filter.
+  - **Permitted URLs**: **Add** the URLs you want to allow. These URLs bypass Apple's web filter.
 
-      The URLs you enter are the URLs you don't want evaluated by the Apple web filter. These URLs aren't a list of allowed websites. To create a list of allowed websites, set the **Filter Type** to **Specific websites only**.
+    The URLs you enter are the URLs you don't want evaluated by the Apple web filter. These URLs aren't a list of allowed websites. To create a list of allowed websites, set the **Filter Type** to **Specific websites only**.
 
-    - **Blocked URLs**: **Add** the URLs you want to stop from opening, regardless of the Apple web filter settings.
+  - **Blocked URLs**: **Add** the URLs you want to stop from opening, regardless of the Apple web filter settings.
 
-  - **Specific websites only** (for Safari web browser only): These URLs are added to the Safari browser's bookmarks. Users are **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
+- **Specific websites only** (for Safari web browser only): These URLs are added to the Safari browser's bookmarks. Users are **only** allowed to visit these sites; no other sites can be opened. Use this option only if you know the exact list of URLs that users can access.
 
-    - **URL**: Enter the URL of the website you want to allow. For example, enter `https://www.contoso.com`.
-    - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Allowed Sites** folder. Bookmarks don't go into the bookmark path you enter.
-    - **Title**: Enter a descriptive title for the bookmark.
+  - **URL**: Enter the URL of the website you want to allow. For example, enter `https://www.contoso.com`.
+  - **Bookmark Path**: Apple changed this setting. All bookmarks go into the **Allowed Sites** folder. Bookmarks don't go into the bookmark path you enter.
+  - **Title**: Enter a descriptive title for the bookmark.
 
-    If you don't enter any URLs, then users can't access any websites except for `microsoft.com`, `microsoft.net`, and `apple.com`. Intune automatically allows these URLs.
+  If you don't enter any URLs, then users can't access any websites except for `microsoft.com`, `microsoft.net`, and `apple.com`. Intune automatically allows these URLs.
 
 ::: zone-end
 
@@ -901,7 +901,7 @@ You might see unexpected behavior when you assign a profile with no image to dev
 
 > [!TIP]
 >
-> - When you configure a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-apple.md#general) setting. This setting prevents users from changing the wallpaper.
+> - When you configure a wallpaper policy, Microsoft recommends enabling the [Block modification of Wallpaper](device-restrictions-apple.md) setting. This setting prevents users from changing the wallpaper.
 > - To display different images on the lock screen and home screen, create a profile with the lock screen image. Create another profile with the home screen image. Assign both profiles to your iOS/iPadOS user or device groups.
 
 ::: zone-end
