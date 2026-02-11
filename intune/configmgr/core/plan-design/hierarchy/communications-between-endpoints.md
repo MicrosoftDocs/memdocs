@@ -71,7 +71,7 @@ When you deploy a site system role that uses Internet Information Services (IIS)
 >
 > Enabling HSTS breaks site system roles that rely on HTTP:
 >
-> - **Fallback Status Point (FSP)** is [HTTP-only by design](../core/clients/deploy/plan/determine-the-site-system-roles-for-clients#fallback-status-point) and stops functioning if HSTS is enforced.
+> - **Fallback Status Point (FSP)** is [HTTP-only by design](../../clients/deploy/plan/determine-the-site-system-roles-for-clients.md#fallback-status-point) and stops functioning if HSTS is enforced.
 > - **Software Update Point (SUP)** uses Windows Server Update Services (WSUS). WSUS encrypts update metadata over HTTPS but [always delivers update payloads over HTTP](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#232-configure-the-wsus-servers-iis-web-server-to-use-tls-for-some-connections)). Enabling HSTS on WSUS Web Site blocks the payload downloads and breaks update functionality. <!-- 16607249 -->
 
 ### <a name="bkmk_client2mp"></a> Client to management point communication
