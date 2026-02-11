@@ -66,7 +66,7 @@ class CCM_DownloadProvider: CCM_Policy
 
  Qualifiers: [in]  
 
- The source of the policy, typically "Local" when the instance is created on a client in the root\ccm\policy\machine\RequestedConfig namespace.  
+ The source of the policy, typically "Local" when the instance is created on a client in the root\ccm\policy\machine\RequestedConfig namespace. Not available in root\ccm\policy\machine\ActualConfig namespace that contains compiled policy.
 
  `Reserved`  
  Data type: String  
