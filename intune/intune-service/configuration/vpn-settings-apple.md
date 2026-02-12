@@ -328,101 +328,100 @@ These settings apply when you choose **Connection type** > **IKEv2**.
 
 **Type of automatic VPN**: Select the VPN type you want to configure - On-demand VPN or per-app VPN. Make sure you only use one option. Using them both simultaneously causes connection issues. When set to **Not configured** (default), Intune doesn't change or update this setting.
 
-- **On-demand VPN**: On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
+### On-demand VPN feature in Automatic VPN
 
-  For example, you can create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
+On-demand VPN uses rules to automatically connect or disconnect the VPN connection. When your devices attempt to connect to the VPN, it looks for matches in the parameters and rules you create, such as a matching domain name. If there's a match, then the action you choose runs.
 
-  - **On-demand rules** > **Add**: Select **Add** to add a rule. If there isn't an existing VPN connection, then use these settings to create an on-demand rule. If there's a match to your rule, then the device does the action you select.
+For example, you can create a condition where the VPN connection is only used when a device isn't connected to a company Wi-Fi network. Or, if a device can't access a DNS search domain you enter, then the VPN connection isn't started.
 
-    - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action you want the device to do. Your options:
+- **On-demand rules** > **Add**: Select **Add** to add a rule. If there isn't an existing VPN connection, then use these settings to create an on-demand rule. If there's a match to your rule, then the device does the action you select.
 
-      - **Establish VPN**: If there's a match between the device value and your on-demand rule, then the device connects to the VPN.
-      - **Disconnect VPN**: If there's a match between the device value and your on-demand rule, then the VPN connection is disconnected.
-      - **Evaluate each connection attempt**: If there's a match between the device value and your on-demand rule, then use the **Choose whether to connect** setting to decide what happens for *each* VPN connection attempt:
-        - **Connect if needed**: If the device is on an internal network, or if there's already an established VPN connection to the internal network, then the on-demand VPN won't connect. These settings aren't used.
+  - **I want to do the following**: If there's a match between the device value and your on-demand rule, then select the action you want the device to do. Your options:
 
-          If there isn't an existing VPN connection, then for *each* VPN connection attempt, decide if users should connect using a DNS domain name. This rule only applies to domains in the **When users try to access these domains** list. All other domains are ignored.
+    - **Establish VPN**: If there's a match between the device value and your on-demand rule, then the device connects to the VPN.
+    - **Disconnect VPN**: If there's a match between the device value and your on-demand rule, then the VPN connection is disconnected.
+    - **Evaluate each connection attempt**: If there's a match between the device value and your on-demand rule, then use the **Choose whether to connect** setting to decide what happens for *each* VPN connection attempt:
+      - **Connect if needed**: If the device is on an internal network, or if there's already an established VPN connection to the internal network, then the on-demand VPN won't connect. These settings aren't used.
 
-          - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, meaning it doesn't have access to internal resources, then it connects to the VPN on-demand. If the domain does resolve, meaning it already has access to internal resources, then it doesn't connect to the VPN.
+        If there isn't an existing VPN connection, then for *each* VPN connection attempt, decide if users should connect using a DNS domain name. This rule only applies to domains in the **When users try to access these domains** list. All other domains are ignored.
 
-            - If the **When users try to access these domains** setting is empty, then the device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain. The idea is that these DNS servers are public servers.
+        - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then the device uses DNS to resolve the domains you enter. If the domain doesn't resolve, meaning it doesn't have access to internal resources, then it connects to the VPN on-demand. If the domain does resolve, meaning it already has access to internal resources, then it doesn't connect to the VPN.
 
-              The domains in the **When users try to access these domains** list are internal resources. Internal resources aren't on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection's DNS servers and the internal resource is available.
+          | &nbsp; | &nbsp; |
+          |---|---|
+          | **When users try to access these domains** setting is *empty* | The device uses the DNS servers configured on the network connection service (Wi-Fi/ethernet) to resolve the domain. The idea is that these DNS servers are public servers. <br/><br/>The domains in the **When users try to access these domains** list are internal resources. Internal resources aren't on public DNS servers and can't be resolved. So, the device connects to the VPN. Now, the domain is resolved using the VPN connection's DNS servers and the internal resource is available.<br/><br/>If the device is on the internal network, then the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network. |
+          | **When users try to access these domains** setting is *populated* | The DNS servers in the list are used to resolve the domains in the list. <br/><br/> The idea is the opposite of the first row (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and the device connects to the VPN on-demand. Now the internal resources are available. <br/><br/> Remember this information only applies to domains in the **When users try to access these domains** list. All other domains are resolved with public DNS servers. When the device is connected to the internal network, the DNS servers in the list are accessible, and there's no need to connect to the VPN. |
 
-              If the device is on the internal network, then the domain resolves, and a VPN connection isn't created because the internal domain is already available. You don't want to waste VPN resources on devices already on the internal network.
+          ---
 
-            - If the **When users try to access these domains** setting is populated, then the DNS servers on this list are used to resolve the domains in the list.
+        - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
 
-              The idea is the opposite of the first bullet (**When users try to access these domains** setting is empty). For instance, the **When users try to access these domains** list has internal DNS servers. A device on an external network can't route to the internal DNS servers. The name resolution times out, and the device connects to the VPN on-demand. Now the internal resources are available.
+        - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
 
-              Remember this information only applies to domains in the **When users try to access these domains** list. All other domains are resolved with public DNS servers. When the device is connected to the internal network, the DNS servers in the list are accessible, and there's no need to connect to the VPN.
+          If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then the device connects to the VPN.
 
-          - **Use the following DNS servers to resolve these domains (optional)**: Enter one or more DNS server IP addresses, like `10.0.0.22`. The DNS servers you enter are used to resolve the domains in the **When users try to access these domains** setting.
+          The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and it connects to the VPN on-demand. Once the VPN connection is established, internal resources are available.
 
-          - **When this URL is unreachable, force-connect the VPN**: Optional. Enter an HTTP or HTTPS probing URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. This URL is probed every time a user tries to access a domain in the **When users try to access these domains** setting. The user doesn't see the URL string probe site.
+      - **Never connect**: For each VPN connection attempt, when users try to access the domains you enter, then the device never connects to the VPN.
 
-            If the probe fails because the URL is unreachable or doesn't return a 200 HTTP status code, then the device connects to the VPN.
+        - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then a VPN connection isn't created. If they try to connect to a domain not in this list, then the device connects to the VPN.
 
-            The idea is that the URL is only accessible on the internal network. If the URL can be accessed, then a VPN connection isn't needed. If the URL can't be accessed, then the device is on an external network, and it connects to the VPN on-demand. Once the VPN connection is established, internal resources are available.
+    - **Ignore**: If there's a match between the device value and your on-demand rule, then a VPN connection is ignored.
 
-        - **Never connect**: For each VPN connection attempt, when users try to access the domains you enter, then the device never connects to the VPN.
+  - **I want to restrict to**: In the **I want to do the following** setting, if you select **Establish VPN**, **Disconnect VPN**, or **Ignore**, then select the condition that the rule must meet. Your options:
 
-          - **When users try to access these domains**: Enter one or more DNS domains, like `contoso.com`. If users try to connect to a domain in this list, then a VPN connection isn't created. If they try to connect to a domain not in this list, then the device connects to the VPN.
+    - **Specific SSIDs**: Enter one or more wireless network names that the rule applies to. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
+    - **Specific search domains**: Enter one or more DNS domains that the rule applies to. For example, enter `contoso.com`.
+    - **All domains**: Select this option to apply your rule to all domains in your organization.
 
-      - **Ignore**: If there's a match between the device value and your on-demand rule, then a VPN connection is ignored.
+  - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
 
-    - **I want to restrict to**: In the **I want to do the following** setting, if you select **Establish VPN**, **Disconnect VPN**, or **Ignore**, then select the condition that the rule must meet. Your options:
+    For example, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
 
-      - **Specific SSIDs**: Enter one or more wireless network names that the rule applies to. This network name is the Service Set Identifier (SSID). For example, enter `Contoso VPN`.
-      - **Specific search domains**: Enter one or more DNS domains that the rule applies to. For example, enter `contoso.com`.
-      - **All domains**: Select this option to apply your rule to all domains in your organization.
+- **Block users from disabling automatic VPN**: Your options:
 
-    - **But only if this URL probe succeeds**: Optional. Enter a URL that the rule uses as a test. For example, enter `https://probe.Contoso.com`. If the device accesses this URL without redirection, then the VPN connection is started. And, the device connects to the target URL. The user doesn't see the URL string probe site.
+  - **Not configured**: Intune doesn't change or update this setting.
+  - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
+  - **No**: Allows users to turn off automatic VPN.
 
-      For example, the URL tests the VPN's ability to connect to a site before the device connects to the target URL through the VPN.
+  This setting applies to:
 
-  - **Block users from disabling automatic VPN**: Your options:
+  - iOS 14 and newer
+  - iPadOS 14 and newer
 
-    - **Not configured**: Intune doesn't change or update this setting.
-    - **Yes**: Prevents users from turning off automatic VPN. It forces users to keep the automatic VPN enabled and running.
-    - **No**: Allows users to turn off automatic VPN.
+### Per-app VPN feature in Automatic VPN
 
-    This setting applies to:
+Enables per-app VPN by associating this VPN connection with a specific app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the app software or program. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
 
-    - iOS 14 and newer
-    - iPadOS 14 and newer
+Per-app VPN isn't supported on an IKEv2 connection. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
 
-- **Per-app VPN**: Enables per-app VPN by associating this VPN connection with a specific app. When the app runs, the VPN connection starts. You can associate the VPN profile with an app when you assign the app software or program. For more information, see [How to assign and monitor apps](../apps/apps-deploy.md).
+- **Provider Type**: Only available for Pulse Secure and Custom VPN.
 
-  Per-app VPN isn't supported on an IKEv2 connection. For more information, see [set up per-app VPN for iOS/iPadOS devices](vpn-setting-configure-per-app.md).
+  When using **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel):
 
-  - **Provider Type**: Only available for Pulse Secure and Custom VPN.
+  - **app-proxy**: Select this option for app-layer tunneling.
+  - **packet-tunnel**: Select this option for packet-layer tunneling.
 
-    When using **per-app VPN** profiles with Pulse Secure or a Custom VPN, choose app-layer tunneling (app-proxy) or packet-level tunneling (packet-tunnel):
+  If you're not sure which option to use, then check your VPN provider's documentation.
 
-    - **app-proxy**: Select this option for app-layer tunneling.
-    - **packet-tunnel**: Select this option for packet-layer tunneling.
+- **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established. For example, enter `contoso.com`.
 
-    If you're not sure which option to use, then check your VPN provider's documentation.
+- **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection.
 
-  - **Safari URLs that will trigger this VPN**: Add one or more web site URLs. When these URLs are visited using the Safari browser on the device, the VPN connection is automatically established. For example, enter `contoso.com`.
+  For more information, see [associated domains](device-features-configure.md#associated-domains).
 
-  - **Associated Domains**: Enter associated domains in the VPN profile to use with this VPN connection.
+- **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
 
-    For more information, see [associated domains](device-features-configure.md#associated-domains).
+- **Block users from disabling automatic VPN**: Your options:
 
-  - **Excluded Domains**: Enter domains that can bypass the VPN connection when per-app VPN is connected. For example, enter `contoso.com`. Traffic to the `contoso.com` domain uses the public Internet even if the VPN is connected.
+  - **Not configured**: Intune doesn't change or update this setting.
+  - **Yes**: Prevents users from turning off the Connect On Demand toggle within the VPN profile settings. It forces users to keep per-app VPN or on-demand rules enabled and running.
+  - **No**: Allows users to turn off the Connect On Demand toggle, which disables per-app VPN and on-demand rules.
 
-  - **Block users from disabling automatic VPN**: Your options:
+  This setting applies to:
 
-    - **Not configured**: Intune doesn't change or update this setting.
-    - **Yes**: Prevents users from turning off the Connect On Demand toggle within the VPN profile settings. It forces users to keep per-app VPN or on-demand rules enabled and running.
-    - **No**: Allows users to turn off the Connect On Demand toggle, which disables per-app VPN and on-demand rules.
-
-    This setting applies to:
-
-    - iOS 14 and newer
-    - iPadOS 14 and newer
+  - iOS 14 and newer
+  - iPadOS 14 and newer
 
 ::: zone-end
 
