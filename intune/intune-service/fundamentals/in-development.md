@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/06/2026
+ms.date: 02/12/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -49,7 +49,6 @@ You can use RSS to be notified when this article is updated. For more informatio
 ### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
 Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
-
 
 <!-- ***********************************************-->
 
@@ -194,6 +193,8 @@ The following operator and behavior changes will be coming to **Device query for
 <!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
+
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 
