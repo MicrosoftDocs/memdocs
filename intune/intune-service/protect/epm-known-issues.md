@@ -3,7 +3,7 @@ title: Known Issues for Endpoint Privilege Management with Microsoft Intune
 description: Configure policies that define how Endpoint Privilege Management functions in your tenant, and behaviors when elevating files to run in administrative context.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/10/2025
+ms.date: 02/24/2026
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.subservice: suite
@@ -43,10 +43,6 @@ Application Control for Business policies that don't account for the EPM client 
 ## Organizations restricting users who can sign in interactively might see issues with Endpoint Privilege Management
 
 Endpoint Privilege Management uses an isolated account to facilitate elevations. This account requires the ability to create an interactive sign-in session. Organizations who limit the ability for users to create interactive sessions need to make changes for EPM to function properly.
-
-## Users requesting support approval for elevation must be the primary user on the device
-
-Endpoint Privilege Management currently requires the user requesting an elevation to be the primary user of the device. We're working to remove this limitation in a future release.
 
 ## Authoring files with a file name as one of the sole attributes for identification
 
