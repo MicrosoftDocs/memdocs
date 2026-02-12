@@ -56,7 +56,7 @@ Use of a *Server configuration* lets you create a configuration a single time an
    - **IP ranges to exclude**
 
    > [!NOTE]
-   > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses. Tunnel Gateway can't route traffic when this range is used.
+   > Do not use an IP range that specifies 0.0.0.0 in any of the include or exclude addresses. Tunnel Gateway can't route traffic when this range is used. If corporate DNS is being used in your server configuration, those address should be added in the include rules for split-tunneling.
 
 5. On the **Review + create** tab, review the configuration, and then select **Create** to save it.
 
