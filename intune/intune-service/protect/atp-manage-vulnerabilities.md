@@ -89,7 +89,7 @@ To manage security tasks:
 
 2. Select **Endpoint security** > **Security tasks**.
 3. Choose a security task to view its details. In the task window, you can select additional links, including:
-   - MANAGED APPS - View the app that is vulnerable. When the vulnerability applies to multiple apps, Intune displays a filtered list of apps.
+   - MANAGED APPS - View the app that's vulnerable. When the vulnerability applies to multiple apps, Intune displays a filtered list of apps.
    - DEVICES - View a list of the *Vulnerable devices* from which you can link through to an entry with more details for the vulnerability on that device.
    - REQUESTOR - Use the link to send mail to the admin who submitted this security task.
    - NOTES - Read custom messages submitted by the requestor when opening the security task.
