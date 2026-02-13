@@ -3,7 +3,7 @@ title: Platforms and policy types supported by assignment filters
 description: Learn which apps, compliance policies, and device configuration profiles and their platforms support assignment filters in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 11/19/2025
+ms.date: 02/24/2026
 ms.topic: reference
 ms.reviewer: mattcall
 ms.collection:
@@ -295,7 +295,7 @@ You can use assignment filters for some common app policies on the following pla
 | PKCS imported certificate | ✅ |
 | SCEP certificate | ✅ |
 | Settings catalog (MDM) | ✅ |
-| Settings catalog (DDM) | ❌ |
+| Settings catalog (DDM) | ✅ |
 | Trusted certificate | ✅ |
 | VPN | ✅ |
 | Wi-Fi | ✅ |
@@ -328,7 +328,7 @@ You can use assignment filters for some common app policies on the following pla
 | Preference file | ✅ |
 | SCEP certificate | ✅ |
 | Settings catalog (MDM) | ✅ |
-| Settings catalog (DDM) | ❌ |
+| Settings catalog (DDM) | ✅ |
 | Trusted certificate | ✅ |
 | VPN | ✅ |
 | Wi-Fi | ✅ |
