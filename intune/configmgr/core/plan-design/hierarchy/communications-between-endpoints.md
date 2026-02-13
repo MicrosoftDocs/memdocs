@@ -65,6 +65,16 @@ When you deploy a site system role that uses Internet Information Services (IIS)
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
 
+> [!WARNING]
+> HTTP Strict Transport Security (HSTS) requires the Site System to be configured for HTTPS and isn’t compatible with Enhanced HTTP. Enable HTTPS on an applicable site system before configuring HSTS.
+>
+> Configuration Manager clients don’t honor HSTS headers, and this configuration isn’t supported for client communication.
+>
+> Enabling HSTS breaks site system roles that rely on HTTP:
+>
+> - **Fallback Status Point (FSP)** is [HTTP-only by design](../../clients/deploy/plan/determine-the-site-system-roles-for-clients.md#fallback-status-point) and stops functioning if HSTS is enforced.
+> - **Software Update Point (SUP)** uses Windows Server Update Services (WSUS). WSUS encrypts update metadata over HTTPS but [always delivers update payloads over HTTP](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#232-configure-the-wsus-servers-iis-web-server-to-use-tls-for-some-connections)). Enabling HSTS on WSUS Web Site blocks the payload downloads and breaks update functionality. <!-- 16607249 -->
+
 ### <a name="bkmk_client2mp"></a> Client to management point communication
 
 There are two stages when a client communicates with a management point: authentication (transport) and authorization (message). This process varies depending upon the following factors:
