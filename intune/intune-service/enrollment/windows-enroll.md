@@ -120,7 +120,7 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 ## Known issues  
 
-This section lists the known issues with MDM enrollment.  
+There are no known issues in Microsoft Intune with MDM automatic enrollment for Windows.  
 
 ## Next steps
 
