@@ -119,7 +119,7 @@ When you're not restricted or limited (technical, political, or regulatory reaso
 
 The strategy depends on many factors, many that are specific to your organization.
 
-In general, Microsoft recommends waiting for a complementary event. For example, you can move to Microsoft Entra Join during a hardware refresh, OS upgrade, or device troubleshooting scenario when there's a new (or reset) instance of Windows. Using this approach, you minimize user disruption and streamline the conversion process to Microsoft Entra Join. Remember, there's no Microsoft supported process or path to convert an existing device from Hybrid Microsoft Entra Join to Microsoft Entra Join without a Windows reset.
+In general, Microsoft recommends waiting for a complementary event. For example, you can move to Microsoft Entra Join during a hardware refresh, OS upgrade, or device troubleshooting scenario when there's a new (or reset) instance of Windows. Using this approach, you minimize user disruption and streamline the conversion process to Microsoft Entra Join. Microsoft recommends that a device is reset to change a device from Microsoft Entra Hybrid Join to Microsoft Entra Join, whilst it acknoledges that there are 3rd party vendors who have tools that will convert a device.  During a support ticket/incident, if it is found that the reason for an issue is due to the conversion process then support will need to be obtained from the 3rd party vendor, or the device reset to get to a working state
 
 On Microsoft Entra hybrid joined devices, you must do a full device wipe, as [Windows Autopilot Reset](/autopilot/windows-autopilot-reset) doesn't support Microsoft Entra hybrid joined devices.
 
