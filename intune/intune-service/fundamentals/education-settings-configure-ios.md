@@ -51,7 +51,7 @@ SDS synchronizes information from your SIS and stores it in Microsoft Entra ID. 
 You can import information into SDS by using one of the following methods:
 
 - [CSV files](https://support.office.com/article/Follow-these-steps-71d5fe4a-aa51-4f35-9b53-348898a390a1) - Manually export and compile comma-separated value (.csv) files
-- [PowerSchool API](https://support.office.com/article/Follow-these-steps-aaaabbbb-0000-cccc-1111-dddd2222eeee) - An SIS provider that simplifies syncing with Microsoft Entra ID
+- [PowerSchool API](https://support.office.com/article/Follow-these-steps-851b5edc-558f-43a9-9122-b2d63458cb8f) - An SIS provider that simplifies syncing with Microsoft Entra ID
 - [OneRoster](https://support.office.com/article/Follow-these-steps-f43cbb2a-b502-497d-a8b1-783dc05a57ab) - A CSV format that you can export and convert to sync with Microsoft Entra ID
 
 ### Find out more
