@@ -91,11 +91,11 @@ When you require managed apps (for example, by using app-based Conditional Acces
 
 **Key app protection policy capabilities:**
 
-- Require PIN or biometric authentication for organizational data access
-- Block copy/paste, screenshots, and data transfer to unmanaged apps
-- Prevent saving organizational data to personal storage
-- Enforce encryption of organizational data at rest
-- Wipe organizational data remotely when devices are lost or users leave
+- Require PIN or biometric authentication for organizational data access.
+- Block copy/paste, screenshots, and data transfer to unmanaged apps.
+- Prevent saving organizational data to personal storage.
+- Enforce encryption of organizational data at rest.
+- Wipe organizational data remotely when devices are lost or users leave.
 
 ## Use device actions to protect devices and data
 
@@ -103,13 +103,13 @@ Run immediate [device actions](../remote-actions/index.md) to respond to securit
 
 **Common security actions:**
 
-- **Remote lock** - Lock a device remotely to prevent unauthorized access
-- **Wipe** - Factory reset a device, removing all data and settings
-- **Retire** - Remove organizational data while preserving personal data
-- **BitLocker key rotation** (Windows) - Rotate encryption keys for enhanced security
-- **Antivirus scan** (Windows) - Run full or quick malware scans
-- **Update Defender intelligence** - Refresh threat definitions
-- **Disable Activation Lock** (iOS/iPadOS) - Remove Activation Lock for device reuse
+- **Remote lock** - Lock a device remotely to prevent unauthorized access.
+- **Wipe** - Factory reset a device, removing all data and settings.
+- **Retire** - Remove organizational data while preserving personal data.
+- **BitLocker key rotation** (Windows) - Rotate encryption keys for enhanced security.
+- **Antivirus scan** (Windows) - Run full or quick malware scans.
+- **Update Defender intelligence** - Refresh threat definitions.
+- **Disable Activation Lock** (iOS/iPadOS) - Remove Activation Lock for device reuse.
 
 These actions are also available for devices managed through [Configuration Manager](#configuration-manager) when using co-management or tenant attach.
 
@@ -162,32 +162,32 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 
 **Conditional Access with Intune enables:**
 
-- [Device-based policies](../protect/create-conditional-access-intune.md) - Require devices to meet compliance requirements before accessing organizational resources
-- [App-based policies](../protect/app-based-conditional-access-intune.md) - Ensure only apps protected by Intune app protection policies can access Microsoft 365 and other services
-- Risk-based access - Dynamically adjust access requirements based on real-time threat intelligence from Defender and MTD partners
+- [Device-based policies](../protect/create-conditional-access-intune.md) - Require devices to meet compliance requirements before accessing organizational resources.
+- [App-based policies](../protect/app-based-conditional-access-intune.md) - Ensure only apps protected by Intune app protection policies can access Microsoft 365 and other services.
+- Risk-based access - Dynamically adjust access requirements based on real-time threat intelligence from Defender and MTD partners.
 
 Conditional Access works across managed and unmanaged devices, helping create an access control layer that adapts to changing threat conditions.
 
 ## Add Endpoint Privilege Management
 
-[Endpoint Privilege Management (EPM)](../protect/epm-overview.md) enforces **least privilege access** for Windows users by running them as standard users while allowing temporary elevation for approved applications. This Zero Trust approach reduces attack surface by preventing blanket administrative access.
+[Endpoint Privilege Management (EPM)](../protect/epm-overview.md) enforces **least privilege access** for Windows users by running them as standard users while allowing temporary elevation for approved applications. This approach reduces attack surface by preventing blanket administrative access.
 
 **How EPM works:**
 
-- Users run as standard accounts by default
-- Elevation rules define which applications can run with elevated privileges
-- Applications are validated using file hashes, certificates, or other criteria
-- Common elevated scenarios: application installations, driver updates, Windows diagnostics
+- Users run as standard accounts by default.
+- Elevation rules define which applications can run with elevated privileges.
+- Applications are validated using file hashes, certificates, or other criteria.
+- Common elevated scenarios: application installations, driver updates, Windows diagnostics.
 
 > [!TIP]
 > EPM is available as an [Intune add-on](../fundamentals/intune-add-ons.md) for Windows devices and requires an additional license.
 
 ## Next steps
 
-Build your Zero Trust security posture with Intune:
+Build your security posture with Intune:
 
-- **Plan your approach** - Review [Zero Trust security guidance](../protect/zero-trust-configure-security.md) for Intune
-- **Configure endpoint security** - Start with [endpoint security policies](../protect/endpoint-security.md) for focused security configurations
-- **Implement compliance** - Deploy [device compliance policies](../protect/device-compliance-get-started.md) and [Conditional Access](../protect/conditional-access.md)
-- **Protect data** - Configure [app protection policies](../apps/app-protection-policy.md) for organizational data
-- **Monitor and maintain** - Learn about [data security and sharing in Intune](../protect/privacy-data-secure-share.md)
+- **Plan your approach** - Review [Zero Trust security guidance](../protect/zero-trust-configure-security.md) for Intune.
+- **Configure endpoint security** - Start with [endpoint security policies](../protect/endpoint-security.md) for focused security configurations.
+- **Implement compliance** - Deploy [device compliance policies](../protect/device-compliance-get-started.md) and [Conditional Access](../protect/conditional-access.md).
+- **Protect data** - Configure [app protection policies](../apps/app-protection-policy.md) for organizational data.
+- **Monitor and maintain** - Learn about [data security and sharing in Intune](../protect/privacy-data-secure-share.md).
