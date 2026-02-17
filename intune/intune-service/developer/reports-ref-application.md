@@ -25,7 +25,7 @@ The **appRevision** entity lists all the versions of apps.
 | Property  | Description | Example |
 |---------|------------|--------|
 | appKey |Unique identifier of the App. |123 |
-| applicationId |Unique identifier of the App - similar to AppKey, but this key is a natural. |b66bc706-ffff-7437-0340-032819502773 |
+| applicationId |Unique identifier of the App - similar to AppKey, but this key is a natural. |00001111-aaaa-2222-bbbb-3333cccc4444 |
 | revision |The version as mentioned by admin during uploading of the binary. |2 |
 | title |Title of the app. |Excel |
 | publisher |Publisher of the app. |Microsoft |

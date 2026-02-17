@@ -87,7 +87,7 @@ First, you need to make note of the **Microsoft Entra tenant name** and **tenant
 
     1. For the Application ID URI, select **Add**. Specify a URI that's unique for the tenant. You'll use this value later as the _App ID URI_. Use one of the following recommended formats:<!-- 10617402 -->
 
-       - `api://{tenantId}/{string}`, for example, `api://5e97358c-d99c-4558-af0c-de7774091dda/ConfigMgrService`
+       - `api://{tenantId}/{string}`, for example, `api://aaaabbbb-0000-cccc-1111-dddd2222eeee/ConfigMgrService`
        - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
         Select **Save**.
@@ -136,7 +136,7 @@ The web (server) app for CMG is now registered in Microsoft Entra ID.
 
         1. In the Configure platforms pane, select **Mobile and desktop applications**.
 
-        1. In the **Configure Desktop + devices** pane, under Custom redirect URIs, specify `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Use the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/2afe572e-d268-4c77-a22d-fdca617e2255`. <!-- this example GUID is just the ms.assetid of this article :) -->
+        1. In the **Configure Desktop + devices** pane, under Custom redirect URIs, specify `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Use the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/00001111-aaaa-2222-bbbb-3333cccc4444`. <!-- this example GUID is just the ms.assetid of this article :) -->
 
         1. Select **Configure**.
 
