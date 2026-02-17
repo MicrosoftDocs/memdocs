@@ -136,7 +136,7 @@ The web (server) app for CMG is now registered in Microsoft Entra ID.
 
         1. In the Configure platforms pane, select **Mobile and desktop applications**.
 
-        1. In the **Configure Desktop + devices** pane, under Custom redirect URIs, specify `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Use the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/00001111-aaaa-2222-bbbb-3333cccc4444`. <!-- this example GUID is just the ms.assetid of this article :) -->
+        1. In the **Configure Desktop + devices** pane, under Custom redirect URIs, specify `ms-appx-web://Microsoft.AAD.BrokerPlugin/<ClientID>`. Use the app's client ID GUID, for example: `ms-appx-web://Microsoft.AAD.BrokerPlugin/00001111-aaaa-2222-bbbb-3333cccc4444`.
 
         1. Select **Configure**.
 
