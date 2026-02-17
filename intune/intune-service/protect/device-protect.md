@@ -1,9 +1,9 @@
 ---
-title: Protect devices with Microsoft Intune
+title: Protect data and devices with Microsoft Intune
 description: Learn about the Intune capabilities that can help you protect your devices and data against unauthorized access and other threats.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/13/2026
+ms.date: 02/17/2026
 ms.topic: overview
 ms.reviewer: davidra
 ms.collection:
@@ -17,6 +17,8 @@ Microsoft Intune helps you keep managed devices secure and up to date while prot
 
 This article introduces Intune's built-in security capabilities and partner technologies that work together to support **Zero Trust** solutions for your organization. As an overview, it describes key protection capabilities and links to detailed documentation for configuration and deployment guidance.
 
+Intune can also integrate with third-party products that provide device compliance and Mobile Threat Defense (MTD) signals.
+
 ## Platform support
 
 From the Microsoft Intune admin center, Intune [supports managed devices](../fundamentals/supported-devices-browsers.md#intune-supported-operating-systems) that run:
@@ -27,15 +29,14 @@ From the Microsoft Intune admin center, Intune [supports managed devices](../fun
 - macOS
 - Windows
 
-**Extend to on-premises devices**
-
-When you use [Configuration Manager](#configuration-manager) to manage on-premises devices, you can extend Intune policies to those devices through tenant attach or co-management.
+In addition, when you use [Configuration Manager](#configuration-manager) to manage on-premises devices, you can extend Intune policies to those devices through tenant attach or co-management.
 
 ## Deploy security policies to protect devices
 
 Deploy policies to configure and enforce security on enrolled devices. The following policy types work together to protect devices:
 
 **[Endpoint security policies](../protect/endpoint-security.md)** - Focused security policies for specific protection areas:
+
 - **Account protection** - Windows Hello for Business, Credential Guard, and Windows LAPS
 - **Antivirus** - Microsoft Defender Antivirus configuration and exclusions
 - **App Control for Business** - Application allowlisting using Windows Defender Application Control
@@ -55,16 +56,16 @@ The following security areas can be managed through these policies:
 - **Authentication and identity**
   - **Certificates** - Deploy certificates using [SCEP and PKCS profiles](../protect/certificates-configure.md), or use [Microsoft Cloud PKI](../../cloud-pki/index.md) for simplified cloud-based certificate management without on-premises infrastructure. Configure [derived credentials](../protect/derived-credentials.md) for smartcard scenarios.
   - **Modern authentication** - Enable [Windows Hello for Business](../protect/windows-hello.md) for passwordless sign-in. Configure [Platform SSO for macOS](../configuration/platform-sso-macos.md) to strengthen authentication across apps and services.
-  - **Multi-factor authentication** - Require MFA and configure PIN/password requirements for enhanced security.
+  - **Multi-factor authentication** - Use Microsoft Entra Conditional Access to require MFA, and use Intune to configure device PIN/password and other sign-in related settings as needed.
 
 - **Data encryption**
   - **Windows** - Deploy [BitLocker](../protect/encrypt-devices.md) for full disk encryption and [Personal Data Encryption (PDE)](../protect/encrypt-devices.md#personal-data-encryption-pde) for file-level encryption on Windows 11.
   - **macOS** - Manage [FileVault](../protect/encrypt-devices-filevault.md) for full disk encryption.
 
 - **Software updates** - Control when and how devices receive updates:
-  - **Android** - [FOTA updates](../../device-updates/android/fota-updates.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/zebra-lifeguard-ota-integration.md) for Zebra devices
-  - **iOS/iPadOS and macOS** - [Configure update policies](../../device-updates/apple/index.md) to manage OS versions and update schedules
-  - **Windows** - Configure [Windows Update behaviors](../../device-updates/windows/index.md), schedule updates, and maintain feature update compliance
+  - **Android** - [FOTA updates](../../device-updates/android/fota-updates.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/zebra-lifeguard-ota-integration.md) for Zebra devices.
+  - **iOS/iPadOS and macOS** - [Configure update policies](../../device-updates/apple/index.md) to manage OS versions and update schedules.
+  - **Windows** - Configure [Windows Update behaviors](../../device-updates/windows/index.md), schedule updates, and maintain feature update compliance.
 
 - **Application control** - Use [App Control for Business](../protect/endpoint-security-app-control-policy.md) policies to define which applications can run on Windows devices.
 
@@ -84,7 +85,9 @@ The following security areas can be managed through these policies:
 
 Protect organizational data at the application layer using [app protection policies](../apps/app-protection-policy.md) with Intune-managed apps. These protections work on both enrolled and unenrolled devices, supporting Bring Your Own Device (BYOD) scenarios.
 
-**Intune-managed apps** integrate the [Intune App SDK](../developer/app-sdk.md) or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps. Users can access organizational data only through managed apps when app protection policies are enforced, while personal data remains unaffected.
+**Intune-managed apps** integrate the [Intune App SDK](../developer/app-sdk.md) or use the [Intune App Wrapping Tool](../developer/apps-prepare-mobile-application-management.md). See [Intune protected apps](../apps/apps-supported-intune-apps.md) for a list of supported apps.
+
+When you require managed apps (for example, by using app-based Conditional Access policies), users can only access organizational data through those managed apps, while personal data remains unaffected.
 
 **Key app protection policy capabilities:**
 
@@ -108,7 +111,7 @@ Run immediate [device actions](../remote-actions/index.md) to respond to securit
 - **Update Defender intelligence** - Refresh threat definitions
 - **Disable Activation Lock** (iOS/iPadOS) - Remove Activation Lock for device reuse
 
-These actions are also available for [co-managed devices](#configuration-manager) managed by Configuration Manager with tenant attach.
+These actions are also available for devices managed through [Configuration Manager](#configuration-manager) when using co-management or tenant attach.
 
 ## Integrate with partner technologies
 
@@ -148,7 +151,7 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 
 ### Conditional Access
 
-[Conditional Access](../protect/conditional-access.md) is a Microsoft Entra capability that serves as the enforcement engine for Zero Trust access policies. It evaluates signals from Intune and other sources to make real-time access decisions, ensuring only trusted users on compliant devices can access organizational resources.
+[Conditional Access](../protect/conditional-access.md) is a Microsoft Entra capability that serves as the enforcement engine for Zero Trust access policies. It evaluates signals from Intune and other sources to make real-time access decisions, helping to ensure only trusted users on compliant devices can access organizational resources.
 
 **Conditional Access evaluates multiple signals:**
 
@@ -163,7 +166,7 @@ Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-
 - [App-based policies](../protect/app-based-conditional-access-intune.md) - Ensure only apps protected by Intune app protection policies can access Microsoft 365 and other services
 - Risk-based access - Dynamically adjust access requirements based on real-time threat intelligence from Defender and MTD partners
 
-Conditional Access works across managed and unmanaged devices, creating a comprehensive access control layer that adapts to changing threat conditions.
+Conditional Access works across managed and unmanaged devices, helping create an access control layer that adapts to changing threat conditions.
 
 ## Add Endpoint Privilege Management
 
