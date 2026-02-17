@@ -27,7 +27,7 @@ From the Microsoft Intune admin center, Intune [supports managed devices](../fun
 - macOS
 - Windows
 
-**Extend to on-premises devices:**
+**Extend to on-premises devices**
 
 When you use [Configuration Manager](#configuration-manager) to manage on-premises devices, you can extend Intune policies to those devices through tenant attach or co-management.
 
@@ -54,7 +54,7 @@ The following security areas can be managed through these policies:
 
 - **Authentication and identity**
   - **Certificates** - Deploy certificates using [SCEP and PKCS profiles](../protect/certificates-configure.md), or use [Microsoft Cloud PKI](../../cloud-pki/index.md) for simplified cloud-based certificate management without on-premises infrastructure. Configure [derived credentials](../protect/derived-credentials.md) for smartcard scenarios.
-  - **Modern authentication** - Enable [Windows Hello for Business](../protect/windows-hello.md) for passwordless sign-in. Configure Platform SSO for macOS to strengthen authentication across apps and services.
+  - **Modern authentication** - Enable [Windows Hello for Business](../protect/windows-hello.md) for passwordless sign-in. Configure [Platform SSO for macOS](../configuration/platform-sso-macos.md) to strengthen authentication across apps and services.
   - **Multi-factor authentication** - Require MFA and configure PIN/password requirements for enhanced security.
 
 - **Data encryption**
@@ -63,7 +63,7 @@ The following security areas can be managed through these policies:
 
 - **Software updates** - Control when and how devices receive updates:
   - **Android** - [FOTA updates](../../device-updates/android/fota-updates.md) for OEM firmware, [Zebra LifeGuard OTA](../../device-updates/android/zebra-lifeguard-ota-integration.md) for Zebra devices
-  - **iOS/iPadOS and macOS** - Manage OS versions and [update schedules](../protect/managed-software-updates-ios-macos.md)
+  - **iOS/iPadOS and macOS** - [Configure update policies](../../device-updates/apple/index.md) to manage OS versions and update schedules
   - **Windows** - Configure [Windows Update behaviors](../../device-updates/windows/index.md), schedule updates, and maintain feature update compliance
 
 - **Application control** - Use [App Control for Business](../protect/endpoint-security-app-control-policy.md) policies to define which applications can run on Windows devices.
@@ -116,57 +116,54 @@ Extend Intune's protection capabilities through integrations with Microsoft tech
 
 ### Compliance partners
 
-Integrate [device compliance data](../protect/device-compliance-partners.md) from third-party MDM solutions with Microsoft Entra ID. Conditional Access policies can then enforce access controls using compliance status from multiple sources.
+Integrate [device compliance data](../protect/device-compliance-partners.md) from third-party MDM solutions with Microsoft Entra ID. This enables organizations with mixed management environments to enforce unified Conditional Access policies across all devices, regardless of which MDM solution manages them.
 
 ### Configuration Manager
 
-Extend Intune security policies to Configuration Manager devices using [co-management](../../configmgr/comanage/overview.md) or [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md):
+Extend Intune's cloud-based security policies to on-premises and hybrid-managed devices through [co-management](../../configmgr/comanage/overview.md) or [tenant attach](../../configmgr/tenant-attach/device-sync-actions.md). This integration provides a unified management experience for organizations transitioning to cloud management or maintaining hybrid infrastructure:
 
-- **Co-management** - Manage Windows devices with both Configuration Manager and Intune simultaneously
-- **Tenant attach** - Synchronize Configuration Manager devices to Intune for centralized management
+- **Co-management** - Concurrently manage Windows devices with both Configuration Manager and Intune, with workload sliders to control which service manages specific capabilities.
+- **Tenant attach** - Synchronize Configuration Manager devices into the Microsoft Intune admin center for centralized visibility and management.
 
-Once integrated, [apply Intune security policies](../protect/endpoint-security-manage-devices.md) including endpoint security policies, compliance policies, certificates (SCEP/PKCS), and security baselines to Configuration Manager devices.
+Both approaches enable [Intune security policies](../protect/endpoint-security-manage-devices.md) on Configuration Manager devices, including endpoint security policies, compliance policies, certificate deployment (SCEP/PKCS), and security baselines. This creates a consistent security posture across cloud and on-premises managed devices.
 
 ### Mobile Threat Defense
 
-[Mobile Threat Defense (MTD)](../protect/mobile-threat-defense.md) apps scan devices for threats and report risk levels to Intune. Use MTD threat levels in compliance policies, app protection policies, and Conditional Access to block compromised devices from accessing organizational resources.
+[Mobile Threat Defense (MTD)](../protect/mobile-threat-defense.md) partners extend threat detection beyond Microsoft's built-in capabilities by scanning for device-level threats, network threats, app-based threats, and phishing attempts. MTD apps continuously assess device risk and report threat levels to Intune, enabling risk-based access decisions through compliance policies, app protection policies, and Conditional Access.
 
-**MTD capabilities for [enrolled devices](../protect/mtd-device-compliance-policy-create.md):**
-- Deploy and manage MTD apps through Intune
-- Use threat levels in compliance and Conditional Access policies
-- Block or allow data access based on device risk
+**For [enrolled devices](../protect/mtd-device-compliance-policy-create.md)**, Intune deploys and manages MTD apps while using their threat level assessments in device compliance evaluations. Devices exceeding acceptable risk thresholds can be blocked from accessing organizational resources until threats are remediated.
 
-**MTD capabilities for [unenrolled devices](../protect/mtd-app-protection-policy.md):**
-- Use threat levels in app protection policies
-- Block access to organizational data on high-risk devices
+**For [unenrolled devices](../protect/mtd-app-protection-policy.md)** in BYOD scenarios, MTD threat levels inform app protection policy decisions, blocking access to organizational data within managed apps when device risk is too high.
 
-**Supported MTD solutions:**
-- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) with enhanced Intune integration
-- [Third-party MTD partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners)
+Intune supports [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md) with enhanced integration capabilities, and multiple [third-party MTD partners](../protect/mobile-threat-defense.md#mobile-threat-defense-partners) to fit diverse security requirements.
 
 ### Microsoft Defender for Endpoint
 
-[Microsoft Defender for Endpoint integrates with Intune](../protect/microsoft-defender-with-intune.md) across Windows, macOS, Linux, Android, and iOS/iPadOS to provide:
+[Microsoft Defender for Endpoint deeply integrates with Intune](../protect/microsoft-defender-with-intune.md) across Windows, macOS, Linux, Android, and iOS/iPadOS, creating a unified security platform that combines device management with advanced threat protection. This integration enables:
 
-- **Mobile Threat Defense** - Device risk assessment for compliance and Conditional Access policies
-- **[Microsoft Tunnel](../protect/microsoft-tunnel-overview.md)** - VPN gateway for Intune using Defender for Endpoint as the client app on Android
-- **[Security tasks](../protect/atp-manage-vulnerabilities.md)** - Vulnerability management collaboration between Defender for Endpoint and Intune teams
-- **Enhanced security policies** - Additional capabilities for [Antivirus](../protect/endpoint-security-antivirus-policy.md) and [Endpoint detection and response (EDR)](../protect/endpoint-security-edr-policy.md) policies
+- **Threat intelligence and risk assessment** - Defender's continuous threat detection and device risk scores flow directly into Intune compliance policies and Conditional Access decisions, enabling dynamic, risk-based access control
+- **Enhanced endpoint security management** - Configure and deploy Defender capabilities through Intune policies, including [Antivirus](../protect/endpoint-security-antivirus-policy.md) settings, [EDR onboarding](../protect/endpoint-security-edr-policy.md), Attack Surface Reduction rules, tamper protection, web protection, and device control
+- **Vulnerability management** - [Security tasks](../protect/atp-manage-vulnerabilities.md) create a collaboration workflow where Defender's threat and vulnerability management identifies at-risk devices and provides remediation guidance that Intune admins can act on directly
+- **[Microsoft Tunnel](../protect/microsoft-tunnel-overview.md)** - Defender for Endpoint serves as the VPN client for Microsoft Tunnel on Android devices, providing secure remote access without requiring separate Defender licensing
 
 ### Conditional Access
 
-[Conditional Access](../protect/conditional-access.md) is a Microsoft Entra capability that enforces access controls based on device compliance and threat levels reported by Intune.
+[Conditional Access](../protect/conditional-access.md) is a Microsoft Entra capability that serves as the enforcement engine for Zero Trust access policies. It evaluates signals from Intune and other sources to make real-time access decisions, ensuring only trusted users on compliant devices can access organizational resources.
 
-**Conditional Access with Intune:**
+**Conditional Access evaluates multiple signals:**
 
-- **[Device-based](../protect/create-conditional-access-intune.md)** - Require devices to be compliant before accessing organizational resources
-- **[App-based](../protect/app-based-conditional-access-intune.md)** - Ensure only apps with Intune app protection policies can access Microsoft 365 services
+- Device compliance status from Intune policies
+- Device risk levels from Microsoft Defender for Endpoint and MTD partners
+- User risk and sign-in risk from Microsoft Entra ID Protection
+- Location, device platform, and application being accessed
 
-**Conditional Access works with:**
-- Device compliance policies
-- Microsoft Defender for Endpoint and MTD apps
-- Device compliance partners
-- App protection policies
+**Conditional Access with Intune enables:**
+
+- [Device-based policies](../protect/create-conditional-access-intune.md) - Require devices to meet compliance requirements before accessing organizational resources
+- [App-based policies](../protect/app-based-conditional-access-intune.md) - Ensure only apps protected by Intune app protection policies can access Microsoft 365 and other services
+- Risk-based access - Dynamically adjust access requirements based on real-time threat intelligence from Defender and MTD partners
+
+Conditional Access works across managed and unmanaged devices, creating a comprehensive access control layer that adapts to changing threat conditions.
 
 ## Add Endpoint Privilege Management
 
