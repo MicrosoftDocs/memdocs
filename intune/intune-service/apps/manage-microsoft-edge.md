@@ -465,23 +465,13 @@ Organizations can configure a search provider for users. To configure a search p
 > [!NOTE]
 > If you want to block access to the web version of Copilot, copilot.microsoft.com, you can use policy AllowListURLs or BlockListURLs.
 
-Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by selecting the Copilot button in bottom bar.
-
-If CopilotMode policy is off, there are settings in **Settings**->**Microsoft Services**->**Copilot**. 
-
-- **Show Copilot** – Control whether to show Copilot button on address bar
-- **Allow Copilot to use page content** – Control whether to allow Copilot to access page content or PDF
-
-If CopilotMode policy is on, there are settings in **Settings**->**AI Innovations**->**Copilot**.
-
-- **Show Copilot** – Control whether to show Copilot button on address bar
-- **Allow Copilot to use page content** – Control whether to allow Copilot to access page content or PDF
-
-And settings in **Settings**->**AI Innovations**->**Copilot Mode**.
-
-- **Enable Copilot prompts card** – Control whether to show Copilot prompts card in the NTP
-
-You can manage the settings for Copilot.
+M365 Copilot chat is available in Microsoft Edge for iOS and Android. If Copilot chat is enabled, user can launch Copilot by pressing the button in address bar. It's by default enabled and you may disable it by .Chat policy below.
+ 
+M365 Copilot chat by default can access your browsing context and content such as opened tabs and browsing history, you may disable it by .ChatPageContext policy below. 
+ 
+Additionally, Edge mobile now provides more Copilot-oriented experience in the browser, which is named "M365 Copilot Mode", as of now it shows Copilot suggestion prompts in the NTP and there are more features and experience updates coming soon. Copilot Mode will also be default enabled in a future version soon, and IT admin can explicitly opt-out by the .CopilotMode MAM policy below, this will keep Edge mobile as current non-Copilot optimized experience. 
+ 
+Note: even aforementioned behaviors are enabled by default, every Edge mobile user can turn it ON/OFF individually in Edge settings per their interest and choice, while below policies will apply to all users in the targeted group/tenant.
 
 |Key |Value |
 |:-----------|:-------------|
