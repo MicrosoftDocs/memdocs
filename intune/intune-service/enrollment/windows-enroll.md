@@ -72,9 +72,9 @@ This article describes how to enable automatic mobile device management (MDM) en
    > If your intent is to enable automatic MDM enrollment for Windows BYOD devices, select **All** or **Some** for the MDM user scope. Then make sure the WIP user scope is **None** or **Some**, and that users are not members of both user scopes.
 
 1. Use the default values for these URLs:
-   - **MDM Terms of use URL**
-   - **MDM Discovery URL**
-   - **MDM Compliance URL**
+   - **MDM terms of use URL**
+   - **MDM discovery URL**
+   - **MDM compliance URL**
 
 1. You have the option to control if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the work or school account registration flow (referring to [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506)). To control the behavior of the flow, use the **Disable MDM enrollment when adding work or school account** setting.
 
