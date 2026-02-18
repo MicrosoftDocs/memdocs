@@ -5,7 +5,7 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 07/22/2024
 ms.topic: install-set-up-deploy
-ms.reviewer: dougeby
+ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
 ---
@@ -97,12 +97,12 @@ Use Microsoft Intune to enable or disable settings and features on iOS/iPadOS de
 | Task | Detail |
 | ---- | ------ |
 |[Create a device profile in Microsoft Intune](../configuration/device-profile-create.md) |Learn about the different types of device profiles you can create for your organization.|
-|[Configure device features](../configuration/device-features-configure.md)|Configure common iOS/iPadOS features and functionality for a work or school context. For a description of the settings in this area, see the [device features reference](../configuration/ios-device-features-settings.md).|
-|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference](../configuration/wi-fi-settings-ios.md).|
-|[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network. You can also [create a per-app VPN policy](../configuration/vpn-setting-configure-per-app.md) to require users to sign in to certain apps through a VPN connection. For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-ios.md). |
+|[Configure device features](../configuration/device-features-configure.md)|Configure common iOS/iPadOS features and functionality for a work or school context. For a description of the settings in this area, see the [device features reference](../configuration/device-features-apple.md).|
+|[Configure Wi-Fi profile](../configuration/wi-fi-settings-configure.md)|This profile enables people to find and connect to your organization's Wi-Fi network. For a description of the settings in this area, see the [Wi-Fi settings reference](../configuration/wi-fi-settings-apple.md).|
+|[Configure VPN profile](../configuration/vpn-settings-configure.md)|Set up a secure VPN option, such as Microsoft Tunnel, for people connecting to your organization's network. You can also [create a per-app VPN policy](../configuration/vpn-setting-configure-per-app.md) to require users to sign in to certain apps through a VPN connection. For a description of the settings in this area, see the [VPN settings reference](../configuration/vpn-settings-apple.md). |
 |[Configure email profile](../configuration/email-settings-configure.md)|Configure email settings so that people can connect to a mail server and access their work or school email. For a description of the settings in this area, see the [email settings reference](../configuration/email-settings-ios.md).|
-|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-ios.md).|
-|[Configure custom profile](../configuration/custom-settings-ios.md)|Add and assign device settings and features that aren't built into Intune.|
+|[Restrict device features](../configuration/device-restrictions-configure.md)|Protect users from unauthorized access and distractions by limiting the device features they can use at work or school. For a description of the settings in this area, see the [device restrictions reference](../configuration/device-restrictions-apple.md).|
+|[Configure custom profile](../configuration/custom-settings-apple.md)|Add and assign device settings and features that aren't built into Intune.|
 |[Customize branding and enrollment experience](../apps/company-portal-app.md)|Customize the Intune Company Portal and Microsoft Intune app experience with your organization's own words, branding, screen preferences, and contact information.|
 |[Managed software updates](../../device-updates/apple/index.md)| Schedule automatic OS updates and installations for supervised iOS/iPadOS devices.|
 

@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 05/29/2024
-ms.localizationpriority: medium
 # the same text of this include is also used in customize-boot-images.md
 ---
 

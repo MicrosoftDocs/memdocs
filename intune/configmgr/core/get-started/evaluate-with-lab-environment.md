@@ -1,17 +1,10 @@
 ---
 title: Evaluate in a lab environment
-titleSuffix: Configuration Manager
 description: Create a lab environment to evaluate Configuration Manager for use in your organization.
 ms.date: 02/28/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Evaluate Configuration Manager by building your own lab environment
 

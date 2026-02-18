@@ -1,17 +1,10 @@
 ---
 title: Prerequisite checks
-titleSuffix: Configuration Manager
 description: Reference of the specific prerequisite checks for Configuration Manager updates.
 ms.date: 03/28/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # List of prerequisite checks for Configuration Manager
@@ -284,6 +277,10 @@ Microsoft .NET Framework 4.0 is installed on the Configuration Manager console c
 *Applies to: new site or when updating an existing one*
 
 Configuration Manager requires the installation of the ODBC driver for SQL server as a prerequisite.
+Starting in version **2309**, this prerequisite is required when you create a new site or update an existing one. From version **2503 onwards**, the minimum required version is **18.4.1.1** or later.
+
+> [!NOTE]
+> We recommend installing the latest version of the Microsoft ODBC Driver for SQL Server to benefit from the most recent fixes and security updates. However, Configuration Manager does __not__ test every new ODBC driver version as soon as it is released. The version shipped with Configuration Manager 2503 and later is __18.4.1.1__, which is the last validated version. If you encounter issues with a newer ODBC driver, you may be asked to revert to a previously validated version until the issue is resolved by the respective component team. Configuration Manager will update the redistributable ODBC driver in future releases if there are security fixes or deprecations.
 
 ### Parent database collation
 
@@ -490,7 +487,7 @@ When using an availability group, replicas are in a healthy state.
 
 *Applies to: Site database server*
 
-The SQL Server meets the minimum requirements for site upgrade. For more information, see [Supported SQL Server versions](../../../plan-design/configs/support-for-sql-server-versions.md).
+The SQL Server meets the minimum requirements for site upgrade. For more information, see required [SQL Server](../../../plan-design/configs/support-for-sql-server-versions.md#bkmk_SQLConfig) and [Database](../../../plan-design/configs/support-for-sql-server-versions.md#bkmk_DBConfig) configurations.
 
 ### SQL Server edition
 

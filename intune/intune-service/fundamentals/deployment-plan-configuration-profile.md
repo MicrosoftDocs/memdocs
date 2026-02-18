@@ -170,8 +170,8 @@ For a list of the settings you can configure, go to:
   - [Android Enterprise > Corporate owned > **Device password** and **Work profile password**](../configuration/device-restrictions-android-for-work.md)
   - [Android Enterprise > Personally owned > **Work profile password** and **Password**](../configuration/device-restrictions-android-for-work.md)
   - [Android AOSP > **Device password**](../configuration/device-restrictions-android-for-work.md)
-- **iOS/iPadOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-ios.md)
-- **macOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-macos.md)
+- **iOS/iPadOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-apple.md)
+- **macOS** [Device restrictions profile > **Password**](../configuration/device-restrictions-apple.md)
 - **Windows**:
   - [Security baselines](../protect/security-baselines.md)
   - [Client device restrictions profile > **Password**](../configuration/device-restrictions-windows-10.md)
@@ -192,7 +192,7 @@ Your policy options:
 | Android Enterprise personally owned devices | Not available <br/><br/>Can use compliance policies to set a minimum patch level, min/max OS version, and more. |
 | iOS/iPadOS | Intune update policy |
 | macOS | Intune update policy |
-| Windows client | - Intune feature updates policy </br>- Intune expedited updates policy |
+| Windows client | - Intune feature updates policy </br>- Intune quality updates policy |
 
 For more information on these features and/or the settings you can configure, go to:
 
@@ -201,7 +201,7 @@ For more information on these features and/or the settings you can configure, go
 - **macOS** [Managed software updates](../../device-updates/apple/index.md)
 - **Windows**:
   - [Feature updates policy](../../device-updates/windows/feature-updates.md)
-  - [Expedited updates policy](../../device-updates/windows/expedite-updates.md)
+  - [Quality updates policy](../../device-updates/windows/quality-updates.md)
 
 ## Level 1 - Access organization email, connect to VPN or Wi-Fi
 
@@ -303,8 +303,8 @@ To get started:
 3. In the VPN device configuration profile, configure the settings for your platform:
 
     - [Android Enterprise VPN settings](../configuration/vpn-settings-android-enterprise.md)
-    - [iOS/iPadOS VPN settings](../configuration/vpn-settings-ios.md)
-    - [macOS VPN settings](../configuration/vpn-settings-macos.md)
+    - [iOS/iPadOS VPN settings](../configuration/vpn-settings-apple.md)
+    - [macOS VPN settings](../configuration/vpn-settings-apple.md)
     - [Windows VPN settings](../configuration/vpn-settings-windows-10.md)
 
 4. [Assign the VPN device configuration profile](../configuration/device-profile-assign.md) to your users or user groups.
@@ -339,8 +339,8 @@ To get started:
 2. Configure the settings for your platform:
 
     - [Android Enterprise Wi-Fi settings](../configuration/wi-fi-settings-android-enterprise.md)
-    - [iOS/iPadOS Wi-Fi settings](../configuration/wi-fi-settings-ios.md)
-    - [macOS Wi-Fi settings](../configuration/wi-fi-settings-macos.md)
+    - [iOS/iPadOS Wi-Fi settings](../configuration/wi-fi-settings-apple.md)
+    - [macOS Wi-Fi settings](../configuration/wi-fi-settings-apple.md)
     - [Windows Wi-Fi settings](../configuration/vpn-settings-windows-10.md)
 
 3. [Assign the Wi-Fi device configuration profile](../configuration/device-profile-assign.md) to your users or user groups.
@@ -365,7 +365,7 @@ Microsoft recommends the following level 2 security policies:
 
   For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
 
-  There are Intune policy settings that focus on [password settings and encrypting backups](../configuration/device-restrictions-ios.md).
+  There are Intune policy settings that focus on [password settings and encrypting backups](../configuration/device-restrictions-apple.md).
 
   # [macOS](#tab/macos-disk)
 
@@ -393,14 +393,14 @@ Microsoft recommends the following level 2 security policies:
 
   On iOS/iPadOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions policy > Password settings](../configuration/device-restrictions-ios.md#password)
+  - [Device restrictions policy > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
 
   # [macOS](#tab/macos-password)
 
   On macOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions policy > Password settings](../configuration/device-restrictions-macos.md#password)
+  - [Device restrictions policy > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
 
   # [Windows](#tab/windows-password)
@@ -511,8 +511,8 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
   # [iOS/iPadOS](#tab/ios-kiosk)
 
   - **iOS/iPadOS**
-    - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-ios.md#kiosk)
+    - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-apple.md)
+    - [Device settings to run as a kiosk](../configuration/device-restrictions-apple.md)
 
   # [Windows](#tab/windows-kiosk)
 

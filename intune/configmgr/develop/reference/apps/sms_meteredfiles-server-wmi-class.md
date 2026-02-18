@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent metered files and implement the matching between the meter rule and the file information in Configuration Manager.
 title: SMS_MeteredFiles Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 4d8ee58d-588c-46de-8dff-5a158c519d4d
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_MeteredFiles Server WMI Class
 The `SMS_MeteredFiles` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents metered files and implements the matching between the meter rule and the file information.

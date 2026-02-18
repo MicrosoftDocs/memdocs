@@ -1,17 +1,10 @@
 ---
 title: Configure sites and hierarchies
-titleSuffix: Configuration Manager
 description: Consult this checklist to ensure you consider the most common configurations that affect both sites and hierarchies.
 ms.date: 07/30/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure sites and hierarchies for Configuration Manager

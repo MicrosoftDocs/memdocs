@@ -1,18 +1,11 @@
 ---
 title: Site administration views
-titleSuffix: Configuration Manager
 description: Information such as the site code, Configuration Manager version, and the location of the SMS provider.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 
 
-ms.assetid: 7c8ca172-c5de-4f13-90e4-039eb3913577
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

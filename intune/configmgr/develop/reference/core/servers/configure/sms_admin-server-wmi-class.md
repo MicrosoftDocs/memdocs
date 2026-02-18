@@ -1,18 +1,10 @@
 ---
 title: SMS_Admin server WMI class
-titleSuffix: Configuration Manager
 description: Details of the SMS_Admin server WMI class
 ms.date: 09/11/2020
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ddc3da5e-2d17-4e03-9987-d7fc5c06f25d
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # SMS_Admin server WMI class

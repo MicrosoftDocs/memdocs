@@ -1,10 +1,6 @@
 ---
-author: banreet
-ms.author: banreetkaur
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 12/01/2021
-ms.localizationpriority: medium
 ---
 <!--This file will be shared. Currently it's in use by the admin-console-extensions.md file. Some headings may be context driven by the article-->
 

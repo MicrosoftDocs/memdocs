@@ -28,7 +28,7 @@ Depending on the platform, you can customize the wipe behavior to meet your orga
 > - Android Enterprise corporate-owned work profile (COPE)
 > - Android Open Source Project (AOSP)
 > - ChromeOS
-> - iOS/iPadOS (corporate-owned)
+> - iOS/iPadOS
 > - macOS
 > - Windows
 

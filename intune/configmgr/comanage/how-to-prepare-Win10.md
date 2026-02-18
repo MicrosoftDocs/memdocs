@@ -1,17 +1,10 @@
 ---
 title: Co-manage internet-based devices
-titleSuffix: Configuration Manager
 description: Learn how to prepare your Windows internet-based devices for co-management.
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ms.date: 12/16/2024
 ms.topic: how-to
 ms.subservice: co-management
-ms.service: configuration-manager
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart,frankroj
 ---
 
 # How to prepare internet-based devices for co-management

@@ -1,18 +1,11 @@
 ---
 title: Capabilities in Technical Preview 1608
-titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1608.
 ms.date: 01/23/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-manager: apoorvseth
-ms.author: banreetkaur
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1608 for Configuration Manager
 

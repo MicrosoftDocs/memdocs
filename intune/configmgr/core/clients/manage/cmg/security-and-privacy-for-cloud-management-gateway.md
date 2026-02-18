@@ -1,16 +1,9 @@
 ---
 title: CMG security and privacy
-titleSuffix: Configuration Manager
 description: Learn about guidance and recommendations for security and privacy with the cloud management gateway.
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ms.date: 04/08/2022
 ms.topic: article
 ms.subservice: core-infra
-ms.service: configuration-manager
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

@@ -1,17 +1,10 @@
 ---
 title: Boundary groups and software update points
-titleSuffix: Configuration Manager
 description: Understand how clients and software update points behave with boundary groups.
 ms.date: 04/08/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Boundary groups and software update points

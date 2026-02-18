@@ -1,18 +1,10 @@
 ---
 title: SMS_MachineVariable Class
-titleSuffix: Configuration Manager
 description: The SMS_MachineVariable WMI class defines the settings of a task sequence variable that is unique to a specific computer.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 5a0951f6-f184-4c00-a7d3-94cd3f466de9
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_MachineVariable Server WMI Class
 The `SMS_MachineVariable` Windows Management Instrumentation (WMI) class is an SMS Provider server class in Configuration Manager that defines the settings of a task sequence variable that is unique to a specific computer.

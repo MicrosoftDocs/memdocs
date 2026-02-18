@@ -4,15 +4,11 @@ summary: "Official product documentation for Configuration Manager"
 metadata:
    ms.topic: hub-page
    ms.subservice: core-infra
-   ms.service: configuration-manager
-   ms.localizationpriority: high
    ms.date: 06/10/2024
    ms.collection:
     - highpri
     - essentials-navigation
    ms.custom: intro-overview
-   ms.author: dougeby
-   author: dougeby
 
 highlightedContent:
   items:

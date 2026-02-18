@@ -1,11 +1,9 @@
 ---
 title: Windows Autopilot known issues
 description: Be informed about known issues that might occur during Windows Autopilot deployment. # RSS subscription is based on this description so don't change. If the description needs to change, update RSS URL in the Tip in the article.
-ms.date: 01/13/2026
+ms.date: 02/10/2026
 ms.collection:
   - M365-modern-desktop
-  - highpri
-  - tier2
 ms.topic: troubleshooting
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
@@ -33,6 +31,25 @@ This article describes known issues that can often be resolved with configuratio
 > For issues with Windows Autopilot with Co-management, see [Windows Autopilot with co-management](/mem/configmgr/comanage/autopilot-enrollment).
 
 ## Known issues
+
+### Microsoft Entra hybrid join Autopilot deployments time out with error code 0x80004005
+
+Date added: *February 9, 2026*
+
+During Microsoft Entra hybrid join Autopilot deployments, devices might experience timeout errors with error code 0x80004005 in the deployment process. The issue is resolved in:  
+- [KB5065789](https://support.microsoft.com/en-us/topic/september-29-2025-kb5065789-os-builds-26200-6725-and-26100-6725-preview-fa03ce47-cec5-4d1c-87d0-cac4195b4b4e) or later for 25H2  
+- [KB5065426](https://support.microsoft.com/en-us/topic/september-9-2025-kb5065426-os-build-26100-6584-77a41d9b-1b7c-4198-b9a5-3c4b6706dea9) or later for 24H2 
+- [KB5070312](https://support.microsoft.com/en-us/topic/november-20-2025-kb5070312-os-build-22631-6276-preview-ac908c2e-c839-46f8-9111-3adfb72caf61) or later for 23H2  
+
+### Local Autopilot Reset can’t be triggered by local administrator when you deny access from network  
+
+**Date added:** *January 16, 2026*
+
+When a device is configured with an Intune policy that sets **Deny access to this computer from the network** for the local account, the local Windows administrator account can't start a local Windows Autopilot Reset.  
+
+This issue affects scenarios where administrators rely on the local administrator account to trigger local Autopilot Reset on a device (for example, from the Windows sign-in screen or after local sign-in). As a workaround, remove the **Deny access to this computer from the network** setting for the local account, or exclude devices that require local Autopilot Reset from this policy. After the device syncs the updated policy, local Autopilot Reset works. 
+
+This issue is under investigation.
 
 ### Devices don't get quality updates during Microsoft Entra hybrid joined deployments  
 

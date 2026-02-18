@@ -4,7 +4,6 @@ description: Follow along with several typical Windows Autopilot deployment scen
 ms.date: 06/13/2025
 ms.collection:
   - M365-modern-desktop
-  - tier2
 ms.topic: article
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
