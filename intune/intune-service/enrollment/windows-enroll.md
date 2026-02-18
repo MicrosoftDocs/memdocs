@@ -1,7 +1,7 @@
 ---
 title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 description: Enable Intune automatic enrollment for Windows devices joining or registering with your Microsoft Entra ID.
-ms.date: 02/13/2026
+ms.date: 02/18/2026
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
