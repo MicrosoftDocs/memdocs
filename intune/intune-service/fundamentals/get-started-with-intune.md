@@ -23,8 +23,6 @@ This article provides an overview of the steps to start your Intune deployment.
 
 > [!TIP]
 > As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
->
-> To review best practices without signing in and activating the automated setup features, go to the [M365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
 
 ## Before you begin
 
