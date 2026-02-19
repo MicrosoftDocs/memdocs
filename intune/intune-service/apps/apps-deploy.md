@@ -152,7 +152,7 @@ The information in the following table can help you understand the resulting int
 > [!NOTE]
 > Apps deployed as Required to corporate-owned work profile and corporate-owned fully managed devices can't be uninstalled manually by the user.
 
-## Managed Google Play app deployment to unmanaged devices
+## Managed app deployment to unmanaged devices
 
 For unenrolled Android devices, you can use managed Google Play to deploy store apps and line-of-business (LOB) apps to users. Once deployed, you can use [Mobile Application Management (MAM)](../apps/android-deployment-scenarios-app-protection-work-profiles.md#mam) to manage the applications.
 
@@ -169,12 +169,18 @@ Steps to assign a Managed Google Play app to unmanaged devices:
 5. User logs in any protected app.
 6. The next time the end user opens the Company Portal app and completes the sign in process, they see a message in the Apps section. This message indicates that there are apps available for them. The user can select this notification to navigate to the Play Store.
 
-   > [!NOTE]
-   > You can configure [device enrollment setting options](./company-portal-app.md#device-enrollment-setting-options) to be **Available, no prompts** or **Unavailable**. This setting prevents users from unintentionally enrolling their device. It also prevents notifications to enroll after they sign in to the Company Portal.
+	> [!NOTE]
+	> You can configure [device enrollment setting options](./company-portal-app.md#device-enrollment-setting-options) to be **Available, no prompts** or **Unavailable**. This setting prevents users from unintentionally enrolling their device. It also prevents notifications to enroll after they sign in to the Company Portal.
 
 6. The end user can expand the context menu within the Play Store app and switch between their personal Google account (where they see their personal apps), and their work account (where they see store and LOB apps targeted to them). End users install the apps by tapping Install in the Play Store app.
 
 When an APP selective wipe is issued in the Intune admin center, the work account is automatically removed from the Play Store app. The end user no longer sees work apps in the Play Store app catalog from that point.
+
+For unmanaged Android devices, you can also use the Company Portal app to allow end users to browse and install available Line-of-Business applications. In this scenario, end users browse and install apps from the Company Portal app, instead of the Play Store app. To make LOB apps available from the Company Portal app, add Android-Line-of-Business apps with **Target platform** of Device Administrator. Target the apps as **Available with or without enrollment** to the desired user group. [Device enrollment setting options](./company-portal-app.md#device-enrollment-setting-options) should be configured to be **Available, no prompts** or **Unavailable**.
+
+> [!NOTE]
+> Intune [ended support for Android device administrator devices](https://nam06.safelinks.protection.outlook.com/?url=https%3A%2F%2Ftechcommunity.microsoft.com%2Fblog%2Fintunecustomersuccess%2Fintune-ending-support-for-android-device-administrator-on-devices-with-gms-in-de%2F3915443&data=05%7C02%7Cabigailstein%40microsoft.com%7C57716dd93a764ca4b96008de6efadc38%7C72f988bf86f141af91ab2d7cd011db47%7C1%7C0%7C639070221094500026%7CUnknown%7CTWFpbGZsb3d8eyJFbXB0eU1hcGkiOnRydWUsIlYiOiIwLjAuMDAwMCIsIlAiOiJXaW4zMiIsIkFOIjoiTWFpbCIsIldUIjoyfQ%3D%3D%7C0%7C%7C%7C&sdata=QMsY3dA2Jw8WuBcc1lP9ClKjyDGX5C3NfmIxlCDHD9o%3D&reserved=0) with GMS in December 2024.
+
 
 When the work account is removed from a device, apps installed from the Play Store remain installed on the device and don't uninstall.
 
