@@ -45,14 +45,17 @@ To enable co-management, follow these instructions:
       
    When you select Azure Government cloud, the **Upload to Microsoft Endpoint Manager admin center** option for [tenant attach](../tenant-attach/device-sync-actions.md) is disabled.
    
-1. Select **Sign In**. Sign in as a Microsoft Entra Global Administrator, and then select **Next**. You sign in this one time for the purposes of this wizard. The credentials aren't stored or reused elsewhere.
+1. Select **Sign In**. Sign in as a [Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator), and then select **Next**. You sign in this one time for the purposes of this wizard. The credentials aren't stored or reused elsewhere.
+
+    > [!IMPORTANT]
+    > [!INCLUDE [global-administrator](../includes/global-administrator-configmgr.md)]
 
 1. On the **Enablement** page, choose the following settings:
 
    - **Automatic enrollment in Intune**: Enables automatic client enrollment in Intune for existing Configuration Manager clients. This option allows you to enable co-management on a subset of clients to initially test co-management and then roll out co-management by using a phased approach. If the user unenrolls a device, the device will be re-enrolled on the next evaluation of the policy. 
    
       - **Pilot**: Only the Configuration Manager clients that are members of the **Intune Auto Enrollment** collection are automatically enrolled in Intune.
-      - **All**: Enable automatic enrollment for all clients running Windows 10 version 1709 or later.
+      - **All**: Enable automatic enrollment for all clients running [supported Windows versions](../../intune-service/fundamentals/supported-devices-browsers.md).
       - **None**: Disable automatic enrollment for all clients.
             
    - **Intune Auto Enrollment**: This collection should contain all of the clients that you want to onboard into co-management. It's essentially a superset of all the other staging collections.
@@ -73,7 +76,7 @@ To enable co-management, follow these instructions:
    If you only want to enable co-management, you don't need to switch workloads now. You can switch workloads later. For more information, see [How to switch workloads](how-to-switch-workloads.md).  
    
    - **Pilot Intune**: Switches the associated workload only for the devices in the pilot collections that you'll specify on the **Staging** page. Each workload can have a different pilot collection.
-   - **Intune**: Switches the associated workload for all co-managed Windows 10 or later devices.  
+   - **Intune**: Switches the associated workload for all co-managed devices.  
       
    > [!Important]
    > Before you switch any workloads, make sure that you properly configure and deploy the corresponding workload in Intune. Make sure that workloads are always managed by one of the management tools for your devices.  
