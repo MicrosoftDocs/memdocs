@@ -465,23 +465,13 @@ Organizations can configure a search provider for users. To configure a search p
 > [!NOTE]
 > If you want to block access to the web version of Copilot, copilot.microsoft.com, you can use policy AllowListURLs or BlockListURLs.
 
-Copilot is available on Microsoft Edge for iOS and Android. Users can start Copilot by selecting the Copilot button in bottom bar.
-
-If CopilotMode policy is off, there are settings in **Settings**->**Microsoft Services**->**Copilot**. 
-
-- **Show Copilot** – Control whether to show Copilot button on address bar
-- **Allow Copilot to use page content** – Control whether to allow Copilot to access page content or PDF
-
-If CopilotMode policy is on, there are settings in **Settings**->**AI Innovations**->**Copilot**.
-
-- **Show Copilot** – Control whether to show Copilot button on address bar
-- **Allow Copilot to use page content** – Control whether to allow Copilot to access page content or PDF
-
-And settings in **Settings**->**AI Innovations**->**Copilot Mode**.
-
-- **Enable Copilot prompts card** – Control whether to show Copilot prompts card in the NTP
-
-You can manage the settings for Copilot.
+M365 Copilot chat is available in Microsoft Edge for iOS and Android. If Copilot chat is enabled, user can launch Copilot by pressing the button in address bar. It's by default enabled and you may disable it by .Chat policy below.
+ 
+M365 Copilot chat by default can access your browsing context and content such as opened tabs and browsing history, you may disable it by .ChatPageContext policy below. 
+ 
+Additionally, Edge mobile now provides more Copilot-oriented experience in the browser, which is named "M365 Copilot Mode", as of now it shows Copilot suggestion prompts in the NTP and there are more features and experience updates coming soon. Copilot Mode will also be default enabled in a future version soon, and IT admin can explicitly opt-out by the .CopilotMode MAM policy below, this will keep Edge mobile as current non-Copilot optimized experience. 
+ 
+Note: even aforementioned behaviors are enabled by default, every Edge mobile user can turn it ON/OFF individually in Edge settings per their interest and choice, while below policies will apply to all users in the targeted group/tenant.
 
 |Key |Value |
 |:-----------|:-------------|
@@ -539,8 +529,8 @@ Use the following key/value pairs to configure either an allowed or blocked site
 
 |Key |Value |
 |:--|:----|
-|com.microsoft.intune.mam.managedbrowser.AllowListURLs <br><br> This policy name has been replaced by the UI of **Allowed URLs** under Microsoft Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
-|com.microsoft.intune.mam.managedbrowser.BlockListURLs <br><br> This policy name has been replaced by the UI of **Blocked URLs** under Microsoft Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.AllowListURLs <br><br> This policy name has been replaced by the UI of **Allowed URLs** under Microsoft Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to allow as a single value, separated by a pipe `|` character. This policy is limited to 1000 entries; subsequent entries are ignored. <br><br>**Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
+|com.microsoft.intune.mam.managedbrowser.BlockListURLs <br><br> This policy name has been replaced by the UI of **Blocked URLs** under Microsoft Edge Configuration settings|The corresponding value for the key is a list of URLs. You enter all the URLs you want to block as a single value, separated by a pipe `|` character. This policy is limited to 1000 entries; subsequent entries are ignored. <br><br> **Examples:** <br>`URL1|URL2|URL3` <br>`http://www.contoso.com/|https://www.bing.com/|https://expenses.contoso.com` |
 |com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock <br><br> This policy name has been replaced by the UI of **Redirect restricted sites to personal context** under Microsoft Edge Configuration settings|**true** (default) allows Microsoft Edge for iOS and Android to transition restricted sites. When personal accounts aren't disabled, users are prompted to either switch to the personal context to open the restricted site, or to add a personal account. If com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked is set to true, users have the capability of opening the restricted site in the InPrivate context. <br>**false** prevents Microsoft Edge for iOS and Android from transitioning users. Users see a message stating that the site they're trying to access is blocked. |
 |com.microsoft.intune.mam.managedbrowser.openInPrivateIfBlocked |**true** allows restricted sites to be opened in the Microsoft Entra account's InPrivate context. If the Microsoft Entra account is the only account configured in Microsoft Edge for iOS and Android, the restricted site is opened automatically in the InPrivate context. If the user has a personal account configured, the user is prompted to choose between opening InPrivate or switch to the personal account. <br>**false** (default) requires the restricted site to be opened in the user's personal account. If personal accounts are disabled, then the site is blocked. <br>In order for this setting to take effect, com.microsoft.intune.mam.managedbrowser.AllowTransitionOnBlock must be set to true. |
 |com.microsoft.intune.mam.managedbrowser.durationOfOpenInPrivateSnackBar | Enter the number of seconds that users see the snack bar notification "Access to this site is blocked by your organization. We've opened it in InPrivate mode for you to access the site." By default, the snack bar notification is shown for 7 seconds.|
