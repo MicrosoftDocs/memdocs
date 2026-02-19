@@ -64,6 +64,9 @@ In both scenarios, the Company Portal installation option is hidden from the dev
 
 ### Multifactor authentication
 
+>[!CAUTION]
+>Phishing-resistant MFA is currently not supported on Setup Assistant for iOS/iPadOS. Users enrolling iOS/iPadOS devices via Automated Device Enrollment using modern authentication must have an alternate MFA method available to complete device enrollment. For more information on choosing an alternate MFA method, see [Requiring multifactor authentication](https://learn.microsoft.com/en-us/entra/identity/conditional-access/policy-all-users-mfa-strength#authentication-strength).
+
 Multifactor authentication (MFA) will be required if a [Conditional Access policy that requires it](multi-factor-authentication.md) is applied at enrollment or during Company Portal sign-in. However, MFA is optional, based on the Microsoft Entra settings in the targeted Conditional Access policy.
 
 External authentication methods are supported in Microsoft Entra ID, which means you can use your preferred MFA solution to facilitate MFA during device enrollment. If you choose to use a third-party MFA provider, before you deploy enrollment profiles to all devices, do a test run to ensure that both the Microsoft Entra MFA screen and MFA work during enrollment. For more information and support details about external authentication methods, see [Public preview: External authentication methods in Microsoft Entra ID](https://techcommunity.microsoft.com/t5/microsoft-entra-blog/public-preview-external-authentication-methods-in-microsoft/ba-p/4078808).
