@@ -69,7 +69,6 @@ Required data collected by Intune includes, but isn't limited to:
 |         |   Intune device ID                             | Yes (If device is MDM enrolled with Intune) |
 |         |   Device storage space                         | No  |
 |         |   EAS device ID                                | No  |
-
 |         |   Location (corporate devices only)            | No  |
 |         |   Mac Address for Mac devices                  | No  |
 |         |   Network information                          | No  |
