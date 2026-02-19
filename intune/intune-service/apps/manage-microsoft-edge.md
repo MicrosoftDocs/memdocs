@@ -465,9 +465,9 @@ Organizations can configure a search provider for users. To configure a search p
 > [!NOTE]
 > If you want to block access to the web version of Copilot, copilot.microsoft.com, you can use policy AllowListURLs or BlockListURLs.
 
-Microsoft 365 Copilot chat is available in Microsoft Edge for iOS and Android. If Copilot chat is enabled, user can launch Copilot by pressing the button in address bar. It's by default enabled and you may disable it by .Chat policy below.
+Microsoft 365 Copilot Chat is available in Microsoft Edge for iOS and Android. If Copilot chat is enabled, user can launch Copilot by pressing the button in address bar. It's by default enabled and you may disable it by .Chat policy below.
  
-Microsoft 365 Copilot chat by default can access your browsing context and content such as opened tabs and browsing history, you may disable it by .ChatPageContext policy below. 
+Copilot chat by default can access your browsing context and content such as opened tabs and browsing history, you may disable it by .ChatPageContext policy below. 
  
 Additionally, Edge mobile now provides more Copilot-oriented experience in the browser, which is named "Microsoft 365 Copilot Mode", as of now it shows Copilot suggestion prompts in the NTP and there are more features and experience updates coming soon. Copilot Mode will also be default enabled in a future version soon, and IT admin can explicitly opt-out by the .CopilotMode MAM policy below, this will keep Edge mobile as current non-Copilot optimized experience. 
  
