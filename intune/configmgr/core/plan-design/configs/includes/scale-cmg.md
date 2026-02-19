@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: client-mgt
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/02/2021
-ms.localizationpriority: medium
 ---
 
 Unless otherwise noted, this guidance is the same for all deployment models and VM sizes.

@@ -1,15 +1,9 @@
 ---
 title: Enable Microsoft Intune tenant attach
-titleSuffix: Configuration Manager
 description: Upload your Configuration Manager devices to the cloud service and take actions from the admin center.
 ms.date: 12/16/2024
 ms.topic: how-to
 ms.subservice: core-infra
-ms.service: configuration-manager
-manager: apoorvseth
-author: LauraWi
-ms.author: laurawi
-ms.localizationpriority: high
 ms.collection: tier3
 ---
 
@@ -38,12 +32,16 @@ When co-management is already enabled, edit the co-management properties to enab
 1. Check the option to **Enforce Role-based Access Control** for the devices uploading to cloud service. By default, SCCM RBAC is enforced along with Intune RBAC when you're uploading your Configuration Manager devices to the cloud service. Hence, the checkbox is checked by default. If you want to enforce only Intune RBAC or if you're using cloud-only account, you must uncheck the option.
 1. Check the option to **Enable Uploading Microsoft Defender for Endpoint data for reporting on devices uploaded to Microsoft Intune admin center** if you want to use [Endpoint Security reports in Intune admin center](deploy-antivirus-policy.md#bkmk_mdereports)
 
-> [!Important]
-> When you enable Endpoint analytics data upload, your default client settings is automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more information on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../endpoint-analytics/index.md).
+    > [!Important]
+    > When you enable Endpoint analytics data upload, your default client settings is automatically updated to allow managed endpoints to send relevant data to your Configuration Manager site server. If you use custom client settings, you may need to update and re-deploy them for data collection to occur. For more information on this, as well as how to configure data collection, such as to limit collection only to a specific set of devices, see the section on [Configuring Endpoint analytics data collection](../../endpoint-analytics/index.md).
 
- [![Screenshot that shows how to upload devices to Microsoft Intune admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox)
+    [![Screenshot that shows how to upload devices to Microsoft Intune admin center.](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png)](../../configmgr/tenant-attach/media/13058986-configure-upload-configmgr.png#lightbox)
 
-1. Sign in with your *Global Administrator* account when prompted.
+1. Sign in with a **Global Administrator** account when prompted.
+
+    > [!IMPORTANT]
+    > [!INCLUDE [global-administrator](../includes/global-administrator-configmgr.md)]
+
 1. Select **Yes** to accept the **Create Microsoft Entra Application** notification. This action provisions a service principal and creates a Microsoft Entra application registration to facilitate the sync.
 1. Choose **OK** to exit the co-management properties once you've done making changes.
 
@@ -61,7 +59,11 @@ When co-management isn't enabled, use the instructions below to enable device up
 1. In the ribbon, select **Configure Cloud Attach** to open the wizard. For version 2103 and earlier, select **Configure co-management** to open the wizard.
 1. On the onboarding page, select **AzurePublicCloud** for your environment. Azure Government Cloud and Azure China 21Vianet aren't supported.
    - Starting in version 2107, US Government customers can select **AzureUSGovernmentCloud**.<!-- 8353823 -->
-1. Select **Sign In**. Use your *Global Administrator* account to sign in.
+1. Select **Sign In** and sign in with the **Global Administrator** account.
+
+    > [!IMPORTANT]
+    > [!INCLUDE [global-administrator](../includes/global-administrator-configmgr.md)]
+
 1. Ensure the **Enable Microsoft Endpoint Manager admin center** option is selected on the **Cloud attach** page. For version 2103 and earlier, select the **Upload to Microsoft Endpoint Manager admin center** option on the **Tenant onboarding** page.
    - Make sure the option **Enable automatic client enrollment for co-management** isn't checked if you don't want to enable co-management now. If you do want to enable co-management, select the option.
    - If you enable co-management along with device upload, there will be given additional pages in the wizard to complete. For more information, see [Enable co-management](../comanage/how-to-enable.md).

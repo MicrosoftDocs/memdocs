@@ -1,18 +1,11 @@
 ---
 title: Technical preview 1807
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 1807.
 ms.date: 07/30/2018
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Capabilities in Configuration Manager technical preview version 1807

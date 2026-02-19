@@ -1,7 +1,7 @@
 ---
 title: Set up the Enrollment Status Page in the admin center copy
 description: Set up a greeting page for users signing in and enrolling Windows devices copy.
-ms.date: 11/24/2025
+ms.date: 01/20/2026
 ms.topic: how-to
 ms.reviewer: madakeva, davguy
 ms.collection:
@@ -130,7 +130,7 @@ On Windows 11 versions with the `2025-06 D` quality update, the control that ena
 
 > [!NOTE]
 > The operating system control is included in the following `2025-06 D` operating system updates:
-> 
+>
 > | OS version | KB article |
 > | --- | --- |
 > | Windows 11, version 25H2 | Automatically included |
@@ -139,7 +139,7 @@ On Windows 11 versions with the `2025-06 D` quality update, the control that ena
 
 ### What you need to know
 
-- The **Install Windows quality updates** Intune setting is available now. But, the OS doesn't enforce it yet. Enforcement is planned in the `2026-01 B` quality update.
+- The **Install Windows quality updates** OS enforcement is included in the `2026-01 B` quality update.
 
 - The **Install Windows quality updates** Intune setting only installs monthly security update releases. It doesn't install the other types of updates listed at [Types of update releases](/windows/deployment/update/release-cycle#types-of-update-releases).
 

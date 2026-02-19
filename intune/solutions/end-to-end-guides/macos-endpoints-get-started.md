@@ -1,7 +1,7 @@
 ---
 title: Get started with macOS endpoints
 description: Microsoft Intune guide to set up and configure macOS devices from setup to creating policies and enrolling devices. You secure your corporate and organization-owned endpoints that are enrolled in Intune, and then deploy at scale with Apple Business Manager or Apple School Manager.
-ms.date: 07/31/2025
+ms.date: 01/22/2026
 ms.topic: get-started
 ms.reviewer: scbree;rogerso
 ms.collection:
@@ -195,6 +195,8 @@ In Intune, you can configure settings that reduce the number of sign-in prompts 
   # [Platform SSO](#tab/psso)
 
   Platform SSO builds on top of the existing capabilties in the Enterprise SSO plug-in. Platform SSO allows for device-bound credentials, smart card or password sync authentication options. On macOS 14, Platform SSO also supports creating new user accounts from the macOS login screen.
+
+  Platform SSO is the most secure approach for device attestation and registration. Microsoft recommends you enforce using Platform SSO during device registration, as it's considered a best practice for a Zero Trust security strategy. It ensures strong device identity and replaces traditional registration typically done through the Company Portal.
 
   For more information, go to:
 
@@ -590,7 +592,7 @@ For more information, go to [Notifications MDM payload settings for Apple device
 
   Microsoft recommends you use the built-in settings in the settings catalog. If the settings catalog doesn't have the settings you need, then use a custom profile.
 
-  For more information, go to [custom profiles](../../intune-service/configuration/custom-settings-macos.md).
+  For more information, go to [custom profiles](../../intune-service/configuration/custom-settings-apple.md).
 
 ✅ **Wallpaper**
 
@@ -623,7 +625,7 @@ For more information, go to [Types of certificate available in Microsoft Intune]
 
 Using Intune, you can create a Wi-Fi connection that includes your network information, and then deploy the connection to your macOS devices. If your devices connect to the organization using Wi-Fi, then create a Wi-Fi connection policy.
 
-For more information, go to [Configure Wi-Fi settings for macOS devices in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-macos.md).
+For more information, go to [Configure Wi-Fi settings for macOS devices in Microsoft Intune](../../intune-service/configuration/wi-fi-settings-apple.md).
 
 ## Phase 5 - Caching (optional)
 

@@ -1,17 +1,10 @@
 ---
 title: Communications between endpoints
-titleSuffix: Configuration Manager
 description: Learn how Configuration Manager site systems and components communicate across a network.
 ms.date: 04/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Communications between endpoints in Configuration Manager
@@ -71,6 +64,14 @@ When you deploy a site system role that uses Internet Information Services (IIS)
 
 > [!IMPORTANT]
 > Starting in Configuration Manager version 2103, sites that allow HTTP client communication are deprecated. Configure the site for HTTPS or Enhanced HTTP. For more information, see [Enable the site for HTTPS-only or enhanced HTTP](../../servers/deploy/install/list-of-prerequisite-checks.md#enable-site-system-roles-for-https-or-enhanced-http).<!-- 9390933,9572265 -->
+
+> [!WARNING]
+> Configuration Manager doesn't support HTTP Strict Transport Security (HSTS) configuration in IIS. Configuration Manager clients don’t honor HSTS headers, however the mandatory redirection to HTTPS isn’t compatible with HTTP or Enhanced HTTP site system role configuration. For more information on IIS configuration, see [HSTS Settings for a Web Site](/iis/configuration/system.applicationhost/sites/site/hsts).
+> 
+> Enabling HSTS breaks site system roles that rely on HTTP, in particular:
+>
+> - **Fallback Status Point (FSP)** is [HTTP-only by design](../../clients/deploy/plan/determine-the-site-system-roles-for-clients.md#fallback-status-point) and stops functioning if HTTPS redirection is enforced.
+> - **Software Update Point (SUP)** uses Windows Server Update Services (WSUS). WSUS encrypts update metadata over HTTPS but [always delivers update payloads over HTTP](/windows-server/administration/windows-server-update-services/deploy/2-configure-wsus#232-configure-the-wsus-servers-iis-web-server-to-use-tls-for-some-connections). Enabling HTTPS redirection on WSUS Web Site blocks the payload downloads and breaks update functionality. <!-- 16607249 -->
 
 ### <a name="bkmk_client2mp"></a> Client to management point communication
 

@@ -1,18 +1,10 @@
 ---
 title: SMS_G_USER_DCMDeploymentCompliantAssetDetails Class
 description: The SMS_G_USER_DCMDeploymentCompliantAssetDetails Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents compliant asset details for a deployment.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 4fcbf856-95b5-4ee8-8f8f-1d3ec0d6252e
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_G_USER_DCMDeploymentCompliantAssetDetails Server WMI Class
 The `SMS_G_USER_DCMDeploymentCompliantAssetDetails` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents compliant asset details for a deployment.

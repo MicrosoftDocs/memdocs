@@ -156,7 +156,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 | ID |Desc |Category |ER |Addresses |Ports|Notes|
 |----|-----|---------|---|----------|-----|-----|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for NA, ROW customers)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for APAC customers)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for EU customers)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443 |
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443 |
 
@@ -354,10 +354,41 @@ Before running the script, ensure you have:
   
 ### Usage
 
-Run the script from an Intune-managed device to test connectivity to the Intune network endpoints using Azure Front Door.
+Run the script from an Intune-managed device to test connectivity to the Intune network endpoints using Azure Front Door. The script can be run in the context of the logged-on user or as the Local System account (Device context).
 
-Open **PowerShell** and use the following syntax:
+#### Script Execution
 
+**Option 1: Run as Current User**
+
+Open **PowerShell** as the current user, navigate to the directory containing the script and run with the following command: 
+
+```powershell
+.\Test-IntuneAFDConnectivity.ps1
+```
+
+**Option 2: Run as System (Device Context)**
+
+To test connectivity as the device itself, use [PsExec](/sysinternals/downloads/psexec) from [Microsoft Sysinternals](/sysinternals/downloads/pstools).
+
+1. Download [PsExec](/sysinternals/downloads/psexec)
+
+1. Open **PowerShell** as an Administrator. Navigate to the directory containing **PsExec**.
+
+3. Run the following command to run the script as SYSTEM:
+
+```powershell
+.\psexec.exe -accepteula -i -s powershell.exe
+```
+
+1. In the new PowerShell window, navigate to the directory containing the script and run with the following command:
+
+```powershell
+.\Test-IntuneAFDConnectivity.ps1
+```
+
+### Options and Commands
+
+Use the following options based on your environment:
 
 |Cloud|Command|Notes|
 | -------- | -------- | -------- |
@@ -388,6 +419,7 @@ FQDNs
 *.manage.microsoft.com
 manage.microsoft.com
 *.dl.delivery.mp.microsoft.com
+*.dm.microsoft.com
 *.do.dsp.mp.microsoft.com
 *.update.microsoft.com
 *.windowsupdate.com
@@ -426,7 +458,7 @@ intunecdnpeasd.azureedge.net
 *.monitor.azure.com
 *.support.services.microsoft.com
 *.trouter.communication.microsoft.com
-*.trouter.skype.com
+*.trouter.communications.svc.cloud.microsoft
 *.trouter.teams.microsoft.com
 api.flightproxy.skype.com
 ecs.communication.microsoft.com

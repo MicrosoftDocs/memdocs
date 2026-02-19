@@ -1,18 +1,10 @@
 ---
 title: Status MIF Functions
-titleSuffix: Configuration Manager
 description: In Configuration Manager, status MIF functions are provided in separate libraries to create a status Management Information Format file.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 57b8ea8c-7cbd-45d1-8b68-a5ff817f2aa1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Status MIF Functions
 In Configuration Manager, status MIF functions are provided in separate libraries to create a status Management Information Format (MIF) file. For more information about how the install status MIF file is used by Configuration Manager, see [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md).

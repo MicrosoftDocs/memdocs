@@ -1,9 +1,7 @@
 ---
 title: Device features and settings in Microsoft Intune
 description: Overview of the different Microsoft Intune device profiles. Get info on GPO, features, restrictions, email, wifi, VPN, education, certificates, upgrade Windows 10/11, BitLocker and Microsoft Defender, and custom device configuration settings in the Microsoft Intune admin center. Use these profiles to manage and protect data and devices in your company.
-author: MandiOhlinger
-ms.author: mandia
-ms.date: 10/14/2025
+ms.date: 02/10/2026
 ms.topic: overview
 ms.reviewer: mikedano
 ms.collection:
@@ -210,7 +208,7 @@ This feature supports:
 
   Windows 11 supports single app kiosk only.
 
-Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-ios.md#kiosk).
+Kiosk settings also available as device restrictions for [Android](device-restrictions-android.md#kiosk), [Android Enterprise](device-restrictions-android-for-work.md) (Device experience), and [iOS/iPadOS](device-restrictions-apple.md).
 
 ## MX profile (Zebra)
 

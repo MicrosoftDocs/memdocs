@@ -1,17 +1,10 @@
 ---
 title: Create a lab in Azure
-titleSuffix: Configuration Manager
 description: Automate the creation of a Configuration Manager technical preview lab or current branch evaluation lab using Azure templates
 ms.date: 06/20/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Create a Configuration Manager lab in Azure

@@ -1,18 +1,10 @@
 ---
 title: "ICIINFO::GetProperty"
 description: Learn how the ICIINFO::GetProperty method, in Configuration Manager, gets a named property value from the configuration item.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: a8812aaa-31e5-46f6-bdae-cea5c24da9ed
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ICIINFO::GetProperty Method
 The `ICIINFO::GetProperty` method, in Configuration Manager, gets a named property value from the configuration item.
