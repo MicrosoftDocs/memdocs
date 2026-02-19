@@ -28,15 +28,12 @@ Windows Autopilot doesn't require delegated administrator permissions when estab
 <!-- MAXADO-9048730 -->
 
 > [!IMPORTANT]
->
-> Microsoft recommends using roles with the fewest permissions. Using lower permissioned accounts helps improve security for an organization. Global Administrator is a highly privileged role that should be limited to emergency scenarios when an existing role can't be used.
+> [!INCLUDE [global-administrator](../autopilot/includes/global-administrator.md)]
 
 > [!TIP]
->
 > While resellers, distributors, or partners could boot each new Windows device to obtain the hardware hash for purposes of providing them to customers or direct registration by the partner, this method isn't recommended. Instead, these partners should register devices using the PKID information obtained from the device packaging, such as the barcode, or obtained electronically from the OEM or upstream partner/distributor.
 
 > [!NOTE]
->
 > Partner Center doesn't have access to profiles created in Intune or Microsoft Store for Business. It only has access to the Windows Autopilot profiles created through Partner Center.
 
 ## Related content
