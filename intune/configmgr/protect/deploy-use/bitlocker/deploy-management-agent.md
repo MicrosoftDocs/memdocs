@@ -165,11 +165,11 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 
 ### Group policy conflicts
 
-- Configuration Manager doesn't implement all MBAM group policy settings. If you configure more settings in group policy, the BitLocker management agent on Configuration Manager clients honors these settings.
+- Configuration Manager doesn't implement all MBAM group policy settings. Standalone MBAM uses domain group policy, while Configuration Manager sets local policies for BitLocker management. Domain policies will override the local Configuration Manager BitLocker management policies. If the standalone MBAM domain group policy doesn't match the Configuration Manager policy, Configuration Manager BitLocker management will fail. For example, if a domain group policy sets the standalone MBAM server for key recovery services, Configuration Manager BitLocker management can't set the same setting for the management point. This behavior causes clients to not report their recovery keys to the Configuration Manager BitLocker management key recovery service on the management point.
 
   > [!WARNING]
-  > Don't set a group policy for a setting that Configuration Manager BitLocker management already specifies. Only set group policies for settings that don't currently exist in Configuration Manager BitLocker management. Configuration Manager has feature parity with standalone MBAM. With Configuration Manager, there should be no reason to set domain group policies to configure BitLocker management. To prevent conflicts and problems, avoid use of group policies for BitLocker. Configure all settings through Configuration Manager BitLocker management policies.
-  > If a group policy setting exists for standalone MBAM, it will override the equivalent setting attempted by Configuration Manager. Standalone MBAM uses domain group policy, while Configuration Manager sets local policies for BitLocker management. Domain policies will override the local Configuration Manager BitLocker management policies. If the standalone MBAM domain group policy doesn't match the Configuration Manager policy, Configuration Manager BitLocker management will fail. For example, if a domain group policy sets the standalone MBAM server for key recovery services, Configuration Manager BitLocker management can't set the same setting for the management point. This behavior causes clients to not report their recovery keys to the Configuration Manager BitLocker management key recovery service on the management point.
+  > Configuration Manager has feature parity with standalone MBAM. With Configuration Manager, there should be no reason to set domain group policies to configure BitLocker management. To prevent conflicts and problems, avoid use of group policies for BitLocker. Configure all settings through Configuration Manager BitLocker management policies.
+  > 
   
 ### TPM password hash
 
