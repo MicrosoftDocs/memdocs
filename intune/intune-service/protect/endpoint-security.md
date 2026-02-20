@@ -26,7 +26,7 @@ Use the Endpoint security node to address common security challenges:
 
 - **Protect against ransomware and malware** - Deploy antivirus policies with real-time protection, configure attack surface reduction rules, enable controlled folder access, and apply security baselines. For more information, see [Manage device security with endpoint security policies](../protect/endpoint-security-policy.md).
 
-- **Apply zero trust principles** - Require device compliance for resource access, integrate with Conditional Access to verify security posture, use device risk signals from Defender for Endpoint, and deploy disk encryption. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
+- **Apply zero trust principles** - Require device compliance for resource access, integrate with Conditional Access to verify security posture, use device risk signals from Defender for Endpoint, deploy disk encryption, and enforce least privilege access with Endpoint Privilege Management. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
 
 - **Secure remote and hybrid work** - Monitor compliance for remote devices, onboard devices to Defender for Endpoint through EDR policies, configure firewall policies, and use Conditional Access to block access from noncompliant devices. For more information, see [Protect data and devices with Microsoft Intune](../protect/device-protect.md).
 
@@ -100,6 +100,17 @@ The following are two common methods of using Conditional Access with Intune:
 - **App-based Conditional Access** - Use app protection policies to manage access to network resources by users on devices that aren't managed by using Intune.
 
 For more information, see [Learn about Conditional Access and Intune](../protect/conditional-access.md).
+
+### Endpoint Privilege Management
+
+Endpoint Privilege Management enforces least privilege access by allowing users to run as standard accounts while enabling temporary elevation for IT-approved applications. This Zero Trust capability reduces attack surface by preventing blanket administrative access while maintaining user productivity for tasks that require elevated permissions, such as installing applications, updating drivers, or running Windows diagnostics.
+
+You deploy Endpoint Privilege Management by creating elevation rules that define which applications can run with administrative privileges and under what conditions. Elevation rules support multiple validation methods including file hashes, publisher certificates, and file paths. You can configure automatic elevation for trusted applications, user-confirmed elevation with optional authentication requirements, support-approved elevation where administrators review requests, or deny rules to block specific files. EPM includes detailed reporting for both managed elevations and unmanaged elevations, helping you identify elevation patterns, refine rules, and plan the transition of users from administrator to standard user accounts.
+
+> [!IMPORTANT]
+> Endpoint Privilege Management is available as an [Intune add-on](../fundamentals/intune-add-ons.md) that requires an additional license beyond Microsoft Intune. You can license EPM as a standalone add-on or as part of the Microsoft Intune Suite. EPM policies are only available for Windows devices.
+
+For more information, see [Endpoint Privilege Management](../protect/epm-overview.md).
 
 ## Set up integration with Microsoft Defender for Endpoint
 
