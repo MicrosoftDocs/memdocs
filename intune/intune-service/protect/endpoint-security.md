@@ -26,7 +26,7 @@ Use the Endpoint security node to address common security challenges:
 
 - **Protect against ransomware and malware** - Deploy antivirus policies with real-time protection, configure attack surface reduction rules, enable controlled folder access, and apply security baselines. For more information, see [Manage device security with endpoint security policies](../protect/endpoint-security-policy.md).
 
-- **Apply zero trust principles** - Require device compliance for resource access, integrate with Conditional Access to verify security posture, use device risk signals from Defender for Endpoint, deploy disk encryption, and enforce least privilege access with Endpoint Privilege Management. For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
+- **Apply zero trust principles** - Require device compliance for resource access, integrate with Conditional Access to verify security posture, use device risk signals from Defender for Endpoint, deploy disk encryption, and enforce least privilege access with Endpoint Privilege Management (EPM). For more information, see [Zero Trust with Microsoft Intune](../fundamentals/zero-trust-with-microsoft-intune.md).
 
 - **Secure remote and hybrid work** - Monitor compliance for remote devices, onboard devices to Defender for Endpoint through EDR policies, configure firewall policies, and use Conditional Access to block access from noncompliant devices. For more information, see [Protect data and devices with Microsoft Intune](../protect/device-protect.md).
 
@@ -76,7 +76,7 @@ This workflow ensures both teams stay aligned on which devices are at risk and p
 
 Endpoint security policies provide streamlined configuration options for specific security features without requiring navigation through extensive device configuration settings. Use these policies to configure device security aspects like antivirus, disk encryption, firewall, and more. They simplify security management by surfacing only the settings relevant to each security capability.
 
-The Endpoint security node also includes device compliance and Conditional Access policies. While these policies aren't focused security policies for configuring endpoints, they're essential tools for managing device security posture and controlling access to corporate resources.
+The Endpoint security node also includes device compliance and Conditional Access policies. While these policies aren't focused security policies for configuring endpoints, they're essential tools for managing device security posture and controlling access to corporate resources. Endpoint security also includes Endpoint Privilege Management policies that allow you to enforce least privilege access on Windows devices.
 
 ![Manage policies](./media/endpoint-security/endpoint-security-policies.png)
 
@@ -103,7 +103,7 @@ For more information, see [Learn about Conditional Access and Intune](../protect
 
 ### Endpoint Privilege Management
 
-Endpoint Privilege Management enforces least privilege access by allowing users to run as standard accounts while enabling temporary elevation for IT-approved applications. This Zero Trust capability reduces attack surface by preventing blanket administrative access while maintaining user productivity for tasks that require elevated permissions, such as installing applications, updating drivers, or running Windows diagnostics.
+Endpoint Privilege Management enforces least privilege access by allowing users to run as standard accounts while enabling temporary elevation for IT-approved applications. This least privilege capability reduces attack surface by preventing blanket administrative access while maintaining user productivity for tasks that require elevated permissions, such as installing applications, updating drivers, or running Windows diagnostics.
 
 You deploy Endpoint Privilege Management by creating elevation rules that define which applications can run with administrative privileges and under what conditions. Elevation rules support multiple validation methods including file hashes, publisher certificates, and file paths. You can configure automatic elevation for trusted applications, user-confirmed elevation with optional authentication requirements, support-approved elevation where administrators review requests, or deny rules to block specific files. EPM includes detailed reporting for both managed elevations and unmanaged elevations, helping you identify elevation patterns, refine rules, and plan the transition of users from administrator to standard user accounts.
 
@@ -142,7 +142,7 @@ Intune offers multiple ways to configure device security. Understanding when to 
 
 | Policy type | Best for | Scope | Management complexity | Ongoing management |
 | --- | --- | --- | --- | --- |
-| **Endpoint security policies** | Targeted security configurations (antivirus, firewall, disk encryption) | Specific security features | Low: Targeted settings only | Configure once, adjust as needed |
+| **Endpoint security policies** | Targeted security configurations (antivirus, firewall, disk encryption, and more) | Specific security features | Low: Targeted settings only | Configure once, adjust as needed |
 | **Security baselines** | Establishing comprehensive best-practice security posture | Broad Windows security settings | Medium: Preconfigured groups of settings | Review and deploy updated baselines when they become available |
 | **Device configuration profiles** | General device settings and configurations | All device settings including non-security | High: Large number of settings | Configure as business needs change |
 | **Compliance policies** | Defining minimum security requirements for access | Device and user requirements | Low: Rules-based evaluation | Configure once, adjust for new threats |
@@ -220,7 +220,7 @@ For detailed information on identifying and resolving conflicts, see:
 
 ### What's the difference between endpoint security policies and device configuration profiles?
 
-Endpoint security policies (like antivirus, firewall, and disk encryption) provide streamlined views with only relevant security settings, making them easier to configure and manage than device configuration profiles. Device configuration profiles include all device settings (Wi-Fi, email, browser, and more) and require navigating more options. Where both exist, prefer endpoint security policies for security configurations.
+Endpoint security policies (like antivirus, firewall, and disk encryption) provide streamlined views with only relevant security settings, making them easier to configure and manage than device configuration profiles. Device configuration profiles include all device settings (Wi-Fi, email, browser, and more) and require navigating more options. Where both exist, consider using endpoint security policies for security configurations.
 
 ### Do I need Defender for Endpoint to use endpoint security in Intune?
 
@@ -232,7 +232,7 @@ Yes, but be careful to avoid configuring the same settings in both. Security bas
 
 ### How do compliance policies differ from configuration policies?
 
-Configuration policies (endpoint security policies, security baselines, device configuration profiles) *set* device settings. Compliance policies *evaluate* whether devices meet your requirements. Compliance policies don't configure devices. They check the resulting state and report compliance status. Use them together: configure settings with endpoint security policies or security baselines, then validate devices meet requirements with compliance policies.
+Configuration policies (endpoint security policies, security baselines, device configuration profiles) *set* device settings. Compliance policies primarily *evaluate* whether devices meet your requirements and report compliance status. On some platforms, compliance policies can also enforce certain security settings like PIN or password requirements by prompting users to remediate noncompliant configurations. Use them together: configure settings with endpoint security policies or security baselines, then validate devices meet requirements with compliance policies.
 
 ### Which devices can I protect with endpoint security?
 
