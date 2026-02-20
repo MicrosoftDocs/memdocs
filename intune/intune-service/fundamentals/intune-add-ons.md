@@ -39,7 +39,7 @@ The following table provides a list of add-on capabilities and associated Intune
 | Specialized devices management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
-> As a companion to this article, see our [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
+> For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
 
 ### Microsoft Intune Endpoint Privilege Management
 
