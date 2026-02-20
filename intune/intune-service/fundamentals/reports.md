@@ -472,7 +472,7 @@ Role-based access control (RBAC) permissions have been applied to the report to 
 | Device   Configuration | Read | **Yes**: Enables the ability to   view device configuration policies in Assignment Failures   report.<br>**No**: Enables  the   ability to view device configuration policies in Assignment Failures report. |
 | Device   Compliance Policies | View Reports | **Yes**: No impact to Assignment   Failures report.<br>**No**: No impact to Assignment Failures report. |
 
-For more information about RBAC permissions, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md) and [Permissions granted by the Endpoint Security Manager role](../protect/endpoint-security.md#permissions-granted-by-the-endpoint-security-manager-role).
+For more information about RBAC permissions, see [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md) and the [Endpoint Security Manager](../fundamentals/role-based-access-control-reference.md#endpoint-security-manager) role reference.
 
 You can view the **Assignment failures** report using the following steps:
 
