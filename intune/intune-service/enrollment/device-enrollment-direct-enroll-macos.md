@@ -50,7 +50,11 @@ Devices that are already enrolled in Intune do not get an ACME certificate unles
 If the Mac you're setting up is enrolled in another MDM provider, you must unenroll it before you can enroll it in Intune. 
 
   > [!NOTE]
-  > This enrollment method doesn't support device enrollment restrictions. Make sure you don't have device platform restrictions targeted at any Apple devices, because it will cause the enrollment profile download to fail. Additionally, if an enrollment profile is downloaded before a restriction is configured and then used after the restriction is enabled, enrollment will fail.  
+  > This enrollment method doesn't support device enrollment restrictions. Make sure you don't have device platform restrictions targeted at any Apple devices, because it will cause the enrollment profile download to fail. In this scenario, admins might see the following error during enrollment:  
+> 
+> **File download error. Failed to dynamically fetch target download uri.**
+> 
+> Additionally, if an enrollment profile is downloaded before a restriction is configured and then used after the restriction is enabled, enrollment will fail.
 
 ## Step 1: Create enrollment profile
 
