@@ -39,23 +39,21 @@ Windows Autopilot device preparation tracks the installation progress of specifi
 
 1. The Cloud PC agent calls the Windows Autopilot device preparation policy assigned to the Cloud PC provisioning policy and the configuration is applied including:
 
-   1. The Intune management extension is installed.
+1. The Intune management extension is installed.
 
-   1. The deployment syncs with Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment. If this step fails, the **Deployment Status** shows up as **Failed** during the phase **Policy installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. The deployment syncs with Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment. If this step fails, the **Deployment Status** shows up as **Failed** during the phase **Policy installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-   1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-   1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If any script fails, the **Deployment Status** shows up as **Failed** during the phase **Scripts installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If any script fails, the **Deployment Status** shows up as **Failed** during the phase **Scripts installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-   1. The deployment checks if Win32, Microsoft Store, or Enterprise App Catalog applications are selected in the Windows Autopilot device preparation policy. If there are Win32, Microsoft Store, or Enterprise App Catalog applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. The deployment checks if Win32, Microsoft Store, or Enterprise App Catalog applications are selected in the Windows Autopilot device preparation policy. If there are Win32, Microsoft Store, or Enterprise App Catalog applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-    > [!IMPORTANT]
-    >
-    > As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
-    >
-    > - Up to 10 essential applications can be installed.
-    > - Up to 10 essential PowerShell scripts can be run.
-
+   > [!IMPORTANT]
+   > As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
+>    > - Up to 25 essential applications can be installed.
+   > - Up to 10 essential PowerShell scripts can be run.
+   
 ## Workflow
 
 The following steps are needed to configure and then perform a Windows Autopilot device preparation in automatic mode for Windows 365 in Intune:
