@@ -209,6 +209,8 @@ The following VPN solutions are **known** not to work with Windows Autopilot and
 - Anything that requires a user cert
 - DirectAccess
 
+In addition, any bring-your-own (BYO) VPN configurations are not supported for use during Windows Autopilot in pre-provisioning mode.
+
 > [!NOTE]
 >
 > Omission of a specific VPN client from this list doesn't automatically mean it's supported or that it works with Windows Autopilot. This list only lists the VPN clients that are **known** not to work with Windows Autopilot.
