@@ -76,7 +76,7 @@ Starting with Intune Certificate Connector version 6.2510.3.2002, the *SCEP vali
 | OID | Extension name | Description |
 |----|----------------|-------------|
 | `2.5.29.19` | Basic Constraints | Specifies whether the certificate subject can act as a certification authority (CA) and, if so, the maximum number of subordinate CAs permitted in the certificate chain. |
-| `2.5.29.14` | Subject Key Identifier | Identifies the public key associated with the certificate subject. Typically a SHA‑1 hash of the public key. | Allowed |
+| `2.5.29.14` | Subject Key Identifier | Identifies the public key associated with the certificate subject. Typically a SHA‑1 hash of the public key. |
 | `1.3.6.1.4.1.311.21.8` | Certificate Authority Version | Indicates the version of the issuing certificate authority. |
 | `1.3.6.1.4.1.311.20.2` | Certificate Template Name | Specifies the certificate template used to issue the certificate. |
 | `2.5.29.1` | Authority Identifier (Deprecated) | Previously used to identify the issuing authority. |
