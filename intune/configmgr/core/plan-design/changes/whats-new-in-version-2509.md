@@ -1,17 +1,10 @@
 ---
 title: What's new in version 2509
-titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2509 of Configuration Manager current branch.
 ms.date: 11/11/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: bhuney
-ms.author: brianhun
-manager: dougeby
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in version 2509 of Configuration Manager current branch
@@ -30,7 +23,7 @@ As part of Microsoft's Secure Future Initiative (SFI) the 2509 version of Config
 For a list of significant customer-reported issues resolved in this release, see the [Summary of changes in Configuration Manager version 2509](../../../hotfix/2509/35877153.md) knowledge base article.
 
 ### Windows 11 25H2 support
-Windows 11, version 25H2 is supported for OS deployment and in-place upgrade scenarios. For more information about Windows 11 25H2, see the [Windows 11 release information](https://learn.microsoft.com/windows/release-health/windows11-release-information).
+Windows 11, version 25H2 is supported for OS deployment and in-place upgrade scenarios. For more information about Windows 11 25H2, see the [Windows 11 release information](/windows/release-health/windows11-release-information).
 
 ### Boot images can be automatically updated to use latest Windows Boot Loader
 A new checkbox, *Use Windows Boot Loader signed with Windows UEFI CA 2023*, is available in the Data Source tab of boot image properties. When enabled, it updates the boot image to use the boot loader signed with Windows UEFI CA 2023.
@@ -43,7 +36,7 @@ The new functionality only works on WDS-Less PXE-enabled Distribution Points.
 Starting in **Configuration Manager 2509**, Windows PE–based OSD scenarios now require **Boundary Group Management Point (MP) assignments**.
 
 - For a successful OSD deployment, the **Boundary Group that the WinPE client belongs to must contain at least one Management Point**.
-- If no MP is associated with the client’s Boundary Group, WinPE will fail to retrieve policy. The **smsts.log** will show errors similar to the following:
+- If no MP is associated with the client's Boundary Group, WinPE will fail to retrieve policy. The **smsts.log** will show errors similar to the following:
 
   > Failed to query Management Point locator Exiting TSMediaWizardControl :: GetPolicy.  
   >  QueryMPLocator: no valid MP locations are received
@@ -55,6 +48,12 @@ The Service Connection Tool (SCT) is improved to provide better logging and erro
 - The SCT explicitly checks for prerequisites and fails if they're not met.
 - Customers are directed to explore the relevant logs, such as ServiceConnectionTool.log and ConfigMgrSetup.log, when there's an error.
 - If there's a download failure, the SCT "Connect" step stops execution thus preventing importing incomplete Update Package payloads.
+
+###  AdminService now rejects NTLM authentication
+
+- AdminService now rejects NTLM authentication attempts. `AdminService.log` should write the below message when NTLM authentication is attempted:
+
+> Rejecting NTLM authentication.
 
  
 ## Known Issues

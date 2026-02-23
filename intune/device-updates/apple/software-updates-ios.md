@@ -4,9 +4,6 @@ description: Use Microsoft Intune to manage system updates for supervised iOS/iP
 ms.date: 10/15/2025
 ms.topic: how-to
 ms.reviewer: annovich, beflamm
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 
 # Manage iOS/iPadOS software updates using MDM-based policies in Microsoft Intune
@@ -37,7 +34,7 @@ With these MDM-based policies, you can:
 
 - iOS/iPadOS software updates that you send to a [Shared iPad](../../intune-service/enrollment/device-enrollment-shared-ipad.md) install only when the device is charging and while no users are signed in to a *Shared iPad session* on the device. The iPad must be signed out of all user accounts and plugged into a power source for the device to update successfully.
 
-- If using [Autonomous Single App Mode (ASAM)](../../intune-service/configuration/device-restrictions-ios.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../../intune-service/configuration/device-restrictions-ios.md#general) to configure ASAM.
+- If using [Autonomous Single App Mode (ASAM)](../../intune-service/configuration/device-restrictions-apple.md#autonomous-single-app-mode-asam), the effect of OS updates should be considered as the resulting behavior might be undesirable. Consider testing to assess the effect of OS updates on the app you're running in ASAM. You can use Intune [*device restriction profiles*](../../intune-service/configuration/device-restrictions-apple.md#general) to configure ASAM.
 
 - If you're new to configuring software updates or want some guidance based on common scenarios, go to:
 

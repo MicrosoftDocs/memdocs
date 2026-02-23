@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the email template embedded by SMS_Subscription using SMS_AlertEmailTemplate.
 title: SMS_AlertEmailTemplate Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: bd23b0f3-ca54-43f8-8c10-460166b9d339
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_AlertEmailTemplate Server WMI Class
 The `SMS_AlertEmailTemplate` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the email template embedded by `SMS_Subscription`.

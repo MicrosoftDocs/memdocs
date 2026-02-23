@@ -1,5 +1,137 @@
 {
   "redirections": [
+
+
+    {
+      "source_path": "intune/intune-service/configuration/custom-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/custom-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/ios-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/macos-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/vpn-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/vpn-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/index.yml",
+      "redirect_url": "/intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/quality-updates-policy.md",
+      "redirect_url": "/intune/device-updates/windows/expedite-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/settings.md",
+      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/expedite-updates.md",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/driver-updates-overview.md",
+      "redirect_url": "/intune/device-updates/windows/driver-updates",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/configure.md",
+      "redirect_url": "/intune/device-updates/windows",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/device-updates/windows/reports.md",
+      "redirect_url": "/intune/device-updates/windows/feature-updates-reports",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-audit-logs.md",
+      "redirect_url": "/intune/cloud-pki/audit-logs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-configure-byoca.md",
+      "redirect_url": "/intune/cloud-pki/configure-byoca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-configure-ca.md",
+      "redirect_url": "/intune/cloud-pki/configure-ca",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-delete.md",
+      "redirect_url": "/intune/cloud-pki/delete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-deployment.md",
+      "redirect_url": "/intune/cloud-pki/deploy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-overview.md",
+      "redirect_url": "/intune/cloud-pki",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-fundamentals.md",
+      "redirect_url": "/intune/cloud-pki/fundamentals",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/microsoft-cloud-pki-monitor.md",
+      "redirect_url": "/intune/cloud-pki/monitor",
+      "redirect_document_id": false
+    },
     {
       "source_path": "intune/intune-service/protect/fota-updates-android.md",
       "redirect_url": "/intune/device-updates/android/fota-updates",
@@ -52,7 +184,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/device-updates/windows/expedite-updates",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -67,17 +199,17 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-overview.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates-overview",
+      "redirect_url": "/intune/device-updates/windows/driver-updates",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/device-updates/windows/driver-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/protect/windows-quality-update-policy.md",
-      "redirect_url": "/intune/device-updates/windows/quality-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -87,7 +219,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-for-business-configure.md",
-      "redirect_url": "/intune/device-updates/windows/configure",
+      "redirect_url": "/intune/device-updates/windows",
       "redirect_document_id": false
     },
     {
@@ -102,7 +234,7 @@
     },
     {
       "source_path": "intune/intune-service/protect/windows-update-settings.md",
-      "redirect_url": "/intune/device-updates/windows/settings",
+      "redirect_url": "/intune/device-updates/windows/update-ring-policy-settings",
       "redirect_document_id": false
     },
     {
@@ -657,7 +789,7 @@
     },
     {
       "source_path": "intune/intune/apps/mamedge-5-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-end-user-experience",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
@@ -667,32 +799,47 @@
     },
     {
       "source_path": "intune/intune/apps/mamedge-6-security-baseline.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-6-security-baseline",
+      "redirect_url": "/intune/intune-service/apps/mamedge-overview",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/mamedge-6-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-8-troubleshoot",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/apps/mamedge-5-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-end-user-experience",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/apps/mamedge-6-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-8-troubleshoot",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/mamedge-7-end-user-experience.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-7-end-user-experience",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/apps/mamedge-8-troubleshoot.md",
-      "redirect_url": "/intune/intune-service/apps/mamedge-8-troubleshoot",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-6-security-baseline.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-overview",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-7-end-user-experience.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-6-end-user-experience",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/apps/mamedge-8-troubleshoot.md",
+      "redirect_url": "/intune/intune-service/apps/mamedge-7-troubleshoot",
       "redirect_document_id": false
     },
     {
@@ -882,7 +1029,7 @@
     },
     {
       "source_path": "intune/intune/configuration/custom-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/custom-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -892,7 +1039,7 @@
     },
     {
       "source_path": "intune/intune/configuration/custom-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/custom-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -982,12 +1129,12 @@
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-ios",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-macos",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
       "redirect_document_id": false
     },
     {
@@ -1087,7 +1234,7 @@
     },
     {
       "source_path": "intune/intune/configuration/ios-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/ios-device-features-settings",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
@@ -1117,7 +1264,7 @@
     },
     {
       "source_path": "intune/intune/configuration/macos-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/macos-device-features-settings",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
@@ -1232,12 +1379,12 @@
     },
     {
       "source_path": "intune/intune/configuration/vpn-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/vpn-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/vpn-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/vpn-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -1282,12 +1429,12 @@
     },
     {
       "source_path": "intune/intune/configuration/wi-fi-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/wi-fi-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -3502,7 +3649,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-expedite-updates.md",
-      "redirect_url": "/intune/intune-service/protect/windows-10-expedite-updates",
+      "redirect_url": "/intune/device-updates/windows/quality-updates",
       "redirect_document_id": false
     },
     {
@@ -3512,7 +3659,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-10-update-rings.md",
-      "redirect_url": "/intune/intune-service/protect/windows-10-update-rings",
+      "redirect_url": "/intune/device-updates/windows/update-rings",
       "redirect_document_id": false
     },
     {
@@ -3522,7 +3669,7 @@
     },
     {
       "source_path": "intune/intune/protect/windows-driver-updates-policy.md",
-      "redirect_url": "/intune/intune-service/protect/windows-driver-updates-policy",
+      "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
     },
     {

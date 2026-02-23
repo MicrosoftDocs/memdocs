@@ -1,18 +1,10 @@
 ---
 title: AddPackages Method
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that assigns a set of packages to the distribution point group.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d9ef0822-0931-4459-b121-49d953b0a233
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # AddPackages Method in Class SMS_DistributionPointGroup
 The `AddPackages` Windows Management Instrumentation (WMI) class method, in Configuration Manager, assigns a set of packages to the distribution point group.

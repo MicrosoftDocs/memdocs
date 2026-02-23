@@ -1,7 +1,7 @@
 ---
 title: Add and Assign Win32 Apps to Microsoft Intune
 description: Learn how to add, assign, and manage Win32 apps with Microsoft Intune.
-ms.date: 10/02/2025
+ms.date: 02/06/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -12,8 +12,6 @@ ms.collection:
 
 # Add, Assign, and Monitor a Win32 App in Microsoft Intune
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.md) by using the [Microsoft Win32 Content Prep Tool](https://go.microsoft.com/fwlink/?linkid=2065730), you can add the app to Intune. To learn more about preparing a Win32 app to be uploaded, see [Prepare Win32 app content for upload](apps-win32-prepare.md).
 
 > [!NOTE]
@@ -23,7 +21,7 @@ After you've [prepared a Win32 app to be uploaded to Intune](apps-win32-prepare.
 
 To use Win32 app management, be sure you meet the following criteria:
 
-- Use Windows 10 version 1607 or later (Enterprise, Pro, and Education versions).
+- Use a [supported Windows version](../fundamentals/supported-devices-browsers.md) (Enterprise, Pro, and Education versions).
 - Devices must be joined or registered to Microsoft Entra ID and be auto-enrolled. The Intune management extension supports devices that are Microsoft Entra joined, Microsoft Entra registered, hybrid domain joined, or group policy enrolled.
   > [!NOTE]
   > For the scenario of group policy enrollment, the user uses the local user account to Microsoft Entra join their Windows device. The user must log on to the device by using their Microsoft Entra user account and enroll in Intune. Intune will install the Intune Management extension on the device if a PowerShell script or a Win32 app is targeted to the user or device.
@@ -82,7 +80,18 @@ Select **Next** to display the **Program** page.
 
 On the **Program** page, configure the app installation and removal commands for the app:
 
-- **Install command**: Add the complete installation command line to install the app.
+> [!IMPORTANT]
+> Microsoft Intune does not support interactive application installations. Applications deployed through Intune must install silently and cannot require user interaction, such as dialog boxes, prompts, or UI input during installation.
+>
+> Techniques that attempt to force interaction with the signed-in user session (for example, using tools like serviceui.exe or similar workarounds) are not supported and may result in inconsistent or unpredictable behavior. Although some applications might appear to install interactively in certain scenarios, this behavior is not supported by Intune and should not be relied upon in production environments.
+
+- **Install command**: Configure how the app is installed on devices.
+
+    **Installer type**: Choose between two options:
+    - **Command line**: Specify a command line to install the app
+    - **PowerShell script**: Upload a PowerShell script to serve as the installer
+
+    For command line installations, add the complete installation command line to install the app.
 
     For example, if your app's file name is **MyApp123**, add the following:
 
@@ -95,6 +104,11 @@ On the **Program** page, configure the app installation and removal commands for
     In the preceding command, the `ApplicationName.exe` package supports the `/quiet` command argument.
 
     For the specific arguments that the application package supports, contact your application vendor.
+
+    For PowerShell script installations, select **PowerShell script** to upload your install script (maximum size 50 KB). The script replaces the standard install command and enables richer setup workflows like prerequisite checks, configuration changes, and post-install actions. Intune packages the script with the app content and runs it in the same context as the app installer. Installation results appear in the Intune admin center based on the script's return code.
+
+    > [!NOTE]
+    > If Multi-Admin Approval (MAA) is enabled for your tenant, you can't upload PowerShell scripts during app creation. You must first create the app, then add or modify scripts afterward. Currently, script properties like `enforceSignatureCheck` and `runAs32Bit` can be edited without MAA requests, but this behavior will change in a future update to require MAA approval.
 
     > [!IMPORTANT]
     > Admins must be careful when they use the command tools. Unexpected or harmful commands might be passed via the **Install command** and **Uninstall command** fields.
@@ -238,7 +252,7 @@ On the **Detection rules** pane, configure the rules to detect the presence of t
 
    - **Enforce script signature check**: Select **Yes** to verify that a trusted publisher has signed the script, which will allow the script to run with no warnings or prompts displayed. The script will run unblocked. Select **No** (default) to run the script without signature verification.
 
-   The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed.
+   The Intune agent checks the results from the script. It reads the values written by the script to the STDOUT stream, the standard error (STDERR) stream, and the exit code. If the script exits with a nonzero value, the script fails and the application detection status isn't installed. If the exit code is zero and STDOUT has data, the application detection status is installed. However, if any data is written to STDERR, the detection result is evaluated as not installed, even if data is written to STDOUT and the script exits with an exit code of zero.
 
    > [!NOTE]
    > We recommend encoding your script as UTF-8 BOM. When the script exits with the value of **0**, the script execution was successful. The second output channel indicates that the app was detected. STDOUT data indicates that the app was found on the client. We don't look for a particular string from STDOUT.
@@ -285,9 +299,9 @@ The user will see Windows notifications indicating that dependent apps are being
 #### Dependency limitations
 
 The following bulleted list provides additional clarity about dependency limitations:
--	If an app has 100 dependencies, then the app graph has a total size of 101 (100 dependency apps + 1 parent app).
--	If an app has 3 dependencies, and one of the dependency apps has 2 dependencies, then the app graph has a total size of 6 (1 parent app + 3 dependency app + 2 dependency apps that are from another dependency app).
--	If an app is a dependency for multiple app “graphs”, meaning that the dependency is somewhere in the dependency chain for some app graph, then all apps from all the separate graphs are summed to calculate the dependency size. For example, if graph A has 23 apps, graph B has 62 apps, and graph C has 20 apps, and app X exist as a dependency app somewhere in the dependency chain in all 3 graphs, then the total size of the graph is 103 (app X is only counted once), which surpasses the 100 limit restriction.
+-    If an app has 100 dependencies, then the app graph has a total size of 101 (100 dependency apps + 1 parent app).
+-    If an app has 3 dependencies, and one of the dependency apps has 2 dependencies, then the app graph has a total size of 6 (1 parent app + 3 dependency app + 2 dependency apps that are from another dependency app).
+-    If an app is a dependency for multiple app "graphs", meaning that the dependency is somewhere in the dependency chain for some app graph, then all apps from all the separate graphs are summed to calculate the dependency size. For example, if graph A has 23 apps, graph B has 62 apps, and graph C has 20 apps, and app X exist as a dependency app somewhere in the dependency chain in all 3 graphs, then the total size of the graph is 103 (app X is only counted once), which surpasses the 100 limit restriction.
 
 #### Dependency failures
 

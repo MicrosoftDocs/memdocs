@@ -5,9 +5,6 @@ ms.date: 04/09/2025
 ms.topic: how-to
 ms.reviewer: jieyan
 ms.subservice: suite
-ms.collection:
-- M365-identity-device-management
-- sub-updates
 ---
 # Android FOTA Updates
 

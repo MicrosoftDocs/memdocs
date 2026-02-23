@@ -477,6 +477,6 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 
 - The profile is created, but might not be doing anything. Be sure to [assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
-- You can also create Wi-Fi profiles for [iOS/iPadOS](wi-fi-settings-ios.md), [macOS](wi-fi-settings-macos.md), and [Windows](wi-fi-settings-windows.md).
+- You can also create Wi-Fi profiles for [iOS/iPadOS and macOS](wi-fi-settings-apple.md), and [Windows](wi-fi-settings-windows.md).
 
 - [Troubleshoot common issues with Wi-Fi profiles](/troubleshoot/mem/intune/troubleshoot-wi-fi-profiles#common-issues).

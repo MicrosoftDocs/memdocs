@@ -13,8 +13,6 @@ ms.collection:
 
 # Use PowerShell Scripts on Windows Devices in Intune
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 Use the Microsoft Intune management extension to upload PowerShell scripts in Intune. Then, run these scripts on Windows devices. The management extension enhances MDM, and makes it easier to move to modern management.
 
 > [!NOTE]
@@ -156,7 +154,7 @@ In **PowerShell scripts**, right-click the script, and select **Delete**.
     > [!TIP]
     > The **Microsoft Intune Management Extension** is a service that runs on the device, just like any other service listed in the Services app (services.msc). After a device reboots, this service might restart, and check for any assigned PowerShell scripts with the Intune service. If the **Microsoft Intune Management Extension** service is set to Manual, then the service might not restart after the device reboots.
 
-- Be sure devices are [joined to Microsoft Entra ID](/azure/active-directory/user-help/user-help-join-device-on-network). Devices that are only [registered](/azure/active-directory/user-help/user-help-register-device-on-network) with your workplace or organization in Microsoft Entra ID don’t receive the scripts.
+- Be sure devices are [joined to Microsoft Entra ID](/azure/active-directory/user-help/user-help-join-device-on-network). Devices that are only [registered](/azure/active-directory/user-help/user-help-register-device-on-network) with your workplace or organization in Microsoft Entra ID don't receive the scripts.
 - Confirm the Intune management extension is downloaded to `%ProgramFiles(x86)%\Microsoft Intune Management Extension`.
 - Scripts don't run on Surface Hubs or Windows in S mode.
 - Review the logs for any errors. See [Intune management extension logs](../apps/intune-management-extension.md#intune-management-extension-logs) (in this article).

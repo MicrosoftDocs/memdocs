@@ -1,18 +1,10 @@
 ---
 description: Learn how to import an inventory class from the MOF file content using ImportInventoryReport class in Configuration Manager.
 title: ImportInventoryReport Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 79ae21e0-8d58-4ec0-8cc1-9322031cb582
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ImportInventoryReport Method in Class SMS_InventoryReport
 The `ImportInventoryReport` Windows Management Instrumentation (WMI) class method, in Configuration Manager, imports an inventory class from the MOF file content.
