@@ -151,6 +151,37 @@ Key capabilities include:
 >
 > - Windows
 
+### Monitor and troubleshoot
+
+#### Updates to operators in device query for multiple devices<!--36180651 -->
+
+Device query for multiple devices now includes expanded operator support, clearer query validation, and improved results to make building and interpreting queries easier.
+
+- **New join types supported**\
+
+  You can now use the following join types when querying across entities:
+  - `leftsemi`
+  - `rightsemi`
+  - `leftanti`
+  - `rightanti`
+
+- **Updated join behavior**\
+
+  Joins that use `on Device.DeviceId` are no longer supported. Queries should instead:
+  - Use `on Device`, or
+  - Omit the on clause entirely when joining on the device entity.
+
+- **Updated device references in operators**\
+  Using Device by itself is no longer supported in operators such as `distinct`, `summarize`, or `order by`. Queries must reference a specific device property.
+
+- **Improved query results**\
+
+  Queries that involve a device—either by querying a device directly or by joining a device with another entity—now return the device as a clickable link in the results, allowing you to quickly navigate to device details.
+
+- **Clearer error messages**\
+
+  Some query error messages have been updated to provide clearer, more descriptive guidance when queries are invalid.
+
 ## Week of February 9, 2026 (Service release 2601)
 
 ### Microsoft Intune Suite

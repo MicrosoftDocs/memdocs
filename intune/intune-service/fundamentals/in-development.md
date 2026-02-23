@@ -125,30 +125,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Operator updates for device query for multiple devices<!--36180651 -->
-
-The following operator and behavior changes will be coming to **Device query for multiple devices**.
-
-- **New join types**\
-  The following join types will be supported:
-  - `leftsemi`
-  - `rightsemi`
-  - `leftanti`
-  - `rightanti`
-
-- **Changes to join behavior**\
-  Joins that use `on Device.DeviceID` will no longer be supported. Queries that currently use `on Device.DeviceId` should switch to using `on Device`, or omit the `on` clause entirely.
-
-- **Changes to device references in operators**\
-  Using `Device` by itself will no longer be valid in operators such as `distinct`, `summarize`, or `order by`. Queries will need to reference a specific device property instead.
-
-- **Updates to query results**\
-  Queries that involve a device—either by querying a device directly or by joining a device to another entity—will return the device as a clickable link in the results, allowing navigation to the device details.
-
-- **Improved error messages**\
-  Some error cases have been updated to provide clearer, more descriptive messages.
+<!-- ## Monitor and troubleshoot -->
 
 <!-- *********************************************** -->
 
