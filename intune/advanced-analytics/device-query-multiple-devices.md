@@ -81,6 +81,7 @@ For more information on Kusto Query Language, see [Learn more about Kusto Query 
 > [!TIP]
 > Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
+<<<<<<< HEAD
 ## Manage device queries for multiple devices
 
 You can save, share, and reuse queries with other Intune admins.
@@ -127,6 +128,8 @@ The saved query appears under the **Saved Queries** tab. When you open **Device 
 1. In the query pane, select **Delete**.
 1. Select **Delete** to confirm.
 
+=======
+>>>>>>> cf374b8ce15add66b0b1b317d91f2f395dbfee9b
 ## Sample queries
 
 To help you get started, some sample queries are provided in this section. To access the sample queries, expand the **example queries** section under the Getting started page, and select the one you want to add to the query window. The following section shows the list of sample queries.
