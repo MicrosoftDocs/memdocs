@@ -81,55 +81,6 @@ For more information on Kusto Query Language, see [Learn more about Kusto Query 
 > [!TIP]
 > Use Copilot in Intune to generate KQL queries for device query using natural language requests. To learn more, see [Query with Copilot in device query](../intune-service/copilot/copilot-intune-overview.md#-use-copilot-to-create-kql-queries-to-get-device-details).
 
-<<<<<<< HEAD
-## Manage device queries for multiple devices
-
-You can save, share, and reuse queries with other Intune admins.
-
-### Save a device query
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
-1. Once the query is complete, select **Save as new**.
-1. In the **Save Query** pane, enter a name and description, and then select a query type:
-   - **Personal query**: Visible only to you and available for future reuse.
-   - **Shared query**: Available to other Intune admins.
-1. Select **Save**.
-
-The saved query appears under the **Saved Queries** tab. When you open **Device query**, you can select a saved personal or shared query from this tab.
-
-> [!NOTE]
-> Only the creator of a shared query can modify or delete it. If the creator's account is deleted, the query is marked for deletion and other admins must save a copy to retain it.
-
-### Modify a saved query
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
-1. Select the **Saved Queries** tab.
-1. Select a query from the personal queries list or shared queries list.
-1. Make your changes, and then select one of the following:
-   - **Save**: Saves changes to the existing query (available only for personal queries).
-   - **Save as new**: Saves the query as a new query.
-
-### Change a personal query to a shared query
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
-1. Select the **Saved Queries** tab.
-1. Find the personal query that you want to share, and then select **…** > **Edit**.
-1. From the **Query type** dropdown, select **Shared query**.
-1. Select **Save**.
-
-> [!NOTE]
-> Only the creator of a shared query can modify or delete it. If the creator's account is deleted, the query is marked for deletion and other admins must save a copy to retain it.
-
-### Delete a personal device query
-
-1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > **Device query**.
-1. Select the **Saved Queries** tab.
-1. Find the personal query that you want to delete, and then select **…** > **Edit**.
-1. In the query pane, select **Delete**.
-1. Select **Delete** to confirm.
-
-=======
->>>>>>> cf374b8ce15add66b0b1b317d91f2f395dbfee9b
 ## Sample queries
 
 To help you get started, some sample queries are provided in this section. To access the sample queries, expand the **example queries** section under the Getting started page, and select the one you want to add to the query window. The following section shows the list of sample queries.
