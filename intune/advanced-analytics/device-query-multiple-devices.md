@@ -96,8 +96,8 @@ You can save, share, and reuse queries with other Intune admins.
 
 The saved query appears under the **Saved Queries** tab. When you open **Device query**, you can select a saved personal or shared query from this tab.
 
-> [!TIP]
-> Shared queries can't be edited or deleted. Start with a personal query and convert it to a shared query after you've finalized it.
+> [!NOTE]
+> Only the creator of a shared query can modify or delete it. If the creator's account is deleted, the query is marked for deletion and other admins must save a copy to retain it.
 
 ### Modify a saved query
 
@@ -117,7 +117,7 @@ The saved query appears under the **Saved Queries** tab. When you open **Device 
 1. Select **Save**.
 
 > [!NOTE]
-> After a query is converted to a shared query, it can't be modified or deleted.
+> Only the creator of a shared query can modify or delete it. If the creator's account is deleted, the query is marked for deletion and other admins must save a copy to retain it.
 
 ### Delete a personal device query
 
