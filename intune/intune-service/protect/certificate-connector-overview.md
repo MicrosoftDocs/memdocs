@@ -12,7 +12,6 @@ ms.collection:
 - sub-certificates
 ---
 
-
 # Certificate Connector for Microsoft Intune
 
 For Microsoft Intune to support use of certificates for authentication and the signing and encryption of email using S/MIME, you can use the Certificate Connector for Microsoft Intune. The certificate connector is software you install on an on-premises server to help deliver and manage certificates for your Intune-managed devices.
@@ -388,7 +387,6 @@ New updates for the connector can take a week or more to become available for ea
 
 Version **6.2510.3.2002** - Changes in this release:  
 
-- Updated connector service-side endpoints to enhance network security.
 - Improved SCEP validation by blocking unknown OID extensions. See [Allowed list of SCEP OIDs](#allowed-list-of-scep-oids).
 - To ensure uninterrupted certificate issuance and management, the Intune Certificate Connector must be updated, either automatically or manually.
 
