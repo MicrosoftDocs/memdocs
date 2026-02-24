@@ -28,7 +28,7 @@ Property list files are typically used for web browsers, like Google Chrome, [Mi
 > [!TIP]
 > For Microsoft Edge version 77 and newer, you can use the settings catalog. You don't have to use a preference file. For more information, go to [Settings catalog](settings-catalog.md).
 
-For more information on `plist` files, go to [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website) and [Custom payload settings](https://support.apple.com/guide/mdm/custom-mdm9abbdbe7/1/web/1) (Apple's website).
+For more information on `plist` files, go to [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website).
 
 This article describes the different property list file settings you can add to macOS devices. As part of your mobile device management (MDM) solution, use these settings to add the app bundle ID (`com.company.application`), and add the app's `.plist` file.
 
