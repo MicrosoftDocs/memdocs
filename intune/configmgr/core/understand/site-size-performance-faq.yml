@@ -206,9 +206,11 @@ sections:
         answer: |
           In general, yes. 
 
-          The built-in []"Rebuild Indexes" maintenance task](../servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics.md#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics isn't updated on most tables. This can lead to suboptimal query plans and poor performance. 
+          The built-in ["Rebuild Indexes" maintenance task](../servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics isn't updated on most tables. This can lead to suboptimal query plans and poor performance. 
           
-          You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
+          You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
+
+          In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one. 
           
           Non-Microsoft scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks. For example, there's a whitepaper summarizing Microsoft CSAs' experience: [SQL Recommendations for MECM](https://github.com/stephaneserero/Sql-recommendations-for-MECM).
           
