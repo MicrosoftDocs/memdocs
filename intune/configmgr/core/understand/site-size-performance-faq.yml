@@ -205,8 +205,8 @@ sections:
           Should I implement any additional SQL Server maintenance tasks?
         answer: |
           In general, yes. 
-          
-          The built-in task to rebuild indexes only affects the fragmented indexes on the tables. The Query Optimizer updates statistics when you rebuild an index on a table or view with ALTER INDEX REBUILD (not with ALTER INDEX REORGANIZE): see [After Maintenance Operations](/sql/relational-databases/statistics/statistics.md#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics won't be updated on most tables. This can lead to suboptimal query plans and poor performance. 
+
+          The built-in []"Rebuild Indexes" maintenance task](../servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly-fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics.md#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics won't be updated on most tables. This can lead to suboptimal query plans and poor performance. 
           
           You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
           
