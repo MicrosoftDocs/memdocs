@@ -2325,7 +2325,7 @@ items:
       - name: Data Intune sends to Zebra
         href: ./intune-service/protect/data-intune-sends-to-zebra.md
       - name: Enable Windows diagnostic data
-        href: ./tenant-administration/windows-diagnostics-data.md
+        href: ./tenant-administration/windows-diagnostic-data.md
       - name: Information shared from Jamf Pro to Intune
         href: ./intune-service/protect/data-jamf-sends-to-intune.md
     - name: View and correct personal data

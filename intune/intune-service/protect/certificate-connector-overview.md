@@ -24,7 +24,7 @@ This article introduces the Certificate Connector for Microsoft Intune, its life
 
 ## Connector overview
 
-To use the certificate connector, you’ll first download software from within the Microsoft Intune admin center, which you’ll then install on a Windows Server.
+To use the certificate connector, you'll first download software from within the Microsoft Intune admin center, which you'll then install on a Windows Server.
 
 During the installation, you can install one or more connector features, including support for:
 
@@ -35,7 +35,7 @@ During the installation, you can install one or more connector features, includi
 
 You'll also assign a service account to run the connector. This account is used for all interactions with your Certification Authority, and for certificate issuance, revocation, and renewal. Supported options for the service account include the connector servers SYSTEM account or a Domain account.
 
-After the connector installs, you can run configuration of the connector again at any time to update it or change the features you’ve installed. After it's installed and configured, the connector can automatically install future updates to keep your connectors current to the most recent release.
+After the connector installs, you can run configuration of the connector again at any time to update it or change the features you've installed. After it's installed and configured, the connector can automatically install future updates to keep your connectors current to the most recent release.
 
 Intune supports installing of multiple instances of the connector in a tenant, and each instance can support different features. If you use multiple connectors that support different features, certificate requests are always routed to a relevant connector. For example, if you install two connectors that support PKCS, and install two more that support both PKCS and SCEP, certificate tasks for PKCS can be managed by any of the four connectors, but tasks for SCEP are only directed to the two connectors that support SCEP.
 
@@ -51,7 +51,7 @@ The Certificate Connector for Microsoft Intune supports:
 
 - Issuing Simple Certificate Enrollment Protocol (SCEP) certificates. When you use an Active Directory Certificate Services Certification Authority (CA), also called a *Microsoft CA*, you must also configure the Network Device Enrollment Service (NDES) on the server that hosts the connector.
 
-  Use of SCEP with a third-party Certification Authority, doesn’t require use of the Certificate Connector for Microsoft Intune.
+  Use of SCEP with a third-party Certification Authority, doesn't require use of the Certificate Connector for Microsoft Intune.
 
 - Certificate revocation.
 
@@ -76,9 +76,9 @@ Periodically, updates  to the certificate connector are released. Announcements 
 
 - Is supported for six months after the release of a new version. During this period, automatic updates can install a newer connector version. Updated connector versions can include but aren't limited to bug fixes and performance and feature improvements.
 
-- If an out of support connector fails, you’ll need to update to the latest supported version.
+- If an out of support connector fails, you'll need to update to the latest supported version.
 
-- If you block the automatic update of the connector, plan to manually update the connector within six months, before support for the installed version ends. After support ends, you’ll need to update the connector to a version that remains in support to receive support for problems with the connector.
+- If you block the automatic update of the connector, plan to manually update the connector within six months, before support for the installed version ends. After support ends, you'll need to update the connector to a version that remains in support to receive support for problems with the connector.
 
 - Connectors that are out of support will continue to function for up to 18 months after the release of a new version. After 18 months, a connectors functionality might fail due to service level improvements, updates, or in addressing common security vulnerabilities that might surface in the future.
 

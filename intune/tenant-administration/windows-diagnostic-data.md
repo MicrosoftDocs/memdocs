@@ -14,10 +14,23 @@ ms.collection:
 
 # Enable Windows diagnostic data and license verification
 
+Some Microsoft Intune features require access to Windows diagnostic data or verification that the tenant owns eligible Windows licenses. Configure these requirements at the tenant level so dependent features can function correctly.
 
-Some Microsoft Intune features depend on access to Windows diagnostic data and verification of eligible Windows licenses. These requirements are configured at the tenant level.
+## Prerequisites
 
-This article explains how to enable Windows diagnostic data for use by Intune and how to attest to Windows license eligibility so dependent features can function correctly.
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
+
+:::column-end:::
+:::column span="3":::
+> To enable Windows diagnostic data and license verification, use an account with at least one of the following roles:
+> - [Intune Administrator][INT-R1]
+> - [Custom role][INT-RC] that includes:
+>   - The permission **xyz/xyz**
+
+:::column-end:::
+:::row-end:::
 
 ## Enable Windows data
 
@@ -43,23 +56,20 @@ To learn more about this configuration, see [Enable Windows diagnostic data proc
 
 ## Enable Windows license verification
 
-To enable Intune features that require Windows license verification, you must attest that your tenant has the required Windows licenses. This attestation is required because some Intune features depend on the presence of eligible Windows licenses in the tenant, and this setting allows you to confirm that requirement is met.
-
-> [!NOTE]
-> This attestation doesn't validate individual device activation or assign licenses. It confirms that your tenant is entitled to use Intune features that require eligible Windows licenses.
-
-Supported licenses include:
-
-- Windows Enterprise E3 or E5, or Microsoft 365 F3, E3, or E5
-- Windows Education A3 or A5, or Microsoft 365 A3 or A5
-- Windows Virtual Desktop Access E3 or E5
+Some Intune features require an attestation that your tenant owns eligible Windows licenses. This setting confirms tenant entitlement for those features; it does not validate or assign licenses to individual devices.
 
 To attest ownership of the required Windows licenses:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Tenant administration** > **Connectors and tokens** > **Windows data**.
 1. Toggle **I confirm that my tenant owns one of these licenses** to **On**. By default, it's *Off*.
 
-Features theat require license verification include:
+Supported licenses:
+
+- Windows Enterprise E3/E5 or Microsoft 365 F3/E3/E5
+- Windows Education A3/A5 or Microsoft 365 A3/A5
+- Windows Virtual Desktop Access E3/E5
+
+Features that require license verification include:
 
 - [Compatibility reports for Windows updates](../device-updates/windows/compatibility-reports.md)
 - [Remediations](../intune-service/fundamentals/remediations.md)
@@ -71,3 +81,6 @@ To understand how Windows diagnostic data is collected and managed, see [Configu
 <!-- admin center -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
+
+[INT-RC]: /intune/intune-service/fundamentals/create-custom-role
+[INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator
