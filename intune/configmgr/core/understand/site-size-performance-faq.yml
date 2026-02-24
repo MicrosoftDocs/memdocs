@@ -13,7 +13,7 @@ summary: |
   
 
 sections:
-  - name: Machine and disk configuration FAQs and examples
+  - name: Machine and disk configuration
     questions:
       - question: |
           How should I format the disks on my site server and SQL Server?
@@ -140,7 +140,7 @@ sections:
           2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
           3. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
-  - name: Other common SQL Server-related performance questions
+  - name: SQL Server-related performance
     questions:
       - question: |
           Is it better to run with SQL Server colocated with the site server, or run it on a remote server?
@@ -191,9 +191,9 @@ sections:
       - question: |
           What version of SQL Server should I run?
         answer: |
-          For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL Server meet required performance criteria. However, SQL Server 2016 or newer tends to outperform SQL Server 2014 in some aspects of the Configuration Manager workload. Also, running SQL Server 2014 at SQL Server 2012 compatibility level (110) improves performance in general. At installation time, Configuration Manager databases running on SQL Server 2014 are set to compatibility level 110. SQL Server 2016 or newer is set to that SQL Server version's default compatibility level, such as 130 for SQL Server 2016. Upgrading SQL Server in place doesn't update compatibility levels until you install the next major Configuration Manager current branch version.
+          For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL Server meet required performance criteria. Upgrading SQL Server in place doesn't update compatibility levels.
           
-          If you see unusual timeouts or slowness on certain SQL queries on SQL Server 2016 or later, such as when using RBAC in the Admin Console, try changing the SQL Server compatibility level on the Configuration Manager database to 110. Running at SQL Server compatibility level 110 on SQL Server 2014 and newer versions of SQL Server is fully supported. For more information, see [SQL query times out or console slow on certain Configuration Manager database queries](https://support.microsoft.com/help/3196320/sql-query-times-out-or-console-slow-on-certain-configuration-manager-d).
+          If you see unusual timeouts or slowness on certain SQL queries on SQL Server 2016 or later, such as when using RBAC in the Admin Console, try changing the SQL Server compatibility level on the Configuration Manager database to 110. Running at SQL Server compatibility level 110 on SQL Server 2014 and newer versions of SQL Server is fully supported. For more information, see [SQL query times out or console slow on certain Configuration Manager database queries](/troubleshoot/mem/configmgr/console-management/sql-query-times-out-or-console-slow-performance).
           
           As of January 2018, you should *avoid* the following SQL Server versions, because of various known performance-related or other potential issues:
           
@@ -202,11 +202,15 @@ sections:
           - SQL Server 2016 RTM to CU3, SP1 CU3 to CU5
           
       - question: |
-          Should I implement any additional SQL Server indexing tasks?
+          Should I implement any additional SQL Server maintenance tasks?
         answer: |
-          Yes, update indexes as often as once a week and statistics as often as once a day to improve SQL Server performance. Third-party scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks.
+          In general, yes. 
           
-          In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one.
+          The built-in task to rebuild indexes only affects the fragmented indexes on the tables. The Query Optimizer updates statistics when you rebuild an index on a table or view with ALTER INDEX REBUILD (not with ALTER INDEX REORGANIZE): see [After Maintenance Operations](/sql/relational-databases/statistics/statistics.md#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics won't be updated on most tables. This can lead to suboptimal query plans and poor performance. 
+          
+          You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
+          
+          Third-party scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks. For example, there is a whitepaper summarizing Microsoft CSAs' experience: [SQL Recommendations for MECM](https://github.com/stephaneserero/Sql-recommendations-for-MECM).
           
       - question: |
           When should I use full SQL Server instead of SQL Server Express on my secondary sites?
@@ -220,23 +224,24 @@ sections:
         answer: |
           Leaving your setting at 0 (use all available processors) is optimal for overall processing performance in most circumstances.
           
-          Many Configuration Manager administrators follow the guidance at [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-confi). On most modern large hardware, this guidance leads to a suggested maximum setting of eight. However, if you run many smaller queries compared to your number of processors, it may help to set it to a higher number. Limiting yourself to eight isn't necessarily the best setting on larger sites when more cores are available. 
+          Many Configuration Manager administrators follow the guidance at [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option). On most modern large hardware, this guidance leads to a suggested maximum setting of eight. However, if you run many smaller queries compared to your number of processors, it may help to set it to a higher number. Limiting yourself to eight isn't necessarily the best setting on larger sites when more cores are available. 
           
           On SQL Servers with greater than eight cores, start with a setting of 0, and only make changes if you experience performance issues or excessive locking. If you need to change MaxDOP because you are encountering performance issues at 0, start with a new value at least greater than or equal to the minimum recommended number of cores for that site's SQL Server sizing. Going lower than this value nearly always has negative performance implications. For example, a remote SQL Server for a 100,000 client site needs at least 12 cores. If your SQL Server has 16 cores, start testing your MaxDOP setting with a value of 12.
           
-  - name: Other common performance-related questions
+  - name: Antimalware configuration
     questions:
       - question: |
           Which folders on the site server (or other roles) should I exclude for antivirus software?
         answer: |
           Take care when disabling antivirus protection on any system. In high volume and secure environments, we recommend disabling *active monitoring* for optimum performance.
           
-          For more information about recommended antivirus exclusions, see [Recommended antivirus exclusions for Configuration Manager 2012 and Current Branch Site Servers, Site Systems, and Clients](https://support.microsoft.com/help/327453/recommended-antivirus-exclusions-for-configuration-manager-2012-and-cu).
-          
+          For more information about recommended antivirus exclusions, see [Recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients](/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions).
+  - name: WSUS Maintenance
+    questions:
       - question: |
           What can I do to make WSUS perform better when it's used with Configuration Manager?
         answer: |
-          Changing a few key IIS settings, such as WsusPool Queue Length and WsusPool Private Memory limit, can improve WSUS performance, even on smaller installations. For more information, see [Recommended hardware](../plan-design/configs/recommended-hardware.md).
+          Changing a few key IIS settings, such as WsusPool Queue Length and WsusPool Private Memory limit, can improve WSUS performance, even on smaller installations. For more information, see [WSUS note at Recommended hardware](../plan-design/configs/recommended-hardware.md#bkmk_note2).
           
           Also make sure you have the latest updates installed for the operating system running WSUS:
           
@@ -247,12 +252,12 @@ sections:
       - question: |
           What type of maintenance should I run on my WSUS servers?
         answer: |
-          See [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint).
+          See [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/update-management/wsus-maintenance-guide).
           
       - question: |
           I want to set up basic performance monitoring for my site. What should I watch?
         answer: |
-          Traditional server performance monitoring works effectively for general Configuration Manager. You can also leverage the various System Center Operations Manager management packs for Configuration Manager, SQL Server, and Windows Server to monitor basic health of your servers. You can also directly monitor the Windows Performance Monitor (PerfMon) counters Configuration Manager provides. Monitor the backlogs in the various inboxes for early warning signs of potential site performance issues or backlogs.
+          Traditional server performance monitoring works effectively for general Configuration Manager. You can also leverage monitoring solutions like the Azure Monitor to monitor basic health of your servers: see [ConfigMgr Performance Baseline the Easy Way](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/configmgr-performance-baseline-the-easy-way/1583081) blog post. You can also directly monitor the Windows Performance Monitor (PerfMon) counters Configuration Manager provides. Monitor the backlogs in the various inboxes for early warning signs of potential site performance issues or backlogs.
 
 additionalContent: |
 
