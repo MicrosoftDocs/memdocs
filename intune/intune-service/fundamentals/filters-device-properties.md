@@ -360,16 +360,17 @@ You can use the following app properties in your managed app filter rules:
   - Android
   - iOS/iPadOS
 
-  > [!IMPORTANT]
-  > - The `Managed` for iOS/iPadOS and the `Android Enterprise` values are being replaced and will be removed in a future update (no ETA). If you have existing assignment filters that use these values, they're automatically mapped to the other values for that platform:
-  >
-  >  | Legacy value | New mapped value |
-  >  |---|---|
-  >  | `Android Enterprise` | - Corporate-owned dedicated devices with Entra ID Shared mode<br/>- Corporate-owned dedicated devices without Entra ID Shared mode<br/>- Corporate-owned with work profile<br/>- Corporate-owned fully managed<br/>- Personally-owned work profile` |
-  >  | `Managed` | - Automated Device Enrollment user-associated devices<br/>- Automated Device Enrollment userless devices<br/>- Account Driven User Enrollment<br/>- Device Enrollment with Company Portal and Web Enrollment |
-  >
-  > - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
-  > - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
+  **What you need to know**
+
+  - The `Managed` for iOS/iPadOS and the `Android Enterprise` values are being replaced and will be removed in a future update (no ETA). If you have existing assignment filters that use these values, they're automatically mapped to the other values for that platform:
+
+    | Legacy value | New mapped value |
+    |---|---|
+    | `Android Enterprise` | - Corporate-owned dedicated devices with Entra ID Shared mode<br/>- Corporate-owned dedicated devices without Entra ID Shared mode<br/>- Corporate-owned with work profile<br/>- Corporate-owned fully managed<br/>- Personally-owned work profile` |
+    | `Managed` | - Automated Device Enrollment user-associated devices<br/>- Automated Device Enrollment userless devices<br/>- Account Driven User Enrollment<br/>- Device Enrollment with Company Portal and Web Enrollment |
+
+  - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
+  - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
 
 - **`deviceManufacturer` (Manufacturer)**: Create a filter rule based on the client reported device manufacturer. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
