@@ -198,7 +198,7 @@ For Android, the **Device Management Type** property for managed apps is:
   - Corporate-owned dedicated devices without Entra ID Shared mode
   - Personally-owned work profile
 
-- Deprecating the following option:
+- To replace the following option:
 
   - Android Enterprise
 
@@ -211,13 +211,13 @@ For iOS/iPadOS, the **Device Management Type** property for managed apps is:
   - Account Driven User Enrollment
   - Device Enrollment with Company Portal and Web Enrollment
 
-- Deprecating the following option:
+- To replace the following option:
 
   - Managed
 
 ##### What you need to know
 
-- If you're using the deprecated values in your filters, the values are automatically mapped to the new available values for that platform.
+- If you're using the legacy values in your filters, the values are automatically mapped to the new available values for that platform.
 - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
 - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
 
