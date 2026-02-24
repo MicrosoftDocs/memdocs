@@ -70,7 +70,7 @@ To customize the RamDisk TFTP window size, add the following registry key on PXE
 
 #### Modify the RamDisk TFTP block size
 
-To customize the RamDisk TFTP window size, add the following registry key on PXE-enabled distribution points:
+To customize the RamDisk TFTP block size, add the following registry key on PXE-enabled distribution points:
 
 - **Location**: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`
 - **Name**: RamDiskTFTPBlockSize
