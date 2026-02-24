@@ -33,7 +33,7 @@ The centralized search box now enables the option to select the desired workspac
 
 ### Configuration Manager does not support SQL Server 2012 and 2014
 
-Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. For more information, see [Supported SQL Server versions for Configuration Manager](../configs/support-for-sql-server-versions.md).
+Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don't upgrade, CM upgrades are blocked, and you see an error during the prereq check. For more information, see [Supported SQL Server versions for Configuration Manager](../configs/support-for-sql-server-versions.md).
 
 <!--## Software updates-->
 
@@ -64,14 +64,16 @@ For more information, see [Bitlocker Supported configurations](../../../protect/
 
 ## Cloud-attached management
 
-### CMG Entra Application secret key renewal 
+### CMG Entra Application secret key renewal
 
 The 'Renew Secret Key' feature now opens a dialog with four options for the validity period. This update also prevents applications older than 800 days (approximately two years) from renewing their secret keys. The same options are available when creating a new app.
 
 :::image type="content" source="media/27297018-secret-window.png" alt-text="Screenshot of secret window selection in console.":::
 
->[!NOTE]
->The admin must sign in using tenant global administrator credentials and then click on the Renew button.
+Sign in using the tenant [Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) credentials and then click on the **Renew** button.
+
+> [!IMPORTANT]
+> [!INCLUDE [global-administrator](../../../../includes/global-administrator-configmgr.md)]
 
 ### CMG Enhanced security option
 

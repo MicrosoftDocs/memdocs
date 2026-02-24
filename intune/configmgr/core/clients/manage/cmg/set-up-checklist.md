@@ -59,9 +59,9 @@ Use the following checklist to make sure you have the necessary information and 
 
 - How many VM instances you need for scale and redundancy.
 
-- An Azure **application developer**, **cloud application administrator**, **application administrator**, or **global administrator** role to register apps in Microsoft Entra ID.
+- A Microsoft Entra **[Application Developer](/entra/identity/role-based-access-control/permissions-reference#application-developer)**, **[Cloud Application Administrator](/entra/identity/role-based-access-control/permissions-reference#cloud-application-administrator)**, or **[Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)** role to register apps in Microsoft Entra ID.
 
-- An Azure **subscription owner** role for when you create the CMG in Azure.
+- An Azure subscription **[Owner](/azure/role-based-access-control/built-in-roles#privileged)** role for when you create the CMG in Azure.
 
 - At least one existing site system server on which you plan to add the **CMG connection point** role.
 
