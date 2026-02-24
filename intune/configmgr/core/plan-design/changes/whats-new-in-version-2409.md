@@ -33,7 +33,7 @@ The centralized search box now enables the option to select the desired workspac
 
 ### Configuration Manager does not support SQL Server 2012 and 2014
 
-Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don’t upgrade, CM upgrades are blocked, and you see an error during the prereq check. For more information, see [Supported SQL Server versions for Configuration Manager](../configs/support-for-sql-server-versions.md).
+Starting with version 2409, Configuration Manager no longer supports SQL Server 2012 and 2014. Upgrade to the latest SQL Server version or at least SQL Server 2016. If you don't upgrade, CM upgrades are blocked, and you see an error during the prereq check. For more information, see [Supported SQL Server versions for Configuration Manager](../configs/support-for-sql-server-versions.md).
 
 <!--## Software updates-->
 
@@ -64,27 +64,29 @@ For more information, see [Bitlocker Supported configurations](../../../protect/
 
 ## Cloud-attached management
 
-### CMG Entra Application secret key renewal 
+### CMG Entra Application secret key renewal
 
 The 'Renew Secret Key' feature now opens a dialog with four options for the validity period. This update also prevents applications older than 800 days (approximately two years) from renewing their secret keys. The same options are available when creating a new app.
 
 :::image type="content" source="media/27297018-secret-window.png" alt-text="Screenshot of secret window selection in console.":::
 
->[!NOTE]
->The admin must sign in using tenant global administrator credentials and then click on the Renew button.
+Sign in using the tenant [Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator) credentials and then click on the **Renew** button.
+
+> [!IMPORTANT]
+> [!INCLUDE [global-administrator](../../../includes/global-administrator-configmgr.md)]
 
 ### CMG Enhanced security option
 
 CMG Setup now uses managed Identities and third-party **Server App** to interact with CMG's Azure Storage account, instead of storage account keys.
 
- - Hence storage account key access is disabled for new CMG setup.
- - For sessions upgrading from earlier versions to 2409, the 'CMG enhanced security' button is shown as enabled.
+- Hence storage account key access is disabled for new CMG setup.
+- For sessions upgrading from earlier versions to 2409, the 'CMG enhanced security' button is shown as enabled.
 
- :::image type="content" source="media/27297018-Cmg-Enhanced.png" alt-text="Screenshot of Cmg enhanced window selection in console." lightbox="media/27297018-cmg-enhanced.png":::
+  :::image type="content" source="media/27297018-Cmg-Enhanced.png" alt-text="Screenshot of Cmg enhanced window selection in console." lightbox="media/27297018-cmg-enhanced.png":::
 
 ## Known Issues
 
- - Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. **VC++ Redistributable Version** need to be upgraded to latest version on **Secondary sites**. [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
+- Upgrade SQL 2012 or 2014 Express, Standard, Enterprise edition to SQl 2016 or latest version. **VC++ Redistributable Version** need to be upgraded to latest version on **Secondary sites**. [Download Latest Microsoft Visual C++ Redistributable Version](https://aka.ms/vs/17/release/vc_redist.x64.exe).
 
 ## Other Updates
 
@@ -96,7 +98,7 @@ The performance of policy processing and collection evaluation has been enhanced
 
 Learn about support changes before they're implemented in [removed and deprecated items](deprecated/removed-and-deprecated.md).
 
- - MDT Integration with CM and Standalone is no longer supported with Configuration Manager deprecation first announced in December 2024 and planned end of support the first release after Oct 10, 2025. Customers should remove MDT Task sequence steps, followed by removing MDT integration, to avoid TS corruption and modification failures.
+- MDT Integration with CM and Standalone is no longer supported with Configuration Manager deprecation first announced in December 2024 and planned end of support the first release after Oct 10, 2025. Customers should remove MDT Task sequence steps, followed by removing MDT integration, to avoid TS corruption and modification failures.
 
 For more information, see [Removed and deprecated features for Configuration Manager.](deprecated/removed-and-deprecated-cmfeatures.md).
 
