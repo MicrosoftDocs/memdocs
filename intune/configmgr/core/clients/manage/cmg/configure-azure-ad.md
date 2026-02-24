@@ -21,17 +21,19 @@ When you integrate the site, you create app registrations in Microsoft Entra ID.
 - **Web app** (also referred to as a _server_ app in Configuration Manager)
 - **Native app** (also referred to as a _client_ app in Configuration Manager)
 
-There are two methods to create these apps, both of which require a **global administrator** role in Microsoft Entra ID:
+There are two methods to create these apps, both of which require a **Microsoft Entra Global Administrator**:
 
 - Use Configuration Manager to automate the creation of the apps when you integrate the site.
 - Manually create the apps in advance, and then import them when you integrate the site.
 
 This article primarily follows the first method. For more information on the other method, see [Manually register Microsoft Entra apps for CMG](manually-register-azure-ad-apps.md).
 
-Before you start, make sure you have a Microsoft Entra ID **global administrator** available.
+Before you start, make sure you have a Microsoft Entra **Global Administrator** available.
 
-> [!NOTE]
-> If you plan to import precreated app registrations, you first need to create them in Microsoft Entra ID. Start with the article to [Manually register Microsoft Entra apps for CMG](manually-register-azure-ad-apps.md). Then return to this article to run the Azure Services wizard and import the apps to Configuration Manager.
+> [!IMPORTANT]
+>
+> - [!INCLUDE [global-administrator](../../../../includes/global-administrator-configmgr.md)]
+> - If you plan to import precreated app registrations, you first need to create them in Microsoft Entra ID. Start with the article to [Manually register Microsoft Entra apps for CMG](manually-register-azure-ad-apps.md). Then return to this article to run the Azure Services wizard and import the apps to Configuration Manager.
 
 ## Purpose of app registrations
 
@@ -81,7 +83,7 @@ If clients use PKI-issued client authentication certificates, then the two clien
 
     - **Secret key validity period**: choose either **1 year** or **2 years** from the drop-down list. One year is the default value.
 
-    - **Microsoft Entra admin account**: Select **Sign in** to authenticate to Microsoft Entra ID as a global administrator. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Microsoft Entra tenant name** for reference.
+    - **Microsoft Entra admin account**: Select **Sign in** to authenticate to Microsoft Entra ID as a Global Administrator. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Microsoft Entra tenant name** for reference.
 
 1. Select **OK** to create the web app in Microsoft Entra ID and close the _Create Server Application_ window.
 
@@ -103,7 +105,7 @@ If clients use PKI-issued client authentication certificates, then the two clien
 
     - **Application name**: A friendly name for the app.
 
-    - **Microsoft Entra admin account**: Select **Sign in** to authenticate to Microsoft Entra ID as a global administrator. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Microsoft Entra tenant name** for reference.
+    - **Microsoft Entra admin account**: Select **Sign in** to authenticate to Microsoft Entra ID as a Global Administrator. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager, and doesn't need to be the same account that runs the Azure Services Wizard. After successfully authenticating to Azure, the page shows the **Microsoft Entra tenant name** for reference.
 
 1. Select **OK** to create the native app in Microsoft Entra ID and close the _Create Client Application_ window.
 

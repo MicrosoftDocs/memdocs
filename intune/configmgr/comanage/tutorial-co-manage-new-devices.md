@@ -1,6 +1,6 @@
 ---
 title: Tutorial - Enable co-management for internet devices
-description: Learn how to configure co-management for new internet-based Windows 10 or later devices by using Configuration Manager and Microsoft Intune.
+description: Learn how to configure co-management for new internet-based Windows devices by using Configuration Manager and Microsoft Intune.
 ms.date: 08/24/2021
 ms.topic: tutorial
 ms.subservice: co-management
@@ -12,14 +12,14 @@ ms.collection: tier3
 
 When you're investing in the cloud through the use of Intune for security and modern provisioning, you might not want to lose your well-established processes for using Configuration Manager to manage PCs in your organization. With co-management, you can keep that process in place.
 
-In this tutorial, you set up co-management of Windows 10 or later devices in an environment where you use both Microsoft Entra ID and on-premises Active Directory but don't have a [hybrid Microsoft Entra ID](/azure/active-directory/devices/concept-azure-ad-join-hybrid) instance. The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows 10 or later devices are already enrolled with Intune.
+In this tutorial, you set up co-management of Windows devices in an environment where you use both Microsoft Entra ID and on-premises Active Directory but don't have a [hybrid Microsoft Entra ID](/azure/active-directory/devices/concept-azure-ad-join-hybrid) instance. The Configuration Manager environment includes a single primary site with all site system roles located on the same server, the site server. This tutorial begins with the premise that your Windows devices are already enrolled with Intune.
 
 If you have a hybrid Microsoft Entra instance that joins on-premises Active Directory with Microsoft Entra ID, we recommend following our companion tutorial, [Enable co-management for Configuration Manager clients](tutorial-co-manage-clients.md).
 
 Use this tutorial when:
 
-- You have Windows 10 or later devices to bring into co-management. These devices might have been provisioned through Windows Autopilot or might be direct from your hardware OEM.
-- You have Windows 10 or later devices on the internet that you currently manage with Intune, and you want to add the Configuration Manager client to them.
+- You have Windows devices to bring into co-management. These devices might have been provisioned through Windows Autopilot or might be direct from your hardware OEM.
+- You have Windows devices on the internet that you currently manage with Intune, and you want to add the Configuration Manager client to them.
 
 In this tutorial, you will:
 > [!div class="checklist"]
@@ -63,6 +63,10 @@ In this tutorial, you will:
 Throughout this tutorial, use the following permissions to complete tasks:
 
 - An account that's a *Global Administrator* for Microsoft Entra ID
+
+  > [!IMPORTANT]
+  > [!INCLUDE [global-administrator](../includes/global-administrator-configmgr.md)]
+
 - An account that's a *Domain Administrator* on your on-premises infrastructure
 - An account that's a *Full Administrator* for *all* scopes in Configuration Manager
 
@@ -85,8 +89,7 @@ About this certificate:
 
 When you request the CMG server authentication certificate, you specify what must be a unique name to identify your cloud service (classic) in Azure. By default, the Azure public cloud uses *cloudapp.net*, and the CMG is hosted within the *cloudapp.net* domain as *\<YourUniqueDnsName>.cloudapp.net*.
 
-> [!TIP]
-> In this tutorial, the CMG server authentication certificate uses a fully qualified domain name (FQDN) that ends in *contoso.com*.  After you create the CMG, you'll configure a canonical name record (CNAME) in your organization's public DNS. This record creates an alias for the CMG that maps to the name that you use in the public certificate.
+In this tutorial, the CMG server authentication certificate uses a fully qualified domain name (FQDN) that ends in *contoso.com*.  After you create the CMG, you'll configure a canonical name record (CNAME) in your organization's public DNS. This record creates an alias for the CMG that maps to the name that you use in the public certificate.
 
 Before you request your public certificate, confirm that the name you want to use is available in Azure. You don't directly create the service in Azure. Instead, Configuration Manager uses the name that's specified in the public certificate to create the cloud service when you install the CMG.
 
@@ -197,18 +200,18 @@ Run the following procedure from the primary site server:
 
 2. On the **App Properties** page, for **Web app**, select **Browse** to open the **Server App** dialog. Select **Create**, and then configure the following fields:
 
-   - **Application Name**: Specify a friendly name for the app, such as **Cloud Management web app**.
+    - **Application Name**: Specify a friendly name for the app, such as **Cloud Management web app**.
 
-   - **HomePage URL**: Configuration Manager doesn't use this value, but Microsoft Entra ID requires it. By default, this value is `https://ConfigMgrService`.
+    - **HomePage URL**: Configuration Manager doesn't use this value, but Microsoft Entra ID requires it. By default, this value is `https://ConfigMgrService`.
 
-   - **App ID URI**: This value needs to be unique in your Microsoft Entra tenant. It's in the access token that the Configuration Manager client uses to request access to the service. By default, this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
+    - **App ID URI**: This value needs to be unique in your Microsoft Entra tenant. It's in the access token that the Configuration Manager client uses to request access to the service. By default, this value is `https://ConfigMgrService`. Change the default to one of the following recommended formats:<!-- 10617402 -->
 
      - `api://{tenantId}/{string}`, for example, `api://aaaabbbb-0000-cccc-1111-dddd2222eeee/ConfigMgrService`
      - `https://{verifiedCustomerDomain}/{string}`, for example, `https://contoso.onmicrosoft.com/ConfigMgrService`
 
-   Next, select **Sign in**, and specify a Microsoft Entra Global Administrator account. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
+    Next, select **Sign in**, and specify a Microsoft Entra Global Administrator account. Configuration Manager doesn't save these credentials. This persona doesn't require permissions in Configuration Manager and doesn't need to be the same account that runs the Azure Services Wizard.
 
-   After you sign in, the results appear. Select **OK** to close the **Create Server Application** dialog and return to the **App Properties** page.
+    After you sign in, the results appear. Select **OK** to close the **Create Server Application** dialog and return to the **App Properties** page.
 
 3. For **Native Client app**, select **Browse** to open the **Client app** dialog.
 
@@ -288,7 +291,7 @@ Use this procedure to install a cloud management gateway as a service in Azure. 
 
 ### Create DNS CNAME records
 
-When you create a DNS entry for the CMG, you enable your Windows 10 or later devices both inside and outside your corporate network to use name resolution to find the CMG cloud service in Azure.
+When you create a DNS entry for the CMG, you enable your Windows devices both inside and outside your corporate network to use name resolution to find the CMG cloud service in Azure.
 
 Our CNAME record example is *MyCMG.contoso.com*, which becomes *MyCMG.cloudapp.net*. In the example:
 
@@ -373,9 +376,9 @@ We recommend that you create a suitable collection before you start the procedur
 
 ## Use Intune to deploy the Configuration Manager client
 
-You can use Intune to install the Configuration Manager client on Windows 10 or later devices that are currently only managed with Intune.
+You can use Intune to install the Configuration Manager client on Windows devices that are currently only managed with Intune.
 
-Then, when a previously unmanaged Windows 10 or later device enrolls with Intune, it automatically installs the Configuration Manager client.
+Then, when a previously unmanaged Windows device enrolls with Intune, it automatically installs the Configuration Manager client.
 
 > [!NOTE]
 > If you're planning to deploy the Configuration Manager client to devices going through Windows Autopilot, we recommend that you target users for the assignment of the Configuration Manager client instead of devices.
