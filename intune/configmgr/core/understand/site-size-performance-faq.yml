@@ -95,9 +95,9 @@ sections:
 
           **Example: Azure-based site server** 
           
-          [Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL Server with **50,000** clients are eight cores, 32 GB, and 1200 IOPS for site server inboxes, and 2800 IOPS for SQL Server files.
+          [Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL Server with **50,000** clients are 8 cores, 32 GB, and 1200 IOPS for site server inboxes, and 2800 IOPS for SQL Server files.
           
-          Your resulting Azure machine might be a DS13v2 (eight cores, 56 GB) with the following disk configuration:
+          Your resulting Azure machine might be a DS13v2 (8 cores, 56 GB) with the following disk configuration:
           
           | Drives | Format | Contains | Minimum IOPS needed| Approx. IOPS supplied<sup>1</sup>  |
           |------------------|---------------|--------------------|----------------------|------------------|
@@ -126,7 +126,7 @@ sections:
           2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
           3. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
-          If you need more performance in future, you can upsize your VM to a DS14v2, which will double CPU and memory. The additional disk bandwidth allowed by that VM size will also instantly boost the available disk IOPS on your previously configured disks.
+          If you need more performance in future, you can upsize your VM to a DS14v2, which doubles CPU and memory. The additional disk bandwidth allowed by that VM size also instantly boosts the available disk IOPS on your previously configured disks.
           
           **DS14v2**
           
@@ -206,11 +206,11 @@ sections:
         answer: |
           In general, yes. 
 
-          The built-in []"Rebuild Indexes" maintenance task](../servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly-fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics.md#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics won't be updated on most tables. This can lead to suboptimal query plans and poor performance. 
+          The built-in []"Rebuild Indexes" maintenance task](../servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics.md#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics isn't updated on most tables. This can lead to suboptimal query plans and poor performance. 
           
           You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
           
-          Third-party scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks. For example, there is a whitepaper summarizing Microsoft CSAs' experience: [SQL Recommendations for MECM](https://github.com/stephaneserero/Sql-recommendations-for-MECM).
+          Non-Microsoft scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks. For example, there's a whitepaper summarizing Microsoft CSAs' experience: [SQL Recommendations for MECM](https://github.com/stephaneserero/Sql-recommendations-for-MECM).
           
       - question: |
           When should I use full SQL Server instead of SQL Server Express on my secondary sites?
@@ -228,7 +228,7 @@ sections:
           
           On SQL Servers with greater than eight cores, start with a setting of 0, and only make changes if you experience performance issues or excessive locking. If you need to change MaxDOP because you are encountering performance issues at 0, start with a new value at least greater than or equal to the minimum recommended number of cores for that site's SQL Server sizing. Going lower than this value nearly always has negative performance implications. For example, a remote SQL Server for a 100,000 client site needs at least 12 cores. If your SQL Server has 16 cores, start testing your MaxDOP setting with a value of 12.
           
-  - name: Antimalware configuration
+  - name: Anti-malware configuration
     questions:
       - question: |
           Which folders on the site server (or other roles) should I exclude for antivirus software?
@@ -236,6 +236,7 @@ sections:
           Take care when disabling antivirus protection on any system. In high volume and secure environments, we recommend disabling *active monitoring* for optimum performance.
           
           For more information about recommended antivirus exclusions, see [Recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients](/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions).
+
   - name: WSUS Maintenance
     questions:
       - question: |
@@ -247,7 +248,7 @@ sections:
           
           - Windows Server 2012: Any non "Security only" cumulative update released October 2017 or later. ([KB4041690](https://support.microsoft.com/help/4041690/windows-server-2012-update-kb4041690))
           - Windows Server 2012 R2: Any non "Security only" cumulative update released August 2017 or later. ([KB4039871](https://support.microsoft.com/help/4039871/windows-8-1-windows-server-2012-r2-update-kb4039871))
-          - Window Server 2016: any non "Security only" cumulative update released August 2017 or later. ([KB4039396](https://support.microsoft.com/help/4039396/windows-10-update-kb4039396))
+          - Windows Server 2016: any non "Security only" cumulative update released August 2017 or later. ([KB4039396](https://support.microsoft.com/help/4039396/windows-10-update-kb4039396))
           
       - question: |
           What type of maintenance should I run on my WSUS servers?
