@@ -21,7 +21,7 @@ In VBScript the error object `Number` property is non-zero if an error occurs du
 
 After you get the error object instance, you can check the __Class property to determine the origin of the error. WMI creates an instance of \__ExtendedStatus for WMI errors, and the SMS Provider creates an instance of `SMS_ExtendedStatus` for SMS Provider errors. `SMS_ExtendedStatus` is derived from \__ExtendedStatus. The details of an SMS Provider error can also be found in SMSProv.log.
 
-For more informationa about handling synchronous errors, see [How to Handle Configuration Manager Synchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md).
+For more information about handling synchronous errors, see [How to Handle Configuration Manager Synchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-synchronous-errors-by-using-wmi.md).
 
 For more information about handling asynchronous errors, see [How to Handle Configuration Manager Asynchronous Errors by Using WMI](../../../develop/core/understand/how-to-handle-configuration-manager-asynchronous-errors-by-using-wmi.md).
 
