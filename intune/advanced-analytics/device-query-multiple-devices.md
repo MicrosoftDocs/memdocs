@@ -70,7 +70,7 @@ Additional prerequisites for device query for multiple devices:
 1. Input a query in the query box using the supported properties and supported operators.
 1. Select **Run** to execute the query.
 1. Results are displayed in the **Results** tab area.
-   - If you only want to run part of the query, or if you have multiple queries in the query window and only want to run one, you can highlight the query you want to run and select **Run**. Only that query is run.
+   - To run part of a query or a single query when multiple queries are in the window, highlight the query you want to run and select **Run**. Only the highlighted query runs.
 
 You can expand the view on the left side to see all the properties that can be queried. Select any one to populate into your query. You can select and drag the edges of both the left side and the query window to make any adjustments.
 
@@ -87,7 +87,7 @@ To help you get started, some sample queries are provided in this section. To ac
 
 ### Top processors by Core Count
 
-This query lists the top five CPUs sorted by core count.
+This query shows the top five CPUs by core count.
 
 ```kusto
 Cpu
