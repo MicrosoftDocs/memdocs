@@ -89,7 +89,7 @@ Implementing Zero Trust device security requires coordination across multiple te
   3. CA policy uses "Require device to be marked as compliant" grant control.
   4. Ensure both policies target the same user groups.
   5. Test together using the Conditional Access *What If* tool before enabling enforcement.
-- For detailed workflow, see [Common ways to use Conditional Access](../protect/conditional-access-intune-common-ways-use#device-based-conditional-access).
+- For detailed workflow, see [Common ways to use Conditional Access](../protect/conditional-access-intune-common-ways-use.md#device-based-conditional-access).
 - For policy creation, see [Require managed devices with Conditional Access](/entra/identity/conditional-access/policy-all-users-device-compliance).
 
 **Related guidance:** [Conditional Access with Intune](../protect/conditional-access.md)
