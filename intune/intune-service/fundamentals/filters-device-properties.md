@@ -92,9 +92,10 @@ You can use the following device properties in your managed device filter rules:
 
   - `(app.deviceManagementType -eq "Corporate-owned dedicated devices without Entra ID Shared mode")`
 
-  This property applies:
+  This property applies to:
 
-  - Android
+  - Android Enterprise
+  - Android (AOSP)
 
 - **`deviceName` (Device Name)**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -354,7 +355,7 @@ You can use the following app properties in your managed app filter rules:
   - `(app.deviceManagementType -eq "Corporate-owned dedicated devices without Entra ID Shared mode")`
   - `(app.deviceManagementType -ne "Android device administrator")`
 
-  This property applies:
+  This property applies to:
 
   - Android
   - iOS/iPadOS
@@ -371,7 +372,7 @@ You can use the following app properties in your managed app filter rules:
   - `(app.deviceManufacturer -eq "Microsoft")`
   - `(app.deviceManufacturer -startsWith "Micro")`
 
-  This property applies:
+  This property applies to:
 
   - Android
   - iOS/iPadOS

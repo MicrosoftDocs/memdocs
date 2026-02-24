@@ -187,7 +187,7 @@ Apple rebranded **Rapid Security Responses** to **Background Security Improvemen
 When you create policies for your managed apps, you can use [assignment filters](filters.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
 
 > [!NOTE]
-> This feature should be available for all customers by late March 2026.
+> This feature is rolling out slowly and should be available for all customers by late March 2026.
 
 For Android, the **Device Management Type** property for managed apps is:
 
