@@ -140,7 +140,7 @@ sections:
           2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
           3. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
-  - name: SQL Server-related performance
+  - name: SQL Server performance
     questions:
       - question: |
           Is it better to run with SQL Server colocated with the site server, or run it on a remote server?
@@ -206,7 +206,7 @@ sections:
         answer: |
           In general, yes. 
 
-          The built-in ["Rebuild Indexes" maintenance task](../servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics isn't updated on most tables. This can lead to suboptimal query plans and poor performance. 
+          The built-in ["Rebuild Indexes" maintenance task](/intune/configmgr/core/servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics isn't updated on most tables. This can lead to suboptimal query plans and poor performance. 
           
           You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
 
