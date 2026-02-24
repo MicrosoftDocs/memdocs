@@ -6,10 +6,14 @@ ms.subservice: sdk
 ms.topic: how-to
 ms.collection: tier3
 ---
-# How to Encrypt Passwords or Data for a Site
-In Configuration Manager, user accounts connect to site systems and Active Directory to perform various tasks. Prior to System Center 2012 Configuration Manager, the Manage Site Accounts tool (MSAC) was used to manage these user accounts. The MSAC tool has been deprecated. Using a new WMI method, these account passwords can be encrypted for a specific site. The following code snipped demonstrates how user account passwords can be encrypted for a specific site.
 
-### To Encrypt Data for a Site
+# How to Encrypt Passwords or Data for a Site
+
+In Configuration Manager, user accounts connect to site systems and Active Directory to perform various tasks. Prior to System Center 2012 Configuration Manager, the Manage Site Accounts tool (MSAC) was used to manage these user accounts. The MSAC tool has been deprecated.
+
+Using a new WMI method, these account passwords can be encrypted for a specific site. The following code snipped demonstrates how user account passwords can be encrypted for a specific site.
+
+## To Encrypt Data for a Site
 
 1.  Connect to the Configuration Manager site.
 
@@ -23,10 +27,11 @@ In Configuration Manager, user accounts connect to site systems and Active Direc
 
 6.  In this case, the encrypted string is output as a test.
 
-## Example
- The following example encrypts data for a specific site.
+### Example
 
-```
+The following example encrypts data for a specific site.
+
+```csharp
 using System;
 using System.Management;
 
@@ -64,14 +69,17 @@ namespace Encryption
 ```
 
 ## Compiling the Code
- The C# example requires:
+
+The C# example requires:
 
 ### Namespaces
- System
 
- System.Management
+System
+
+System.Management
 
 ### Assembly
 
 ## Robust Programming
- For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
+
+For more information about error handling, see [About Configuration Manager Errors](../../../develop/core/understand/about-configuration-manager-errors.md).
