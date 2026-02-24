@@ -5,7 +5,6 @@ author: paolomatarazzo
 ms.author: paoloma
 ms.date: 02/24/2026
 ms.topic: how-to
-ms.reviewer: zadvor
 ms.collection:
 - M365-identity-device-management
 - privacy
@@ -16,6 +15,7 @@ ms.collection:
 
 Some Microsoft Intune features require access to Windows diagnostic data or verification that the tenant owns eligible Windows licenses. Configure these requirements at the tenant level so dependent features can function correctly.
 
+<!--
 ## Prerequisites
 
 :::row:::
@@ -31,8 +31,9 @@ Some Microsoft Intune features require access to Windows diagnostic data or veri
 
 :::column-end:::
 :::row-end:::
+-->
 
-## Enable Windows data
+## Enable Windows diagnostic data
 
 To allow Intune to access Windows diagnostic data collected from enrolled devices:
 
