@@ -195,6 +195,7 @@ For Android, the **Device Management Type** property for managed apps is:
 
   - Corporate-owned with work profile
   - Corporate-owned fully managed
+  - Corporate-owned dedicated devices with Entra ID Shared mode
   - Corporate-owned dedicated devices without Entra ID Shared mode
   - Personally-owned work profile
 
