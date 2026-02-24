@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/11/2026
+ms.date: 02/19/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -185,6 +185,9 @@ Apple rebranded **Rapid Security Responses** to **Background Security Improvemen
 #### More options for assignment filters > Device Management Type property for managed apps on Android and iOS/iPadOS<!-- 25040926 -->
 
 When you create policies for your managed apps, you can use [assignment filters](filters.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
+
+> [!NOTE]
+> We have begun to slowly roll out this feature and expect it to be available for all customers by late March 2026.
 
 For Android, the **Device Management Type** property for managed apps is adding the following options:
 
