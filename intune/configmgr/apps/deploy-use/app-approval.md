@@ -132,7 +132,7 @@ With these additional optional prerequisites, recipients can approve or deny the
     1. Go to the [Azure portal](https://portal.azure.com) as a user with **Global Administrator** permissions. Go to **Microsoft Entra ID**, and select **App registrations**.
 
         > [!IMPORTANT]
-        > [!INCLUDE [global-administrator](../includes/global-administrator-configmgr.md)]
+        > [!INCLUDE [global-administrator](../../includes/global-administrator-configmgr.md)]
 
     1. Select the **Client** application created for Configuration Manager **Cloud Management** integration.
 
