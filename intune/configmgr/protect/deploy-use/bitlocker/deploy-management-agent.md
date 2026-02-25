@@ -44,64 +44,61 @@ When you create and deploy this policy, the Configuration Manager client enables
 
     - **Removable Drive**: Manage encryption for drives that you can remove from a device, like a USB key
 
-    - **Client Management**: Manage the key recovery service backup of BitLocker Drive Encryption recovery information
-
+   - **Client Management**: Manage the key recovery service backup of BitLocker Drive Encryption recovery information
+      
 1. On the **Setup** page, configure the following global settings for BitLocker Drive Encryption:
 
-    > [!NOTE]
-    > Configuration Manager applies these settings when you enable BitLocker. If the drive is already encrypted or is in progress, any change to these policy settings doesn't change the drive encryption on the device.
-    >
-    > If you disable or don't configure these settings, BitLocker uses the default encryption method (AES 128-bit).
-
-    - For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**. Then select the encryption method.
-
-    - For Windows 10 or later devices, enable the option for **Drive encryption method and cipher strength (Windows 10 or later)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
-
+   > [!NOTE]
+   > Configuration Manager applies these settings when you enable BitLocker. If the drive is already encrypted or is in progress, any change to these policy settings doesn't change the drive encryption on the device.
+   > 
+   > If you disable or don't configure these settings, BitLocker uses the default encryption method (AES 128-bit).
+   
+   - For Windows 8.1 devices, enable the option for **Drive encryption method and cipher strength**. Then select the encryption method.
+      
+   - For Windows 10 or later devices, enable the option for **Drive encryption method and cipher strength (Windows 10 or later)**. Then individually select the encryption method for OS drives, fixed data drives, and removable data drives.
+      
     For more information on these and other settings on this page, see [Settings reference - Setup](../../tech-ref/bitlocker/settings.md#setup).
-
+   
 1. On the **Operating System Drive** page, specify the following settings:
 
-    - **Operating System Drive Encryption Settings**: If you enable this setting, the user has to protect the OS drive, and BitLocker encrypts the drive. If you disable it, the user can't protect the drive.
-
+   - **Operating System Drive Encryption Settings**: If you enable this setting, the user has to protect the OS drive, and BitLocker encrypts the drive. If you disable it, the user can't protect the drive.
+      
     On devices with a compatible TPM, two types of authentication methods can be used at startup to provide added protection for encrypted data. When the computer starts, it can use only the TPM for authentication, or it can also require the entry of a personal identification number (PIN). Configure the following settings:
-
-    - **Select protector for operating system drive**: Configure it to use a TPM and PIN, or just the TPM.
-
-    - **Configure minimum PIN length for startup**: If you require a PIN, this value is the shortest length the user can specify. The user enters this PIN when the computer boots to unlock the drive. By default, the minimum PIN length is `4`.
-
+   
+   - **Select protector for operating system drive**: Configure it to use a TPM and PIN, or just the TPM.
+      
+   - **Configure minimum PIN length for startup**: If you require a PIN, this value is the shortest length the user can specify. The user enters this PIN when the computer boots to unlock the drive. By default, the minimum PIN length is `4`.
+      
     For more information on these and other settings on this page, see [Settings reference - OS drive](../../tech-ref/bitlocker/settings.md#os-drive).
-
+   
 1. On the **Fixed Drive** page, specify the following settings:
 
-    - **Fixed data drive encryption**: If you enable this setting, BitLocker requires users to put all fixed data drives under protection. It then encrypts the data drives. When you enable this policy, either enable auto-unlock or the settings for **Fixed data drive password policy**.
-
-    - **Configure auto-unlock for fixed data drive**: Allow or require BitLocker to automatically unlock any encrypted data drive. To use auto-unlock, also require BitLocker to encrypt the OS drive.
-
+   - **Fixed data drive encryption**: If you enable this setting, BitLocker requires users to put all fixed data drives under protection. It then encrypts the data drives. When you enable this policy, either enable auto-unlock or the settings for **Fixed data drive password policy**.
+      
+   - **Configure auto-unlock for fixed data drive**: Allow or require BitLocker to automatically unlock any encrypted data drive. To use auto-unlock, also require BitLocker to encrypt the OS drive.
+      
     For more information on these and other settings on this page, see [Settings reference - Fixed drive](../../tech-ref/bitlocker/settings.md#fixed-drive).
-
+   
 1. On the **Removable Drive** page, specify the following settings:
 
-    - **Removable data drive encryption**: When you enable this setting, and allow users to apply BitLocker protection, the Configuration Manager client saves recovery information about removable drives to the recovery service on the management point. This behavior allows users to recover the drive if they forget or lose the protector (password).
-
-    - **Allow users to apply BitLocker protection on removable data drives**: Users can turn on BitLocker protection for a removable drive.
-
-    - **Removable data drive password policy**: Use these settings to set the constraints for passwords to unlock BitLocker-protected removable drives.
-
+   - **Removable data drive encryption**: When you enable this setting, and allow users to apply BitLocker protection, the Configuration Manager client saves recovery information about removable drives to the recovery service on the management point. This behavior allows users to recover the drive if they forget or lose the protector (password).
+      
+   - **Allow users to apply BitLocker protection on removable data drives**: Users can turn on BitLocker protection for a removable drive.
+      
+   - **Removable data drive password policy**: Use these settings to set the constraints for passwords to unlock BitLocker-protected removable drives.
+      
     For more information on these and other settings on this page, see [Settings reference - Removable drive](../../tech-ref/bitlocker/settings.md#removable-drive).
-
+   
 1. On the **Client Management** page, specify the following settings:
 
-    > [!IMPORTANT]
-    > For versions of Configuration Manager prior to 2103, if you don't have a management point with an HTTPS-enabled website, don't configure this setting. For more information, see [Recovery service](recovery-service.md).
-
-    - **Configure BitLocker Management Services**: When you enable this setting, Configuration Manager automatically and silently backs up key recovery information in the site database. If you disable or don't configure this setting, Configuration Manager doesn't save key recovery information.
-
-        - **Select BitLocker recovery information to store**: Configure it to use a recovery password and key package, or just a recovery password.
-
-        - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
-
+   - **Configure BitLocker Management Services**: When you enable this setting, Configuration Manager automatically and silently backs up key recovery information in the site database. If you disable or don't configure this setting, Configuration Manager doesn't save key recovery information.
+   
+      - **Select BitLocker recovery information to store**: Configure it to use a recovery password and key package, or just a recovery password.
+            
+      - **Allow recovery information to be stored in plain text**: Without a BitLocker management encryption certificate, Configuration Manager stores the key recovery information in plain text. For more information, see [Encrypt recovery data in the database](encrypt-recovery-data.md).
+            
     For more information on these and other settings on this page, see [Settings reference - Client management](../../tech-ref/bitlocker/settings.md#client-management).
-
+   
 1. Complete the wizard.
 
 To change the settings of an existing policy, choose it in the list, and select **Properties**.
@@ -166,18 +163,14 @@ If you currently use Microsoft BitLocker Administration and Monitoring (MBAM), y
 > [!IMPORTANT]
 > When you migrate from stand-alone MBAM to Configuration Manager BitLocker management, if you require existing functionality of stand-alone MBAM, don't reuse stand-alone MBAM servers or components with Configuration Manager BitLocker management. If you reuse these servers, stand-alone MBAM will stop working when Configuration Manager BitLocker management installs its components on those servers. Don't run the MBAMWebSiteInstaller.ps1 script to set up the BitLocker portals on stand-alone MBAM servers. When you set up Configuration Manager BitLocker management, use separate servers.
 
-### Group policy
+### Group policy conflicts
 
-- The BitLocker management settings are fully compatible with MBAM group policy settings. If devices receive both group policy settings and Configuration Manager policies, configure them to match.
+Configuration Manager doesn't implement all MBAM group policy settings. Standalone MBAM uses domain group policy, while Configuration Manager sets local policies for BitLocker management. Domain policies will override the local Configuration Manager BitLocker management policies. If the standalone MBAM domain group policy doesn't match the Configuration Manager policy, Configuration Manager BitLocker management will fail. For example, if a domain group policy sets the standalone MBAM server for key recovery services, Configuration Manager BitLocker management can't set the same setting for the management point. This behavior causes clients to not report their recovery keys to the Configuration Manager BitLocker management key recovery service on the management point.
 
-  > [!NOTE]
-  > If a group policy setting exists for standalone MBAM, it will override the equivalent setting attempted by Configuration Manager. Standalone MBAM uses domain group policy, while Configuration Manager sets local policies for BitLocker management. Domain policies will override the local Configuration Manager BitLocker management policies. If the standalone MBAM domain group policy doesn't match the Configuration Manager policy, Configuration Manager BitLocker management will fail. For example, if a domain group policy sets the standalone MBAM server for key recovery services, Configuration Manager BitLocker management can't set the same setting for the management point. This behavior causes clients to not report their recovery keys to the Configuration Manager BitLocker management key recovery service on the management point.
-
-- Configuration Manager doesn't implement all MBAM group policy settings. If you configure more settings in group policy, the BitLocker management agent on Configuration Manager clients honors these settings.
-
-  > [!IMPORTANT]
-  > Don't set a group policy for a setting that Configuration Manager BitLocker management already specifies. Only set group policies for settings that don't currently exist in Configuration Manager BitLocker management. Configuration Manager version 2002 has feature parity with standalone MBAM. With Configuration Manager version 2002 and later, in most instances there should be no reason to set domain group policies to configure BitLocker policies. To prevent conflicts and problems, avoid use of group policies for BitLocker. Configure all settings through Configuration Manager BitLocker management policies.
-
+> [!WARNING]
+> Configuration Manager has feature parity with standalone MBAM. With Configuration Manager, there should be no reason to set domain group policies to configure BitLocker management. To prevent conflicts and problems, avoid use of group policies for BitLocker. Configure all settings through Configuration Manager BitLocker management policies.
+> 
+  
 ### TPM password hash
 
 - Previous MBAM clients don't upload the TPM password hash to Configuration Manager. The client only uploads the TPM password hash once.
@@ -201,7 +194,7 @@ To work around this behavior, first disable BitLocker on the device. Then deploy
 
 The Configuration Manager client handler for BitLocker is co-management aware. If the device is co-managed, and you switch the [Endpoint Protection workload](../../../comanage/workloads.md#endpoint-protection) to Intune, then the Configuration Manager client ignores its BitLocker policy. The device gets Windows encryption policy from Intune.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Switching encryption management authorities while maintaining the desired encryption algorithm doesn't require any additional actions on the client. However, if you switch encryption management authorities and the desired encryption algorithm also changes, you will need to plan for [re-encryption](#re-encryption).
 
 For more information about managing BitLocker with Intune, see the following articles:

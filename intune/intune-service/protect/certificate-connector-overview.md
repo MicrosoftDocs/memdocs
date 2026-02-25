@@ -3,7 +3,7 @@ title: Overview of Certificate Connector for Microsoft Intune - Azure | Microsof
 description: Learn about the unified Certificate Connector for Microsoft Intune, which supports SCEP, PKCS, imported PKCS, and certificate revocation.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 08/04/2025
+ms.date: 02/23/2026
 ms.topic: how-to
 ms.reviewer: wicale
 ms.collection:
@@ -11,7 +11,6 @@ ms.collection:
 - certificates
 - sub-certificates
 ---
-
 
 # Certificate Connector for Microsoft Intune
 
@@ -65,8 +64,23 @@ The Certificate Connector for Microsoft Intune supports:
   - Certificate Connector should not be installed on the same server as Intune Connector for Active Directory.
 
     >[!NOTE]
-    > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue, process Imported certificates, and handle revocation requests. It's not possible to define which connector handles each request. </br></br>
+    > Any instance of the connector that supports PKCS can be used to retrieve pending PKCS requests from the Intune Service queue, process Imported certificates, and handle revocation requests. It's not possible to define which connector handles each request.
+    >
     > Therefore, each connector that supports PKCS must have the same permissions and be able to connect with all the certification authorities defined later in the PKCS profiles.
+
+### Allowed list of SCEP OIDs
+
+Starting with Intune Certificate Connector version 6.2510.3.2002, the *SCEP validation service* blocks unknown certificate extensions to strengthen the connector's security posture. Only the following certificate extension OIDs are allowed and enforced.
+
+| OID | Extension name | Description |
+|----|----------------|-------------|
+| `2.5.29.19` | Basic Constraints | Specifies whether the certificate subject can act as a certification authority (CA) and, if so, the maximum number of subordinate CAs permitted in the certificate chain. |
+| `2.5.29.14` | Subject Key Identifier | Identifies the public key associated with the certificate subject. Typically a SHA‑1 hash of the public key. |
+| `1.3.6.1.4.1.311.21.8` | Certificate Authority Version | Indicates the version of the issuing certificate authority. |
+| `1.3.6.1.4.1.311.20.2` | Certificate Template Name | Specifies the certificate template used to issue the certificate. |
+| `2.5.29.1` | Authority Identifier (Deprecated) | Previously used to identify the issuing authority. |
+| `2.5.29.3` | Certificate Policies (Deprecated) | Previously used to convey certificate policy information. |
+| `2.16.840.1.113730.1.11` | Netscape Certificate Extension | Legacy Netscape‑specific certificate extension. |
 
 ## Lifecycle
 
@@ -368,6 +382,13 @@ New updates for the connector can take a week or more to become available for ea
 
 > [!IMPORTANT]
 > Starting April 2022, certificate connectors earlier than version **6.2101.13.0** will be deprecated and will show a status of *Error*. Starting August 2022, these connector versions **won't** be able to revoke certificates. Starting September 2022, these connector versions **won't** be able to issue certificates. This includes both the [PFX Certificate Connector for Microsoft Intune](../protect/certificate-connectors.md#pfx-certificate-connector-release-history) and  [Microsoft Intune Connector](../protect/certificate-connectors.md#microsoft-intune-connector-release-history), which on July 29, 2021 were replaced by the *Certificate Connector for Microsoft Intune* (as detailed in this article).
+
+### February 18, 2026
+
+Version **6.2510.3.2002** - Changes in this release:  
+
+- Improved SCEP validation by blocking unknown OID extensions. See [Allowed list of SCEP OIDs](#allowed-list-of-scep-oids).
+- To ensure uninterrupted certificate issuance and management, the Intune Certificate Connector must be updated, either automatically or manually.
 
 ### July 22, 2025
 
