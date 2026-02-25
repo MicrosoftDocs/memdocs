@@ -1,6 +1,8 @@
 items:
+
 - name: Privacy and personal data
   href: ./index.md
+
 - name: Data collection and data processing
   items:
   - name: Data collection
@@ -9,6 +11,7 @@ items:
     href: ./data-handling/data-storage-processing.md
   - name: Optional diagnostic data in client apps
     href: ./data-handling/optional-diagnostic-data.md
+
 - name: Data sharing with third parties
   items:
   - name: Overview of third-party data sharing
@@ -29,17 +32,13 @@ items:
         href: ./data-sharing/intune-to-google.md
       - name: Data Intune sends to Zebra
         href: ./data-sharing/intune-to-zebra.md
+
 - name: Manage personal data
   items:
   - name: View and correct personal data
     href: ./personal-data/view-correct.md
   - name: Audit, export, and delete
     href: ./personal-data/audit-export-delete.md
-
-- name: View and correct personal data
-  href: ./intune-service/protect/privacy-data-view-correct.md
-- name: Audit, export, delete
-  href: ./intune-service/protect/privacy-data-audit-export-delete.md
 
 - name: Enable Windows diagnostic data
   href: ../tenant-administration/windows-diagnostic-data.md

@@ -34,7 +34,7 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 ## Data collection
 
-Endpoint analytics data collection falls into the [optional](../intune-service/protect/privacy-data-collect.md#optional-data) category. This section includes some examples of the optional data collected for devices enrolled in endpoint analytics:
+Endpoint analytics data collection falls into the [optional](../privacy/data-handling/data-collection.md#optional-data) category. This section includes some examples of the optional data collected for devices enrolled in endpoint analytics:
 
 - Diagnostic, performance, and usage data tied to a user and/or device
   - `logOnId`

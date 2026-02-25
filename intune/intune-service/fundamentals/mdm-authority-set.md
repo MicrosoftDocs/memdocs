@@ -54,8 +54,8 @@ Scenarios that add a consent to share data are included when:
 
 In each case, the consent is strictly related to running a mobile device management service. For example, confirming that an IT Admin has authorized Google or Apple devices to enroll. Documentation to address what information is shared when the new workflows go live is available from the following locations:
 
-- [Data Intune sends to Google](../protect/data-intune-sends-to-google.md)
-- [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md)
+- [Data Intune sends to Google](../../privacy/data-sharing/intune-to-google.md)
+- [Data Intune sends to Apple](../../privacy/data-sharing/intune-to-apple.md)
 
 ## Key Considerations
 
