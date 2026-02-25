@@ -1784,9 +1784,12 @@ items:
       href: ./intune-service/fundamentals/admin-tasks.md
     - name: Device cleanup rules
       href: ./intune-service/fundamentals/device-cleanup-rules.md
+    - name: Enable Windows diagnostic data
+      href: ./tenant-administration/windows-diagnostic-data.md
 
     - name: Endpoint analytics
       href: ./endpoint-analytics/toc.yml
+
     - name: Advanced Analytics
       href: ./advanced-analytics/toc.yml
 
@@ -2305,7 +2308,5 @@ items:
   - name: Privacy and personal data
     href: ./privacy/toc.yml
 
-  - name: Enable Windows diagnostic data
-    href: ./intune-service/protect/data-enable-windows-data.md
   - name: Microsoft Intune service description
     href: ./intune-service/fundamentals/microsoft-intune-service-description.md

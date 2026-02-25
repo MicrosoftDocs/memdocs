@@ -24,14 +24,14 @@ items:
       href: ./data-sharing/google-to-intune.md
     - name: Information shared from Jamf Pro to Intune
       href: ./data-sharing/jamf-to-intune.md
-    - name: Data sent from Intune
-      items:
-      - name: Data Intune sends to Apple
-        href: ./data-sharing/intune-to-apple.md
-      - name: Data Intune sends to Google
-        href: ./data-sharing/intune-to-google.md
-      - name: Data Intune sends to Zebra
-        href: ./data-sharing/intune-to-zebra.md
+  - name: Data sent from Intune
+    items:
+    - name: Data Intune sends to Apple
+      href: ./data-sharing/intune-to-apple.md
+    - name: Data Intune sends to Google
+      href: ./data-sharing/intune-to-google.md
+    - name: Data Intune sends to Zebra
+      href: ./data-sharing/intune-to-zebra.md
 
 - name: Manage personal data
   items:
@@ -39,6 +39,3 @@ items:
     href: ./personal-data/view-correct.md
   - name: Audit, export, and delete
     href: ./personal-data/audit-export-delete.md
-
-- name: Enable Windows diagnostic data
-  href: ../tenant-administration/windows-diagnostic-data.md
