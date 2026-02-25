@@ -94,10 +94,10 @@ This layer implements enterprise-level Zero Trust identity and device access pol
 
 This layer represents the shift from assessment to enforcement. After compliance policies mark devices as compliant or noncompliant, Conditional Access policies use that signal to grant or block access to email, SharePoint, Teams, and other protected resources.
 
-**Example:** Your identity team creates a Conditional Access policy requiring compliant devices for all users accessing Microsoft 365 apps. A user with a noncompliant device (missing BitLocker from the layer 3 example) attempts to access Outlook. The Conditional Access policy blocks access and displays a message explaining the device doesn't meet security requirements. After a device enables BitLocker and checks in with Intune, the device is assessed as compliant and access is restored.
+**Example:** Your identity team configures a Conditional Access policy that requires devices to be marked as compliant before users can access Microsoft 365 apps. A user attempts to access Outlook from a Windows device that is managed by Intune. The device is noncompliant because it doesn't meet an Intune compliance requirement, disk encryption (BitLocker) isn't enabled. Because the device isn't marked as compliant, Conditional Access blocks access to Outlook and prompts the user to resolve the issue. After the user enables BitLocker, the device reports its updated compliance state to Intune. Once the device is evaluated as compliant, Conditional Access reevaluates the sign-in and access to Outlook is restored.
 
 > [!NOTE]
-> This layer requires coordination with your identity team, as Conditional Access policies are created in Microsoft Entra ID, not Intune. See the [Identity team coordination section](#identity-team-microsoft-entra-id) for the workflow.
+> This layer requires coordination with your identity team. While the Intune admin center presents the Conditional Access node from Microsoft Entra ID, Conditional Access policies are created in Entra ID, not Intune. See the [Identity team coordination section](#identity-team-microsoft-entra-id) for the workflow.
 
 For details, see [Require managed devices with Conditional Access](/entra/identity/conditional-access/policy-all-users-device-compliance).
 
@@ -105,9 +105,9 @@ For details, see [Require managed devices with Conditional Access](/entra/identi
 
 Configuration profiles configure device settings to harden security, enable features, and create consistent configurations across your fleet. While compliance policies (layer 3) assess whether devices meet requirements, configuration profiles proactively deploy settings to ensure devices are configured correctly.
 
-Common configurations include security baselines, Wi-Fi and VPN profiles, certificate deployment, password policies, disk encryption settings, and application of Group Policy equivalents.
+You can deploy settings through device configuration profiles or endpoint security policies. Device configuration profiles support broad scenarios including Wi-Fi and VPN profiles, certificate deployment, password policies, disk encryption settings, and Group Policy equivalents. Endpoint security policies provide streamlined experiences focused specifically on security settings like antivirus, disk encryption, firewall, attack surface reduction, and endpoint detection and response.
 
-**Example:** You deploy a Windows security baseline to corporate laptops. The configuration profile enables Windows Firewall, configures BitLocker encryption, disables legacy protocols, enables attack surface reduction rules, and configures dozens of other security settings. Users don't need to configure any of these settings manually—Intune applies them automatically.
+**Example:** You deploy a Windows security baseline to corporate laptops. The baseline enables Windows Firewall, configures BitLocker encryption, disables legacy protocols, enables attack surface reduction rules, and configures dozens of other security settings. Users don't need to configure any of these settings manually—Intune applies them automatically.
 
 > [!TIP]
 > Security baselines are preconfigured profiles containing Microsoft's recommended security settings. Use them as a starting point, then customize based on your organization's needs.
@@ -118,12 +118,12 @@ For details, see [Deploy configuration profiles](deployment-plan-configuration-p
 
 Device risk monitoring integrates Microsoft Defender for Endpoint with Intune to add continuous threat detection, device risk assessment, and risk-based access controls. This layer shifts from static compliance checks to dynamic security monitoring that responds to active threats in real time.
 
-When you onboard devices to Microsoft Defender for Endpoint, they begin reporting security telemetry and threat intelligence. Defender assigns each device a risk level (secure, low, medium, high, or unavailable) based on detected threats, vulnerabilities, and security posture. You can use this risk level in compliance policies to block access from high-risk devices or trigger remediation actions.
+When you onboard devices to Microsoft Defender for Endpoint, they begin reporting security telemetry and threat intelligence. Defender assigns each device a risk level (secured, low, medium, high, or unavailable) based on detected threats, vulnerabilities, and security posture. You can use this risk level in compliance policies to block access from high-risk devices or trigger remediation actions.
 
-**Example:** A user's laptop becomes infected with malware. Microsoft Defender for Endpoint detects the threat and marks the device as high risk. Your compliance policy evaluating device risk immediately marks the device as noncompliant. Conditional Access blocks the user's access to organizational resources until Defender remediates the threat and the device risk returns to an acceptable level.
+**Example:** A user's laptop becomes infected with malware. Microsoft Defender for Endpoint detects the threat and marks the device as high risk. Your compliance policy evaluating device risk immediately marks the device as noncompliant. Conditional Access blocks the user's access to organizational resources until the threat is remediated and the device risk returns to an acceptable level.
 
 > [!TIP]
-> This layer also enables deployment of the Microsoft Defender for Endpoint security baseline, which configures advanced threat protection settings like attack surface reduction rules, controlled folder access, and network protection.
+> Integrating Defender for Endpoint with Intune also lets you deploy deeper security configurations, including the Microsoft Defender for Endpoint security baseline and advanced threat protection settings like attack surface reduction rules, controlled folder access, and network protection.
 
 For details, see [Microsoft Defender for Endpoint integration](../protect/microsoft-defender-integrate.md).
 
@@ -133,7 +133,7 @@ Endpoint data loss prevention uses Microsoft Purview to prevent sensitive data f
 
 Devices onboarded to Microsoft Defender for Endpoint in layer 6 are automatically onboarded for Endpoint DLP with no additional Intune configuration. Your compliance team creates DLP policies in the Microsoft Purview portal defining which sensitivity labels, file types, or content patterns trigger protective actions.
 
-**Example:** Your compliance team creates a DLP policy preventing files labeled "Confidential" from being copied to USB drives or uploaded to personal cloud storage. A user attempts to copy a confidential financial report to a USB drive. Endpoint DLP blocks the operation and displays a policy notification explaining the restriction. The user can file a business justification to request an override if needed, and all activities are logged for compliance reporting.
+**Example:** Your compliance team creates a DLP policy preventing files labeled "Confidential" from being copied to USB drives or uploaded to personal cloud storage. A user attempts to copy a confidential financial report to a USB drive. Endpoint DLP blocks the operation and displays a notification explaining the restriction. Depending on how the compliance team configured the policy, the block might be absolute or allow the user to provide a business justification and proceed. All activities are logged for compliance reporting.
 
 > [!NOTE]
 > As the Intune administrator, your role for Endpoint DLP is limited to ensuring devices are onboarded to Microsoft Defender for Endpoint (layer 6). All DLP policy creation and management happens in the Microsoft Purview portal by your compliance team.
@@ -162,6 +162,8 @@ Implementing Zero Trust device security requires coordination across multiple te
 
 ### Identity team (Microsoft Entra ID)
 
+**Their responsibility:** Manage Conditional Access policies, configure authentication requirements, and administer the Microsoft Entra ID tenant.
+
 **Your coordination:**
 
 - After you create app protection policies (layer 1), work with identity team to create Conditional Access policy requiring approved apps.
@@ -185,9 +187,13 @@ Implementing Zero Trust device security requires coordination across multiple te
 - Use Intune to onboard devices to Microsoft Defender for Endpoint (layer 6)
 - Deploy both Windows security baseline and Defender for Endpoint security baseline to managed devices
 - Receive device risk signals from Defender that feed into compliance policies
+- Act on Intune security tasks that are created by Defender security admins for remediating discovered vulnerabilities and misconfigurations
 - Coordinate incident response when threats are detected on managed devices
 
-**Related guidance:** [Microsoft Defender for Endpoint integration](../protect/microsoft-defender-integrate.md)
+**Related guidance:**
+
+- [Microsoft Defender for Endpoint integration](../protect/microsoft-defender-integrate.md)
+- [Remediate vulnerabilities with security tasks](../protect/atp-manage-vulnerabilities.md)
 
 ### Data security and privacy team (Microsoft Purview)
 
@@ -203,7 +209,10 @@ Implementing Zero Trust device security requires coordination across multiple te
 > [!NOTE]
 > As the Intune administrator, your role for Endpoint DLP is limited to ensuring devices are onboarded to Microsoft Defender for Endpoint. Devices onboarded to MDE automatically become DLP-capable with no additional Intune configuration. All DLP policy creation and management happens in the Microsoft Purview portal by your compliance team.
 
-**Related guidance:** [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about) | [Get started with Endpoint DLP](/purview/endpoint-dlp-getting-started)
+**Related guidance:**
+
+- [Learn about Endpoint DLP](/purview/endpoint-dlp-learn-about)
+- [Get started with Endpoint DLP](/purview/endpoint-dlp-getting-started)
 
 ### Best practices for cross-team coordination
 
