@@ -27,7 +27,7 @@ Some Microsoft Intune features require access to Windows diagnostic data or veri
 > To enable Windows diagnostic data and license verification, use an account with at least one of the following roles:
 > - [Intune Administrator][INT-R1]
 > - [Custom role][INT-RC] that includes:
->   - The permission **xyz/xyz**
+>   - The permission **/**
 
 :::column-end:::
 :::row-end:::
