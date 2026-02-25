@@ -1,0 +1,71 @@
+items:
+- name: Privacy and personal data
+  href: ./intune-service/protect/privacy-personal-data.md
+- name: Compliance in Intune
+  href: ./intune-service/fundamentals/compliance-in-intune.md
+- name: Optional diagnostic data in client apps
+  href: ./intune-service/protect/client-apps-optional-data.md
+- name: Data collection
+  href: ./intune-service/protect/privacy-data-collect.md
+- name: Data storage and processing
+  href: ./intune-service/protect/privacy-data-store-process.md
+- name: Data security and sharing
+  href: ./intune-service/protect/privacy-data-secure-share.md
+  items:
+  - name: Data Apple sends to Intune
+    href: ./intune-service/protect/data-apple-sends-to-intune.md
+  - name: Data Google sends to Intune
+    href: ./intune-service/protect/data-google-sends-to-intune.md
+  - name: Data Intune sends to Apple
+    href: ./intune-service/protect/data-intune-sends-to-apple.md
+  - name: Data Intune sends to Google
+    href: ./intune-service/protect/data-intune-sends-to-google.md
+  - name: Data Intune sends to Zebra
+    href: ./intune-service/protect/data-intune-sends-to-zebra.md
+  - name: Enable Windows diagnostic data
+    href: ./intune-service/protect/data-enable-windows-data.md
+  - name: Information shared from Jamf Pro to Intune
+    href: ./intune-service/protect/data-jamf-sends-to-intune.md
+- name: View and correct personal data
+  href: ./intune-service/protect/privacy-data-view-correct.md
+- name: Audit, export, delete
+  href: ./intune-service/protect/privacy-data-audit-export-delete.md
+
+
+
+    - name: Privacy and personal data
+      href: ./intune-service/protect/privacy-personal-data.md rename to --> ./privacy/index.md
+    - name: Data collection and data processing
+      items:
+      - name: Data collection
+        href: ./intune-service/protect/privacy-data-collect.md --> ./privacy/data-handling/data-collection.md
+      - name: Data storage and processing
+        href: ./intune-service/protect/privacy-data-store-process.md --> ./privacy/data-handling/data-storage-processing.md
+      - name: Optional diagnostic data in client apps
+        href: ./intune-service/protect/client-apps-optional-data.md --> ./privacy/data-handling/optional-diagnostic-data.md
+    - name: Data sharing with third parties
+      items:
+      - name: Overview of third‑party data sharing
+	href: ./privacy/data-sharing/index.md
+      - name: Data sent to Intune
+        items:
+        - name: Data Apple sends to Intune
+          href: ./privacy/data-sharing/apple-to-intune.md
+        - name: Data Google sends to Intune
+          href: ./privacy/sharing/google-to-intune.md
+        - name: Information shared from Jamf Pro to Intune
+          href: ./privacy/sharing/jamf-to-intune.md
+      - name: Data sent from Intune
+        items:
+        - name: Data Intune sends to Apple
+          href: ./privacy/data-sharing/intune-to-apple.md
+        - name: Data Intune sends to Google
+          href: ./privacy/data-sharing/intune-to-google.md
+        - name: Data Intune sends to Zebra
+          href: ./privacy/data-sharing/intune-to-zebra.md
+    - name: Manage personal data
+      items:
+      - name: View and correct personal data
+        href: ./privacy/personal-data/view-correct.md
+      - name: Audit, export, and delete
+        href: ./privacy/personal-data/audit-export-delete.md
