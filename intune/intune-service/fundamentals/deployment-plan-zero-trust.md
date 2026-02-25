@@ -81,7 +81,7 @@ For details, see [Deployment guidance: Enroll devices](deployment-guide-enrollme
 
 Compliance policies define security requirements that devices must meet to access organizational resources. These policies evaluate device health and mark devices as compliant or noncompliant based on settings you configure, such as password requirements, OS versions, encryption status, and jailbreak detection.
 
-**Example:** Your compliance policy requires Windows devices to have BitLocker enabled, run a minimum OS version, and use a password with at least 8 characters. A user's laptop missing BitLocker is marked noncompliant. The user receives notifications about the requirement and has time to remediate before access is blocked (if you enforce layer 4).
+**Example:** Your compliance policy requires Windows devices to have BitLocker enabled, run a minimum OS version, and use a password with at least eight characters. A user's laptop missing BitLocker is marked noncompliant. The user receives notifications about the requirement and has time to remediate before access is blocked (if you enforce layer 4).
 
 > [!TIP]
 > Compliance policies assess device state but don't automatically block access. They work with Conditional Access (layer 4) to enforce compliance requirements.
@@ -94,7 +94,7 @@ This layer implements enterprise-level Zero Trust identity and device access pol
 
 This layer represents the shift from assessment to enforcement. After compliance policies mark devices as compliant or noncompliant, Conditional Access policies use that signal to grant or block access to email, SharePoint, Teams, and other protected resources.
 
-**Example:** Your identity team creates a Conditional Access policy requiring compliant devices for all users accessing Microsoft 365 apps. A user with a noncompliant device (missing BitLocker from the layer 3 example) attempts to access Outlook. The Conditional Access policy blocks access and displays a message explaining the device doesn't meet security requirements. After enabling BitLocker and checking in with Intune, the device becomes compliant and access is restored.
+**Example:** Your identity team creates a Conditional Access policy requiring compliant devices for all users accessing Microsoft 365 apps. A user with a noncompliant device (missing BitLocker from the layer 3 example) attempts to access Outlook. The Conditional Access policy blocks access and displays a message explaining the device doesn't meet security requirements. After a device enables BitLocker and checks in with Intune, the device is assessed as compliant and access is restored.
 
 > [!NOTE]
 > This layer requires coordination with your identity team, as Conditional Access policies are created in Microsoft Entra ID, not Intune. See the [Identity team coordination section](#identity-team-microsoft-entra-id) for the workflow.
@@ -107,10 +107,10 @@ Configuration profiles configure device settings to harden security, enable feat
 
 Common configurations include security baselines, Wi-Fi and VPN profiles, certificate deployment, password policies, disk encryption settings, and application of Group Policy equivalents.
 
-**Example:** You deploy a Windows security baseline to corporate laptops. The configuration profile enables Windows Defender Firewall, configures BitLocker encryption, disables legacy protocols, enables attack surface reduction rules, and configures dozens of other security settings. Users don't need to configure any of these settings manually—Intune applies them automatically.
+**Example:** You deploy a Windows security baseline to corporate laptops. The configuration profile enables Windows Firewall, configures BitLocker encryption, disables legacy protocols, enables attack surface reduction rules, and configures dozens of other security settings. Users don't need to configure any of these settings manually—Intune applies them automatically.
 
 > [!TIP]
-> Security baselines are pre-configured profiles containing Microsoft's recommended security settings. Use them as a starting point, then customize based on your organization's needs.
+> Security baselines are preconfigured profiles containing Microsoft's recommended security settings. Use them as a starting point, then customize based on your organization's needs.
 
 For details, see [Deploy configuration profiles](deployment-plan-configuration-profile.md).
 
@@ -164,7 +164,7 @@ Implementing Zero Trust device security requires coordination across multiple te
 
 **Your coordination:**
 
-- After creating app protection policies (layer 1), work with identity team to create Conditional Access policy requiring approved apps.
+- After you create app protection policies (layer 1), work with identity team to create Conditional Access policy requiring approved apps.
 - After creating compliance policies (layer 3), coordinate Conditional Access policy requiring compliant devices:
   1. You create and assign compliance policies in Intune to define device requirements.
   2. Identity team creates Conditional Access policy in Microsoft Entra admin center.
