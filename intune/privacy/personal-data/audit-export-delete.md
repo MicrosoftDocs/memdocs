@@ -24,7 +24,7 @@ Audit logs provide tenant admins with a record of activities that generate a cha
 
 For security purposes, Intune maintains audit logs for user and device actions for two years. These logs are automatically deleted after the two-year retention period.
 
-To review audit logs, see [Audit logs for Intune activities](../fundamentals/monitor-audit-logs.md).
+To review audit logs, see [Audit logs for Intune activities](../../intune-service/fundamentals/monitor-audit-logs.md).
 
 Admins can't delete audit logs.
 
@@ -57,7 +57,7 @@ Resetting to factory settings restores all company and personal data and setting
 
 ### User self-removal from Intune management
 
-Users can remove their [Android](../user-help/unenroll-your-device-from-intune-android.md), [Apple](../user-help/unenroll-your-device-from-intune-ios.md), or [Windows](../user-help/unenroll-your-device-from-intune-windows.md) personal device from Intune management without admin assistance.
+Users can remove their [Android](../../intune-service/user-help/unenroll-your-device-from-intune-android.md), [Apple](../../intune-service/user-help/unenroll-your-device-from-intune-ios.md), or [Windows](../../intune-service/user-help/unenroll-your-device-from-intune-windows.md) personal device from Intune management without admin assistance.
 
 ### Retire
 

@@ -118,7 +118,7 @@ conceptualContent:
           text: Supported platforms and requirements
         - url: ./privacy/index.md
           itemType: overview
-          text: Privacy and personal
+          text: Privacy and personal data
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
