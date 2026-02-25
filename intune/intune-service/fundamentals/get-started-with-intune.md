@@ -33,6 +33,8 @@ This article provides an overview of the steps to start your Intune deployment.
   - [Move to cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md)
   - [Planning guide to move to Microsoft Intune](intune-planning-guide.md)
   - [Deployment guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
+  - [Protection and configuration levels](protection-configuration-levels.md)
+  - [Zero Trust deployment approach](deployment-plan-zero-trust.md)
   - [Microsoft Intune fundamentals online training](/training/paths/endpoint-manager-fundamentals/)
 
 - Determine your license needs and any other prerequisites for your Intune deployment. The following list provides some of the most common prerequisites:
