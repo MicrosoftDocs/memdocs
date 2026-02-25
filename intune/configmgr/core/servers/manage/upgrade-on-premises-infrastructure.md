@@ -88,7 +88,11 @@ Use the steps in this section for any of the following upgrade scenarios:
 
 - After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.
 
+- If you're upgrading the central administration site server, then [run a site reset](modify-your-infrastructure.md#bkmk_reset).
+
 - If you're upgrading the primary site server, then [run a site reset](modify-your-infrastructure.md#bkmk_reset).
+
+- If you're upgrading a secondary site server, then [recover the secondary site](recover-sites.md#recover-a-secondary-site).
 
 - If the WSUS server is remote from the Site Server, the **Windows Server Update Services Tools** must be removed and reinstalled.
 
