@@ -85,7 +85,7 @@ For more information, see the [Protect your sensitive data with Microsoft Purvie
 
 Intune includes privacy controls to manage data collection, storage, and sharing:
 
-For details about privacy, see [Privacy and personal data in Intune](../protect/privacy-personal-data.md).
+For details about privacy, see [Privacy and personal data in Intune](../privacy/index.md).
 
 ## Related articles
 
