@@ -16,7 +16,7 @@ Below we describe the steps an admin would go through to deregister a device fro
 
 ### Delete from Intune
 
-Before a device is deregistered from Windows Autopilot, it first has to be deleted from Intune. To delete an Windows Autopilot device from Intune:
+Before a device is deregistered from Windows Autopilot, it first has to be deleted from Intune. To delete a Windows Autopilot device from Intune:
 
 1. Sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 
@@ -71,7 +71,7 @@ Once the device is deleted from Intune, it can then be deregistered from Windows
 >
 > - For Microsoft Entra hybrid joined devices, delete the computer object from the on‑premises Active Directory Domain Services (AD DS) environment to prevent it from being resynced to Microsoft Entra ID. After this step, no additional actions are required in Intune or Windows Autopilot. Avoid manually deleting the device from Microsoft Entra ID.
 >   
-> For information about what to expect in Microsoft Entra ID after deregistration, see [What happens to Microsoft Entra ID device object after deregistration?](#what-happens-to-the-microsoft-entra-device-object-after-deregistration) 
+> For information about what to expect in Microsoft Entra ID after deregistration, see [What happens to the Microsoft Entra device object after deregistration?](#what-happens-to-the-microsoft-entra-device-object-after-deregistration) 
 
 This process ensures that related records in Windows Autopilot, Intune, and Microsoft Entra ID are handled correctly. Skipping steps or removing records out of order can result in orphaned records or unrecoverable devices. If a device goes into an unrecoverable state, contact the appropriate [Microsoft support alias](../autopilot-support.md) for assistance.  
 
