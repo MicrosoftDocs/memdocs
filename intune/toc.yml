@@ -226,12 +226,6 @@ items:
       - name: Get started with your deployment
         displayName: mdm, mam, android, ios, ipados, macos, windows
         href: ./intune-service/fundamentals/get-started-with-intune.md
-      - name: Protection and configuration levels
-        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/protection-configuration-levels.md
-      - name: Zero Trust deployment approach
-        displayName: deployment, zero trust, security, compliance, conditional access
-        href: ./intune-service/fundamentals/deployment-plan-zero-trust.md
       - name: Step 1 - Set up Intune subscription
         displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
         href: ./intune-service/fundamentals/deployment-plan-setup.md
@@ -247,6 +241,12 @@ items:
       - name: Step 5 - Enroll devices
         displayName: deployment, mdm, android, ios, ipados, macos, windows
         href: ./intune-service/fundamentals/deployment-guide-enroll.md
+      - name: Protection and configuration levels
+        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
+        href: ./intune-service/fundamentals/protection-configuration-levels.md
+      - name: Zero Trust deployment approach
+        displayName: deployment, zero trust, security, compliance, conditional access
+        href: ./intune-service/fundamentals/deployment-plan-zero-trust.md
 
     - name: Platform guides
       items:
