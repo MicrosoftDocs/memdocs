@@ -30,4 +30,4 @@ You can display your company's terms and conditions in the Intune Company Portal
 
 ## Next steps
 
-Find out more about how Intune [collects](data-collection.md), [stores and processes](data-storage-processing.md), and [shares](data-sharing/index.md) personal data.
+Find out more about how Intune [collects](data-handling/data-collection.md), [stores and processes](data-handling/data-storage-processing.md), and [shares](data-sharing/index.md) personal data.

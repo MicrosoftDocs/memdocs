@@ -68,11 +68,11 @@ You should understand how Intune collects, stores, retains, processes, secures, 
 
 The following resources can help you understand privacy and personal data in Intune:
 
-- [Privacy and personal data in Intune](../protect/privacy-personal-data.md)
-- [Optional diagnostic data from Intune Client apps](../protect/client-apps-optional-data.md)
-- [Data collection in Intune](../protect/privacy-data-collect.md)
-- [Data storage and processing in Intune](../protect/privacy-data-store-process.md)
-- [Audit, export, or delete personal data in Intune](../protect/privacy-data-audit-export-delete.md)
+- [Privacy and personal data in Intune](../../privacy/index.md)
+- [Optional diagnostic data from Intune Client apps](../../privacy/data-handling/optional-diagnostic-data.md)
+- [Data collection in Intune](../../privacy/data-handling/data-collection.md)
+- [Data storage and processing in Intune](../../privacy/data-handling/data-storage-processing.md)
+- [Audit, export, or delete personal data in Intune](../../privacy/personal-data/audit-export-delete.md)
 
 ## Related content
 

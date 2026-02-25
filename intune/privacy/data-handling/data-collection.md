@@ -30,85 +30,85 @@ Data in the required category consists of data in the default feature set that i
 
 Required data collected by Intune includes, but isn't limited to:
 
-|Category |   Data       |  MAM workload <sup>**1**</sup> |
-|-------- |:------------ |---------------|
-| **Access control information**   | Private keys for certificates  | No  |
-|         | Static authenticators (customer's password)             | No  |
-| **Admin and account information** |   Active Directory ID of each customer IT admin | Yes |
-|         |   Admin user first name and family name          | Yes |
-|         |   Admin user name                              | Yes |
-|         |   Email address of account owner               | Yes |
-|         |   Payment data for customer billing            | Yes |
-|         |   Phone number                                 | Yes |
-|         |   Subscription key                             | Yes |
-|         |   UPN (email)                                  | Yes |
-| **Admin created data**, like: |   Compliance policies    | No  |
-|         |   Group policy                                 | No  |
-|         |   Line-of-Business (LOB) application           | Yes |
-|         |   PowerShell scripts                           | No  |
-|         |   Profile names                                | Yes |
+| Category | Data | MAM workload <sup>**1**</sup> |
+|--|:-|--|
+| **Access control information** | Private keys for certificates | No |
+|  | Static authenticators (customer's password) | No |
+| **Admin and account information** | Active Directory ID of each customer IT admin | Yes |
+|  | Admin user first name and family name | Yes |
+|  | Admin user name | Yes |
+|  | Email address of account owner | Yes |
+|  | Payment data for customer billing | Yes |
+|  | Phone number | Yes |
+|  | Subscription key | Yes |
+|  | UPN (email) | Yes |
+| **Admin created data**, like: | Compliance policies | No |
+|  | Group policy | No |
+|  | Line-of-Business (LOB) application | Yes |
+|  | PowerShell scripts | No |
+|  | Profile names | Yes |
 | **Admin usage data from across all Intune tenants** (for example, admin controls selected when interacting with the Admin console) |  | Yes |
-| **Application inventory**, like: |   app ID              | Yes (Managed apps only) |
-|         |   app name                                     | Yes (Managed apps only) |
-|         |   installation location                        | No  |
-|         |   size                                         | No  |
-|         |   version                                      | Yes (Managed apps only) |
-|         | **Note**: Application inventory data is only collected when marked by the Admin as a corporate-owned device or the compliant app feature is turned on. | |
-| **Audit log information, including data about the following activities** |   Assign | Yes |
-|         |   Create                  | Yes |
-|         |   Delete                  | Yes |
-|         |   Manage                  | Yes |
-|         |   Remote tasks            | Yes |
-|         |   Update (edit)           | Yes |
-| **Customer third party tenant IDs** (like Apple ID) |    | No  |
-| **Device Data** |   Account ID                           | Yes |
-|         |   AppleID for iOS/iPadOS devices               | No  |
-|         |   Microsoft Entra device ID             | Yes (If device is Microsoft Entra joined) |
-|         |   Intune device ID                             | Yes (If device is MDM enrolled with Intune) |
-|         |   Device storage space                         | No  |
-|         |   EAS device ID                                | No  |
-|         |   Location (corporate devices only)            | No  |
-|         |   Mac Address for Mac devices                  | No  |
-|         |   Network information                          | No  |
-|         |   Platform-specific IDs                        | No  |
-|         |   Tenant ID                                    | Yes |
-|         |   Windows ID for Windows devices               | No  |
-| **Hardware inventory information**  | Device name    | Yes (Device Friendly Name) |
-|         |   Device type             | Yes |
-|         |   ICCID                   | No  |
-|         |   IMEI number             | No  |
-|         |   IP address              | No  |
-|         |   Manufacturer            | Yes |
-|         |   Model                   | Yes |
-|         |   Operating system        | Yes |
-|         |   Operating system version| Yes |
-|         |   Serial number           | No  |
-|         |   Wi-Fi MacAddress        | No  |
-| **Managed application information** |   Microsoft Entra device ID | Yes (If device is Microsoft Entra joined) |
-|         |   Device enrollment status                     | Yes |
-|         |   Device health status                         | Yes (Includes threat status if a Mobile Threat Defense connector is configured) |
-|         |   Encryption keys                              | Yes |
-|         |   Intune device management ID                  | Yes |
-|         |   Last application check-in date/time          | Yes |
-|         |   Managed application device tag               | Yes |
-|         |   Managed application ID                       | Yes |
-|         |   Managed application SDK version              | Yes |
-|         |   Managed application version                  | Yes |
-|         |   MAM enrollment data/time                     | Yes |
-|         |   MAM enrollment status                        | Yes |
-| **Support information** |  Contact information (name, phone number, email address)   | No  |
-|         |   Email discussions with Microsoft support, product, and/or customer experience team members | No  |
-| **Tenant account information** (this data is available from the Microsoft Intune admin center |   installedDeviceCount: The number of devices on which the application is installed.  | Yes |
-|         |   Number of devices or users enrolled          | No  |
-|         |   Number of identified device platforms        | No  |
-|         |   Number of installed devices                  | No  |
-|         |   notApplicableDeviceCount: The number of devices for which the application isn't applicable. | No  |
-|         |   notInstalledDeviceCount: The number of devices for which the application is applicable but not installed. | No  |
-|         |   pendingInstallDeviceCount: The number of devices for which the application is applicable and installation is pending. | No  |
-| **User information**   | Owner name/user display (the Azure-registered name of the user as identified by AzureUserID)   | Yes |
-|         |   Phone number                                 | No  |
-|         |   Third-party user identifies (like AppleID)   | No  |
-|         |   User Principal Name or email address         | Yes |
+| **Application inventory**, like: | app ID | Yes (Managed apps only) |
+|  | app name | Yes (Managed apps only) |
+|  | installation location | No |
+|  | size | No |
+|  | version | Yes (Managed apps only) |
+|  | **Note**: Application inventory data is only collected when marked by the Admin as a corporate-owned device or the compliant app feature is turned on. |  |
+| **Audit log information, including data about the following activities** | Assign | Yes |
+|  | Create | Yes |
+|  | Delete | Yes |
+|  | Manage | Yes |
+|  | Remote tasks | Yes |
+|  | Update (edit) | Yes |
+| **Customer third party tenant IDs** (like Apple ID) |  | No |
+| **Device Data** | Account ID | Yes |
+|  | AppleID for iOS/iPadOS devices | No |
+|  | Microsoft Entra device ID | Yes (If device is Microsoft Entra joined) |
+|  | Intune device ID | Yes (If device is MDM enrolled with Intune) |
+|  | Device storage space | No |
+|  | EAS device ID | No |
+|  | Location (corporate devices only) | No |
+|  | Mac Address for Mac devices | No |
+|  | Network information | No |
+|  | Platform-specific IDs | No |
+|  | Tenant ID | Yes |
+|  | Windows ID for Windows devices | No |
+| **Hardware inventory information** | Device name | Yes (Device Friendly Name) |
+|  | Device type | Yes |
+|  | ICCID | No |
+|  | IMEI number | No |
+|  | IP address | No |
+|  | Manufacturer | Yes |
+|  | Model | Yes |
+|  | Operating system | Yes |
+|  | Operating system version | Yes |
+|  | Serial number | No |
+|  | Wi-Fi MacAddress | No |
+| **Managed application information** | Microsoft Entra device ID | Yes (If device is Microsoft Entra joined) |
+|  | Device enrollment status | Yes |
+|  | Device health status | Yes (Includes threat status if a Mobile Threat Defense connector is configured) |
+|  | Encryption keys | Yes |
+|  | Intune device management ID | Yes |
+|  | Last application check-in date/time | Yes |
+|  | Managed application device tag | Yes |
+|  | Managed application ID | Yes |
+|  | Managed application SDK version | Yes |
+|  | Managed application version | Yes |
+|  | MAM enrollment data/time | Yes |
+|  | MAM enrollment status | Yes |
+| **Support information** | Contact information (name, phone number, email address) | No |
+|  | Email discussions with Microsoft support, product, and/or customer experience team members | No |
+| **Tenant account information** (this data is available from the Microsoft Intune admin center | installedDeviceCount: The number of devices on which the application is installed. | Yes |
+|  | Number of devices or users enrolled | No |
+|  | Number of identified device platforms | No |
+|  | Number of installed devices | No |
+|  | notApplicableDeviceCount: The number of devices for which the application isn't applicable. | No |
+|  | notInstalledDeviceCount: The number of devices for which the application is applicable but not installed. | No |
+|  | pendingInstallDeviceCount: The number of devices for which the application is applicable and installation is pending. | No |
+| **User information** | Owner name/user display (the Azure-registered name of the user as identified by AzureUserID) | Yes |
+|  | Phone number | No |
+|  | Third-party user identifies (like AppleID) | No |
+|  | User Principal Name or email address | Yes |
 
 <sup>**1**</sup> Intune Mobile Application Management (MAM) can be deployed independent of other Intune workloads. For customers only using Intune MAM, this column identifies which required data is collected.
 
@@ -120,11 +120,11 @@ Your organization might enable optional features within Intune which enable coll
 
 - Device query for Corporate-owned Windows Devices
 
-  When a customer enables Device query, the admin can query device details such as File Name and File Path. For a complete list of data, see [Intune data platform schema](../advanced-analytics/data-platform-schema.md).
+  When a customer enables Device query, the admin can query device details such as File Name and File Path. For a complete list of data, see [Intune data platform schema](../../advanced-analytics/data-platform-schema.md).
 
 - Enhanced device inventory
 
-  When a customer enables enhanced device inventory, the admin can see non-sensitive device details such as CPU, disk drive, and memory info. For a complete list of data, see [Intune data platform schema](../advanced-analytics/data-platform-schema.md).
+  When a customer enables enhanced device inventory, the admin can see non-sensitive device details such as CPU, disk drive, and memory info. For a complete list of data, see [Intune data platform schema](../../advanced-analytics/data-platform-schema.md).
 
 Customers can control the collection of pseudonymized diagnostics and telemetry data from Intune components installed on their devices. We think there are compelling reasons for people to share this optional data as it helps Microsoft improve the reliability and performance of its products and we understand the importance of providing users the opportunity to make these choices for themselves.
 

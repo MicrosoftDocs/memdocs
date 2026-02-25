@@ -42,7 +42,7 @@ Intune leverages other Microsoft services for compliance, including:
 - [Microsoft Purview](/purview/purview): A suite of data governance and compliance tools.
 - [Microsoft Entra ID](/entra/fundamentals/whatis): Identity and access management, formerly known as Azure Active Directory (Azure AD).
 - [Microsoft Purview Compliance Manager](/purview/compliance-manager): Tools for managing compliance across your organization.
-- [Microsoft Defender for Endpoint](../protect/microsoft-defender-with-intune.md): An enterprise endpoint security platform.
+- [Microsoft Defender for Endpoint](../intune-service/protect/microsoft-defender-with-intune.md): An enterprise endpoint security platform.
 
 ## Microsoft Intune capabilities for compliance
 
@@ -57,9 +57,9 @@ For more information about Intune compliance capabilities, visit the [Microsoft 
 
 Intune supports compliance with data residency requirements by supporting Microsoft Cloud's regional and global data storage policies. These policies include:
 
-- **Data location**: Data is stored in Microsoft-managed data centers. For more information, see [Data storage and processing in Intune](../protect/privacy-data-store-process.md).
-- **EU Data Boundary**: Ensures that data belonging to EU customers is stored and processed within the EU. For more information, see [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn) and [Configure Microsoft Tunnel for Intune](../protect/microsoft-tunnel-configure.md).
-- **Encryption**: Data is encrypted at rest and in transit. For more information, see [Access requirements policy mapping from Basic Mobility and Security to Intune](../fundamentals/policy-map-access-requirements.md).
+- **Data location**: Data is stored in Microsoft-managed data centers. For more information, see [Data storage and processing in Intune](..//privacy/data-handling/data-storage-processing.md).
+- **EU Data Boundary**: Ensures that data belonging to EU customers is stored and processed within the EU. For more information, see [EU Data Boundary](/privacy/eudb/eu-data-boundary-learn) and [Configure Microsoft Tunnel for Intune](../intune-service/protect/microsoft-tunnel-configure.md).
+- **Encryption**: Data is encrypted at rest and in transit. For more information, see [Access requirements policy mapping from Basic Mobility and Security to Intune](../intune-service/fundamentals/policy-map-access-requirements.md).
 
 ## Compliance features
 
@@ -70,7 +70,7 @@ Intune includes several compliance features that help organizations meet regulat
 > [!IMPORTANT]
 > Microsoft Intune doesn't use any personal data collected as part of providing the service for profiling, advertising, or marketing purposes.
 
-Intune supports data lifecycle management through retention policies and labels. These features help organizations retain or delete data based on compliance requirements. For more information, see [Privacy and personal data in Intune](../fundamentals/intune-service-servicing-information.md#privacy-and-personal-data-in-intune).
+Intune supports data lifecycle management through retention policies and labels. These features help organizations retain or delete data based on compliance requirements. For more information, see [Privacy and personal data in Intune](../intune-service/fundamentals/intune-service-servicing-information.md#privacy-and-personal-data-in-intune).
 
 ### Auditing and reporting
 
