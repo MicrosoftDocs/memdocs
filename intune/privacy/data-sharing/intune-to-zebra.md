@@ -1,8 +1,6 @@
 ---
 title: Data Intune sends to Zebra
 description: List of data that Intune sends to Zebra.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/07/2023
 ms.topic: reference
 ms.reviewer: jieyan

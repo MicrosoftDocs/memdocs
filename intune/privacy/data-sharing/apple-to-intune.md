@@ -1,8 +1,6 @@
 ---
 title: Data Apple sends to Intune
 description: List of data that Apple sends to Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/08/2022
 ms.topic: reference
 ms.reviewer:

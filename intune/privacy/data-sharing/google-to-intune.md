@@ -1,8 +1,6 @@
 ---
 title: Data Google sends to Intune
 description: List of data that Google sends to Intune when Android enterprise device management is enabled with Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/08/2022
 ms.topic: reference
 ms.reviewer:

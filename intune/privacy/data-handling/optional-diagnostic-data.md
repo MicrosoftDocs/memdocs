@@ -1,8 +1,6 @@
 ---
 title: Optional diagnostic data that is collected by Intune client apps
 description: Learn about the optional diagnostic data that Intune Client apps collect.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/08/2022
 ms.topic: article
 ms.reviewer: angerobe
@@ -88,4 +86,4 @@ Users can [turn off usage data collection](../user-help/turn-off-microsoft-usage
 
 ## Next steps
 
-[Find out more about data collection in Intune.](privacy-data-collect.md)
+[Find out more about data collection in Intune.](../data-handling/data-collection.md)

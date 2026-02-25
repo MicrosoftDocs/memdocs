@@ -2299,10 +2299,10 @@ items:
       - name: Move your Intune Data Warehouse account data
         href: ./intune-service/developer/data-warehouse-account-move.md
 
-  - name: Governance and trust
+  - name: Regulatory compliance
     href: ./governance/toc.yml
 
-  - name: Privacy, compliance, and personal data
+  - name: Privacy and personal data
     href: ./privacy/toc.yml
 
   - name: Enable Windows diagnostic data

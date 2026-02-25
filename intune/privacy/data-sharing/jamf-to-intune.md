@@ -1,8 +1,6 @@
 ---
 title: Data JAMF Pro sends to Intune
 description: Review the list of data that Jamf Pro sends to Microsoft Intune when you integrate Jamf Pro to manage Macs with Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/07/2023
 ms.topic: reference
 ms.reviewer: elocholi

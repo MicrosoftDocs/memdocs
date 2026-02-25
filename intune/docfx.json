@@ -141,6 +141,8 @@
         "cloud-pki/**/*.yml": "paolomatarazzo",
         "device-updates/**/*.md": "paolomatarazzo",
         "device-updates/**/*.yml": "paolomatarazzo",
+        "privacy/**/*.md": "paolomatarazzo",
+        "privacy/**/*.yml": "paolomatarazzo",
         "solutions/**/*.md": "mandiohlinger",
         "solutions/**/*.yml": "mandiohlinger"
       },
@@ -169,6 +171,8 @@
         "cloud-pki/**/*.yml": "paolomatarazzo",
         "device-updates/**/*.md": "paoloma",
         "device-updates/**/*.yml": "paoloma",
+        "privacy/**/*.md": "paoloma",
+        "privacy/**/*.yml": "paoloma",
         "solutions/**/*.md": "mandia",
         "solutions/**/*.yml": "mandia"
       },

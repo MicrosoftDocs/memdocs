@@ -1,8 +1,6 @@
 ---
 title: Audit, export or delete personal data collected by Intune
 description: Learn how to audit, export, or delete personal data that is collected by Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/10/2025
 ms.topic: article
 ms.reviewer: kerimh
@@ -30,7 +28,7 @@ To review audit logs, see [Audit logs for Intune activities](../fundamentals/mon
 
 Admins can't delete audit logs.
 
-These audit events are retained for two years. Tenant admins can request audit logs using [this support request form](https://privacy.microsoft.com/en-US/privacy-questions?).
+These audit events are retained for two years. Tenant admins can request audit logs using [this support request form](https://privacy.microsoft.com/privacy-questions).
 
 ## Export personal data
 
@@ -75,4 +73,4 @@ If an Intune tenant customer cancels their Intune account, all tenant data is de
 
 ## Next steps
 
-Find out how to [view and correct personal data](privacy-data-view-correct.md) personal data in Intune.
+Find out how to [view and correct personal data](view-correct.md) personal data in Intune.

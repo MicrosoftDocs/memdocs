@@ -1,8 +1,6 @@
 ---
-author: eross-msft
 ms.topic: include
 ms.date: 04/24/2018
-ms.author: lizross
 ---
 
 >[!Note]

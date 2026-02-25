@@ -1,8 +1,6 @@
 ---
 title: Privacy and personal data in Intune
 description: Learn what personal data is collected and processed in Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/07/2025
 ms.topic: article
 ms.reviewer: intuneprivacy
@@ -16,7 +14,7 @@ ms.collection:
 
 # Privacy and personal data in Intune
 
-Microsoft Intune operates as a data processor on behalf of the customer as necessary to provide customers with the requested service as set forth in the [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215). Personal data is provided directly through Customer Administrator use of Intune through the Azure portal or Microsoft Intune admin center, or from customer devices when enrolled for management. Personal data is also collected at third-party services per the customer's instructions such as [setting up Apple Volume Purchasing Program](privacy-data-secure-share.md#data-sharing). Customers can receive, transmit, and store data on devices managed by Intune. Personal data is processed and stored within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215).
+Microsoft Intune operates as a data processor on behalf of the customer as necessary to provide customers with the requested service as set forth in the [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215). Personal data is provided directly through Customer Administrator use of Intune through the Azure portal or Microsoft Intune admin center, or from customer devices when enrolled for management. Personal data is also collected at third-party services per the customer's instructions such as [setting up Apple Volume Purchasing Program](data-sharing/index.md#data-sharing). Customers can receive, transmit, and store data on devices managed by Intune. Personal data is processed and stored within the audited compliance boundary of the Intune service under the technical security measures assured through [Microsoft Online Services Terms (OST)](https://go.microsoft.com/fwlink/p/?LinkId=2098215).
 
 To help Intune admins understand how your data's privacy is protected, this article explains how Intune collects, stores, retains, processes, secures, shares, audits, and exports personal data. It also covers how to review, correct, and delete your personal data.
 
@@ -32,4 +30,4 @@ You can display your company's terms and conditions in the Intune Company Portal
 
 ## Next steps
 
-Find out more about how Intune [collects](privacy-data-collect.md), [stores and processes](privacy-data-store-process.md), and [shares](privacy-data-secure-share.md) personal data.
+Find out more about how Intune [collects](data-collection.md), [stores and processes](data-storage-processing.md), and [shares](data-sharing/index.md) personal data.

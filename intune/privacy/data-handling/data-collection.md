@@ -1,8 +1,6 @@
 ---
 title: Data collection in Intune
 description: Learn about personal data collected in Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 06/25/2025
 ms.topic: article
 ms.reviewer: bradyw
@@ -155,4 +153,4 @@ For more information on the data types and definition, see [How Microsoft catego
 
 ## Related content
 
-Learn more about how Intune [stores and processes](privacy-data-store-process.md) and [shares](privacy-data-secure-share.md) personal data.
+Learn more about how Intune [stores and processes](data-storage-processing.md) and [shares](../data-sharing/index.md) personal data.

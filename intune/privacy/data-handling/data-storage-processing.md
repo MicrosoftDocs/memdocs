@@ -1,8 +1,6 @@
 ---
 title: Data storage and processing in Intune
 description: Learn how personal data is stored and processed in Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 06/25/2025
 ms.topic: article
 ms.reviewer: bradyw
@@ -82,4 +80,4 @@ Microsoft Intune doesn't use any personal data collected as part of providing th
 
 ## Next steps
 
-Find out more about how Intune [secures and shares](privacy-data-secure-share.md) personal data.
+Find out more about how Intune [secures and shares](../data-sharing/index.md) personal data.

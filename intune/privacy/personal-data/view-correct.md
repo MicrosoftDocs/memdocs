@@ -1,8 +1,6 @@
 ---
 title: View and correct personal data collected by Intune
 description: Learn how to view and correct personal data that's been collected by Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 04/08/2022
 ms.topic: article
 ms.reviewer: angerobe
@@ -41,4 +39,4 @@ Admins can't update device or app specific information. If an end user wants to 
 
 ## Next steps
 
-Find out how to [audit, export, or delete](privacy-data-audit-export-delete.md) personal data in Intune.
+Find out how to [audit, export, or delete](audit-export-delete.md) personal data in Intune.

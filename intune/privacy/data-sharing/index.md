@@ -1,8 +1,6 @@
 ---
 title: Data security and sharing in Intune
 description: Learn how personal data is secured and shared in Intune.
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 12/07/2023
 ms.topic: article
 ms.reviewer: angerobe
@@ -56,4 +54,4 @@ To learn more, see [Diagnostics and usage data for Configuration Manager](/confi
 
 ## Next steps
 
-Find out how to [view and correct](privacy-data-view-correct.md) personal data in Intune.
+Find out how to [view and correct](../personal-data/view-correct.md) personal data in Intune.
