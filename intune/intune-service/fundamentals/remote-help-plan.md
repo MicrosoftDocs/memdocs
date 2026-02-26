@@ -112,6 +112,7 @@ To use Remote Help, helpers must have the appropriate role based access control 
 |Remote Help - Unattended| Allows the helper to connect to Android devices without requiring the sharer to accept the connection each time. This capability requires the Android device to be enrolled in Intune as a fully managed device or as a dedicated device.|
 |Remote Tasks - Offer remote assistance| Allows the helper to offer remote assistance to users.|
 |Remote Assistance Connector - Read|Required to allow the user to see if Remote Help is configured for the tenant when starting a session.|
+|Organization - Read|Required to allow users to initiate Remote Help sessions from the Intune portal.|
 
 The following Intune built-in roles include Remote Help permissions:
 
@@ -119,7 +120,10 @@ The following Intune built-in roles include Remote Help permissions:
 - School Administrator (View screen, take full control, elevation, Remote Tasks - Offer remote assistance, Remote Assistance Connector - Read)
 
 > [!NOTE]
-> A person needs a combination of the *Remote Tasks - Offer Remote Assistance* permission, the *Remote Assistance Connector - read* permission, and at least one of the Remote Help permissions to provide help. The permissions are granted to users in the admin group of a role assignment for the users or devices in the defined scope groups. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control.md).
+> A person needs a combination of the *Remote Tasks - Offer Remote Assistance* permission, the *Remote Assistance Connector - read* permission, the *Organization - Read*, and at least one of the Remote Help permissions to provide help. The permissions are granted to users in the admin group of a role assignment for the users or devices in the defined scope groups. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control.md).
+
+> [!NOTE]
+> If your organisation is using Windows 365 Cloud PCs you need to create a `Custom Windows 365 role` role with `Cloud PCs - Read`. Without this permission administrators cannot see device details for Windows 365 Cloud PCs in the Intune Portal and neither can initiate a Remote Help session from the Intune portal. For more information about Intune role-based access control, see [About role-based access control (RBAC) for Microsoft Intune](../fundamentals/role-based-access-control.md).
 
 > [!IMPORTANT]
 > If a sharer or a sharer's device isn't in the scope of a helper, that helper can't provide assistance. The *All Devices* scope group doesn't include unenrolled devices. Instead, use a user scope group during the assignment process.
