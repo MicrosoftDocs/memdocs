@@ -228,11 +228,11 @@ Intune doesn't store any data sent through the pipeline. Intune routes data to t
 
 ## Known Issues
 
-The export pipeline may duplicate up 100% of the data published in a 24-hour period. Systems consuming this data should be prepared to handle duplicated data.
+Issues that may occur sending Intune log data.
 
 ### Duplicate data
 
-The Intune **Audit logs** and **Operational logs** are available for routing using this feature.
+The export pipeline may duplicate up 100% of the data published in a 24-hour period. Systems consuming this export should be prepared to handle duplicated data.
 
 ## Related content
 
