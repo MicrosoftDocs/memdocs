@@ -118,7 +118,7 @@ conceptualContent:
           text: Supported platforms and requirements
         - url: ./governance/index.yml
           itemType: overview
-          text: Compliance and privacy
+          text: Privacy and compliance
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.
