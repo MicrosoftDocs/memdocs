@@ -789,6 +789,9 @@ You can view the **Device action** report using the following steps:
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Monitor** > **Device actions**.
 
+> [!NOTE]
+> Device actions report contains data for past 180 days.
+
 ## Next steps
 
 Learn more about the following technologies:
