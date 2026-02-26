@@ -2307,6 +2307,7 @@ items:
 
   - name: Privacy and compliance
     href: /intune/governance
+    displayName: GDPR, HIPAA, SOC, ISO
 
   - name: Microsoft Intune service description
     href: ./intune-service/fundamentals/microsoft-intune-service-description.md
