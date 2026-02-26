@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/26/2026
+ms.date: 03/02/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,7 +57,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of February 23, 2026 (Service release 2602)
+## Week of March 2, 2026 (Service release 2602)
 
 ### App management
 
