@@ -235,6 +235,8 @@ This level focuses on enterprise-level services and features, and can require an
 
 For more specific information on device configuration policies at this level, go to [Level 3 - High protection and configuration](deployment-plan-configuration-profile.md#level-3---high-protection-and-configuration).
 
-## Related article
+## Related articles
 
 For a complete list of all the device configuration profiles you can create, go to [Apply features and settings on your devices using device profiles in Microsoft Intune](../configuration/device-profiles.md).
+
+For a Zero Trust-focused deployment approach, see [Zero Trust deployment approach with Microsoft Intune](deployment-plan-zero-trust.md). This framework provides a seven-layer progressive deployment strategy aligned with Zero Trust security principles.
