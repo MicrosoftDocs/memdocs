@@ -226,9 +226,6 @@ items:
       - name: Get started with your deployment
         displayName: mdm, mam, android, ios, ipados, macos, windows
         href: ./intune-service/fundamentals/get-started-with-intune.md
-      - name: Protection and configuration levels
-        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
-        href: ./intune-service/fundamentals/protection-configuration-levels.md
       - name: Step 1 - Set up Intune subscription
         displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
         href: ./intune-service/fundamentals/deployment-plan-setup.md
@@ -244,6 +241,12 @@ items:
       - name: Step 5 - Enroll devices
         displayName: deployment, mdm, android, ios, ipados, macos, windows
         href: ./intune-service/fundamentals/deployment-guide-enroll.md
+      - name: Protection and configuration levels
+        displayName: deployment, mdm, mam, android, ios, ipados, macos, windows
+        href: ./intune-service/fundamentals/protection-configuration-levels.md
+      - name: Zero Trust deployment approach
+        displayName: deployment, zero trust, security, compliance, conditional access
+        href: ./intune-service/fundamentals/deployment-plan-zero-trust.md
 
     - name: Platform guides
       items:
@@ -2325,7 +2328,7 @@ items:
       - name: Data Intune sends to Zebra
         href: ./intune-service/protect/data-intune-sends-to-zebra.md
       - name: Enable Windows diagnostic data
-        href: ./intune-service/protect/data-enable-windows-data.md
+        href: ./tenant-administration/windows-diagnostic-data.md
       - name: Information shared from Jamf Pro to Intune
         href: ./intune-service/protect/data-jamf-sends-to-intune.md
     - name: View and correct personal data

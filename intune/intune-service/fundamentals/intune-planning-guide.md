@@ -610,4 +610,6 @@ The community-based [Intune forum](https://social.technet.microsoft.com/Forums/h
 
 - [Migration guide: Set up or move to Microsoft Intune](deployment-guide-intune-setup.md)
 - [Get started with your Microsoft Intune deployment](get-started-with-intune.md)
+- [Protection and configuration levels](protection-configuration-levels.md)
+- [Zero Trust deployment approach](deployment-plan-zero-trust.md)
 - [Frontline worker device management in Microsoft Intune](../../solutions/frontline-worker/frontline-worker-overview.md)

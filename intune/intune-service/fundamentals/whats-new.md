@@ -311,24 +311,48 @@ Apple rebranded **Rapid Security Responses** to **Background Security Improvemen
 
 When you create policies for your managed apps, you can use [assignment filters](filters.md) to assign policies based on rules you create. In these rules, you can use different device and app properties, including the **Device Management Type** property on Android and iOS/iPadOS.
 
-For Android, the **Device Management Type** property for managed apps is adding the following options:
+> [!NOTE]
+> This feature is rolling out slowly and should be available for all customers by late March 2026.
 
-- Corporate-owned with work profile
-- Corporate-owned fully managed
-- Corporate-owned dedicated devices without Entra ID Shared mode
+For Android, the **Device Management Type** property for managed apps is:
 
-For iOS/iPadOS, the **Device Management Type** property for managed apps is adding the following options:
+- Adding the following options:
 
-- Automated Device Enrollment user-associated devices
-- Automated Device Enrollment userless devices
-- Account Driven User Enrollment
-- Device Enrollment with Company Portal and Web Enrollment
+  - Corporate-owned with work profile
+  - Corporate-owned fully managed
+  - Corporate-owned dedicated devices with Entra ID Shared mode
+  - Corporate-owned dedicated devices without Entra ID Shared mode
+  - Personally-owned work profile
+
+- To replace the following option:
+
+  - Android Enterprise
+
+For iOS/iPadOS, the **Device Management Type** property for managed apps is:
+
+- Adding the following options:
+
+  - Automated Device Enrollment user-associated devices
+  - Automated Device Enrollment userless devices
+  - Account Driven User Enrollment
+  - Device Enrollment with Company Portal and Web Enrollment
+
+- To replace the following option:
+
+  - Managed
+
+##### What you need to know
+
+- If you're using the legacy values in your filters, the values are automatically mapped to the new available values for that platform.
+- For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
+- If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
+
+#####
 
 To learn more about filters, see:
 
 - [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md)
-- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune
-](filters-device-properties.md)
+- [App and device properties, operators, and rule editing when creating assignment filters in Microsoft Intune](filters-device-properties.md)
 
 > [!div class="checklist"]
 > Applies to:
@@ -364,7 +388,7 @@ For more information, see [Mobile Threat Defense toggle options](../protect/mtd-
 
 #### Update firewall configurations for new Intune network endpoints<!-- 34445623 -->
 
-As part of Microsoft’s ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), Microsoft Intune began using Azure Front Door (AFD) IP addresses in addition to the existing Intune service IPs in December 2025.
+As part of Microsoft's ongoing [Secure Future Initiative (SFI)](https://www.microsoft.com/trust-center/security/secure-future-initiative), Microsoft Intune began using Azure Front Door (AFD) IP addresses in addition to the existing Intune service IPs in December 2025.
 
 Customers that use IP-based allowlist, Azure service tags, or have strict outbound filtering in their firewall, VPN, proxy, or other network infrastructure may block this new traffic, causing degraded or failed device connectivity. This can affect core Intune functions including device and app management.
 
