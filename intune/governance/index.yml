@@ -1,10 +1,10 @@
 ### YamlMime:Landing
 
-title: Privacy and compliance in Microsoft Intune
+title: Microsoft Intune privacy and compliance documentation
 summary: Microsoft Intune supports governance needs primarily through privacy and personal data protections, alongside regulatory compliance guidance. Use this area to understand how Intune handles personal data responsibly and helps organizations meet privacy and compliance obligations.
 
 metadata:
-  title: Microsoft Intune privacy and compliance documentation
+  title: Privacy and compliance
   description: Learn how Microsoft Intune supports governance through privacy and personal data protection to help organizations meet privacy and compliance requirements.
   author: paolomatarazzo
   ms.author: paoloma
