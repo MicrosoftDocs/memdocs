@@ -3,7 +3,7 @@ title: Use Multi Admin Approval in Intune
 description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/16/2025
+ms.date: 02/23/2026
 ms.topic: how-to
 ms.reviewer: davidra
 ms.collection:
@@ -22,7 +22,9 @@ When any account in the Tenant is used to make a change to a resource that's pro
 
 Access policies are supported for the following resources:
 
-- Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.  
+- Compliance policies - Applies to creating and managing [compliance policies](../protect/create-compliance-policy.md).  
+- Configuration policies - Applies to creating and managing policies via the [settings catalog](../configuration/settings-catalog.md).  
 - Device actions - Applies to [wipe](../remote-actions/device-wipe.md), [retire](../remote-actions/device-retire.md) and [delete](../remote-actions/device-delete.md) device actions.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
