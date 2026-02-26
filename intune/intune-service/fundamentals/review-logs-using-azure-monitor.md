@@ -3,7 +3,7 @@ title: Route logs to Azure Monitor using Microsoft Intune
 description: Use Diagnostics Settings to send audit logs and operational logs in Microsoft Intune to Azure Storage account, Event Hubs, or Log Analytics. Choose how long you want to keep the data, and see some estimated costs for different size tenants.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 01/22/2026
+ms.date: 02/26/2026
 ms.topic: how-to
 ms.reviewer: chnatar, daviales
 ms.collection:
@@ -228,11 +228,11 @@ Intune doesn't store any data sent through the pipeline. Intune routes data to t
 
 ## Known Issues
 
-Issues that may occur sending Intune log data.
+Issues that can occur when sending Intune log data.
 
 ### Duplicate data
 
-The export pipeline may duplicate up 100% of the data published in a 24-hour period. Systems consuming this export should be prepared to handle duplicated data.
+The export pipeline might duplicate up to 100% of the data published in a 24-hour period. Systems consuming this export should be prepared to handle duplicated data.
 
 ## Related content
 
