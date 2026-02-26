@@ -1,5 +1,5 @@
 items:
-  - name: Privacy and compliance
+  - name: Privacy and compliance documentation
     href: index.yml
   - name: Compliance and regulatory alignment
     href: ./compliance-and-regulatory-alignment.md
