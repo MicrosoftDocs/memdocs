@@ -2306,7 +2306,7 @@ items:
         href: ./intune-service/developer/data-warehouse-account-move.md
 
   - name: Privacy and compliance
-    href: ./governance/index.yml
+    href: /intune/governance
 
   - name: Microsoft Intune service description
     href: ./intune-service/fundamentals/microsoft-intune-service-description.md

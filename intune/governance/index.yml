@@ -6,8 +6,8 @@ summary: Microsoft Intune supports governance needs primarily through privacy an
 metadata:
   title: Microsoft Intune privacy and compliance documentation
   description: Microsoft Entra fundamentals, such as users, groups, licenses, company branding, subscriptions, tenants, and more.
-  author: paoloma
-  ms.author: paolomatarazzo
+  author: paolomatarazzo
+  ms.author: paoloma
   ms.date: 02/26/2026
   ms.subservice: fundamentals
   ms.topic: landing-page
