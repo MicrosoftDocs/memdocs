@@ -226,6 +226,14 @@ Yes. To access the logs from your custom application, you can use the [Event Hub
 
 Intune doesn't store any data sent through the pipeline. Intune routes data to the Azure Monitor pipeline, at the authority of the tenant. For more information, go to [Azure Monitor overview](/azure/azure-monitor/overview).
 
+## Known Issues
+
+The export pipeline may duplicate up 100% of the data published in a 24-hour period. Systems consuming this data should be prepared to handle duplicated data.
+
+### Duplicate data
+
+The Intune **Audit logs** and **Operational logs** are available for routing using this feature.
+
 ## Related content
 
 - [Archive activity logs to a storage account](/azure/active-directory/reports-monitoring/quickstart-azure-monitor-route-logs-to-storage-account)
