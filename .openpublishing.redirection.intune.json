@@ -1,7 +1,10 @@
 {
   "redirections": [
-
-
+    {
+      "source_path": "intune/intune-service/protect/data-enable-windows-data.md",
+      "redirect_url": "/intune/tenant-administration/windows-diagnostic-data",
+      "redirect_document_id": false
+    },
     {
       "source_path": "intune/intune-service/configuration/custom-settings-ios.md",
       "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
