@@ -5,7 +5,7 @@ summary: Microsoft Intune supports governance needs primarily through privacy an
 
 metadata:
   title: Microsoft Intune privacy and compliance documentation
-  description: Microsoft Entra fundamentals, such as users, groups, licenses, company branding, subscriptions, tenants, and more.
+  description: Learn how Microsoft Intune supports governance through privacy and personal data protection to help organizations meet privacy and compliance requirements.
   author: paolomatarazzo
   ms.author: paoloma
   ms.date: 02/26/2026
@@ -22,15 +22,15 @@ landingContent:
         links:
           - text: Data handling
             url: ../privacy/data-handling/data-collection.md
-          - text: Data sharing
+          - text: Data storage and processing
+            url: ../privacy/data-handling/data-storage-processing
+          - text: Data sharing with third parties
             url: ../privacy/data-sharing/index.md
-          - text: Manage personal data
-            url: ../privacy/personal-data/view-correct.md
 
   # Card
   - title: Compliance in Microsoft Intune
     linkLists:
-      - linkListType: get-started
+      - linkListType: overview
         links:
           - text: Compliance and regulatory alignment
             url: compliance-and-regulatory-alignment.md
