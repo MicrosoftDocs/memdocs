@@ -116,9 +116,9 @@ conceptualContent:
         - url: ./intune-service/fundamentals/supported-devices-browsers.md
           itemType: get-started
           text: Supported platforms and requirements
-        - url: ./privacy/index.md
+        - url: ./governance/index.yml
           itemType: overview
-          text: Privacy and personal data
+          text: Compliance and privacy
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.

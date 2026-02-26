@@ -2305,11 +2305,8 @@ items:
       - name: Move your Intune Data Warehouse account data
         href: ./intune-service/developer/data-warehouse-account-move.md
 
-  - name: Regulatory compliance
-    href: ./governance/toc.yml
-
-  - name: Privacy and personal data
-    href: ./privacy/toc.yml
+  - name: Privacy and compliance
+    href: ./governance/index.yml
 
   - name: Microsoft Intune service description
     href: ./intune-service/fundamentals/microsoft-intune-service-description.md
