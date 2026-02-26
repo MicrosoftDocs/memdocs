@@ -67,7 +67,7 @@ In your baseline, at a minimum, Microsoft recommends the following security poli
 
 This section lists the Intune and Microsoft services you can use to create these security policies.
 
-For a more granular list of Windows settings and their recommended values, go to [Windows security baselines](../protect/security-baselines.md).
+For a more granular list of Windows settings and their recommended values, see [Windows security baselines](../protect/security-baselines.md).
 
 ### Antivirus and scanning
 
@@ -96,7 +96,7 @@ Your policy options:
 | --- | --- |
 | Android Enterprise | - [Mobile threat defense partner](../protect/mobile-threat-defense.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | iOS/iPadOS | - [Mobile threat defense partner](../protect/mobile-threat-defense.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
-| macOS | Not available |
+| macOS | [Intune endpoint detection and response profile](../protect/endpoint-security-edr-policy.md) (Microsoft Defender for Endpoint) |
 | Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune endpoint detection and response profile](../protect/endpoint-security-edr-policy.md) (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner ?? |
 
 ### Firewall
@@ -127,9 +127,9 @@ Your policy options:
 | Platform | Policy type |
 | --- | --- |
 | Android Enterprise | [Intune settings catalog](../configuration/settings-catalog-android.md) for Corporate owned, Fully Managed, and Dedicated devices to manage the: <br/>- **Device password**<br/>- **Work profile password**<br/><br/>[Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) for Corporate owned and Personally owned devices to manage the: <br/>- **Device password**<br/>- **Work profile password** <br/>- **Password**|
-| Android Open-Source Project (AOSP) | - [Intune settings catalog](../configuration/settings-catalog-android.md) to manage the **Device password**<br/>- [Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) to manage the **Device password** |
-| iOS/iPadOS | [Intune device restrictions template > **Password**](../configuration/device-restrictions-apple.md) |
-| macOS | [Intune device restrictions template > **Password**](../configuration/device-restrictions-apple.md) |
+| Android Open-Source Project (AOSP) | - [Intune settings catalog > **Device password**](../configuration/settings-catalog-android.md) <br/>- [Intune device restrictions template > **Device password**](../configuration/device-restrictions-android-for-work.md) |
+| iOS/iPadOS | - [Intune settings catalog > Declarative Device Management (DDM) > **Passcode**](../configuration/settings-catalog-apple.md) (preferred) <br/> - [Intune settings catalog > Security > **Passcode**](../configuration/settings-catalog-apple.md) <br/>- [Intune device restrictions template > **Password**](../configuration/device-restrictions-apple.md) |
+| macOS | - [Intune settings catalog > Declarative Device Management (DDM) > **Passcode**](../configuration/settings-catalog-apple.md) (preferred) <br/> - [Intune settings catalog > Security > **Passcode**](../configuration/settings-catalog-apple.md) <br/>- [Intune device restrictions template > **Password**](../configuration/device-restrictions-apple.md) |
 | Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended) </br>- [Intune device restrictions template > **Password**](../configuration/device-restrictions-windows-10.md) </br>- [Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md) </br>- [Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md) |
 
 ### Software updates
@@ -142,8 +142,8 @@ Your policy options:
 
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise organization owned devices | - [Intune device restrictions template > Corporate owned > General > System update](../configuration/device-restrictions-android-for-work.md) |
-| Android Enterprise personally owned devices | Not available <br/><br/>Can use compliance policies to set a minimum patch level, min/max OS version, and more. |
+| Android Enterprise organization owned devices | [Intune device restrictions template > Corporate owned > General > System update](../configuration/device-restrictions-android-for-work.md) |
+| Android Enterprise personally owned devices | Not available <br/><br/>Can use [compliance policies](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) to set a minimum patch level, min/max OS version, and more. |
 | iOS/iPadOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
 | macOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
 | Windows client | - [Intune feature updates policy](../../device-updates/windows/feature-updates.md) </br>- [Intune quality updates policy](../../device-updates/windows/quality-updates.md) |
@@ -190,11 +190,11 @@ If you have existing devices, then deploy the email app at any time, and deploy 
 
 To get started:
 
-1. Deploy an email app to your devices. For some guidance, go to [Add email settings to devices using Intune](../configuration/email-settings-configure.md).
+1. Deploy an email app to your devices. For some guidance, see [Add email settings to devices using Intune](../configuration/email-settings-configure.md).
 
 2. [Create an email device configuration profile in Intune](../configuration/email-settings-configure.md). Depending on the email app your organization uses, the email device configuration profile might not be needed.
 
-    For some guidance, go to [Add email settings to devices using Intune](../configuration/email-settings-configure.md).
+    For some guidance, see [Add email settings to devices using Intune](../configuration/email-settings-configure.md).
 
 3. In the email device configuration profile, configure the settings for your platform:
 
@@ -241,8 +241,8 @@ To get started:
 
 1. Deploy a VPN app to your devices.
 
-    - For a list of supported VPN apps, go to [Supported VPN connection apps in Intune](../configuration/vpn-settings-configure.md#vpn-connection-types).
-    - For the steps to add apps to Intune, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
+    - For a list of supported VPN apps, see [Supported VPN connection apps in Intune](../configuration/vpn-settings-configure.md#vpn-connection-types).
+    - For the steps to add apps to Intune, see [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 2. [Create a VPN configuration profile in Intune](../configuration/vpn-settings-configure.md).
 3. In the VPN device configuration profile, configure the settings for your platform:
@@ -300,29 +300,31 @@ Microsoft recommends the following level 2 security policies:
 
   # [Android](#tab/android-disk)
 
-  On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings, which is enabled and allowed by default. In Intune, you can:
+  On Android devices, disk encryption and Samsung Knox might be built into the operating system. Disk encryption might be automatically enabled *when* you configure the lock screen settings, which is enabled and allowed by default.
+
+  In Intune, you can:
 
   - Create a settings catalog policy that disables the lock screen (not recommended). When the lock screen is disabled, the device isn't encrypted.
   - Create a device restrictions template profile that disables individual features when the lock screen is on.
 
   For a list of the password and lock screen settings you can configure, see:
 
-  - [Android settings catalog settings](../configuration/settings-catalog-android.md) for Fully Managed and Dedicated devices > Review the **Device password** and **Work profile password** settings.
-  - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md) for Corporate-owned and Personally owned devices > Review the **Device password** and **Work profile password** settings.
+  - [Android settings catalog settings](../configuration/settings-catalog-android.md) for Fully Managed and Dedicated devices > **Device password** and **Work profile password** settings
+  - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md) for Corporate-owned and Personally owned devices > **Device password** and **Work profile password** settings
 
   # [iOS/iPadOS](#tab/ios-disk)
 
   On iOS/iPadOS devices, disk encryption and Secure Enclave are built into the operating system and automatically enabled. There aren't any Intune settings to configure these specific features.
 
-  For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
+  For more specific information, see [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
 
-  There are Intune policy settings that focus on [password settings and encrypting backups](../configuration/device-restrictions-apple.md).
+  There are Intune policy settings in the settings catalog and the [device restrictions template](../configuration/device-restrictions-apple.md) that focus on password settings and encrypting backups, like the **Force Encrypted Backup** setting.
 
   # [macOS](#tab/macos-disk)
 
-  On macOS devices, you can [configure and use FileVault](../protect/encrypt-devices-filevault.md) policies in Intune for disk encryption.
+  On macOS devices, you can use a settings catalog policy (preferred) or an endpoint security policy (deprecated) to [configure and use FileVault](../protect/encrypt-devices-filevault.md) for disk encryption.
 
-  Secure Enclave is built into the operating and automatically enabled. For more specific information, go to [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
+  Secure Enclave is built into the operating and automatically enabled. For more specific information, see [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
 
   # [Windows](#tab/windows-disk)
 
@@ -332,7 +334,7 @@ Microsoft recommends the following level 2 security policies:
 
 - **Expire passwords and regulate reusing old passwords**. In Level 1, you created a strong PIN or password policy. If you haven't already, be sure you configure your PINs & passwords to expire and set some password-reuse rules.
 
-  You can use Intune to [create a device restrictions template](../configuration/device-restrictions-configure.md) or a [settings catalog](../configuration/settings-catalog.md) policy that configures these settings. For more information on the password settings you can configure, go to the following articles:
+  You can use Intune to create a [settings catalog](../configuration/settings-catalog.md) policy or a [device restrictions template](../configuration/device-restrictions-configure.md) that configures these settings. For more information on the password settings you can configure, see the following articles:
 
   # [Android](#tab/android-password)
 
@@ -386,7 +388,7 @@ Microsoft recommends the following level 2 security policies:
 
 - If you use **on-premises GPOs** and want to know if these same settings are available in Intune, then use [Group Policy analytics](../configuration/group-policy-analytics.md). This feature analyzes your GPOs and depending on the analysis, can import them into an Intune settings catalog policy.
 
-  For more information, go to [Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md).
+  For more information, see [Analyze your on-premises GPOs and import them in Intune](../configuration/group-policy-analytics.md).
 
 ## Level 3 - High protection and configuration
 
@@ -396,23 +398,44 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   - **Use certificates to authenticate** email, VPN, and Wi-Fi connections. Certificates are deployed to users and devices, and are then used by users to get access to resources in your organization through the email, VPN, and Wi-Fi connections.
 
-    To learn more about using certificates in Intune, go to:
+    To learn more about using certificates in Intune, see:
 
     - [Use PKCS or SCEP certificates for authentication](../protect/certificates-configure.md)
     - [Use derived credentials](../protect/derived-credentials.md)
 
   - **Configure single sign-on** (SSO) for a more seamless experience when users open business apps, like Microsoft 365 apps. Users sign-in once and then are automatically signed-in to all the apps that support your SSO configuration.
 
-    To learn about using SSO in Intune and Microsoft Entra ID, go to:
+    To learn about using SSO in Intune and Microsoft Entra ID, see:
 
-    - [**Android**: Enable cross-app SSO on Android using MSAL in Microsoft Entra ID](/entra/msal/android/single-sign-on)
-    - [**iOS/iPadOS**: Use the Enterprise SSO plug-in in Intune and other MDMs](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
-    - [**macOS**: Configure Platform SSO in an Intune settings catalog policy](../configuration/platform-sso-macos.md)
-    - [**Windows**: Configure SSO with Microsoft Entra ID](/azure/active-directory/manage-apps/what-is-single-sign-on)
+    # [Android](#tab/android-sso)
+
+    Uses the Microsoft Authentication Library (MSAL), which is a feature of Microsoft Entra ID. It help you enable SSO across your applications and acts as a broker, so you can extend SSO across the entire device.
+
+    - [Enable cross-app SSO on Android using MSAL in Microsoft Entra ID](/entra/msal/android/single-sign-on)
+
+    # [iOS/iPadOS](#tab/ios-sso)
+
+    Uses the Microsoft Enterprise SSO plug-in, which is a feature in Microsoft Entra ID. It provides single sign-on (SSO) features for Apple devices and uses the Apple single sign-on app extension framework.
+
+    - [Use the Enterprise SSO plug-in in Intune and other MDMs](../configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
+
+    # [macOS](#tab/macos-sso)
+
+    Uses the Microsoft Enterprise SSO plug-in, which is a feature in Microsoft Entra ID. It provides single sign-on (SSO) features for macOS devices using the built-in SSO app extension and Platform SSO features that optimize your SSO configuration.
+
+    - [Configure Platform SSO in an Intune settings catalog policy](../configuration/platform-sso-macos.md)
+
+    # [Windows](#tab/windows-sso)
+
+    Microsoft Entra ID Single sign-on is an authentication method that allows users to sign in using one set of credentials to multiple independent software systems. Many apps already exist in Microsoft Entra ID that you can use with SSO.
+
+    - [Configure SSO with Microsoft Entra ID](/entra/identity/enterprise-apps/what-is-single-sign-on)
+
+---
 
   - **Use multifactor authentication** (MFA). When you move to password-less, MFA adds an extra layer of security, and can help protect your organization from phishing attacks. You can use MFA with authenticator apps, like Microsoft Authenticator, or with a phone call or text message. You can also use MFA when users enroll their devices in Intune.
 
-    Multifactor authentication is a feature of Microsoft Entra ID and can be used with Microsoft Entra accounts. For more information, go to:
+    Multifactor authentication is a feature of Microsoft Entra ID and can be used with Microsoft Entra accounts. For more information, see:
 
     - [Microsoft Entra ID Protection overview](/azure/active-directory/identity-protection/overview-identity-protection)
     - [Microsoft Entra multifactor authentication](/azure/active-directory/authentication/concept-mfa-howitworks)
@@ -420,15 +443,15 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   - **Set up Microsoft Tunnel** for your enrolled Android and iOS/iPadOS devices. Microsoft Tunnel uses Linux to allow these devices access to on-premises resources using modern authentication and Conditional Access.
 
-    Microsoft Tunnel uses Intune, Microsoft Entra ID, and Active Directory Federation Services (AD FS). For more information, go to [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
+    Microsoft Tunnel uses Intune, Microsoft Entra ID, and Active Directory Federation Services (AD FS). For more information, see [Microsoft Tunnel for Microsoft Intune](../protect/microsoft-tunnel-overview.md).
 
   - **Use Microsoft Tunnel for Mobile Application Management** (Tunnel for MAM) to extend tunnel capabilities to Android and iOS/iPad devices that are *not enrolled* with Intune. [Tunnel for MAM](../protect/microsoft-tunnel-mam.md) is available as an Intune add-on that requires an extra license.
 
-    For more information, go to [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+    For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 - **Use Windows Local Administrator Password Solution (LAPS) policy** to manage and back up the built-in local administrator account on your Windows devices. Because the local admin account can't be deleted and has full permissions to the device, management of the built-in Windows administrator account is an important step in securing your organization. Intune policy for Windows LAPS uses the capabilities that are available for Windows devices that run version 21h2 or later.
 
-  For more information, go to [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
+  For more information, see [Intune support for Windows LAPS](../protect/windows-laps-overview.md).
 
 - Use **Microsoft Intune Endpoint Privilege Management** (EPM) to reduce the attack surface of your Windows devices. EPM empowers you to have users that run as standard users (without administrator rights) yet remain productive by determining when those users can run apps in an elevated context.
 
@@ -438,7 +461,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
   - Support requests by users to elevate a managed process.
   - Allow for automatic elevations of files that just need to run without any user interruption.
 
-  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an extra license. For more information, go to [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+  [Endpoint Privilege Management](../protect/epm-overview.md) is available as an Intune add-on that requires an extra license. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
 
 - **Use Android Common Criteria mode** on Android devices that are used by highly sensitive organizations, like government establishments.
 
@@ -447,14 +470,18 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
   - [Android settings catalog settings](../configuration/settings-catalog-android.md)
   - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md)
 
-- Create policies that **apply to the firmware layer**. These policies help you manage firmware updates, which can include software and security patches, feature updates, and other changes to the device's firmware. They can help prevent malware from communicating with the OS processes.
+- Create policies that **apply to the firmware layer**:
 
   # [Android](#tab/android-firmware)
+
+  These policies help you manage firmware updates, which can include software and security patches, feature updates, and other changes to the device's firmware.
 
   - [Firmware Over-the-Air (FOTA) updates](../../device-updates/android/fota-updates.md)
   - [Zebra LifeGuard Over-the-Air updates](../../device-updates/android/zebra-lifeguard-ota-integration.md)
 
   # [Windows](#tab/windows-firmware)
+
+  These policies can help prevent malware from communicating with the OS processes. You can control security features, the built-in hardware, and the boot options in the UEFI layer.
 
   - [Use Device Firmware Configuration Interface (DFCI) profiles on Windows devices](../configuration/device-firmware-configuration-interface-windows.md)
 
@@ -466,7 +493,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   - **Android Enterprise**:
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
-    - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md) > Device experience
+    - [Android device restrictions template settings > Device experience](../configuration/device-restrictions-android-for-work.md)
 
   - **Android device administrator**
     - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
@@ -476,9 +503,24 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   # [iOS/iPadOS](#tab/ios-kiosk)
 
-  - **iOS/iPadOS**
-    - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-apple.md)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-apple.md)
+  Autonomous single app mode (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
+
+  - [Settings catalog](../configuration/settings-catalog.md) > Restrictions > Autonomous single app mode (ASAM)
+  - [Device restrictions template > Autonomous single app mode (ASAM)](../configuration/device-restrictions-apple.md)
+
+  Kiosk mode locks the device into running one app. You can choose any app and admins can exit out of kiosk mode. Commonly used for kiosks and signage.
+
+  - [Device restrictions template > Kiosk](../configuration/device-restrictions-apple.md)
+
+  Shared iPads are designed for use by multiple people, most commonly in education environments like classrooms or labs. Each user signs in to the same physical iPad and gets their own data and settings.
+
+  - [Device restrictions template > Shared iPad](../configuration/device-restrictions-apple.md)
+
+  # [macOS](#tab/macos-kiosk)
+
+  Autonomous single app mode (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
+
+  - [Settings catalog](../configuration/settings-catalog.md) > App management > Autonomous single app mode
 
   # [Windows](#tab/windows-kiosk)
 
@@ -497,11 +539,15 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   # [macOS](#tab/macos-shell)
 
-  [**macOS**: Use shell scripts](../apps/macos-shell-scripts.md)
+  Shell scripts can be used to manage settings and features that aren't available in Intune natively. You can add a script, set the script frequency, and more.
+
+  - [Use shell scripts](../apps/macos-shell-scripts.md)
 
   # [Windows](#tab/windows-shell)
 
-  [Use Windows PowerShell scripts](../apps/powershell-scripts.md)
+  Windows PowerShell scripts can be used when you need customization, automation, or one‑time remediation on Windows devices.
+
+  - [Use Windows PowerShell scripts](../apps/powershell-scripts.md)
 
 ---
 
