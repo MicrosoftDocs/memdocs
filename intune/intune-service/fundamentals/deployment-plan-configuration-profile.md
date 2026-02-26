@@ -127,10 +127,10 @@ Your policy options:
 | Platform | Policy type |
 | --- | --- |
 | Android Enterprise | [Intune settings catalog](../configuration/settings-catalog-android.md) for Corporate owned, Fully Managed, and Dedicated devices to manage the: <br/>- **Device password**<br/>- **Work profile password**<br/><br/>[Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) for Corporate owned and Personally owned devices to manage the: <br/>- **Device password**<br/>- **Work profile password** <br/>- **Password**|
-| Android Open-Source Project (AOSP) | - [Intune settings catalog > **Device password**](../configuration/settings-catalog-android.md) <br/>- [Intune device restrictions template > **Device password**](../configuration/device-restrictions-android-for-work.md) |
-| iOS/iPadOS | - [Intune settings catalog > Declarative Device Management (DDM) > **Passcode**](../configuration/settings-catalog-apple.md) (preferred) <br/> - [Intune settings catalog > Security > **Passcode**](../configuration/settings-catalog-apple.md) <br/>- [Intune device restrictions template > **Password**](../configuration/device-restrictions-apple.md) |
-| macOS | - [Intune settings catalog > Declarative Device Management (DDM) > **Passcode**](../configuration/settings-catalog-apple.md) (preferred) <br/> - [Intune settings catalog > Security > **Passcode**](../configuration/settings-catalog-apple.md) <br/>- [Intune device restrictions template > **Password**](../configuration/device-restrictions-apple.md) |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended) </br>- [Intune device restrictions template > **Password**](../configuration/device-restrictions-windows-10.md) </br>- [Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md) </br>- [Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md) |
+| Android Open-Source Project (AOSP) | - [Intune settings catalog](../configuration/settings-catalog-android.md) > **Device password** <br/>- [Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) > **Device password** |
+| iOS/iPadOS | - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../configuration/device-restrictions-apple.md) > **Password** |
+| macOS | - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Declarative Device Management (DDM) > **Passcode** (recommended) <br/> - [Intune settings catalog](../configuration/apple-settings-catalog-configurations.md) > Security > **Passcode** <br/>- [Intune device restrictions template](../configuration/device-restrictions-apple.md) > **Password** |
+| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended) </br>- [Intune device restrictions template](../configuration/device-restrictions-windows-10.md) > **Password** </br>- [Manage Windows Hello for Business when devices enroll](../protect/windows-hello.md) </br>- [Manage Windows Hello for Business after devices enroll](../protect/identity-protection-configure.md) |
 
 ### Software updates
 
@@ -142,7 +142,7 @@ Your policy options:
 
 | Platform | Policy type |
 | --- | --- |
-| Android Enterprise organization owned devices | [Intune device restrictions template > Corporate owned > General > System update](../configuration/device-restrictions-android-for-work.md) |
+| Android Enterprise organization owned devices | [Intune device restrictions template](../configuration/device-restrictions-android-for-work.md) > Corporate owned > General > System update |
 | Android Enterprise personally owned devices | Not available <br/><br/>Can use [compliance policies](../protect/compliance-policy-create-android-for-work.md#personally-owned-work-profile) to set a minimum patch level, min/max OS version, and more. |
 | iOS/iPadOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
 | macOS | [Intune settings catalog managed software updates](../../device-updates/apple/index.md) |
@@ -322,7 +322,7 @@ Microsoft recommends the following level 2 security policies:
 
   # [macOS](#tab/macos-disk)
 
-  On macOS devices, you can use a settings catalog policy (preferred) or an endpoint security policy (deprecated) to [configure and use FileVault](../protect/encrypt-devices-filevault.md) for disk encryption.
+  On macOS devices, you can use a settings catalog policy (recommended) or an endpoint security policy (deprecated) to [configure and use FileVault](../protect/encrypt-devices-filevault.md) for disk encryption.
 
   Secure Enclave is built into the operating and automatically enabled. For more specific information, see [Introduction to Apple platform security](https://support.apple.com/guide/security/intro-to-apple-platform-security-seccd5016d31/web) and [Secure Enclave](https://support.apple.com/guide/security/secure-enclave-sec59b0b31ff/web) (opens Apple's web site).
 
@@ -347,21 +347,21 @@ Microsoft recommends the following level 2 security policies:
 
   On iOS/iPadOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions profile > Password settings](../configuration/device-restrictions-apple.md)
+  - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
 
   # [macOS](#tab/macos-password)
 
   On macOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions profile > Password settings](../configuration/device-restrictions-apple.md)
+  - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
 
   # [Windows](#tab/windows-password)
 
   On Windows devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions profile > Password settings](../configuration/device-restrictions-windows-10.md#password)
+  - [Device restrictions template > Password settings](../configuration/device-restrictions-windows-10.md#password)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Device lock`
 
 ---
@@ -493,7 +493,7 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   - **Android Enterprise**:
     - [Use and manage Android Enterprise devices with OEMConfig](../configuration/android-oem-configuration-overview.md)
-    - [Android device restrictions template settings > Device experience](../configuration/device-restrictions-android-for-work.md)
+    - [Android device restrictions template settings](../configuration/device-restrictions-android-for-work.md) > Device experience
 
   - **Android device administrator**
     - [Use and manage Zebra devices with Zebra Mobility Extensions](../configuration/android-zebra-mx-overview.md)
@@ -503,22 +503,22 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
   # [iOS/iPadOS](#tab/ios-kiosk)
 
-  Autonomous single app mode (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
+  **Autonomous single app mode** (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
 
   - [Settings catalog](../configuration/settings-catalog.md) > Restrictions > Autonomous single app mode (ASAM)
-  - [Device restrictions template > Autonomous single app mode (ASAM)](../configuration/device-restrictions-apple.md)
+  - [Device restrictions template](../configuration/device-restrictions-apple.md) > Autonomous single app mode (ASAM)
 
-  Kiosk mode locks the device into running one app. You can choose any app and admins can exit out of kiosk mode. Commonly used for kiosks and signage.
+  **Kiosk mode** locks the device into running one app. You can choose any app and admins can exit out of kiosk mode. Commonly used for kiosks and signage.
 
-  - [Device restrictions template > Kiosk](../configuration/device-restrictions-apple.md)
+  - [Device restrictions template](../configuration/device-restrictions-apple.md) > Kiosk
 
-  Shared iPads are designed for use by multiple people, most commonly in education environments like classrooms or labs. Each user signs in to the same physical iPad and gets their own data and settings.
+  **Shared iPads** are designed for use by multiple people, most commonly in education environments like classrooms or labs. Each user signs in to the same physical iPad and gets their own data and settings.
 
-  - [Device restrictions template > Shared iPad](../configuration/device-restrictions-apple.md)
+  - [Device restrictions template](../configuration/device-restrictions-apple.md) > Shared iPad
 
   # [macOS](#tab/macos-kiosk)
 
-  Autonomous single app mode (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
+  **Autonomous single app mode** (ASAM) locks the device into running one specific app only. The app must support ASAM and only the app can exit out of ASAM. It's designed for dedicated devices where users can't exit the app. Commonly used for exams, check‑in stations, and healthcare or industrial terminals.
 
   - [Settings catalog](../configuration/settings-catalog.md) > App management > Autonomous single app mode
 
