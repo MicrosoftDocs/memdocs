@@ -3,7 +3,7 @@ title: Assignment filter properties and operators reference
 description: Reference guide for device and app properties, operators, and rule syntax when creating assignment filters in Microsoft Intune. Includes examples and supported values.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 01/26/2026
+ms.date: 02/24/2026
 ms.topic: reference
 ms.reviewer: mattcall
 ms.collection:
@@ -92,9 +92,10 @@ You can use the following device properties in your managed device filter rules:
 
   - `(app.deviceManagementType -eq "Corporate-owned dedicated devices without Entra ID Shared mode")`
 
-  This property applies:
+  This property applies to:
 
-  - Android
+  - Android Enterprise
+  - Android (AOSP)
 
 - **`deviceName` (Device Name)**: Create a filter rule based on the Intune device name property. Enter a string value for the device's full name (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -333,19 +334,20 @@ You can use the following app properties in your managed app filter rules:
   | Value | Supported platforms |
   |-----------|------------------------|
   | `Unmanaged` | Android <br/>iOS/iPadOS |
-  | `Managed` | iOS/iPadOS |
   | `Android device administrator` | Android |
-  | `Android Enterprise` | Android |
   | `AOSP userless devices` | Android |
   | `AOSP user-associated devices` | Android |
-  | `Corporate-owned dedicated devices with Azure AD Shared mode` | Android |
+  | `Corporate-owned dedicated devices with Entra ID Shared mode` | Android |
   | `Corporate-owned dedicated devices without Entra ID Shared mode` | Android |
   | `Corporate-owned with work profile` | Android |
   | `Corporate-owned fully managed` | Android |
+  | `Personally-owned work profile` | Android |
+  | `Android Enterprise` (being replaced) | Android |
   | `Automated Device Enrollment user-associated devices` | iOS/iPadOS |
   | `Automated Device Enrollment userless devices` | iOS/iPadOS |
   | `Account Driven User Enrollment` | iOS/iPadOS |
   | `Device Enrollment with Company Portal and Web Enrollment` | iOS/iPadOS |
+  | `Managed` (being replaced) | iOS/iPadOS |
 
   Example:
 
@@ -353,10 +355,23 @@ You can use the following app properties in your managed app filter rules:
   - `(app.deviceManagementType -eq "Corporate-owned dedicated devices without Entra ID Shared mode")`
   - `(app.deviceManagementType -ne "Android device administrator")`
 
-  This property applies:
+  This property applies to:
 
   - Android
   - iOS/iPadOS
+
+  **What you need to know**:
+
+  - This feature is rolling out slowly and should be available for all customers by late March 2026.
+  - The `Managed` for iOS/iPadOS and the `Android Enterprise` values are being replaced and will be removed in a future update (no ETA). If you have existing assignment filters that use these values, they're automatically mapped to the other values for that platform:
+
+    | Legacy value | New mapped value |
+    | ---- | ---- |
+    | Android Enterprise | - Corporate-owned dedicated devices with Entra ID Shared mode<br/>- Corporate-owned dedicated devices without Entra ID Shared mode<br/>- Corporate-owned with work profile<br/>- Corporate-owned fully managed<br/>- Personally-owned work profile |
+    | Managed | - Automated Device Enrollment user-associated devices<br/>- Automated Device Enrollment userless devices<br/>- Account Driven User Enrollment<br/>- Device Enrollment with Company Portal and Web Enrollment |
+
+  - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
+  - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
 
 - **`deviceManufacturer` (Manufacturer)**: Create a filter rule based on the client reported device manufacturer. Enter the full string value (using `-eq`, `-ne`, `-in`, `-notIn` operators), or partial value (using `-startswith`, `-contains`, `-notcontains` operators).
 
@@ -365,7 +380,7 @@ You can use the following app properties in your managed app filter rules:
   - `(app.deviceManufacturer -eq "Microsoft")`
   - `(app.deviceManufacturer -startsWith "Micro")`
 
-  This property applies:
+  This property applies to:
 
   - Android
   - iOS/iPadOS

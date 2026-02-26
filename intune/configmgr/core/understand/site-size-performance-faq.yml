@@ -13,7 +13,7 @@ summary: |
   
 
 sections:
-  - name: Machine and disk configuration FAQs and examples
+  - name: Machine and disk configuration
     questions:
       - question: |
           How should I format the disks on my site server and SQL Server?
@@ -95,9 +95,9 @@ sections:
 
           **Example: Azure-based site server** 
           
-          [Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL Server with **50,000** clients are eight cores, 32 GB, and 1200 IOPS for site server inboxes, and 2800 IOPS for SQL Server files.
+          [Sizing guidelines](../plan-design/configs/site-size-performance-guidelines.md#general-sizing-guidelines) for a colocated site server and SQL Server with **50,000** clients are 8 cores, 32 GB, and 1200 IOPS for site server inboxes, and 2800 IOPS for SQL Server files.
           
-          Your resulting Azure machine might be a DS13v2 (eight cores, 56 GB) with the following disk configuration:
+          Your resulting Azure machine might be a DS13v2 (8 cores, 56 GB) with the following disk configuration:
           
           | Drives | Format | Contains | Minimum IOPS needed| Approx. IOPS supplied<sup>1</sup>  |
           |------------------|---------------|--------------------|----------------------|------------------|
@@ -126,7 +126,7 @@ sections:
           2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
           3. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
-          If you need more performance in future, you can upsize your VM to a DS14v2, which will double CPU and memory. The additional disk bandwidth allowed by that VM size will also instantly boost the available disk IOPS on your previously configured disks.
+          If you need more performance in future, you can upsize your VM to a DS14v2, which doubles CPU and memory. The additional disk bandwidth allowed by that VM size also instantly boosts the available disk IOPS on your previously configured disks.
           
           **DS14v2**
           
@@ -140,7 +140,7 @@ sections:
           2. This value is from [Example disk configurations](../plan-design/configs/site-size-performance-guidelines.md#example-disk-configurations). VM size limits performance.
           3. [Azure guidance](/azure/azure-sql/virtual-machines/windows/performance-guidelines-best-practices-checklist#storage) allows for placing the TempDB on the local, SSD-based *D:* drive, given it won't exceed available space and allows for additional disk I/O distribution.
           
-  - name: Other common SQL Server-related performance questions
+  - name: SQL Server performance
     questions:
       - question: |
           Is it better to run with SQL Server colocated with the site server, or run it on a remote server?
@@ -191,9 +191,9 @@ sections:
       - question: |
           What version of SQL Server should I run?
         answer: |
-          For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL Server meet required performance criteria. However, SQL Server 2016 or newer tends to outperform SQL Server 2014 in some aspects of the Configuration Manager workload. Also, running SQL Server 2014 at SQL Server 2012 compatibility level (110) improves performance in general. At installation time, Configuration Manager databases running on SQL Server 2014 are set to compatibility level 110. SQL Server 2016 or newer is set to that SQL Server version's default compatibility level, such as 130 for SQL Server 2016. Upgrading SQL Server in place doesn't update compatibility levels until you install the next major Configuration Manager current branch version.
+          For supported versions of SQL, see [Support for SQL Server versions](../plan-design/configs/support-for-sql-server-versions.md). From a performance standpoint, all supported versions of SQL Server meet required performance criteria. Upgrading SQL Server in place doesn't update compatibility levels.
           
-          If you see unusual timeouts or slowness on certain SQL queries on SQL Server 2016 or later, such as when using RBAC in the Admin Console, try changing the SQL Server compatibility level on the Configuration Manager database to 110. Running at SQL Server compatibility level 110 on SQL Server 2014 and newer versions of SQL Server is fully supported. For more information, see [SQL query times out or console slow on certain Configuration Manager database queries](https://support.microsoft.com/help/3196320/sql-query-times-out-or-console-slow-on-certain-configuration-manager-d).
+          If you see unusual timeouts or slowness on certain SQL queries on SQL Server 2016 or later, such as when using RBAC in the Admin Console, try changing the SQL Server compatibility level on the Configuration Manager database to 110. Running at SQL Server compatibility level 110 on SQL Server 2014 and newer versions of SQL Server is fully supported. For more information, see [SQL query times out or console slow on certain Configuration Manager database queries](/troubleshoot/mem/configmgr/console-management/sql-query-times-out-or-console-slow-performance).
           
           As of January 2018, you should *avoid* the following SQL Server versions, because of various known performance-related or other potential issues:
           
@@ -202,11 +202,15 @@ sections:
           - SQL Server 2016 RTM to CU3, SP1 CU3 to CU5
           
       - question: |
-          Should I implement any additional SQL Server indexing tasks?
-        answer: |
-          Yes, update indexes as often as once a week and statistics as often as once a day to improve SQL Server performance. Third-party scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks.
+          Should I implement any additional SQL Server maintenance tasks?
+        answer: |          
+          The built-in ["Rebuild Indexes" maintenance task](/intune/configmgr/core/servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics aren't updated on most tables. This can lead to suboptimal query plans and poor performance.
           
-          In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one.
+          You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
+
+          In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one. 
+          
+          Non-Microsoft scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks. For example, there's a whitepaper summarizing Microsoft CSAs' experience: [SQL Recommendations for MECM](https://github.com/stephaneserero/Sql-recommendations-for-MECM).
           
       - question: |
           When should I use full SQL Server instead of SQL Server Express on my secondary sites?
@@ -220,39 +224,41 @@ sections:
         answer: |
           Leaving your setting at 0 (use all available processors) is optimal for overall processing performance in most circumstances.
           
-          Many Configuration Manager administrators follow the guidance at [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](https://support.microsoft.com/help/2806535/recommendations-and-guidelines-for-the-max-degree-of-parallelism-confi). On most modern large hardware, this guidance leads to a suggested maximum setting of eight. However, if you run many smaller queries compared to your number of processors, it may help to set it to a higher number. Limiting yourself to eight isn't necessarily the best setting on larger sites when more cores are available. 
+          Many Configuration Manager administrators follow the guidance at [Recommendations and guidelines for the "max degree of parallelism" configuration option in SQL Server](/sql/database-engine/configure-windows/configure-the-max-degree-of-parallelism-server-configuration-option). On most modern large hardware, this guidance leads to a suggested maximum setting of eight. However, if you run many smaller queries compared to your number of processors, it may help to set it to a higher number. Limiting yourself to eight isn't necessarily the best setting on larger sites when more cores are available. 
           
           On SQL Servers with greater than eight cores, start with a setting of 0, and only make changes if you experience performance issues or excessive locking. If you need to change MaxDOP because you are encountering performance issues at 0, start with a new value at least greater than or equal to the minimum recommended number of cores for that site's SQL Server sizing. Going lower than this value nearly always has negative performance implications. For example, a remote SQL Server for a 100,000 client site needs at least 12 cores. If your SQL Server has 16 cores, start testing your MaxDOP setting with a value of 12.
           
-  - name: Other common performance-related questions
+  - name: Anti-malware configuration
     questions:
       - question: |
           Which folders on the site server (or other roles) should I exclude for antivirus software?
         answer: |
           Take care when disabling antivirus protection on any system. In high volume and secure environments, we recommend disabling *active monitoring* for optimum performance.
           
-          For more information about recommended antivirus exclusions, see [Recommended antivirus exclusions for Configuration Manager 2012 and Current Branch Site Servers, Site Systems, and Clients](https://support.microsoft.com/help/327453/recommended-antivirus-exclusions-for-configuration-manager-2012-and-cu).
-          
+          For more information about recommended antivirus exclusions, see [Recommended antivirus exclusions for Configuration Manager site servers, site systems, and clients](/troubleshoot/mem/configmgr/endpoint-protection/recommended-antivirus-exclusions).
+
+  - name: WSUS Maintenance
+    questions:
       - question: |
           What can I do to make WSUS perform better when it's used with Configuration Manager?
         answer: |
-          Changing a few key IIS settings, such as WsusPool Queue Length and WsusPool Private Memory limit, can improve WSUS performance, even on smaller installations. For more information, see [Recommended hardware](../plan-design/configs/recommended-hardware.md).
+          Changing a few key IIS settings, such as WsusPool Queue Length and WsusPool Private Memory limit, can improve WSUS performance, even on smaller installations. For more information, see [WSUS note at Recommended hardware](../plan-design/configs/recommended-hardware.md#bkmk_note2).
           
           Also make sure you have the latest updates installed for the operating system running WSUS:
           
           - Windows Server 2012: Any non "Security only" cumulative update released October 2017 or later. ([KB4041690](https://support.microsoft.com/help/4041690/windows-server-2012-update-kb4041690))
           - Windows Server 2012 R2: Any non "Security only" cumulative update released August 2017 or later. ([KB4039871](https://support.microsoft.com/help/4039871/windows-8-1-windows-server-2012-r2-update-kb4039871))
-          - Window Server 2016: any non "Security only" cumulative update released August 2017 or later. ([KB4039396](https://support.microsoft.com/help/4039396/windows-10-update-kb4039396))
+          - Windows Server 2016: any non "Security only" cumulative update released August 2017 or later. ([KB4039396](https://support.microsoft.com/help/4039396/windows-10-update-kb4039396))
           
       - question: |
           What type of maintenance should I run on my WSUS servers?
         answer: |
-          See [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](https://support.microsoft.com/help/4490644/complete-guide-to-microsoft-wsus-and-configuration-manager-sup-maint).
+          See [The complete guide to Microsoft WSUS and Configuration Manager SUP maintenance](/troubleshoot/mem/configmgr/update-management/wsus-maintenance-guide).
           
       - question: |
           I want to set up basic performance monitoring for my site. What should I watch?
         answer: |
-          Traditional server performance monitoring works effectively for general Configuration Manager. You can also leverage the various System Center Operations Manager management packs for Configuration Manager, SQL Server, and Windows Server to monitor basic health of your servers. You can also directly monitor the Windows Performance Monitor (PerfMon) counters Configuration Manager provides. Monitor the backlogs in the various inboxes for early warning signs of potential site performance issues or backlogs.
+          Traditional server performance monitoring works effectively for general Configuration Manager. You can also leverage monitoring solutions like the Azure Monitor to monitor basic health of your servers: see [ConfigMgr Performance Baseline the Easy Way](https://techcommunity.microsoft.com/blog/coreinfrastructureandsecurityblog/configmgr-performance-baseline-the-easy-way/1583081) blog post. You can also directly monitor the Windows Performance Monitor (PerfMon) counters Configuration Manager provides. Monitor the backlogs in the various inboxes for early warning signs of potential site performance issues or backlogs.
 
 additionalContent: |
 
