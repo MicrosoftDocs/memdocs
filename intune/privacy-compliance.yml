@@ -23,7 +23,7 @@ landingContent:
           - text: Data handling
             url: ./privacy/data-handling/data-collection.md
           - text: Data storage and processing
-            url: ./privacy/data-handling/data-storage-processing
+            url: ./privacy/data-handling/data-storage-processing.md
           - text: Data sharing with third parties
             url: ./privacy/data-sharing/index.md
 
