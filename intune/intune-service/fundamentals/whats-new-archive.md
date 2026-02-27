@@ -91,7 +91,7 @@ With this feature, you can:
 - Use the [Audit logs](monitor-audit-logs.md) to see the devices that the device cleanup rules conceal from the Intune reports.
 - Use [role-based access control (RBAC)](role-based-access-control.md) to customize the user roles that can create device cleanup rules.
 
-For more information, see [device cleanup rules](../../tenant-administration/device-cleanup-rules.md).
+For more information, see [device cleanup rules](../../operations/tenant-administration/device-cleanup-rules.md).
 
 ### Device security
 

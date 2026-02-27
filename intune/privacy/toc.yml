@@ -12,6 +12,11 @@ items:
   - name: Optional diagnostic data in client apps
     href: ./data-handling/optional-diagnostic-data.md
 
+- name: Diagnostic data requirements
+  items:
+  - name: Windows diagnostic data requirements for Intune
+    href: ./windows-diagnostic-data.md
+
 - name: Data sharing with third parties
   items:
   - name: Overview of third-party data sharing
