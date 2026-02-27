@@ -185,4 +185,4 @@ If the Trusted Platform Module (TPM) was reset to factory settings, then the dev
 ## Related articles
 
 - [Troubleshoot policies and profiles](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune).
-- Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).
+- Need extra help? See [How to get support in Microsoft Intune](../../support/get-support-admin-center.md).

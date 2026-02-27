@@ -206,7 +206,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     To create a support ticket, your account must be assigned an [administrator role in Microsoft Entra](/entra/identity/role-based-access-control) with sufficient permissions. To adhere to the principles of least privileged access, Microsoft recommends assigning the [**Service support administrator**](/entra/identity/role-based-access-control/delegate-by-task) role to your administrators who create Intune support tickets, which is the least privileged Microsoft Entra role that can create support tickets.
 
-    For more information, see [How to get support in Microsoft Intune](../../get-support.md).
+    For more information, see [How to get support in Microsoft Intune](../../support/get-support-admin-center.md).
 
 15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
 

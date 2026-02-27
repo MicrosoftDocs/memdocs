@@ -38,7 +38,7 @@ You can also read:
 > - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new)
 > - [Windows Autopilot: What's new](/autopilot/whats-new)
 
-You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../fundamentals/use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
 <!-- Common categories - in this order:

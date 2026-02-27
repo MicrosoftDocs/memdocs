@@ -59,7 +59,7 @@ When you open the *Connector status* tab, any unhealthy connectors display at th
 When there's more than a single connector of any one type, the status is a summary for all of those same connectors. The least healthy status of any single connector is used as the health for the group.
 
 > [!IMPORTANT]
-> Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review any applicable connector logs or open a case with [support](../../get-support.md) to investigate further.
+> Some connectors can report a status of *Healthy* or *Connected* but might not be functioning correctly. If you encounter issues with a specific connector, review any applicable connector logs or open a case with [support](../../support/get-support-admin-center.md) to investigate further.
 
 **Connector status:**
 
@@ -108,4 +108,4 @@ To view information for Intune News, your account must have the **Service suppor
 ## Next steps
 
 - [Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Get support for Intune](../../get-support.md)
+- [Get support for Intune](../../support/get-support-admin-center.md)

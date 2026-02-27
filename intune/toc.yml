@@ -25,7 +25,7 @@ items:
     - name: Intune service release information
       href: ./intune-service/fundamentals/intune-service-servicing-information.md
     - name: Endpoint management at Microsoft
-      href: endpoint-manager-overview.md
+      href: ./fundamentals/endpoint-management.md
     - name: What is device management?
       href: ./intune-service/fundamentals/what-is-device-management.md
 
@@ -1858,9 +1858,9 @@ items:
       - name: Powershell scripts for Remediations
         href: ./intune-service/fundamentals/powershell-scripts-remediation.md
     - name: Using the Intune docs
-      href: ./use-docs.md
+      href: ./fundamentals/use-docs.md
     - name: Get support in the Intune admin center
-      href: ./get-support.md
+      href: ./support/get-support-admin-center.md
     - name: Troubleshoot issues
       href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
 

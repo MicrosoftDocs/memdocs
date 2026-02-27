@@ -294,4 +294,4 @@ Remote Help displays a warning if the sharer's device isn't enrolled in Microsof
 
 ## Next steps
 
-[Get support in the Microsoft Intune admin center.](../../get-support.md)
+[Get support in the Microsoft Intune admin center.](../../support/get-support-admin-center.md)

@@ -87,7 +87,7 @@ Before you file a frown, prepare your information:
 
 - Is this feedback a suggestion to improve the product? If so, share a new idea instead. For more information, see [Send a suggestion](#send-a-suggestion).
 
-- Is the issue with the product documentation? You can file feedback directly on the documentation. For more information, see [Doc feedback](../../../use-docs.md#about-feedback).
+- Is the issue with the product documentation? You can file feedback directly on the documentation. For more information, see [Doc feedback](../../../fundamentals/use-docs.md#about-feedback).
 
 To send feedback on something that you didn't like about the Configuration Manager product:
 
@@ -253,8 +253,8 @@ When you send a frown, include the following additional information specific to 
 
 ## Next steps
 
-[How to use the docs](../../../use-docs.md)
+[How to use the docs](../../../fundamentals/use-docs.md)
 
 [How to use the console](../servers/manage/admin-console.md)
 
-[How to get support in Microsoft Intune admin center](../../../get-support.md)
+[How to get support in Microsoft Intune admin center](../../../support/get-support-admin-center.md)
