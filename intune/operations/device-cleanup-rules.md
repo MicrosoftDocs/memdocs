@@ -26,7 +26,7 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../includes/requirements/rbac.md)]
 :::column-end:::
 :::column span="3":::
 > To configure device cleanup rules, use an account with at least one of the following roles:

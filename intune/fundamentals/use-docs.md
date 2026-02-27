@@ -19,8 +19,8 @@ This article provides resources and tips for using the Microsoft Intune product 
 
 For general help and support, see:
 
-- [Find help for Configuration Manager](configmgr/core/understand/find-help.md)
-- [Get support in Microsoft Intune](support/get-support-admin-center.md)
+- [Find help for Configuration Manager](../configmgr/core/understand/find-help.md)
+- [Get support in Microsoft Intune](../support/get-support-admin-center.md)
 
 > [!TIP]
 > Also visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
