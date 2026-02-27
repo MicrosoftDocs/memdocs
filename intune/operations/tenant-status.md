@@ -39,7 +39,7 @@ The page is divided into three tabs.
 
 ## Tenant details tab
 
-Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens [What's new in Intune](../fundamentals/whats-new.md). In *What's new*, you can read about the latest features and updates to the Intune service.
+Tenant details provide at-a-glance information about your tenant. View details like your tenant name and location, your MDM Authority, and your tenants service release number. The service release number is a link that opens [What's new in Intune](../intune-service/fundamentals/whats-new.md). In *What's new*, you can read about the latest features and updates to the Intune service.
 
 On this tab, you'll also find basic information about your available licenses and how many are assigned to users. Licenses for devices aren't shown.
 
@@ -107,5 +107,5 @@ To view information for Intune News, your account must have the **Service suppor
 
 ## Next steps
 
-- [Walkthrough the Microsoft Intune admin center](../fundamentals/tutorial-walkthrough-endpoint-manager.md)
-- [Get support for Intune](../../support/get-support-admin-center.md)
+- [Walkthrough the Microsoft Intune admin center](../intune-service/fundamentals/tutorial-walkthrough-endpoint-manager.md)
+- [Get support for Intune](../support/get-support-admin-center.md)

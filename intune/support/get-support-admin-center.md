@@ -32,13 +32,13 @@ To access help and support in the admin center, you have some options:
 
 - Go to **Troubleshooting + support** or another node in the admin center and select **Help and support** to open a full screen experience of Help and support.
 
-  :::image type="content" source="./media/get-support/troubleshooting-support-help-support.png" alt-text="Screenshot that shows how to get to help and support from Troubleshooting and support in the Microsoft Intune admin center." lightbox="./media/get-support/troubleshooting-support-help-support.png":::
+  :::image type="content" source="./media/troubleshooting-support-help-support.png" alt-text="Screenshot that shows how to get to help and support from Troubleshooting and support in the Microsoft Intune admin center." lightbox="./media/troubleshooting-support-help-support.png":::
 
 - From any node in the admin center, or your current area of focus, select the question mark (`?`) near your profile pic to open the Help and Support pane.
 
   In the following example, select **All services** and then select the question mark (`?`). **Help and support** opens:
 
-  :::image type="content" source="./media/get-support/all-services-question-mark.png" alt-text="Screenshot that shows how to get to help and support using home, dashboard, or any other option in the Microsoft Intune admin center." lightbox="./media/get-support/all-services-question-mark.png":::
+  :::image type="content" source="./media/all-services-question-mark.png" alt-text="Screenshot that shows how to get to help and support using home, dashboard, or any other option in the Microsoft Intune admin center." lightbox="./media/all-services-question-mark.png":::
 
   When you open **Help and support** in this way, it's pinned at the side. You can select any other option and it stays pinned.
 
@@ -55,7 +55,7 @@ In **Help and support**, select any available option to focus support on your sc
 
 In the following example, you see the different services available in this subscription:
 
-:::image type="content" source="./media/get-support/help-and-support-pinned.png" alt-text="Screenshot that shows the available help and support services in your subscription in the Microsoft Intune admin center.":::
+:::image type="content" source="./media/help-and-support-pinned.png" alt-text="Screenshot that shows the available help and support services in your subscription in the Microsoft Intune admin center.":::
 
 The following information can help you choose the correct focus:
 
@@ -101,18 +101,18 @@ When you select a support scenario, the admin center displays the Help and Suppo
 > [!NOTE]
 > To access support scenarios in the Intune admin center, your account must have an Azure Active Directory (Azure AD) role that includes the *action* **microsoft.office365.supportTickets**.
 
-:::image type="content" source="./media/get-support/confirm-management-selection.png" alt-text="Screenshot that shows the How can we help window in the Intune admin center.":::
+:::image type="content" source="./media/confirm-management-selection.png" alt-text="Screenshot that shows the How can we help window in the Intune admin center.":::
 
 Above the *How can we help?* title, there are three icons that you can select to open different panes: *Find solutions*, *Contact support*, and *Service requests*. An underlined icon indicates the active pane you're viewing. By default, the Help and support page opens to the *Find solutions* pane.
 
 > [!TIP]
 > Customers with a **Premier** or **Unified** support contract have [other options](#premier-and-unified-support-options) for support. If you've a Premier or Unified support contract, you'll see a banner similar to the following image:
 >
-> :::image type="content" source="./media/get-support/premier-banner.png" alt-text="Screenshot that shows the premier support option in the Intune admin center.":::
+> :::image type="content" source="./media/premier-banner.png" alt-text="Screenshot that shows the premier support option in the Intune admin center.":::
 
 ### Search for solutions
 
-:::image type="content" source="./media/get-support/find-solutions.png" alt-text="Screenshot that shows how to search for solutions in the Intune admin center.":::
+:::image type="content" source="./media/find-solutions.png" alt-text="Screenshot that shows how to search for solutions in the Intune admin center.":::
 
 On the *Search for solutions* pane, specify a few details about an issue in the provided text box. The console might offer suggestions based on the details that you enter. Depending on the presence of specific keywords, the console offers one of two support experiences depending on what is available for the product you selected: the traditional support experience and the updated support experience.
 
@@ -126,11 +126,11 @@ For products that use traditional support, when you enter keywords, the *Search 
 
 For example, for Microsoft Intune you might enter **device enrollment failure**. With these criteria, your results include the option to run diagnostics for a user account:
 
-:::image type="content" source="./media/get-support/troubleshooting-insights.png" alt-text="Screenshot that shows the need help pane to run diagnostics, view insights, and read recommended articles in the Intune admin center." lightbox="./media/get-support/troubleshooting-insights.png":::
+:::image type="content" source="./media/troubleshooting-insights.png" alt-text="Screenshot that shows the need help pane to run diagnostics, view insights, and read recommended articles in the Intune admin center." lightbox="./media/troubleshooting-insights.png":::
 
 Running the diagnostics can identify issues for that account in Azure AD. In this example, the user wasn't assigned a license for Intune, preventing the device enrollment, and we see a link to relevant content:
 
-:::image type="content" source="./media/get-support/diagnostic-resuslts.png" alt-text="Screenshot that shows the diagnostic results in the Intune admin center." lightbox="./media/get-support/diagnostic-resuslts.png":::
+:::image type="content" source="./media/diagnostic-resuslts.png" alt-text="Screenshot that shows the diagnostic results in the Intune admin center." lightbox="./media/diagnostic-resuslts.png":::
 
 #### Updated support experience
 
@@ -138,11 +138,11 @@ Running the diagnostics can identify issues for that account in Azure AD. In thi
 
 Some keywords lead to an enhanced experience that helps you drill down to more scenario-specific support. For example, you're using Microsoft Intune and enter a generic search for *Need help with Intune*. You can see several more focused scenarios and you can select to clarify the problem and find more focused results.
 
-:::image type="content" source="./media/get-support/scenarios-example.png" alt-text="Screenshot that shows scenario options in the Intune admin center.":::
+:::image type="content" source="./media/scenarios-example.png" alt-text="Screenshot that shows scenario options in the Intune admin center.":::
 
 When you select a scenario, new options are offered to help narrow down the issue.
 
-:::image type="content" source="./media/get-support/drill-in-scenarios.png" alt-text="Screenshot that shows filtered scenario options in the Intune admin center.":::
+:::image type="content" source="./media/drill-in-scenarios.png" alt-text="Screenshot that shows filtered scenario options in the Intune admin center.":::
 
 When presented, you can run automated tests or diagnostics where applicable, and view insightful information to help troubleshoot the problem. You might also see remediation steps to help you fix the issue.
 
@@ -153,11 +153,11 @@ The **Contact Support** option is available after you provide some basic keyword
 > [!IMPORTANT]
 > For technical support with third-party products that work with Intune (like Cisco or Lookout), contact the supplier of that product first. Before you open a request with Intune support, make sure you configured the other product correctly.
 
-:::image type="content" source="./media/get-support/contact-support.png" alt-text="Screenshot that shows how to select the contact support icon in the Intune admin center.":::
+:::image type="content" source="./media/contact-support.png" alt-text="Screenshot that shows how to select the contact support icon in the Intune admin center.":::
 
 When requesting assistance, provide a description of the problem with as much detail as needed. After confirming your phone and email contact information, select the method of contact you prefer. The window displays a response time for each contact method, which gives you an expectation of when you'll be contacted. Before submitting your request, attach files like logs or screenshots that can help fill in details about the issue.
 
-:::image type="content" source="./media/get-support/contact-support-form.png" alt-text="Screenshot that shows the contact support form in the Intune admin center.":::
+:::image type="content" source="./media/contact-support-form.png" alt-text="Screenshot that shows the contact support form in the Intune admin center.":::
 
 After you fill in the required information, select **Contact me** to submit the request.
 
@@ -165,7 +165,7 @@ After you fill in the required information, select **Contact me** to submit the 
 
 The *Service requests* pane displays your case history. Active cases are at the top of the list, with closed issues also available for review.
 
-:::image type="content" source="./media/get-support/service-requests.png" alt-text="Screenshot that shows your service request list in the Intune admin center.":::
+:::image type="content" source="./media/service-requests.png" alt-text="Screenshot that shows your service request list in the Intune admin center.":::
 
 If you have an active support case number, you can enter it here to go to that issue. Or, you can select any incident from the list of active and closed incidents to view more information about it.
 
