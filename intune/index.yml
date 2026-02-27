@@ -116,7 +116,7 @@ conceptualContent:
         - url: ./intune-service/fundamentals/supported-devices-browsers.md
           itemType: get-started
           text: Supported platforms and requirements
-        - url: ./governance/index.yml
+        - url: ./privacy-compliance.yml
           itemType: overview
           text: Privacy and compliance
 

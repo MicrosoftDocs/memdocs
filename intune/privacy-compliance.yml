@@ -18,14 +18,14 @@ landingContent:
   # Card 
   - title: Privacy in Microsoft Intune
     linkLists:
-      - linkListType: overview
+      - linkListType: concept
         links:
           - text: Data handling
-            url: ../privacy/data-handling/data-collection.md
+            url: ./privacy/data-handling/data-collection.md
           - text: Data storage and processing
-            url: ../privacy/data-handling/data-storage-processing
+            url: ./privacy/data-handling/data-storage-processing
           - text: Data sharing with third parties
-            url: ../privacy/data-sharing/index.md
+            url: ./privacy/data-sharing/index.md
 
   # Card
   - title: Compliance in Microsoft Intune
@@ -33,4 +33,4 @@ landingContent:
       - linkListType: overview
         links:
           - text: Compliance and regulatory alignment
-            url: compliance-and-regulatory-alignment.md
+            url: ./governance/compliance-and-regulatory-alignment.md

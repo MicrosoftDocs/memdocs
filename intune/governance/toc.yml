@@ -1,6 +1,6 @@
 items:
   - name: Privacy and compliance documentation
-    href: index.yml
+    href: ../privacy-compliance.yml
   - name: Compliance and regulatory alignment
     href: ./compliance-and-regulatory-alignment.md
     displayName: GDPR, HIPAA, SOC, ISO
