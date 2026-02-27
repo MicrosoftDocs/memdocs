@@ -3,7 +3,7 @@ title: Third-party device compliance partners support in Microsoft Intune
 description: Use a third-party device compliance partner as a source of compliance data for devices you manage with Intune.
 author: lenewsad
 ms.author: lanewsad
-ms.date: 04/10/2025
+ms.date: 02/27/2026
 ms.topic: overview
 ms.reviewer: ilwu-microsoft
 ms.collection:
@@ -14,7 +14,7 @@ ms.collection:
 
 # Support third-party device compliance partners in Intune
 
-Several third-party device compliance partners have been evaluated as a supported partner solution that you can integrate with Microsoft Intune. When you use a [third-party device compliance partner](#supported-device-compliance-partners), the partner adds the compliance state data it collects to Microsoft Entra ID. You can then use the device compliance data from the partner along side the compliance results you collect with Intune to power your [Conditional Access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access) that help to protect your organization and data.
+Several third-party device compliance partners were evaluated and are supported solutions that you can integrate with Microsoft Intune.. When you use a [third-party device compliance partner](#supported-device-compliance-partners), the partner adds the compliance state data it collects to Microsoft Entra ID. You can use device compliance data from the partner alongside the compliance results you collect with Intune. Together, these signals power [Conditional Access policies](../protect/device-compliance-get-started.md#integrate-with-conditional-access) that help to protect your organization and data.  
 
 Third-party partners support one or more of the following platforms:
 
@@ -22,7 +22,7 @@ Third-party partners support one or more of the following platforms:
 - iOS/iPadOS
 - macOS
 
-By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Microsoft Entra ID and Intune, you're configuring that partner to be a source of Mobile Device Management (MDM) authority for the devices you assign to that partner through a Microsoft Entra user group.
+By default, Intune is set up to be the Mobile Device Management (MDM) authority for your devices. When you add a compliance partner to Microsoft Entra ID and Intune, that partner becomes the MDM authority for devices assigned to it through a Microsoft Entra user group. 
 
 To enable user data from device compliance partners, complete the following tasks:
 
@@ -88,7 +88,7 @@ Enable support for a device compliance partner to use compliance state data from
 
    Next, select the drop-down for **Platform**, and select the platform.
 
-   You're limited to a single partner per platform, even if you have added multiple compliance partners to Microsoft Entra ID.
+   You're limited to a single partner per platform, even if you added multiple compliance partners to Microsoft Entra ID.  
 
 4. On **Assignments**, select the user groups that include devices that are managed by this partner. With this assignment, you change the MDM authority for applicable devices to use this partner. Users who have devices managed by the partner must also be assigned a license for Intune.
 
@@ -104,20 +104,20 @@ Your configuration now appears on the Partner compliance management page.
 
 3. On the partner configuration **Overview** page, select **Properties** to open the Properties page where you can edit the assignments.
 
-4. On the **Properties** page, select **Edit** to open the Assignments view where you can change the groups that will use this configuration.
+4. On the **Properties** page, select **Edit** to open the Assignments view where you can change the groups that use this configuration.
 
 5. Select **Review + save** and then **Save** to save your edits.
 
 6. *This step only applies when you use VMware Workspace ONE*:
 
-   From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Intune admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in new groups you’ve assigned won’t successfully report compliance.
+   From within the Workspace ONE UEM console, you must manually synchronize the changes you saved in the Microsoft Intune admin center. Until you manually sync changes, Workspace ONE UEM isn’t aware of configuration changes, and users in newly assigned groups do not successfully report compliance. 
 
    To manually sync from Azure Services:
    1. Sign in to your VMware Workspace ONE UEM console.
    2. Go to **Settings** > **System** > **Enterprise Integration** > **Directory Services**.
    3. For *Sync Azure Services*, select **SYNC**.
 
-      All the changes you’ve made since the initial configuration or the last manual synchronization are synchronized from Azure Services to UEM.
+      Azure services synchronize all changes made after the initial configuration or the last manual synchronization to UEM.   
 
 ## Configure your compliance partner to work with Intune
 
@@ -145,21 +145,21 @@ Sign in to the Azure portal and go to **Microsoft Entra ID** > **Devices** > [**
 
 ## Best practices for migrating devices from 3rd party MDM to Intune MDM
 
-When you migrate devices from 3rd party MDM providers to a full Intune stack, we recommend you follow these cleanup steps:
+When you migrate devices from third-party MDM providers to a full Intune stack, we recommend you follow these cleanup steps:
 
-1. Initiate a retirement action from the 3rd party MDM service before the device is enrolled with Intune MDM. This notifies Intune to perform the necessary cleanup tasks in our 3rd party integration services.
+1. Initiate a retirement action from the third-party MDM service before the device is enrolled with Intune MDM. This retirement action notifies Intune to perform the necessary cleanup tasks in our third-party integration services.
 > [!NOTE]
-> Removing the 3rd party MDM profile locally on a device doesn't sufficiently trigger the Intune cleanup tasks.
+> Removing the third-party MDM profile locally on a device doesn't sufficiently trigger the Intune cleanup tasks.
 
-2. Confirm that devices retired from the 3rd party MDM appear in Microsoft Entra ID with **None** listed in the **MDM** column. At this point, your devices can be newly enrolled with Intune MDM.
+2. Confirm that devices retired from the third-party MDM appear in Microsoft Entra ID with **None** listed in the **MDM** column. At this point, your devices can be newly enrolled with Intune MDM.
 
-3. After all devices have migrated to Intune via steps 1 and 2, disable the Intune connection in your 3rd party MDM provider's admin console. If that isn't an option, you can also disable the connection console in the Microsoft Intune admin center.
+3. After all devices migrate to Intune via steps 1 and 2, disable the Intune connection in your third-party MDM provider's admin console. If that isn't an option, you can also disable the connection console in the Microsoft Intune admin center.
    1. Go to **Tenant administration** > **Connectors and tokens** > **Device compliance partner**.
    1. Select the device compliance partner you want to disable.
    1. Toggle the connection to **Off**.
 
 > [!NOTE]
-> If devices haven't been through the cleanup tasks and they're showing as enrolled in Intune, Intune enforces Intune compliance policies and statuses and ignores the 3rd party policies.
+> If devices don’t complete the cleanup tasks and still appear enrolled in Intune, Intune applies its own compliance policies and ignores third‑party policies.  
 
 ## Next steps
 
