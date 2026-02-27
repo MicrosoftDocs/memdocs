@@ -199,7 +199,7 @@ Deleting VMs from Azure will leave orphaned device records in the Microsoft Intu
 For more information, see:
 
 - [Using Intune device cleanup rules](https://techcommunity.microsoft.com/t5/device-management-in-microsoft/using-intune-device-cleanup-rules-updated-version/ba-p/3760854).
-- [Automatically remove devices with cleanup rules](../fundamentals/device-cleanup-rules.md)
+- [Automatically remove devices with cleanup rules](../../tenant-administration/device-cleanup-rules.md)
 
 ## Security baselines
 

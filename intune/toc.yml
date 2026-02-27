@@ -1782,11 +1782,11 @@ items:
   - name: Manage, maintain, and monitor Microsoft Intune
     items:
     - name: Tenant status and health
-      href: ./intune-service/fundamentals/tenant-status.md
+      href: ./tenant-administration/tenant-status.md
     - name: Manage admin tasks
       href: ./intune-service/fundamentals/admin-tasks.md
     - name: Device cleanup rules
-      href: ./intune-service/fundamentals/device-cleanup-rules.md
+      href: ./tenant-administration/device-cleanup-rules.md
     - name: Enable Windows diagnostic data
       href: ./tenant-administration/windows-diagnostic-data.md
 
