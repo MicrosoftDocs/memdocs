@@ -60,7 +60,7 @@ Where `<thumbprint>` is the thumbprint of the installed certificate, and `<GUID>
 
 For example:
 
-`netsh http add sslcert ipport=0.0.0.0:443 certhash=5aef9c1f348d4d1c8675309ca3363c2a5d3b617d appid={e9f0631d-6d1c-41b4-9617-454705f9c011}`
+`netsh http add sslcert ipport=0.0.0.0:443 certhash=5aef9c1f348d4d1c8675309ca3363c2a5d3b617d appid={00001111-aaaa-2222-bbbb-3333cccc4444}`
 
 ## Enable internet access
 

@@ -323,4 +323,3 @@ Specifically:
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
 - [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune/welcome-intune)
-- [Microsoft Intune guides at setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2313710)
