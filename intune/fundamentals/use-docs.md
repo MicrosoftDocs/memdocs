@@ -23,7 +23,7 @@ For general help and support, see:
 - [Get support in Microsoft Intune](../support/get-support-admin-center.md)
 
 > [!TIP]
-> Also visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
+> Also visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](../configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
 
 Information in this article also applies to the [Configuration Manager PowerShell documentation](/powershell/sccm/overview) in the [sccm-docs-powershell-ref repository](https://github.com/MicrosoftDocs/sccm-docs-powershell-ref).
 
