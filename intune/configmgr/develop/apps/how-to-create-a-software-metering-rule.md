@@ -6,7 +6,9 @@ ms.topic: how-to
 ms.collection: tier3
 description: You can create a software metering rule in Configuration Manager by creating an instance of the SMS_MeteredProductRule class and populating the properties.
 ---
+
 # How to Create a Software Metering Rule
+
 You create a software metering rule, in Configuration Manager, by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.
 
 ### To create software metering rule
@@ -20,12 +22,67 @@ You create a software metering rule, in Configuration Manager, by creating an in
 4.  Save the new software metering rule and properties.
 
 ## Example
- The following example method shows how to create a software metering rule by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.
 
- For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).
+The following example method shows how to create a software metering rule by creating an instance of the `SMS_MeteredProductRule` class and populating the properties.
+
+For information about calling the sample code, see [Calling Configuration Manager Code Snippets](../../develop/core/understand/calling-code-snippets.md).
+
+### PowerShell
+
+```powershell
+function New-CMSWMRRule {
+    param(
+        [Parameter(Mandatory=$true)]
+        [string]$ProductName,
+
+        [Parameter(Mandatory=$true)]
+        [string]$FileName,
+
+        [Parameter(Mandatory=$true)]
+        [string]$OriginalFileName,
+
+        [Parameter(Mandatory=$true)]
+        [string]$FileVersion,
+
+        [Parameter(Mandatory=$true)]
+        [int]$LanguageID,
+
+        [Parameter(Mandatory=$true)]
+        [string]$SiteCode,
+
+        [Parameter(Mandatory=$true)]
+        [bool]$ApplyToChildSites,
+
+        [string]$ProviderMachineName = $env:COMPUTERNAME
+    )
+
+    $namespace = "root\sms\site_$SiteCode"
+
+    # Create a new instance of SMS_MeteredProductRule
+    $ruleClass = [WMIClass]"\\$ProviderMachineName\$namespace:SMS_MeteredProductRule"
+    $newRule = $ruleClass.CreateInstance()
+
+    # Populate properties
+    $newRule.ProductName       = $ProductName
+    $newRule.FileName          = $FileName
+    $newRule.OriginalFileName  = $OriginalFileName
+    $newRule.FileVersion       = $FileVersion
+    $newRule.LanguageID        = $LanguageID
+    $newRule.SiteCode          = $SiteCode
+    $newRule.ApplyToChildSites = $ApplyToChildSites
+
+    # Save the rule
+    $result = $newRule.Put()
+
+    Write-Host ""
+    Write-Host "Created new SWM Rule: $ProductName"
+    Write-Host "WMI Path: $($result.Path)"
+}
+```
+
+### VBScript
 
 ```vb
-
 Sub CreateSWMRule(connection,              _
                   newProductName,          _
                   newFileName,             _
@@ -56,8 +113,9 @@ Sub CreateSWMRule(connection,              _
 End Sub
 ```
 
-```c#
+### C#
 
+```c#
 public void CreateSWMRule(WqlConnectionManager connection,
                           string newProductName,
                           string newFileName,
@@ -94,47 +152,52 @@ public void CreateSWMRule(WqlConnectionManager connection,
         throw;
     }
 }
-
 ```
 
- The example method has the following parameters:
+The example method has the following parameters:
 
-|Parameter|Type|Description|
-|----|----|----|
-|`connection`|-   Managed: `WqlConnectionManager`<br />-   VBScript: `SWbemServices`|A valid connection to the SMS Provider.|
-|`newProductName`|-   Managed: `String`<br />-   VBScript: `String`|The new product name.|
-|`newFileName`|-   Managed: `String`<br />-   VBScript: `String`|The new file name.|
-|`newOriginalFileName`|-   Managed: `String`<br />-   VBScript: `String`|The new original file name.|
-|`newFileVersion`|-   Managed: `String`<br />-   VBScript: `String`|The new file version.|
-|`newLanguageID`|-   Managed: `Integer`<br />-   VBScript: `Integer`|The new language ID.|
-|`newSiteCode`|-   Managed: `String`<br />-   VBScript: `String`|The new site code.|
-|`newApplyToChildSites`|-   Managed: `Boolean`<br />-   VBScript: `Boolean`|Determines whether the rule will apply to child sites.|
+| Parameter              | Type                                                               | Description                                            |
+| ---------------------- | ------------------------------------------------------------------ | ------------------------------------------------------ |
+| `connection`           | - Managed: `WqlConnectionManager`<br />- VBScript: `SWbemServices` | A valid connection to the SMS Provider.                |
+| `newProductName`       | - Managed: `String`<br />- VBScript: `String`                      | The new product name.                                  |
+| `newFileName`          | - Managed: `String`<br />- VBScript: `String`                      | The new file name.                                     |
+| `newOriginalFileName`  | - Managed: `String`<br />- VBScript: `String`                      | The new original file name.                            |
+| `newFileVersion`       | - Managed: `String`<br />- VBScript: `String`                      | The new file version.                                  |
+| `newLanguageID`        | - Managed: `Integer`<br />- VBScript: `Integer`                    | The new language ID.                                   |
+| `newSiteCode`          | - Managed: `String`<br />- VBScript: `String`                      | The new site code.                                     |
+| `newApplyToChildSites` | - Managed: `Boolean`<br />- VBScript: `Boolean`                    | Determines whether the rule will apply to child sites. |
 
 ## Compiling the Code
- This C# example requires:
+
+This C# example requires:
 
 ### Namespaces
- System
 
- System.Collections.Generic
+System
 
- System.Text
+System.Collections.Generic
 
- Microsoft.ConfigurationManagement.ManagementProvider
+System.Text
 
- Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
+Microsoft.ConfigurationManagement.ManagementProvider
+
+Microsoft.ConfigurationManagement.ManagementProvider.WqlQueryEngine
 
 ### Assembly
- adminui.wqlqueryengine
 
- microsoft.configurationmanagement.managementprovider
+adminui.wqlqueryengine
+
+microsoft.configurationmanagement.managementprovider
 
 ## Robust Programming
- For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).
+
+For more information about error handling, see [About Configuration Manager Errors](../../develop/core/understand/about-configuration-manager-errors.md).
 
 ## .NET Framework Security
- For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).
+
+For more information about securing Configuration Manager applications, see [Configuration Manager role-based administration](../../develop/core/servers/configure/role-based-administration.md).
 
 ## See Also
- [Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)
- [SMS_MeteredProductRule Server WMI Class](../../develop/reference/apps/sms_meteredproductrule-server-wmi-class.md)
+
+[Configuration Manager Software Development Kit](../../develop/core/misc/system-center-configuration-manager-sdk.md)
+[SMS_MeteredProductRule Server WMI Class](../../develop/reference/apps/sms_meteredproductrule-server-wmi-class.md)
