@@ -223,14 +223,12 @@ items:
       items:
         - name: Overview of levels
           href: plan-design/diagnostics/levels-overview.md
+        - name: Data for version 2509
+          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2509.md 
         - name: Data for version 2503
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2503.md 
         - name: Data for version 2409
           href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2409.md 
-        - name: Data for version 2403
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2403.md  
-        - name: Data for version 2309
-          href: plan-design/diagnostics/levels-of-diagnostic-usage-data-collection-2309.md  
         - name: Configuration Manager tools
       href: plan-design/diagnostics/tools.md
     - name: Frequently asked questions (FAQ)
