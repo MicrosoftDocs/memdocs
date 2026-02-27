@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/get-support.md",
+      "redirect_url": "/intune/support/get-support-admin-center",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/fundamentals/tenant-status.md",
       "redirect_url": "/intune/operations/tenant-status",
       "redirect_document_id": false

@@ -222,8 +222,6 @@ For iOS/iPadOS, the **Device Management Type** property for managed apps is:
 - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
 - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
 
-#####
-
 To learn more about filters, see:
 
 - [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md)
