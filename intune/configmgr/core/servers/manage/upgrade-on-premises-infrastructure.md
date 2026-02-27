@@ -134,9 +134,10 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 #### Known issue for remote site systems
 
-After completing the [After Upgrade](#after-upgrade) section above, if you upgraded a central administration site, primary site, secondary site, or distribition point, there may be data missing from the following registry location:
+After completing the [After Upgrade](#after-upgrade) section above, if you upgraded a central administration site, primary site, secondary site, or distribution point there may be data missing from the following registry location:
 
 Key: HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths
+
 Value: Machine
 
 - For a central administration site, primary site, or secondary site the data in the REG_Multi_SZ 'Machine' registry value should include: Software\Microsoft\SMS
