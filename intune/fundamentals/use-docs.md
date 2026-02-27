@@ -90,38 +90,11 @@ Select the **Feedback** link in the upper right of any article or go to the Feed
 
 :::image type="content" source="media/docs-feedback.png" alt-text="Screenshot of the feedback section of a Microsoft Learn article.":::
 
-<!-- this information is not true anymore. Feedback is not integrated with github anymore, so i'm commenting this section out for now.
-
-Feedback is integrated with GitHub Issues. For more information about this integration with GitHub Issues, see the [docs platform blog post](/teamblog/a-new-feedback-system-is-coming-to-docs).
-
-:::image type="content" source="media/docs-feedback.png" alt-text="Screenshot of the feedback section of a Microsoft Learn article.":::
-
-<!-- To share non-docs feedback about the product itself, select **This product**. This action opens the product's feedback site. 10932544
-
-To share feedback about the current article, select **This page**. A [GitHub account](https://github.com/join) is a prerequisite for providing documentation feedback. Once you sign in, there's a one-time authorization for the MicrosoftDocs organization. It then opens the GitHub new issue form. Add a descriptive title and detailed feedback in the body, but don't modify the document details section. Then select **Submit new issue** to file a new issue for the target article in the [MEMDocs GitHub repository](https://github.com/MicrosoftDocs/memdocs/issues).
-
-To see whether there's already feedback for this article, select **View all page feedback**. This action opens a GitHub issue query for this article. By default it displays both open and closed issues. Review any existing feedback before you submit a new issue. If you find a related issue, select the face icon to add a reaction, add a comment to the thread, or **Subscribe** to receive notifications.-->
-
 ### Types of feedback
 
-- Product feedback for [Configuration Manager](configmgr/core/understand/product-feedback.md) or [Intune](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472)
+- Product feedback for [Configuration Manager](../configmgr/core/understand/product-feedback.md) or [Intune](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472)
 - [Product questions](/answers/products/enterprise-mobility-security)
-- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Intune](support/get-support-admin-center.md)
-
-<!-- this information is not true anymore. Feedback is not integrated with github anymore, so i'm commenting this section out for now.>
-Use GitHub Issues to submit the following types of feedback:
-
-- Doc bug: The content is out of date, unclear, confusing, or broken.
-- Doc enhancement: A suggestion to improve the article.
-- Doc question: You need help with finding existing documentation.
-- Doc idea: A suggestion for a new article.
-- Kudos: Positive feedback about a helpful or informative article!
-- Localization: Feedback about content translation.
-- Search engine optimization (SEO): Feedback about problems searching for content. Include the search engine, keywords, and target article in the comments.
-
-If you create an issue for something not related to an article, Microsoft will close the issue and redirect you to a better feedback channel. For example:
-
-To share feedback on the Microsoft Learn platform itself, see [Docs feedback](https://aka.ms/sitefeedback). The platform includes all of the wrapper components such as the header, table of contents, and right menu. Also how the articles render in the browser, such as the font, alert boxes, and page anchors. -->
+- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Intune](../support/get-support-admin-center.md)
 
 ## Notifications
 

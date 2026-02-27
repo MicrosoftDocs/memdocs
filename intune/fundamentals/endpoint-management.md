@@ -51,9 +51,9 @@ Co-management is a great way to get started with cloud-based device management, 
 
 For more information, go to:
 
-- [What is Configuration Manager?](./configmgr/core/understand/introduction.md)
-- [What is co-management?](./configmgr/comanage/overview.md)
-- [Tenant attach: Prerequisites](./configmgr/tenant-attach/prerequisites.md)
+- [What is Configuration Manager?](../configmgr/core/understand/introduction.md)
+- [What is co-management?](../configmgr/comanage/overview.md)
+- [Tenant attach: Prerequisites](../configmgr/tenant-attach/prerequisites.md)
 
 ## Intune Suite
 
