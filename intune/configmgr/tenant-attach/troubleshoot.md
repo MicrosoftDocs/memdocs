@@ -59,7 +59,7 @@ When an action is initiated from the Microsoft Intune admin center, **CMGatewayN
 ```text
 Received new notification. Validating basic notification details...
 Validating device action message content...
-Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID:     a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2
+Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: aaaabbbb-0000-cccc-1111-dddd2222eeee AADUserID:     aaaabbbb-0000-cccc-1111-dddd2222eeee
 Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-5529380b3b6f TaskParam: TargetDeviceIDs: 1
 ```
 
@@ -73,7 +73,7 @@ Forwarded BGB remote task. TemplateID: 1 TaskGuid: a43dd1b3-a006-4604-b012-55293
 
    ```text
    Validating device action message content...
-   Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID:     a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2
+   Authorized to perform client action. TemplateID: RequestMachinePolicy TenantId: aaaabbbb-0000-cccc-1111-dddd2222eeee AADUserID:     aaaabbbb-0000-cccc-1111-dddd2222eeee
    ```
 
 1. The remote task is forwarded to the SMS_NOTIFICATION_SERVER.
@@ -111,7 +111,7 @@ If the admin doesn't have the required permissions in Configuration Manager, you
 ```text
 Received new notification. Validating basic notification details..
 Validating device action message content...
-Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId: a1b2c3a1-b2c3-d4a1-b2c3-d4a1b2c3a1b2 AADUserID: 3a1e89e6-e190-4615-9d38-a208b0eb1c78
+Unauthorized to perform client action. TemplateID: RequestMachinePolicy TenantId: aaaabbbb-0000-cccc-1111-dddd2222eeee AADUserID: bbbbcccc-1111-dddd-2222-eeee3333ffff
 ```
 
 Ensure the user running the action from the Microsoft Intune admin center has the required permissions on Configuration Manager site. For more information, see [Microsoft Intune tenant attach prerequisites](prerequisites.md).
@@ -143,7 +143,7 @@ To reset the tenant attach configuration:
 ##### Errors for AccountOnboardingInfo and DevicePost requests in GenericUploadWorker.log
 
 ```log
-[OnboardScenario] Creating web request to: https://us.gateway.configmgr.manage.microsoft.com/api/gateway/AccountOnboardingInfo Method: POST Activity ID: ed2186a0-fb43-4cf1-84df-9283dd45a461 Timeout: 00:02:00
+[OnboardScenario] Creating web request to: https://us.gateway.configmgr.manage.microsoft.com/api/gateway/AccountOnboardingInfo Method: POST Activity ID: ccccdddd-2222-eeee-3333-ffff4444aaaa Timeout: 00:02:00
 [OnboardScenario] Response from https://us.gateway.configmgr.manage.microsoft.com/api/gateway/AccountOnboardingInfo is: 400 (Bad Request)
 Response status code: 400 (BadRequest) Activity ID: a579728b-eca0-4144-80ac-eea25ee5bcf6
 Unexpected exception for worker GenericUploadWorker
