@@ -2306,7 +2306,7 @@ items:
         href: ./intune-service/developer/data-warehouse-account-move.md
 
   - name: Privacy and compliance
-    href: /intune/privcacy-compliance
+    href: /intune/privacy-compliance
     displayName: GDPR, HIPAA, SOC, ISO
 
   - name: Microsoft Intune service description
