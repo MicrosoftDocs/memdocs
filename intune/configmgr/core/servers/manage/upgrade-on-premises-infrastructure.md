@@ -134,9 +134,16 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 #### Known issue for remote site systems
 
-After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
+After completing the [After Upgrade](#after-upgrade) section above, if you upgraded a central administration site, primary site, secondary site, or distribition point, there may be data missing from the following registry location:
 
-If this value is missing after you upgrade Windows on the server, manually add it. Otherwise site system roles can have issues uploading files to the site server inboxes.
+Key: HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths
+Value: Machine
+
+- For a central administration site, primary site, or secondary site the data in the REG_Multi_SZ 'Machine' registry value should include: Software\Microsoft\SMS
+
+- For a distribution point, the data in the REG_Multi_SZ 'Machine' registry value should include: Software\Microsoft\SMS\DP
+ 
+If the data is missing from the value after you upgrade Windows on the server, manually add the one(s) that correspond to the role(s) installed on the system. Otherwise site system roles can have issues uploading files to the site server inboxes. Distribution Points may have issues with Content Distribution, Distribution Point Configuration, or general functionality.
 
 ## Upgrade the OS of clients
 
