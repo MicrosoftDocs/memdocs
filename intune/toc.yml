@@ -304,7 +304,7 @@ items:
       - name: Add groups
         href: ./intune-service/fundamentals/groups-add.md
       - name: Manage Intune licenses
-        href: ./licensing/toc.yml
+        href: ./fundamentals/licensing/toc.yml
       - name: Set the MDM authority
         href: ./intune-service/fundamentals/mdm-authority-set.md
 

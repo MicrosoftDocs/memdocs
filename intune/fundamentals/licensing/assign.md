@@ -2,15 +2,10 @@
 
 title: Assign Microsoft Intune licenses
 description: Assign licenses to users so they can enroll in Intune
-author: paolomatarazzo
-ms.author: paoloma
 ms.date: 01/24/2025
 ms.topic: how-to
-ms.reviewer: amsaeedi
 ms.collection:
 - M365-identity-device-management
-- highpri
-- EngageScoreOct2022
 ---
 
 # Assign licenses to users so they can enroll devices in Intune
@@ -107,7 +102,7 @@ To view the number of free and used licenses on a Microsoft Intune subscription,
    A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
 
 > [!NOTE]
-> To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/index.md#confirm-your-licenses).
+> To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](index.md#confirm-your-licenses).
 
 ## Use PowerShell to selectively manage EMS user licenses
 
@@ -161,6 +156,6 @@ Verify with:
 
 ## Related content
 
-- [Assign Microsoft Intune roles to groups of users for role-based access control](../fundamentals/assign-role.md)
-- [Set the MDM authority](../fundamentals/mdm-authority-set.md)
+- [Assign Microsoft Intune roles to groups of users for role-based access control](../../intune-service/fundamentals/assign-role.md)
+- [Set the MDM authority](../../intune-service/fundamentals/mdm-authority-set.md)
 

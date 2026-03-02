@@ -1,8 +1,6 @@
 ---
 title: Unlicensed admins in Microsoft Intune | Microsoft Docs
 description: This article describes how to give unlicensed admins permissions to access Intune.
-author: BrenDuns
-ms.author: brenduns
 ms.date: 05/09/2025
 ms.topic: how-to
 ms.collection:
@@ -33,6 +31,6 @@ You can give administrators access to Microsoft Intune without them requiring an
 
 ## Next step
 
-[Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
+[Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
 
 [Microsoft Intune licensing](../../fundamentals/licensing/index.md)

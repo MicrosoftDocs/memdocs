@@ -126,7 +126,7 @@ For guidance, go to [Assign licenses](../../fundamentals/licensing/assign.md).
 
 You can give administrators access to Microsoft Intune without them requiring an Intune license. This feature applies to any administrator, including Intune administrators, Microsoft Entra administrators, and so on.
 
-For guidance, go to [Unlicensed admins](unlicensed-admins.md).
+For guidance, go to [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
 
 ## 7 - Manage Roles and grant admin permissions for Intune
 
