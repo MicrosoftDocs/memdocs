@@ -173,7 +173,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Tenant status." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png":::
 
-    For more information, see [Intune Tenant Status](../../operations/tenant-status.md).
+    For more information, see [Intune Tenant Status](../../fundamentals/tenant-status.md).
 
 13. From the navigation pane, select **Troubleshooting + support** > **Troubleshoot** to check status details on a specific user or devices.
 
