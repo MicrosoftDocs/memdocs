@@ -1,7 +1,7 @@
 ---
 title: Understand Microsoft Intune Management Extension
 description: Understand Microsoft Intune management extension for Windows.
-ms.date: 10/02/2025
+ms.date: 03/02/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
