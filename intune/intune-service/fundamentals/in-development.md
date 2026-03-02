@@ -202,7 +202,7 @@ We’re working on an updated Windows security baseline for Windows 11, version 
 
 When available, the 25H2 baseline will be provided as a new baseline version. Existing baseline profiles won’t automatically update to the new version.
 
-For more information about the security baseline changes introduced with Windows 11, version 25H2, see the Windows blog: [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231). To prepare for updating a baseline in Intune, see [Configure security baseline policies in Microsoft Intune](../protect/security-baselines-configure#update-a-baseline-profile-to-the-latest-version).
+For more information about the security baseline changes introduced with Windows 11, version 25H2, see the Windows blog: [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231). To prepare for updating a baseline in Intune, see [Configure security baseline policies in Microsoft Intune](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
 
 > [!div class="checklist"]
 > Applies to:
