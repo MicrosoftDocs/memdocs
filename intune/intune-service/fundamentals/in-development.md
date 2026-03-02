@@ -103,6 +103,21 @@ The Recovery Lock password can be viewed in the per-device monitor view > **Pass
 
 <!-- ## Device management -->
 
+### Remote Help connectivity updates for Windows devices<!-- 9252975 -->
+
+We're working to improve connectivity when using the Launch Remote Help feature in the Intune admin center for Windows devices. The improvement involves the addition of a new endpoint:
+
+`*.trouter.communications.svc.cloud.microsoft.com`
+
+For the best experience we recommend updating firewall rules to include the new endpoint once it becomes available.
+
+For the current list of required network endpoints, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md?tabs=north-america#network-requirements-for-powershell-scripts-and-win32-apps) and [Remote Help](../fundamentals/intune-endpoints.md#remote-help).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows  
+
 ### Device page in the Intune admin center is updated (public preview) <!-- 36646300 -->
 
 In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
