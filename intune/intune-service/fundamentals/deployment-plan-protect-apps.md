@@ -274,7 +274,7 @@ For more information about protecting Exchange Online, go to the following topic
 The following list provides the end-user requirements to use app protection policies on apps managed by Intune include the following:
 
 - The end user must have a Microsoft Entra account. See [Add users and give administrative permission to Intune](users-add.md) to learn how to create Intune users in Microsoft Entra ID.
-- The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](../../fundamentals/licensing/assign.md) to learn how to assign Intune licenses to end users.
+- The end user must have a license for Microsoft Intune assigned to their Microsoft Entra account. See [Manage Intune licenses](../../fundamentals/licensing/assign-licenses.md) to learn how to assign Intune licenses to end users.
 - The end user must belong to a security group that is targeted by an app protection policy. The same app protection policy must target the specific app being used. App protection policies can be created and deployed in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431). Security groups can currently be created in the [Microsoft 365 admin center](https://admin.microsoft.com).
 - The end user must sign into the app using their Microsoft Entra account.
 

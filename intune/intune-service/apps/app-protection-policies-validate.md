@@ -43,7 +43,7 @@ Here are the actions to take based on the user status:
 
 - [What is Intune app protection policy?](app-protection-policies.md)
 - [Licenses that include Intune](../../fundamentals/licensing/index.md)
-- [Assign licenses to users so they can enroll devices in Intune](../../fundamentals/licensing/assign.md)
+- [Assign licenses to users so they can enroll devices in Intune](../../fundamentals/licensing/assign-licenses.md)
 - [How to validate your app protection policy setup](app-protection-policies-validate.md)
 - [How to monitor app protection policies](app-protection-policies-monitor.md)
 

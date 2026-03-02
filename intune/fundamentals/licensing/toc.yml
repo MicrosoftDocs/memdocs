@@ -4,6 +4,6 @@ items:
   - name: Determine license needs
     href: ./index.md
   - name: Assign licenses
-    href: ./assign.md
+    href: ./assign-licenses.md
   - name: Allow access to unlicensed admins
     href: ./unlicensed-admins.md

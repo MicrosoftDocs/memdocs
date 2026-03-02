@@ -81,10 +81,10 @@ You can purchase device licenses based on your estimated usage. Microsoft Intune
 
 - [Windows Autopilot Self-Deploying mode](/autopilot/self-deploying)
 - [Apple Device Enrollment Program without user affinity](../../intune-service/enrollment/device-enrollment-program-enroll-ios.md)
-- [Apple School Manager without user affinity](../../intune-service/apple-school-manager-set-up-ios.md)
-- [Apple Configurator without user affinity](../../intune-service/apple-configurator-enroll-ios.md)
-- [Android Enterprise dedicated](../../intune-service/android-kiosk-enroll.md)
-- [Using a device enrollment manager account](../../intune-service/device-enrollment-manager-enroll.md)
+- [Apple School Manager without user affinity](../../intune-service/enrollment/apple-school-manager-set-up-ios.md)
+- [Apple Configurator without user affinity](../../intune-service/enrollment/apple-configurator-enroll-ios.md)
+- [Android Enterprise dedicated](../../intune-service/enrollment/android-kiosk-enroll.md)
+- [Using a device enrollment manager account](../../intune-service/enrollment/device-enrollment-manager-enroll.md)
 
 > [!NOTE]
 > Visit the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page, or contact your account representative if you have any questions or you would like to receive the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases.
@@ -128,4 +128,4 @@ If you don't have a license for Microsoft Entra ID P1 or P2, see [Sign up for Mi
 
 For the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases, see the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page.
 
-For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](assign.md).
+For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](assign-licenses.md).

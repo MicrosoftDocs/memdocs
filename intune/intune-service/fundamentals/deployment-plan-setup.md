@@ -120,7 +120,7 @@ For guidance, go to [Microsoft Intune licensing](../../fundamentals/licensing/in
 Whether you added users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The [Microsoft Intune's free trial](try-intune-overview.md) provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
 Give users permission to use Intune. Each user or userless device requires an Intune license to access the service.
 
-For guidance, go to [Assign licenses](../../fundamentals/licensing/assign.md).
+For guidance, go to [Assign licenses](../../fundamentals/licensing/assign-licenses.md).
 
 ✔️ **Unlicensed admins**
 

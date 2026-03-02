@@ -120,7 +120,7 @@ Next, assign the Intune policies to the groups you choose. Keep the following po
     - Assign licenses to **Users**. For more information, see [Assign licenses to users](/microsoft-365/admin/manage/assign-licenses-to-users).
     - Assign licenses to **Groups**. For more information, see [Assign licenses to a group](/microsoft-365/admin/manage/manage-group-licenses).
 
-    For more information on assigning licenses in Intune, see [Assign licenses to users so they can enroll devices in Intune](../../fundamentals/licensing/assign.md).
+    For more information on assigning licenses in Intune, see [Assign licenses to users so they can enroll devices in Intune](../../fundamentals/licensing/assign-licenses.md).
 
 At the next [Intune device refresh cycle](../configuration/device-profile-troubleshoot.md#policy-refresh-intervals), the devices automatically switch to Intune management and the new policies start affecting user devices.
 

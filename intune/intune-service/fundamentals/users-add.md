@@ -17,7 +17,7 @@ Microsoft Entra ID, part of Microsoft Entra, is the identity service for Microso
 
 Intune also supports use of user accounts that synchronize from Active Directory to any cloud-based service that shares the tenant with Intune and your Entra tenant.
 
-After a user is added or synchronized to Entra and [assigned a license to Intune](../../fundamentals/licensing/assign.md), that user can enroll devices with Intune and begin to access company resources. Intune administrators can also [assign Intune RBAC roles](../fundamentals/assign-role.md) and permissions to discreet groups of users to enable those users to help administer your Intune subscription.
+After a user is added or synchronized to Entra and [assigned a license to Intune](../../fundamentals/licensing/assign-licenses.md), that user can enroll devices with Intune and begin to access company resources. Intune administrators can also [assign Intune RBAC roles](../fundamentals/assign-role.md) and permissions to discreet groups of users to enable those users to help administer your Intune subscription.
 
 The remainder of this article focuses on using the Intune admin center to manage user accounts.
 
@@ -35,7 +35,7 @@ The following Microsoft Entra built-in RBAC role is the least privileged built-i
 - [**User Administrator**](/entra/identity/role-based-access-control/permissions-reference#user-administrator) – This role provides permissions sufficient to add and edit user accounts from within the admin centers for Microsoft Intune, Microsoft Entra, and Microsoft 365.
 
 > [!TIP]
-> The Microsoft Entra *User Administrator* role also provides sufficient permissions to assign licenses to Intune and other products to users. However, license management is a task that can only be managed when using the Microsoft 365 admin center. For more information, see [Assign Intune licenses to users](../../fundamentals/licensing/assign.md).
+> The Microsoft Entra *User Administrator* role also provides sufficient permissions to assign licenses to Intune and other products to users. However, license management is a task that can only be managed when using the Microsoft 365 admin center. For more information, see [Assign Intune licenses to users](../../fundamentals/licensing/assign-licenses.md).
 
 ## Add users to Intune
 
@@ -166,4 +166,4 @@ To delete users from Entra, your administrative account must have permissions eq
 ## Related content
 
 - [Add groups to organize users and devices](../fundamentals/groups-add.md)
-- [Assign users licenses to Intune](../../fundamentals/licensing/assign.md)
+- [Assign users licenses to Intune](../../fundamentals/licensing/assign-licenses.md)

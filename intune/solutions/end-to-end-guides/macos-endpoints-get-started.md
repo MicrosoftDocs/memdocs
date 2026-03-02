@@ -91,7 +91,7 @@ Specifically:
 
 - **Licensing**
 
-  Users enrolling macOS devices require a Microsoft Intune or Microsoft Intune for Education license. To assign licenses, go to [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign.md). Assign the licenses to the test accounts you created.
+  Users enrolling macOS devices require a Microsoft Intune or Microsoft Intune for Education license. To assign licenses, go to [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign-licenses.md). Assign the licenses to the test accounts you created.
 
   > [!NOTE]
   > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. For more information, go to [Compare Microsoft 365 Enterprise Plans](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).

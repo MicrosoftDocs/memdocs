@@ -140,7 +140,7 @@ After you buy licenses via any source, the licenses are available in your tenant
 
 ## How to assign licenses
 
-For information on how to assign licenses in the Microsoft Intune admin center, see [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign.md).
+For information on how to assign licenses in the Microsoft Intune admin center, see [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign-licenses.md).
 
 ## Monitor license use
 

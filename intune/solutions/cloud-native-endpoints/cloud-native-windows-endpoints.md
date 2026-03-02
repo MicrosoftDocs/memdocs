@@ -82,7 +82,7 @@ Enrollment restrictions allow you to control what types of devices can enroll in
     - **Microsoft Entra Premium P1**
     - **Microsoft Intune for Education**
 
-  To assign licenses, go to [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign.md).
+  To assign licenses, go to [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign-licenses.md).
 
   > [!NOTE]
   > Both types of licenses are typically included with licensing bundles, like Microsoft 365 E3 (or A3) and higher. View comparisons of Microsoft 365 licensing [here](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans).
