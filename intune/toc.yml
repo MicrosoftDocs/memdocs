@@ -1780,7 +1780,7 @@ items:
     - name: Manage admin tasks
       href: ./intune-service/fundamentals/admin-tasks.md
     - name: Device cleanup rules
-      href: ./fundamentals/device-cleanup-rules.md
+      href: ./governance/device-cleanup-rules.md
 
     - name: Endpoint analytics
       href: ./endpoint-analytics/toc.yml
