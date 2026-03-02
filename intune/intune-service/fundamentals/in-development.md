@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/02/2026
+ms.date: 03/05/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -52,16 +52,7 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 <!-- ***********************************************-->
 
-## App management
-
-### Added protection for iOS/iPadOS app widgets<!-- 14614429 -->
-
-To protect organizational data for MAM managed accounts and apps, Intune app protection policies will soon provide the capability to block data sync from policy managed app data to app widgets. App widgets can be added to end-user's iOS/iPadOS device lock screen, which can expose data contained by these widgets, such as meeting titles, top sites, and recent notes. In Intune, you'll be able to set the app protection policy setting **Sync policy managed app data with app widgets** to **Block** for iOS/iPadOS apps. This setting will be available as part of the **Data Protection** settings in app protection policies. This new setting will be an app protection feature similar to the **Sync policy managed app data with native app or add-ins** setting.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
+ <!-- ## App management -->
 
 <!-- *********************************************** -->
 
