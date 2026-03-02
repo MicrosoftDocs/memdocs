@@ -34,16 +34,16 @@ If testing shows that your app protection policy behavior isn't functioning as e
 ## What to do
 Here are the actions to take based on the user status:
 
-- If the user isn't licensed for app protection, assign an [Intune license](../fundamentals/licenses.md) to the user.
-- If the user isn't licensed for Microsoft 365, get a [license](../fundamentals/licenses.md) for the user.
+- If the user isn't licensed for app protection, assign an [Intune license](../../fundamentals/licensing/index.md) to the user.
+- If the user isn't licensed for Microsoft 365, get a [license](../../fundamentals/licensing/index.md) for the user.
 - If a user's app is listed as **Not checked in**, check if you've correctly configured an [app protection policy](app-protection-policies-validate.md) for that app.
 - Ensure that these conditions apply across all users to which you want [app protection policies](app-protection-policies-monitor.md) to apply.
 
 ## See also
 
 - [What is Intune app protection policy?](app-protection-policies.md)
-- [Licenses that include Intune](../fundamentals/licenses.md)
-- [Assign licenses to users so they can enroll devices in Intune](../fundamentals/licenses-assign.md)
+- [Licenses that include Intune](../../fundamentals/licensing/index.md)
+- [Assign licenses to users so they can enroll devices in Intune](../../fundamentals/licensing/assign.md)
 - [How to validate your app protection policy setup](app-protection-policies-validate.md)
 - [How to monitor app protection policies](app-protection-policies-monitor.md)
 

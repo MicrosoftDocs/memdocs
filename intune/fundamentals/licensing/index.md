@@ -70,7 +70,7 @@ For existing Configuration Manager-managed devices to enroll into Intune for co-
 ## Additional information
 
 - A Microsoft Intune user and device subscription is available as a standalone, in addition to the bundles listed above.
-- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features. For more information, see [Device-only licenses](../fundamentals/licenses.md#device-only-licenses).
+- A Microsoft Intune device-only subscription is available to manage kiosks, dedicated devices, phone-room devices, IoT, and other single-use devices that don't require user-based security and management features. For more information, see [Device-only licenses](#device-only-licenses).
 - The appropriate Microsoft Intune license is required if a user or device benefits directly or indirectly from the Microsoft Intune service, including access to the Microsoft Intune service through a [Microsoft API](/legal/microsoft-apis/terms-of-use).
 - Intune isn't included in licenses not in the previous tables.
 
@@ -133,4 +133,4 @@ If you don't have a license for Microsoft Entra ID P1 or P2, see [Sign up for Mi
 
 For the latest information about product editions, product licensing updates, volume licensing plans, and other information related to your specific use cases, see the [Microsoft Licensing](https://www.microsoft.com/licensing/default) page.
 
-For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](licenses-assign.md).
+For information about how user and device licenses affect access to services, as well as how to assign a license to a user, see the [Assign Intune licenses to your user accounts article](assign.md).

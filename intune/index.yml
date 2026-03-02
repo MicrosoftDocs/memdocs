@@ -107,7 +107,7 @@ conceptualContent:
         - url: https://aka.ms/Intune_GuidedDemo
           itemType: get-started
           text: Interactive demos for Intune
-        - url: ./intune-service/fundamentals/licenses.md
+        - url: ./fundamentals/licensing/index.md
           itemType: get-started
           text: Microsoft Intune licensing
         - url: ./intune-service/fundamentals/intune-planning-guide.md

@@ -15,7 +15,7 @@ ms.collection:
 
 # Assign licenses to users so they can enroll devices in Intune
 
-Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user license before users can enroll their devices in Intune. For a list of licenses, see [Microsoft Intune licensing](licenses.md).
+Whether you manually add users or synchronize from your on-premises Active Directory, you must first assign each user license before users can enroll their devices in Intune. For a list of licenses, see [Microsoft Intune licensing](index.md).
 
 > [!NOTE]
 > Users assigned Intune app protection policy and not enrolling their devices into Microsoft Intune will also require an Intune license to receive the policy.
@@ -26,7 +26,7 @@ You can use the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?
 
 1. In the [Microsoft 365 admin center](https://go.microsoft.com/fwlink/p/?LinkId=698854), select **Users** > **Active users** > *choose an unlicensed user* > **Licenses and apps**.
 
-2. Choose the box for **Intune** > **Save changes**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead. For more information about Microsoft Intune licenses, see [Microsoft Intune licensing](licenses.md).
+2. Choose the box for **Intune** > **Save changes**. If you want to use the Enterprise Mobility + Security E5 or other license, choose that box instead. For more information about Microsoft Intune licenses, see [Microsoft Intune licensing](index.md).
 
 The user account now has the permissions needed to use the service and enroll devices into Intune management.
 
@@ -34,11 +34,11 @@ The user account now has the permissions needed to use the service and enroll de
 
 If you're an educational organization, you can use School Data Sync (SDS) to assign Intune for Education licenses to synced users. Just choose the Intune for Education checkbox when you're setting up your SDS profile.
 
-![Screenshot of SDS profile setting](./media/licenses-assign/i4e-sds-profile-setup-setting.png)
+![Screenshot of SDS profile setting](./images/i4e-sds-profile-setup-setting.png)
 
 When you assign an Intune for Education license, make sure that Intune A Direct license is also assigned.
 
-![Screenshot of product license set up](./media/licenses-assign/i4e-set-licenses.png)
+![Screenshot of product license set up](./images/i4e-set-licenses.png)
 
 See this [overview of School Data Sync](https://support.office.com/article/Overview-of-School-Data-Sync-and-Classroom-f3d1147b-4ade-4905-8518-508e729f2e91) to learn more about SDS.
 
@@ -107,7 +107,7 @@ To view the number of free and used licenses on a Microsoft Intune subscription,
    A list of the **Account ID**, the **Active Units**, and the **Consumed Units** will appear. Note that this will also display any Microsoft Office 365 licenses on the subscription.
 
 > [!NOTE]
-> To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/licenses.md#confirm-your-licenses).
+> To confirm your Microsoft Entra ID P1 or P2 and Microsoft Intune using Microsoft Intune admin center, see [Confirm your licenses](../fundamentals/index.md#confirm-your-licenses).
 
 ## Use PowerShell to selectively manage EMS user licenses
 
@@ -157,7 +157,7 @@ Verify with:
 (Get-MgUser -UserPrincipalName "user@<TenantName>.onmicrosoft.com").Licenses.ServiceStatus
 ```
 
-![Command line sample of PowerShell verification alt-text="Command line sample"](./media/licenses-assign/posh-addlic-verify.png)
+![Command line sample of PowerShell verification alt-text="Command line sample"](./images/posh-addlic-verify.png)
 
 ## Related content
 

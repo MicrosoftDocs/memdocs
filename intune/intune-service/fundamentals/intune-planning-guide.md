@@ -320,7 +320,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 For more information, go to:
 
-- [Microsoft Intune licensing](licenses.md)
+- [Microsoft Intune licensing](../../fundamentals/licensing/index.md)
 - [Microsoft 365 for business](https://www.microsoft.com/licensing/product-licensing/microsoft-365-business)
 - [Microsoft 365 enterprise licensing](https://www.microsoft.com/microsoft-365/compare-microsoft-365-enterprise-plans)
 - [Microsoft Intune Suite](intune-add-ons.md)
@@ -333,7 +333,7 @@ Some considerations:
 
   - Intune
 
-  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](licenses.md).
+  Intune is available with different subscriptions, including as a stand-alone service. For more information, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
   You currently use Configuration Manager, and want to set up co-management for your devices. Intune is already included in your Configuration Manager license. If you want Intune to fully manage new devices or existing co-managed devices, then you need a separate Intune license.
 

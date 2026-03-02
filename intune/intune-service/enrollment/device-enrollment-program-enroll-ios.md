@@ -465,7 +465,7 @@ You enabled management and syncing between Apple and Intune and assigned a profi
 
   To summarize, if a device has a user, the user needs to have an assigned Intune license. If the device doesn't have an Intune-licensed user, the device needs to have an Intune device license.
 
-  For more information on Intune licensing, see [Microsoft Intune licensing](../fundamentals/licenses.md) and the [Intune planning guide](../fundamentals/intune-planning-guide.md).
+  For more information on Intune licensing, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md) and the [Intune planning guide](../fundamentals/intune-planning-guide.md).
 
 - A device that is already activated needs to be wiped before it can enroll properly with automated device enrollment. After you wipe it but before activating it again, you can apply the enrollment profile. See [Set up an existing iPhone, iPad, or iPod touch](https://support.apple.com/en-us/HT207516)
 

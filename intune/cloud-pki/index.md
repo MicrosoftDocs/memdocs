@@ -121,7 +121,7 @@ Microsoft Cloud PKI requires one of the following licenses:
 * Microsoft Intune Suite license
 * Microsoft Cloud PKI standalone Intune add-ons license
 
-For more information about licensing options, see [Microsoft Intune licensing](../intune-service/fundamentals/licenses.md).
+For more information about licensing options, see [Microsoft Intune licensing](../fundamentals/licensing/index.md).
 
 ## Role based access control
 

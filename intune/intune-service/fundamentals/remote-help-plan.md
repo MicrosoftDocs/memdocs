@@ -130,7 +130,7 @@ The following Intune built-in roles include Remote Help permissions:
 
 Remote Help has the following requirements: 
 
-- [Intune subscription](../fundamentals/licenses.md).  
+- [Intune subscription](../../fundamentals/licensing/index.md).  
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.  
 - [Supported platforms and devices](#supported-platforms).  
 - Intune-enrolled devices must be registered with Microsoft Entra.  

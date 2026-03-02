@@ -113,14 +113,14 @@ Intune is available with different subscriptions, including as a stand-alone ser
 
 Microsoft Intune is available for different organization sizes and needs; from a simple-to-use management experience for schools and small businesses, to a more advanced functionality required by enterprise customers. An admin must have a license assigned to them to administer Intune (unless you selected to allow unlicensed admins).
 
-For guidance, go to [Microsoft Intune licensing](licenses.md).
+For guidance, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
 ✔️ **Get started with assigning licenses to users**
 
 Whether you added users one at a time or all at once, you must assign each user an Intune license before users can enroll their devices in Intune. The [Microsoft Intune's free trial](try-intune-overview.md) provides 25 Intune licenses. For a list of licenses, see Licenses that include Intune.
 Give users permission to use Intune. Each user or userless device requires an Intune license to access the service.
 
-For guidance, go to [Assign licenses](licenses-assign.md).
+For guidance, go to [Assign licenses](../../fundamentals/licensing/assign.md).
 
 ✔️ **Unlicensed admins**
 

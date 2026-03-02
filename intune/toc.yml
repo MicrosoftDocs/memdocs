@@ -304,13 +304,7 @@ items:
       - name: Add groups
         href: ./intune-service/fundamentals/groups-add.md
       - name: Manage Intune licenses
-        items:
-        - name: Determine license needs
-          href: ./intune-service/fundamentals/licenses.md
-        - name: Assign licenses
-          href: ./intune-service/fundamentals/licenses-assign.md
-        - name: Allow access to unlicensed admins
-          href: ./intune-service/fundamentals/unlicensed-admins.md
+        href: ./licensing/toc.yml
       - name: Set the MDM authority
         href: ./intune-service/fundamentals/mdm-authority-set.md
 
