@@ -3,7 +3,7 @@ title: Platforms and policy types supported by assignment filters
 description: Learn which apps, compliance policies, and device configuration profiles and their platforms support assignment filters in Microsoft Intune.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 02/24/2026
+ms.date: 03/02/2026
 ms.topic: reference
 ms.reviewer: mattcall
 ms.collection:
@@ -355,7 +355,10 @@ The following features on managed devices don't support using assignment filters
   You can use assignment filters on app protection policies for managed apps. For more information on managed apps, go to [Use filters when assigning your apps, policies, and profiles in Intune](filters.md).
 
 - End user experiences customization policies
+- Enrollment notifications
+- Feature updates for Windows
 - iOS/iPadOS app provisioning profiles
+- Linux platform workloads
 - Partner device management
 - Policies for Office apps
 - Policy sets
@@ -363,10 +366,7 @@ The following features on managed devices don't support using assignment filters
 - S mode supplemental policies for Windows
 - Shell scripts for macOS
 - Terms and conditions
-- Update policies for iOS/iPadOS
-- Feature updates for Windows
-- Enrollment notifications
-- Linux platform workloads
+- Update policies MDM template for iOS/iPadOS (deprecated)
 - Devices that are targeted with Endpoint Security configuration using Microsoft Defender for Endpoint integration, such as servers. These devices aren't enrolled in Intune.
 
 ## Related content

@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/12/2026
+ms.date: 03/02/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -67,18 +67,6 @@ To protect organizational data for MAM managed accounts and apps, Intune app pro
 
 ## Device configuration
 
-### Apple declarative device management (DDM) support for assignment filters<!-- 24298491 -->
-
-You'll be able to use assignment filters in policy assignments for DDM-based configurations, like software updates.
-
-To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - iOS/iPadOS
-> - macOS
-
 ### Recovery Lock settings catalog settings for macOS<!-- 32541429 -->
 
 On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management.
@@ -100,33 +88,11 @@ In a [settings catalog](../configuration/settings-catalog.md) policy, you can so
 
 <!-- *********************************************** -->
 
-## Device management
-
-### Multi-administrator approval support for device compliance and device configuration policies<!-- 26838614 -->
-
-Multi-administrator approval will soon support device configuration policies created through the settings catalog, device compliance policies, compliance settings, and device cleanup rules. When you turn on this feature, any changes you make, including creating, editing, or deleting a policy, must be approved by a second administrator before they take effect. This dual-authorization process helps protect your organization from unauthorized or accidental changes to role-based access control.
+<!-- ## Device management -->
 
 <!-- *********************************************** -->
 
 ## Device security
-
-### Autopatch update readiness<!--34573480 -->
-
-Autopatch update readiness will deliver a unified experience for tracking and remediating Windows update issues across Intune‑enrolled devices and Autopatch group‑enrolled devices.
-
-This experience will provide complete Intune-enrolled device accounting, enabling admins to view all managed devices, their enrollment status, and their policy assignments in a single dashboard.
-
-Autopatch update readiness will include the following capabilities:
-
-- A *device update journey* that surfaces granular update states for each device, making it easier to identify where updates stall and why.
-- A *centralized alerting framework* that consolidates actionable alerts for update failures, policy conflicts, and readiness gaps, with remediation guidance integrated into a single dashboard.
-- An *update readiness checker* that enables admins to proactively evaluate devices for deployment risks and flag devices as *At Risk* based on signals like disk space, appraiser data, and setup conditions.
-- *Repair Devices with OS Reinstall*, a capability that enables admins to remediate upgrade‑blocked devices by triggering an OS reinstall for common issues such as insufficient disk space and app compatibility problems, with supporting alerts and reporting.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
@@ -159,30 +125,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Monitor and troubleshoot
-
-### Operator updates for device query for multiple devices<!--36180651 -->
-
-The following operator and behavior changes will be coming to **Device query for multiple devices**.
-
-- **New join types**\
-  The following join types will be supported:
-  - `leftsemi`
-  - `rightsemi`
-  - `leftanti`
-  - `rightanti`
-
-- **Changes to join behavior**\
-  Joins that use `on Device.DeviceID` will no longer be supported. Queries that currently use `on Device.DeviceId` should switch to using `on Device`, or omit the `on` clause entirely.
-
-- **Changes to device references in operators**\
-  Using `Device` by itself will no longer be valid in operators such as `distinct`, `summarize`, or `order by`. Queries will need to reference a specific device property instead.
-
-- **Updates to query results**\
-  Queries that involve a device—either by querying a device directly or by joining a device to another entity—will return the device as a clickable link in the results, allowing navigation to the device details.
-
-- **Improved error messages**\
-  Some error cases have been updated to provide clearer, more descriptive messages.
+<!-- ## Monitor and troubleshoot -->
 
 <!-- *********************************************** -->
 
