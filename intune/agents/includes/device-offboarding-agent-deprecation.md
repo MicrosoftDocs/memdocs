@@ -18,7 +18,7 @@ ms.date: 03/02/2026
 >
 > **What this change means for you**
 > 
-> - You can continue using the Device Offboarding Agent until **June 11, 2026** if it's already set up.
+> - You can continue using the Device Offboarding Agent until **June 1, 2026** if it's already set up.
 > - If you delete the agent between **April 30, 2026** and **June 1, 2026**, you can't set it up again.
 > - After **June 1, 2026**, the Device Offboarding Agent isn't accessible.
 > 
