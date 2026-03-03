@@ -1,9 +1,9 @@
 ---
 title: Set permissions to Managed Home Screen using Android Enterprise OEMConfig
-description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX, and Legacy Zebra OEMConfig apps to Intune, and use the app schemas to configure permissions for the Managed Home Screen (MHS) app on Android Enterprise devices.
+description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX, Legacy Zebra OEMConfig, and Honeywell UEMConnect apps to Intune, and use the app schemas to configure permissions for the Managed Home Screen (MHS) app on Android Enterprise devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 02/02/2026
+ms.date: 03/03/2026
 ms.topic: how-to
 ms.reviewer: abigailstein
 ms.collection:
@@ -47,11 +47,11 @@ For the MHS to work, certain permissions are required for certain features. Sams
 
 The following table lists the permissions that you can configure for the MHS app on Samsung and Zebra devices:
 
-| Permission  | Samsung | Zebra | Legacy Zebra | Honeywell | 
+| Permission | Samsung | Zebra | Legacy Zebra | Honeywell |
 |---|---|---|---|---|
 | **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ | ✅ |
-| **Notification Permission** is required by:<br/><br/>- Notification badge| ✅ | ✅ | ✅ | n/a
-| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch   | ✅ | ✅ | n/a | ✅ |
+| **Notification Permission** is required by:<br/><br/>- Notification badge | ✅ | ✅ | ✅ | n/a |
+| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | ✅ | ✅ | n/a | ✅ |
 | **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ✅ | n/a | ✅ |
 
 For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](oemconfig-zebra-android-devices.md#oemconfig-apps-for-zebra-devices).
@@ -70,12 +70,12 @@ OEMs provide their own OEMConfig app that lets you configure features within the
 > * Get the OEMConfig app from the Managed Google Play Store.
 > * Assign the app to your devices or device groups that use the MHS.
 
-Samsung, Zebra and Honeywell OEMs use the following Managed Google Play apps:
+Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 | OEM | App name |
 |---|---|
 | Samsung | Knox Service Plugin |
-| Zebra | Zebra OEMConfig Powered by MX <br/><br/>Zebra OEMConfig Powered by MX is a new version of the OEMConfig app released in May 2023.|
+| Zebra | Zebra OEMConfig Powered by MX <br/><br/>Zebra OEMConfig Powered by MX is a new version of the OEMConfig app released in May 2023. |
 | Zebra | Legacy Zebra OEMConfig |
 | Honeywell | Honeywell UEMConnect |
 
@@ -316,7 +316,7 @@ When you use the schema settings in the **Honeywell UEMConnect** app, the Intune
 
     For guidance on configuring the OEM app schema, use the following links:
 
-    - How to Grant Runtime Permissions via OEM Config (Honeywell UEMConnect)]([https://techcommunity.microsoft.com/t5/microsoft-intune-blog/frontline-workers-get-a-better-experience-from-microsoft-and/ba-p/4078801](https://sps-support.honeywell.com/s/article/How-to-Grant-Runtime-Permissions-via-OEM-Config-Honeywell-UEMConnect))
+    - [How to Grant Runtime Permissions via OEM Config (Honeywell UEMConnect)](https://sps-support.honeywell.com/s/article/How-to-Grant-Runtime-Permissions-via-OEM-Config-Honeywell-UEMConnect)
 
     When you create the Intune policy, you enter the following info:
 
