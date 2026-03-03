@@ -144,7 +144,7 @@ Key capabilities include:
 - **Update readiness checker**: Proactively evaluate devices for deployment risks and flag devices as At Risk based on signals such as disk space, appraiser data, and setup conditions.
 - **Repair devices with OS reinstall**: Remediate upgrade‑blocked devices by triggering an OS reinstall for common issues like insufficient disk space or app compatibility problems, with supporting alerts and reporting.
 
-<!--For more information, see [Autopatch update readiness](/windows/deployment/windows-autopatch/monitor/windows-autopatch-update-readiness-overview).-->
+<For more information, see [Autopatch update readiness](/windows/deployment/windows-autopatch/monitor/windows-autopatch-update-readiness-overview).
 
 > [!div class="checklist"]
 > Applies to:
