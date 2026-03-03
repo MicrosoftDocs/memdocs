@@ -100,17 +100,15 @@ For more information about device restrictions, see [Android template device set
 >   - The permissions **Remote tasks/Locate device**, **Remote tasks/Play sound to locate lost devices**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 >
-::: zone pivot="android"
->
-> For Android devices, the availability of this remote action depends on the admin's ability to read the policies that configure device location.
+>::: zone pivot="android"
 >
 > For Android devices, the remote action is available only if the admin can read the policies that configure device location.
 >
 > The account must:
 > - Have the **Device configuration/Read** permission.
 > - Have scope tag visibility to the device restriction or settings catalog policy that enables location for the device.
-
-::: zone-end
+>
+>::: zone-end
 
 :::column-end:::
 :::row-end:::
