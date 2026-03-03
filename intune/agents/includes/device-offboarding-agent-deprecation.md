@@ -27,8 +27,3 @@ ms.date: 03/02/2026
 > - Complete any active offboarding actions before **June 1, 2026**.
 > - Avoid creating new dependencies on the Device Offboarding Agent.
 > - Transition existing offboarding workflows to previously used device lifecycle and remediation options in Intune.
-
-<!--
-> For more information, see the announcement in the Microsoft 365 admin center: [MCXYZ](https://admin.microsoft.com/AdminPortal/home#/MessageCenter/:/messages/MCXYZ).
-
--->
