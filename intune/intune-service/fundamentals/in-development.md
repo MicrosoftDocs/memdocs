@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/05/2026
+ms.date: 03/06/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -46,9 +46,8 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ## Microsoft Intune Suite
 
-### Scope tags support for Endpoint Privilege Management reports
-<!-- 34630681 -->
- 
+### Scope tags support for Endpoint Privilege Management reports<!-- 34630681 -->
+
 We’re fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
 ### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
