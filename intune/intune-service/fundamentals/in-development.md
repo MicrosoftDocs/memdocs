@@ -105,13 +105,27 @@ The Recovery Lock password can be viewed in the per-device monitor view > **Pass
 
 <!-- *********************************************** -->
 
- <!--## Device enrollment -->
+## Device enrollment
+
+### Access management for Apple services<!-- 31209876 iddraft idready idstaged -->
+
+You will be able to use Apple access management settings in Apple Business Manager and Apple School Manager to configure service access for Apple accounts on organization-owned devices. These controls will let you choose what devices users can sign in to and which apps and services are available to them. For more information about how Apple defines service access and Apple account permissions, see the [Apple Business Manager User Guide](https://support.apple.com/guide/apple-business-manager/customize-user-access-to-apps-and-services-axm53xk34bq/web)(opens Apple support site).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+### Microsoft Intune will support userless ADE for visionOS and tvOS devices<!-- 29219451 -->
+
+Microsoft Intune will be adding support for userless automated device enrollment (ADE) for visionOS and tvOS devices, enabling you to enroll and manage Apple Vision Pro and Apple TV through Apple Business Manager or Apple School Manager. This capability will support ADE without user affinity and includes custom configuration uploads for settings, default enrollment restrictions, and remote device actions. The feature will be available with Microsoft Intune Plan 2 as part of the Microsoft 365 Suite. Enrolled visionOS and tvOS devices will appear alongside iOS and iPadOS devices in the Intune admin center within **Apple mobile** and can be filtered. Support will require tvOS 26 and later or visionOS 26 and later. We recommend that you keep these devices up to date to receive the latest security fixes.
 
 <!-- *********************************************** -->
 
-<!-- ## Device management -->
+## Device management
 
-### Remote Help connectivity updates for Windows devices<!-- 9252975 -->
+### Remote Help connectivity updates for Windows devices<!-- 29252975 -->
 
 We're working to improve connectivity when using the Launch Remote Help feature in the Intune admin center for Windows devices. The improvement involves the addition of a new endpoint:
 
@@ -125,6 +139,10 @@ For the current list of required network endpoints, see [Network requirements fo
 > Applies to:
 >
 > - Windows  
+
+### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
+
+Microsoft Intune will update its TeamViewer integration to simplify onboarding and improve reliability for remote assistance workflows. The new connector will replace the existing TeamViewer connector experience and provide a more streamlined experience in the Intune admin center. After the older experience is retired, organizations using that TeamViewer connector will need to migrate to the new connector within 12 months to maintain functionality.
 
 ### Device page in the Intune admin center is updated (public preview) <!-- 36646300 -->
 
