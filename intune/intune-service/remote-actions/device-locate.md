@@ -104,9 +104,11 @@ For more information about device restrictions, see [Android template device set
 >
 > For Android devices, the availability of this remote action depends on the admin's ability to read the policies that configure device location.
 >
-> To use **Locate device**, the account must:
+> For Android devices, the remote action is available only if the admin can read the policies that configure device location.
+>
+> The account must:
 > - Have the **Device configuration/Read** permission.
-> - Have scope tag visibility to the device restriction or settings catalog policy that controls location settings for the device.
+> - Have scope tag visibility to the device restriction or settings catalog policy that enables location for the device.
 
 ::: zone-end
 
