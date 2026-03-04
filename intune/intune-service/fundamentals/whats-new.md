@@ -100,14 +100,16 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 **AirPlay**:
 
 - Device Name
+
 **Microsoft Defender**:
 
 - The Microsoft Defender category is updated with new settings. Learn more about available macOS Defender settings at [Microsoft Defender - Policies](/defender-endpoint/mac-preferences).
 
-Applies to:
-
-- iOS/iPadOS
-- macOS
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
 
 ### Device management
 
