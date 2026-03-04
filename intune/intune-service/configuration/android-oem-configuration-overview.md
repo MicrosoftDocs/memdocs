@@ -106,7 +106,7 @@ To use OEMConfig on your devices, you need the following requirements:
 > - **Device Configurations**
 > - **Android Enterprise** > **Read**
 >
-> - These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations. You can create a [custom role](../fundamentals/create-custom-role.md) that only includes these permissions.
+> These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations. You can create a [custom role](../fundamentals/create-custom-role.md) that only includes these permissions.
 :::column-end:::
 :::row-end:::
 
