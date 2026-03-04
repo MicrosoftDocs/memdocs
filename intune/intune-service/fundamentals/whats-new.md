@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/02/2026
+ms.date: 03/04/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,58 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of March 4, 2026
+
+### Device configuration
+
+#### New settings in the Windows settings catalog <!-- 36822089 -->
+
+There are new settings in the Windows settings catalog. To see and configure these settings in Intune, create a Windows settings catalog profile (**Devices > Configuration profiles > Create profile > Windows 10 and later > Settings catalog**).
+
+The new policies include:
+
+**Microsoft Edge**:
+
+- **Control whether an informational webpage for Edge for Business is shown in the new tab after major browser updates**: When **Enabled** or not configured, users with Microsoft Entra ID profiles see an informational page about new Edge for Business features after major browser updates. When **Disabled**, the informational page isn't shown to users.
+
+  This policy:
+
+  - Applies only to Microsoft Entra ID profiles. It doesn't apply to Microsoft account (MSA) profiles.
+  - Is available starting in Microsoft Edge version 144, which allows you to configure the setting before any version 145 changes.
+
+- **Enable Silent Printing**: When **Enabled**, Microsoft Edge automatically closes the print preview window and prints to the default printer using its default settings. If the default printer is **Save as PDF**, the file is saved to the user's Downloads folder. When **Disabled** or not configured, silent printing is disabled. The print preview window stays open, and the user must choose the print settings as usual.
+
+**Microsoft Edge > Content settings**:
+
+- **Allow precise geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are allowed to access the user's high-accuracy geolocation without prompting for permission. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal setting is used.
+
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+
+- **Block geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are blocked from requesting or accessing the user's geolocation. These sites can't prompt the user for location permissions. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal browser setting is used.
+
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+
+**Windows Backup and Restore**:
+
+- **Enable Windows Restore**: Choose to enable Windows Restore. When enabled, the restore experience is shown during the Windows setup (OOBE). It allows a user to restore their backed‑up Windows settings from the cloud to a new or reset device. It restores the user experience settings and configuration preferences. It's not a full system image.
+
+  Your options:
+
+  - Windows Restore Not Configured
+  - Windows Restore Enabled
+
+  This policy:
+
+  - Was previously for Windows Insiders and is now generally available (GA).
+  - Uses the [WindowsBackupAndRestore CSP](/windows/client-management/mdm/windowsbackupandrestore-csp).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
 
 ## Week of March 2, 2026 (Service release 2602)
 
