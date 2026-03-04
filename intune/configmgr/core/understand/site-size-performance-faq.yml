@@ -204,14 +204,16 @@ sections:
       - question: |
           Should I implement any additional SQL Server maintenance tasks?
         answer: |          
-          The built-in ["Rebuild Indexes" maintenance task](/intune/configmgr/core/servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes on the tables or views. The Query Optimizer then updates statistics on related objects as per [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) in SQL documentation. Therefore, if you only use the built-in task, statistics aren't updated on most tables. This can lead to suboptimal query plans and poor performance.
+          The built-in ["Rebuild Indexes" maintenance task](/intune/configmgr/core/servers/manage/reference-for-maintenance-tasks#rebuild-indexes) rebuilds only highly fragmented indexes. The Query Optimizer then updates statistics on related objects as described in [After Maintenance Operations](/sql/relational-databases/statistics/statistics#after-maintenance-operations) section in SQL documentation. Therefore, if you rely solely on this built-in task, statistics may not be updated on some tables and views, leading to suboptimal query plans and poor performance.
           
-          You should update indexes as often as once a week and statistics as often as once a day to maintain SQL Server performance. Engaging a Microsoft Cloud Solution Architect (CSA) or SQL Server expert can help you optimize your maintenance strategy for your environment.
+          You should perform [index maintenance](/sql/relational-databases/indexes/reorganize-and-rebuild-indexes) as often as once a week and [update statistics](/sql/t-sql/statements/update-statistics-transact-sql) of tables and views as often as once a day to maintain SQL Server performance.
+          
+          There is no one-size-fits-all approach to database maintenance. The optimal strategy depends on factors such as database size, workload characteristics, and operational requirements. Engaging an in-house SQL Server expert or a Microsoft Cloud Solution Architect (CSA) can help you design the maintenance strategy tailored to your environment.
 
-          In large sites, some SQL Server tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your maintenance approach for them one by one. 
-          
-          Non-Microsoft scripts and additional information available from the Configuration Manager and SQL Server communities can help optimize these tasks. For example, there's a whitepaper summarizing Microsoft CSAs' experience: [SQL Recommendations for MECM](https://github.com/stephaneserero/Sql-recommendations-for-MECM).
-          
+          Additional guidance is available from the Configuration Manager and SQL Server communities, including non-Microsoft maintenance scripts. The [SQL Recommendations for MECM](https://github.com/stephaneserero/Sql-recommendations-for-MECM) whitepaper summarizes Microsoft CSAs' field experience on SQL maintenance and tuning.
+
+          In large sites, some database tables, such as CI\_CurrentComplianceStatusDetails, HinvChangeLog, might be large, depending on your usage patterns. You may need to reduce or alter your approach to maintain these one by one.
+                    
       - question: |
           When should I use full SQL Server instead of SQL Server Express on my secondary sites?
         answer: |

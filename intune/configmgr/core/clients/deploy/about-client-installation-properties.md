@@ -348,12 +348,12 @@ Specifies the Microsoft Entra tenant identifier. Configuration Manager links to 
 
 - On a device that runs Windows 10 or later and is joined to the same Microsoft Entra tenant, open a command prompt.
 - Run the following command: `dsregcmd.exe /status`
-- In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
+- In the Device State section, find the **TenantId** value. For example, `TenantId : aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
   > [!NOTE]
   > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
-Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
+Example: `ccmsetup.exe AADTENANTID=aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
 <!--
 ### AADTENANTNAME
