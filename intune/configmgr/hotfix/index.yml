@@ -35,8 +35,6 @@ landingContent:
             url: 2503/32851084.md
           - text: KB 35958849 Cloud management gateway deployment maintenance update
             url: 2503/35958849.md
-          - text: KB 36495448 Software update management client fix
-            url: 2509/36495448.md
   - title: Configuration Manager 2409
     linkLists:
       - linkListType: overview
