@@ -1208,7 +1208,7 @@ items:
               href: ./intune-service/configuration/administrative-templates-windows.md
             - name: Configure recovery lock on macOS
               displayName: gpo, admx, macos
-              href: ./configuration/settings-catalog-recovery-lock.md
+              href: ./intune-service/configuration/settings-catalog-recovery-lock.md
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./intune-service/configuration/administrative-templates-import-custom.md
