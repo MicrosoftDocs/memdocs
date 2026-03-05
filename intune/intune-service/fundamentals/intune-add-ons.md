@@ -136,7 +136,7 @@ Licenses for Intune add-ons can be purchased just as you would purchase Intune P
 - Microsoft Volume License Servicing Center (VLSC)
 - Existing relationships with Microsoft partners/resellers
 
-After you buy licenses via any source, the licenses are available in your tenant and the status of the Intune add-ons capability will update accordingly.
+After you buy licenses via any source, the licenses are available in your tenant and the status of the Intune add-ons capability will update accordingly. 
 
 ## How to assign licenses
 
