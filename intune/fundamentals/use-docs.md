@@ -19,7 +19,7 @@ This article provides resources and tips for using the Microsoft Intune product 
 For general help and support, see:
 
 - [Find help for Configuration Manager](../configmgr/core/understand/find-help.md)
-- [Get support in Microsoft Intune](../support/get-support-admin-center.md)
+- [Get support in Microsoft Intune](../fundamentals/it-pro-support/get-support-admin-center.md)
 
 > [!TIP]
 > Also visit the **Documentation** node in the **Community** workspace of the Configuration Manager console. This node includes up-to-date information about Configuration Manager documentation and support articles. For more information, see [Using the Configuration Manager console](../configmgr/core/servers/manage/admin-console.md#bkmk_doc-dashboard).
@@ -93,7 +93,7 @@ Select the **Feedback** link in the upper right of any article or go to the Feed
 
 - Product feedback for [Configuration Manager](../configmgr/core/understand/product-feedback.md) or [Intune](https://feedbackportal.microsoft.com/feedback/forum/ef1d6d38-fd1b-ec11-b6e7-0022481f8472)
 - [Product questions](/answers/products/enterprise-mobility-security)
-- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Intune](../support/get-support-admin-center.md)
+- Support requests for [Configuration Manager](https://aka.ms/cmcbsupport) or [Microsoft Intune](../fundamentals/it-pro-support/get-support-admin-center.md)
 
 ## Notifications
 

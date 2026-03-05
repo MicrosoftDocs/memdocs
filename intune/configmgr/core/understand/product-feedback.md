@@ -257,4 +257,4 @@ When you send a frown, include the following additional information specific to 
 
 [How to use the console](../servers/manage/admin-console.md)
 
-[How to get support in Microsoft Intune admin center](../../../support/get-support-admin-center.md)
+[How to get support in Microsoft Intune admin center](../../../fundamentals/it-pro-support/get-support-admin-center.md)

@@ -1852,7 +1852,7 @@ items:
     - name: Using the Intune docs
       href: ./fundamentals/use-docs.md
     - name: Get support in the Intune admin center
-      href: ./support/get-support-admin-center.md
+      href: ./fundamentals/it-pro-support/get-support-admin-center.md
     - name: Troubleshoot issues
       href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
 

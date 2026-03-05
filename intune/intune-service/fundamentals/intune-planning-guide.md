@@ -570,7 +570,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Determine who will support end users**. Organizations can have different tiers or levels (1-3). For example, tier 1 and 2 might be part of the support team. Tier 3 includes members of the MDM team responsible for the Intune deployment.
 
-  Tier 1 is typically the first level of support and the first tier to contact. If tier 1 can't resolve the issue, then they escalate to tier 2. Tier 2 escalates it to tier 3. [Microsoft support](../../support/get-support-admin-center.md) might be considered as tier 4.
+  Tier 1 is typically the first level of support and the first tier to contact. If tier 1 can't resolve the issue, then they escalate to tier 2. Tier 2 escalates it to tier 3. [Microsoft support](../../fundamentals/it-pro-support/get-support-admin-center.md) might be considered as tier 4.
 
   - In the initial rollout phases, be sure all tiers in your support team document issues and resolutions. Look for patterns, and adjust your communications for the next rollout phase. For example:
     - If different users or groups are hesitant about enrolling their personal devices, consider a Teams calls to answer common questions.

@@ -122,6 +122,6 @@ CALLERID, NAME, NUMBER, UNIVERSAL PRINCIPAL NAME, URGENCY, IMPACT, SEVERITY, ASS
 
 ## Next steps
 
-- [Get support in Microsoft Intune admin center](../../support/get-support-admin-center.md)
+- [Get support in Microsoft Intune admin center](../../fundamentals/it-pro-support/get-support-admin-center.md)
 
 - [Use Remote Help](remote-help.md)

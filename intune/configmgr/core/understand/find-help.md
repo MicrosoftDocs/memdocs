@@ -23,7 +23,7 @@ There are several resources that you can use to find help with Configuration Man
 
 For help with product accessibility, see [Accessibility features](accessibility-features.md).
 
-To get support for co-management, tenant attach, and analytics features, see [How to get support in Microsoft Intune admin center](../../../support/get-support-admin-center.md).
+To get support for co-management, tenant attach, and analytics features, see [How to get support in Microsoft Intune admin center](../../../fundamentals/it-pro-support/get-support-admin-center.md).
 
 ## Product feedback
 
@@ -71,4 +71,4 @@ The following links provide information about support options and community reso
 
 [Software Center user guide](software-center.md)
 
-[How to get support in Microsoft Intune admin center](../../../support/get-support-admin-center.md)
+[How to get support in Microsoft Intune admin center](../../../fundamentals/it-pro-support/get-support-admin-center.md)
