@@ -57,7 +57,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of March 4, 2026
+## Week of March 2, 2026
 
 ### Device configuration
 
