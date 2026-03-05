@@ -29,14 +29,14 @@ The following table provides a list of add-on capabilities and associated Intune
 
 | Capability | Standalone add-on | Intune Plan 2 | Intune Suite |
 |:-|:-:|:-:|:-:|
-| Endpoint Privilege Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Enterprise App Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Advanced Analytics | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Remote Help | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Microsoft Tunnel for Mobile Application Management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Microsoft Cloud PKI | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Firmware-over-the-air update |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Specialized devices management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Endpoint Privilege Management](../protect/epm-overview.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Enterprise App Management](../apps/apps-enterprise-app-management.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Advanced Analytics](../../advanced-analytics/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Remote Help](remote-help.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Microsoft Tunnel for Mobile Application Management](https://aka.ms/IntuneSuitePricing) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Microsoft Cloud PKI](../../cloud-pki/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Specialized devices management](specialty-devices-with-intune.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
 > For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
