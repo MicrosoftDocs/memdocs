@@ -3,7 +3,7 @@ title: Use Intune Suite add-on capabilities
 description: Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/01/2024
+ms.date: 03/05/2026
 ms.topic: how-to
 ms.reviewer: aanavath
 ms.subservice: suite
@@ -33,7 +33,7 @@ The following table provides a list of add-on capabilities and associated Intune
 | [Enterprise App Management](../apps/apps-enterprise-app-management.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Advanced Analytics](../../advanced-analytics/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Remote Help](remote-help.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| [Microsoft Tunnel for Mobile Application Management](https://aka.ms/IntuneSuitePricing) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Microsoft Cloud PKI](../../cloud-pki/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 | [Specialized devices management](specialty-devices-with-intune.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
