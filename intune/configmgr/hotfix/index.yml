@@ -17,6 +17,8 @@ landingContent:
         links:
           - text: KB 35877153 Summary of changes in 2509
             url: 2509/35877153.md
+          - text: KB 36495448 Software update management client fix
+            url: 2509/36495448.md
           - text: KB 33247081 Connected cache update for Configuration Manager versions 2409, 2503, and 2509
             url: 2509/33247081.md
   - title: Configuration Manager 2503
@@ -35,6 +37,8 @@ landingContent:
             url: 2503/32851084.md
           - text: KB 35958849 Cloud management gateway deployment maintenance update
             url: 2503/35958849.md
+          - text: KB 36495448 Software update management client fix
+            url: 2509/36495448.md
   - title: Configuration Manager 2409
     linkLists:
       - linkListType: overview
