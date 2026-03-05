@@ -57,9 +57,32 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
-## Week of March 2, 2026
+## Week of March 2, 2026 (Service release 2602)
+
+### App management
+
+#### Newly available protected apps for Intune <!-- 36072390, 36072616 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Jump by Accio Inc.
+- Mijn InPlanning by Intus Workforce Solutions (Android)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
 ### Device configuration
+
+#### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
+
+You can use assignment filters in policy assignments for DDM-based configurations, like software updates.
+
+To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
 
 #### New settings in the Windows settings catalog <!-- 36822089 -->
 
@@ -113,32 +136,6 @@ The new policies include:
 > - Windows
 
 To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
-
-## Week of March 2, 2026 (Service release 2602)
-
-### App management
-
-#### Newly available protected apps for Intune <!-- 36072390, 36072616 -->
-
-The following protected apps are now available for Microsoft Intune:
-
-- Jump by Accio Inc.
-- Mijn InPlanning by Intus Workforce Solutions (Android)
-
-For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
-
-### Device configuration
-
-#### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
-
-You can use assignment filters in policy assignments for DDM-based configurations, like software updates.
-
-To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
-
-Applies to:
-
-- iOS/iPadOS
-- macOS
 
 #### New updates to the Apple settings catalog <!-- 36180374 -->
 
