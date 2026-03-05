@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/04/2026
+ms.date: 03/05/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -90,7 +90,12 @@ The new policies include:
 
 **Windows Backup and Restore**:
 
-- **Enable Windows Restore**: Choose to enable Windows Restore. When enabled, the restore experience is shown during the Windows setup (OOBE). It allows a user to restore their backed‑up Windows settings from the cloud to a new or reset device. It restores the user experience settings and configuration preferences. It's not a full system image.
+- **Enable Windows Restore**: Choose to enable Windows Restore. When enabled, the restore process for a device can be initiated:
+
+  - At the time of device enrollment during the out-of-box experience (OOBE), or
+  - The first time a user signs in with their Microsoft Entra ID account after the device finishes enrolling.
+
+  It allows a user to restore their backed‑up Windows settings and Microsoft Store apps from the cloud to a new or reset device. It restores the user experience settings and configuration preferences. It's not a full system image. To learn more, see [Windows Backup for Organizations overview](/windows/configuration/windows-backup).
 
   Your options:
 
