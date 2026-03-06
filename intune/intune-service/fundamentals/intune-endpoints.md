@@ -3,7 +3,7 @@ title: Network endpoints for Microsoft Intune
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/21/2025
+ms.date: 03/05/2026
 ms.topic: reference
 ms.reviewer: angrobe
 ms.collection:
@@ -439,16 +439,6 @@ euprodimedatasec.azureedge.net
 naprodimedatahotfix.azureedge.net
 naprodimedatapri.azureedge.net
 naprodimedatasec.azureedge.net
-swda01-mscdn.azureedge.net
-swda02-mscdn.azureedge.net
-swdb01-mscdn.azureedge.net
-swdb02-mscdn.azureedge.net
-swdc01-mscdn.azureedge.net
-swdc02-mscdn.azureedge.net
-swdd01-mscdn.azureedge.net
-swdd02-mscdn.azureedge.net
-swdin01-mscdn.azureedge.net
-swdin02-mscdn.azureedge.net
 *.notify.windows.com
 *.wns.windows.com
 ekcert.spserv.microsoft.com
@@ -488,12 +478,34 @@ intunemaape9.neu.attest.azure.net
 *.gov.teams.microsoft.us
 remoteassistanceweb.usgov.communication.azure.us
 config.edge.skype.com
-contentauthassetscdn-prod.azureedge.net
-contentauthassetscdn-prodeur.azureedge.net
-contentauthrafcontentcdn-prod.azureedge.net
-contentauthrafcontentcdn-prodeur.azureedge.net
 fd.api.orgmsg.microsoft.com
 ris.prod.api.personalization.ideas.microsoft.com
+*.powershellgallery.com
+cdn.oneget.org
+go.microsoft.com
+aka.ms
+displaycatalog.mp.microsoft.com
+purchase.md.mp.microsoft.com
+licensing.mp.microsoft.com
+storeedgefd.dsx.mp.microsoft.com
+*.events.data.microsoft.com
+*.delivery.mp.microsoft.com
+enterpriseregistration.windows.net
+certauth.enterpriseregistration.windows.net
+login.microsoftonline.com
+graph.windows.net
+config.office.com
+ecs.office.com
+aadcdn.msauth.net
+aadcdn.msftauth.net
+browser.pipe.aria.microsoft.com
+teams.microsoft.com
+login.live.com
+lgmsapeweu.blob.core.windows.net
+lgmsapewus2.blob.core.windows.net
+lgmsapesea.blob.core.windows.net
+lgmsapeaus.blob.core.windows.net
+lgmsapeind.blob.core.windows.net
 
 ```
 
