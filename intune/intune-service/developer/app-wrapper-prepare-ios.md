@@ -229,8 +229,6 @@ You can use the following command line parameters with the App Wrapping Tool:
 |`-ds`|(Optional) Disable Intune's protections for SFSafariViewController, SFAuthSession, and ASWebAuthenticationSession.
 |`-mp`|(Optional) `<Path to a plist file containing MAM settings to merge into the wrapped app>`. Use this property to provide custom Intune MAM SDK settings that will be merged into the app's IntuneMAMSettings dictionary during the wrapping process. Note: The settings `MultiIdentity`, `MAMPolicyRequired`, `AutoEnrollOnLaunch`, and `ContainingAppBundleId` are unsupported via -mp as they are automatically configured by the App Wrapping Tool. Authentication settings (`ADALAuthority`, `ADALClientId`, `ADALRedirectUri`) are also unsupported via -mp and must be configured using the -aa, -ac, and -ar command-line parameters. |
 
-
-
 ### Use a plist to input arguments
 
 An easy way to run the App Wrapping Tool is to put all the command arguments into a [plist](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) file. Plist is a file format similar to XML that you can use to input your command line arguments using a form interface.
