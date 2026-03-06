@@ -154,18 +154,18 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpcconnectionpolicy)
   - **Use authentication for outgoing RPC connections: (Device)**\
     Baseline default: *Default*
-  - **Protocol to allow for incoming RPC connections: (Device)**\
+  - **Protocol to use for outgoing RPC connections: (Device)**\
     Baseline default: *RPC over TCP*
 
 - **Configure RPC listener settings**\
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpclistenerpolicy)
   - **Protocols to allow for incoming RPC connections: (Device)**\
-    Baseline default: *RCP over TCP*
+    Baseline default: *RPC over TCP*
   - **Authentication protocol to use for incoming RPC connections: (Device)**\
     Baseline default: *Negotiate*
 
-- **Configure RPC over TPC port**\
+- **Configure RPC over TCP port**\
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurerpctcpport)
   - **RPC over TCP port (Device)**\
@@ -178,7 +178,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 - **Manage processing of Queue-specific files**\
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-printers?WT.mc_id=Portal-fx#configurecopyfilespolicy)
-  - **Manage processing of Queue-specific files: (Device)**\
+  - **Manage processing of Queue-Specific files: (Device)**\
     Baseline default: *Limit Queue-specific files to Color profiles*
 
 #### Start Menu and Taskbar > Notifications
@@ -187,6 +187,12 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-admx-wpn?WT.mc_id=Portal-fx#nolockscreentoastnotification)
 
+#### System > Audit Process Creation
+
+- **Include command line in process creation events**\
+  Baseline default: *Enabled*\
+  [Learn more](windows/client-management/mdm/policy-csp-admx-auditsettings?WT.mc_id=Portal-fx#includecmdline)
+  
 #### System > Credentials Delegation
 
 - **Encryption Oracle Remediation**\
@@ -229,7 +235,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 
 #### System > Internet Communication Management > Internet Communication settings
 
-- **Turn off downloading of print drivers**\
+- **Turn off downloading of print drivers over HTTP**\
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-connectivity?WT.mc_id=Portal-fx#disabledownloadingofprintdriversoverhttp)
 
@@ -562,7 +568,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 - **Include local path when user is uploading files to a server**\
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#internetzoneincludelocalpathwhenuploadingfilestoserver)
-  - **Include local path when user is uploading files to a server**\
+  - **Include local directory path when uploading files to a server**\
     Baseline default: *Disable*
 
 - **Initialize and script ActiveX controls not marked as safe**\
@@ -746,7 +752,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 - **Allow binary and script behaviors**\
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-internetexplorer?WT.mc_id=Portal-fx#restrictedsiteszoneallowbinaryandscriptbehaviors)
-  - **Allow binary and script behaviors**\
+  - **Allow binary and script Behaviors**\
     Baseline default: *Disable*
 
 - **Allow cut, copy or paste operations from the clipboard via script**\
@@ -1069,12 +1075,6 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   Baseline default: *Enabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#realtimeprotection-disablescanonrealtimeenable)
 
-#### Windows Components > Microsoft Defender Antivirus > Scan
-
-- **Scan packed executables**\
-  Baseline default: *Enabled*\
-  [Learn more](/windows/client-management/mdm/policy-csp-admx-microsoftdefenderantivirus?WT.mc_id=Portal-fx#scan-disablepackedexescanning)
-
 #### Windows Components > Remote Desktop Services > Remote Desktop Connection Client
 
 - **Do not allow passwords to be saved**\
@@ -1111,7 +1111,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 
 #### Windows Components > Windows Logon Options
 
-- **Enable MPR notifications for the system**\
+- **Configure the transmission of the user's password in the content of MPR notifications sent by winlogon**\
   Baseline default: *Disabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-windowslogon?WT.mc_id=Portal-fx#enablemprnotifications)
 
@@ -1334,6 +1334,9 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   - **Block credential stealing from the Windows local security authority subsystem**\
     Baseline default: *Block*\
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  - **Block process creations originating from PSExec and WMI commands**
+    Baseline default: *Audit*\
+    [Learn more](https://learn.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Office applications from creating executable content**\
     Baseline default: *Block*\
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
@@ -1372,10 +1375,6 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 - **Hide Exclusions From Local Admins**\
   Baseline default: *If you enable this setting, local admins will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*\
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocaladmins)
-
-- **Hide Exclusions From Local Users**\
-  Baseline default: *If you enable this setting, local users will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*\
-  [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocalusers)
 
 - **Oobe Enable Rtp And Sig Update**\
   Baseline default: *If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.*\
@@ -1474,7 +1473,8 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
     Baseline default: *True*\
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoredomainprofiledisableinboundnotifications)
   - **Log Max File Size**\
-    Baseline default: *16384*\
+    Baseline default: *Configured*\
+    Value: *16384*\
     [Learn more](/windows/client-management/mdm/Firewall-csp/?WT.mc_id=Portal-fx#mdmstoredomainprofilelogmaxfilesize)
   - **Default Inbound Action for Domain Profile**\
     Baseline default: *Block*\
@@ -1484,7 +1484,8 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   Baseline default: *True*\
   [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofileenablefirewall)
   - **Log Max File Size**\
-    Baseline default: *16384*\
+    Baseline default: *Configured*\
+    Value: *16384*\
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstoreprivateprofilelogmaxfilesize)
   - **Default Inbound Action for Private Profile**\
     Baseline default: *Block*\
@@ -1509,7 +1510,8 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
     Baseline default: *Enable Logging Of Dropped Packets*\
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofileenablelogdroppedpackets)
   - **Log Max File Size**\
-    Baseline default: *16384*\
+    Baseline default: *Configured*\
+    Value: *16384*\
     [Learn more](/windows/client-management/mdm/firewall-csp?WT.mc_id=Portal-fx#mdmstorepublicprofilelogmaxfilesize)
   - **Default Outbound Action**\
     Baseline default: *Allow*\
@@ -1567,7 +1569,8 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#auditinsecureguestlogon)
 
 - **Auth Rate Limiter Delay In Ms**\
-  Baseline default: *2000*\
+  Baseline default: *Configured*\
+  Value: *2000*\
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#authratelimiterdelayinms)
 
 - **Enable Auth Rate Limiter**\
@@ -1578,12 +1581,12 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   Baseline default: *Disabled*\
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#enablemailslots)
 
-- **Max SMB 2 Dialect**\
+- **Max Smb2 Dialect**\
   Baseline default: *SMB 3.1.1*\
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#maxsmb2dialect)
 
-- **Min SMB 2 Dialect**\
-  Baseline default: *3.0.0*\
+- **Min Smb2 Dialect**\
+  Baseline default: *SMB 3.0.0*\
   [Learn more](/windows/client-management/mdm/policy-csp-lanmanserver#minsmb2dialect)
 
 ### Lanman Workstation
@@ -1623,7 +1626,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 ### LAPS
 <!-- UI option uses 'Azure AD`, as does the CSP for options while the CSP description uses Microsoft Entra ID -->
 - **Backup Directory**\
-  Baseline default: *Backup the password to Azure AD only*\
+  Baseline default: *Backup the password to Microsoft Entra ID only*\
   [Learn more](/windows/client-management/mdm/LAPS-csp/?WT.mc_id=Portal-fx#policiesbackupdirectory)
 
 ### Local Policies Security Options
@@ -1675,7 +1678,7 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_donotstorelanmanagerhashvalueonnextpasswordchange)
 
 - **Network Security LAN Manager Authentication Level**\
-  Baseline default: *Send LM and NTLMv2 responses only. Refuse LM and NTLM*\
+  Baseline default: *Send NTLMv2 responses only. Refuse LM and NTLM*\
   [Learn more](/windows/client-management/mdm/policy-csp-LocalPoliciesSecurityOptions?WT.mc_id=Portal-fx#networksecurity_lanmanagerauthenticationlevel)
 
 - **Network Security Minimum Session Security For NTLMSSP Based Clients**\
@@ -1815,87 +1818,87 @@ The settings in this baseline are taken from the Windows 11 **version 25H2** sec
 
 - **Access From Network**\
   Baseline default: *Configured*\
-  Values: *Administrators* (*S-1-5-32-544), *Remote Desktop Users* (*S-1-5-32-555)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#accessfromnetwork)
 
 - **Allow Local Log On**\
   Baseline default: *Configured*\
-  Values: *Administrators* (*S-1-5-32-544), *Users* (*S-1-5-32-545)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#allowlocallogon)
 
 - **Backup Files And Directories**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#backupfilesanddirectories)
 
 - **Create Global Objects**\
   Baseline default: *Configured*\
-  Values: *Administrators* (*S-1-5-32-544), *Local Service*  (*S-1-5-19), *Network Service* (*S-1-5-20), *Service* (*S-1-5-6)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createglobalobjects)
 
 - **Create Page File**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#createpagefile)
 
 - **Debug Programs**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#debugprograms)
 
 - **Deny Access From Network**\
   Baseline default: *Configured*\
-  Value: *NT AUTHORITY\Local Account* (*S-1-5-113)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyaccessfromnetwork)
 
 - **Deny Remote Desktop Services Log On**\
   Baseline default: *Configured*\
-  Value: *NT AUTHORITY\Local Account* (*S-1-5-113)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#denyremotedesktopserviceslogon)
 
 - **Impersonate Client**\
   Baseline default: *Configured*\
-  Values: *Administrators* (*S-1-5-32-544), *Service* (*S-1-5-6), *Local Service* (*S-1-5-19), *Network Service* (*S-1-5-20)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#impersonateclient)
 
 - **Load Unload Device Drivers**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#loadunloaddevicedrivers)
 
 - **Manage Auditing And Security Log**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#manageauditingandsecuritylog)
 
 - **Manage Volume**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#managevolume)
 
 - **Modify Firmware Environment**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#modifyfirmwareenvironment)
 
 - **Profile Single Process**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#profilesingleprocess)
 
 - **Remote Shutdown**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#remoteshutdown)
 
 - **Restore Files And Directories**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#restorefilesanddirectories)
 
 - **Take Ownership**\
   Baseline default: *Configured*\
-  Value: *Administrators* (*S-1-5-32-544)
+  *In the admin center, this setting includes one or more preconfigured SIDs, but none are selected by default.*\
   [Learn more](/windows/client-management/mdm/policy-csp-UserRights?WT.mc_id=Portal-fx#takeownership)
 
 ### Virtualization Based Technology
@@ -3215,6 +3218,9 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
   - **Block credential stealing from the Windows local security authority subsystem**\
     Baseline default: *Block*\
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
+  - **Block process creations originating from PSExec and WMI commands**
+    Baseline default: *Audit*\
+    [Learn more](https://learn.microsoft.com/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
   - **Block Office applications from creating executable content**\
     Baseline default: *Block*\
     [Learn more](/windows/security/threat-protection/microsoft-defender-atp/attack-surface-reduction?WT.mc_id=Portal-fx)
@@ -3265,10 +3271,6 @@ The settings in this baseline are taken from the Windows 11 **version 24H2** sec
 - **Enable Convert Warn To Block**\
   Baseline default: *Warn verdicts are converted to block*\
   [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationenableconvertwarntoblock)
-
-- **Hide Exclusions From Local Users**\
-  Baseline default: *If you enable this setting, local users will no longer be able to see the exclusion list in Windows Security App or via PowerShell.*\
-  [Learn more](/windows/client-management/mdm/Defender-csp/?WT.mc_id=Portal-fx#configurationhideexclusionsfromlocalusers)
 
 - **Oobe Enable Rtp And Sig Update**\
   Baseline default: *If you enable this setting, real-time protection and Security Intelligence Updates are enabled during OOBE.*\
