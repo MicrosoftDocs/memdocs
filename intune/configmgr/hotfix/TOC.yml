@@ -9,8 +9,8 @@ items:
     href: 2509/33247081.md
   - name: KB 36495448 Software update management client fix
     href: 2509/36495448.md
-  - name: KB 36439222 Offline feedback update for Configuration Manager 2403, 2409, 2503
-    href: 2509/36439222.md
+  - name: KB 36419222 Offline feedback update for Configuration Manager 2403, 2409, 2503
+    href: 2509/36419222.md
 - name: Version 2503
   items:
   - name: KB 31909343 Summary of changes in 2503
@@ -25,8 +25,8 @@ items:
     href: 2503/32851084.md
   - name: KB 35958849 Cloud management gateway deployment maintenance update
     href: 2503/35958849.md
-  - name: KB 36439222 Offline feedback update for Configuration Manager 2403, 2409, 2503
-    href: 2503/36439222.md  
+  - name: KB 36419222 Offline feedback update for Configuration Manager 2403, 2409, 2503
+    href: 2503/36419222.md  
 - name: Version 2409
   items:
   - name: KB 30195272 Summary of changes in 2409
