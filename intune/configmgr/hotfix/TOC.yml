@@ -13,8 +13,6 @@ items:
     href: 2509/36439222.md
 - name: Version 2503
   items:
-  - name: KB 36439222 Offline feedback submission fails when using UploadOfflineFeedback.exe
-    href: 2503/36439222.md  
   - name: KB 31909343 Summary of changes in 2503
     href: 2503/31909343.md
   - name: KB 32480179 Configuration Manager 2503 early update ring
@@ -27,7 +25,8 @@ items:
     href: 2503/32851084.md
   - name: KB 35958849 Cloud management gateway deployment maintenance update
     href: 2503/35958849.md
-
+  - name: KB 36439222 Offline feedback submission fails when using UploadOfflineFeedback.exe
+    href: 2503/36439222.md  
 - name: Version 2409
   items:
   - name: KB 30195272 Summary of changes in 2409
