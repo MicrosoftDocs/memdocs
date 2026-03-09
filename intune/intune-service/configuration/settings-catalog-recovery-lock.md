@@ -57,10 +57,13 @@ This article applies to:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 >
-> To run the device actions, use a [custom role](../fundamentals/create-custom-role.md) with the following permissions:
+> To run the device actions, sign into the Intune admin center with an account with one of the following roles:
 >
-> - Remote tasks/Rotate macOS recovery lock password
-> - Remote tasks/View macOS recovery lock password
+> - [Intune administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role
+> - An Intune [custom role](../fundamentals/create-custom-role.md) with the following permissions:
+>
+>   - Remote tasks/Rotate macOS recovery lock password
+>   - Remote tasks/View macOS recovery lock password
 :::column-end:::
 :::row-end:::
 
@@ -125,7 +128,7 @@ You can use the rotate recovery lock passcode device action to reset the recover
 2. Select **Rotate recovery lock passcode**.
 3. Confirm the action.
 
-To learn more, see [Need link from Paolo ??]().
+To learn more, see [Rotate recovery lock passcode device action](../remote-actions/rotate-recovery-lock-passcode.md).
 
 ## Remove the recovery lock password
 
