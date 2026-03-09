@@ -190,4 +190,4 @@ Build your security posture with Intune:
 - **Configure endpoint security** - Start with [endpoint security policies](../protect/endpoint-security.md) for focused security configurations.
 - **Implement compliance** - Deploy [device compliance policies](../protect/device-compliance-get-started.md) and [Conditional Access](../protect/conditional-access.md).
 - **Protect data** - Configure [app protection policies](../apps/app-protection-policy.md) for organizational data.
-- **Monitor and maintain** - Learn about [data security and sharing in Intune](../protect/privacy-data-secure-share.md).
+- **Monitor and maintain** - Learn about [data security and sharing in Intune](../../privacy/data-sharing/index.md).

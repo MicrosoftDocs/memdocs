@@ -38,7 +38,7 @@ You can also read:
 > - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new)
 > - [Windows Autopilot: What's new](/autopilot/whats-new)
 
-You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../fundamentals/use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
 <!-- Common categories - in this order:
@@ -164,6 +164,12 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 >
 > - iOS/iPadOS
 > - macOS
+
+### Device enrollment  
+
+#### New setting controls MDM enrollment during account registration on Windows (public preview)<!-- 14724061 --> 
+
+A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in public preview. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
 ### Device management
 
@@ -476,7 +482,7 @@ The *Windows feature update compatibility risks report* and *Windows feature upd
 
 #### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->
 
-**Admin tasks** in the Intune admin center are out of public preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
+**Admin tasks** in the Intune admin center are out of preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
 
 The following task types are supported:
 
