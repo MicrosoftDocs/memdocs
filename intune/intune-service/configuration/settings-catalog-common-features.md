@@ -53,7 +53,7 @@ There are features and built-in settings to help you manage AI features on Andro
 
 For more information, go to [Manage AI features on Android devices](../../solutions/ai/manage-ai-android.md).
 
-## Enable recovery lock on macOS devices
+## Enable Recovery Lock on macOS devices
 
 <!-- ms.reviewer: beflamm -->
 
