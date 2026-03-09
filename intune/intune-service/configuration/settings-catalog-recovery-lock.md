@@ -5,7 +5,6 @@ ms.author: mandia
 author: MandiOhlinger
 ms.date: 03/24/2026
 ms.topic: how-to
-
 ms.reviewer: beflamm
 ms.collection:
 - M365-identity-device-management
@@ -57,7 +56,7 @@ This article applies to:
 >
 > - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
 >
-> To run the device actions, sign into the Intune admin center with an account with one of the following roles:
+> To run the device actions, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account with one of the following roles:
 >
 > - [Intune administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role
 > - An Intune [custom role](../fundamentals/create-custom-role.md) with the following permissions:
@@ -118,7 +117,7 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 When you assign the policy to devices, you can monitor its status using the [Per setting status report](../fundamentals/reports.md#per-setting-status-report-operational).
 
-If Recovery Lock is enabled, you can view the password at **Passwords and keys** > **Recovery Lock Password**.
+If Recovery Lock is enabled, you can view the password in the report at **Passwords and keys** > **Recovery Lock Password**.
 
 ## Use the rotate Recovery Lock passcode device action
 
