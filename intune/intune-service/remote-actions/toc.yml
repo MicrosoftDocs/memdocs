@@ -70,6 +70,9 @@ items:
   - name: Restart
     href: device-restart.md
     displayName: remote action
+  - name: Restore managed home screen
+    href: device-restore-managed-home-screen.md
+    displayName: remote action
   - name: Retire
     href: device-retire.md
     displayName: remote action
@@ -90,6 +93,9 @@ items:
     displayName: remote action
   - name: Sync
     href: device-sync.md
+    displayName: remote action
+  - name: Suspend managed home screen
+    href: device-suspend-managed-home-screen.md
     displayName: remote action
   - name: Update cellular data plan
     href: update-cellular-data-plan.md
