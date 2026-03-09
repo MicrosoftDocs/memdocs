@@ -7,9 +7,9 @@ ms.topic: how-to
 
 # Remote Device Action: rotate Recovery Lock passcode
 
-Recovery Lock protects macOS devices by requiring a password to access recoveryOS. With Intune, administrators can remotely rotate this passcode to maintain secure, controlled access to the recovery environment.
+Recovery Lock protects macOS devices by requiring a password to access recoveryOS. By using Intune, administrators can remotely rotate this passcode to keep access to the recovery environment secure and controlled.
 
-Using the **Rotate Recovery Lock Passcode** action, Intune generates a new passcode that replaces the existing one. The updated passcode appears in the admin center and becomes the only valid credential for accessing the device's recovery options.
+When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new passcode to replace the current one. The new passcode shows up in the admin center and is the only valid credential for accessing the device's recovery options.
 
 ## Prerequisites
 
@@ -58,7 +58,7 @@ Using the **Rotate Recovery Lock Passcode** action, Intune generates a new passc
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
 1. At the top of the device overview pane, find the row of remote action icons. Select **Rotate Recovery Lock Passcode**.
-1. Select **Yes** to confirm the action. A new Recovery Lock Passcode will be generated.
+1. Select **Yes** to confirm the action. A new Recovery Lock Passcode is generated.
    - To view the new passcode, select **Passwords and keys** > **View Recovery Lock Passcode**.
 
 ## Reference links
