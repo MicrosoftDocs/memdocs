@@ -21,7 +21,7 @@ Using the **Rotate Recovery Lock Passcode** action, Intune generates a new passc
 :::column span="3":::
 
 > This remote action supports the following platforms:
-> - macOS in [Supervised Mode](/intune/intune-service/remote-actions/device-supervised-mode), running macOS 11.5 or later on Apple silicon (Intel-based Macs aren't supported).
+> - macOS in supervised mode, running macOS 11.5 or later on Apple silicon (Intel-based Macs aren't supported).
 
 :::column-end:::
 :::row-end:::
