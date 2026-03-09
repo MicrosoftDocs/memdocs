@@ -48,11 +48,11 @@ You can use RSS to be notified when this article is updated. For more informatio
 
 ### Scope tags support for Endpoint Privilege Management reports<!-- 34630681 -->
 
-We're fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
+We’re fixing how scope tags work with Endpoint Privilege Management (EPM) reports. With this change, EPM reports will respect the report viewers assigned scope and display the details for only the users and devices that the report user is scoped to view.  
 
 ### Expanded support for Endpoint Privilege Management support approved elevation requests<!-- 33479618 -->
 
-Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device's primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.
+Soon Endpoint Privilege Management (EPM) will support the use of [support approved elevation requests](/intune/intune-service/protect/epm-support-approved) by all users of a device. Today, requesting elevation that requires support approval is limited to the device’s primary user or the user who enrolled the device. This update expands the utility of support approved elevations and helps to improve scenarios that involve shared devices.6
 
 <!-- ***********************************************-->
 
@@ -62,7 +62,7 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 
 We're adding support for Declarative Device Management (DDM) in Microsoft Intune for configuring required line-of-business (LoB) apps on devices running iOS/iPadOS 18 and later.
 
-Apple's new Managed App configuration introduces policy-based app deployment and configuration using the declarative management model. This allows for efficient app delivery, real-time app status, and expanded app attribute options for per-app associated domains.
+Apple’s new Managed App configuration introduces policy-based app deployment and configuration using the declarative management model. This allows for efficient app delivery, real-time app status, and expanded app attribute options for per-app associated domains.
 
 Admins can configure line-of-business apps to use DDM by changing the management type setting in App information.
 
@@ -143,6 +143,31 @@ For the current list of required network endpoints, see [Network requirements fo
 
 Microsoft Intune will update its TeamViewer integration to simplify onboarding and improve reliability for remote assistance workflows. The new connector will replace the existing TeamViewer connector experience and provide a more streamlined experience in the Intune admin center. After the older experience is retired, organizations using that TeamViewer connector will need to migrate to the new connector within 12 months to maintain functionality.
 
+### Device page in the Intune admin center is updated (public preview) <!-- 36646300 -->
+
+In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
+
+- Track device activity
+- Access tools and reports
+- Manage device information
+
+The single device page has the following tabs:
+
+- **Device action status**: Shows requested, in‑progress, and recently completed device actions. You can search, sort, and filter this list. You'll be able to quickly understand what actions are running or have completed without leaving the device view.
+- **Tools + reports**: This tab was previously called **Overview**. It shows monitoring reports, lists, and tools, like remediations, that were previously accessed in another part of the admin center.
+- **Properties**: Contains admin‑modifiable device properties with visible scope tags and a dedicated editing view.
+- **Device details**: This was previously called **Hardware**. It provides physical device information and key Intune and Microsoft Entra management details.
+
+Other features:
+
+- Device actions are grouped, ordered, and labeled consistently across platforms and device types, with improved logic to show only relevant and permitted actions. Destructive actions are clearly separated and require confirmation, reducing unintentional actions.
+
+- The updated layout uses a standard structure across device types and platforms, while adapting to platform‑specific capabilities.
+
+- Improved labeling, hierarchy, and formatting make device information easier to scan and understand. **Essentials** elevates important device information and is accessible from any tab.
+
+All existing device management capabilities remain available. This update focuses on making them easier to find and use.
+
 ### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
 
 Intune will soon include two new remote actions that let admins temporarily suspend and later restore managed home screen (MHS) on Android devices. These actions allow users to exit MHS and access the device's default launcher for a specified duration, without removing policies or requiring a PIN.
@@ -213,9 +238,9 @@ To learn more about the settings catalog, see [Use the Intune settings catalog t
 
 ### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
 
-We're working on an updated Windows security baseline for Windows 11, version 25H2, to reflect the latest Microsoft security recommendations for supported Windows devices. The update is expected to introduce changes such as new settings, updated default values, and the retirement of existing settings to align with current Windows security guidance.
+We’re working on an updated Windows security baseline for Windows 11, version 25H2, to reflect the latest Microsoft security recommendations for supported Windows devices. The update is expected to introduce changes such as new settings, updated default values, and the retirement of existing settings to align with current Windows security guidance.
 
-When available, the 25H2 baseline will be provided as a new baseline version. Existing baseline profiles won't automatically update to the new version.
+When available, the 25H2 baseline will be provided as a new baseline version. Existing baseline profiles won’t automatically update to the new version.
 
 For more information about the security baseline changes introduced with Windows 11, version 25H2, see the Windows blog: [Windows 11, version 25H2 security baseline](https://techcommunity.microsoft.com/blog/microsoft-security-baselines/windows-11-version-25h2-security-baseline/4456231). To prepare for updating a baseline in Intune, see [Configure security baseline policies in Microsoft Intune](../protect/security-baselines-configure.md#update-a-baseline-profile-to-the-latest-version).
 
