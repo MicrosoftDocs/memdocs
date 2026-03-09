@@ -1,13 +1,13 @@
 ---
 title: "Remote Device Action: Suspend Managed Home Screen"
-description: Learn how to suspend the managed home screen with Microsoft Intune.
+description: Learn how to suspend the Managed Home Screen with Microsoft Intune.
 ms.date: 01/20/2026
 ms.topic: how-to
 ---
 
-# Remote device action: suspend managed home screen
+# Remote device action: suspend Managed Home Screen
 
-The *suspend managed home screen* remote action in Intune temporarily disables the managed home screen on a device. When the managed home screen is suspended, the device will no longer enforce the managed home screen policies, and the user will have access to the standard home screen and apps.
+The *suspend Managed Home Screen* remote action in Intune temporarily disables the Managed Home Screen on a device. When the Managed Home Screen is suspended, the device will no longer enforce the Managed Home Screen policies, and the user will have access to the standard home screen and apps.
 
 ## Prerequisites
 
@@ -57,11 +57,11 @@ The *suspend managed home screen* remote action in Intune temporarily disables t
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Suspend managed home screen**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Suspend Managed Home Screen**.
 
 ## User experience
 
-Once the managed home screen is suspended, the device will no longer enforce the managed home screen policies, and the user will have access to the standard home screen and apps.
+Once the Managed Home Screen is suspended, the device will no longer enforce the Managed Home Screen policies, and the user will have access to the standard home screen and apps.
 
 ## Reference links
 

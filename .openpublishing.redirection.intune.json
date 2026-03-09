@@ -2,17 +2,17 @@
   "redirections": [
     {
       "source_path": "intune/intune-service/fundamentals/licenses-assign.md",
-      "redirect_url": "/intune/fundamentls/licensing/assign-licenses",
+      "redirect_url": "/intune/fundamentals/licensing/assign-licenses",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/fundamentals/licenses.md",
-      "redirect_url": "/intune/fundamentls/licensing",
+      "redirect_url": "/intune/fundamentals/licensing",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune-service/fundamentals/unlicensed-admins.md",
-      "redirect_url": "/intune/fundamentls/licensing/unlicensed-admins",
+      "redirect_url": "/intune/fundamentals/licensing/unlicensed-admins",
       "redirect_document_id": false
     },
     {
