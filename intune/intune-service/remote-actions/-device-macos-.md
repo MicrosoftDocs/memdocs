@@ -1,13 +1,13 @@
 ---
-title: "Remote Device Action: Suspend Managed Home Screen"
-description: Learn how to suspend the Managed Home Screen with Microsoft Intune.
-ms.date: 01/20/2026
+title: "Remote Device Action: View macOS Recovery Lock Password"
+description: Learn how view the macOS recovery lock password with Microsoft Intune.
+ms.date: 03/09/2026
 ms.topic: how-to
 ---
 
-# Remote device action: suspend Managed Home Screen
+# Remote Device Action: view macOS recovery lock password"
 
-The *suspend Managed Home Screen* remote action in Intune temporarily disables the Managed Home Screen on a device. When the Managed Home Screen is suspended, the device will no longer enforce the Managed Home Screen policies, and the user will have access to the standard home screen and apps.
+The *view macOS recovery lock password* remote action in Intune allows administrators to view the recovery lock password for a managed macOS device. The recovery lock password is used to unlock a macOS device that has been locked due to too many failed login attempts or other security reasons. By viewing the recovery lock password, administrators can provide it to users to help them regain access to their locked devices.
 
 ## Prerequisites
 
@@ -19,8 +19,7 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 :::column span="3":::
 
 > This remote action supports the following platforms:
-> - Android Enterprise corporate-owned Fully Managed (COBO)
-> - Android Enterprise corporate-owned Dedicated (COSU)
+> - macOS
 
 :::column-end:::
 :::row-end:::
@@ -36,7 +35,7 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission **Remote tasks/Temporarily Suspend Managed Home Screen**
+>   - The permission **Remote tasks / Rotate macOS recovery lock password** and **Remote tasks / View macOS recovery lock password**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::
@@ -46,28 +45,22 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 [!INCLUDE [device-configuration](../../includes/requirements/device-configuration.md)]
 :::column-end:::
 :::column span="3":::
-> To run this remote action, the **Alarms & Reminders** permission must be granted to the Managed Home Screen.
->
-> For more information, see [Configure permissions for the Managed Home Screen (MHS) on Android Enterprise devices using Microsoft Intune](../configuration/oemconfig-managed-home-screen-permissions-android.md).
+> To run this remote action, the 
 
 :::column-end:::
 :::row-end:::
 
-## How to suspend the Managed Home Screen from the Intune admin center
+## How to view the macOS recovery lock password from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Suspend Managed Home Screen**.
-
-## User experience
-
-Once the Managed Home Screen is suspended, the device will no longer enforce the Managed Home Screen policies, and the user will have access to the standard home screen and apps.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Add here**.
 
 ## Reference links
 
 - Microsoft Graph API: [managedDevice resource type][GRAPH-1]
 <!--
-- Microsoft Graph API: [temporarilySuspendManagedHomeScreen action][GRAPH-2]
+- Microsoft Graph API: [restoreManagedHomeScreen action][GRAPH-2]
 -->
 
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
@@ -78,4 +71,5 @@ Once the Managed Home Screen is suspended, the device will no longer enforce the
 [INT-R2]: /intune/intune-service/fundamentals/role-based-access-control-reference#school-administrator
 
 [GRAPH-1]: /graph/api/resources/intune-devices-manageddevice
-[GRAPH-2]: /graph/api/intune-devices-manageddevice-TemporarilySuspendManagedHomeScreen
+[GRAPH-2]: /graph/api/intune-devices-manageddevice-RestoreManagedHomeScreen
+

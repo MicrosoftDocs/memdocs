@@ -1,13 +1,13 @@
 ---
 title: "Remote Device Action: Restore Managed Home Screen"
-description: Learn how to restore the managed home screen with Microsoft Intune.
+description: Learn how to restore the Managed Home Screen with Microsoft Intune.
 ms.date: 01/20/2026
 ms.topic: how-to
 ---
 
-# Remote device action: restore managed home screen
+# Remote device action: restore Managed Home Screen
 
-The *restore managed home screen* remote action in Intune re-enables the managed home screen on a device that was previously suspended. When the managed home screen is restored, the device will enforce the managed home screen policies again, restricting access to only the apps and settings defined by those policies.
+The *restore Managed Home Screen* remote action in Intune re-enables the Managed Home Screen on a device that was previously suspended. When the Managed Home Screen is restored, the device will enforce the Managed Home Screen policies again, restricting access to only the apps and settings defined by those policies.
 
 ## Prerequisites
 
@@ -53,15 +53,15 @@ The *restore managed home screen* remote action in Intune re-enables the managed
 :::column-end:::
 :::row-end:::
 
-## How to restore the managed home screen from the Intune admin center
+## How to restore the Managed Home Screen from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
-1. At the top of the device overview pane, find the row of remote action icons. Select **Restore managed home screen**.
+1. At the top of the device overview pane, find the row of remote action icons. Select **Restore Managed Home Screen**.
 
 ## User experience
 
-Once the managed home screen is restored, the device will enforce the managed home screen policies again, and the user will have access to the managed home screen and apps.
+Once the Managed Home Screen is restored, the device will enforce the Managed Home Screen policies again, and the user will have access to the Managed Home Screen and apps.
 
 
 ## Reference links
