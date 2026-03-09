@@ -18,9 +18,9 @@ ms.collection:
 >
 > **Jamf macOS device support for Conditional Access is being deprecated**.
 >
-> Beginning on September 1, 2024, the platform that Jamf Pro’s Conditional Access feature is built on will no longer be supported.
+> Beginning on September 1, 2024, the platform that Jamf Pro's Conditional Access feature is built on will no longer be supported.
 >
-> If you use Jamf Pro’s Conditional Access integration for macOS devices, follow Jamf’s documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
+> If you use Jamf Pro's Conditional Access integration for macOS devices, follow Jamf's documented guidelines to migrate your devices to Device Compliance integration at [***Migrating from macOS Conditional Access to macOS Device Compliance – Jamf Pro Documentation***](https://learn.jamf.com/bundle/jamf-pro-documentation-current/page/Conditional_Access.html#ariaid-title6).
 >
 > If you need help, log in to your [***Jamf Account***](https://account.jamf.com) to contact Jamf's support. For more information, see the blog post at [**https://aka.ms/Intune/Jamf-Device-Compliance**](https://aka.ms/Intune/Jamf-Device-Compliance).
 
@@ -302,5 +302,5 @@ Yes, the changes are logged to the JAMFChangeManagement.log file. To view the Ch
 ## Next steps
 
 - [Apply compliance policies to Jamf-managed devices](../protect/conditional-access-assign-jamf.md)
-- [Data Jamf sends to Intune](../protect/data-jamf-sends-to-intune.md)
+- [Data Jamf sends to Intune](../../privacy/data-sharing/jamf-to-intune.md)
 - [Integrate Jamf Pro with Intune to report compliance to Microsoft Entra ID](../protect/jamf-managed-device-compliance-with-entra-id.md).

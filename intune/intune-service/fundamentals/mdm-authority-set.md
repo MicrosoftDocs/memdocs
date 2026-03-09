@@ -54,8 +54,8 @@ Scenarios that add a consent to share data are included when:
 
 In each case, the consent is strictly related to running a mobile device management service. For example, confirming that an IT Admin has authorized Google or Apple devices to enroll. Documentation to address what information is shared when the new workflows go live is available from the following locations:
 
-- [Data Intune sends to Google](../protect/data-intune-sends-to-google.md)
-- [Data Intune sends to Apple](../protect/data-intune-sends-to-apple.md)
+- [Data Intune sends to Google](../../privacy/data-sharing/intune-to-google.md)
+- [Data Intune sends to Apple](../../privacy/data-sharing/intune-to-apple.md)
 
 ## Key Considerations
 
@@ -79,7 +79,7 @@ There are three major steps to enable coexistence:
 
 Before enabling coexistence with Basic Mobility and Security, consider the following points:
 
-- Make sure you have sufficient [Intune licenses](licenses.md) for the users you intend to manage through Intune.
+- Make sure you have sufficient [Intune licenses](../../fundamentals/licensing/index.md) for the users you intend to manage through Intune.
 - Review which users are assigned Intune licenses. After you enable coexistence, any user already assigned an Intune license will have their devices switch to Intune. To avoid unexpected device switches, we recommend not assigning any Intune licenses until you've enabled coexistence.
 - Create and deploy Intune policies to replace device security policies that were originally deployed through the Office 365 Security & Compliance portal. This replacement should be done for any users you expect to move from Basic Mobility and Security to Intune. If there are no Intune policies assigned to those users, enabling coexistence may cause them to lose Basic Mobility and Security settings. These settings are lost without replacement, like managed email profiles. Even when replacing device security policies with Intune policies, users may be prompted to re-authenticate their email profiles after the device is moved to Intune management.
 - You can't unprovision Basic Mobility and Security after you've set it up. However, there are steps you can take to turn off the policies. For more information, see [Turn off Basic Mobility and Security](/microsoft-365/admin/basic-mobility-security/turn-off).

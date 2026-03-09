@@ -46,7 +46,7 @@ Before you begin any of these integration workflows, ensure you have the require
 
 **Subscription**: Microsoft Intune Plan 1 subscription provides access to Intune and the Microsoft Intune admin center.
 
-For licensing options, see [Microsoft Intune licensing](../fundamentals/licenses.md).
+For licensing options, see [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
 **Supported platforms**:
 
