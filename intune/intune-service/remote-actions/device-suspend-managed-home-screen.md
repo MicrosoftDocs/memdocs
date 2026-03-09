@@ -53,7 +53,7 @@ The *suspend Managed Home Screen* remote action in Intune temporarily disables t
 :::column-end:::
 :::row-end:::
 
-## How to suspend the Managed Home Screen from the Intune admin center
+## How to suspend the managed home screen from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.

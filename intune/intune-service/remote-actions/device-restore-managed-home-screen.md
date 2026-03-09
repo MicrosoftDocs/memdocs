@@ -53,7 +53,7 @@ The *restore Managed Home Screen* remote action in Intune re-enables the Managed
 :::column-end:::
 :::row-end:::
 
-## How to restore the Managed Home Screen from the Intune admin center
+## How to restore the managed home screen from the Intune admin center
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Devices** > [**All devices**][INT-ALLD].
 1. From the devices list, select a device.
