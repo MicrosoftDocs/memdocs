@@ -37,7 +37,7 @@ The *Device Offboarding Agent* identifies stale or misaligned devices across Int
 >
 >Required licenses:
 >
-> - [Microsoft Intune Plan 1 subscription](../intune-service/fundamentals/licenses.md)
+> - [Microsoft Intune Plan 1 subscription](../fundamentals/licensing/index.md)
 > - [Microsoft Security Copilot](/copilot/security/get-started-security-copilot) with sufficient security compute units (SCUs)
 :::column-end:::
 :::row-end:::

@@ -51,7 +51,7 @@ Find out what you need to manage Intune security baselines.
 
 ### Licensing
 
-- Use of Intune to deploy security baselines requires a Microsoft Intune Plan 1 subscription. See [Microsoft Intune licensing](../fundamentals/licenses.md).
+- Use of Intune to deploy security baselines requires a Microsoft Intune Plan 1 subscription. See [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
   > [!TIP]
   >
