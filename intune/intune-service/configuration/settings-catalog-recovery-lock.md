@@ -1,6 +1,6 @@
 ---
 title: Configure Recovery Lock using the settings catalog
-description: Add or create settings using the settings catalog to configure recovery lock on macOS devices. Use recovery lock to help protect your macOS devices against unauthorized reinstallation and wiping. Using Microsoft Intune, you can configure recovery lock settings, and deploy these settings to macOS devices in your organization.
+description: Add or create settings using the settings catalog to configure Recovery Lock on macOS devices. Use Recovery Lock to help protect your macOS devices against unauthorized reinstallation and wiping. Using Microsoft Intune, you can configure Recovery Lock settings, and deploy these settings to macOS devices in your organization.
 ms.author: mandia
 author: MandiOhlinger
 ms.date: 03/24/2026
@@ -13,7 +13,7 @@ ms.collection:
 
 # Configure Recovery Lock on macOS devices in Microsoft Intune
 
-Recovery Lock helps protect your macOS devices against unauthorized reinstallation and wiping. When you add a recovery lock policy, Intune automatically generates a strong, random password and sets it on the device.
+Recovery Lock helps protect your macOS devices against unauthorized reinstallation and wiping. When you add a Recovery Lock policy, Intune automatically generates a strong, random password and sets it on the device.
 
 When you configure this feature:
 
@@ -22,9 +22,9 @@ When you configure this feature:
 - The password can be reset automatically using a time-based rotation interval.
 - Access to the **Startup Options** screen is protected.
 
-Use the Intune [settings catalog](settings-catalog.md) to configure recovery lock on your macOS devices. After you configure the policy, assign it to your macOS devices.
+Use the Intune [settings catalog](settings-catalog.md) to configure Recovery Lock on your macOS devices. After you configure the policy, assign it to your macOS devices.
 
-After you configure and assign the policy, you can use device actions to rotate the recovery lock passcode.
+After you configure and assign the policy, you can use device actions to rotate the Recovery Lock passcode.
 
 To learn more about the recoveryOS password and startup security, see [Startup security in macOS](https://support.apple.com/guide/deployment/startup-security-dep5810e849c/1/web/1.0) (opens Apple's website).
 
@@ -69,7 +69,7 @@ This article applies to:
 
 ## Create the Recovery Lock policy
 
-Use the following steps to create a recovery lock policy in the settings catalog.
+Use the following steps to create a Recovery Lock policy in the settings catalog.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
@@ -90,11 +90,11 @@ Use the following steps to create a recovery lock policy in the settings catalog
 
     :::image type="content" source="./media/settings-catalog-recovery-lock/recovery-lock-category-settings.png" alt-text="Screenshot that shows Recovery Lock settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-recovery-lock/recovery-lock-category-settings.png":::
 
-8. Configure the recovery lock settings:
+8. Configure the Recovery Lock settings:
 
-    - **Enable Recovery Lock Password**: Select **Enabled** to enable the recovery lock feature on the device.
+    - **Enable Recovery Lock Password**: Select **Enabled** to enable the Recovery Lock feature on the device.
 
-    - **Recovery Lock Password Rotation Schedule**: Enter the number of months before the recovery lock password is automatically reset, from 1 to 12 months.
+    - **Recovery Lock Password Rotation Schedule**: Enter the number of months before the Recovery Lock password is automatically reset, from 1 to 12 months.
 
       When the schedule triggers, Intune updates the password on the device and securely stores it in the Intune admin center.
 
@@ -120,22 +120,22 @@ When you assign the policy to devices, you can monitor its status using the [Per
 
 If Recovery Lock is enabled, you can view the password at **Passwords and keys** > **Recovery Lock Password**.
 
-## Use the rotate recovery lock passcode device action
+## Use the rotate Recovery Lock passcode device action
 
-You can use the rotate recovery lock passcode device action to reset the recovery lock password on demand. This action is helpful if a user forgets their password, or if you want to proactively rotate the password outside of the rotation schedule you set in the policy.
+You can use the rotate Recovery Lock passcode device action to reset the Recovery Lock password on demand. This action is helpful if a user forgets their password, or if you want to proactively rotate the password outside of the rotation schedule you set in the policy.
 
 1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), select **Devices** > **All devices** > select the macOS device.
 2. Select **Rotate recovery lock passcode**.
 3. Confirm the action.
 
-To learn more, see [Rotate recovery lock passcode device action](../remote-actions/rotate-recovery-lock-passcode.md).
+To learn more, see [Rotate Recovery Lock passcode device action](../remote-actions/rotate-recovery-lock-passcode.md).
 
-## Remove the recovery lock password
+## Remove the Recovery Lock password
 
-To remove the recovery lock password from a device, you have the following options:
+To remove the Recovery Lock password from a device, you have the following options:
 
-- **Option 1**: When you unenroll the device from Intune, the recovery lock password is automatically cleared from the device.
-- **Option 2**: When you unassign a device from the policy, Intune attempts to clear the recovery lock password.
+- **Option 1**: When you unenroll the device from Intune, the Recovery Lock password is automatically cleared from the device.
+- **Option 2**: When you unassign a device from the policy, Intune attempts to clear the Recovery Lock password.
 
 ## Related content
 
