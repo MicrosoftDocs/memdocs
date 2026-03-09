@@ -3,7 +3,7 @@ title: Manage attack surface reduction settings with Microsoft Intune
 description: Configure and deploy policies for devices you manage with endpoint security attack surface reduction policy settings in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 06/20/2025
+ms.date: 03/06/2026
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
@@ -21,7 +21,7 @@ You can use attack surface reduction (ASR) policies to reduce the attack surface
 
 - **Attack Surface Reduction Rules**: Use this profile to target behaviors that malware and malicious apps typically use to infect computers. Examples of these behaviors include use of executable files and scripts in Office apps, web mail that attempts to download or run files, and obfuscated or otherwise suspicious scripts behaviors that apps don't usually initiate during normal day-to-day work.
 
-- **Device Control**: Use this profile to allow, block, and otherwise secure removable media through controls that can monitor and help prevent threats from unauthorized peripherals from compromising your devices. and control features to help prevent threats in unauthorized peripherals from compromising your devices.
+- **Device Control**: Use this profile to allow, block, and otherwise secure removable media through controls that can monitor and help prevent threats from unauthorized peripherals from compromising your devices.
 
 For more information, see [Overview of attack surface reduction]( /windows/security/threat-protection/microsoft-defender-atp/overview-attack-surface-reduction) in the Windows Threat protection documentation.
 
@@ -57,16 +57,7 @@ For guidance on assigning the right level of permissions and rights to manage In
 
 The available profiles for attack surface reduction policy depend on the platform you select.
 
-Find guidance for creating endpoint security profiles at [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy).
-
-> [!NOTE]
->
-> Beginning in April 2022, new profiles for Attack surface reduction policy have begun to release. When a new profile becomes available, it uses the same name of the profile it replaces and includes the same settings as the older profile but in the newer settings format as seen in the Settings Catalog. Your previously created instances of these profiles remain available to use and edit, but all new instances you create will be in the new format. The following profiles have been updated:
->
-> - Attack surface reduction rules (April 5, 2022)
-> - Exploit protection (April 5, 2022)
-> - Device control (May 23, 2022)
-> - App and browser isolation (April 18, 2023)
+To create an attack surface reduction policy, see [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy). When prompted during policy creation, select the **Windows** platform, and then select the profile you want to configure.
 
 ### Devices managed by Intune
 
@@ -116,10 +107,10 @@ Available profiles for this platform include:
 
 - **Application control** - Application control settings can help mitigate security threats by restricting the applications that users can run and the code that runs in the System Core (kernel). Manage settings that can block unsigned scripts and MSIs, and restrict Windows PowerShell to run in Constrained Language Mode.
 
-  To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
+  > [!NOTE]
+  > Unlike other ASR profiles, settings in the *Application control* profile haven't been updated to the Settings Catalog format. Existing policies remain fully functional, but the profile uses the older template-based format in the admin center. Also, AppLocker CSP behavior currently prompts the end user to reboot their machine when a policy is deployed.
 
-    > [!NOTE]
-    > If you use this setting, AppLocker CSP behavior currently prompts end user to reboot their machine when a policy is deployed.
+  To learn more, see [Application Control](/windows/security/threat-protection/windows-defender-application-control/windows-defender-application-control) in the Microsoft Defender for Endpoint documentation.
 
 - **Exploit Protection** - Exploit protection settings can help protect against malware that uses exploits to infect devices and spread. Exploit protection consists of many mitigations that can apply to either the operating system or individual apps.
 
