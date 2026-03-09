@@ -12,7 +12,7 @@ ms.date: 01/08/2026
 :::column-end:::
 :::column span="3":::
 > To use this feature, the following licenses are required:
-> - [Microsoft Intune Plan 1](../../../intune-service/fundamentals/licenses.md)
+> - [Microsoft Intune Plan 1](../../../fundamentals/licensing/index.md)
 > - A Windows license that includes the [Autopatch entitlement](/windows/deployment/windows-autopatch/prepare/windows-autopatch-prerequisites#licenses-and-entitlements).
 :::column-end:::
 :::row-end:::

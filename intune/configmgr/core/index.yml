@@ -32,7 +32,7 @@ landingContent:
           - text: Use Software Center
             url: understand/software-center.md
           - text: Use the docs
-            url: ../../use-docs.md
+            url: ../../fundamentals/use-docs.md
           - text: Find help
             url: understand/find-help.md
 
