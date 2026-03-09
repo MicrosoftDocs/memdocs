@@ -1,7 +1,7 @@
 ---
 title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 description: Enable Intune automatic enrollment for Windows devices joining or registering with your Microsoft Entra ID.
-ms.date: 12/01/2025
+ms.date: 03/06/2026
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -44,7 +44,7 @@ This article describes how to enable automatic mobile device management (MDM) en
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role
+> - Built-in **[Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
 
@@ -72,14 +72,14 @@ This article describes how to enable automatic mobile device management (MDM) en
    > If your intent is to enable automatic MDM enrollment for Windows BYOD devices, select **All** or **Some** for the MDM user scope. Then make sure the WIP user scope is **None** or **Some**, and that users are not members of both user scopes.
 
 1. Use the default values for these URLs:
-   - **MDM Terms of use URL**
-   - **MDM Discovery URL**
-   - **MDM Compliance URL**
+   - **MDM terms of use URL**
+   - **MDM discovery URL**
+   - **MDM compliance URL**
 
 1. You have the option to control if users in an automatic enrollment configuration on Microsoft Entra registered devices are prompted to MDM enroll their device in the work or school account registration flow (referring to [Add Your Work or School Account to a Windows Device](https://support.microsoft.com/windows/add-your-work-or-school-account-to-a-windows-device-a6505ceb-1a20-4b15-889c-250175481506)). To control the behavior of the flow, use the **Disable MDM enrollment when adding work or school account** setting.
 
    > [!NOTE]
-   > This feature is in public preview and undergoing rollout. During rollout, some users will not see this setting.   
+   > This feature is in public preview.  
    
    This setting is turned off by default. If you're enforcing Windows MAM for your work or school accounts, enable this setting. This setting applies to:  
     - Users in the **Some** or **All** category in the MDM auto-enrollment configuration.  
@@ -110,7 +110,7 @@ The Microsoft Intune user help docs provide conceptual information, tutorials, a
 
 Users on personal devices running Windows can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows devices](../user-help/enroll-windows-10-device.md).
 
-You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
 
 ## Best practices and troubleshooting
 
@@ -120,7 +120,7 @@ You can also let unlicensed admins sign in to the Intune admin center to help wi
 
 ## Known issues  
 
-MDM auto-enrollment might occur when the **Disable MDM enrollment when adding work or school account** setting is enabled. This is a known issue that we are working to fix. During the public preview rollout while we work on this issue, some users will not be able to see this setting.   
+There are no known issues in Microsoft Intune with MDM automatic enrollment for Windows.  
 
 ## Next steps
 

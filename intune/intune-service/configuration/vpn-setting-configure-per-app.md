@@ -123,7 +123,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 4. In **Configuration settings**, configure the following settings:
 
     - **Connection type**: Select your VPN client app.
-    - **Base VPN**: Configure your settings. [iOS/iPadOS VPN settings](vpn-settings-ios.md) describes all the settings. When using per-app VPN, be sure you configure the following properties as listed:
+    - **Base VPN**: Configure your settings. [iOS/iPadOS VPN settings](vpn-settings-apple.md) describes all the settings. When using per-app VPN, be sure you configure the following properties as listed:
 
       - **Authentication method**: Select **Certificates**.
       - **Authentication certificate**: Select an existing SCEP or PKCS certificate > **OK**.
@@ -131,7 +131,7 @@ This VPN profile includes the SCEP or PKCS certificate that has the client crede
 
       :::image type="content" source="./media/vpn-setting-configure-per-app/vpn-per-app-create-vpn-profile.png" alt-text="Screenshot that shows a per-app VPN profile, IP address or FQDN, authentication method, and split tunneling in Microsoft Intune and Intune admin center.":::
 
-      For information on the other settings, go to [iOS/iPadOS VPN settings](vpn-settings-ios.md).
+      For information on the other settings, go to [iOS/iPadOS VPN settings](vpn-settings-apple.md).
 
     - **Automatic VPN** > **Type of automatic VPN** > **Per-app VPN**
 
@@ -192,5 +192,5 @@ Verify the zero-touch experience by connecting without having to select the VPN 
 
 ## Related articles
 
-- To review iOS/iPadOS settings, go to [VPN settings for iOS/iPadOS devices in Microsoft Intune](vpn-settings-ios.md).
+- To review iOS/iPadOS settings, go to [VPN settings for iOS/iPadOS devices in Microsoft Intune](vpn-settings-apple.md).
 - To learn more about VPN setting and Intune, go to [configure VPN settings in Microsoft Intune](vpn-settings-configure.md).

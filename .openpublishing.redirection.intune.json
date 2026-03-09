@@ -1,6 +1,176 @@
 {
   "redirections": [
     {
+      "source_path": "intune/intune-service/fundamentals/licenses-assign.md",
+      "redirect_url": "/intune/fundamentls/licensing/assign-licenses",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/licenses.md",
+      "redirect_url": "/intune/fundamentls/licensing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/unlicensed-admins.md",
+      "redirect_url": "/intune/fundamentls/licensing/unlicensed-admins",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/get-support.md",
+      "redirect_url": "/intune/fundamentals/it-pro-support/get-support-admin-center",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/tenant-status.md",
+      "redirect_url": "/intune/fundamentals/tenant-status",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/device-cleanup-rules.md",
+      "redirect_url": "/intune/fundamentals/device-cleanup-rules",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/endpoint-manager-overview.md",
+      "redirect_url": "/intune/fundamentals/endpoint-management",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/use-docs.md",
+      "redirect_url": "/intune/fundamentals/use-docs",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/compliance-in-intune.md",
+      "redirect_url": "/intune/governance/compliance-and-regulatory-alignment",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-collect.md",
+      "redirect_url": "/intune/privacy/data-handling/data-collection",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-store-process.md",
+      "redirect_url": "/intune/privacy/data-handling/data-storage-processing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/client-apps-optional-data.md",
+      "redirect_url": "/intune/privacy/data-handling/optional-diagnostic-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-apple-sends-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/apple-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-google-sends-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/google-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-secure-share.md",
+      "redirect_url": "/intune/privacy/data-sharing",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-intune-sends-to-apple.md",
+      "redirect_url": "/intune/privacy/data-sharing/intune-to-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-intune-sends-to-google.md",
+      "redirect_url": "/intune/privacy/data-sharing/intune-to-google",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-intune-sends-to-zebra.md",
+      "redirect_url": "/intune/privacy/data-sharing/intune-to-zebra",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-jamf-sends-to-intune.md",
+      "redirect_url": "/intune/privacy/data-sharing/jamf-to-intune",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-personal-data.md",
+      "redirect_url": "/intune/privacy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-audit-export-delete.md",
+      "redirect_url": "/intune/privacy/personal-data/audit-export-delete",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/privacy-data-view-correct.md",
+      "redirect_url": "/intune/privacy/personal-data/view-correct",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/protect/data-enable-windows-data.md",
+      "redirect_url": "/intune/privacy/windows-diagnostic-data",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/custom-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/custom-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/ios-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/macos-device-features-settings.md",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/device-restrictions-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/vpn-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/vpn-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-ios.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/configuration/wi-fi-settings-macos.md",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/index.yml",
+      "redirect_url": "/intune",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/device-updates/windows/driver-updates-policy.md",
       "redirect_url": "/intune/device-updates/windows/driver-update-policy",
       "redirect_document_id": false
@@ -972,7 +1142,7 @@
     },
     {
       "source_path": "intune/intune/configuration/custom-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/custom-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -982,7 +1152,7 @@
     },
     {
       "source_path": "intune/intune/configuration/custom-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/custom-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/custom-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -1072,12 +1242,12 @@
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-ios",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/device-restrictions-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/device-restrictions-macos",
+      "redirect_url": "/intune/intune-service/configuration/device-restrictions-apple",
       "redirect_document_id": false
     },
     {
@@ -1177,7 +1347,7 @@
     },
     {
       "source_path": "intune/intune/configuration/ios-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/ios-device-features-settings",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
@@ -1207,7 +1377,7 @@
     },
     {
       "source_path": "intune/intune/configuration/macos-device-features-settings.md",
-      "redirect_url": "/intune/intune-service/configuration/macos-device-features-settings",
+      "redirect_url": "/intune/intune-service/configuration/device-features-apple",
       "redirect_document_id": false
     },
     {
@@ -1322,12 +1492,12 @@
     },
     {
       "source_path": "intune/intune/configuration/vpn-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/vpn-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/vpn-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/vpn-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -1372,12 +1542,12 @@
     },
     {
       "source_path": "intune/intune/configuration/wi-fi-settings-ios.md",
-      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-ios",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
       "redirect_document_id": false
     },
     {
       "source_path": "intune/intune/configuration/wi-fi-settings-macos.md",
-      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-macos",
+      "redirect_url": "/intune/intune-service/configuration/wi-fi-settings-apple",
       "redirect_document_id": false
     },
     {
@@ -2452,7 +2622,7 @@
     },
     {
       "source_path": "intune/intune/fundamentals/tenant-status.md",
-      "redirect_url": "/intune/intune-service/fundamentals/tenant-status",
+      "redirect_url": "/intune/operations/tenant-status",
       "redirect_document_id": false
     },
     {
@@ -3387,7 +3557,7 @@
     },
     {
       "source_path": "intune/intune/protect/privacy-data-collect.md",
-      "redirect_url": "/intune/intune-service/protect/privacy-data-collect",
+      "redirect_url": "/intune/privacy/data-handling/data-collection",
       "redirect_document_id": false
     },
     {

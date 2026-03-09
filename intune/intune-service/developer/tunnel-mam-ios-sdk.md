@@ -123,7 +123,7 @@ To enable the Tunnel for MAM iOS SDK, use the following steps:
    - `MSTAPNextPluginVpnMicrosoftTunnel.xcframework`
    - `ssl.xcframework`
 
-2. In the Xcode project, select your app project > **Add files**. In the following example, files are added to an app project called “Flash Chat”:
+2. In the Xcode project, select your app project > **Add files**. In the following example, files are added to an app project called "Flash Chat":
 
    :::image type="content" source="./media/tunnel-mam-ios-sdk/add-files-xcode-project.png" alt-text="Screen that shows how to add files to the app project in Xcode on a macOS device.":::
 
@@ -288,8 +288,8 @@ The developer should:
 Your privacy is important to us. Review the following privacy related online documentation:
 
 - [Microsoft Privacy Statement](https://privacy.microsoft.com/privacystatement)
-- [Privacy and personal data in Intune](../protect/privacy-personal-data.md)
-- [Data storage and processing in Intune](../protect/privacy-data-store-process.md)
+- [Privacy and personal data in Intune](../../privacy/index.md)
+- [Data storage and processing in Intune](../../privacy/data-handling/data-storage-processing.md)
 
 When the Microsoft Tunnel for MAM iOS SDK integrates into mobile apps, the following data is collected when a developer:
 

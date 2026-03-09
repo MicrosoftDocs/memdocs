@@ -129,14 +129,14 @@ In Intune, you can create device configuration profiles that configure the home 
 
   :::image type="content" source="./media/ios-ipados-device-restrictions-kiosk.png" alt-text="A device restrictions policy with the device settings configured for iOS and iPadOS devices in Microsoft Intune." lightbox="./media/ios-ipados-device-restrictions-kiosk.png":::
 
-  In this policy, you can also create a list of approved apps and hide some system apps. For more information on the settings you can configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-ios.md).
+  In this policy, you can also create a list of approved apps and hide some system apps. For more information on the settings you can configure, go to [iOS and iPadOS device settings to allow or restrict features using Intune](../../intune-service/configuration/device-restrictions-apple.md).
 
 For a list of the Shared iPad settings you can configure, go to [Configure settings for Shared iPads](../../intune-service/enrollment/device-enrollment-shared-ipad.md#configure-settings-for-shared-ipads).
 
 For a list of all the device configuration settings, go to:
 
-- [iOS and iPadOS device settings to use common features](../../intune-service/configuration/ios-device-features-settings.md)
-- [iOS and iPadOS device settings to allow or restrict features](../../intune-service/configuration/device-restrictions-ios.md)
+- [iOS and iPadOS device settings to use common features](../../intune-service/configuration/device-features-apple.md)
+- [iOS and iPadOS device settings to allow or restrict features](../../intune-service/configuration/device-restrictions-apple.md)
 
 ## Related articles
 

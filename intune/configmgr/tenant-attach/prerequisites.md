@@ -20,9 +20,12 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 ## Prerequisites
 
-- An account that is a *Global Administrator* for signing in when applying this onboarding change. For more information, see [Microsoft Entra administrator roles](/azure/role-based-access-control/rbac-and-directory-admin-roles#azure-ad-administrator-roles).
+- An account that is a **[Microsoft Entra Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)** for signing in when applying this onboarding change.
 
-  - Onboarding creates a third-party app and a first party service principal in your Microsoft Entra tenant.
+  Onboarding creates a third-party app and a first party service principal in your Microsoft Entra tenant.
+
+  > [!IMPORTANT]
+  > [!INCLUDE [global-administrator](../includes/global-administrator-configmgr.md)]
 
 - An Azure cloud environment.
 

@@ -81,6 +81,6 @@ The volume and cryptographic keys created to manage the work data on the device 
 
 * For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-ios.md)
-   * [iOS and iPadOS device features](../configuration/ios-device-features-settings.md)
+   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../configuration/device-features-apple.md)
    * [Set up per-app Virtual Private Network (VPN)](../configuration/vpn-setting-configure-per-app.md)
