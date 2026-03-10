@@ -226,7 +226,9 @@ For more information about the security baseline changes introduced with Windows
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
+
+The new baseline will be available for [US Government Community Cloud High (GCC High)](/intune/intune-service/fundamentals/intune-govt-service-description) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
 > [!div class="checklist"]
 > Applies to:
