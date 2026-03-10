@@ -25,7 +25,7 @@ In this article, users who provide help are referred to as *helpers*, and users 
 Remote Help uses Intune role-based access controls (RBAC) to set the level of access a helper is allowed. Through RBAC, you determine which users can provide help and the level of help they can provide.
 
 > [!TIP]
-> As a companion to this article, see our [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite‎ add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.  
+> For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
 
 ## Planning checklist  
 Follow this checklist to streamline your planning process.  
@@ -130,7 +130,7 @@ The following Intune built-in roles include Remote Help permissions:
 
 Remote Help has the following requirements: 
 
-- [Intune subscription](../fundamentals/licenses.md).  
+- [Intune subscription](../../fundamentals/licensing/index.md).  
 - [Remote Help add on license or an Intune Suite license](intune-add-ons.md#available-add-ons) for all IT support workers (helpers) and users (sharers) that are targeted to use Remote Help and benefit from the service.  
 - [Supported platforms and devices](#supported-platforms).  
 - Intune-enrolled devices must be registered with Microsoft Entra.  

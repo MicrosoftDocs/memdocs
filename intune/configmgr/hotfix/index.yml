@@ -17,6 +17,8 @@ landingContent:
         links:
           - text: KB 35877153 Summary of changes in 2509
             url: 2509/35877153.md
+          - text: KB 33247081 Connected cache update for Configuration Manager versions 2409, 2503, and 2509
+            url: 2509/33247081.md
   - title: Configuration Manager 2503
     linkLists:
       - linkListType: overview

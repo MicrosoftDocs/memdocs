@@ -87,7 +87,7 @@ Endpoint Privilege Management doesn't support SSL inspection, which is known as 
 
 ### Certain Windows functions, such as control panel items or configurations in the settings app can't be elevated with EPM
 
-EPM can elevate Executables (.exe), Windows Installer (.msi), and PowerShell scripts (.ps1). Some functions in Windows are executed in ways that EPM can't detect and elevate. As a workaround, some of these things could be packaged as scripts and approved for elevation with EPM.
+EPM can elevate Executables (.exe), Windows Installer (.msi), and PowerShell scripts (.ps1). Some functions in Windows are executed in ways that EPM can't detect and elevate. As a workaround, some of these things could be packaged as scripts and approved for elevation with EPM. Elevation of Universal Windows Platform (UWP) apps, including scenarios where a UWP app launches an underlying .exe, is not currently supported.
 
 ### Certificate based rules only work for valid certificates
 

@@ -62,7 +62,7 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
    > When you assign a role to a group, every member of that group receives the permissions granted by that role. Only assign roles to groups for which you know the membership, and which don't include users that shouldn't receive the administrative privileges provided by the role.
 
    > [!NOTE]
-   > If your tenant allows [unlicensed admins](../fundamentals/unlicensed-admins.md), Intune role assignments only apply to direct members of the assigned security group. Members of nested groups do not receive these assignments by default. However, if a user in a nested group has an Intune license, that user will receive the Intune role.
+   > If your tenant allows [unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md), Intune role assignments only apply to direct members of the assigned security group. Members of nested groups do not receive these assignments by default. However, if a user in a nested group has an Intune license, that user will receive the Intune role.
 
    Select **Next**.
 

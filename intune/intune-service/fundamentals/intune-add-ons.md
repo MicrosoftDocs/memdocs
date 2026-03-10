@@ -3,7 +3,7 @@ title: Use Intune Suite add-on capabilities
 description: Microsoft Intune Suite unifies a series of mission-critical advanced endpoint management and security capabilities. The capabilities of the suite are integrated with Microsoft 365 and Microsoft Security across endpoint platforms for both cloud and on-premises co-managed devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 08/01/2024
+ms.date: 03/05/2026
 ms.topic: how-to
 ms.reviewer: aanavath
 ms.subservice: suite
@@ -16,7 +16,7 @@ ms.collection:
 
 Microsoft Intune Suite provides mission-critical advanced endpoint management and security capabilities into Microsoft Intune. You can find add-ons to Intune in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) under **Tenant administration** > **Intune add-ons**. The **Summary** blade shows all available Intune add-ons, a short description, and the status of the add-on. Each add-on shows a status of either **Active** or **Available for trial or purchase**.
 
-Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager. For more information, see [Licenses available for Microsoft Intune](licenses.md).
+Licenses for the Intune add-ons can be added for an additional cost to the licensing options that include Microsoft Intune or Microsoft Configuration Manager. For more information, see [Licenses available for Microsoft Intune](../../fundamentals/licensing/index.md).
 
 > [!NOTE]
 > Intune add-ons are currently not supported in Sovereign clouds.
@@ -29,17 +29,17 @@ The following table provides a list of add-on capabilities and associated Intune
 
 | Capability | Standalone add-on | Intune Plan 2 | Intune Suite |
 |:-|:-:|:-:|:-:|
-| Endpoint Privilege Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Enterprise App Management | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Advanced Analytics | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Remote Help | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Microsoft Tunnel for Mobile Application Management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Microsoft Cloud PKI | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Firmware-over-the-air update |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
-| Specialized devices management |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Endpoint Privilege Management](../protect/epm-overview.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Enterprise App Management](../apps/apps-enterprise-app-management.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Advanced Analytics](../../advanced-analytics/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Remote Help](remote-help.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Microsoft Tunnel for Mobile Application Management](../protect/microsoft-tunnel-mam.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Microsoft Cloud PKI](../../cloud-pki/index.md) | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Firmware-over-the-air update](../../device-updates/android/zebra-lifeguard-ota-integration.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
+| [Specialized devices management](specialty-devices-with-intune.md) |  | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: | :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: |
 
 > [!TIP]
-> As a companion to this article, see our [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314425) to review the step-by-step process to assign licenses, configure settings, and enable add-ons across your organization's devices. For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
+> For a customized experience based on your environment, you can access the [Intune Suite add-ons guide](https://go.microsoft.com/fwlink/?linkid=2314706) in the Microsoft 365 admin center.
 
 ### Microsoft Intune Endpoint Privilege Management
 
@@ -136,11 +136,11 @@ Licenses for Intune add-ons can be purchased just as you would purchase Intune P
 - Microsoft Volume License Servicing Center (VLSC)
 - Existing relationships with Microsoft partners/resellers
 
-After you buy licenses via any source, the licenses are available in your tenant and the status of the Intune add-ons capability will update accordingly.
+After you buy licenses via any source, the licenses are available in your tenant and the status of the Intune add-ons capability will update accordingly. 
 
 ## How to assign licenses
 
-For information on how to assign licenses in the Microsoft Intune admin center, see [Assign Microsoft Intune licenses](licenses-assign.md).
+For information on how to assign licenses in the Microsoft Intune admin center, see [Assign Microsoft Intune licenses](../../fundamentals/licensing/assign-licenses.md).
 
 ## Monitor license use
 
