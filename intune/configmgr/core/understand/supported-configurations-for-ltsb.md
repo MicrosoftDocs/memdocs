@@ -122,7 +122,7 @@ The LTSB supports the following versions of SQL Server to host the site database
 **Supported versions:**
 
 - SQL Server 2016: Standard, Enterprise
-   - Note: SQL Server 2016 ESU licenses will continue to be supported for use with Configuration Manager LTSB
+   - Configuration Manager LTSB will continue to be supported when the site database is hosted SQL Server 2016 ESU licensed servers.
 - SQL Server 2014 SP2: Standard, Enterprise
 - SQL Server 2014 SP1: Standard, Enterprise
 - SQL Server 2012 SP3: Standard, Enterprise
