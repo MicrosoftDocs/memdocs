@@ -1,9 +1,9 @@
 ---
 title: Set permissions to Managed Home Screen using Android Enterprise OEMConfig
-description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX, and Legacy Zebra OEMConfig apps to Intune, and use the app schemas to configure permissions for the Managed Home Screen (MHS) app on Android Enterprise devices.
+description: Add the Samsung Knox Service Plugin, Zebra OEMConfig Powered by MX, Legacy Zebra OEMConfig, and Honeywell UEMConnect apps to Intune, and use the app schemas to configure permissions for the Managed Home Screen (MHS) app on Android Enterprise devices.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 02/02/2026
+ms.date: 03/03/2026
 ms.topic: how-to
 ms.reviewer: abigailstein
 ms.collection:
@@ -29,9 +29,10 @@ Supported OEMs include:
 
 - Samsung (devices running OS 13+)
 - Zebra
+- Honeywell
 
 > [!NOTE]
-> More OEMs are being added, including Honeywell (no ETA).
+> More OEMs are being added
 
 This article:
 
@@ -46,12 +47,12 @@ For the MHS to work, certain permissions are required for certain features. Sams
 
 The following table lists the permissions that you can configure for the MHS app on Samsung and Zebra devices:
 
-| Permission  | Samsung | Zebra | Legacy Zebra |
-|---|---|---|---|
-| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ |
-| **Notification Permission** is required by:<br/><br/>- Notification badge| ✅ | ✅ | ✅ |
-| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch   | ✅ | ✅ | n/a |
-| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ✅ | n/a |
+| Permission | Samsung | Zebra | Legacy Zebra | Honeywell |
+|---|---|---|---|---|
+| **Overlay Permission** is required by: <br/><br/>- Virtual home button<br/>- Screen saver <br/>- Automatic sign out | ✅ | ✅ | ✅ | ✅ |
+| **Notification Permission** is required by:<br/><br/>- Notification badge | ✅ | ✅ | ✅ | n/a |
+| **Alarms & Reminders** permission is required by: <br/><br/>- Screen saver<br/>- Automatic sign out<br/>- Automatic relaunch | ✅ | ✅ | n/a | ✅ |
+| **Write Settings** permission is required by: <br/><br/>- Brightness toggle<br/>- Rotation toggle | ✅ | ✅ | n/a | ✅ |
 
 For information on when to use Zebra vs. Legacy Zebra, go to [OEMConfig apps for Zebra devices](oemconfig-zebra-android-devices.md#oemconfig-apps-for-zebra-devices).
 
@@ -69,13 +70,14 @@ OEMs provide their own OEMConfig app that lets you configure features within the
 > * Get the OEMConfig app from the Managed Google Play Store.
 > * Assign the app to your devices or device groups that use the MHS.
 
-Samsung and Zebra OEMs use the following Managed Google Play apps:
+Samsung, Zebra, and Honeywell OEMs use the following Managed Google Play apps:
 
 | OEM | App name |
 |---|---|
 | Samsung | Knox Service Plugin |
-| Zebra | Zebra OEMConfig Powered by MX <br/><br/>Zebra OEMConfig Powered by MX is a new version of the OEMConfig app released in May 2023.|
+| Zebra | Zebra OEMConfig Powered by MX <br/><br/>Zebra OEMConfig Powered by MX is a new version of the OEMConfig app released in May 2023. |
 | Zebra | Legacy Zebra OEMConfig |
+| Honeywell | Honeywell UEMConnect |
 
 ### Add the OEMConfig app
 
@@ -109,6 +111,17 @@ Samsung and Zebra OEMs use the following Managed Google Play apps:
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
 
 3. In the **Legacy Zebra OEMConfig** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
+
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
+
+# [Honeywell](#tab/honeywell)
+
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), sign in to your **Managed Google Play account**.
+2. Search for the **Honeywell UEMConnect** app, select the app, and then select **Sync**.
+
+    For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-add-android-for-work.md).
+
+3. In the **Honeywell UEMConnect** app properties, make it a required app, and assign the app to your devices or device groups that use the MHS.
 
     For the specific steps, go to [Add Managed Google Play apps to Android Enterprise devices with Intune](../apps/apps-deploy.md#assign-an-app).
 
@@ -261,6 +274,53 @@ When you use the schema settings in the **Legacy Zebra OEMConfig** app, this pro
 
     - **MHS Application Package**: `com.microsoft.launcher.enterprise`
     - **MHS Application Signature**: `MIIHFjCCBP6gAwIBAgITMwAAADkjR9QgyFtFjgAAAAAAOTANBgkqhkiG9w0BAQsFADCBkDELMAkGA1UEBhMCVVMxEzARBgNVBAgTCldhc2hpbmd0b24xEDAOBgNVBAcTB1JlZG1vbmQxHjAcBgNVBAoTFU1pY3Jvc29mdCBDb3Jwb3JhdGlvbjE6MDgGA1UEAxMxTWljcm9zb2Z0IENvcnBvcmF0aW9uIFRoaXJkIFBhcnR5IE1hcmtldHBsYWNlIFBDQTAeFw0xNDEwMDExODU0NDlaFw0zNDAxMDExODU0NDlaMIHMMQswCQYDVQQGEwJVUzETMBEGA1UECBMKV2FzaGluZ3RvbjEQMA4GA1UEBxMHUmVkbW9uZDEeMBwGA1UEChMVTWljcm9zb2Z0IENvcnBvcmF0aW9uMS8wLQYDVQQLEyZNaWNyb3NvZnQgTmV4dCBTY3JlZW4gTG9jayBmb3IgQW5kcm9pZDFFMEMGA1UEAxM8TWljcm9zb2Z0IENvcnBvcmF0aW9uIFRoaXJkIFBhcnR5IE1hcmtldHBsYWNlIChEbyBOb3QgVHJ1c3QpMIICIjANBgkqhkiG9w0BAQEFAAOCAg8AMIICCgKCAgEAtxysoEo+wgNo9pYS1Cls986hU2LRvk26Xm1mCb1y04JIA/1lDBMSMiN1hzHZHtwkDB5yr9dm6lOgz8DceWybBgnmwpHVjjPNUmGL2M9ea7hdAunqoTPcEFvEJ5kaH1OAtCbtVYODt44j4rYeTKd67c/Hd6FlaY8RM2oFg2JcysQteVYRS1MLngG+z/gv3ZugoLcyNeKEIxn4pk/OkH62Z8NH+CCj4e4PUQrTkGkdDi536V0oYCCBF2V4xzzVpLghgpJWIN66t32DpQ3m6WRAh0EoPb0xrchxCY6j28iD7m2ETE/yqa1aOhSdcUQbsWJeuIvh296YJ26AVTd7huJTyZspNP2mqUq1Hr/9NULsU3dmhdrAe72a7WnNOOQYIMRmuHh9t0rOQ7tzBYLK7UxIKcuoKykpAG4ojV4rEdd0n3Eziia+nRBpHiVp1IAj+UYc/NRVVWa5lf7ApZlWwNi5oMGAgK+jANMsgFvDsVADwD67cpX803cwsaHeMGZ+Hme5Y2ukooSp0B7ZuWR7mqzJ1wM64rfdyN/ugKyt6zfUiGhlXIaFd2p9XekH1TaJb1S6bbuuA7LjRuOaNJZd/0ZmevNKP3B/LdMzNTOaSz4dlcIq9hlx1Ym0DUecqjRoq1933YEyXs+tm9pRP3jC59V61HdiNpU/JuGzQWkRArUihxkCAwEAAaOCASkwggElMB0GA1UdDgQWBBSC7TJvJ8qHAreWrp9T6kfPHOwAmzAfBgNVHSMEGDAWgBSukeRgn5jAC98aC2vwVjMnR6zHxzBcBgNVHR8EVTBTMFGgT6BNhktodHRwOi8vY3JsLm1pY3Jvc29mdC5jb20vcGtpL2NybC9wcm9kdWN0cy9NaWNDb3JUaGlQYXJNYXJQQ0FfMjAxMC0xMC0wNS5jcmwwYAYIKwYBBQUHAQEEVDBSMFAGCCsGAQUFBzAChkRodHRwOi8vd3d3Lm1pY3Jvc29mdC5jb20vcGtpL2NlcnRzL01pY0NvclRoaVBhck1hclBDQV8yMDEwLTEwLTA1LmNydDAMBgNVHRMBAf8EAjAAMBUGA1UdJQQOMAwGCisGAQQBgjdMAgEwDQYJKoZIhvcNAQELBQADggIBABzAtG3nkeNGxQAvsHVLNV5o50F/sOznsHrZJcFeDEtr2N06AJsPSmN/JQp7Tvh68xQj6+Ts3SGtEwZGGLNmjTDTSWbGz+Kl+YMxZKrcOTUsmmDeH/20e8UQhYpEn+4NiYWFNHeI/NfNmzAYSRum9MfSDNryy1j4K4plhZHgyIid+xnJVqfkviuIR7IErWrA3ysrqq2KV7Sc6i1UatuoLRtiaO8wm1GW35RofnRZKJ1B/GJMOAt/9emBxKJZJpUme/1Wp0xjSVBlqMLF3kmF6jVKuhUrdl2QLxpuOOPwxTKzSVW6d+4fmCW+L7pVW14WJRSvHI2Aqpnu6Qpr7qDLiT0n9JiJaIw1KCXzGdzN1Zzu3o1urLy3FmVo1lQcM4MXauJxgdifXi2cb5Uca8VVAHrov3rivVKc9oRgaGAjCQL785paWQ1xDOkuDt36ZPjXP+8Q8wkh+hLT/2uNAl9NUUttsKmZCE8/i5wZcJwOR/XbUMVKNTnmr7KsjVAAtCg/ThSaYYms1dkM7hcMhZKBhSM9n6Qi5rO4wShkBW+krlKLOpkXB0V2Z0F/yt7Lk45QwWOEYXStvQ3U4iMb/zhh95ofQONItwFPaAUqjGnfRrgEnbg/Y8d5zDLJgMarARyJ1bXLXQn5QJx4pA8XXWiAg3WpOyntvlH7SdH/meGFWhHX`
+
+8. Select **Next**, add any [optional scope tags](../fundamentals/scope-tags.md) > **Next**.
+
+9. In **Assignments**, select the devices or device groups that should receive your profile. Assign one profile to each device. The OEMConfig model only supports one policy per device.
+
+    For more information on assigning profiles, go to [Assign user and device profiles](device-profile-assign.md).
+
+10. Select **Next**, and review your settings. When you select **Create**, your changes are saved, and the profile is assigned. The policy is also shown in the profiles list.
+
+The next time the device checks for configuration updates, the settings you configured are applied to the app.
+
+# [Honeywell](#tab/honeywell-policy)
+
+When you use the schema settings in the **Honeywell UEMConnect** app, the Intune profile grants the following permissions:
+
+- **Overlay Permission**
+- **Alarms & Reminders Permission**
+- **Write Settings**
+
+**Create the policy**:
+
+1. Sign in to the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
+
+2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
+3. Enter the following properties:
+
+    - **Platform**: Select **Android Enterprise**.
+    - **Profile type**: Select **OEMConfig**.
+
+4. Select **Create**.
+5. In **Basics**, enter the following properties:
+
+    - **Name**: Enter a descriptive name for the new profile.
+    - **Description**: Enter a description for the profile. This setting is optional, but recommended.
+    - **OEMConfig app**: Choose **Select an OEMConfig app**.
+    - **Associated app**: Select the **Honeywell UEMConnect** app.
+
+6. Select **Next**.
+7. In **Configuration settings**, select the **Configuration designer**. The properties available within the app schema are shown for you to configure.
+
+    For guidance on configuring the OEM app schema, use the following links:
+
+    - [How to Grant Runtime Permissions via OEM Config (Honeywell UEMConnect)](https://sps-support.honeywell.com/s/article/How-to-Grant-Runtime-Permissions-via-OEM-Config-Honeywell-UEMConnect)
+
+    When you create the Intune policy, you enter the following info:
+
+    - **MHS Package Name**: `com.microsoft.launcher.enterprise`
 
 8. Select **Next**, add any [optional scope tags](../fundamentals/scope-tags.md) > **Next**.
 
