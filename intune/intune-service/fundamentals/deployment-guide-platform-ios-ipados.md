@@ -21,7 +21,7 @@ Intune supports mobile device management (MDM) of iPads and iPhones to give user
 Before you begin, complete these prerequisites to enable iOS/iPadOS device management in Intune. For more detailed information about how to set up, onboard, or move to Intune, see the [Intune setup deployment guide](deployment-guide-intune-setup.md).
 
 * [Add users](users-add.md) and [groups](groups-add.md)
-* [Assign licenses to users](licenses-assign.md)
+* [Assign licenses to users](../../fundamentals/licensing/assign-licenses.md)
 * [Set mobile device management authority](mdm-authority-set.md)
 * [Set up Apple MDM push (APNs) certificate](../enrollment/apple-mdm-push-certificate-get.md)
 

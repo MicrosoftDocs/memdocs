@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/02/2026
+ms.date: 03/05/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -38,7 +38,7 @@ You can also read:
 > - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new)
 > - [Windows Autopilot: What's new](/autopilot/whats-new)
 
-You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../fundamentals/use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
 <!-- Common categories - in this order:
@@ -78,10 +78,64 @@ You can use assignment filters in policy assignments for DDM-based configuration
 
 To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
 
-Applies to:
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
 
-- iOS/iPadOS
-- macOS
+#### New settings in the Windows settings catalog <!-- 36822089 -->
+
+There are new settings in the Windows settings catalog. To see and configure these settings in Intune, create a Windows settings catalog profile (**Devices > Configuration profiles > Create profile > Windows 10 and later > Settings catalog**).
+
+The new policies include:
+
+**Microsoft Edge**:
+
+- **Control whether an informational webpage for Edge for Business is shown in the new tab after major browser updates**: When **Enabled** or not configured, users with Microsoft Entra ID profiles see an informational page about new Edge for Business features after major browser updates. When **Disabled**, the informational page isn't shown to users.
+
+  This policy:
+
+  - Applies only to Microsoft Entra ID profiles. It doesn't apply to Microsoft account (MSA) profiles.
+  - Is available starting in Microsoft Edge version 144, which allows you to configure the setting before any version 145 changes.
+
+- **Enable Silent Printing**: When **Enabled**, Microsoft Edge automatically closes the print preview window and prints to the default printer using its default settings. If the default printer is **Save as PDF**, the file is saved to the user's Downloads folder. When **Disabled** or not configured, silent printing is disabled. The print preview window stays open, and the user must choose the print settings as usual.
+
+**Microsoft Edge > Content settings**:
+
+- **Allow precise geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are allowed to access the user's high-accuracy geolocation without prompting for permission. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal setting is used.
+
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+
+- **Block geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are blocked from requesting or accessing the user's geolocation. These sites can't prompt the user for location permissions. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal browser setting is used.
+
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+
+**Windows Backup and Restore**:
+
+- **Enable Windows Restore**: Choose to enable Windows Restore. When enabled, the restore process for a device can be initiated:
+
+  - At the time of device enrollment during the out-of-box experience (OOBE), or
+  - The first time a user signs in with their Microsoft Entra ID account after the device finishes enrolling.
+
+  It allows a user to restore their backed‑up Windows settings and Microsoft Store apps from the cloud to a new or reset device. It restores the user experience settings and configuration preferences. It's not a full system image. To learn more, see [Windows Backup for Organizations overview](/windows/configuration/windows-backup).
+
+  Your options:
+
+  - Windows Restore Not Configured
+  - Windows Restore Enabled
+
+  This policy:
+
+  - Was previously for Windows Insiders and is now generally available (GA).
+  - Uses the [WindowsBackupAndRestore CSP](/windows/client-management/mdm/windowsbackupandrestore-csp).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
 
 #### New updates to the Apple settings catalog <!-- 36180374 -->
 
@@ -110,6 +164,12 @@ There are new settings in the Settings Catalog. To see these settings, in the [M
 >
 > - iOS/iPadOS
 > - macOS
+
+### Device enrollment  
+
+#### New setting controls MDM enrollment during account registration on Windows (public preview)<!-- 14724061 --> 
+
+A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in public preview. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).  
 
 ### Device management
 
@@ -422,7 +482,7 @@ The *Windows feature update compatibility risks report* and *Windows feature upd
 
 #### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->
 
-**Admin tasks** in the Intune admin center are out of public preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
+**Admin tasks** in the Intune admin center are out of preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
 
 The following task types are supported:
 
