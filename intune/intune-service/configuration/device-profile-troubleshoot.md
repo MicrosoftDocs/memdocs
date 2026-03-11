@@ -176,6 +176,11 @@ For more information on dynamic groups, go to:
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
+## I unassigned a device compliance policy from a device, but it is still showing under Device Compliance policies in the Intune admin console
+
+When a compliance policy is unassigned from a device its associated user, that policy will continue to show in the Intune admin console as being assigned until the device syncs with the Intune service (with the specific associated user). This is by design, because the policy will continue to be in effect on the device until the Intune service is able to sync with the device.
+
+
 ## "The sync could not be initiated (0x80072f9a)" error
 
 On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
