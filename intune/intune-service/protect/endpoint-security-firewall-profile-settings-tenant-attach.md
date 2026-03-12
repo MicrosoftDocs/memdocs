@@ -1,5 +1,5 @@
 ---
-title: Intune endpoint security firewall settings for Configuration Manager devices| Microsoft Docs
+title: Intune endpoint security firewall settings for Configuration Manager devices
 description: Endpoint security firewall policy settings for tenant attached devices you manage with Configuration Manager. You can configure firewall setting after you configure tenant attach for Configuration Manager.
 author: brenduns
 ms.author: brenduns
