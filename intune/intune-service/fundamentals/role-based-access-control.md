@@ -3,7 +3,7 @@ title: Role-based access control (RBAC) with Microsoft Intune
 description: Learn how RBAC lets you control who can perform actions and make changes in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/20/2025
+ms.date: 03/12/2026
 ms.topic: article
 ms.reviewer: davidra
 ms.collection:
@@ -68,7 +68,7 @@ The following table identifies the Microsoft Entra roles that have access to Int
 | Microsoft Entra role | All Intune data | Intune audit data |
 | --- | :---: | :---: |
 | Global Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
-| Intune Service Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
+| Intune Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
 | Conditional Access Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | None | None |
 | Security Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only (full administrative permissions for Endpoint Security node) | Read only |
 | Security Operator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
@@ -96,12 +96,16 @@ The **Global Administrator** role is a built-in role in Microsoft Entra, and has
 
 To learn more about the Microsoft Entra Global Administrator role, see [Microsoft Entra built-in roles - Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-The **Intune Administrator** role is a built-in role in Microsoft Entra, and is also known as the **Intune Service Administrator** role. It has a limited scope of permissions to administer and manage Intune, and manage related features, like user and group management. This role is suitable for admins who only need to administer Intune.
+The **Intune Administrator** role is a built-in role in Microsoft Entra. It grants global read/write permissions across Microsoft Intune and is classified as a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center). While its scope is narrower than the Global Administrator role, it still exceeds what is needed for almost all day-to-day Intune management tasks. Don't use this role for routine administration — use a least-privileged [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead.
+
+> [!NOTE]
+> In Microsoft Graph API and Microsoft PowerShell, this role appears as **Intune Service Administrator**.
 
 **To reduce risk**:
 
-- Assign the Intune Administrator role only as needed. If there's a [built-in Intune role](#rbac-roles) that meets the needs of the admin, then assign that role instead of the Intune Administrator role. Always assign the least privileged Intune role necessary for the admin to do their tasks.
-- Create [custom roles](create-custom-role.md) to further limit the scope of permissions for your admins.
+- Don't use the Intune Administrator role for day-to-day Intune administration. Because this role has read/write access to all Intune data, its use should be limited and access tightly controlled.
+- Assign a [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead. These roles provide the specific permissions needed for a task without the broad access that the Intune Administrator role grants.
+- When the Intune Administrator role is required, assign it only for the duration needed, and then remove it.
 
 **Enhanced Security Controls**:
 
