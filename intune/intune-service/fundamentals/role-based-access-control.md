@@ -96,15 +96,15 @@ The **Global Administrator** role is a built-in role in Microsoft Entra, and has
 
 To learn more about the Microsoft Entra Global Administrator role, see [Microsoft Entra built-in roles - Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-The **Intune Administrator** role is a built-in role in Microsoft Entra. It grants global read/write permissions across Microsoft Intune and is classified as a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center). While its scope is narrower than the Global Administrator role, it still exceeds what is needed for almost all day-to-day Intune management tasks. Don't use this role for routine administration — use a least-privileged [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead.
+The **Intune Administrator** role is a built-in role in Microsoft Entra. It grants global read/write permissions across Microsoft Intune and is classified as a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center). While its scope is narrower than the Global Administrator role, it still exceeds what is needed for almost all day-to-day Intune management tasks. Don't use this role for routine administration. Use a least-privileged [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead.
 
 > [!NOTE]
 > In Microsoft Graph API and Microsoft PowerShell, this role appears as **Intune Service Administrator**.
 
 **To reduce risk**:
 
-- Don't use the Intune Administrator role for day-to-day Intune administration. Because this role has read/write access to all Intune data, its use should be limited and access tightly controlled.
-- Assign a [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead. These roles provide the specific permissions needed for a task without the broad access that the Intune Administrator role grants.
+- Don't use the Intune Administrator role for day-to-day Intune administration.
+- Assign a [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead. These roles limit permissions to only what each task requires.
 - When the Intune Administrator role is required, assign it only for the duration needed, and then remove it.
 
 **Enhanced Security Controls**:

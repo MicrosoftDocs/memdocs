@@ -37,7 +37,7 @@ To use multi administrative approval, your tenant must have at least two adminis
 
 **To create and manage access policies**, use an account with one of the following:
 
-- **Custom Intune role** (recommended): Use a [custom role](create-custom-role.md) that includes only the [Multi Admin Approval permissions](create-custom-role.md#multi-admin-approval) required for the task. To create and manage access policies, the custom role needs *Create access policy*, *Read access policy*, *Update access policy*, and *Delete access policy* permissions.
+- **Custom Intune role** (recommended): Use a [custom role](create-custom-role.md) that includes the required [Multi Admin Approval permissions](create-custom-role.md#multi-admin-approval). To create and manage access policies, the custom role needs *Create access policy*, *Read access policy*, *Update access policy*, and *Delete access policy* permissions.
 
 - **Intune Administrator** [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (also known as **Intune Service Administrator**): This Microsoft Entra role provides full read/write access to Intune. Because it's a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), Microsoft recommends using a least-privileged custom Intune role for routine access policy management instead of this role. To learn more, see [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 
