@@ -68,7 +68,7 @@ All approver groups must also be a member group of one or more Intune role assig
 
 4. On the *Review + Create* page, review, and then save your changes.
 
-5. Next, use a separate administrative account to sign-in to the admin center to review and approve the new access policy.
+5. Next, use a separate administrative account with Approval for Multi Admin Approval permission to sign-in to the admin center to review and approve the new access policy.
 
 6. Sign back in to the admin center with the first admin account that created the access policy, view the policy, and finalize it by selecting **Complete**. After Intune applies this policy, configurations for the protected profile type will require multiple admin approvals.
 

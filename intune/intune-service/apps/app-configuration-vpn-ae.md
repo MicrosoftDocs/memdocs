@@ -1,5 +1,5 @@
 ---
-title: Configure a VPN or Per-App VPN for Android Enterprise Devices in Microsoft Intune | Microsoft Docs
+title: Configure a VPN or Per-App VPN for Android Enterprise Devices in Microsoft Intune
 description: Use an app configuration policy to add or create a VPN or per-app VPN profile for Android Enterprise devices in Microsoft Intune.
 ms.date: 11/21/2024
 ms.topic: how-to
