@@ -6,8 +6,6 @@ ms.author: lanewsad
 ms.date: 02/28/2025
 ms.topic: how-to
 ms.reviewer: hipethe
-ms.suite: ems
-search.appverid: MET150
 ms.collection:
   - M365-identity-device-management
   - help-support
