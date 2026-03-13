@@ -3,7 +3,7 @@ title: Configure security, email, VPN, and Wi-Fi device configuration profiles
 description: Step 4 to deploy device configuration profiles as part of the minimum set of policies for your devices using Microsoft Intune. The starting point is to enable the firewall, install AV, scan for malware, install software updates, create a strong PIN policy, and create email, VPN, and Wi-Fi device configuration profiles.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 02/25/2026
+ms.date: 03/12/2026
 ms.topic: how-to
 
 
@@ -73,7 +73,7 @@ For a more granular list of Windows settings and their recommended values, see [
 
 :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Install antivirus software and regularly scan for malware**
 
-All devices should have antivirus software installed and be regularly scanned for malware. Intune integrates with third party partner mobile threat defense (MTD) services that provide AV and threat scanning. For macOS and Windows, antivirus and scanning are built in to Intune with Microsoft Defender for Endpoint.
+All devices should have antivirus software installed and be regularly scanned for malware. Intune integrates with third party partner mobile threat defense (MTD) services that provide AV and threat scanning. Antivirus and scanning are built in to Intune with Microsoft Defender for Endpoint.
 
 Your policy options:
 
@@ -184,7 +184,7 @@ Intune has built-in email settings for Android, iOS/iPadOS, and Windows client d
 
 On new devices, we recommended you deploy the email app during the enrollment process. When enrollment completes, then deploy the email device configuration policy.
 
-If you have existing devices, then deploy the email app at any time, and deploy the email device configuration policy.
+If you have existing devices, deploy the email app at any time. Then, deploy the email device configuration policy.
 
 #### Get started with email profiles
 
@@ -347,39 +347,39 @@ Microsoft recommends the following level 2 security policies:
 
   On iOS/iPadOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+  - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
 
   # [macOS](#tab/macos-password)
 
   On macOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
+  - [Device restrictions template > Password settings](../configuration/device-restrictions-apple.md)
 
   # [Windows](#tab/windows-password)
 
   On Windows devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions template > Password settings](../configuration/device-restrictions-windows-10.md#password)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Device lock`
+  - [Device restrictions template > Password settings](../configuration/device-restrictions-windows-10.md#password)
 
 ---
 
 - Intune includes **hundreds of settings that can manage devices features** and settings, like disabling the built-in camera, controlling notifications, allowing bluetooth, blocking games, and more.
 
-  You can use the [built-in templates](../configuration/device-profiles.md) or the [settings catalog](../configuration/settings-catalog.md) to see and configure the settings.
+  You can use the [settings catalog](../configuration/settings-catalog.md) or the [built-in templates](../configuration/device-profiles.md) to see and configure the settings.
 
-  - **[Device restrictions templates](../configuration/device-restrictions-configure.md)** are logical groups of built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
-
-    You can use these templates on the following platforms:
+  - **[Use the settings catalog](../configuration/settings-catalog.md)** to see and configure all the available settings. You can use the settings catalog on the following platforms:
 
     - Android
     - iOS/iPadOS
     - macOS
     - Windows
 
-  - **[Use the settings catalog](../configuration/settings-catalog.md)** to see and configure all the available settings. You can use the settings catalog on the following platforms:
+  - **[Device restrictions templates](../configuration/device-restrictions-configure.md)** are logical groups of built-in settings that can control different parts of the devices, including security, hardware, data sharing, and more.
+
+    You can use these templates on the following platforms:
 
     - Android
     - iOS/iPadOS
