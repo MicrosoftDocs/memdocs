@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/05/2026
+ms.date: 03/12/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -75,6 +75,9 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
 
 You can use assignment filters in policy assignments for DDM-based configurations, like software updates.
+
+> [!NOTE]
+> This feature is rolling out slowly and should be available for all customers by late March 2026.
 
 To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
 
