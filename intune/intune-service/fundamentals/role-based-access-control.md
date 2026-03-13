@@ -105,7 +105,7 @@ The **Intune Administrator** role is a built-in role in Microsoft Entra. It gran
 
 - Don't use the Intune Administrator role for day-to-day Intune administration.
 - Assign a [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead. These roles limit permissions to only what each task requires.
-- When the Intune Administrator role is required, assign it only for the duration needed, and then remove it.
+- When the Intune Administrator role is required, assign it only for the duration needed, and then remove it. Optionally, if you have Microsoft Entra ID with a P2 or Microsoft Entra ID Governance license, you can use [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-getting-started) (PIM) to provide time bound elevation for this role.
 
 **Enhanced Security Controls**:
 
