@@ -1,6 +1,11 @@
 {
   "redirections": [
     {
+      "source_path": "intune/fundamentals/device-cleanup-rules.md",
+      "redirect_url": "/intune/governance/device-cleanup-rules",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/fundamentals/licenses-assign.md",
       "redirect_url": "/intune/fundamentals/licensing/assign-licenses",
       "redirect_document_id": false
@@ -27,7 +32,7 @@
     },
     {
       "source_path": "intune/intune-service/fundamentals/device-cleanup-rules.md",
-      "redirect_url": "/intune/fundamentals/device-cleanup-rules",
+      "redirect_url": "/intune/governance/device-cleanup-rules",
       "redirect_document_id": false
     },
     {
