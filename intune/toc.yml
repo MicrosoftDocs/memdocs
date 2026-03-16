@@ -25,7 +25,7 @@ items:
     - name: Intune service release information
       href: ./intune-service/fundamentals/intune-service-servicing-information.md
     - name: Endpoint management at Microsoft
-      href: endpoint-manager-overview.md
+      href: ./fundamentals/endpoint-management.md
     - name: What is device management?
       href: ./intune-service/fundamentals/what-is-device-management.md
 
@@ -304,13 +304,7 @@ items:
       - name: Add groups
         href: ./intune-service/fundamentals/groups-add.md
       - name: Manage Intune licenses
-        items:
-        - name: Determine license needs
-          href: ./intune-service/fundamentals/licenses.md
-        - name: Assign licenses
-          href: ./intune-service/fundamentals/licenses-assign.md
-        - name: Allow access to unlicensed admins
-          href: ./intune-service/fundamentals/unlicensed-admins.md
+        href: ./fundamentals/licensing/toc.yml
       - name: Set the MDM authority
         href: ./intune-service/fundamentals/mdm-authority-set.md
 
@@ -718,15 +712,15 @@ items:
               - name: Help users troubleshoot problems
                 href: ./intune-service/fundamentals/help-desk-operators.md
               - name: Troubleshoot app installation problems
-                href: /troubleshoot/mem/intune/troubleshoot-app-install
+                href: /troubleshoot/mem/intune/troubleshoot-app-install?context=/intune/context
               - name: App installation error reference
-                href: /troubleshoot/mem/intune/app-install-error-codes
+                href: /troubleshoot/mem/intune/app-install-error-codes?context=/intune/context
               - name: Troubleshoot mobile application management
-                href: /troubleshoot/mem/intune/troubleshoot-mam
+                href: /troubleshoot/mem/intune/troubleshoot-mam?context=/intune/context
               - name: Review app protection logs
                 href: ./intune-service/apps/app-protection-policy-settings-log.md
               - name: Troubleshooting app protection policy deployment
-                href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment
+                href: /troubleshoot/mem/intune/troubleshoot-app-protection-policy-deployment?context=/intune/context
 
     - name: Protect and secure Data and Devices
       items:
@@ -772,7 +766,7 @@ items:
         - name: Block apps that don't use modern authentication (MSAL)
           href: ./intune-service/protect/app-modern-authentication-block.md
         - name: Troubleshoot Conditional Access
-          href: /troubleshoot/mem/intune/troubleshoot-conditional-access
+          href: /troubleshoot/mem/intune/troubleshoot-conditional-access?context=/intune/context
         - name: Jamf Cloud connector
           items:
           - name: Use the Jamf Cloud connector
@@ -784,7 +778,7 @@ items:
           - name: Enforce compliance on Macs managed with Jamf Pro
             href: ./intune-service/protect/conditional-access-assign-jamf.md
           - name: Troubleshoot Jamf Pro integration
-            href: /troubleshoot/mem/intune/troubleshoot-jamf
+            href: /troubleshoot/mem/intune/troubleshoot-jamf?context=/intune/context
 
       - name: Software updates
         href: ./device-updates/toc.yml
@@ -854,7 +848,7 @@ items:
           - name: Monitor disk encryption
             href: ./intune-service/protect/encryption-monitor.md
           - name: Troubleshoot BitLocker policies
-            href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies
+            href: /troubleshoot/mem/intune/troubleshoot-bitlocker-policies?context=/intune/context
         - name: Endpoint protection
           href: ./intune-service/protect/endpoint-protection-configure.md
 
@@ -988,7 +982,7 @@ items:
             - name: Install the connector
               href: ./intune-service/protect/certificate-connector-install.md
             - name: Troubleshoot certificate connector
-              href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events
+              href: /troubleshoot/mem/intune/troubleshoot-certificate-connector-events?context=/intune/context
 
           - name: SCEP
             items:
@@ -1002,17 +996,17 @@ items:
             - name: Troubleshoot SCEP certificate profiles
               items:
               - name: Troubleshoot SCEP certificate profiles
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles
+                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profiles?context=/intune/context
               - name: Profile deployment to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment
+                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-profile-deployment?context=/intune/context
               - name: Device to NDES communication
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes
+                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-device-to-ndes?context=/intune/context
               - name: NDES operations
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module
+                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-ndes-policy-module?context=/intune/context
               - name: Certificate delivery to devices
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery
+                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-delivery?context=/intune/context
               - name: Reporting for certificate deployment
-                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting
+                href: /troubleshoot/mem/intune/troubleshoot-scep-certificate-reporting?context=/intune/context
 
           - name: PKCS
             items:
@@ -1025,7 +1019,7 @@ items:
               href: ./intune-service/protect/certificates-s-mime-encryption-sign.md
               displayName: csr
             - name: Troubleshoot PKCS certificate profiles
-              href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles
+              href: /troubleshoot/mem/intune/troubleshoot-pkcs-certificate-profiles?context=/intune/context
           - name: Use DigiCert PKI
             href: ./intune-service/protect/certificates-digicert-configure.md
             displayName: ca; pkcs; pki; ra; registration authority
@@ -1204,8 +1198,11 @@ items:
               displayName: gpo, windows
               href: ./intune-service/configuration/settings-catalog-restrict-usb.md
             - name: Configure ADMX
-              displayName: gpo, admx, windows
+              displayName: gpo, admx, windows, settings catalog
               href: ./intune-service/configuration/administrative-templates-windows.md
+            - name: Configure Recovery Lock on macOS
+              displayName: gpo, admx, macos
+              href: ./intune-service/configuration/settings-catalog-recovery-lock.md
           - name: Import custom ADMX and ADML
             displayName: gpo, windows
             href: ./intune-service/configuration/administrative-templates-import-custom.md
@@ -1242,7 +1239,7 @@ items:
             href: ./intune-service/configuration/email-settings-configure.md
           - name: Issues and resolutions
             displayName: android, ios, ipados, windows
-            href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune
+            href: /troubleshoot/mem/intune/troubleshoot-email-profiles-in-microsoft-intune?context=/intune/context
         - name: VPN
           items:
           - name: Configure VPN
@@ -1265,7 +1262,7 @@ items:
             displayName: wifi, wireless, psk, oma-uri, eap, android, windows
           - name: Troubleshoot Wi-Fi
             displayName: wifi, wireless, android, ios, ipados, macos, windows, holographic
-            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles
+            href: /troubleshoot/mem/intune/troubleshoot-wi-fi-profiles?context=/intune/context
         - name: BIOS & DFCI on Windows
           items:
           - name: Configure the BIOS
@@ -1724,15 +1721,15 @@ items:
         - name: View enrollment reports
           href: ./intune-service/enrollment/view-enrollment-reports.md
         - name: Troubleshoot device enrollment
-          href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune
+          href: /troubleshoot/mem/intune/troubleshoot-device-enrollment-in-intune?context=/intune/context
         - name: Troubleshoot iOS/iPadOS device enrollment
-          href: /troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors
+          href: /troubleshoot/mem/intune/troubleshoot-ios-enrollment-errors?context=/intune/context
         - name: Troubleshoot Windows device enrollment
-          href: /troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors
+          href: /troubleshoot/mem/intune/troubleshoot-windows-enrollment-errors?context=/intune/context
         - name: Troubleshoot Windows auto-enrollment
-          href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment
+          href: /troubleshoot/mem/intune/troubleshoot-windows-auto-enrollment?context=/intune/context
         - name: Troubleshoot Android device enrollment
-          href: /troubleshoot/mem/intune/troubleshoot-android-enrollment
+          href: /troubleshoot/mem/intune/troubleshoot-android-enrollment?context=/intune/context
 
     - name: Assign and deploy policies
       items:
@@ -1777,19 +1774,20 @@ items:
         href: ./intune-service/configuration/device-profile-troubleshoot.md
       - name: Troubleshoot policies and profiles
         displayName: android, ios, ipados, macos, windows
-        href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune
+        href: /troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune?context=/intune/context
 
   - name: Manage, maintain, and monitor Microsoft Intune
     items:
     - name: Tenant status and health
-      href: ./intune-service/fundamentals/tenant-status.md
+      href: ./governance/tenant-status.md
     - name: Manage admin tasks
       href: ./intune-service/fundamentals/admin-tasks.md
     - name: Device cleanup rules
-      href: ./intune-service/fundamentals/device-cleanup-rules.md
+      href: ./governance/device-cleanup-rules.md
 
     - name: Endpoint analytics
       href: ./endpoint-analytics/toc.yml
+
     - name: Advanced Analytics
       href: ./advanced-analytics/toc.yml
 
@@ -1855,9 +1853,9 @@ items:
       - name: Powershell scripts for Remediations
         href: ./intune-service/fundamentals/powershell-scripts-remediation.md
     - name: Using the Intune docs
-      href: ./use-docs.md
+      href: ./fundamentals/use-docs.md
     - name: Get support in the Intune admin center
-      href: ./get-support.md
+      href: ./fundamentals/it-pro-support/get-support-admin-center.md
     - name: Troubleshoot issues
       href: /troubleshoot/mem/intune/welcome-intune?context=/intune/context
 
@@ -2302,38 +2300,9 @@ items:
       - name: Move your Intune Data Warehouse account data
         href: ./intune-service/developer/data-warehouse-account-move.md
 
-  - name: Privacy, compliance, and personal data
-    items:
-    - name: Privacy and personal data
-      href: ./intune-service/protect/privacy-personal-data.md
-    - name: Compliance in Intune
-      href: ./intune-service/fundamentals/compliance-in-intune.md
-    - name: Optional diagnostic data in client apps
-      href: ./intune-service/protect/client-apps-optional-data.md
-    - name: Data collection
-      href: ./intune-service/protect/privacy-data-collect.md
-    - name: Data storage and processing
-      href: ./intune-service/protect/privacy-data-store-process.md
-    - name: Data security and sharing
-      href: ./intune-service/protect/privacy-data-secure-share.md
-      items:
-      - name: Data Apple sends to Intune
-        href: ./intune-service/protect/data-apple-sends-to-intune.md
-      - name: Data Google sends to Intune
-        href: ./intune-service/protect/data-google-sends-to-intune.md
-      - name: Data Intune sends to Apple
-        href: ./intune-service/protect/data-intune-sends-to-apple.md
-      - name: Data Intune sends to Google
-        href: ./intune-service/protect/data-intune-sends-to-google.md
-      - name: Data Intune sends to Zebra
-        href: ./intune-service/protect/data-intune-sends-to-zebra.md
-      - name: Enable Windows diagnostic data
-        href: ./tenant-administration/windows-diagnostic-data.md
-      - name: Information shared from Jamf Pro to Intune
-        href: ./intune-service/protect/data-jamf-sends-to-intune.md
-    - name: View and correct personal data
-      href: ./intune-service/protect/privacy-data-view-correct.md
-    - name: Audit, export, delete
-      href: ./intune-service/protect/privacy-data-audit-export-delete.md
+  - name: Privacy and compliance
+    href: /intune/privacy-compliance
+    displayName: GDPR, HIPAA, SOC, ISO
+
   - name: Microsoft Intune service description
     href: ./intune-service/fundamentals/microsoft-intune-service-description.md

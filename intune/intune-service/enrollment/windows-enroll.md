@@ -1,7 +1,7 @@
 ---
 title: Enable MDM automatic enrollment for Windows | Microsoft Intune
 description: Enable Intune automatic enrollment for Windows devices joining or registering with your Microsoft Entra ID.
-ms.date: 02/18/2026
+ms.date: 03/06/2026
 ms.topic: how-to
 ms.reviewer: maholdaa
 ms.collection:
@@ -44,7 +44,7 @@ This article describes how to enable automatic mobile device management (MDM) en
 :::column-end:::
 :::column span="3":::
 > Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the following role:
-> - Built-in **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** Microsoft Entra role
+> - Built-in **[Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator)** Microsoft Entra role
 :::column-end:::
 :::row-end:::
 
@@ -110,7 +110,7 @@ The Microsoft Intune user help docs provide conceptual information, tutorials, a
 
 Users on personal devices running Windows can automatically enroll by adding their work or school account on their device, or by using the Intune Company Portal app. Devices running earlier versions of Windows must enroll using the Intune Company Portal app.  For more information, see [Enroll Windows devices](../user-help/enroll-windows-10-device.md).
 
-You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../fundamentals/unlicensed-admins.md).
+You can also let unlicensed admins sign in to the Intune admin center to help with troubleshooting and support. For more information, see [Unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md).
 
 ## Best practices and troubleshooting
 

@@ -1,5 +1,5 @@
 ---
-title: Technical Preview 1801 | Microsoft Docs
+title: Technical Preview 1801
 description: Learn about features available in the Technical Preview version 1801 for Configuration Manager.
 ms.date: 01/19/2018
 ms.subservice: core-infra

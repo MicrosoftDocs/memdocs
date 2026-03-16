@@ -1,6 +1,5 @@
 ---
 title: Understand compliance in Configuration Manager
-audience: ITPro
 ms.topic: concept-article
 ms.collection: 
  - tier1

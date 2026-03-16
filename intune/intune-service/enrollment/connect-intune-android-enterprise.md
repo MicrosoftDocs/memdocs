@@ -45,7 +45,7 @@ Complete these steps to enable Android Enterprise management options in Microsof
 2. Go to **Devices** > **Enrollment**.
 3. Select the **Android** tab.
 4. Under **Prerequisites**, choose **Managed Google Play**.  If you're using a custom Intune role, access to this option requires organization *read* and *update* permissions.
-5. Select **I agree** to grant Microsoft permission to [send user and device information to Google](../protect/data-intune-sends-to-google.md).
+5. Select **I agree** to grant Microsoft permission to [send user and device information to Google](../../privacy/data-sharing/intune-to-google.md).
 
 6. Select **Launch Google to connect now** to open the managed Google Play website. The website opens on a new tab in your browser.
 

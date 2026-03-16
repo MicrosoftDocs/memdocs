@@ -1,5 +1,5 @@
 ---
-title: Intune endpoint security firewall settings | Microsoft Docs
+title: Intune endpoint security firewall settings
 description: Endpoint security firewall policy settings for Windows and macOS in Microsoft Intune
 author: brenduns
 ms.author: brenduns
