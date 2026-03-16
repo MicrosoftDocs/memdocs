@@ -3,7 +3,7 @@ title: Network endpoints for Microsoft Intune
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/21/2025
+ms.date: 03/24/2026
 ms.topic: reference
 ms.reviewer: angrobe
 ms.collection:
@@ -156,7 +156,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 | ID |Desc |Category |ER |Addresses |Ports|Notes|
 |----|-----|---------|---|----------|-----|-----|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for NA, ROW customers)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for APAC customers)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for EU customers)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(rolling out March through June 2026)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443 |
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443 |
 
@@ -459,6 +459,9 @@ intunecdnpeasd.azureedge.net
 *.support.services.microsoft.com
 *.trouter.communication.microsoft.com
 *.trouter.communications.svc.cloud.microsoft
+go-amer.trouter.communications.svc.cloud.microsoft
+go-apac.trouter.communications.svc.cloud.microsoft
+go-eu.trouter.communications.svc.cloud.microsoft
 *.trouter.teams.microsoft.com
 api.flightproxy.skype.com
 ecs.communication.microsoft.com
