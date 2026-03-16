@@ -126,7 +126,7 @@ You can deploy Windows 8 applications using UDI like any other application that 
 
 ## Managing MDT Using Windows PowerShell
 
-You can manage MDT deployment shares using the Deployment Workbench and Windows PowerShell. MDT includes a Windows PowerShell™ snap-in—Microsoft.BDD.SnapIn—that must be loaded prior to using the MDT-specific features in Windows PowerShell. The MDT Windows PowerShell snap-in includes:
+You can manage MDT deployment shares using the Deployment Workbench and Windows PowerShell. MDT includes a Windows PowerShell&trade; snap-in—Microsoft.BDD.SnapIn—that must be loaded prior to using the MDT-specific features in Windows PowerShell. The MDT Windows PowerShell snap-in includes:
 
 - A Windows PowerShell provider—MDTProvider—that provides access to the contents of a deployment share
 
@@ -1110,7 +1110,7 @@ SkipDomainMembership=YES
 JoinDomain=DomainName
 DomainAdmin=Administrator
 DomainAdminDomain=DomainName
-DomainAdminPassword=a_secure_password
+DomainAdminPassword=<complex_password>
 
 SkipUserData=yes
 UserDataLocation=AUTO
@@ -1145,7 +1145,7 @@ Applications001={a26c6358-8db9-4615-90ff-d4511dc2feff}
 Applications002={7e9d10a0-42ef-4a0a-9ee2-90eb2f4e4b98}
 UserID=Administrator
 UserDomain=DomainName
-UserPassword=P@ssw0rd
+UserPassword=<complex_password>
 
 SkipBitLocker=YES
 SkipSummary=YES
@@ -1177,7 +1177,7 @@ SkipDomainMembership=YES
 JoinDomain=WOODGROVEBANK
 DomainAdmin=Administrator
 DomainAdminDomain=WOODGROVEBANK
-DomainAdminPassword=P@ssw0rd
+DomainAdminPassword=<complex_password>
 
 SkipUserData=Yes
 UserDataLocation=\\WDG-MDT-01\UserData$\Directory\usmtdata
