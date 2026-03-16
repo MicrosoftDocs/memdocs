@@ -108,7 +108,7 @@ You can cancel a request before it's approved by selecting it from the My reques
 
 - Plan to monitor the status of your requests through the *My requests* page of the *Multi Admin Approval* node in the Microsoft Intune admin center.
 
-- When an approval is already pending for an object, a new request is can't be submitted for it.
+- When an approval is already pending for an object, a new request can't be submitted for it.
 
 - All actions for a protected resource are protected, including but not limited to:
   - Edit
