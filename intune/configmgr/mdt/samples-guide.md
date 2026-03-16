@@ -1302,16 +1302,16 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 6. Complete the **Properties** tab of the new task using the following information:
 
-   | **In this box** |                                                                **Do this**                                                                |
-   |-----------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-   |    **Name**     |                         Type **Connect to server** (where server is the name of the server to which to connect).                          |
-   | **Description** |                                       Type text that explains why the connection needs to be made.                                        |
+   | **In this box** |  **Do this**   |
+   |---|---|
+   |    **Name**     | Type **Connect to server** (where server is the name of the server to which to connect).   |
+   | **Description** | Type text that explains why the connection needs to be made.   |
    |   **Command**   | Type **cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path** (where *unc_path* is the UNC path to a shared folder on the server). |
 
 7. Complete the **Options** tab of the new task using the following information. Unless specified, accept default values, and then select **OK**.
 
    |**In this box** |**Do this** |
-   |-|-|
+   |---|---|
    |**Success codes** |Type **0 3010**. (The ZTIConnect.wsf script returns these codes upon successful completion.)|
    |**Conditions list box** |Add any conditions that might be necessary. (In most instances this task requires no conditions.)|
 
@@ -1321,7 +1321,7 @@ cscript.exe "%SCRIPTROOT%\ZTIConnect.wsf" /uncpath:unc_path
 
 Variations on model numbers and names can exist with virtually no difference in the driver set. These variations in model numbers and names can unnecessarily increase time spent making multiple database entries for a given model. The following procedure shows how to define a new property using a user exit function call that returns a substring of the model number.
 
- **To create model aliases**
+**To create model aliases**
 
 1. Select **Start**, and then point to **All Programs**. Point to **Microsoft Deployment Toolkit**, and then select **Deployment Workbench**.
 
