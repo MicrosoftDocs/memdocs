@@ -3,7 +3,7 @@ title: Assign a role to an Intune administrator
 description: Learn how to assign a built-in or custom role to a user in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 06/24/2026
+ms.date: 03/24/2026
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
