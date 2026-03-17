@@ -130,7 +130,7 @@ Account credentials that will be used when promoting the server to a domain cont
 
 |**Example**|
 |-|
-|`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=complex_password`|
+|`[Settings] Priority=Default  [Default] ADDSUserName=Administrator ADDSUserDomain=WoodGroveBank ADDSPassword=<complex_password>`|
 
 ### Administrators
 
@@ -4002,7 +4002,7 @@ Instead of generating a random recovery password, the **Enable BitLocker** task 
 
 |**Example**|
 |-|
-|`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerRecoveryPassword=<48_digit_numerical_password>> OSDBitLockerStartupKeyDrive=C:`|
+|`[Settings] Priority=Default  [Default] BDEInstallSuppress=NO BDEDriveLetter=S: BDEDriveSize=2000 OSDBitLockerMode=TPMKey OSDBitLockerCreateRecoveryPassword=AD OSDBitLockerRecoveryPassword=<48_digit_numerical_password> OSDBitLockerStartupKeyDrive=C:`|
 
 ### OSDBitLockerStartupKey
 
