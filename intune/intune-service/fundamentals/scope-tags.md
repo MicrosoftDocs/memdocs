@@ -3,8 +3,9 @@ title: Use role-based access control (RBAC) and scope tags for distributed IT
 description: Use role-based access control (RBAC) and scope tags to filter configuration profiles to specific roles.
 author: brenduns
 ms.author: brenduns
-ms.date: 06/06/2025
+ms.date: 06/24/2026
 ms.topic: how-to
+ai-assisted: true
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -93,6 +94,57 @@ When working with scope tags, remember these details:
 - You can only assign a scope tag that you have in your role assignments.
 - You can only target groups that are listed in the Scope (Groups) of your role assignment.
 - If you have a scope tag assigned to your role, you can't delete all scope tags on an Intune object. At least one scope tag is required.
+
+## Permission behavior across role assignments
+
+The following sections describe Intune's existing and default behavior for scoped permissions, and an improved opt-in public preview behavior that will become the default behavior for all tenants in a future release.
+
+> [!IMPORTANT]
+> In March 2026, Intune introduced an opt-in public preview for **Scoped permissions**. This new behavior changes how permissions apply when an admin has multiple role assignments with different scope tags. Until you enable this setting, your tenant continues to use the [default behavior](#default-behavior). Review both behaviors and use the [Permissions Assessment Report](#permissions-assessment-report) to understand the impact before opting in, as this change can't be reversed.
+
+### Default behavior
+
+By default, when an admin belongs to multiple role assignments that use different scope tags and share the same permission category (for example, Mobile Apps), Intune merges the permissions across those assignments. This can result in an admin receiving broader access than intended. For example:
+
+- The *App Admins* security group is assigned a role that grants only **Read** permissions for **Mobile Apps**, scoped to *Headquarters* — intended to give them read-only access there.
+- The same group is also assigned a role that grants full permissions (Create, Read, Update, Delete) for **Mobile Apps**, scoped to *Regional Office*.
+- Because both assignments share the **Mobile Apps** permission category, Intune merges them. The result: *App Admins* members have full permissions on Mobile Apps under both *Headquarters* and *Regional Office* — not the read-only access intended for *Headquarters*.
+
+If this isn't the access you intended, use the [Permissions Assessment Report](#permissions-assessment-report) to see exactly how your current assignments will change before you opt in to [Scoped permissions](#scoped-permissions-opt-in-public-preview).
+
+### Scoped permissions (opt-in public preview)
+
+The **Scoped permissions** setting gives you precise control over what each admin can actually do within each scope tag. Rather than having Intune silently merge permissions across role assignments, each assignment's permissions stay contained to its own scope — so admins get exactly the access you intended, no more.
+
+When enabled, each role assignment's permissions apply only within its own scope tag context. In the same example, *App Admins* members would have read-only access to Mobile Apps tagged *Headquarters* and full permissions for Mobile Apps tagged *Regional Office* — exactly as intended.
+
+Before enabling this setting, use the [Permissions Assessment Report](#permissions-assessment-report) to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings** and can be run as many times as needed.
+
+To enable Scoped permissions, go to **Tenant administration** > **Roles** > **Settings** and turn on the **Scoped permissions** toggle, using an account with one of the following roles:
+
+- **Custom Intune role (recommended)** - Create a [custom role](create-custom-role.md) that includes the **Update** action for **Organization**. No built-in Intune role includes this permission.
+- **[Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator)** :::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false"::: - This Microsoft Entra role provides full read/write access to Intune. Because it's a privileged role, Microsoft recommends using a least-privileged custom Intune role instead.
+
+## Permissions Assessment Report
+
+Before enabling Scoped permissions, use the **Permissions Assessment Report** to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings**, and can be run as often as needed, before or after enabling the setting.
+
+The report shows each affected security group, the roles and scope tags involved, and a comparison of current (merged) permissions versus the permissions that would apply after Scoped permissions is enabled.
+
+To review the impact on your tenant and enable Scoped permissions:
+
+1. Go to **Tenant administration** > **Roles** > **Settings**.
+
+2. Select **Generate Report** to run the Permissions Assessment Report.
+
+   The report displays the current permissions for each affected security group (as *Old Permissions*) and what those permissions would be after enabling Scoped permissions (as *New Permissions*). Review the results, adjust role assignments as needed, and communicate any permission reductions to affected admins.
+
+   You can also export this report to Excel for later review.
+
+3. When ready, enable the **Scoped permissions** toggle.
+
+   > [!IMPORTANT]
+   > Do not enable scoped permissions until you are ready to implement this change. Enabling Scoped permissions is a one-way action that can't be reversed.
 
 ## Next steps
 
