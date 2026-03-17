@@ -3,7 +3,7 @@ title: Use Multi Admin Approval in Intune
 description: Configure Multi Admin Approval to protect your tenant against the use of compromised administrative accounts in Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/16/2025
+ms.date: 03/12/2026
 ms.topic: how-to
 ms.reviewer: davidra
 ms.collection:
@@ -22,7 +22,9 @@ When any account in the Tenant is used to make a change to a resource that's pro
 
 Access policies are supported for the following resources:
 
-- Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.
+- Apps – Applies to [app deployments](../apps/apps-add.md), but doesn't apply to app protection policies.  
+- Compliance policies - Applies to creating and managing [compliance policies](../protect/create-compliance-policy.md).  
+- Configuration policies - Applies to creating and managing policies via the [settings catalog](../configuration/settings-catalog.md).  
 - Device actions - Applies to [wipe](../remote-actions/device-wipe.md), [retire](../remote-actions/device-retire.md) and [delete](../remote-actions/device-delete.md) device actions.
 - Role-based access control – Applies to changes to roles, including modifications to role permissions, admin groups, or member group assignments.
 - Scripts – Applies to deploying scripts to devices that run [Windows](../apps/powershell-scripts.md).
@@ -33,9 +35,13 @@ Access policies are supported for the following resources:
 
 To use multi administrative approval, your tenant must have at least two administrator accounts. One account is used to perform a change in the tenant, the second account is used to approve the change.
 
-To create an access policy, your account must be assigned the [*Intune Service Administrator*](../fundamentals/role-based-access-control.md) role, or be assigned the appropriate Multi Admin Approval permissions for an Intune role. Administrators who manage the access policies specifically for multi-admin approval require the *Approval for Multi Admin Approval* permission.
+**To create and manage access policies**, use an account with one of the following:
 
-To be an approver for access policies, an account must be in the approver group that's assigned to the access policy for a specific type of resource.
+- **Custom Intune role** (recommended): Use a [custom role](create-custom-role.md) that includes the required [Multi Admin Approval permissions](create-custom-role.md#multi-admin-approval). To create and manage access policies, the custom role needs *Create access policy*, *Read access policy*, *Update access policy*, and *Delete access policy* permissions.
+
+- **Intune Administrator** [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (also known as **Intune Service Administrator**): This Microsoft Entra role provides full read/write access to Intune. Because it's a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center), Microsoft recommends using a least-privileged custom Intune role for routine access policy management instead of this role. To learn more, see [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
+
+**To approve or reject requests**, an account must be in the approver group that's assigned to the access policy for a specific type of resource. Approver accounts require the *Approval for Multi Admin Approval* permission in their Intune role.
 
 All approver groups must also be a member group of one or more Intune role assignments. There's no specific requirement for which role assignment the approver group must be added to. If the approver group isn't added to a role assignment, approver group members are removed from the group periodically.
 
@@ -66,7 +72,7 @@ All approver groups must also be a member group of one or more Intune role assig
 
 4. On the *Review + Create* page, review, and then save your changes.
 
-5. Next, use a separate administrative account to sign-in to the admin center to review and approve the new access policy.
+5. Next, use a separate administrative account with Approval for Multi Admin Approval permission to sign-in to the admin center to review and approve the new access policy.
 
 6. Sign back in to the admin center with the first admin account that created the access policy, view the policy, and finalize it by selecting **Complete**. After Intune applies this policy, configurations for the protected profile type will require multiple admin approvals.
 
@@ -102,7 +108,7 @@ You can cancel a request before it's approved by selecting it from the My reques
 
 - Plan to monitor the status of your requests through the *My requests* page of the *Multi Admin Approval* node in the Microsoft Intune admin center.
 
-- When an approval is already pending for an object, a new request is can't be submitted for it.
+- When an approval is already pending for an object, a new request can't be submitted for it.
 
 - All actions for a protected resource are protected, including but not limited to:
   - Edit

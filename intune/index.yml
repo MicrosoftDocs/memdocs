@@ -107,7 +107,7 @@ conceptualContent:
         - url: https://aka.ms/Intune_GuidedDemo
           itemType: get-started
           text: Interactive demos for Intune
-        - url: ./intune-service/fundamentals/licenses.md
+        - url: ./fundamentals/licensing/index.md
           itemType: get-started
           text: Microsoft Intune licensing
         - url: ./intune-service/fundamentals/intune-planning-guide.md
@@ -116,6 +116,9 @@ conceptualContent:
         - url: ./intune-service/fundamentals/supported-devices-browsers.md
           itemType: get-started
           text: Supported platforms and requirements
+        - url: ./privacy-compliance.yml
+          itemType: overview
+          text: Privacy and compliance
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.

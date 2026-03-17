@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/24/2026
+ms.date: 03/12/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -38,7 +38,7 @@ You can also read:
 > - [Windows Autopilot device preparation: What's new](/autopilot/device-preparation/whats-new)
 > - [Windows Autopilot: What's new](/autopilot/whats-new)
 
-You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../use-docs.md#notifications).
+You can use RSS to be notified when this page is updated. For more information, see [How to use the docs](../../fundamentals/use-docs.md#notifications).
 <!-- **RSS feed**: Get notified when this page is updated by copying and pasting the following URL into your feed reader: `https://learn.microsoft.com/api/search/rss?search=%22What%27s+new+in+microsoft+intune%3F+-+Azure%22&locale=en-us` -->
 
 <!-- Common categories - in this order:
@@ -56,6 +56,188 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of March 2, 2026 (Service release 2602)
+
+### App management
+
+#### Newly available protected apps for Intune <!-- 36072390, 36072616 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- Jump by Accio Inc.
+- Mijn InPlanning by Intus Workforce Solutions (Android)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Device configuration
+
+#### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
+
+You can use assignment filters in policy assignments for DDM-based configurations, like software updates.
+
+> [!NOTE]
+> This feature is rolling out slowly and should be available for all customers by late March 2026.
+
+To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+#### New settings in the Windows settings catalog <!-- 36822089 -->
+
+There are new settings in the Windows settings catalog. To see and configure these settings in Intune, create a Windows settings catalog profile (**Devices > Configuration profiles > Create profile > Windows 10 and later > Settings catalog**).
+
+The new policies include:
+
+**Microsoft Edge**:
+
+- **Control whether an informational webpage for Edge for Business is shown in the new tab after major browser updates**: When **Enabled** or not configured, users with Microsoft Entra ID profiles see an informational page about new Edge for Business features after major browser updates. When **Disabled**, the informational page isn't shown to users.
+
+  This policy:
+
+  - Applies only to Microsoft Entra ID profiles. It doesn't apply to Microsoft account (MSA) profiles.
+  - Is available starting in Microsoft Edge version 144, which allows you to configure the setting before any version 145 changes.
+
+- **Enable Silent Printing**: When **Enabled**, Microsoft Edge automatically closes the print preview window and prints to the default printer using its default settings. If the default printer is **Save as PDF**, the file is saved to the user's Downloads folder. When **Disabled** or not configured, silent printing is disabled. The print preview window stays open, and the user must choose the print settings as usual.
+
+**Microsoft Edge > Content settings**:
+
+- **Allow precise geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are allowed to access the user's high-accuracy geolocation without prompting for permission. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal setting is used.
+
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+
+- **Block geolocation on these sites**: When **Enabled**, enter a list of URL patterns for sites that are blocked from requesting or accessing the user's geolocation. These sites can't prompt the user for location permissions. When **Disabled** or not configured, the default geolocation setting applies to all sites (if configured) or the user's personal browser setting is used.
+
+  For information about valid URL patterns and examples, see [Filter formats for URL list-based policies](/deployedge/edge-learnmmore-url-list-filter%20format). Wildcards (*) are supported.
+
+**Windows Backup and Restore**:
+
+- **Enable Windows Restore**: Choose to enable Windows Restore. When enabled, the restore process for a device can be initiated:
+
+  - At the time of device enrollment during the out-of-box experience (OOBE), or
+  - The first time a user signs in with their Microsoft Entra ID account after the device finishes enrolling.
+
+  It allows a user to restore their backed‑up Windows settings and Microsoft Store apps from the cloud to a new or reset device. It restores the user experience settings and configuration preferences. It's not a full system image. To learn more, see [Windows Backup for Organizations overview](/windows/configuration/windows-backup).
+
+  Your options:
+
+  - Windows Restore Not Configured
+  - Windows Restore Enabled
+
+  This policy:
+
+  - Was previously for Windows Insiders and is now generally available (GA).
+  - Uses the [WindowsBackupAndRestore CSP](/windows/client-management/mdm/windowsbackupandrestore-csp).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+
+#### New updates to the Apple settings catalog <!-- 36180374 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type.
+
+##### iOS/iPadOS
+
+**AirPlay**:
+
+- Device Name
+
+##### macOS
+
+**AirPlay**:
+
+- Device Name
+
+**Microsoft Defender**:
+
+- The Microsoft Defender category is updated with new settings. Learn more about available macOS Defender settings at [Microsoft Defender - Policies](/defender-endpoint/mac-preferences).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+### Device enrollment  
+
+#### New setting controls MDM enrollment during account registration on Windows (public preview)<!-- 14724061 --> 
+
+A new setting that affects the Microsoft Entra account registration experience on Windows is available in the Microsoft Intune admin center. The setting, **Disable MDM enrollment when adding work or school account on Windows**, controls whether devices enroll in MDM during the account registration flow. The default setting is set to **No**, which allows MDM enrollment. No action is required unless you want to change the default enrollment behavior. This Microsoft Entra setting is in public preview. For more information, see [Enable MDM automatic enrollment for Windows](../enrollment/windows-enroll.md).  
+
+### Device management
+
+#### Multi-administrator approval support for device compliance and device configuration policies<!-- 26838614 -->
+
+Multi-administrator approval now supports device configuration policies created through the settings catalog and device compliance policies. When you turn on this feature, any changes you make, including creating, editing, or deleting a policy, must be approved by a second administrator before they take effect. This dual-authorization process helps protect your organization from unauthorized or accidental changes to role-based access control.
+
+For more information, see [Use Access policies to require Multi Admin Approval](multi-admin-approval.md).
+
+### Device security
+
+#### Intune ending support for legacy Apple MDM software update policies<!--36742761 -->
+
+With the release of iOS 26, iPadOS 26, and macOS 26, Apple has deprecated legacy mobile device management (MDM) software update commands and payloads. As a result, Microsoft Intune will soon end support for creating legacy iOS/iPadOS and macOS software update policies.
+To continue managing Apple software updates in Intune, configure update policies using Apple's declarative device management (DDM) model. DDM provides a more modern and reliable approach to managing software updates, with improved device autonomy and reporting.
+
+For guidance on moving to DDM‑based software updates, see the Intune Customer Success blog: [Move to declarative device management for Apple software updates](https://techcommunity.microsoft.com/blog/intunecustomersuccess/support-tip-move-to-declarative-device-management-for-apple-software-updates/4432177).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+#### Autopatch update readiness<!--34573480 -->
+
+Autopatch update readiness provides a unified experience for tracking and remediating Windows update issues across Intune-enrolled devices and Windows Autopatch group-enrolled devices.
+With a single dashboard, admins can view all managed devices, including enrollment status and policy assignments, to better understand update readiness across their environment.
+
+Key capabilities include:
+
+- **Device update journey**: View granular update states for each device to quickly identify where updates are blocked and why.
+- **Centralized alerting**: See actionable alerts for update failures, policy conflicts, and readiness gaps in one place, with integrated remediation guidance.
+- **Update readiness checker**: Proactively evaluate devices for deployment risks and flag devices as At Risk based on signals such as disk space, appraiser data, and setup conditions.
+- **Repair devices with OS reinstall**: Remediate upgrade‑blocked devices by triggering an OS reinstall for common issues like insufficient disk space or app compatibility problems, with supporting alerts and reporting.
+
+For more information, see [Autopatch update readiness](/windows/deployment/windows-autopatch/monitor/windows-autopatch-update-readiness-overview).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+### Monitor and troubleshoot
+
+#### Updates to operators in device query for multiple devices<!--36180651 -->
+
+Device query for multiple devices now includes expanded operator support, clearer query validation, and improved results to make building and interpreting queries easier.
+
+- **New join types supported**\
+  You can now use the following join types when querying across entities:
+  - `leftsemi`
+  - `rightsemi`
+  - `leftanti`
+  - `rightanti`
+- **Updated join behavior**\
+  Joins that use `on Device.DeviceId` are no longer supported. Queries should instead:
+  - Use `on Device`, or
+  - Omit the on clause entirely when joining on the device entity.
+- **Updated device references in operators**\
+  Using Device by itself is no longer supported in operators such as `distinct`, `summarize`, or `order by`. Queries must reference a specific device property.
+- **Improved query results**\
+  Queries that involve a device—either by querying a device directly or by joining a device with another entity—now return the device as a clickable link in the results, allowing you to quickly navigate to device details.
+- **Clearer error messages**\
+  Some query error messages have been updated to provide clearer, more descriptive guidance when queries are invalid.
 
 ## Week of February 9, 2026 (Service release 2601)
 
@@ -222,8 +404,6 @@ For iOS/iPadOS, the **Device Management Type** property for managed apps is:
 - For the automatic mapping to work correctly, devices must be registered with Microsoft Entra and have a Microsoft Entra Device ID. If the devices don't meet these requirements, the app assignment filters won't match to the more granular management types. You can use an Intune [app configuration policy](../apps/app-configuration-policies-managed-app.md#add-an-app-configuration-policy-for-managed-apps-on-iosipados-and-android-devices) to force Microsoft Entra device registration with the `com.microsoft.intune.mam.IntuneMAMOnly.RequireAADRegistration=Enabled` key.
 - If the device is MDM-managed by a third-party or partner service, the managed app assignment filters won't match to the more granular management types.
 
-#####
-
 To learn more about filters, see:
 
 - [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md)
@@ -305,7 +485,7 @@ The *Windows feature update compatibility risks report* and *Windows feature upd
 
 #### Admin tasks in Microsoft Intune are now generally available<!-- 32978931 -->
 
-**Admin tasks** in the Intune admin center are out of public preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
+**Admin tasks** in the Intune admin center are out of preview and now generally available. Admin tasks provide a centralized view where admins can discover, organize, and act on common tasks that are otherwise spread throughout the Intune admin center. Located under **Tenant Administration**, this unified experience supports search, filtering, and sorting to help you focus on what needs attention, without navigating across multiple nodes.
 
 The following task types are supported:
 
@@ -1457,57 +1637,6 @@ For more information about the changes behind these reports, see [Support tip: M
 Multi Admin Approval now supports role-based access control. When enabled, any changes to roles, including modifications to role permissions, admin groups, or member group assignments, require a second administrator to approve the change before it's applied. This dual authorization process helps protect your organization from unauthorized or accidental role-based access control changes.
 
 For more information, see [Role-based access control in Microsoft Intune](../fundamentals/role-based-access-control.md).
-
-## Week of August 11, 2025
-
-### Device management
-
-#### Platform SSO is generally available (GA) and also supports custom TGT<!-- 33990050 -->
-
-Platform SSO is a feature in Microsoft Entra that enables single sign-on (SSO) using a Microsoft Entra ID on macOS devices. Using the Intune settings catalog, you can configure Platform SSO and use Intune to deploy the Platform SSO configuration to your macOS devices.
-
-- Microsoft Entra announced that Platform SSO for macOS devices is generally available (GA). For more information on this Microsoft Entra feature, see [Microsoft Enterprise SSO plug-in for Apple devices](/entra/identity-platform/apple-sso-plugin).
-- Microsoft Entra supports Kerberos Ticket Granting Tickets (TGTs) to access on-premises Active Directory and Microsoft Entra ID using [Apple's Kerberos SSO extension](https://support.apple.com/guide/deployment/depe6a1cda64/web).
-
-  On the Company Portal version 5.2508.0 and newer, you can use the Intune settings catalog Platform SSO policy to enable Kerberos SSO to on-premises and cloud resources using the TGTs.
-
-To configure Platform SSO in Intune, see:
-
-- [Configure Platform SSO for macOS devices in Intune](../configuration/platform-sso-macos.md)
-- [Common Platform SSO scenarios for macOS devices in Intune](../configuration/platform-sso-scenarios.md)
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS
-
-### Device security
-
-#### Update required for Microsoft Tunnel endpoints<!-- 32817331 -->
-
-As part of our ongoing improvements to the Microsoft Tunnel infrastructure, we introduced new endpoints with the [March 19, 2025 release](../protect/microsoft-tunnel-upgrade.md). You must upgrade your Microsoft Tunnel to the March 19, 2025 release version or later to ensure you're using the new endpoints. Once you upgrade to this version or later, you can't downgrade to an earlier version. Earlier releases that rely on legacy endpoints aren't supported and might cause service disruptions. To continue with uninterrupted service, we recommend upgrading to the latest supported build and avoiding rollback to unsupported versions.
-
-## Week of July 28, 2025
-
-### Device management
-
-#### New Microsoft Graph permissions for API calls to device management endpoints<!-- 20952394 -->
-
-Calls to several Microsoft Graph APIs now require one of two newer *DeviceManagement* permissions that replace the use of previously supported permissions. The following are the two new permissions and the original permissions that the new permissions replace:
-- **DeviceManagementScripts.Read.All** - This new permission replaces use of *DeviceManagementConfiguration.Read.All*
-- **DeviceManagementScripts.ReadWrite.All** - This new permission replaces use of the *DeviceManagementConfiguration.ReadWrite.All*
-
-Access to the following Microsoft Graph API calls now require using the new permissions:
-
-- ~/deviceManagement/deviceShellScripts
-- ~/deviceManagement/deviceHealthScripts
-- ~/deviceManagement/deviceComplianceScripts
-- ~/deviceManagement/deviceCustomAttributeShellScripts
-- ~/deviceManagement/deviceManagementScripts 
-
-Currently both the *DeviceManagementScripts* and the older *DeviceManagementConfiguration* permissions remain functional. However, in early September 2025, tools and scripts that rely on the older permissions to access the listed APIs fail to function.
-
-For more information, see [How to use Microsoft Entra ID to access the Intune APIs in Microsoft Graph](../developer/Intune-graph-apis.md).
 
 ## What's new archive
 <!-- Past announcements that are older than six months will be moved to the archive -->

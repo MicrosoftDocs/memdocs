@@ -7,7 +7,7 @@ ms.topic: reference
 
 # Endpoint analytics data collection
 
-This article explains the data flow, data collection, and how to stop gathering data for endpoint analytics. For more information about data handling policies, see Intune's [Data storage and processing](../intune-service/protect/privacy-data-store-process.md) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
+This article explains the data flow, data collection, and how to stop gathering data for endpoint analytics. For more information about data handling policies, see Intune's [Data storage and processing](../privacy/data-handling/data-storage-processing.md) and the [Microsoft Trust Center](https://www.microsoft.com/trust-center/privacy/data-location).
 
 ## Data flow
 
@@ -34,7 +34,7 @@ Endpoint analytics is available in all Intune locations in global Azure. Endpoin
 
 ## Data collection
 
-Endpoint analytics data collection falls into the [optional](../intune-service/protect/privacy-data-collect.md#optional-data) category. This section includes some examples of the optional data collected for devices enrolled in endpoint analytics:
+Endpoint analytics data collection falls into the [optional](../privacy/data-handling/data-collection.md#optional-data) category. This section includes some examples of the optional data collected for devices enrolled in endpoint analytics:
 
 - Diagnostic, performance, and usage data tied to a user and/or device
   - `logOnId`
@@ -57,7 +57,7 @@ Endpoint analytics data collection falls into the [optional](../intune-service/p
   - `ver`: The version of the current OS.
 
 > [!IMPORTANT]
-> Our data handling policies are described in [Privacy and personal data in Intune](../intune-service/protect/privacy-personal-data.md). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
+> Our data handling policies are described in [Privacy and personal data in Intune](../privacy/index.md). We only use your customer data to provide you the services you signed up for. As described during the onboarding process, we anonymize and aggregate the scores from all enrolled organizations to keep the **All organizations (median)** baseline up-to-date.
 
 ## Stop gathering data
 
@@ -88,4 +88,4 @@ For more information about related privacy aspects, see the following articles:
 - [Security and privacy at Microsoft Azure data centers](https://azure.microsoft.com/global-infrastructure/)
 - [Confidence in the trusted cloud](https://azure.microsoft.com/overview/trusted-cloud/)
 - [Trust Center](https://www.microsoft.com/trustcenter)
-- [Intune Data storage and processing](../intune-service/protect/privacy-data-store-process.md)
+- [Intune Data storage and processing](../privacy/data-handling/data-storage-processing.md)

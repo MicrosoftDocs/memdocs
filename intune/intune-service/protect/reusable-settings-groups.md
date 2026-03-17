@@ -1,5 +1,5 @@
 ---
-title: Use reusable groups of settings policies in Microsoft Intune | Microsoft Docs
+title: Use reusable groups of settings policies in Microsoft Intune
 description: Manage groups of settings for Intune profiles as a single object and then add that settings group object to multiple profile instances. Later changes you make to the settings groups  automatically apply to each profile that includes the reusable settings group.
 author: brenduns
 ms.author: brenduns
@@ -164,7 +164,7 @@ The following shows a configuration with only one group selected for Excluded ID
 
 6. After adding reusable groups to a profile, complete the policy configuration. When saved, Intune includes the settings from the reusable groups and deploys the profile to devices based on the profile's assignments. A maximum of 100 reusable groups can be added per profile.
 
-If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control | Microsoft Docs](/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
+If you have an E5 license, you can use Microsoft Defender for Endpoint to view device control events under the *Device Control report* and *Advanced hunting*. See [Protect your organization's data with device control](/microsoft-365/security/defender-endpoint/device-control-report) in the Defender for Endpoint documentation.
 
 ## Use reusable groups for Endpoint Privilege Management
 

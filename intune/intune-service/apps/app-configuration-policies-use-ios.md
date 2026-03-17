@@ -194,7 +194,7 @@ Additionally, Intune supports the following token types in the property list:
 - \{\{partialupn\}\}—for example, **John**
 - \{\{accountid\}\}—for example, **fc0dc142-71d8-4b12-bbea-bae2a8514c81**
 - \{\{deviceid\}\}—for example, **b9841cd9-9843-405f-be28-b2265c59ef97**
-- \{\{userid\}\}—for example, **3ec2c00f-b125-4519-acf0-302ac3761822**
+- \{\{userid\}\}—for example, **00aa00aa-bb11-cc22-dd33-44ee44ee44ee**
 - \{\{username\}\}—for example, **John Doe**
 - \{\{serialnumber\}\}—for example, **F4KN99ZUG5V2** (for iOS/iPadOS devices)
 - \{\{serialnumberlast4digits\}\}—for example, **G5V2** (for iOS/iPadOS devices)
