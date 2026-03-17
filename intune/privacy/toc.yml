@@ -1,0 +1,46 @@
+items:
+
+- name: Overview
+  href: ./index.md
+
+- name: Data collection and data processing
+  items:
+  - name: Data collection
+    href: ./data-handling/data-collection.md
+  - name: Data storage and processing
+    href: ./data-handling/data-storage-processing.md
+  - name: Optional diagnostic data in client apps
+    href: ./data-handling/optional-diagnostic-data.md
+
+- name: Diagnostic data requirements
+  items:
+  - name: Windows diagnostic data requirements for Intune
+    href: ./windows-diagnostic-data.md
+
+- name: Data sharing with third parties
+  items:
+  - name: Overview of third-party data sharing
+    href: ./data-sharing/index.md
+  - name: Data sent to Intune
+    items:
+    - name: Data Apple sends to Intune
+      href: ./data-sharing/apple-to-intune.md
+    - name: Data Google sends to Intune
+      href: ./data-sharing/google-to-intune.md
+    - name: Information shared from Jamf Pro to Intune
+      href: ./data-sharing/jamf-to-intune.md
+  - name: Data sent from Intune
+    items:
+    - name: Data Intune sends to Apple
+      href: ./data-sharing/intune-to-apple.md
+    - name: Data Intune sends to Google
+      href: ./data-sharing/intune-to-google.md
+    - name: Data Intune sends to Zebra
+      href: ./data-sharing/intune-to-zebra.md
+
+- name: Manage personal data
+  items:
+  - name: View and correct personal data
+    href: ./personal-data/view-correct.md
+  - name: Audit, export, and delete
+    href: ./personal-data/audit-export-delete.md

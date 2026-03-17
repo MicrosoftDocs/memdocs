@@ -1,5 +1,5 @@
 ---
-title: New version 1710 | Microsoft Docs
+title: New version 1710
 description: Get details about changes and new capabilities introduced in version 1710 of Configuration Manager.
 ms.date: 01/08/2018
 ms.subservice: core-infra

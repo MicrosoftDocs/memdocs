@@ -3,7 +3,7 @@ title: Questions with policies and profiles in Microsoft Intune
 description: Common questions, answers, and scenarios with device policies and profiles in Microsoft Intune. Learn more about profile changes not applying to users or devices, how long it takes for new policies to deploy, which settings apply when there are conflicts, what happens when you delete or remove a profile, and more.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 10/20/2025
+ms.date: 03/11/2026
 ms.update-cycle: 180-days
 ms.topic: troubleshooting
 ms.reviewer:
@@ -176,6 +176,17 @@ For more information on dynamic groups, go to:
 - [Performance recommendations when using Intune to group, target, and filter](../fundamentals/filters-performance-recommendations.md)
 - [Dynamic membership rules for groups in Microsoft Entra ID](/azure/active-directory/enterprise-users/groups-dynamic-membership)
 
+## Unassigned device compliance policy still assigned and enforced
+
+When you unassign a compliance policy from a device with an associated user, the policy continues to be assigned and enforced until the device syncs with the Intune service. This behavior is by design.
+
+You can also manually sync the device.
+
+To learn more, see:
+
+- [Policy refresh intervals](#policy-refresh-intervals) (this article)
+- [Remote device action: sync](../remote-actions/device-sync.md)
+
 ## "The sync could not be initiated (0x80072f9a)" error
 
 On Windows devices, when trying to sync in the **Settings** app > **Accounts** > **Access work or school**, you might see a `The sync could not be initiated (0x80072f9a)` error.
@@ -185,4 +196,4 @@ If the Trusted Platform Module (TPM) was reset to factory settings, then the dev
 ## Related articles
 
 - [Troubleshoot policies and profiles](/troubleshoot/mem/intune/troubleshoot-policies-in-microsoft-intune).
-- Need extra help? See [How to get support in Microsoft Intune](../../get-support.md).
+- Need extra help? See [How to get support in Microsoft Intune](../../fundamentals/it-pro-support/get-support-admin-center.md).

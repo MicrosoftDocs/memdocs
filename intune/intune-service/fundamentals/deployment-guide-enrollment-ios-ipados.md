@@ -93,7 +93,7 @@ This task list provides an overview. For more specific information, go to [Apple
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install the **Company Portal** app during enrollment without user Apple IDs.
     - You want users to use the device, even when the Company Portal app isn't installed.
 
-    - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
+  - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
 
     - You want to wipe the device.
     - You don't want to use modern authentication features, like MFA.
