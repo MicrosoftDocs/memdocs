@@ -10,7 +10,18 @@ ms.collection: tier3
 
 *Applies to: Configuration Manager (current branch)*
 
-Firewall policies for Endpoint Protection in Configuration Manager let you perform basic Windows Firewall configuration and maintenance tasks on client computers in your hierarchy. You can use Windows Firewall policies to perform the following tasks:
+Firewall policies for Endpoint Protection in Configuration Manager let you perform basic Windows Firewall configuration and maintenance tasks on client computers in your hierarchy. 
+
+### Pre-Requisites
+
+- A site system server with the Endpoint Protection role installed
+
+- An Endpoint Protection Client Setting with 'Manage Endpoint Protection client on client computers' set to 'Yes' 
+
+> [!NOTE]
+> It is not necessary to have 'Install Endpoint Protection client' enabled in the client setting
+
+You can use Windows Firewall policies to perform the following tasks:
 
 -   Control whether Windows Firewall is turned on or off.
 
@@ -26,16 +37,16 @@ Firewall policies for Endpoint Protection in Configuration Manager let you perfo
 
 4.  On the **General** page of the **Create Windows Firewall Policy Wizard**, specify a name and an optional description for this firewall policy, and then click **Next**.
 
-5.  On the **Profile Settings** page of the wizard, configure the following settings for each network profile:
+1. On the **Profile Settings** page of the wizard, configure the following settings for each network profile:
 
-    > [!NOTE]
+       > [!NOTE]
     >  For more information about network profiles, see the Windows documentation.
 
-    -   **Enable Windows Firewall**
-
-        > [!NOTE]
-        >  If **Enable Windows Firewall** is not enabled, the other settings on this page of the wizard are unavailable.
-
+   - **Enable Windows Firewall**
+   
+     > [!NOTE]
+     >  If **Enable Windows Firewall** is not enabled, the other settings on this page of the wizard are unavailable.
+     
     -   **Block all incoming connections, including those in the list of allowed programs**
 
     -   **Notify the user when Windows Firewall blocks a new program**
