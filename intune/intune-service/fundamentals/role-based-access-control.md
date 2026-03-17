@@ -169,6 +169,7 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 > When an admin has multiple role assignments that use different scope tags, this behavior can result in broader access than intended. Intune includes an opt-in preview setting that changes how permissions apply so that each role assignment's permissions are contained to its own scope tag context. For details and the steps to evaluate the impact on your tenant, see [Permission behavior across role assignments](scope-tags.md#permission-behavior-across-role-assignments).
 
 ## Monitor RBAC assignments
+*This and the three subsections are in progress*
 
 To help you monitor and understand the permissions assigned across your Intune tenant, the Intune admin center includes several views. Go to **Tenant administration** > **Roles** and expand **Monitor** to access these views. For example, in a complex administrative environment, you can use the **Admin permissions** view to specify an account and see its current scope of administrative privileges.
 
