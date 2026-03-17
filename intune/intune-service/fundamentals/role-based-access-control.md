@@ -169,8 +169,6 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 - When there aren't any scope tags or some scope tags are assigned from different assignments, a user can only see devices that are part of some scope tags and can't see all devices.
 
 ## Monitor RBAC assignments
-*This and the three subsections are in progress*
-
 Within the Intune admin center, you can go to **Tenant admin** > **Roles** and expand **Monitor** to find several views that can help you identify the permissions different users have within your Intune tenant. For example, in a complex administrative environment, you can use the **Admin permissions** view to specify an account so you can see its current scope of administrative privileges.
 
 :::image type="content" source="./media/role-based-access-control/rbac-monitor-node.png" alt-text="A screen capture of the options for monitoring RBAC from within the Intune admin center.":::
