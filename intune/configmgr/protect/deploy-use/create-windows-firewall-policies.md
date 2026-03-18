@@ -39,7 +39,7 @@ You can use Windows Firewall policies to perform the following tasks:
 
 1. On the **Profile Settings** page of the wizard, configure the following settings for each network profile:
 
-       > [!NOTE]
+    > [!NOTE]
     >  For more information about network profiles, see the Windows documentation.
 
    - **Enable Windows Firewall**
