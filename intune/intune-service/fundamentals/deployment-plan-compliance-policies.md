@@ -247,8 +247,10 @@ We recommend using the following settings in your enhanced device compliance pol
 
 ## Follow the minimum recommended baseline policies
 
+This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
+
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
-3. 🡺 **Plan for compliance policies** (*You are here*)
+3. 🡺 **Plan for compliance policies** (this article)
 4. [Configure device features](deployment-plan-configuration-profile.md)
 5. [Enroll devices](deployment-guide-enroll.md)

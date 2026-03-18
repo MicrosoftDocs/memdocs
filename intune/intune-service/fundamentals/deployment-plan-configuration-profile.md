@@ -3,7 +3,7 @@ title: Configure security, email, VPN, and Wi-Fi device configuration profiles
 description: Step 4 to deploy device configuration profiles as part of the minimum set of policies for your devices using Microsoft Intune. The starting point is to enable the firewall, install AV, scan for malware, install software updates, create a strong PIN policy, and create email, VPN, and Wi-Fi device configuration profiles.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 03/17/2026
+ms.date: 03/18/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
@@ -80,7 +80,7 @@ Your policy options:
 | Android Enterprise | - [Mobile threat defense partner](../protect/mobile-threat-defense.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | iOS/iPadOS | - [Mobile threat defense partner](../protect/mobile-threat-defense.md) </br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | macOS | - [Intune Endpoint Security antivirus profile](../protect/endpoint-security-antivirus-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../protect/endpoint-security-antivirus-policy.md) (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner ?? |
+| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune Endpoint Security antivirus profile](../protect/endpoint-security-antivirus-policy.md) (Microsoft Defender for Endpoint) |
 
 ### Detection and response
 
@@ -95,7 +95,7 @@ Your policy options:
 | Android Enterprise | - [Mobile threat defense partner](../protect/mobile-threat-defense.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | iOS/iPadOS | - [Mobile threat defense partner](../protect/mobile-threat-defense.md)</br>- [Microsoft Defender for Endpoint](/defender-endpoint/mtd) |
 | macOS | [Intune endpoint detection and response profile](../protect/endpoint-security-edr-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune endpoint detection and response profile](../protect/endpoint-security-edr-policy.md) (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner ?? |
+| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune endpoint detection and response profile](../protect/endpoint-security-edr-policy.md) (Microsoft Defender for Endpoint) |
 
 ### Firewall
 
@@ -110,7 +110,7 @@ Your policy options:
 | Android Enterprise | [Mobile threat defense partner](../protect/mobile-threat-defense.md) |
 | iOS/iPadOS | [Mobile threat defense partner](../protect/mobile-threat-defense.md) |
 | macOS | [Intune Endpoint Security firewall profile](../protect/endpoint-security-firewall-policy.md) (Microsoft Defender for Endpoint) |
-| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../protect/endpoint-security-firewall-policy.md) (Microsoft Defender for Endpoint) </br>- Mobile threat defense partner ??|
+| Windows client | - [Intune security baselines](../protect/security-baselines.md) (recommended)</br>- [Intune Endpoint Security firewall profile](../protect/endpoint-security-firewall-policy.md) (Microsoft Defender for Endpoint) |
 
 ### Password policy
 
@@ -564,8 +564,10 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
 
 ## Follow the minimum recommended baseline policies
 
+This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
+
 1. [Set up Microsoft Intune](deployment-plan-setup.md)
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
 3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
-4. 🡺 **Configure device features** (*You are here*)
+4. 🡺 **Configure device features** (this article)
 5. [Enroll devices](deployment-guide-enroll.md)

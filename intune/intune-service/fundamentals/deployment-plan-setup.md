@@ -3,7 +3,7 @@ title : Set up Intune
 description: Step 1 for deploying or setting up Intune. The starting point is to review supported configurations, sign up for the trial, configure the custom domain name, add users and groups to Intune, assign licenses to users, manage roles, grant admin permissions, and set the MDM authority.
 author: paolomatarazzo
 ms.author: paoloma
-ms.date: 03/17/2026
+ms.date: 03/18/2026
 ms.topic: install-set-up-deploy
 ms.collection:
 - M365-identity-device-management
@@ -136,29 +136,29 @@ Scope tags work with roles to limit which Intune objects, like devices, policies
 
 :::image type="icon" source="../../media/icons/16/check.svg" border="false"::: **Get started with managing roles**
 
-1. Assign the built-in roles to the admins in your organization. For example, assign the Policy and Profile manager role to the admins that create and manage enrollment policies.
+1. Assign the built-in roles to the admins based on their responsibilities. For example, assign the **Policy and Profile manager** role to the admins that create and manage enrollment policies. Role assignments determine what admins can see and modify in Intune.
 
     For guidance, see:
 
-    - [Role-based access control (RBAC) with Microsoft Intune](role-based-access-control.md)
-    - [Built-in role permissions for Microsoft Intune](role-based-access-control-reference.md)
+    - [Role-based access control (RBAC) with Intune](role-based-access-control.md)
+    - [Built-in role permissions for Intune](role-based-access-control-reference.md)
+    - [Assign a role in Intune](assign-role.md)
 
-2. Create your own custom roles with the exact set of permissions you need. Custom roles let you define a precise set of permissions when built-in roles don't meet your requirements, or you want to implement least-privilege access.
+2. Create your own custom roles with the exact set of permissions you need, and then assign to the admins based on their responsibilities. Custom roles let you define a precise set of permissions when built-in roles don't meet your requirements, or you want to implement least-privilege access. For example, you can create a custom role that only has permissions to create and update device compliance policies.
 
     For guidance, see:
 
     - [Create a custom role in Intune](create-custom-role.md)
-    - [Built-in role permissions for Microsoft Intune](role-based-access-control-reference.md)
+    - [Built-in role permissions for Intune](role-based-access-control-reference.md)
+    - [Assign a role in Intune](assign-role.md)
 
-3. Assign roles to your admin team based on their responsibilities. Role assignments determine what admins can see and modify in Intune. For guidance, see [Assign a role to an Intune user](assign-role.md).
-
-4. Use scope tags to limit visibility of Intune objects. Scope tags control which objects admins can see. Roles control what actions they can take on those objects. Using RBAC together with scope tags helps ensure admins only have access to the resources they're responsible for.
+3. Use scope tags to limit visibility of Intune objects. Scope tags control which objects admins can see. Roles control what actions they can take on those objects. Using RBAC together with scope tags helps ensure admins only have access to the resources they're responsible for.
 
     For guidance, see [Use role-based access control (RBAC) and scope tags for distributed IT](scope-tags.md).
 
-5. Configure Multi Admin Approvals. To help protect against a compromised administrative account, this feature requires that a second administrative account must approve a change before the change is applied. It adds an extra layer of security by ensuring that high-impact changes, like wiping or deleting devices, require approval from multiple administrators.
+4. Configure Multi Admin Approval. To help protect against a compromised administrative account, this feature requires that a second administrative account must approve a change before the change is applied. It adds an extra layer of security by ensuring that high-impact changes, like wiping or deleting devices, require approval from multiple administrators.
 
-    For guidance, see [Configure Multi Admin Approvals](multi-admin-approvals.md).
+    For guidance, see [Configure Multi Admin Approval](multi-admin-approval.md).
 
 ## 8 - Set the mobile device management authority
 
@@ -182,8 +182,10 @@ For guidance, see [Configure the company portal](../apps/company-portal-app.md).
 
 ## Follow the minimum recommended baseline policies
 
-1. 🡺 **Set up Microsoft Intune** (*You are here*)
+This article is part of a five-step series that describes how to deploy Microsoft Intune. The series includes the following articles, in order:
+
+1. 🡺 **Set up Microsoft Intune** (this article)
 2. [Add, configure, and protect apps](deployment-plan-protect-apps.md)
-3. [Plan for compliance policies](deployment-plan-compliance-policies.md)
-4. [Configure device features](deployment-plan-configuration-profile.md)
+3. [Create compliance policies](deployment-plan-compliance-policies.md)
+4. [Configure device features and settings](deployment-plan-configuration-profile.md)
 5. [Enroll devices](deployment-guide-enroll.md)
