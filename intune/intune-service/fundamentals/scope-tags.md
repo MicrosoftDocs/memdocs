@@ -114,11 +114,11 @@ If this isn't the access you intended, use the [Permissions Assessment Report](#
 
 ### Scoped permissions (opt-in public preview)
 
-The **Scoped permissions** setting gives you precise control over what each admin can actually do within each scope tag. Rather than having Intune silently merge permissions across role assignments, each assignment's permissions stay contained to its own scope. Admins get exactly the access you intended, no more.
+Available as an opt-in public preview, you can use the **Scoped permissions** setting to gain precise control over what each admin can actually do within each scope tag. Rather than having Intune silently merge permissions across role assignments, each assignment's permissions stay contained to its own scope. Admins get exactly the access you intended, no more.
 
-When enabled, each role assignment's permissions apply only within its own scope tag context. In the same example, *App Admins* members would have read-only access to Mobile Apps tagged *Headquarters* and full permissions for Mobile Apps tagged *Regional Office*, exactly as intended.
+When scoped permissions are enabled, each role assignment's permissions apply only within its own scope tag context. In the same example, *App Admins* members would have read-only access to Mobile Apps tagged *Headquarters* and full permissions for Mobile Apps tagged *Regional Office*, exactly as intended.
 
-Before enabling this setting, use the [Permissions Assessment Report](#permissions-assessment-report) to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings** and can be run as many times as needed.
+Enabling **scoped permissions** is a one-time tenant action that cannot be undone. Before enabling this setting, use the [Permissions Assessment Report](#permissions-assessment-report) to preview exactly how permissions will change for each affected admin in your tenant. The report is available at **Tenant administration** > **Roles** > **Settings** and can be run as many times as needed.
 
 To enable Scoped permissions, go to **Tenant administration** > **Roles** > **Settings** and turn on the **Scoped permissions** toggle, using an account with one of the following roles:
 
