@@ -58,7 +58,7 @@ To help keep your organization's data and devices secure, create different polic
 In your baseline, at a minimum, include the following security policies:
 
 - Install antivirus (AV) software and regularly scan for malware.
-- Use detection and response
+- Use detection and response.
 - Turn on the firewall.
 - Install software updates regularly.
 - Create a strong PIN or password policy.
