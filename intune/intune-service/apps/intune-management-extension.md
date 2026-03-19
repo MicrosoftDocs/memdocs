@@ -39,8 +39,12 @@ The Intune management extension has the following prerequisites. When the prereq
 
 - Devices running a [supported Windows version](../fundamentals/supported-devices-browsers.md). The Intune management extension doesn't support Windows in S mode because S mode doesn't allow running nonstore apps.
 
-- Devices joined to Microsoft Entra ID, including Microsoft Entra hybrid joined: Devices joined to Microsoft Entra ID and on-premises Active Directory (AD). See [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
-  
+- Devices joined to Microsoft Entra ID, including:
+
+  - Microsoft Entra hybrid joined: Devices joined to Microsoft Entra ID and on-premises Active Directory (AD). See [Plan your Microsoft Entra hybrid join implementation](/azure/active-directory/devices/hybrid-azuread-join-plan) for guidance.
+
+  - Microsoft Entra registered/Workplace joined (WPJ): Devices [registered](/azure/active-directory/user-help/user-help-register-device-on-network) in Microsoft Entra ID. For more information, see [Workplace Join as a seamless second factor authentication](/windows-server/identity/ad-fs/operations/join-to-workplace-from-any-device-for-sso-and-seamless-second-factor-authentication-across-company-applications#BKMK_DRS). These are Bring Your Own Device (BYOD) devices with a work or school account added via **Settings** > **Accounts** > **Access work or school**.
+
 - Devices enrolled in Intune, including:
 
   - Devices enrolled using group policy (GPO). For more information, see [Enroll a Windows device automatically using Group Policy](/windows/client-management/enroll-a-windows-10-device-automatically-using-group-policy).
