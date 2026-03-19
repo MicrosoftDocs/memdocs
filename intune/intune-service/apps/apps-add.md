@@ -1,7 +1,7 @@
 ---
 title: Add Apps to Microsoft Intune
 description: Learn how to add apps to Microsoft Intune so you can assign apps to users and devices. Intune supports a wide range of app types.
-ms.date: 10/02/2025
+ms.date: 03/19/2026
 ms.topic: overview
 ms.reviewer: bryanke
 ai-usage: ai-assisted
@@ -61,7 +61,7 @@ The following table lists the specific app types and how you can add them in the
 | [Microsoft 365 apps for macOS](../apps/apps-add-office365-macos.md) | Store app (Microsoft 365) | Select **macOS** under **Microsoft 365 Apps** as the **app type**, and then select the Microsoft 365 app suite. |
 | [Microsoft Edge, version 77 and later for Windows](../apps/apps-windows-edge.md) | Store app | Select **Windows 10 and later** under **Microsoft Edge, version 77 and later** as the **app type**. |
 | [Microsoft Edge, version 77 and later for macOS](../apps/apps-edge-macos.md) | Store app | Select **macOS** under **Microsoft Edge, version 77 and later** as the **app type**. |
-| [Android line-of-business (LOB) apps](../apps/lob-apps-android.md) | LOB app | Select **Line-of-business app** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**.  |
+| [Android line-of-business (LOB) apps](../apps/lob-apps-android.md) | LOB app | Select **Line-of-business app** app as the **app type**, select the **App package file**, and then enter an Android installation file with the extension **.apk**. For Android Enterprise fully managed and dedicated devices, you can deploy required LOB apps directly without Managed Google Play. |
 | [iOS/iPadOS LOB apps](../apps/lob-apps-ios.md) | LOB app | Select **Line-of-business** app as the **app type**, select the **App package file**, and then enter an iOS/iPadOS installation file with the extension **.ipa**.  |
 | [Windows LOB apps](../apps/lob-apps-windows.md) | LOB app | Select **Line-of-business app** app as the app type, select the **App package file**, and then enter a Windows installation file with the extension **.msi**, **.appx**, **.appxbundle**, **.msix**, and **.msixbundle**. |
 | [Built-in iOS/iPadOS app](../apps/apps-add-built-in.md)  | Built-in app | Select **Built-In app** as the **app type**, and then select the built-in app in the list of provided apps.  |
