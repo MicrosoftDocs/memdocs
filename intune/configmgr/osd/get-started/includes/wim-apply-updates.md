@@ -7,10 +7,13 @@ ms.date: 07/31/2025
 
 > [!IMPORTANT]
 >
-> Due to changes in how Windows 11 updates are delivered through UUP patches, Offline Servicing of Windows 11 images and update packages using Configuration Manager is no longer supported. The recommended method to keep Windows 11 deployments up-to-date is to acquire the latest patched Windows 11 ISO from [Microsoft 365 admin center](https://admin.microsoft.com/). Once the updated Windows 11 ISO is obtained:
->
+> Configuration Manager no longer supports offline servicing of UUP‑enabled images and update packages, such as Windows 11 and Windows Server 2025.  
+> This change is due to updates in how UUP patches are delivered.  
+> The recommended method to keep UUP enabled deployments up-to-date is to acquire the latest patched Operating System ISO from the [Microsoft 365 admin center](https://admincetner.microsoft.com).  
+> Once the updated Operating System ISO is obtained:
+>  
 > - Import the **install.wim** image from the ISO into the site for **Operating System Images** packages used in bare metal/refresh task sequences.
-> - Import the whole contents of the ISO into the site for **Operating System Upgrade Packages** used in-place upgrade task sequences.
+> - Import the whole contents of the ISO into the site for **Operating System Upgrade Packages** used for in-place upgrade task sequences.
 
 > [!NOTE]
 >
