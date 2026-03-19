@@ -31,7 +31,7 @@ This article lists some features and benefits of Microsoft Intune.
 
 > [!TIP]
 >
-> - To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
+> - To get Intune, go to [Licenses available for Microsoft Intune](../../fundamentals/licensing/index.md) and [Intune 30-day trial](free-trial-sign-up.md).
 > - For more information on the Intune licensing plans, go to [Microsoft Intune capabilities and plans](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune).
 > - For information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
 
@@ -323,4 +323,3 @@ Specifically:
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
 - [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune/welcome-intune)
-- [Microsoft Intune guides at setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2313710)

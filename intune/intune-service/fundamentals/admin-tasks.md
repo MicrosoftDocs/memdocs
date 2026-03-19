@@ -40,7 +40,7 @@ When viewing Admin tasks, you can only see and manage tasks permitted by your as
 
 1. Open the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) and go to **Tenant administration** > **Admin tasks**.
 
-2. Intune displays a consolidated list of tasks that are available to you, based on your RBAC permissions. The display includes the first 50 available tasks that match the filter criteria. To view additional tasks, use the filter control to adjust the displayed tasks.
+2. Intune displays a consolidated list of tasks that are available to you, based on your RBAC permissions. Use the filter control to adjust the displayed tasks.
 
 3. Select a task from the **Task** column to open its management pane. The pane that opens is the *same interface and workflow* you'd use if managing the task from its original location in the admin center. This ensures a consistent experience whether you're working from the admin tasks node or directly within the source capability.
 

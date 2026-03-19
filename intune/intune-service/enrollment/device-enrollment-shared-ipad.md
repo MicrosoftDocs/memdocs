@@ -92,7 +92,7 @@ When creating the device configuration profile for Shared iPads, keep in mind th
 
   In iPadOS 13.4 or later, users can initiate a temporary session by tapping **Guest** on the device sign-in screen. A *temporary session* allows users to sign in to the device as a guest, and doesn't require them to enter a Managed Apple ID or password. All user data, including browsing history, is deleted when the user signs out of the session. Temporary sessions are allowed by default with Shared iPad. For more information, see [Shared iPad overview](https://support.apple.com/guide/deployment/dep9a34c2ba2/1/web/1.0) (opens Apple documentation).
 
- You can configure temporary sessions in an iOS device restrictions profile in the admin center. For more information, see [Shared iPad - Automated device enrollment (supervised)](../configuration/device-restrictions-apple.md#settings-apply-to-automated-device-enrollment-supervised-10).
+ You can configure temporary sessions in an iOS device restrictions profile in the admin center. For a list of the settings you can configure, see [Shared iPad - Automated device enrollment (supervised)](../configuration/device-restrictions-apple.md).
 
 ## Add apps
 
@@ -112,7 +112,7 @@ The following table shows each iOS app type and describes the type of assignment
 |     Web app    |     Not supported    |     User    |
 |     App Store app    |     Not applicable    |     Not applicable    |
 
-Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Microsoft Entra user groups. For more information, see [Home screen layout](../configuration/device-features-apple.md#home-screen-layout).
+Configure home screen layout settings in a device configuration profile to organize the app layout and folders on the home screen and dock. Assign the profile to Microsoft Entra user groups. For a list of the settings you can configure, see [Home screen layout](../configuration/device-features-apple.md).
 
 ## Recommended policy and app assignment for Shared iPads
 

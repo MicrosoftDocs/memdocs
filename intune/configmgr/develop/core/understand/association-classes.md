@@ -6,15 +6,17 @@ ms.subservice: sdk
 ms.topic: article
 ms.collection: tier3
 ---
+
 # Configuration Manager Association Classes
+
 In Configuration Manager, an association allows you to logically relate the instances of two classes. Typically, an association consists of two key properties (which are paths, or pointers, that uniquely identify the location of the other class instances), but an association can also contain additional properties. The provider uses the key properties to retrieve the requested data.
 
- Although association classes provide a convenient means to collect related information, they are inherently slow. If performance is an issue, you should consider collecting the related information yourself.
+Although association classes provide a convenient means to collect related information, they are inherently slow. If performance is an issue, you should consider collecting the related information yourself.
 
 > [!NOTE]
->  Association classes are read-only except for the `SMS_CollectToSubCollect_a` class. Association class names are suffixed with _a.
+> Association classes are read-only except for the `SMS_CollectToSubCollect_a` class. Association class names are suffixed with _a.
 
- The following table shows the association classes.
+The following table shows the association classes.
 
 |Association class|Description|
 |-----------------------|-----------------|
@@ -38,12 +40,13 @@ In Configuration Manager, an association allows you to logically relate the inst
 |`SMS_SiteToSubSite_a`|Defines the hierarchy of sites by relating a site with its subsites.|
 
 ## See Also
- [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)
- [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)
- [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)
- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)
- [Objects overview](configuration-manager-objects-overview.md)
- [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)
- [About errors](about-configuration-manager-errors.md)
- [Configuration Manager Object Security](../../../develop/core/understand/configuration-manager-object-security.md)
- [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)
+
+- [Configuration Manager Bit Field Properties](../../../develop/core/understand/configuration-manager-bit-field-properties.md)
+- [Configuration Manager Date and Time Formats](../../../develop/core/understand/date-and-time-formats.md)
+- [Configuration Manager Embedded Objects](../../../develop/core/understand/embedded-objects.md)
+- [Configuration Manager Extended WMI Query Language](../../../develop/core/understand/extended-wmi-query-language.md)
+- [Objects overview](configuration-manager-objects-overview.md)
+- [Configuration Manager Lazy Properties](../../../develop/core/understand/configuration-manager-lazy-properties.md)
+- [About errors](about-configuration-manager-errors.md)
+- [Configuration Manager Object Security](../../../develop/core/understand/configuration-manager-object-security.md)
+- [Configuration Manager Special Queries](../../../develop/core/understand/special-queries.md)

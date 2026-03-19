@@ -393,14 +393,14 @@ Microsoft recommends the following level 2 security policies:
 
   On iOS/iPadOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions policy > Password settings](../configuration/device-restrictions-apple.md#password)
+  - [Device restrictions policy > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
 
   # [macOS](#tab/macos-password)
 
   On macOS devices, you can use device restrictions policies and/or the settings catalog to set password rules:
 
-  - [Device restrictions policy > Password settings](../configuration/device-restrictions-apple.md#password)
+  - [Device restrictions policy > Password settings](../configuration/device-restrictions-apple.md)
   - [Settings catalog](../configuration/settings-catalog.md) > Search for `Passcode`
 
   # [Windows](#tab/windows-password)
@@ -511,8 +511,8 @@ This level expands on what you configured in levels 1 and 2. It adds extra secur
   # [iOS/iPadOS](#tab/ios-kiosk)
 
   - **iOS/iPadOS**
-    - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-apple.md#autonomous-single-app-mode-asam)
-    - [Device settings to run as a kiosk](../configuration/device-restrictions-apple.md#kiosk)
+    - [Device settings to run in autonomous single app mode (ASAM)](../configuration/device-restrictions-apple.md)
+    - [Device settings to run as a kiosk](../configuration/device-restrictions-apple.md)
 
   # [Windows](#tab/windows-kiosk)
 

@@ -1,6 +1,6 @@
 ### YamlMime:Hub
 title: Microsoft Intune documentation
-summary: Learn more about managing devices, apps, and security with Microsoft Intune.
+summary: Manage devices, apps, and security with Microsoft Intune.
 brand: azure
 
 metadata:
@@ -86,7 +86,7 @@ productDirectory:
       summary: Manage administrative access, roles, scope, and governance features to operate Intune securely and at scale.
       url: ./intune-service/fundamentals/role-based-access-control.md
 
-    - title: Configuration Manager and Co-management 
+    - title: Configuration Manager and co-management 
       imageSrc: ./media/icons/hub-page/co-management.svg
       summary: Manage devices using both cloud and on-premises tools.
       url: ./configmgr/index.yml
@@ -107,7 +107,7 @@ conceptualContent:
         - url: https://aka.ms/Intune_GuidedDemo
           itemType: get-started
           text: Interactive demos for Intune
-        - url: ./intune-service/fundamentals/licenses.md
+        - url: ./fundamentals/licensing/index.md
           itemType: get-started
           text: Microsoft Intune licensing
         - url: ./intune-service/fundamentals/intune-planning-guide.md
@@ -116,6 +116,9 @@ conceptualContent:
         - url: ./intune-service/fundamentals/supported-devices-browsers.md
           itemType: get-started
           text: Supported platforms and requirements
+        - url: ./privacy-compliance.yml
+          itemType: overview
+          text: Privacy and compliance
 
       - title: Industry and platform guides
         summary: Microsoft offers comprehensive guidance on planning a migration to Intune.

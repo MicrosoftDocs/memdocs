@@ -52,7 +52,7 @@ You can add the software update point site system role to an existing site syste
 
 #### Determine the port settings used in IIS
 
- 1. On the WSUS server, open Internet Information Services (IIS) Manager.
+1. On the WSUS server, open Internet Information Services (IIS) Manager.
  1. Expand **Sites**, select the **WSUS Administration** site, and then select **Bindings** from the **Actions** pane. In the **Site Bindings** dialog, the HTTP and HTTPS port values are displayed in the **Port** column.
 
 ### Configure SSL communications to WSUS
@@ -150,11 +150,18 @@ Configure the classifications settings on the **Classifications** page of the wi
 
 ## Products
 
- Configure the product settings on the **Products** page of the wizard, or on the **Products** tab in Software Update Point Component Properties.
+Configure the product settings on the **Products** page of the wizard, or on the **Products** tab in Software Update Point Component Properties.
 
 > [!TIP]
 > - The **Products** page of the wizard is available only when you configure the first software update point at the site. This page is not displayed when you install additional software update points.
 > - When you first install the software update point on the top-level site, clear all of the products. After the initial software updates synchronization, configure the products from an updated list, and then re-initiate synchronization. This setting is configured only on the software update point at the top-level site.
+
+> [!WARNING]
+> Select only the products that are required in your environment. Selecting unnecessary products increases the size of the WSUS metadata catalog and can negatively affect software update scan performance. Configuration Manager clients evaluate update metadata during every scan, even for updates that aren’t deployed.
+>
+> To reduce scan time and improve performance:
+> - Remove legacy products that are no longer used in your environment, such as unsupported versions of Windows and Office.
+> - Avoid selecting update products that Configuration Manager can’t deploy. These products are intended for standalone WSUS scenarios only (for example, Dynamic Updates and Servicing Drivers).
 
 ## Languages
 

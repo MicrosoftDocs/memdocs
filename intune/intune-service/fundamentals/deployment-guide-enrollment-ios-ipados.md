@@ -29,7 +29,7 @@ There's also a visual guide of the different enrollment options for each platfor
 > [!TIP]
 >
 > - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
-> - As a companion to this article, see [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2314413) to review best practices, learn to configure managed and unmanaged app protection policies, and validate and manage app data. For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2313884) in the [Microsoft 365 admin center](https://admin.microsoft.com).
+> - For a customized experience based on your environment, you can access the [Manage and secure iOS and iPadOS devices guide](https://go.microsoft.com/fwlink/?linkid=2313884) in the [Microsoft 365 admin center](https://admin.microsoft.com).
 
 ## Before you begin
 
@@ -93,7 +93,7 @@ This task list provides an overview. For more specific information, go to [Apple
     - You want to automatically install the **Company Portal** app during enrollment. If your company uses the Volume Purchase Program (VPP), you can automatically install the **Company Portal** app during enrollment without user Apple IDs.
     - You want users to use the device, even when the Company Portal app isn't installed.
 
-    - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
+  - Select the **Setup Assistant (legacy)** when you can't use *Setup Assistant with modern authentication* and:
 
     - You want to wipe the device.
     - You don't want to use modern authentication features, like MFA.

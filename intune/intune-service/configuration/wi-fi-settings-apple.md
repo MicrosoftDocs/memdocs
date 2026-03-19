@@ -236,6 +236,6 @@ Enterprise profiles use Extensible Authentication Protocol (EAP) to authenticate
 
 ## Related articles
 
-- [Aassign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
+- [Assign this profile](device-profile-assign.md) and [monitor its status](device-profile-monitor.md).
 
 - Configure Wi-Fi settings on [Android](wi-fi-settings-android.md), [Android Enterprise](wi-fi-settings-android-enterprise.md), and [Windows](wi-fi-settings-windows.md) devices.
