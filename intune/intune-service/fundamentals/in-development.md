@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/06/2026
+ms.date: 03/26/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -80,27 +80,13 @@ The Multiple Managed Accounts (MMA) feature for Intune mobile application manage
 
 ## Device configuration
 
-### Recovery lock features available for macOS devices <!-- 28675745 32541429  -->
+#### New supported OEMConfig app for Android Enterprise <!-- 36423115 -->
 
-On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management. Admins can also rotate this password.
+The following OEMConfig app is available in Intune for Android Enterprise:
 
-There are two ways to use this feature:
+- Inventus | `com.inventus.oemconfig.gen`
 
-- **Settings catalog policy** - In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
-
-  - Turn on the recovery lock feature
-  - Set a recovery lock password
-  - Configure a password rotation schedule
-  - Clear a recovery lock password
-
-- **Remote device action** - Use the Recovery Lock device action to manually set, reset, or clear the recovery lock password for a specific device.
-
-The Recovery Lock password can be viewed in the per-device monitor view > **Passwords and keys** (**Devices** > **All devices** > Select a device). To view the Recovery Lock password, the signed-in administrator needs the **Remote tasks/Get recovery lock key** permission.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - macOS
+For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
 <!-- *********************************************** -->
 
@@ -124,61 +110,9 @@ Microsoft Intune will be adding support for userless automated device enrollment
 
 ## Device management
 
-### Remote Help connectivity updates for Windows devices<!-- 29252975 -->
-
-We're working to improve connectivity when using the Launch Remote Help feature in the Intune admin center for Windows devices. The improvement involves the addition of a new endpoint:
-
-`*.trouter.communications.svc.cloud.microsoft.com`
-
-For the best experience we recommend updating firewall rules to include the new endpoint once it becomes available.
-
-For the current list of required network endpoints, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md?tabs=north-america#network-requirements-for-powershell-scripts-and-win32-apps) and [Remote Help](../fundamentals/intune-endpoints.md#remote-help).
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Windows  
-
 ### New TeamViewer connector experience in Microsoft Intune<!-- 35094013 -->
 
 Microsoft Intune will update its TeamViewer integration to simplify onboarding and improve reliability for remote assistance workflows. The new connector will replace the existing TeamViewer connector experience and provide a more streamlined experience in the Intune admin center. After the older experience is retired, organizations using that TeamViewer connector will need to migrate to the new connector within 12 months to maintain functionality.
-
-### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
-
-Intune will soon include two new remote actions that let admins temporarily suspend and later restore managed home screen (MHS) on Android devices. These actions allow users to exit MHS and access the device's default launcher for a specified duration, without removing policies or requiring a PIN.
-
-After the defined time elapses, or when the *restore managed home screen* action is triggered, MHS is automatically restored, helping maintain device security while minimizing disruption.
-
-> [!div class="checklist"]
-> Applies to:
->
-> - Android Enterprise corporate-owned Fully Managed (COBO)
-> - Android Enterprise corporate-owned Dedicated (COSU)
-
-### Device page in the Intune admin center is updated (public preview) <!-- 3646300 16532161  -->
-
-In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you'll notice a new full-page layout that gives you a single view of the device. Use this view to:
-
-- Track device activity
-- Access tools and reports
-- Manage device information
-
-The single device page has the following tabs:
-
-- **Device action status**: Shows requested, in‑progress, and recently completed device actions. You can search, sort, and filter this list. You'll be able to quickly understand what actions are running or have completed without leaving the device view.
-- **Tools + reports**: This tab was previously called **Overview**. It shows monitoring reports, lists, and tools, like remediations, that were previously accessed in another part of the admin center.
-- **Properties**: Contains admin‑modifiable device properties with visible scope tags and a dedicated editing view.
-- **Device details**: This was previously called **Hardware**. It provides physical device information and key Intune and Microsoft Entra management details.
-
-Other features:
-
-- Device actions are grouped, ordered, and labeled consistently across platforms and device types, with improved logic to show only relevant and permitted actions. Destructive actions are clearly separated and require confirmation, reducing unintentional actions.
-
-- The updated layout uses a standard structure across device types and platforms, while adapting to platform‑specific capabilities.
-
-- Improved labeling, hierarchy, and formatting make device information easier to scan and understand. **Essentials** elevates important device information and is accessible from any tab.
-
-All existing device management capabilities remain available. This update focuses on making them easier to find and use.
 
 <!-- *********************************************** -->
 
@@ -261,15 +195,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 <!-- *********************************************** -->
 
-## Role-based access control
-
-### Decoupling of Scope Tag permissions for Role-based access control<!-- 37134761 -->
-
-Intune will soon provide a one-time action you can use to decouple permissions assigned through scope tags, making role-based access control (RBAC) more precise. Currently, permissions for the same resource in different roles but with different scope tags are merged, which can unintentionally grant admins broader access than intended. This change will improve security and clarity for organizations managing complex role assignments.
-
-To help you prepare for this one-time change, Intune is adding a new report, the *Permissions Assessment Report*. This report will detail your tenants current permissions and show how they will change after the one-time change. You can then review and adjust your role assignments as needed before enacting the change for your tenant. You can rerun the report as often as necessary until your permissions are ready to decouple.
-
-Then, you can apply the decoupling action, after which Intune RBAC permissions will be assigned strictly by role and scope tag, ensuring admins receive only the intended permissions for their assigned resources.
+<!-- ## Role-based access control -->
 
 <!-- *********************************************** -->
 

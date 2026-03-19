@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/12/2026
+ms.date: 03/26/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -56,6 +56,217 @@ You can use RSS to be notified when this page is updated. For more information, 
 ### Tenant administration
 
 -->
+
+## Week of March 23, 2026 (Service release 2603)
+
+### Device configuration
+
+#### Recovery lock features available for macOS devices <!-- 28675745 32541429 -->
+
+On macOS devices, you can configure a recovery OS password that prevents users from booting company-owned devices into recovery mode, reinstalling macOS, and bypassing remote management. Admins can also rotate this password.
+
+There are two ways to use this feature:
+
+- **Settings catalog policy** - In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+
+  - Turn on the recovery lock feature
+  - Configure a password rotation schedule
+
+- **Remote device action** - Use the Recovery Lock device action to manually rotate the recovery lock password for a specific device.
+
+The Recovery Lock password can be viewed in the per-setting status report > **Passwords and keys**. To view the Recovery Lock password, the signed-in administrator needs the **Remote tasks/View macOS recovery lock password** permission.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - macOS
+
+#### New updates to the Apple settings catalog <!-- 36630003 -->
+
+The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
+
+There are new settings in the Settings Catalog. To see these settings, in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy** > **iOS/iPadOS** or **macOS** for platform > **Settings catalog** for profile type. 
+
+##### iOS/iPadOS
+
+**Declarative Device Management (DDM) > External Intelligence Settings**:
+
+- Allow Sign In
+- Allowed Workspace IDs
+
+**Declarative Device Management (DDM) > Intelligence Settings**:
+
+- Allow Apple Intelligence Report
+- Allow Genmoji
+- Allow Image Playground
+- Allow Image Wand
+- Allow Personalized Handwriting Results
+- Allow Visual Intelligence Summary
+- Allow Writing Tools
+- Mail > Allow Smart Replies
+- Mail > Allow Summary
+- Notes > Allow Transcription
+- Notes > Allow Transcription Summary
+- Safari > Allow Summary
+- Force On Device Only Dictation
+- Force On Device Only Translation
+
+**Declarative Device Management (DDM) > Keyboard Settings**:
+
+- Allow Definition Lookup
+- Allow Auto Correction
+- Allow Dictation
+- Allow Predictive Text
+- Allow Slide To Type
+- Allow Spell Check
+- Allow Text Replacement
+- Allow Math Keyboard Suggestions
+
+**Declarative Device Management (DDM) > Siri Settings**:
+
+- Allow User Generated Content
+- Allow While Locked
+- Force Profanity Filter
+
+##### macOS
+
+**Declarative Device Management (DDM) > External Intelligence Settings**:
+
+- Allow Sign In
+- Allowed Workspace IDs
+
+**Declarative Device Management (DDM) > Intelligence Settings**:
+
+- Allow Apple Intelligence Report
+- Allow Genmoji
+- Allow Image Playground
+- Allow Writing Tools
+- Mail > Allow Smart Replies
+- Mail > Allow Summary
+- Notes > Allow Transcription
+- Notes > Allow Transcription Summary
+- Safari > Allow Summary
+- Force On Device Only Dictation
+
+**Declarative Device Management (DDM) > Keyboard Settings**:
+
+- Allow Definition Lookup
+- Allow Dictation
+- Allow Math Keyboard Suggestions
+
+**Declarative Device Management (DDM) > Siri Settings**:
+
+- Force Profanity Filter
+
+**System Configuration > File Provider**:
+
+- Management Allows Remote Syncing
+- Management Remote Syncing Allow List
+- Management Allows External Volume Syncing
+- Management External Volume Syncing Allow List
+- Management Domain Auto Enablement List
+**Restrictions**:
+
+- Allow Rosetta Usage Awareness
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+> - macOS
+
+### Device management
+
+#### Remote Help connectivity update for Windows devices<!-- 29252975 -->
+
+We've improved connectivity when using the [Launch Remote Help](../fundamentals/remote-help-use.md#provide-help) capability in the Intune admin center for Windows devices. For the best experience, we recommend updating firewall rules to include this new endpoint:
+
+- `*.trouter.communications.svc.cloud.microsoft`
+
+For the current list of required network endpoints, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md?tabs=north-america#network-requirements-for-powershell-scripts-and-win32-apps) and [Remote Help](../fundamentals/intune-endpoints.md#remote-help) in the Intune endpoints documentation.
+
+With this endpoint addition, we've also added a new [Intune Management Extension log](../apps/intune-management-extension.md#ime-log-files), NotificationInfra.log, which tracks notifications sent through the Microsoft real-time communication channel.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### Preview the new device page in the Intune admin center (public preview) <!-- 16532161 36646300 -->
+
+In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you can see device-specific info, like device properties.
+
+This page is redesigned and is available for you to preview. To enable the new experience:
+
+1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All Devices**.
+2. Move the **Preview new device view** toggle to **On**.
+
+The new experience is only available when you go to **Devices** > **All Devices** and select a device. If you open a device page from a different part of the Intune admin center, like from a report, the original page view is shown, even with the toggle enabled.
+
+When turned on, you see the new full page layout that gives you a single view of the device. Use this view to:
+
+- Track device activity
+- Access tools and reports
+- Manage device information
+
+The single device page has the following tabs:
+
+- **Device action status**: Shows requested, in‑progress, and recently completed device actions. You can search, sort, and filter this list. You can quickly see what actions are running or have completed without leaving the device view.
+- **Tools and reports**: This tab was previously called **Overview**. It shows monitoring reports, like compliance and device configuration status, tools, like remediations. These features were previously accessed in other parts of the Intune admin center.
+- **Properties**: Contains admin‑modifiable device properties with visible scope tags and a dedicated editing view.
+- **Device details**: This tab was previously called **Hardware**. It provides physical device information and key Intune and Microsoft Entra management details.
+
+Other features:
+
+- Device actions are grouped, ordered, and labeled consistently across platforms and device types, and only shows relevant and permitted actions. Destructive actions are separated and require confirmation, reducing unintentional actions.
+
+- The updated layout uses a standard structure across device types and platforms, while adapting to platform‑specific capabilities.
+
+- Improved labeling, hierarchy, and formatting make device information easier to scan and understand. The **Essentials** section elevates important device information and is accessible from any tab.
+
+All existing device management capabilities remain available. This update focuses on making them easier to find and use.
+
+#### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
+
+Intune has two new remote actions that allow admins to temporarily suspend and restore Managed Home Screen (MHS) on Android devices. These actions let users exit MHS and access the device's default launcher for a defined period—without removing policies or requiring a PIN.
+
+When the specified duration expires, or when the *restore managed home screen action* is triggered, MHS automatically re‑locks the device into the kiosk experience. This helps maintain security while reducing disruption during troubleshooting or short‑term use outside of MHS.
+
+To learn more, see:
+
+- [Suspend Managed Home Screen](device-suspend-managed-home-screen.md)
+- [Restore Managed Home Screen](device-restore-managed-home-screen.md)
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Android Enterprise corporate-owned Fully Managed (COBO)
+> - Android Enterprise corporate-owned Dedicated (COSU)
+
+### Intune apps
+
+#### Newly available protected apps for Intune <!-- 36620792, 36620880, 36621194, 36621352, 36627824 -->
+
+The following protected apps are now available for Microsoft Intune:
+
+- PerfectServe Clinical Collab by PerfectServe
+- Synigo Pulse by Synigo B.V.
+- DeepL for Intune by DeepL SE
+- Foxit PDF Editor by Foxit Software Inc.
+- EasyPlant QC Inspections by Technip Energies (Android)
+
+For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
+
+### Role-based access control
+
+#### Scoped permissions for Role-based access control (public preview)<!-- 37134761 -->
+Intune now includes an opt-in public preview to enable **Scoped permissions**, making your role-based access control (RBAC) configuration more precise. Enabling Scoped permissions is a one-time choice that can't be undone. In the future, this will become the default behavior for all tenants.
+
+Previously, when an admin had multiple role assignments using different scope tags for the same permission category, Intune merged permissions across those assignments, which could unintentionally grant broader access than intended. With Scoped permissions enabled, each role assignment's permissions apply only within its own scope tag context, so admins receive exactly the access you intended.
+
+To help you prepare before enabling this change, Intune includes a new **Permissions Assessment Report**. The report details your tenant's current permissions and shows how they will change after enabling Scoped permissions. You can rerun the report as often as needed, adjust role assignments, and communicate any changes to affected admins before opting in.
+
+For more information about the current default behavior, the Scoped permissions opt-in public preview, and the new report, see [Permission behavior across role assignments](../fundamentals/scope-tags.md#permission-behavior-across-role-assignments).
 
 ## Week of March 2, 2026 (Service release 2602)
 
