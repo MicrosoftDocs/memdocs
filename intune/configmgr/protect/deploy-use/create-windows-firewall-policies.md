@@ -1,7 +1,7 @@
 ---
 title: Windows Firewall policies for Endpoint Protection
 description: Learn how to create and deploy firewall policies for Endpoint Protection in System Center 2012 Configuration Manager.
-ms.date: 03/07/2017
+ms.date: 03/19/2026
 ms.subservice: protect
 ms.topic: install-set-up-deploy
 ms.collection: tier3
@@ -12,22 +12,21 @@ ms.collection: tier3
 
 Firewall policies for Endpoint Protection in Configuration Manager let you perform basic Windows Firewall configuration and maintenance tasks on client computers in your hierarchy. 
 
-### Pre-Requisites
-
-- A site system server with the Endpoint Protection role installed
-
-- An Endpoint Protection Client Setting with 'Manage Endpoint Protection client on client computers' set to 'Yes' 
-
-> [!NOTE]
-> It is not necessary to have 'Install Endpoint Protection client' enabled in the client setting
-
 You can use Windows Firewall policies to perform the following tasks:
 
--   Control whether Windows Firewall is turned on or off.
+- Control whether Windows Firewall is turned on or off.
+- Control whether incoming connections are allowed to client computers.
+- Control whether users are notified when Windows Firewall blocks a new program.
 
--   Control whether incoming connections are allowed to client computers.
+### Prerequisites
 
--   Control whether users are notified when Windows Firewall blocks a new program.
+- A site system server with the Endpoint Protection role installed.
+- An Endpoint Protection Client Setting with **Manage Endpoint Protection client on client computers** set to **Yes**.
+
+> [!NOTE]
+> It is not necessary to have **Install Endpoint Protection client** enabled in the client setting.
+
+## Create the policy
 
 1.  In the Configuration Manager console, click **Assets and Compliance**.
 
@@ -37,19 +36,14 @@ You can use Windows Firewall policies to perform the following tasks:
 
 4.  On the **General** page of the **Create Windows Firewall Policy Wizard**, specify a name and an optional description for this firewall policy, and then click **Next**.
 
-1. On the **Profile Settings** page of the wizard, configure the following settings for each network profile:
+5. On the **Profile Settings** page of the wizard, configure the following settings for each network profile:
 
-    > [!NOTE]
-    >  For more information about network profiles, see the Windows documentation.
+    - **Enable Windows Firewall**
 
-   - **Enable Windows Firewall**
-   
-     > [!NOTE]
-     >  If **Enable Windows Firewall** is not enabled, the other settings on this page of the wizard are unavailable.
+      If **Enable Windows Firewall** is not enabled, the other settings on this page of the wizard are unavailable.
      
-    -   **Block all incoming connections, including those in the list of allowed programs**
-
-    -   **Notify the user when Windows Firewall blocks a new program**
+    - **Block all incoming connections, including those in the list of allowed programs**
+    - **Notify the user when Windows Firewall blocks a new program**
 
 6.  On the **Summary** page of the wizard, review the actions to be taken, and then complete the wizard.
 
