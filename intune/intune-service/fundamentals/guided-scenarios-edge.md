@@ -13,6 +13,8 @@ ms.collection:
 
 # Guided Scenario - Deploy Microsoft Edge for Mobile
 
+[!INCLUDE [guided-scenarios-deprecation](../includes/guided-scenarios-deprecation.md)]
+
 By following this [guided scenario](guided-scenarios-overview.md), you can assign the Microsoft Edge app to your users on iOS/iPadOS or Android devices at your organization. Assigning this app allows your users to seamlessly browse content using their corporate devices.
 
 Microsoft Edge lets users cut through the clutter of the web with built-in features that help them consolidate, arrange, and manage work content. Users of iOS/iPadOS and Android devices who sign in with their corporate Microsoft Entra accounts in the Microsoft Edge application will find their browser preloaded with workplace **Favorites** and website filters you define.

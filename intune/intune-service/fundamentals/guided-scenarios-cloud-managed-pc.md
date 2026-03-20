@@ -13,6 +13,8 @@ ms.collection:
 
 # Guided Scenario - Cloud-Managed Modern Desktop
 
+[!INCLUDE [guided-scenarios-deprecation](../includes/guided-scenarios-deprecation.md)]
+
 The modern desktop is the state-of-the-art productivity platform for the Information Worker. Microsoft 365 Apps and Windows are the core components of the modern desktop along with the latest security baselines for Windows and Microsoft Defender for Endpoint.
 
 Managing the modern desktop from the cloud brings the added benefit of internet-wide remote actions. Cloud-management utilizes the in-built Windows Mobile Device Management policies and removes dependencies on local Active Directory group policy.

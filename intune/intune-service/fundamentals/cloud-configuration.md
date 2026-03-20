@@ -25,8 +25,10 @@ Cloud config makes these devices easy to use, and secures these devices with Mic
 
 There are two ways to deploy cloud config:
 
-- **Option 1 - Automatic** (this article): Use the guided scenario described in this article to automatically create all the groups and policies with their configured values.
-- **Option 2 - Manual**: Use a step-by-step setup guide to deploy cloud config yourself, including manually creating all the policies. For information on this option, go to [Windows client cloud config setup guide](cloud-configuration-setup-guide.md).
+> [!IMPORTANT]
+> The guided scenario for automatic deployment of Windows in cloud configuration is deprecated and being removed from the Intune admin center. Use the manual step-by-step setup guide to deploy cloud config.
+
+- **Step-by-step setup guide**: Use the [Windows client cloud config setup guide](cloud-configuration-setup-guide.md) to deploy cloud config yourself, including manually creating all the policies.
 
 With Windows in cloud configuration:
 
@@ -212,5 +214,4 @@ When it deploys successfully, you can use the monitoring and reporting features 
 
 ## Related content
 
-- [Guided scenarios overview](guided-scenarios-overview.md)
 - [Windows client cloud config step by step setup guide](cloud-configuration-setup-guide.md)

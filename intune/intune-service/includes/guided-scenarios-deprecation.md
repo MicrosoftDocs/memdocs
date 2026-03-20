@@ -1,0 +1,2 @@
+> [!IMPORTANT]
+> Guided scenarios are deprecated and being removed from the Microsoft Intune admin center. The policies, apps, and configurations that guided scenarios previously created can be configured manually using the existing Intune workflows. For cloud configuration deployments, use the [Windows client cloud config step-by-step setup guide](../fundamentals/cloud-configuration-setup-guide.md).

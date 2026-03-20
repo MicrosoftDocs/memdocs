@@ -13,6 +13,8 @@ ms.collection:
 
 # Guided Scenario - Secure Microsoft Office Mobile Apps
 
+[!INCLUDE [guided-scenarios-deprecation](../includes/guided-scenarios-deprecation.md)]
+
 By following this guided scenario in the Device Management portal, you can enable basic Intune app protection on iOS/iPadOS and Android devices.
 
 The app protection that you enable will enforce the following actions:

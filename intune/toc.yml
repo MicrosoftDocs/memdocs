@@ -1977,7 +1977,7 @@ items:
       - name: Windows FLW
         displayName: kiosk, multi-app, single-app
         href: ./solutions/frontline-worker/frontline-worker-overview-windows.md
-    - name: Guided scenarios
+    - name: Guided scenarios (deprecated)
       items:
       - name: Guided scenarios overview
         href: ./intune-service/fundamentals/guided-scenarios-overview.md
@@ -1987,14 +1987,14 @@ items:
         href: ./intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md
       - name: Secure Microsoft Office mobile apps
         href: ./intune-service/fundamentals/guided-scenarios-office-mobile.md
-      - name: Windows in cloud configuration
-        items:
-        - name: Overview
-          displayName: cloud config, flw, windows
-          href: ./intune-service/fundamentals/cloud-configuration.md
-        - name: Step-by-step guide
-          displayName: cloud config, flw, windows
-          href: ./intune-service/fundamentals/cloud-configuration-setup-guide.md
+    - name: Windows in cloud configuration
+      items:
+      - name: Overview
+        displayName: cloud config, flw, windows
+        href: ./intune-service/fundamentals/cloud-configuration.md
+      - name: Step-by-step guide
+        displayName: cloud config, flw, windows
+        href: ./intune-service/fundamentals/cloud-configuration-setup-guide.md
     - name: Move to cloud native endpoints
       items:
       - name: Overview and benefits

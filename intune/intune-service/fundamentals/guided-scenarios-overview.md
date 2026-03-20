@@ -12,6 +12,8 @@ ms.collection:
 
 # Intune Guided Scenarios Overview
 
+[!INCLUDE [guided-scenarios-deprecation](../includes/guided-scenarios-deprecation.md)]
+
 A guided scenario is a customized series of steps centered around one end-to-end use-case. Common scenarios are based on the role an admin, user, or device plays in your organization. These roles typically require a collection of carefully orchestrated profiles, settings, applications, and security controls. The goal is to provide the best user experience and security.
 
 If you're not familiar with the steps and resources to implement a particular scenario, then start with guided scenarios. The guided scenarios assemble policies, apps, assignments, and other management configurations automatically. Additionally, the guided scenarios may deliberately omit certain options not applicable or uncommon for the given scenario.
