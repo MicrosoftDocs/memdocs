@@ -257,6 +257,29 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
+### Monitor and troubleshootg
+
+#### Support for system proxy settings in endpoint analytics and Advanced Analytics<!--30148318 -->
+
+Devices configured with system-level (WinHTTP) proxy settings can now send telemetry to endpoint analytics and Advanced Analytics, enabling more comprehensive reporting. Endpoint Privilege Management (EPM) will also include elevation usage data from these devices.
+
+No admin action is required. If endpoint analytics or EPM is enabled for a device, telemetry and events will automatically appear in the User Experience (Device blade), endpoint Analytics reports, and EPM.
+
+For more details about displaying advanced proxy settings, see [Netsh.exe commands](/windows/win32/winhttp/netsh-exe-commands#show-advproxy).
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+#### Improvements to device query for multiple devices<!-- 32041372, 29800657, 33412956 -->
+   
+Device query for multiple devices now includes new capabilities to help you work with query results more efficiently.
+
+You can use a search text box to search across all resulting rows of a query, use column headers to add filters for specific values, and create Microsoft Entra security groups directly from a query's device results.
+   
+For more information, see [Device query for  multiple devices](../../advanced-analytics/device-query-multiple-devices.md).
+
 ### Role-based access control
 
 #### Scoped permissions for Role-based access control (public preview)<!-- 37134761 -->
