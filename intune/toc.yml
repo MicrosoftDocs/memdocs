@@ -160,16 +160,8 @@ items:
 
     - name: Remote Help
       items:
-      - name: Remote Help overview
-        href: ./intune-service/fundamentals/remote-help.md
-      - name: Planning Remote Help
-        href: ./intune-service/fundamentals/remote-help-plan.md
-      - name: Deploying Remote Help
-        href: ./intune-service/fundamentals/remote-help-deploy.md
       - name: Using Remote Help
         href: ./intune-service/fundamentals/remote-help-use.md
-      - name: Troubleshooting Remote Help
-        href: ./intune-service/fundamentals/remote-help-troubleshoot-monitor.md
     - name: Advanced Analytics
       href: ./advanced-analytics/toc.yml
 
