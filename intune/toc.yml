@@ -160,8 +160,16 @@ items:
 
     - name: Remote Help
       items:
+      - name: Remote Help overview
+        href: ./intune-service/fundamentals/remote-help.md
+      - name: Planning Remote Help
+        href: ./intune-service/fundamentals/remote-help-plan.md
+      - name: Deploying Remote Help
+        href: ./intune-service/fundamentals/remote-help-deploy.md
       - name: Using Remote Help
         href: ./intune-service/fundamentals/remote-help-use.md
+      - name: Troubleshooting Remote Help
+        href: ./intune-service/fundamentals/remote-help-troubleshoot-monitor.md
     - name: Advanced Analytics
       href: ./advanced-analytics/toc.yml
 
@@ -1820,17 +1828,7 @@ items:
     - name: Remote Help with ServiceNow integration
       href: ./intune-service/fundamentals/service-now-integration.md
     - name: Remote Help with the Intune Suite
-      items:
-      - name: Remote Help overview
-        href: ./intune-service/fundamentals/remote-help.md
-      - name: Planning Remote Help
-        href: ./intune-service/fundamentals/remote-help-plan.md
-      - name: Deploying Remote Help
-        href: ./intune-service/fundamentals/remote-help-deploy.md
-      - name: Using Remote Help
-        href: ./intune-service/fundamentals/remote-help-use.md
-      - name: Troubleshooting Remote Help
-        href: ./intune-service/fundamentals/remote-help-troubleshoot-monitor.md
+      href: ./intune-service/fundamentals/remote-help.md
     - name: Use TeamViewer for remote administration
       href: ./intune-service/fundamentals/teamviewer-support.md
     - name: Remediations that fix common support issues
