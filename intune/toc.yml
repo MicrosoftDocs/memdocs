@@ -1829,18 +1829,16 @@ items:
       href: ./intune-service/fundamentals/service-now-integration.md
     - name: Remote Help with the Intune Suite
       items:
-      - name: Using Remote Help
+      - name: Remote Help overview
         href: ./intune-service/fundamentals/remote-help.md
-      - name: Remote Help on Windows
-        href: ./intune-service/fundamentals/remote-help-windows.md
-      - name: Remote Help on macOS
-        href: ./intune-service/fundamentals/remote-help-macos.md
-      - name: Remote Help Web App
-        href: ./intune-service/fundamentals/remote-help-webapp.md
-      - name: Remote Help on Android
-        href: ./intune-service/fundamentals/remote-help-android.md
-      - name: Troubleshooting Remote Help on Android
-        href: ./intune-service/fundamentals/remote-help-android-troubleshoot.md
+      - name: Planning Remote Help
+        href: ./intune-service/fundamentals/remote-help-plan.md
+      - name: Deploying Remote Help
+        href: ./intune-service/fundamentals/remote-help-deploy.md
+      - name: Using Remote Help
+        href: ./intune-service/fundamentals/remote-help-use.md
+      - name: Troubleshooting Remote Help
+        href: ./intune-service/fundamentals/remote-help-troubleshoot-monitor.md
     - name: Use TeamViewer for remote administration
       href: ./intune-service/fundamentals/teamviewer-support.md
     - name: Remediations that fix common support issues
