@@ -81,6 +81,14 @@ The Recovery Lock password can be viewed in the per-setting status report > **Pa
 >
 > - macOS
 
+#### New supported OEMConfig app for Android Enterprise <!-- 36423115 -->
+
+The following OEMConfig app is available in Intune for Android Enterprise:
+
+- Inventus | `com.inventus.oemconfig.gen`
+
+For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
+
 #### New updates to the Apple settings catalog <!-- 36630003 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
@@ -257,7 +265,7 @@ The following protected apps are now available for Microsoft Intune:
 
 For more information about protected apps, see [Microsoft Intune protected apps](../apps/apps-supported-intune-apps.md).
 
-### Monitor and troubleshootg
+### Monitor and troubleshooting
 
 #### Support for system proxy settings in endpoint analytics and Advanced Analytics<!--30148318 -->
 
@@ -273,16 +281,17 @@ For more details about displaying advanced proxy settings, see [Netsh.exe comman
 > - Windows
 
 #### Improvements to device query for multiple devices<!-- 32041372, 29800657, 33412956 -->
-   
+
 Device query for multiple devices now includes new capabilities to help you work with query results more efficiently.
 
 You can use a search text box to search across all resulting rows of a query, use column headers to add filters for specific values, and create Microsoft Entra security groups directly from a query's device results.
-   
-For more information, see [Device query for  multiple devices](../../advanced-analytics/device-query-multiple-devices.md).
+
+For more information, see [Device query for multiple devices](../../advanced-analytics/device-query-multiple-devices.md).
 
 ### Role-based access control
 
 #### Scoped permissions for Role-based access control (public preview)<!-- 37134761 -->
+
 Intune now includes an opt-in public preview to enable **Scoped permissions**, making your role-based access control (RBAC) configuration more precise. Enabling Scoped permissions is a one-time choice that can't be undone. In the future, this will become the default behavior for all tenants.
 
 Previously, when an admin had multiple role assignments using different scope tags for the same permission category, Intune merged permissions across those assignments, which could unintentionally grant broader access than intended. With Scoped permissions enabled, each role assignment's permissions apply only within its own scope tag context, so admins receive exactly the access you intended.
