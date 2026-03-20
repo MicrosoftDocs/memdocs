@@ -1977,16 +1977,6 @@ items:
       - name: Windows FLW
         displayName: kiosk, multi-app, single-app
         href: ./solutions/frontline-worker/frontline-worker-overview-windows.md
-    - name: Guided scenarios (deprecated)
-      items:
-      - name: Guided scenarios overview
-        href: ./intune-service/fundamentals/guided-scenarios-overview.md
-      - name: Deploy Microsoft Edge for Mobile
-        href: ./intune-service/fundamentals/guided-scenarios-edge.md
-      - name: Cloud-managed Modern Desktop
-        href: ./intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md
-      - name: Secure Microsoft Office mobile apps
-        href: ./intune-service/fundamentals/guided-scenarios-office-mobile.md
     - name: Windows in cloud configuration
       items:
       - name: Overview
