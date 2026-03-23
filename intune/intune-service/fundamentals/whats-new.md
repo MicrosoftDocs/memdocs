@@ -3,7 +3,11 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
+<<<<<<< HEAD
 ms.date: 03/26/2026
+=======
+ms.date: 03/23/2026
+>>>>>>> 702571b7375d8f1ce601513cbef19c3458163255
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,6 +61,7 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+<<<<<<< HEAD
 ## Week of March 23, 2026 (Service release 2603)
 
 ### Device configuration
@@ -299,6 +304,17 @@ Previously, when an admin had multiple role assignments using different scope ta
 To help you prepare before enabling this change, Intune includes a new **Permissions Assessment Report**. The report details your tenant's current permissions and shows how they will change after enabling Scoped permissions. You can rerun the report as often as needed, adjust role assignments, and communicate any changes to affected admins before opting in.
 
 For more information about the current default behavior, the Scoped permissions opt-in public preview, and the new report, see [Permission behavior across role assignments](../fundamentals/scope-tags.md#permission-behavior-across-role-assignments).
+=======
+## Week of March 16, 2026  
+
+### Device management  
+
+#### Improved Remote Help update reporting on macOS<!-- 35705883 -->  
+
+We've improved the update and reporting experience for Remote Help on macOS to make version management more reliable and transparent for IT admins.  
+ 
+After you deploy the latest Remote Help client (version 1.0.26012221) through Microsoft Intune, you can now view the full client version in your device inventory and during app upgrades. This improvement makes it easier to verify deployments. Remote Help installations deployed through Intune are also registered with Microsoft AutoUpdate (MAU), allowing Intune-managed macOS devices to automatically receive future Remote Help updates. For more information, see [Deploy Remote Help with Microsoft Intune](remote-help-deploy.md). 
+>>>>>>> 702571b7375d8f1ce601513cbef19c3458163255
 
 ## Week of March 2, 2026 (Service release 2602)
 
