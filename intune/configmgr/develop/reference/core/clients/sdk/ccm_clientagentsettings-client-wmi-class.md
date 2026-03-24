@@ -1,18 +1,10 @@
 ---
 title: CCM_ClientAgentSettings Class
-titleSuffix: Configuration Manager
 description: A client class, in Configuration Manager, that contains common client agent settings.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6388838c-8832-4e84-ba1a-bb66af8f79ff
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CCM_ClientAgentSettings Client WMI Class
 The `CCM_ClientAgentSettings` WMI class is a client class, in Configuration Manager, that contains common client agent settings.

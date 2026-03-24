@@ -1,18 +1,10 @@
 ---
 title: SubmitRegistrationRecord Method
-titleSuffix: Configuration Manager
 description: A Windows Management Instrumentation class method that submits a registration record.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ca40b886-729f-4390-aacf-64878811a96a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SubmitRegistrationRecord Method in Class SMS_Site
 The `SubmitRegistrationRecord` Windows Management Instrumentation (WMI) class method, in Configuration Manager, submits a registration record.

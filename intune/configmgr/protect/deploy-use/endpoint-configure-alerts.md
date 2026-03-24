@@ -1,16 +1,9 @@
 ---
 title: Configure Endpoint Protection alerts
-titleSuffix: Configuration Manager
 description: Learn how to configure Endpoint Protection alerts in Configuration Manager.
 ms.date: 03/23/2017
-ms.service: configuration-manager
 ms.subservice: protect
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

@@ -1,16 +1,9 @@
 ---
 title: Technical preview 2210
-titleSuffix: Configuration Manager
 description: Learn about new features available in the Configuration Manager technical preview branch version 2210.
 ms.date: 10/12/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.reviewer: mstewart
-ms.localizationpriority: medium
 ---
 
 # Features in Configuration Manager technical preview version 2210

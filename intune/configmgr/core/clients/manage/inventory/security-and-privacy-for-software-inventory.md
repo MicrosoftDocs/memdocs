@@ -1,17 +1,10 @@
 ---
 title: Software inventory security privacy
-titleSuffix: Configuration Manager
 description: Get security and privacy information for software inventory in Configuration Manager.
 ms.date: 02/22/2017
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Security and privacy for software inventory in Configuration Manager
 

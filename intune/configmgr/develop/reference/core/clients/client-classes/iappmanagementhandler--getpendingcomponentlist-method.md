@@ -1,18 +1,10 @@
 ---
 title: "IAppManagementHandler::GetPendingComponentList"
-titleSuffix: Configuration Manager
 description: "The IAppManagementHandler::GetPendingComponentList method gets the pending component list for a specified deployment type."
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d769f0da-1b46-4a3b-9dc7-f14d7a489020
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IAppManagementHandler::GetPendingComponentList Method
 The `IAppManagementHandler::GetPendingComponentList` method, in Configuration Manager, gets the pending component list for a specified deployment type. This is an optional method for the application deployment type handler. It's called if the handler returns a status of "PendingUpdate" for the `EnforceApp` method.  Software Center presents a list of these components to the end user, which need to be closed in order for the `EnforceApp` method to succeed.

@@ -3,7 +3,7 @@ title: Role-based access control (RBAC) with Microsoft Intune
 description: Learn how RBAC lets you control who can perform actions and make changes in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/20/2025
+ms.date: 03/12/2026
 ms.topic: article
 ms.reviewer: davidra
 ms.collection:
@@ -30,7 +30,7 @@ To view a role in the **Intune admin center**, go to **Tenant administration** >
 - **Assignments**: Select an [assignment for a role](assign-role.md) to view details about it including the groups and scopes that the assignment includes. A role can have multiple assignments, and a user can receive multiple assignments.
 
 > [!NOTE]
-> In June 2021, Intune began supporting [unlicensed admins](../fundamentals/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change and administrator accounts in a nested security group assigned to a role still require a license to manage Intune.
+> In June 2021, Intune began supporting [unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md). User accounts created after this change can administer Intune without an assigned license. Accounts created before this change and administrator accounts in a nested security group assigned to a role still require a license to manage Intune.
 
 ### Built-in roles
 
@@ -67,16 +67,16 @@ The following table identifies the Microsoft Entra roles that have access to Int
 
 | Microsoft Entra role | All Intune data | Intune audit data |
 | --- | :---: | :---: |
-| Global Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
-| Intune Service Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
-| Conditional Access Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | None | None |
-| Security Administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only (full administrative permissions for Endpoint Security node) | Read only |
-| Security Operator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
-| Security Reader [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
+| Global Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
+| Intune Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read/write | Read/write |
+| Conditional Access Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | None | None |
+| Security Administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only (full administrative permissions for Endpoint Security node) | Read only |
+| Security Operator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
+| Security Reader [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read only | Read only |
 | Compliance Administrator | None | Read only |
 | Compliance Data Administrator | None | Read only |
-| Global Reader [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
-| Helpdesk administrator [![Privileged label icon](../media/privileged-lable.png)](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
+| Global Reader [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) | Read Only | Read Only |
+| Helpdesk administrator [:::image type="icon" source="../../media/icons/16/privileged-label.svg" border="false":::](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center) (This role is equivalent to the Intune *Help Desk Operator* role) | Read Only | Read Only |
 | Reports Reader | None | Read Only|
 
 In addition to the Microsoft Entra roles with permission within Intune, the following three areas of Intune are direct extensions of Microsoft Entra: **Users**, **Groups**, and **Conditional Access**. Instances of these objects and configurations made from within Intune exist in Microsoft Entra. As Microsoft Entra objects, they can be managed by Microsoft Entra administrators with sufficient permissions granted by an Microsoft Entra role. Similarly, Intune admins with sufficient permissions for Intune can view and manage these object types that are created in Microsoft Entra.
@@ -96,12 +96,16 @@ The **Global Administrator** role is a built-in role in Microsoft Entra, and has
 
 To learn more about the Microsoft Entra Global Administrator role, see [Microsoft Entra built-in roles - Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
 
-The **Intune Administrator** role is a built-in role in Microsoft Entra, and is also known as the **Intune Service Administrator** role. It has a limited scope of permissions to administer and manage Intune, and manage related features, like user and group management. This role is suitable for admins who only need to administer Intune.
+The **Intune Administrator** role is a built-in role in Microsoft Entra. It grants global read/write permissions across Microsoft Intune and is classified as a [privileged role](/entra/identity/role-based-access-control/privileged-roles-permissions?tabs=admin-center). While its scope is narrower than the Global Administrator role, it still exceeds what is needed for almost all day-to-day Intune management tasks. Don't use this role for routine administration. Use a least-privileged [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead.
+
+> [!NOTE]
+> In Microsoft Graph API and Microsoft PowerShell, this role appears as **Intune Service Administrator**.
 
 **To reduce risk**:
 
-- Assign the Intune Administrator role only as needed. If there's a [built-in Intune role](#rbac-roles) that meets the needs of the admin, then assign that role instead of the Intune Administrator role. Always assign the least privileged Intune role necessary for the admin to do their tasks.
-- Create [custom roles](create-custom-role.md) to further limit the scope of permissions for your admins.
+- Don't use the Intune Administrator role for day-to-day Intune administration.
+- Assign a [built-in Intune role](#rbac-roles) or a [custom role](create-custom-role.md) instead. These roles limit permissions to only what each task requires.
+- When the Intune Administrator role is required, assign it only for the duration needed, and then remove it. Optionally, if you have Microsoft Entra ID with a P2 or Microsoft Entra ID Governance license, you can use [Privileged Identity Management](/entra/id-governance/privileged-identity-management/pim-getting-started) (PIM) to provide time bound elevation for this role.
 
 **Enhanced Security Controls**:
 
@@ -165,8 +169,6 @@ If a user has multiple role assignments, permissions, and scope tags, those role
 - When there aren't any scope tags or some scope tags are assigned from different assignments, a user can only see devices that are part of some scope tags and can't see all devices.
 
 ## Monitor RBAC assignments
-*This and the three subsections are in progress*
-
 Within the Intune admin center, you can go to **Tenant admin** > **Roles** and expand **Monitor** to find several views that can help you identify the permissions different users have within your Intune tenant. For example, in a complex administrative environment, you can use the **Admin permissions** view to specify an account so you can see its current scope of administrative privileges.
 
 :::image type="content" source="./media/role-based-access-control/rbac-monitor-node.png" alt-text="A screen capture of the options for monitoring RBAC from within the Intune admin center.":::
@@ -175,9 +177,9 @@ Within the Intune admin center, you can go to **Tenant admin** > **Roles** and e
 When you select this node, you see a combined list of the current Intune RBAC categories and permissions that your account is granted. This combined list includes all the permissions from all role assignments, but not which role assignments provide them or by which group membership they're assigned.
 
 ### Roles by permission
-With this view, you can see details about a specific Intune RBAC [category and permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available.
+With this view, you can see details about a specific Intune RBAC [permission](../fundamentals/create-custom-role.md#custom-role-permissions), and through which role assignments, and to which groups that combination is made available.
 
-To get started, select an Intune permission Category and then a specific Permission from that category. The admin center then displays a list of instances that lead to that permission being assigned that includes:
+To get started, select an Intune permission and then a specific action from that permission. The admin center then displays a list of instances that lead to that permission being assigned that includes:
 
 - **Role display name** – The name of the built-in or custom RBAC role that grants the permission.
 - **Role assignment display name** – The name of the role assignment that assigns the role to groups of users.
@@ -186,7 +188,7 @@ To get started, select an Intune permission Category and then a specific Permiss
 ### Admin permissions
 Use the Admin permissions node to identify the specific permissions that an account is currently granted.
 
-Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Category* and *Permission*.
+Start by specifying a **User** account. So long as the user has Intune permissions assigned to their account, Intune displays the complete list of those permissions identified by *Permission* and *Action*.
 
 :::image type="content" source="./media/role-based-access-control/admin-permission-view.png" alt-text="A screen capture that shows an example of the Admin permissions view in the Intune admin center.":::
 ## Next steps

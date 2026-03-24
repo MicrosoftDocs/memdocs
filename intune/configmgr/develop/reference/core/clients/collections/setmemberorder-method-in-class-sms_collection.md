@@ -1,18 +1,10 @@
 ---
 title: SetMemberOrder Method
-titleSuffix: Configuration Manager
 description: Set the order of the members of a collection. It is used when the members of a server group collection need to be patched in a particular order.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 6be66fa4-952a-4ce8-bfdf-55165bf6197b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SetMemberOrder Method in Class SMS_Collection
 The `SetMemberOrder` Windows Management Instrumentation (WMI) class method, in Configuration Manager, sets the order of the members of a collection. Use this class instance when the members of a  server group collection need to be patched in a particular order.

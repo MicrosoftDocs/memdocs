@@ -1,10 +1,6 @@
 ---
-author: bhuney
-ms.author: brianhun
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 07/31/2025
-ms.localizationpriority: medium
 ---
 
 ## Apply software updates to an image

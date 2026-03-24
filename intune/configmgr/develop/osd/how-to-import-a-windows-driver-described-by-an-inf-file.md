@@ -1,18 +1,10 @@
 ---
 title: Import a Windows Driver Described by an INF File
-titleSuffix: Configuration Manager
 description: You can import a Windows driver that is described by an information (.inf) file, in Configuration Manager, by using the CreateFromINF Method in Class SMS_Driver.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 7855f112-ef75-4754-affb-170ded8e1d0c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Import a Windows Driver Described by an INF File into Configuration Manager
 You can import a Windows driver that is described by an information (.inf) file, in Configuration Manager, by using the [CreateFromINF Method in Class SMS_Driver](../../develop/reference/osd/createfrominf-method-in-class-sms_driver.md).

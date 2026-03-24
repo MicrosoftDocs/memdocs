@@ -1,5 +1,5 @@
 ---
-title: Set up user enrollment with Company Portal for iOS | Microsoft Docs
+title: Set up user enrollment with Company Portal for iOS
 description: Set up the profile based Apple User Enrollment option for personal devices enrolling in Microsoft Intune.
 ms.date: 12/06/2024
 ms.topic: how-to
@@ -81,6 +81,6 @@ The volume and cryptographic keys created to manage the work data on the device 
 
 * For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-ios.md)
-   * [iOS and iPadOS device features](../configuration/ios-device-features-settings.md)
+   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../configuration/device-features-apple.md)
    * [Set up per-app Virtual Private Network (VPN)](../configuration/vpn-setting-configure-per-app.md)

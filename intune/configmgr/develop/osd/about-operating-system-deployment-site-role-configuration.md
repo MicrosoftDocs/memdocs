@@ -1,18 +1,10 @@
 ---
 title: OS Deployment Site Role Configuration
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.assetid: 15ddea9d-e13a-4be2-a3f6-20eba1e4a678
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 description: Learn about the different operating system deployment site roles and how to configure these roles by using the SMS_SiteControlFile class.
-ms.reviewer: mstewart
 ---
 # About Operating System Deployment Site Role Configuration
 The following two site roles are of particular importance to Operating System Deployment in Configuration Manager.

@@ -1,17 +1,10 @@
 ---
 title: Configure power management
-titleSuffix: Configuration Manager
 description: Set up power management in Configuration Manager.
 ms.date: 09/10/2019
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure power management in Configuration Manager

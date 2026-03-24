@@ -1,17 +1,10 @@
 ---
 title: Console extension deployment
 description: The deployment of a typical Configuration Manager extension has to account for actions, forms, views, management classes and node extensions.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: install-set-up-deploy
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configuration Manager console extension deployment

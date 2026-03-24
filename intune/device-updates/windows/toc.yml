@@ -1,0 +1,67 @@
+items:
+- name: Overview
+  href: index.md
+  displayName: windows updates
+- name: Update ring policies
+  items:
+  - name: Get started
+    href: update-rings.md
+    displayName: windows updates, rings
+  - name: Policy settings
+    href: update-ring-policy-settings.md
+    displayName: windows updates, rings
+  - name: Reports
+    href: update-rings-reports.md
+    displayName: windows updates, rings
+- name: Manage Windows feature updates
+  items:
+  - name: Get started
+    href: feature-updates.md
+    displayName: windows feature updates
+  - name: Configure feature update policies
+    href: feature-update-policy.md
+    displayName: windows quality updates
+  - name: Rollout options
+    href: rollout-options.md
+    displayName: windows updates
+  - name: Upgrade Windows 10 devices
+    href: feature-updates-windows-10.md
+  - name: Feature update policies reports
+    href: feature-updates-reports.md
+    displayName: windows feature updates
+  - name: Feature updates compatibility reports
+    href: compatibility-reports.md
+    displayName: windows updates, reports
+- name: Manage Windows quality updates
+  items:
+  - name: Get started
+    href: quality-updates.md
+    displayName: windows quality updates
+  - name: Use hotpatch with quality updates
+    href: hotpatch.md
+    displayName: windows quality updates
+  - name: Expedite Windows quality updates
+    href: expedite-policy.md
+    displayName: windows quality updates
+  - name: Monitor and report on Windows quality updates
+    href: quality-updates-reports.md
+    displayName: windows quality updates
+- name: Manage Windows driver updates
+  items:
+  - name: Get started
+    href: driver-updates.md
+    displayName: windows driver updates
+  - name: Configure driver update policies
+    href: driver-update-policy.md
+    displayName: windows driver updates
+  - name: Driver update policies reports
+    href: driver-updates-reports.md
+    displayName: windows updates
+  - name: Driver updates FAQs
+    href: driver-updates-faq.yml
+    displayName: windows driver updates
+- name: Delivery Optimization
+  href: ../../intune-service/configuration/delivery-optimization-windows.md
+  displayName: delivery optimization, windows updates
+- name: Windows Autopatch documentation
+  href: /windows/deployment/windows-autopatch/?context=/intune/context

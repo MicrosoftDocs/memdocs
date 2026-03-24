@@ -1,18 +1,10 @@
 ---
 description: Learn how to notify the administrator console that an alert has changed its status with SMS_InstanceChangeNotification class.
 title: SMS_InstanceChangeNotification Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: feda268d-16d9-43a0-8bef-d26070e5deca
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_InstanceChangeNotification Server WMI Class
 The `SMS_InstanceChangeNotification` WMI class is an SMS Provider server class, in Configuration Manager, that notifies the administrator console that an alert has changed its status.

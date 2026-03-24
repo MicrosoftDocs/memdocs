@@ -69,18 +69,13 @@ Microsoft Intune automatically marks devices that meet certain criteria as corpo
 - Intune is set up, and ready to enroll users and devices. Be sure:
 
   - The [MDM Authority](mdm-authority-set.md) is set to Intune, even when using [co-management](../../configmgr/comanage/overview.md) with Intune + Configuration Manager.
-  - [Intune licenses are assigned](licenses-assign.md).
+  - [Intune licenses are assigned](../../fundamentals/licensing/assign-licenses.md).
 
   For more information, go to the [Intune setup deployment guide](deployment-guide-intune-setup.md).
 
 - Your devices [are supported](supported-devices-browsers.md). This requirement includes devices that are co-managed, or Microsoft Entra hybrid joined devices.
 
 - Sign in as a member of the **Policy and Profile Manager** built-in Intune role. For information on the permissions in this role, go to [Built-in role permissions for Microsoft Intune - Policy and Profile manager](role-based-access-control-reference.md#policy-and-profile-manager).
-
-  If you created an Intune Trial subscription, the account that created the subscription is a Microsoft Entra [Global Administrator](/entra/identity/role-based-access-control/permissions-reference#global-administrator).
-
-  > [!CAUTION]
-  > [!INCLUDE [global-admin](../includes/global-admin.md)]
 
   It's possible some enrollment platforms might require a more privileged Microsoft Entra role, like the **Intune Administrator** built-in role. For information on this role, go to [Microsoft Entra built-in roles - Intune Administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator).
 

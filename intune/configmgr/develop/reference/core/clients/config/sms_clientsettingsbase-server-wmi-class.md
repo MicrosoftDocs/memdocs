@@ -1,18 +1,10 @@
 ---
 title: SMS_ClientSettingsBase Class
-titleSuffix: Configuration Manager
 description: The SMS_ClientSettingsBase WMI class is an SMS Provider server class, in Configuration Manager, that represents the base class used by several client settings related classes.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 766a4537-74c1-43bd-b21f-8f028038635f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ClientSettingsBase Server WMI Class
 The `SMS_ClientSettingsBase` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents  the base class used by several client settings related classes (`SMS_AntimalwareSettings`, `SMS_ClientSettings`, and so on) for their simple properties.

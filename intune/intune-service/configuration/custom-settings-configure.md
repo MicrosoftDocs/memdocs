@@ -1,9 +1,7 @@
 ---
 title: Use custom device settings in Microsoft Intune
 description: Add or create a profile to use custom settings for Windows 10/11 client, Android device administrator, Android Enterprise, macOS, and iOS/iPadOS devices using Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
-ms.date: 04/16/2025
+ms.date: 02/05/2026
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.collection:
@@ -55,8 +53,7 @@ This article shows you how to create a custom device configuration profile in In
 7. In **Configuration settings**, depending on the platform you chose, the settings you can configure are different. Choose your platform for detailed settings:
 
     - [Android device administrator](custom-settings-android.md)
-    - [iOS/iPadOS](custom-settings-ios.md)
-    - [macOS](custom-settings-macos.md)
+    - [iOS/iPadOS or macOS](custom-settings-apple.md)
     - [Windows](custom-settings-windows-10.md)
     - [Windows Holographic for Business](custom-settings-windows-holographic.md)
 

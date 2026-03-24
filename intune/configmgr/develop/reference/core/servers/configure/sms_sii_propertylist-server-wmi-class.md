@@ -1,18 +1,10 @@
 ---
 title: SMS_SII_PropertyList Class
 description: The SMS_SII_PropertyList class is an SMS Provider server class that represents a general-purpose storage object defining property lists for a site install item.
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: d1853cde-6768-40f4-aa39-2e42b79d5ad8
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SII_PropertyList Server WMI Class
 The `SMS_SII_PropertyList` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a general-purpose storage object defining property lists for a site install item.

@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: desktop-analytics
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/02/2021
-ms.localizationpriority: medium
 ---
 
 - `https://aka.ms/configmgrgateway`

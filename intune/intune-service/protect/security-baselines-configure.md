@@ -51,7 +51,7 @@ Find out what you need to manage Intune security baselines.
 
 ### Licensing
 
-- Use of Intune to deploy security baselines requires a Microsoft Intune Plan 1 subscription. See [Microsoft Intune licensing](../fundamentals/licenses.md).
+- Use of Intune to deploy security baselines requires a Microsoft Intune Plan 1 subscription. See [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
   > [!TIP]
   >
@@ -97,7 +97,7 @@ The following guidance can be used anytime you create a new security baseline pr
 
    Select **Next** to move to the next tab. After you advance to a new tab, you can select the tab name to return to a previously viewed tab.
 
-5. On the Configuration settings tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
+5. On the **Configuration settings** tab, view the groups of **Settings** that are available in the baseline you selected. You can expand a group to view the settings in that group, and the default values for those settings in the baseline. To find specific settings:
 
    - Select a group to expand and review the available settings.
    - The insights for a setting are available beside a light bulb icon. Settings insights provide confidence in configurations by adding insights that similar organizations adopted successfully. Insights are available for some settings and not all settings. For more information, see [Settings insight](../fundamentals/settings-insight.md).

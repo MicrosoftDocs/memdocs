@@ -1,11 +1,7 @@
 ---
-author: Banreet
-ms.author: banreetkaur
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 06/24/2021
-ms.localizationpriority: medium
 ---
 
 ### Using Cloud Attach Configuration Wizard during upgrade fails

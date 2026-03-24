@@ -1,9 +1,9 @@
 ---
-title: Try Microsoft Intune Overview
-description: Evaluate Microsoft Intune by stepping through common Intune settings.
+title: Try Microsoft Intune for free
+description: Evaluate Microsoft Intune with a free trial. Step through common settings, enroll devices, create policies, and learn about cloud-based device management. Start your trial today.
 author: nicholasswhite
 ms.author: nwhite
-ms.date: 04/24/2024
+ms.date: 01/20/2026
 ms.topic: concept-article
 ms.reviewer: tycast
 ms.collection:
@@ -11,53 +11,47 @@ ms.collection:
 - highpri
 ---
 
-# Evaluate Microsoft Intune
+# Prerequisites and tasks to try and evaluate Microsoft Intune for free
 
-Microsoft Intune, which is a part of the Microsoft Intune family of products, provides the cloud infrastructure, the cloud-based mobile device management (MDM), cloud-based mobile application management (MAM), and cloud-based PC management for your organization. It lets you protect your organization by controlling features and settings on Android, Android Enterprise, iOS/iPadOS, macOS, and Windows devices. It integrates closely with Microsoft Entra ID for identity and access control and Azure Information Protection and advanced threat protection products for data protection. When you use it with Microsoft 365, you can enable your workforce to be productive on all their devices while keeping your organization's information protected. In addition, you can add a variety of Intune support apps for each supported platform. If you have on-premises infrastructure, such as Exchange or an Active Directory, you can use Intune connectors to help you connect to external services. Intune is included in Microsoft's [Enterprise Mobility + Security (EMS) suite](https://www.microsoft.com/microsoft-365/enterprise-mobility-security?azure-portal=true).
+You can evaluate and use Microsoft Intune with a free trial.
 
-[!INCLUDE [intune-evaluate](../includes/intune-evaluate.md)]
+In this series of articles, you learn how to evaluate Microsoft Intune by stepping through common tasks, like adding users and groups, enrolling devices, creating policies, and adding apps. You can use a free trial to complete the steps in this series.
 
-## Prerequisites
+To learn more about Intune, see [What is Microsoft Intune?](what-is-intune.md) and [Benefits of Microsoft Intune training path](/training/modules/benefits-microsoft-endpoint-manager/).
 
-The following list includes recommended (but not required) prerequisites when setting up Microsoft Intune:
-- Available devices (iOS device, Android device, Windows device, macOS device)
-- Familiarity with [Intune's supported operating systems](../fundamentals/supported-devices-browsers.md)
-- Familiarity with [Network endpoints for Microsoft Intune](../fundamentals/intune-endpoints.md)
-- An [app](../apps/apps-supported-intune-apps.md) that you would like to add to Intune
+## Recommended prerequisites
 
-## Learning objectives
+The following list includes recommended prerequisites when setting up Microsoft Intune:
 
-In this topic, you'll set up a testing environment to evaluate Intune. Then, you'll step through specific actions to better understand and evaluate Intune.
-- Set up the Microsoft Intune free trial
-- Create users and groups
-- Set up device enrollment
-- Create compliance policies
-- Understand notifications
-- Add and assign apps
-- Create and assign app policies
-- Create and assign customer roles
-- Create a device profile
+- Use available devices on [supported operating systems](supported-devices-browsers.md)
+- Be familiar with [network endpoints for Microsoft Intune](intune-endpoints.md)
+- Have an [app](../apps/apps-supported-intune-apps.md) that you can add to Intune, like a Microsoft 365 app
+- Be familiar with [role-based access control (RBAC) in Intune](role-based-access-control.md)
 
-## Benefits of Microsoft Intune
+## Tasks in this series
 
-Microsoft Intune helps you and your organization by increasing security and productivity, providing flexibility, and maximizing your management investment.
+In these topics, you set up a test environment. Then, you step through common tasks that help you better understand and use Intune.
 
-Microsoft Intune provides the following:
-- Intelligent and unified endpoint security
-- Flexible and unified endpoint management
-- Data protection without device enrollment
-- Greater end users productivity
-- Co-management for cloud and on-premises devices
+- [Step 1 - Set up the Microsoft Intune free trial](free-trial-sign-up.md)
+- [Step 2 - Create a user and assign a license](quickstart-create-user.md)
+- [Step 3 - Create a group](quickstart-create-group.md)
+- [Step 4 - Set up automatic enrollment](../enrollment/quickstart-setup-auto-enrollment.md)
+- [Step 5 - Enroll your Windows device](../enrollment/quickstart-enroll-windows-device.md)
+- [Step 6 - Create a compliance policy](../protect/quickstart-set-password-length-android.md)
+- [Step 7 - Send notifications to noncompliant devices](../protect/quickstart-send-notification.md)
+- [Step 8 - Add and assign an app](../apps/quickstart-add-assign-app.md)
+- [Step 9 - Create and assign an app protection policy](../apps/quickstart-create-assign-app-policy.md)
+- [Step 10 - Create and assign custom roles](quickstart-create-custom-role.md)
+- [Step 11 - Create a device configuration profile](../configuration/quickstart-email-profile.md)
 
-Learn how the Microsoft Intune family of products helps you maximize your return on investment. For more information, see [Benefits of Microsoft Intune](/training/modules/benefits-microsoft-endpoint-manager/).
+## Get started
 
-## Next steps
+> [!div class="nextstepaction"]
+> [Step 1 - Set up the Microsoft Intune free trial](free-trial-sign-up.md)
 
-Start by signing up for the [Intune free trial](../fundamentals/free-trial-sign-up.md). When you complete the sign-up process, you'll have a new tenant and you'll understand the basics of working with Microsoft Intune.
+When you complete the setup, you have a new tenant that's ready to step through the tasks in this series.
 
 ## Learn more
 
-For more information about Microsoft Intune, see the following resources:
-
-- [Microsoft Intune fundamentals](/training/paths/endpoint-manager-fundamentals)
-- [Modern management and security principles driving our Microsoft endpoint management vision](https://techcommunity.microsoft.com/t5/microsoft-endpoint-manager-blog/modern-management-and-security-principles-driving-our-microsoft/ba-p/946797?azure-portal=true)
+- [What is Microsoft Intune?](what-is-intune.md)
+- [Training path - Introduction to Microsoft Intune](/training/modules/intro-to-endpoint-manager)

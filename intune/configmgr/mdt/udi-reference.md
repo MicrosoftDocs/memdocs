@@ -1,17 +1,10 @@
 ---
 title: Toolkit reference - Microsoft Deployment Toolkit (MDT) UDI Reference
-titleSuffix: Microsoft Deployment Toolkit
 description: Reference details for Microsoft Deployment Toolkit (MDT) UDI Reference
 ms.date: 09/09/2016
 ms.subservice: mdt
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: frankroj,mstewart
 ---
 
 # UDI Reference
@@ -1424,7 +1417,7 @@ This task sequence variable specifies the password for the domain-based account 
 
 |**Example**|
 |-|
-|`OSDJoinPassword=P@ssw0rd10`|
+|`OSDJoinPassword=<complex_password>`|
 
 ### OSDLocalAdminPassword
 
@@ -1436,7 +1429,7 @@ This task sequence variable specifies the password for the Administrator local b
 
 |**Example**|
 |-|
-|`OSDLocalAdminPassword=P@ssw0rd10`|
+|`OSDLocalAdminPassword=<complex_password>`|
 
 ### OSDNetworkJoinType
 

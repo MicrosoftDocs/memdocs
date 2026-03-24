@@ -1,17 +1,10 @@
 ---
 title: Deploy content
-titleSuffix: Configuration Manager
 description: After you install distribution points for Configuration Manager, here's how you can begin to deploy content to them.
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Deploy and manage content for Configuration Manager

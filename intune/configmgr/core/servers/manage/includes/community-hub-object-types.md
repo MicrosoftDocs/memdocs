@@ -1,10 +1,6 @@
 ---
-author: banreet
-ms.author: banreetkaur
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 08/02/2021
-ms.localizationpriority: medium
 ---
 <!--This file is shared by the community-hub and community-hub-contribute .md files. Headings are context driven by the article-->
 - CMPivot queries

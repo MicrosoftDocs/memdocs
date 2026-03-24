@@ -1,18 +1,10 @@
 ---
 description: Learn how to create an XML file that describes an SmsFormData class using a Create Form XML for a Configuration Manager property sheet.
 title: Create Form XML for a Property Sheet
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: ce0a6939-840e-401c-9843-d5c94c00b9e6
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Create Form XML for a Configuration Manager Property Sheet
 In Configuration Manager, to create the form XML for a Configuration Manager property sheet, you create an XML file that describes an `SmsFormData`.
@@ -37,7 +29,7 @@ In Configuration Manager, to create the form XML for a Configuration Manager pro
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
-    <SmsFormData xmlns="http://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework" FormatVersion="1">
+    <SmsFormData xmlns="https://schemas.microsoft.com/SystemsManagementServer/2005/03/ConsoleFramework" FormatVersion="1">
       <Form Id="PROPERTYSHEETGUID" CustomData="SomeData" FormType="PropertySheet" ForceRefresh="true">
         <Assembly Name="ConfigMgrControl.dll" Namespace="Microsoft.ConfigurationManagement.AdminConsole.ConfigMgrPropertySheet" />
         <Pages>

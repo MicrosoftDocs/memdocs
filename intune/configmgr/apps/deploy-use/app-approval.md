@@ -1,17 +1,10 @@
 ---
 title: Approve applications
-titleSuffix: Configuration Manager
 description: Learn about the settings and behaviors for application approval in Configuration Manager.
 ms.date: 08/12/2022
-ms.subservice: app-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Approve applications in Configuration Manager
@@ -136,7 +129,10 @@ With these additional optional prerequisites, recipients can approve or deny the
 
 - Manually configure settings in Microsoft Entra ID:
 
-    1. Go to the [Azure portal](https://portal.azure.com) as a user with *Global Admin* permissions. Go to **Microsoft Entra ID**, and select **App registrations**.
+    1. Go to the [Azure portal](https://portal.azure.com) as a user with **Global Administrator** permissions. Go to **Microsoft Entra ID**, and select **App registrations**.
+
+        > [!IMPORTANT]
+        > [!INCLUDE [global-administrator](../../includes/global-administrator-configmgr.md)]
 
     1. Select the **Client** application created for Configuration Manager **Cloud Management** integration.
 

@@ -1,16 +1,9 @@
 ---
 title: Tenant attach - Resource explorer the admin center
-titleSuffix: Configuration Manager
 description: View hardware inventory for uploaded Configuration Manager devices using resource explorer in the admin center.
 ms.date: 07/11/2022
 ms.topic: how-to
 ms.subservice: core-infra
-ms.service: configuration-manager
-manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
-ms.localizationpriority: high
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

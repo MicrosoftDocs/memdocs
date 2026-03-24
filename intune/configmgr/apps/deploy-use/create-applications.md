@@ -1,17 +1,10 @@
 ---
 title: Create applications
-titleSuffix: Configuration Manager
 description: Create applications with deployment types, detection methods, and requirements to install software.
 ms.date: 10/01/2021
-ms.subservice: app-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Create applications in Configuration Manager

@@ -3,9 +3,9 @@ title: Migration guide to Microsoft Intune
 description: Deployment guide to set up, onboard, or move to Intune. These steps include moving from partner MDM providers, using co-management, moving from on-premises group policy, and moving from Office 365 device management.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 06/03/2025
+ms.date: 12/15/2025
 ms.topic: upgrade-and-migration-article
-ms.reviewer: dougeby
+ms.reviewer: jamiesil
 ms.collection:
 - M365-identity-device-management
 - highpri
@@ -31,8 +31,6 @@ Use this guide to determine the best migration approach, and get some guidance &
 > - [!INCLUDE [tips-guidance-plan-deploy-guides](../includes/tips-guidance-plan-deploy-guides.md)]
 >
 > - As a companion to this article, the Microsoft 365 admin center also has some setup guidance. The guide customizes your experience based on your environment. To access this deployment guide, go to the [Microsoft Intune setup guide in the Microsoft 365 admin center](https://go.microsoft.com/fwlink/?linkid=2224812), and sign in with the **Global Reader** (at a minimum). For more information on these deployment guides and the roles needed, go to [Advanced deployment guides for Microsoft 365 and Office 365 products](/microsoft-365/enterprise/setup-guides-for-microsoft-365).
->
->   To review best practices without signing in and activating the automated setup features, go to the [Microsoft 365 Setup portal](https://go.microsoft.com/fwlink/?linkid=2223058).
 
 ## Before you begin
 
@@ -239,9 +237,7 @@ Next, [Step 1: Set up Microsoft Intune](deployment-plan-setup.md).
 
 ## Currently use Microsoft 365 Basic Mobility and Security
 
-If you created and deployed Microsoft 365 Basic Mobility and Security policies, then you can migrate the users, groups, and policies to Microsoft Intune.
-
-For more information, go to [Migrate from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
+If you created and deployed Microsoft 365 Basic Mobility and Security policies, then see [Move from Microsoft 365 Basic Mobility and Security to Intune](migrate-to-intune.md).
 
 ## Tenant to tenant migration
 

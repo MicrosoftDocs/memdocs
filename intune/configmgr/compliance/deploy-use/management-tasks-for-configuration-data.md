@@ -1,17 +1,10 @@
 ---
 title: Manage configuration data
-titleSuffix: Configuration Manager
 description: After you create configuration items and baselines in Configuration Manager, you can use other commands to perform various actions.
 ms.date: 10/06/2016
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: article
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Manage configuration data in Configuration Manager
 

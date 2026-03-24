@@ -32,8 +32,6 @@ See the following visual guide for a summary of all enrollment options and featu
 Apps requiring user affinity, such as the Intune Company Portal app, aren't supported on Macs enrolled via direct enrollment. The Company Portal app isn't used, needed, or supported for enrollments without user affinity. Be sure device users don't install the Company Portal app from the Apple App Store on enrolled devices.
 
 ## Certificates
->[!IMPORTANT]
-> Downloading the ACME profile is not supported at this time and will result in an error. Download the SCEP profile for all devices only until we fix this problem and restore support.
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 
@@ -49,7 +47,14 @@ Devices that are already enrolled in Intune do not get an ACME certificate unles
 - [An Apple MDM push certificate](apple-mdm-push-certificate-get.md).
 - Administrator rights on the Macs you're enrolling.
 
-If the Mac you're setting up is enrolled in another MDM provider, you must unenroll it before you can enroll it in Intune. Also, make sure that you don't have a device platform restriction targeted at iOS/iPadOS devices, because it will cause the enrollment profile to fail on enrolling Macs.
+If the Mac you're setting up is enrolled in another MDM provider, you must unenroll it before you can enroll it in Intune. 
+
+  > [!NOTE]
+  > This enrollment method doesn't support device enrollment restrictions. Make sure you don't have device platform restrictions targeted at any Apple devices, because it will cause the enrollment profile download to fail. In this scenario, admins might see the following error during enrollment:  
+> 
+> **File download error. Failed to dynamically fetch target download uri.**
+> 
+> Additionally, if an enrollment profile is downloaded before a restriction is configured and then used after the restriction is enabled, enrollment will fail.
 
 ## Step 1: Create enrollment profile
 

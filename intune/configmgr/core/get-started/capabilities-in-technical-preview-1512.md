@@ -1,18 +1,11 @@
 ---
 title: Capabilities in Technical Preview 1512
-titleSuffix: Configuration Manager
 description: Learn about features available in the Technical Preview for Configuration Manager, version 1512.
 ms.date: 01/23/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
 ROBOTS: NOINDEX
-manager: apoorvseth
-ms.author: banreetkaur
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Capabilities in Technical Preview 1512 for Configuration Manager
 

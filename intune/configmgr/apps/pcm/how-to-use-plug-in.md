@@ -1,18 +1,11 @@
 ---
 title: How to use the conversion plug-in
-titleSuffix: Configuration Manager
 description: Use the Package Conversion Manager plug-in to customize the analysis and conversion processes.
 ms.date: 08/24/2018
-ms.subservice: app-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
 ROBOTS: NOINDEX
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to use the Package Conversion Manager plug-in

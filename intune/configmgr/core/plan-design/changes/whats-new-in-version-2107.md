@@ -1,17 +1,10 @@
 ---
 title: What's new in version 2107
-titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2107 of Configuration Manager current branch.
 ms.date: 10/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in version 2107 of Configuration Manager current branch
@@ -36,7 +29,7 @@ The Microsoft Intune family of products is an integrated solution for managing a
 
 - [Tenant attach](../../../tenant-attach/device-sync-actions.md)
 - [Co-management](../../../comanage/overview.md)
-- [Endpoint analytics](../../../../analytics/enroll-configmgr.md)
+- [Endpoint analytics](../../../../endpoint-analytics/configure.md?pivots=cm)
 
 For more information, see [Install in-console updates](../../servers/manage/install-in-console-updates.md).
 
@@ -89,7 +82,7 @@ For more information, see [Microsoft Intune tenant attach: Prerequisites](../../
 <!--10158821, 10115058-->
 To better reflect the other cloud services that Configuration Manager offers, the **Co-management** node has been renamed to the **Cloud Attach** node. Other changes you may notice include the ribbon button being renamed from **Configure Co-management**  to **Configure Cloud Attach** and the **Co-management Configuration Wizard** was renamed to **Cloud Attach Configuration Wizard**.
 
-For more information, see [Co-management](../../../comanage/overview.md), [Tenant attach](../../../tenant-attach/device-sync-actions.md), and [Endpoint analytics](../../../../analytics/enroll-configmgr.md).
+For more information, see [Co-management](../../../comanage/overview.md), [Tenant attach](../../../tenant-attach/device-sync-actions.md), and [Endpoint analytics](../../../../endpoint-analytics/configure.md?pivots=cm).
 
 ## Desktop Analytics
 

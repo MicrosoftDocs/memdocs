@@ -1,18 +1,10 @@
 ---
 description: Learn how to delete all members, that is, resources and discovery data, for a collection using the DeleteAllMembers class method.
 title: DeleteAllMembers Method
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ae1b7baf-751d-49ab-9188-72d1816cd852
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # DeleteAllMembers Method in Class SMS_Collection
 The `DeleteAllMembers` Windows Management Instrumentation (WMI) class method, in Configuration Manager, deletes all members, that is, resources and discovery data, for the collection.

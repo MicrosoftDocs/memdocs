@@ -1,11 +1,6 @@
 ---
 title: Understand compliance in Configuration Manager
-author: dougeby
-ms.author: dougeby
-manager: dougeby
-audience: ITPro
 ms.topic: concept-article
-ms.service: configuration-manager
 ms.collection: 
  - tier1
  - essentials-compliance

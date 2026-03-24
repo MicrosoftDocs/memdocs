@@ -86,37 +86,35 @@ items:
 - name: Endpoint analytics
   items:
   - name: Endpoint analytics overview
-    href: ../../analytics/index.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+    href: ../../endpoint-analytics/index.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Scores, baselines, and insights
-    href: ../../analytics/scores.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+    href: ../../endpoint-analytics/scores.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Enable Endpoint analytics
     items:
     - name: Enroll Intune devices
-      href: ../../analytics/enroll-intune.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/configure.md?pivots=cm?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Enroll Configuration Manager devices
-      href: ../../analytics/enroll-configmgr.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/configure.md?pivots=cm?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Use Endpoint analytics
     items:
     - name: Startup performance
-      href: ../../analytics/startup-performance.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
-    - name: Restart frequency
-      href: ../../analytics/restart-frequency.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/startup-performance.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Application reliability
-      href: ../../analytics/app-reliability.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/app-reliability.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Work from anywhere
-      href: ../../analytics/work-from-anywhere.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/work-from-anywhere.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Endpoint analytics in Microsoft Adoption Score
-      href: ../../analytics/adoption-score.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/adoption-score.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Endpoint analytics settings
-      href: ../../analytics/settings.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/configure.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
   - name: Reference for Endpoint analytics
     items:
     - name: Data collection
-      href: ../../analytics/data-collection.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/data-collection.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Troubleshoot
-      href: ../../analytics/troubleshoot.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/troubleshoot.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
     - name: Get support
-      href: ../../analytics/get-support.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
+      href: ../../endpoint-analytics/get-support.md?toc=/intune/configmgr/cloud-attach/toc.json&bc=/intune/configmgr/cloud-attach/breadcrumb/toc.json
 - name: Co-management
   items:
   - name: Co-management overview

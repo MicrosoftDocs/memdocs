@@ -1,16 +1,9 @@
 ---
 title: Prepare site system roles for OSD
-titleSuffix: Configuration Manager
 description: Configure the site system roles before you deploy operating systems in Configuration Manager.
 ms.date: 10/01/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: install-set-up-deploy
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -77,7 +70,7 @@ To customize the RamDisk TFTP window size, add the following registry key on PXE
 
 #### Modify the RamDisk TFTP block size
 
-To customize the RamDisk TFTP window size, add the following registry key on PXE-enabled distribution points:
+To customize the RamDisk TFTP block size, add the following registry key on PXE-enabled distribution points:
 
 - **Location**: `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\SMS\DP`
 - **Name**: RamDiskTFTPBlockSize

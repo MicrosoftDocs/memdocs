@@ -5,7 +5,7 @@ author: lenewsad
 ms.author: lanewsad
 ms.date: 08/21/2024
 ms.topic: install-set-up-deploy
-ms.reviewer: dougeby
+ms.reviewer: acabello
 ms.collection:
 - M365-identity-device-management
 ---
@@ -21,7 +21,7 @@ For each section in this guide, review the associated tasks. Some tasks are requ
  Complete the following prerequisites to enable your tenant's endpoint management capabilities:
 
 * [Add users](users-add.md) and [groups](groups-add.md)
-* [Assign licenses to users](licenses-assign.md)
+* [Assign licenses to users](../../fundamentals/licensing/assign-licenses.md)
 * [Set mobile device management authority](mdm-authority-set.md)
 
 We recommend you use the least privileged role that's needed to complete tasks. For example, the least privileged role that can complete device enrollment tasks is the built-in **Policy and Profile Manager** Intune role.

@@ -1,7 +1,7 @@
 ---
 title: Overview of Apple device enrollment in Microsoft Intune
 description: Utilize Apple device enrollment to enroll and manage user-owned iOS/iPadOS devices in Microsoft Intune.
-ms.date: 01/14/2025
+ms.date: 12/08/2025
 ms.topic: concept-article
 ms.reviewer: rishitasarin
 ms.collection:
@@ -17,12 +17,9 @@ Device enrollment supports an app based enrollment experience and web based enro
 * **Device enrollment with Company Portal**
 * **Web based device enrollment**
 
-Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** and select **Enrollment types**.
+Create an enrollment profile in the admin center to select and configure enrollment types. Go to **Devices** > **By platform** > **iOS/iPadOS** > **Device onboarding** > **Enrollment** and select **Enrollment types**.  
 
-> [!TIP]
-> We recommend enabling web-based enrollment for devices running iOS/iPadOS 15 and later because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment.
-
-Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Microsoft Entra registration within the employee's work apps and reduce the number of times they have to authenticate. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration). You aren't required to use JIT registration with web-based enrollment but we recommend using it to make the enrollment experience faster and easier for your employees and students.
+Web-based enrollment utilizes just in time (JIT) registration with the Apple single sign-on (SSO) extension to facilitate Microsoft Entra registration within the employee's work apps and reduce the number of times they have to authenticate. We recommend web enrollment using JIT registration with SSO as the most secure enrollment method for device attestation. We also recommend enabling web-based enrollment for devices because it doesn't require employees and students to install the Company Portal app. Post-enrollment functionality remains the same as with app-based enrollment. To enable JIT registration in enrollments, [create a device configuration profile with an SSO app extension policy](web-based-device-enrollment-ios.md#step-1-set-up-just-in-time-registration).   
 
 The following table provides details about app and web-based enrollment.
 
@@ -43,8 +40,8 @@ Microsoft Intune supports a subset of device management options for devices enro
 
 <!-- P2 For supported settings in Intune device configurations profiles, see:
 
-   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-ios.md)
-   * [iOS and iPadOS device features](../configuration/ios-device-features-settings.md)
+   * [iOS and iPadOS device restrictions](../configuration/device-restrictions-apple.md)
+   * [iOS and iPadOS device features](../configuration/device-features-apple.md)
    * List others.... -->
 
 ## User experience
@@ -61,9 +58,6 @@ Employees and students can access management options for their personal devices 
 For more information about how employees and students can access these actions in the web version, see [Using the Intune Company Portal website](../user-help/using-the-intune-company-portal-website.md).
 
 ## Certificates
-
->[!NOTE]
-> The [ACME certificate](../fundamentals/whats-new-archive.md#acme-protocol-support-for-iosipados-and-macos-enrollment) phased rollout for new eligible enrollments has been paused. New enrollments are using the SCEP certificate like before with no changes to the end user experience.
 
 This enrollment type supports the Automated Certificate Management Environment (ACME) protocol. When new devices enroll, the management profile from Intune receives an ACME certificate. The ACME protocol provides better protection than the SCEP protocol against unauthorized certificate issuance through robust validation mechanisms and automated processes, which helps reduce errors in certificate management.
 

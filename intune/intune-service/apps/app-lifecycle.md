@@ -1,7 +1,7 @@
 ---
 title: Overview of the App Lifecycle for Microsoft Intune
 description: Learn about the managed apps lifecycle in Microsoft Intune. The app lifecycle involves adding, deploying, configuring, protecting, and retiring apps.
-ms.date: 11/18/2024
+ms.date: 11/18/2025
 ms.topic: concept-article
 ms.reviewer: bryanke
 ms.custom: apps; get-started
@@ -28,7 +28,7 @@ After you've added the app to Intune, you can then [assign it to users and devic
 As part of the app lifecycle, new versions of apps are regularly released. Intune provides tools to easily [update apps](apps-add.md) that you have deployed to a newer version. Additionally, you can configure extra functionality for some apps, for example:
 
 - [iOS/iPadOS app configuration policies](app-configuration-policies-use-ios.md) supply settings for compatible iOS/iPadOS apps that are used when the app is run. For example, an app might require specific branding settings or the name of a server to which it must connect.
-- [Managed browser policies](manage-microsoft-edge.md) help you to configure settings for the [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), which replaces the default device browser and lets you restrict the websites that your users can visit.
+- [Microsoft Edge management policies](manage-microsoft-edge.md) help you configure settings for [Microsoft Edge](apps-supported-intune-apps.md#microsoft-apps), which replaces the default device browser and lets you restrict the websites that your users can visit.
 
 ## Protect
 

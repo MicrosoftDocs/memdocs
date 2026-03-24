@@ -1,18 +1,10 @@
 ---
 title: SetAllUpdatesUserExperience Method
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the SetAllUpdatesUserExperience WMI class method sets the user experience mode that determines how software updates are displayed on a target computer.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: f9bddc84-7410-4c26-8448-e019ad5d4d5b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SetAllUpdatesUserExperience Method in Class CCM_SoftwareUpdatesManager
 The `SetAllUpdatesUserExperience` WMI class method, in Configuration Manager, sets the user experience mode that determines how software updates are displayed on a target computer.

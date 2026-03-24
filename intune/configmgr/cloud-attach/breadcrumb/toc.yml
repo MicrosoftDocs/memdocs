@@ -35,11 +35,11 @@ items:
       topicHref: /intune/
       items:
       - name: Configuration Manager
-        tocHref: /intune/analytics/
+        tocHref: /intune/endpoint-analytics/
         topicHref: /intune/configmgr/index
         items:
         - name: Cloud attach
-          tocHref: /intune/analytics/
+          tocHref: /intune/endpoint-analytics/
           topicHref: /intune/configmgr/cloud-attach/index
 
 - name: Docs

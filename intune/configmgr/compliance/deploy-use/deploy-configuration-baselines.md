@@ -1,17 +1,10 @@
 ---
 title: Deploy configuration baselines
-titleSuffix: Configuration Manager
 description: Deploy configuration baselines to define configuration baseline deployments and to add or remove configuration baselines from deployments.
 ms.date: 10/06/2016
-ms.service: configuration-manager
 ms.subservice: compliance
 ms.topic: install-set-up-deploy
-author: LauraWi
-manager: apoorvseth
-ms.author: laurawi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to deploy configuration baselines in Configuration Manager
 

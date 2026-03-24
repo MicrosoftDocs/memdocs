@@ -1,9 +1,7 @@
 ---
 title: Kiosk settings for Windows and Holographic devices in Microsoft Intune
 description: Configure your Windows 10/11 and Windows Holographic for Business devices as single-app and multi-app kiosks, customize the start menu, add apps, show the task bar, and configure a web browser in Microsoft Intune.
-author: MandiOhlinger
-ms.author: mandia
-ms.date: 06/25/2024
+ms.date: 02/10/2026
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.collection:
@@ -25,7 +23,7 @@ To create kiosk profiles for other platforms, go to:
 
 - [Android device administrator](device-restrictions-android.md#kiosk)
 - [Android Enterprise](device-restrictions-android-for-work.md) (Device experience)
-- [iOS/iPadOS](device-restrictions-ios.md#kiosk)
+- [iOS/iPadOS](device-restrictions-apple.md)
 
 Intune supports one kiosk profile per device. If you need multiple kiosk profiles on a single device, you can use a [Custom OMA-URI](custom-settings-windows-10.md).
 

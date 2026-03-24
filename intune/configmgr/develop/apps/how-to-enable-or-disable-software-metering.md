@@ -1,18 +1,10 @@
 ---
 title: Enable or Disable Software Metering
-titleSuffix: Configuration Manager
 description: Enable or disable the Software Metering Client Agent by modifying the site control file settings.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 8e706653-7627-4cd9-853d-3690be0d567b
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Enable or Disable Software Metering
 You enable or disable the Software Metering Client Agent, in Configuration Manager, by modifying the site control file settings.

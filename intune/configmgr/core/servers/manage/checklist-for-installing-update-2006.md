@@ -1,18 +1,11 @@
 ---
 title: Checklist for 2006
-titleSuffix: Configuration Manager
 description: Learn about actions to take before updating to Configuration Manager version 2006.
 ms.date: 08/31/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: checklist
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Checklist for installing update 2006 for Configuration Manager

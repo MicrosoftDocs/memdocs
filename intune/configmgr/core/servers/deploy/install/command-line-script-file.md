@@ -1,17 +1,10 @@
 ---
 title: Unattended setup script file keys
-titleSuffix: Configuration Manager
 description: Specify the keys and values in the INI installation script file for an unattended setup of Configuration Manager.
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Unattended setup script file keys

@@ -1,17 +1,10 @@
 ---
 title: Client installation parameters and properties
-titleSuffix: Configuration Manager
 description: Learn about the ccmsetup command-line parameters and properties for installing the Configuration Manager client.
 ms.date: 04/05/2022
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About client installation parameters and properties in Configuration Manager
@@ -355,12 +348,12 @@ Specifies the Microsoft Entra tenant identifier. Configuration Manager links to 
 
 - On a device that runs Windows 10 or later and is joined to the same Microsoft Entra tenant, open a command prompt.
 - Run the following command: `dsregcmd.exe /status`
-- In the Device State section, find the **TenantId** value. For example, `TenantId : 607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
+- In the Device State section, find the **TenantId** value. For example, `TenantId : aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
   > [!NOTE]
   > An Azure administrator can also obtain this value in the Azure portal. For more information, see [get tenant ID](/azure/active-directory/develop/howto-create-service-principal-portal#get-values-for-signing-in).
 
-Example: `ccmsetup.exe AADTENANTID=607b7853-6f6f-4d5d-b3d4-811c33fdd49a`
+Example: `ccmsetup.exe AADTENANTID=aaaabbbb-0000-cccc-1111-dddd2222eeee`
 
 <!--
 ### AADTENANTNAME

@@ -1,16 +1,9 @@
 ---
 title: How to use task sequence variables
-titleSuffix: Configuration Manager
 description: Learn about how to use the variables in a Configuration Manager task sequence.
 ms.date: 04/05/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

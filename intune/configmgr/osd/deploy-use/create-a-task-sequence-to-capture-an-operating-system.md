@@ -1,16 +1,9 @@
 ---
 title: Create a task sequence to capture an OS
-titleSuffix: Configuration Manager
 description: A build-and-capture task sequence builds a reference computer that can include specific drivers and software updates along with the OS.
 ms.date: 11/29/2019
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

@@ -1,16 +1,9 @@
 ---
 title: Download software updates
-titleSuffix: Configuration Manager
 description: Use the Download Software Updates Wizard to download software updates and distribute them to distribution points so they are ready to deploy to clients.
 ms.date: 03/20/2023
 ms.topic: how-to
-ms.service: configuration-manager
 ms.subservice: software-updates
-manager: apoorvseth
-author: LauraWi
-ms.author: laurawi
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

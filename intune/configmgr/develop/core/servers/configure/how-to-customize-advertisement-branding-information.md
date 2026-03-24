@@ -1,18 +1,10 @@
 ---
 title: Customize Advertisement Branding Information
-titleSuffix: Configuration Manager
 description: You set the software distribution branding information for the Configuration Manager client by changing the SWDBrandingSubTitle property of the client agent component section in the site control file.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 536e192b-2a77-4542-950f-e05b04074e41
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Customize Advertisement Branding Information in Configuration Manager
 You set the software distribution branding information for the Configuration Manager client by changing the `SWDBrandingSubTitle` property of the client agent component section in the site control file.

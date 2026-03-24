@@ -23,7 +23,7 @@ Before you can deploy, configure, monitor, or protect apps, you must add them to
 
 ## Prerequisites
 
-- Windows 10 version 1709 or later.
+- A [supported Windows version](../fundamentals/supported-devices-browsers.md)
 - Any pre-installed versions of Microsoft Edge *version 77 and later* for all channels in user context will be overwritten with Edge installed in system context.
 
 ## Configure the app in Intune

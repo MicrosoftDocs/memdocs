@@ -1,10 +1,6 @@
 ---
-author: banreet
-ms.author: banreetkaur
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 04/08/2022
-ms.localizationpriority: medium
 ---
 <!--This file is shared by the community-hub and community-hub-extensions.md files for 8516139. H2s/H3s are driven by the article-->
 

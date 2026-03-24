@@ -1,17 +1,10 @@
 ---
 title: Troubleshooting dashboard
-titleSuffix: Configuration Manager
 description: Use a dashboard in the console to view information about the software update health status of clients in your environment.
 ms.date: 04/04/2024
-ms.subservice: client-mgt
-ms.service: configuration-manager
-ms.topic: conceptual
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
+ms.subservice: core-infra
+ms.topic: article
 ms.collection: tier3
-ms.reviewer: mstewart
 ms.topicc: troubleshooting-general
 ---
 

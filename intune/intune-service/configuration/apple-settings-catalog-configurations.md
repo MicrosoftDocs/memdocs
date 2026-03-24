@@ -117,7 +117,7 @@ Use the Software Update configuration to enforce an update to install at a speci
 
 | Apple Platform Guides | Apple Developer | Apple YAML | Intune documentation
 | -------  | ------- | ------- | ------- |
-| <ul><li>[Software Update declarative configuration](https://support.apple.com/guide/deployment/depca14ecd4d/1/web/1.0)</li><li>[Installing and enforcing software updates](https://support.apple.com/guide/deployment/depd30715cbb/web)</li></ul>| [Software Update Enforcement Specific](https://developer.apple.com/documentation/devicemanagement/softwareupdateenforcementspecific)| [Software Update Enforcement Specific](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/softwareupdate.enforcement.specific.yaml)| [Use the settings catalog to configure managed software updates](../protect/updates/apple.md) |
+| <ul><li>[Software Update declarative configuration](https://support.apple.com/guide/deployment/depca14ecd4d/1/web/1.0)</li><li>[Installing and enforcing software updates](https://support.apple.com/guide/deployment/depd30715cbb/web)</li></ul>| [Software Update Enforcement Specific](https://developer.apple.com/documentation/devicemanagement/softwareupdateenforcementspecific)| [Software Update Enforcement Specific](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/softwareupdate.enforcement.specific.yaml)| [Use the settings catalog to configure managed software updates](../../device-updates/apple/index.md) |
 
 **Known issues**
 
@@ -129,7 +129,7 @@ Use the Software Update Settings configuration to defer OS updates and control h
 
 |Apple Platform Guides|Apple Developer|Apple YAML|Intune documentation|
 | -------- | -------- | -------- | -------- |
-|[Software Update Settings declarative configuration](https://support.apple.com/en-tm/guide/deployment/dep0578d8b8a/web)|[Software Update Settings](https://developer.apple.com/documentation/devicemanagement/softwareupdatesettings)|[Software Update Settings](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/softwareupdate.settings.yaml)|[Use the settings catalog to configure managed software updates](../protect/updates/apple.md)|
+|[Software Update Settings declarative configuration](https://support.apple.com/en-tm/guide/deployment/dep0578d8b8a/web)|[Software Update Settings](https://developer.apple.com/documentation/devicemanagement/softwareupdatesettings)|[Software Update Settings](https://github.com/apple/device-management/blob/release/declarative/declarations/configurations/softwareupdate.settings.yaml)|[Use the settings catalog to configure managed software updates](../../device-updates/apple/index.md)|
 
 **Known issues**
 

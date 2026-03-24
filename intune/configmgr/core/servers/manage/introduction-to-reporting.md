@@ -1,17 +1,10 @@
 ---
 title: Introduction to reporting
-titleSuffix: Configuration Manager
 description: Learn about the set of tools and resources available to you for managing reporting in Configuration Manager.
 ms.date: 04/05/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: overview
-manager: apoorvseth
-ms.author: laurawi
-author: LauraWi
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Introduction to reporting in Configuration Manager

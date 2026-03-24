@@ -3,7 +3,7 @@ title: Frequently asked questions for Endpoint Privilege Management
 description: A list of frequently asked questions for customers deploying Microsoft Intune Endpoint Privilege Management
 author: brenduns
 ms.author: brenduns
-ms.date: 09/10/2025
+ms.date: 1/26/2026
 ms.topic: how-to
 ms.reviewer: mikedano
 ms.subservice: suite
@@ -23,11 +23,12 @@ The following sections of this article discuss frequently asked questions for En
 
 ## Frequently asked questions
 
-### Why is my virtual device not onboarding to Endpoint Privilege Management?
+### Is my virtual device supported for onboarding to Endpoint Privilege Management?
 
-Currently, Endpoint Privilege Management isn't supported with Azure Virtual Desktop. This issue will be fixed in future release.
+Endpoint Privilege Management is supported with the following virtual devices:
 
-Support for Windows 365 was added in September 2023.
+- Azure Virtual Desktop single-session virtual machines (VMs), added in January 2026.
+- Windows 365, added in September 2023.
 
 ### Why is my elevation settings policy showing error/not applicable?
 
@@ -35,7 +36,7 @@ The elevation settings policy controls the enablement of EPM and the configurati
 
 ### What happens when someone with administrative privileges uses a device that is enabled for EPM?
 
-Endpoint Privilege Management doesn't manage elevation requests by users that have administrative permissions on a device. If an administrator launches a file with a matching elevation rule, the application launches as it normally does for the administrator and will be reported as an unmanaged elevation.
+Endpoint Privilege Management doesn't manage elevation requests by users that have administrative permissions on a device. If an administrator launches a file with a matching elevation rule, the application launches as it normally does for the administrator and is reported as an unmanaged elevation.
 
 ### What files can be elevated to administrator?
 

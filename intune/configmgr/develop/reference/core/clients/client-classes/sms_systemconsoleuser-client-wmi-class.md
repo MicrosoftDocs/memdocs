@@ -1,18 +1,10 @@
 ---
 description: The SMS_SystemConsoleUser class is a client Windows Management Instrumentation class, in Configuration Manager, that defines usage data about users, based on the Windows security event log.
 title: SMS_SystemConsoleUser Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 9b5f27fc-e2e4-4c4e-8b30-f84293b886be
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SystemConsoleUser Client WMI Class
 The `SMS_SystemConsoleUser` class is a client Windows Management Instrumentation (WMI) class, in Configuration Manager, that defines usage data about users, based on the Windows security event log.

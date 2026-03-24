@@ -1,18 +1,10 @@
 ---
 title: "ICCMEvent::RawEvent Property"
-titleSuffix: Configuration Manager
 description: "In Configuration Manager, ICcmEvent::RawEvent is a read-only property that indicates information to add to a raw event."
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 4e952869-2e3f-45c8-a259-12898f5373f0
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # ICCMEvent::RawEvent Property
 `ICcmEvent::RawEvent` is a read-only property in Configuration Manager that indicates information to add to a raw event.

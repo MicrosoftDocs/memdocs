@@ -1,18 +1,10 @@
 ---
 description: Learn how to use WBEMTEST, a useful tool for working with WMI/WBEM immediately available on most systems.
 title: Introduction to WBEMTEST
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 1a627513-494d-4e82-92e4-b3689c9ecf50
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Introduction to WBEMTEST
 If you spend much time around Configuration Manager, you become aware that much of it runs through WMI.  WMI is "Windows Management Instrumentation" and is Microsoft's implementation of an Internet standard called Web Based Enterprise Management (WBEM).

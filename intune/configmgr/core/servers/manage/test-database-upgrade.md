@@ -1,17 +1,10 @@
 ---
 title: Test database update
-titleSuffix: Configuration Manager
 description: Test upgrade the site database when installing updates for Configuration Manager.
 ms.date: 02/16/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Test the database upgrade when installing an update

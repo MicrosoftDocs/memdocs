@@ -13,19 +13,14 @@ ms.collection:
 
 # Intune Management Extension for Windows
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 The Intune Management Extension (IME) is an installer agent that enhances Windows device management (MDM). It supplements the standard Windows MDM feature by enabling advanced device management capabilities.
 
 > [!NOTE]
 > For details about PowerShell scripts, see [Use PowerShell scripts on Windows devices in Intune](../apps/powershell-scripts.md).
 
-> [!IMPORTANT]
-> To support expanded functionality and bug fixes, use .NET Framework 4.7.2 or later with the Intune Management Extension on Windows clients. If a Windows client uses an earlier version of the .NET Framework, the Intune Management Extension still functions. The .NET Framework 4.7.2 is available from Windows Update as of July 10, 2018, and is included in Windows 10 version 1809 (RS5) and later. Multiple versions of the .NET Framework can coexist on a device.
-
 This feature applies to:
 
-- Windows 10 and later (excluding Windows Home and Windows devices running in S mode).
+- [Supported Windows versions](../fundamentals/supported-devices-browsers.md) (excluding Windows Home and Windows devices running in S mode).
 
 > [!NOTE]
 > After the Intune management extension prerequisites are met, the extension installs automatically when you assign any of the following to the user or device:
@@ -42,7 +37,7 @@ This feature applies to:
 
 The Intune management extension has the following prerequisites. When the prerequisites are met, the Intune management extension installs automatically when a PowerShell script or Win32 app is assigned to the user or device.
 
-- Devices running Windows 10 version 1607 or later. If the device is enrolled using [automatic enrollment](../enrollment/windows-bulk-enroll.md), it must run Windows 10 version 1709 or later. The Intune management extension doesn't support Windows in S mode because S mode doesn't allow running nonstore apps.
+- Devices running a [supported Windows version](../fundamentals/supported-devices-browsers.md). The Intune management extension doesn't support Windows in S mode because S mode doesn't allow running nonstore apps.
 
 - Devices joined to Microsoft Entra ID, including:
 
@@ -62,7 +57,7 @@ The Intune management extension has the following prerequisites. When the prereq
 
     - Users sign in to the device using their Microsoft Entra account and then enroll in Intune.
 
-  - Co-managed devices using Configuration Manager and Intune. When installing Win32 apps, set the **Apps** workload to **Pilot Intune** or **Intune**. PowerShell scripts run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension deploys to a device when you target a PowerShell script to the device. The device must be Microsoft Entra ID or Microsoft Entra hybrid joined and run Windows 10 version 1607 or later. See the following articles for guidance:
+  - Co-managed devices using Configuration Manager and Intune. When installing Win32 apps, set the **Apps** workload to **Pilot Intune** or **Intune**. PowerShell scripts run even if the **Apps** workload is set to **Configuration Manager**. The Intune management extension deploys to a device when you target a PowerShell script to the device. The device must be Microsoft Entra ID or Microsoft Entra hybrid joined and running a [supported Windows version](../fundamentals/supported-devices-browsers.md). See the following articles for guidance:
 
     - [What is co-management](/configmgr/comanage/overview)
     - [Client apps workload](/configmgr/comanage/workloads#client-apps)
@@ -71,7 +66,7 @@ The Intune management extension has the following prerequisites. When the prereq
 - For devices behind firewalls and proxy servers, enable communication for Intune. For more information, see [Network requirements for PowerShell scripts and Win32 apps](../fundamentals/intune-endpoints.md).
 
 > [!NOTE]
-> For details about using Windows 10 or Windows 11 virtual machines, see [Using Windows 10 virtual machines with Microsoft Intune](../fundamentals/windows-10-virtual-machines.md).
+> For details about using Windows virtual machines, see [Using Windows virtual machines with Microsoft Intune](../fundamentals/windows-10-virtual-machines.md).
 
 ## Understand Intune management extension agent installation
 
@@ -81,7 +76,7 @@ For devices meeting the prerequisites, the Intune management extension installs 
 - [Remediations](../fundamentals/remediations.md)
 - [Discovery scripts for custom compliance](../protect/compliance-custom-script.md)
 - [Win32 apps](../apps/apps-win32-add.md)
-- [Endpoint analytics](../../analytics/settings.md)
+- [Endpoint analytics](../../endpoint-analytics/index.md)
 - [Remote Help](../fundamentals/remote-help-windows.md)
 - [Managed Installers in Intune](../protect/endpoint-security-app-control-policy.md)
 - [Update Windows BIOS using configuration MDM policy](../configuration/bios-configuration.md)
@@ -104,13 +99,13 @@ On a Windows device with the IME installed, open **Company Portal**, select **Se
 Alternatively, open **Task Manager**, find the service **IntuneManagementExtension**, right-click, and select **Restart**. The `IntuneManagementExtension` service restarts immediately, initiating a check-in with Intune.
 
 > [!NOTE]
-> The **Sync** actions from either the **Settings** app (Windows 10 or later) or **Devices** in Microsoft Intune admin center initiate an MDM check-in but don't force an IME check-in.
+> The **Sync** actions from either the **Settings** app or **Devices** in Microsoft Intune admin center initiate an MDM check-in but don't force an IME check-in.
 
 ### Intune management extension removal
 
 The IME is removed from the device under the following conditions:
 
-- Shell scripts are no longer assigned to the device.
+- PowerShell scripts are no longer assigned to the device.
 - The Windows device is no longer managed.
 - The IME is in an irrecoverable state for over 24 hours (device-awake time).
 
@@ -136,11 +131,32 @@ To check if the device is automatically enrolled:
 
 [Enable Windows automatic enrollment](../enrollment/windows-enroll.md#enable-windows-automatic-enrollment) includes the steps to configure automatic enrollment in Intune.
 
+### Issue: Microsoft Intune Windows Agent app gets automatically disabled
+
+Microsoft Intune Windows Agent is a Microsoft Entra ID app. The IME agent uses the Microsoft Intune Windows Agent app to authenticate against the gateway to get other apps, scripts, and other critical payloads. This application isn't linked to any subscription-based lifecycle flow.
+
+Under some conditions, the Microsoft Intune Windows Agent app can fail subscription validity checks and get continuously disabled, even when the admin re-enables the app. When disabled, the IME agent can't retrieve tokens against the Microsoft Intune Windows Agent application and user targetted payloads stop working.
+
+**Possible resolution**:
+
+Delete the service principal from your organization tenant using Microsoft Graph API, preferably through Graph Explorer:
+
+1. Sign in to [Graph Explorer](https://developer.microsoft.com/graph/graph-explorer) using an organization admin account that can delete service principals, like the **[Application Administrator](/entra/identity/role-based-access-control/permissions-reference#application-administrator)** role. Make sure the top-right corner shows your tenant name, not "sample tenant".
+
+    For a list of Microsoft Entra built-in roles, and what they can do, see [Microsoft Entra built-in roles](/entra/identity/role-based-access-control/permissions-reference).
+
+2. Select **API Explorer** > `servicePrincipals` > `{servicePrincipal-id}` > `DELETE`.
+3. In the Graph URL syntax, replace `{servicePrincipal-id}` with the ID of the service principal.
+4. Select **Run Query** to execute the deletion.
+
+> [!NOTE]
+> These steps should be completed by someone who is familiar with Graph Explorer. To learn more about Graph Explorer, see [Use Graph Explorer to try Microsoft Graph APIs](/graph/graph-explorer/graph-explorer-overview).
+
 ## Intune management extension logs
 
 IME logs on the client machine are typically in `C:\ProgramData\Microsoft\IntuneManagementExtension\Logs`. Use [CMTrace.exe](/configmgr/core/support/cmtrace) to view these log files.
 
-![Screenshot or sample cmtrace agent logs in Microsoft Intune](./media/apps-win32-app-management/apps-win32-app-10.png)
+:::image type="content" source="media/intune-management-extension/image.png" alt-text="Screenshot showing Intune Management Extension log files in CMTrace.":::
 
 Also, use the log file *AppWorkload.log* to troubleshoot and analyze Win32 app management events on the client. This log file contains all logging information related to app deployment activities conducted by the IME.
 

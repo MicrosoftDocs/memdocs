@@ -173,7 +173,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Tenant status." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-12.png":::
 
-    For more information, see [Intune Tenant Status](tenant-status.md).
+    For more information, see [Intune Tenant Status](../../governance/tenant-status.md).
 
 13. From the navigation pane, select **Troubleshooting + support** > **Troubleshoot** to check status details on a specific user or devices.
 
@@ -206,7 +206,7 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     To create a support ticket, your account must be assigned an [administrator role in Microsoft Entra](/entra/identity/role-based-access-control) with sufficient permissions. To adhere to the principles of least privileged access, Microsoft recommends assigning the [**Service support administrator**](/entra/identity/role-based-access-control/delegate-by-task) role to your administrators who create Intune support tickets, which is the least privileged Microsoft Entra role that can create support tickets.
 
-    For more information, see [How to get support in Microsoft Intune](../../get-support.md).
+    For more information, see [How to get support in Microsoft Intune](../../fundamentals/it-pro-support/get-support-admin-center.md).
 
 15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
 

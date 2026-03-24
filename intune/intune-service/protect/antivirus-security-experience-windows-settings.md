@@ -1,5 +1,5 @@
 ---
-title: Antivirus policy settings for Windows Security experience policy for Microsoft Intune | Microsoft Docs
+title: Antivirus policy settings for Windows Security experience policy for Microsoft Intune
 description: Endpoint security Antivirus policy settings for the Windows Security app in Microsoft Intune
 author: brenduns
 ms.author: brenduns

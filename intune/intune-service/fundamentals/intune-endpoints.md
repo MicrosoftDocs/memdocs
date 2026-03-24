@@ -3,7 +3,7 @@ title: Network endpoints for Microsoft Intune
 description: Review endpoints for Intune. This page lists IP addresses and port settings needed for proxy settings in your Intune deployments.
 author: brenduns
 ms.author: brenduns
-ms.date: 08/21/2025
+ms.date: 03/05/2026
 ms.topic: reference
 ms.reviewer: angrobe
 ms.collection:
@@ -67,7 +67,7 @@ The data columns shown in the tables are:
 
 | ID | Desc | Category | ER | Addresses | Ports |
 |----|------|----------|----|-----------|-------|
-| 163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25`<br><br>`Azure Front Door Endpoints:`<br>` 13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/23, 150.171.97.0/24, 2620:1ec:40::/48, 2620:1ec:49::/48, 2620:1ec:4a::/47` | **TCP:** 80, 443 |
+| 163 | Intune client and host service| Allow<BR>Required | False | `*.manage.microsoft.com`<BR>`manage.microsoft.com`<BR>`*.dm.microsoft.com`<BR>`EnterpriseEnrollment.manage.microsoft.com`<BR>`104.46.162.96/27, 13.67.13.176/28, 13.67.15.128/27, 13.69.231.128/28, 13.69.67.224/28, 13.70.78.128/28, 13.70.79.128/27, 13.74.111.192/27, 13.77.53.176/28, 13.86.221.176/28,13.89.174.240/28, 13.89.175.192/28, 20.189.229.0/25, 20.191.167.0/25, 20.37.153.0/24, 20.37.192.128/25, 20.38.81.0/24, 20.41.1.0/24, 20.42.1.0/24, 20.42.130.0/24, 20.42.224.128/25, 20.43.129.0/24, 20.44.19.224/27, 40.119.8.128/25, 40.67.121.224/27, 40.70.151.32/28, 40.71.14.96/28, 40.74.25.0/24, 40.78.245.240/28, 40.78.247.128/27, 40.79.197.64/27, 40.79.197.96/28, 40.80.180.208/28, 40.80.180.224/27, 40.80.184.128/25, 40.82.248.224/28, 40.82.249.128/25, 52.150.137.0/25, 52.162.111.96/28, 52.168.116.128/27, 52.182.141.192/27, 52.236.189.96/27, 52.240.244.160/27, 20.204.193.12/30, 20.204.193.10/31, 20.192.174.216/29, 20.192.159.40/29, 104.208.197.64/27, 172.160.217.160/27, 172.201.237.160/27, 172.202.86.192/27, 172.205.63.0/25, 172.212.214.0/25, 172.215.131.0/27, 20.168.189.128/27, 20.199.207.192/28, 20.204.194.128/31, 20.208.149.192/27, 20.208.157.128/27, 20.214.131.176/29, 20.43.129.0/24, 20.91.147.72/29, 4.145.74.224/27, 4.150.254.64/27, 4.154.145.224/27, 4.200.254.32/27, 4.207.244.0/27, 4.213.25.64/27, 4.213.86.128/25, 4.216.205.32/27, 4.237.143.128/25, 40.84.70.128/25, 48.218.252.128/25, 57.151.0.192/27, 57.153.235.0/25, 57.154.140.128/25, 57.154.195.0/25, 57.155.45.128/25, 68.218.134.96/27, 74.224.214.64/27, 74.242.35.0/25, 172.208.170.0/25, 74.241.231.0/25, 74.242.184.128/25`<br><br>`Azure Front Door Endpoints:`<br>` 13.107.219.0/24, 13.107.227.0/24, 13.107.228.0/23, 150.171.97.0/24, 2620:1ec:40::/48, 2620:1ec:49::/48, 2620:1ec:4a::/47` | **TCP:** 80, 443 |
 | 172 | MDM Delivery Optimization | Default<BR>Required | False | `*.do.dsp.mp.microsoft.com`<BR> `*.dl.delivery.mp.microsoft.com`<BR> | **TCP:** 80, 443 |
 | 170 | MEM - Win32Apps | Default<BR>Required | False | `swda01-mscdn.manage.microsoft.com`<br>`swda02-mscdn.manage.microsoft.com`<br>`swdb01-mscdn.manage.microsoft.com`<br>`swdb02-mscdn.manage.microsoft.com`<br>`swdc01-mscdn.manage.microsoft.com`<br>`swdc02-mscdn.manage.microsoft.com`<br>`swdd01-mscdn.manage.microsoft.com`<br>`swdd02-mscdn.manage.microsoft.com`<br>`swdin01-mscdn.manage.microsoft.com`<BR>`swdin02-mscdn.manage.microsoft.com` | **TCP:** 80, 443 |
 | 97 | Consumer Outlook.com, OneDrive, Device authentication, and Microsoft account | Default<BR>Required | False | `account.live.com`<BR>`login.live.com`<BR> | **TCP:** 443 |
@@ -156,7 +156,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 | ID |Desc |Category |ER |Addresses |Ports|Notes|
 |----|-----|---------|---|----------|-----|-----|
-181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
+181 | MEM - Remote Help Feature| Default<BR>Required | False |`*.support.services.microsoft.com`<BR>`remoteassistance.support.services.microsoft.com`<BR>`teams.microsoft.com`<BR>`remoteassistanceprodacs.communication.azure.com`<BR>`edge.skype.com`<BR>`aadcdn.msftauth.net`<BR>`aadcdn.msauth.net`<BR>`alcdn.msauth.net`<BR>`wcpstatic.microsoft.com`<BR>`*.aria.microsoft.com`<BR>`browser.pipe.aria.microsoft.com`<BR>`*.events.data.microsoft.com`<BR>`v10c.events.data.microsoft.com`<BR>`*.monitor.azure.com`<BR>`js.monitor.azure.com`<BR>`edge.microsoft.com`<BR>`*.trouter.communication.microsoft.com`<BR>`*.trouter.teams.microsoft.com`<BR>`*.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026)<BR>`go-amer.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for NA, ROW customers)<BR>`go-apac.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for APAC customers)<BR>`go-eu.trouter.communications.svc.cloud.microsoft`(starting around March 15th, 2026, only for EU customers)<BR>`api.flightproxy.skype.com`<BR>`ecs.communication.microsoft.com`<BR>`remotehelp.microsoft.com`<BR>`remoteassistanceprodacseu.communication.azure.com`(this endpoint is only for EU customers)<BR> | **TCP:** 443 |
 187 | Dependency - Remote Help web pubsub | Default<BR>Required | False | `*.webpubsub.azure.com`<BR> `AMSUA0101-RemoteAssistService-pubsub.webpubsub.azure.com`<BR>| **TCP:** 443 |
 188 | Remote Help Dependency for GCC customers| Default<BR>Required | False |`remoteassistanceweb-gcc.usgov.communication.azure.us`<BR>`gcc.remotehelp.microsoft.com`<BR>`gcc.relay.remotehelp.microsoft.com`<BR>`*.gov.teams.microsoft.us` | **TCP:** 443 |
 
@@ -172,7 +172,7 @@ In addition to configuring the network requirements listed in the following tabl
 
 ## Endpoint analytics
 
-For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../analytics/index.md#prerequisites).
+For more information on the required endpoints for endpoint analytics, see [Network and connectivity requirements](../../endpoint-analytics/index.md#prerequisites).
 
 ## Microsoft Defender for Endpoint
 
@@ -312,7 +312,7 @@ Different endpoints are used depending on your tenant location. To find your ten
 
 ## Network requirements for PowerShell scripts and Win32 apps
 
-If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
+If you're using Intune for scenarios that use the Intune management extension, like deploying [Win32 apps](../apps/apps-win32-app-management.md), [PowerShell scripts](../apps/powershell-scripts.md), [remediations](../fundamentals/remediations.md), [endpoint analytics](../../endpoint-analytics/index.md), [custom compliance policies](../protect/compliance-use-custom-settings.md) or [BIOS configuration profiles](../configuration/bios-configuration.md), you also need to grant access to endpoints in which your tenant currently resides.
 
 Different endpoints are used depending on your tenant location. To find your tenant location, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), choose **Tenant administration** > **Tenant details** > **Tenant location** with a value of *North America 0501* or similar. Using the region in the location (North America in *North America 0501*), review the following table for the CDN endpoints and ports required:
 
@@ -325,12 +325,88 @@ Different endpoints are used depending on your tenant location. To find your ten
 |Europe | `euprodimedatapri.azureedge.net`<br>`euprodimedatasec.azureedge.net`<br>`euprodimedatahotfix.azureedge.net`<br>`imeswdb-afd-primary.manage.microsoft.com`<br>`imeswdb-afd-secondary.manage.microsoft.com`<br>`imeswdb-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
 | Asia Pacific | `approdimedatapri.azureedge.net`<br>`approdimedatasec.azureedge.net`<br>`approdimedatahotfix.azureedge.net`<br>`imeswdc-afd-primary.manage.microsoft.com`<br>`imeswdc-afd-secondary.manage.microsoft.com`<br>`imeswdc-afd-hotfix.manage.microsoft.com`<br>(Starting March 2025, azureedge.net domains will migrate to manage.microsoft.com) | **TCP:** 443 |
 
+For diagnostic data used to monitor the health of the client side components:
+
+- `*.events.data.microsoft.com`
 
 ## Windows Autopatch
 
 <a name="windows-update-for-business-deployment-service"></a>
 
 For more information on the required endpoints for Windows Autopatch, see [Windows Autopatch prerequisites](/windows/deployment/windows-autopatch/prepare/windows-autopatch-configure-network#required-microsoft-product-endpoints).
+
+## Azure Front Door Connectivity Diagnostics Tool
+
+To help with validating connectivity to the Azure Front Door (AFD) IP addresses used by Intune, the [Test-IntuneAFDConnectivity.ps1](https://download.microsoft.com/download/52de3524-4108-47e5-acda-5cc820107759/Test-IntuneAFDConnectivity.ps1) script can be used to test connectivity to the required AFD IP address ranges and service endpoints.
+
+This diagnostics tool includes checks for:
+
+- DNS Resolution of Intune service endpoints
+- Outbound TCP Connectivity on ports 80 and 443 to AFD IP addresses
+- HTTPS validation to the Intune cloud service
+
+### Prerequisites
+
+Before running the script, ensure you have:
+
+- PowerShell 5.1 or later
+- Connectivity to Network endpoints for Microsoft Intune, as defined in this article.
+  
+### Usage
+
+Run the script from an Intune-managed device to test connectivity to the Intune network endpoints using Azure Front Door. The script can be run in the context of the logged-on user or as the Local System account (Device context).
+
+#### Script Execution
+
+**Option 1: Run as Current User**
+
+Open **PowerShell** as the current user, navigate to the directory containing the script and run with the following command: 
+
+```powershell
+.\Test-IntuneAFDConnectivity.ps1
+```
+
+**Option 2: Run as System (Device Context)**
+
+To test connectivity as the device itself, use [PsExec](/sysinternals/downloads/psexec) from [Microsoft Sysinternals](/sysinternals/downloads/pstools).
+
+1. Download [PsExec](/sysinternals/downloads/psexec)
+
+1. Open **PowerShell** as an Administrator. Navigate to the directory containing **PsExec**.
+
+3. Run the following command to run the script as SYSTEM:
+
+```powershell
+.\psexec.exe -accepteula -i -s powershell.exe
+```
+
+1. In the new PowerShell window, navigate to the directory containing the script and run with the following command:
+
+```powershell
+.\Test-IntuneAFDConnectivity.ps1
+```
+
+### Options and Commands
+
+Use the following options based on your environment:
+
+|Cloud|Command|Notes|
+| -------- | -------- | -------- |
+|Public Cloud (Default)|`.\Test-IntuneAFDConnectivity.ps1`|Tests connectivity to Public Cloud environments|
+|Government Cloud|`.\Test-IntuneAFDConnectivity.ps1 -CloudType gov`|Tests connectivity to US Government, GCC High, and DoD environments|
+|Export Results with Detailed Logging|`.\Test-IntuneAFDConnectivity.ps1 -LogLevel Detailed -OutputPath "C:\Logs" -Verbose`|Runs tests with detailed logging and saves results to the specified output directory|
+
+### Troubleshooting
+
+If the script reports a failure (Exit Code 1):
+
+- **If the Azure Front Door IP Address tests show failed IPs or IP ranges:** Your firewall, proxy, or VPN may be blocking outbound connections on ports **443** or **80** to those Azure Front Door IPs.
+
+- **If the Service Endpoint test shows “HTTPS endpoint unreachable”:** The required Intune service FQDNs or Azure Front Door IPs may not be reachable, or a DNS, proxy, or HTTPS inspection issue is preventing connection to the Intune service FQDN.
+
+- **Review the network endpoints for Microsoft Intune** (as detailed in this article) and ensure your firewall, VPN, or proxy allows all required Intune service FQDNs, Azure Front Door IP ranges, and ports.
+
+- **Check detailed results** in the saved output file, or run the script with detailed logging (-LogLevel Detailed and -Verbose) to capture more diagnostic information.
 
 ## Consolidated Endpoint List
 
@@ -343,6 +419,7 @@ FQDNs
 *.manage.microsoft.com
 manage.microsoft.com
 *.dl.delivery.mp.microsoft.com
+*.dm.microsoft.com
 *.do.dsp.mp.microsoft.com
 *.update.microsoft.com
 *.windowsupdate.com
@@ -362,16 +439,6 @@ euprodimedatasec.azureedge.net
 naprodimedatahotfix.azureedge.net
 naprodimedatapri.azureedge.net
 naprodimedatasec.azureedge.net
-swda01-mscdn.azureedge.net
-swda02-mscdn.azureedge.net
-swdb01-mscdn.azureedge.net
-swdb02-mscdn.azureedge.net
-swdc01-mscdn.azureedge.net
-swdc02-mscdn.azureedge.net
-swdd01-mscdn.azureedge.net
-swdd02-mscdn.azureedge.net
-swdin01-mscdn.azureedge.net
-swdin02-mscdn.azureedge.net
 *.notify.windows.com
 *.wns.windows.com
 ekcert.spserv.microsoft.com
@@ -381,7 +448,7 @@ intunecdnpeasd.azureedge.net
 *.monitor.azure.com
 *.support.services.microsoft.com
 *.trouter.communication.microsoft.com
-*.trouter.skype.com
+*.trouter.communications.svc.cloud.microsoft
 *.trouter.teams.microsoft.com
 api.flightproxy.skype.com
 ecs.communication.microsoft.com
@@ -411,12 +478,34 @@ intunemaape9.neu.attest.azure.net
 *.gov.teams.microsoft.us
 remoteassistanceweb.usgov.communication.azure.us
 config.edge.skype.com
-contentauthassetscdn-prod.azureedge.net
-contentauthassetscdn-prodeur.azureedge.net
-contentauthrafcontentcdn-prod.azureedge.net
-contentauthrafcontentcdn-prodeur.azureedge.net
 fd.api.orgmsg.microsoft.com
 ris.prod.api.personalization.ideas.microsoft.com
+*.powershellgallery.com
+cdn.oneget.org
+go.microsoft.com
+aka.ms
+displaycatalog.mp.microsoft.com
+purchase.md.mp.microsoft.com
+licensing.mp.microsoft.com
+storeedgefd.dsx.mp.microsoft.com
+*.events.data.microsoft.com
+*.delivery.mp.microsoft.com
+enterpriseregistration.windows.net
+certauth.enterpriseregistration.windows.net
+login.microsoftonline.com
+graph.windows.net
+config.office.com
+ecs.office.com
+aadcdn.msauth.net
+aadcdn.msftauth.net
+browser.pipe.aria.microsoft.com
+teams.microsoft.com
+login.live.com
+lgmsapeweu.blob.core.windows.net
+lgmsapewus2.blob.core.windows.net
+lgmsapesea.blob.core.windows.net
+lgmsapeaus.blob.core.windows.net
+lgmsapeind.blob.core.windows.net
 
 ```
 

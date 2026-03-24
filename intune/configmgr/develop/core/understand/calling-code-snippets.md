@@ -1,18 +1,10 @@
 ---
 title: Calling Code Snippets
-titleSuffix: Configuration Manager
 description: How to set up the calling code for the code examples that are used throughout the Configuration Manager Software Development Kit (SDK).
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: article
-ms.assetid: 8d5d026f-18da-43c4-8427-575716351925
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Calling Configuration Manager Code Snippets
 The following code samples show how to set up the calling code for the code examples that are used throughout the Configuration Manager Software Development Kit (SDK).

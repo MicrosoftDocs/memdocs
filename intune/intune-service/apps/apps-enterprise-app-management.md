@@ -1,7 +1,7 @@
 ---
 title: Microsoft Intune Enterprise Application Management
 description: Learn about Enterprise App Management and the Enterprise App Catalog in Microsoft Intune.
-ms.date: 11/14/2025
+ms.date: 01/07/2026
 ms.topic: how-to
 ms.reviewer: dguilory
 ms.subservice: suite
@@ -16,7 +16,9 @@ ms.collection:
 Microsoft Intune Enterprise App Management enables you to easily discover and deploy applications and keep them up to date from the Enterprise App Catalog. The Enterprise App Catalog is a collection of prepared Microsoft and non-Microsoft applications. These apps are Win32 apps that are [prepared as Win32 apps](../apps/apps-win32-prepare.md) and hosted by Microsoft.
 
 > [!IMPORTANT]
-> Enterprise App Management is an Intune add-on as part of the Intune suite that is available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+> Enterprise App Management is an Intune add-on as part of the Intune suite that's available for trial and purchase. For more information, see [Use Intune Suite add-on capabilities](../fundamentals/intune-add-ons.md).
+
+[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
 
 ## Benefits of Enterprise App Management
 
@@ -85,51 +87,42 @@ Microsoft hosts the applications in Microsoft storage accessible through `*.mana
 
 ### Is Microsoft providing security around any of the content provided in the Enterprise App Catalog?
 
-Microsoft doesn't assert compliance or authorizations for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
+Microsoft doesn't assert compliance, authorization, authenticity, or integrity for apps distributed via Intune. Customers are responsible for ensuring that apps meet their requirements.
 
 ### What app installer types are in the Enterprise App Catalog?
 
 The apps currently provided in the Enterprise application catalog are Windows Win32 applications (exe and msi).
 
-### How will Microsoft detect if an application from the Enterprise App Catalog is in use?
+### How can Microsoft detect if an application from the Enterprise App Catalog is in use?
 
 At this time, Intune provides no running application detection.
 
-### What are the Service Level Objectives (SLOs) for when an app update is available in the catalog?
+### What are the Service Level Objectives for when an app update is available in the catalog?
 
-Service Level Objectives (SLOs) define target timelines for making app updates available in the Enterprise App Catalog between when Microsoft receives them to when they're made available in the Enterprise App Catalog. Unlike Service Level Agreements (SLAs), these are guidelines, not guarantees. SLOs allow customers to plan typical app update processing timelines.
+Service Level Objectives (SLOs) define target timelines for making app updates available in the Enterprise App Catalog between when Microsoft receives them to when they're made available in the Enterprise App Catalog. Unlike Service Level Agreements (SLAs), SLOs are guidelines, not guarantees that allow customers to plan typical app update processing timelines.
 
 The SLO measurement window starts at ingestion, the point when the app update is first received from the data source and logged in the EAM system.
 
 #### App Update Process Flow
 
 1. **Ingestion** – App update is received by Microsoft
-2. **Automated Validation** – Compatibility, security, and compliance checks
-3. **Manual Validation** (if needed) – Vendor engagement for additional testing or bypass approval
+2. **Automated Validation** – Compatibility and compliance checks
+3. **Manual Validation** - More testing if needed
 4. **Catalog Availability** – App update published to Enterprise App Catalog
 
 #### Automated Validation
 
-Most apps undergo automated validation checks for compatibility, security, and compliance.
+Most apps undergo automated validation checks.
 
 - Target: 80–90% of app updates are processed and available in the Intune portal within 24 hours of ingestion.
-- Current Performance: Average processing time is approximately 70 minutes; maximum observed is approximately 8 hours.
 
-#### Manual Validation Apps (Bypass Required)
+#### Manual Validation Apps
 
-If an app fails automated checks, it moves to manual validation. Automated validation includes:
-
-- Detonation: Testing installation and uninstallation processes
-- Scan: Malware and virus detection checks
-
-When an app fails these automated checks, vendor engagement is required for additional testing or bypass approval. The 7-day SLO accounts for vendor turnaround time, which is outside Microsoft's direct control.
-
-- Target: Updates requiring manual vendor testing and bypass are completed within 7 days.
-- Current State: Average wait time for bypassed apps is approximately 11 days. Microsoft is actively working to reduce this through vendor process improvements and prioritization.
+If an app fails automated checks, it moves to manual validation and requires more testing. Updates requiring manual testing and approval are completed within seven days.
 
 #### Exception Handling
 
-- High-usage or critical apps that fail automated validation are prioritized for expedited processing (goal: 48 hours).
+- High-usage or critical apps that fail automated validation are prioritized for expedited processing (goal of 48 hours.)
 - Apps that fail both automated and manual validation don't meet SLO and are flagged as unsupported.
 
 ### How many applications are in the catalog?
@@ -174,7 +167,7 @@ For applications that don't update themselves, you can view the upgrades that ar
 
 ### After several hours, what can I do if my app continues to show that it isn't ready and that the requested content is still being prepared?
 
-If the app content hasn't synced after several hours, delete the app and try again.
+If the app content isn't synced after several hours, delete the app and try again.
 
 ### Is there an Intune report available to view details about the Enterprise App Catalog apps for a specific device?
 
@@ -185,7 +178,7 @@ Yes, the Managed Apps report provides a report of apps on a specific device that
 
 There are various applications available in the Enterprise App Catalog. To view the current application list in [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), see [Add a Windows catalog app (Win32) to Intune](../apps/apps-add-enterprise-app.md#add-a-windows-catalog-app-win32-to-intune).
 
-More apps will be available on an ongoing basis in the Enterprise App Catalog.
+More apps are available on an ongoing basis in the Enterprise App Catalog.
 
 > [!NOTE]
 > **think-cell apps removed from Enterprise App Catalog**: At the request of think-cell, their applications are removed from the Enterprise App Catalog. This removal **does not affect** existing think-cell installations in your tenant or on user devices. Customers who currently have think-cell apps deployed through the Enterprise App Catalog can continue to manage these installations normally.

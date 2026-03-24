@@ -1,18 +1,10 @@
 ---
 title: Configure Network Discovery
-titleSuffix: Configuration Manager
 description: Learn how to configure the Network Discovery settings in Configuration Manager.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 1b2a2766-1ada-4949-b548-af41454c0467
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Configure Network Discovery
 You configure the Network Discovery settings, in Configuration Manager, by modifying the necessary site control file settings.

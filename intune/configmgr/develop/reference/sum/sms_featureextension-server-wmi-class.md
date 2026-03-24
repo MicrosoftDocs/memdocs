@@ -1,16 +1,9 @@
 ---
 description: Learn how to use the SMS_FeatureExtension class to represent feature extensions.  
 title: "SMS_FeatureExtension Class"
-titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 0a40d370-575f-480d-b998-9fd3c8cf7f1c
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 
 

@@ -1,18 +1,10 @@
 ---
 title: GetClientBaselineStatusSummary Method
-titleSuffix: Configuration Manager
 description: The GetClientBaselineStatusSummary WMI class method gets baseline status summary information by BaselineType and CollectionID.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: ff58c3a0-203e-476b-b803-e449444f4fb1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # GetClientBaselineStatusSummary Method in Class SMS_ClientBaselineStatus
 The `GetClientBaselineStatusSummary` Windows Management Instrumentation (WMI) class method, in Configuration Manager, gets baseline status summary information by `BaselineType` and `CollectionID`.

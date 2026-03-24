@@ -49,11 +49,11 @@ This feature applies to:
 
    When you're done configuring settings, select **Next**.
 
-8. On the **Scope tags** page (optional), assign scope tags to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../fundamentals/scope-tags.md).
+8. On the **Scope tags** page (optional), assign scope tags to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use RBAC and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
    Select **Next** to continue.
 
-9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../configuration/device-profile-assign.md).
+9. On the **Assignments** page, select the groups that receive this profile. For more information on assigning profiles, see [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md).
 
    Select **Next**.
 
@@ -64,4 +64,4 @@ The next time each device checks in, the policy is applied.
 ## Next steps
 
 - [Monitor the profiles status](device-profile-monitor.md).
-- [Review available settings for the older profile format](../configuration/delivery-optimization-settings.md). *Applies to profiles created before April 24, 2025*
+- [Review available settings for the older profile format](../../intune-service/configuration/delivery-optimization-settings.md). *Applies to profiles created before April 24, 2025*

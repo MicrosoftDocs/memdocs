@@ -1,18 +1,10 @@
 ---
 title: CIEvalState Enumeration
-titleSuffix: Configuration Manager
 description: In Configuration Manager, the CIEvalState enumeration is used by the ICIINFO Interface.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 952016eb-b0b5-47a6-acef-01d65acc9f65
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # CIEvalState Enumeration
 In Configuration Manager, the `CIEvalState` enumeration defines configuration item evaluation states. This enumeration is used by the [ICIINFO Interface](../../../../../develop/reference/core/clients/client-classes/iciinfo-interface.md).

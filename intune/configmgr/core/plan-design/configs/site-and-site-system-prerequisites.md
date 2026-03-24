@@ -1,17 +1,10 @@
 ---
 title: Site prerequisites
-titleSuffix: Configuration Manager
 description: Learn how to configure a Windows computer as a Configuration Manager site system server.
 ms.date: 03/25/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Site and site system prerequisites for Configuration Manager
@@ -139,6 +132,9 @@ For more information on all prerequisites including permissions, see [Prerequisi
 Starting in version 2309, Configuration Manager requires the installation of the ODBC driver for SQL server as a **prerequisite**. This prerequisite is required when you create a **new site** or **update** an existing one. Configuration Manager doesn't manage the updates for the ODBC driver. Ensure that this component is up to date. From **version 2503** onwards, the ODBC driver version has to be updated to version **18.4.1.1** and above or it blocks the upgrade.
 
 For more information, see [Prerequisite checks - SQL ODBC driver for SQL Server](../../servers/deploy/install/list-of-prerequisite-checks.md).
+
+> [!NOTE]
+> We recommend installing the latest version of the Microsoft ODBC Driver for SQL Server to benefit from the most recent fixes and security updates. However, Configuration Manager does __not__ test every new ODBC driver version as soon as it is released. The version shipped with Configuration Manager 2503 and later is __18.4.1.1__, which is the last validated version. If you encounter issues with a newer ODBC driver, you may be asked to revert to a previously validated version until the issue is resolved by the respective component team. Configuration Manager will update the redistributable ODBC driver in future releases if there are security fixes or deprecations.
 
 ### SQL Server Native Client for the site server
 

@@ -1,0 +1,47 @@
+---
+author: paolomatarazzo
+ms.author: paoloma
+ms-topic: include
+ms.date: 11/14/2025
+---
+
+## Common errors
+
+While the agent run might fail due to insufficient SCUs, there are other possible errors that can occur. This section lists some common error messages you might encounter while using the agent, along with explanations and suggested actions.
+
+### The agent doesn't provide accurate suggestions
+
+In this case, the agent may not have enough data to generate accurate suggestions, or its settings might not fully align with your organization's environment.
+
+To help improve future suggestions, use the like/dislike buttons :::image type="icon" source="../../media/icons/16/like.svg" border="false"::: :::image type="icon" source="../../media/icons/16/dislike.svg" border="false"::: available on each suggestion to share your feedback.
+
+###  You don't have access to this agent - Licenses
+
+**Details:** You don't have the licenses needed to access this agent.
+
+Check the licensing and plugins requirements for this agent, and make sure the necessary licenses and configurations are assigned in your tenant.
+
+###  You don't have access to this agent - Workspace
+
+**Details:** You aren't part of the workspace needed to access this agent.
+
+This message indicates that your account doesn't have permission to view or use the [Security Copilot workspace](/copilot/security/workspaces-overview), which is configured at the time Security Copilot is added to your Tenant. Contact the administrator who installed or manages your Security Copilot subscription for assistance in gaining access, and see [Understand authentication in Microsoft Security Copilot](/copilot/security/authentication).
+
+###  You don't have access to this agent - Permissions
+
+**Details:** You don't have the permissions needed to access this agent.
+
+Review the roles requirements to use the agent. Work with an Intune Administrator to assign your account the required permissions.
+
+###  The agent encountered an error and didn't finish the run. Try running the agent again.
+
+**Details:** The agent instance failed to start or successfully complete its run. Details of the failure can't be identified. Despite failing to run or complete, admins can continue to view and manage the agent suggestions from past runs.
+
+If the agent continues to fail, it's possible that its lost authorization for its identity account and can't run until it's reauthorized. Possible reasons for a loss of authorization include but aren't limited to:
+- The agent's authorization period of 90 days was reached.
+- The user account that the agent was installed with is subject to a policy that requires periodic reauthentication.
+- An access token has been revoked.
+
+Agent reauthorization requires that the agent is removed and then set up again.
+> [!WARNING]
+> When an agent is removed, all existing agent suggestions are deleted. This includes details about suggestions that were marked as *Applied*.

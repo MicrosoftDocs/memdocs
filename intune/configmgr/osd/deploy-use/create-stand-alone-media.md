@@ -1,16 +1,9 @@
 ---
 title: Create stand-alone media
-titleSuffix: Configuration Manager
 description: Use stand-alone media to deploy the OS on a computer without a network connection.
 ms.date: 12/14/2023
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: how-to
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

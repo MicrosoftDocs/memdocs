@@ -1,18 +1,10 @@
 ---
 description: Learn how to use SMS_G_System_CollectedFile class which contains information about a file copied from the client computer to the site server.
 title: SMS_G_System_CollectedFile Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 602346d5-3d06-4d2e-9fc7-103dd2c81c0c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_G_System_CollectedFile Server WMI Class
 The `SMS_G_System_CollectedFile` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains information about a file copied from the client computer to the site server.

@@ -1,18 +1,10 @@
 ---
 title: SMS_CI_LocalizedEulas Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class in Configuration Manager. It contains the localized Microsoft Software License Terms information for a configuration item.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 5e8ec642-51dc-4388-bbac-3a067addaed1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_CI_LocalizedEulas Server WMI Class
 The `SMS_CI_LocalizedEulas` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains the localized Microsoft Software License Terms information for a configuration item.

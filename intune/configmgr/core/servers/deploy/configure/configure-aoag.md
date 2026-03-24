@@ -1,17 +1,10 @@
 ---
 title: Configure an availability group
-titleSuffix: Configuration Manager
 description: Set up and manage a SQL Server Always On availability group for the Configuration Manager site database.
 ms.date: 06/12/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: sheetg09
-ms.author: brianhun
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configure a SQL Server Always On availability group for Configuration Manager

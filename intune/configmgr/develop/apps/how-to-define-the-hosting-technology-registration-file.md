@@ -1,18 +1,10 @@
 ---
 title: Define the Hosting Technology Registration File
-titleSuffix: Configuration Manager
 description: "To define a hosting technology registration file, create an XML file based on the http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest schema. This file registers the custom hosting technology with Configuration Manager."
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 47960cf4-e7dd-4e26-92b7-5774cfc44a1c
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Define the Hosting Technology Registration File
 To define a hosting technology registration file, create an XML file based on the `http://schemas.microsoft.com/SystemCenterConfigurationManager/2009/AppMgmtDigest` schema. Used in the installation process, the registration file registers the custom hosting technology with Configuration Manager.  The hosting technology registration file is required for the installation of the custom hosting technology.

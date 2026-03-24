@@ -1,18 +1,10 @@
 ---
 description: Learn how to classify replication group data in Configuration Manager using SMS_ReplicationGroup WMI class.
 title: SMS_ReplicationGroup Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 66b11714-672c-4a84-80e4-8e173afee891
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ReplicationGroup Server WMI Class
 The `SMS_ReplicationGroup` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that contains replication group data.

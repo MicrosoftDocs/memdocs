@@ -1,17 +1,10 @@
 ---
 title: Remote control
-titleSuffix: Configuration Manager
 description: Get an introduction to remote control in Configuration Manager.
 ms.date: 04/23/2017
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Introduction to remote control in Configuration Manager
 

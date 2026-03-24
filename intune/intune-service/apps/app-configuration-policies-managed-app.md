@@ -112,7 +112,7 @@ Intune supports the following token types in the configuration settings. Other c
 - \{\{mail\}\}—for example, John@contoso.com
 - \{\{partialupn\}\}—for example, John
 - \{\{accountid\}\}—for example, fc0dc142-71d8-4b12-bbea-bae2a8514c81
-- \{\{userid\}\}—for example, 3ec2c00f-b125-4519-acf0-302ac3761822
+- \{\{userid\}\}—for example, 00aa00aa-bb11-cc22-dd33-44ee44ee44ee
 - \{\{username\}\}—for example, John Doe
 - \{\{PrimarySMTPAddress\}\}—for example, testuser@ad.domain.com
 
@@ -132,7 +132,7 @@ To add the configuration setting to your app configuration policy, on the **Sett
 - **Name**: `com.microsoft.intune.mam.visionOSAllowiPadCompatApps`
 - **Value**: `Enabled`
 
-To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../fundamentals/filters-device-properties.md#managed-app-properties).
+To apply app protection policy to Microsoft Teams, apply managed app filter app.deviceModel -startsWith "RealityDevice" when creating the app protection policy. For more information about filters for managed app properties, see [Managed app properties](../fundamentals/filters-device-properties.md#available-properties).
 
 For related information about create app protection policies, see [iOS app protection policy settings](../apps/app-protection-policy-settings-ios.md).
 

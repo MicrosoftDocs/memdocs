@@ -7,9 +7,9 @@ ms.author: mandia
 
 These notices provide important information that can help you prepare for future Intune changes and features.
 
-### Update to the latest Intune Company Portal for Android, Intune App SDK for iOS, and Intune App Wrapper for iOS before December 2025
+### Update to the latest Intune Company Portal for Android, Intune App SDK for iOS, and Intune App Wrapper for iOS
 
-Starting **December 15, 2025**, or soon after, we're making updates to improve the Intune mobile application management (MAM) service. To stay secure and run smoothly, this update will require iOS wrapped apps, iOS SDK integrated apps, and the Intune Company Portal for Android to be updated to the latest versions.
+Starting **January 19, 2026**, or soon after, we're making updates to improve the Intune mobile application management (MAM) service. To stay secure and run smoothly, this update will require iOS wrapped apps, iOS SDK integrated apps, and the Intune Company Portal for Android to be updated to the latest versions.
 
 > [!IMPORTANT]
 > If you don't update to the latest versions, users will be blocked from launching your app.
@@ -27,7 +27,7 @@ If your users haven't updated to the latest Microsoft or third-party app protect
 
 #### How can you prepare?
 
-Plan to make the following changes before **December 15, 2025**:
+Plan to make the following changes before **January 19, 2026**:
 
 - For apps using the Intune App SDK, you must update to the new version of the Intune App SDK for iOS:  
   - For apps built with XCode 16 use [v20.8.0 - Release 20.8.0 - microsoftconnect/ms-intune-app-sdk-ios | GitHub](https://github.com/microsoftconnect/ms-intune-app-sdk-ios/releases/tag/20.8.0)

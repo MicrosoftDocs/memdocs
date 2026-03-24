@@ -1,18 +1,11 @@
 ---
 title: Sample queries for the query view
-titleSuffix: Configuration Manager
 description: Sample queries that show how the query view can be joined to a security view.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
 
 
-ms.assetid: f03a4839-c731-44c3-99e7-fffc4885cae9
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

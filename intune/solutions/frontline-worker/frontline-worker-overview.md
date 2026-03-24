@@ -80,7 +80,7 @@ Intune has built-in features that can be used for frontline worker devices, incl
   These devices include augmented reality (AR) & virtual reality (VR) headsets, large smart-screen devices, and some conference room meeting devices, like Microsoft Teams Rooms devices. They can be managed using Intune policies.
 
 > [!NOTE]
-> Some features may require additional licenses. For more information, go to [Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md) or [Microsoft Intune licensing](../../intune-service/fundamentals/licenses.md).
+> Some features may require additional licenses. For more information, go to [Intune Suite add-on capabilities](../../intune-service/fundamentals/intune-add-ons.md) or [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
 ## Microsoft Entra shared device mode for FLW
 

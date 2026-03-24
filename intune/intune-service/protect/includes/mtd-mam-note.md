@@ -2,7 +2,7 @@
 author: brenduns
 ms.author: brenduns
 ms.topic: include
-ms.date: 08/20/2024
+ms.date: 11/10/2025
 ---
 
 <!-- This note appears in several articles that detail MTD partner apps that support App Protection policies (MAM)  Do not add a blank line after the end of this note.  -->

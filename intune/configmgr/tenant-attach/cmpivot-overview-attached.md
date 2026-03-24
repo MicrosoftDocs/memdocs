@@ -1,16 +1,9 @@
 ---
 title: Tenant attached CMPivot usage overview
-titleSuffix: Configuration Manager
 description: CMPivot usage overview for Microsoft Intune tenant attached devices.
 ms.date: 01/25/2022
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: high
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 

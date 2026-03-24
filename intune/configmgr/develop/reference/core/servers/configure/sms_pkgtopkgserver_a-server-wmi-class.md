@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SMS_PkgToPkgServer_a class to use the `PackageID` property to relate an SMS_Package Server WMI class object with its SMS_DistributionPoint Server WMI class objects.
 title: SMS_PkgToPkgServer_a Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 104a2dd5-bdd5-4ba9-bdfc-61dc38f58258
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_PkgToPkgServer_a Server WMI Class
 The `SMS_PkgToPkgServer_a` association Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that uses the `PackageID` property to relate an [SMS_Package Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_package-server-wmi-class.md) object with its [SMS_DistributionPoint Server WMI Class](../../../../../develop/reference/core/servers/configure/sms_distributionpoint-server-wmi-class.md) objects.

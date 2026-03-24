@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent a Configuration Manager application in the task sequence using SMS_TaskSequenceAppReferencesInfo class.
 title: SMS_TaskSequenceAppReferencesInfo Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 932e81bd-0533-46ee-9794-8a33ebdfb08d
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequenceAppReferencesInfo Server WMI Class
 The `SMS_TaskSequenceAppReferencesInfo` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a Configuration Manager application in the task sequence.

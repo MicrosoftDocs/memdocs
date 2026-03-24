@@ -3,7 +3,7 @@ title: Collect device hardware info with the properties catalog
 description: Use the properties catalog in Microsoft Intune view and collect enhanced device hardware info on Windows devices you manage with Intune. You can collect info like BIOS version, TPM status, disk info, memory details, and network adapter configurations. Use this information to get deeper visibility into your device inventory and troubleshoot issues.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 10/20/2025
+ms.date: 02/09/2026
 ms.topic: how-to
 ms.collection:
 - M365-identity-device-management
@@ -45,7 +45,7 @@ This feature applies to:
 > This feature supports the following platforms:
 >
 > - Windows
-> - Devices must be corporate owned, Intune managed (includes co-managed), and Microsoft Entra joined.
+> - Devices must be corporate owned, Intune managed (includes co-managed), Microsoft Entra Hybrid joined, and Microsoft Entra joined.
 :::column-end:::
 :::row-end:::
 
@@ -111,7 +111,7 @@ Use the following steps to view the collected device inventory information:
 
 ## Available and required properties
 
-The following properties are available for you to collect. To learn more about the different properties, see [Intune Data Platform Schema](../../analytics/data-platform-schema.md).
+The following properties are available for you to collect. To learn more about the different properties, see [Intune Data Platform Schema](../../advanced-analytics/data-platform-schema.md).
 
 # [Available property categories](#tab/available)
 
@@ -173,4 +173,4 @@ When you create the policy, the following **required** properties are automatica
 
 ## Related content
 
-- [Intune Data Platform Schema and property info](../../analytics/data-platform-schema.md)
+- [Intune Data Platform Schema and property info](../../advanced-analytics/data-platform-schema.md)

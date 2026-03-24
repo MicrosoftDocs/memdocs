@@ -142,7 +142,7 @@ To enable data collection:
 1. Select **Review + Save**.
 1. Select **Save**.
 
-For more information on data collection, see [Endpoint analytics data collection](/intune/analytics/data-collection).
+For more information on data collection, see [Endpoint analytics data collection](/intune/endpoint-analytics/data-collection).
 
 ### Configure Windows data
 

@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 02/26/2025
 ms.topic: overview
-ms.reviewer: dougeby
+ms.reviewer: davguy
 ms.collection:
 - M365-identity-device-management
 - highpri

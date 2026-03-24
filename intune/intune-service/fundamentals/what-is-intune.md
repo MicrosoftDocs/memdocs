@@ -5,7 +5,7 @@ author: MandiOhlinger
 ms.author: mandia
 ms.date: 04/30/2025
 ms.topic: overview
-ms.reviewer: dougeby
+ms.reviewer: davguy
 ms.collection:
 - essentials-overview
 - M365-identity-device-management
@@ -31,7 +31,7 @@ This article lists some features and benefits of Microsoft Intune.
 
 > [!TIP]
 >
-> - To get Intune, go to [Licenses available for Microsoft Intune](licenses.md) and [Intune 30-day trial](free-trial-sign-up.md).
+> - To get Intune, go to [Licenses available for Microsoft Intune](../../fundamentals/licensing/index.md) and [Intune 30-day trial](free-trial-sign-up.md).
 > - For more information on the Intune licensing plans, go to [Microsoft Intune capabilities and plans](https://www.microsoft.com/security/business/endpoint-management/microsoft-intune).
 > - For information on what it means to be cloud-native, go to [Learn more about cloud-native endpoints](../../solutions/cloud-native-endpoints/cloud-native-endpoints-overview.md).
 
@@ -130,14 +130,14 @@ Microsoft Intune integrates with other Microsoft products and services that focu
   - [Windows Autopilot overview](/autopilot/overview)
   - [Windows Autopilot deployment for existing devices](/autopilot/existing-devices)
 
-- **[Endpoint analytics](../../analytics/index.md)** for visibility and reporting on end user experiences, including device performance and reliability
+- **[Endpoint analytics](../../endpoint-analytics/index.md)** for visibility and reporting on end user experiences, including device performance and reliability
 
   You can use Endpoint analytics to help identify policies or hardware issues that slow down devices. It also provides guidance that can help you proactively improve end user experiences and reduce help desk tickets.
 
   For more specific information, go to:
 
-  - [Endpoint Analytics Overview](../../analytics/index.md)
-  - [Enroll Intune devices into Endpoint analytics](../../analytics/configure.md)
+  - [Endpoint Analytics Overview](../../endpoint-analytics/index.md)
+  - [Enroll Intune devices into Endpoint analytics](../../endpoint-analytics/configure.md)
 
 - **[Microsoft 365](/deployoffice/about-microsoft-365-apps)** for end user productivity Office apps, including Outlook, Teams, Sharepoint, OneDrive, and more
 
@@ -323,4 +323,3 @@ Specifically:
 - [Manage devices using Microsoft Intune](manage-devices.md)
 - [Manage apps using Microsoft Intune](manage-apps.md)
 - [Troubleshoot Microsoft Intune](/troubleshoot/mem/intune/welcome-intune)
-- [Microsoft Intune guides at setup.cloud.microsoft](https://go.microsoft.com/fwlink/?linkid=2313710)

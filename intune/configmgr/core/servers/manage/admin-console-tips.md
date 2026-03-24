@@ -1,17 +1,10 @@
 ---
 title: Console changes and tips
-titleSuffix: Configuration Manager
 description: Learn about changes to the Configuration Manager console and tips for using it.
 ms.date: 03/28/2024
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Configuration Manager console changes and tips

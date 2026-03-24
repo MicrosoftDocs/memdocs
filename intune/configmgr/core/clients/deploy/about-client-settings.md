@@ -1,17 +1,10 @@
 ---
 title: Client settings
-titleSuffix: Configuration Manager
 description: Learn about the default and custom settings for controlling client behaviors
-ms.date: 03/28/2024
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.date: 12/08/2025
+ms.subservice: core-infra
 ms.topic: reference
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About client settings in Configuration Manager
@@ -294,7 +287,7 @@ Set a grace period of 0 to 120 hours. Use this setting along with the deployment
 
 ### Enable Endpoint analytics data collection
 
-Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../analytics/enroll-configmgr.md).
+Enables local data collection on the client for upload to Endpoint analytics. Set to **Yes** to configure devices for local data collection. Set to **No** to disable local data collection. For more information, see [Enroll Configuration Manager devices into Endpoint analytics](../../../../endpoint-analytics/configure.md?pivots=cm).
 
 ## Computer restart
 
@@ -976,6 +969,8 @@ When you set this option to **Yes**, it sets the policy for **Allow signed updat
 <!--4062619-->
 Use this setting to configure [Dynamic Update for Windows](https://techcommunity.microsoft.com/t5/Windows-IT-Pro-Blog/The-benefits-of-Windows-10-Dynamic-Update/ba-p/467847). Dynamic Update installs language packs, features on demand, drivers, and cumulative updates during Windows setup by directing the client to download these updates from the internet. When this setting is set to either **Yes** or **No**, Configuration Manager modifies the [setupconfig](/windows-hardware/manufacture/desktop/windows-setup-command-line-options) file that is used during feature update installation.
 
+For UUP-based feature updates, this setting doesn't control Dynamic Update excluding drivers. The only applicable Dynamic Update parameter is `/DynamicUpdate NoDrivers` in setupconfig.
+
 - **Not Configured** - The default value. No changes are made to the setupconfig file.
   - Dynamic Update is enabled by default on all supported versions of Windows 10 or later.
     - For Windows 10, version 1803 and earlier, Dynamic Update checks the device's WSUS server for approved dynamic updates. In Configuration Manager environments, dynamic updates are never directly approved in the WSUS server so these devices don't install them.
@@ -986,7 +981,7 @@ Use this setting to configure [Dynamic Update for Windows](https://techcommunity
 ### <a name="bkmk_fserv"></a>Enable features introduced via servicing are off by default.
 
 <!--16834520-->
-To learn more about the settings: “Enable features introduced via servicing are off by default”, please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
+To learn more about the settings: "Enable features introduced via servicing are off by default", please read this [blog](https://techcommunity.microsoft.com/t5/windows-it-pro-blog/commercial-control-for-continuous-innovation/ba-p/3737575). The post describes the Commercial control for continuous innovation in Windows. The setting for this policy is now integrated with the Configuration Manager 2303. More information on the Commercial control timeline and versions of Windows 11 supported by the setting can be found in the blog.
 
 - **Not Configured** - The default value, then features that are shipped via a monthly quality update (servicing) will remain off until the feature update that includes these features is installed.
   - Enable features introduced via servicing are off by default on all supported versions of Windows 11 22621.1344 or later.

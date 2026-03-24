@@ -1,18 +1,10 @@
 ---
 description: Learn how to use IAppManagementTypes interface, in Configuration Manager, which is a container for Application Management related type definitions.
 title: IAppManagementTypes Interface
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: c2d7d78a-bf14-43dc-bad7-8eeba0bab91a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # IAppManagementTypes Interface
 The `IAppManagementTypes` interface, in Configuration Manager, is a container for Application Management related type definitions.

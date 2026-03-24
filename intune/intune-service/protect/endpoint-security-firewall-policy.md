@@ -1,5 +1,5 @@
 ---
-title: Manage firewall settings with endpoint security policies in Microsoft Intune | Microsoft Docs
+title: Manage firewall settings with endpoint security policies in Microsoft Intune
 description: Configure and deploy policies for devices you manage with endpoint security firewall policy in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
@@ -42,7 +42,7 @@ Find the endpoint security policies for firewalls under *Manage* in the **Endpoi
 
 ## Role-based access controls (RBAC)
 
-For guidance on assigning the right level of permissions and rights to manage Intune firewall policy, see [Assign-role-based-access-controls-for-endpoint-security-policy](../protect/endpoint-security-policy.md#assign-role-based-access-controls-for-endpoint-security-policy).
+For guidance on assigning the right level of permissions and rights to manage Intune firewall policy, see [Role-based access control for endpoint security](../protect/endpoint-security-policy.md#role-based-access-control-for-endpoint-security).
 
 ## Firewall profiles
 
@@ -204,7 +204,7 @@ Additional common firewall rule issues:
 
 ## Next steps
 
-[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-an-endpoint-security-policy)
+[Configure Endpoint security policies](../protect/endpoint-security-policy.md#create-endpoint-security-policies)
 
 View details for the settings in the deprecated Firewall profiles for the deprecated *Windows 10 and later* platform:
 

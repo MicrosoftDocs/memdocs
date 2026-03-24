@@ -1,17 +1,10 @@
 ---
 title: Service connection point
-titleSuffix: Configuration Manager
 description: Learn about this Configuration Manager site system role, and understand and plan for its range of uses.
 ms.date: 10/12/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: concept-article
-ms.author: laurawi
-author: LauraWi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # About the service connection point in Configuration Manager

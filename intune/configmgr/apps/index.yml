@@ -5,16 +5,10 @@ summary: Use Configuration Manager to manage and deploy applications, scripts, a
 
 metadata:
   title: App management documentation
-  titleSuffix: Configuration Manager
   description: Use Configuration Manager to manage and deploy applications, scripts, and packages. Automate the deployments, or let users install apps from Software Center.
-  ms.subservice: app-mgt
-  ms.service: configuration-manager
+  ms.subservice: core-infra
   ms.topic: landing-page
-  author: banreet
-  ms.author: banreetkaur
-  manager: apoorvseth
   ms.date: 09/23/2021
-  ms.localizationpriority: high
 
 landingContent:
   - title: About app management

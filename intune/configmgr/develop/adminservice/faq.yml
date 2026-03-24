@@ -1,16 +1,10 @@
 ### YamlMime:FAQ
 metadata:
   title: Admin service FAQ
-  titleSuffix: Configuration Manager
   description: Frequently asked questions (FAQ) about the Configuration Manager administration service
   ms.date: 04/16/2021
   ms.subservice: sdk
-  ms.service: configuration-manager
   ms.topic: faq
-  ms.assetid: 4902b9ea-eaff-4f59-a9cf-c600d008eade
-  author: banreet
-  ms.author: banreetkaur
-  manager: apoorvseth
 title: Administration service frequently asked questions (FAQ)
 summary: |
   *Applies to: Configuration Manager (current branch, technical preview branch, long-term servicing branch)*

@@ -1,7 +1,7 @@
 ---
 title: Report problems in Company Portal app for Windows
 description: Share app diagnostics with your support person to diagnose a problem with the Company Portal app for Windows.
-ms.date: 11/08/2024
+ms.date: 12/02/2025
 ms.reviewer: scottduf
 ---
 
@@ -29,6 +29,18 @@ Complete the following steps to upload Company Portal app logs.
 1. The email app opens an email template for you to fill in. Describe the problem and the steps you took leading up to the problem. Then send the email to your IT support person so that they can follow up on the issue.
 
 1. Follow up with your support person as needed.
+
+### Collect logs manually
+
+Or, you can use the following steps to download the Company Portal app logs manually.
+
+1. Go to the following folder:
+
+    `%localappdata%\Packages\Microsoft.CompanyPortal_8wekyb3d8bbwe\LocalState`
+
+    The `%localappdata%` variable resolves to your local application data folder. By default, this corresponds to `C:\Users\<UserName>\AppData\Local`, where `UserName` is the signed-in user account name. 
+
+2. The application logs are stored in files following the `Log_<n>.log` pattern. Attach these logs to the support ticket.
 
 ## Report problem to Microsoft
 

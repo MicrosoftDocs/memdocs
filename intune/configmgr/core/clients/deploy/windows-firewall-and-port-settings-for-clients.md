@@ -1,17 +1,10 @@
 ---
 title: Windows client firewall and port settings
-titleSuffix: Configuration Manager
 description: Select Windows Firewall and port settings for clients in Configuration Manager.
 ms.date: 10/06/2016
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Windows Firewall and port settings for clients in Configuration Manager
 

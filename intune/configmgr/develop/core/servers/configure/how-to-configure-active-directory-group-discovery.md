@@ -1,18 +1,10 @@
 ---
 title: Configure Active Directory Group Discovery
-titleSuffix: Configuration Manager
 description: Learn how to configure the Active Directory Group Discovery settings by modifying the necessary site control file settings.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 789485ee-5f76-40da-8d06-8417eb6794a9
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Configure Active Directory Group Discovery
 You configure the Active Directory Group Discovery settings, in Configuration Manager, by modifying the necessary site control file settings.

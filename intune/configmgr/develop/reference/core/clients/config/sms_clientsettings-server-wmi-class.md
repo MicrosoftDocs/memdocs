@@ -1,18 +1,10 @@
 ---
 description: Learn how to represent the settings that apply to the clients which belong to a specified collection using SMS_ClientSettings class.
 title: SMS_ClientSettings Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: f46e48ff-60cd-4a68-a36e-9ece153d93c3
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_ClientSettings Server WMI Class
 The `SMS_ClientSettings` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents the settings that apply to the clients which belong to a specified collection. These settings override the default client settings.

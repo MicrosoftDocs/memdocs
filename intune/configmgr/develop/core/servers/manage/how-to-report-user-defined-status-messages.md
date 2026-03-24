@@ -1,18 +1,10 @@
 ---
 description: Learn how to report user-defined informational, warning, and error status messages, on the site server using methods defined in the SMS_StatusMessage class.
 title: Report User-Defined Status Messages
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: c32d4de0-4d09-4c2e-ad83-d3f690a3be63
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Report User-Defined Status Messages
 In Configuration Manager, you can report user-defined informational, warning, and error status messages, on the site server, by using the following methods that are defined in the `SMS_StatusMessage` class:

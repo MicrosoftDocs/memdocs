@@ -1,17 +1,10 @@
 ---
 title: Remotely administer Windows computer
-titleSuffix: Configuration Manager
 description: Administer a remote Windows client computer by using Configuration Manager.
 ms.date: 10/08/2020
-ms.subservice: client-mgt
-ms.service: configuration-manager
+ms.subservice: core-infra
 ms.topic: how-to
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # How to remotely administer a Windows client computer by using Configuration Manager

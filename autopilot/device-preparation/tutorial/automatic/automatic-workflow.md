@@ -1,18 +1,23 @@
 ---
 title: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune
 description: Overview for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune.
-ms.date: 06/11/2025
+ms.date: 11/21/2025
 ms.topic: tutorial
-ms.collection:
-  - tier1
-  - highpri
 appliesto:
   - ✅ <a href="https://learn.microsoft.com/windows/release-health/supported-versions-windows-client" target="_blank">Windows 11</a>
 ---
 
-# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 Frontline in shared mode (preview) in Intune
+# Step by step tutorial for Windows Autopilot device preparation in automatic mode for Windows 365 (preview) in Intune  
 
-This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365.
+> [!NOTE]
+> This feature is in public preview.  
+
+This step by step tutorial guides through using Intune to perform a Windows Autopilot device preparation in automatic mode for Windows 365. You can use Windows Autopilot device preparation policies in automatic mode to provision these supported SKUs:  
+
+- Windows 365 Frontline in shared mode  
+- Windows 365 Enterprise  
+- Windows 365 Frontline in dedicated mode  
+- Windows 365 Cloud Apps  
 
 The purpose of this tutorial is a step by step guide for all the configuration steps required for a successful Windows Autopilot device preparation in automatic mode for Windows 365 deployment using Intune. The tutorial is also designed as a walkthrough in a lab or testing scenario, but can be expanded for use in a production environment.
 
@@ -34,23 +39,21 @@ Windows Autopilot device preparation tracks the installation progress of specifi
 
 1. The Cloud PC agent calls the Windows Autopilot device preparation policy assigned to the Cloud PC provisioning policy and the configuration is applied including:
 
-   1. The Intune management extension is installed.
+1. The Intune management extension is installed.
 
-   1. The deployment syncs with Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment. If this step fails, the **Deployment Status** shows up as **Failed** during the phase **Policy installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. The deployment syncs with Intune and checks if line-of-business (LOB) and Microsoft 365 applications are selected in the Windows Autopilot device preparation policy. It also syncs all MDM policy at this time, but application of the policy isn't tracked during the deployment. If this step fails, the **Deployment Status** shows up as **Failed** during the phase **Policy installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-   1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. If there are LOB and Microsoft 365 applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-   1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If any script fails, the **Deployment Status** shows up as **Failed** during the phase **Scripts installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. The deployment checks if PowerShell scripts are selected in the Windows Autopilot device preparation policy. If there are PowerShell scripts selected in the policy, then they run. If any script fails, the **Deployment Status** shows up as **Failed** during the phase **Scripts installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-   1. The deployment checks if Win32, Microsoft Store, or Enterprise App Catalog applications are selected in the Windows Autopilot device preparation policy. If there are Win32, Microsoft Store, or Enterprise App Catalog applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
+1. The deployment checks if Win32, Microsoft Store, or Enterprise App Catalog applications are selected in the Windows Autopilot device preparation policy. If there are Win32, Microsoft Store, or Enterprise App Catalog applications selected in the policy, then they're installed. If any application installation fails, the **Deployment Status** shows up as **Failed** during the phase **Apps installation** in the [Windows Autopilot device preparation reporting and monitoring](../../reporting-monitoring.md).
 
-    > [!IMPORTANT]
-    >
-    > As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
-    >
-    > - Up to 10 essential applications can be installed.
-    > - Up to 10 essential PowerShell scripts can be run.
-
+   > [!IMPORTANT]
+   > As part of a Windows Autopilot device preparation in automatic mode for Windows 365 deployment:
+   >  - Up to 25 essential applications can be installed.
+   >  - Up to 10 essential PowerShell scripts can be run.
+   
 ## Workflow
 
 The following steps are needed to configure and then perform a Windows Autopilot device preparation in automatic mode for Windows 365 in Intune:

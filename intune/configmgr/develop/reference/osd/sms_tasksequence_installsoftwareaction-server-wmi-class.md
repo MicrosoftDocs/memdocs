@@ -1,18 +1,10 @@
 ---
 description: Learn how to use the SMS_TaskSequence_InstallSoftwareAction class to represent task sequence actions that install software.
 title: SMS_TaskSequence_InstallSoftwareAction Class
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: e6679d3b-6019-4404-bdb1-62ec5ae17edd
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_InstallSoftwareAction Server WMI Class
 The `SMS_TaskSequence_InstallSoftwareAction` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a task sequence action that installs software.

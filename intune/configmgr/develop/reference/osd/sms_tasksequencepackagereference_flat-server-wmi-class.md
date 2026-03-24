@@ -1,18 +1,10 @@
 ---
 title: SMS_TaskSequencePackageReference_Flat Class
-titleSuffix: Configuration Manager
 description: The SMS_TaskSequencePackageReference_Flat WMI class represents all classic package or application references for a task sequence.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 7dba381c-b2b2-461b-8e7c-fd6aadd8739a
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequencePackageReference_Flat Server WMI Class
 The `SMS_TaskSequencePackageReference_Flat` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents all classic package or application references for a task sequence. The list also includes the applications that are dependent on the applications directly referenced in the task sequence.

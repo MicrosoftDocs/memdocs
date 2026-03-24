@@ -1,6 +1,6 @@
 ---
 title: Windows App Deployment by Using Microsoft Intune
-description: Learn about Windows 10/11 app deployment scenarios available with Microsoft Intune.
+description: Learn about Windows app deployment scenarios available with Microsoft Intune.
 ms.date: 10/02/2025
 ms.topic: how-to
 ms.reviewer: priyar
@@ -13,19 +13,12 @@ ms.collection:
 
 # Windows App Deployment by Using Microsoft Intune
 
-[!INCLUDE [windows-10-support](../includes/windows-10-support.md)]
-
 Microsoft Intune supports a variety of app types and deployment scenarios on Windows devices. After you've added an app to Intune, you can assign the app to users and devices. This article provides more details on the supported Windows scenarios, and also covers key details to note when you're deploying apps to Windows. For information about deploying an app, also known as assigning an app, see [Assign an app](../apps/apps-deploy.md#assign-an-app) to a group.
 
 A Line-of-business (LOB) app is the app type supported on Windows devices. The file extensions for Windows apps include .msi, .appx, and .appxbundle.
 
 > [!NOTE]
-> To deploy modern apps, you need at least:
->
-> - For Windows 10 1803, [May 23, 2018—KB4100403 (OS Build 17134.81)](https://support.microsoft.com/help/4100403/windows-10-update-kb4100403).
-> - For Windows 10 1709, [June 21, 2018—KB4284822 (OS Build 16299.522)](https://support.microsoft.com/help/4284822).
->
-> Only Windows 10 1803 and later support installing apps when there is no primary user associated.
+> To deploy modern apps, you need to use [supported Windows versions](../fundamentals/supported-devices-browsers.md).
 >
 > LOB app deployment isn't supported on devices running Windows Home editions.
 

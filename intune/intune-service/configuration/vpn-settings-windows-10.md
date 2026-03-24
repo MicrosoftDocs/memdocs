@@ -1,8 +1,6 @@
 ---
 title: Windows VPN settings in Microsoft Intune
 description: Learn and read about all the available VPN settings in Microsoft Intune, what they're used for, and what they do. See the traffic rules, Conditional Access, and DNS and proxy settings for Windows 10/11 and Windows Holographic for Business devices.
-author: MandiOhlinger
-ms.author: mandia
 ms.date: 10/14/2025
 ms.topic: reference
 ms.reviewer: abalwan
@@ -340,8 +338,8 @@ For example, if the user is already connected to a trusted DNS suffix, then the 
 - App-based trigger
 - DNS autotrigger
 
-## Next steps
+## Related articles
 
-The profile is created, but may not be doing anything yet. Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
+Be sure to [assign the profile](device-profile-assign.md), and [monitor its status](device-profile-monitor.md).
 
-Configure VPN settings on [Android](vpn-settings-android.md), [iOS/iPadOS](vpn-settings-ios.md), and [macOS](vpn-settings-macos.md) devices.
+Configure VPN settings on [Android](vpn-settings-android.md), and [iOS/iPadOS and macOS](vpn-settings-apple.md) devices.

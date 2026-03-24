@@ -1,17 +1,10 @@
 ---
 title: Upgrade on-premises infrastructure
-titleSuffix: Configuration Manager
 description: Learn how to upgrade infrastructure, such as SQL Server and the OS of site systems.
-ms.date: 12/19/2024
+ms.date: 12/08/2025
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Upgrade on-premises infrastructure that supports Configuration Manager
@@ -84,20 +77,34 @@ Use the steps in this section for any of the following upgrade scenarios:
 - Make sure the following Configuration Manager services are running:
 
   - SMS_EXECUTIVE
-
   - SMS_SITE_COMPONENT_MANAGER
 
 - Make sure the **Windows Process Activation** and **WWW/W3svc** services are enabled and set for automatic start. The upgrade process disables these services, so make sure they're running for the following site system roles:
 
   - Site server
-
   - Management point
 
 - Make sure each server that hosts a site system role continues to meet all [prerequisites](../../plan-design/configs/site-and-site-system-prerequisites.md). For example, you might need to reinstall BITS, WSUS, or configure specific settings for IIS.
 
 - After restoring any missing prerequisites, restart the server one more time to make sure services are started and operational.
 
-- If you're upgrading the primary site server, then [run a site reset](modify-your-infrastructure.md#bkmk_reset).
+- If you're upgrading the central administration site server or the primary site server, then [run a site reset](modify-your-infrastructure.md#bkmk_reset).
+
+- If you're upgrading a secondary site server, then [recover the secondary site](recover-sites.md#recover-a-secondary-site).
+
+- If the WSUS server is remote from the Site Server, the **Windows Server Update Services Tools** must be removed and reinstalled.
+
+  - Remove the Windows Server Update Services Tools
+
+    ```cmd
+    Uninstall-WindowsFeature -Name  UpdateServices-RSAT
+    ```
+
+  - Install the Windows Server Update Services Tools
+
+    ```cmd
+    Install-WindowsFeature -Name  UpdateServices-RSAT
+    ```
 
 #### Known issue for remote Configuration Manager consoles
 
@@ -127,9 +134,17 @@ After you upgrade the site server, or an instance of the SMS Provider, you can't
 
 #### Known issue for remote site systems
 
-After you upgrade a server that hosts a site system role, the value `Software\Microsoft\SMS` may be missing from the following registry key: `HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths`
+After completing the [After Upgrade](#after-upgrade) section above, if you upgraded a central administration site, primary site, secondary site, or distribution point there may be data missing from the following registry location:
 
-If this value is missing after you upgrade Windows on the server, manually add it. Otherwise site system roles can have issues uploading files to the site server inboxes.
+Key: HKLM\SYSTEM\CurrentControlSet\Control\SecurePipeServers\Winreg\AllowedPaths
+
+Value: Machine
+
+- For a central administration site, primary site, or secondary site the data in the REG_Multi_SZ 'Machine' registry value should include: Software\Microsoft\SMS
+
+- For a distribution point, the data in the REG_Multi_SZ 'Machine' registry value should include: Software\Microsoft\SMS\DP
+ 
+If the data is missing from the value after you upgrade Windows on the server, manually add the one(s) that correspond to the role(s) installed on the system. Otherwise site system roles can have issues uploading files to the site server inboxes. Distribution Points may have issues with Content Distribution, Distribution Point Configuration, or general functionality.
 
 ## Upgrade the OS of clients
 

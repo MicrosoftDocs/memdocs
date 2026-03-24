@@ -205,8 +205,8 @@ After the VPN app is assigned to the device, this next step creates the device c
 
     - [Android device administrator](vpn-settings-android.md)
     - [Android Enterprise](vpn-settings-android-enterprise.md)
-    - [iOS/iPadOS](vpn-settings-ios.md)
-    - [macOS](vpn-settings-macos.md)
+    - [iOS/iPadOS](vpn-settings-apple.md)
+    - [macOS](vpn-settings-apple.md)
     - [Windows](vpn-settings-windows-10.md) (including Windows Holographic for Business)
 
 8. Select **Next**.

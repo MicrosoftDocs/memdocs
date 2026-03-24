@@ -1,18 +1,11 @@
 ---
 title: SMS provider WMI schema reference
-titleSuffix: Configuration Manager
 description: How Configuration�Manager uses Windows Management Instrumentation (WMI) to manage its objects.
 ms.date: 04/30/2019
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
 
 
-ms.assetid: fbce5da1-e33a-49b9-ab0a-5290a7ef2592
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 ---
 

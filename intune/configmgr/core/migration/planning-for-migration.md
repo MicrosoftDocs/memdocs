@@ -1,17 +1,10 @@
 ---
 title: Plan for migration
-titleSuffix: Configuration Manager
 description: Learn about sites and hierarchies before you migrate data to a Configuration Manager current branch destination hierarchy.
 ms.date: 01/12/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Plan for migration to Configuration Manager current branch
 

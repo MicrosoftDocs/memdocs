@@ -1,16 +1,9 @@
 ---
 title: Install Software Updates
-titleSuffix: Configuration Manager
 description: Recommendations for using the task sequence step Install Software Updates in Configuration Manager.
 ms.date: 03/05/2021
-ms.service: configuration-manager
 ms.subservice: osd
 ms.topic: troubleshooting
-author: LauraWi
-ms.author: laurawi
-manager: apoorvseth
-ms.localizationpriority: medium
-ms.reviewer: mstewart
 ms.collection: tier3
 ---
 
@@ -198,7 +191,7 @@ Use the following resources and additional information to help you troubleshoot 
 
   - Remove unnecessary classifications, products, and languages. For more information, see [Configure classifications and products to synchronize](../../sum/get-started/configure-classifications-and-products.md).
 
-  - Reindex the site database and rebuild statistics. For more information, see the [FAQ for site sizing and performance](../../core/understand/site-size-performance-faq.yml#should-i-implement-any-additional-sql-server-indexing-tasks-).
+  - Reindex the site database and rebuild statistics. For more information, see the [FAQ for site sizing and performance](../../core/understand/site-size-performance-faq.yml#should-i-implement-any-additional-sql-server-maintenance-tasks-).
 
   - Decline unnecessary updates, for example:
 

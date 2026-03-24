@@ -1,11 +1,7 @@
 ---
-author: banreet
-ms.author: banreetkaur
 ms.subservice: desktop-analytics
-ms.service: configuration-manager
 ms.topic: include
 ms.date: 11/17/2021
-ms.localizationpriority: medium
 ---
 
 These configurations apply to the server that hosts the service connection point and any firewalls between that server and the internet. Allow communication through outgoing HTTPS port **TCP 443** to the internet locations.

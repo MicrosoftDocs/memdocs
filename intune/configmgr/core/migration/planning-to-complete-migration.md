@@ -1,17 +1,10 @@
 ---
 title: Complete migration
-titleSuffix: Configuration Manager
 description: Learn how to finish migration to a Configuration Manager current branch destination hierarchy after a source hierarchy no longer has data.
 ms.date: 01/12/2017
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: upgrade-and-migration-article
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # Plan to complete migration in Configuration Manager
 

@@ -1,17 +1,10 @@
 ---
 title: "Modify a Collection"
-titleSuffix: "Configuration Manager"
 description: "How to modify a collection by using the collection ID provided. The example property values are modified using the name and comment values."  
 
 ms.date: "09/20/2016"
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: 21815cfc-bd5d-4c1e-b2e6-f6662d1cc408
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 
 

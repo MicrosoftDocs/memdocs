@@ -1,16 +1,9 @@
 ---
 description: Learn how to perform a manual synchronization of the Software Update Point using SyncNow class method.
 title: "SyncNow Method"
-titleSuffix: "Configuration Manager"
 ms.date: "09/20/2016"
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: 1784de36-fad1-4f10-b280-19d828003dba
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
 
 

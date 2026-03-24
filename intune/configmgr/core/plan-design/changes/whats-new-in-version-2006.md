@@ -1,18 +1,11 @@
 ---
 title: What's new in version 2006
-titleSuffix: Configuration Manager
 description: Get details about changes and new capabilities introduced in version 2006 of Configuration Manager current branch.
 ms.date: 11/04/2020
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: whats-new
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ROBOTS: NOINDEX
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # What's new in version 2006 of Configuration Manager current branch
@@ -65,12 +58,12 @@ During a new onboarding, an administrator can specify a previously created appli
 
 ### Endpoint analytics data collection enabled by default
 <!--7065447, 7741111-->
-The **Enable Endpoint analytics data collection** client setting is now enabled by default. This setting allows your managed endpoints to send data, such as startup performance insights, to your Configuration Manager site server. This change affects local data collection only. Endpoint analytics data isn't uploaded to the Microsoft Intune admin center until you [enable data upload in Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload). The new default value applies to the default client settings and any custom client settings created after upgrading to version 2006.
+The **Enable Endpoint analytics data collection** client setting is now enabled by default. This setting allows your managed endpoints to send data, such as startup performance insights, to your Configuration Manager site server. This change affects local data collection only. Endpoint analytics data isn't uploaded to the Microsoft Intune admin center until you [enable data upload in Configuration Manager](../../../../endpoint-analytics/configure.md?pivots=cm). The new default value applies to the default client settings and any custom client settings created after upgrading to version 2006.
 
 - If you're upgrading from version 2002 to version 2006, existing custom client settings values are retained. The default value for **Enable Endpoint analytics data collection** in Configuration Manager version 2002 is **No**.
 - If you're upgrading to version 2006 from Configuration Manager version 1910 or prior, any pre-existing custom client settings that contain the **Computer Agent** group of settings inherits the new default of **Yes** for **Enable Endpoint analytics data collection**.
 
-For more information, see [Configure Endpoint analytics data collection in Configuration Manager](../../../../analytics/enroll-configmgr.md#bkmk_cm_upload).
+For more information, see [Configure Endpoint analytics data collection in Configuration Manager](../../../../endpoint-analytics/configure.md?pivots=cm).
 
 ## <a name="bkmk_infra"></a> Site infrastructure
 

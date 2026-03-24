@@ -1,7 +1,7 @@
 ---
 title: Set up local admin account creation and password management for macOS devices
 description: Set up macOS account configuration with LAPS through automatic device enrollment for macOS devices in Intune.
-ms.date: 08/01/2025
+ms.date: 11/17/2025
 ms.topic: how-to
 ms.reviewer: annovich
 ms.collection:
@@ -22,7 +22,9 @@ The Intune generated password for the admin account is 15 characters with a mixt
 Because *macOS local account configuration with LAPS* is enabled only during automated device enrollment (ADE), a previously enrolled device must reenroll with Intune using a LAPS enabled ADE profile to be supported for LAPS for the administrator account.
 
 > [!IMPORTANT]
-> When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if **Change at next auth** is not enabled or if a value is set for Max Age (days). This does not affect the standard account. We're aware of the issue. As a workaround, manually rotate the admin password after the reset on the device to keep the Intune and device password state in sync.
+> There is a known issue that affects devices running macOS versions earlier than macOS 26.4. When a macOS device enrolls via ADE with a configured local admin account and a targeted passcode profile, it prompts for an admin password reset—even if **Change at next auth** is not enabled or if a value is set for Max Age (days). This does not affect the standard account.
+>
+> As a workaround, manually rotate the admin password after the reset on the device to keep the Intune and device password state in sync. Upgrade your device to macOS 26.4 to resolve this issue.  
 
 > [!IMPORTANT]
 > The local admin account does not receive a secure token, due to platform limitations. The first account that signs in after enrollment receives the secure token, which at this time will always be the local user account.
@@ -41,7 +43,7 @@ The following are device requirements for the macOS local account configuration 
 
 ## Role-based access controls for macOS LAPS
 
-the account of an admin that's trusted to view or rotate the local admin account password for a device that was onboarded to macOS LAPS, must have the following Intune role-based access control (RBAC) permissions:
+The account of an admin that's trusted to view or rotate the local admin account password for a device that was onboarded to macOS LAPS, must have the following Intune role-based access control (RBAC) permissions:
 
 Category: **Enrollment programs**:
 - Set **Rotate macOS admin password** to **Yes**
@@ -70,7 +72,7 @@ Whenever any part of the local account configuration, the **Await final configur
 
 :::image type="content" source="./media/macos-laps/configure-local-admin-account-options.png" alt-text="Screen capture that shows the options available for an admin account.":::
 
-Following are examples of the available configuration options. Additional details are accessible through the *Information* icons that follow the name of some settings.
+The following are examples of the available configuration options. Additional details are accessible through the *Information* icons that follow the name of some settings.
 
 - **Admin account username** - Specify the account name or use one of the following supported variables to dynamically create the name. By default, this field uses *Admin*.
   - {{serialNumber}} - for example, **F4KN99ZUG5V2**
@@ -89,7 +91,7 @@ Following are examples of the available configuration options. Additional detail
 
 :::image type="content" source="./media/macos-laps/configure-local-user-account-options.png" alt-text="Screen capture that shows the options available for a non-admin user account.":::
 
-Following is some guidance for the available options. Additional details are accessible through the Information icons that follow the name of some settings.
+The following is some guidance for the available options. Additional details are accessible through the Information icons that follow the name of some settings.
 
 - **Account type** - By default this is set to *Standard* to create a standard user account. The local user account type is set to administrator if no local admin account is configured, which is a platform limitation as an admin account is always required to set up any macOS device.
 
@@ -116,7 +118,7 @@ To view the local Administrator password of a device, your own account must be a
 
 ### To view the admin account password
 
-1.	In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
+1.    In the [Microsoft Intune admin center]( https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **macOS devices** > select a **macOS device** to open its *Overview* pane > **Passwords and keys**.
 
 On the **Passwords and keys** pane, you can retrieve the admin password for the macOS device under the **Local administrator account password** section. Here you can also see the last time the password was rotated, manually or automatically.
 
@@ -141,7 +143,7 @@ To use this device action, your account must be assigned the [Intune RBAC permis
    :::image type="content" source="./media/macos-laps/macos-device-overview.png" alt-text="Screen capture of a devices overview pane.":::
 
 
-3. To confirm when the password was last rotated for the device, from the device’s *Overview* pane:
+3. To confirm when the password was last rotated for the device, from the device's *Overview* pane:
    1. Expand **Monitor** and then select **Passwords and keys**.
    2. On the **Passwords and keys** pane, you can find the last date and time that the password was rotated.
 
@@ -158,4 +160,3 @@ Look for the following entries:
 ## Related content
 
 - Get started with the [macOS enrollment guide](../fundamentals/deployment-guide-enrollment-macos.md).
-- After macOS devices are enrolled, you can [create custom settings for macOS devices](../configuration/custom-settings-macos.md).

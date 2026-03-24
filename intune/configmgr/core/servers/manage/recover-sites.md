@@ -1,17 +1,10 @@
 ---
 title: Site recovery
-titleSuffix: Configuration Manager
 description: Learn to recover your sites in Configuration Manager.
 ms.date: 09/18/2021
 ms.subservice: core-infra
-ms.service: configuration-manager
 ms.topic: how-to
-author: banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: medium
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 
 # Recover a Configuration Manager site

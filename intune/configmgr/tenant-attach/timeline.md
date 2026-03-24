@@ -1,15 +1,9 @@
 ---
 title: Tenant attach - Device timeline
-titleSuffix: Configuration Manager
 description: View the timeline for Configuration Manager devices from the admin center.
 ms.date: 07/11/2022
 ms.topic: how-to
 ms.subservice: core-infra
-ms.service: configuration-manager
-manager: apoorvseth
-author: Banreet
-ms.author: banreetkaur
-ms.localizationpriority: high
 ---
 
 # <a name="bkmk_timeline"></a> Tenant attach: Device timeline in the admin center

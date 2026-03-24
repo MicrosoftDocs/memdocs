@@ -1,18 +1,10 @@
 ---
 title: SMS_SCI_SysResUse Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a specific usage of a server or other network resource.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: f2a6e60e-a0df-4c13-9c46-485bd6061da1
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_SCI_SysResUse Server WMI Class
 The `SMS_SCI_SysResUse` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a specific usage of a server or other network resource.

@@ -1,18 +1,10 @@
 ---
 description: Learn how to perform a synchronous query for Configuration Manager objects and implement a sink method to handle query results.
 title: Perform an Asynchronous Query by Using WMI
-titleSuffix: Configuration Manager
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: how-to
-ms.assetid: ff1c49fa-dede-4a22-b0e8-38460c4aa057
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # How to Perform an Asynchronous Configuration Manager Query by Using WMI
 In Configuration Manager, you perform a synchronous query for Configuration Manager objects by calling the [SWbemServices](/windows/win32/wmisdk/swbemservices) object [ExecQueryAsync](/windows/win32/api/wbemcli/nf-wbemcli-iwbemservices-execqueryasync) method and by implementing a sink method to handle query results.

@@ -1,18 +1,10 @@
 ---
 title: SMS_TaskSequence_SoftwareConditionExpression Class
-titleSuffix: Configuration Manager
 description: An SMS Provider server class that represents a condition expression to verify if a specified product is installed on the destination computer.
 ms.date: 09/20/2016
 ms.subservice: sdk
-ms.service: configuration-manager
 ms.topic: reference
-ms.assetid: c7881ad7-e3c8-4c67-ae69-2f8615343f5f
-author: Banreet
-ms.author: banreetkaur
-manager: apoorvseth
-ms.localizationpriority: low
 ms.collection: tier3
-ms.reviewer: mstewart
 ---
 # SMS_TaskSequence_SoftwareConditionExpression Server WMI Class
 The `SMS_TaskSequence_SoftwareConditionExpression` Windows Management Instrumentation (WMI) class is an SMS Provider server class, in Configuration Manager, that represents a condition expression to verify if a specified product is installed on the destination computer. If the software exists, the action is run; otherwise it is not run.
