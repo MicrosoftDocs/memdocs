@@ -46,8 +46,7 @@ The report also provides actionable insights—showing how much your score could
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Resource performance**.
 
-:::image type="content" source="media/resource-performance/score-breakdown-and-trends.png" lightbox="media/resource-performance/score-breakdown-and-trends.png" alt-text=":::image type="content" source="media/resource-performance/score-breakdown-and-trends.png" lightbox="media/resource-performance/score-breakdown-and-trends.png" alt-text="Screenshot of the resource performance report with overall score, CPU and RAM spike time breakdown, 28-day trend, and prioritized recommendations.":::
-":::
+:::image type="content" source="media/resource-performance/score-breakdown-and-trends.png" lightbox="media/resource-performance/score-breakdown-and-trends.png" alt-text="Screenshot of the resource performance report with overall score, CPU and RAM spike time breakdown, 28-day trend, and prioritized recommendations.":::
 
 ### Resource performance score
 
