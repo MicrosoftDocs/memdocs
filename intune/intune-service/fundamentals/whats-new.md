@@ -300,6 +300,16 @@ To help you prepare before enabling this change, Intune includes a new **Permiss
 
 For more information about the current default behavior, the Scoped permissions opt-in public preview, and the new report, see [Permission behavior across role assignments](../fundamentals/scope-tags.md#permission-behavior-across-role-assignments).
 
+## Week of March 16, 2026  
+
+### Device management  
+
+#### Improved Remote Help update reporting on macOS<!-- 35705883 -->  
+
+We've improved the update and reporting experience for Remote Help on macOS to make version management more reliable and transparent for IT admins.  
+ 
+After you deploy the latest Remote Help client (version 1.0.26012221) through Microsoft Intune, you can now view the full client version in your device inventory and during app upgrades. This improvement makes it easier to verify deployments. Remote Help installations deployed through Intune are also registered with Microsoft AutoUpdate (MAU), allowing Intune-managed macOS devices to automatically receive future Remote Help updates. For more information, see [Deploy Remote Help with Microsoft Intune](remote-help-deploy.md). 
+
 ## Week of March 2, 2026 (Service release 2602)
 
 ### App management

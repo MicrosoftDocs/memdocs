@@ -66,6 +66,9 @@ To turn on automatic app updates:
 
 3. On the Microsoft AutoUpdate screen, select **Automatically download and install**.
 
+> [!NOTE]
+> The minimum supported version of the Company Portal app for macOS is v5.2401.0. If you're running an older version, you'll be prompted to update the Company Portal app when you sign in.
+
 ## Update on Windows device
 
 To view available app updates on devices running Windows:
