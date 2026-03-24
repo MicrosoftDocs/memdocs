@@ -21,7 +21,11 @@ Passwordless authentication helps reduce phishing and credential theft by replac
 
 Microsoft Intune doesn't issue passwordless credentials. Instead, it helps you prepare devices, apps, and user experiences so these methods can work consistently across your organization. Microsoft Entra ID provides the identity controls and authentication methods, while Intune helps enforce the device state and configuration those methods depend on.
 
-Use this article to understand how Microsoft Intune fits into a passwordless strategy from an Intune administrator's perspective. If you're ready to deploy a specific method, use the implementation links throughout this article.
+Use this article to understand how Microsoft Intune fits into a passwordless strategy from an Intune administrator's perspective. When you're ready to deploy a specific method, use the implementation links throughout this article.
+
+Passwordless also fits into a broader Zero Trust strategy. Strong sign-in methods help organizations verify explicitly, device compliance helps control access, and related tools help investigate risk and protect data after users authenticate.
+
+For Zero Trust background, see [What is Zero Trust?](/security/zero-trust/zero-trust-overview) and [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common).
 
 ## How Microsoft Intune fits into a passwordless strategy
 
@@ -31,7 +35,7 @@ In a passwordless deployment, Microsoft Intune and Microsoft Entra ID each have 
 - **Microsoft Intune** prepares devices for passwordless sign-in by configuring settings, enforcing compliance, deploying required apps, and supporting the platform experiences that make passwordless practical at scale.
 - **Platform capabilities** on Windows, macOS, iOS, and Android provide the device-bound experience, such as biometrics, secure hardware, passkey support, and brokered single sign-on.
 
-This separation is important. If you're planning a passwordless solution, Microsoft Entra ID is the identity authority, but Microsoft Intune is often the management layer that helps users actually adopt and use those methods successfully.
+This separation is important. If you're planning a passwordless solution, Microsoft Entra ID is the identity authority, and Microsoft Intune is the management layer that helps users adopt and use those methods successfully.
 
 ## What Microsoft Intune contributes
 
@@ -51,9 +55,9 @@ Microsoft Intune can support these passwordless methods as part of an end-to-end
 
 ### Windows Hello for Business
 
-Windows Hello for Business is a hardware-backed, phishing-resistant sign-in method for Windows devices. In an Intune-managed environment, you typically use Microsoft Intune to prepare Windows devices for Windows Hello for Business and to enforce related device settings.
+Windows Hello for Business is a hardware-backed, phishing-resistant sign-in method for Windows devices. In an Intune-managed environment, Microsoft Intune prepares Windows devices for Windows Hello for Business and enforces related device settings.
 
-Microsoft Intune is most relevant when you need to:
+This method is most relevant when you need to:
 
 - Prepare cloud-first Windows devices for passwordless sign-in.
 - Deliver Windows Hello for Business settings during enrollment and ongoing management.
@@ -80,7 +84,7 @@ For implementation guidance, see:
 
 ### Passkeys
 
-Passkeys extend passwordless authentication across device-bound and synced credential models. From an Intune perspective, passkeys are mostly about platform and app readiness. Microsoft Intune helps you manage the devices and app prerequisites that make passkey adoption viable across platforms.
+Passkeys extend passwordless authentication across device-bound and synced credential models. From a Microsoft Intune perspective, passkeys are mostly about platform and app readiness. The main requirement is managing the device and app prerequisites that make passkey adoption viable across platforms.
 
 This dependency is especially important on:
 
@@ -94,9 +98,9 @@ For implementation guidance, see:
 
 ### Microsoft Authenticator phone sign-in
 
-Microsoft Authenticator can provide a passwordless sign-in experience on mobile devices and can also act as a broker for Microsoft Entra ID authentication across apps. Microsoft Intune supports this flow by helping you deploy and manage the mobile app and device prerequisites behind that experience.
+Microsoft Authenticator can provide a passwordless sign-in experience on mobile devices and can also act as a broker for Microsoft Entra ID authentication across apps. Microsoft Intune supports this flow by deploying and managing the mobile app and device prerequisites behind that experience.
 
-In many environments, Microsoft Intune helps by:
+In many environments, this support includes:
 
 - Deploying Microsoft Authenticator to managed mobile devices.
 - Supporting the brokered sign-in experience across Microsoft apps.
@@ -127,7 +131,7 @@ For implementation guidance, see:
 
 Certificate-based authentication can also be part of a passwordless strategy, especially in regulated or specialized environments. Microsoft Intune is relevant when certificate delivery, device trust, and platform configuration all need to work together.
 
-This is usually where Microsoft Intune contributes by:
+This usually means:
 
 - Deploying certificate profiles.
 - Managing devices that consume those certificates.
@@ -163,7 +167,7 @@ Related guidance:
 
 ### macOS
 
-On macOS, passwordless planning often depends on how Microsoft Entra ID integrates with the platform sign-in and single sign-on experience. Microsoft Intune helps by delivering the device configuration needed for Apple-focused identity integrations.
+On macOS, passwordless planning often depends on how Microsoft Entra ID integrates with the platform sign-in and single sign-on experience. Microsoft Intune delivers the device configuration needed for Apple-focused identity integrations.
 
 This matters when you're planning:
 
@@ -177,7 +181,7 @@ Related guidance:
 
 ### iOS and iPadOS
 
-On iOS and iPadOS, passwordless planning is more about app sign-in, brokered authentication, and passkey behavior than device sign-in. Microsoft Intune helps deploy and manage the apps and settings that make those experiences consistent for users.
+On iOS and iPadOS, passwordless planning is more about app sign-in, brokered authentication, and passkey behavior than device sign-in. Microsoft Intune deploys and manages the apps and settings that make those experiences consistent for users.
 
 Related guidance:
 
@@ -186,13 +190,32 @@ Related guidance:
 
 ### Android
 
-On Android, Microsoft Intune helps establish the managed context that passwordless and brokered authentication flows depend on. This is especially relevant when Microsoft Authenticator or related app experiences are part of your mobile access design.
+On Android, Microsoft Intune establishes the managed context that passwordless and brokered authentication flows depend on. This is especially relevant when Microsoft Authenticator or related app experiences are part of your mobile access design.
 
 Related guidance:
 
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 
 ## Related dependencies to plan for
+
+### Zero Trust architecture
+
+Passwordless is one part of a broader identity and device access strategy. From a Zero Trust perspective, passwordless methods strengthen authentication, but they work best when paired with device trust, policy enforcement, and data protection.
+
+For an Intune administrator, that usually means planning across these layers:
+
+- **Identity** with phishing-resistant authentication methods in Microsoft Entra ID.
+- **Device trust** with Microsoft Intune enrollment, compliance, and configuration.
+- **Access policy** with Conditional Access and related exclusion planning.
+- **Data protection** with Microsoft Purview capabilities that help protect content after access is granted.
+- **Investigation and response** with Microsoft Defender signals and workflows when risk or compromise needs follow-up.
+
+This article keeps the focus on Microsoft Intune, but passwordless planning is more effective when you treat it as part of the Zero Trust identity and device access stack instead of as a standalone credential feature.
+
+Related guidance:
+
+- [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
+- [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common)
 
 ### Conditional Access
 
@@ -203,6 +226,31 @@ When you link to Conditional Access guidance, also account for emergency access 
 Related guidance:
 
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
+
+### Microsoft Defender signals and investigation
+
+Microsoft Defender isn't required to understand passwordless, but it can become an important related dependency when your organization uses device risk, threat investigation, or response workflows as part of the broader access story.
+
+For example, passwordless methods help reduce credential theft risk, while Microsoft Defender products can help detect suspicious activity on endpoints and support investigation when something still goes wrong. In some environments, these signals influence how teams think about trusted devices, incident response, or higher-assurance access patterns.
+
+This article doesn't teach Microsoft Defender integration or incident response. Instead, treat Microsoft Defender as part of the surrounding security posture that can complement passwordless and device-based access controls.
+
+### Microsoft Purview data protection
+
+Microsoft Purview is also a related dependency, not a core topic for this article. Passwordless authentication helps establish stronger user identity, but it doesn't protect sensitive content by itself after access is granted.
+
+If your organization is using passwordless as part of a broader Zero Trust approach, Microsoft Purview can help protect data with capabilities such as:
+
+- Sensitivity labels.
+- Encryption tied to protected content.
+- Data Loss Prevention policies.
+
+That relationship matters most when your readers are trying to connect strong sign-in with downstream protection for email, files, and collaboration data. In that case, passwordless is the identity-control layer, while Microsoft Purview becomes part of the data-protection layer.
+
+Related guidance:
+
+- [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels)
+- [Design a data loss prevention policy](/purview/dlp-policy-design)
 
 ### Compliance and configuration policies
 
@@ -221,6 +269,7 @@ Common validation points include:
 
 - Microsoft Entra sign-in logs.
 - Microsoft Intune device and policy reporting.
+- Microsoft Defender investigation views when passwordless is part of a broader incident-response model.
 - Platform-specific verification experiences for the passwordless method you deploy.
 
 If you build implementation content later, this area can become a dedicated verify section.
@@ -247,6 +296,16 @@ Use this conceptual article as the starting point, then move to the product or p
 
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 
+### Use Zero Trust guidance to connect identity, devices, and policy
+
+- [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
+- [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common)
+
+### Use data protection guidance when you need to extend strong sign-in to protected content
+
+- [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels)
+- [Design a data loss prevention policy](/purview/dlp-policy-design)
+
 ## Related articles
 
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
@@ -256,3 +315,7 @@ Use this conceptual article as the starting point, then move to the product or p
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
+- [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
+- [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common)
+- [Get started with sensitivity labels](/purview/get-started-with-sensitivity-labels)
+- [Design a data loss prevention policy](/purview/dlp-policy-design)
