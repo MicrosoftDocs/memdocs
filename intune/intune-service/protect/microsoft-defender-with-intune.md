@@ -6,6 +6,8 @@ ms.author: brenduns
 ms.date: 03/24/2026
 ms.topic: article
 ms.reviewer: aanavath
+ai-usage: ai-assisted
+
 ms.collection:
 - M365-identity-device-management
 - highpri
