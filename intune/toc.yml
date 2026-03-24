@@ -1959,6 +1959,10 @@ items:
 
   - name: Scenario-based guidance
     items:
+    - name: Passwordless authentication
+      href: ./solutions/passwordless.md
+    - name: Passwordless authentication (meging)
+      href: ./solutions/outline.md
     - name: Manage AI on Android
       href: ./solutions/ai/manage-ai-android.md
     - name: Manage operating system versions
