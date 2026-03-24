@@ -77,52 +77,35 @@ After the assignment is saved, confirm the installation status before proceeding
 
 ## Configure Microsoft Defender for Endpoint on Android
 
-After deploying the app, use the following procedures to configure Microsoft Defender for Endpoint on Android devices.
+After deploying the app, use Intune policies to configure Microsoft Defender for Endpoint on Android devices. This involves creating an app configuration policy to grant app permissions and a device configuration profile to set up always-on VPN for web protection. You can also optionally configure low-touch onboarding to reduce the steps users need to complete. For optional feature configurations specific to Defender, such as network protection and privacy controls, see [Configure Microsoft Defender for Endpoint on Android features](/defender-endpoint/android-configure) in the Defender documentation.
 
-### Configure app configuration policies
+### Grant app permissions
 
-Defender for Endpoint supports app configuration policies for managed devices using Microsoft Intune. Use app configuration policies to select feature configurations and grant application permissions for Defender for Endpoint.
+Create an app configuration policy to grant Defender the permissions it needs on the device without prompting users during onboarding.
 
-1. In the **Apps** page, go to **Policy** > **App configuration policies** > **Add** > **Managed devices**.
+1. In the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Apps** > **App configuration policies** > **Add** > **Managed devices**.
 
-   :::image type="content" source="./media/apps-defender-android/android-mem.png" alt-text="The App configuration policies pane in the Microsoft Intune admin center portal" lightbox="./media/apps-defender-android/android-mem.png":::
+1. On the **Basics** page, specify the following details:
 
-2. In the **Create app configuration policy** page, specify the following details:
+   - **Name**: Enter a descriptive name, such as *Microsoft Defender for Endpoint*.
+   - **Platform**: **Android Enterprise**
+   - **Profile type**: Select the type that matches your device enrollment:
+     - **Personally-owned Work Profile only**
+     - **Fully Managed, Dedicated, and Corporate-owned work profile only**
+   - **Targeted app**: Select **Microsoft Defender: Antivirus**, then select **Next**.
 
-   - Name: **Microsoft Defender for Endpoint**.
-   - Choose **Android Enterprise** as platform.
-   - Choose **Personally-owned Work Profile only** or **Fully Managed, Dedicated, and Corporate-owned work profile only** as Profile Type.
-   - Select **Select App**, choose **Microsoft Defender**, select **OK** and then **Next**.
+1. On the **Settings** page, for **Permissions** select **Add**. From the list, select the available app permissions, and then select **OK**.
 
-     :::image type="content" source="./media/apps-defender-android/android-create-app.png" alt-text="Screenshot of the Associated app details pane." lightbox="./media/apps-defender-android/android-create-app.png":::
+1. For each permission, set the permission state:
 
-3. Select **Permissions** \> **Add**. From the list, select the available app permissions \> **OK**.
+   - **Prompt**: Prompts the user to accept or deny.
+   - **Auto grant**: Automatically approves without notifying the user.
+   - **Auto deny**: Automatically denies without notifying the user.
 
-4. Select an option for each permission to grant with this policy:
+   > [!NOTE]
+   > On Android 12 and later, **Auto grant** isn't supported for certain permissions on corporate-owned work profile and dedicated devices. For details, see [Add app configuration policies for managed Android Enterprise devices](app-configuration-policies-use-android.md).
 
-   - **Prompt** - Prompts the user to accept or deny.
-   - **Auto grant** - Automatically approves without notifying the user.
-   - **Auto deny** - Automatically denies without notifying the user.
-
-5. Go to the **Configuration settings** section, and then choose **Use configuration designer**.
-
-   :::image type="content" source="./media/apps-defender-android/configurationformat.png" alt-text="Image of android create app configuration policy." lightbox="./media/apps-defender-android/configurationformat.png":::
-
-6. Select **Add** to view a list of supported configurations. Select the required configuration, and then select **Ok**.
-
-   :::image type="content" source="./media/apps-defender-android/selectconfigurations.png" alt-text="Image of selecting configuration policies for android." lightbox="./media/apps-defender-android/selectconfigurations.png":::
-
-7. You should see all the selected configurations listed. You can change the configuration value as required and then select **Next**.
-
-   :::image type="content" source="./media/apps-defender-android/listedconfigurations.png" alt-text="Image of selected configuration policies." lightbox="./media/apps-defender-android/listedconfigurations.png":::
-
-8. In the **Assignments** page, select the user group to which this app config policy would be assigned. Select **Select groups to include**, select a group, and then select **Next**. The group selected here is usually the same group to which you assign the Microsoft Defender for Endpoint Android app.
-
-   :::image type="content" source="./media/apps-defender-android/android-select-group.png" alt-text="The Selected groups pane" lightbox="./media/apps-defender-android/android-select-group.png":::
-
-9. In the **Review + Create** page that comes up next, review all the information, and then select **Create**.
-
-   The app configuration policy for Defender for Endpoint is now assigned to the selected user group.
+1. Select **Next**, assign the policy to the same user group you used when deploying the app, and then select **Next** > **Create**.
 
 ### Set up always-on VPN
 
@@ -217,5 +200,5 @@ After policies are pushed to devices, users complete onboarding from the device.
 
 ## Next steps
 
-- [Configure Microsoft Defender for Endpoint web protection settings for Android](../protect/microsoft-defender-configure-android.md) — Manage web protection settings from Intune by enrollment type.
-- [Configure Microsoft Defender for Endpoint on Android features](/defender-endpoint/android-configure) — Configure privacy controls and other Android-specific Defender features.
+- [Configure Microsoft Defender for Endpoint web protection settings for Android](../protect/microsoft-defender-configure-android.md): Manage web protection settings from Intune by enrollment type.
+- [Configure Microsoft Defender for Endpoint on Android features](/defender-endpoint/android-configure): Configure privacy controls and other Android-specific Defender features.
