@@ -79,7 +79,7 @@ MFA adds layers of security by requiring two or more factors (something you know
 :::column-end:::
 :::row-end:::
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+**Learn more:**
 - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
 
 ### Phishing resistance and Zero Trust
@@ -92,7 +92,7 @@ Zero Trust assumes no implicit trust—every access request must be verified. Ph
 
 Without phishing resistance, attackers can bypass MFA through social engineering or prompt bombing, undermining Zero Trust protections.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+**Learn more:**
 - [What is Zero Trust?](/en-us/security/zero-trust/zero-trust-overview)
 
 ## Passwordless Authentication Methods in Microsoft Entra ID
@@ -110,15 +110,6 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::column-end:::
 :::row-end:::
 
-<!--
-[!INCLUDE [intune](includes/intune.md)]
-- Enforcing OS version requirements for passkey support.
-- Ensuring Authenticator and Company Portal apps are installed.
-- Maintaining compliance so Conditional Access allows passkey sign-in.
-
-[!INCLUDE [learn-more](includes/learn-more.md)]
-- add here
--->
 
 :::row:::
 :::column span="1":::
@@ -137,7 +128,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 - Enabling FIDO2 sign-in via policy settings.
 - Ensuring devices are compliant for passwordless access.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+**Learn more:**
 - add here
 -->
 
@@ -161,7 +152,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 - Supporting Purebred workflows for mobile certificate issuance and renewal in government or high-security environments.
 - Offering a cloud-based PKI option to reduce infrastructure complexity.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+**Learn more:**
 - add here
 - -->
 
@@ -185,7 +176,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 - Prompting setup during OOBE for Entra-joined devices.
 - Ensuring compliance for passwordless sign-in policies.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+**Learn more:**
 - add here
 -->
 
@@ -211,7 +202,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 - Applying App Protection Policies (MAM).
 - Ensuring the brokered authentication flow (Company Portal/Authenticator) is present on iOS/Android.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+**Learn more:**
 - add here
 -->
 
@@ -237,7 +228,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 - Providing a path for passwordless onboarding by prompting Hello setup after TAP sign-in.
 - Supporting fallback scenarios without compromising security.
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+**Learn more:**
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass#use-a-temporary-access-pass)
 -->
 
@@ -375,7 +366,7 @@ Summarize benefits, reiterate Intune's role, and link to next steps or resources
 
 ### Links to review
 
-[!INCLUDE [learn-more](includes/learn-more.md)]
+
 - [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](../../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
 - [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students)
 - [App Protection Policies Overview](../../intune-service/apps/app-protection-policy.md)
