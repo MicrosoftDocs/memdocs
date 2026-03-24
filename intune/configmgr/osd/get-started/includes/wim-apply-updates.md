@@ -1,19 +1,18 @@
 ---
 ms.topic: include
-ms.date: 07/31/2025
+ms.date: 03/24/2026
 ---
 
 ## Apply software updates to an image
 
 > [!IMPORTANT]
 >
-> Configuration Manager no longer supports offline servicing of UUP‑enabled images and update packages, such as Windows 11 and Windows Server 2025.  
-> This change is due to updates in how UUP patches are delivered.  
-> The recommended method to keep UUP enabled deployments up-to-date is to acquire the latest patched Operating System ISO from the [Microsoft 365 admin center](https://admin.microsoft.com).  
-> Once the updated Operating System ISO is obtained:
+> Configuration Manager doesn’t support offline servicing for Windows images and update packages that use the [Unified Update Platform](/windows/deployment/update/windows-update-overview#unified-update-platform-uup-architecture) (UUP), including Windows Server 2025 and recent Windows 11 releases. This limitation is due to changes in how UUP updates are delivered. 
+> 
+> To keep UUP-based Operating System Deployments up to date, use the latest patched operating system ISO available from the [Microsoft 365 admin center](https://admin.microsoft.com). After you obtain the updated operating system ISO:
 >  
-> - Import the **install.wim** image from the ISO into the site for **Operating System Images** packages used in bare metal/refresh task sequences.
-> - Import the whole contents of the ISO into the site for **Operating System Upgrade Packages** used for in-place upgrade task sequences.
+> - Import the **install.wim** image from the ISO as an **Operating System Image** for use with bare metal and refresh task sequences.
+> - Import the entire ISO contents as an **Operating System Upgrade Package** for use with in-place upgrade task sequences.
 
 > [!NOTE]
 >
