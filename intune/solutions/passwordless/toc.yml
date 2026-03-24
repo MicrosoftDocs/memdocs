@@ -5,9 +5,6 @@ items:
 - name: Outline
   href: outline.md
   displayName: passwordless
-- name: 🔴 Overview
-  href: index.md
-  displayName: passwordless
 - name: 🔴 Services integration
   href: integration.md
   displayName: passwordless

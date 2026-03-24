@@ -1,6 +1,6 @@
 ---
 title: Passwordless authentication with Microsoft Intune
-description: Learn how Microsoft Intune supports passwordless authentication across Windows, macOS, iOS, and Android, and how it connects with Microsoft Entra ID and related platform capabilities.
+description: Learn how Microsoft Intune enables passwordless authentication across Windows, macOS, iOS, and Android. Discover how Intune works with Microsoft Entra ID to secure your organization.
 ms.date: 03/24/2026
 ms.topic: concept-article
 author: paolomatarazzo
@@ -90,6 +90,41 @@ Microsoft Intune commonly supports passwordless adoption in these areas:
 - **App and broker preparation**: Deploying apps such as Microsoft Authenticator and Company Portal where platform flows depend on them.
 - **Cross-platform consistency**: Giving admins one management plane for Windows, macOS, iOS/iPadOS, and Android.
 
+## Prerequisites and licensing
+
+Before you plan a passwordless deployment, verify that your environment meets the licensing and platform requirements for the methods you intend to use. Some passwordless features require specific Microsoft Entra ID or Microsoft Intune license tiers, and each method has minimum OS version requirements.
+
+### Licensing requirements
+
+| Capability | License requirement |
+|---|---|
+| Windows Hello for Business | Microsoft Entra ID P1 (for Conditional Access enforcement) |
+| FIDO2 security keys | Microsoft Entra ID P1 |
+| Passkeys (device-bound and synced) | Microsoft Entra ID P1 |
+| Microsoft Authenticator phone sign-in | Microsoft Entra ID P1 |
+| Temporary Access Pass | Microsoft Entra ID P1 |
+| Certificate-based authentication (CBA) | Microsoft Entra ID P1 (P2 for risk-based Conditional Access) |
+| Authentication strength policies | Microsoft Entra ID P1 |
+| Risk-based Conditional Access | Microsoft Entra ID P2 |
+| Microsoft Cloud PKI | Microsoft Intune Suite add-on or standalone Cloud PKI add-on |
+| Device compliance and configuration profiles | Microsoft Intune Plan 1 |
+
+For current licensing details, see [Microsoft Entra plans and pricing](/entra/fundamentals/licensing) and [Microsoft Intune licensing](/intune/fundamentals/licenses).
+
+### Minimum platform versions
+
+| Method | Windows | macOS | iOS/iPadOS | Android |
+|---|---|---|---|---|
+| Windows Hello for Business | Windows 10 or later | — | — | — |
+| FIDO2 security keys | Windows 10 1903 or later | — | — | — |
+| Passkeys (synced) | Windows 11 23H2 or later | macOS 13 or later | iOS 17 or later | Android 14 or later |
+| Device-bound passkeys in Authenticator | — | — | iOS 17 or later | Android 14 or later |
+| Platform SSO (Secure Enclave) | — | macOS 13 or later | — | — |
+| Web sign-in (TAP at lock screen) | Windows 11 22H2 or later | — | — | — |
+| Microsoft Authenticator phone sign-in | — | — | iOS 16 or later | Android 11 or later |
+
+Platform version requirements can change with each release cycle. Always verify current requirements in the product documentation for the specific method you're deploying.
+
 ## Passwordless methods and Intune's role
 
 ### Windows Hello for Business
@@ -151,13 +186,26 @@ For implementation guidance, see:
 
 ### Temporary Access Pass
 
-Temporary Access Pass is a time-limited credential that helps users bootstrap or recover access before they complete their long-term passwordless setup. It isn't a permanent passwordless method, but it's often part of a successful rollout.
+Temporary Access Pass (TAP) is a time-limited credential that helps users bootstrap or recover access before they complete their long-term passwordless setup. It isn't a permanent passwordless method, but it's often part of a successful rollout.
 
 From an Intune perspective, Temporary Access Pass matters when you want to:
 
 - Simplify onboarding to passwordless methods.
 - Reduce reliance on temporary passwords during deployment.
 - Connect onboarding scenarios to managed Windows device setup.
+
+#### Day-zero onboarding with TAP
+
+A common challenge in passwordless deployments is the "chicken-and-egg" problem: a new user needs to sign in to register their passwordless credential, but you don't want to issue a password for that first sign-in. TAP solves this by providing a short-lived credential for initial device setup and credential registration.
+
+A typical onboarding flow looks like this:
+
+1. **Admin issues a TAP** — The IT admin or automated workflow generates a time-limited TAP for the new user in the Microsoft Entra admin center or via Microsoft Graph API.
+1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web sign-in enables TAP entry directly at the lock screen.
+1. **User registers a passwordless method** — After signing in with the TAP, the user is prompted to register Windows Hello for Business, a FIDO2 security key, a passkey in Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
+1. **TAP expires** — The TAP is single-use or time-limited (configurable), so it can't be reused after the user registers their passwordless method.
+
+This flow eliminates the need to issue and then revoke a temporary password, and gives Intune a managed onboarding path from the first sign-in.
 
 For implementation guidance, see:
 
@@ -166,16 +214,27 @@ For implementation guidance, see:
 
 ### Certificate-based authentication
 
-Certificate-based authentication can also be part of a passwordless strategy, especially in regulated or specialized environments. Intune is relevant when certificate delivery, device trust, and platform configuration all need to work together.
+Certificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
 
-This usually means:
+Intune supports two infrastructure models for certificate delivery:
 
-- Deploying certificate profiles.
-- Managing devices that consume those certificates.
-- Connecting the device management layer to the identity method defined in Microsoft Entra ID.
+- **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Microsoft Intune to bridge their on-premises PKI with Intune. The connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an enterprise CA or need to integrate with established PKI investments.
+- **Microsoft Cloud PKI**: For organizations that want to simplify or eliminate on-premises certificate infrastructure, Microsoft Cloud PKI provides a cloud-based CA as part of the Microsoft Intune Suite. Cloud PKI issues and manages certificates without requiring on-premises servers, connectors, or hardware security modules.
+
+Regardless of infrastructure model, Intune delivers certificates to devices using certificate profiles:
+
+- **Trusted root certificate profiles** distribute your CA's root certificate so devices can establish the trust chain.
+- **SCEP certificate profiles** request and deploy certificates from a SCEP-enabled CA.
+- **PKCS certificate profiles** request and deploy certificates using the PKCS #12 standard.
+- **Imported PFX certificate profiles** deploy pre-generated certificates that are imported into Intune.
+
+These profiles work across Windows, macOS, iOS/iPadOS, and Android, making Intune the delivery mechanism that connects your PKI infrastructure—whether on-premises or cloud-based—to the identity method defined in Microsoft Entra ID.
 
 For implementation guidance, see:
 
+- [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
+- [Microsoft Cloud PKI overview](../../cloud-pki/index.md)
+- [Certificate Connector for Microsoft Intune](../../intune-service/protect/certificate-connector-overview.md)
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 
 ## Platform considerations
@@ -201,6 +260,17 @@ Related guidance:
 - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
 - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+
+#### Hybrid and legacy considerations
+
+The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
+
+- **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
+- **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure such as Active Directory Federation Services (AD FS) or certificate trust depending on the trust model.
+- **On-premises resource access** from Entra joined devices requires Cloud Kerberos Trust or certificate-based trust. Cloud Kerberos Trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [Cloud Kerberos Trust deployment](/windows/security/identity-protection/hello-for-business/deploy/hybrid-cloud-kerberos-trust).
+- **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods when Cloud Kerberos Trust is configured, but applications that require NTLM or direct LDAP bind may need additional planning.
+
+If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
 
 ### macOS
 
@@ -249,6 +319,25 @@ When Intune, Entra ID, and platform capabilities are used together, organization
 - **Reduced IT support load**: Fewer password resets, smoother onboarding with Temporary Access Pass, and self-service recovery options reduce helpdesk volume.
 - **Future-ready architecture**: The framework is built to accommodate new methods like synced passkeys. As standards evolve, they integrate into the same Entra ID + Intune model without requiring architectural changes.
 
+## Where to start in the Intune admin center
+
+This article is conceptual and doesn't walk through full setup steps. However, knowing where to find the relevant settings in the [Microsoft Intune admin center](https://intune.microsoft.com) can help you plan and explore. The following table maps common passwordless tasks to their location in the admin center.
+
+| Task | Where to configure |
+|---|---|
+| Windows Hello for Business (tenant-wide) | **Devices** > **Enrollment** > **Windows Hello for Business** |
+| Windows Hello for Business (policy-based) | **Devices** > **Configuration** > Create profile > **Settings catalog** > search for *Windows Hello for Business* |
+| Enable the Windows passwordless experience | **Devices** > **Configuration** > Create profile > **Settings catalog** > **Administrative Templates** > **System** > **Logon** > *Enable Passwordless Experience* |
+| Enable Web sign-in (for TAP at lock screen) | **Devices** > **Configuration** > Create profile > **Settings catalog** > **Authentication** > *Enable Web Sign In* |
+| Deploy certificate profiles (SCEP/PKCS) | **Devices** > **Configuration** > Create profile > **Templates** > *SCEP certificate*, *PKCS certificate*, or *Trusted certificate* |
+| Deploy Microsoft Authenticator | **Apps** > **All apps** > **Add** > select platform > add Microsoft Authenticator |
+| Deploy Company Portal | **Apps** > **All apps** > **Add** > select platform > add Company Portal |
+| Apple SSO extension | **Devices** > **Configuration** > Create profile > **Templates** > **Device features** > *Single sign-on app extension* |
+| Compliance policies | **Devices** > **Compliance** > **Create policy** > select platform |
+| Cloud PKI | **Tenant administration** > **Cloud PKI** |
+
+For step-by-step deployment guidance for each method, use the implementation links in the method sections earlier in this article.
+
 ## Related dependencies to plan for
 
 ### Zero Trust architecture
@@ -276,6 +365,19 @@ Related guidance:
 
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
 
+### Emergency access and recovery
+
+A common concern when removing passwords is what happens when a user loses their only passwordless device—a phone, a FIDO2 key, or a laptop with Windows Hello. Without a recovery plan, admins can face support escalations and users can be locked out of critical resources.
+
+Plan for these scenarios as part of your passwordless deployment:
+
+- **Emergency access accounts**: Maintain at least two break-glass accounts that are excluded from Conditional Access policies and passwordless enforcement. These accounts provide a fallback path if a misconfiguration or outage blocks all other access. Store credentials securely and monitor sign-in activity on these accounts. For more information, see [Manage emergency access accounts in Microsoft Entra ID](/entra/identity/role-based-access-control/security-emergency-access).
+- **Recovery with Temporary Access Pass**: When a user loses their passwordless device, an admin can issue a new TAP so the user can sign in and register a replacement credential. This avoids resetting the user to a password and keeps the recovery flow within the passwordless model.
+- **Multiple registered methods**: Encourage users to register more than one passwordless method where possible. For example, a user who uses Windows Hello for Business on their laptop might also register a passkey in Microsoft Authenticator on their phone. If one device is lost, the other method still works.
+- **Self-service credential management**: Users can manage their authentication methods at [My Security Info](https://mysignins.microsoft.com/security-info). When combined with TAP-based recovery, this reduces helpdesk dependency for credential resets.
+
+Planning for recovery before you enforce passwordless is essential. A rollout that blocks passwords without a recovery path creates the kind of lockout scenarios that erode admin and user confidence in the transition.
+
 ### Compliance and device readiness
 
 Passwordless often depends on the device being in the right state before users can rely on the experience. Readiness typically includes:
@@ -293,6 +395,19 @@ To validate a passwordless deployment, common checkpoints include:
 - Microsoft Intune device and policy reporting.
 - Platform-specific verification experiences for the passwordless method you deploy.
 
+## User adoption and communication
+
+Technical readiness is only one part of a passwordless rollout. Users who are accustomed to passwords may experience confusion or resistance when sign-in flows change. Planning for user communication and support can make the difference between a smooth transition and widespread helpdesk escalation.
+
+Consider these practices:
+
+- **Communicate the change early**: Let users know that their sign-in experience is changing, why it's changing, and what to expect. Focus on the benefits—fewer passwords to remember, faster sign-in, and stronger security.
+- **Provide platform-specific guidance**: The passwordless experience is different on Windows (Hello biometric or PIN), macOS (Touch ID with Platform SSO), iOS (Authenticator or passkeys), and Android (Authenticator broker). Tailor communication to the platforms your users have.
+- **Identify pilot groups**: Start with a group of users who can test the experience and provide feedback before you enforce passwordless across the organization. IT staff, early adopters, and security-aware teams are often good candidates.
+- **Prepare helpdesk staff**: Ensure your support team knows how to issue a Temporary Access Pass for recovery, how to guide users through credential registration, and where to check sign-in logs when issues arise.
+
+For end-user documentation on managing sign-in methods, see [Set up your security info from a sign-in prompt](/entra/identity/authentication/end-user-first-time).
+
 ## Related articles
 
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
@@ -300,6 +415,8 @@ To validate a passwordless deployment, common checkpoints include:
 - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
 - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
+- [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
+- [Microsoft Cloud PKI overview](../../cloud-pki/index.md)
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
 - [What is Zero Trust?](/security/zero-trust/zero-trust-overview)

@@ -129,16 +129,27 @@ For implementation guidance, see:
 
 ### Certificate-based authentication
 
-Certificate-based authentication can also be part of a passwordless strategy, especially in regulated or specialized environments. Microsoft Intune is relevant when certificate delivery, device trust, and platform configuration all need to work together.
+Certificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Microsoft Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
 
-This usually means:
+Intune supports two infrastructure models for certificate delivery:
 
-- Deploying certificate profiles.
-- Managing devices that consume those certificates.
-- Connecting the device management layer to the identity method defined in Microsoft Entra ID.
+- **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Microsoft Intune to bridge their on-premises PKI with Intune. The connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an enterprise CA or need to integrate with established PKI investments.
+- **Microsoft Cloud PKI**: For organizations that want to simplify or eliminate on-premises certificate infrastructure, Microsoft Cloud PKI provides a cloud-based CA as part of the Microsoft Intune Suite. Cloud PKI issues and manages certificates without requiring on-premises servers, connectors, or hardware security modules.
+
+Regardless of infrastructure model, Intune delivers certificates to devices using certificate profiles:
+
+- **Trusted root certificate profiles** distribute your CA's root certificate so devices can establish the trust chain.
+- **SCEP certificate profiles** request and deploy certificates from a SCEP-enabled CA.
+- **PKCS certificate profiles** request and deploy certificates using the PKCS #12 standard.
+- **Imported PFX certificate profiles** deploy pre-generated certificates that are imported into Intune.
+
+These profiles work across Windows, macOS, iOS/iPadOS, and Android, making Intune the delivery mechanism that connects your PKI infrastructure—whether on-premises or cloud-based—to the identity method defined in Microsoft Entra ID.
 
 For implementation guidance, see:
 
+- [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
+- [Microsoft Cloud PKI overview](../../cloud-pki/index.md)
+- [Certificate Connector for Microsoft Intune](../../intune-service/protect/certificate-connector-overview.md)
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 
 ## Platform considerations
@@ -313,6 +324,8 @@ Use this conceptual article as the starting point, then move to the product or p
 - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
 - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
 - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
+- [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
+- [Microsoft Cloud PKI overview](../../cloud-pki/index.md)
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
 - [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
