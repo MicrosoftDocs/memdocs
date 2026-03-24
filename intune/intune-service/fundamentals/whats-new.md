@@ -200,40 +200,6 @@ With this endpoint addition, we've also added a new [Intune Management Extension
 >
 > - Windows
 
-#### Preview the new device page in the Intune admin center (public preview) <!-- 16532161 36646300 -->
-
-In the Intune admin center, when you go to **Devices** > **All Devices** and select a device, you can see device-specific info, like device properties.
-
-This page is redesigned and is available for you to preview. To enable the new experience:
-
-1. In the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), go to **Devices** > **All Devices**.
-2. Move the **Preview new device view** toggle to **On**.
-
-The new experience is only available when you go to **Devices** > **All Devices** and select a device. If you open a device page from a different part of the Intune admin center, like from a report, the original page view is shown, even with the toggle enabled.
-
-When turned on, you see the new full page layout that gives you a single view of the device. Use this view to:
-
-- Track device activity
-- Access tools and reports
-- Manage device information
-
-The single device page has the following tabs:
-
-- **Device action status**: Shows requested, in‑progress, and recently completed device actions. You can search, sort, and filter this list. You can quickly see what actions are running or have completed without leaving the device view.
-- **Tools and reports**: This tab was previously called **Overview**. It shows monitoring reports, like compliance and device configuration status, tools, like remediations. These features were previously accessed in other parts of the Intune admin center.
-- **Properties**: Contains admin‑modifiable device properties with visible scope tags and a dedicated editing view.
-- **Device details**: This tab was previously called **Hardware**. It provides physical device information and key Intune and Microsoft Entra management details.
-
-Other features:
-
-- Device actions are grouped, ordered, and labeled consistently across platforms and device types, and only shows relevant and permitted actions. Destructive actions are separated and require confirmation, reducing unintentional actions.
-
-- The updated layout uses a standard structure across device types and platforms, while adapting to platform‑specific capabilities.
-
-- Improved labeling, hierarchy, and formatting make device information easier to scan and understand. The **Essentials** section elevates important device information and is accessible from any tab.
-
-All existing device management capabilities remain available. This update focuses on making them easier to find and use.
-
 #### New remote actions to suspend and restore Managed Home Screen on Android devices<!-- 10741483 -->
 
 Intune has two new remote actions that allow admins to temporarily suspend and restore Managed Home Screen (MHS) on Android devices. These actions let users exit MHS and access the device's default launcher for a defined period—without removing policies or requiring a PIN.
