@@ -1,7 +1,7 @@
 ---
-title: Device Query for Multiple Devices in Advanced Analytics
-description: Use device query for multiple devices in Microsoft Intune to run Kusto Query Language (KQL) queries, analyze device inventory, and gain cross-platform insights.
-ms.date: 01/23/2026
+title: Device Query for Multiple Devices
+description: Use device query for multiple devices in Microsoft Intune to run KQL queries, analyze inventory trends, and start querying your managed fleet now.
+ms.date: 03/24/2026
 ms.topic: how-to
 ---
 
@@ -92,7 +92,7 @@ After you run a query, results appear in the **Results** tab. You can interact w
 
 To help you get started, this section provides some sample queries. To access the sample queries, expand the **example queries** section under the **Getting started** page, and select the query you want to add to the query window. The following section shows the list of sample queries.
 
-### Top processors by Core Count
+### Top processors by core count
 
 This query shows the top five CPUs by core count.
 
@@ -113,7 +113,7 @@ EncryptableVolume
 | join LogicalDrive on Device
 ```
 
-### Arm64 devices
+### ARM64 devices
 
 This query lists all devices with an ARM64 processor.
 
@@ -164,7 +164,7 @@ This query provides a summary of devices by OS version.
 OsVersion| summarize DevicesCount = count() by OsVersion
 ```
 
-### Devices Bios Information
+### Device BIOS information
 
 This query lists devices based on BIOS manufacturer.
 
@@ -271,7 +271,7 @@ Scalar functions can be used to perform operations on individual values. The fol
 
 ## Supported properties
 
-Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](data-platform-schema.md).
+Device query supports the following entities. To learn more about what properties are supported for each entity, see [Intune Data Platform Schema](ref-data-platform-schema.md).
 
 - `Apple Auto Setup Admin Accounts`
 - `Apple Device States`
