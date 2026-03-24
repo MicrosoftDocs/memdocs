@@ -3,7 +3,7 @@ title: Create a custom role in Intune
 description: Learn how to create a custom role in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 02/04/2026
+ms.date: 03/24/2026
 ms.topic: article
 ms.collection:
   - M365-identity-device-management
@@ -406,8 +406,8 @@ The following permissions are available when creating custom roles.
 | --- | --- | --- |
 | Organization | Create | Create tenant settings such as device categories and Exchange connectors. |
 | Organization | Delete | Delete tenant settings such as device categories and Exchange Connectors. |
-| Organization | Read | View tenant settings such as device categories and Exchange Connectors. This permission is required to activate all enrollment workflows. |
-| Organization | Update | Manage tenant settings, device categories, and Exchange Connectors. |
+| Organization | Read | View tenant settings such as device categories and Exchange Connectors. This permission is required to activate all enrollment workflows. Also allows viewing the Scoped permissions setting and running the Permissions Assessment Report. |
+| Organization | Update | Manage tenant settings, device categories, and Exchange Connectors. Also allows enabling the [Scoped permissions](scope-tags.md#scoped-permissions-opt-in-public-preview) setting. |
 
 ### Organizational Messages
 
