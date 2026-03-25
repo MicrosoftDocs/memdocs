@@ -1,7 +1,7 @@
 ---
 title: What Is App Management in Microsoft Intune?
 description: Learn about client app management capabilities by platform for Microsoft Intune.
-ms.date: 10/02/2025
+ms.date: 03/19/2026
 ms.topic: overview
 ms.reviewer: bryanke
 ai-usage: ai-assisted
@@ -69,7 +69,7 @@ Intune offers a range of capabilities to help you get the apps you need on the d
 <sup>2</sup> Applies to devices managed by Intune only.<br>
 <sup>3</sup> Intune supports available apps from Managed Google Play store on Android Enterprise devices.<br>
 <sup>4</sup> Intune doesn't provide installing a shortcut to an app as a web link on standard Android Enterprise devices. However, Web link support is provided for [multi-app dedicated Android Enterprise devices](../configuration/device-restrictions-android-for-work.md) > **Device experience**.<br>
-<sup>5</sup> LOB for AE are supported, but the apps need to be published privately to Managed Google Play.<br>
+<sup>5</sup> LOB apps for Android Enterprise are supported through Managed Google Play private app publishing. For fully managed and dedicated devices, you can also deploy required LOB apps directly to devices without Managed Google Play.<br>
 <sup>6</sup> This native iOS feature allows Intune to take over the ownership of an application originally deployed outside of Intune. This action occurs during the next check-in.
 
 ## Get started
