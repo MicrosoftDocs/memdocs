@@ -321,40 +321,128 @@ The passwordless methods described in this article rely on specific platform cap
 
 Passwordless isn't one feature. It's a set of platform-specific experiences that rely on Entra ID for identity and Intune for device management.
 
-### Windows
+:::row:::
+    :::column span="1":::
+**Windows**
+:::image type="icon" source="media/passwordless/windows.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> Windows is the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
+> 
+> Intune commonly supports Windows passwordless scenarios by:
+> 
+> - Preparing cloud-first, Microsoft Entra joined devices.
+> - Delivering Windows Hello for Business configuration.
+> - Supporting FIDO2 security key experiences.
+> - Aligning device readiness with compliance and modern management.
+> - Supporting onboarding experiences that can connect to Windows Autopilot.
+> 
+> When a user signs in with Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> 
+> - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
+> - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
+> - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+>
+> **Hybrid and legacy considerations**
+> 
+> The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
+> 
+> - **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
+> - **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure depending on the trust model.
+> - **On-premises resource access** from Entra joined devices requires cloud Kerberos trust or certificate-based trust. Cloud Kerberos trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/> hello-for-business/deploy/hybrid-cloud-kerberos-trust).
+> - **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods, but applications that require NTLM or direct LDAP bind might need extra planning.
+> 
+> If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> - [Configure single sign-on for Microsoft Entra joined devices](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso)
+:::column-end:::
+:::row-end:::
 
-Windows is the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
 
-Intune commonly supports Windows passwordless scenarios by:
+:::row:::
+    :::column span="1":::
+**Windows**
+:::image type="icon" source="media/passwordless/windows.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> Windows is the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
+> 
+> Intune commonly supports Windows passwordless scenarios by:
+> 
+> - Preparing cloud-first, Microsoft Entra joined devices.
+> - Delivering Windows Hello for Business configuration.
+> - Supporting FIDO2 security key experiences.
+> - Aligning device readiness with compliance and modern management.
+> - Supporting onboarding experiences that can connect to Windows Autopilot.
+> 
+> When a user signs in with Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> 
+> - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
+> - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
+> - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+>
+> **Hybrid and legacy considerations**
+> 
+> The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
+> 
+> - **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
+> - **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure depending on the trust model.
+> - **On-premises resource access** from Entra joined devices requires cloud Kerberos trust or certificate-based trust. Cloud Kerberos trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/> hello-for-business/deploy/hybrid-cloud-kerberos-trust).
+> - **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods, but applications that require NTLM or direct LDAP bind might need extra planning.
+> 
+> If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> - [Configure single sign-on for Microsoft Entra joined devices](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso)
+:::column-end:::
+:::row-end:::
 
-- Preparing cloud-first, Microsoft Entra joined devices.
-- Delivering Windows Hello for Business configuration.
-- Supporting FIDO2 security key experiences.
-- Aligning device readiness with compliance and modern management.
-- Supporting onboarding experiences that can connect to Windows Autopilot.
 
-When a user signs in with Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
+:::row:::
+    :::column span="1":::
+**Windows**
+:::image type="icon" source="media/passwordless/windows.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> Windows is the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
+> 
+> Intune commonly supports Windows passwordless scenarios by:
+> 
+> - Preparing cloud-first, Microsoft Entra joined devices.
+> - Delivering Windows Hello for Business configuration.
+> - Supporting FIDO2 security key experiences.
+> - Aligning device readiness with compliance and modern management.
+> - Supporting onboarding experiences that can connect to Windows Autopilot.
+> 
+> When a user signs in with Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> 
+> - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
+> - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
+> - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+>
+> **Hybrid and legacy considerations**
+> 
+> The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
+> 
+> - **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
+> - **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure depending on the trust model.
+> - **On-premises resource access** from Entra joined devices requires cloud Kerberos trust or certificate-based trust. Cloud Kerberos trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/> hello-for-business/deploy/hybrid-cloud-kerberos-trust).
+> - **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods, but applications that require NTLM or direct LDAP bind might need extra planning.
+> 
+> If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> - [Configure single sign-on for Microsoft Entra joined devices](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso)
+:::column-end:::
+:::row-end:::
 
-:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-
-- [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
-- [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
-- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
-
-#### Hybrid and legacy considerations
-
-The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
-
-- **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
-- **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure depending on the trust model.
-- **On-premises resource access** from Entra joined devices requires cloud Kerberos trust or certificate-based trust. Cloud Kerberos trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/hello-for-business/deploy/hybrid-cloud-kerberos-trust).
-- **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods, but applications that require NTLM or direct LDAP bind might need extra planning.
-
-If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
-
-:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-
-- [Configure single sign-on for Microsoft Entra joined devices](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso)
 
 ### macOS
 
