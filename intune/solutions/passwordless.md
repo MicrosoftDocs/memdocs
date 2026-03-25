@@ -62,6 +62,8 @@ Not all passwordless methods offer the same level of protection. Understanding t
 
 Although *passwordless* might sound like it removes a security factor, most passwordless methods actually satisfy multifactor authentication (MFA) requirements. MFA requires two or more factors—something you know, something you have, or something you are. For example, Windows Hello combines possession (a device-bound key stored in the TPM) with inherence (a biometric gesture) or knowledge (a PIN), satisfying MFA in a single sign-in step. This is why Conditional Access authentication strength policies can classify passwordless methods as MFA-compliant—or even as phishing-resistant MFA.
 
+:::row:::
+:::column span="1":::
 :::image type="icon" source="media/passwordless/phishing.svg" border="false"::: 
 :::column-end:::
 :::column span="3":::
@@ -69,18 +71,19 @@ Although *passwordless* might sound like it removes a security factor, most pass
 :::column-end:::
 :::row-end:::
 
-> :::image type="icon" source="media/passwordless/information.svg" border="false"::: Learn more:
-> For a complete comparison of authentication methods, see [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
+:::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
 
-## What Microsoft Intune contributes
+> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
 
-Microsoft Intune commonly supports passwordless adoption in these areas:
+## How Intune drives passwordless adoption
 
-- **Device readiness**: Enrolling or registering devices and applying the settings required for supported passwordless experiences.
-- **Configuration delivery**: Deploying profiles and policies for scenarios such as Windows Hello for Business, certificates, and Apple SSO-related settings.
-- **Compliance and access signals**: Reporting device state that related solutions, such as Conditional Access, evaluate before granting access.
-- **App and broker preparation**: Deploying apps such as Microsoft Authenticator and Company Portal where platform flows depend on them.
-- **Cross-platform consistency**: Giving admins one management plane for Windows, macOS, iOS/iPadOS, and Android.
+Microsoft Intune plays a central role in enabling and scaling passwordless authentication across your organization. Its contributions typically include:
+
+- **Device readiness**: Enrolling and registering devices, then applying the configurations required to support passwordless sign-in methods.
+Configuration delivery: Deploying policies and profiles for Windows Hello for Business, certificate-based authentication, Apple platform SSO, and other passwordless-enabling settings.
+- **Compliance and access signals**: Reporting device health and compliance states that Conditional Access and related services rely on before granting access.
+- **App and broker enablement**: Installing foundational apps—such as Microsoft Authenticator and Company Portal—when platform passwordless flows depend on them.
+- **Cross‑platform consistency**: Providing a unified management and policy plane across Windows, macOS, iOS/iPadOS, and Android to simplify passwordless deployment at scale.
 
 ## Prerequisites and licensing
 
@@ -88,18 +91,18 @@ Before you plan a passwordless deployment, verify that your environment meets th
 
 ### Licensing requirements
 
-| Capability | License requirement |
-|---|---|
-| Windows Hello for Business | Microsoft Entra ID P1 (for Conditional Access enforcement) |
-| FIDO2 security keys | Microsoft Entra ID P1 |
-| Passkeys (device-bound and synced) | Microsoft Entra ID P1 |
-| Microsoft Authenticator phone sign-in | Microsoft Entra ID P1 |
-| Temporary Access Pass | Microsoft Entra ID P1 |
-| Certificate-based authentication (CBA) | Microsoft Entra ID P1 (P2 for risk-based Conditional Access) |
-| Authentication strength policies | Microsoft Entra ID P1 |
-| Risk-based Conditional Access | Microsoft Entra ID P2 |
-| Microsoft Cloud PKI | Microsoft Intune Suite add-on or standalone Cloud PKI add-on |
-| Device compliance and configuration profiles | Microsoft Intune Plan 1 |
+| Capability                                   | License requirement                                          |
+|----------------------------------------------|--------------------------------------------------------------|
+| Windows Hello for Business                   | Microsoft Entra ID P1 (for Conditional Access enforcement)   |
+| FIDO2 security keys                          | Microsoft Entra ID P1                                        |
+| Passkeys (device-bound and synced)           | Microsoft Entra ID P1                                        |
+| Microsoft Authenticator phone sign-in        | Microsoft Entra ID P1                                        |
+| Temporary Access Pass                        | Microsoft Entra ID P1                                        |
+| Certificate-based authentication (CBA)       | Microsoft Entra ID P1 (P2 for risk-based Conditional Access) |
+| Authentication strength policies             | Microsoft Entra ID P1                                        |
+| Risk-based Conditional Access                | Microsoft Entra ID P2                                        |
+| Microsoft Cloud PKI                          | Microsoft Intune Suite add-on or standalone Cloud PKI add-on |
+| Device compliance and configuration profiles | Microsoft Intune Plan 1                                      |
 
 > :::image type="icon" source="media/passwordless/information.svg" border="false"::: For current licensing details, see:
 > - [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
@@ -107,18 +110,25 @@ Before you plan a passwordless deployment, verify that your environment meets th
 
 ### Minimum platform versions
 
+| Method                                 | Windows                       | macOS                        | iOS/iPadOS                        | Android             |
+|----------------------------------------|-------------------------------|------------------------------|-----------------------------------|---------------------|
+| Windows Hello for Business             | All supported Windows clients | —                            | —                                 | —                   |
+| FIDO2 security keys                    | All supported Windows clients | —                            | —                                 | —                   |
+| Passkeys (synced)                      | Windows 11                    | All supported macOS versions | All supported iOS/iPadOS versions | Android 14 or later |
+| Device-bound passkeys in Authenticator | —                             | —                            | All supported iOS/iPadOS versions | Android 14 or later |
+| Platform SSO (Secure Enclave)          | —                             | All supported macOS versions | —                                 | —                   |
+| Web sign-in (TAP at lock screen)       | Windows 11                    | —                            | —                                 | —                   |
+| Microsoft Authenticator phone sign-in  | —                             | —                            | All supported iOS/iPadOS versions | Android 11 or later |
 
-| Method | Windows | macOS | iOS/iPadOS | Android |
-|---|---|---|---|---|
-| Windows Hello for Business | Windows 10 or later | — | — | — |
-| FIDO2 security keys | Windows 10 1903 or later | — | — | — |
-| Passkeys (synced) | Windows 11 23H2 or later | macOS 13 or later | iOS 17 or later | Android 14 or later |
-| Device-bound passkeys in Authenticator | — | — | iOS 17 or later | Android 14 or later |
-| Platform SSO (Secure Enclave) | — | macOS 13 or later | — | — |
-| Web sign-in (TAP at lock screen) | Windows 11 22H2 or later | — | — | — |
-| Microsoft Authenticator phone sign-in | — | — | iOS 16 or later | Android 11 or later |
 
-Platform version requirements can change with each release cycle. Always verify current requirements in the product documentation for the specific method you're deploying.
+>[!NOTE]
+> 
+> *Supported* refers to operating system versions that Microsoft Intune currently supports for full functionality, policy deployment, and management.  
+> Platform version requirements can change with each release cycle. Always verify current requirements in the product documentation for the specific method you're deploying..
+
+:::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+> - [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
+
 
 ## Passwordless methods and Intune's role
 
