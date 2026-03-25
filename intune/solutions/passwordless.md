@@ -60,7 +60,7 @@ This separation is important. Entra ID is the identity authority. Intune is the 
 
 Not all passwordless methods offer the same level of protection. Understanding the difference between *phishing-resistant* and *non-phishing-resistant* methods is important when designing your strategy.
 
-Although *passwordless* might sound like it removes a security factor, most passwordless methods actually satisfy multifactor authentication (MFA) requirements. MFA requires at least two factors. Windows Hello does this inherently by pairing a device‑bound credential (possession) with either a biometric gesture (inherence) or a PIN (knowledge). For example, Windows Hello combines possession (a device-bound key stored in the TPM) with inherence (a biometric gesture) or knowledge (a PIN), satisfying MFA in a single sign-in step. This is why Conditional Access authentication strength policies can classify passwordless methods as MFA-compliant - or even as phishing-resistant MFA.
+Although *passwordless* might sound like it removes a security factor, most passwordless methods actually satisfy multifactor authentication (MFA) requirements. MFA requires at least two factors. Windows Hello does this inherently by pairing a device‑bound credential (possession) with either a biometric gesture (inherence) or a PIN (knowledge). This is why Conditional Access authentication strength policies can classify passwordless methods as *MFA-compliant* - or even as *phishing-resistant MFA*.
 
 Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed - even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. Each method described later in this article includes its phishing‑resistance level.
 
@@ -259,7 +259,7 @@ The passwordless methods available to users depend on both the device platform a
 > :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 > Intune supports two infrastructure models for certificate delivery:
 >
-> - **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Intune to bridge their on-premises PKI with Intune. The >connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an >enterprise CA or need to integrate with established PKI investments.
+> - **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Intune to bridge their on-premises PKI with Intune. The connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an enterprise CA or need to integrate with established PKI investments.
 > - **Microsoft Cloud PKI**: For organizations that want to simplify or eliminate on-premises certificate infrastructure, Microsoft Cloud PKI provides a cloud-based CA as part of the Microsoft Intune Suite. Cloud PKI issues and manages certificates without requiring on-premises servers, connectors, or hardware security modules.
 >
 > Regardless of infrastructure model, Intune delivers certificates to devices using certificate profiles:
@@ -327,68 +327,6 @@ The passwordless methods described in this article rely on specific platform cap
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 - [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
 
-## Dependencies for passwordless authentication
-
-### Zero Trust architecture
-
-Passwordless authentication is one part of a broader identity and device access strategy. For an Intune administrator, planning usually involves these layers:
-
-- **Identity**: Phishing-resistant authentication methods in Entra ID.
-- **Device trust**: Intune enrollment, compliance, and configuration.
-- **Access policy**: Conditional Access and related exclusion planning.
-- **Data protection**: Microsoft Purview capabilities that help protect content after access is granted.
-- **Investigation and response**: Microsoft Defender signals and workflows when risk or compromise needs follow-up.
-
-:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-
-- [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
-- [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common)
-
-### Conditional Access
-
-Conditional Access evaluates signals such as device state and authentication strength before granting access. When combined with passwordless methods, Conditional Access can enforce authentication strength policies that require phishing-resistant MFA - effectively mandating passwordless by blocking weaker methods like passwords or SMS codes.
-
-When you implement Conditional Access alongside passwordless, also account for emergency access planning to prevent accidental lockout scenarios.
-
-:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-
-- [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
-- [Conditional Access authentication strengths](/entra/identity/authentication/concept-authentication-strengths)
-
-### Emergency access and recovery
-
-A common concern when removing passwords is what happens when a user loses their only passwordless device - a phone, a FIDO2 key, or a laptop with Hello. Without a recovery plan, admins can face support escalations and users can be locked out of critical resources.
-
-Plan for these scenarios as part of your passwordless deployment:
-
-- **Emergency access accounts**: Maintain at least two break-glass accounts that are excluded from Conditional Access policies and passwordless enforcement. These accounts provide a fallback path if a misconfiguration or outage blocks all other access. Store credentials securely and monitor sign-in activity on these accounts.
-- **Recovery with Temporary Access Pass**: When a user loses their passwordless device, an admin can issue a new TAP so the user can sign in and register a replacement credential. This approach avoids resetting the user to a password and keeps the recovery flow within the passwordless model.
-- **Multiple registered methods**: Encourage users to register more than one passwordless method where possible. For example, a user who uses Hello for Business on their laptop might also register a passkey in Authenticator on their phone. If one device is lost, the other method still works.
-- **Self-service credential management**: Users can manage their authentication methods at [My Security Info](https://mysignins.microsoft.com/security-info). When combined with TAP-based recovery, this approach reduces helpdesk dependency for credential resets.
-
-Planning for recovery before you enforce passwordless is essential. A rollout that blocks passwords without a recovery path creates the kind of lockout scenarios that erode admin and user confidence in the transition.
-
-:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-
-- [Manage emergency access accounts in Microsoft Entra ID](/entra/identity/role-based-access-control/security-emergency-access).
-
-### Compliance and device readiness
-
-Passwordless often depends on the device being in the right state before users can rely on the experience. Readiness typically includes:
-
-- Supported device platforms and versions.
-- Device enrollment or registration.
-- Required apps and brokers.
-- Method-specific configuration profiles and identity prerequisites.
-
-### Verification and ongoing operations
-
-To validate a passwordless deployment, common checkpoints include:
-
-- Entra sign-in logs.
-- Intune device and policy reporting.
-- Platform-specific verification experiences for the passwordless method you deploy.
-
 ## Platform considerations
 
 Passwordless isn't one feature. It's a set of platform-specific experiences that rely on Entra ID for identity and Intune for device management.
@@ -410,7 +348,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 > - Aligning device readiness with compliance and modern management.
 > - Supporting onboarding experiences that can connect to Windows Autopilot.
 > 
-> When a user signs in with Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
+> When a user signs in with Windows Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
 > 
 > :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 > 
@@ -491,6 +429,68 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 > 
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 :::row-end:::
+
+## Dependencies for passwordless authentication
+
+### Zero Trust architecture
+
+Passwordless authentication is one part of a broader identity and device access strategy. For an Intune administrator, planning usually involves these layers:
+
+- **Identity**: Phishing-resistant authentication methods in Entra ID.
+- **Device trust**: Intune enrollment, compliance, and configuration.
+- **Access policy**: Conditional Access and related exclusion planning.
+- **Data protection**: Microsoft Purview capabilities that help protect content after access is granted.
+- **Investigation and response**: Microsoft Defender signals and workflows when risk or compromise needs follow-up.
+
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+
+- [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
+- [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common)
+
+### Conditional Access
+
+Conditional Access evaluates signals such as device state and authentication strength before granting access. When combined with passwordless methods, Conditional Access can enforce authentication strength policies that require phishing-resistant MFA - effectively mandating passwordless by blocking weaker methods like passwords or SMS codes.
+
+When you implement Conditional Access alongside passwordless, also account for emergency access planning to prevent accidental lockout scenarios.
+
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+
+- [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
+- [Conditional Access authentication strengths](/entra/identity/authentication/concept-authentication-strengths)
+
+### Emergency access and recovery
+
+A common concern when removing passwords is what happens when a user loses their only passwordless device - a phone, a FIDO2 key, or a laptop with Windows Hello. Without a recovery plan, admins can face support escalations and users can be locked out of critical resources.
+
+Plan for these scenarios as part of your passwordless deployment:
+
+- **Emergency access accounts**: Maintain at least two break-glass accounts that are excluded from Conditional Access policies and passwordless enforcement. These accounts provide a fallback path if a misconfiguration or outage blocks all other access. Store credentials securely and monitor sign-in activity on these accounts.
+- **Recovery with Temporary Access Pass**: When a user loses their passwordless device, an admin can issue a new TAP so the user can sign in and register a replacement credential. This approach avoids resetting the user to a password and keeps the recovery flow within the passwordless model.
+- **Multiple registered methods**: Encourage users to register more than one passwordless method where possible. For example, a user who uses Hello for Business on their laptop might also register a passkey in Authenticator on their phone. If one device is lost, the other method still works.
+- **Self-service credential management**: Users can manage their authentication methods at [My Security Info](https://mysignins.microsoft.com/security-info). When combined with TAP-based recovery, this approach reduces helpdesk dependency for credential resets.
+
+Planning for recovery before you enforce passwordless is essential. A rollout that blocks passwords without a recovery path creates the kind of lockout scenarios that erode admin and user confidence in the transition.
+
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+
+- [Manage emergency access accounts in Microsoft Entra ID](/entra/identity/role-based-access-control/security-emergency-access).
+
+### Compliance and device readiness
+
+Passwordless often depends on the device being in the right state before users can rely on the experience. Readiness typically includes:
+
+- Supported device platforms and versions.
+- Device enrollment or registration.
+- Required apps and brokers.
+- Method-specific configuration profiles and identity prerequisites.
+
+### Verification and ongoing operations
+
+To validate a passwordless deployment, common checkpoints include:
+
+- Entra sign-in logs.
+- Intune device and policy reporting.
+- Platform-specific verification experiences for the passwordless method you deploy.
 
 ## User adoption and communication
 
