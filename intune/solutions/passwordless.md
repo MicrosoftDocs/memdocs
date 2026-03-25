@@ -17,7 +17,7 @@ ai-usage: ai-assisted
 
 # Passwordless authentication with Microsoft Intune
 
-Passwordless authentication helps reduce phishing and credential theft by replacing passwords with stronger sign-in methods, such as Windows Hello for Business, FIDO2 security keys, passkeys, certificate-based authentication, Microsoft Authenticator phone sign-in, and Temporary Access Pass.
+Passwordless authentication helps reduce phishing and credential theft by replacing passwords with stronger sign-in methods, such as Windows Hello, FIDO2 security keys, passkeys, certificate-based authentication, Microsoft Authenticator phone sign-in, and Temporary Access Pass.
 
 Microsoft Intune doesn't issue passwordless credentials. Instead, it helps you prepare devices, apps, and user experiences so these methods work consistently across your organization. Microsoft Entra ID provides the identity controls and authentication methods, while Intune enforces the device state and configuration those methods depend on.
 
@@ -84,21 +84,21 @@ The passwordless methods available to your users depend on the platforms they us
 
 :::row:::
     :::column span="1":::
-**Windows Hello for Business**
+**Windows Hello**
 
 :::image type="icon" source="media/passwordless/windows-hello.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Phishing-resistant**
 >
-> Windows Hello for Business replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
+> Windows Hello replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
 >
-> Intune prepares Windows devices for Windows Hello for Business and enforces related device settings.
+>  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intunes' role:** Intune prepares Windows devices for Windows Hello by delivering and enforcing Windows Hello for Business policy settings.
 >
 > This method is most relevant when you need to:
 >
 > - Prepare cloud-first Windows devices for passwordless sign-in.
-> - Deliver Windows Hello for Business settings during enrollment and ongoing management.
+> - Deliver Windows Hello for Business policy settings during enrollment and ongoing management.
 > - Align Windows sign-in with device compliance and modern management.> 
 >
 > :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
@@ -119,7 +119,7 @@ The passwordless methods available to your users depend on the platforms they us
 >
 >FIDO2 security keys are physical devices (USB, NFC, or Bluetooth) that store a FIDO credential and provide phishing-resistant authentication without relying on the device platform. Because the credential is bound to the hardware key and verified through a cryptographic challenge, it can't be intercepted or replayed. FIDO2 keys are ideal for shared devices, high-assurance environments, or as a recovery path alongside platform-based credentials.
 >
->Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences, especially on Windows.
+>  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intunes' role:** Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences.
 >
 >This method is often a good fit when organizations need:
 >
@@ -144,14 +144,14 @@ The passwordless methods available to your users depend on the platforms they us
 >
 > Passkeys are the standards-based umbrella for FIDO credentials that can be either device-bound or synced across devices. In Microsoft Entra ID, you can use:
 >
-> - **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello for Business or Microsoft Authenticator on iOS 17+ and Android 14+.
+> - **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello or Microsoft Authenticator on iOS 17+ and Android 14+.
 > - **Synced passkeys** managed by platform password managers (such as iCloud Keychain or Google Password Manager) or supported third-party providers, which enable cross-device use.
 >
 > Both types are phishing-resistant. From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
 >
 >This dependency is especially important on:
 >
-> - **Windows**, where platform sign-in and Windows Hello for Business can intersect with broader passwordless planning.
+> - **Windows**, where platform sign-in and Windows Hello can intersect with broader passwordless planning.
 > - **iOS/iPadOS** and **Android**, where passkeys can depend on mobile device state and app broker behavior.
 > - **macOS**, where platform identity integration and user sign-in experience shape adoption.
 >
@@ -218,8 +218,8 @@ The passwordless methods available to your users depend on the platforms they us
 > A typical onboarding flow looks like this:
 > 
 > 1. **Admin issues a TAP** — The IT admin or automated workflow generates a time-limited TAP for the new user in the Microsoft Entra admin center or via Microsoft Graph API.
-> 1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web > sign-in enables TAP entry directly at the lock screen.
-> 1. **User registers a passwordless method** — After signing in with the TAP, the user is prompted to register Windows Hello for Business, a FIDO2 security key, a passkey in > Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
+> 1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web sign-in enables TAP entry directly at the lock screen.
+> 1. **User registers a passwordless method** — After signing in with the TAP, the user is prompted to register Windows Hello, a FIDO2 security key, a passkey in Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
 > 1. **TAP expires** — The TAP is single-use or time-limited (configurable), so it can't be reused after the user registers their passwordless method.
 > 
 > This flow eliminates the need to issue and then revoke a temporary password, and gives Intune a managed onboarding path from the first sign-in.
@@ -275,7 +275,7 @@ Before you plan a passwordless deployment, verify that your environment meets th
 
 | Capability                                   | License requirement                                          |
 |----------------------------------------------|--------------------------------------------------------------|
-| Windows Hello for Business                   | Microsoft Entra ID P1 (for Conditional Access enforcement)   |
+| Windows Hello                   | Microsoft Entra ID P1 (for Conditional Access enforcement)   |
 | FIDO2 security keys                          | Microsoft Entra ID P1                                        |
 | Passkeys (device-bound and synced)           | Microsoft Entra ID P1                                        |
 | Microsoft Authenticator phone sign-in        | Microsoft Entra ID P1                                        |
@@ -294,7 +294,7 @@ Before you plan a passwordless deployment, verify that your environment meets th
 
 | Method                                     | Windows                       | macOS                        | iOS/iPadOS                        | Android             |
 |--------------------------------------------|-------------------------------|------------------------------|-----------------------------------|---------------------|
-| **Windows Hello for Business**             | All supported Windows clients |                              |                                   |                     |
+| **Windows Hello**             | All supported Windows clients |                              |                                   |                     |
 | **FIDO2 security keys**                    | All supported Windows clients |                              |                                   |                     |
 | **Passkeys**                               | Windows 11                    | All supported macOS versions | All supported iOS/iPadOS versions | Android 14 or later |
 | **Device-bound passkeys in Authenticator** |                               |                              | All supported iOS/iPadOS versions | Android 14 or later |
@@ -392,25 +392,6 @@ When Intune, Entra ID, and platform capabilities are used together, organization
 - **Stronger security posture**: Phishing-resistant methods prevent credential theft and replay attacks. Device compliance gating ensures that even valid credentials only work from healthy, managed devices—aligning with Zero Trust principles.
 - **Reduced IT support load**: Fewer password resets, smoother onboarding with Temporary Access Pass, and self-service recovery options reduce helpdesk volume.
 - **Future-ready architecture**: The framework is built to accommodate new methods like synced passkeys. As standards evolve, they integrate into the same Entra ID + Intune model without requiring architectural changes.
-
-## Where to start in the Intune admin center
-
-This article is conceptual and doesn't walk through full setup steps. However, knowing where to find the relevant settings in the [Microsoft Intune admin center](https://intune.microsoft.com) can help you plan and explore. The following table maps common passwordless tasks to their location in the admin center.
-
-| Task | Where to configure |
-|---|---|
-| Windows Hello for Business (tenant-wide) | **Devices** > **Enrollment** > **Windows Hello for Business** |
-| Windows Hello for Business (policy-based) | **Devices** > **Configuration** > Create profile > **Settings catalog** > search for *Windows Hello for Business* |
-| Enable the Windows passwordless experience | **Devices** > **Configuration** > Create profile > **Settings catalog** > **Administrative Templates** > **System** > **Logon** > *Enable Passwordless Experience* |
-| Enable Web sign-in (for TAP at lock screen) | **Devices** > **Configuration** > Create profile > **Settings catalog** > **Authentication** > *Enable Web Sign In* |
-| Deploy certificate profiles (SCEP/PKCS) | **Devices** > **Configuration** > Create profile > **Templates** > *SCEP certificate*, *PKCS certificate*, or *Trusted certificate* |
-| Deploy Microsoft Authenticator | **Apps** > **All apps** > **Add** > select platform > add Microsoft Authenticator |
-| Deploy Company Portal | **Apps** > **All apps** > **Add** > select platform > add Company Portal |
-| Apple SSO extension | **Devices** > **Configuration** > Create profile > **Templates** > **Device features** > *Single sign-on app extension* |
-| Compliance policies | **Devices** > **Compliance** > **Create policy** > select platform |
-| Cloud PKI | **Tenant administration** > **Cloud PKI** |
-
-For step-by-step deployment guidance for each method, use the implementation links in the method sections earlier in this article.
 
 ## Related dependencies to plan for
 

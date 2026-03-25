@@ -167,63 +167,6 @@ For a deeper dive into passwordless authentication methods, refer to the [Passwo
 
 ---
 
-<!--
-
-
-
-Intune's role in the passwordless journey
-Intune ensures devices meet compliance and configuration requirements for passwordless sign-in:
-
-
-Device compliance
-Enforce security baselines before enabling passwordless authentication.
-
-
-Policy deployment
-Configure Windows Hello for Business, Microsoft Authenticator app, and platform SSO.
-
-
-Integration with Conditional Access
-Provide device signals to enforce Zero Trust policies.
-
-
-Lifecycle management
-Keep devices updated for new passwordless capabilities and security improvements.
-
-
-
-
-
-
-Aligning with Zero Trust
-Passwordless authentication supports Zero Trust by:
-
-Verifying strong identity signals.
-Enforcing device health and compliance.
-Reducing reliance on shared secrets.
-
-Visual concept:
-A simple diagram showing three blocks:
-
-Microsoft Entra ID (Identity)
-Microsoft Intune (Device compliance)
-Conditional Access (Policy enforcement)
-
-
-Implementation scenarios
-Here are common solution flows:
-
-
-Onboarding new devices
-Use Temporary Access Pass for initial sign-in, then configure Windows Hello via Intune.
-
-
-Hybrid environments
-Combine FIDO2 keys with Intune compliance policies for secure access across cloud and on-premises resources.
-
--->
-
-
 
 ## Passwordless options in Intune and Entra
 
@@ -258,7 +201,7 @@ Include policy examples and actionable steps.
 - [Passwordless experience in Windows](https://learn.microsoft.com/windows/security/identity-protection/passwordless-experience)  
 - [Intune enrollment and MFA](https://learn.microsoft.com/mem/intune/enrollment/multi-factor-authentication)
 
----
+
 
 ## Device Readiness and User Experience
 
@@ -287,11 +230,6 @@ Explicitly map passwordless strategies to Zero Trust principles:
 - **Verify explicitly** – Strong authentication methods.
 - **Use least privilege** – Conditional Access policies.
 - **Assume breach** – Continuous monitoring and anomaly detection.
-
----
-
-## Conclusion
-Summarize benefits, reiterate Intune's role, and link to next steps or resources.
 
 ---
 
