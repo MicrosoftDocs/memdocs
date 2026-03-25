@@ -17,36 +17,22 @@ ai-usage: ai-assisted
 
 # Passwordless authentication with Microsoft Intune
 
-Passwordless authentication helps reduce phishing and credential theft by replacing passwords with stronger sign-in methods, such as Windows Hello, FIDO2 security keys, passkeys, certificate-based authentication, Authenticator phone sign-in, and Temporary Access Pass.
+Passwordless authentication reduces phishing and credential theft by replacing passwords with stronger sign‑in methods such as Windows Hello, FIDO2 security keys, passkeys, certificates, Authenticator phone sign‑in, and Temporary Access Pass.
 
-Intune doesn't issue passwordless credentials. Instead, it helps you prepare devices, apps, and user experiences so these methods work consistently across your organization. Microsoft Entra ID provides the identity controls and authentication methods, while Intune enforces the device state and configuration those methods depend on.
+Microsoft Intune doesn't issue passwordless credentials. Instead, it prepares devices, apps, and user experiences so these passwordless methods work reliably at scale. Microsoft Entra ID is the identity authority that verifies credentials and enforces authentication and Conditional Access policies, while Intune configures device settings, enforces compliance, and enables the platform capabilities those methods depend on. Together, Entra ID and Intune provide the identity foundation and device readiness required to adopt passwordless authentication across diverse platforms and form factors.
 
-This article explains how Intune fits into a passwordless strategy from an Intune administrator's perspective. When you're ready to deploy a specific method, use the implementation links throughout this article.
-
-## What counts as passwordless
-
-Not all passwordless methods offer the same level of protection. Understanding the difference between *phishing-resistant* and *non-phishing-resistant* methods is important when designing your strategy.
-
-Although *passwordless* might sound like it removes a security factor, most passwordless methods actually satisfy multifactor authentication (MFA) requirements. MFA requires two or more factors - something you know, something you have, or something you are. For example, Hello combines possession (a device-bound key stored in the TPM) with inherence (a biometric gesture) or knowledge (a PIN), satisfying MFA in a single sign-in step. This is why Conditional Access authentication strength policies can classify passwordless methods as MFA-compliant - or even as phishing-resistant MFA.
-
-Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed - even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. The method sections later in this article indicate the phishing-resistance level for each method.
-
-
-:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-
-- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-- [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
+This article explains how Intune supports a passwordless strategy from an Intune administrator's perspective. For deployment details, follow the implementation links for each passwordless method.
 
 ## How Microsoft passwordless solution works
 
-Microsoft's passwordless solution integrates Entra ID for identity and single sign-on (SSO) with Intune for device configuration and policy enforcement. This combination enables users to authenticate using strong credentials—such as biometrics, FIDO2 security keys, or passkeys—without entering passwords.
+Microsoft's passwordless solution pairs Entra ID for identity and single sign‑on (SSO) with Intune for device configuration and policy enforcement. This combination enables users to authenticate using strong credentials—such as biometrics, FIDO2 security keys, or passkeys—without entering passwords.
 
 :::row:::
    :::column span="1":::
    :::image type="icon" source="media/passwordless/entra.svg" border="false":::
    :::column-end:::
    :::column span="3":::
-      **Entra ID** is the core identity provider. It verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. Upon successful authentication, Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. Conditional Access policies evaluate device state, authentication strength, and risk signals before granting access.
+      **Entra ID** is the core identity provider. It verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. After successful authentication, Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. Conditional Access policies evaluate device state, authentication strength, and risk signals before granting access.
    :::column-end:::
 :::row-end:::
 
@@ -70,27 +56,43 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
 
 This separation is important. Entra ID is the identity authority. Intune is the management layer that helps users adopt and use those methods successfully.
 
+## Passwordless, MFA, and phishing resistance
+
+Not all passwordless methods offer the same level of protection. Understanding the difference between *phishing-resistant* and *non-phishing-resistant* methods is important when designing your strategy.
+
+Although *passwordless* might sound like it removes a security factor, most passwordless methods actually satisfy multifactor authentication (MFA) requirements. MFA requires at least two factors. Windows Hello does this inherently by pairing a device‑bound credential (possession) with either a biometric gesture (inherence) or a PIN (knowledge). For example, Windows Hello combines possession (a device-bound key stored in the TPM) with inherence (a biometric gesture) or knowledge (a PIN), satisfying MFA in a single sign-in step. This is why Conditional Access authentication strength policies can classify passwordless methods as MFA-compliant - or even as phishing-resistant MFA.
+
+Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed - even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. Each method described later in this article includes its phishing‑resistance level.
+
+
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+
+- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
+- [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
+
 ## Benefits of passwordless authentication with Intune
 
 When you use Intune, Entra ID, and platform capabilities together, your organization gains:
 
 - **Seamless single sign-on**: Users sign in once to the device and get automatic access to apps, cloud services, and - in some cases - on-premises resources. Password reset calls and repeated authentication prompts are eliminated.
-- **User convenience across devices**: The passwordless experience is native to each platform. Windows Hello uses the OS login, macOS integrates Touch ID with Entra ID, and mobile devices use Authenticator in the background. Users don't manage different methods per device.
+- **User convenience across devices**: Users get a native, consistent experience across devices. Windows Hello uses OS sign‑in, macOS integrates Touch ID with Entra ID, and mobile platforms use Authenticator and platform passkeys. Users don't need to juggle separate passwords per device.
 - **Stronger security posture**: Phishing-resistant methods prevent credential theft and replay attacks. Device compliance gating ensures that even valid credentials only work from healthy, managed devices - aligning with Zero Trust principles.
 - **Reduced IT support load**: Fewer password resets, smoother onboarding with Temporary Access Pass, and self-service recovery options reduce helpdesk volume.
-- **Future-ready architecture**: The framework is built to accommodate new methods like synced passkeys. As standards evolve, they integrate into the same Entra ID + Intune model without requiring architectural changes.
+- **Future-ready architecture**: As standards evolve, new passwordless methods — including synced passkeys and hardware‑backed credentials — can plug into the same Entra ID + Intune architecture without requiring major redesign.
 
 ## How Intune drives passwordless adoption
 
-Intune plays a central role in enabling and scaling passwordless authentication across your organization. Its contributions typically include:
+Intune enables and operationalizes passwordless authentication by ensuring that devices and applications are properly configured to use strong, modern credentials. While Microsoft Entra ID governs identity and authentication policy, Intune prepares the device environment that passwordless methods depend on.
 
-- **Device readiness**: Enrolling and registering devices, then applying the configurations required to support passwordless sign-in methods.
-- **Configuration delivery**: Deploying policies and profiles for Windows Hello for Business, certificate-based authentication, Apple platform SSO, and other passwordless-enabling settings.
-- **Compliance and access signals**: Reporting device health and compliance states that Conditional Access and related services rely on before granting access.
-- **App and broker enablement**: Installing foundational apps - such as Authenticator and Microsoft Intune Company Portal - when platform passwordless flows depend on them.
-- **Cross-platform consistency**: Providing a unified management and policy plane across Windows, macOS, iOS/iPadOS, and Android to simplify passwordless deployment at scale.
+Key contributions include:
 
-The passwordless methods available to your users depend on the platforms they use and the authentication methods you enable in Entra ID. Intune's role is to prepare devices, deploy necessary configurations, and support the user experience for each method.
+- **Device readiness**: Enrolling, registering, and configuring devices so they can participate in passwordless sign‑in flows.
+- **Configuration deployment**: Delivering the policies required for Windows Hello for Business, certificate-based authentication, Apple Platform SSO, and similar platform capabilities.
+- **Compliance and access signals**: Supplying device health and compliance data that Conditional Access evaluates before granting access.
+- **App and broker provisioning**: Deploying core applications—such as Microsoft Authenticator and Intune Company Portal—that enable identity brokering and passwordless SSO scenarios.
+- **Unified cross‑platform management**: Providing a consistent policy and management framework across Windows, macOS, iOS/iPadOS, and Android to streamline enterprise deployment.
+
+The passwordless methods available to users depend on both the device platform and the authentication options enabled in Entra ID. Intune ensures that each device is prepared, configured, and capable of delivering a secure and reliable passwordless experience.
 
 :::row:::
     :::column span="1":::
