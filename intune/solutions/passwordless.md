@@ -271,7 +271,7 @@ The passwordless methods available to users depend on both the device platform a
 >
 >These profiles work across Windows, macOS, iOS/iPadOS, and Android, making Intune the delivery mechanism that connects your PKI infrastructure—whether on-premises or cloud-based—to the identity method defined in Entra ID.
 >
->For implementation guidance, see:
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: For implementation guidance, see:
 >
 > - [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
 > - [Microsoft Cloud PKI overview](../../cloud-pki/index.md)
