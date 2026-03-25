@@ -65,7 +65,7 @@ Although *passwordless* might sound like it removes a security factor, most pass
 Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed—even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. The method sections later in this article indicate the phishing-resistance level for each method.
 
 
-> :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 >
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 > - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
@@ -101,7 +101,7 @@ The passwordless methods available to your users depend on the platforms they us
 > - Deliver Windows Hello for Business policy settings during enrollment and ongoing management.
 > - Align Windows sign-in with device compliance and modern management.> 
 >
-> :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 > - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
 > - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
 :::column-end:::
@@ -127,7 +127,7 @@ The passwordless methods available to your users depend on the platforms they us
 >- A strong phishing-resistant option that isn't tied to a single platform authenticator.
 >- A recovery or alternate path alongside platform-based credentials.
 >
-> :::image type="icon" source="media/passwordless/information.svg" border="false"::: For implementation guidance, see:
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: For implementation guidance, see:
 >- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 
 :::column-end:::
@@ -155,7 +155,7 @@ The passwordless methods available to your users depend on the platforms they us
 > - **iOS/iPadOS** and **Android**, where passkeys can depend on mobile device state and app broker behavior.
 > - **macOS**, where platform identity integration and user sign-in experience shape adoption.
 >
-> :::image type="icon" source="media/passwordless/information.svg" border="false"::: For implementation guidance, see:
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: For implementation guidance, see:
 >-  [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 :::column-end:::
 :::row-end:::
@@ -286,7 +286,7 @@ Before you plan a passwordless deployment, verify that your environment meets th
 | Microsoft Cloud PKI                          | Microsoft Intune Suite add-on or standalone Cloud PKI add-on |
 | Device compliance and configuration profiles | Microsoft Intune Plan 1                                      |
 
-:::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 > - [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
 > - [Microsoft Intune licensing](/intune/fundamentals/licenses)
 
@@ -308,7 +308,7 @@ Before you plan a passwordless deployment, verify that your environment meets th
 > *Supported* refers to operating system versions that Microsoft Intune currently supports for full functionality, policy deployment, and management.  
 > Platform version requirements can change with each release cycle. Always verify current requirements in the product documentation for the specific method you're deploying..
 
-> :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 > - [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
 
 ## Platform considerations
