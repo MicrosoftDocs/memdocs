@@ -65,10 +65,10 @@ Although *passwordless* might sound like it removes a security factor, most pass
 Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed—even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. The method sections later in this article indicate the phishing-resistance level for each method.
 
 
-> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
->
-> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-> - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+
+- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
+- [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
 
 ## How Intune drives passwordless adoption
 
@@ -93,7 +93,7 @@ The passwordless methods available to your users depend on the platforms they us
 >
 > Windows Hello replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
 >
->  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intunes' role:** Intune prepares Windows devices for Windows Hello by delivering and enforcing Windows Hello for Business policy settings.
+>  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune prepares Windows devices for Windows Hello by delivering and enforcing Windows Hello for Business policy settings.
 >
 > This method is most relevant when you need to:
 >
@@ -119,7 +119,7 @@ The passwordless methods available to your users depend on the platforms they us
 >
 >FIDO2 security keys are physical devices (USB, NFC, or Bluetooth) that store a FIDO credential and provide phishing-resistant authentication without relying on the device platform. Because the credential is bound to the hardware key and verified through a cryptographic challenge, it can't be intercepted or replayed. FIDO2 keys are ideal for shared devices, high-assurance environments, or as a recovery path alongside platform-based credentials.
 >
->  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intunes' role:** Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences.
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences.
 >
 >This method is often a good fit when organizations need:
 >
@@ -147,7 +147,7 @@ The passwordless methods available to your users depend on the platforms they us
 > - **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello or Microsoft Authenticator on iOS 17+ and Android 14+.
 > - **Synced passkeys** managed by platform password managers (such as iCloud Keychain or Google Password Manager) or supported third-party providers, which enable cross-device use.
 >
-> Both types are phishing-resistant. From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
 >
 >This dependency is especially important on:
 >
@@ -168,14 +168,14 @@ The passwordless methods available to your users depend on the platforms they us
 :::image type="icon" source="media/passwordless/authenticator.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-> **Not phishing-resistant** :::image type="icon" source="../media/icons/16/caution.svg" border="false":::
+>  :::image type="icon" source="../media/icons/16/caution.svg" border="false"::: **Not phishing-resistant**
 >
 > Microsoft Authenticator phone sign-in replaces passwords with push-based approval and number matching on the user's trusted mobile device. It's convenient and widely supported, but relies on push notifications rather than hardware-bound credentials, which means it doesn't fully prevent phishing attacks such as MFA prompt manipulation.
 >
 >> [!NOTE]
 >> Microsoft Authenticator can *also* store device-bound passkeys (iOS 17+, Android 14+), which *are* phishing-resistant. This section covers the push-based phone sign-in flow specifically.
 >
-> Intune supports this flow by deploying and managing the mobile app and device prerequisites.
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune supports this flow by deploying and managing the mobile app and device prerequisites.
 >
 > In many environments, this support includes:
 >
@@ -205,7 +205,7 @@ The passwordless methods available to your users depend on the platforms they us
 >
 > Temporary Access Pass (TAP) is a time-limited credential issued by an admin that helps users bootstrap or recover access before they complete their long-term passwordless setup. TAP isn't a permanent passwordless method and isn't phishing-resistant, but it's often a critical part of a successful rollout because it solves the first-sign-in problem without issuing a password.
 >
-> From an Intune perspective, Temporary Access Pass matters when you want to:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** From an Intune perspective, Temporary Access Pass matters when you want to:
 >
 > - Simplify onboarding to passwordless methods.
 > - Reduce reliance on temporary passwords during deployment.
@@ -239,33 +239,34 @@ The passwordless methods available to your users depend on the platforms they us
 :::image type="icon" source="media/passwordless/certificate.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-> **Phishing-resistant** :::image type="icon" source="../media/icons/16/check.svg" border="false":::
-Certificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
-
-Intune supports two infrastructure models for certificate delivery:
-
-- **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Microsoft Intune to bridge their on-premises PKI with Intune. The connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an enterprise CA or need to integrate with established PKI investments.
-- **Microsoft Cloud PKI**: For organizations that want to simplify or eliminate on-premises certificate infrastructure, Microsoft Cloud PKI provides a cloud-based CA as part of the Microsoft Intune Suite. Cloud PKI issues and manages certificates without requiring on-premises servers, connectors, or hardware security modules.
-
-Regardless of infrastructure model, Intune delivers certificates to devices using certificate profiles:
-
-- **Trusted root certificate profiles** distribute your CA's root certificate so devices can establish the trust chain.
-- **SCEP certificate profiles** request and deploy certificates from a SCEP-enabled CA.
-- **PKCS certificate profiles** request and deploy certificates using the PKCS #12 standard.
-- **Imported PFX certificate profiles** deploy pre-generated certificates that are imported into Intune.
+> :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Phishing-resistant**
+> ertificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
+>
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune supports two infrastructure models for certificate delivery:
+>
+> - **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Microsoft Intune to bridge their on-premises PKI with Intune. The >connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an >enterprise CA or need to integrate with established PKI investments.
+> - **Microsoft Cloud PKI**: For organizations that want to simplify or eliminate on-premises certificate infrastructure, Microsoft Cloud PKI provides a cloud-based CA as part of the Microsoft Intune Suite. Cloud PKI issues and manages certificates without requiring on-premises servers, connectors, or hardware security modules.
+>
+> Regardless of infrastructure model, Intune delivers certificates to devices using certificate profiles:
+>
+> - **Trusted root certificate profiles** distribute your CA's root certificate so devices can establish the trust chain.
+> - **SCEP certificate profiles** request and deploy certificates from a SCEP-enabled CA.
+> - **PKCS certificate profiles** request and deploy certificates using the PKCS #12 standard.
+> - **Imported PFX certificate profiles** deploy pre-generated certificates that are imported into Intune.
+>
+>
+>
+>
+>These profiles work across Windows, macOS, iOS/iPadOS, and Android, making Intune the delivery mechanism that connects your PKI infrastructure—whether on-premises or cloud-based—to the identity method defined in Microsoft Entra ID.
+>
+>For implementation guidance, see:
+>
+> - [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
+> - [Microsoft Cloud PKI overview](../../cloud-pki/index.md)
+> - [Certificate Connector for Microsoft Intune](../../intune-service/protect/certificate-connector-overview.md)
+> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 :::column-end:::
 :::row-end:::
-
-
-
-These profiles work across Windows, macOS, iOS/iPadOS, and Android, making Intune the delivery mechanism that connects your PKI infrastructure—whether on-premises or cloud-based—to the identity method defined in Microsoft Entra ID.
-
-For implementation guidance, see:
-
-- [Use certificates for authentication in Microsoft Intune](../../intune-service/protect/certificates-configure.md)
-- [Microsoft Cloud PKI overview](../../cloud-pki/index.md)
-- [Certificate Connector for Microsoft Intune](../../intune-service/protect/certificate-connector-overview.md)
-- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 
 ## Prerequisites and licensing
 
@@ -287,20 +288,20 @@ Before you plan a passwordless deployment, verify that your environment meets th
 | Device compliance and configuration profiles | Microsoft Intune Plan 1                                      |
 
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-> - [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
-> - [Microsoft Intune licensing](/intune/fundamentals/licenses)
+- [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
+- [Microsoft Intune licensing](/intune/fundamentals/licenses)
 
 ### Minimum platform versions
 
-| Method                                     | Windows                       | macOS                        | iOS/iPadOS                        | Android             |
-|--------------------------------------------|-------------------------------|------------------------------|-----------------------------------|---------------------|
-| **Windows Hello**             | All supported Windows clients |                              |                                   |                     |
-| **FIDO2 security keys**                    | All supported Windows clients |                              |                                   |                     |
-| **Passkeys**                               | Windows 11                    | All supported macOS versions | All supported iOS/iPadOS versions | Android 14 or later |
-| **Device-bound passkeys in Authenticator** |                               |                              | All supported iOS/iPadOS versions | Android 14 or later |
-| **Platform SSO (Secure Enclave)**          |                               | All supported macOS versions |                                   |                     |
-| **Web sign-in (TAP at lock screen)**       | Windows 11                    |                              |                                   |                     |
-| **Microsoft Authenticator phone sign-in**  |                               |                              | All supported iOS/iPadOS versions | Android 11 or later |
+| Method                                     | Windows                       | macOS                  | iOS/iPadOS             | Android             |
+|--------------------------------------------|:-----------------------------:|:----------------------:|:----------------------:|:-------------------:|
+| **Windows Hello**                          | All supported Windows clients | —                      | —                      | —                   |
+| **FIDO2 security keys**                    | All supported Windows clients | —                      | —                      | —                   |
+| **Passkeys**                               | Windows 11                    | All supported versions | All supported versions | Android 14 or later |
+| **Device-bound passkeys in Authenticator** | —                             | —                      | All supported versions | Android 14 or later |
+| **Platform SSO (Secure Enclave)**          | —                             | All supported versions | —                      | —                   |
+| **Web sign-in (TAP at lock screen)**       | Windows 11                    | —                      | —                      | —                   |
+| **Microsoft Authenticator phone sign-in**  | —                             | —                      | All supported versions | Android 11 or later |
 
 
 >[!NOTE]
@@ -308,8 +309,8 @@ Before you plan a passwordless deployment, verify that your environment meets th
 > *Supported* refers to operating system versions that Microsoft Intune currently supports for full functionality, policy deployment, and management.  
 > Platform version requirements can change with each release cycle. Always verify current requirements in the product documentation for the specific method you're deploying..
 
-> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-> - [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+- [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
 
 ## Platform considerations
 
@@ -329,7 +330,7 @@ Intune commonly supports Windows passwordless scenarios by:
 
 When a user signs in with Windows Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and—when Cloud Kerberos Trust is configured—on-premises resources like file shares, all without additional sign-in prompts.
 
-Related guidance:
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
 - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
@@ -358,7 +359,7 @@ This matters when you're planning:
 - Single sign-on between the device and Microsoft apps.
 - A consistent management model alongside Windows and mobile devices.
 
-Related guidance:
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
 
@@ -368,7 +369,7 @@ On iOS and iPadOS, passwordless planning is more about app sign-in, brokered aut
 
 The Microsoft SSO extension on iOS can intercept authentication requests across Microsoft and third-party apps, enabling seamless sign-in after initial device setup. Microsoft Authenticator acts as the authentication broker, and can also store device-bound passkeys on iOS 17+ for phishing-resistant authentication.
 
-Related guidance:
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
@@ -379,7 +380,7 @@ On Android, Intune establishes the managed context that passwordless and brokere
 
 Both Company Portal and Microsoft Authenticator can act as authentication brokers on Android. Once a user signs in through the broker, Entra ID issues a Primary Refresh Token that enables SSO across all broker-aware apps in the work profile. On Android 14+, Authenticator can also store device-bound passkeys for phishing-resistant authentication.
 
-Related guidance:
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 
@@ -405,7 +406,7 @@ Passwordless is one part of a broader identity and device access strategy. For a
 - **Data protection**: Microsoft Purview capabilities that help protect content after access is granted.
 - **Investigation and response**: Microsoft Defender signals and workflows when risk or compromise needs follow-up.
 
-Related guidance:
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
 - [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common)
@@ -416,7 +417,7 @@ Conditional Access evaluates signals such as device state and authentication str
 
 When you implement Conditional Access alongside passwordless, also account for emergency access planning to prevent accidental lockout scenarios.
 
-Related guidance:
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
 
@@ -426,12 +427,16 @@ A common concern when removing passwords is what happens when a user loses their
 
 Plan for these scenarios as part of your passwordless deployment:
 
-- **Emergency access accounts**: Maintain at least two break-glass accounts that are excluded from Conditional Access policies and passwordless enforcement. These accounts provide a fallback path if a misconfiguration or outage blocks all other access. Store credentials securely and monitor sign-in activity on these accounts. For more information, see [Manage emergency access accounts in Microsoft Entra ID](/entra/identity/role-based-access-control/security-emergency-access).
+- **Emergency access accounts**: Maintain at least two break-glass accounts that are excluded from Conditional Access policies and passwordless enforcement. These accounts provide a fallback path if a misconfiguration or outage blocks all other access. Store credentials securely and monitor sign-in activity on these accounts.
 - **Recovery with Temporary Access Pass**: When a user loses their passwordless device, an admin can issue a new TAP so the user can sign in and register a replacement credential. This avoids resetting the user to a password and keeps the recovery flow within the passwordless model.
 - **Multiple registered methods**: Encourage users to register more than one passwordless method where possible. For example, a user who uses Windows Hello for Business on their laptop might also register a passkey in Microsoft Authenticator on their phone. If one device is lost, the other method still works.
 - **Self-service credential management**: Users can manage their authentication methods at [My Security Info](https://mysignins.microsoft.com/security-info). When combined with TAP-based recovery, this reduces helpdesk dependency for credential resets.
 
 Planning for recovery before you enforce passwordless is essential. A rollout that blocks passwords without a recovery path creates the kind of lockout scenarios that erode admin and user confidence in the transition.
+
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+
+- [Manage emergency access accounts in Microsoft Entra ID](/entra/identity/role-based-access-control/security-emergency-access).
 
 ### Compliance and device readiness
 
@@ -460,6 +465,8 @@ Consider these practices:
 - **Provide platform-specific guidance**: The passwordless experience is different on Windows (Hello biometric or PIN), macOS (Touch ID with Platform SSO), iOS (Authenticator or passkeys), and Android (Authenticator broker). Tailor communication to the platforms your users have.
 - **Identify pilot groups**: Start with a group of users who can test the experience and provide feedback before you enforce passwordless across the organization. IT staff, early adopters, and security-aware teams are often good candidates.
 - **Prepare helpdesk staff**: Ensure your support team knows how to issue a Temporary Access Pass for recovery, how to guide users through credential registration, and where to check sign-in logs when issues arise.
+
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 For end-user documentation on managing sign-in methods, see [Set up your security info from a sign-in prompt](/entra/identity/authentication/end-user-first-time).
 

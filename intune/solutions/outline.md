@@ -83,59 +83,6 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::column-end:::
 :::row-end:::
 
-<!--
-[!INCLUDE [intune](includes/intune.md)]
-
-- Deploying certificates via SCEP or PKCS profiles.
-- Configuring apps and devices to enforce CBA.
-- Integrating with Entra ID conditional access for secure sign-in.
-- Supporting Purebred workflows for mobile certificate issuance and renewal in government or high-security environments.
-- Offering a cloud-based PKI option to reduce infrastructure complexity.
-
-**Learn more:**
-- add here
-- -->
-
-
-
-<!--
-
-[!INCLUDE [intune](includes/intune.md)]
-
-- Requiring Windows Hello during enrollment.
-- Enforcing Hello settings (PIN complexity, biometrics allowed/disallowed).
-- Prompting setup during OOBE for Entra-joined devices.
-- Ensuring compliance for passwordless sign-in policies.
-
-**Learn more:**
-- add here
--->
-
-:::row:::
-    :::column span="1":::
-**Microsoft Authenticator app**
-
-:::image type="icon" source="media/passwordless/authenticator.svg" border="false":::
-:::column-end:::
-:::column span="3":::
->**Microsoft Authenticator** offers multiple sign-in options, including passwordless methods and a legacy MFA approach:
->- **Passkeys in Authenticator**: Authenticator can store a FIDO-based passkey for an Entra account, enabling passwordless authentication that is **phishing-resistant**. Ideal for high-assurance environments.
->- **Passwordless phone sign-in**: After entering a username, users approve sign-in on their trusted device by unlocking it with biometrics or a PIN and matching a number. This method is convenient and widely supported, but it's **not phishing-resistant** because it relies on push notifications rather than hardware-bound credentials. Best for scenarios prioritizing flexibility and ease of use.
->- **TOTP/OTP codes**: Time-based one-time codes for MFA. This is **not passwordless** and **not phishing-resistant**. These methods are not passwordless and don't provide phishing resistance. They're included for completeness, but organizations should prioritize passwordless options for stronger security.
-:::column-end:::
-:::row-end:::
-
-<!--
-[!INCLUDE [intune](includes/intune.md)]
-
-- Deploying the Authenticator app.
-- Enforcing device compliance.
-- Applying App Protection Policies (MAM).
-- Ensuring the brokered authentication flow (Company Portal/Authenticator) is present on iOS/Android.
-
-**Learn more:**
-- add here
--->
 
 :::row:::
     :::column span="1":::
