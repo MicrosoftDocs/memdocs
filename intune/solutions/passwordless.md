@@ -29,7 +29,7 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
 
 :::row:::
    :::column span="1":::
-   :::image type="icon" source="icons/entra.svg" border="false":::
+   :::image type="icon" source="media/passwordless/entra.svg" border="false":::
    :::column-end:::
    :::column span="3":::
    **Microsoft Entra ID** is the core identity provider. It verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. Upon successful authentication, Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. Conditional Access policies evaluate device state, authentication strength, and risk signals before granting access.
@@ -38,7 +38,7 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
 
 :::row:::
    :::column span="1":::
-   :::image type="icon" source="icons/intune.svg" border="false":::
+   :::image type="icon" source="media/passwordless/intune.svg" border="false":::
    :::column-end:::
    :::column span="3":::
    **Microsoft Intune** prepares devices for passwordless sign-in by configuring settings, enforcing compliance, deploying required apps, and supporting the platform experiences that make passwordless practical at scale. Intune gives admins one management plane for Windows, macOS, iOS/iPadOS, and Android.
@@ -47,7 +47,7 @@ Microsoft's passwordless solution integrates Entra ID for identity and single si
 
 :::row:::
    :::column span="1":::
-   :::image type="icon" source="icons/devices.svg" border="false":::
+   :::image type="icon" source="media/passwordless/devices.svg" border="false":::
    :::column-end:::
    :::column span="3":::
    **Platform capabilities** on Windows, macOS, iOS, and Android provide the device-bound experience, including biometrics, secure hardware (TPM, Secure Enclave), passkey support, and brokered single sign-on.
@@ -58,27 +58,19 @@ This separation is important. Microsoft Entra ID is the identity authority. Micr
 
 ## What counts as passwordless
 
-Not all passwordless methods offer the same level of protection. Understanding the difference between phishing-resistant and non-phishing-resistant methods is important when designing your strategy.
+Not all passwordless methods offer the same level of protection. Understanding the difference between *phishing-resistant* and *non-phishing-resistant* methods is important when designing your strategy.
 
-### Phishing-resistant methods
+Although *passwordless* might sound like it removes a security factor, most passwordless methods actually satisfy multifactor authentication (MFA) requirements. MFA requires two or more factors—something you know, something you have, or something you are. For example, Windows Hello combines possession (a device-bound key stored in the TPM) with inherence (a biometric gesture) or knowledge (a PIN), satisfying MFA in a single sign-in step. This is why Conditional Access authentication strength policies can classify passwordless methods as MFA-compliant—or even as phishing-resistant MFA.
 
-Phishing attacks trick users into revealing credentials or approving fraudulent sign-ins. Phishing-resistant MFA ensures credentials can't be intercepted or replayed, even if a user is tricked.
+:::image type="icon" source="media/passwordless/phishing.svg" border="false"::: 
+:::column-end:::
+:::column span="3":::
+> Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed—even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. The method sections later in this article indicate the phishing-resistance level for each method.
+:::column-end:::
+:::row-end:::
 
-- **Passkeys (FIDO)** are the standards-based umbrella. In Entra ID you can use:
-  - **Device-bound passkeys** on platform authenticators like Windows Hello for Business and Microsoft Authenticator (iOS/Android). These are stored in secure hardware (TPM/Secure Enclave) on a single device.
-  - **Synced passkeys** in platform password managers (such as iCloud Keychain and Google Password Manager) and some third-party providers.
-- **FIDO2 security keys** are external keys (USB/NFC/BLE) that hold a FIDO credential. Ideal for shared devices or high-assurance scenarios.
-- **Certificate-based authentication (CBA)** uses digital certificates and asymmetric cryptography, preventing credential replay. Widely adopted in regulated industries and government environments through smart cards such as PIV and CAC.
-- **Windows Hello for Business** uses a device-bound asymmetric key sealed to the TPM, with access controlled by PIN or biometric gesture.
-
-### Other passwordless methods
-
-These methods eliminate passwords but don't fully prevent phishing:
-
-- **Microsoft Authenticator phone sign-in** replaces passwords with push-based approval and number matching. Convenient and widely supported, but relies on push notifications rather than hardware-bound credentials.
-- **Temporary Access Pass (TAP)** is a time-limited credential for onboarding or recovery. Not a permanent method, but often part of a successful rollout.
-
-For a complete comparison of authentication methods, see [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
+> :::image type="icon" source="media/passwordless/information.svg" border="false"::: Learn more:
+> For a complete comparison of authentication methods, see [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
 
 ## What Microsoft Intune contributes
 
@@ -109,9 +101,12 @@ Before you plan a passwordless deployment, verify that your environment meets th
 | Microsoft Cloud PKI | Microsoft Intune Suite add-on or standalone Cloud PKI add-on |
 | Device compliance and configuration profiles | Microsoft Intune Plan 1 |
 
-For current licensing details, see [Microsoft Entra plans and pricing](/entra/fundamentals/licensing) and [Microsoft Intune licensing](/intune/fundamentals/licenses).
+> :::image type="icon" source="media/passwordless/information.svg" border="false"::: For current licensing details, see:
+> - [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
+> - [Microsoft Intune licensing](/intune/fundamentals/licenses)
 
 ### Minimum platform versions
+
 
 | Method | Windows | macOS | iOS/iPadOS | Android |
 |---|---|---|---|---|
@@ -129,7 +124,11 @@ Platform version requirements can change with each release cycle. Always verify 
 
 ### Windows Hello for Business
 
-Windows Hello for Business is a hardware-backed, phishing-resistant sign-in method for Windows devices. Intune prepares Windows devices for Windows Hello for Business and enforces related device settings.
+> **Phishing-resistant** ✅
+
+Windows Hello for Business replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
+
+Intune prepares Windows devices for Windows Hello for Business and enforces related device settings.
 
 This method is most relevant when you need to:
 
@@ -144,7 +143,11 @@ For implementation guidance, see:
 
 ### FIDO2 security keys
 
-FIDO2 security keys provide phishing-resistant authentication using external hardware keys. Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences, especially on Windows.
+> **Phishing-resistant** ✅
+
+FIDO2 security keys are physical devices (USB, NFC, or Bluetooth) that store a FIDO credential and provide phishing-resistant authentication without relying on the device platform. Because the credential is bound to the hardware key and verified through a cryptographic challenge, it can't be intercepted or replayed. FIDO2 keys are ideal for shared devices, high-assurance environments, or as a recovery path alongside platform-based credentials.
+
+Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences, especially on Windows.
 
 This method is often a good fit when organizations need:
 
@@ -158,7 +161,14 @@ For implementation guidance, see:
 
 ### Passkeys
 
-Passkeys extend passwordless authentication across device-bound and synced credential models. From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
+> **Phishing-resistant** ✅
+
+Passkeys are the standards-based umbrella for FIDO credentials that can be either device-bound or synced across devices. In Microsoft Entra ID, you can use:
+
+- **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello for Business or Microsoft Authenticator on iOS 17+ and Android 14+.
+- **Synced passkeys** managed by platform password managers (such as iCloud Keychain or Google Password Manager) or supported third-party providers, which enable cross-device use.
+
+Both types are phishing-resistant. From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
 
 This dependency is especially important on:
 
@@ -172,7 +182,14 @@ For implementation guidance, see:
 
 ### Microsoft Authenticator phone sign-in
 
-Microsoft Authenticator can provide a passwordless sign-in experience on mobile devices and act as a broker for Microsoft Entra ID authentication across apps. Intune supports this flow by deploying and managing the mobile app and device prerequisites.
+> **Not phishing-resistant** ⚠️
+
+Microsoft Authenticator phone sign-in replaces passwords with push-based approval and number matching on the user's trusted mobile device. It's convenient and widely supported, but relies on push notifications rather than hardware-bound credentials, which means it doesn't fully prevent phishing attacks such as MFA prompt manipulation.
+
+> [!NOTE]
+> Microsoft Authenticator can *also* store device-bound passkeys (iOS 17+, Android 14+), which *are* phishing-resistant. This section covers the push-based phone sign-in flow specifically.
+
+Intune supports this flow by deploying and managing the mobile app and device prerequisites.
 
 In many environments, this support includes:
 
@@ -186,7 +203,9 @@ For implementation guidance, see:
 
 ### Temporary Access Pass
 
-Temporary Access Pass (TAP) is a time-limited credential that helps users bootstrap or recover access before they complete their long-term passwordless setup. It isn't a permanent passwordless method, but it's often part of a successful rollout.
+> **Not a permanent method** — used for onboarding and recovery
+
+Temporary Access Pass (TAP) is a time-limited credential issued by an admin that helps users bootstrap or recover access before they complete their long-term passwordless setup. TAP isn't a permanent passwordless method and isn't phishing-resistant, but it's often a critical part of a successful rollout because it solves the first-sign-in problem without issuing a password.
 
 From an Intune perspective, Temporary Access Pass matters when you want to:
 
@@ -213,6 +232,8 @@ For implementation guidance, see:
 - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 
 ### Certificate-based authentication
+
+> **Phishing-resistant** ✅
 
 Certificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
 

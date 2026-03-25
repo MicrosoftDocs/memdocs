@@ -26,7 +26,7 @@ Together, these components deliver passwordless access aligned with **Zero Trust
     :::column:::
 #### Microsoft Entra ID
 
-:::image type="icon" source="icons/entra.svg" border="false":::
+:::image type="icon" source="media/passwordless/entra.svg" border="false":::
 
     - Phishing-resistant credentials
     - Authentication strengths & policies
@@ -35,7 +35,7 @@ Together, these components deliver passwordless access aligned with **Zero Trust
     :::column:::
 #### Microsoft Intune
 
-    :::image type="icon" source="icons/intune.svg" border="false":::
+    :::image type="icon" source="media/passwordless/intune.svg" border="false":::
 
     - Device compliance and configuration (updates, apps, policies)
     - Security baselines
@@ -45,7 +45,7 @@ Together, these components deliver passwordless access aligned with **Zero Trust
     :::column:::
 #### Devices
 
-        :::image type="icon" source="icons/devices.svg" border="false":::
+        :::image type="icon" source="media/passwordless/devices.svg" border="false":::
 
 - Platform authenticators (biometrics, PIN)
 - Microsoft Authenticator app for mobile sign-in
@@ -68,7 +68,7 @@ MFA adds layers of security by requiring two or more factors (something you know
 :::column span="1":::
 **Phising resistance**
 
-:::image type="icon" source="icons/phishing.svg" border="false"::: 
+:::image type="icon" source="media/passwordless/phishing.svg" border="false"::: 
 :::column-end:::
 :::column span="3":::
 > Phishing attacks trick users into revealing credentials or approving malicious sign-ins. Passwordless methods combined with strong multi-factor authentication (MFA) help mitigate these risks.
@@ -103,7 +103,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::column span="1":::
 **Passkeys (FIDO2)**
 
-:::image type="icon" source="icons/passkey.svg" border="false":::
+:::image type="icon" source="media/passwordless/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > Passkeys are cryptographic credentials that replace passwords and can sync across devices or remain device-bound. Synced passkeys provide cross-device convenience, while device-bound passkeys offer stronger hardware-based security. They deliver strong phishing resistance and simplify sign-in for users, making them ideal for organizations adopting modern authentication across multiple platforms.
@@ -115,7 +115,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::column span="1":::
 **FIDO2 Security Keys**
 
-:::image type="icon" source="icons/security-key.svg" border="false":::
+:::image type="icon" source="media/passwordless/security-key.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > FIDO2 keys are physical devices that enable strong, phishing-resistant authentication without relying on passwords. They store cryptographic credentials and work offline, making them ideal for high-security environments or shared devices. These external keys connect via USB, NFC, or Bluetooth and provide a simple, secure way to verify identity in scenarios where maximum assurance is required.
@@ -136,7 +136,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 :::column span="1":::
 **Certificate-Based Authentication (CBA)**
 
-:::image type="icon" source="icons/certificate.svg" border="false":::
+:::image type="icon" source="media/passwordless/certificate.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > Certificate-based authentication uses digital certificates to verify identity, commonly required in regulated industries. Because it relies on asymmetric cryptography, CBA is phishing-resistant and prevents credential replay attacks. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV (Personal Identity Verification) and CAC (Common Access Card). For mobile-friendly deployments, organizations can use derived credentials (e.g., Purebred), which store certificates in secure elements on mobile devices
@@ -160,7 +160,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
     :::column span="1":::
 **Windows Hello for Business**
 
-:::image type="icon" source="icons/windows-hello.svg" border="false":::
+:::image type="icon" source="media/passwordless/windows-hello.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key that is generated and sealed to the TPM, with access controlled by a PIN or biometric gesture.. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
@@ -184,7 +184,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
     :::column span="1":::
 **Microsoft Authenticator app**
 
-:::image type="icon" source="icons/authenticator.svg" border="false":::
+:::image type="icon" source="media/passwordless/authenticator.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 >**Microsoft Authenticator** offers multiple sign-in options, including passwordless methods and a legacy MFA approach:
@@ -210,7 +210,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
     :::column span="1":::
 **Temporary Access Pass (TAP)**
 
-:::image type="icon" source="icons/tap.svg" border="false":::
+:::image type="icon" source="media/passwordless/tap.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 
