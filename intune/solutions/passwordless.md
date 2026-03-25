@@ -73,7 +73,8 @@ Although *passwordless* might sound like it removes a security factor, most pass
 
 :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
 
-> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless).
+> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
+> - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
 
 ## How Intune drives passwordless adoption
 
@@ -104,52 +105,58 @@ Before you plan a passwordless deployment, verify that your environment meets th
 | Microsoft Cloud PKI                          | Microsoft Intune Suite add-on or standalone Cloud PKI add-on |
 | Device compliance and configuration profiles | Microsoft Intune Plan 1                                      |
 
-> :::image type="icon" source="media/passwordless/information.svg" border="false"::: For current licensing details, see:
+:::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
 > - [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
 > - [Microsoft Intune licensing](/intune/fundamentals/licenses)
 
 ### Minimum platform versions
 
-| Method                                 | Windows                       | macOS                        | iOS/iPadOS                        | Android             |
-|----------------------------------------|-------------------------------|------------------------------|-----------------------------------|---------------------|
-| Windows Hello for Business             | All supported Windows clients | —                            | —                                 | —                   |
-| FIDO2 security keys                    | All supported Windows clients | —                            | —                                 | —                   |
-| Passkeys (synced)                      | Windows 11                    | All supported macOS versions | All supported iOS/iPadOS versions | Android 14 or later |
-| Device-bound passkeys in Authenticator | —                             | —                            | All supported iOS/iPadOS versions | Android 14 or later |
-| Platform SSO (Secure Enclave)          | —                             | All supported macOS versions | —                                 | —                   |
-| Web sign-in (TAP at lock screen)       | Windows 11                    | —                            | —                                 | —                   |
-| Microsoft Authenticator phone sign-in  | —                             | —                            | All supported iOS/iPadOS versions | Android 11 or later |
-
+| Method | Windows | macOS | iOS/iPadOS | Android |
+|--|--|--|--|--|
+| Windows Hello for Business | All supported Windows clients | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: |
+| FIDO2 security keys | All supported Windows clients | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: |
+| Passkeys (synced) | Windows 11 | All supported macOS versions | All supported iOS/iPadOS versions | Android 14 or later |
+| Device-bound passkeys in Authenticator | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | All supported iOS/iPadOS versions | Android 14 or later |
+| Platform SSO (Secure Enclave) | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | All supported macOS versions | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: |
+| Web sign-in (TAP at lock screen) | Windows 11 | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: |
+| Microsoft Authenticator phone sign-in | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | :::image type="icon" source="./media/passwordless/block.svg" border="false"::: | All supported iOS/iPadOS versions | Android 11 or later |
 
 >[!NOTE]
 > 
 > *Supported* refers to operating system versions that Microsoft Intune currently supports for full functionality, policy deployment, and management.  
 > Platform version requirements can change with each release cycle. Always verify current requirements in the product documentation for the specific method you're deploying..
 
-:::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+> :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
 > - [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
-
 
 ## Passwordless methods and Intune's role
 
-### Windows Hello for Business
+:::row:::
+    :::column span="1":::
+**Windows Hello for Business**
 
-> **Phishing-resistant** ✅
+:::image type="icon" source="media/passwordless/windows-hello.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> **Phishing-resistant** :::image type="icon" source="../media/icons/16/check.svg" border="false":::
+>
+> Windows Hello for Business replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
+>
+> Intune prepares Windows devices for Windows Hello for Business and enforces related device settings.
+>
+> This method is most relevant when you need to:
+>
+> - Prepare cloud-first Windows devices for passwordless sign-in.
+> - Deliver Windows Hello for Business settings during enrollment and ongoing management.
+> - Align Windows sign-in with device compliance and modern management.> 
 
-Windows Hello for Business replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
+> :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+> - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
+> - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
+:::column-end:::
+:::row-end:::
 
-Intune prepares Windows devices for Windows Hello for Business and enforces related device settings.
 
-This method is most relevant when you need to:
-
-- Prepare cloud-first Windows devices for passwordless sign-in.
-- Deliver Windows Hello for Business settings during enrollment and ongoing management.
-- Align Windows sign-in with device compliance and modern management.
-
-For implementation guidance, see:
-
-- [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
-- [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
 
 ### FIDO2 security keys
 
@@ -213,7 +220,7 @@ For implementation guidance, see:
 
 ### Temporary Access Pass
 
-> **Not a permanent method** — used for onboarding and recovery
+> **Not a permanent method** :::image type="icon" source="./media/passwordless/block.svg" border="false":::  used for onboarding and recovery
 
 Temporary Access Pass (TAP) is a time-limited credential issued by an admin that helps users bootstrap or recover access before they complete their long-term passwordless setup. TAP isn't a permanent passwordless method and isn't phishing-resistant, but it's often a critical part of a successful rollout because it solves the first-sign-in problem without issuing a password.
 
@@ -229,10 +236,10 @@ A common challenge in passwordless deployments is the "chicken-and-egg" problem:
 
 A typical onboarding flow looks like this:
 
-1. **Admin issues a TAP** — The IT admin or automated workflow generates a time-limited TAP for the new user in the Microsoft Entra admin center or via Microsoft Graph API.
-1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web sign-in enables TAP entry directly at the lock screen.
-1. **User registers a passwordless method** — After signing in with the TAP, the user is prompted to register Windows Hello for Business, a FIDO2 security key, a passkey in Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
-1. **TAP expires** — The TAP is single-use or time-limited (configurable), so it can't be reused after the user registers their passwordless method.
+1. **Admin issues a TAP** :::image type="icon" source="./media/passwordless/block.svg" border="false":::  The IT admin or automated workflow generates a time-limited TAP for the new user in the Microsoft Entra admin center or via Microsoft Graph API.
+1. **User sets up their device** :::image type="icon" source="./media/passwordless/block.svg" border="false":::  The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web sign-in enables TAP entry directly at the lock screen.
+1. **User registers a passwordless method** :::image type="icon" source="./media/passwordless/block.svg" border="false":::  After signing in with the TAP, the user is prompted to register Windows Hello for Business, a FIDO2 security key, a passkey in Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
+1. **TAP expires** :::image type="icon" source="./media/passwordless/block.svg" border="false":::  The TAP is single-use or time-limited (configurable), so it can't be reused after the user registers their passwordless method.
 
 This flow eliminates the need to issue and then revoke a temporary password, and gives Intune a managed onboarding path from the first sign-in.
 

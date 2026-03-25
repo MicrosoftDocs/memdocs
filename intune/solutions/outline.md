@@ -22,66 +22,6 @@ Microsoft's passwordless approach is built on three pillars: identity with **Mic
 
 Together, these components deliver passwordless access aligned with **Zero Trust** principles, verifying every sign-in based on identity, device health, and contextual signals.
 
-:::row:::
-    :::column:::
-#### Microsoft Entra ID
-
-:::image type="icon" source="media/passwordless/entra.svg" border="false":::
-
-    - Phishing-resistant credentials
-    - Authentication strengths & policies
-    - Conditional Access decision engine
-    :::column-end:::
-    :::column:::
-#### Microsoft Intune
-
-    :::image type="icon" source="media/passwordless/intune.svg" border="false":::
-
-    - Device compliance and configuration (updates, apps, policies)
-    - Security baselines
-    - Risk posture signals (compliance, MTD, MAM)
-
-    :::column-end:::
-    :::column:::
-#### Devices
-
-        :::image type="icon" source="media/passwordless/devices.svg" border="false":::
-
-- Platform authenticators (biometrics, PIN)
-- Microsoft Authenticator app for mobile sign-in
-- Hardware-backed security (TPM, secure enclaves)
-- Optimized user experience and enrollment readiness
-    :::column-end:::
-:::row-end:::
-
----
-
-Before diving into how Intune supports passwordless, it's important to understand key concepts around phishing resistance and the role played by multifactor authentication (MFA) within passwordless strategies.
-
-## MFA and passwordless
-
-MFA adds layers of security by requiring two or more factors (something you know, have, or are). Passwordless methods often satisfy MFA because they combine possession (device or key) and inherence (biometrics).
-
-## Phising resistance
-
-:::row:::
-:::column span="1":::
-**Phising resistance**
-
-:::image type="icon" source="media/passwordless/phishing.svg" border="false"::: 
-:::column-end:::
-:::column span="3":::
-> Phishing attacks trick users into revealing credentials or approving malicious sign-ins. Passwordless methods combined with strong multi-factor authentication (MFA) help mitigate these risks.
->
->It's essential to understand the difference between phishing-resistant and non-phishing-resistant authentication methods when designing a passwordless strategy:
-> - A phishing-resistant method ensures that even if a user is tricked into interacting with a fraudulent prompt, the attacker cannot gain access.
-> - Non-phishing-resistant methods can be compromised if users are deceived into sharing secrets or approving fake requests.
-:::column-end:::
-:::row-end:::
-
-**Learn more:**
-- [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
-
 ### Phishing resistance and Zero Trust
 
 Zero Trust assumes no implicit trust—every access request must be verified. Phishing-resistant authentication is essential because:
@@ -156,16 +96,7 @@ Microsoft Entra ID supports several passwordless methods that vary in phishing r
 - add here
 - -->
 
-:::row:::
-    :::column span="1":::
-**Windows Hello for Business**
 
-:::image type="icon" source="media/passwordless/windows-hello.svg" border="false":::
-:::column-end:::
-:::column span="3":::
-> Windows Hello for Business provides a passwordless experience for Windows sign-in and organizational access. It uses a device-bound asymmetric key that is generated and sealed to the TPM, with access controlled by a PIN or biometric gesture.. This method integrates seamlessly with Entra ID and supports phishing-resistant authentication. It's ideal for managed Windows devices where users sign in locally and need strong identity assurance.
-:::column-end:::
-:::row-end:::
 
 <!--
 
