@@ -299,15 +299,15 @@ Depending on the passwordless methods you choose, your organization may need Mic
 
 The passwordless methods described in this article rely on specific platform capabilities that are only available in certain OS versions. The table below summarizes the platform requirements for each method:
 
-| Method                                     | Windows                         | macOS                    | iOS/iPadOS               | Android             |
-|--------------------------------------------|:-------------------------------:|:------------------------:|:------------------------:|:-------------------:|
-| **Windows Hello**                          | All *supported* Windows clients | —                        | —                        | —                   |
-| **FIDO2 security keys**                    | All *supported* Windows clients | —                        | —                        | —                   |
-| **Passkeys**                               | Windows 11                      | All *supported* versions | All *supported* versions | Android 14 or later |
-| **Device-bound passkeys in Authenticator** | —                               | —                        | All *supported* versions | Android 14 or later |
-| **Platform SSO (Secure Enclave)**          | —                               | All *supported* versions | —                        | —                   |
-| **Web sign-in (TAP at lock screen)**       | Windows 11                      | —                        | —                        | —                   |
-| **Microsoft Authenticator phone sign-in**  | —                               | —                        | All *supported* versions | Android 11 or later |
+| Method                                     | Windows                         | macOS                    | iOS/iPadOS               | Android     |
+|--------------------------------------------|:-------------------------------:|:------------------------:|:------------------------:|:-----------:|
+| **Windows Hello**                          | All *supported* Windows clients | —                        | —                        | —           |
+| **FIDO2 security keys**                    | All *supported* Windows clients | —                        | —                        | —           |
+| **Passkeys**                               | Windows 11                      | All *supported* versions | All *supported* versions | Android 14+ |
+| **Device-bound passkeys in Authenticator** | —                               | —                        | All *supported* versions | Android 14+ |
+| **Platform SSO (Secure Enclave)**          | —                               | All *supported* versions | —                        | —           |
+| **Web sign-in (TAP at lock screen)**       | Windows 11                      | —                        | —                        | —           |
+| **Microsoft Authenticator phone sign-in**  | —                               | —                        | All *supported* versions | Android 11+ |
 
 >[!NOTE]
 > 
@@ -352,6 +352,10 @@ The passwordless experiences described in this article assume a cloud-first dire
 
 If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
 
+:::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+
+- [Configure single sign-on for Microsoft Entra joined devices](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso)
+
 ### macOS
 
 On macOS, passwordless planning depends on how Microsoft Entra ID integrates with the platform sign-in and single sign-on experience. Intune delivers the device configuration needed for Apple-focused identity integrations.
@@ -367,6 +371,7 @@ This matters when you're planning:
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
+- [Platform SSO configuration guide for macOS devices](../intune-service/configuration/platform-sso-macos.md)
 
 ### iOS and iPadOS
 
@@ -378,6 +383,7 @@ The Microsoft SSO extension on iOS can intercept authentication requests across 
 
 - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
 - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
+- [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
 
 ### Android
 
