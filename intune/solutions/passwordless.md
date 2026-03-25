@@ -119,7 +119,8 @@ The passwordless methods available to your users depend on the platforms they us
 >
 >FIDO2 security keys are physical devices (USB, NFC, or Bluetooth) that store a FIDO credential and provide phishing-resistant authentication without relying on the device platform. Because the credential is bound to the hardware key and verified through a cryptographic challenge, it can't be intercepted or replayed. FIDO2 keys are ideal for shared devices, high-assurance environments, or as a recovery path alongside platform-based credentials.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences.
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences.
 >
 >This method is often a good fit when organizations need:
 >
@@ -147,7 +148,8 @@ The passwordless methods available to your users depend on the platforms they us
 > - **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello or Microsoft Authenticator on iOS 17+ and Android 14+.
 > - **Synced passkeys** managed by platform password managers (such as iCloud Keychain or Google Password Manager) or supported third-party providers, which enable cross-device use.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+>  From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
 >
 >This dependency is especially important on:
 >
@@ -175,7 +177,8 @@ The passwordless methods available to your users depend on the platforms they us
 >> [!NOTE]
 >> Microsoft Authenticator can *also* store device-bound passkeys (iOS 17+, Android 14+), which *are* phishing-resistant. This section covers the push-based phone sign-in flow specifically.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune supports this flow by deploying and managing the mobile app and device prerequisites.
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> Intune supports this flow by deploying and managing the mobile app and device prerequisites.
 >
 > In many environments, this support includes:
 >
@@ -198,27 +201,25 @@ The passwordless methods available to your users depend on the platforms they us
 :::image type="icon" source="media/passwordless/tap.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-> **Phishing-resistant** :::image type="icon" source="../media/icons/16/check.svg" border="false":::
- 
-
-> **Not a permanent method** :::image type="icon" source="../media/icons/16/caution.svg" border="false"::: — used for onboarding and recovery
+> :::image type="icon" source="../media/icons/16/caution.svg" border="false"::: **Not a permanent method** — used for onboarding and recovery
 >
 > Temporary Access Pass (TAP) is a time-limited credential issued by an admin that helps users bootstrap or recover access before they complete their long-term passwordless setup. TAP isn't a permanent passwordless method and isn't phishing-resistant, but it's often a critical part of a successful rollout because it solves the first-sign-in problem without issuing a password.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** From an Intune perspective, Temporary Access Pass matters when you want to:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> From an Intune perspective, Temporary Access Pass matters when you want to:
 >
 > - Simplify onboarding to passwordless methods.
 > - Reduce reliance on temporary passwords during deployment.
 > - Connect onboarding scenarios to managed Windows device setup.
 >
-> #### Day-zero onboarding with TAP
+> *Day-zero onboarding with TAP*
 >
 >A common challenge in passwordless deployments is the "chicken-and-egg" problem: a new user needs to sign in to register their passwordless credential, but you don't want to issue a password for that first sign-in. TAP solves this by providing a short-lived credential for initial device setup and credential registration.
 >
 > A typical onboarding flow looks like this:
 > 
 > 1. **Admin issues a TAP** — The IT admin or automated workflow generates a time-limited TAP for the new user in the Microsoft Entra admin center or via Microsoft Graph API.
-> 1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web sign-in enables TAP entry directly at the lock screen.
+> 1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11, Web sign-in enables TAP entry directly at the lock screen.
 > 1. **User registers a passwordless method** — After signing in with the TAP, the user is prompted to register Windows Hello, a FIDO2 security key, a passkey in Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
 > 1. **TAP expires** — The TAP is single-use or time-limited (configurable), so it can't be reused after the user registers their passwordless method.
 > 
@@ -228,6 +229,7 @@ The passwordless methods available to your users depend on the platforms they us
 > 
 > - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
 > - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+> - [Web sign-in for Windows](/windows/security/identity-protection/web-sign-in/?tabs=intune)
 
 :::column-end:::
 :::row-end:::
@@ -242,7 +244,8 @@ The passwordless methods available to your users depend on the platforms they us
 > :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Phishing-resistant**
 > ertificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune supports two infrastructure models for certificate delivery:
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> Intune supports two infrastructure models for certificate delivery:
 >
 > - **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Microsoft Intune to bridge their on-premises PKI with Intune. The >connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an >enterprise CA or need to integrate with established PKI investments.
 > - **Microsoft Cloud PKI**: For organizations that want to simplify or eliminate on-premises certificate infrastructure, Microsoft Cloud PKI provides a cloud-based CA as part of the Microsoft Intune Suite. Cloud PKI issues and manages certificates without requiring on-premises servers, connectors, or hardware security modules.
