@@ -62,17 +62,11 @@ Not all passwordless methods offer the same level of protection. Understanding t
 
 Although *passwordless* might sound like it removes a security factor, most passwordless methods actually satisfy multifactor authentication (MFA) requirements. MFA requires two or more factors—something you know, something you have, or something you are. For example, Windows Hello combines possession (a device-bound key stored in the TPM) with inherence (a biometric gesture) or knowledge (a PIN), satisfying MFA in a single sign-in step. This is why Conditional Access authentication strength policies can classify passwordless methods as MFA-compliant—or even as phishing-resistant MFA.
 
-:::row:::
-:::column span="1":::
-:::image type="icon" source="media/passwordless/phishing.svg" border="false"::: 
-:::column-end:::
-:::column span="3":::
-> Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed—even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. The method sections later in this article indicate the phishing-resistance level for each method.
-:::column-end:::
-:::row-end:::
+Phishing-resistant methods use hardware-bound, cryptographic credentials that can't be intercepted or replayed—even if a user is tricked into interacting with a fraudulent prompt. Non-phishing-resistant methods eliminate passwords but can still be compromised through social engineering or prompt manipulation. The method sections later in this article indicate the phishing-resistance level for each method.
 
-:::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
 
+> :::image type="icon" source="media/passwordless/information.svg" border="false"::: **Learn more**
+>
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 > - [Get started with phishing-resistant passwordless authentication deployment in Microsoft Entra ID](/entra/identity/authentication/how-to-plan-prerequisites-phishing-resistant-passwordless-authentication)
 
@@ -86,7 +80,7 @@ Configuration delivery: Deploying policies and profiles for Windows Hello for Bu
 - **App and broker enablement**: Installing foundational apps—such as Microsoft Authenticator and Company Portal—when platform passwordless flows depend on them.
 - **Cross‑platform consistency**: Providing a unified management and policy plane across Windows, macOS, iOS/iPadOS, and Android to simplify passwordless deployment at scale.
 
-## Passwordless methods and Intune's role
+The passwordless methods available to your users depend on the platforms they use and the authentication methods you enable in Microsoft Entra ID. Intune's role is to prepare devices, deploy necessary configurations, and support the user experience for each method.
 
 :::row:::
     :::column span="1":::
@@ -133,8 +127,7 @@ Configuration delivery: Deploying policies and profiles for Windows Hello for Bu
 >- A strong phishing-resistant option that isn't tied to a single platform authenticator.
 >- A recovery or alternate path alongside platform-based credentials.
 >
->For implementation guidance, see:
->
+> :::image type="icon" source="media/passwordless/information.svg" border="false"::: For implementation guidance, see:
 >- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 
 :::column-end:::
@@ -142,91 +135,99 @@ Configuration delivery: Deploying policies and profiles for Windows Hello for Bu
 
 :::row:::
     :::column span="1":::
-**title**
+**Passkeys**
 
-:::image type="icon" source="media/passwordless/windows-hello.svg" border="false":::
+:::image type="icon" source="media/passwordless/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > **Phishing-resistant** :::image type="icon" source="../media/icons/16/check.svg" border="false":::
+>
+> Passkeys are the standards-based umbrella for FIDO credentials that can be either device-bound or synced across devices. In Microsoft Entra ID, you can use:
+>
+> - **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello for Business or Microsoft Authenticator on iOS 17+ and Android 14+.
+> - **Synced passkeys** managed by platform password managers (such as iCloud Keychain or Google Password Manager) or supported third-party providers, which enable cross-device use.
+>
+> Both types are phishing-resistant. From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
+>
+>This dependency is especially important on:
+>
+> - **Windows**, where platform sign-in and Windows Hello for Business can intersect with broader passwordless planning.
+> - **iOS/iPadOS** and **Android**, where passkeys can depend on mobile device state and app broker behavior.
+> - **macOS**, where platform identity integration and user sign-in experience shape adoption.
+>
+> :::image type="icon" source="media/passwordless/information.svg" border="false"::: For implementation guidance, see:
+>-  [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 :::column-end:::
 :::row-end:::
 
 
-### FIDO2 security keys
+:::row:::
+    :::column span="1":::
+**Microsoft Authenticator phone sign-in**
 
-
-
-### Passkeys
-
-> **Phishing-resistant** :::image type="icon" source="../media/icons/16/check.svg" border="false":::
-
-Passkeys are the standards-based umbrella for FIDO credentials that can be either device-bound or synced across devices. In Microsoft Entra ID, you can use:
-
-- **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello for Business or Microsoft Authenticator on iOS 17+ and Android 14+.
-- **Synced passkeys** managed by platform password managers (such as iCloud Keychain or Google Password Manager) or supported third-party providers, which enable cross-device use.
-
-Both types are phishing-resistant. From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
-
-This dependency is especially important on:
-
-- **Windows**, where platform sign-in and Windows Hello for Business can intersect with broader passwordless planning.
-- **iOS/iPadOS** and **Android**, where passkeys can depend on mobile device state and app broker behavior.
-- **macOS**, where platform identity integration and user sign-in experience shape adoption.
-
-For implementation guidance, see:
-
-- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-
-### Microsoft Authenticator phone sign-in
-
+:::image type="icon" source="media/passwordless/authenticator.svg" border="false":::
+:::column-end:::
+:::column span="3":::
 > **Not phishing-resistant** :::image type="icon" source="../media/icons/16/caution.svg" border="false":::
+>
+> Microsoft Authenticator phone sign-in replaces passwords with push-based approval and number matching on the user's trusted mobile device. It's convenient and widely supported, but relies on push notifications rather than hardware-bound credentials, which means it doesn't fully prevent phishing attacks such as MFA prompt manipulation.
+>
+>> [!NOTE]
+>> Microsoft Authenticator can *also* store device-bound passkeys (iOS 17+, Android 14+), which *are* phishing-resistant. This section covers the push-based phone sign-in flow specifically.
+>
+> Intune supports this flow by deploying and managing the mobile app and device prerequisites.
+>
+> In many environments, this support includes:
+>
+> - Deploying Microsoft Authenticator to managed mobile devices.
+> - Supporting the brokered sign-in experience across Microsoft apps.
+> - Accounting for app protection policy considerations on mobile platforms when those are part of the broader mobile access design.
+>
+> For implementation guidance, see:
+>
+> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
+:::column-end:::
+:::row-end:::
 
-Microsoft Authenticator phone sign-in replaces passwords with push-based approval and number matching on the user's trusted mobile device. It's convenient and widely supported, but relies on push notifications rather than hardware-bound credentials, which means it doesn't fully prevent phishing attacks such as MFA prompt manipulation.
 
-> [!NOTE]
-> Microsoft Authenticator can *also* store device-bound passkeys (iOS 17+, Android 14+), which *are* phishing-resistant. This section covers the push-based phone sign-in flow specifically.
 
-Intune supports this flow by deploying and managing the mobile app and device prerequisites.
+:::row:::
+    :::column span="1":::
+**Temporary Access Pass**
 
-In many environments, this support includes:
+:::image type="icon" source="media/passwordless/tap.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> **Phishing-resistant** :::image type="icon" source="../media/icons/16/check.svg" border="false":::
+ 
 
-- Deploying Microsoft Authenticator to managed mobile devices.
-- Supporting the brokered sign-in experience across Microsoft apps.
-- Accounting for app protection policy considerations on mobile platforms when those are part of the broader mobile access design.
-
-For implementation guidance, see:
-
-- [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-
-### Temporary Access Pass
-
-> **Not a permanent method** — used for onboarding and recovery
-
-Temporary Access Pass (TAP) is a time-limited credential issued by an admin that helps users bootstrap or recover access before they complete their long-term passwordless setup. TAP isn't a permanent passwordless method and isn't phishing-resistant, but it's often a critical part of a successful rollout because it solves the first-sign-in problem without issuing a password.
-
-From an Intune perspective, Temporary Access Pass matters when you want to:
-
-- Simplify onboarding to passwordless methods.
-- Reduce reliance on temporary passwords during deployment.
-- Connect onboarding scenarios to managed Windows device setup.
-
-#### Day-zero onboarding with TAP
-
-A common challenge in passwordless deployments is the "chicken-and-egg" problem: a new user needs to sign in to register their passwordless credential, but you don't want to issue a password for that first sign-in. TAP solves this by providing a short-lived credential for initial device setup and credential registration.
-
-A typical onboarding flow looks like this:
-
-1. **Admin issues a TAP** — The IT admin or automated workflow generates a time-limited TAP for the new user in the Microsoft Entra admin center or via Microsoft Graph API.
-1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web sign-in enables TAP entry directly at the lock screen.
-1. **User registers a passwordless method** — After signing in with the TAP, the user is prompted to register Windows Hello for Business, a FIDO2 security key, a passkey in Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
-1. **TAP expires** — The TAP is single-use or time-limited (configurable), so it can't be reused after the user registers their passwordless method.
-
-This flow eliminates the need to issue and then revoke a temporary password, and gives Intune a managed onboarding path from the first sign-in.
-
-For implementation guidance, see:
-
-- [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
-- [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+> **Not a permanent method** :::image type="icon" source="../media/icons/16/caution.svg" border="false"::: — used for onboarding and recovery
+>
+> Temporary Access Pass (TAP) is a time-limited credential issued by an admin that helps users bootstrap or recover access before they complete their long-term passwordless setup. TAP isn't a permanent passwordless method and isn't phishing-resistant, but it's often a critical part of a successful rollout because it solves the first-sign-in problem without issuing a password.
+>
+> From an Intune perspective, Temporary Access Pass matters when you want to:
+>
+> - Simplify onboarding to passwordless methods.
+> - Reduce reliance on temporary passwords during deployment.
+> - Connect onboarding scenarios to managed Windows device setup.
+>
+> #### Day-zero onboarding with TAP
+>
+>A common challenge in passwordless deployments is the "chicken-and-egg" problem: a new user needs to sign in to register their passwordless credential, but you don't want to issue a password for that first sign-in. TAP solves this by providing a short-lived credential for initial device setup and credential registration.
+>
+> A typical onboarding flow looks like this:
+> 
+> 1. **Admin issues a TAP** — The IT admin or automated workflow generates a time-limited TAP for the new user in the Microsoft Entra admin center or via Microsoft Graph API.
+> 1. **User sets up their device** — The user enters the TAP during Windows Autopilot OOBE, the macOS setup assistant, or mobile device enrollment. On Windows 11 22H2 and later, Web > sign-in enables TAP entry directly at the lock screen.
+> 1. **User registers a passwordless method** — After signing in with the TAP, the user is prompted to register Windows Hello for Business, a FIDO2 security key, a passkey in > Authenticator, or another passwordless method. This is the permanent credential that replaces the TAP.
+> 1. **TAP expires** — The TAP is single-use or time-limited (configurable), so it can't be reused after the user registers their passwordless method.
+> 
+> This flow eliminates the need to issue and then revoke a temporary password, and gives Intune a managed onboarding path from the first sign-in.
+> 
+> For implementation guidance, see:
+> 
+> - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
+> - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
 
 :::column-end:::
 :::row-end:::
