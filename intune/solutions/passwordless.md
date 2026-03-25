@@ -290,7 +290,7 @@ Before you plan a passwordless deployment, verify that your environment meets th
 
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 - [Microsoft Entra plans and pricing](/entra/fundamentals/licensing)
-- [Microsoft Intune licensing](/intune/fundamentals/licenses)
+- [Microsoft Intune licensing](../fundamentals/licensing/index.md)
 
 ### Minimum platform versions
 
@@ -303,7 +303,6 @@ Before you plan a passwordless deployment, verify that your environment meets th
 | **Platform SSO (Secure Enclave)**          | —                             | All supported versions | —                      | —                   |
 | **Web sign-in (TAP at lock screen)**       | Windows 11                    | —                      | —                      | —                   |
 | **Microsoft Authenticator phone sign-in**  | —                             | —                      | All supported versions | Android 11 or later |
-
 
 >[!NOTE]
 > 
@@ -319,7 +318,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 
 ### Windows
 
-Windows is the deepest Intune-managed passwordless platform. It's the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
+Windows is the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
 
 Intune commonly supports Windows passwordless scenarios by:
 
@@ -342,9 +341,9 @@ When a user signs in with Windows Hello or a FIDO2 key, Windows obtains a Primar
 The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
 
 - **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
-- **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure such as Active Directory Federation Services (AD FS) or certificate trust depending on the trust model.
-- **On-premises resource access** from Entra joined devices requires Cloud Kerberos Trust or certificate-based trust. Cloud Kerberos Trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [Cloud Kerberos Trust deployment](/windows/security/identity-protection/hello-for-business/deploy/hybrid-cloud-kerberos-trust).
-- **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods when Cloud Kerberos Trust is configured, but applications that require NTLM or direct LDAP bind may need additional planning.
+- **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure depending on the trust model.
+- **On-premises resource access** from Entra joined devices requires cloud Kerberos trust or certificate-based trust. Cloud Kerberos trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/hello-for-business/deploy/hybrid-cloud-kerberos-trust).
+- **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods, but applications that require NTLM or direct LDAP bind may need additional planning.
 
 If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
 
@@ -352,7 +351,7 @@ If your environment is hybrid, plan your passwordless rollout starting with Entr
 
 On macOS, passwordless planning depends on how Microsoft Entra ID integrates with the platform sign-in and single sign-on experience. Intune delivers the device configuration needed for Apple-focused identity integrations.
 
-With the Microsoft Enterprise SSO plug-in and Apple's Platform SSO framework (macOS 13+), Intune can deploy a configuration that allows users to sign in to the Mac using their Entra ID credentials. When configured with the Secure Enclave key method, this provides a phishing-resistant, hardware-backed sign-in experience similar to Windows Hello.
+With the Microsoft Enterprise SSO plug-in and Apple's Platform SSO framework, Intune can deploy a configuration that allows users to sign in to the Mac using their Entra ID credentials. When configured with the Secure Enclave key method, this provides a phishing-resistant, hardware-backed sign-in experience similar to Windows Hello.
 
 This matters when you're planning:
 
