@@ -119,7 +119,7 @@ The passwordless methods available to your users depend on the platforms they us
 >
 >FIDO2 security keys are physical devices (USB, NFC, or Bluetooth) that store a FIDO credential and provide phishing-resistant authentication without relying on the device platform. Because the credential is bound to the hardware key and verified through a cryptographic challenge, it can't be intercepted or replayed. FIDO2 keys are ideal for shared devices, high-assurance environments, or as a recovery path alongside platform-based credentials.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 > Intune can help make devices ready for this method by managing supported platforms and related sign-in experiences.
 >
 >This method is often a good fit when organizations need:
@@ -148,7 +148,7 @@ The passwordless methods available to your users depend on the platforms they us
 > - **Device-bound passkeys** stored in secure hardware (TPM or Secure Enclave) on a single device, such as through Windows Hello or Microsoft Authenticator on iOS 17+ and Android 14+.
 > - **Synced passkeys** managed by platform password managers (such as iCloud Keychain or Google Password Manager) or supported third-party providers, which enable cross-device use.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 >  From an Intune perspective, passkeys are mostly about platform and app readiness—managing the device and app prerequisites that make passkey adoption viable across platforms.
 >
 >This dependency is especially important on:
@@ -177,7 +177,7 @@ The passwordless methods available to your users depend on the platforms they us
 >> [!NOTE]
 >> Microsoft Authenticator can *also* store device-bound passkeys (iOS 17+, Android 14+), which *are* phishing-resistant. This section covers the push-based phone sign-in flow specifically.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 > Intune supports this flow by deploying and managing the mobile app and device prerequisites.
 >
 > In many environments, this support includes:
@@ -205,7 +205,7 @@ The passwordless methods available to your users depend on the platforms they us
 >
 > Temporary Access Pass (TAP) is a time-limited credential issued by an admin that helps users bootstrap or recover access before they complete their long-term passwordless setup. TAP isn't a permanent passwordless method and isn't phishing-resistant, but it's often a critical part of a successful rollout because it solves the first-sign-in problem without issuing a password.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 > From an Intune perspective, Temporary Access Pass matters when you want to:
 >
 > - Simplify onboarding to passwordless methods.
@@ -244,7 +244,7 @@ The passwordless methods available to your users depend on the platforms they us
 > :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Phishing-resistant**
 > ertificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
 >
-> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**/
+> :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 > Intune supports two infrastructure models for certificate delivery:
 >
 > - **On-premises PKI**: Organizations with an existing certification authority (CA) can use the Certificate Connector for Microsoft Intune to bridge their on-premises PKI with Intune. The >connector enables Intune to deploy SCEP and PKCS certificate profiles to managed devices using your existing CA infrastructure. This model suits organizations that already operate an >enterprise CA or need to integrate with established PKI investments.
