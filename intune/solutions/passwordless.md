@@ -175,7 +175,7 @@ The passwordless methods available to your users depend on the platforms they us
 
 :::row:::
     :::column span="1":::
-**Authenticator phone sign-in**
+**Authenticator phone<br>sign-in**
 
 :::image type="icon" source="media/passwordless/authenticator.svg" border="false":::
 :::column-end:::
@@ -398,7 +398,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
     :::column span="1":::
 **iOS and iPadOS**
 
-:::image type="icon" source="media/passwordless/macos.svg" border="false":::
+:::image type="icon" source="media/passwordless/apple-mobile.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > On iOS and iPadOS, passwordless planning focuses more on app sign-in, brokered authentication, and passkey behavior than on device sign-in. Intune deploys and manages the apps and settings that make those experiences consistent for users.
@@ -417,7 +417,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
     :::column span="1":::
 **Android**
 
-:::image type="icon" source="media/passwordless/macos.svg" border="false":::
+:::image type="icon" source="media/passwordless/android.svg" border="false":::
 :::column-end:::
 :::column span="3":::
 > On Android, Intune establishes the managed context that passwordless and brokered authentication flows depend on. This context is especially relevant when Authenticator or related app experiences are part of your mobile access design.
