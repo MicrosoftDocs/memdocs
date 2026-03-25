@@ -93,7 +93,8 @@ The passwordless methods available to your users depend on the platforms they us
 >
 > Windows Hello replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
 >
->  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:** Intune prepares Windows devices for Windows Hello by delivering and enforcing Windows Hello for Business policy settings.
+>  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:**  
+> Intune prepares Windows devices for Windows Hello by delivering and enforcing Windows Hello for Business policy settings.
 >
 > This method is most relevant when you need to:
 >
@@ -141,7 +142,7 @@ The passwordless methods available to your users depend on the platforms they us
 :::image type="icon" source="media/passwordless/passkey.svg" border="false":::
 :::column-end:::
 :::column span="3":::
-> **Phishing-resistant** :::image type="icon" source="../media/icons/16/check.svg" border="false":::
+> :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Phishing-resistant**
 >
 > Passkeys are the standards-based umbrella for FIDO credentials that can be either device-bound or synced across devices. In Microsoft Entra ID, you can use:
 >
@@ -212,7 +213,7 @@ The passwordless methods available to your users depend on the platforms they us
 > - Reduce reliance on temporary passwords during deployment.
 > - Connect onboarding scenarios to managed Windows device setup.
 >
-> *Day-zero onboarding with TAP*
+> **Day-zero onboarding with TAP**
 >
 >A common challenge in passwordless deployments is the "chicken-and-egg" problem: a new user needs to sign in to register their passwordless credential, but you don't want to issue a password for that first sign-in. TAP solves this by providing a short-lived credential for initial device setup and credential registration.
 >
@@ -256,9 +257,6 @@ The passwordless methods available to your users depend on the platforms they us
 > - **SCEP certificate profiles** request and deploy certificates from a SCEP-enabled CA.
 > - **PKCS certificate profiles** request and deploy certificates using the PKCS #12 standard.
 > - **Imported PFX certificate profiles** deploy pre-generated certificates that are imported into Intune.
->
->
->
 >
 >These profiles work across Windows, macOS, iOS/iPadOS, and Android, making Intune the delivery mechanism that connects your PKI infrastructure—whether on-premises or cloud-based—to the identity method defined in Microsoft Entra ID.
 >
