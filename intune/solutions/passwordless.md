@@ -324,111 +324,6 @@ The passwordless methods described in this article rely on specific platform cap
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 - [Intune supported operating systems](../intune-service/fundamentals/supported-devices-browsers.md#supported-operating-systems-and-browsers-in-intune)
 
-## Platform considerations
-
-Passwordless isn't one feature. It's a set of platform-specific experiences that rely on Entra ID for identity and Intune for device management.
-
-:::row:::
-    :::column span="1":::
-**Windows**
-
-:::image type="icon" source="media/passwordless/windows.svg" border="false":::
-:::column-end:::
-:::column span="3":::
-> Windows is the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
-> 
-> Intune commonly supports Windows passwordless scenarios by:
-> 
-> - Preparing cloud-first, Microsoft Entra joined devices.
-> - Delivering Windows Hello for Business configuration.
-> - Supporting FIDO2 security key experiences.
-> - Aligning device readiness with compliance and modern management.
-> - Supporting onboarding experiences that can connect to Windows Autopilot.
-> 
-> When a user signs in with Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
-> 
-> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-> 
-> - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
-> - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
-> - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
->
-> **Hybrid and legacy considerations**
-> 
-> The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
-> 
-> - **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
-> - **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure depending on the trust model.
-> - **On-premises resource access** from Entra joined devices requires cloud Kerberos trust or certificate-based trust. Cloud Kerberos trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/> hello-for-business/deploy/hybrid-cloud-kerberos-trust).
-> - **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods, but applications that require NTLM or direct LDAP bind might need extra planning.
-> 
-> If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
-> 
-> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-> - [Configure single sign-on for Microsoft Entra joined devices](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso)
-:::column-end:::
-:::row-end:::
-
-
-:::row:::
-    :::column span="1":::
-**macOS**
-
-:::image type="icon" source="media/passwordless/macos.svg" border="false":::
-:::column-end:::
-:::column span="3":::
-> On macOS, passwordless planning depends on how Entra ID integrates with the platform sign-in and single sign-on experience. Intune delivers the device configuration needed for Apple-focused identity integrations.
-> 
-> With the Microsoft Enterprise SSO plug-in and Apple's Platform SSO framework, Intune can deploy a configuration that allows users to sign in to the Mac using their Entra ID credentials. When configured with the Secure Enclave key method, this provides a phishing-resistant, hardware-backed sign-in experience similar to Windows Hello.
-> 
-> This information matters when you're planning:
-> 
-> - Platform SSO and related sign-in experiences.
-> - Single sign-on between the device and Microsoft apps.
-> - A consistent management model alongside Windows and mobile devices.
-> 
-> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-> 
-> - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
-> - [Platform SSO configuration guide for macOS devices](../intune-service/configuration/platform-sso-macos.md)
-:::column-end:::
-:::row-end:::
-
-:::row:::
-    :::column span="1":::
-**iOS and iPadOS**
-
-:::image type="icon" source="media/passwordless/apple-mobile.svg" border="false":::
-:::column-end:::
-:::column span="3":::
-> On iOS and iPadOS, passwordless planning focuses more on app sign-in, brokered authentication, and passkey behavior than on device sign-in. Intune deploys and manages the apps and settings that make those experiences consistent for users.
-> 
-> The Microsoft SSO extension on iOS can intercept authentication requests across Microsoft and third-party apps, enabling seamless sign-in after initial device setup. Microsoft Authenticator acts as the authentication broker, and can also store device-bound passkeys on iOS 17+ for phishing-resistant authentication.
-> 
-> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-> 
-> - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
-> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-> - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
-:::row-end:::
-
-
-:::row:::
-    :::column span="1":::
-**Android**
-
-:::image type="icon" source="media/passwordless/android.svg" border="false":::
-:::column-end:::
-:::column span="3":::
-> On Android, Intune establishes the managed context that passwordless and brokered authentication flows depend on. This context is especially relevant when Authenticator or related app experiences are part of your mobile access design.
-> 
-> Both Company Portal and Authenticator can act as authentication brokers on Android. After a user signs in through the broker, Entra ID issues a Primary Refresh Token that enables SSO across all broker-aware apps in the work profile. On Android 14+, Authenticator can also store device-bound passkeys for phishing-resistant authentication.
-> 
-> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
-> 
-> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
-:::row-end:::
-
 ## Dependencies for passwordless authentication
 
 ### Zero Trust architecture
@@ -490,6 +385,109 @@ To validate a passwordless deployment, common checkpoints include:
 - Entra sign-in logs.
 - Intune device and policy reporting.
 - Platform-specific verification experiences for the passwordless method you deploy.
+
+## Platform considerations
+
+Passwordless isn't one feature. It's a set of platform-specific experiences that rely on Entra ID for identity and Intune for device management.
+
+:::row:::
+    :::column span="1":::
+### **Windows**
+
+:::image type="icon" source="media/passwordless/windows.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> Windows is the most complete example of how device enrollment, cloud sign-in, security posture, and passwordless user experience work together.
+> 
+> Intune commonly supports Windows passwordless scenarios by:
+> 
+> - Preparing cloud-first, Microsoft Entra joined devices.
+> - Delivering Windows Hello for Business configuration.
+> - Supporting FIDO2 security key experiences.
+> - Aligning device readiness with compliance and modern management.
+> - Supporting onboarding experiences that can connect to Windows Autopilot.
+> 
+> When a user signs in with Hello or a FIDO2 key, Windows obtains a Primary Refresh Token from Entra ID. That PRT enables seamless SSO to Microsoft 365 apps, SaaS applications, and - when Cloud Kerberos Trust is configured - on-premises resources like file shares, all without additional sign-in prompts.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> 
+> - [Windows Hello for Business overview](/windows/security/identity-protection/hello-for-business/hello-overview)
+> - [Passwordless strategy guide for organizations](/windows/security/identity-protection/passwordless-strategy)
+> - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
+>
+> **Hybrid and legacy considerations**
+> 
+> The passwordless experiences described in this article assume a cloud-first direction with Microsoft Entra joined devices. Organizations with hybrid Entra joined devices should be aware of these differences:
+> 
+> - **Web sign-in** (used for TAP at the Windows lock screen) is supported only on Microsoft Entra joined devices, not hybrid Entra joined devices.
+> - **Windows Hello for Business** works on both Entra joined and hybrid Entra joined devices, but hybrid deployments may require additional infrastructure depending on the trust model.
+> - **On-premises resource access** from Entra joined devices requires cloud Kerberos trust or certificate-based trust. Cloud Kerberos trust is the recommended model because it doesn't require deploying certificates for Kerberos authentication. For more information, see [cloud Kerberos trust deployment](/windows/security/identity-protection/> hello-for-business/deploy/hybrid-cloud-kerberos-trust).
+> - **Legacy applications** that require Active Directory Kerberos authentication can still work with passwordless methods, but applications that require NTLM or direct LDAP bind might need extra planning.
+> 
+> If your environment is hybrid, plan your passwordless rollout starting with Entra joined devices and expand to hybrid Entra joined devices as your infrastructure supports it.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> - [Configure single sign-on for Microsoft Entra joined devices](/windows/security/identity-protection/hello-for-business/hello-hybrid-aadj-sso)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+### **macOS**
+
+:::image type="icon" source="media/passwordless/macos.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> On macOS, passwordless planning depends on how Entra ID integrates with the platform sign-in and single sign-on experience. Intune delivers the device configuration needed for Apple-focused identity integrations.
+> 
+> With the Microsoft Enterprise SSO plug-in and Apple's Platform SSO framework, Intune can deploy a configuration that allows users to sign in to the Mac using their Entra ID credentials. When configured with the Secure Enclave key method, this provides a phishing-resistant, hardware-backed sign-in experience similar to Windows Hello.
+> 
+> This information matters when you're planning:
+> 
+> - Platform SSO and related sign-in experiences.
+> - Single sign-on between the device and Microsoft apps.
+> - A consistent management model alongside Windows and mobile devices.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> 
+> - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
+> - [Platform SSO configuration guide for macOS devices](../intune-service/configuration/platform-sso-macos.md)
+:::column-end:::
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+### **iOS and iPadOS**
+
+:::image type="icon" source="media/passwordless/apple-mobile.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> On iOS and iPadOS, passwordless planning focuses more on app sign-in, brokered authentication, and passkey behavior than on device sign-in. Intune deploys and manages the apps and settings that make those experiences consistent for users.
+> 
+> The Microsoft SSO extension on iOS can intercept authentication requests across Microsoft and third-party apps, enabling seamless sign-in after initial device setup. Microsoft Authenticator acts as the authentication broker, and can also store device-bound passkeys on iOS 17+ for phishing-resistant authentication.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> 
+> - [Microsoft Enterprise SSO plug-in and Platform SSO for Apple devices](/entra/identity-platform/apple-sso-plugin)
+> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
+> - [Use the Microsoft Enterprise SSO plug-in on iOS/iPadOS devices](../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-with-intune.md)
+:::row-end:::
+
+:::row:::
+    :::column span="1":::
+### **Android**
+
+:::image type="icon" source="media/passwordless/android.svg" border="false":::
+:::column-end:::
+:::column span="3":::
+> On Android, Intune establishes the managed context that passwordless and brokered authentication flows depend on. This context is especially relevant when Authenticator or related app experiences are part of your mobile access design.
+> 
+> Both Company Portal and Authenticator can act as authentication brokers on Android. After a user signs in through the broker, Entra ID issues a Primary Refresh Token that enables SSO across all broker-aware apps in the work profile. On Android 14+, Authenticator can also store device-bound passkeys for phishing-resistant authentication.
+> 
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
+> 
+> - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
+:::row-end:::
 
 ## User adoption and communication
 
