@@ -147,7 +147,7 @@ The passwordless methods available to your users depend on the platforms they us
 
 :::row:::
     :::column span="1":::
-**Passkeys**
+## Passkeys
 
 :::image type="icon" source="media/passwordless/passkey.svg" border="false":::
 :::column-end:::
@@ -175,7 +175,8 @@ The passwordless methods available to your users depend on the platforms they us
 
 :::row:::
     :::column span="1":::
-**Authenticator phone<br>sign-in**
+
+### Authenticator phone<br>sign-in
 
 :::image type="icon" source="media/passwordless/authenticator.svg" border="false":::
 :::column-end:::
@@ -204,7 +205,7 @@ The passwordless methods available to your users depend on the platforms they us
 
 :::row:::
     :::column span="1":::
-**Temporary Access Pass**
+#### Temporary Access Pass
 
 :::image type="icon" source="media/passwordless/tap.svg" border="false":::
 :::column-end:::
@@ -244,7 +245,7 @@ The passwordless methods available to your users depend on the platforms they us
 
 :::row:::
     :::column span="1":::
-**Certificate-Based Authentication (CBA)**
+### **Certificate-Based Authentication (CBA)**
 
 :::image type="icon" source="media/passwordless/certificate.svg" border="false":::
 :::column-end:::
@@ -392,7 +393,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 
 :::row:::
     :::column span="1":::
-### **Windows**
+**Windows**
 
 :::image type="icon" source="media/passwordless/windows.svg" border="false":::
 :::column-end:::
@@ -433,7 +434,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 
 :::row:::
     :::column span="1":::
-### **macOS**
+## macOS
 
 :::image type="icon" source="media/passwordless/macos.svg" border="false":::
 :::column-end:::
@@ -457,7 +458,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 
 :::row:::
     :::column span="1":::
-### **iOS and iPadOS**
+### iOS and iPadOS
 
 :::image type="icon" source="media/passwordless/apple-mobile.svg" border="false":::
 :::column-end:::
@@ -475,7 +476,7 @@ Passwordless isn't one feature. It's a set of platform-specific experiences that
 
 :::row:::
     :::column span="1":::
-### **Android**
+#### Android
 
 :::image type="icon" source="media/passwordless/android.svg" border="false":::
 :::column-end:::
