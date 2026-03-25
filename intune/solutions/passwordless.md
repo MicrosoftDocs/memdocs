@@ -93,7 +93,7 @@ The passwordless methods available to your users depend on the platforms they us
 >
 > Windows Hello replaces passwords with a device-bound asymmetric key that is generated and sealed to the TPM. Access to the key is controlled by a PIN or biometric gesture (fingerprint or facial recognition), combining possession and inherence in a single sign-in step. This makes it a hardware-backed, phishing-resistant method for Windows devices.
 >
->  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role:**  
+>  :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 > Intune prepares Windows devices for Windows Hello by delivering and enforcing Windows Hello for Business policy settings.
 >
 > This method is most relevant when you need to:
@@ -187,7 +187,7 @@ The passwordless methods available to your users depend on the platforms they us
 > - Supporting the brokered sign-in experience across Microsoft apps.
 > - Accounting for app protection policy considerations on mobile platforms when those are part of the broader mobile access design.
 >
-> For implementation guidance, see:
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: For implementation guidance, see:
 >
 > - [Passwordless authentication options for Microsoft Entra ID](/entra/identity/authentication/concept-authentication-passwordless)
 :::column-end:::
@@ -226,7 +226,7 @@ The passwordless methods available to your users depend on the platforms they us
 > 
 > This flow eliminates the need to issue and then revoke a temporary password, and gives Intune a managed onboarding path from the first sign-in.
 > 
-> For implementation guidance, see:
+> :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: For implementation guidance, see:
 > 
 > - [Use a Temporary Access Pass](/entra/identity/authentication/howto-authentication-temporary-access-pass)
 > - [Overview of Windows Autopilot](/autopilot/windows-autopilot)
@@ -243,7 +243,8 @@ The passwordless methods available to your users depend on the platforms they us
 :::column-end:::
 :::column span="3":::
 > :::image type="icon" source="../media/icons/16/check.svg" border="false"::: **Phishing-resistant**
-> ertificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
+>
+> Certificate-based authentication (CBA) uses digital certificates and asymmetric cryptography to verify identity, making it phishing-resistant and preventing credential replay. It's widely adopted in regulated industries and government environments, often through smart cards such as PIV and CAC. Unlike other passwordless methods where Intune primarily prepares the device environment, CBA is one area where Intune plays a direct role in distributing the credential itself.
 >
 > :::image type="icon" source="../media/icons/16/intune.svg" border="false"::: **Intune's role**  
 > Intune supports two infrastructure models for certificate delivery:
@@ -275,6 +276,8 @@ Before you plan a passwordless deployment, verify that your environment meets th
 
 ### Licensing requirements
 
+Depending on the passwordless methods you choose, your organization may need Microsoft Entra ID P1 or P2 licenses for users, as well as specific Intune licenses for device management and certificate delivery. The table below summarizes the licensing requirements for common passwordless capabilities:
+
 | Capability                                   | License requirement                                          |
 |----------------------------------------------|--------------------------------------------------------------|
 | Windows Hello                   | Microsoft Entra ID P1 (for Conditional Access enforcement)   |
@@ -294,15 +297,17 @@ Before you plan a passwordless deployment, verify that your environment meets th
 
 ### Minimum platform versions
 
-| Method                                     | Windows                       | macOS                  | iOS/iPadOS             | Android             |
-|--------------------------------------------|:-----------------------------:|:----------------------:|:----------------------:|:-------------------:|
-| **Windows Hello**                          | All supported Windows clients | —                      | —                      | —                   |
-| **FIDO2 security keys**                    | All supported Windows clients | —                      | —                      | —                   |
-| **Passkeys**                               | Windows 11                    | All supported versions | All supported versions | Android 14 or later |
-| **Device-bound passkeys in Authenticator** | —                             | —                      | All supported versions | Android 14 or later |
-| **Platform SSO (Secure Enclave)**          | —                             | All supported versions | —                      | —                   |
-| **Web sign-in (TAP at lock screen)**       | Windows 11                    | —                      | —                      | —                   |
-| **Microsoft Authenticator phone sign-in**  | —                             | —                      | All supported versions | Android 11 or later |
+The passwordless methods described in this article rely on specific platform capabilities that are only available in certain OS versions. The table below summarizes the platform requirements for each method:
+
+| Method                                     | Windows                         | macOS                    | iOS/iPadOS               | Android             |
+|--------------------------------------------|:-------------------------------:|:------------------------:|:------------------------:|:-------------------:|
+| **Windows Hello**                          | All *supported* Windows clients | —                        | —                        | —                   |
+| **FIDO2 security keys**                    | All *supported* Windows clients | —                        | —                        | —                   |
+| **Passkeys**                               | Windows 11                      | All *supported* versions | All *supported* versions | Android 14 or later |
+| **Device-bound passkeys in Authenticator** | —                               | —                        | All *supported* versions | Android 14 or later |
+| **Platform SSO (Secure Enclave)**          | —                               | All *supported* versions | —                        | —                   |
+| **Web sign-in (TAP at lock screen)**       | Windows 11                      | —                        | —                        | —                   |
+| **Microsoft Authenticator phone sign-in**  | —                               | —                        | All *supported* versions | Android 11 or later |
 
 >[!NOTE]
 > 
@@ -420,6 +425,7 @@ When you implement Conditional Access alongside passwordless, also account for e
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
+- [Conditional Access authentication strengths](/entra/identity/authentication/concept-authentication-strengths)
 
 ### Emergency access and recovery
 
@@ -468,7 +474,8 @@ Consider these practices:
 
 :::image type="icon" source="../media/icons/16/learn-more.svg" border="false"::: **Learn more**
 
-For end-user documentation on managing sign-in methods, see [Set up your security info from a sign-in prompt](/entra/identity/authentication/end-user-first-time).
+- [Microsoft Entra end-user rollout templates and materials](https://www.microsoft.com/en-us/download/details.aspx?id=57600)
+- [Authentication Methods Activity](/entra/identity/authentication/howto-authentication-methods-activity)
 
 ## Related articles
 
@@ -483,3 +490,4 @@ For end-user documentation on managing sign-in methods, see [Set up your securit
 - [Build a Conditional Access policy](/entra/identity/conditional-access/concept-conditional-access-policies)
 - [What is Zero Trust?](/security/zero-trust/zero-trust-overview)
 - [Common security policies for Microsoft 365 organizations](/security/zero-trust/zero-trust-identity-device-access-policies-common)
+- [Passwordless for Students](/microsoft-365/education/guide/1-reference/protect-passwordless-students)

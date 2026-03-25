@@ -184,5 +184,5 @@ Explicitly map passwordless strategies to Zero Trust principles:
 
 
 - [Single sign-on (SSO) overview and options for Apple devices in Microsoft Intune](../../intune-service/configuration/use-enterprise-sso-plug-in-ios-ipados-macos.md)
-- [Passwordless for Students](/microsoft-365/education/deploy/protect-passwordless-students)
+
 - [App Protection Policies Overview](../../intune-service/apps/app-protection-policy.md)
