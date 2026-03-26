@@ -1,7 +1,7 @@
 ---
 title: Add and Assign Managed Google Play Apps to Android Enterprise Devices
 description: Understand how to synchronize and assign apps to Android Enterprise devices from the Managed Google Play store.
-ms.date: 03/19/2026
+ms.date: 11/03/2025
 ms.topic: how-to
 ms.reviewer: ilwu
 ai-usage: ai-assisted
@@ -74,9 +74,6 @@ Browse and approve store apps in a view hosted within Intune. This view opens di
 > [!IMPORTANT]
 > This method is no longer supported and it's required to add apps directly in the Microsoft Intune admin center. For more information, see [Support Tip: Intune moving to support new Google Play Android Management API](https://techcommunity.microsoft.com/t5/intune-customer-success/support-tip-intune-moving-to-support-new-google-play-android/ba-p/3849875)
 ## Managed Google Play private (LOB) apps
-
-> [!NOTE]
-> For Android Enterprise fully managed and dedicated devices, you can also deploy required LOB apps directly to devices without using Managed Google Play. For more information, see [Add an Android line-of-business app to Microsoft Intune](lob-apps-android.md).
 
 There are two ways to add LOB apps to Managed Google Play:
 
