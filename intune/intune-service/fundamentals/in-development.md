@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/26/2026
+ms.date: 03/30/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -57,14 +57,6 @@ Soon Endpoint Privilege Management (EPM) will support the use of [support approv
 <!-- ***********************************************-->
 
 ## App management
-
-### Declarative Device Management for Apple line-of-business apps on iOS/iPadOS<!-- 30457044 -->
-
-We're adding support for Declarative Device Management (DDM) in Microsoft Intune for configuring required line-of-business (LoB) apps on devices running iOS/iPadOS 18 and later.
-
-Apple's new Managed App configuration introduces policy-based app deployment and configuration using the declarative management model. This allows for efficient app delivery, real-time app status, and expanded app attribute options for per-app associated domains.
-
-Admins can configure line-of-business apps to use DDM by changing the management type setting in App information.
 
 ### Multiple managed accounts for app protection policies <!-- 3182632 -->
 

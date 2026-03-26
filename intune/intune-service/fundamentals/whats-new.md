@@ -59,6 +59,17 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 ## Week of March 30, 2026 (Service release 2603)
 
+### App management
+
+#### Declarative Device Management for Apple line-of-business apps on iOS/iPadOS<!-- 30457044 -->
+
+Microsoft Intune now supports Apple Declarative Device Management (DDM) for required line-of-business apps on devices running iOS/iPadOS 18 and later. By changing the management type to DDM in App information, you can deploy and configure apps using Apple’s policy-based model, which improves delivery efficiency, provides real-time app status, and expands per-app options such as associated domains.
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - iOS/iPadOS
+
 ### Device configuration
 
 #### Recovery lock features available for macOS devices <!-- 28675745 32541429 -->
@@ -248,11 +259,7 @@ Previously, when an admin had multiple role assignments using different scope ta
 To help you prepare before enabling this change, Intune includes a new **Permissions Assessment Report**. The report details your tenant's current permissions and shows how they will change after enabling Scoped permissions. You can rerun the report as often as needed, adjust role assignments, and communicate any changes to affected admins before opting in.
 
 For more information about the current default behavior, the Scoped permissions opt-in public preview, and the new report, see [Permission behavior across role assignments](../fundamentals/scope-tags.md#permission-behavior-across-role-assignments).
-<<<<<<< HEAD
-=======
-=======
 
->>>>>>> 51167b441d37e0918b99393ef982fb6f60fe40ec
 ## Week of March 16, 2026  
 
 ### Device management  
