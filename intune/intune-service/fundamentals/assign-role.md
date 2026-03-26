@@ -3,7 +3,7 @@ title: Assign a role to an Intune administrator
 description: Learn how to assign a built-in or custom role to a user in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 09/23/2025
+ms.date: 03/24/2026
 ms.topic: article
 ms.collection:
 - M365-identity-device-management
@@ -14,6 +14,9 @@ ms.collection:
 The information in this article can help you assign users Microsoft Intune [built-in](role-based-access-control.md#built-in-roles) or [custom](create-custom-role.md) role-based access control (RBAC) roles to users who administer your Intune subscription. RBAC roles are assigned to groups, and not individual users.
 
 Before you assign roles to groups, ensure you have sufficient groups for the different Intune administrative tasks, and review the membership of those groups. Each member of a group that is assigned an RBAC role receives the permissions granted by that role. Permissions from multiple groups are cumulative for a user and there are no options to deny specific permissions. However, you can [use Scope Tags with RBAC](../fundamentals/scope-tags.md) to limit the scope of what different groups of individuals can view and manage.
+
+> [!NOTE]
+> When an admin belongs to multiple role assignments that use different scope tags, Intune's default behavior merges permissions across those assignments. This can result in broader access than intended. To understand or change this behavior, see [Permission behavior across role assignments](scope-tags.md#permission-behavior-across-role-assignments).
 
 > [!IMPORTANT]
 > Microsoft advises against using accounts with Intune Administrator-level permissions for daily management when lesser-privileged roles suffice. However, Intune Administrator permissions are necessary during initial Intune setup for tasks such as:
@@ -62,7 +65,7 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
    > When you assign a role to a group, every member of that group receives the permissions granted by that role. Only assign roles to groups for which you know the membership, and which don't include users that shouldn't receive the administrative privileges provided by the role.
 
    > [!NOTE]
-   > If your tenant allows [unlicensed admins](../fundamentals/unlicensed-admins.md), Intune role assignments only apply to direct members of the assigned security group. Members of nested groups do not receive these assignments by default. However, if a user in a nested group has an Intune license, that user will receive the Intune role.
+   > If your tenant allows [unlicensed admins](../../fundamentals/licensing/unlicensed-admins.md), Intune role assignments only apply to direct members of the assigned security group. Members of nested groups do not receive these assignments by default. However, if a user in a nested group has an Intune license, that user will receive the Intune role.
 
    Select **Next**.
 
@@ -86,4 +89,3 @@ Before you deploy Intune roles, be familiar with [About Intune role assignments]
 
 - [Create a custom role](../fundamentals/create-custom-role.md)
 - [Set the MDM authority](../fundamentals/mdm-authority-set.md)
-

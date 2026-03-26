@@ -25,7 +25,7 @@ This feature applies to:
 
 ## Prerequisites
 
-- Requires Microsoft Intune and a Microsoft 365 subscription. For information on Intune licensing, go to [Microsoft Intune licensing](../fundamentals/licenses.md).
+- Requires Microsoft Intune and a Microsoft 365 subscription. For information on Intune licensing, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
 - To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
 

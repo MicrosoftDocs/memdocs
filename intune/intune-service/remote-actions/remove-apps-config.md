@@ -40,7 +40,7 @@ Use the *remove apps and configuration* remote action in Intune to uninstall app
 > - [Help Desk Operator][INT-R1]
 > - [School Administrator][INT-R2]
 > - [Custom role][INT-RC] that includes:
->   - The permission **Ramote tasks/Change assignments**
+>   - The permission **Remote tasks/Change assignments**
 >   - Permissions that provide visibility into and access to managed devices in Intune (for example, Organization/Read, Managed devices/Read)
 :::column-end:::
 :::row-end:::

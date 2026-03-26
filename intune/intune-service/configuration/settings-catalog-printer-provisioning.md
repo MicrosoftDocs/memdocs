@@ -32,7 +32,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 - To use this feature, you need the following subscriptions:
 
   - **Universal Print**: For more specific information, go to [License Universal Print](/universal-print/fundamentals/universal-print-license).
-  - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../fundamentals/licenses.md).
+  - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
 
 - Every printer must be registered in the Universal Print service (UP), which uses Microsoft Entra ID. For more information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration).
 
