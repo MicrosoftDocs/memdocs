@@ -60,7 +60,7 @@ The available profiles for attack surface reduction policy depend on the platfor
 To create an attack surface reduction policy, see [Create an endpoint security policy](/intune/intune-service/protect/endpoint-security-policy#create-an-endpoint-security-policy). When prompted during policy creation, select the **Windows** platform, and then select the profile you want to configure.
 
 > [!NOTE]
-> Most attack surface reduction profiles use the Settings Catalog format. The **Application control** profile is an exception — it remains in the older template-based format. See the [Application control](#application-control) profile entry for details.
+> Most attack surface reduction profiles use the Settings Catalog format. The **Application control** profile is an exception — it remains in the older template-based format. See the **Application control** profile entry in the following profiles list for details.
 
 ### Devices managed by Intune
 

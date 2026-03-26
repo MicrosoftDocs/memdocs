@@ -477,7 +477,7 @@ A Conditional Access policy blocks devices marked as noncompliant from accessing
 
 **Microsoft Defender for Endpoint:**
 - [Conditional Access integration](/defender-endpoint/conditional-access) - Advanced access control scenarios
-- [Security operations dashboard](/defender-endpoint/security-operations-dashboard) - Threat monitoring and response
+- [Microsoft Defender for Endpoint reports](/defender-endpoint/threat-protection-reports) - Threat monitoring and response
 
 ### Support resources
 
