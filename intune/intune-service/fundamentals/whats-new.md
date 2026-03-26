@@ -3,7 +3,7 @@ title: What's new in Microsoft Intune
 description: Find out what's new in Microsoft Intune.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/05/2026
+ms.date: 03/23/2026
 ms.topic: whats-new
 ms.reviewer: intuner
 ms.collection:
@@ -57,6 +57,16 @@ You can use RSS to be notified when this page is updated. For more information, 
 
 -->
 
+## Week of March 16, 2026  
+
+### Device management  
+
+#### Improved Remote Help update reporting on macOS<!-- 35705883 -->  
+
+We've improved the update and reporting experience for Remote Help on macOS to make version management more reliable and transparent for IT admins.  
+ 
+After you deploy the latest Remote Help client (version 1.0.26012221) through Microsoft Intune, you can now view the full client version in your device inventory and during app upgrades. This improvement makes it easier to verify deployments. Remote Help installations deployed through Intune are also registered with Microsoft AutoUpdate (MAU), allowing Intune-managed macOS devices to automatically receive future Remote Help updates. For more information, see [Deploy Remote Help with Microsoft Intune](remote-help-deploy.md). 
+
 ## Week of March 2, 2026 (Service release 2602)
 
 ### App management
@@ -75,6 +85,9 @@ For more information about protected apps, see [Microsoft Intune protected apps]
 #### Apple declarative device management (DDM) supports assignment filters<!-- 24298491 -->
 
 You can use assignment filters in policy assignments for DDM-based configurations, like software updates.
+
+> [!NOTE]
+> This feature is rolling out slowly and should be available for all customers by late March 2026.
 
 To learn more about filters, see [Use assignment filters to assign your apps, policies, and profiles in Microsoft Intune](filters.md).
 

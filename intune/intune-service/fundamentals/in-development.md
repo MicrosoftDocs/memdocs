@@ -263,7 +263,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Role-based access control
 
-### Decoupling of Scope Tag permissions for Role-based access control<!-- 27067241 -->
+### Decoupling of Scope Tag permissions for Role-based access control<!-- 37134761 -->
 
 Intune will soon provide a one-time action you can use to decouple permissions assigned through scope tags, making role-based access control (RBAC) more precise. Currently, permissions for the same resource in different roles but with different scope tags are merged, which can unintentionally grant admins broader access than intended. This change will improve security and clarity for organizations managing complex role assignments.
 
