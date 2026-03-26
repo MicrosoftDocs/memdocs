@@ -22,7 +22,7 @@ To learn more about the settings catalog, see [Settings catalog overview](index.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [platform](../../../intune-service/includes/requirements/platform.md)]
+[!INCLUDE [platform](../../intune-service/includes/requirements/platform.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -38,7 +38,7 @@ To learn more about the settings catalog, see [Settings catalog overview](index.
 
 :::row:::
 :::column span="1":::
-[!INCLUDE [rbac](../../../intune-service/includes/requirements/rbac.md)]
+[!INCLUDE [rbac](../../intune-service/includes/requirements/rbac.md)]
 
 :::column-end:::
 :::column span="3":::
@@ -51,7 +51,7 @@ To learn more about the settings catalog, see [Settings catalog overview](index.
 :::row:::
 :::column span="1":::
 
-[!INCLUDE [device-configuration](../../../intune-service/includes/requirements/device-configuration.md)]
+[!INCLUDE [device-configuration](../../intune-service/includes/requirements/device-configuration.md)]
 
 :::column-end:::
 :::column span="3":::
