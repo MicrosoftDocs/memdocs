@@ -65,7 +65,7 @@ When designing your Apple device update strategy, align with your organization's
 
 # [**Latest version**](#tab/automatic-updates)
 
-1. [Create a settings catalog policy](/intune/device-configuration/settings-catalog/index) for the iOS/iPadOS or macOS platform and use the following settings:
+1. [Create a settings catalog policy](../../device-configuration/settings-catalog/index.md) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name and value |
    |--|--|--|
@@ -79,7 +79,7 @@ When designing your Apple device update strategy, align with your organization's
 
 # [**Targeted version**](#tab/manual-updates)
 
-1. [Create a settings catalog policy](/intune/device-configuration/settings-catalog/index) for the iOS/iPadOS or macOS platform and use the following settings:
+1. [Create a settings catalog policy](../../device-configuration/settings-catalog/index.md) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name and value |
     |--|--|--|

@@ -73,7 +73,7 @@ For more information about device restrictions, see [Android template device set
 
 > Before you can use the locate functionality, you must configure your devices to allow it.
 > 
-> 1. [Create a Settings catalog policy](/intune/device-configuration/settings-catalog/index) for the Windows platform and use the following setting:
+> 1. [Create a Settings catalog policy](../../device-configuration/settings-catalog/index.md) for the Windows platform and use the following setting:
 > 
 >     | Category | Setting name | Value |
 >     |--|--|--|

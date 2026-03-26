@@ -71,7 +71,7 @@ The business benefits of using Intune to manage Activation Lock are:
 
 ::: zone pivot="ios"
 > Before you can manage Activation Lock, you must configure your devices to allow it.
-> 1. [Create a Settings catalog policy](/intune/device-configuration/settings-catalog/index) for the iOS/iPadOS platform and use the following setting:
+> 1. [Create a Settings catalog policy](../../device-configuration/settings-catalog/index.md) for the iOS/iPadOS platform and use the following setting:
 > 
 >     | Category | Setting name | Value |
 >     |--|--|--|
@@ -81,7 +81,7 @@ The business benefits of using Intune to manage Activation Lock are:
 ::: zone-end
 ::: zone pivot="macos"
 > Before you can manage Activation Lock, you must configure your devices to allow it.
-> 1. [Create a Settings catalog policy](/intune/device-configuration/settings-catalog/index) for the macOS platform and use the following setting:
+> 1. [Create a Settings catalog policy](../../device-configuration/settings-catalog/index.md) for the macOS platform and use the following setting:
 > 
 >     | Category | Setting name | Value |
 >     |--|--|--|

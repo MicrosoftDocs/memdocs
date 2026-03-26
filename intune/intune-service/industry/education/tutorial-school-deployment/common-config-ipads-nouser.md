@@ -17,7 +17,7 @@ These iPads generally have additional restrictions that are not suitable for 1:1
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/intune/device-configuration/settings-catalog/index)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](../../../../device-configuration/settings-catalog/index.md)
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 
 > [!TIP]

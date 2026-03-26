@@ -72,7 +72,7 @@ Content-Type: application/json
 
 Settings described in this section aren't available in an Update ring policy and should be configured using a settings catalog type configuration profile.
 
-To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](/intune/device-configuration/settings-catalog/index).
+To learn more, see [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](../../../../device-configuration/settings-catalog/index.md).
 
 > [!TIP]
 > When creating a settings catalog profile in the Microsoft Intune admin center, you can copy a policy name from this article and paste it into the settings picker search field to find the desired policy.
