@@ -1,7 +1,7 @@
 ---
 title: Monitor App Information and Assignments
 description: After you assign an app to users or devices, use this information to help you monitor the app's status.
-ms.date: 03/19/2026
+ms.date: 01/05/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -88,11 +88,11 @@ A user status list is shown when you select **User install status** in the **Mon
 
 ## App installation error reporting
 
-More error details are available for line-of-business (LOB) apps on Android Open Source Project (AOSP) and Android Enterprise devices. You can view installation error codes for LOB apps in Intune.
+More error details are available for Line of Business (LOB) apps on Android Open Source Project (AOSP) devices. You can view installation error codes for LOB apps in Intune.
 
-### LOB apps on AOSP and Android Enterprise devices
+### LOB apps on AOSP devices
 
-The following table provides additional installation error code details for LOB apps on AOSP and Android Enterprise fully managed and dedicated devices:
+The following table provides addition installation error code details for LOB apps on AOSP devices:
 
 | Error code | Error string | Retry automatically | Additional information |
 |---|---|---|---|

@@ -81,6 +81,13 @@ By default, apps are considered single identity. The SDK sets the process identi
 
 ### Switch identities
 
+> [!IMPORTANT]
+> The SDK can't independently detect identity changes. It relies entirely on the app to report them. If the app doesn't correctly notify the SDK of an identity switch:
+>
+> - App protection policies might not be enforced for the active user, leaving managed data unprotected.
+> - Unmanaged data might be incorrectly restricted.
+>
+> The app must call the appropriate identity-switching APIs (such as `setUIPolicyAccountId`) whenever the active user changes, including on app launch, on account switch, and when displaying data for a different user.
 * **App-initiated identity switch**:
 
     At launch, multi-identity apps are considered to be running under an unknown, unmanaged account. The conditional launch UI won't run, and no policies will be enforced on the app. The app is responsible for notifying the SDK whenever the identity should be changed. Typically, this will happen whenever the app is about to show data for a specific user account.
