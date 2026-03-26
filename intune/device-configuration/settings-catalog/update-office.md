@@ -12,11 +12,11 @@ ms.collection:
 
 # Set the Microsoft 365 apps update channel using the Microsoft Intune settings catalog
 
-Admins must keep Microsoft 365 Apps up-to-date so users have access to the latest security updates and performance improvements. In Intune, you can use the [settings catalog](settings-catalog.md) to update Microsoft 365 apps on your Windows devices, including setting the update channel.
+Admins must keep Microsoft 365 Apps up-to-date so users have access to the latest security updates and performance improvements. In Intune, you can use the [settings catalog](index.md) to update Microsoft 365 apps on your Windows devices, including setting the update channel.
 
 This article shows you how to use the settings catalog to manage Microsoft 365 app updates. It also provides guidance on confirming your policies apply successfully, which can help when troubleshooting.
 
-In this scenario, you create a settings catalog policy in Intune that updates Microsoft 365 on your devices. For more information on settings catalog, go to [Use the Intune settings catalog to configure settings](settings-catalog.md).
+In this scenario, you create a settings catalog policy in Intune that updates Microsoft 365 on your devices. For more information on settings catalog, go to [Use the Intune settings catalog to configure settings](index.md).
 
 This feature applies to:
 
@@ -25,9 +25,9 @@ This feature applies to:
 
 ## Prerequisites
 
-- Requires Microsoft Intune and a Microsoft 365 subscription. For information on Intune licensing, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+- Requires Microsoft Intune and a Microsoft 365 subscription. For information on Intune licensing, go to [Microsoft Intune licensing](../../../intune-service/fundamentals/licensing/index.md).
 
-- To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure the settings catalog policy, at a minimum, sign into the [Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 - Add and enable [Microsoft 365 Apps Automatic Updates](/deployoffice/configure-update-settings-for-office-365-proplus) for your Office apps. You can enable automatic updates using Group Policy, or the Intune Office settings catalog settings:
 
@@ -39,7 +39,7 @@ This feature applies to:
 
 Use an Intune policy to set the update channel for Microsoft 365 apps. The update channel determines how frequently Office checks for updates.
 
-1. In your [settings catalog](settings-catalog.md#create-the-policy) policy, search for **Update Channel**, and select it. Close the settings picker.
+1. In your [settings catalog](index.md#create-the-policy) policy, search for **Update Channel**, and select it. Close the settings picker.
 
     :::image type="content" source="./media/update-office/settings-catalog-update-channel.png" alt-text="In Microsoft Intune and Intune admin center, add the Office Update Channel setting in the settings catalog." lightbox="./media/update-office/settings-catalog-update-channel.png":::
 
@@ -51,10 +51,10 @@ Use an Intune policy to set the update channel for Microsoft 365 apps. The updat
     > - It's recommended to update more frequently. Semi-annually is only used as an example.
     > - For information on the different update channels, go to [Overview of update channels for Microsoft 365 Apps](/microsoft-365-apps/updates/overview-update-channels).
 
-3. When the policy is ready, [assign the policy](device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
+3. When the policy is ready, [assign the policy](../../intune-service/configuration/device-profile-assign.md) to your Windows client devices. To test your policy sooner, you can also sync the policy.
 
-    - [Sync the policy in Intune](../remote-actions/device-sync.md)
-    - [Manually sync the policy on the device](../user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
+    - [Sync the policy in Intune](../../intune-service/remote-actions/device-sync.md)
+    - [Manually sync the policy on the device](../../intune-service/user-help/sync-your-device-manually-windows.md#sync-from-settings-app)
 
 ## Check the Intune registry keys
 
@@ -177,4 +177,4 @@ Consider using the following steps to test your policy before deploying the poli
 
 - [Update channel values for Microsoft 365 clients](../../configmgr/sum/deploy-use/manage-office-365-proplus-updates.md#bkmk_channel)
 - [Overview of Cloud Policy service for Microsoft 365](/microsoft-365-apps/admin-center/overview-cloud-policy)
-- [Use the Intune settings catalog to configure settings](settings-catalog.md)
+- [Use the Intune settings catalog to configure settings](index.md)

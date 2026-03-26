@@ -196,6 +196,7 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/configuration/vpn-settings-ios.md",
       "redirect_url": "/intune/intune-service/configuration/vpn-settings-apple",
       "redirect_document_id": false
     },

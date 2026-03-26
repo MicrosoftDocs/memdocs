@@ -13,7 +13,7 @@ ms.collection:
 
 # Configure Microsoft Edge policy settings in Microsoft Intune
 
-Using the [settings catalog](settings-catalog.md) in Microsoft Intune, you can create and manage Microsoft Edge policy settings on your Windows and macOS devices. The Microsoft Edge settings are ADMX-backed policy settings, similar to on-premises Group Policy Objects (GPO).
+Using the [settings catalog](index.md) in Microsoft Intune, you can create and manage Microsoft Edge policy settings on your Windows and macOS devices. The Microsoft Edge settings are ADMX-backed policy settings, similar to on-premises Group Policy Objects (GPO).
 
 With these settings, you can control how Microsoft Edge works and configure Microsoft Edge features for users in your organization. For example, you can:
 
@@ -25,7 +25,7 @@ With these settings, you can control how Microsoft Edge works and configure Micr
 
 These settings are created in an Intune policy, and then deployed to devices in your organization.
 
-This article shows you how to configure Microsoft Edge policy settings using the [settings catalog](settings-catalog.md) in Microsoft Intune.
+This article shows you how to configure Microsoft Edge policy settings using the [settings catalog](index.md) in Microsoft Intune.
 
 This article applies to:
 
@@ -33,17 +33,17 @@ This article applies to:
 - macOS
 - Microsoft Edge version 77 and newer
 
-  For Microsoft Edge version 45 and earlier, go to [Microsoft Edge Browser device restrictions](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
+  For Microsoft Edge version 45 and earlier, go to [Microsoft Edge Browser device restrictions](../../intune-service/configuration/device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
 > [!TIP]
 >
-> - For information on adding the Microsoft Edge version 77+ app on Windows client, go to [Add Microsoft Edge app on Windows client devices](../apps/apps-windows-edge.md).
-> - For information on adding and configuring Microsoft Edge version 77+ app on macOS, go to [Add Microsoft Edge app](../apps/apps-edge-macos.md), and [Configure Microsoft Edge app using plist](/DeployEdge/configure-microsoft-edge-on-mac).
+> - For information on adding the Microsoft Edge version 77+ app on Windows client, go to [Add Microsoft Edge app on Windows client devices](../../intune-service/apps/apps-windows-edge.md).
+> - For information on adding and configuring Microsoft Edge version 77+ app on macOS, go to [Add Microsoft Edge app](../../intune-service/apps/apps-edge-macos.md), and [Configure Microsoft Edge app using plist](/DeployEdge/configure-microsoft-edge-on-mac).
 > - For a list of the Microsoft Edge updates, including new policies, go to the [Release notes for Microsoft Edge](/deployedge/microsoft-edge-relnote-stable-channel#policy-updates).
 
 ## Prerequisites
 
-- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Create a policy for Microsoft Edge
 
@@ -85,11 +85,11 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 
 10. Select **Next**. In **Scope tags**, select **Next**.
 
-    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
 11. In **Assignments**, select **Next**.
 
-    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](device-profile-assign.md).
+    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](../../intune-service/configuration/device-profile-assign.md).
 
     :::image type="content" source="./media/configure-edge/add-entra-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/add-entra-group-assign-policy.png":::
 
@@ -102,5 +102,5 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 ## Related content
 
 - [Download Microsoft Edge for your business](https://aka.ms/EdgeEnterprise)
-- [Manage web access by using Microsoft Edge with Microsoft Intune](../apps/manage-microsoft-edge.md)
-- [Deploy Microsoft Edge app using Microsoft Intune](../apps/apps-windows-edge.md)
+- [Manage web access by using Microsoft Edge with Microsoft Intune](../../intune-service/apps/manage-microsoft-edge.md)
+- [Deploy Microsoft Edge app using Microsoft Intune](../../intune-service/apps/apps-windows-edge.md)

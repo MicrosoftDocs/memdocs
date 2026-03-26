@@ -18,7 +18,7 @@ ms.collection:
 
 Group policy and ADMX templates include settings you can configure on Windows devices. These settings are used and managed by Mobile Device Management (MDM) providers, like Microsoft Intune, to configure features and settings on Windows devices. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, and more.
 
-These settings are built into the Microsoft Intune [settings catalog](settings-catalog.md). In a settings catalog profile, you configure the settings you want to include, and then assign this profile to your devices.
+These settings are built into the Microsoft Intune [settings catalog](index.md). In a settings catalog profile, you configure the settings you want to include, and then assign this profile to your devices.
 
 In this walkthrough, you:
 
@@ -38,7 +38,7 @@ This feature applies to:
 
 > [!TIP]
 >
-> - For an overview of the Intune settings catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
+> - For an overview of the Intune settings catalog, go to [Use the settings catalog to configure settings](index.md).
 > - For more information on ADMX policies, go to [Understanding ADMX-backed policies](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 ## Prerequisites
@@ -47,7 +47,7 @@ This feature applies to:
 
   For more information on what you get with the different Microsoft 365 licenses, go to [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
-- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, go to [Set the mobile device management authority](../fundamentals/mdm-authority-set.md).
+- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, go to [Set the mobile device management authority](../../intune-service/fundamentals/mdm-authority-set.md).
 
   :::image type="content" source="./media/tutorial-group-policy-migration/tenant-status.png" alt-text="Screenshot that shows how to set the MDM authority to Microsoft Intune in your tenant status.":::
 
@@ -113,7 +113,7 @@ In Intune, policies are applied to users and groups you create. There isn't a hi
 - If two compliance policies are in conflict, then the most restrictive policy applies.
 - If two configuration profiles are in conflict, then the setting isn't applied.
 
-For more information, go to [Common questions, issues, and resolutions with device policies and profiles](device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+For more information, go to [Common questions, issues, and resolutions with device policies and profiles](../../intune-service/configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, like a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
@@ -178,7 +178,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
 - Your Microsoft Entra ID license can include other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Conditional Access](/entra/identity/conditional-access/overview).
 
-- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
+- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](../../intune-service/configuration/device-profile-assign.md#user-groups-vs-device-groups).
 
 - Remember, a user can belong to multiple groups. Consider some of the other dynamic user and device groups you can create, like:
 
@@ -341,7 +341,7 @@ In this section, you created some settings catalog policies, and assigned them t
 
 ## Policy best practices
 
-When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](device-profile-create.md#recommendations).
+When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](../../intune-service/configuration/device-profile-create.md#recommendations).
 
 ## Clean up resources
 

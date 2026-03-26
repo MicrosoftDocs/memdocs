@@ -32,7 +32,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 - To use this feature, you need the following subscriptions:
 
   - **Universal Print**: For more specific information, go to [License Universal Print](/universal-print/fundamentals/universal-print-license).
-  - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../../fundamentals/licensing/index.md).
+  - **Microsoft Intune**: For more specific information, go to [Microsoft Intune licensing](../../../intune-service/fundamentals/licensing/index.md).
 
 - Every printer must be registered in the Universal Print service (UP), which uses Microsoft Entra ID. For more information, go to [What is printer registration?](/universal-print/fundamentals/universal-print-printer-registration).
 
@@ -44,7 +44,7 @@ This article shows you how to create a Universal Print policy in Microsoft Intun
 
 - Accounts need the following roles/licenses:
 
-  - **Policy and Profile Manager** role: Needed to create and assign Intune policies. For information on this role, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md)
+  - **Policy and Profile Manager** role: Needed to create and assign Intune policies. For information on this role, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md)
   - An assigned Universal Print license.
 
 - End user accounts need the following permissions/licenses:
@@ -94,7 +94,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 9. Select **Next**.
 
-10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../fundamentals/scope-tags.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups. For more information about scope tags, see [Use RBAC roles and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -106,7 +106,7 @@ This policy includes your printer information. When you assign the policy, the p
 
     `The selected groups may not have Universal Print permissions to selected printers. If this is the case, Intune will provide these groups with the correct permissions.`
 
-    For more information on assigning profiles in Intune, go to [Assign user and device profiles](device-profile-assign.md). For more information on user scope vs. device scope in the settings catalog, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](settings-catalog.md#device-scope-vs-user-scope-settings).
+    For more information on assigning profiles in Intune, go to [Assign user and device profiles](../../intune-service/configuration/device-profile-assign.md). For more information on user scope vs. device scope in the settings catalog, go to [Use the settings catalog to configure settings: Device scope vs. user scope settings](index.md#device-scope-vs-user-scope-settings).
 
     Select **Next**.
 
@@ -114,9 +114,9 @@ This policy includes your printer information. When you assign the policy, the p
 
 ## Failures and reporting
 
-After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](device-profile-monitor.md).
+After you assign the profile, you can monitor its status. The Intune reports show if a profile successfully applied, failed, has conflicts, and more. For more specific information, go to [Monitor device configuration profiles in Microsoft Intune](../../intune-service/configuration/device-profile-monitor.md).
 
-For information on the reporting data you can view, go to [Intune reports](../fundamentals/reports.md).
+For information on the reporting data you can view, go to [Intune reports](../../intune-service/fundamentals/reports.md).
 
 ### Common issues
 
@@ -145,4 +145,4 @@ For more information and specific steps, go to [Universal Print troubleshooting 
 ## Related articles
 
 - [What is Universal Print](/universal-print/fundamentals/universal-print-whatis)
-- [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](index.md)
