@@ -84,7 +84,7 @@ When you use Microsoft Intune, Microsoft Entra ID, and platform capabilities tog
 
 ## How Microsoft Intune drives passwordless adoption
 
-Intune enables and operationalizes passwordless authentication by ensuring that devices and applications are properly configured to use strong, modern credentials. While Microsoft Entra ID governs identity and authentication policy, Microsoft Intune prepares the device environment that passwordless methods depend on.
+Microsoft Intune enables and operationalizes passwordless authentication by ensuring that devices and applications are properly configured to use strong, modern credentials. While Microsoft Entra ID governs identity and authentication policy, Microsoft Intune prepares the device environment that passwordless methods depend on.
 
 Key contributions include:
 
