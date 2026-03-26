@@ -21,7 +21,7 @@ Passwordless authentication reduces phishing and credential theft by replacing p
 
 Microsoft Intune doesn't issue passwordless credentials. Instead, it prepares devices, apps, and user experiences so these passwordless methods work reliably at scale. Microsoft Entra ID is the identity authority that verifies credentials and enforces authentication and Conditional Access policies, while Microsoft Intune configures device settings, enforces compliance, and enables the platform capabilities those methods depend on. Together, Microsoft Entra ID and Microsoft Intune provide the identity foundation and device readiness required to adopt passwordless authentication across diverse platforms and form factors.
 
-This article explains how Microsoft Intune supports a passwordless strategy from an Microsoft Intune administrator's perspective. For deployment details, follow the implementation links for each passwordless method.
+This article explains how Microsoft Intune supports a passwordless strategy from an administrator's perspective. For deployment details, follow the implementation links for each passwordless method.
 
 ## How Microsoft's passwordless solution works
 
@@ -32,7 +32,7 @@ Microsoft's passwordless solution pairs Microsoft Entra ID for identity and sing
    :::image type="icon" source="media/passwordless/entra.svg" border="false":::
    :::column-end:::
    :::column span="3":::
-      **Entra ID** is the core identity provider. It verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. After successful authentication, Microsoft Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. Conditional Access policies evaluate device state, authentication strength, and risk signals before granting access.
+      **Microsoft Entra ID** is the core identity provider. It verifies passwordless credentials like Windows Hello PINs, FIDO2 keys, and passkeys. After successful authentication, Microsoft Entra ID issues a Primary Refresh Token (PRT) or equivalent, enabling seamless SSO to Microsoft 365, Azure, and other protected resources. Conditional Access policies evaluate device state, authentication strength, and risk signals before granting access.
    :::column-end:::
 :::row-end:::
 
@@ -41,7 +41,7 @@ Microsoft's passwordless solution pairs Microsoft Entra ID for identity and sing
    :::image type="icon" source="media/passwordless/intune.svg" border="false":::
    :::column-end:::
    :::column span="3":::
-   **Intune** prepares devices for passwordless sign-in by configuring settings, enforcing compliance, deploying required apps, and supporting the platform experiences that make passwordless practical at scale. Microsoft Intune gives admins one management plane for Windows, macOS, iOS/iPadOS, and Android.
+   **Microsoft Intune** prepares devices for passwordless sign-in by configuring settings, enforcing compliance, deploying required apps, and supporting the platform experiences that make passwordless practical at scale. Microsoft Intune gives admins one management plane for Windows, macOS, iOS/iPadOS, and Android.
    :::column-end:::
 :::row-end:::
 
