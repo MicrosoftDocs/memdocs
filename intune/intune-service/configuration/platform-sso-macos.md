@@ -64,6 +64,12 @@ You configure Platform SSO using the Intune [settings catalog](settings-catalog.
 
   - Safari
 
+  - Firefox
+
+    Configure the MicrosoftEntraSSO policy for browser integration
+
+    See: [Firefox policy templates](https://mozilla.github.io/policy-templates/#microsoftentrasso) and [Firefox Enterprise 133 release notes](https://support.mozilla.org/en-US/kb/firefox-enterprise-133-release-notes)
+
   You can use Intune to add web browser apps, including [package (`.pkg`)](../apps/lob-apps-macos.md) and [disk image (`.dmg`)](../apps/lob-apps-macos-dmg.md) files, and deploy the app to your macOS devices. To get started, go to [Add apps to Microsoft Intune](../apps/apps-add.md).
 
 - Platform SSO uses the Intune settings catalog to configure the required settings. To create the settings catalog policy, at a minimum, sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account that has the following Intune permissions:
