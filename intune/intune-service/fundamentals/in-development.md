@@ -226,7 +226,9 @@ For more information about the security baseline changes introduced with Windows
 
 ### Security Baseline for audits of Security Technical Implementation Guides<!-- 31532934 -->
 
-We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs). As a baseline focused on audits and not on configuration, this baseline focuses on Windows devices and generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
+We're adding a new security baseline that audits devices against the recommended configuration of Security Technical Implementation Guides (STIGs).
+
+The new baseline will be available for [US Government Community Cloud High (GCC High)](/intune/intune-service/fundamentals/intune-govt-service-description) tenants, and focused on audits and not on configuration. Applicable to Windows devices, the baseline generates detailed reports on which devices meet the recommended settings for compliance with STIGs.
 
 > [!div class="checklist"]
 > Applies to:
@@ -261,7 +263,7 @@ When this change takes effect, devices that are assigned this policy while manag
 
 ## Role-based access control
 
-### Decoupling of Scope Tag permissions for Role-based access control<!-- 27067241 -->
+### Decoupling of Scope Tag permissions for Role-based access control<!-- 37134761 -->
 
 Intune will soon provide a one-time action you can use to decouple permissions assigned through scope tags, making role-based access control (RBAC) more precise. Currently, permissions for the same resource in different roles but with different scope tags are merged, which can unintentionally grant admins broader access than intended. This change will improve security and clarity for organizations managing complex role assignments.
 

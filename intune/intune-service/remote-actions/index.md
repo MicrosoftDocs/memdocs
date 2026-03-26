@@ -112,10 +112,8 @@ Select one of the following tabs to learn more about the available remote action
 | :::image type="icon" source="icons/rename-device.svg" border="false"::: | [Rename device][RA-REN] | Changes the device name in Intune. |
 | :::image type="icon" source="icons/reset-passcode.svg" border="false"::: | [Reset passcode][RA-PREST] | Resets the device passcode. |
 | :::image type="icon" source="icons/restart.svg" border="false"::: | [Restart][RA-RESTART] | Restarts a device. |
-| :::image type="icon" source="icons/restore-managed-home-screen.svg" border="false"::: | [Restore managed home screen][RA-RMHS] | Restores the managed home screen on a device. |
 | :::image type="icon" source="icons/retire.svg" border="false"::: | [Retire][RA-RETIRE] | Removes company data and settings from a device, and leaves personal data intact. |
 | :::image type="icon" source="icons/send-custom-notification.svg" border="false"::: | [Send custom notification][RA-NOTIFY] | Sends a custom notification message to a device that can be viewed in the Company Portal app. |
-| :::image type="icon" source="icons/suspend-managed-home-screen.svg" border="false"::: | [Suspend managed home screen][RA-SMHS] | Suspends the managed home screen on a device. |
 | :::image type="icon" source="icons/sync.svg" border="false"::: | [Sync][RA-SYNC] | Syncs a device with Intune to apply the latest policies and configurations. |
 | :::image type="icon" source="icons/wipe.svg" border="false"::: | [Wipe][RA-WIPE] | Restores a device to its factory settings and removes all data and settings. |
 
