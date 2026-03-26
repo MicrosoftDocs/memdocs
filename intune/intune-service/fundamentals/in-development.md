@@ -86,7 +86,7 @@ On macOS devices, you can configure a recovery OS password that prevents users f
 
 There are two ways to use this feature:
 
-- **Settings catalog policy** - In a [settings catalog](../configuration/settings-catalog.md) policy, you can use the Recovery Lock settings to:
+- **Settings catalog policy** - In a [settings catalog](../../device-configuration/settings-catalog/index.md) policy, you can use the Recovery Lock settings to:
 
   - Turn on the recovery lock feature
   - Set a recovery lock password
@@ -209,7 +209,7 @@ The new policies will include:
 >
 > - Windows
 
-To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
 
 ### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
 

@@ -15,7 +15,7 @@ Optional policies, while relatively common, are provided for more situational us
 
 To learn more, see:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/mem/intune-service/configuration/settings-catalog)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS and macOS devices](/intune/device-configuration/settings-catalog/index)
 - [Restrictions payload](https://developer.apple.com/documentation/devicemanagement/restrictions)
 
 > [!TIP]

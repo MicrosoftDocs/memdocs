@@ -60,7 +60,7 @@ Once the passcode is removed, if there's a passcode policy set, the device promp
 [INT-AC]: https://go.microsoft.com/fwlink/?linkid=2109431
 [INT-ALLD]: https://go.microsoft.com/fwlink/?linkid=2333814
 [INT-AC2]: https://go.microsoft.com/fwlink/?linkid=2109431#view/Microsoft_Intune_Devices/DeviceActionList.ReactView
-[INT-1]:/intune/intune-service/configuration/settings-catalog-android
+[INT-1]:/intune/device-configuration/settings-catalog/ref-android-settings
 
 [INT-RC]: /intune/intune-service/fundamentals/create-custom-role
 [INT-R1]: /intune/intune-service/fundamentals/role-based-access-control-reference#help-desk-operator

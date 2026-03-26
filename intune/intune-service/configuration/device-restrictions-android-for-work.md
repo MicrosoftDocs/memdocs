@@ -38,10 +38,10 @@ This article applies to:
 
   For the steps, go to [Create a device restriction profile in Microsoft Intune](device-restrictions-configure.md).
 
-- Settings can be configured using **templates** (this article) or the **[settings catalog](settings-catalog.md)**. This article focuses on the template. For more information on **settings catalog**, go to:
+- Settings can be configured using **templates** (this article) or the **[settings catalog](../../device-configuration/settings-catalog/index.md)**. This article focuses on the template. For more information on **settings catalog**, go to:
 
-  - [Use the settings catalog to configure Intune settings](settings-catalog.md)
-  - [Android Enterprise device settings list in the Intune settings catalog](settings-catalog-android.md)
+  - [Use the settings catalog to configure Intune settings](../../device-configuration/settings-catalog/index.md)
+  - [Android Enterprise device settings list in the Intune settings catalog](../../device-configuration/settings-catalog/ref-android-settings.md)
 
   > [!TIP]
   >- If you can't find a setting in **templates**, select **settings catalog**. The settings catalog is a list of the settings you can configure for corporate-owned Android Enterprise devices. It can include other settings that aren't available in **templates**.
@@ -98,7 +98,7 @@ For corporate-owned devices with a work profile, some settings only apply in the
 - **USB file transfer**: **Block** prevents transferring files over USB. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow transferring files.
 
   > [!TIP]
-  > The Intune settings catalog > **USB access** setting has more options that you can configure and manage. To learn more, see [Android Intune settings catalog settings list](settings-catalog-android.md#general).
+  > The Intune settings catalog > **USB access** setting has more options that you can configure and manage. To learn more, see [Android Intune settings catalog settings list](../../device-configuration/settings-catalog/ref-android-settings.md#general).
 
 - **External media**: **Block** prevents using or connecting any external media on the device. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow external media on the device.
 - **Beam data using NFC (work-profile level)**: **Block** prevents using the Near Field Communication (NFC) technology to beam data from apps. When set to **Not configured** (default), Intune doesn't change or update this setting. By default, the OS might allow using NFC to share data between devices.

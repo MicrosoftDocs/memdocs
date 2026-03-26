@@ -77,7 +77,7 @@ This policy includes your printer information. When you assign the policy, the p
 
 7. In **Configuration settings**, select **Add settings**. In the settings picker, select **Printer Provisioning**, and select the settings you want to configure.
 
-    :::image type="content" source="./media/settings-catalog-printer-provisioning/settings-picker-printer-provisioning.png" alt-text="Screenshot that shows how to select printer provisioning in the settings catalog to create a universal print policy in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/configure-universal-print/settings-picker-printer-provisioning.png" alt-text="Screenshot that shows how to select printer provisioning in the settings catalog to create a universal print policy in Microsoft Intune and Intune admin center.":::
 
     Close the settings picker.
 
@@ -90,7 +90,7 @@ This policy includes your printer information. When you assign the policy, the p
 
     You can add more printers using the **Add** button:
 
-    :::image type="content" source="./media/settings-catalog-printer-provisioning/add-printer.png" alt-text="Screenshot that shows how to add more printers to the universal print policy in the settings catalog in Microsoft Intune and Intune admin center.":::
+    :::image type="content" source="./media/configure-universal-print/add-printer.png" alt-text="Screenshot that shows how to add more printers to the universal print policy in the settings catalog in Microsoft Intune and Intune admin center.":::
 
 9. Select **Next**.
 

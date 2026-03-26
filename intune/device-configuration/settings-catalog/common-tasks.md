@@ -35,7 +35,7 @@ This feature applies to:
 
 These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
-:::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="Screenshot that shows the Google Chrome settings in the settings catalog that are built in to Microsoft Intune and Intune admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
+:::image type="content" source="./media/common-tasks/google-chrome-settings.png" alt-text="Screenshot that shows the Google Chrome settings in the settings catalog that are built in to Microsoft Intune and Intune admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
 
 Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 

@@ -66,22 +66,22 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 
 7. In **Configuration settings**, select **Add settings**, and search for Edge:
 
-    :::image type="content" source="./media/settings-catalog-configure-edge/settings-catalog-search-edge.png" alt-text="Screenshot that shows Microsoft Edge settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/settings-catalog-search-edge.png":::
+    :::image type="content" source="./media/configure-edge/settings-catalog-search-edge.png" alt-text="Screenshot that shows Microsoft Edge settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/settings-catalog-search-edge.png":::
 
     Select the **Microsoft Edge** category. The settings with `(User)` in the name apply to all users signed into the device. The other settings apply to the device, even if no one is signed in.
 
-    :::image type="content" source="./media/settings-catalog-configure-edge/settings-catalog-edge-user-device.png" alt-text="Screenshot that shows Microsoft Edge user and device settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/settings-catalog-edge-user-device.png":::
+    :::image type="content" source="./media/configure-edge/settings-catalog-edge-user-device.png" alt-text="Screenshot that shows Microsoft Edge user and device settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/settings-catalog-edge-user-device.png":::
 
 8. In search, find a specific Microsoft Edge setting you want to configure. For example, search for `home page`, and select the **Configure the home page URL** setting:
 
-    :::image type="content" source="./media/settings-catalog-configure-edge/settings-catalog-edge-home-page-url.png" alt-text="Screenshot that shows home page URL settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/settings-catalog-edge-home-page-url.png":::
+    :::image type="content" source="./media/configure-edge/settings-catalog-edge-home-page-url.png" alt-text="Screenshot that shows home page URL settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/settings-catalog-edge-home-page-url.png":::
 
    > [!NOTE]
    > For a list of the available settings, go to [Microsoft Edge – Policies](/DeployEdge/microsoft-edge-policies) and [Microsoft Edge – Update policies](/DeployEdge/microsoft-edge-update-policies).
 
 9. Close the settings picker. Set the **Configure the home page URL** setting to **Enabled**, and set its value to a URL, like `https://www.bing.com`:
 
-    :::image type="content" source="./media/settings-catalog-configure-edge/settings-catalog-edge-home-page-url-enabled.png" alt-text="Screenshot of the Microsoft Edge home page URL set to a web site using the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/settings-catalog-edge-home-page-url-enabled.png":::
+    :::image type="content" source="./media/configure-edge/settings-catalog-edge-home-page-url-enabled.png" alt-text="Screenshot of the Microsoft Edge home page URL set to a web site using the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/settings-catalog-edge-home-page-url-enabled.png":::
 
 10. Select **Next**. In **Scope tags**, select **Next**.
 
@@ -91,7 +91,7 @@ This section shows you how to create, search, and configure Microsoft Edge setti
 
     Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, go to [Assign user and device profiles in Intune](device-profile-assign.md).
 
-    :::image type="content" source="./media/settings-catalog-configure-edge/add-entra-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-configure-edge/add-entra-group-assign-policy.png":::
+    :::image type="content" source="./media/configure-edge/add-entra-group-assign-policy.png" alt-text="Screenshot of Assign or deploy the ADMX policy template to users or groups in Microsoft Intune and Intune admin center." lightbox="./media/configure-edge/add-entra-group-assign-policy.png":::
 
 12. In **Review + create**, the summary of your changes is shown. Select **Create**.
 

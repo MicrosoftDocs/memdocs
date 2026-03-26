@@ -15,7 +15,7 @@ ms.collection:
 > [!IMPORTANT]
 > This template is deprecated in the August 2024 service release (2408). Existing policies continue to work. But, you can't create new policies using this template.
 >
-> Instead, use the settings catalog to create new policies that configure the System Extension payload. To learn more about the settings catalog, go to the [macOS settings catalog](settings-catalog.md).
+> Instead, use the settings catalog to create new policies that configure the System Extension payload. To learn more about the settings catalog, go to the [macOS settings catalog](../../device-configuration/settings-catalog/index.md).
 
 > [!NOTE]
 >

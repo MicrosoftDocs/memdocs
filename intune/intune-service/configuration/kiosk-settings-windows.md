@@ -60,7 +60,7 @@ Runs only one app on the device, such as a web browser or Store app.
   - **Add Microsoft Edge browser**: Select this option for Microsoft Edge version 87 and newer.
 
     > [!NOTE]
-    > These settings enable the Microsoft Edge browser on the device. To configure Microsoft Edge settings, use the [settings catalog](settings-catalog-configure-edge.md).
+    > These settings enable the Microsoft Edge browser on the device. To configure Microsoft Edge settings, use the [settings catalog](../../device-configuration/settings-catalog/configure-edge.md).
 
     - **Edge Kiosk URL**: Enter a default webpage that opens when Microsoft Edge browser opens and restarts. For example, enter `https://www.contoso.com` or `http://bing.com`.
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
@@ -76,7 +76,7 @@ Runs only one app on the device, such as a web browser or Store app.
     > [!NOTE]
     > This setting enables the Microsoft Edge browser on the device.
     >
-    > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](settings-catalog-configure-edge.md).
+    > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](../../device-configuration/settings-catalog/configure-edge.md).
     > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
     - **Microsoft Edge kiosk mode type**: Select the kiosk mode type. Both options help protect user data.
@@ -167,7 +167,7 @@ Runs multiple apps on the device. Apps in this mode are available on the start m
       > [!NOTE]
       > This setting enables the Microsoft Edge browser on the device.
       >
-      > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](settings-catalog-configure-edge.md)
+      > - To configure Microsoft Edge version 77 and newer settings, use the [settings catalog](../../device-configuration/settings-catalog/configure-edge.md)
       > - To configure Microsoft Edge version 45 and older, create a [device restrictions profile](device-restrictions-configure.md), and [configure the settings](device-restrictions-windows-10.md#microsoft-edge-legacy-version-45-and-older).
 
     - **Add Kiosk browser**: These settings control a web browser app on the kiosk. Be sure you deploy a web browser app to the kiosk devices using [Client Apps](../apps/apps-add.md).

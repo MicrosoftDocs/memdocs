@@ -65,7 +65,7 @@ When designing your Apple device update strategy, align with your organization's
 
 # [**Latest version**](#tab/automatic-updates)
 
-1. [Create a settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
+1. [Create a settings catalog policy](/intune/device-configuration/settings-catalog/index) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name and value |
    |--|--|--|
@@ -79,7 +79,7 @@ When designing your Apple device update strategy, align with your organization's
 
 # [**Targeted version**](#tab/manual-updates)
 
-1. [Create a settings catalog policy](/intune/intune-service/configuration/settings-catalog) for the iOS/iPadOS or macOS platform and use the following settings:
+1. [Create a settings catalog policy](/intune/device-configuration/settings-catalog/index) for the iOS/iPadOS or macOS platform and use the following settings:
 
     | Category | Setting name and value |
     |--|--|--|
@@ -92,7 +92,7 @@ When designing your Apple device update strategy, align with your organization's
 
 ---
 
-For more information about configuring Software Update policies and the available settings, see [Software Update](../../intune-service/configuration/apple-settings-catalog-configurations.md#software-update).
+For more information about configuring Software Update policies and the available settings, see [Software Update](../../device-configuration/settings-catalog/ref-apple-settings.md#software-update).
 
 ## Software Update Settings
 
@@ -104,7 +104,7 @@ When you configure software updates, you might want to manage aspects of the sof
 - Suppress update notifications up to one hour before the enforcement deadline.
 - Control whether users are allowed to update to the latest major update, latest minor update, or are offered both.
 
-For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../../intune-service/configuration/apple-settings-catalog-configurations.md#software-update-settings).
+For more information about configuring Software Update Settings policies and the available settings, see [Software Update Settings](../../device-configuration/settings-catalog/ref-apple-settings.md#software-update-settings).
 
 ## Monitor policy settings deployment
 
