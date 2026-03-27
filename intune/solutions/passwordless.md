@@ -21,6 +21,8 @@ Passwordless authentication reduces phishing and credential theft by replacing p
 
 Microsoft Intune doesn't issue passwordless credentials. Instead, it prepares devices, apps, and user experiences so these passwordless methods work reliably at scale. Microsoft Entra ID is the identity authority that verifies credentials and enforces authentication and Conditional Access policies, while Microsoft Intune configures device settings, enforces compliance, and enables the platform capabilities those methods depend on. Together, Microsoft Entra ID and Microsoft Intune provide the identity foundation and device readiness required to adopt passwordless authentication across diverse platforms and form factors.
 
+The passwordless experience varies by platform. On Windows, it commonly spans both device sign‑in and app access through SSO. On macOS, it centers on platform authentication and SSO into apps, rather than deep device‑bound identity. On iOS/iPadOS and Android, it more often focuses on app sign‑in, brokered authentication, and passkey behavior than on device sign‑in. Keep these distinctions in mind when evaluating platform requirements and planning deployment.
+
 This article explains how Microsoft Intune supports a passwordless strategy from an administrator's perspective. For deployment details, follow the implementation links for each passwordless method.
 
 ## How Microsoft's passwordless solution works
@@ -50,7 +52,7 @@ Microsoft's passwordless solution pairs Microsoft Entra ID for identity and sing
    :::image type="icon" source="media/passwordless/devices.svg" border="false":::
    :::column-end:::
    :::column span="3":::
-   **Platform capabilities** on Windows, macOS, iOS, and Android provide the device-bound experience, including biometrics, secure hardware (TPM, Secure Enclave), passkey support, and brokered single sign-on.
+   **Platform capabilities** on Windows, macOS, iOS, and Android provide the device-bound experience, including biometrics, secure hardware (TPM on Windows, Secure Enclave on macOS), passkey support, and brokered single sign-on.
    :::column-end:::
 :::row-end:::
 
@@ -292,7 +294,7 @@ Depending on the passwordless methods you choose, your organization might need M
 
 | Capability                                   | License requirement                                          |
 |----------------------------------------------|--------------------------------------------------------------|
-| Windows Hello                   | Microsoft Entra ID P1 (for Conditional Access enforcement)   |
+| Windows Hello                                | Microsoft Entra ID P1 (for Conditional Access enforcement)   |
 | FIDO2 security keys                          | Microsoft Entra ID P1                                        |
 | Passkeys (device-bound and synced)           | Microsoft Entra ID P1                                        |
 | Microsoft Authenticator phone sign-in        | Microsoft Entra ID P1                                        |
@@ -311,15 +313,15 @@ Depending on the passwordless methods you choose, your organization might need M
 
 The passwordless methods described in this article rely on specific platform capabilities that are only available in certain OS versions. The table below summarizes the platform requirements for each method:
 
-| Method                                     | Windows                         | macOS                    | iOS/iPadOS               | Android     |
-|--------------------------------------------|:-------------------------------:|:------------------------:|:------------------------:|:-----------:|
-| **Windows Hello**                          | All *supported* Windows clients | —                        | —                        | —           |
-| **FIDO2 security keys**                    | All *supported* Windows clients | —                        | —                        | —           |
-| **Passkeys**                               | Windows 11                      | All *supported* versions | All *supported* versions | Android 14+ |
+| Method                                               | Windows                         | macOS                    | iOS/iPadOS               | Android     |
+|------------------------------------------------------|:-------------------------------:|:------------------------:|:------------------------:|:-----------:|
+| **Windows Hello**                                    | All *supported* Windows clients | —                        | —                        | —           |
+| **FIDO2 security keys**                              | All *supported* Windows clients | —                        | —                        | —           |
+| **Passkeys**                                         | Windows 11                      | All *supported* versions | All *supported* versions | Android 14+ |
 | **Device-bound passkeys in Microsoft Authenticator** | —                               | —                        | All *supported* versions | Android 14+ |
-| **Platform SSO (Secure Enclave)**          | —                               | All *supported* versions | —                        | —           |
-| **Web sign-in (TAP at lock screen)**       | Windows 11                      | —                        | —                        | —           |
-| **Microsoft Authenticator phone sign-in**  | —                               | —                        | All *supported* versions | Android 11+ |
+| **Platform SSO (Secure Enclave)**                    | —                               | All *supported* versions | —                        | —           |
+| **Web sign-in (TAP at lock screen)**                 | Windows 11                      | —                        | —                        | —           |
+| **Microsoft Authenticator phone sign-in**            | —                               | —                        | All *supported* versions | Android 11+ |
 
 >[!NOTE]
 > 
@@ -481,17 +483,17 @@ Planning for recovery before you enforce passwordless is essential. A rollout th
 
 Passwordless often depends on the device being in the right state before users can rely on the experience. Readiness typically includes:
 
-- Supported device platforms and versions.
-- Device enrollment or registration.
-- Required apps and brokers.
-- Method-specific configuration profiles and identity prerequisites.
+- [Supported device platforms and versions](../intune-service/fundamentals/supported-devices-browsers.md)
+- [Device enrollment or registration](../intune-service/fundamentals/deployment-guide-enrollment.md)
+- [Required apps and brokers](../intune-service/apps/apps-add.md)
+- [Method-specific configuration profiles and identity prerequisites](../intune-service/configuration/device-profiles.md)
 
 ### Verification and ongoing operations
 
 To validate a passwordless deployment, common checkpoints include:
 
-- Microsoft Entra sign-in logs.
-- Microsoft Intune device and policy reporting.
+- [Microsoft Entra sign-in logs](/entra/identity/monitoring-health/concept-sign-ins)
+- [Microsoft Intune device and policy reporting](../intune-service/fundamentals/reports.md)
 - Platform-specific verification experiences for the passwordless method you deploy.
 
 ## User adoption and communication
