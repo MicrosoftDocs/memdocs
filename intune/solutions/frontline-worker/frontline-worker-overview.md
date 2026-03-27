@@ -59,13 +59,12 @@ Intune has built-in features that can be used for frontline worker devices, incl
 
 - **[Windows cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)**
 
-  This feature is a guided scenario and can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and secures them with Microsoft-recommended security features.
+  This feature can turn a Windows client device into a cloud-optimized device. It simplifies the devices, and secures them with Microsoft-recommended security features.
 
-  For more information on this guided scenario and the other guided scenarios available, go to:
+  For more information, go to:
 
-  - [Guided scenario - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration.md)
-  - [Step-by-step guide - Windows in cloud configuration](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
-  - [Intune guided scenarios overview](../../intune-service/fundamentals/guided-scenarios-overview.md)
+  - [Windows in cloud configuration overview](../../intune-service/fundamentals/cloud-configuration.md)
+  - [Step-by-step setup guide](../../intune-service/fundamentals/cloud-configuration-setup-guide.md)
 
 - **[Remote Help](../../intune-service/fundamentals/remote-help.md)**
 

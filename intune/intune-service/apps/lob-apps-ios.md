@@ -1,7 +1,7 @@
 ---
 title: Add an iOS/iPadOS Line-of-Business App to Microsoft Intune
 description: Learn about how to add an iOS/iPadOS line-of-business (LOB) app to Microsoft Intune.
-ms.date: 01/14/2026
+ms.date: 03/10/2026
 ms.topic: how-to
 ms.reviewer: bryanke
 ms.collection:
@@ -50,6 +50,14 @@ You can deploy LOB apps to Shared iPad devices. For Shared iPad devices, line-of
     - **Privacy URL**: Optionally, enter the URL of a website that contains privacy information for this app. The URL appears in the company portal.
     - **Developer**: Optionally, enter the name of the app developer.
     - **Owner**: Optionally, enter a name for the owner of this app. An example is **HR department**.
+    - **Management type**: Select **MDM** (default) or **DDM** to choose how the app is managed on the device. Declarative Device Management (DDM) uses Apple's policy-based management model for app deployment and configuration on devices running iOS/iPadOS 18 and later. DDM provides efficient app delivery, real-time app status reporting, and expanded app attribute options for per-app associated domains. For devices running earlier versions of iOS/iPadOS, select **MDM**.
+
+      > [!IMPORTANT]
+      > The following limitations apply when using DDM for app management:
+      >
+      > - **MAM-enabled apps**: If the app is integrated with the Intune App SDK, the **Management type** setting isn't available and the app can only be created for MDM.
+      > - **App configuration policies**: App configuration policies only work for MDM-based apps. If you need to apply app configuration policies to a line-of-business app, use **MDM** as the management type.
+
     - **Notes**: Enter any notes that you want to associate with this app.
     - **Logo**: Upload an icon that is associated with the app. This icon is displayed with the app when users browse through the company portal.
 2. Choose **Next** to display the **Scope tags** page.
