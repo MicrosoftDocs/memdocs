@@ -17,7 +17,6 @@ The troubleshooting pane lets help desk operators and Intune administrators view
 
 The **Troubleshooting + support** pane provides three options:
 
-- [Guided scenarios](guided-scenarios-overview.md) to provide a customized series of steps centered around one end-to-end use-case. For more information, see [Guided scenarios](guided-scenarios-overview.md).
 - **Troubleshooting** to help determine any issues with **Assignments**, **App protection status**, and **Enrollment failures**.
 - [Help and support](../../fundamentals/it-pro-support/get-support-admin-center.md) to provide global technical, pre-sales, billing, and subscription support for device management cloud-based services related to Intune. For more information, see [Help and support](../../fundamentals/it-pro-support/get-support-admin-center.md).
 

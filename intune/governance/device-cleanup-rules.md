@@ -64,6 +64,9 @@ Device cleanup rules in Intune run on a schedule and automatically hide records 
 
     You can create one rule per platform. The rule applies to all devices in your organization with the platform you select.
 
+> [!IMPORTANT]
+> If both platform-specific and *All platforms* rules exist, the one with fewer days will be applied.
+
 1. Select **Next**.
 1. In **Rule settings** > **Remove devices that haven't checked in for this many days**, enter a number between 30 and 270.
 
