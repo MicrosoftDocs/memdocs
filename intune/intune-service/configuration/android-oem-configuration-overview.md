@@ -3,7 +3,7 @@ title: Use OEMConfig on Android Enterprise devices in Microsoft Intune
 description: Use Microsoft Intune to manage and use devices running Android Enterprise with OEMConfig. See all the steps, including an overview, see the prerequisites, create the configuration profile in Intune, and see a list of supported OEMConfig apps.
 author: MandiOhlinger
 ms.author: mandia
-ms.date: 01/26/2026
+ms.date: 03/24/2026
 ms.topic: how-to
 ms.reviewer: akritis
 ms.collection:
@@ -82,14 +82,33 @@ When using OEMConfig, be familiar with the following information:
 
 To use OEMConfig on your devices, you need the following requirements:
 
-- The Android Enterprise devices must be MDM enrolled in Intune.
-- To create the Intune profile, the Intune admin needs the following role-based access (RBAC) permissions in Intune:
+:::row:::
+:::column span="1":::
+[!INCLUDE [platform](../../includes/requirements/platform.md)]
 
-  - **Mobile apps**
-  - **Device Configurations**
-  - **Android Enterprise** > **Read**
+:::column-end:::
+:::column span="3":::
+> This feature supports the following platforms:
+>
+> - Android Enterprise
+> - Devices must be MDM enrolled in Intune.
+:::column-end:::
+:::row-end:::
 
-  These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations. You can create a [custom role](../fundamentals/create-custom-role.md) that only includes these permissions.
+:::row:::
+:::column span="1":::
+[!INCLUDE [rbac](../../includes/requirements/rbac.md)]
+:::column-end:::
+:::column span="3":::
+> To create the Intune profile, the Intune admin needs the following role-based access (RBAC) permissions in Intune:
+>
+> - **Mobile apps**
+> - **Device Configurations**
+> - **Android Enterprise** > **Read**
+>
+> These permissions are required because OEMConfig profiles use managed app configurations to manage device configurations. You can create a [custom role](../fundamentals/create-custom-role.md) that only includes these permissions.
+:::column-end:::
+:::row-end:::
 
 ## Step 1 - Get the OEMConfig app
 
@@ -227,6 +246,7 @@ Intune supports the following OEMConfig apps:
 | HMDGlobal - 5.3 | com.hmdglobal.app.oemconfig.n5_3 |
 | HMDGlobal - OEMConfig | com.hmdglobal.app.oemconfig |
 | imotion | com.iwaylink.oemconfig | |
+| Inventus | com.inventus.oemconfig.gen |
 | Janam | com.oemconfig.janam | |
 | Kyocera | jp.kyocera.enterprisedeviceconfig |  |
 | Lenovo | com.lenovo.oemconfig.rel | |
