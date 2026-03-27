@@ -204,14 +204,11 @@ This following list is the same order as the diagnostic zip. Each collection con
 |`HKLM\SOFTWARE\Microsoft\PolicyManager\current\device\DeviceHealthMonitoring`|
 |`HKLM\SOFTWARE\Microsoft\IntuneManagementExtension`|
 |`HKLM\SOFTWARE\Microsoft\SystemCertificates\AuthRoot`|
-|`HKLM\SOFTWARE\Microsoft\Windows Advanced Threat Protection`|
 |`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Authentication\LogonUI`|
 |`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Internet Settings`|
 |`HKLM\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall`|
 |`HKLM\SOFTWARE\Microsoft\DeviceInventory`|
-|`HKLM\SOFTWARE\Policies`|
 |`HKLM\SOFTWARE\Policies\Microsoft\Cryptography\Configuration\SSL`|
-|`HKLM\SOFTWARE\Policies\Microsoft\Windows Advanced Threat Protection`|
 |`HKLM\SOFTWARE\WOW6432Node\Microsoft\Windows\CurrentVersion\Uninstall`|
 |`HKLM\SYSTEM\CurrentControlSet\Control\SecurityProviders\SCHANNEL`|
 |`HKLM\SYSTEM\CurrentControlSet\Services\SharedAccess\Parameters\FirewallPolicy\Mdm`|
