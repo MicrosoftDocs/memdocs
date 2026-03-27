@@ -59,18 +59,6 @@ The following policy types help you manage Windows updates in Intune:
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
 :::column-end:::
-
-:::row:::
-:::column:::
-#### Hotpatch security updates 
-
->**:::image type="icon" source="icons/feature-update.svg" border="false":::** 
->
-> Secures devices more quickly by delivering eligible security patches without a reboot. Rebootless updates are the default way monthly Windows security updates are delivered.
->> [!div class="nextstepaction"]
->> [Learn more](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates)
-:::column-end:::
-
 :::column:::
 #### Quality update policy
 
@@ -85,7 +73,17 @@ The following policy types help you manage Windows updates in Intune:
 :::column-end:::
 :::row-end:::
 
+
 :::row:::
+:::column:::
+#### Hotpatch security updates 
+
+>**:::image type="icon" source="icons/quality-update.svg" border="false":::** 
+>
+> Secures devices more quickly by delivering eligible security patches without a reboot. Rebootless updates are the default way monthly Windows security updates are delivered.
+>> [!div class="nextstepaction"]
+>> [Learn more](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates)
+:::column-end:::
 :::column:::
 #### Driver update policy
 
@@ -95,8 +93,6 @@ The following policy types help you manage Windows updates in Intune:
 >
 >> [!div class="nextstepaction"]
 >> [Learn more](feature-updates.md)
-:::column-end:::
-:::column:::
 :::column-end:::
 :::row-end:::
 
