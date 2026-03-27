@@ -208,16 +208,6 @@ Follow the steps below to better understand Intune in the Microsoft Intune admin
 
     For more information, see [How to get support in Microsoft Intune](../../fundamentals/it-pro-support/get-support-admin-center.md).
 
-15. From the navigation pane, select **Troubleshooting + support** > **Guided scenarios** to display available Intune guided scenarios.
-
-    A guided scenario is a customized series of steps centered around one end-to-end use-case. Common scenarios are based on the role an admin, user, or device plays in your organization. These roles typically require a collection of carefully orchestrated profiles, settings, applications, and security controls to provide the best user experience and security.
-
-    If you are not familiar with all the steps and resources needed to implement a particular Intune scenario, guided scenarios may be used as your starting point.
-
-    :::image type="content" alt-text="Screenshot of the Microsoft Intune admin center - Guided scenarios." source="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-15.png" lightbox="./media/tutorial-walkthrough-endpoint-manager/tutorial-walkthrough-mem-15.png":::
-
-    For more information about guided scenarios, see [Guided scenarios overview](guided-scenarios-overview.md).
-
 ## Configure the Microsoft Intune admin center
 
 Microsoft Intune admin center allows you to customize and configure the view of the portal.
