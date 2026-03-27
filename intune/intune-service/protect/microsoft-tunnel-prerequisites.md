@@ -408,8 +408,8 @@ Devices must be enrolled to Intune to be supported with Microsoft Tunnel. Only t
   > [!NOTE]
   > *Android Enterprise dedicated* devices aren't supported by the Microsoft Tunnel.
 
-> [!IMPORTANT]
-> Support for Android 10 on Microsoft Tunnel ended March 31, 2026. Devices running Android 10 must upgrade to Android 11 or later to continue using Microsoft Tunnel.
+  > [!IMPORTANT]
+  > Support for Android 10 on Microsoft Tunnel ended March 31, 2026. Devices running Android 10 must upgrade to Android 11 or later to continue using Microsoft Tunnel.
 
 All platforms support the following functionality:
 
