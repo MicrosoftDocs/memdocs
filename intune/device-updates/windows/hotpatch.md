@@ -8,13 +8,17 @@ ms.topic: how-to
 
 # Hotpatch for Windows quality updates
 
-Windows quality update policies in Microsoft Intune support **hotpatch**, a deployment capability designed to reduce device downtime and user disruption. Hotpatch applies eligible **Monthly B security updates** so that they take effect without requiring an immediate device restart.
+With hotpatch updates, you can quickly take measures to help protect your organization from the evolving landscape of cyberattacks, while minimizing user disruptions. Hotpatch updates are *Monthly B release* security updates that install and take effect without requiring you to restart the device. By minimizing the need to restart, these updates help ensure faster compliance, making it easier for organizations to maintain security while keeping workflows uninterrupted. 
 
-Hotpatch is an extension of Windows Update and is managed through **Windows Autopatch** using quality update policies. When enabled, Autopatch orchestrates the deployment of hotpatch updates to eligible devices enrolled in the Autopatch quality update policy. This approach helps organizations maintain security compliance while minimizing workflow interruptions.
+Hotpatch security updates are enabled by default for all eligible devices in Microsoft Intune. This approach helps organizations maintain security compliance while minimizing workflow interruptions.  
+
+You can configure if hotpatch is enabled for you devices using either a tenant level setting or quality update policies.  
 
 ### Key benefits
 
+- **Faster Security**: Hotpatch security fixes take effect without requiring a restart, getting devices secure much more quickly.  
 - **Reduced disruption**: Hotpatch installs eligible security updates without requiring an immediate device restart, helping users stay productive.
+- **Smaller payloads**: Hotpatch package size is significantly smaller than the standard cumulative updates. 
 - **No changes to existing update rings**: Existing update ring configurations remain in effect and are honored alongside hotpatch configurations.
 - **Policy‑level visibility**: The hotpatch quality updates report provides a policy‑level view of update status for devices receiving hotpatch updates.
 
@@ -36,10 +40,9 @@ Hotpatch has the same [prerequisites](quality-updates.md#prerequisites) as Windo
 >> [!NOTE]
 >> Devices might be temporarily ineligible because they don't have VBS enabled or aren't currently on the latest baseline release. To ensure that all your Windows devices are configured properly to be eligible for hotpatch updates, see [Troubleshoot hotpatch updates](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates).
 >
->**Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)**
+> You can also find VBS status in [Autopatch alerts and remediation](/windows/deployment/windows-autopatch/monitor/alerts-remediations) with the alert *Hotpatch - VBS not running*. 
 >
-> > [!IMPORTANT]
-> > Arm 64 device support is in public preview.
+>**Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)**
 >
 > To ensure all the hotpatch updates are applied, you must set the **Compiled Hybrid Portable Executable** (CHPE) disable flag and restart the device to disable CHPE usage. You only need to set this flag one time. The registry setting remains applied through updates.
 >
@@ -47,7 +50,7 @@ Hotpatch has the same [prerequisites](quality-updates.md#prerequisites) as Windo
 >
 > To disable CHPE, create and/or set the following DWORD registry key:
 >
-> Path: `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management DWORD key value: HotPatchRestrictions=1`
+> Path: `HKLM\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management DWORD key value: HotPatchRestrictions=1`
 >
 > To learn more about CHPE, see [here](/windows/win32/winprog64/wow64-implementation-details)
 >
@@ -80,6 +83,11 @@ For more information about the release calendar for hotpatch updates, see [Relea
 | 3 | July | August and September |
 | 4 | October | November and December |
 
+During a hotpatch month, if a device has hotpatch updates enabled but isn't on the latest baseline update, the device will receive both the latest baseline update (restart required) and the latest hotpatch update.
+
+> [!NOTE]
+> Upgrading a hotpatch enrolled device to the latest Windows version (e.g. upgrading from Windows 11 24H2 to Windows 11 25H2) during a baseline month keeps the device on the hotpatch cycle and the device keeps receiving the hotpatch updates seamlessly. However, upgrading a device to the latest Windows version in a hotpatch month switches the device to standard updates; you must restart the device to apply the update until the next baseline release. 
+
 ## Hotpatch on Windows 11 Enterprise or Windows Server 2025
 
 > [!NOTE]
@@ -94,8 +102,23 @@ The calendar dates, eight hotpatch months, and four baseline months, planned eac
 
 ## Enroll devices to receive hotpatch updates
 
-> [!NOTE]
-> If you're using Autopatch groups and want your devices to receive hotpatch updates, you must create a hotpatch policy and assign devices to it. Turning on hotpatch updates doesn't change the deferral setting applied to devices within an Autopatch group.
+You can enable hotpatch updates for your devices using a tenant level setting or quality update policies. The tenant level setting is the default setting applied to devices that aren't members of a quality update policy. If a device is assigned to a quality update policy, the hotpatch setting from that policy is the one applied.
+
+### Default hotpatch tenant setting 
+
+The default tenant setting is only applied to devices that aren't members of a quality update policy.
+
+Windows Autopatch respects your configuration of quality update policies. If a device is assigned to one of those policies, the hotpatch setting from that policy is the one applied.  
+
+Configure the default hotpatch update behavior for your tenant as follows:
+
+1. In the [Microsoft Intune admin center][INT-AC], select **Tenant administration** > **Windows Autopatch** > **Tenant management**. 
+1. Select the **Tenant settings** tab. 
+1. Toggle the **When available, apply updates without restarting the device ("hotpatch")** setting to either **Allow** or **Block**.
+
+### Configure hotpatch using Quality Update policies.
+
+Windows Autopatch respects your configuration of the hotpatch setting in quality update policies. If a device is assigned to one of those policies, the hotpatch setting from that policy is the one applied not the tenant default setting.  
 
 To enroll devices to receive hotpatch updates:
 
@@ -127,7 +150,45 @@ To access the report:
 
 1. In the [Microsoft Intune admin center][INT-AC], select **Reports**
 1. Under the **Windows Autopatch** section, select **Windows quality updates**
-1. On the **Reports** tab, select **Hotpatch quality updates report**.
+1. On the **Reports** tab, select **Hotpatch quality updates report**.
+
+## Troubleshoot hotpatch updates
+
+### Step 1: Verify the device is eligible for hotpatch updates and on a hotpatch baseline before the hotpatch update is installed 
+
+Hotpatching follows the hotpatch release cycle. Review the prerequisites to ensure the device is eligible for hotpatch updates. For information on devices that don't meet the prerequisites, see Ineligible devices. 
+
+For the latest release schedule, see the hotpatch release notes. For information on Windows update history, see Windows 11, version 24H2 update history. 
+
+### Step 2: Verify the device has Virtualization-based security (VBS) turned on 
+
+1. Select Start, and enter *System information* in the Search. 
+1. Select **System information** from the results. 
+1. Under **System summary**, under the Item column, find **Virtualization-based security**. 
+1. Under the **Value** column, ensure it states *Running*. 
+
+### Step 3: Verify the device is properly configured to turn on hotpatch updates 
+
+1. In Intune, review your configured policies within Autopatch to see which groups of devices are targeted with a hotpatch policy by going to the **Windows Update** > **Quality Updates** page. 
+1. Ensure the hotpatch update policy is set to **Allow**. 
+1. On the device, select **Start** > **Settings** > **Windows Update** > **Advanced options** > **Configured update policies** > find **Enable hotpatching when available**. This setting indicates that the device is enrolled in hotpatch updates as configured by Autopatch. 
+
+### Step 4: Disable compiled hybrid PE usage (CHPE) (Arm64 CPU only) 
+
+For more information, see [Arm 64 devices must disable compiled hybrid PE usage (CHPE) (Arm 64 CPU Only)](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates). 
+
+### Step 5: Use Event viewer to verify the device has hotpatch updates turned on 
+
+1. Right-click on the Start menu, and select **Event viewer**. 
+1. Search for *AllowRebootlessUpdates* in the filter. If *AllowRebootlessUpdates* is set to `1`, the device is enrolled in the Autopatch update policy and has hotpatch updates turned on:
+    `"data": { "payload": "{\"Orchestrator\":{\"UpdatePolicy\":{\"Update/AllowRebootlessUpdates\":true}}}", "isEnrolled": 1, "isCached": 1, "vbsState": 2,`
+
+### Step 6: Check Windows Logs for any hotpatch errors 
+
+Hotpatch updates provide an inbox monitor service that checks for the health of the updates installed on the device. If the monitor service detects an error, the service logs an event in the Windows Application Logs. If there's a critical error, the device installs the standard (LCU) update to ensure the device is fully secure. 
+
+1. Right-click on the Start menu, and select **Event viewer**. 
+1. Search for *hotpatch* in the filter to view the logs. 
 
 <!-- admin center links -->
 

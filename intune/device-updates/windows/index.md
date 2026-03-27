@@ -109,7 +109,7 @@ Beyond policy, there are several other powerful Intune features powered by Autop
 1. Autopatch reports provide deep insight into update readiness, compliance, and alerts.  
 1. For eligible Windows editions, it also enables cloud-powered update scenarios like hotpatch and expedited updates with minimal manual configuration. 
 
-The following table compares how update management differs when you use Autopatch Groups and manual Autopatch configuration:
+The following table compares how update management differs when you use manual Autopatch configuration with policies and using Autopatch Groups:
 
 | **Feature** | **When using Autopatch Policies** | **When using Autopatch Groups** |
 |--|--|--|
