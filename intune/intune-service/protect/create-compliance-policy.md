@@ -117,7 +117,7 @@ For more information about using custom compliance settings, including supported
    **For Linux**:
    1. On the *Compliance settings* page, select **Add settings** to open the **Settings picker**.
    2. Select **Custom Compliance**. Then close the settings picker.
-   3. Switch **Require Custom Compliance** to **True**. T
+   3. Switch **Require Custom Compliance** to **True**.
    4. For **Select your discovery script**, select **Select a script**. Then select a script that’s been previously added to the Microsoft Intune admin center. This script must be uploaded before you begin to create the policy.
    6. For **Select your rules file**, select the folder icon and then locate and add the JSON file for Linux that you want to use with this policy. For assistance with the JSON, see [Create a JSON for custom compliance settings](compliance-custom-json.md).
 
