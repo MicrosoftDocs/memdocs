@@ -5,7 +5,7 @@ ms.date: 03/09/2026
 ms.topic: how-to
 ---
 
-# Remote Device Action: rotate Recovery Lock passcode
+# Remote device action: rotate Recovery Lock passcode
 
 <!-- Remove this note after rollout completes (target: late April 2026) -->
 > [!NOTE]
