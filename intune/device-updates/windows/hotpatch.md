@@ -158,7 +158,7 @@ To access the report:
 
 Hotpatching follows the hotpatch release cycle. Review the prerequisites to ensure the device is eligible for hotpatch updates. For information on devices that don't meet the prerequisites, see [Ineligible devices](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates#ineligible-devices). 
 
-For the latest release schedule, see the hotpatch release notes. For information on Windows update history, see Windows 11, version 24H2 update history. 
+For the latest release schedule, see the [hotpatch release notes](https://support.microsoft.com/topic/release-notes-for-hotpatch-public-preview-on-windows-11-version-24h2-enterprise-clients-c117ee02-fd35-4612-8ea9-949c5d0ba6d1). For information on Windows update history, see [Windows 11, version 24H2 update history](https://support.microsoft.com/topic/windows-11-version-24h2-update-history-0929c747-1815-4543-8461-0160d16f15e5). 
 
 ### Step 2: Verify the device has Virtualization-based security (VBS) turned on 
 
