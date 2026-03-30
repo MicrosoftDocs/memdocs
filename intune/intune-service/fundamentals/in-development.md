@@ -164,7 +164,7 @@ The new policies will include:
 >
 > - Windows
 
-To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../../device-configuration/settings-catalog/index.md).
 
 ### Intune security baseline for Windows 11 version 25H2 <!-- 34955665 -->
 

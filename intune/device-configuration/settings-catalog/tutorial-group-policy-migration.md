@@ -18,7 +18,7 @@ ms.collection:
 
 Group policy and ADMX templates include settings you can configure on Windows devices. These settings are used and managed by Mobile Device Management (MDM) providers, like Microsoft Intune, to configure features and settings on Windows devices. For example, you can turn on Design Ideas in PowerPoint, set a home page in Microsoft Edge, and more.
 
-These settings are built into the Microsoft Intune [settings catalog](settings-catalog.md). In a settings catalog profile, you configure the settings you want to include, and then assign this profile to your devices.
+These settings are built into the Microsoft Intune [settings catalog](index.md). In a settings catalog profile, you configure the settings you want to include, and then assign this profile to your devices.
 
 In this walkthrough, you:
 
@@ -38,7 +38,7 @@ This feature applies to:
 
 > [!TIP]
 >
-> - For an overview of the Intune settings catalog, go to [Use the settings catalog to configure settings](settings-catalog.md).
+> - For an overview of the Intune settings catalog, go to [Use the settings catalog to configure settings](index.md).
 > - For more information on ADMX policies, go to [Understanding ADMX-backed policies](/windows/client-management/mdm/understanding-admx-backed-policies).
 
 ## Prerequisites
@@ -47,9 +47,9 @@ This feature applies to:
 
   For more information on what you get with the different Microsoft 365 licenses, go to [Transform your Enterprise with Microsoft 365](https://www.microsoft.com/microsoft-365/enterprise/microsoft365-plans-and-pricing).
 
-- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, go to [Set the mobile device management authority](../fundamentals/mdm-authority-set.md).
+- Microsoft Intune is configured as the **Intune MDM Authority**. For more information, go to [Set the mobile device management authority](../../intune-service/fundamentals/mdm-authority-set.md).
 
-  :::image type="content" source="./media/tutorial-settings-catalog-group-policy/tenant-status.png" alt-text="Screenshot that shows how to set the MDM authority to Microsoft Intune in your tenant status.":::
+  :::image type="content" source="./media/tutorial-group-policy-migration/tenant-status.png" alt-text="Screenshot that shows how to set the MDM authority to Microsoft Intune in your tenant status.":::
 
 - On an on-premises Active Directory domain controller (DC):
 
@@ -81,7 +81,7 @@ This feature applies to:
 
         Wait while Windows adds the feature. When complete, it eventually shows in the **Windows Administrative Tools** app.
 
-        :::image type="content" source="./media/tutorial-settings-catalog-group-policy/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app." lightbox="./media/tutorial-settings-catalog-group-policy/windows-administrative-tools-app.png":::
+        :::image type="content" source="./media/tutorial-group-policy-migration/windows-administrative-tools-app.png" alt-text="Screenshot that shows the Windows Administrative Tools apps, including the Group Policy Management app." lightbox="./media/tutorial-group-policy-migration/windows-administrative-tools-app.png":::
 
   - Be sure you have internet access and administrator rights to the Microsoft 365 subscription, which includes the Intune admin center.
 
@@ -101,7 +101,7 @@ You can also open the Intune admin center from the [Microsoft 365 admin center](
 2. Sign in with the administrator account of your Microsoft 365 tenant subscription.
 3. Select **Show all** > **Admin centers** > **Microsoft Intune**. The Intune admin center opens.
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/microsoft-365-admin-centers.png" alt-text="Screenshot that shows the admin centers in the Microsoft 365 admin center.":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/microsoft-365-admin-centers.png" alt-text="Screenshot that shows the admin centers in the Microsoft 365 admin center.":::
 
 ## Create groups, and add users
 
@@ -113,7 +113,7 @@ In Intune, policies are applied to users and groups you create. There isn't a hi
 - If two compliance policies are in conflict, then the most restrictive policy applies.
 - If two configuration profiles are in conflict, then the setting isn't applied.
 
-For more information, go to [Common questions, issues, and resolutions with device policies and profiles](device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
+For more information, go to [Common questions, issues, and resolutions with device policies and profiles](../../intune-service/configuration/device-profile-troubleshoot.md#compliance-and-device-configuration-policies-that-conflict).
 
 In these next steps, you create security groups, and add users to these groups. You can add a user to multiple groups. For example, it's normal for a user to have multiple devices, like a Surface Pro for work, and an Android mobile device for personal. And, it's normal for a person to access organizational resources from these multiple devices.
 
@@ -146,7 +146,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
         1. Select **Add expression**. Your expression is shown in the **Rule syntax**:
 
-            :::image type="content" source="./media/tutorial-settings-catalog-group-policy/dynamic-group-query.png" alt-text="Screenshot that shows how to create a dynamic group query, and add expressions in Microsoft Intune." lightbox="./media/tutorial-settings-catalog-group-policy/dynamic-group-query.png":::
+            :::image type="content" source="./media/tutorial-group-policy-migration/dynamic-group-query.png" alt-text="Screenshot that shows how to create a dynamic group query, and add expressions in Microsoft Intune." lightbox="./media/tutorial-group-policy-migration/dynamic-group-query.png":::
 
             When users or devices meet the criteria you enter, they're automatically added to the dynamic groups. In this example, devices are automatically added to this group when the operating system is Windows. If you're using this walkthrough in a production environment, then be careful. The goal is to practice creating dynamic groups.
 
@@ -178,7 +178,7 @@ In these next steps, you create security groups, and add users to these groups. 
 
 - Your Microsoft Entra ID license can include other services that are commonly used when managing apps and devices, including [multifactor authentication (MFA)](/entra/identity/authentication/concept-mfa-howitworks) and [Conditional Access](/entra/identity/conditional-access/overview).
 
-- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](device-profile-assign.md#user-groups-vs-device-groups).
+- Many administrators ask when to use user groups and when to use device groups. For some guidance, go to [User groups vs. device groups](../../intune-service/configuration/device-profile-assign.md#user-groups-vs-device-groups).
 
 - Remember, a user can belong to multiple groups. Consider some of the other dynamic user and device groups you can create, like:
 
@@ -224,19 +224,19 @@ In this section, we create a settings catalog policy in Intune, look at some set
 5. Select **Next**.
 6. In **Configuration settings**, select **Add settings**. You see a list of all the settings.
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-settings-picker.png" alt-text="Screenshot that shows the settings catalog settings picker in Microsoft Intune." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-settings-picker.png":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-settings-picker.png" alt-text="Screenshot that shows the settings catalog settings picker in Microsoft Intune." lightbox="./media/tutorial-group-policy-migration/settings-catalog-settings-picker.png":::
 
      You can also filter settings that apply to **devices** and settings that apply to **users**, and **Search** for settings:
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-filter-search.png" alt-text="Screenshot that shows how you can filter and search in the settings catalog settings picker in Microsoft Intune.":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-filter-search.png" alt-text="Screenshot that shows how you can filter and search in the settings catalog settings picker in Microsoft Intune.":::
 
 7. In search, enter **download**. All the policy settings with "download" in their name are filtered and shown in the list:
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-download-settings.png" alt-text="Screenshot that shows how to search for policies with a keyword in the settings catalog in a Microsoft Intune." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-download-settings.png":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-download-settings.png" alt-text="Screenshot that shows how to search for policies with a keyword in the settings catalog in a Microsoft Intune." lightbox="./media/tutorial-group-policy-migration/settings-catalog-download-settings.png":::
 
 8. Go to the **Microsoft Edge** category > select **SmartScreen settings**. Notice the SmartScreen policy settings with "download" in their name are filtered and shown:
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-microsoft-edge-smart-screen-filtered-settings.png" alt-text="Screenshot that shows how to see the Microsoft Edge Smart Screen policy settings in the settings catalog in Microsoft Intune." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-microsoft-edge-smart-screen-filtered-settings.png":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-microsoft-edge-smart-screen-filtered-settings.png" alt-text="Screenshot that shows how to see the Microsoft Edge Smart Screen policy settings in the settings catalog in Microsoft Intune." lightbox="./media/tutorial-group-policy-migration/settings-catalog-microsoft-edge-smart-screen-filtered-settings.png":::
 
 ### Compare a policy in Group Policy Management and Intune
 
@@ -249,39 +249,39 @@ In this section, we show a policy in Intune and its matching policy in Group Pol
 2. Expand **Domains** > select your domain. For example, select `contoso.net`.
 3. Right-click the **OfficeandEdge** policy > **Edit**. The Group Policy Management Editor app opens.
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/open-group-policy-management.png" alt-text="Screenshot that shows how to right-click the on-premises Office and Microsoft Edge ADMX group policy, and select Edit.":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/open-group-policy-management.png" alt-text="Screenshot that shows how to right-click the on-premises Office and Microsoft Edge ADMX group policy, and select Edit.":::
 
     **OfficeandEdge** is a group policy that includes the Office and Microsoft Edge ADMX templates. This policy is described in [prerequisites](#prerequisites) (in this article).
 
 4. Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Control Panel** > **Personalization**. Notice the available settings.
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/open-group-policy-management-editor-admx-policy.png" alt-text="Screenshot that shows how to expand Computer Configuration in on-premises Group Policy Management Editor, and go to Personalization.":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/open-group-policy-management-editor-admx-policy.png" alt-text="Screenshot that shows how to expand Computer Configuration in on-premises Group Policy Management Editor, and go to Personalization.":::
 
     Double-click **Prevent enabling lock screen camera**, and see the available options:
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/prevent-enabling-lock-screen-camera-admx-policy.png" alt-text="Screenshot that shows how to see the on-premises Computer configuration setting options in group policy.":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/prevent-enabling-lock-screen-camera-admx-policy.png" alt-text="Screenshot that shows how to see the on-premises Computer configuration setting options in group policy.":::
 
 5. In the Intune admin center, go to your **Windows student devices** settings catalog policy.
 6. Select **Configuration settings** > **Edit** > **Add settings**. Search for **Personalization** and select the `Administrative templates\Control Panel\Personalization` category. Notice the available settings:
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-admx-personalization-category.png" alt-text="Screenshot that shows the ADMX personalization policy setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-admx-personalization-category.png":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-admx-personalization-category.png" alt-text="Screenshot that shows the ADMX personalization policy setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-group-policy-migration/settings-catalog-admx-personalization-category.png":::
 
     This path and the available settings are similar to what you see in Group Policy Management Editor. If you select the **Prevent enabling lock screen camera** setting, you see similar options that are available in Group Policy Management Editor.
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-control-panel-personalization.png" alt-text="Screenshot that shows the ADMX Prevent enabling lock screen camera setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-control-panel-personalization.png":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-control-panel-personalization.png" alt-text="Screenshot that shows the ADMX Prevent enabling lock screen camera setting path in the Microsoft Intune settings catalog." lightbox="./media/tutorial-group-policy-migration/settings-catalog-control-panel-personalization.png":::
 
 ### Compare a user policy in Group Policy Management and Intune
 
 1. In your **Windows student devices** settings catalog policy, select **Configuration settings** > **Edit** > **Add settings**. Search for `inprivate browsing`. Notice the settings options. The `(User)` setting applies to user configurations. The other setting applies to device configurations.
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-inprivate-browsing.png" alt-text="Screenshot that shows a user setting and a device setting in the Microsoft Intune settings catalog." lightbox="./media/tutorial-settings-catalog-group-policy/settings-catalog-inprivate-browsing.png":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-inprivate-browsing.png" alt-text="Screenshot that shows a user setting and a device setting in the Microsoft Intune settings catalog." lightbox="./media/tutorial-group-policy-migration/settings-catalog-inprivate-browsing.png":::
 
 2. In **Group Policy Management Editor**, find the matching user and device settings:
 
     - Device: Expand **Computer configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Internet Explorer** > **Privacy** > **Turn off InPrivate Browsing**.
     - User: Expand **User configuration** > **Policies** > **Administrative Templates** > **Windows components** > **Internet Explorer** > **Privacy** > **Turn off InPrivate Browsing**.
 
-    :::image type="content" source="./media/tutorial-settings-catalog-group-policy/group-policy-turn-off-inprivate-browsing.png" alt-text="Screenshot that shows how to turn off InPrivate Browsing in Internet Explorer using on-premises ADMX template.":::
+    :::image type="content" source="./media/tutorial-group-policy-migration/group-policy-turn-off-inprivate-browsing.png" alt-text="Screenshot that shows how to turn off InPrivate Browsing in Internet Explorer using on-premises ADMX template.":::
 
 > [!TIP]
 > To see the built-in Windows policies, you can also use GPEdit (**Edit group policy** app).
@@ -324,7 +324,7 @@ In this section, you create a OneDrive settings catalog policy in Intune to cont
 
 Your settings look similar to the following settings:
 
-:::image type="content" source="./media/tutorial-settings-catalog-group-policy/settings-catalog-onedrive.png" alt-text="Screenshot that shows how to create a OneDrive settings catalog policy in Microsoft Intune.":::
+:::image type="content" source="./media/tutorial-group-policy-migration/settings-catalog-onedrive.png" alt-text="Screenshot that shows how to create a OneDrive settings catalog policy in Microsoft Intune.":::
 
 For more information on OneDrive client settings, go to [Use Group Policy to control OneDrive sync client settings](/sharepoint/use-group-policy).
 
@@ -341,7 +341,7 @@ In this section, you created some settings catalog policies, and assigned them t
 
 ## Policy best practices
 
-When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](device-profile-create.md#recommendations).
+When you create policies and profiles in Intune, there are some recommendations and best practices to consider. For more information, go to [policy and profile best practices](../../intune-service/configuration/device-profile-create.md#recommendations).
 
 ## Clean up resources
 

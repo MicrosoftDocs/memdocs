@@ -12,11 +12,11 @@ ms.collection:
 
 # Tasks you can complete using the Settings Catalog in Intune
 
-Using the [settings catalog](settings-catalog.md) in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can access many settings that manage apps and features on your devices.
+Using the [settings catalog](index.md) in the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431), you can access many settings that manage apps and features on your devices.
 
 This article lists and describes some of the features you can configure in the settings catalog.
 
-For more information on the settings catalog, and what it is, go to [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md). To see all the settings you can configure, [create a settings catalog policy](settings-catalog.md).
+For more information on the settings catalog, and what it is, go to [Use the settings catalog to configure settings on Windows and macOS devices](index.md). To see all the settings you can configure, [create a settings catalog policy](index.md).
 
 This feature applies to:
 
@@ -35,11 +35,11 @@ This feature applies to:
 
 These web browser settings are built in, and can be configured & deployed to your managed devices. On Windows devices, you can also configure Google Chrome.
 
-:::image type="content" source="./media/settings-catalog-common-features/google-chrome-settings.png" alt-text="Screenshot that shows the Google Chrome settings in the settings catalog that are built in to Microsoft Intune and Intune admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
+:::image type="content" source="./media/common-tasks/google-chrome-settings.png" alt-text="Screenshot that shows the Google Chrome settings in the settings catalog that are built in to Microsoft Intune and Intune admin center. Use these settings to create and configure a Google Chrome policy on Windows devices.":::
 
 Previously, to configure Google Chrome settings on Windows devices, you created a custom OMA-URI device configuration policy.
 
-For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](settings-catalog-configure-edge.md).
+For a sample Microsoft Edge scenario, see [Create a Microsoft Edge policy](configure-edge.md).
 
 ## Manage AI features on Android devices
 
@@ -63,7 +63,7 @@ This feature applies to:
 
 You can configure Recovery Lock on your macOS devices. When you enable Recovery Lock, users are prompted for a password when they try to access the recovery partition environment on the device. This feature helps prevent unauthorized users from reinstalling or wiping the device.
 
-For more information, go to [Protect macOS devices using Recovery Lock with Microsoft Intune](settings-catalog-recovery-lock.md).
+For more information, go to [Protect macOS devices using Recovery Lock with Microsoft Intune](configure-recovery-lock-macos.md).
 
 ## Add universal printers
 
@@ -75,7 +75,7 @@ This feature applies to:
 
 You can create a universal print policy, add printers, and then deploy this printer list to your managed users. When the policy is deployed, it automatically installs the printers you added. Users can see these printers, and select a printer from your list.
 
-For more information, go to [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md).
+For more information, go to [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md).
 
 Previously, to configure Universal Print settings, you used the [Universal Print printer provisioning tool](/universal-print/fundamentals/universal-print-intune-tool), which requires more manual steps, and has some limitations.
 
@@ -120,9 +120,9 @@ On macOS, you can use property list (plist) files to configure features and sett
 
   Previously, you had to [use a property list (plist) file to configure these features for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
-Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then we recommend you continue using the [preference file](preference-file-settings-macos.md).
+Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then we recommend you continue using the [preference file](../../intune-service/configuration/preference-file-settings-macos.md).
 
 ## Related content
 
-- [Use the settings catalog to configure settings on Windows and macOS devices](settings-catalog.md)
-- [Create a Universal Print policy in Microsoft Intune](settings-catalog-printer-provisioning.md)
+- [Use the settings catalog to configure settings on Windows and macOS devices](index.md)
+- [Create a Universal Print policy in Microsoft Intune](configure-universal-print.md)

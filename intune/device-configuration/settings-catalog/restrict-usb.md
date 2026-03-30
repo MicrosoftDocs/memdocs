@@ -14,7 +14,7 @@ ms.collection:
 
 Many organizations want to block specific types of USB devices, such as USB flash drives or cameras. You might also want to allow specific USB devices, such as a keyboard or mouse.
 
-You can use the settings catalog in Microsoft Intune to configure these settings in a policy, and then deploy this policy to your Windows devices. For more information on the settings catalog, see [Use the settings catalog to configure device settings in Microsoft Intune](settings-catalog.md).
+You can use the settings catalog in Microsoft Intune to configure these settings in a policy, and then deploy this policy to your Windows devices. For more information on the settings catalog, see [Use the settings catalog to configure device settings in Microsoft Intune](index.md).
 
 This article shows you:
 
@@ -27,7 +27,7 @@ This article applies to:
 
 ## Prerequisites
 
-- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../fundamentals/role-based-access-control.md).
+- To configure the settings catalog policy, at a minimum, sign into the Intune admin center with the **Policy and Profile manager** role. For information on the built-in roles in Intune, and what they can do, go to [Role-based access control (RBAC) with Microsoft Intune](../../intune-service/fundamentals/role-based-access-control.md).
 
 ## Create the profile
 
@@ -53,7 +53,7 @@ This policy gives an example of how to block (or allow) features that affect USB
     - **Allow installation of devices using drivers that match these device setup classes**
     - **Prevent installation of devices not described by other policy settings**
 
-    :::image type="content" source="./media/settings-catalog-restrict-usb/settings-catalog-select-device-installation-restrictions.png" alt-text="Screenshot that shows the Device Installation Restrictions settings in the settings catalog in Microsoft Intune." lightbox="./media/settings-catalog-restrict-usb/settings-catalog-select-device-installation-restrictions.png":::
+    :::image type="content" source="./media/restrict-usb/settings-catalog-select-device-installation-restrictions.png" alt-text="Screenshot that shows the Device Installation Restrictions settings in the settings catalog in Microsoft Intune." lightbox="./media/restrict-usb/settings-catalog-select-device-installation-restrictions.png":::
 
 8. Close the settings picker. Configure the settings you selected:
 
@@ -71,10 +71,10 @@ This policy gives an example of how to block (or allow) features that affect USB
 
     When the settings are enabled and configured, your policy looks similar to the following policy settings:
 
-    :::image type="content" source="./media/settings-catalog-restrict-usb/settings-catalog-restrict-usb-settings-enabled.png" alt-text="Screenshot that shows the restrict USB settings in the settings catalog in Microsoft Intune." lightbox="./media/settings-catalog-restrict-usb/settings-catalog-restrict-usb-settings-enabled.png":::
+    :::image type="content" source="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png" alt-text="Screenshot that shows the restrict USB settings in the settings catalog in Microsoft Intune." lightbox="./media/restrict-usb/settings-catalog-restrict-usb-settings-enabled.png":::
 
 9. Select **Next**.
-10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+10. In **Scope tags** (optional), assign a tag to filter the profile to specific IT groups, such as `US-NC IT Team` or `JohnGlenn_ITDepartment`. For more information about scope tags, see [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
     Select **Next**.
 
@@ -92,7 +92,7 @@ If a USB device is blocked from installing, then you see a message similar to th
 
 In the following example, the iPad is blocked because its device ID isn't in the allowed device ID list:
 
-:::image type="content" source="./media/settings-catalog-restrict-usb/device-status.png" alt-text="Screenshot that shows a device blocked by an Intune policy." lightbox="./media/settings-catalog-restrict-usb/device-status.png":::
+:::image type="content" source="./media/restrict-usb/device-status.png" alt-text="Screenshot that shows a device blocked by an Intune policy." lightbox="./media/restrict-usb/device-status.png":::
 
 ## A device is blocked but should be allowed
 
@@ -100,9 +100,9 @@ Some USB devices have multiple GUIDs, and it's common to miss some GUIDs in your
 
 In the following example, in the **Allow installation of devices using drivers that match these device setup classes** setting, the Multimedia class GUID is entered, and the camera is blocked:
 
-:::image type="content" source="./media/settings-catalog-restrict-usb/camera-blocked.png" alt-text="Screenshot that shows the Windows can't find your camera message on a Windows device." lightbox="./media/settings-catalog-restrict-usb/camera-blocked.png":::
+:::image type="content" source="./media/restrict-usb/camera-blocked.png" alt-text="Screenshot that shows the Windows can't find your camera message on a Windows device." lightbox="./media/restrict-usb/camera-blocked.png":::
 
-:::image type="content" source="./media/settings-catalog-restrict-usb/cam-blocked.png" alt-text="Screenshot that shows the camera is blocked by group policy message on a Windows device." lightbox="./media/settings-catalog-restrict-usb/cam-blocked.png":::
+:::image type="content" source="./media/restrict-usb/cam-blocked.png" alt-text="Screenshot that shows the camera is blocked by group policy message on a Windows device." lightbox="./media/restrict-usb/cam-blocked.png":::
 
 **Resolution**:
 
@@ -186,4 +186,4 @@ To find the GUID of your device, use the following steps:
 
 ## Related articles
 
-- [Use the Intune settings catalog to configure settings](settings-catalog.md)
+- [Use the Intune settings catalog to configure settings](index.md)

@@ -101,7 +101,7 @@ The settings catalog in Intune includes thousands of settings to manage iOS/iPad
 
 For more information on policies in Intune, go to:
 
-- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](../configuration/settings-catalog.md)
+- [Use the settings catalog to configure settings on Windows, iOS/iPadOS, and macOS devices](../../device-configuration/settings-catalog/index.md)
 - [Common questions and answers with device policies and profiles in Microsoft Intune](../configuration/device-profile-troubleshoot.md)
 
 ## Secure your user identities
@@ -125,7 +125,7 @@ Your user and group accounts access organization resources. You need to keep the
 
   - [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
   - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the **Microsoft Defender for Endpoint security** or **Security Baseline for Windows 10 and later** baselines.
-  - [Settings catalog](../configuration/settings-catalog.md): The settings from endpoint security account protection profiles are available in the Intune settings catalog.
+  - [Settings catalog](../../device-configuration/settings-catalog/index.md): The settings from endpoint security account protection profiles are available in the Intune settings catalog.
 
 - **Certificate-based authentication** is also a part of a password-less strategy. You can use certificates to authenticate your users to applications and organization resources through a VPN, a Wi-Fi connection, or email profiles. With certificates, users don't need to enter usernames and passwords, and certificates can make access to these resources easier.
 

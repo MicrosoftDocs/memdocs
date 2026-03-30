@@ -5,7 +5,7 @@ ms.date: 03/09/2026
 ms.topic: how-to
 ---
 
-# Remote Device Action: rotate Recovery Lock passcode
+# Remote device action: rotate Recovery Lock passcode
 
 <!-- Remove this note after rollout completes (target: late April 2026) -->
 > [!NOTE]
@@ -52,7 +52,7 @@ When you use the **Rotate Recovery Lock Passcode** action, Intune creates a new 
 :::column span="3":::
 > To run this remote action, the device must be configured with a policy setting that enables the Recovery Lock feature.
 >
-> For more information, see [Create the Recovery Lock policy](../configuration/settings-catalog-recovery-lock.md#create-the-recovery-lock-policy).
+> For more information, see [Create the Recovery Lock policy](../../device-configuration/settings-catalog/configure-recovery-lock-macos.md#create-the-recovery-lock-policy).
 
 :::column-end:::
 :::row-end:::
