@@ -120,7 +120,7 @@ On macOS, you can use property list (plist) files to configure features and sett
 
   Previously, you had to [use a property list (plist) file to configure these features for Mac](/deployoffice/mac/deploy-preferences-for-office-for-mac) (opens another Microsoft website).
 
-Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then we recommend you continue using the [preference file](preference-file-settings-macos.md).
+Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then we recommend you continue using the [preference file](../../intune-service/configuration/preference-file-settings-macos.md).
 
 ## Related content
 

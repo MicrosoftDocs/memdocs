@@ -49,7 +49,7 @@ This feature applies to:
 
   - Configure Recovery Lock to help protect your devices against unauthorized reinstallation and wiping. For more information, see [Protect macOS devices using Recovery Lock](configure-recovery-lock-macos.md).
 
-  - [Use DDM to manage software updates](../protect/updates/apple.md), passcode restrictions, and more. Apple's declarative device management (DDM) is available in the settings catalog.
+  - [Use DDM to manage software updates](../../device-updates/apple/index.md), passcode restrictions, and more. Apple's declarative device management (DDM) is available in the settings catalog.
 
   - Configure newer versions of Microsoft Edge and other features, instead of property list (plist) files. For more information, see:
 
