@@ -86,7 +86,7 @@ For more information about the release calendar for hotpatch updates, see [Relea
 During a hotpatch month, if a device has hotpatch updates enabled but isn't on the latest baseline update, the device will receive both the latest baseline update (restart required) and the latest hotpatch update.
 
 > [!NOTE]
-> Upgrading a hotpatch enrolled device to the latest Windows version (e.g. upgrading from Windows 11 24H2 to Windows 11 25H2) during a baseline month keeps the device on the hotpatch cycle and the device keeps receiving the hotpatch updates seamlessly. However, upgrading a device to the latest Windows version in a hotpatch month switches the device to standard updates; you must restart the device to apply the update until the next baseline release. 
+> Upgrading a hotpatch enrolled device to the latest Windows version (e.g. upgrading from Windows 11, version 24H2 to Windows 11, version 25H2) during a baseline month keeps the device on the hotpatch cycle, and the device keeps receiving the hotpatch updates seamlessly. However, upgrading a device to the latest Windows version in a hotpatch month switches the device to standard updates; you must restart the device to apply the update until the next baseline release. 
 
 ## Hotpatch on Windows 11 Enterprise or Windows Server 2025
 
