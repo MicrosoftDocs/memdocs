@@ -4454,6 +4454,26 @@
       "source_path": "intune/intune/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android.md",
       "redirect_url": "/intune/intune-service/user-help/your-device-appears-encrypted-but-cp-says-otherwise-android",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-overview.md",
+      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-edge.md",
+      "redirect_url": "/intune/intune-service/apps/manage-microsoft-edge",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-office-mobile.md",
+      "redirect_url": "/intune/intune-service/apps/app-protection-policy",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "intune/intune-service/fundamentals/guided-scenarios-cloud-managed-pc.md",
+      "redirect_url": "/intune/intune-service/fundamentals/cloud-configuration-setup-guide",
+      "redirect_document_id": false
     }
   ]
 }
