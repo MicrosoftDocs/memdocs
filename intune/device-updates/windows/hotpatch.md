@@ -116,7 +116,7 @@ Configure the default hotpatch update behavior for your tenant as follows:
 1. Select the **Tenant settings** tab. 
 1. Toggle the **When available, apply updates without restarting the device ("hotpatch")** setting to either **Allow** or **Block**.
 
-### Configure hotpatch using Quality Update policies.
+### Configure hotpatch using quality update policies.
 
 Windows Autopatch respects your configuration of the hotpatch setting in quality update policies. If a device is assigned to one of those policies, the hotpatch setting from that policy is the one applied not the tenant default setting.  
 
