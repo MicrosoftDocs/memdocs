@@ -1,7 +1,7 @@
 ---
-title: Battery Health Report in Advanced Analytics
-description: Learn how the battery health report in Microsoft Intune Advanced Analytics provides insights into device battery performance, degradation, and proactive replacement strategies.
-ms.date: 12/01/2025
+title: Battery Health Report in Endpoint Analytics
+description: Learn how to use the battery health report in Microsoft Intune to detect battery degradation, plan proactive replacements, and improve user experience.
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 
@@ -31,7 +31,7 @@ The battery health report can be used to:
 
 In the [Microsoft Intune admin center][INT-AC], select **Reports** > **Endpoint analytics** > **Battery health**.
 
-:::image type="content" source="images/battery-health.png" lightbox="images/battery-health.png" alt-text="Screenshot of the Battery Health tab in Advanced Analytics.":::
+:::image type="content" source="media/battery-health/overview-score-and-insights.png" lightbox="media/battery-health/overview-score-and-insights.png" alt-text="Screenshot of the Battery health report overview with health score, baseline comparison, capacity and runtime scores, and insights.":::
 
 ### Battery health score
 
@@ -63,7 +63,7 @@ For example, some devices might have batteries with below 60% capacity but still
 
 These devices result in poor user experience as they must be plugged in frequently. Devices with battery estimated runtimes below 3 hours are considered most impacted. Low runtimes are typically reported in combination with battery capacities.
 
-Devices with less than 3 hours of runtime usually have poor maximum capacities and are included in insights that highlight both issues together. The exception is seen in the following scenario where even with high capacities, the batteries drain quickly because of power hungry apps. Either by design or because of poor energy usage efficiency.
+Devices with less than 3 hours of runtime usually have poor maximum capacities and are included in insights that highlight both issues together. An exception occurs when batteries with high capacities still drain quickly because of power-hungry apps, either by design or because of poor energy efficiency.
 
 #### Good battery capacity but poor runtime
 

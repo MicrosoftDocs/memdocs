@@ -3,7 +3,7 @@ title: In development - Microsoft Intune
 description: This article describes Microsoft Intune features that are in development.
 author: brenduns
 ms.author: brenduns
-ms.date: 03/06/2026
+ms.date: 03/24/2026
 ms.topic: article
 ms.reviewer: intuner
 ms.collection:
@@ -277,22 +277,7 @@ Then, you can apply the decoupling action, after which Intune RBAC permissions w
 
 <!-- *********************************************** -->
 
-## Tenant administration
-
-### Guided scenarios being removed from the Intune admin center <!-- 29654118 -->
-
-All guided scenarios except Windows 365 Boot will be removed from the Microsoft Intune admin center. After this change, you'll no longer be able to access the guided scenario wizards. However, any Intune objects previously created by these wizards, such as policies and apps, will remain and can continue to be managed as usual. The Windows 365 Boot guided scenario will remain available and can be accessed from the Windows 365 overview page in the Intune admin center. No action is required to prepare for this change.
-
-For alternative step-by-step guidance, see the following resources:
-
-- [Microsoft Intune documentation](https://go.microsoft.com/fwlink/?linkid=2310495)
-- I[ntune prescriptive guides](https://go.microsoft.com/fwlink/?linkid=2300666)
-- Intune administration guides: [https://m365accelerator.microsoft.com/intune](https://m365accelerator.microsoft.com/intune)
-  - [Securing apps for mobile | Android](https://m365accelerator.microsoft.com/intune/manage-and-secure-apps-for-android)
-  - [Securing apps for mobile | iOS](https://m365accelerator.microsoft.com/intune/manage-and-secure-apps-for-ios)
-  - [Configuring Intune and Configuration Manager to co-manage devices](https://m365accelerator.microsoft.com/intune/microsoft-intune-and-configuration-manager-co-management-setup-guide)
-  - [Manage and secure devices for Windows](https://m365accelerator.microsoft.com/intune/windows-device-management)
-- [Microsoft Copilot in Intune](/intune/intune-service/copilot/copilot-intune-overview)
+<!-- ## Tenant administration -->
 
 <!-- *********************************************** -->
 

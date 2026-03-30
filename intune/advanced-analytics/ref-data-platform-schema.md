@@ -1,7 +1,7 @@
 ---
 title: Intune Data Platform Schema
 description: Review the Microsoft Intune data platform schema for device queries and inventory. Discover supported properties and data types to efficiently manage and report on your devices with Intune.
-ms.date: 12/01/2025
+ms.date: 03/24/2026
 ms.topic: reference
 ---
 
@@ -65,7 +65,7 @@ For entities that include Android data, the following platforms are supported:
 | `AutomaticSecurityUpdatesEnabled` | bool | The preference to automatically install system data files and security updates. |macOS|
 | `BackgroundDownloadEnabled` | bool | The preference to download app updates in the background. |macOS|
 | `CatalogUrl` | string | The URL to the software update catalog the client is using. |macOS|
-| `IsDefaultCatalog` | bool | If true, CatalogURL is the default catalog. |macOS|
+| `IsDefaultCatalog` | bool | If true, `CatalogUrl` is the default catalog. |macOS|
 | `PerformPeriodicCheck` | bool | If true, start a new scan. |macOS|
 | `PreviousScanDateTime` | DateTime | The date of the last software update scan. |macOS|
 | `PreviousScanResult` | string | The result code of last software update scan; "0" = success. |macOS|
@@ -78,7 +78,7 @@ For entities that include Android data, the following platforms are supported:
 
 | Property | Type | Description | Platform |
 | --- | --- | --- |--- |
-| `CycleCount` | Long | The number of times a battery completed a full charge and discharge. Can be used to assess the battery state.|Android, Windows|
+| `CycleCount` | Long | The number of times a battery completed a full charge and discharge. Use this property to assess the battery state.|Android, Windows|
 | `DesignCapacity` | Long (milliwatt hours) | The theoretical capacity of the battery when new.|Windows|
 | `FullChargedCapacity` | Long (milliwatt hours) | Full charge capacity of the battery.|Windows|
 | `Health` | string | Assessment of battery health |Android, iOS, iPadOS, macOS, Windows|
@@ -110,7 +110,7 @@ For entities that include Android data, the following platforms are supported:
 
 > **Description**: Provides Bluetooth device information.\
 > **Supported platforms**: iOS, iPadOS, macOS\
-> **Supported for**: Device Query for Multiple devices.
+> **Supported for**: Device query for multiple devices.
 
 | Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
@@ -184,7 +184,7 @@ For entities that include Android data, the following platforms are supported:
 | Property | Type | Description | Supported platforms |
 | --- | --- | --- |--- |
 | `DeviceCapacityBytes` | long | Total device storage capacity |Android, iOS, iPadOS, macOS|
-| `Encrypted` | bool | Details whether encryption is on or off |Android|
+| `Encrypted` | bool | Indicates whether encryption is on or off |Android|
 
 
 ## `DiskDrive`
