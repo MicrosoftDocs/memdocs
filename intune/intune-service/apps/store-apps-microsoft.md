@@ -167,7 +167,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | [Settings Catalog](../configuration/settings-catalog.md) &#124; Microsoft App Store > Disable Store Originated Apps | Administrative Templates > Windows Components > Store |
+  | [ApplicationManagement/DisableStoreOriginatedApps](/windows/client-management/mdm/policy-csp-applicationmanagement#disablestoreoriginatedapps) | [Settings Catalog](../../device-configuration/settings-catalog/index.md) &#124; Microsoft App Store > Disable Store Originated Apps | Administrative Templates > Windows Components > Store |
 
 - **Turn off Automatic Download and Install of updates** policy
 
@@ -175,7 +175,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | [Settings Catalog](../configuration/settings-catalog.md) &#124; Microsoft App Store > Allow apps from the Microsoft app store to auto update | Administrative Templates > Windows Components > Store |
+  | [ApplicationManagement/AllowAppStoreAutoUpdate](/windows/client-management/mdm/policy-csp-applicationmanagement#allowappstoreautoupdate) | [Settings Catalog](../../device-configuration/settings-catalog/index.md) &#124; Microsoft App Store > Allow apps from the Microsoft app store to auto update | Administrative Templates > Windows Components > Store |
 
 - **Enable App Installer Microsoft Store Source** policy
 
@@ -212,7 +212,7 @@ For more information on the Microsoft Store integration with Intune due to the M
 
   | CSP | Intune | On-premises GPO |
   | --- | --- | --- |
-  | [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>[ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | [Settings Catalog](../configuration/settings-catalog.md) | **Windows Components** > **Store** > **Turn off the Store Application** <br/> **Administrative Templates** > **Windows Components** > **Store**|
+  | [ADMX_WindowsStore/RemoveWindowsStore_1](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_1) <br/>[ADMX_WindowsStore/RemoveWindowsStore_2](/windows/client-management/mdm/policy-csp-admx-windowsstore#removewindowsstore_2) | [Settings Catalog](../../device-configuration/settings-catalog/index.md) | **Windows Components** > **Store** > **Turn off the Store Application** <br/> **Administrative Templates** > **Windows Components** > **Store**|
 
 ### What you need to know
 

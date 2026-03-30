@@ -126,7 +126,7 @@ A restriction period gives you time to test an update before users can install i
 
 If you use device restrictions to hide an update, review your software update policies to ensure they don't schedule the installation of that update before the restriction period ends. Software update policies install updates per their schedule regardless of the update being hidden or visible to the device user.
 
-The settings that can restrict visibility of updates on macOS devices are in the [settings catalog](../../intune-service/configuration/settings-catalog.md) > **Restrictions** category. A few examples of settings you can use to defer an update include:
+The settings that can restrict visibility of updates on macOS devices are in the [settings catalog](../../device-configuration/settings-catalog/index.md) > **Restrictions** category. A few examples of settings you can use to defer an update include:
 
 - Enforced Software Update Delay
 - Enforced Software Update Major OS Deferred Install Delay
