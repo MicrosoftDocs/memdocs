@@ -156,7 +156,7 @@ To access the report:
 
 ### Step 1: Verify the device is eligible for hotpatch updates and on a hotpatch baseline before the hotpatch update is installed 
 
-Hotpatching follows the hotpatch release cycle. Review the prerequisites to ensure the device is eligible for hotpatch updates. For information on devices that don't meet the prerequisites, see Ineligible devices. 
+Hotpatching follows the hotpatch release cycle. Review the prerequisites to ensure the device is eligible for hotpatch updates. For information on devices that don't meet the prerequisites, see [Ineligible devices](/windows/deployment/windows-autopatch/manage/windows-autopatch-hotpatch-updates#ineligible-devices). 
 
 For the latest release schedule, see the hotpatch release notes. For information on Windows update history, see Windows 11, version 24H2 update history. 
 
