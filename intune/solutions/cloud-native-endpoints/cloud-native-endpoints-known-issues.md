@@ -115,7 +115,7 @@ It's possible some of your older policies aren't available, or don't apply to cl
 
 - Inventory your policies, and determine what they do. You may find categories or groupings, such as policies that focus on security, policies that focus on the OS, and so on.
 
-  You can create an Intune policy that includes the settings from your categories or groupings. The [Settings Catalog](../../intune-service/configuration/settings-catalog.md) is a good resource.
+  You can create an Intune policy that includes the settings from your categories or groupings. The [Settings Catalog](../../device-configuration/settings-catalog/index.md) is a good resource.
 
 - Be prepared to create new policies. The built-in features of modern endpoint management, like Microsoft Intune, may have better options to create and deploy policies.
 

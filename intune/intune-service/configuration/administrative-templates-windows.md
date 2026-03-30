@@ -15,7 +15,7 @@ ms.collection:
 
 # Configure ADMX settings using the settings catalog in Microsoft Intune
 
-The [Intune settings catalog](settings-catalog.md) includes **Administrative Templates** that you can use to help manage Windows client devices. These settings are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI.
+The [Intune settings catalog](../../device-configuration/settings-catalog/index.md) includes **Administrative Templates** that you can use to help manage Windows client devices. These settings are built in to Intune (no downloading), and don't require any customizations, including using OMA-URI.
 
 This feature applies to:
 
@@ -97,7 +97,7 @@ For more information about KIR, see:
 ## Related content
 
 - [assign the template (also called a profile)](device-profile-assign.md) and [monitor the policy status](device-profile-monitor.md).
-- [Update Office using the settings catalog](settings-catalog-update-office.md).
-- [Restrict USB devices using the settings catalog](settings-catalog-restrict-usb.md).
-- [Create Microsoft Edge policy using the settings catalog](settings-catalog-configure-edge.md).
+- [Update Office using the settings catalog](../../device-configuration/settings-catalog/update-office.md).
+- [Restrict USB devices using the settings catalog](../../device-configuration/settings-catalog/restrict-usb.md).
+- [Create Microsoft Edge policy using the settings catalog](../../device-configuration/settings-catalog/configure-edge.md).
 - [Import custom or partner ADMX files](administrative-templates-import-custom.md).

@@ -38,7 +38,7 @@ In addition to Account protection profiles, Intune supports the following option
 
 - [During device enrollment](../protect/windows-hello.md): Configure tenant-wide policy that applies Windows Hello settings to devices at the time the device enrolls with Intune.
 - [Security baselines](../protect/security-baselines.md): Some settings for Windows Hello can be managed through Intune's security baselines, like the baselines for *Microsoft Defender for Endpoint security* or *Security Baseline for Windows 10 and later*.
-- [Settings catalog](../configuration/settings-catalog.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
+- [Settings catalog](../../device-configuration/settings-catalog/index.md): The settings from endpoint security Account protection profiles are available in the Intune settings catalog.
 
 > [!NOTE]
 > For customers looking to configure Windows Holographic for Business, please use [DeviceLock CSP](/windows/client-management/mdm/policy-csp-devicelock)

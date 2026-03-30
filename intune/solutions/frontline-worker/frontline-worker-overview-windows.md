@@ -145,7 +145,7 @@ To configure devices for this scenario, you deploy the apps to the devices. Then
 To get started, use the following links:
 
 1. [Add apps to Microsoft Intune](../../intune-service/apps/apps-add.md). When the apps are added, you create app policies that deploy the apps to the devices.
-2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../intune-service/configuration/settings-catalog.md).
+2. Create a device configuration restrictions profile that [allows or restricts features using Intune](../../intune-service/configuration/device-restrictions-windows-10.md). There are hundreds of settings available for you to configure, including more in the [Settings Catalog](../../device-configuration/settings-catalog/index.md).
 
     :::image type="content" source="./media/windows-device-restrictions.png" alt-text="All the device restrictions settings for Windows devices in Microsoft Intune.":::
 

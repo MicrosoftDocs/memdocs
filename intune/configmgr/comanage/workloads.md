@@ -124,7 +124,7 @@ This workload manages Microsoft 365 Apps on co-managed devices.
 
 Updates can be managed using either of the following features:
 
-- [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune settings catalog](../../intune-service/configuration/settings-catalog-update-office.md)
+- [Use Update Channel and Target Version settings to update Microsoft 365 with Microsoft Intune settings catalog](../../device-configuration/settings-catalog/update-office.md)
 - [Manage Microsoft 365 Apps with Configuration Manager](../sum/deploy-use/manage-office-365-proplus-updates.md).
 
 > [!NOTE]

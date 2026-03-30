@@ -30,7 +30,7 @@ Windows client custom profiles use Open Mobile Alliance Uniform Resource Identif
 
 Windows client makes many Configuration Service Provider (CSP) settings available, such as [Policy Configuration Service Provider (Policy CSP)](/windows/configuration/provisioning-packages/how-it-pros-can-use-configuration-service-providers).
 
-If you're looking for a specific setting, the [Windows device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](settings-catalog.md) include many built-in settings. So, you may not need to enter custom values.
+If you're looking for a specific setting, the [Windows device restriction profile](device-restrictions-windows-10.md) and the [Settings catalog](../../device-configuration/settings-catalog/index.md) include many built-in settings. So, you may not need to enter custom values.
 
 ## Before you begin
 

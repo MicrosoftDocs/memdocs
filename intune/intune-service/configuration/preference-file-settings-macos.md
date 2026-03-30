@@ -26,7 +26,7 @@ Property list files are typically used for web browsers, like Google Chrome, [Mi
 > There are sample `.plist` files at [ManagedPreferencesApplications examples on GitHub](https://github.com/ProfileCreator/ProfileManifests/tree/master/Manifests/ManagedPreferencesApplications). This GitHub repository is not owned, not maintained, and not created by Microsoft. Use the information at your own risk.
 
 > [!TIP]
-> For Microsoft Edge version 77 and newer, you can use the settings catalog. You don't have to use a preference file. For more information, go to [Settings catalog](settings-catalog.md).
+> For Microsoft Edge version 77 and newer, you can use the settings catalog. You don't have to use a preference file. For more information, go to [Settings catalog](../../device-configuration/settings-catalog/index.md).
 
 For more information on `plist` files, go to [About Information Property List Files](https://developer.apple.com/library/archive/documentation/General/Reference/InfoPlistKeyReference/Articles/AboutInformationPropertyListFiles.html) (Apple's website).
 
@@ -48,7 +48,7 @@ These settings are added to a device configuration profile in Intune, and then a
 
 - Only some apps work with managed preferences, and might not allow you to manage all settings.
 - Be sure you upload property list files that target device channel settings, not user channel settings. Property list files target the entire device.
-- Use the [Settings catalog](settings-catalog.md) to configure Microsoft Edge version 77 and newer. For a list of the settings you can configure, go to [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
+- Use the [Settings catalog](../../device-configuration/settings-catalog/index.md) to configure Microsoft Edge version 77 and newer. For a list of the settings you can configure, go to [Microsoft Edge - Policies](/DeployEdge/microsoft-edge-policies) (opens another Microsoft website).
 
   Be sure macOS is listed as a supported platform. If some settings aren't available in the settings catalog, then use the preference file.
 
@@ -57,7 +57,7 @@ These settings are added to a device configuration profile in Intune, and then a
 > [!NOTE]
 > [!INCLUDE [not-all-settings-are-documented](../includes/not-all-settings-are-documented.md)]
 >
-> [Tasks you can complete using the Settings Catalog in Intune](settings-catalog-common-features.md) is also a good resource.
+> [Tasks you can complete using the Settings Catalog in Intune](../../device-configuration/settings-catalog/common-tasks.md) is also a good resource.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.
