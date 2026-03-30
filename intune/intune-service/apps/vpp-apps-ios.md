@@ -55,7 +55,7 @@ Purchased apps can be assigned to groups using two types of licenses that Apple 
 > Don't use user licensing for the same Managed Apple Account across account-driven user enrollments and non-account driven user enrollments. 
 
 > [!NOTE]
-> Please avoid assigning both device licenses and user licenses to the same device or user, as this can lead to unexpected behavior.
+> Don't assign both device licenses and user licenses to the same device or user. This scenario isn't supported and can result in issues with app installation and updates.
 
 ## What app types are supported?
 You can purchase and distribute public and private apps using Apple Business Manager.
