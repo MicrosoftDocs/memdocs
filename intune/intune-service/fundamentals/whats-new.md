@@ -83,7 +83,7 @@ There are two ways to use this feature:
   - Turn on the recovery lock feature
   - Configure a password rotation schedule
 
-- **Remote device action** - Use the Recovery Lock device action to manually rotate the recovery lock password for a specific device.
+- **Remote device action** - Use the [Recovery Lock device action](../remote-actions/rotate-recovery-lock-passcode.md) to manually rotate the recovery lock password for a specific device.
 
 The Recovery Lock password can be viewed in the per-setting status report > **Passwords and keys**. To view the Recovery Lock password, the signed-in administrator needs the **Remote tasks/View macOS recovery lock password** permission.
 
@@ -91,6 +91,9 @@ The Recovery Lock password can be viewed in the per-setting status report > **Pa
 > Applies to:
 >
 > - macOS
+
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by late April 2026.
 
 #### New supported OEMConfig app for Android Enterprise <!-- 36423115 -->
 
