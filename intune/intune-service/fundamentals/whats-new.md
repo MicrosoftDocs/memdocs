@@ -103,6 +103,38 @@ The following OEMConfig app is available in Intune for Android Enterprise:
 
 For more information about OEMConfig, see [Use and manage Android Enterprise devices with OEMConfig in Microsoft Intune](../configuration/android-oem-configuration-overview.md).
 
+#### New settings in the Windows settings catalog <!-- 36922863 -->
+
+There are new settings in the Windows settings catalog. To see and configure these settings in Intune, create a Windows settings catalog profile (**Devices > Configuration profiles > Create profile > Windows 10 and later > Settings catalog**).
+
+The new policies include:
+
+- **Connectivity > Disable Cross Device Resume**: This feature lets Windows suggest continuing an activity users start on a device, like a phone, to a PC. IT admins can use this policy to turn off this feature and prevent users from continuing tasks, like browsing files or continuing to use supported apps that require linking between a phone and PC. 
+
+  When set to **CrossDeviceResume is Disabled**, the Windows device doesn't receive any CrossDeviceResume notification. Users won’t see any "resume from your phone" prompts. When you select **CrossDeviceResume is Enabled**, the Windows device does receive notification to resume activity from linked devices. If you don't configure this policy setting, the default behavior is that the CrossDeviceResume feature is turned on, which means users see the notification. Changes to this policy take effect on reboot.
+
+  This policy:
+
+  - Is available to Windows Insiders.
+  - Uses the [DisableCrossDeviceResume](/windows/client-management/mdm/policy-csp-Connectivity#disablecrossdeviceresume) CSP.
+
+- **Windows AI > Remove Microsoft Copilot App**: This policy setting allows you to uninstall the Microsoft Copilot app from devices. It applies to devices and users that meet the following conditions:
+
+  - The Microsoft 365 Copilot and Microsoft Copilot apps are both installed.
+  - The Microsoft Copilot app was not installed by the user.
+  - The Microsoft Copilot app was not opened in the last 14 days.
+
+  If this policy is enabled, the Microsoft Copilot app is uninstalled. Users can still re-install if they choose to.
+
+  [RemoveMicrosoftCopilotApp](/windows/client-management/mdm/policy-csp-WindowsAI#removemicrosoftcopilotapp) CSP
+
+> [!div class="checklist"]
+> Applies to:
+>
+> - Windows
+
+To learn more about the settings catalog, see [Use the Intune settings catalog to configure settings](../configuration/settings-catalog.md).
+
 #### New updates to the Apple settings catalog <!-- 36630003 -->
 
 The [Settings Catalog](../configuration/settings-catalog.md) lists all the settings you can configure in a device policy, and all in one place. For more information about configuring Settings Catalog profiles in Intune, see [Create a policy using settings catalog](../configuration/settings-catalog.md).
