@@ -1,7 +1,7 @@
 ---
-title: Device Scopes in endpoint analytics
-description: Learn how to use device scopes in Microsoft Intune endpoint analytics with scope tags for custom device reporting and targeted insights.
-ms.date: 12/01/2025
+title: Device Scopes
+description: Learn how to use device scopes in Microsoft Intune with scope tags for custom device reporting and targeted insights.
+ms.date: 03/24/2026
 ms.topic: concept-article
 ---
 

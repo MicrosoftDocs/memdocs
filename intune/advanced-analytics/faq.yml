@@ -1,8 +1,8 @@
 ### YamlMime:FAQ
 metadata:
-  title: Frequently Asked Questions About Advanced Analytics in Microsoft Intune
+  title: Advanced Analytics FAQ
   description: This article provides answers to some frequently asked questions about Advanced Analytics.
-  ms.date: 12/01/2025
+  ms.date: 03/24/2026
   ms.topic: faq
 
 title: |
@@ -46,7 +46,7 @@ sections:
           Advanced Analytics builds on endpoint analytics by offering deeper insights, advanced reporting, and enhanced anomaly detection capabilities.
       - question: Do I need additional licensing for Advanced Analytics?
         answer: |
-          Yes, Advanced Analytics requires specific licensing. See the Plan section for details.
+          Yes, Advanced Analytics requires specific licensing. Review the prerequisites for details.
 
   - name: Integration and compatibility
     questions:
