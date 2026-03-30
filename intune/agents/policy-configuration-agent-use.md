@@ -189,4 +189,4 @@ To update any settings and their values in the policy draft, you must create a d
 
 - [Policy Configuration Agent in Intune - Overview and set up](policy-configuration-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
-- [Security Copilot in Intune - An overview](../intune-service/copilot/copilot-intune-overview.md)
+- [Security Copilot in Intune - An overview](../copilot/index.md)

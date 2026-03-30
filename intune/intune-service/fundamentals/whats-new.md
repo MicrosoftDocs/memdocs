@@ -74,7 +74,7 @@ For alternative step-by-step guidance, see the following resources:
   - [Securing apps for mobile | iOS](https://m365accelerator.microsoft.com/intune/manage-and-secure-apps-for-ios)
   - [Configuring Intune and Configuration Manager to co-manage devices](https://m365accelerator.microsoft.com/intune/microsoft-intune-and-configuration-manager-co-management-setup-guide)
   - [Manage and secure devices for Windows](https://m365accelerator.microsoft.com/intune/windows-device-management)
-- [Microsoft Copilot in Intune](/intune/intune-service/copilot/copilot-intune-overview)
+- [Microsoft Copilot in Intune](/intune/copilot)
 
 > [!div class="checklist"]
 > Applies to:
@@ -800,7 +800,7 @@ Scripts or automation using these Graph APIs will stop working now that the repo
 
 #### Query and results improvements to Explorer feature with Security Copilot in Intune <!--33987602-->
 
-With your Security Copilot license, you can query your Intune data using the **[Explorer in Intune](../copilot/copilot-intune-explorer.md)** feature. 
+With your Security Copilot license, you can query your Intune data using the **[Explorer in Intune](../../copilot/explorer.md)** feature. 
 
 When you create your queries, you have more filter options. For example:
 
@@ -809,7 +809,7 @@ When you create your queries, you have more filter options. For example:
 
 In the query results, there are also more columns available to view your data.
 
-To learn more about this feature, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+To learn more about this feature, see [Explore Intune data with natural language and take action](../../copilot/explorer.md).
 
 #### Device Management Type assignment filter property supports Android enrollment options for Managed Devices<!-- 33016364 -->
 
@@ -849,7 +849,7 @@ Each query returns a Copilot summary to help you understand the results and offe
 - Add devices or users from the results to a group so you can target apps and policies to this group.
 - Filter example queries to find or build requests that match your needs.
 
-To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+To learn more, see [Explore Intune data with natural language and take action](../../copilot/explorer.md).
 
 ### Device security
 
@@ -1254,7 +1254,7 @@ Each query returns a Copilot summary to help you understand the results and offe
 - Add devices or users from the results to a group so you can target apps and policies to this group.
 - Filter example queries to find or build requests that match your needs.
 
-To learn more, see [Explore Intune data with natural language and take action](../copilot/copilot-intune-explorer.md).
+To learn more, see [Explore Intune data with natural language and take action](../../copilot/explorer.md).
 
 #### Intel vPro Fleet Services integration in Intune partner portal <!-- 33964910 -->
 
@@ -1293,7 +1293,7 @@ References in Intune documentation and the Intune admin center are updated to re
 
 - **Expanded support for Windows 365 Cloud PC** - With this general availability update, Copilot now supports Windows 365 Cloud PC management. IT admins can access important info, like licensing status, connection quality, configuration details, and performance metrics. This feature makes it easier for admins to monitor and manage Cloud PCs directly from the Intune admin center.
 
-To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md).
+To learn more about Copilot in Intune and to get started, see [Microsoft Copilot in Intune](../../copilot/index.md).
 
 #### Intune supports iOS/iPadOS 17.x as the minimum version<!--33405397-->
 

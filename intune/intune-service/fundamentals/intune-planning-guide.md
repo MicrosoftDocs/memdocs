@@ -312,7 +312,7 @@ Managing devices is a relationship with different services. Intune includes the 
 
 - **Microsoft Purview** (included in the **Microsoft 365 E5** license) classifies and protects documents and emails by applying labels. On Microsoft 365 apps, you can use this service to [prevent unauthorized access to organization data](/microsoft-365/compliance/information-protection), including apps on personal devices.
 
-- **[Microsoft Copilot in Intune](../copilot/copilot-intune-overview.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
+- **[Microsoft Copilot in Intune](../../copilot/index.md)** is a generative-AI security analysis tool. It accesses your Intune data and can help you manage your policies and settings, understand your security posture, and troubleshoot device issues.
 
   Copilot in Intune is licensed through Microsoft Security Copilot. For more information, go to [Get started with Microsoft Security Copilot](/copilot/security/get-started-security-copilot).
 

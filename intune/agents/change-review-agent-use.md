@@ -149,4 +149,4 @@ The agent cannot proceed because the request violates Microsoft's Responsible AI
 
 - [Change Review Agent in Intune](change-review-agent.md)
 - [Security Copilot agents in Intune - An overview](index.md)
-- [Security Copilot in Intune - An overview](../intune-service/copilot/copilot-intune-overview.md)
+- [Security Copilot in Intune - An overview](../copilot/index.md)

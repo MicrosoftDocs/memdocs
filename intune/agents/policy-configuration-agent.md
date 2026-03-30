@@ -203,4 +203,4 @@ When it completes, the agent is ready to use. To learn more about using the agen
 
 - [Use the Policy Configuration Agent](policy-configuration-agent-use.md)
 - [Security Copilot agents in Intune - An overview](index.md)
-- [Security Copilot in Intune - An overview](../intune-service/copilot/copilot-intune-overview.md)
+- [Security Copilot in Intune - An overview](../copilot/index.md)
