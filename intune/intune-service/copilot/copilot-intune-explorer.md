@@ -108,5 +108,5 @@ This data exploration capability is constantly improving. We continue to add mor
 ## Related content
 
 - [Use Microsoft Copilot in Intune to troubleshoot ](copilot-devices.md).
-- [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
+- [Use the settings catalog to create device configuration policies](../../device-configuration/settings-catalog/index.md).
 - [Learn about privacy and data security in Security Copilot](security-copilot.md#privacy-and-data-security-in-security-copilot).

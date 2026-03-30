@@ -273,7 +273,7 @@ The [setup deployment guide](deployment-guide-intune-setup.md) has some good inf
 Some considerations:
 
 - If you currently don't use any MDM service or solution, then going straight to Intune might be best.
-- If you currently use on-premises Group Policy Objects (GPO), then going to Intune and using the [Intune settings catalog](../configuration/settings-catalog.md) is similar, and can be an easier transition to cloud-based device policy. The settings catalog also includes settings for Apple devices and Google Chrome.
+- If you currently use on-premises Group Policy Objects (GPO), then going to Intune and using the [Intune settings catalog](../../device-configuration/settings-catalog/index.md) is similar, and can be an easier transition to cloud-based device policy. The settings catalog also includes settings for Apple devices and Google Chrome.
 - For new devices not enrolled in Configuration Manager, or any MDM solution, then going straight to Intune might be best.
 - If you currently use Configuration Manager, then your options include:
 
@@ -396,7 +396,7 @@ Some considerations:
 
     [Settings insight](settings-insight.md) provides confidence in configurations by adding insights that similar organizations successfully adopted. Insights are available for some settings and not all settings. For more information, see [Settings insight](settings-insight.md).
 
-  - **Settings catalog**: The [settings catalog](../configuration/settings-catalog.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
+  - **Settings catalog**: The [settings catalog](../../device-configuration/settings-catalog/index.md) lists all the settings you can configure and looks similar to on-premises GPOs and ADMX templates. When you create the policy, you start from scratch and configure settings at a granular level.
   - **Group policy**: Use [group policy analytics](../configuration/group-policy-analytics.md) to import and analyze your GPOs. This feature helps you determine how your GPOs translate in the cloud. The output shows which settings are supported in MDM providers, including Microsoft Intune. It also shows any deprecated settings, or settings not available to MDM providers.
 
     You can also create an Intune policy based on your imported settings. For more information, go to [Create a settings catalog policy using your imported GPOs](../configuration/group-policy-analytics-migrate.md).
@@ -592,7 +592,7 @@ Validate the end-user experience with success metrics in your deployment plan. S
 
 - **Train your help desk and support teams**. Have them enroll devices running the different platforms used in your organization so they're familiar with the process. Consider using help desk and support teams as a pilot group for your scenarios.
 
-  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../configuration/tutorial-settings-catalog-group-policy.md), and courses through training partners.
+  There are training resources available, including [YouTube videos](https://www.youtube.com/results?search_query=intune+training), Microsoft tutorials about [Windows Autopilot scenarios](/autopilot/tutorial/autopilot-scenarios), [compliance](../protect/tutorial-protect-email-on-enrolled-devices.md), [configuration](../../device-configuration/settings-catalog/tutorial-group-policy-migration.md), and courses through training partners.
 
   The following example is an Intune support training agenda:
 

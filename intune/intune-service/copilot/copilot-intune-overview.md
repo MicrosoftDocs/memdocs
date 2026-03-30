@@ -175,7 +175,7 @@ You can get more insights about this setting by asking questions like:
 - How could this setting affect users?
 - How could this setting affect security?
 
-These Copilot prompts can help you understand the effect of the setting, look for potential conflicts, and provide a recommended value. For an example of how to use Copilot with the settings catalog, go to [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
+These Copilot prompts can help you understand the effect of the setting, look for potential conflicts, and provide a recommended value. For an example of how to use Copilot with the settings catalog, go to [Use the settings catalog to create device configuration policies](../../device-configuration/settings-catalog/index.md).
 
 You can use the Copilot tooltips on the following policy types in Intune:
 
@@ -267,5 +267,5 @@ The following examples are some queries you can try:
 ## Related content
 
 - [Use Copilot in Intune to troubleshoot devices](../copilot/copilot-devices.md).
-- [Use the settings catalog to create device configuration policies](../configuration/settings-catalog.md).
+- [Use the settings catalog to create device configuration policies](../../device-configuration/settings-catalog/index.md).
 - [Learn more about Intune capabilities in Microsoft Security Copilot](security-copilot.md).

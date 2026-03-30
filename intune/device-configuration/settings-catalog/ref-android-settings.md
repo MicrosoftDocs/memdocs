@@ -16,7 +16,7 @@ ms.collection:
 
 This article lists and describes the Android Enterprise and AOSP settings you can configure in a settings catalog policy in Microsoft Intune. When you create the settings catalog profile, use the settings described in this article as a reference.
 
-To learn more about the settings catalog, see [Settings catalog overview](settings-catalog.md).
+To learn more about the settings catalog, see [Settings catalog overview](index.md).
 
 ## Prerequisites
 
@@ -44,7 +44,7 @@ To learn more about the settings catalog, see [Settings catalog overview](settin
 :::column span="3":::
 > To configure the policy, use an account with the following role:
 >
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 :::column-end:::
 :::row-end:::
 
@@ -59,7 +59,7 @@ To learn more about the settings catalog, see [Settings catalog overview](settin
 >
 > - Devices must be corporate owned.
 > - Devices must be enrolled in Intune.
-> - Create a [settings catalog policy](settings-catalog.md).
+> - Create a [settings catalog policy](index.md).
 :::column-end:::
 :::row-end:::
 
@@ -74,7 +74,7 @@ These settings apply to the Android Enterprise enrollment types where Intune con
 - Dedicated devices
 - Corporate-owned devices with a work profile
 
-To learn more about the different Android enrollment types, see [Android Enrollment guide](../fundamentals/deployment-guide-enrollment-android.md).
+To learn more about the different Android enrollment types, see [Android Enrollment guide](../../intune-service/fundamentals/deployment-guide-enrollment-android.md).
 
 ### Device restriction
 
@@ -331,7 +331,7 @@ To learn more about the different Android enrollment types, see [Android Enrollm
   - Android Enterprise corporate owned fully managed (COBO)
   - Android Enterprise corporate owned dedicated devices (COSU)
 
-- **Block location**: If **True**, disables the Location setting on the device and prevents users from turning it on. When this setting is disabled, any other setting that depends on the device location is affected, including the `[Locate device](../remote-actions/device-locate.md)` remote action that admins use. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
+- **Block location**: If **True**, disables the Location setting on the device and prevents users from turning it on. When this setting is disabled, any other setting that depends on the device location is affected, including the `[Locate device](../../intune-service/remote-actions/device-locate.md)` remote action that admins use. If **False**, Intune doesn't change or update this setting. By default, the OS might allow using location on the device.
 
   Applies to:
 
@@ -681,5 +681,5 @@ Android Open Source Project (AOSP) devices are Android devices that don't have G
 
 ## Related articles
 
-- [Settings catalog overview](settings-catalog.md)
-- [Apple settings catalog](apple-settings-catalog-configurations.md)
+- [Settings catalog overview](index.md)
+- [Apple settings catalog](ref-apple-settings.md)

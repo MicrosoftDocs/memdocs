@@ -44,7 +44,7 @@ When Mac devices join a Microsoft Entra ID tenant, the devices get a workplace j
 
 With Platform SSO configured, the SSO app extension acts as the broker for Microsoft Entra ID authentication and Conditional Access.
 
-You configure Platform SSO using the Intune [settings catalog](settings-catalog.md). When the settings catalog policy is ready, you assign the policy. Microsoft recommends you assign the policy when the user enrolls the device in Intune. But, it can be assigned at any time, including on existing devices.
+You configure Platform SSO using the Intune [settings catalog](../../device-configuration/settings-catalog/index.md). When the settings catalog policy is ready, you assign the policy. Microsoft recommends you assign the policy when the user enrolls the device in Intune. But, it can be assigned at any time, including on existing devices.
 
 ## Prerequisites
 
@@ -163,7 +163,7 @@ When using password sync authentication, you can enable keyvault recovery to ens
 
 ## Step 2 - Create the Platform SSO policy in Intune
 
-To configure the Platform SSO policy, use the steps in this section to create an [Intune settings catalog](settings-catalog.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
+To configure the Platform SSO policy, use the steps in this section to create an [Intune settings catalog](../../device-configuration/settings-catalog/index.md) policy. The Microsoft Enterprise SSO plug-in requires the settings listed.
 
 1. Sign in to the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431).
 2. Select **Devices** > **Manage devices** > **Configuration** > **Create** > **New policy**.

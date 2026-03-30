@@ -12,6 +12,9 @@ ms.collection:
 
 # Configure Recovery Lock on macOS devices in Microsoft Intune
 
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by late April 2026.
+
 Recovery Lock helps protect your macOS devices against unauthorized reinstallation and wiping. When you add a Recovery Lock policy, Intune automatically generates a strong, random password and sets it on the device.
 
 When you configure this feature:
@@ -21,7 +24,7 @@ When you configure this feature:
 - The password can be reset automatically using a time-based rotation interval.
 - Access to the **Startup Options** screen is protected.
 
-Use the Intune [settings catalog](settings-catalog.md) to configure Recovery Lock on your macOS devices. After you configure the policy, assign it to your macOS devices.
+Use the Intune [settings catalog](index.md) to configure Recovery Lock on your macOS devices. After you configure the policy, assign it to your macOS devices.
 
 After you configure and assign the policy, you can use device actions to rotate the Recovery Lock passcode.
 
@@ -54,12 +57,12 @@ This article applies to:
 :::column span="3":::
 > To configure this policy in the settings catalog, use an account with at least one of the following roles:
 >
-> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../includes/minimum-rbac-role-policy-profile-manager.md)]
+> - [!INCLUDE [minimum-rbac-role-policy-profile-manager](../../intune-service/includes/minimum-rbac-role-policy-profile-manager.md)]
 >
 > To run the device actions, sign into the [Microsoft Intune admin center](https://go.microsoft.com/fwlink/?linkid=2109431) with an account with one of the following roles:
 >
 > - [Intune administrator](/entra/identity/role-based-access-control/permissions-reference#intune-administrator) Microsoft Entra role
-> - An Intune [custom role](../fundamentals/create-custom-role.md) with the following permissions:
+> - An Intune [custom role](../../intune-service/fundamentals/create-custom-role.md) with the following permissions:
 >
 >   - Remote tasks/Rotate macOS recovery lock password
 >   - Remote tasks/View macOS recovery lock password
@@ -87,7 +90,7 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 7. In **Configuration settings**, select **Add settings**, and search for **Recovery Lock**. Select the **Recovery Lock Password** category, select **Select all these settings**, and then close the settings picker.
 
-    :::image type="content" source="./media/settings-catalog-recovery-lock/recovery-lock-category-settings.png" alt-text="Screenshot that shows Recovery Lock settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/settings-catalog-recovery-lock/recovery-lock-category-settings.png":::
+    :::image type="content" source="./media/configure-recovery-lock-macos/recovery-lock-category-settings.png" alt-text="Screenshot that shows Recovery Lock settings in the settings catalog in Microsoft Intune and Intune admin center." lightbox="./media/configure-recovery-lock-macos/recovery-lock-category-settings.png":::
 
 8. Configure the Recovery Lock settings:
 
@@ -101,11 +104,11 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 9. Select **Next**. In **Scope tags**, select **Next**.
 
-    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../fundamentals/scope-tags.md).
+    Scope tags are optional, and this example doesn't use them. To learn more about scope tags, and what they do, go to [Use role-based access control (RBAC) and scope tags for distributed IT](../../intune-service/fundamentals/scope-tags.md).
 
 10. In **Assignments**, select **Next**.
 
-    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, see [Assign user and device profiles in Intune](device-profile-assign.md).
+    Assignments are optional, and this example doesn't use them. In production, select **Add groups**. Select a Microsoft Entra group that includes users or devices that should receive this policy. For information and guidance on assigning policies, see [Assign user and device profiles in Intune](../../intune-service/configuration/device-profile-assign.md).
 
 11. In **Review + create**, review the summary of your changes. Select **Create**.
 
@@ -115,7 +118,7 @@ Use the following steps to create a Recovery Lock policy in the settings catalog
 
 ## Monitor Recovery Lock status and view the password
 
-When you assign the policy to devices, you can monitor its status using the [Per setting status report](../fundamentals/reports.md#per-setting-status-report-operational).
+When you assign the policy to devices, you can monitor its status using the [Per setting status report](../../intune-service/fundamentals/reports.md#per-setting-status-report-operational).
 
 If Recovery Lock is enabled, you can view the password in the report at **Passwords and keys** > **Recovery Lock Password**.
 
@@ -127,7 +130,7 @@ You can use the rotate Recovery Lock passcode device action to reset the Recover
 2. Select **Rotate recovery lock passcode**.
 3. Confirm the action.
 
-To learn more, see [Rotate Recovery Lock passcode device action](../remote-actions/rotate-recovery-lock-passcode.md).
+To learn more, see [Rotate Recovery Lock passcode device action](../../intune-service/remote-actions/rotate-recovery-lock-passcode.md).
 
 ## Remove the Recovery Lock password
 
@@ -138,5 +141,5 @@ To remove the Recovery Lock password from a device, you have the following optio
 
 ## Related content
 
-- [Use the Intune settings catalog to configure settings](settings-catalog.md)
-- [Common tasks you can complete using the settings catalog](settings-catalog-common-features.md)
+- [Use the Intune settings catalog to configure settings](index.md)
+- [Common tasks you can complete using the settings catalog](common-tasks.md)
