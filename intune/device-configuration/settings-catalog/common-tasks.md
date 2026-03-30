@@ -63,7 +63,7 @@ This feature applies to:
 
 You can configure Recovery Lock on your macOS devices. When you enable Recovery Lock, users are prompted for a password when they try to access the recovery partition environment on the device. This feature helps prevent unauthorized users from reinstalling or wiping the device.
 
-For more information, go to [Protect macOS devices using Recovery Lock with Microsoft Intune](settings-catalog-recovery-lock.md).
+For more information, go to [Protect macOS devices using Recovery Lock with Microsoft Intune](configure-recovery-lock-macos.md).
 
 ## Add universal printers
 

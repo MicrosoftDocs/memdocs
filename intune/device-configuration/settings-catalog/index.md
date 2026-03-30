@@ -47,7 +47,7 @@ This feature applies to:
 
   With the settings catalog, you can:
 
-  - Configure Recovery Lock to help protect your devices against unauthorized reinstallation and wiping. For more information, see [Protect macOS devices using Recovery Lock](settings-catalog-recovery-lock.md).
+  - Configure Recovery Lock to help protect your devices against unauthorized reinstallation and wiping. For more information, see [Protect macOS devices using Recovery Lock](configure-recovery-lock-macos.md).
 
   - [Use DDM to manage software updates](../protect/updates/apple.md), passcode restrictions, and more. Apple's declarative device management (DDM) is available in the settings catalog.
 

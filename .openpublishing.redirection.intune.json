@@ -181,6 +181,11 @@
       "redirect_document_id": false
     },
     {
+      "source_path": "intune/intune-service/configuration/settings-catalog-recovery-lock.md",
+      "redirect_url": "/intune/device-configuration/settings-catalog/configure-recovery-lock-macos",
+      "redirect_document_id": false
+    },
+    {
       "source_path": "intune/intune-service/configuration/settings-catalog-restrict-usb.md",
       "redirect_url": "/intune/device-configuration/settings-catalog/restrict-usb",
       "redirect_document_id": false
