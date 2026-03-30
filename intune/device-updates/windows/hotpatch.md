@@ -118,7 +118,7 @@ Configure the default hotpatch update behavior for your tenant as follows:
 
 ### Configure hotpatch using quality update policies.
 
-Windows Autopatch respects your configuration of the hotpatch setting in quality update policies. If a device is assigned to one of those policies, the hotpatch setting from that policy is the one applied not the tenant default setting.  
+Windows Autopatch respects your configuration of the hotpatch setting in quality update policies. If a device is assigned to one of those policies, the hotpatch setting from that policy is the one applied, not the tenant default setting.  
 
 To enroll devices to receive hotpatch updates:
 
