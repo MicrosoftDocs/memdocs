@@ -171,7 +171,7 @@ For the latest release schedule, see the [hotpatch release notes](https://suppor
 
 1. In Intune, review your configured policies within Windows Autopatch to see which groups of devices are targeted with a hotpatch policy by going to the **Windows Update** > **Quality Updates** page. 
 1. Ensure the hotpatch update policy is set to **Allow**. 
-1. On the device, select **Start** > **Settings** > **Windows Update** > **Advanced options** > **Configured update policies** > find **Enable hotpatching when available**. This setting indicates that the device is enrolled in hotpatch updates as configured by Autopatch. 
+1. On the device, select **Start** > **Settings** > **Windows Update** > **Advanced options** > **Configured update policies** > find **Enable hotpatching when available**. This setting indicates that the device is enrolled in hotpatch updates as configured by Windows Autopatch. 
 
 ### Step 4: Disable compiled hybrid PE usage (CHPE) (Arm64 CPU only) 
 
