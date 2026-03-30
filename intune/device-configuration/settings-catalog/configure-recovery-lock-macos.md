@@ -12,6 +12,9 @@ ms.collection:
 
 # Configure Recovery Lock on macOS devices in Microsoft Intune
 
+> [!NOTE]
+> This feature is gradually rolling out and may not yet be available in your tenant. Full availability is expected by late April 2026.
+
 Recovery Lock helps protect your macOS devices against unauthorized reinstallation and wiping. When you add a Recovery Lock policy, Intune automatically generates a strong, random password and sets it on the device.
 
 When you configure this feature:
