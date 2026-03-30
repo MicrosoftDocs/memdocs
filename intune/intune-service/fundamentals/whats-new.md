@@ -74,7 +74,7 @@ For alternative step-by-step guidance, see the following resources:
   - [Securing apps for mobile | iOS](https://m365accelerator.microsoft.com/intune/manage-and-secure-apps-for-ios)
   - [Configuring Intune and Configuration Manager to co-manage devices](https://m365accelerator.microsoft.com/intune/microsoft-intune-and-configuration-manager-co-management-setup-guide)
   - [Manage and secure devices for Windows](https://m365accelerator.microsoft.com/intune/windows-device-management)
-- [Microsoft Copilot in Intune](/intune/copilot)
+- [Microsoft Copilot in Intune](../../copilot/index.md)
 
 > [!div class="checklist"]
 > Applies to:
