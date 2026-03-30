@@ -114,12 +114,11 @@ In Intune, some common security tasks include:
 
 - **Use security baselines** on your Windows devices. Security baselines are preconfigured settings that you can deploy to your devices. These baseline settings focus on security at a granular level and can also be changed to meet any organization specific requirements.
 
-  If you're not sure where to start, then look at security baseline and the built-in guided scenarios.
+  If you're not sure where to start, then look at security baselines.
 
   For more specific information, go to:
 
   - [Use security baselines to configure Windows devices in Intune](../protect/security-baselines.md)
-  - [Guided scenarios overview](guided-scenarios-overview.md)
 
 - **Manage software updates, encrypt hard disks, configure built-in firewalls**, and more using built-in policy settings. You can also use Windows Autopatch for automatic patching of Windows, including Windows quality updates and Windows feature updates.
 
