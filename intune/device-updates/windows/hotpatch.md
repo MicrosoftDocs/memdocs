@@ -16,7 +16,7 @@ You can configure if hotpatch is enabled for you devices using either a tenant l
 
 ### Key benefits
 
-- **Faster Security**: Hotpatch security fixes take effect without requiring a restart, getting devices secure much more quickly.  
+- **Faster security**: Hotpatch security fixes take effect without requiring a restart, getting devices secure much more quickly.  
 - **Reduced disruption**: Hotpatch installs eligible security updates without requiring an immediate device restart, helping users stay productive.
 - **Smaller payloads**: Hotpatch package size is significantly smaller than the standard cumulative updates. 
 - **No changes to existing update rings**: Existing update ring configurations remain in effect and are honored alongside hotpatch configurations.
